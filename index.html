@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Radar · Stav Theodor-Kimhi · THEODORA</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Every exhibition, opening, and art story worth your time in New York, New Jersey, and Tel Aviv, chosen by a curator who places art in the world's finest spaces.">
+<meta property="og:title" content="Art Radar · Stav Theodor-Kimhi">
+<meta property="og:description" content="The art worth seeing, chosen by a curator. Exhibitions, openings, and the stories behind them, and the art I help people live with.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stavtheodor.com/">
+<meta property="og:image" content="https://stavtheodor.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stav Theodor-Kimhi, art curator, beside the THEODORA mark">
+<meta property="og:site_name" content="THEODORA">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Art Radar · Stav Theodor-Kimhi">
+<meta name="twitter:description" content="The art worth seeing, chosen by a curator. Exhibitions, openings, and the stories behind them.">
+<meta name="twitter:image" content="https://stavtheodor.com/og-image.jpg">
+<link rel="canonical" href="https://stavtheodor.com/">
+<link rel="alternate" hreflang="en" href="https://stavtheodor.com/">
+<link rel="alternate" hreflang="he" href="https://stavtheodor.com/">
+<link rel="alternate" hreflang="x-default" href="https://stavtheodor.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #FAF8F3;
+    --ink: #1C1A17;
+    --ink-soft: #4A463F;
+    --bronze: #A0815C;
+    --bronze-soft: #C4AE8F;
+    --hairline: rgba(28, 26, 23, 0.14);
+    --en: 'Cormorant Garamond', Georgia, serif;
+    --he: 'Frank Ruhl Libre', 'David Libre', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+  /* ---------- top nav ---------- */
+  nav {
+    padding: 26px 0 0;
+    text-align: center;
+  }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin: 0 14px;
+    transition: color .25s;
+  }
+  nav a:hover { color: var(--bronze); }
+
+  /* ---------- hero ---------- */
+  header.hero {
+    text-align: center;
+    padding: 84px 24px 72px;
+  }
+  .hero-logo {
+    display: block;
+    width: 190px;
+    height: auto;
+    margin: 0 auto 34px;
+  }
+  .cities {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-indent: 0.22em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+  h1 {
+    font-weight: 500;
+    font-size: clamp(40px, 7.5vw, 60px);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .role {
+    margin-top: 16px;
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    text-indent: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .rule {
+    width: 56px;
+    height: 1px;
+    background: var(--bronze);
+    margin: 36px auto;
+    border: none;
+  }
+  .tagline {
+    font-style: italic;
+    font-size: clamp(20px, 3.4vw, 24px);
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ---------- sections ---------- */
+  section { padding: 64px 0; }
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .prose p { margin-bottom: 1.35em; }
+  .prose p:last-child { margin-bottom: 0; }
+  .lead {
+    font-size: 23px;
+    line-height: 1.55;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .about-portrait {
+    margin: 6px 0 0;
+  }
+  .about-portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+  }
+  .about-portrait figcaption {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    text-align: center;
+  }
+  @media (max-width: 620px) {
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-portrait { max-width: 300px; margin: 0 auto; }
+  }
+
+  /* ---------- services ---------- */
+  .services {
+    width: min(1040px, calc(100vw - 48px));
+    margin: 56px 0 8px 50%;
+    transform: translateX(-50%);
+    padding: 46px 0 44px;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .services .label { margin-bottom: 38px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px 30px;
+  }
+  .service { text-align: center; }
+  .service h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .service p {
+    font-style: italic;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .services-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+
+  /* ---------- buttons ---------- */
+  .btn-row { text-align: center; margin-top: 44px; }
+  .portfolio-invite {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .portfolio-invite .rule { margin: 0 auto 32px; }
+  .portfolio-invite p {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 0 auto 28px;
+  }
+
+  /* ---------- portfolio slideshow ---------- */
+  #portfolio { padding: 64px 0; }
+  .portfolio-lead {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
+  .slideshow { width: min(880px, calc(100vw - 40px)); margin: 0 auto; }
+  .slideshow:focus { outline: none; }
+  .slide-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--ivory);
+    border: 1px solid var(--hairline);
+    overflow: hidden;
+  }
+  .slide-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .slide-btn, .slide-fs {
+    position: absolute;
+    border: 1px solid var(--hairline);
+    background: rgba(250, 248, 243, 0.86);
+    color: var(--bronze);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s, color .25s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slide-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-family: var(--en);
+    font-size: 26px;
+    line-height: 1;
+    padding-bottom: 3px;
+  }
+  .slide-btn:hover, .slide-fs:hover { background: var(--bronze); color: var(--ivory); }
+  .slide-btn.prev { left: 14px; }
+  .slide-btn.next { right: 14px; }
+  .slide-fs {
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 15px;
+  }
+  .slide-counter {
+    text-align: center;
+    margin-top: 22px;
+    font-family: var(--en);
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    color: var(--bronze);
+  }
+  .slide-frame:fullscreen { background: var(--ink); border: none; }
+  @media (max-width: 540px) {
+    .slide-btn { width: 40px; height: 40px; font-size: 22px; }
+    .slide-btn.prev { left: 8px; }
+    .slide-btn.next { right: 8px; }
+    .portfolio-lead { font-size: 18px; }
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--bronze);
+    padding: 15px 34px 13px;
+    margin: 8px 10px;
+    transition: background .3s, color .3s;
+  }
+  .btn:hover { background: var(--bronze); color: var(--ivory); }
+  .btn.solid { background: var(--ink); border-color: var(--ink); color: var(--ivory); }
+  .btn.solid:hover { background: var(--bronze); border-color: var(--bronze); }
+
+  /* ---------- timeline ---------- */
+  .timeline-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin: -18px 0 56px;
+  }
+  article.post {
+    position: relative;
+    padding: 0 0 72px 36px;
+    border-left: 1px solid var(--hairline);
+    margin-left: 8px;
+  }
+  article.post:last-of-type { padding-bottom: 8px; }
+  article.post::before {
+    content: "";
+    position: absolute;
+    left: -3.5px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--bronze);
+  }
+  .post-date {
+    font-size: 12.5px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+  .post-title {
+    font-family: var(--en);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 8px 0 22px;
+  }
+  .post-body {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--he);
+    font-weight: 300;
+    font-size: 17.5px;
+    line-height: 1.95;
+    color: var(--ink);
+  }
+  .post-body p { margin-bottom: 1.2em; }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-body a {
+    color: var(--bronze);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bronze-soft);
+    word-break: break-all;
+    transition: color .25s;
+  }
+  .post-body a:hover { color: var(--ink); }
+  .post-body strong { font-weight: 500; }
+  .credit {
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  article.post.note .post-title { font-size: 20px; font-weight: 500; }
+  article.post.note { padding-bottom: 56px; }
+  article.post.note .post-body { font-size: 16.5px; color: var(--ink-soft); }
+  figure {
+    margin: 30px 0;
+    text-align: center;
+  }
+  figure img {
+    max-width: min(380px, 100%);
+    filter: sepia(8%);
+    opacity: 0.92;
+  }
+  figcaption {
+    direction: ltr;
+    font-family: var(--en);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-top: 12px;
+  }
+  .post-gallery {
+    column-count: 2;
+    column-gap: 14px;
+    margin-bottom: -14px;
+  }
+  .post-gallery img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 14px;
+    filter: none;
+    opacity: 1;
+  }
+  @media (max-width: 540px) {
+    .post-gallery { column-count: 1; }
+  }
+  /* two images side by side, aligned along their bottom edge, each with its own caption */
+  .pair-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+  }
+  .pair-bottom img {
+    width: 50%;
+    max-width: 50%;
+    display: block;
+  }
+  .pair-caps {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .pair-caps figcaption {
+    width: 50%;
+    margin-top: 0;
+    text-align: center;
+  }
+  @media (max-width: 540px) {
+    .pair-bottom, .pair-caps { flex-direction: column; align-items: center; }
+    .pair-bottom img, .pair-caps figcaption { width: 100%; max-width: min(380px, 100%); }
+  }
+  /* gallery walk (a single post made of several stops, each image with its text) */
+  .walk-stop {
+    margin-top: 42px;
+    padding-top: 38px;
+    border-top: 1px solid var(--hairline);
+  }
+  .walk-venue {
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin-bottom: 18px;
+  }
+  .walk-stop figure { margin: 0 0 20px; }
+  .walk-stop figure img {
+    max-width: 100%;
+    filter: sepia(8%);
+    opacity: 0.95;
+  }
+  .walk-intro {
+    margin-top: 42px;
+    padding-top: 34px;
+    border-top: 1px solid var(--hairline);
+    font-size: 18px;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    border-top: 1px solid var(--hairline);
+    margin-top: 48px;
+    padding: 72px 0 64px;
+    text-align: center;
+  }
+  footer .name {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 28px;
+  }
+  footer .sub {
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-indent: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 10px 0 30px;
+  }
+  .contact-list { list-style: none; }
+  .contact-list li { padding: 5px 0; font-size: 18px; }
+  .contact-list a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bronze-soft);
+    transition: color .25s;
+  }
+  .contact-list a:hover { color: var(--bronze); }
+  .copyright {
+    margin-top: 44px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 540px) {
+    body { font-size: 18px; }
+    header.hero { padding: 60px 24px 52px; }
+    section { padding: 48px 0; }
+    article.post { padding-left: 24px; margin-left: 4px; }
+    nav a { margin: 0 8px; font-size: 11px; }
+    .lead { font-size: 20px; }
+  }
+</style>
+
+<!-- FAQPage schema: 3.2x AIO citation lift per 2026 research -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does an art curator do for a private residence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An art curator for private residences guides the entire process: developing an art concept for the space, sourcing works from galleries and artists, selecting pieces that fit the design and the client's sensibility, and overseeing installation. The goal is art that feels right for that specific home and person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does THEODORA's art advisory service work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "THEODORA handles the full process from start to finish. It begins with understanding the space and the client, then moves through art concept, sourcing, selection, and installation. Every recommendation is specific to that project — no two clients receive the same answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with interior designers and architects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A significant part of THEODORA's practice is working alongside architects and interior designers on behalf of their clients. Stav speaks the language of design and understands how art must function within a larger design intent — not on top of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does THEODORA provide art advisory services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "THEODORA is based in New York City and New Jersey, serving the greater New York luxury market. Stav also works on projects in Tel Aviv and has experience with large-scale international hospitality commissions. Projects are evaluated individually regardless of location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know which art is right for my space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is exactly what the advisory process is for. Stav listens first, then looks — at the space, the light, the design, and the person living in it. The right piece is not about price or trend. It is about whether it resonates with this specific space and this specific person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What exhibitions are worth seeing in New York right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Art Radar, THEODORA's curatorial newsletter, publishes monthly picks of must-see exhibitions in New York, New Jersey, and Tel Aviv — chosen by Stav Theodor-Kimhi, an art curator with two decades of experience. The full archive is available at stavtheodor.com."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Structured data: Person + Organization + WebSite (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://stavtheodor.com/#stav",
+      "name": "Stav Theodor-Kimhi",
+      "jobTitle": "Art Curator and Advisor",
+      "description": "Fine art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. Founder of THEODORA.",
+      "url": "https://stavtheodor.com/",
+      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/stavtheodor",
+        "https://www.instagram.com/theodora.artcuration"
+      ],
+      "worksFor": { "@id": "https://stavtheodor.com/#org" },
+      "knowsAbout": [
+        "Fine Art Curation",
+        "Art Advisory",
+        "Hospitality Art",
+        "Private Art Collections",
+        "Contemporary Art",
+        "Israeli Art"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://stavtheodor.com/#org",
+      "name": "THEODORA",
+      "description": "Fine art curation and advisory. A to Z: art concept, sourcing, selection, and installation for private residences and hospitality projects in New York, New Jersey, and Tel Aviv.",
+      "url": "https://stavtheodor.com/",
+      "logo": "https://stavtheodor.com/images/theodora-logo.png",
+      "image": "https://stavtheodor.com/og-image.jpg",
+      "founder": { "@id": "https://stavtheodor.com/#stav" },
+      "areaServed": [
+        { "@type": "City", "name": "New York City" },
+        { "@type": "City", "name": "New Jersey" },
+        { "@type": "City", "name": "Tel Aviv" }
+      ],
+      "knowsAbout": [
+        "Art Curation",
+        "Art Advisory",
+        "Interior Art Consulting",
+        "Private Art Collections",
+        "Hospitality Art"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/theodora-art",
+        "https://www.instagram.com/theodora.artcuration"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stavtheodor.com/#site",
+      "name": "Art Radar · THEODORA",
+      "url": "https://stavtheodor.com/",
+      "description": "Art exhibitions, openings, and the stories behind them, chosen by curator Stav Theodor-Kimhi. Covering New York, New Jersey, and Tel Aviv.",
+      "publisher": { "@id": "https://stavtheodor.com/#org" },
+      "inLanguage": ["en", "he"]
+    }
+  ]
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4300MN0Q97');
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#radar">Art Radar</a>
+  <a href="#posts">Posts</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero wrap">
+  <img class="hero-logo" src="images/theodora-logo.png" alt="THEODORA · fine art living" width="440" height="195">
+  <h1>Stav Theodor&#8209;Kimhi</h1>
+  <div class="role">Art Curator &amp; Advisor</div>
+  <div class="cities">New York City &nbsp;&middot;&nbsp; New Jersey &nbsp;&middot;&nbsp; Tel Aviv</div>
+  <hr class="rule">
+  <p class="tagline">I don't simply place art in spaces, I connect people with the art they are meant to live with.</p>
+</header>
+
+<hr class="divider">
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="wrap">
+  <div class="label">About</div>
+  <div class="about-grid">
+    <figure class="about-portrait">
+      <img src="images/stav-portrait.jpg" alt="Stav Theodor-Kimhi, founder and art curator" width="508" height="430">
+      <figcaption>Founder &amp; Art Curator</figcaption>
+    </figure>
+    <div class="prose">
+    <p class="lead">Art is not an accessory. It is a meeting point between a person and a space. A conversation. An emotion. A reflection of identity.</p>
+    <p>I founded THEODORA after two decades across the art world: museums, galleries, academia, and years of work alongside leaders in international hospitality, building art concepts and collections for projects from hotels to private homes. That experience taught me one thing above all: the right piece, in the right space, at the right moment, changes how a person sees.</p>
+    <p>THEODORA exists to help people discover that connection. To find artworks that resonate on a personal level and create spaces that feel meaningful, distinctive, and alive. Recent projects include private residences in Caesarea, Tel Aviv, and Herzliya, large-scale hospitality commissions, and the exhibition Creating Hope.</p>
+    </div>
+  </div>
+  <div class="services">
+    <div class="label">Our Services</div>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Art Consulting &amp; Curation</h3>
+        <p>From a single artwork to a complete collection</p>
+      </div>
+      <div class="service">
+        <h3>Sourcing &amp; Acquisition</h3>
+        <p>Personalized, through a global network of artists and makers</p>
+      </div>
+      <div class="service">
+        <h3>Commissions &amp; Creative Direction</h3>
+        <p>From first concept to final execution</p>
+      </div>
+      <div class="service">
+        <h3>Production &amp; Installation</h3>
+        <p>Framing and placement, managed end to end</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============ PORTFOLIO ============ -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="label">Portfolio</div>
+    <p class="portfolio-lead">Hotels by the sea, private homes, commissioned works, and the artists behind them. The best introduction to what I do is to&nbsp;see&nbsp;it.</p>
+  </div>
+  <div class="slideshow" id="slideshow" tabindex="0">
+    <div class="slide-frame" id="slide-frame">
+      <img id="slide-img" src="images/portfolio/slide-01.jpg" alt="THEODORA portfolio, slide 1 of 40">
+      <button class="slide-btn prev" id="slide-prev" type="button" aria-label="Previous slide">&#8249;</button>
+      <button class="slide-btn next" id="slide-next" type="button" aria-label="Next slide">&#8250;</button>
+      <button class="slide-fs" id="slide-fs" type="button" aria-label="Toggle fullscreen">&#9974;</button>
+    </div>
+    <div class="slide-counter"><span id="slide-num">01</span> / 40</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============ ART RADAR ============ -->
+<section id="radar" class="wrap">
+  <div class="label">Art Radar</div>
+  <div class="prose">
+    <p>Art Radar began as a WhatsApp group for our community in northern New Jersey and New York: a weekly radar of the exhibitions, gallery openings, public installations, art fairs, and museum events that are truly worth your time. Some weeks it is a long list. Some weeks it is one precise recommendation.</p>
+    <p>The posts are written in Hebrew and published in the group first. They are collected here, in order, so you can always come back to them. Most cover exhibitions and events that are open around the date of the post, so the timeline reads like a living calendar of the art season.</p>
+  </div>
+  <div class="btn-row">
+    <a class="btn solid" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Join the WhatsApp Group</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============ POSTS ============ -->
+<section id="posts" class="wrap">
+  <div class="label">The Posts</div>
+  <p class="timeline-note">Hebrew · newest first</p>
+
+  <!-- POST TEMPLATE (copy this block to add a new post, newest at the top):
+  <article class="post">
+    <div class="post-date">Month D, 2026</div>
+    <h2 class="post-title">English topic label</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>Hebrew paragraph…</p>
+    </div>
+  </article>
+  -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Giacometti at the Temple of Dendur, the Met",
+    "description": "Seventeen sculptures by Alberto Giacometti are installed inside and around the Temple of Dendur at the Metropolitan Museum of Art, creating a dialogue between ancient Egyptian representation and Giacometti's elongated human forms. On view through September 8, 2026.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#giacometti-dendur",
+    "mainEntityOfPage": "https://stavtheodor.com/#giacometti-dendur",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Giacometti, Metropolitan Museum of Art, Temple of Dendur, sculpture, modern art, New York exhibition",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Alberto Giacometti at the Temple of Dendur",
+        "endDate": "2026-09-08",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Museum",
+          "name": "The Metropolitan Museum of Art",
+          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
+        }
+      },
+      { "@type": "Person", "name": "Alberto Giacometti", "nationality": "Swiss" }
+    ]
+  }
+  </script>
+  <article class="post" id="giacometti-dendur">
+    <div class="post-date">June 26, 2026</div>
+    <h2 class="post-title">Giacometti at the Temple of Dendur, the Met</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>לפני 60 שנה בדיוק הלך לעולמו הפסל השווייצרי אלברטו ג'קומטי. פסליו, שהפכו לאחד הסמלים המזוהים ביותר עם הפיסול המודרני, עיצבו מחדש את האופן שבו אנחנו חושבים על הדמות האנושית.</p>
+      <p>ג'קומטי היה אמן מצליח כבר בחייו, אך בעשור וחצי האחרון זינק ערכן של עבודותיו, וחלק מפסליו נמכרו ביותר מ-100 מיליון דולר. דמויותיו האנושיות - דקות, מאורכות ושבריריות - הפכו לסימן ההיכר שלו, אך עבורו הן מעולם לא היו רק סגנון. הן היו הדרך לחקור את אחת השאלות שהעסיקו אותו לאורך כל חייו: מהו ייצוג אנושי? עם זאת, לדמויות שלו לא ניתנו מאפיינים מזהים. הן אינן משויכות לגיל, למעמד חברתי או למוצא אתני. הן אוניברסליות, על-זמניות, ומצליחות לייצג את האדם באשר הוא.</p>
+      <p>לפני כשבועיים נפתחה במוזיאון המטרופוליטן בניו יורק אחת התערוכות המסקרנות של הקיץ: 17 פסלים של ג'קומטי הוצבו בתוך ומסביב למקדש דנדור, אחד החללים המרשימים ביותר במוזיאון.</p>
+      <p>הבחירה אינה מקרית.</p>
+      <p>השפה הפיסולית של ג'קומטי נולדה, במידה רבה, מתוך היכרות עמוקה עם אמנות מצרים העתיקה. כשהגיע לפריז בשנות ה־20, הוא בילה שעות ארוכות בגלריות המצריות של מוזיאון הלובר. הרישומים והמחקרים שלו מאותה תקופה מעידים על עיסוק מתמשך באופן שבו המצרים תיארו את הגוף האנושי: דמויות מונומנטליות, סמליות, אך בו בזמן מלאות בנוכחות אנושית.</p>
+      <p>כעת, בתוך מקדש מצרי מהמאה הראשונה לפני הספירה, ניצבות 17 יצירות של ג'קומטי, ובהן Woman Walking (1932) ופסלים מסדרת Women of Venice (1956). הדמויות המאורכות שלו ניצבות מול הדמויות החקוקות באבן המקדש, ונוצר דיאלוג מרתק בין שני עולמות אמנותיים המרוחקים זה מזה אלפי שנים, אך עוסקים באותה שאלה בסיסית- כיצד מייצגים את האדם.</p>
+      <p>כפי שאמרה אוצרת קרן ג'קומטי בפריז:<br>"האמנות המצרית הדהדה עם חיפושו המתמיד של ג'קומטי אחר מונומנטליות ואנושיות בו-זמנית."</p>
+      <p>זו אינה רק תערוכת פסלים. זו חוויה של חלל, אור וקנה מידה, שבה כל תנועה של המבקר משנה את מערכת היחסים בין העבודות לבין המקדש.</p>
+      <p>גם אם כבר ביקרתם במטרופוליטן בעבר, זו הזדמנות נדירה לראות את אחד החללים האייקוניים ביותר שלו מזווית חדשה.</p>
+      <p>📍 The Met Fifth Avenue, ניו יורק<br>📅 עד 8 בספטמבר, 2026</p>
+      <figure>
+        <img src="images/2026-06-26-giacometti-walking-woman-dendur.png" alt="Alberto Giacometti, Walking Woman, a slender black bronze figure standing on a white plinth inside the Temple of Dendur, the Metropolitan Museum of Art" loading="lazy">
+        <figcaption>Alberto Giacometti, Walking Woman, inside the Temple of Dendur. The Metropolitan Museum of Art, New York.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Fresh Paint Art Fair, Tel Aviv",
+    "description": "Fresh Paint, Israel's largest contemporary art fair, celebrates its 14th edition at Tachana Technit, Tel Aviv, June 24-29, 2026, showcasing Israeli artists at all career stages.",
+    "datePublished": "2026-06-24",
+    "dateModified": "2026-06-24",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#fresh-paint-2026",
+    "mainEntityOfPage": "https://stavtheodor.com/#fresh-paint-2026",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Fresh Paint, Tel Aviv art fair, Israeli contemporary art, art fair 2026",
+    "about": [
+      {
+        "@type": "Event",
+        "name": "Fresh Paint 2026",
+        "startDate": "2026-06-24",
+        "endDate": "2026-06-29",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Tachana Technit",
+          "address": { "@type": "PostalAddress", "addressLocality": "Tel Aviv", "addressCountry": "IL" }
+        }
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="fresh-paint-2026">
+    <div class="post-date">June 24, 2026</div>
+    <h2 class="post-title">Fresh Paint Art Fair, Tel Aviv</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>היי כולם,</p>
+      <p>הפוסט של היום מוקדש לחברי הקהילה שנמצאים בישראל 🇮🇱</p>
+      <p>היום נפתח יריד צבע טרי, אחד מאירועי האמנות שאני הכי אוהבת ומחכה להם בכל שנה. השנה מציין היריד את שנתו ה־14, והוא ממשיך להיות אחד האירועים המסקרנים והמשפיעים ביותר בשדה האמנות והעיצוב הישראלי.</p>
+      <p>בתור מי שעוקבת אחרי עולם האמנות כבר שנים, אחד הדברים שאני הכי אוהבת בצבע טרי הוא האפשרות לגלות אמנים ישראלים שעדיין לא נמצאים בכל רדאר. לא פעם אני פוגשת שם יוצרים בתחילת דרכם, ואז כמה שנים מאוחר יותר רואה אותם מציגים בגלריות מובילות, במוזיאונים ובאוספים פרטיים. מבחינתי, זו אחת הסיבות שהיריד הזה נשאר כל כך רלוונטי ומרגש גם אחרי כל כך הרבה שנים.</p>
+      <p>מעבר לעבודות עצמן, צבע טרי הוא מקום שבו אפשר להרגיש את הדופק של הסצנה המקומית, לראות מה מעסיק אמנים היום, אילו חומרים ורעיונות תופסים מקום, ואיך אמנות מגיבה למציאות שסביבה. לצד אמנות עכשווית תמצאו גם עיצוב, פרויקטים מיוחדים, יוזמות חברתיות ושיתופי פעולה שמרחיבים את השיחה מעבר לקירות הגלריה.</p>
+      <p>אם אתם נמצאים בישראל בימים הקרובים, אוהבים אמנות, מתעניינים באיסוף, או פשוט נהנים לגלות יוצרים חדשים- אני ממליצה בחום לקפוץ לביקור.</p>
+      <p>ואם אתם מגיעים, ספרו לי אילו עבודות או אמנים תפסו לכם את העין 🎨✨<br>היריד יתקיים עד ה-29 ביוני.<br><a href="https://www.freshpaint.co.il/" target="_blank" rel="noopener">freshpaint.co.il</a></p>
+      <figure>
+        <img src="images/2026-06-26-fresh-paint-2026.jpg" alt="Fresh Paint 2026, the art and design fair, Tel Aviv, June 24–29, Tachana Technit" loading="lazy">
+        <figcaption>Fresh Paint 2026, Tachana Technit, Tel Aviv. June 24&ndash;29, 2026.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Three Exhibitions in New York",
+    "description": "Three concurrent New York exhibitions: Fred Tomaselli's Blooms Disrupted at James Cohan Gallery (through June 27), Whitney Bedford at Miles McEnery Gallery (through June 20), and Arghavan Khosravi's What Remains at Uffner and Liu Gallery (through July 2).",
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#three-exhibitions-nyc-june-2026",
+    "mainEntityOfPage": "https://stavtheodor.com/#three-exhibitions-nyc-june-2026",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Fred Tomaselli, Whitney Bedford, Arghavan Khosravi, New York gallery exhibitions, James Cohan Gallery, Miles McEnery Gallery",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Blooms Disrupted: Fred Tomaselli",
+        "endDate": "2026-06-27",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "James Cohan Gallery", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Whitney Bedford",
+        "endDate": "2026-06-20",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "Miles McEnery Gallery", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "What Remains: Arghavan Khosravi",
+        "endDate": "2026-07-02",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "Uffner and Liu Gallery", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="three-exhibitions-nyc-june-2026">
+    <div class="post-date">June 17, 2026</div>
+    <h2 class="post-title">Three Exhibitions in New York</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>היום אני רוצה להמליץ לכם על <strong>שלוש תערוכות שוות במיוחד</strong> בניו יורק, שכל אחת מהן עושה שימוש במסורת אמנותית היסטורית אחרת כדי לעסוק בשאלות עכשוויות. למרות ההבדלים (העצומים, יש לומר) ביניהן, שלושתן מדגימות כיצד שפות חזותיות מן העבר יכולות להישאר רלוונטיות, חיות ומעוררות מחשבה גם היום.</p>
+      <p>🌺 Fred Tomaselli | Blooms Disrupted</p>
+      <p>📍 James Cohan Gallery<br>🗓️ עד 27 ביוני 2026</p>
+      <p>בתערוכה החדשה שלו, Blooms Disrupted, פרד טומאסלי לוקח את רעיון הגן ומפרק אותו לכדי עולם חזותי כמעט פסיכדלי. העבודות נוצרו בהשראת הגן שתכנן רוברט אירווין במוזיאון Getty בלוס אנג'לס. אירווין ראה בגן יצירת אמנות חיה ולא רק עיצוב נוף, והרעיון של שינוי מתמיד ותפיסה חזותית משתנה מהדהד גם בעבודותיו של טומאסלי.</p>
+      <p>הציורים מתפוצצים בצבע, בדפוסים חוזרים ובצורות גיאומטריות, ונעים ללא הרף בין סדר לכאוס. התוצאה היא קומפוזיציות קלידוסקופיות המשלבות מוטיבים מהטבע יחד עם מבנים מופשטים ויוצרות תחושת תנועה כמעט היפנוטית.</p>
+      <p>לצד הציורים מוצגים גם קולאז'ים המבוססים על עמודי ה-New York Times. החיבור בין עולם החדשות היומיומי לבין נוף דמיוני וצמחי מעלה שאלות על היחסים בין טבע, מידע ורעש תקשורתי בעידן הנוכחי.</p>
+      <figure>
+        <div class="post-gallery">
+          <img src="images/2026-06-17-tomaselli-collage.jpg" alt="Fred Tomaselli, a kaleidoscopic collage built from New York Times pages with a tree and bright flowers on a blue ground" loading="lazy">
+          <img src="images/2026-06-17-tomaselli-garden.jpg" alt="Fred Tomaselli, a psychedelic flower garden of stars and blooms against a blue sky" loading="lazy">
+        </div>
+        <figcaption>Fred Tomaselli, Blooms Disrupted, James Cohan Gallery, New York.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/2026-06-17-getty-irwin-garden.jpg" alt="Aerial view of Robert Irwin's Central Garden at the Getty Center, with its circular maze of azaleas in a reflecting pool" loading="lazy">
+        <figcaption>Robert Irwin, Central Garden, Getty Center, Los Angeles. The inspiration for the series.</figcaption>
+      </figure>
+      <p>🌄 Whitney Bedford</p>
+      <p>📍 Miles McEnery Gallery<br>🗓️ עד 20 ביוני 2026</p>
+      <p>ויטני בדפורד, אמנית אמריקאית המתגוררת בלוס אנג'לס, היא דוגמא מצוינת לרומנטיקה עכשווית (המושפעת מהזרם הרומנטי של המאה ה-19). בדפורד משלבת בין מסורת ציור הנוף הקלאסי לבין שפה ציורית המאופיינת בהשטחת החלל ובצמצום העומק הפרספקטיבי. היא שואבת השראה מציורי רנסנס ומנופי עבר אידיליים, אך במהרה חודרים אליהם סימנים מובהקים של ההווה: שקיעות ניאון, כבישים, צורות גיאומטריות, אדריכלות עכשווית ועצי הדקל של דרום קליפורניה.</p>
+      <p>התוצאה היא נוף שנע בין יופי לרמז מתמיד של אי-יציבות. לצד הרומנטיקה של הטבע נוכחת תחושת משבר סביבתי, המושפעת גם מהשריפות הגדולות שפקדו את לוס אנג'לס בינואר 2025. בדפורד משתמשת בנוף לא רק כנושא ציורי, אלא ככלי לחשיבה על האופן שבו שינויי האקלים משנים את מערכת היחסים שלנו עם הסביבה הטבעית.</p>
+      <figure>
+        <img src="images/2026-06-17-bedford-landscape.jpg" alt="Whitney Bedford, a landscape with a willow tree under a pink sky, framed by neon geometric lines" loading="lazy">
+        <figcaption>Whitney Bedford, Miles McEnery Gallery, New York.</figcaption>
+      </figure>
+      <p>🪞 Arghavan Khosravi | What Remains</p>
+      <p>📍 Uffner &amp; Liu Gallery<br>🗓️ עד 2 ביולי 2026</p>
+      <p>אחרונה חביבה ובעיני הכי מעניינת היא התערוכה What Remains של האמנית האיראנית ארגוואן חוסראווי. חוסראווי בונה עולם שנראה כמו חלום רב-שכבתי; היא משלבת בין מסורת המיניאטורה הפרסית לבין מבנים המזוהים עם יצירות מזבח אירופיות מימי הביניים, ויוצרת קומפוזיציות עשירות שבהן גילוי והסתרה מתקיימים בו-זמנית. דלתות, וילונות וחבלים מופיעים שוב ושוב בעבודותיה, מסתירים חלקים מהדימוי וחושפים אחרים. דמויות נשיות רבות נראות רק באופן חלקי, כאילו הן לכודות בין נוכחות להיעדר.</p>
+      <p>חוסראווי, שחיה ופועלת כיום בקונטיקט, משתמשת בשפה החזותית הזו כדי לחקור את חוויית החיים של נשים תחת מערכות פוליטיות, תרבותיות ודתיות מגבילות, ואת המתח המתמיד בין נראות, שליטה וחופש.</p>
+      <figure>
+        <img src="images/2026-06-17-khosravi-what-remains.jpg" alt="Arghavan Khosravi, female figures partly hidden behind a curtain beside an arched altarpiece-like panel" loading="lazy">
+        <figcaption>Arghavan Khosravi, What Remains, Uffner &amp; Liu Gallery, New York.</figcaption>
+      </figure>
+      <p>שלוש תערוכות, שלוש שפות חזותיות מן העבר, ושלוש דרכים שונות להביט דרכן על ההווה. איזו מהן הכי מסקרנת אתכם? 🤍</p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "David Hockney, 1937–2026",
+    "description": "A tribute to David Hockney, the British artist who died June 11, 2026, after more than six decades of painting, printmaking, photography, and digital art. Known for his California pool paintings and constant reinvention across media.",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#david-hockney-1937-2026",
+    "mainEntityOfPage": "https://stavtheodor.com/#david-hockney-1937-2026",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "David Hockney, obituary, British painter, pool paintings, modern art, art history",
+    "about": [
+      { "@type": "Person", "name": "David Hockney", "nationality": "British", "deathDate": "2026-06-11" }
+    ]
+  }
+  </script>
+  <article class="post" id="david-hockney-1937-2026">
+    <div class="post-date">June 12, 2026</div>
+    <h2 class="post-title">David Hockney, 1937&ndash;2026</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>אתמול הלך לעולמו אחד האמנים האיקוניים והמשפיעים ביותר של תקופתנו, האמן הבריטי דייויד הוקני.<br>הוקני יצר למעלה משישה עשורים והמשיך לעבוד כמעט עד ליומו האחרון.</p>
+      <p>לאורך הקריירה שלו הוא לא הפסיק להתחדש, לחקור ולדחוף את גבולות המדיום; מציור ורישום, דרך צילום והדפס, ועד יצירה דיגיטלית באייפד.</p>
+      <p>הוא התפרסם בזכות השפה הוויזואלית הייחודית שלו: צבעוניות עזה, אור קליפורני מסנוור, קומפוזיציות נועזות, ובעיקר סדרת ציורי הבריכות האיקונית שלו, שהפכה לחלק בלתי נפרד מהקאנון של האמנות המודרנית.</p>
+      <p>אבל מעבר לאסתטיקה המזוהה איתו, הוקני היה אמן של התבוננות. אמן שפעל In situ וידע לקחת רגעים יומיומיים, נוף, אור או אינטימיות אנושית, ולהפוך אותם לחוויה חזותית עמוקה ובלתי נשכחת.</p>
+      <p>המורשת שלו היא תזכורת לכך שאמנות גדולה לא רק מתעדת את העולם, היא משנה את הדרך שבה אנחנו רואים אותו.</p>
+      <figure>
+        <img src="images/2026-06-12-hockney-pool.jpg" alt="David Hockney, Portrait of an Artist (Pool with Two Figures), 1972" loading="lazy">
+        <figcaption>David Hockney, Portrait of an Artist (Pool with Two Figures), 1972. Image via Christie's.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Fifth Avenue, Where Jewelry Meets Art",
+    "description": "Tiffany and Co., Bulgari, and Chanel's Fifth Avenue flagships house significant contemporary art collections, including works by Basquiat and James Turrell at Tiffany, revealing that some of New York's most compelling art is displayed in luxury retail rather than museums.",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#fifth-avenue-jewelry-art",
+    "mainEntityOfPage": "https://stavtheodor.com/#fifth-avenue-jewelry-art",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Fifth Avenue, Tiffany, Bulgari, Chanel, art collection, New York, luxury retail, Basquiat, James Turrell"
+  }
+  </script>
+  <article class="post" id="fifth-avenue-jewelry-art">
+    <div class="post-date">June 12, 2026</div>
+    <h2 class="post-title">Fifth Avenue, Where Jewelry Meets Art</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>יש סוד קטן לעולם האמנות של ניו יורק: חלק מהאמנות העכשווית המסקרנת ביותר בעיר בכלל לא מוצגת במוזיאונים או בגלריות, אלא מסתתרת דווקא בחנויות התכשיטים היוקרתיות של השדרה החמישית ✨</p>
+      <p>המוסד הראשון הוא תכשיטי טיפאני. כבר מראשית דרכה, טיפאני לקחה חלק פעיל בעולם האמנות. המייסד, צ'ארלס טיפאני, היה פטרון של מוזיאון המטרופוליטן וממייסדי אגודת האמנויות היפות של ניו יורק. בנו, לואיס טיפאני, היה מהאמנים המרכזיים של זרם האר נובו האמריקאי. מכירים את מנורות טיפאני? 🙂</p>
+      <p>בחנות הדגל של טיפאני בשדרה החמישית תוכלו למצוא אוסף אמנות מרשים במיוחד, כולל הציור המפורסם של בסקיאט מהקמפיין של ביונסה וג'יי זי. לצידה מוצגות עבודות של אמנים אמריקאים מובילים כמו ג'יימס טורל (שבאמת שווה פוסט בפני עצמו), ראשיד ג'ונסון ועוד.</p>
+      <p>יחסי הגומלין בין אמנות לתכשיטי יוקרה לא נעצרים בטיפאני. גם המותג האיטלקי בולגרי מתהדר בקשר הדוק לעולם האמנות. החברה הפכה החל מהשנה לשותפה רשמית של הביאנלה בונציה, היא תומכת באמנים צעירים ותורמת רבות לשימור עתיקות ברומא.</p>
+      <p>אבל, החיבור המסקרן ביותר הוא לאמן הפופ אנדי וורהול. התכשיטים של בולגרי בשנות ה-70 וה-80 הושפעו ישירות מפופ ארט, ו-וורהול עצמו היה אובססיבי למותג ואספן נלהב של תכשיטים. הוא אמר פעם: &ldquo;כשאני ברומא, אני תמיד מבקר בבולגרי. זה המוזיאון החשוב ביותר לאמנות עכשווית.&rdquo; זו אמירה מעניינת, כי היא מערערת על ההפרדה שאנחנו רגילים לעשות בין אמנות, עיצוב, אופנה ואובייקטים של תשוקה. עבור וורהול, הגבולות האלה היו מטושטשים ממילא.</p>
+      <p>עוד חיבור לאמנות מתקיים במותג שאנל. קוקו שאנל הייתה אספנית אובססיבית של אמנות ועתיקות. הדירה האגדית שלה בפריז הייתה מלאה בחפצי אמנות ותרבות שאספה. באותה תקופה, אספנות של אמנות וחפצים מהמזרח נחשבה לשיא התחכום התרבותי והייתה חלק משמעותי מהשפעות המודרניזם המערבי- תופעה שהחלה כבר במאה ה־19 והמשיכה עמוק אל תוך המאה ה־20. הטעם האקלקטי הזה נוכח גם בחלל התכשיטים של שאנל כיום: חלק מהאוסף מוצג בחלל הציבורי הפתוח לקהל, וחלקו שמור ללקוחות פרטיים בחדרים האינטימיים שבקומה העליונה.</p>
+      <p>זה אולי נשמע מפתיע, אבל אולי זה רק מוכיח שאמנות, עיצוב ויוקרה תמיד היו שזורים זה בזה.</p>
+      <p>האם הופתעתם מהחיבור בין שני העולמות? 💎🖼️</p>
+      <p>אנקדוטה קצרה: וורהול הציע פעם לניקולה בולגרי, נכדו של מייסד הבית, כמה מהציורים שלו בתמורה לתכשיטים של בולגרי. בולגרי סירב, ולימים הודה שזו הייתה העסקה הגרועה בחייו 😅 לכן, כשהחנות נפתחה מחדש ב 2017 נתלו בה שלושה הדפסים של וורהול באיזור ה VIP.</p>
+      <figure>
+        <div class="post-gallery">
+          <img src="images/2026-06-12-fifth-avenue-basquiat-campaign.jpg" alt="Beyonce and Jay-Z with a Basquiat painting in the Tiffany campaign" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-tiffany-flagship.jpg" alt="Artworks inside the Tiffany flagship on Fifth Avenue" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-tiffany-lamp.jpg" alt="A Tiffany stained glass lamp" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-warhol-venus.jpg" alt="Warhol Venus prints displayed in a jewelry store" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-chanel.jpg" alt="The Chanel salon with Coromandel screens" loading="lazy">
+        </div>
+        <figcaption>As shared with the original post.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Clinamen at Park Avenue Armory",
+    "description": "Clinamen, the immersive sound installation by French artist Celeste Boursier-Mougenot, fills the Drill Hall of Park Avenue Armory with floating ceramic bowls that drift, collide, and generate live improvised music on water. June 10 through August 26, 2026.",
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-09",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#clinamen-park-avenue-armory",
+    "mainEntityOfPage": "https://stavtheodor.com/#clinamen-park-avenue-armory",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Clinamen, Celeste Boursier-Mougenot, Park Avenue Armory, sound installation, immersive art, New York 2026",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Clinamen",
+        "startDate": "2026-06-10",
+        "endDate": "2026-08-26",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "PerformingArtsTheater",
+          "name": "Park Avenue Armory",
+          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
+        }
+      },
+      { "@type": "Person", "name": "Celeste Boursier-Mougenot", "nationality": "French" }
+    ]
+  }
+  </script>
+  <article class="post" id="clinamen-park-avenue-armory">
+    <div class="post-date">June 9, 2026</div>
+    <h2 class="post-title">Clinamen at Park Avenue Armory</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>🎶 Clinamen | סלסט בורסייה-מוז'נו ב–Park Avenue Armory 🎶</p>
+      <p>מחר נפתחת בניו יורק אחת העבודות המהפנטות והמדוברות של השנים האחרונות: Clinamen של האמן, המוזיקאי והמלחין הצרפתי Céleste Boursier-Mougenot.</p>
+      <p>במרכז המיצב ניצבים אגנים עצומים מלאים במים, שעל פניהם צפות מאות קערות קרמיקה לבנות. זרם עדין מניע אותן באיטיות, וכאשר הן נפגשות זו בזו הן מפיקות צלילים עדינים ובלתי צפויים. התנודות האקוסטיות הללו, ללא כל התערבות של מבצע, הן לב לבה של היצירה; סימפוניה אמיתית של הרגע, המתפתחת עם זרימה של גלים בלתי נראים.</p>
+      <p>ביצירה הצליל הופך לחומר חי והמבקר מוזמן להשתתף באופן פעיל בחוויה. שמה של העבודה, Clinamen, לקוח מהפיזיקה האפיקוראית ומתאר את הסטייה האקראית של אטומים- רעיון המשקף את אופייה המשתנה של מיצג האמנות. כל תנועה של המים יוצרת מפגש חדש בין הקערות, וכל מפגש מוליד צליל אחר. כך נבנית סימפוניה חיה שאינה חוזרת על עצמה לעולם.</p>
+      <p>העבודה ממשיכה את עיסוקו רב השנים של בורסייה-מוז'נו בגבול שבין אמנות, מוזיקה וחוויה חושית. חפצים יומיומיים מקבלים כאן תפקיד חדש, והצליל הופך לחומר פיסולי של ממש. המבקרים מוזמנים לשוטט בחלל, להאט את הקצב, ולהתמסר לרגע שבו הזמן נדמה כמעט כמושעה.</p>
+      <p>בגרסה החדשה המוצגת ב־Park Avenue Armory, המיצב ממלא את חלל ה־Drill Hall העצום והופך אותו לנוף אקוסטי ומדיטטיבי, שבו מים, קרמיקה, אדריכלות ונוכחות אנושית נפגשים לדיאלוג עדין ומתמשך.</p>
+      <p>📍 Park Avenue Armory, New York<br>📅 10 ביוני – 26 באוגוסט 2026</p>
+      <p>זו אחת מאותן עבודות שקשה להסביר במילים! צריך פשוט להיות שם, להקשיב, ולהיסחף. ✨</p>
+      <p>חווייה מומלצת גם לילדים! 😊</p>
+      <figure>
+        <video src="videos/2026-06-09-clinamen-armory.mp4" controls preload="metadata" playsinline style="width:100%;height:auto;border-radius:inherit"></video>
+        <figcaption>Clinamen in motion, Bourse de Commerce &ndash; Pinault Collection, Paris. Video via <a href="https://www.youtube.com/watch?v=bvWcvbfctpw" target="_blank" rel="noopener">YouTube</a>.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Living With Art, at the Montclair Art Museum",
+    "description": "Living With Art at the Montclair Art Museum presents over one hundred works from the private collection of Ann and Mel Shaffer, assembled over four decades. The installation replicates the salon-style density of their home, offering collectors and designers a model for how art can be lived with rather than displayed. Through June 28, 2026.",
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#living-with-art-montclair",
+    "mainEntityOfPage": "https://stavtheodor.com/#living-with-art-montclair",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Montclair Art Museum, living with art, private collection, New Jersey, contemporary art, collectors, interior design",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Living With Art: The Shaffer Collection",
+        "endDate": "2026-06-28",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Museum",
+          "name": "Montclair Art Museum",
+          "address": { "@type": "PostalAddress", "addressLocality": "Montclair", "addressRegion": "NJ", "addressCountry": "US" }
+        }
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="living-with-art-montclair">
+    <div class="post-date">June 4, 2026</div>
+    <h2 class="post-title">Living With Art, at the Montclair Art Museum</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>הפעם אני לוקחת אותנו קצת יותר קרוב לבית, אל העיירה מונטקלייר, חצי שעה מאיתנו.</p>
+      <figure>
+        <img src="images/2026-06-04-montclair-shaffer.jpg" alt="Salon-style hung walls and a Nick Cave Soundsuit at the Montclair Art Museum" loading="lazy">
+      </figure>
+      <p>ב־Montclair Art Museum מוצגות בימים אלה יותר ממאה עבודות מתוך האוסף הפרטי של אן ומל שאפר, זוג שאסף אמנות עכשווית במשך יותר מארבעה עשורים. אבל מה שהופך את התערוכה הזו למיוחדת הוא לא רק מי האמנים שעל הקירות, אלא הדרך שבה האמנות מוצגת.</p>
+      <p>אספני אמנות רציניים מחזיקים בדרך כלל הרבה יותר עבודות ממה שניתן להציג בבית, ומחליפים ביניהן מדי פעם. אצל בני הזוג שאפר הסיפור שונה. לאורך השנים הם רכשו יצירות שסיקרנו אותם, אתגרו אותם או ריגשו אותם, ולאו דווקא כאלה שהתאימו לטרנדים בשוק. ובעיקר, הם תמיד חיו עם האמנות שלהם. לא שמרו אותה למחסן, לא הסתירו אותה מאחורי זכוכית, אלא שילבו אותה בחיי היומיום.</p>
+      <p>זו גם הסיבה שהתערוכה אינה מרגישה כמו תערוכה מוזיאלית טיפוסית. הבחירה האוצרותית ברורה כבר מהרגע הראשון: אין כמעט לייבלים או טקסטים על הקירות. בכוונה. כך גם נראה הבית של בני הזוג שאפר. העבודות מסודרות לפי האופן שבו הוצבו בחדרי הבית, ובחללי הגלריה פוזרו כיסאות המזמינים את המבקרים לעצור, לשבת ולהתבונן. לרגעים מרגישים פחות כמו מבקרים במוזיאון ויותר כמו אורחים בבית מלא אמנות.</p>
+      <p>מה שנשאר איתי מהביקור הוא הרעיון שאמנות אינה משהו ששומרים ליום מיוחד. היא חלק מהחיים עצמם. ולמרות שקשה להתעלם מהערך הכספי של חלק מהעבודות בתערוכה, אספנות של אמנות אינה שמורה רק לבעלי הון. היא יכולה להתחיל מתצלום של אמן מקומי שאתם אוהבים, הדפס קטן שקניתם בטיול, או אפילו מציאה בחנות עתיקות שכונתית. הנקודה היא לא היוקרה, אלא להקיף את עצמכם בדברים שמעוררים בכם רגש, מחשבה וסקרנות. ✨</p>
+      <p><strong>מה לא לפספס בתערוכה?</strong></p>
+      <p>🖼️ Untitled #408 של Cindy Sherman (2002), עבודה מתקופה מכרעת בקריירה של אחת האמניות המשפיעות בדורה.</p>
+      <p>🖼️ עבודה של Nick Cave מ־2018, שבה ראש ברונזה מחובר לערימה של חולצות בדגל ארצות הברית. אחת הנוכחויות החזקות בתערוכה.</p>
+      <p>🖼️ Jimmy Paulette and Misty in a Taxi, NYC של Nan Goldin (1991), צילום שנשאר איתך הרבה אחרי שעוזבים את החדר.</p>
+      <p>אם כבר מגיעים, שווה לשלב גם טיול במונטקלייר עצמה. ☕️ זו אחת העיירות המקסימות בניו ג'רזי, עם גלריות קטנות, בתי קפה ומסעדות ואווירה יצירתית שמורגשת כמעט בכל פינה.</p>
+      <p>טיפ קטן: 📚 מחזיקי כרטיס Public Library באיזורינו יכולים ליהנות מכניסה חינם למוזיאון ל־2 מבוגרים וילדים חופשי.</p>
+      <p>📅 התערוכה פתוחה עד 28 ביוני 2026</p>
+      <figure>
+        <div class="pair-bottom">
+          <img src="images/2026-06-04-montclair-sherman.jpg" alt="Cindy Sherman, Untitled #408, a portrait of a woman with big blonde curls in a blue satin dress" loading="lazy">
+          <img src="images/2026-06-04-montclair-goldin.jpg" alt="Nan Goldin, Misty and Jimmy Paulette in a Taxi, two drag queens in the back of a New York cab" loading="lazy">
+        </div>
+        <div class="pair-caps">
+          <figcaption>Cindy Sherman, Untitled #408, 2002.</figcaption>
+          <figcaption>Nan Goldin, Misty and Jimmy Paulette in a Taxi, NYC, 1991.</figcaption>
+        </div>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Marcel Duchamp at MoMA",
+    "description": "A major retrospective of Marcel Duchamp at the Museum of Modern Art, New York, brings together works spanning Fountain (1917), Nude Descending a Staircase No. 2 (1912), and The Large Glass. On view through August 22, 2026.",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#duchamp-moma",
+    "mainEntityOfPage": "https://stavtheodor.com/#duchamp-moma",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Marcel Duchamp, MoMA, retrospective, readymade, Fountain, modern art, Museum of Modern Art New York",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Marcel Duchamp",
+        "endDate": "2026-08-22",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Museum",
+          "name": "Museum of Modern Art",
+          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
+        }
+      },
+      { "@type": "Person", "name": "Marcel Duchamp", "nationality": "French" }
+    ]
+  }
+  </script>
+  <article class="post" id="duchamp-moma">
+    <div class="post-date">May 28, 2026</div>
+    <h2 class="post-title">Marcel Duchamp at MoMA</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>בהמשך לשיח הביקורתי הבוחן את השאלה ״מהי אמנות?״, קשה להתעלם מהתערוכה של אחד האמנים שניתן לומר כי השפיעו על עולם האמנות יותר מכל אמן אחר במאה ה 20: האמן הצרפתי אמריקאי Marcel Duchamp. דושאן, בחשיבה פורצת דרך ורדיקלית לזמנה, סלל את הדרך לעידן חדש של חופש יצירתי שהדיו מורגשים עד היום. באמצעות תערוכה רטרוספקטיבית רחבת היקף, הכוללת כ 300 עבודות ומשתרעת על פני שישה עשורים של יצירה, מנסה Museum of Modern Art (MoMA) להתחקות אחר מסלולו של אמן יוצא דופן שבחר שלא להשתייך לזרמים האמנותיים שפעלו סביבו, אלא לעצב לעצמו שפה אמנותית ייחודית ועצמאית.</p>
+      <p>דושאן מזוהה יותר מכל עם ה"רדי מיידס" שלו, חפצי יום יום שנלקחו מהקשרם המקורי והוצגו כאמנות. המפורסמת שבהן היא Fountain מ 1917, משתנה שהוגשה לתערוכה תחת שם בדוי ושינתה מן היסוד את השיח הפילוסופי סביב האמנות. העבודה עוררה שאלות עמוקות על גבולות המדיום, תפקידו של האמן, מושג המקוריות והאופן שבו אנו מגדירים יצירת אמנות.</p>
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="Marcel Duchamp, Fountain, 1917. Photograph by Alfred Stieglitz." loading="lazy">
+        <figcaption>Fountain, 1917. Photograph by Alfred Stieglitz. Public domain.</figcaption>
+      </figure>
+      <p>אף שהתערוכה מבקשת לבחון את היקף יצירתו של דושאן באופן כמעין מחקרי, כמעין מעבדה רחבת ממדים, נדמה לעיתים שאוצריה מבקשים להציג מחדש את דמותו של האמן יותר מאשר להציע פרשנות חדשה או גילוי משמעותי אודותיו. אהבתי במיוחד את הבחירה לכלול את ציוריו המוקדמים, ובהם Nude Descending a Staircase (No. 2) מ 1912, שכן רבים אינם מודעים לכך שדושאן החל את דרכו כצייר. עם זאת, הורגש בעיניי חסרונן של עבודותיו הקינטיות והתנועתיות, שעמדו על התפר שבין אובייקט, תנועה ותפיסה, וביטאו את אחד הרעיונות המרכזיים ביצירתו: אמנות כחוויה, ולא רק כאובייקט.</p>
+      <figure>
+        <img src="images/2026-05-28-duchamp-nude.jpg" alt="Marcel Duchamp, Nude Descending a Staircase (No. 2), 1912" loading="lazy" style="max-width:min(280px,100%)">
+        <figcaption>Nude Descending a Staircase (No. 2), 1912.</figcaption>
+      </figure>
+      <p>ועדיין, האפשרות לראות יחד גוף עבודות כה רחב של אחד האמנים המשפיעים והחידתיים ביותר של המאה ה 20, הופכת את התערוכה לביקור ששווה בהחלט להקדיש לו זמן.<br>בתצוגה עד 22 באוגוסט 2026.</p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Pop: 1960s to Today, at the Guggenheim",
+    "description": "Pop: From the 1960s to Today at the Solomon R. Guggenheim Museum traces Pop art's influence from Warhol, Lichtenstein, and Oldenburg through Maurizio Cattelan and Yayoi Kusama. Opens June 5, 2026.",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#guggenheim-pop",
+    "mainEntityOfPage": "https://stavtheodor.com/#guggenheim-pop",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Guggenheim, Pop art, Warhol, Lichtenstein, Yayoi Kusama, contemporary art, New York exhibition 2026",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Pop: From the 1960s to Today",
+        "startDate": "2026-06-05",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Museum",
+          "name": "Solomon R. Guggenheim Museum",
+          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
+        }
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="guggenheim-pop">
+    <div class="post-date">May 28, 2026</div>
+    <h2 class="post-title">Pop: 1960s to Today, at the Guggenheim</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>אם חודש מאי מסמן את יריית הפתיחה של עונת האמנות בניו יורק, הרי שיוני הוא גולת הכותרת עבור אוהבי האמנות באשר הם. המוזיאונים האיקוניים והגלריות החדשניות בעיר פותחים את התערוכות המסקרנות והשאפתניות ביותר שלהם, והעיר כולה מוצפת בתרבות חזותית במיטבה ✨</p>
+      <p>אחד המוזיאונים שראוי להקדיש לו פוסט בפני עצמו הוא הגוגנהיים, שבו תיפתח ב־5 ביוני התערוכה Pop: From the 1960s to Today. כפי ששמה מרמז, התערוכה בוחנת את הדיאלוג המתמשך בין עבודות פופ איקוניות משנות ה־60 לבין יצירות עכשוויות שנרכשו לאורך השנים וממשיכות להרחיב, לערער ולעדכן את השפה הפופית.</p>
+      <p>המוזיאון צולל אל הארכיון העשיר שלו ומציג עבודות של ענקי התחום, בהם אנדי וורהול, רוי ליכטנשטיין וקלאס אולדנבורג (פסל שוודי אמריקאי שנודע בעיקר בזכות עבודתו על פסלים סביבתיים שמהווים גרסאות ענק של חפצים יום-יומיים. מוטיב מרכזי נוסף ביצירתו הוא גרסאות רכות של חפצים קשיחים), לצד אמנים עכשוויים פורצי דרך כמו מאוריציו קטלאן, שלו אקדיש פוסט נפרד. דרך עיסוק במדיה, צריכה, פרסום ותרבות המונים, התערוכה בוחנת מחדש שאלות יסוד: מהי אמנות? היכן עובר הגבול בין אמנות גבוהה לתרבות פופולרית? ומהו תפקידו של המוזיאון בהגדרת מה ראוי להיקרא יצירת אמנות?</p>
+      <p>וכאילו שזה לא מספיק, כחלק מהתערוכה יוצג גם אחד מחדרי המראות האייקוניים של יאיו קוסאמה 🪩 תוספת חווייתית וסוחפת במיוחד, שמכניסה ממד כמעט אינסופי של השתקפות, צבע ודימוי אל תוך השיח על תרבות חזותית וצריכה.</p>
+      <p>אין לי ספק שזו הולכת להיות תערוכה נועזת, צבעונית, חכמה וחווייתית 🎨 וכנראה גם התערוכה שאני באופן אישי הכי מחכה לראות בקיץ 2026.</p>
+      <figure>
+        <img src="images/2026-05-28-guggenheim-pop.jpg" alt="Pop art painting of a woman's eye with a tear" loading="lazy">
+        <figcaption>As shared with the original post.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "A Tip: Free Museum Passes from Your Library",
+    "description": "Public libraries in Tenafly, Demarest, Closter, and Cresskill, NJ offer free Guggenheim museum passes to cardholders. A practical tip for NJ and NY art audiences to access major museums at no cost.",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#library-museum-passes",
+    "mainEntityOfPage": "https://stavtheodor.com/#library-museum-passes",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "free museum passes, New Jersey library, Guggenheim, museum access, art tip, NJ museums, Tenafly, Demarest"
+  }
+  </script>
+  <article class="post note" id="library-museum-passes">
+    <div class="post-date">May 28, 2026</div>
+    <h2 class="post-title">A Tip: Free Museum Passes from Your Library</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>ועוד טיפ קטן: הספריות הציבוריות של טנפליי, דמרסט, קלוסטר וקרסקיל מעניקות לתושבים כניסה חינם לגוגנהיים. צריך רק לשאול את הפאס מראש עם כרטיס הספרייה.</p>
+      <p>לידיעתכם, גם הספרייה בפיירלון מציעה Museum pass.</p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "A Tip: Museums on Us",
+    "description": "Bank of America's Museums on Us program offers free admission to the Metropolitan Museum of Art, the Guggenheim, and hundreds of US museums on the first full weekend of each month to Bank of America and Merrill Lynch cardholders.",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#museums-on-us-bofa",
+    "mainEntityOfPage": "https://stavtheodor.com/#museums-on-us-bofa",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Museums on Us, Bank of America, free museum admission, Metropolitan Museum, Guggenheim, New York museums"
+  }
+  </script>
+  <article class="post note" id="museums-on-us-bofa">
+    <div class="post-date">May 28, 2026</div>
+    <h2 class="post-title">A Tip: Museums on Us</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>למי שמחזיק כרטיס אשראי של Bank of America, יש הטבה מעולה שלא כולם יודעים עליה: בסופ״ש הראשון של כל חודש (השבוע ה-6-7 ביוני!) הכניסה למוזיאונים רבים ברחבי ארה״ב חינם לכל מחזיק כרטיס. כרטיס אחד לכל בעל חשבון, כלומר זוג = שני כרטיסים. ברשימה: מטרופוליטן, גוגנהיים ועוד רבים במנהטן ובכל ארה״ב.</p>
+      <p>לרשימה המלאה: <a href="https://about.bankofamerica.com/en/making-an-impact/museums-on-us-partners" target="_blank" rel="noopener">about.bankofamerica.com/museums-on-us</a></p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Pollock Record",
+    "description": "Jackson Pollock's Number 7A (1948) sold at Christie's New York for $181.2 million, a new auction record for the artist, nearly tripling his previous $61.2 million record. The post examines collector strategy through Sy Newhouse's curated 47-work collection versus Paul Allen's 155-work trove.",
+    "datePublished": "2026-05-24",
+    "dateModified": "2026-05-24",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#pollock-record",
+    "mainEntityOfPage": "https://stavtheodor.com/#pollock-record",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Jackson Pollock, auction record, Christie's, Number 7A, art market, drip painting, collecting strategy",
+    "about": [
+      {
+        "@type": "SaleEvent",
+        "name": "Jackson Pollock Number 7A Auction",
+        "location": { "@type": "Organization", "name": "Christie's New York", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": "VisualArtwork",
+        "name": "Number 7A",
+        "creator": { "@type": "Person", "name": "Jackson Pollock" },
+        "dateCreated": "1948"
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="pollock-record">
+    <div class="post-date">May 24, 2026</div>
+    <h2 class="post-title">The Pollock Record</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>שבוע שעבר היה אחד השבועות ההיסטוריים בעולם שוק האמנות. אבל המכירה היא לא הסיפור הגדול פה.</p>
+      <p>🔨 Number 7A של ג'קסון פולוק נמכר בבית המכירות הפומביות-Christie's ב-181.2 מיליון דולר!!! שיא חדש אחרי שהשיא הקודם של פולוק היה 61.2 מליון בשנת 2021. אבל הסיפור הוא לא הציור. הסיפור הוא מה שהמכירה חושפת על הדרך שבה אוסף גדול נבנה.</p>
+      <p>פולוק הוא הצייר האמריקאי שהמציא את ה-drip painting: ציור מתוך תנועה, שפיכת צבע ישירות על הבד המונח על הרצפה. הוא הפך את מרכז הכובד של עולם האמנות מפריז לניו יורק. הציור הזה, משנת 1948, הוא מהשיאים של הקריירה שלו.</p>
+      <figure>
+        <img src="images/2026-05-24-pollock.jpg" alt="Jackson Pollock, Number 7A, 1948" loading="lazy" style="max-width:100%">
+        <figcaption>Jackson Pollock, Number 7A, 1948.</figcaption>
+      </figure>
+      <p>אבל מי שמכר אותו הוא הסיפור האמיתי. סאי ניוהאוס ניהל את קונדה נאסט 40 שנה ובנה את אוסף האמנות שלו לפי עיקרון אחד פשוט: לא לרכוש הרבה, אלא לרכוש את הגרסה הטובה ביותר של כל אמן שבחר, ואז לא לפחד למכור אותה כשמצא גרסה טובה יותר. הוא עבד צמוד עם הדילר טוביאס מאייר שנים על גבי שנים כדי לעצב ולערוך את האוסף, והשקיע עם אשתו ויקטוריה מעל 700 מיליון דולר. מאז מותו, מאייר מביא את האוסף למכירה בגלים מחושבים, בזהירות, כדי שהשוק לא יוצף ביצירות איקוניות בו-זמנית. אחרי המכירה הזו, 47 יצירות מאוסף ניוהאוס הניבו מעל מיליארד דולר. להשוואה: אוסף פול אלן, הגדול ביותר שנמכר אי פעם, חצה ב-2021 את שער 1.6 מיליארד. מ-155 יצירות. ניוהאוס: שליש מהיצירות, שני שלישים מהמחיר. זו התוצאה של עבודה אוצרותית איכותית.</p>
+      <p><a href="https://www.christies.com/en/stories/jackson-pollock-number7a-1948-john-elderfield-44b8c76206ad4793a8dccc3c899ea86f" target="_blank" rel="noopener">christies.com: Jackson Pollock, Number 7A</a></p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Brancusi, Christie's, and a $107 Million Campaign",
+    "description": "Constantin Brancusi's Danaid (1913) sold at Christie's New York for $107.6 million, a world auction record for the sculptor. The sale was preceded by a viral campaign starring Nicole Kidman, illustrating how auction houses use cinematic marketing to drive results.",
+    "datePublished": "2026-05-20",
+    "dateModified": "2026-05-20",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#brancusi-christies",
+    "mainEntityOfPage": "https://stavtheodor.com/#brancusi-christies",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Brancusi, Danaid, Christie's, auction record, art market, Romanian sculptor, Nicole Kidman, art marketing",
+    "about": [
+      {
+        "@type": "SaleEvent",
+        "name": "Brancusi Danaid Auction",
+        "location": { "@type": "Organization", "name": "Christie's New York", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": "VisualArtwork",
+        "name": "Danaid",
+        "creator": { "@type": "Person", "name": "Constantin Brancusi" },
+        "dateCreated": "1913"
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="brancusi-christies">
+    <div class="post-date">May 20, 2026</div>
+    <h2 class="post-title">Brancusi, Christie's, and a $107 Million Campaign</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p class="credit">מתוך פוסט של ARTernative</p>
+      <p>כשאמנות, כסף גדול ותרבות פופולרית נפגשים, נוצרת הדרמה המזוקקת שרק שוק האמנות העולמי יודע לספק. השבוע קיבלנו שיעור מאלף באיך הופכים פסל מודרניסטי בן מעל מאה שנה ללהיט ויראלי, וכיצד קמפיין שיווקי מבריק מתרגם למיליוני דולרים.</p>
+      <p>זה התחיל בסרטון פרומו קצר שהפיק בית המכירות כריסטיס. על המסך: ניקול קידמן, בנעלי סטילטו של לובוטן, צועדת בביטחון במסדרונות מטה החברה, נכנסת למעלית פרטית וחושפת מאחורי וילונות לבנים את "דנאיד" (על שם הדנאידות מהמיתולוגיה היוונית) - פסל ראש ברונזה אייקוני משנת 1913 של קונסטנטין ברנקוזי. המטרה הרשמית הייתה לייצר באזז לקראת המכירה של יצירת המופת, שהגיעה מהאוסף הפרטי של איל התקשורת המנוח סמואל אירווינג ניוהאוס (שרכש אותה ב-2002 תמורת סכום שנחשב אז לשיא: 18.2 מיליון דולר).</p>
+      <p>התוצאה? בערב המכירה הפומבית בניו יורק, הפטיש נחת על מחיר בלתי נתפס של 93 מיליון דולר. יחד עם העמלות והמיסים, הסכום הסופי הגיע ל-107.6 מיליון דולר, מה ששבר רשמית את שיא המכירות של הפסל.</p>
+      <p>הסיפור הזה הוא תזכורת לכך שאמנות גדולה לעולם אינה פועלת בחלל ריק; היא חיה, מגיבה ומנהלת דיאלוג עם התרבות העכשווית. זהו מהלך שיווקי מדויק, שמזכיר לנו שוב את הדיון לגבי חיבורים (מרתקים, אבל לא רק) המתרחשים בנקודת המפגש שבין היסטוריה, אמנות, תרבות עכשווית וכסף גדול.</p>
+      <p>רוצים לראות את הסרטון? הנה הלינק: <a href="https://youtu.be/nMDlal5tQP8?si=_UVb5NXfZ5CU1DAU" target="_blank" rel="noopener">youtu.be/nMDlal5tQP8</a></p>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "May, the Big Art Month in New York",
+    "description": "A gallery walk through New York's May 2026 art season: Gainsborough portraits at the Frick, the Met Costume Art exhibition, Helen Frankenthaler at Gagosian through July 2, Firelei Baez at Hauser and Wirth through July 31, Gerhard Richter at David Zwirner, and Jess Allen at Nino Mier Gallery through June 13.",
+    "datePublished": "2026-05-20",
+    "dateModified": "2026-05-20",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#may-big-art-month-nyc",
+    "mainEntityOfPage": "https://stavtheodor.com/#may-big-art-month-nyc",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "New York galleries, Frick, Gagosian, Hauser and Wirth, David Zwirner, Helen Frankenthaler, Firelei Baez, Gerhard Richter, May 2026 New York art",
+    "about": [
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Helen Frankenthaler",
+        "endDate": "2026-07-02",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "Gagosian Gallery", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Firelei Baez",
+        "endDate": "2026-07-31",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "Hauser and Wirth", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      },
+      {
+        "@type": ["Event", "ExhibitionEvent"],
+        "name": "Gerhard Richter",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "ArtGallery", "name": "David Zwirner Gallery", "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" } }
+      }
+    ]
+  }
+  </script>
+  <article class="post" id="may-big-art-month-nyc">
+    <div class="post-date">May 20, 2026</div>
+    <h2 class="post-title">May, the Big Art Month in New York</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p><strong>מאי הוא החודש הגדול ביותר לאמנות בניו יורק.</strong> שבוע ירידי האמנות הגדולים של ניו יורק אמנם נסגר בשבוע שעבר, עם ירידי אמנות דוגמת Frieze Art של הגלריות הגדולות והחזקות ביותר בעיר, ירידים מסקרנים כמו NADA‏ (New Art Dealers Alliance), יריד שמוקדש לגלריות צעירות, קולות חדשים ואמנות עכשווית ניסיונית, ו־Independent Art Fair, יריד אינטימי יותר שמתמקד בפרזנטציות אוצרותיות וסולו־שואוז איכותיים, אבל העיר עדיין מלאה בתערוכות ששווה מאוד לראות.</p>
+
+      <div class="walk-stop">
+        <div class="walk-venue">The Frick Collection · Gainsborough</div>
+        <figure>
+          <img src="images/2026-05-20-frick-gainsborough.jpg" alt="Gainsborough portraits on the deep green walls of the Frick Collection" loading="lazy">
+        </figure>
+        <p>🎨 לאוהבי האמנות הקלאסית – ב־The Frick Collection מוצגת התערוכה Gainsborough: The Fashion of Portraiture, שעוסקת בקשר בין ציורי הדיוקן של Thomas Gainsborough לאופנה, סטטוס ותרבות חזותית באנגליה של המאה ה־18. תערוכה יפהפייה שמציגה דיוקנאות מרהיבים, <strong>ותוצג עד ה־25 במאי</strong>. בכלל, זה אחד המוזיאונים האהובים עלי בעיר ויש בו כמה יצירות מופת של תולדות האמנות. הישג מרשים עבור מוזיאון יחסית קטן.</p>
+      </div>
+
+      <div class="walk-stop">
+        <div class="walk-venue">The Metropolitan Museum · Costume Art</div>
+        <figure>
+          <img src="images/2026-05-20-met-costume-art.jpg" alt="Historic and contemporary dress shown beside classical sculpture at the Met" loading="lazy">
+        </figure>
+        <p>👗 ואם באופנה עסקינן, אז ב־The Metropolitan Museum of Art נפתחה תערוכת האביב בגלריות קונדה נאסט החדשות. התערוכה Costume Art משתייכת למחלקת האופנה, מבקשת לבחון את הקשר בין אופנה לאמנות דרך "הגוף הלבוש", ומציגה בגדים היסטוריים ועכשוויים לצד ציורים, פסלים ואובייקטים מאוספי המוזיאון. זו תערוכה מרשימה במיוחד גם למי שלא מגדיר את עצמו "איש אופנה", כי היא עוסקת לא רק בבגדים אלא בזהות, גוף, ייצוג ותרבות חזותית. התערוכה מוצגת עד ה־10 בינואר 2027.</p>
+      </div>
+
+      <p class="walk-intro">🖼️ <strong>בגלריות המבחר עכשיו הוא כ"כ טוב שזו הייתה משימה קשה מאד לסנן מכל מה שמוצג אבל הנה התערוכות שלדעתי חובה לראות!</strong></p>
+
+      <div class="walk-stop">
+        <div class="walk-venue">Gagosian · Helen Frankenthaler</div>
+        <figure>
+          <img src="images/2026-05-20-gagosian-frankenthaler.jpg" alt="Large abstract color-field paintings by Helen Frankenthaler at Gagosian" loading="lazy">
+        </figure>
+        <p>גלריה Gagosian מציגה אחת האמניות הבולטות של האבסטרקט האמריקאי של המאה ה-20, Helen Frankenthaler, עם 20 מהציורים הגדולים והנועזים ביותר שלה. בתצוגה עד 2.7</p>
+      </div>
+
+      <div class="walk-stop">
+        <div class="walk-venue">Hauser &amp; Wirth · Firelei Báez</div>
+        <figure>
+          <img src="images/2026-05-20-hauser-wirth-baez.jpg" alt="Firelei Báez, fantastical figures painted over colonial maps and historical documents" loading="lazy">
+        </figure>
+        <p>בגלריה של Hauser &amp; Wirth, בין הגלריות האהובות עלי בעיר, מוצגות עבודות של האמנית הדומיניקנית firelei báez, הידועה בשכבות הדמויות הפנטסטיות על גבי מפות קולוניאליות ומסמכים היסטוריים, ובפעם הראשונה היא תציג גם פסלי ברונזה. עד ה־31.7</p>
+      </div>
+
+      <div class="walk-stop">
+        <div class="walk-venue">David Zwirner · Gerhard Richter</div>
+        <figure>
+          <img src="images/2026-05-20-zwirner-richter.jpg" alt="Gerhard Richter, a blurred photo-realist seascape beside an abstract painting at David Zwirner" loading="lazy">
+        </figure>
+        <p>בגלריה David Zwirner תרצו לראות את תערוכת גרהרד ריכטר, אחד האמנים החיים היקרים בעולם, עם ציוריו הפוטוריאליסטיים המטושטשים לצד הציורים האבסטרקטיים שלו. היום, יערוך בית המכירות כריסטיס מכירה פומבית של אוסף הגלריסטית מריאן גודמן שנפטרה בינואר האחרון בגיל 97 והותירה אחריה אוסף אמנות מרשים במיוחד. 7 ציורים של ריכטר יועמדו למכירה ויתכן שנצפה בשיא חדש לאמן חי היקר בעולם.</p>
+      </div>
+
+      <div class="walk-stop">
+        <div class="walk-venue">Nino Mier Gallery · Jess Allen</div>
+        <figure>
+          <img src="images/2026-05-20-nino-mier-allen.jpg" alt="Jess Allen, quiet figurative paintings with charged light and shadow at Nino Mier Gallery" loading="lazy">
+        </figure>
+        <p>ב־Nino Mier Gallery מוצגת התערוכה Suspending Time של Jess Allen. אלן יוצרת ציורים פיגורטיביים שקטים ואינטימיים, עם דמויות, צללים וחללים טעונים פסיכולוגית, שמרגישים כמעט קולנועיים. התחושה היא של רגע בין זיכרון, התבוננות פנימית ותחושת זמן מושהה. התערוכה מוצגת עד 13 ביוני.</p>
+      </div>
+    </div>
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Welcome to Art Radar",
+    "description": "Stav Theodor-Kimhi, art curator and advisor based in Tenafly, NJ, introduces Art Radar: a weekly curatorial newsletter covering must-see exhibitions, gallery openings, and art events in New York, New Jersey, and Tel Aviv, written in Hebrew for the Israeli community in the NY metro area.",
+    "datePublished": "2026-05-19",
+    "dateModified": "2026-05-19",
+    "inLanguage": "he",
+    "url": "https://stavtheodor.com/#welcome-art-radar",
+    "mainEntityOfPage": "https://stavtheodor.com/#welcome-art-radar",
+    "author": { "@id": "https://stavtheodor.com/#stav" },
+    "publisher": { "@id": "https://stavtheodor.com/#org" },
+    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
+    "keywords": "Art Radar, THEODORA, Stav Theodor-Kimhi, art curator, New York, New Jersey, Tel Aviv, curatorial newsletter, Hebrew"
+  }
+  </script>
+  <article class="post" id="welcome-art-radar">
+    <div class="post-date">May 19, 2026</div>
+    <h2 class="post-title">Welcome to Art Radar</h2>
+    <div class="post-body" lang="he" dir="rtl">
+      <p>שלום לכל המצטרפים והמצטרפות 👋</p>
+      <p>למי שלא מכיר/ה אותי, אני סתיו תאודור קמחי, אוצרת ויועצת אמנות. עברתי לטנפליי לפני שנה וחצי עם בעלי ושני הבנים שלנו (5 ו-7), ומאז אני מגלה שוב ושוב כמה סצנת האמנות באזור שלנו עשירה, מסקרנת ואינסופית.</p>
+      <p>פתחתי את הקבוצה הזו כדי לעשות סדר ולשתף את הדברים שבאמת שווה להכיר, בלי להרגיש שצריך לעקוב אחרי מיליון מקומות או לטבוע במידע.</p>
+      <p>בכל שבוע אשתף כאן המלצות על תערוכות, פתיחות גלריה, מיצבים ציבוריים, ירידי אמנות, אירועים במוזיאונים (גם לילדים), וכל מה שנראה לי מעניין ושווה יציאה. לפעמים זו תהיה רשימה ארוכה, לפעמים המלצה אחת מדויקת ונראה יחד לאן זה יתפתח 🙂</p>
+      <p>בקיץ אשתף גם המלצות אמנות בישראל, למי שקופץ לביקור מולדת 🇮🇱</p>
+      <p>שמחה שאתם פה, ובקרוב הפוסט הראשון יוצא לדרך 🚀</p>
+      <figure>
+        <img src="images/2026-05-20-galleries-1.jpg" alt="Stav reflected in a mirror artwork at a gallery" loading="lazy">
+        <figcaption>Stav, reflected in a mirror work between the galleries.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+</section>
+
+<!-- ============ CONTACT ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="name">Stav Theodor&#8209;Kimhi</div>
+    <div class="sub">Art Curation &amp; Advisory · Tenafly, New Jersey</div>
+    <ul class="contact-list">
+      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
+      <li><a href="tel:+15512466416">+1 (551) 246-6416</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+    <div class="copyright">© 2026 THEODORA</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var total = 40, i = 0;
+  var img = document.getElementById('slide-img');
+  var num = document.getElementById('slide-num');
+  var frame = document.getElementById('slide-frame');
+  var show = document.getElementById('slideshow');
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function src(n) { return 'images/portfolio/slide-' + pad(n + 1) + '.jpg'; }
+  var cache = {};
+  function preload(n) {
+    if (n < 0 || n >= total || cache[n]) return;
+    var im = new Image(); im.src = src(n); cache[n] = im;
+  }
+  function go(n) {
+    i = (n + total) % total;
+    img.src = src(i);
+    img.alt = 'THEODORA portfolio, slide ' + (i + 1) + ' of ' + total;
+    num.textContent = pad(i + 1);
+    preload(i + 1); preload(i - 1);
+  }
+  document.getElementById('slide-next').addEventListener('click', function () { go(i + 1); });
+  document.getElementById('slide-prev').addEventListener('click', function () { go(i - 1); });
+  document.getElementById('slide-fs').addEventListener('click', function () {
+    if (document.fullscreenElement) { document.exitFullscreen(); }
+    else if (frame.requestFullscreen) { frame.requestFullscreen(); }
+    else if (frame.webkitRequestFullscreen) { frame.webkitRequestFullscreen(); }
+  });
+  show.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { go(i + 1); }
+    else if (e.key === 'ArrowLeft') { go(i - 1); }
+  });
+  var x0 = null;
+  frame.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  frame.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) { go(dx < 0 ? i + 1 : i - 1); }
+    x0 = null;
+  }, { passive: true });
+  preload(1);
+})();
+</script>
+
+<script>
+  document.querySelectorAll('article.post').forEach(function(article) {
+    article.addEventListener('click', function() {
+      var title = article.querySelector('h2, h3') ? article.querySelector('h2, h3').innerText : 'unknown';
+      gtag('event', 'article_click', {
+        'event_category': 'engagement',
+        'event_label': title
+      });
+    });
+  });
+</script>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="bcf53a6b-c2c4-4bd6-a04d-4e748d9f32b4" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiYmNmNTNhNmItYzJjNC00YmQ2LWEwNGQtNGU3NDhkOWYzMmI0IiwiYWNjb3VudF9pZCI6IjZhMTMyNDIyMjU2OTRhMjYxOTRiZjI2YSIsImRlcGxveV9pZCI6IjZhM2VmOTEzZmZmZTM1M2I3NGI4YTQyZiIsImlzc3VlciI6Im5mc2VydmVyIn0.tfEdP7wNdpA7YGfEHIsp6dojWXvjszw5-LvIYsAaq0g"></script></body>
+</html>

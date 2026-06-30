@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <ellipse cx="21" cy="27" rx="18" ry="13" fill="#F7AAB7" transform="rotate(-14 21 27)"/>
+  <ellipse cx="41" cy="23" rx="20" ry="16" fill="#EE6541" transform="rotate(7 41 23)"/>
+  <ellipse cx="33" cy="45" rx="18" ry="12" fill="#7CB79B" transform="rotate(-5 33 45)"/>
+  <text x="32" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="40" text-anchor="middle" fill="#1C1A17">T</text>
+</svg>
