@@ -1,0 +1,349 @@
+{
+ "slug": "theodore-gericault",
+ "name": "Théodore Géricault",
+ "qid": "Q184212",
+ "born": 1791,
+ "died": 1824,
+ "periods": [
+  "romanticism"
+ ],
+ "oneLiner": "French painter (1791–1824)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg/330px-Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg"
+ },
+ "bio": {
+  "extract": "Jean-Louis André Théodore Géricault was a French painter and lithographer. His best-known painting is The Raft of the Medusa. Despite his short life, he was one of the pioneers of the Romantic movement.",
+  "source": "https://en.wikipedia.org/wiki/Th%C3%A9odore_G%C3%A9ricault"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Th%C3%A9odore_G%C3%A9ricault",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3349704",
+   "title": "The Charging Chasseur",
+   "year": 1812,
+   "image": {
+    "file": "File:An Officer of the Imperial Horse Guards Charging - Géricault (Louvre INV 4885).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/An_Officer_of_the_Imperial_Horse_Guards_Charging_-_G%C3%A9ricault_%28Louvre_INV_4885%29.jpg/960px-An_Officer_of_the_Imperial_Horse_Guards_Charging_-_G%C3%A9ricault_%28Louvre_INV_4885%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/An_Officer_of_the_Imperial_Horse_Guards_Charging_-_G%C3%A9ricault_%28Louvre_INV_4885%29.jpg/1920px-An_Officer_of_the_Imperial_Horse_Guards_Charging_-_G%C3%A9ricault_%28Louvre_INV_4885%29.jpg",
+    "pxW": 5211,
+    "pxH": 7764
+   },
+   "cm": {
+    "w": 266,
+    "h": 349
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Charging Chasseur, or An Officer of the Imperial Horse Guards Charging, is a c. 1812 oil-on-canvas painting by the French painter Théodore Géricault. Depicting an officer of the Mounted Chasseurs of the Imperial Guard ready to attack, the painting was placed on display at both the Salon of 1812 and Salon of 1814. It is now on at the Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Charging_Chasseur"
+   },
+   "facts": [
+    {
+     "text": "The painting was Géricault's first exhibited work and it is an example of his attempt to condense both movement and structure in his art.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/The_Charging_Chasseur#History_and_description"
+    },
+    {
+     "text": "The American artist Kehinde Wiley reimagined The Charging Chasseur in his 2007 painting Officer of the Hussars. In Officer of the Hussars, a young Black man dressed in a sleeveless shirt, jeans, and Timberland boots sits atop the horse.",
+     "section": "Cultural references",
+     "source": "https://en.wikipedia.org/wiki/The_Charging_Chasseur#Cultural_references"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q15951392",
+   "title": "Gray Horse",
+   "year": 1812,
+   "image": {
+    "file": "File:Theodore-Gericault--cheval-arabe-gris-blanc-rouen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Theodore-Gericault--cheval-arabe-gris-blanc-rouen.jpg/960px-Theodore-Gericault--cheval-arabe-gris-blanc-rouen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Theodore-Gericault--cheval-arabe-gris-blanc-rouen.jpg/1920px-Theodore-Gericault--cheval-arabe-gris-blanc-rouen.jpg",
+    "pxW": 4019,
+    "pxH": 3287
+   },
+   "cm": {
+    "w": 74,
+    "h": 60
+   },
+   "collection": "Musée des Beaux-Arts de Rouen",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q3006832",
+   "title": "The Wounded Cuirassier",
+   "year": 1814,
+   "image": {
+    "file": "File:Cuirassier blessé, quittant le feu - Théodore Géricault - Musée du Louvre Peintures INV 4886 ; MN 51.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cuirassier_bless%C3%A9%2C_quittant_le_feu_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4886_%3B_MN_51.jpg/960px-Cuirassier_bless%C3%A9%2C_quittant_le_feu_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4886_%3B_MN_51.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cuirassier_bless%C3%A9%2C_quittant_le_feu_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4886_%3B_MN_51.jpg/1920px-Cuirassier_bless%C3%A9%2C_quittant_le_feu_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4886_%3B_MN_51.jpg",
+    "pxW": 7141,
+    "pxH": 8666
+   },
+   "cm": {
+    "w": 294,
+    "h": 358
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Wounded Cuirassier is an oil painting of a single anonymous soldier descending a slope with his nervous horse by the French Romantic painter and lithographer Théodore Géricault (1791–1824). In this Salon of 1814 entry, Géricault decided to turn away from scenes of heroism in favor of a subject that is on the losing side of the battle. On display in the aftermath of France's disastrous military campaign in Russia, this life-size painting captured the feeling of a nation in defeat.",
+    "source": "https://en.wikipedia.org/wiki/The_Wounded_Cuirassier"
+   },
+   "facts": [
+    {
+     "text": "Géricault studied in Paris where he created his first major work, The Charging Chasseur, for the Paris Salon of 1812. His next major Salon submission was The Wounded Cuirassier in 1814.",
+     "section": "Artist and setting",
+     "source": "https://en.wikipedia.org/wiki/The_Wounded_Cuirassier#Artist_and_setting"
+    },
+    {
+     "text": "Géricault rushed to make The Wounded Cuirassier in only three weeks and created five separate sketches and drafts before the final version. Perhaps as a result of its hurried production, the message of the painting was not entirely clear to critics.",
+     "section": "Creation",
+     "source": "https://en.wikipedia.org/wiki/The_Wounded_Cuirassier#Creation"
+    },
+    {
+     "text": "Géricault uses a similar style and technique to his previous works, yet his approach to battle painting was unique in the period. He elected not to show a wound on the soldier, perhaps suggesting to viewers that the wound is internal and extends to the nation.",
+     "section": "Style and composition",
+     "source": "https://en.wikipedia.org/wiki/The_Wounded_Cuirassier#Style_and_composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q19911548",
+   "title": "Evening: Landscape with an Aqueduct",
+   "year": 1818,
+   "image": {
+    "file": "File:Théodore Géricault - Evening, Landscape with an Aqueduct.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Th%C3%A9odore_G%C3%A9ricault_-_Evening%2C_Landscape_with_an_Aqueduct.jpg/960px-Th%C3%A9odore_G%C3%A9ricault_-_Evening%2C_Landscape_with_an_Aqueduct.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Th%C3%A9odore_G%C3%A9ricault_-_Evening%2C_Landscape_with_an_Aqueduct.jpg/1920px-Th%C3%A9odore_G%C3%A9ricault_-_Evening%2C_Landscape_with_an_Aqueduct.jpg",
+    "pxW": 4830,
+    "pxH": 5496
+   },
+   "cm": {
+    "w": 220,
+    "h": 250
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Evening: Landscape with an Aqueduct is an 1818 landscape painting by the French artist Théodore Géricault.",
+    "source": "https://en.wikipedia.org/wiki/Evening%3A_Landscape_with_an_Aqueduct"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q212616",
+   "title": "The Raft of the Medusa",
+   "year": 1819,
+   "image": {
+    "file": "File:JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/960px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/1920px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+    "pxW": 5872,
+    "pxH": 4008
+   },
+   "cm": {
+    "w": 716,
+    "h": 491
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Raft of the Medusa – originally titled Scène de Naufrage – is an oil painting of 1818–1819 by the French Romantic painter and lithographer Théodore Géricault (1791–1824). Completed when the artist was 27, the work has become an icon of French Romanticism. At 491 by 716 cm, it is an over-life-size painting that depicts a moment from the aftermath of the wreck of the French naval frigate Méduse, which ran aground off the coast of today's Mauritania on 2 July 1816.",
+    "source": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa"
+   },
+   "facts": [
+    {
+     "text": "The Raft of the Medusa portrays the moment when, after 13 days adrift on the raft, the remaining 15 survivors view a ship approaching from a distance. According to an early British reviewer, the work is set at a moment when \"the ruin of the raft may be said to be complete\".",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa#Description"
+    },
+    {
+     "text": "In June 1816, the French frigate Méduse, captained by Viscount Hugues Duroy de Chaumareys, departed from Rochefort, bound for the Senegalese port of Saint-Louis. She headed a convoy of three other ships: the storeship Loire, the brig Argus and the corvette Écho.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa#Background"
+    },
+    {
+     "text": "Géricault was captivated by accounts of the widely publicised 1816 shipwreck, and realised that a depiction of the event might be an opportunity to establish his reputation as a painter. Having decided to proceed, he undertook extensive research before he began the painting.",
+     "section": "Research and preparatory studies",
+     "source": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa#Research_and_preparatory_studies"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q2459266",
+   "title": "Portrait of a Kleptomaniac",
+   "year": 1820,
+   "image": {
+    "file": "File:Théodore Géricault - Portrait of a Kleptomaniac - 1908-F - Museum of Fine Arts Ghent (MSK).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Kleptomaniac_-_1908-F_-_Museum_of_Fine_Arts_Ghent_%28MSK%29.jpg/960px-Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Kleptomaniac_-_1908-F_-_Museum_of_Fine_Arts_Ghent_%28MSK%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Kleptomaniac_-_1908-F_-_Museum_of_Fine_Arts_Ghent_%28MSK%29.jpg/1920px-Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Kleptomaniac_-_1908-F_-_Museum_of_Fine_Arts_Ghent_%28MSK%29.jpg",
+    "pxW": 5098,
+    "pxH": 6066
+   },
+   "cm": {
+    "w": 50,
+    "h": 61
+   },
+   "collection": "Museum of Fine Arts Ghent (MSK)",
+   "story": {
+    "extract": "Portrait of a Kleptomaniac or Portrait of an Insane Person is an 1822 oil painting by Théodore Géricault. It is part of series of ten portraits made for the psychiatrist Étienne-Jean Georget and is currently kept in the Museum of Fine Arts, Ghent, Belgium.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Kleptomaniac"
+   },
+   "facts": [
+    {
+     "text": "The work was made quickly, which prefigured the concerns of the Impressionists. However, the painting did not belong to Impressionism.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Kleptomaniac#Description"
+    },
+    {
+     "text": "The painting belongs to a series of ten portraits of the insane inmates of Salpêtrière asylum in Paris. Géricault made it near the end of his career and the five remaining portraits from the series represent the painter's last triumph.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Kleptomaniac#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q429753",
+   "title": "The 1821 Derby at Epsom",
+   "year": 1821,
+   "image": {
+    "file": "File:Le Derby de 1821 à Epsom - Théodore Géricault - Musée du Louvre Peintures MI 708 - photo 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Le_Derby_de_1821_%C3%A0_Epsom_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_MI_708_-_photo_2.jpg/960px-Le_Derby_de_1821_%C3%A0_Epsom_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_MI_708_-_photo_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Le_Derby_de_1821_%C3%A0_Epsom_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_MI_708_-_photo_2.jpg/1920px-Le_Derby_de_1821_%C3%A0_Epsom_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_MI_708_-_photo_2.jpg",
+    "pxW": 11171,
+    "pxH": 8124
+   },
+   "cm": {
+    "w": 123,
+    "h": 92
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The 1821 Derby at Epsom, or Horse Race is an 1821 painting by the French artist Théodore Géricault in the Louvre Museum, showing The Derby of that year.",
+    "source": "https://en.wikipedia.org/wiki/The_1821_Derby_at_Epsom"
+   },
+   "facts": [
+    {
+     "text": "Fascinated by horses, Géricault made many paintings portraying them. Working for a while at the imperial stables at Versailles, he had the opportunity to study them in detail and made numerous portraits of horses.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/The_1821_Derby_at_Epsom#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q3210764",
+   "title": "Insane Woman",
+   "year": 1821,
+   "image": {
+    "file": "File:La Monomane de l'envie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/La_Monomane_de_l%27envie.jpg/960px-La_Monomane_de_l%27envie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/La_Monomane_de_l%27envie.jpg/1920px-La_Monomane_de_l%27envie.jpg",
+    "pxW": 31646,
+    "pxH": 38234
+   },
+   "cm": {
+    "w": 58,
+    "h": 72
+   },
+   "collection": "Museum of Fine Arts of Lyon",
+   "story": {
+    "extract": "Monomaniac of Envy, also known by the name of Hyena of Salpêtrière, Portrait of a Woman Suffering from Obsessive Envy, and Manic Envy, is an oil-on-canvas painting by the French Romantic artist Théodore Géricault. Painted as part of his series of ten portraits on the mentally ill, it is one of only five known to survive today. It is currently housed in the Museum of Fine Arts of Lyon, France.",
+    "source": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy"
+   },
+   "facts": [
+    {
+     "text": "Géricault's Monomaniac of Envy has inspired a number of other works. Marlene Dumas's 2011 painting Obsessive Envy is based on Géricault's composition.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy#Legacy"
+    },
+    {
+     "text": "The Portraits of the Insane depict patients from the Paris mental hospitals La Salpêtrière and Bicêtre. Art historians have described the portraits as significant for their \"unprecedented objective sobriety,” observing that they \"have a powerful realism that is entirely unaffected by romantic sentiment or artistic dramatization.”",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy#Description"
+    },
+    {
+     "text": "Mental aberration and irrational states of mind interested Romantic artists who questioned Enlightenment rationality.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q3222938",
+   "title": "The Plaster Kiln",
+   "year": 1821,
+   "image": {
+    "file": "File:Le Four à plâtre - Théodore Géricault - Musée du Louvre Peintures INV 4888 ; MN 28.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_Four_%C3%A0_pl%C3%A2tre_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4888_%3B_MN_28.jpg/960px-Le_Four_%C3%A0_pl%C3%A2tre_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4888_%3B_MN_28.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_Four_%C3%A0_pl%C3%A2tre_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4888_%3B_MN_28.jpg/1920px-Le_Four_%C3%A0_pl%C3%A2tre_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4888_%3B_MN_28.jpg",
+    "pxW": 3023,
+    "pxH": 2405
+   },
+   "cm": {
+    "w": 61,
+    "h": 50
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
+   "qid": "Q111912988",
+   "title": "The Melancholic Man",
+   "year": null,
+   "image": {
+    "file": "File:The Melancholic Man - Théodore Géricault.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg/960px-The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg",
+    "pxW": 1902,
+    "pxH": 2560
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Melancholic Man is an oil-on-canvas painting discovered by Javier S. Burgos, a Spanish scientist, in Ravenna, Emilia-Romagna, Italy in 2019. It depicts a man with a furrowed brow, dressed in a red robe.",
+    "source": "https://en.wikipedia.org/wiki/The_Melancholic_Man"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Théodore Géricault"
+   }
+  }
+ ]
+}

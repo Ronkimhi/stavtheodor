@@ -1,0 +1,349 @@
+{
+ "slug": "ernst-ludwig-kirchner",
+ "name": "Ernst Ludwig Kirchner",
+ "qid": "Q229272",
+ "born": 1880,
+ "died": 1938,
+ "periods": [
+  "expressionism"
+ ],
+ "oneLiner": "German painter, sculptor, engraver and printmaker (1880–1938)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg/330px-Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg"
+ },
+ "bio": {
+  "extract": "Ernst Ludwig Kirchner was a German expressionist painter and printmaker. He was one of the founders of the artists group Die Brücke or \"The Bridge\", a key group leading to the foundation of Expressionism in 20th-century art. Kirchner volunteered for army service in the First World War, but soon suffered a breakdown and was discharged. His work was branded as \"degenerate\" by the Nazis in 1933, and in 1937 more than 600 of his works were sold or destroyed.",
+  "source": "https://en.wikipedia.org/wiki/Ernst_Ludwig_Kirchner"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Ernst_Ludwig_Kirchner",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q14856959",
+   "title": "Half-Length Nude with Hat",
+   "year": 1911,
+   "image": {
+    "file": "File:Ernst-Ludwig-Kirchner-Weiblicher-Akt-mit-Hut-Museum-Ludwig.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Ernst-Ludwig-Kirchner-Weiblicher-Akt-mit-Hut-Museum-Ludwig.jpg/960px-Ernst-Ludwig-Kirchner-Weiblicher-Akt-mit-Hut-Museum-Ludwig.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/94/Ernst-Ludwig-Kirchner-Weiblicher-Akt-mit-Hut-Museum-Ludwig.jpg",
+    "pxW": 1818,
+    "pxH": 1980
+   },
+   "cm": {
+    "w": 70,
+    "h": 76
+   },
+   "collection": "Museum Ludwig",
+   "story": {
+    "extract": "Female Half-Length Nude with Hat is an 1911 oil on canvas painting by the German Expressionist painter Ernst Ludwig Kirchner. It is currently held at the Museum Ludwig in Cologne.",
+    "source": "https://en.wikipedia.org/wiki/Female_Half-Length_Nude_with_Hat"
+   },
+   "facts": [
+    {
+     "text": "The painting was originally part of the Adolphe Basler collection in Paris and was later acquired by the American art dealer Sam Salz who was living in Paris at the time. In 1924, the work came to Cologne as part of the collection of the lawyer Josef Haubrich.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Female_Half-Length_Nude_with_Hat#Provenance"
+    },
+    {
+     "text": "The work depicts Kirchner's lover and model Doris Große, known as \"Dodo\". The pair met in Dresden around 1903 or 1904, maintaining a relationship until 1911 when Kirchner moved from Dresden to Berlin.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Female_Half-Length_Nude_with_Hat#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q3476580",
+   "title": "Berlin Street Scene",
+   "year": 1913,
+   "image": {
+    "file": "File:Kirchner Berlin Street Scene 1913.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Kirchner_Berlin_Street_Scene_1913.jpg/960px-Kirchner_Berlin_Street_Scene_1913.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Kirchner_Berlin_Street_Scene_1913.jpg/1920px-Kirchner_Berlin_Street_Scene_1913.jpg",
+    "pxW": 1948,
+    "pxH": 2638
+   },
+   "cm": {
+    "w": 95,
+    "h": 121
+   },
+   "collection": "Neue Galerie",
+   "story": {
+    "extract": "Berlin Street Scene is a 1913 painting from the cycle Street scenes, by the German expressionist artist Ernst Ludwig Kirchner. The cycle, created by Kirchner between 1913 and 1915, often depicts \"Kokotten\" (prostitutes) with their clients, and is regarded as one of the most important works of German Expressionism.",
+    "source": "https://en.wikipedia.org/wiki/Berlin_Street_Scene"
+   },
+   "facts": [
+    {
+     "text": "Kirchner often depicted prostitutes and their relationship to their clients. This was not meant as social criticism but rather an attempt to depict his idea of a new independent type of woman.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Berlin_Street_Scene#Interpretation"
+    },
+    {
+     "text": "In the painting foreground, two prostitutes are seen wearing very colourful clothing with elaborate lace collars and high-fashion hats. Two clients are depicted— one is facing the viewer, one is facing the prostitutes.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Berlin_Street_Scene#Description"
+    },
+    {
+     "text": "In the painting influences of Italian Futurism can be found through the hasty dynamic of the work. The angular language of form is borrowed from Cubism.",
+     "section": "Style",
+     "source": "https://en.wikipedia.org/wiki/Berlin_Street_Scene#Style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q2972870",
+   "title": "Five Women on the Street",
+   "year": 1913,
+   "image": {
+    "file": "File:Kirchner - Five Women on the Street (Fünf Frauen auf der Strasse) 1913.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kirchner_-_Five_Women_on_the_Street_%28F%C3%BCnf_Frauen_auf_der_Strasse%29_1913.jpg/960px-Kirchner_-_Five_Women_on_the_Street_%28F%C3%BCnf_Frauen_auf_der_Strasse%29_1913.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Kirchner_-_Five_Women_on_the_Street_%28F%C3%BCnf_Frauen_auf_der_Strasse%29_1913.jpg",
+    "pxW": 1432,
+    "pxH": 1909
+   },
+   "cm": {
+    "w": 90,
+    "h": 120
+   },
+   "collection": "Museum Ludwig",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q19298701",
+   "title": "Portrait of Erna Schilling",
+   "year": 1913,
+   "image": {
+    "file": "File:Porträt Erna Schilling (Ernst Ludwig Kirchner)-WUS00596 (cropped).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portr%C3%A4t_Erna_Schilling_%28Ernst_Ludwig_Kirchner%29-WUS00596_%28cropped%29.jpg/960px-Portr%C3%A4t_Erna_Schilling_%28Ernst_Ludwig_Kirchner%29-WUS00596_%28cropped%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portr%C3%A4t_Erna_Schilling_%28Ernst_Ludwig_Kirchner%29-WUS00596_%28cropped%29.jpg/1920px-Portr%C3%A4t_Erna_Schilling_%28Ernst_Ludwig_Kirchner%29-WUS00596_%28cropped%29.jpg",
+    "pxW": 2463,
+    "pxH": 2889
+   },
+   "cm": {
+    "w": 60,
+    "h": 72
+   },
+   "collection": "Neue Nationalgalerie",
+   "story": {
+    "extract": "Portrait of Erna Schilling, also known as Sick Woman or Woman with an Hat, is an oil-on-canvas painting executed in 1913 by the German Expressionist artist Ernst Ludwig Kirchner. It depicts the nightclub dancer Erna Schilling, from Berlin, who after Kirchner's move from Dresden to Berlin in 1911, became his friend and model, and later, common-law wife. The portrait shows Kirchner's signature on the top left: EL Kirchner.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Erna_Schilling"
+   },
+   "facts": [
+    {
+     "text": "The portrait came to the industrialist and art collector Carl Hagemann collection in 1916. Hagemann was a friend of the artist who, in return for monthly financial support for Kirchner, was allowed to choose a painting from his studio on a regular basis.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Erna_Schilling#Provenance"
+    },
+    {
+     "text": "After moving from Dresden to Berlin in October 1911, Kirchner met the dancer Erna Schilling and her sister Gerda in a Berlin nightclub. He became her friend and she became his model.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Erna_Schilling#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q19883652",
+   "title": "Street, Berlin",
+   "year": 1913,
+   "image": {
+    "file": "File:Ernst Ludwig Kirchner, 1913, Street, Berlin, oil on canvas, 120.6 x 91.1 cm, MoMA.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Ernst_Ludwig_Kirchner%2C_1913%2C_Street%2C_Berlin%2C_oil_on_canvas%2C_120.6_x_91.1_cm%2C_MoMA.jpg/960px-Ernst_Ludwig_Kirchner%2C_1913%2C_Street%2C_Berlin%2C_oil_on_canvas%2C_120.6_x_91.1_cm%2C_MoMA.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/60/Ernst_Ludwig_Kirchner%2C_1913%2C_Street%2C_Berlin%2C_oil_on_canvas%2C_120.6_x_91.1_cm%2C_MoMA.jpg",
+    "pxW": 1501,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 91,
+    "h": 121
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Street, Berlin is an oil painting by Ernst Ludwig Kirchner painted in 1913 before the outbreak of World War I. At this time, Kirchner painted several different street scenes that illustrated the chaos of city life and the relationship between men and women.",
+    "source": "https://en.wikipedia.org/wiki/Street%2C_Berlin_%28Kirchner%29"
+   },
+   "facts": [
+    {
+     "text": "Street, Berlin depicts a busy street scene as men and women walk down the sidewalk. Two women in the central foreground are the focal point of the piece.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Street%2C_Berlin_%28Kirchner%29#Description"
+    },
+    {
+     "text": "Kirchner had been a founding member of the German Expressionist painting group Die Brücke. The artists banded together in 1905 in Dresden and with the goal of promoting an avant-garde artistic style and saw themselves as an avant-garde group that bridged the gap between the classical past and their perception of art of the future.",
+     "section": "Die Brücke and personal struggles",
+     "source": "https://en.wikipedia.org/wiki/Street%2C_Berlin_%28Kirchner%29#Die_Br%C3%BCcke_and_personal_struggles"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q18920504",
+   "title": "Potsdamer Platz",
+   "year": 1914,
+   "image": {
+    "file": "File:Ernst Ludwig Kirchner - Potsdamer Platz (1914).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ernst_Ludwig_Kirchner_-_Potsdamer_Platz_%281914%29.jpg/960px-Ernst_Ludwig_Kirchner_-_Potsdamer_Platz_%281914%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ernst_Ludwig_Kirchner_-_Potsdamer_Platz_%281914%29.jpg/1920px-Ernst_Ludwig_Kirchner_-_Potsdamer_Platz_%281914%29.jpg",
+    "pxW": 3331,
+    "pxH": 4457
+   },
+   "cm": {
+    "w": 150,
+    "h": 200
+   },
+   "collection": "Neue Nationalgalerie",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q24953623",
+   "title": "Self-portrait as a Soldier",
+   "year": 1915,
+   "image": {
+    "file": "File:Kirchner - Self Portrait as a Soldier (1915).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Kirchner_-_Self_Portrait_as_a_Soldier_%281915%29.jpg/960px-Kirchner_-_Self_Portrait_as_a_Soldier_%281915%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Kirchner_-_Self_Portrait_as_a_Soldier_%281915%29.jpg/1920px-Kirchner_-_Self_Portrait_as_a_Soldier_%281915%29.jpg",
+    "pxW": 2400,
+    "pxH": 2775
+   },
+   "cm": {
+    "w": 63,
+    "h": 69
+   },
+   "collection": "Allen Memorial Art Museum",
+   "story": {
+    "extract": "Self-Portrait as a Soldier, or Selbstbildnis als Soldat, is an Expressionist oil-on-canvas painting by the German artist Ernst Ludwig Kirchner. Kirchner created this self-depiction in 1915, following his medical discharge from military service during the First World War. The artwork measures 69 centimetres in height by 61 centimetres in width.",
+    "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_a_Soldier"
+   },
+   "facts": [
+    {
+     "text": "Self Portrait as a Soldier depicts Kirchner as a gaunt and utilitarian soldier wearing the 75th Mansfeld Field Artillery Regiment uniform. He stands in an artist's studio, positioned prominently within the artwork's foreground.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_a_Soldier#Subject_matter"
+    },
+    {
+     "text": "Kirchner's 'Self-Portrait as a Soldier' was painted in 1915, a year after the commencement of the First World War (WW1). The impetus for Germany's involvement in WW1 was its alliance with Austria-Hungary who declared war on Serbia on 28 July 1914, following the assassination of Archduke Franz Ferdinand.",
+     "section": "Historical and socio-political context",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_a_Soldier#Historical_and_socio-political_context"
+    },
+    {
+     "text": "Self Portrait as a Soldier depicts Kirchner smoking a cigarette which hangs loosely from his lips. Common analysis of this suggests that Kirchner has chosen to depict himself within a state of thought.",
+     "section": "Visual analysis",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_a_Soldier#Visual_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q21713185",
+   "title": "Alpine Kitchen",
+   "year": 1918,
+   "image": {
+    "file": "File:Ernst Ludwig Kirchner - Cocina alpina.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ernst_Ludwig_Kirchner_-_Cocina_alpina.jpg/960px-Ernst_Ludwig_Kirchner_-_Cocina_alpina.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ernst_Ludwig_Kirchner_-_Cocina_alpina.jpg/1920px-Ernst_Ludwig_Kirchner_-_Cocina_alpina.jpg",
+    "pxW": 2750,
+    "pxH": 2707
+   },
+   "cm": null,
+   "collection": "Thyssen-Bornemisza Museum",
+   "story": {
+    "extract": "Alpine Kitchen is an oil painting on canvas by German artist Ernst Ludwig Kirchner, executed in 1918. It was made when the painter was temporarily living in a mountain hut in the Alps, at 1900 meters of height, above Davos. The house still exists almost in his original form.",
+    "source": "https://en.wikipedia.org/wiki/Alpine_Kitchen"
+   },
+   "facts": [
+    {
+     "text": "The painting has a square format with the dimensions of 121.5 by 121.5 cm. It is signed, with a small signature at the bottom right that reads EL Kirchner and on the back is the name KN-Da/Ad2.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Alpine_Kitchen#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q27075975",
+   "title": "Recumbent Nude",
+   "year": 1931,
+   "image": {
+    "file": "File:Nackte liegende Frau (Ernst Ludwig Kirchner)-WUS00616-2 (cropped).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nackte_liegende_Frau_%28Ernst_Ludwig_Kirchner%29-WUS00616-2_%28cropped%29.jpg/960px-Nackte_liegende_Frau_%28Ernst_Ludwig_Kirchner%29-WUS00616-2_%28cropped%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nackte_liegende_Frau_%28Ernst_Ludwig_Kirchner%29-WUS00616-2_%28cropped%29.jpg/1920px-Nackte_liegende_Frau_%28Ernst_Ludwig_Kirchner%29-WUS00616-2_%28cropped%29.jpg",
+    "pxW": 2691,
+    "pxH": 4541
+   },
+   "cm": null,
+   "collection": "Kirchner Museum Davos",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  },
+  {
+   "qid": "Q27062154",
+   "title": "Archery",
+   "year": 1935,
+   "image": {
+    "file": "File:Ernst Ludwig Kirchner - Bogenschützen -1935-37.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ernst_Ludwig_Kirchner_-_Bogensch%C3%BCtzen_-1935-37.jpg/960px-Ernst_Ludwig_Kirchner_-_Bogensch%C3%BCtzen_-1935-37.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Ernst_Ludwig_Kirchner_-_Bogensch%C3%BCtzen_-1935-37.jpg",
+    "pxW": 1816,
+    "pxH": 2361
+   },
+   "cm": {
+    "w": 150,
+    "h": 195
+   },
+   "collection": "Kirchner Museum Davos",
+   "story": {
+    "extract": "Archers is an oil-on-canvas painting by German painter Ernst Ludwig Kirchner, created in 1935–1937, at his Swiss home town of Davos. It belongs to his last phase, in which he abandoned the Expressionism of his earlier work. The painting depicts three people engaged in the sport of archery.",
+    "source": "https://en.wikipedia.org/wiki/Archers_%28Kirchner%29"
+   },
+   "facts": [
+    {
+     "text": "The painting shows three people engaged in archery. A female figure in the foreground holds arrows in her hands, while the male figure on the left drawns the bow.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Archers_%28Kirchner%29#Description"
+    },
+    {
+     "text": "The motif of a bow shot has long been used in depictions of the martyrdom of Saint Sebastian. It cannot be ruled out that Kirchner alludes to this motif in his painting.",
+     "section": "Background and history",
+     "source": "https://en.wikipedia.org/wiki/Archers_%28Kirchner%29#Background_and_history"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Ludwig Kirchner"
+   }
+  }
+ ]
+}

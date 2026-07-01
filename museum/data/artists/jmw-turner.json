@@ -1,0 +1,400 @@
+{
+ "slug": "jmw-turner",
+ "name": "J. M. W. Turner",
+ "qid": "Q159758",
+ "born": 1775,
+ "died": 1851,
+ "periods": [
+  "romanticism"
+ ],
+ "oneLiner": "English painter and draftsman (c.1775–1851)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Joseph_Mallord_William_Turner_auto-retrato.jpg/330px-Joseph_Mallord_William_Turner_auto-retrato.jpg"
+ },
+ "bio": {
+  "extract": "Joseph Mallord William Turner, known in his time as William Turner, was an English Romantic painter, printmaker and watercolourist. He is known for his expressive colouring, imaginative landscapes and turbulent, often violent marine paintings. His artistic style developed over his lifetime, moving away from Romanticism—bypassing the following rising style of Realism—and, instead, with his later works being a significant precursor of and presaging the later Impressionist and Abstract Art movements that arose in the decades after his death. He left behind more than 550 oil paintings, 2,000 watercolours, and 30,000 works on paper.",
+  "source": "https://en.wikipedia.org/wiki/J._M._W._Turner"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/J._M._W._Turner",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3412132",
+   "title": "Fishermen at Sea",
+   "year": 1796,
+   "image": {
+    "file": "File:Joseph Mallord William Turner - Fishermen at Sea - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg/960px-Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg/1920px-Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg",
+    "pxW": 2258,
+    "pxH": 1678
+   },
+   "cm": {
+    "w": 91,
+    "h": 122
+   },
+   "collection": "Tate",
+   "story": {
+    "extract": "Fishermen at Sea, sometimes known as the Cholmeley Sea Piece, is an early oil painting by English artist J. Turner. It was exhibited at the Royal Academy in 1796 and has been owned by the Tate Gallery since 1972.",
+    "source": "https://en.wikipedia.org/wiki/Fishermen_at_Sea"
+   },
+   "facts": [
+    {
+     "text": "The work measures 36 by 48.125 inches (91.44 cm × 122.24 cm) and is in oils. Fisherman at Sea depicts a moonlit view of fishermen on rough seas near the Isle of Wight, and is a work of marine art.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Fishermen_at_Sea#Description"
+    },
+    {
+     "text": "Turner enrolled as a student at the Royal Academy of Arts at the age of 15. He began as primarily a watercolour painter in the early 1790s.",
+     "section": "Creation and history",
+     "source": "https://en.wikipedia.org/wiki/Fishermen_at_Sea#Creation_and_history"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q22977128",
+   "title": "Dolbadarn Castle",
+   "year": 1800,
+   "image": {
+    "file": "File:J.M.W. Turner - Dolbadarn Castle - Study for Diploma Picture.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/J.M.W._Turner_-_Dolbadarn_Castle_-_Study_for_Diploma_Picture.jpg/960px-J.M.W._Turner_-_Dolbadarn_Castle_-_Study_for_Diploma_Picture.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/J.M.W._Turner_-_Dolbadarn_Castle_-_Study_for_Diploma_Picture.jpg/1920px-J.M.W._Turner_-_Dolbadarn_Castle_-_Study_for_Diploma_Picture.jpg",
+    "pxW": 3320,
+    "pxH": 4560
+   },
+   "cm": {
+    "w": 30,
+    "h": 46
+   },
+   "collection": "National Library of Wales Framed works of art collection",
+   "story": {
+    "extract": "Dolbadarn Castle is an oil painting by J. Turner (1775–1851) depicting Dolbadarn Castle, created in 1798–1799. It is part of a body of work completed by Turner during a tour of the region, which included Dolbadarn, Llanberis and other parts of Snowdonia.",
+    "source": "https://en.wikipedia.org/wiki/Dolbadarn_Castle_%28Turner%29"
+   },
+   "facts": [
+    {
+     "text": "The painting is an artist's impression of a 13th-century event of some importance in Welsh history. It depicts Owain Goch, the brother of Prince Llywelyn ap Gruffudd (LLywelyn the Second), being taken by soldiers to prison at Dolbadarn Castle.",
+     "section": "Historical event",
+     "source": "https://en.wikipedia.org/wiki/Dolbadarn_Castle_%28Turner%29#Historical_event"
+    },
+    {
+     "text": "Turner first visited Wales in 1792, when he traveled through the south of the country. On his second visit in 1794, he visited Flintshire and Denbighshire.",
+     "section": "Travel  through Wales",
+     "source": "https://en.wikipedia.org/wiki/Dolbadarn_Castle_%28Turner%29#Travel__through_Wales"
+    },
+    {
+     "text": "The frame was especially commissioned for the painting from John Jones of London, in the 1940s. The picture was purchased by the Library with the help of the National Art Collection Fund and the National Lottery.",
+     "section": "Details of the picture",
+     "source": "https://en.wikipedia.org/wiki/Dolbadarn_Castle_%28Turner%29#Details_of_the_picture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q3646554",
+   "title": "Snow Storm: Hannibal and his Army Crossing the Alps",
+   "year": 1812,
+   "image": {
+    "file": "File:Joseph Mallord William Turner 081.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Joseph_Mallord_William_Turner_081.jpg/960px-Joseph_Mallord_William_Turner_081.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Joseph_Mallord_William_Turner_081.jpg",
+    "pxW": 1536,
+    "pxH": 942
+   },
+   "cm": {
+    "w": 146,
+    "h": 238
+   },
+   "collection": "Tate",
+   "story": {
+    "extract": "Snow Storm: Hannibal and his Army Crossing the Alps is an oil on canvas painting by J. Turner, first exhibited in 1812. Left to the nation in the Turner Bequest, it was acquired by the National Gallery in London in 1856, and is now held by the Tate Gallery.",
+    "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Hannibal_and_his_Army_Crossing_the_Alps"
+   },
+   "facts": [
+    {
+     "text": "Turner saw parallels between Hannibal and Napoleon, and between the historic Punic War between Rome and Carthage and the contemporary Napoleonic Wars between Britain and France. Turner is using Hannibal as a historical parallel to Napoleon, who had also crossed the Alps.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Hannibal_and_his_Army_Crossing_the_Alps#Background"
+    },
+    {
+     "text": "The painting depicts the struggle of Hannibal's soldiers to cross the Maritime Alps in 218 BC, opposed by the forces of nature and local tribes. A curving black storm cloud dominates the sky, poised to descend on the soldiers in the valley below, with an orange-yellow sun attempting to break through the clouds.",
+     "section": "Content",
+     "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Hannibal_and_his_Army_Crossing_the_Alps#Content"
+    },
+    {
+     "text": "Turner's historical paintings contained complex historical and symbolic references that required some effort to understand, even for cultured viewers.",
+     "section": "Fallacies of Hope",
+     "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Hannibal_and_his_Army_Crossing_the_Alps#Fallacies_of_Hope"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q3027255",
+   "title": "Dido building Carthage",
+   "year": 1815,
+   "image": {
+    "file": "File:Turner - Dido.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Turner_-_Dido.jpg/960px-Turner_-_Dido.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Turner_-_Dido.jpg/1920px-Turner_-_Dido.jpg",
+    "pxW": 6288,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 232,
+    "h": 156
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Dido building Carthage, or The Rise of the Carthaginian Empire is an oil on canvas painting by J. Turner. The painting is one of Turner's most important works, greatly influenced by the luminous classical landscapes of Claude Lorrain.",
+    "source": "https://en.wikipedia.org/wiki/Dido_building_Carthage"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q1772871",
+   "title": "The Battle of Trafalgar",
+   "year": 1823,
+   "image": {
+    "file": "File:Turner, The Battle of Trafalgar (1822).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Turner%2C_The_Battle_of_Trafalgar_%281822%29.jpg/960px-Turner%2C_The_Battle_of_Trafalgar_%281822%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/29/Turner%2C_The_Battle_of_Trafalgar_%281822%29.jpg",
+    "pxW": 1800,
+    "pxH": 1269
+   },
+   "cm": {
+    "w": 366,
+    "h": 259
+   },
+   "collection": "Royal Museums Greenwich",
+   "story": {
+    "extract": "The Battle of Trafalgar, 21 October 1805 is a painting of 1822 by the British artist J. Turner. It was commissioned by King George IV as a part of a series of works to decorate three state reception rooms in St James's Palace and link the Hanoverian dynasty with military success.",
+    "source": "https://en.wikipedia.org/wiki/The_Battle_of_Trafalgar_%28Turner%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts a scene from the Battle of Trafalgar, which fought was fought on 21 October 1805 between a British fleet under Horatio Nelson and a Franco-Spanish fleet under Pierre-Charles Villeneuve and Federico Gravina off Cape Trafalgar.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Battle_of_Trafalgar_%28Turner%29#History"
+    },
+    {
+     "text": "A history painting is traditionally defined as a large-scale work depicting a scene from the Bible, mythology, or classical history.",
+     "section": "Role as a history painting",
+     "source": "https://en.wikipedia.org/wiki/The_Battle_of_Trafalgar_%28Turner%29#Role_as_a_history_painting"
+    },
+    {
+     "text": "The British were striving to assert their position as the world's dominant naval power; with their victory in this battle they were successful and with this painting that becomes evident. Turner had a great deal of personal interest and investment in this work and with the history of the Battle of Trafalgar in general.",
+     "section": "Studies",
+     "source": "https://en.wikipedia.org/wiki/The_Battle_of_Trafalgar_%28Turner%29#Studies"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q4003071",
+   "title": "Ulysses deriding Polyphemus",
+   "year": 1829,
+   "image": {
+    "file": "File:Joseph Mallord William Turner 064.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Mallord_William_Turner_064.jpg/960px-Joseph_Mallord_William_Turner_064.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/07/Joseph_Mallord_William_Turner_064.jpg",
+    "pxW": 1920,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 203,
+    "h": 132
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Ulysses Deriding Polyphemus is an 1829 oil painting by Joseph Mallord William Turner. It depicts a scene from Homer's Odyssey, showing Odysseus (Ulysses) standing on his ship deriding Polyphemus, one of the cyclopes he encounters and has recently blinded, who is disguised behind one of the mountains on the left side. Additional details include the Trojan Horse, a scene from Virgil's Aeneid, on one of the flags and the horses of Apollo rising above the horizon.",
+    "source": "https://en.wikipedia.org/wiki/Ulysses_Deriding_Polyphemus"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q257580",
+   "title": "The Fighting Temeraire",
+   "year": 1839,
+   "image": {
+    "file": "File:Turner, J. M. W. - The Fighting Téméraire tugged to her last Berth to be broken.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg/960px-Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg/1920px-Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+    "pxW": 6000,
+    "pxH": 4455
+   },
+   "cm": {
+    "w": 122,
+    "h": 91
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Fighting Temeraire, tugged to her last berth to be broken up, 1838 is an oil-on-canvas painting by the English artist Joseph Mallord William Turner, painted in 1838 and exhibited at the Royal Academy in 1839.",
+    "source": "https://en.wikipedia.org/wiki/The_Fighting_Temeraire"
+   },
+   "facts": [
+    {
+     "text": "When Turner came to paint this picture he was at the height of his career, having exhibited at the Royal Academy, London for 40 years. He was renowned for his highly atmospheric paintings in which he explored the subjects of the weather, the sea and the effects of light.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Fighting_Temeraire#Background"
+    },
+    {
+     "text": "The composition of this painting is unusual in that the most significant object, the old warship, is positioned well to the left of the painting, where it rises in stately splendour and almost ghostlike colours against a triangle of blue sky and rising mist that throws it into relief.",
+     "section": "Symbolism",
+     "source": "https://en.wikipedia.org/wiki/The_Fighting_Temeraire#Symbolism"
+    },
+    {
+     "text": "Turner took a degree of artistic licence with the painting. The ship was known to her crew as \"Saucy\", rather than \"Fighting\" Temeraire.",
+     "section": "Artistic licence",
+     "source": "https://en.wikipedia.org/wiki/The_Fighting_Temeraire#Artistic_licence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q219344",
+   "title": "The Slave Ship",
+   "year": 1840,
+   "image": {
+    "file": "File:Slave-ship.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Slave-ship.jpg/960px-Slave-ship.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Slave-ship.jpg/1920px-Slave-ship.jpg",
+    "pxW": 2152,
+    "pxH": 1616
+   },
+   "cm": {
+    "w": 123,
+    "h": 91
+   },
+   "collection": "Museum of Fine Arts Boston",
+   "story": {
+    "extract": "The Slave Ship, originally titled Slavers Throwing overboard the Dead and Dying—Typhon coming on, is a painting by the British artist J. Turner, first exhibited at The Royal Academy of Arts in 1840.",
+    "source": "https://en.wikipedia.org/wiki/The_Slave_Ship"
+   },
+   "facts": [
+    {
+     "text": "The painting inspired David Dabydeen's 1994 longform poem, Turner. In 2006 the painting was the focus of episode 5 in the eight-part BBC TV mini-series Simon Schama's Power of Art, broadcast by BBC Two.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Slave_Ship#Legacy"
+    },
+    {
+     "text": "Turner's emphasis on colour rather than design is typical of many Romantic works of the time. The indistinct shapes and the pervasiveness of the sunset's blood-red colour serve to illustrate the idea that nature is superior to man.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Slave_Ship#Analysis"
+    },
+    {
+     "text": "In 1781, the captain of a slave ship inbound to Jamaica, the Zong, had ordered 132 slaves to be thrown overboard when drinking water was running low so that insurance payments could be collected; slaves who died of natural causes were not covered by insurance.",
+     "section": "Historical background",
+     "source": "https://en.wikipedia.org/wiki/The_Slave_Ship#Historical_background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q16038731",
+   "title": "Snow Storm: Steam-Boat off a Harbour's Mouth",
+   "year": 1842,
+   "image": {
+    "file": "File:Joseph Mallord William Turner - Snow Storm - Steam-Boat off a Harbour's Mouth - WGA23178.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Joseph_Mallord_William_Turner_-_Snow_Storm_-_Steam-Boat_off_a_Harbour%27s_Mouth_-_WGA23178.jpg/960px-Joseph_Mallord_William_Turner_-_Snow_Storm_-_Steam-Boat_off_a_Harbour%27s_Mouth_-_WGA23178.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Joseph_Mallord_William_Turner_-_Snow_Storm_-_Steam-Boat_off_a_Harbour%27s_Mouth_-_WGA23178.jpg/1920px-Joseph_Mallord_William_Turner_-_Snow_Storm_-_Steam-Boat_off_a_Harbour%27s_Mouth_-_WGA23178.jpg",
+    "pxW": 2510,
+    "pxH": 1879
+   },
+   "cm": {
+    "w": 122,
+    "h": 91
+   },
+   "collection": "Tate",
+   "story": {
+    "extract": "Snow Storm, or Snow Storm: Steam-Boat off a Harbour's Mouth, is a painting by English artist Joseph Mallord William Turner (1775–1851) from 1842.",
+    "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Steam-Boat_off_a_Harbour%27s_Mouth"
+   },
+   "facts": [
+    {
+     "text": "An inscription on the painting relates that The Author was in this Storm on the Night the \"Ariel\" left Harwich.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Steam-Boat_off_a_Harbour%27s_Mouth#History"
+    },
+    {
+     "text": "The painting depicts a paddle steamer caught in a snow storm. This marine painting is showing a Romantic era's painter's depiction of a snowstorm on water at its best, fully developing the bold, daring Romantic fantasy of Turner.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Snow_Storm%3A_Steam-Boat_off_a_Harbour%27s_Mouth#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  },
+  {
+   "qid": "Q2339059",
+   "title": "Rain, Steam and Speed – The Great Western Railway",
+   "year": 1843,
+   "image": {
+    "file": "File:Turner - Rain, Steam and Speed - National Gallery file.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Turner_-_Rain%2C_Steam_and_Speed_-_National_Gallery_file.jpg/960px-Turner_-_Rain%2C_Steam_and_Speed_-_National_Gallery_file.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Turner_-_Rain%2C_Steam_and_Speed_-_National_Gallery_file.jpg/1920px-Turner_-_Rain%2C_Steam_and_Speed_-_National_Gallery_file.jpg",
+    "pxW": 5661,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 122,
+    "h": 91
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Rain, Steam, and Speed – The Great Western Railway is an oil painting by the 19th-century British painter J. Turner.",
+    "source": "https://en.wikipedia.org/wiki/Rain%2C_Steam_and_Speed_%E2%80%93_The_Great_Western_Railway"
+   },
+   "facts": [
+    {
+     "text": "Turner's painting illustrates an oncoming train in the countryside during a summer rainstorm. The train in the center is dark and rain-shrouded, surrounded by a golden natural landscape on both sides.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Rain%2C_Steam_and_Speed_%E2%80%93_The_Great_Western_Railway#Description"
+    },
+    {
+     "text": "The painting was painted close to the end of the Industrial Revolution, which brought a massive shift from an agrarian economy to one dominated by machine manufacturing in the Victorian era. The railway was among the most potent symbols of industrialisation, since this new way of transportation heavily affected industrial and social life.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Rain%2C_Steam_and_Speed_%E2%80%93_The_Great_Western_Railway#Background"
+    },
+    {
+     "text": "Turner frequently created an atmospheric tonality in his artistic creations by spreading the paint in short, broad brushstrokes from a filthy palette onto the canvas and gradually drawing forms out of his color ground. In the center of the painting and the upper right, Turner used thick impasto with a palette knife.",
+     "section": "Artistic technique",
+     "source": "https://en.wikipedia.org/wiki/Rain%2C_Steam_and_Speed_%E2%80%93_The_Great_Western_Railway#Artistic_technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "J. M. W. Turner"
+   }
+  }
+ ]
+}

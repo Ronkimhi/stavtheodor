@@ -1,0 +1,390 @@
+{
+ "slug": "eugene-delacroix",
+ "name": "Eugène Delacroix",
+ "qid": "Q33477",
+ "born": 1798,
+ "died": 1863,
+ "periods": [
+  "romanticism"
+ ],
+ "oneLiner": "French painter (1798–1863)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg/330px-F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg"
+ },
+ "bio": {
+  "extract": "Ferdinand Victor Eugène Delacroix was a French Romantic artist who was regarded as the leader of the French Romantic school.",
+  "source": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2354251",
+   "title": "The Barque of Dante",
+   "year": 1822,
+   "image": {
+    "file": "File:Eugène Delacroix - The Barque of Dante.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Eug%C3%A8ne_Delacroix_-_The_Barque_of_Dante.jpg/960px-Eug%C3%A8ne_Delacroix_-_The_Barque_of_Dante.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Eug%C3%A8ne_Delacroix_-_The_Barque_of_Dante.jpg/1920px-Eug%C3%A8ne_Delacroix_-_The_Barque_of_Dante.jpg",
+    "pxW": 3626,
+    "pxH": 2713
+   },
+   "cm": {
+    "w": 242,
+    "h": 189
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Barque of Dante, also Dante and Virgil in Hell, is the first major painting by the French artist Eugène Delacroix, and is a work signalling the shift in the character of narrative painting, from Neo-Classicism towards Romanticism. The painting loosely depicts events narrated in canto eight of Dante's Inferno; a leaden, smoky mist and the blazing City of Dis form the backdrop against which the poet Dante fearfully endures his crossing of the River Styx. As his barque ploughs through waters heaving with tormented souls, Dante is steadied by Virgil, the learned poet of Classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/The_Barque_of_Dante"
+   },
+   "facts": [
+    {
+     "text": "In a letter to his sister, Madame Henriette de Verninac, written in 1821, Delacroix speaks of his desire to paint for the Salon the following year, and to 'gain a little recognition'. In April 1822 he wrote to his friend Charles Soulier that he had been working hard and non-stop for two and a half months to precisely that end.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Barque_of_Dante#Background"
+    },
+    {
+     "text": "The Barque of Dante was an artistically ambitious work, and although the composition is conventional, the painting in some important respects broke unmistakably free of the French Neo-Classical tradition.",
+     "section": "Themes",
+     "source": "https://en.wikipedia.org/wiki/The_Barque_of_Dante#Themes"
+    },
+    {
+     "text": "The drops of water running down the bodies of the damned are painted in a manner seldom seen up to and including the early nineteenth century. Four different, unmixed pigments, in discretely applied quantities comprise the image of one drop and its shadow.",
+     "section": "Water drops on the damned",
+     "source": "https://en.wikipedia.org/wiki/The_Barque_of_Dante#Water_drops_on_the_damned"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q2290433",
+   "title": "The Massacre at Chios",
+   "year": 1824,
+   "image": {
+    "file": "File:Scène des massacres de Scio, Eugène Delacroix - Musée du Louvre Peintures INV 3823 ; C3.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg/960px-Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg/1920px-Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg",
+    "pxW": 6807,
+    "pxH": 8084
+   },
+   "cm": {
+    "w": 354,
+    "h": 419
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Scenes from the Massacre at Chios is the second major oil painting by the French artist Eugène Delacroix. The work is more than four meters tall, and shows some of the horror of the wartime destruction visited on the northern Aegean Sea island of Chios in the 1822 Chios massacre. A frieze-like display of suffering characters, military might, ornate and colourful costumes, terror, disease and death is shown in front of a scene of widespread desolation.",
+    "source": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios"
+   },
+   "facts": [
+    {
+     "text": "On 15 September 1821, Delacroix wrote to his friend Raymond Soulier that he wanted to make a reputation for himself by painting a scene from the war between the Ottomans and the Greeks, and have this painting displayed at the Salon. At this time Delacroix was not famous, and had yet to paint a canvas that was to be hung for public display.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios#History"
+    },
+    {
+     "text": "A military attack on the inhabitants of Chios by Ottoman forces commenced on 12 April 1822 and was prosecuted for several months into the summer of the same year. The campaign resulted in the deaths of twenty thousand citizens, and the forced deportation into slavery of almost all the surviving seventy thousand inhabitants.",
+     "section": "Massacre",
+     "source": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios#Massacre"
+    },
+    {
+     "text": "Delacroix had been greatly impressed by his fellow Parisian Théodore Géricault's The Raft of the Medusa, a painting for which he himself modeled as the young man at the front with the outstretched arm. The pyramidal arrangement that governs Géricault's painting is similarly seen with the figures in the foreground of The Massacre at Chios.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q3119110",
+   "title": "Orphan Girl at the Cemetery",
+   "year": 1824,
+   "image": {
+    "file": "File:Jeune Orpheline au cimetière - Eugène Delacroix - Muse du Louvre Peintures RF 1652 - photo 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Jeune_Orpheline_au_cimeti%C3%A8re_-_Eug%C3%A8ne_Delacroix_-_Muse_du_Louvre_Peintures_RF_1652_-_photo_2.jpg/960px-Jeune_Orpheline_au_cimeti%C3%A8re_-_Eug%C3%A8ne_Delacroix_-_Muse_du_Louvre_Peintures_RF_1652_-_photo_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Jeune_Orpheline_au_cimeti%C3%A8re_-_Eug%C3%A8ne_Delacroix_-_Muse_du_Louvre_Peintures_RF_1652_-_photo_2.jpg/1920px-Jeune_Orpheline_au_cimeti%C3%A8re_-_Eug%C3%A8ne_Delacroix_-_Muse_du_Louvre_Peintures_RF_1652_-_photo_2.jpg",
+    "pxW": 8167,
+    "pxH": 9851
+   },
+   "cm": {
+    "w": 54,
+    "h": 66
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Orphan Girl at the cemetery is a painting by the French artist Eugène Delacroix.",
+    "source": "https://en.wikipedia.org/wiki/Orphan_Girl_at_the_Cemetery"
+   },
+   "facts": [
+    {
+     "text": "The Young Orphan Girl in the Cemetery, an alternate title for the painting, is currently in the Musée du Louvre in Paris, France.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Orphan_Girl_at_the_Cemetery#Provenance"
+    },
+    {
+     "text": "Believed to be a preparatory work in oil for the artist's later Massacre at Chios, Orphan Girl at the Cemetery is nevertheless considered a masterpiece in its own right. An air of sorrow and fearfulness emanates from the picture, and tears well from the eyes of the grief-stricken girl as she looks apprehensively upward.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Orphan_Girl_at_the_Cemetery#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q3181999",
+   "title": "Greece on the Ruins of Missolonghi",
+   "year": 1826,
+   "image": {
+    "file": "File:Eugène Delacroix - La Grèce sur les ruines de Missolonghi, 1826.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/67/Eug%C3%A8ne_Delacroix_-_La_Gr%C3%A8ce_sur_les_ruines_de_Missolonghi%2C_1826.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/67/Eug%C3%A8ne_Delacroix_-_La_Gr%C3%A8ce_sur_les_ruines_de_Missolonghi%2C_1826.jpg",
+    "pxW": 900,
+    "pxH": 1337
+   },
+   "cm": {
+    "w": 142,
+    "h": 213
+   },
+   "collection": "Musée des Beaux-Arts de Bordeaux",
+   "story": {
+    "extract": "Greece on the Ruins of Missolonghi is an 1826 oil painting by French painter Eugène Delacroix, now preserved at the Musée des Beaux-Arts de Bordeaux. It was first exhibited at the Galerie Lebrun in 1826 with later exhibitions at Hobday's Gallery in London in 1828 and the Musée Colbert in Paris in 1829. It is likely that the painting was finished between the middle of June and the middle of August of 1826, although the exact date is unknown.",
+    "source": "https://en.wikipedia.org/wiki/Greece_on_the_Ruins_of_Missolonghi"
+   },
+   "facts": [
+    {
+     "text": "The work depicts a woman dressed in a disordered blue robe with gold details (often used to depict Greece in many of Delacroix's works), a white underdress, and scarf-like headwear. The figure was likely meant to serve as an allegorical figure of Greece, representing \"Hellenic Beauty\" and motherhood.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Greece_on_the_Ruins_of_Missolonghi#Analysis"
+    },
+    {
+     "text": "The Turks surrounded Missolonghi on the Gulf of Patras after having tried several times to retake the territory following the 1821 Greek insurrection. While the Greeks held out for almost a year, disease and famine ultimately resulted in a Turkish victory.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/Greece_on_the_Ruins_of_Missolonghi#Context"
+    },
+    {
+     "text": "Visitors were expected to be shocked by the painting and experience an appeal to humane and civic responsibility, with the painting depicting the horrors and violence of war. The severed hand and the rubble from the explosion serve as reminders of the reality of massacres and wars.",
+     "section": "French Romanticism",
+     "source": "https://en.wikipedia.org/wiki/Greece_on_the_Ruins_of_Missolonghi#French_Romanticism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q1133821",
+   "title": "Death of Sardanapalus",
+   "year": 1827,
+   "image": {
+    "file": "File:La Mort de Sardanapale - Eugène Delacroix - Musée du Louvre Peintures RF 2346.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg/960px-La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg/1920px-La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg",
+    "pxW": 9842,
+    "pxH": 7703
+   },
+   "cm": {
+    "w": 496,
+    "h": 392
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Death of Sardanapalus is an 1827 oil painting on canvas by the French artist Eugène Delacroix, now in the Musée du Louvre, Paris. A smaller replica he made in 1844 is in the Philadelphia Museum of Art. It is a work of Romanticism based on the tale of Sardanapalus, a king of Assyria, from Greek historian Diodorus Siculus's library.",
+    "source": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus"
+   },
+   "facts": [
+    {
+     "text": "Death of Sardanapalus was controversial and polarizing at its exhibition at the Paris Salon of 1827. Delacroix's main figural subject was Sardanapalus, a king willing to destroy all of his possessions, including people and luxurious goods, in a funerary pyre of gore and excess.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus#Reception"
+    },
+    {
+     "text": "The main focus of Death of Sardanapalus is a large bed draped in rich red fabric. On it lies a man with a disinterested eye overseeing a scene of chaos.",
+     "section": "Visual analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus#Visual_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q22965178",
+   "title": "Woman with a Parrot",
+   "year": 1827,
+   "image": {
+    "file": "File:Delacroix, Eugène Ferdinand Victor - Woman with a Parrot - 1827.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Delacroix%2C_Eug%C3%A8ne_Ferdinand_Victor_-_Woman_with_a_Parrot_-_1827.jpg/960px-Delacroix%2C_Eug%C3%A8ne_Ferdinand_Victor_-_Woman_with_a_Parrot_-_1827.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Delacroix%2C_Eug%C3%A8ne_Ferdinand_Victor_-_Woman_with_a_Parrot_-_1827.jpg",
+    "pxW": 1500,
+    "pxH": 1114
+   },
+   "cm": {
+    "w": 32,
+    "h": 24
+   },
+   "collection": "Museum of Fine Arts of Lyon",
+   "story": {
+    "extract": "Woman Stroking a Parrot or Woman with a Parrot is an 1827 Orientalist oil-on-canvas painting by Eugène Delacroix. Several art historians have linked the work to Lambert Sustris's Venus and Cupid. In 1897 the painting was given by Couturier de Royas to the Museum of Fine Arts of Lyon, where it still hangs.",
+    "source": "https://en.wikipedia.org/wiki/Woman_Stroking_a_Parrot"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q29530",
+   "title": "Liberty Leading the People",
+   "year": 1830,
+   "image": {
+    "file": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/1920px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+    "pxW": 10128,
+    "pxH": 8103
+   },
+   "cm": {
+    "w": 325,
+    "h": 260
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Liberty Leading the People is a painting of the Romantic era by the French artist Eugène Delacroix, commemorating the July Revolution of 1830 that toppled King Charles X.",
+    "source": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People"
+   },
+   "facts": [
+    {
+     "text": "By the time Delacroix painted Liberty Leading the People, he was already the acknowledged driving force of the Romantic school in French painting.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People#History"
+    },
+    {
+     "text": "Although Delacroix was not the first artist to depict Liberty in a Phrygian cap, his painting may be the best known early version of the figure commonly known as Marianne, a symbol of the French Republic and of France in general. The painting may have influenced Victor Hugo's 1862 novel Les Misérables.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People#Legacy"
+    },
+    {
+     "text": "Delacroix depicted Liberty as both an allegorical goddess-figure and a robust woman of the people. The mound of corpses and wreckage acts as a kind of pedestal from which Liberty strides, barefoot and bare-breasted, out of the canvas and into the space of the viewer.",
+     "section": "Symbolism",
+     "source": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People#Symbolism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q1212737",
+   "title": "The Women of Algiers",
+   "year": 1834,
+   "image": {
+    "file": "File:Femmes d'Alger dans leur appartement, Eugène Delacroix - Musée du Louvre Peintures INV 3824.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Femmes_d%27Alger_dans_leur_appartement%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3824.jpg/960px-Femmes_d%27Alger_dans_leur_appartement%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3824.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Femmes_d%27Alger_dans_leur_appartement%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3824.jpg/1920px-Femmes_d%27Alger_dans_leur_appartement%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3824.jpg",
+    "pxW": 10342,
+    "pxH": 8036
+   },
+   "cm": {
+    "w": 229,
+    "h": 180
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Women of Algiers in Their Apartment is the title of two oil on canvas paintings by the French Romantic painter Eugène Delacroix.",
+    "source": "https://en.wikipedia.org/wiki/Women_of_Algiers"
+   },
+   "facts": [
+    {
+     "text": "The French conquest of Algeria started in 1830 and affected France's relationship with nearby countries, such as Morocco. Towards the end of 1831 King Louis Phillipe sent a diplomatic party to Morocco in order to establish friendly relations and negotiate a treaty with the Sultan.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Women_of_Algiers#History"
+    },
+    {
+     "text": "The 1834 painting was first displayed at the Salon of 1834 in Paris, where it received mixed reviews.",
+     "section": "1834 painting",
+     "source": "https://en.wikipedia.org/wiki/Women_of_Algiers#1834_painting"
+    },
+    {
+     "text": "The nineteenth century concept of North Africa was a warped and fantasised interpretation of the foreign countries. Ottoman Turkey, Egypt, Algeria, Morocco, and India were all condensed under the enigmatic category of \"The Orient\".",
+     "section": "Orientalism",
+     "source": "https://en.wikipedia.org/wiki/Women_of_Algiers#Orientalism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q11938897",
+   "title": "Jewish Wedding in Morocco",
+   "year": 1839,
+   "image": {
+    "file": "File:Noce juive dans le Maroc - Eugène Delacroix - Musée du Louvre Peintures INV 3825 ; LP 4737.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noce_juive_dans_le_Maroc_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3825_%3B_LP_4737.jpg/960px-Noce_juive_dans_le_Maroc_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3825_%3B_LP_4737.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noce_juive_dans_le_Maroc_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3825_%3B_LP_4737.jpg/1920px-Noce_juive_dans_le_Maroc_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3825_%3B_LP_4737.jpg",
+    "pxW": 10605,
+    "pxH": 7758
+   },
+   "cm": {
+    "w": 140,
+    "h": 105
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Jewish Wedding in Morocco is an 1839 genre painting by the French artist Eugène Delacroix. It depicts a Jewish wedding taking place in the Sultanate of Morocco. A leading figure of the Romantic movement, Delacroix visited North Africa and produced a number of Orientalist pictures inspired by his travels.Delacroix had witnessed a wedding ceremony and sketched Moroccan Jews while in Tangier in 1832.",
+    "source": "https://en.wikipedia.org/wiki/Jewish_Wedding_in_Morocco"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  },
+  {
+   "qid": "Q3055367",
+   "title": "Entry of the Crusaders in Constantinople",
+   "year": 1840,
+   "image": {
+    "file": "File:Prise de Constantinople par les croisés (12 avril 1204) - Eugène Delacroix - Musée du Louvre Peintures INV 3821 ; LP 4674 - après restauration 2026.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Prise_de_Constantinople_par_les_crois%C3%A9s_%2812_avril_1204%29_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3821_%3B_LP_4674_-_apr%C3%A8s_restauration_2026.jpg/960px-Prise_de_Constantinople_par_les_crois%C3%A9s_%2812_avril_1204%29_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3821_%3B_LP_4674_-_apr%C3%A8s_restauration_2026.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Prise_de_Constantinople_par_les_crois%C3%A9s_%2812_avril_1204%29_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3821_%3B_LP_4674_-_apr%C3%A8s_restauration_2026.jpg/1920px-Prise_de_Constantinople_par_les_crois%C3%A9s_%2812_avril_1204%29_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3821_%3B_LP_4674_-_apr%C3%A8s_restauration_2026.jpg",
+    "pxW": 8375,
+    "pxH": 6789
+   },
+   "cm": {
+    "w": 497,
+    "h": 411
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Entry of the Crusaders in Constantinople or The Crusaders Entering Constantinople is a large painting by the French painter Eugène Delacroix. It was commissioned by Louis-Philippe in 1838, and completed in 1840. It was exhibited at the Salon of 1841.",
+    "source": "https://en.wikipedia.org/wiki/Entry_of_the_Crusaders_in_Constantinople"
+   },
+   "facts": [
+    {
+     "text": "Delacroix's painting depicts a brutal episode of the armed expedition known as Fourth Crusade (12 April 1204), in which a Crusaders army abandoned their plan to invade Muslim Egypt and Jerusalem, and instead sacked the Christian (Eastern Orthodox) city of Constantinople, the capital of the Byzantine Empire.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Entry_of_the_Crusaders_in_Constantinople#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Eugène Delacroix"
+   }
+  }
+ ]
+}

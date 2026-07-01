@@ -1,0 +1,369 @@
+{
+ "slug": "tintoretto",
+ "name": "Tintoretto",
+ "qid": "Q9319",
+ "born": 1518,
+ "died": 1594,
+ "periods": [
+  "mannerism"
+ ],
+ "oneLiner": "Renaissance painter (1518/1519–1594)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tintoretto-selfport.jpg/330px-Tintoretto-selfport.jpg"
+ },
+ "bio": {
+  "extract": "Jacopo Robusti, best known as Tintoretto, was an Italian Renaissance painter of the Venetian school. His contemporaries both admired and criticised the speed with which he painted and the unprecedented boldness of his brushwork. For his phenomenal energy in painting he was termed il Furioso. His work is characterised by muscular figures, dramatic gestures and bold use of perspective, in the Mannerist style.",
+  "source": "https://en.wikipedia.org/wiki/Tintoretto"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Tintoretto",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2273890",
+   "title": "Miracle of the Slave",
+   "year": 1547,
+   "image": {
+    "file": "File:Tintoretto - Miracle of the Slave.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tintoretto_-_Miracle_of_the_Slave.jpg/960px-Tintoretto_-_Miracle_of_the_Slave.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tintoretto_-_Miracle_of_the_Slave.jpg/1920px-Tintoretto_-_Miracle_of_the_Slave.jpg",
+    "pxW": 6358,
+    "pxH": 4959
+   },
+   "cm": {
+    "w": 541,
+    "h": 415
+   },
+   "collection": "Gallerie dell'Accademia",
+   "story": {
+    "extract": "The Miracle of the Slave is a painting completed in 1548 by the Italian Renaissance artist Jacopo Tintoretto. Originally commissioned for the Scuola Grande di San Marco, a confraternity in the city of Venice, the work has been held in the Gallerie dell'Accademia since 1815.",
+    "source": "https://en.wikipedia.org/wiki/Miracle_of_the_Slave_%28Tintoretto%29"
+   },
+   "facts": [
+    {
+     "text": "Interpretations of the painting have focused on its religious content.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Miracle_of_the_Slave_%28Tintoretto%29#Interpretation"
+    },
+    {
+     "text": "Miracle of the Slave was commissioned by the charitable civic organization of the Scuola Grande di San Marco to hang opposite the altar within the building. The work hung in the Scuola until seized by the French in 1797.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Miracle_of_the_Slave_%28Tintoretto%29#Description"
+    },
+    {
+     "text": "Miracle of the Slave was the first notable work of Tintoretto's career. Prior to Miracle of the Slave, Tintoretto did not have powerful backers.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/Miracle_of_the_Slave_%28Tintoretto%29#Context"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": "Q2393412",
+   "title": "Venus and Mars Surprised by Vulcan",
+   "year": 1555,
+   "image": {
+    "file": "File:JACOPO-TINTORETTO-JACOPO-ROBUSTI VULKAN-UEBERRASCHT-VENUS-UND-MARS CC-BY-SA BSTGS 9257.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/JACOPO-TINTORETTO-JACOPO-ROBUSTI_VULKAN-UEBERRASCHT-VENUS-UND-MARS_CC-BY-SA_BSTGS_9257.jpg/960px-JACOPO-TINTORETTO-JACOPO-ROBUSTI_VULKAN-UEBERRASCHT-VENUS-UND-MARS_CC-BY-SA_BSTGS_9257.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/JACOPO-TINTORETTO-JACOPO-ROBUSTI_VULKAN-UEBERRASCHT-VENUS-UND-MARS_CC-BY-SA_BSTGS_9257.jpg/1920px-JACOPO-TINTORETTO-JACOPO-ROBUSTI_VULKAN-UEBERRASCHT-VENUS-UND-MARS_CC-BY-SA_BSTGS_9257.jpg",
+    "pxW": 3000,
+    "pxH": 2034
+   },
+   "cm": {
+    "w": 198,
+    "h": 135
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Mars and Venus Surprised by Vulcan or Venus, Vulcan and Mars is a 1551-1552 oil on canvas painting by Jacopo Tintoretto, now in the Alte Pinakothek in Munich.",
+    "source": "https://en.wikipedia.org/wiki/Mars_and_Venus_Surprised_by_Vulcan"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q3978277",
+   "title": "Susanna and the Elders",
+   "year": 1555,
+   "image": {
+    "file": "File:Jacopo Robusti, called Tintoretto - Susanna and the Elders - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Jacopo_Robusti%2C_called_Tintoretto_-_Susanna_and_the_Elders_-_Google_Art_Project.jpg/960px-Jacopo_Robusti%2C_called_Tintoretto_-_Susanna_and_the_Elders_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Jacopo_Robusti%2C_called_Tintoretto_-_Susanna_and_the_Elders_-_Google_Art_Project.jpg/1920px-Jacopo_Robusti%2C_called_Tintoretto_-_Susanna_and_the_Elders_-_Google_Art_Project.jpg",
+    "pxW": 6424,
+    "pxH": 4868
+   },
+   "cm": {
+    "w": 194,
+    "h": 146
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "Susanna and the Elders is an oil painting by the Venetian painter Tintoretto. Robusti, also known as Tintoretto or Il Furioso, for the energy and \"fury\" with which he painted, depicted both sacred and profane subjects in a period sometimes known as the Venetian “golden century”.",
+    "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Tintoretto%29"
+   },
+   "facts": [
+    {
+     "text": "Tintoretto's Susanna and the Elders, from 1555/56, is one of several works on the same subject from the artist's studio. One of the pictures is exhibited at the Louvre, the Museo del Prado and in the National Gallery of Art in Washington, D.C.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Tintoretto%29#History"
+    },
+    {
+     "text": "According to the biblical story, a young married Jewish woman named Susanna bathed in a pool in her garden every day. One day, two elderly men who were guests of Susanna's wealthy husband Joakim, lusted for Susanna, who was described as \"The Beautiful Susanna\".",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Tintoretto%29#Subject"
+    },
+    {
+     "text": "The painting shows a naked Susanna sitting in a garden beside a pool, leaning against a tree, and facing a dense rose trellis, against which leans a mirror. Susanna gazes into the mirror.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Tintoretto%29#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q3937806",
+   "title": "Finding of the body of St Mark",
+   "year": 1562,
+   "image": {
+    "file": "File:Jacopo Tintoretto - Finding of the body of St Mark.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Jacopo_Tintoretto_-_Finding_of_the_body_of_St_Mark.jpg/960px-Jacopo_Tintoretto_-_Finding_of_the_body_of_St_Mark.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Jacopo_Tintoretto_-_Finding_of_the_body_of_St_Mark.jpg/1920px-Jacopo_Tintoretto_-_Finding_of_the_body_of_St_Mark.jpg",
+    "pxW": 4289,
+    "pxH": 4239
+   },
+   "cm": {
+    "w": 400,
+    "h": 396
+   },
+   "collection": "Pinacoteca di Brera",
+   "story": {
+    "extract": "The Finding of the Body of Saint Mark or Discovery of the Body of Saint Mark is a painting by Tintoretto. Dated to between 1562 and 1566, it is part of a cycle of paintings dedicated to Saint Mark, the patron saint of Venice. It is now held in the Pinacoteca di Brera in Milan.",
+    "source": "https://en.wikipedia.org/wiki/Finding_of_the_Body_of_Saint_Mark"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Tommaso Rangone., the “grand guardian” of the Scuola Grande di San Marco in Venice, from Tintoretto as part of a series of large canvases depicting Venice's acquisition of the body of Saint Mark.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Finding_of_the_Body_of_Saint_Mark#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": "Q2472983",
+   "title": "Last Supper",
+   "year": 1563,
+   "image": {
+    "file": "File:Jacopo Tintoretto - The Last Supper - WGA22649.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg/960px-Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/46/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg",
+    "pxW": 1337,
+    "pxH": 850
+   },
+   "cm": {
+    "w": 568,
+    "h": 365
+   },
+   "collection": "Church of San Giorgio Maggiore",
+   "story": {
+    "extract": "The Last Supper is a painting by the Italian Renaissance artist Jacopo Tintoretto. An oil painting on canvas executed in 1592–1594, it is housed in the Basilica di San Giorgio Maggiore in Venice, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Last_Supper_%28Tintoretto%29"
+   },
+   "facts": [
+    {
+     "text": "Tintoretto depicted the Last Supper several times during his artistic career. His earlier paintings for the Chiesa di San Marcuola (1547) and for the Chiesa di San Felice (1559) depict the scene from a frontal perspective, with the figures seated at a table placed parallel to the picture plane.",
+     "section": "Overview",
+     "source": "https://en.wikipedia.org/wiki/Last_Supper_%28Tintoretto%29#Overview"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q924655",
+   "title": "St Mark's Body Brought to Venice",
+   "year": 1564,
+   "image": {
+    "file": "File:Jacopo Tintoretto - St Mark's Body Brought to Venice.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jacopo_Tintoretto_-_St_Mark%27s_Body_Brought_to_Venice.jpg/960px-Jacopo_Tintoretto_-_St_Mark%27s_Body_Brought_to_Venice.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jacopo_Tintoretto_-_St_Mark%27s_Body_Brought_to_Venice.jpg/1920px-Jacopo_Tintoretto_-_St_Mark%27s_Body_Brought_to_Venice.jpg",
+    "pxW": 7720,
+    "pxH": 9600
+   },
+   "cm": {
+    "w": 315,
+    "h": 398
+   },
+   "collection": "Gallerie dell'Accademia",
+   "story": {
+    "extract": "Saint Mark's Body Brought to Venice, The Abduction of the Body of Saint Mark or Translation of the Body of Saint Mark is a painting by Tintoretto depicting the translatio, or transfer of Saint Mark's relics from Alexandria to Venice. It was produced between 1562 and 1566 as part of a series of works on Saint Mark for the Sala Capitolare of the Scuola Grande di San Marco - the others are Miracle of the Slave, Saint Mark Saving a Saracen from Shipwreck and Finding of the Body of Saint Mark. It is now held in the Gallerie dell'Accademia in Venice.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Mark%27s_Body_Brought_to_Venice"
+   },
+   "facts": [
+    {
+     "text": "The painting is notable for its striking, deep perspective background lines. The colours are darker in the near subjects, while the figures in the background are white, nearly transparent.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Saint_Mark%27s_Body_Brought_to_Venice#Composition"
+    },
+    {
+     "text": "Saint Mark spent most of his life in Alexandria, Egypt. His body was brought to Venice eight centuries after his death in AD 68.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Saint_Mark%27s_Body_Brought_to_Venice#Subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": "Q490312",
+   "title": "Crucifixion",
+   "year": 1565,
+   "image": {
+    "file": "File:Jacopo Tintoretto 021.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Jacopo_Tintoretto_021.jpg/960px-Jacopo_Tintoretto_021.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Jacopo_Tintoretto_021.jpg/1920px-Jacopo_Tintoretto_021.jpg",
+    "pxW": 2712,
+    "pxH": 1181
+   },
+   "cm": null,
+   "collection": "Scuola Grande di San Rocco",
+   "story": {
+    "extract": "The Crucifixion by Tintoretto is a large painting in oil on canvas, installed in the Sala dell'Albergo of the Scuola Grande di San Rocco, Venice. It is signed and dated 1565. This painting is one of the most dramatic versions of the Crucifixion in the history of Christian art.",
+    "source": "https://en.wikipedia.org/wiki/Crucifixion_%28Tintoretto%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q3013303",
+   "title": "Danae",
+   "year": 1570,
+   "image": {
+    "file": "File:Tintoret-Danaé-Lyon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Tintoret-Dana%C3%A9-Lyon.jpg/960px-Tintoret-Dana%C3%A9-Lyon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Tintoret-Dana%C3%A9-Lyon.jpg/1920px-Tintoret-Dana%C3%A9-Lyon.jpg",
+    "pxW": 2040,
+    "pxH": 1558
+   },
+   "cm": {
+    "w": 182,
+    "h": 142
+   },
+   "collection": "Museum of Fine Arts of Lyon",
+   "story": {
+    "extract": "Danaë is an oil painting by the Italian artist Tintoretto, from c. 1570. It was acquired by the Museum of Fine Arts of Lyon in 1811, where it still hangs.",
+    "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Tintoretto%29"
+   },
+   "facts": [
+    {
+     "text": "The canvas depicts a scene from the legend of Zeus and Danaë. According to the legend, King Acrisius of Argos was warned by an oracle that he would be killed by his own grandson.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Tintoretto%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q2274267",
+   "title": "The Origin of the Milky Way",
+   "year": 1575,
+   "image": {
+    "file": "File:Jacopo Tintoretto - The Origin of the Milky Way - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Jacopo_Tintoretto_-_The_Origin_of_the_Milky_Way_-_Google_Art_Project.jpg/960px-Jacopo_Tintoretto_-_The_Origin_of_the_Milky_Way_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Jacopo_Tintoretto_-_The_Origin_of_the_Milky_Way_-_Google_Art_Project.jpg/1920px-Jacopo_Tintoretto_-_The_Origin_of_the_Milky_Way_-_Google_Art_Project.jpg",
+    "pxW": 3000,
+    "pxH": 2684
+   },
+   "cm": {
+    "w": 168,
+    "h": 149
+   },
+   "collection": "Orleans Collection",
+   "story": {
+    "extract": "The Origin of the Milky Way is a painting by the Italian Renaissance master Jacopo Tintoretto, in the National Gallery, London, formerly in the Orleans Collection. The painting is considered one of Tintoretto’s most successful paintings in the Venetian style. It is an oil painting on canvas, and dates from ca. 1575–1580.",
+    "source": "https://en.wikipedia.org/wiki/The_Origin_of_the_Milky_Way"
+   },
+   "facts": [
+    {
+     "text": "While the National Gallery was restoring the painting in 1972, they did an X-ray on the piece and determined that there was an original painting that was carefully painted over. The original painting was of the same scene, but the style was rapidly done and had a firm determination to it.",
+     "section": "Patron",
+     "source": "https://en.wikipedia.org/wiki/The_Origin_of_the_Milky_Way#Patron"
+    },
+    {
+     "text": "The painting suffered some damage over the years, the most glaring is the missing third that was cut off. The two sides of the canvas are frayed and ragged due to the canvas being distorted by the tension of being stretched awkwardly on the stretcher.",
+     "section": "Damage",
+     "source": "https://en.wikipedia.org/wiki/The_Origin_of_the_Milky_Way#Damage"
+    },
+    {
+     "text": "The painting depicts Jupiter, god of the sky and king of the gods, who is depicted wearing red. Juno, the goddess of marriage and queen of the gods, is the woman in the bed, and Hercules the illegitimate son of Jupiter and the mortal woman Alcmene.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/The_Origin_of_the_Milky_Way#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacopo Tintoretto"
+   }
+  },
+  {
+   "qid": "Q5996597",
+   "title": "Paradise",
+   "year": 1588,
+   "image": {
+    "file": "File:(Venice) Jacopo Tintoretto - Gloria del Paradiso - Sala del Maggior Consiglio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%28Venice%29_Jacopo_Tintoretto_-_Gloria_del_Paradiso_-_Sala_del_Maggior_Consiglio.jpg/960px-%28Venice%29_Jacopo_Tintoretto_-_Gloria_del_Paradiso_-_Sala_del_Maggior_Consiglio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%28Venice%29_Jacopo_Tintoretto_-_Gloria_del_Paradiso_-_Sala_del_Maggior_Consiglio.jpg/1920px-%28Venice%29_Jacopo_Tintoretto_-_Gloria_del_Paradiso_-_Sala_del_Maggior_Consiglio.jpg",
+    "pxW": 11943,
+    "pxH": 3789
+   },
+   "cm": null,
+   "collection": "Doge's Palace",
+   "story": {
+    "extract": "Il Paradiso is a massive oil painting on canvas that dominates the main hall of the Doge's Palace, which hosted the Great Council of Venice. It is one of the largest paintings on canvas in the world and was painted by Jacopo Robusti, known more commonly as Tintoretto. The painting features a heavenly scene with depictions of various religious figures such as the portrayal of Justina, patron saint of Padua.",
+    "source": "https://en.wikipedia.org/wiki/Il_Paradiso"
+   },
+   "facts": [
+    {
+     "text": "In 1577, a fire destroyed part of the Doge's Palace, including a 14th-century fresco by Guariento depicting the Coronation of the Virgin. The painting was situated behind the throne on which the doge and wealthy aristocrats took seats among the Great Council during their gatherings.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Il_Paradiso#History"
+    },
+    {
+     "text": "The Virgin Interceding with Christ portrays the scene surmounted by the dove of the Holy Spirit and raised upon a dense semicircular rank of cherubim and seraphim. The reference to the Annunciation that had figured in the previous fresco was present: the Archangel Gabriel is shown holding out a lily to Mary, depicted with a halo of 7 stars.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Il_Paradiso#Painting"
+    },
+    {
+     "text": "Around two decades into the 16th century, a cloth dyer in Venice, Italy by the name of Battista Robusti conceived a son who would be known as Jacopo Robusti. Little to nothing is known about the childhood of Jacopo because his father's business as a dyer was not significant enough to be well documented.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/Il_Paradiso#Influences"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Didier Descouens"
+   }
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "slug": "roy-lichtenstein",
+ "name": "Roy Lichtenstein",
+ "qid": "Q151679",
+ "born": 1923,
+ "died": 1997,
+ "periods": [
+  "pop-art"
+ ],
+ "oneLiner": "American pop artist (1923–1997)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg/330px-Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Roy Fox Lichtenstein was an American artist. A leading figure of the Pop Art movement, he is best known for his large-scale paintings inspired by comic books, advertisements, and mass-produced imagery. Lichtenstein's art is represented in major museum collections worldwide, and he remains one of the most influential and recognizable artists of the 20th century.",
+  "source": "https://en.wikipedia.org/wiki/Roy_Lichtenstein"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Roy_Lichtenstein",
+ "hasGallery": false,
+ "paintings": [
+  {
+   "qid": "Q3567592",
+   "title": "Whaam!",
+   "year": 1997,
+   "image": {
+    "file": "File:Roy Lichtenstein (1967).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Roy_Lichtenstein_%281967%29.jpg/960px-Roy_Lichtenstein_%281967%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Roy_Lichtenstein_%281967%29.jpg/1920px-Roy_Lichtenstein_%281967%29.jpg",
+    "pxW": 3648,
+    "pxH": 2406
+   },
+   "cm": {
+    "w": 272,
+    "h": 406
+   },
+   "collection": "Tate",
+   "story": {
+    "extract": "Whaam! is a 1963 diptych painting by the American artist Roy Lichtenstein. It is one of the best-known works of pop art, and among Lichtenstein's most important paintings. Whaam! was first exhibited at the Leo Castelli Gallery in New York City in 1963, and purchased by the Tate Gallery, London, in 1966.",
+    "source": "https://en.wikipedia.org/wiki/Whaam%21"
+   },
+   "facts": [
+    {
+     "text": "Whaam! adapts a panel by Irv Novick from the \"Star Jockey\" story from issue No. 89 of DC Comics' All-American Men of War (Feb. 1962). The original forms part of a dream sequence in which fictional World War II P-51 Mustang pilot Johnny Flying Cloud, \"the Navajo ace\", foresees himself flying a jet fighter while shooting down other jet planes.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Whaam%21#History"
+    },
+    {
+     "text": "The painting was, for the most part, well received by art critics when first exhibited. A November 1963 Art Magazine review by Donald Judd described Whaam! as one of the \"broad and powerful paintings\" of the 1963 exhibition at Castelli's Gallery.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Whaam%21#Reception"
+    },
+    {
+     "text": "Marla F. Prather observed that Whaam!'s grand scale and dramatic depiction contributed to its position as a historic work of pop art.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Whaam%21#Legacy"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Eric Koch for Anefo"
+   }
+  }
+ ]
+}

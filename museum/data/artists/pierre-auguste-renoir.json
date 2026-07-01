@@ -1,0 +1,416 @@
+{
+ "slug": "pierre-auguste-renoir",
+ "name": "Pierre-Auguste Renoir",
+ "qid": "Q39931",
+ "born": 1841,
+ "died": 1919,
+ "periods": [
+  "impressionism"
+ ],
+ "oneLiner": "French painter and sculptor (1841–1919)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pierre_Auguste_Renoir%2C_uncropped_image.jpg/330px-Pierre_Auguste_Renoir%2C_uncropped_image.jpg"
+ },
+ "bio": {
+  "extract": "Pierre-Auguste Renoir was a leading French Impressionist artist. In his depiction of feminine beauty, Renoir has been described as \"the final representative of a tradition which runs directly from Rubens to Watteau.\"",
+  "source": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2783729",
+   "title": "Lise with a Parasol",
+   "year": 1867,
+   "image": {
+    "file": "File:Lise with a Parasol.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Lise_with_a_Parasol.jpg/960px-Lise_with_a_Parasol.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Lise_with_a_Parasol.jpg/1920px-Lise_with_a_Parasol.jpg",
+    "pxW": 2469,
+    "pxH": 4005
+   },
+   "cm": {
+    "w": 115,
+    "h": 184
+   },
+   "collection": "Museum Folkwang",
+   "story": {
+    "extract": "Lise with a Parasol is an oil on canvas painting by French artist Pierre-Auguste Renoir, created in 1867 during his early Salon period. The full-length painting depicts model Lise Tréhot posing in a forest. She wears a white muslin dress and holds a black lace parasol to shade her from the sunlight, which filters down through the leaves, contrasting her face in the shadow and her body in the light, highlighting her dress rather than her face.",
+    "source": "https://en.wikipedia.org/wiki/Lise_with_a_Parasol"
+   },
+   "facts": [
+    {
+     "text": "In a letter from Renoir to Frédéric Bazille in September 1869, Renoir writes about his desperation for money: \"I exhibited [the portraits of] Lise and Sisley at Carpentier's. I am going to try to stick him for about 100 francs, and I'm going to put my woman in white up for auction.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Lise_with_a_Parasol#Provenance"
+    },
+    {
+     "text": "Lise with a Parasol is a large format, almost life-size portrait painting of a young woman in full-length, standing on the edge of a forest clearing with the shade of a grove of oak trees composing the background.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Lise_with_a_Parasol#Description"
+    },
+    {
+     "text": "Pierre-Auguste Renoir (1841–1919) grew up in Paris, where his father worked as a tailor and his mother as a seamstress.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Lise_with_a_Parasol#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q1659469",
+   "title": "In the Summer",
+   "year": 1868,
+   "image": {
+    "file": "File:Auguste Renoir - En été - La bohémienne - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Auguste_Renoir_-_En_%C3%A9t%C3%A9_-_La_boh%C3%A9mienne_-_Google_Art_Project.jpg/960px-Auguste_Renoir_-_En_%C3%A9t%C3%A9_-_La_boh%C3%A9mienne_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Auguste_Renoir_-_En_%C3%A9t%C3%A9_-_La_boh%C3%A9mienne_-_Google_Art_Project.jpg/1920px-Auguste_Renoir_-_En_%C3%A9t%C3%A9_-_La_boh%C3%A9mienne_-_Google_Art_Project.jpg",
+    "pxW": 2737,
+    "pxH": 4015
+   },
+   "cm": {
+    "w": 59,
+    "h": 85
+   },
+   "collection": "Alte Nationalgalerie",
+   "story": {
+    "extract": "In Summer is an 1868 oil-on-canvas painting by Pierre-Auguste Renoir, a portrait of Lise Tréhot aged about 20.",
+    "source": "https://en.wikipedia.org/wiki/In_Summer_%28Renoir%29"
+   },
+   "facts": [
+    {
+     "text": "It is not known who purchased the painting from Renoir, but it was acquired from an unnamed art dealer by the art critic Théodore Duret in March 1873, and was acquired by collector François Depeaux (1853-1920).",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/In_Summer_%28Renoir%29#Provenance"
+    },
+    {
+     "text": "The painting measures 85 centimetres (33 in) by 59 centimetres (23 in) and is a half-length frontal portrait of a young woman, dressed informally, sitting on a chair beside a wall, possibly on a balcony, with greenery behind.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/In_Summer_%28Renoir%29#Description"
+    },
+    {
+     "text": "Tréhot was Renoir's companion from about 1866 to 1871. He painted her at least 23 times, including Lise with a parasol, painted in 1867, Renoir's first significant critical success which was admired at the Paris Salon of 1868.",
+     "section": "The subject",
+     "source": "https://en.wikipedia.org/wiki/In_Summer_%28Renoir%29#The_subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q74339",
+   "title": "La loge",
+   "year": 1874,
+   "image": {
+    "file": "File:Pierre-Auguste Renoir (1841-1919) - Theatre Box (La Loge) - P.1948.SC.338 - Courtauld Gallery.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pierre-Auguste_Renoir_%281841-1919%29_-_Theatre_Box_%28La_Loge%29_-_P.1948.SC.338_-_Courtauld_Gallery.jpg/960px-Pierre-Auguste_Renoir_%281841-1919%29_-_Theatre_Box_%28La_Loge%29_-_P.1948.SC.338_-_Courtauld_Gallery.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pierre-Auguste_Renoir_%281841-1919%29_-_Theatre_Box_%28La_Loge%29_-_P.1948.SC.338_-_Courtauld_Gallery.jpg",
+    "pxW": 964,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 64,
+    "h": 80
+   },
+   "collection": "Courtauld Gallery",
+   "story": {
+    "extract": "La Loge is an 1874 oil painting by Pierre-Auguste Renoir. It is part of the collection at the Courtauld Institute of Art in London.",
+    "source": "https://en.wikipedia.org/wiki/La_Loge"
+   },
+   "facts": [
+    {
+     "text": "Between the years 1873 and 1880, the theme of the theatre box allowed Renoir to explore the characteristic scenes of modern Paris and study the interplay between the current fashions and the idea of the theatre box as a place to see as well as a place to be seen.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/La_Loge#Analysis"
+    },
+    {
+     "text": "The painting, La Loge, depicts a young woman, Nini Lopez, sitting a theatre box, while her male companion behind her uses a pair of binoculars to observe something above him.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/La_Loge#Composition"
+    },
+    {
+     "text": "Renoir depicts the conventional evening dress worn by a wealthy couple when going out to a theatre. The focus is placed on the young woman, who is positioned in the foreground.",
+     "section": "Fashion",
+     "source": "https://en.wikipedia.org/wiki/La_Loge#Fashion"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q683274",
+   "title": "Bal du moulin de la Galette",
+   "year": 1876,
+   "image": {
+    "file": "File:Renoir, Pierre-Auguste - Dance at Le Moulin de la Galette, 1876.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg/960px-Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg/1920px-Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg",
+    "pxW": 40869,
+    "pxH": 30379
+   },
+   "cm": {
+    "w": 175,
+    "h": 131
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Bal du moulin de la Galette is an 1876 painting by French artist Pierre-Auguste Renoir.",
+    "source": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette"
+   },
+   "facts": [
+    {
+     "text": "Renoir painted a smaller version of the picture (78 × 114 cm) with the same title. The painting is now believed to be in a private collection in Switzerland.",
+     "section": "Smaller version",
+     "source": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#Smaller_version"
+    },
+    {
+     "text": "Renoir conceived his project of painting the dancing at Le Moulin de la Galette in May 1876 and its execution is described in full by his civil servant friend Georges Rivière in his memoir Renoir et ses amis. Renoir needed to set up a studio near the mill.",
+     "section": "Genesis",
+     "source": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#Genesis"
+    },
+    {
+     "text": "A homage to this painting appears as the cover art of A Night on the Town, the 1976 album of singer-songwriter Rod Stewart with Stewart replacing the man, in the centre, wearing the straw boater.",
+     "section": "In popular culture",
+     "source": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#In_popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q1118456",
+   "title": "La Balançoire",
+   "year": 1876,
+   "image": {
+    "file": "File:Swing-Renoir.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Swing-Renoir.jpeg/960px-Swing-Renoir.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Swing-Renoir.jpeg/1920px-Swing-Renoir.jpeg",
+    "pxW": 7648,
+    "pxH": 10000
+   },
+   "cm": {
+    "w": 73,
+    "h": 92
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Swing is an oil-on-canvas painting made in the summer of 1876 by the French Impressionist artist Pierre-Auguste Renoir. The painting depicts model Jeanne Samary, Norbert Goeneutte, and Renoir's brother Edmond. The painting combines eighteenth-century techniques with modern elements.",
+    "source": "https://en.wikipedia.org/wiki/The_Swing_%28Renoir%29"
+   },
+   "facts": [
+    {
+     "text": "This scene depicts Edmond Renoir (the artist's brother), Norbert Goeneutte, and Jeanne Samary, a young working woman from Montmartre and a favourite model of Renoir's who appears in many of his other works. Seemingly lost in thought, Jeanne stands on a swing hanging from a tree while Norbert and Edmond try to capture her attention.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Renoir%29#Description"
+    },
+    {
+     "text": "Renoir started out as a porcelain painter, incorporating the delicacy and elegance of eighteenth-century art into his work. He continued on with this style as he rose to fame as a painter.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Renoir%29#Technique"
+    },
+    {
+     "text": "Renoir greatly admired the works of Watteau, Boucher, and Fragonard, and their influence is observable in many of his works. This painting is especially evocative of fête galante paintings of the eighteenth-century Rococo style.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Renoir%29#Influences"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q1167907",
+   "title": "Luncheon of the Boating Party",
+   "year": 1880,
+   "image": {
+    "file": "File:Pierre-Auguste Renoir - Luncheon of the Boating Party - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/960px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/1920px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+    "pxW": 9025,
+    "pxH": 6684
+   },
+   "cm": {
+    "w": 176,
+    "h": 130
+   },
+   "collection": "The Phillips Collection",
+   "story": {
+    "extract": "Luncheon of the Boating Party is an 1880–1881 painting by French impressionist Pierre-Auguste Renoir. Exhibited at the Seventh Impressionist Exhibition in 1882, it was identified as the best painting in the show by three critics. It was purchased from the artist by the dealer-patron Paul Durand-Ruel and bought in 1923 from his son by industrialist Duncan Phillips, who spent a decade in pursuit of the work.",
+    "source": "https://en.wikipedia.org/wiki/Luncheon_of_the_Boating_Party"
+   },
+   "facts": [
+    {
+     "text": "The painting, combining figures, still-life, and landscape in one work, depicts a group of Renoir's friends relaxing on a balcony at the Maison Fournaise restaurant along the Seine river in Chatou, France. The painter and art patron, Gustave Caillebotte, is seated in the lower right.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Luncheon_of_the_Boating_Party#Description"
+    },
+    {
+     "text": "As he often did in his paintings, Renoir included several of his friends in Luncheon of the Boating Party. Identification of the sitters was made in 1912 by Julius Meier-Graefe.",
+     "section": "Subjects depicted",
+     "source": "https://en.wikipedia.org/wiki/Luncheon_of_the_Boating_Party#Subjects_depicted"
+    },
+    {
+     "text": "At the Seventh Impressionist Exhibition in 1882, the painting generally received praise from critics. \"It is fresh and free without being too bawdy,\" wrote Paul de Charry in Le Pays, March 10, 1882.",
+     "section": "Contemporary critical reception",
+     "source": "https://en.wikipedia.org/wiki/Luncheon_of_the_Boating_Party#Contemporary_critical_reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q630121",
+   "title": "Two Sisters",
+   "year": 1881,
+   "image": {
+    "file": "File:Pierre-Auguste Renoir - Two Sisters (On the Terrace) - 1933.455 - Art Institute of Chicago.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Pierre-Auguste_Renoir_-_Two_Sisters_%28On_the_Terrace%29_-_1933.455_-_Art_Institute_of_Chicago.jpg/960px-Pierre-Auguste_Renoir_-_Two_Sisters_%28On_the_Terrace%29_-_1933.455_-_Art_Institute_of_Chicago.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Pierre-Auguste_Renoir_-_Two_Sisters_%28On_the_Terrace%29_-_1933.455_-_Art_Institute_of_Chicago.jpg",
+    "pxW": 1813,
+    "pxH": 2250
+   },
+   "cm": {
+    "w": 81,
+    "h": 100
+   },
+   "collection": "Art Institute of Chicago",
+   "story": {
+    "extract": "Two Sisters (On the Terrace) is an 1881 oil-on-canvas painting by French artist Pierre-Auguste Renoir in the collection of the Art Institute of Chicago. The dimensions of the painting are 100.5 cm × 81 cm. The title Two Sisters (French: Les Deux Sœurs) was given to the painting by Renoir, and the title On the Terrace (French: Sur la terrasse) by its first owner Paul Durand-Ruel.",
+    "source": "https://en.wikipedia.org/wiki/Two_Sisters_%28On_the_Terrace%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q1114571",
+   "title": "The Umbrellas",
+   "year": 1881,
+   "image": {
+    "file": "File:Pierre-Auguste Renoir, The Umbrellas, ca. 1881-86.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Pierre-Auguste_Renoir%2C_The_Umbrellas%2C_ca._1881-86.jpg/960px-Pierre-Auguste_Renoir%2C_The_Umbrellas%2C_ca._1881-86.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Pierre-Auguste_Renoir%2C_The_Umbrellas%2C_ca._1881-86.jpg/1920px-Pierre-Auguste_Renoir%2C_The_Umbrellas%2C_ca._1881-86.jpg",
+    "pxW": 2687,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 115,
+    "h": 180
+   },
+   "collection": "Hugh Lane Gallery",
+   "story": {
+    "extract": "The Umbrellas is an oil-on-canvas painting by Pierre-Auguste Renoir, painted in two phases in the 1880s. It is owned by the National Gallery in London as part of the Lane Bequest but is displayed alternately in London and at the Dublin City Gallery The Hugh Lane. From May 2013 to 2019, it returned to Dublin for a six-year period.",
+    "source": "https://en.wikipedia.org/wiki/The_Umbrellas_%28Renoir%29"
+   },
+   "facts": [
+    {
+     "text": "Renoir did not exhibit The Umbrellas straight away – he may have thought the combination of styles would be too challenging for the public – and he eventually sold the painting to the French art dealer Paul Durand-Ruel in 1892.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Umbrellas_%28Renoir%29#Provenance"
+    },
+    {
+     "text": "The painting measures 180.3 centimetres (71.0 in) high by 114.9 centimetres (45.2 in) wide. It depicts a busy street scene in Paris, with most of the people depicted using umbrellas against the rain.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Umbrellas_%28Renoir%29#Description"
+    },
+    {
+     "text": "Renoir began the painting in about 1880–81, using the loose brushwork with dark and bright tones typical of the Impressionist movement.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/The_Umbrellas_%28Renoir%29#Development"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q2501284",
+   "title": "The Great Bathers",
+   "year": 1884,
+   "image": {
+    "file": "File:Pierre-Auguste Renoir, French - The Large Bathers - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pierre-Auguste_Renoir%2C_French_-_The_Large_Bathers_-_Google_Art_Project.jpg/960px-Pierre-Auguste_Renoir%2C_French_-_The_Large_Bathers_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pierre-Auguste_Renoir%2C_French_-_The_Large_Bathers_-_Google_Art_Project.jpg/1920px-Pierre-Auguste_Renoir%2C_French_-_The_Large_Bathers_-_Google_Art_Project.jpg",
+    "pxW": 6725,
+    "pxH": 4609
+   },
+   "cm": {
+    "w": 171,
+    "h": 118
+   },
+   "collection": "Philadelphia Museum of Art",
+   "story": {
+    "extract": "Les Grandes Baigneuses, or The Large Bathers, is a painting by Pierre-Auguste Renoir made between 1884 and 1887. The painting is in the Philadelphia Museum of Art, in Philadelphia.",
+    "source": "https://en.wikipedia.org/wiki/Les_Grandes_Baigneuses_%28Renoir%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was initially purchased by Jacques-Émile Blanche, Renoir's former student, for 1,000 Francs. It was sold to Carroll Sargent Tyson, Jr. in 1927, and bequeathed to the Philadelphia Museum of Art in 1963.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Les_Grandes_Baigneuses_%28Renoir%29#Provenance"
+    },
+    {
+     "text": "The painting was exhibited at the Petit Gallery in May 1887. Renoir considered this work to be his grand masterpiece and he reportedly expected viewers to be \"dumbfounded\" by the painting.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Les_Grandes_Baigneuses_%28Renoir%29#Reception"
+    },
+    {
+     "text": "It is inspired at least in part by a sculpture by François Girardon, The Bath of the Nymphs (1672), a low lead relief realized for a fountain park of Versailles. The painting is also influenced by Veronese and Tiepolo, whose work Renoir greatly admired during his time in Venice.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/Les_Grandes_Baigneuses_%28Renoir%29#Influences"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  },
+  {
+   "qid": "Q3808227",
+   "title": "Girls at the Piano",
+   "year": 1892,
+   "image": {
+    "file": "File:Auguste Renoir - Young Girls at the Piano - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg/960px-Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg/1920px-Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg",
+    "pxW": 4005,
+    "pxH": 5292
+   },
+   "cm": {
+    "w": 90,
+    "h": 116
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Young Girls at the Piano is an oil-on-canvas painting by French artist Pierre-Auguste Renoir, a leading painter in the development of the Impressionist style. The painting represents his late work period (1892–1919). It was completed in 1892 as an informal commission for the Musée du Luxembourg.",
+    "source": "https://en.wikipedia.org/wiki/Girls_at_the_Piano"
+   },
+   "facts": [
+    {
+     "text": "Renoir depicts two young girls at a piano in a bourgeois home, one in a white dress with blue sash seated playing and one in a pink dress standing.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Girls_at_the_Piano#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pierre-Auguste Renoir"
+   }
+  }
+ ]
+}

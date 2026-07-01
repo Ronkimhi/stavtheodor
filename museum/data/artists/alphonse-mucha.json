@@ -1,0 +1,271 @@
+{
+ "slug": "alphonse-mucha",
+ "name": "Alphonse Mucha",
+ "qid": "Q146691",
+ "born": 1860,
+ "died": 1939,
+ "periods": [
+  "symbolism-art-nouveau"
+ ],
+ "oneLiner": "Czech painter, illustrator and graphic artist (1860–1939)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg/330px-Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg"
+ },
+ "bio": {
+  "extract": "Alfons Maria Mucha, known in English as Alphonse Mucha, was a Czech painter, illustrator, and graphic artist. Living in Paris during the Art Nouveau period, he was widely known for his distinctly stylised and decorative theatrical posters, particularly those of Sarah Bernhardt. He produced illustrations, advertisements, decorative panels, as well as designs, which became among the best-known images of the period.",
+  "source": "https://en.wikipedia.org/wiki/Alphonse_Mucha"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Alphonse_Mucha",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3107798",
+   "title": "Gismonda",
+   "year": 1894,
+   "image": {
+    "file": "File:Alfons Mucha - 1894 - Gismonda.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg",
+    "pxW": 800,
+    "pxH": 2343
+   },
+   "cm": {
+    "w": 67,
+    "h": 198
+   },
+   "collection": "National Gallery Prague",
+   "story": {
+    "extract": "Gismonda is a Greek-set melodrama in four acts by Victorien Sardou that premiered on October 31, 1894 at the Théâtre de la Renaissance. In 1918, the play was adapted for the now lost film Love's Conquest. In 1918/1919, it was adapted into the opera Gismonda by Henry Février.",
+    "source": "https://en.wikipedia.org/wiki/Gismonda"
+   },
+   "facts": [
+    {
+     "text": "Act I starts in 1451 in Athens at the foot of the Acropolis. In the opening act, we find Gismonda, the widow of the Duke of Athens, and the mother of his child, a five-year-old boy named Francesco.",
+     "section": "Act I",
+     "source": "https://en.wikipedia.org/wiki/Gismonda#Act_I"
+    },
+    {
+     "text": "The second act begins in the Convent of Daphne, where Gismonda has gone into a retreat with her son, Francesco. The boy is ill with a strange fever that comes on every evening and breaks every morning.",
+     "section": "Act II",
+     "source": "https://en.wikipedia.org/wiki/Gismonda#Act_II"
+    },
+    {
+     "text": "This act takes place in Gismonda's private apartment in her palace. The Athenian populace is not pleased that their Duchess does not keep her vow.",
+     "section": "Act III",
+     "source": "https://en.wikipedia.org/wiki/Gismonda#Act_III"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q4193020",
+   "title": "Zodiac",
+   "year": 1897,
+   "image": {
+    "file": "File:Alphonse Mucha - Zodiac, 1869.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alphonse_Mucha_-_Zodiac%2C_1869.jpg/960px-Alphonse_Mucha_-_Zodiac%2C_1869.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alphonse_Mucha_-_Zodiac%2C_1869.jpg/1920px-Alphonse_Mucha_-_Zodiac%2C_1869.jpg",
+    "pxW": 2046,
+    "pxH": 2717
+   },
+   "cm": {
+    "w": 48,
+    "h": 66
+   },
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q4292430",
+   "title": "Rêveur",
+   "year": 1897,
+   "image": {
+    "file": "File:Alfons Mucha - F. Champenois Imprimeur-Éditeur.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg/960px-Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg",
+    "pxW": 1202,
+    "pxH": 1633
+   },
+   "cm": {
+    "w": 55,
+    "h": 73
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/efba7392fa1d13b18bf6b82f9712db26",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q125351886",
+   "title": "Madonna of the Lilies",
+   "year": 1905,
+   "image": {
+    "file": "File:Alfons Mucha - Madonna of the Lilies (1905).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg/960px-Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg",
+    "pxW": 1415,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 182,
+    "h": 247
+   },
+   "collection": "Mucha Foundation",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q48977656",
+   "title": "Portrait of Josephine Crane-Bradley as Slavia",
+   "year": 1908,
+   "image": {
+    "file": "File:SlaviaMucha.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SlaviaMucha.jpg/960px-SlaviaMucha.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SlaviaMucha.jpg/1920px-SlaviaMucha.jpg",
+    "pxW": 3128,
+    "pxH": 5000
+   },
+   "cm": {
+    "w": 92,
+    "h": 154
+   },
+   "collection": "National Gallery Prague",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q19912129",
+   "title": "Maude Adams (1872–1953) as Joan of Arc",
+   "year": 1909,
+   "image": {
+    "file": "File:Mucha-Maud Adams as Joan of Arc-1909.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg/960px-Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg",
+    "pxW": 1000,
+    "pxH": 2820
+   },
+   "cm": {
+    "w": 76,
+    "h": 209
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q59161470",
+   "title": "Slavs in their Original Homeland",
+   "year": 1912,
+   "image": {
+    "file": "File:Slovane v pravlasti 81x61m.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Slovane_v_pravlasti_81x61m.jpg/960px-Slovane_v_pravlasti_81x61m.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Slovane_v_pravlasti_81x61m.jpg/1920px-Slovane_v_pravlasti_81x61m.jpg",
+    "pxW": 3454,
+    "pxH": 2530
+   },
+   "cm": {
+    "w": 810,
+    "h": 610
+   },
+   "collection": "museum collection of the Prague City Gallery",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q59161690",
+   "title": "The Celebration of Svantovit in Rujana",
+   "year": 1912,
+   "image": {
+    "file": "File:Slavnost svatovitova na rujane.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Slavnost_svatovitova_na_rujane.jpg/960px-Slavnost_svatovitova_na_rujane.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Slavnost_svatovitova_na_rujane.jpg/1920px-Slavnost_svatovitova_na_rujane.jpg",
+    "pxW": 3539,
+    "pxH": 2681
+   },
+   "cm": {
+    "w": 810,
+    "h": 610
+   },
+   "collection": "museum collection of the Prague City Gallery",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q59161906",
+   "title": "The Introduction of Slavonic Liturgy",
+   "year": 1912,
+   "image": {
+    "file": "File:Zavedeni slovanske liturgie na velke morave.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Zavedeni_slovanske_liturgie_na_velke_morave.jpg/960px-Zavedeni_slovanske_liturgie_na_velke_morave.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Zavedeni_slovanske_liturgie_na_velke_morave.jpg/1920px-Zavedeni_slovanske_liturgie_na_velke_morave.jpg",
+    "pxW": 3782,
+    "pxH": 2650
+   },
+   "cm": {
+    "w": 810,
+    "h": 610
+   },
+   "collection": "museum collection of the Prague City Gallery",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  },
+  {
+   "qid": "Q125352276",
+   "title": "Song of Bohemia",
+   "year": 1918,
+   "image": {
+    "file": "File:Alfons Mucha - Chant de Bohème 02.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg/960px-Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg/1920px-Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg",
+    "pxW": 5496,
+    "pxH": 3916
+   },
+   "cm": {
+    "w": 138,
+    "h": 100
+   },
+   "collection": "Mucha Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Alphonse Mucha"
+   }
+  }
+ ]
+}

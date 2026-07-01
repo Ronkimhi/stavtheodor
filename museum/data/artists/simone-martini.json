@@ -1,0 +1,281 @@
+{
+ "slug": "simone-martini",
+ "name": "Simone Martini",
+ "qid": "Q221043",
+ "born": 1284,
+ "died": 1344,
+ "periods": [
+  "medieval-gothic"
+ ],
+ "oneLiner": "Italian painter",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Simone_Martini_-_Frontispice_du_Virgile.jpg/330px-Simone_Martini_-_Frontispice_du_Virgile.jpg"
+ },
+ "bio": {
+  "extract": "Simone Martini was an Italian painter born in Siena. He was a major figure in the development of early Italian painting and greatly influenced the development of the International Gothic style.",
+  "source": "https://en.wikipedia.org/wiki/Simone_Martini"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Simone_Martini",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3842553",
+   "title": "Madonna and Child n. 583",
+   "year": 1305,
+   "image": {
+    "file": "File:The-madonna-and-child-1881.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/The-madonna-and-child-1881.jpg/960px-The-madonna-and-child-1881.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/ac/The-madonna-and-child-1881.jpg",
+    "pxW": 1511,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 57,
+    "h": 88
+   },
+   "collection": "Pinacoteca Nazionale, Siena",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q3947520",
+   "title": "Saint Louis of Toulouse crowns Robert of Anjou",
+   "year": 1317,
+   "image": {
+    "file": "File:Simone Martini 013.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Simone_Martini_013.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Simone_Martini_013.jpg",
+    "pxW": 823,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 138,
+    "h": 200
+   },
+   "collection": "Museo di Capodimonte",
+   "story": {
+    "extract": "Saint Louis of Toulouse Crowning His Brother Robert of Anjou is a painting by Simone Martini, commissioned from him by Robert of Anjou during the artist's stay in Naples around 1317. It shows Robert being crowned by his elder brother Louis of Toulouse, who was made a saint in 1317. It is now in the National Museum of Capodimonte in Naples.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Louis_of_Toulouse_Crowning_His_Brother_Robert_of_Anjou"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q3907529",
+   "title": "Saint Catherine of Alexandria Polyptych",
+   "year": 1320,
+   "image": {
+    "file": "File:Simone Martini 012.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Simone_Martini_012.jpg/960px-Simone_Martini_012.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Simone_Martini_012.jpg/1920px-Simone_Martini_012.jpg",
+    "pxW": 3200,
+    "pxH": 2255
+   },
+   "cm": {
+    "w": 340,
+    "h": 195
+   },
+   "collection": "National Museum of San Matteo",
+   "story": {
+    "extract": "The Saint Catherine of Alexandria Polyptych is a painting by the Italian medieval artist Simone Martini, dating to 1320. Originally placed at the high altar of the church of Santa Caterina, Pisa, it is now housed in the Museo Nazionale di San Matteo of the same city.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Catherine_of_Alexandria_Polyptych"
+   },
+   "facts": [
+    {
+     "text": "The polyptych is Martini's largest work, and includes numerous sub-panels. The altarpiece consists of seven main elements, each one in three parts: a cusp, a smaller panel divided into two sections, and a larger panel depicting a single saint.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Saint_Catherine_of_Alexandria_Polyptych#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q3395788",
+   "title": "Polyptych of Saint Dominique",
+   "year": 1323,
+   "image": {
+    "file": "File:Simone Martini 008.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Simone_Martini_008.jpg/960px-Simone_Martini_008.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Simone_Martini_008.jpg/1920px-Simone_Martini_008.jpg",
+    "pxW": 2048,
+    "pxH": 927
+   },
+   "cm": {
+    "w": 48,
+    "h": 94
+   },
+   "collection": "Museo dell'Opera del Duomo",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q20183716",
+   "title": "Madonna and Child",
+   "year": 1326,
+   "image": {
+    "file": "File:Madonna and Child MET DT704.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Madonna_and_Child_MET_DT704.jpg/960px-Madonna_and_Child_MET_DT704.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Madonna_and_Child_MET_DT704.jpg/1920px-Madonna_and_Child_MET_DT704.jpg",
+    "pxW": 2679,
+    "pxH": 3722
+   },
+   "cm": {
+    "w": 38,
+    "h": 57
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q21711295",
+   "title": "St. Peter",
+   "year": 1326,
+   "image": {
+    "file": "File:Simone Martini - San Pietro.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Simone_Martini_-_San_Pietro.jpg/960px-Simone_Martini_-_San_Pietro.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Simone_Martini_-_San_Pietro.jpg/1920px-Simone_Martini_-_San_Pietro.jpg",
+    "pxW": 2000,
+    "pxH": 2980
+   },
+   "cm": {
+    "w": 38,
+    "h": 58
+   },
+   "collection": "Thyssen-Bornemisza Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q3539577",
+   "title": "Triptych of Saint Augustine",
+   "year": 1328,
+   "image": {
+    "file": "File:Simone Martini 073.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Simone_Martini_073.jpg/960px-Simone_Martini_073.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Simone_Martini_073.jpg/1920px-Simone_Martini_073.jpg",
+    "pxW": 2024,
+    "pxH": 1565
+   },
+   "cm": {
+    "w": 67,
+    "h": 82
+   },
+   "collection": "Pinacoteca Nazionale, Siena",
+   "story": {
+    "extract": "The Blessed Agostino Novello Triptych is a tempera on panel painting by Simone Martini, produced for a church in Siena between 1324 and 1328, at which time he had just returned from Assisi, Pisa and Orvieto to work on his frescoes at the Palazzo Pubblico. It now hangs in the Pinacoteca Nazionale in Siena.",
+    "source": "https://en.wikipedia.org/wiki/Blessed_Agostino_Novello_Triptych"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q979440",
+   "title": "Annunciation with Saints Maxima and Ansanus",
+   "year": 1333,
+   "image": {
+    "file": "File:Simone Martini — Annunciation with St. Margaret and St. Ansanus.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg/960px-Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg/1920px-Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg",
+    "pxW": 10416,
+    "pxH": 9044
+   },
+   "cm": {
+    "w": 305,
+    "h": 158
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Annunciation with Saint Margaret and Saint Ansanus is a painting by the Italian Gothic artists Simone Martini and Lippo Memmi, now housed in the Uffizi Gallery in Florence, Italy. It is a wooden triptych painted in tempera and gold, with a central panel having double size. Considered Martini's masterwork and one of the most outstanding works of Gothic painting, the work was originally painted for a side altar in Siena Cathedral.",
+    "source": "https://en.wikipedia.org/wiki/Annunciation_with_Saint_Margaret_and_Saint_Ansanus"
+   },
+   "facts": [
+    {
+     "text": "The painting originally decorated the altar of Saint Ansanus in the Cathedral of Siena, and had been commissioned as part of a cycle of four altarpieces dedicated to the city's patron saints during 1330–1350.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_with_Saint_Margaret_and_Saint_Ansanus#History"
+    },
+    {
+     "text": "The work is composed of a large central panel depicting the Annunciation, and two side panels with Saint Ansanus (left), and female saint, generarally identified as Saint Maxima or Saint Margaret, in the right, and four tondi in the cusps: Jeremiah, Ezekiel, Isaiah and Daniel.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_with_Saint_Margaret_and_Saint_Ansanus#Description"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": "Q3225814",
+   "title": "The Carrying of the Cross",
+   "year": 1335,
+   "image": {
+    "file": "File:Simone Martini 067.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Simone_Martini_067.jpg/960px-Simone_Martini_067.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Simone_Martini_067.jpg/1920px-Simone_Martini_067.jpg",
+    "pxW": 2064,
+    "pxH": 3336
+   },
+   "cm": {
+    "w": 20,
+    "h": 30
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  },
+  {
+   "qid": "Q19607289",
+   "title": "Christ discovered in the temple",
+   "year": 1342,
+   "image": {
+    "file": "File:Simone Martini - Christ Discovered in the Temple - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Simone_Martini_-_Christ_Discovered_in_the_Temple_-_Google_Art_Project.jpg/960px-Simone_Martini_-_Christ_Discovered_in_the_Temple_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Simone_Martini_-_Christ_Discovered_in_the_Temple_-_Google_Art_Project.jpg/1920px-Simone_Martini_-_Christ_Discovered_in_the_Temple_-_Google_Art_Project.jpg",
+    "pxW": 3049,
+    "pxH": 4287
+   },
+   "cm": {
+    "w": 35,
+    "h": 50
+   },
+   "collection": "Walker Art Gallery",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Simone Martini"
+   }
+  }
+ ]
+}

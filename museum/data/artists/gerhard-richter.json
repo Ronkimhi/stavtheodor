@@ -1,0 +1,21 @@
+{
+ "slug": "gerhard-richter",
+ "name": "Gerhard Richter",
+ "qid": "Q164351",
+ "born": 1932,
+ "died": null,
+ "periods": [
+  "contemporary"
+ ],
+ "oneLiner": "German visual artist (b. 1932)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg/330px-Gerhard_Richter%2C_Prague_%282017%29.jpg"
+ },
+ "bio": {
+  "extract": "Gerhard Richter is a German visual artist. Richter has produced abstract as well as photorealistic paintings, photographs and glass pieces. He is widely regarded as one of the most important contemporary German artists and several of his works have set record prices at auction, with him being the most expensive living painter at one time.",
+  "source": "https://en.wikipedia.org/wiki/Gerhard_Richter"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Gerhard_Richter",
+ "hasGallery": false,
+ "paintings": []
+}

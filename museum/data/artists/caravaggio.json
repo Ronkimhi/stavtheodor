@@ -1,0 +1,417 @@
+{
+ "slug": "caravaggio",
+ "name": "Caravaggio",
+ "qid": "Q42207",
+ "born": 1571,
+ "died": 1610,
+ "periods": [
+  "baroque"
+ ],
+ "oneLiner": "Italian painter (1571–1610)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bild-Ottavio_Leoni%2C_Caravaggio.jpg/330px-Bild-Ottavio_Leoni%2C_Caravaggio.jpg"
+ },
+ "bio": {
+  "extract": "Michelangelo Merisi da Caravaggio, known mononymously as Caravaggio, was an Italian painter active in Rome for a significant portion of his artistic life. He began his apprenticeship in Milan in 1584, and during the final four years of his life, he moved between Naples, Malta, and Sicily. His paintings have been characterized by art critics as combining a realistic observation of the human state, both physical and emotional, with a dramatic use of lighting, which had a formative influence on Baroque painting.",
+  "source": "https://en.wikipedia.org/wiki/Caravaggio"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Caravaggio",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2610675",
+   "title": "The Fortune Teller",
+   "year": 1594,
+   "image": {
+    "file": "File:The Fortune Teller-Caravaggio (Louvre).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/The_Fortune_Teller-Caravaggio_%28Louvre%29.jpg/960px-The_Fortune_Teller-Caravaggio_%28Louvre%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/The_Fortune_Teller-Caravaggio_%28Louvre%29.jpg/1920px-The_Fortune_Teller-Caravaggio_%28Louvre%29.jpg",
+    "pxW": 7683,
+    "pxH": 5806
+   },
+   "cm": {
+    "w": 131,
+    "h": 99
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Fortune Teller is a painting by Italian Baroque artist Michelangelo Merisi da Caravaggio. It exists in two versions, both by Caravaggio, the first from c. 1594, the second from c. 1595. The dates in both cases are disputed.",
+    "source": "https://en.wikipedia.org/wiki/The_Fortune_Teller_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "The painting shows a foppishly-dressed boy (in the second version the model is believed to be Caravaggio's companion, the Sicilian painter Mario Minniti), having his palm read by a Romani girl. The boy looks pleased as he gazes into her face, and she returns his gaze.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/The_Fortune_Teller_%28Caravaggio%29#Subject_matter"
+    },
+    {
+     "text": "Caravaggio's painting, of which two versions exist, shows a well-groomed, vain young man having his palm read by a Romani woman.",
+     "section": "Fortune teller's deceit as a metaphor",
+     "source": "https://en.wikipedia.org/wiki/The_Fortune_Teller_%28Caravaggio%29#Fortune_teller%27s_deceit_as_a_metaphor"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masur"
+   }
+  },
+  {
+   "qid": "Q2293936",
+   "title": "Self-Portrait as Bacchus",
+   "year": 1595,
+   "image": {
+    "file": "File:Young Sick Bacchus-Caravaggio (1593).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Young_Sick_Bacchus-Caravaggio_%281593%29.jpg/960px-Young_Sick_Bacchus-Caravaggio_%281593%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Young_Sick_Bacchus-Caravaggio_%281593%29.jpg/1920px-Young_Sick_Bacchus-Caravaggio_%281593%29.jpg",
+    "pxW": 3231,
+    "pxH": 4269
+   },
+   "cm": {
+    "w": 53,
+    "h": 67
+   },
+   "collection": "Galleria Borghese",
+   "story": {
+    "extract": "The Young Sick Bacchus, also known as the Sick Bacchus or the Self-Portrait as Bacchus, is an early self-portrait by the Italian Baroque artist Michelangelo Merisi da Caravaggio, dated between 1593 and 1594. It now hangs in the Galleria Borghese in Rome. According to Caravaggio's first biographer, Giovanni Baglione, it was a cabinet piece painted by the artist using a mirror.",
+    "source": "https://en.wikipedia.org/wiki/Young_Sick_Bacchus"
+   },
+   "facts": [
+    {
+     "text": "The painting dates from Caravaggio's first years in Rome following his arrival from his native Milan in mid-1592. Sources for this period are inconclusive and probably inaccurate, but they agree that at one point the artist fell extremely ill and spent six months in the hospital of Santa Maria della Consolazione.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Young_Sick_Bacchus#History"
+    },
+    {
+     "text": "Apart from its assumed autobiographical content, this early painting was likely used by Caravaggio to market himself, demonstrating his virtuosity in painting genres such as still-life and portraits and hinting at the ability to paint the classical figures of antiquity.",
+     "section": "Style",
+     "source": "https://en.wikipedia.org/wiki/Young_Sick_Bacchus#Style"
+    },
+    {
+     "text": "Cindy Sherman, as part of her History Portrait series (1989–90), produced a parody on Sick Bacchus, an ironic photographic self-portrait named Untitled # 224. During a 2018 NPR interview, Paul Janeway of the band St.",
+     "section": "Commentary",
+     "source": "https://en.wikipedia.org/wiki/Young_Sick_Bacchus#Commentary"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q2293905",
+   "title": "Medusa",
+   "year": 1597,
+   "image": {
+    "file": "File:Caravaggio - Medusa - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Caravaggio_-_Medusa_-_Google_Art_Project.jpg/960px-Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Caravaggio_-_Medusa_-_Google_Art_Project.jpg/1920px-Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+    "pxW": 3369,
+    "pxH": 3453
+   },
+   "cm": {
+    "w": 55,
+    "h": 60
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Two versions of Medusa were created by the Italian Baroque painter Michelangelo Merisi da Caravaggio, one in 1596 and the other in ca. 1597. Both depict the moment from Greek mythology in which the Gorgon Medusa is killed by the demigod Perseus, but the Medusas are also self-portraits. Due to its bizarre and intricate design, the painting is said to display Caravaggio's unique fascination with violence and realism.",
+    "source": "https://en.wikipedia.org/wiki/Medusa_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "In the 1590s, Caravaggio was working in Rome, and his success and wealth were increasing. However, the time in which he painted the two versions of the Medusa was characterized by several run-ins with the law.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Caravaggio%29#History"
+    },
+    {
+     "text": "Caravaggio depicted the act of decapitation in several of his other paintings, including Judith Beheading Holofernes, David with the Head of Goliath, and The Beheading of St John the Baptist.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Caravaggio%29#Influence"
+    },
+    {
+     "text": "The first version of the painting, created in 1596, is known as Murtula.",
+     "section": "Versions",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Caravaggio%29#Versions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q2011510",
+   "title": "Bacchus",
+   "year": 1598,
+   "image": {
+    "file": "File:Baco, por Caravaggio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Baco%2C_por_Caravaggio.jpg/960px-Baco%2C_por_Caravaggio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Baco%2C_por_Caravaggio.jpg/1920px-Baco%2C_por_Caravaggio.jpg",
+    "pxW": 2633,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 85,
+    "h": 95
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Bacchus is an oil painting by Italian Baroque master Michelangelo Merisi da Caravaggio (1571–1610) commissioned by Cardinal Francesco Maria del Monte. The painting shows a youthful Bacchus reclining in classical fashion with grapes and vine leaves in his hair, fingering the drawstring of his loosely draped robe. On a stone table in front of him is a bowl of fruit and a large carafe of red wine.",
+    "source": "https://en.wikipedia.org/wiki/Bacchus_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "Caravaggio is not only attempting to depict Bacchus, but also a boy dressed up as Bacchus. It Is a sensual scene inviting the viewer to succumb to their carnal desires.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_%28Caravaggio%29#Interpretation"
+    },
+    {
+     "text": "Bacchus, also known as Dionysus was the Greek god of wine, inebriation, fertility and theater. He is known to be joyous and kind to those who admire him, yet cruel and mischievous to those who cross him.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_%28Caravaggio%29#Subject_matter"
+    },
+    {
+     "text": "Bacchus was painted shortly after Caravaggio joined the household of his first important patron, Cardinal del Monte, and reflects the humanist interests of the Cardinal's educated circle. Caravaggio moved into the Palazzo Madama in 1596 and remained a guest of the Cardinal for five years.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_%28Caravaggio%29#Commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q318947",
+   "title": "Supper at Emmaus",
+   "year": 1601,
+   "image": {
+    "file": "File:Caravaggio - Supper at Emmaus - National Gallery London.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Caravaggio_-_Supper_at_Emmaus_-_National_Gallery_London.jpeg/960px-Caravaggio_-_Supper_at_Emmaus_-_National_Gallery_London.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Caravaggio_-_Supper_at_Emmaus_-_National_Gallery_London.jpeg/1920px-Caravaggio_-_Supper_at_Emmaus_-_National_Gallery_London.jpeg",
+    "pxW": 3388,
+    "pxH": 2410
+   },
+   "cm": {
+    "w": 141,
+    "h": 196
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Supper at Emmaus is a painting by the Italian Baroque master Caravaggio, completed in 1601, and now in London. It depicts the Gospel story of the resurrected Jesus's appearance in Emmaus.",
+    "source": "https://en.wikipedia.org/wiki/Supper_at_Emmaus_%28Caravaggio%2C_London%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts the moment when the resurrected but incognito Jesus reveals himself to two of his disciples (presumed to be Luke and Cleopas) in the town of Emmaus, only to soon vanish from their sight (Gospel of Luke 24: 30–31). In the painting, Cleopas wears the scallop shell of a pilgrim, while the other apostle wears torn clothes.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Supper_at_Emmaus_%28Caravaggio%2C_London%29#Description"
+    },
+    {
+     "text": "The basket of fruit in the foreground has two stray strands of wicker that form an ichthys, the early Christian fish-symbol for Christ. The shadow of the fruit on the tablecloth forms the body of a fish and fishtail.",
+     "section": "Christian symbolism",
+     "source": "https://en.wikipedia.org/wiki/Supper_at_Emmaus_%28Caravaggio%2C_London%29#Christian_symbolism"
+    },
+    {
+     "text": "Caravaggio painted another version of the Supper at Emmaus (now in the Pinacoteca di Brera, Milan) in 1606. By comparison, the gestures of figures are far more restrained, making presence more important than performance.",
+     "section": "Milan version",
+     "source": "https://en.wikipedia.org/wiki/Supper_at_Emmaus_%28Caravaggio%2C_London%29#Milan_version"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q474024",
+   "title": "Amor Vincit Omnia",
+   "year": 1601,
+   "image": {
+    "file": "File:Caravaggio - Cupid as Victor - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Caravaggio_-_Cupid_as_Victor_-_Google_Art_Project.jpg/960px-Caravaggio_-_Cupid_as_Victor_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Caravaggio_-_Cupid_as_Victor_-_Google_Art_Project.jpg/1920px-Caravaggio_-_Cupid_as_Victor_-_Google_Art_Project.jpg",
+    "pxW": 7120,
+    "pxH": 9844
+   },
+   "cm": {
+    "w": 113,
+    "h": 156
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "Amor Vincit Omnia in Latin, known in English by a variety of names including Amor Victorious, Victorious Cupid, Love Triumphant, Love Victorious or Earthly Love, is a painting by the Italian Baroque artist Caravaggio, from 1601-1602.",
+    "source": "https://en.wikipedia.org/wiki/Amor_Vincit_Omnia_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "Amor Vincit Omnia shows Amor, the Roman Cupid, wearing dark eagle wings, half-sitting on or climbing down from what appears to be a table. Scattered around are the emblems of all human endeavors—violin and lute, armor, coronet, square and compasses, pen and manuscript, bay leaves, and flower, tangled and trampled under Cupid's foot.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Amor_Vincit_Omnia_%28Caravaggio%29#Description"
+    },
+    {
+     "text": "The subject of Cupid was common for the age. Caravaggio's depiction of Cupid is unusually realistic—where other depictions, such as the contemporary Sleeping Cupid by Battistello Caracciolo, show an idealized, almost generic version.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Amor_Vincit_Omnia_%28Caravaggio%29#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q597114",
+   "title": "Death of the Virgin",
+   "year": 1604,
+   "image": {
+    "file": "File:Death of the Virgin-Caravaggio (1606).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Death_of_the_Virgin-Caravaggio_%281606%29.jpg/960px-Death_of_the_Virgin-Caravaggio_%281606%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Death_of_the_Virgin-Caravaggio_%281606%29.jpg/1920px-Death_of_the_Virgin-Caravaggio_%281606%29.jpg",
+    "pxW": 9458,
+    "pxH": 14274
+   },
+   "cm": {
+    "w": 245,
+    "h": 369
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Death of the Virgin is an oil on canvas painting by the Italian Baroque master Caravaggio, from c. 1604-1606. It is a depiction of the death of the Virgin Mary. It is part of the collection of the Musée du Louvre, in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "When he painted The Death of the Virgin (c. 1601–06), Caravaggio had been working in Rome for fifteen years. The painting was commissioned by Laerzio Cherubini, a papal lawyer, for his chapel in the Carmelite church of Santa Maria della Scala in Trastevere, Rome; the painting could not have been finished before 1605–06.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_%28Caravaggio%29#History"
+    },
+    {
+     "text": "The painting recalls Caravaggio's Entombment in the Vatican in scope, sobriety, and the photographic naturalism. The figures are nearly life-sized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_%28Caravaggio%29#Description"
+    },
+    {
+     "text": "This painting illustrates the iconographic and formal revolution that Caravaggio instigated in the late 16th and early 17th centuries. Distancing himself from the precious, affected mannerist vogue, the artist inaugurated a frank, robust, energetic style.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_%28Caravaggio%29#Influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q2627056",
+   "title": "David with the Head of Goliath",
+   "year": 1605,
+   "image": {
+    "file": "File:David with the Head of Goliath-Caravaggio (1610).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg/960px-David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg/1920px-David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg",
+    "pxW": 5922,
+    "pxH": 7329
+   },
+   "cm": {
+    "w": 101,
+    "h": 125
+   },
+   "collection": "Galleria Borghese",
+   "story": {
+    "extract": "David with the Head of Goliath is a painting by the Italian Baroque master Caravaggio. It is housed in the Galleria Borghese, Rome. The painting, which was in the collection of Cardinal Scipione Borghese in 1650, has been dated as early as 1605 and as late as 1609–1610, with more recent scholars tending towards the former.",
+    "source": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_%28Caravaggio%2C_Rome%29"
+   },
+   "facts": [
+    {
+     "text": "The Netflix limited series, Ripley, features this painting when the protagonist visits the Galleria Borghese shortly after committing a murder. Symbol for the song \"Euclid\" on Sleep Token's album Take Me Back to Eden (2023).",
+     "section": "References in popular culture",
+     "source": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_%28Caravaggio%2C_Rome%29#References_in_popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q2727560",
+   "title": "The Beheading of Saint John the Baptist",
+   "year": 1608,
+   "image": {
+    "file": "File:La decapitación de San Juan Bautista, por Caravaggio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/La_decapitaci%C3%B3n_de_San_Juan_Bautista%2C_por_Caravaggio.jpg/960px-La_decapitaci%C3%B3n_de_San_Juan_Bautista%2C_por_Caravaggio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b2/La_decapitaci%C3%B3n_de_San_Juan_Bautista%2C_por_Caravaggio.jpg",
+    "pxW": 1772,
+    "pxH": 1225
+   },
+   "cm": {
+    "w": 520,
+    "h": 361
+   },
+   "collection": "St. John's Co-Cathedral",
+   "story": {
+    "extract": "The Beheading of Saint John the Baptist is an oil painting by the Italian artist Caravaggio. Measuring 3.7 m by 5.2 m, it depicts the execution of John the Baptist. It is located in the Oratory of St.",
+    "source": "https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "Completed in 1608 in Malta, the painting had been commissioned by the Knights of Malta as an altarpiece; it was the largest altarpiece which Caravaggio would ever paint. It still hangs in St.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_%28Caravaggio%29#History"
+    },
+    {
+     "text": "The painting, in oil on canvas, is 12 ft (3.7 m) by 17 ft (5.2 m) and prominent are the vivid red and warm yellow colours, common to the Baroque period with the use of chiaroscuro. The image depicts the execution of John the Baptist while nearby a servant girl stands with a golden platter to receive his head.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_%28Caravaggio%29#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caravaggio"
+   }
+  },
+  {
+   "qid": "Q969377",
+   "title": "The Calling of Saint Matthew",
+   "year": 1609,
+   "image": {
+    "file": "File:Caravaggio — The Calling of Saint Matthew.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg/960px-Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg/1920px-Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg",
+    "pxW": 8792,
+    "pxH": 8304
+   },
+   "cm": {
+    "w": 322,
+    "h": 340
+   },
+   "collection": "San Luigi dei Francesi",
+   "story": {
+    "extract": "The Calling of Saint Matthew is an oil painting by the Italian Baroque master Caravaggio that depicts the moment Jesus Christ calls on the tax collector Matthew to follow him. It was completed in 1599–1600 for the Contarelli Chapel in the church of the French congregation, San Luigi dei Francesi in Rome, where it remains. It hangs alongside two other paintings of Matthew by Caravaggio: The Martyrdom of Saint Matthew and The Inspiration of Saint Matthew (1602).",
+    "source": "https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew"
+   },
+   "facts": [
+    {
+     "text": "More than a decade earlier, Cardinal Matthieu Cointerel had left funds and specific instructions in his will for the decoration of a chapel based on themes related to his namesake, Saint Matthew.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew#Commission"
+    },
+    {
+     "text": "The painting depicts the story from the Gospel of Matthew (Matthew 9:9): \"Jesus saw a man named Matthew at his seat in the custom house, and said to him, 'Follow me', and Matthew rose and followed Him.\" Caravaggio depicts Matthew the tax collector sitting at a table with four other men.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew#Subject_matter"
+    },
+    {
+     "text": "There is some debate over which man in the picture is Saint Matthew, as the surprised gesture of the bearded man at the table can be read in two ways. Most writers on the Calling assume Saint Matthew to be the bearded man, and see him to be pointing at himself, as if to ask \"Me?\" in response to Christ's summons.",
+     "section": "Identity of Matthew",
+     "source": "https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew#Identity_of_Matthew"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Gleb Simonov"
+   }
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "jackson-pollock",
+ "name": "Jackson Pollock",
+ "qid": "Q37571",
+ "born": 1912,
+ "died": 1956,
+ "periods": [
+  "abstract-expressionism"
+ ],
+ "oneLiner": "American painter (1912–1956)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Jackson_Pollock%27s_passport_%28cropped%29.jpg/330px-Jackson_Pollock%27s_passport_%28cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Paul Jackson Pollock was an American painter. A major figure in the abstract expressionist movement, he was widely noticed for his \"drip technique\" of pouring or splashing liquid household paint onto a horizontal surface, enabling him to view and paint his canvases from all angles. It was called all-over painting and action painting, because Pollock covered the entire canvas and used the force of his whole body to paint, often in a frenetic dancing style. This extreme form of abstraction divided critics: some praised the immediacy of the creation, while others derided the random effects.",
+  "source": "https://en.wikipedia.org/wiki/Jackson_Pollock"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jackson_Pollock",
+ "hasGallery": false,
+ "paintings": []
+}

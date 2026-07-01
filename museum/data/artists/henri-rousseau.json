@@ -1,0 +1,312 @@
+{
+ "slug": "henri-rousseau",
+ "name": "Henri Rousseau",
+ "qid": "Q156386",
+ "born": 1844,
+ "died": 1910,
+ "periods": [
+  "symbolism-art-nouveau"
+ ],
+ "oneLiner": "French painter (1844–1910)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rousseau_Joyeux_Farceurs_Dornac_crop.jpg/330px-Rousseau_Joyeux_Farceurs_Dornac_crop.jpg"
+ },
+ "bio": {
+  "extract": "Henri Julien Félix Rousseau was a French post-Impressionist painter in the Naïve or Primitive manner. He was also known as Le Douanier, a humorous description of his occupation as a toll and tax collector. He started painting seriously in his early forties; by age 49, he retired from his job to work on his art full-time.",
+  "source": "https://en.wikipedia.org/wiki/Henri_Rousseau"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Henri_Rousseau",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3549784",
+   "title": "Carnival Evening",
+   "year": 1886,
+   "image": {
+    "file": "File:Henri-Julien-Félix Rousseau, French - Carnival Evening - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Henri-Julien-F%C3%A9lix_Rousseau%2C_French_-_Carnival_Evening_-_Google_Art_Project.jpg/960px-Henri-Julien-F%C3%A9lix_Rousseau%2C_French_-_Carnival_Evening_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Henri-Julien-F%C3%A9lix_Rousseau%2C_French_-_Carnival_Evening_-_Google_Art_Project.jpg/1920px-Henri-Julien-F%C3%A9lix_Rousseau%2C_French_-_Carnival_Evening_-_Google_Art_Project.jpg",
+    "pxW": 4656,
+    "pxH": 6034
+   },
+   "cm": {
+    "w": 90,
+    "h": 117
+   },
+   "collection": "Philadelphia Museum of Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri-Julien-Félix Rousseau, French, 1844–1910 (1844–1910) – Artist/Maker (French) Born in Laval, France. Died in Paris, France. Details on Google Art Project"
+   }
+  },
+  {
+   "qid": "Q3319184",
+   "title": "Myself: Portrait – Landscape",
+   "year": 1890,
+   "image": {
+    "file": "File:Henri Rousseau - Myself- Portrait – Landscape - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Henri_Rousseau_-_Myself-_Portrait_%E2%80%93_Landscape_-_Google_Art_Project.jpg/960px-Henri_Rousseau_-_Myself-_Portrait_%E2%80%93_Landscape_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Henri_Rousseau_-_Myself-_Portrait_%E2%80%93_Landscape_-_Google_Art_Project.jpg/1920px-Henri_Rousseau_-_Myself-_Portrait_%E2%80%93_Landscape_-_Google_Art_Project.jpg",
+    "pxW": 5069,
+    "pxH": 6522
+   },
+   "cm": {
+    "w": 113,
+    "h": 146
+   },
+   "collection": "National Gallery Prague",
+   "story": {
+    "extract": "Myself, Portrait-Landscape is an oil on canvas self-portrait by Henri Rousseau, from 1890. It is held in the National Gallery Prague. It was chosen as one of the 105 decisive western paintings for Michel Butor's imaginary museum.",
+    "source": "https://en.wikipedia.org/wiki/Myself%2C_Portrait-Landscape"
+   },
+   "facts": [
+    {
+     "text": "Painted at the start of his career and exhibited at the 1890 salon des Indépendants, Rousseau chose its title to claim a neutral status for it between the usually totally distinct genres of portrait painting and landscape painting.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Myself%2C_Portrait-Landscape#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q960447",
+   "title": "Tiger in a Tropical Storm",
+   "year": 1891,
+   "image": {
+    "file": "File:Surprised-Rousseau.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Surprised-Rousseau.jpg/960px-Surprised-Rousseau.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Surprised-Rousseau.jpg/1920px-Surprised-Rousseau.jpg",
+    "pxW": 3000,
+    "pxH": 2397
+   },
+   "cm": {
+    "w": 162,
+    "h": 129
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Tiger in a Tropical Storm or Surprised! is an 1891 oil-on-canvas painting by Henri Rousseau. It was the first of the jungle paintings for which the artist is chiefly known. It shows a tiger, illuminated by a flash of lightning, preparing to pounce on its prey in the midst of a raging gale.",
+    "source": "https://en.wikipedia.org/wiki/Tiger_in_a_Tropical_Storm"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q1219263",
+   "title": "The Sleeping Gypsy",
+   "year": 1897,
+   "image": {
+    "file": "File:La Bohémienne endormie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/La_Boh%C3%A9mienne_endormie.jpg/960px-La_Boh%C3%A9mienne_endormie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/La_Boh%C3%A9mienne_endormie.jpg/1920px-La_Boh%C3%A9mienne_endormie.jpg",
+    "pxW": 5411,
+    "pxH": 3457
+   },
+   "cm": {
+    "w": 201,
+    "h": 130
+   },
+   "collection": "John Quinn Art Collection",
+   "story": {
+    "extract": "The Sleeping Gypsy is an 1897 oil on canvas painting by the French Naïve artist Henri Rousseau (1844–1910). It is a fantastical depiction of a lion musing over a sleeping woman on a moonlit night. It is held by the Museum of Modern Art in New York City, to which it was donated by Olga Guggenheim in 1939.",
+    "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy"
+   },
+   "facts": [
+    {
+     "text": "Rousseau first exhibited the painting at the 13th Salon des Indépendants in 1897, and tried unsuccessfully to sell it to the mayor of his hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant where it remained until 1924, when it was discovered and bought by the art critic Louis Vauxcelles.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy#Provenance"
+    },
+    {
+     "text": "Rousseau described his painting as follows: \"A wandering Negress, a mandolin player, lies with her jar beside her (a vase with drinking water), overcome by fatigue in a deep sleep. A lion chances to pass by, picks up her scent yet does not devour her.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q4952174",
+   "title": "Boy on the Rocks",
+   "year": 1897,
+   "image": {
+    "file": "File:Henri Rousseau, Boy on the Rocks, 1895-1897, NGA 46538.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Henri_Rousseau%2C_Boy_on_the_Rocks%2C_1895-1897%2C_NGA_46538.jpg/960px-Henri_Rousseau%2C_Boy_on_the_Rocks%2C_1895-1897%2C_NGA_46538.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Henri_Rousseau%2C_Boy_on_the_Rocks%2C_1895-1897%2C_NGA_46538.jpg/1920px-Henri_Rousseau%2C_Boy_on_the_Rocks%2C_1895-1897%2C_NGA_46538.jpg",
+    "pxW": 3280,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 46,
+    "h": 55
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Boy On The Rocks is a painting by French artist Henri Rousseau. It is an oil on canvas and was created sometime between 1895 and 1897. The painting was purchased by art collector Chester Dale in 1927 and was subsequently bequeathed to the National Gallery of Art in Washington, D.C. in 1963.",
+    "source": "https://en.wikipedia.org/wiki/Boy_on_the_Rocks"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q7741023",
+   "title": "The Hungry Lion Throws Itself on the Antelope",
+   "year": 1905,
+   "image": {
+    "file": "File:Henri Rousseau — The Hungry Lion Throws Itself on the Antelope.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Henri_Rousseau_%E2%80%94_The_Hungry_Lion_Throws_Itself_on_the_Antelope.jpg/960px-Henri_Rousseau_%E2%80%94_The_Hungry_Lion_Throws_Itself_on_the_Antelope.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Henri_Rousseau_%E2%80%94_The_Hungry_Lion_Throws_Itself_on_the_Antelope.jpg/1920px-Henri_Rousseau_%E2%80%94_The_Hungry_Lion_Throws_Itself_on_the_Antelope.jpg",
+    "pxW": 6678,
+    "pxH": 4446
+   },
+   "cm": {
+    "w": 300,
+    "h": 200
+   },
+   "collection": "Beyeler Foundation",
+   "story": {
+    "extract": "The Hungry Lion Throws Itself on the Antelope is a large oil-on-canvas painting created by Henri Rousseau in 1905. Following Scouts Attacked by a Tiger the previous year, The Hungry Lion was the second jungle painting to mark Rousseau's return to this genre after a 10-year hiatus caused by the generally negative reception to his 1891 painting Tiger in a Tropical Storm.",
+    "source": "https://en.wikipedia.org/wiki/The_Hungry_Lion_Throws_Itself_on_the_Antelope"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": "Q3207251",
+   "title": "La encantadora de serpientes",
+   "year": 1907,
+   "image": {
+    "file": "File:HENRI ROUSSEAU - La Encantadora de Serpientes (Museo de Orsay, París, 1907. Óleo sobre lienzo, 169 x 189.5 cm).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HENRI_ROUSSEAU_-_La_Encantadora_de_Serpientes_%28Museo_de_Orsay%2C_Par%C3%ADs%2C_1907._%C3%93leo_sobre_lienzo%2C_169_x_189.5_cm%29.jpg/960px-HENRI_ROUSSEAU_-_La_Encantadora_de_Serpientes_%28Museo_de_Orsay%2C_Par%C3%ADs%2C_1907._%C3%93leo_sobre_lienzo%2C_169_x_189.5_cm%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HENRI_ROUSSEAU_-_La_Encantadora_de_Serpientes_%28Museo_de_Orsay%2C_Par%C3%ADs%2C_1907._%C3%93leo_sobre_lienzo%2C_169_x_189.5_cm%29.jpg/1920px-HENRI_ROUSSEAU_-_La_Encantadora_de_Serpientes_%28Museo_de_Orsay%2C_Par%C3%ADs%2C_1907._%C3%93leo_sobre_lienzo%2C_169_x_189.5_cm%29.jpg",
+    "pxW": 3556,
+    "pxH": 3147
+   },
+   "cm": {
+    "w": 189,
+    "h": 167
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Snake Charmer is a 1907 oil-on-canvas painting by French Naïve artist Henri Rousseau (1844–1910). It is a depiction of a woman with glowing eyes playing a flute in the moonlight by the edge of a dark jungle with a snake extending toward her from a nearby tree, two near her legs, and one wrapped around her shoulders.",
+    "source": "https://en.wikipedia.org/wiki/The_Snake_Charmer_%28Rousseau%29"
+   },
+   "facts": [
+    {
+     "text": "The Snake Charmer was commissioned by Berthe, Comtesse de Delaunay, the mother of artist Robert Delaunay. It was Rousseau's first large commission and was exhibited in the 1907 Autumn Salon.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Snake_Charmer_%28Rousseau%29#History"
+    },
+    {
+     "text": "The painting has an asymmetric vertical composition with a detailed depiction of the jungle on the right and a woman playing the flute on the left, back-lit by moonlight from a full moon. A snake, charmed by the music, stretches horizontally across the painting.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Snake_Charmer_%28Rousseau%29#Description"
+    },
+    {
+     "text": "Sylvia Plath's 1957 poem \"Snakecharmer\" and Willard Elliot's 1975 composition The Snake Charmer for Alto Flute and Orchestra were inspired by Rousseau's painting. The painting was used as cover art for the 2000 novel Merrick by Anne Rice, Darwin's Dangerous Idea by Daniel Dennett, Origins of the Modern Mind by Merlin Donald, and Gaia by James E.",
+     "section": "Popular culture references",
+     "source": "https://en.wikipedia.org/wiki/The_Snake_Charmer_%28Rousseau%29#Popular_culture_references"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q19912313",
+   "title": "The Repast of the Lion",
+   "year": 1907,
+   "image": {
+    "file": "File:The Repast of the Lion MET DT50.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Repast_of_the_Lion_MET_DT50.jpg/960px-The_Repast_of_the_Lion_MET_DT50.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Repast_of_the_Lion_MET_DT50.jpg/1920px-The_Repast_of_the_Lion_MET_DT50.jpg",
+    "pxW": 3811,
+    "pxH": 2683
+   },
+   "cm": {
+    "w": 160,
+    "h": 114
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Repast of the Lion is an early 20th century painting by French Post-Impressionist Henri Rousseau. Done in oil on canvas, the work depicts a feeding lion in a jungle setting. The painting expands upon some of Rousseau's late 19th century work, and the foliage depicted in the painting was inspired by the artist's studying of Paris' botanical gardens.",
+    "source": "https://en.wikipedia.org/wiki/The_Repast_of_the_Lion"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q59511250",
+   "title": "The Muse Inspiring the Poet",
+   "year": 1909,
+   "image": {
+    "file": "File:La muse inspirant le poète.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/f6/La_muse_inspirant_le_po%C3%A8te.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f6/La_muse_inspirant_le_po%C3%A8te.jpg",
+    "pxW": 728,
+    "pxH": 1111
+   },
+   "cm": {
+    "w": 97,
+    "h": 146
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "The Muse Inspiring the Poet is a 1909 oil-on-canvas painting by the French artist Henri Rousseau, forming a double portrait of Marie Laurencin and Guillaume Apollinaire. Owned for a time by Paul Rosenberg, it is now in the Kunstmuseum Basel. Another version of the work is now in the Pushkin Museum in Moscow.",
+    "source": "https://en.wikipedia.org/wiki/The_Muse_Inspiring_the_Poet"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  },
+  {
+   "qid": "Q548141",
+   "title": "The Dream",
+   "year": 1910,
+   "image": {
+    "file": "File:Henri Rousseau 005.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Henri_Rousseau_005.jpg/960px-Henri_Rousseau_005.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Henri_Rousseau_005.jpg/1920px-Henri_Rousseau_005.jpg",
+    "pxW": 4482,
+    "pxH": 3035
+   },
+   "cm": {
+    "w": 298,
+    "h": 204
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "The Dream is a large oil-on-canvas painting created by Henri Rousseau in 1910, one of more than 25 Rousseau paintings with a jungle theme. His last completed work, it was first exhibited at the Salon des Indépendants from 18 March to 1 May 1910, a few months before his death on 2 September 1910. Rousseau's earlier works had received a negative reception, but poet and critic Guillaume Apollinaire remarked on its debut: \"The picture radiates beauty, that is indisputable.",
+    "source": "https://en.wikipedia.org/wiki/The_Dream_%28Rousseau%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Rousseau"
+   }
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "slug": "pablo-picasso",
+ "name": "Pablo Picasso",
+ "qid": "Q5593",
+ "born": 1881,
+ "died": 1973,
+ "periods": [
+  "cubism"
+ ],
+ "oneLiner": "Spanish painter and sculptor (1881–1973)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/330px-Pablo_picasso_1.jpg"
+ },
+ "bio": {
+  "extract": "Pablo Ruiz Picasso was a Spanish painter and sculptor who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture, the co-invention of collage, and for the wide variety of styles that he helped develop and explore. Among his most famous works are the proto-Cubist Les Demoiselles d'Avignon (1907) and the anti-war painting Guernica (1937), a dramatic portrayal of the bombing of Guernica by German and Italian air forces during the Spanish Civil War. His career spanned more than 76 years, from his late teens to his death in 1973.",
+  "source": "https://en.wikipedia.org/wiki/Pablo_Picasso"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Pablo_Picasso",
+ "hasGallery": false,
+ "paintings": [
+  {
+   "qid": "Q4429116",
+   "title": "The Magpie",
+   "year": 1868,
+   "image": {
+    "file": "File:Claude Monet - The Magpie - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Claude_Monet_-_The_Magpie_-_Google_Art_Project.jpg/960px-Claude_Monet_-_The_Magpie_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Claude_Monet_-_The_Magpie_-_Google_Art_Project.jpg/1920px-Claude_Monet_-_The_Magpie_-_Google_Art_Project.jpg",
+    "pxW": 4289,
+    "pxH": 2909
+   },
+   "cm": {
+    "w": 130,
+    "h": 89
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Magpie is an oil-on-canvas landscape painting by the French Impressionist Claude Monet, created during the winter of 1868–1869 near the commune of Étretat in Normandy. Monet's patron, Louis Joachim Gaudibert, helped arrange a house in Étretat for Monet's girlfriend Camille Doncieux and their newborn son, allowing Monet to paint in relative comfort, surrounded by his family.",
+    "source": "https://en.wikipedia.org/wiki/The_Magpie_%28Monet%29"
+   },
+   "facts": [
+    {
+     "text": "Thor Carlander collection, Paris (1918) Durand-Ruel collection, Paris (1941) Guerlain collection, Paris (1946) Louvre, Paris (1984) Musée d'Orsay, Paris (1984)",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Magpie_%28Monet%29#Provenance"
+    },
+    {
+     "text": "In the late 1850s, French landscape painter Eugène Boudin (1824–1898) introduced Monet (1840–1926) to the art of painting en plein air—\"in the open air\", using natural light. The invention of the collapsible metal paint tube (1841) and portable easel brought painting, formerly confined to studios, into the outdoors.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Magpie_%28Monet%29#Background"
+    },
+    {
+     "text": "In 1867, Monet's girlfriend, Camille Doncieux (1847–1879), gave birth to their son Jean in Paris. Lacking money, Monet returned to his father's house in Sainte-Adresse and lived with his aunt, leaving Doncieux and their child in Paris.",
+     "section": "First Étretat campaign",
+     "source": "https://en.wikipedia.org/wiki/The_Magpie_%28Monet%29#First_%C3%89tretat_campaign"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  }
+ ]
+}

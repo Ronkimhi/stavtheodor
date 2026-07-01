@@ -1,0 +1,258 @@
+{
+ "slug": "odilon-redon",
+ "name": "Odilon Redon",
+ "qid": "Q154349",
+ "born": 1840,
+ "died": 1916,
+ "periods": [
+  "symbolism-art-nouveau"
+ ],
+ "oneLiner": "French painter (1840–1916)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Odilon_Redon_vers_1880.jpg/330px-Odilon_Redon_vers_1880.jpg"
+ },
+ "bio": {
+  "extract": "Odilon Redon was a French Symbolist draftsman, printmaker, and painter.",
+  "source": "https://en.wikipedia.org/wiki/Odilon_Redon"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Odilon_Redon",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3236211",
+   "title": "Les Yeux clos",
+   "year": 1890,
+   "image": {
+    "file": "File:Odilon Redon - Closed Eyes - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Odilon_Redon_-_Closed_Eyes_-_Google_Art_Project.jpg/960px-Odilon_Redon_-_Closed_Eyes_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Odilon_Redon_-_Closed_Eyes_-_Google_Art_Project.jpg/1920px-Odilon_Redon_-_Closed_Eyes_-_Google_Art_Project.jpg",
+    "pxW": 3822,
+    "pxH": 4723
+   },
+   "cm": {
+    "w": 36,
+    "h": 44
+   },
+   "collection": "Musée d'Orsay",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q64799851",
+   "title": "Christ and the Samaritan Woman (The White Flower Bouquet)",
+   "year": 1895,
+   "image": {
+    "file": "File:1895 Redon Christus und Samariterin anagoria.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/1895_Redon_Christus_und_Samariterin_anagoria.JPG/960px-1895_Redon_Christus_und_Samariterin_anagoria.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/1895_Redon_Christus_und_Samariterin_anagoria.JPG/1920px-1895_Redon_Christus_und_Samariterin_anagoria.JPG",
+    "pxW": 2940,
+    "pxH": 3729
+   },
+   "cm": {
+    "w": 50,
+    "h": 65
+   },
+   "collection": "Städel Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q17490837",
+   "title": "Baronne Robert de Domecy",
+   "year": 1900,
+   "image": {
+    "file": "File:Odilon Redon - Baroness Robert de Domecy - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Odilon_Redon_-_Baroness_Robert_de_Domecy_-_Google_Art_Project.jpg/960px-Odilon_Redon_-_Baroness_Robert_de_Domecy_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Odilon_Redon_-_Baroness_Robert_de_Domecy_-_Google_Art_Project.jpg/1920px-Odilon_Redon_-_Baroness_Robert_de_Domecy_-_Google_Art_Project.jpg",
+    "pxW": 1966,
+    "pxH": 2133
+   },
+   "cm": {
+    "w": 68,
+    "h": 74
+   },
+   "collection": "Musée d'Orsay",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q94637061",
+   "title": "Siren",
+   "year": 1900,
+   "image": {
+    "file": "File:Redon - La sirène, um 1900.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Redon_-_La_sir%C3%A8ne%2C_um_1900.jpg/960px-Redon_-_La_sir%C3%A8ne%2C_um_1900.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Redon_-_La_sir%C3%A8ne%2C_um_1900.jpg/1920px-Redon_-_La_sir%C3%A8ne%2C_um_1900.jpg",
+    "pxW": 4302,
+    "pxH": 5396
+   },
+   "cm": {
+    "w": 22,
+    "h": 27
+   },
+   "collection": "Im Obersteg Foundation collection",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q60513952",
+   "title": "Vase of Flowers",
+   "year": 1905,
+   "image": {
+    "file": "File:Clevelandart 1935.233.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Clevelandart_1935.233.jpg/960px-Clevelandart_1935.233.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Clevelandart_1935.233.jpg/1920px-Clevelandart_1935.233.jpg",
+    "pxW": 2500,
+    "pxH": 3400
+   },
+   "cm": {
+    "w": 59,
+    "h": 73
+   },
+   "collection": "Cleveland Museum of Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q67609603",
+   "title": "Fishing Boats: Memory of Venice",
+   "year": 1908,
+   "image": {
+    "file": "File:Redon - Fishing Boats Memory of Venice, circa 1908.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Redon_-_Fishing_Boats_Memory_of_Venice%2C_circa_1908.jpg/960px-Redon_-_Fishing_Boats_Memory_of_Venice%2C_circa_1908.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Redon_-_Fishing_Boats_Memory_of_Venice%2C_circa_1908.jpg",
+    "pxW": 1137,
+    "pxH": 620
+   },
+   "cm": {
+    "w": 74,
+    "h": 40
+   },
+   "collection": "Museum Langmatt Sidney and Jenny Brown Foundation",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q19883571",
+   "title": "Butterflies",
+   "year": 1910,
+   "image": {
+    "file": "File:Odilon Redon - Butterflies - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Odilon_Redon_-_Butterflies_-_Google_Art_Project.jpg/960px-Odilon_Redon_-_Butterflies_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Odilon_Redon_-_Butterflies_-_Google_Art_Project.jpg/1920px-Odilon_Redon_-_Butterflies_-_Google_Art_Project.jpg",
+    "pxW": 3031,
+    "pxH": 4103
+   },
+   "cm": {
+    "w": 55,
+    "h": 74
+   },
+   "collection": "Museum of Modern Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q3211037",
+   "title": "The Birth of Venus",
+   "year": 1912,
+   "image": {
+    "file": "File:Venus redon.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Venus_redon.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Venus_redon.jpeg",
+    "pxW": 480,
+    "pxH": 1121
+   },
+   "cm": null,
+   "collection": "Museum of Modern Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q18001840",
+   "title": "Pandora",
+   "year": 1912,
+   "image": {
+    "file": "File:Pandora by Odilon Redon.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Pandora_by_Odilon_Redon.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Pandora_by_Odilon_Redon.JPG",
+    "pxW": 725,
+    "pxH": 1748
+   },
+   "cm": {
+    "w": 63,
+    "h": 144
+   },
+   "collection": "Q214867",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  },
+  {
+   "qid": "Q3793426",
+   "title": "The Cyclops",
+   "year": 1914,
+   "image": {
+    "file": "File:Odilon Redon - The Cyclops, c. 1914.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Odilon_Redon_-_The_Cyclops%2C_c._1914.jpg/960px-Odilon_Redon_-_The_Cyclops%2C_c._1914.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Odilon_Redon_-_The_Cyclops%2C_c._1914.jpg/1920px-Odilon_Redon_-_The_Cyclops%2C_c._1914.jpg",
+    "pxW": 2846,
+    "pxH": 3579
+   },
+   "cm": {
+    "w": 53,
+    "h": 66
+   },
+   "collection": "Kröller-Müller Museum",
+   "story": {
+    "extract": "The Cyclops is a symbolist painting by Odilon Redon that depicts the myth of the love of Polyphemus for the nymph Galatea. It was painted in oil on cardboard, then mounted on wood, and is now in the Kröller-Müller Museum in the Netherlands. The painting has been variously dated between 1898 and 1914.",
+    "source": "https://en.wikipedia.org/wiki/The_Cyclops_%28Redon%29"
+   },
+   "facts": [
+    {
+     "text": "Galatea is shown asleep on the lower right, her naked body blending into the flowery hill slope. In the upper half of the painting, the head and shoulders of the cyclops Polyphemus tower above a mountain ridge as he turns his one eye in the naiad's direction.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Cyclops_%28Redon%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Odilon Redon"
+   }
+  }
+ ]
+}

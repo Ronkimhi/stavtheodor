@@ -1,0 +1,379 @@
+{
+ "slug": "bronzino",
+ "name": "Bronzino",
+ "qid": "Q7803",
+ "born": 1503,
+ "died": 1572,
+ "periods": [
+  "mannerism"
+ ],
+ "oneLiner": "Italian Mannerist painter (1503-1572)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg/330px-Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Agnolo di Cosimo, usually known as Bronzino or Agnolo Bronzino, was an Italian Mannerist painter from Florence. His sobriquet, Bronzino, may refer to his relatively dark skin or reddish hair.",
+  "source": "https://en.wikipedia.org/wiki/Bronzino"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Bronzino",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3937730",
+   "title": "Portrait of a Young Man with a Book",
+   "year": 1530,
+   "image": {
+    "file": "File:Bronzino (Agnolo di Cosimo di Mariano) - Portrait of a Young Man - The Metropolitan Museum of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Bronzino_%28Agnolo_di_Cosimo_di_Mariano%29_-_Portrait_of_a_Young_Man_-_The_Metropolitan_Museum_of_Art.jpg/960px-Bronzino_%28Agnolo_di_Cosimo_di_Mariano%29_-_Portrait_of_a_Young_Man_-_The_Metropolitan_Museum_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Bronzino_%28Agnolo_di_Cosimo_di_Mariano%29_-_Portrait_of_a_Young_Man_-_The_Metropolitan_Museum_of_Art.jpg/1920px-Bronzino_%28Agnolo_di_Cosimo_di_Mariano%29_-_Portrait_of_a_Young_Man_-_The_Metropolitan_Museum_of_Art.jpg",
+    "pxW": 5711,
+    "pxH": 7245
+   },
+   "cm": {
+    "w": 75,
+    "h": 96
+   },
+   "collection": "The H. O. Havemeyer Collection",
+   "story": {
+    "extract": "The Portrait of a Young Man with a Book is a painting by Agnolo Bronzino created in the 1530s. After its creation, it was owned amongst various aristocrats and art collectors until it entered the collection at the Metropolitan Museum of Art 1929. The painting was commissioned by the powerful Florentine family, the Medici.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Young_Man_with_a_Book_%28Bronzino%29"
+   },
+   "facts": [
+    {
+     "text": "Portrait of a Young Man with a Book was created around the 1530s or 1540s for Cosimo I de' Medici. From there the piece can be traced to Lucien Bonaparte, Prince of Canino, Rome, and also Napoleon's brother by 1808.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Young_Man_with_a_Book_%28Bronzino%29#Provenance"
+    },
+    {
+     "text": "Bronzino's Portrait of a Young Man depicts an unknown youthful man standing in a Florentine palace with his left hand on his hip, while his right hand holds a book, as his fingers fall between the pages.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Young_Man_with_a_Book_%28Bronzino%29#Description"
+    },
+    {
+     "text": "Agnolo Bronzino painted Portrait of a Young Man with a Book around the 1530s for Cosimo I de' Medici. The Medici family was the dominant family in Florence from the 15th century up till the 18th century.",
+     "section": "Patron, artist, and commission",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Young_Man_with_a_Book_%28Bronzino%29#Patron%2C_artist%2C_and_commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q3944462",
+   "title": "Panciatichi Holy Family",
+   "year": 1539,
+   "image": {
+    "file": "File:Bronzino - Sacra famiglia Panciatichi or Madonna Panciatichi - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bronzino_-_Sacra_famiglia_Panciatichi_or_Madonna_Panciatichi_-_Google_Art_Project.jpg/960px-Bronzino_-_Sacra_famiglia_Panciatichi_or_Madonna_Panciatichi_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bronzino_-_Sacra_famiglia_Panciatichi_or_Madonna_Panciatichi_-_Google_Art_Project.jpg/1920px-Bronzino_-_Sacra_famiglia_Panciatichi_or_Madonna_Panciatichi_-_Google_Art_Project.jpg",
+    "pxW": 2648,
+    "pxH": 3421
+   },
+   "cm": {
+    "w": 90,
+    "h": 117
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Panciatichi Holy Family or Panciatichi Madonna and Child is a 1541 oil on panel painting by the Italian Mannerist painter Bronzino, signed on a stone in the bottom left corner. It is now in the Uffizi in Florence, where it was first recorded in the Tribuna in 1704. It remained there until 2010, when it was moved as part of the \"New Uffizi\" project.",
+    "source": "https://en.wikipedia.org/wiki/Panciatichi_Holy_Family"
+   },
+   "facts": [
+    {
+     "text": "Before a dark background of rocks on which towers emerge under a leaden sky, the Holy Family with the infant Saint John is depicted in the foreground, with the sleeping Child placed parallel to the edge of the table, lying on a cushion and a sack.",
+     "section": "Description and style",
+     "source": "https://en.wikipedia.org/wiki/Panciatichi_Holy_Family#Description_and_style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q3937473",
+   "title": "Portrait of Bartolomeo Panciatichi",
+   "year": 1540,
+   "image": {
+    "file": "File:Painting - Portrait of Bartolomeo Panciatichi by Bronzino.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Painting_-_Portrait_of_Bartolomeo_Panciatichi_by_Bronzino.jpg/960px-Painting_-_Portrait_of_Bartolomeo_Panciatichi_by_Bronzino.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Painting_-_Portrait_of_Bartolomeo_Panciatichi_by_Bronzino.jpg/1920px-Painting_-_Portrait_of_Bartolomeo_Panciatichi_by_Bronzino.jpg",
+    "pxW": 3099,
+    "pxH": 3780
+   },
+   "cm": {
+    "w": 85,
+    "h": 104
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Portrait of Bartolomeo Panciatichi is a tempera on panel painting by the Italian artist Agnolo di Cosimo, known as Bronzino, finished around 1540. It is housed in the Uffizi Gallery of Florence, Italy since 1704.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Bartolomeo_Panciatichi"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Yanko Malinov"
+   }
+  },
+  {
+   "qid": "Q1131476",
+   "title": "Deposition of Christ",
+   "year": 1543,
+   "image": {
+    "file": "File:Déploration sur le Christ mort (Bronzino).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/D%C3%A9ploration_sur_le_Christ_mort_%28Bronzino%29.jpg/960px-D%C3%A9ploration_sur_le_Christ_mort_%28Bronzino%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7f/D%C3%A9ploration_sur_le_Christ_mort_%28Bronzino%29.jpg",
+    "pxW": 1459,
+    "pxH": 2181
+   },
+   "cm": {
+    "w": 173,
+    "h": 268
+   },
+   "collection": "Musée des Beaux-Arts et d'Archéologie de Besançon",
+   "story": {
+    "extract": "The Deposition of Christ is a painting by the Italian artist Agnolo di Cosimo, known as Bronzino, completed in 1545. It is housed in the Musée des Beaux-Arts de Besançon, France. A copy by Bronzino can be found in the Palazzo Vecchio.",
+    "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Bronzino%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was originally commissioned to be the altarpiece for the chapel of Eleonora of Toledo in the Palazzo Vecchio, Florence.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Bronzino%29#History"
+    },
+    {
+     "text": "In the center foreground is a Pietà portraying the body of Jesus being cradled in his mother Mary's arms. The Apostle John supports his back and is modeled on a youth holding up the body of Christ in a Deposition painted by Bronzino's teacher, Pontormo.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Bronzino%29#Composition"
+    },
+    {
+     "text": "In addition to embedding donor portraits and likenesses of themselves in their works, sixteenth-century Florentine artists were known to portray other artisans and associates in their paintings and sculptures.",
+     "section": "Portraiture",
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Bronzino%29#Portraiture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q1328065",
+   "title": "Portrait of Eleanor of Toledo and her son Giovanni de' Medici",
+   "year": 1544,
+   "image": {
+    "file": "File:Bronzino - Eleonora di Toledo col figlio Giovanni - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bronzino_-_Eleonora_di_Toledo_col_figlio_Giovanni_-_Google_Art_Project.jpg/960px-Bronzino_-_Eleonora_di_Toledo_col_figlio_Giovanni_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bronzino_-_Eleonora_di_Toledo_col_figlio_Giovanni_-_Google_Art_Project.jpg/1920px-Bronzino_-_Eleonora_di_Toledo_col_figlio_Giovanni_-_Google_Art_Project.jpg",
+    "pxW": 2553,
+    "pxH": 3098
+   },
+   "cm": {
+    "w": 96,
+    "h": 115
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The painting, Portrait of Eleanor of Toledo and Her Son Giovanni, was painted c. 1545 by Agnolo di Cosimo, known as Bronzino. The painting is of Eleonora di Toledo, the Duchess of Florence, and her son Giovanni. This portrait uses the position of the two and their clothing to exemplify her power, fertility, and the legacy of the Medici family.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Eleanor_of_Toledo"
+   },
+   "facts": [
+    {
+     "text": "Duke Cosimo I de' Medici (1519–1574) and his Spanish wife, Duchess Eleonora di Toledo (1522–1562), were Bronzino's most famous and longstanding patrons. Emperor Charles V granted the Ducal title on Cosimo I de' Medici following the assassination of Alessandro de' Medici in 1537.",
+     "section": "Medici Family",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Eleanor_of_Toledo#Medici_Family"
+    },
+    {
+     "text": "In 1522, Eleonora was born in Spain. Eleonora, her mother Doña María Osorio y Pimentel, and her siblings joined her father, Don Pedro de Toledo, at the luxurious court of Naples in 1534.",
+     "section": "Eleonora di Medici",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Eleanor_of_Toledo#Eleonora_di_Medici"
+    },
+    {
+     "text": "According to Vasari, Bronzino first gained recognition for his artistic skills at Cosimo and Eleonora's wedding on July 6, 1539, when he painted two images from the history of the Medici family that were used as decoration for the wedding celebration.",
+     "section": "Agnolo di Cosimo, a.k.a. Bronzino",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Eleanor_of_Toledo#Agnolo_di_Cosimo%2C_a.k.a._Bronzino"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q3625842",
+   "title": "Portrait of Cosimo I de' Medici",
+   "year": 1544,
+   "image": {
+    "file": "File:Portrait of Cosimo I de' Medici in armour, by Agnolo Bronzino (Uffizi Gallery, Florence).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Portrait_of_Cosimo_I_de%27_Medici_in_armour%2C_by_Agnolo_Bronzino_%28Uffizi_Gallery%2C_Florence%29.jpg/960px-Portrait_of_Cosimo_I_de%27_Medici_in_armour%2C_by_Agnolo_Bronzino_%28Uffizi_Gallery%2C_Florence%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Portrait_of_Cosimo_I_de%27_Medici_in_armour%2C_by_Agnolo_Bronzino_%28Uffizi_Gallery%2C_Florence%29.jpg/1920px-Portrait_of_Cosimo_I_de%27_Medici_in_armour%2C_by_Agnolo_Bronzino_%28Uffizi_Gallery%2C_Florence%29.jpg",
+    "pxW": 5625,
+    "pxH": 6866
+   },
+   "cm": {
+    "w": 58,
+    "h": 74
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Portrait of Cosimo I de' Medici is a painting by the Italian artist Agnolo di Cosimo, known as Bronzino, finished in 1545. In his position as court painter for the Medici, Bronzino was author of several portraits of Grand Duke Cosimo I de' Medici. In this portrait, Cosimo is represented in his younger years, commanding and proud; and to quote Giorgio Vasari, \"clad with white armor and a hand over the helmet\".",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Cosimo_I_de%27_Medici"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q1430990",
+   "title": "Venus, Cupid, Folly and Time",
+   "year": 1545,
+   "image": {
+    "file": "File:Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, London.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/960px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/1920px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg",
+    "pxW": 3349,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 117,
+    "h": 147
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Venus, Cupid, Folly and Time is an allegorical painting of about 1545 by the Florentine painter Agnolo Bronzino. It is now in the National Gallery, London. Scholars do not know for certain what the painting depicts.",
+    "source": "https://en.wikipedia.org/wiki/Venus%2C_Cupid%2C_Folly_and_Time"
+   },
+   "facts": [
+    {
+     "text": "The painting may have been commissioned by Cosimo I de' Medici, Grand Duke of Tuscany or by Francesco Salviati, to be presented by him as a gift to Francis I of France.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Venus%2C_Cupid%2C_Folly_and_Time#Painting"
+    },
+    {
+     "text": "Crowded into the claustrophobic foreground of the painting are several figures whose identities have been the subject of extensive scholarly debate. At times it has also been called A Triumph of Venus.",
+     "section": "Scholarly debate",
+     "source": "https://en.wikipedia.org/wiki/Venus%2C_Cupid%2C_Folly_and_Time#Scholarly_debate"
+    },
+    {
+     "text": "The foot at the lower left corner is the source of the emblematic Monty Python Foot. The painting is discussed in Iris Murdoch's novel The Nice and the Good.",
+     "section": "In popular culture",
+     "source": "https://en.wikipedia.org/wiki/Venus%2C_Cupid%2C_Folly_and_Time#In_popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q493792",
+   "title": "Portrait of Andrea Doria as Neptune",
+   "year": 1545,
+   "image": {
+    "file": "File:Angelo Bronzino - Portrait of Andrea Doria as Neptune - WGA3261.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Angelo_Bronzino_-_Portrait_of_Andrea_Doria_as_Neptune_-_WGA3261.jpg/960px-Angelo_Bronzino_-_Portrait_of_Andrea_Doria_as_Neptune_-_WGA3261.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Angelo_Bronzino_-_Portrait_of_Andrea_Doria_as_Neptune_-_WGA3261.jpg",
+    "pxW": 1332,
+    "pxH": 1800
+   },
+   "cm": {
+    "w": 53,
+    "h": 115
+   },
+   "collection": "Pinacoteca di Brera",
+   "story": {
+    "extract": "The Portrait of Andrea Doria as Neptune is an oil painting on canvas completed by Bronzino for a private collection in either the 1530s or 1540s. It is now in the Pinacoteca di Brera in Milan, Italy. An oil painting on canvas, it measures 199.5 centimetres (78.5 in) by 149 centimetres (59 in).",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Andrea_Doria_as_Neptune"
+   },
+   "facts": [
+    {
+     "text": "The subject of the painting is Andrea Doria, a Renaissance condottiero and admiral from Genoa, who was also the effective ruler of the city-state. He was around sixty when the portrait was painted (the date is somewhat disputed); either way his physique hardly reflects his age at the time.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Andrea_Doria_as_Neptune#Description"
+    },
+    {
+     "text": "Andrea Doria was born into an aristocratic family who had been wealthy political leaders of the Genoan republic since 1134, together with another influential family, the Spinola. He was orphaned at an early age.",
+     "section": "Doria",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Andrea_Doria_as_Neptune#Doria"
+    },
+    {
+     "text": "Bronzino's so-called \"allegorical portraits\", such as this Genoese admiral, are not representative of his art, or of contemporary portrait painting in general, but are possibly more captivating due to the eccentricity of depicting a publicly recognized personality as a nude mythical figure.",
+     "section": "Creation and provenance",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Andrea_Doria_as_Neptune#Creation_and_provenance"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q1990128",
+   "title": "Portrait of Lucrezia Panciatichi",
+   "year": 1545,
+   "image": {
+    "file": "File:Agnolo di Cosimo Tori detto Bronzino (Firenze, 1503-1572) - Ritratto di Lucrezia Panciatichi - 736 - Uffizi Gallery.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Agnolo_di_Cosimo_Tori_detto_Bronzino_%28Firenze%2C_1503-1572%29_-_Ritratto_di_Lucrezia_Panciatichi_-_736_-_Uffizi_Gallery.jpg/960px-Agnolo_di_Cosimo_Tori_detto_Bronzino_%28Firenze%2C_1503-1572%29_-_Ritratto_di_Lucrezia_Panciatichi_-_736_-_Uffizi_Gallery.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Agnolo_di_Cosimo_Tori_detto_Bronzino_%28Firenze%2C_1503-1572%29_-_Ritratto_di_Lucrezia_Panciatichi_-_736_-_Uffizi_Gallery.jpg",
+    "pxW": 1839,
+    "pxH": 2300
+   },
+   "cm": {
+    "w": 85,
+    "h": 102
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Portrait of Lucrezia Panciatichi is an oil on panel painting by the Italian artist Agnolo di Cosimo, known as Bronzino, finished around 1545. It is a pendant to the portrait of her husband, Bartolomeo Panciatichi. Both paintings are in the Uffizi Gallery in Florence, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Lucrezia_Panciatichi"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  },
+  {
+   "qid": "Q3784272",
+   "title": "Portrait of Giovanni de' Medici as a Child",
+   "year": 1545,
+   "image": {
+    "file": "File:Bronzino - Portrait of Giovanni de’ Medici - 1475 - Uffizi Gallery.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bronzino_-_Portrait_of_Giovanni_de%E2%80%99_Medici_-_1475_-_Uffizi_Gallery.jpg/960px-Bronzino_-_Portrait_of_Giovanni_de%E2%80%99_Medici_-_1475_-_Uffizi_Gallery.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Bronzino_-_Portrait_of_Giovanni_de%E2%80%99_Medici_-_1475_-_Uffizi_Gallery.jpg",
+    "pxW": 1447,
+    "pxH": 1867
+   },
+   "cm": {
+    "w": 45,
+    "h": 58
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Portrait of Giovanni de' Medici as a Child is an oil on panel painting by the Florentine artist Agnolo Bronzino. It is currently located at the Galleria degli Uffizi in Florence.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Giovanni_de%27_Medici_as_a_Child"
+   },
+   "facts": [
+    {
+     "text": "This portrait uses oil paint on panel and portrays Giovanni di Cosimo de' Medici. It was painted for his father, Cosimo I de’ Medici, Grand Duke of Tuscany.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Giovanni_de%27_Medici_as_a_Child#Background"
+    },
+    {
+     "text": "An extended title for this portrait is the Portrait of Giovanni de’ Medici as a Child holding a Goldfinch. It was painted sometime between 1544 and 1545, based on the child's age.",
+     "section": "Description and Analysis",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Giovanni_de%27_Medici_as_a_Child#Description_and_Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bronzino"
+   }
+  }
+ ]
+}

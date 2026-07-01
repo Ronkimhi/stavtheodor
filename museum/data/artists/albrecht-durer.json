@@ -1,0 +1,380 @@
+{
+ "slug": "albrecht-durer",
+ "name": "Albrecht Dürer",
+ "qid": "Q5580",
+ "born": 1471,
+ "died": 1528,
+ "periods": [
+  "northern-renaissance"
+ ],
+ "oneLiner": "German painter, printmaker, mathematician, and theorist (1471-1528)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/D%C3%BCrer_Alte_Pinakothek.jpg/330px-D%C3%BCrer_Alte_Pinakothek.jpg"
+ },
+ "bio": {
+  "extract": "Albrecht Dürer, sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe in his twenties due to his high-quality woodcut prints. He was in contact with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 was patronized by Emperor Maximilian I.",
+  "source": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2428778",
+   "title": "Portrait of the Artist Holding a Thistle",
+   "year": 1493,
+   "image": {
+    "file": "File:Portrait de l'artiste tenant un chardon - Albrecht Dürer - Musée du Louvre Peintures RF 2382.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Portrait_de_l%27artiste_tenant_un_chardon_-_Albrecht_D%C3%BCrer_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2382.jpg/960px-Portrait_de_l%27artiste_tenant_un_chardon_-_Albrecht_D%C3%BCrer_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2382.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Portrait_de_l%27artiste_tenant_un_chardon_-_Albrecht_D%C3%BCrer_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2382.jpg/1920px-Portrait_de_l%27artiste_tenant_un_chardon_-_Albrecht_D%C3%BCrer_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2382.jpg",
+    "pxW": 7557,
+    "pxH": 10053
+   },
+   "cm": {
+    "w": 44,
+    "h": 56
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Portrait of the Artist Holding a Thistle is an oil painting on parchment pasted on canvas by the German artist Albrecht Dürer. Painted in 1493, it is the earliest of Dürer's painted self-portraits and has been identified as one of the first self-portraits painted by a Northern artist. It was acquired in 1922 by the Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_the_Artist_Holding_a_Thistle"
+   },
+   "facts": [
+    {
+     "text": "In 1493, Dürer was 22 years old and working in Strasbourg. He had completed his apprenticeship with Michael Wolgemut and his tour as a journeyman, and would marry Agnes Frey on 7 July 1494.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_the_Artist_Holding_a_Thistle#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q2388965",
+   "title": "Self-Portrait",
+   "year": 1498,
+   "image": {
+    "file": "File:Selbstporträt, by Albrecht Dürer, from Prado in Google Earth.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Selbstportr%C3%A4t%2C_by_Albrecht_D%C3%BCrer%2C_from_Prado_in_Google_Earth.jpg/960px-Selbstportr%C3%A4t%2C_by_Albrecht_D%C3%BCrer%2C_from_Prado_in_Google_Earth.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Selbstportr%C3%A4t%2C_by_Albrecht_D%C3%BCrer%2C_from_Prado_in_Google_Earth.jpg/1920px-Selbstportr%C3%A4t%2C_by_Albrecht_D%C3%BCrer%2C_from_Prado_in_Google_Earth.jpg",
+    "pxW": 19047,
+    "pxH": 24047
+   },
+   "cm": {
+    "w": 41,
+    "h": 52
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Self-portrait is the second of Albrecht Dürer's three painted self-portraits and was executed in oil on wood panel in 1498, after his first trip to Italy. In the depiction, Dürer elevates himself to the social position he believed suited to an artist of his ability. He presents himself in half length, under an arch, turned towards the viewer.",
+    "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Madrid%29"
+   },
+   "facts": [
+    {
+     "text": "Art historian Marcel Brion believes the self-portrait marks a farewell to his irresponsible youth, the acclaim he received during his visit to Italy and his general apprehension as the 15th century came to an end and dark clouds hung over the Germanic states.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Madrid%29#Interpretation"
+    },
+    {
+     "text": "Dürer is depicted in front of an open window before a flat landscape containing a lake and distant snow-capped mountains. The landscape may represent either the memory of his recent travels abroad or his inner mental state.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Madrid%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q2546309",
+   "title": "Self-Portrait with Fur-Trimmed Robe",
+   "year": 1500,
+   "image": {
+    "file": "File:Dürer Alte Pinakothek.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/D%C3%BCrer_Alte_Pinakothek.jpg/960px-D%C3%BCrer_Alte_Pinakothek.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/D%C3%BCrer_Alte_Pinakothek.jpg/1920px-D%C3%BCrer_Alte_Pinakothek.jpg",
+    "pxW": 2128,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 49,
+    "h": 67
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Self-Portrait is a panel painting by the German Renaissance artist Albrecht Dürer. Completed early in 1500, just before his 29th birthday, it is the last of his three painted self-portraits. Art historians consider it the most personal, iconic and complex of these.",
+    "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Munich%29"
+   },
+   "facts": [
+    {
+     "text": "The portrait was likely donated or sold by Dürer to the Nuremberg city council. It was probably on continuous public display in Nuremberg from just before Dürer's death in 1528 until 1805, when it was sold to the Bavarian royal collection.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Munich%29#Provenance"
+    },
+    {
+     "text": "Dürer's face has the inflexibility and impersonal dignity of a mask, hiding the restless turmoil of anguish and passion within. In its directness and apparent confrontation with the viewer, the self-portrait is unlike any that came before.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Munich%29#Description"
+    },
+    {
+     "text": "Dürer seems to portray himself in a manner that invokes depictions of Christ. The Latin inscription, composed by Celtes' personal secretary, translates as: \"I, Albrecht Dürer of Nuremberg portrayed myself in appropriate [or everlasting] colours aged twenty-eight years\".",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28D%C3%BCrer%2C_Munich%29#Iconography"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q2628761",
+   "title": "Adoration of the Magi",
+   "year": 1504,
+   "image": {
+    "file": "File:Albrecht Dürer - Adorazione dei Magi - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Albrecht_D%C3%BCrer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg/960px-Albrecht_D%C3%BCrer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Albrecht_D%C3%BCrer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg/1920px-Albrecht_D%C3%BCrer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+    "pxW": 3848,
+    "pxH": 3360
+   },
+   "cm": {
+    "w": 114,
+    "h": 99
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Adoration of the Magi is a panel painting by Albrecht Dürer (1471-1528), produced under commission by Frederick the Wise for the altar of the Schlosskirche in Wittenberg. It is considered one of Dürer's best and most important works from the period between his first and second trips to Italy. The work is modest in size, just over a metre wide, however it is of great importance in Dürer's oeuvre and in the history of art.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28D%C3%BCrer%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q1170194",
+   "title": "Feast of the Rosary",
+   "year": 1506,
+   "image": {
+    "file": "File:Albrecht Dürer - Das Rosenkranzfest (1506).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Albrecht_D%C3%BCrer_-_Das_Rosenkranzfest_%281506%29.jpg/960px-Albrecht_D%C3%BCrer_-_Das_Rosenkranzfest_%281506%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Albrecht_D%C3%BCrer_-_Das_Rosenkranzfest_%281506%29.jpg/1920px-Albrecht_D%C3%BCrer_-_Das_Rosenkranzfest_%281506%29.jpg",
+    "pxW": 17737,
+    "pxH": 14883
+   },
+   "cm": {
+    "w": 192,
+    "h": 162
+   },
+   "collection": "National Gallery Prague",
+   "story": {
+    "extract": "The Feast of the Rosary is a 1506 oil painting by Albrecht Dürer, now in the National Gallery, Prague, Czech Republic. According to Czech art historian Jaroslav Pešina, it is \"probably the most superb painting that a German master has ever created.\" The work also relates to a series of artworks commissioned by Maximilian I, his Burgundian subjects or figures close to his family to commemorate the Duchess Mary of Burgundy, Maximilian's first wife and to provide the focus for a cult-like phenomenon that associated her with her name-saint, the Virgin Mary.",
+    "source": "https://en.wikipedia.org/wiki/Feast_of_the_Rosary"
+   },
+   "facts": [
+    {
+     "text": "The work was initially commissioned by Jakob Fugger, an intermediary between emperor Maximilian I and Pope Julius II, during the painter's stay as the banker's guest in Augsburg, though it was produced whilst the painter was in Venice.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Feast_of_the_Rosary#History"
+    },
+    {
+     "text": "The painting shows the Virgin Mary at the centre, enthroned and holding the Christ Child, with two flying angels holding an elaborated royal crown made of gold, pearls and gems over her; this was a Flemish art scheme already widespread in the German area at the time.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Feast_of_the_Rosary#Description"
+    },
+    {
+     "text": "The style of the work is reminiscent of some Bellini's works featuring the same quiet monumental appearance, such as the San Giobbe Altarpiece (1487) or the San Zaccaria Altarpiece (1505), especially regarding the guitar playing angel in the center.",
+     "section": "Commentaries",
+     "source": "https://en.wikipedia.org/wiki/Feast_of_the_Rosary#Commentaries"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q2448065",
+   "title": "Christ Among the Doctors",
+   "year": 1506,
+   "image": {
+    "file": "File:Albrecht Dürer - Jesus among the Doctors - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg/960px-Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg/1920px-Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg",
+    "pxW": 4338,
+    "pxH": 3480
+   },
+   "cm": {
+    "w": 80,
+    "h": 64
+   },
+   "collection": "Thyssen-Bornemisza Museum",
+   "story": {
+    "extract": "Christ among the Doctors is an oil painting by Albrecht Dürer, dating to 1506, now in the Museo Thyssen-Bornemisza, Madrid, Spain. The work belongs to the time of Dürer's sojourn in Italy, and was according to its inscription executed incidentally in five days while he was working on the Feast of the Rosary altarpiece in Venice. The work was influenced by Leonardo da Vinci and possibly based on the most probably earlier painting by Cima da Conegliano on the same theme.",
+    "source": "https://en.wikipedia.org/wiki/Christ_Among_the_Doctors_%28D%C3%BCrer%29"
+   },
+   "facts": [
+    {
+     "text": "The topic of the panel painting is the Finding in the Temple episode from Jesus's childhood, found in the Gospel of Luke (2:41–52). On an annual pilgrimage of the holy family to Jerusalem for Passover the twelve-year-old child got lost and found again after three days in a temple debating with scholars executing His Father's business.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Christ_Among_the_Doctors_%28D%C3%BCrer%29#Conception"
+    },
+    {
+     "text": "Not until his second journey to Italy Dürer made detailed studies after living models before he worked out a final composition for paintings and engravings alike.",
+     "section": "Preparatory drawings",
+     "source": "https://en.wikipedia.org/wiki/Christ_Among_the_Doctors_%28D%C3%BCrer%29#Preparatory_drawings"
+    },
+    {
+     "text": "The panel of Jesus among the Doctors has a usual underdrawing grounded with egg-tempera, but covered by just a tenuous layer of oil paint. In fact, it is made \"in an almost impromptu fashion, a thin coat of color being applied in broad and fluid strokes utterly different from Dürer's normally meticulous brushwork,\" as Erwin Panofsky described it.",
+     "section": "The manner of painting",
+     "source": "https://en.wikipedia.org/wiki/Christ_Among_the_Doctors_%28D%C3%BCrer%29#The_manner_of_painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q664038",
+   "title": "Martyrdom of the Ten Thousand",
+   "year": 1508,
+   "image": {
+    "file": "File:Dürer, Albrecht - Marter der zehntausend Christen - KHM.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/D%C3%BCrer%2C_Albrecht_-_Marter_der_zehntausend_Christen_-_KHM.jpg/960px-D%C3%BCrer%2C_Albrecht_-_Marter_der_zehntausend_Christen_-_KHM.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/45/D%C3%BCrer%2C_Albrecht_-_Marter_der_zehntausend_Christen_-_KHM.jpg",
+    "pxW": 1167,
+    "pxH": 1328
+   },
+   "cm": {
+    "w": 87,
+    "h": 99
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "The Martyrdom of the Ten Thousand is an oil painting by Albrecht Dürer, dating to 1508 and now at the Kunsthistorisches Museum of Vienna, Austria. It is signed on a cartouche which hangs from the artist's self-portrait in the center, saying Iste faciebat Ano Domini 1508 Albertus Dürer Aleman.",
+    "source": "https://en.wikipedia.org/wiki/Martyrdom_of_the_Ten_Thousand"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Frederick III, Elector of Saxony for the All Saints' Church, Wittenberg. Frederick had been Dürer's patron since 1496.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Martyrdom_of_the_Ten_Thousand#History"
+    },
+    {
+     "text": "The painting illustrates the legendary martyrdom of ten thousand Christian soldiers perpetrated on Mount Ararat by the King of Persia, Shapur II, by the order of the Roman emperor Hadrian or Antoninus Pius, or, according to other sources, Diocletian. Dürer painted numerous different martyrdom scenes within a forest with clearings and cliffs.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Martyrdom_of_the_Ten_Thousand#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q688870",
+   "title": "Adoration of the Trinity",
+   "year": 1511,
+   "image": {
+    "file": "File:Albrecht Dürer - Adoration of the Trinity (Landauer Altar) - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/960px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/1920px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg",
+    "pxW": 4969,
+    "pxH": 5434
+   },
+   "cm": {
+    "w": 123,
+    "h": 135
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "Adoration of the Trinity is an oil painting on panel by the German Renaissance artist Albrecht Dürer, executed in 1511 and now in the Kunsthistorisches Museum, Vienna, Austria.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Trinity"
+   },
+   "facts": [
+    {
+     "text": "The work was commissioned by the rich merchant Matthäus Landauer of Nuremberg for a chapel dedicated to the Holy Trinity and All the Saints in the Zwölfbrüderhaus ('House of Twelve Brothers'), which he had founded with Erasmus Schiltkrot in 1501.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Trinity#History"
+    },
+    {
+     "text": "The altar had no movable panels, as in numerous previous similar installations, and was included in a rich frame, also designed by Dürer. There is a carved depiction of the Last Judgement at the top of the frame, and it also displays the donors' coats of arms.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Trinity#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q3937568",
+   "title": "Portrait of Hieronymus Holzschuher",
+   "year": 1526,
+   "image": {
+    "file": "File:Dürer - Hieronymus Holzschuher (1469-1529) mit Deckel, 1526, 557E.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/D%C3%BCrer_-_Hieronymus_Holzschuher_%281469-1529%29_mit_Deckel%2C_1526%2C_557E.jpg/960px-D%C3%BCrer_-_Hieronymus_Holzschuher_%281469-1529%29_mit_Deckel%2C_1526%2C_557E.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/D%C3%BCrer_-_Hieronymus_Holzschuher_%281469-1529%29_mit_Deckel%2C_1526%2C_557E.jpg/1920px-D%C3%BCrer_-_Hieronymus_Holzschuher_%281469-1529%29_mit_Deckel%2C_1526%2C_557E.jpg",
+    "pxW": 2892,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 37,
+    "h": 51
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "The Portrait of Hieronymus Holzschuher is a painting by German Renaissance master Albrecht Dürer, dated from 1526, now housed in the Gemäldegalerie of Berlin, Germany. The signature is in the upper left corner, and reads HIERONIMVS HOLTZSCHVER ANNO DO[MI]NI 1526 ETATIS SVE 57.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Hieronymus_Holzschuher"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Albrecht Dürer"
+   }
+  },
+  {
+   "qid": "Q323141",
+   "title": "Heller Altarpiece",
+   "year": 1610,
+   "image": {
+    "file": "File:HMF Duerer Gruenewald Harrich Heller-Altar DSC 6312.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/HMF_Duerer_Gruenewald_Harrich_Heller-Altar_DSC_6312.jpg/960px-HMF_Duerer_Gruenewald_Harrich_Heller-Altar_DSC_6312.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/HMF_Duerer_Gruenewald_Harrich_Heller-Altar_DSC_6312.jpg/1920px-HMF_Duerer_Gruenewald_Harrich_Heller-Altar_DSC_6312.jpg",
+    "pxW": 4288,
+    "pxH": 2848
+   },
+   "cm": {
+    "w": 138,
+    "h": 189
+   },
+   "collection": "Dominikanerkloster Frankfurt am Main",
+   "story": {
+    "extract": "The Heller Altarpiece was an oil on panel triptych by German Renaissance artists Albrecht Dürer and Matthias Grünewald, executed between 1507 and 1509. The artwork was named after Jakob Heller, who ordered it. Dürer painted the interior, Grünewald the exterior.",
+    "source": "https://en.wikipedia.org/wiki/Heller_Altarpiece"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Frankfurt merchant Jakob Heller, for the Dominican church of the city. In 1615, the central panel, the only one by Dürer alone, was sold to Maximilian I of Bavaria; a copy was ordered to replace the original in its location at the church's high altar.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Heller_Altarpiece#History"
+    },
+    {
+     "text": "The central panel, depicting the Assumption and Coronation of the Virgin, was perhaps inspired by Raphael's Oddi Altarpiece. It is not known if Dürer saw Raphael's work in Perugia, during a hypothetical trip to Rome after his stay in Venice, or if he knew it from etchings or drawings.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Heller_Altarpiece#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Matthias Grünewald / Jobst Harrich / Albrecht Dürer / After Albrecht Dürer / After Albrecht Dürer"
+   }
+  }
+ ]
+}

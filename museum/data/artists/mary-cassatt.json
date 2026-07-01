@@ -1,0 +1,417 @@
+{
+ "slug": "mary-cassatt",
+ "name": "Mary Cassatt",
+ "qid": "Q173223",
+ "born": 1844,
+ "died": 1926,
+ "periods": [
+  "impressionism"
+ ],
+ "oneLiner": "American painter and printmaker (1844—1926)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mary_Cassatt_photograph_1913.jpg/330px-Mary_Cassatt_photograph_1913.jpg"
+ },
+ "bio": {
+  "extract": "Mary Stevenson Cassatt was an American painter and printmaker. She was born in Allegheny, Pennsylvania, but lived most of her adult life in France, where she befriended Edgar Degas and exhibited with the Impressionists. Cassatt often created images of the social and private lives of women, with particular emphasis on the intimate bonds between mothers and children.",
+  "source": "https://en.wikipedia.org/wiki/Mary_Cassatt"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Mary_Cassatt",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3640080",
+   "title": "Little Girl in a Blue Armchair",
+   "year": 1878,
+   "image": {
+    "file": "File:Cassat - Blue Armchair NGA.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cassat_-_Blue_Armchair_NGA.jpg/960px-Cassat_-_Blue_Armchair_NGA.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cassat_-_Blue_Armchair_NGA.jpg/1920px-Cassat_-_Blue_Armchair_NGA.jpg",
+    "pxW": 22206,
+    "pxH": 14876
+   },
+   "cm": {
+    "w": 130,
+    "h": 90
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Little Girl in a Blue Armchair is an 1878 oil painting by the American painter, printmaker, pastelist, and connoisseur Mary Cassatt. It is in the collection of the National Gallery of Art, Washington D.C. Edgar Degas made some changes in the painting.",
+    "source": "https://en.wikipedia.org/wiki/Little_Girl_in_a_Blue_Armchair"
+   },
+   "facts": [
+    {
+     "text": "The museum page provenance suggests the painting was possibly shown at the Fourth Impressionist Exhibition 1879 as Portrait de petite fille. By 1877 Cassatt had come into frank conflict with the official French art establishment and had had both her submissions for that year rejected by the Salon.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Little_Girl_in_a_Blue_Armchair#Painting"
+    },
+    {
+     "text": "Griselda Pollock declares the painting one of the most radical images of childhood of the time.",
+     "section": "Commentaries",
+     "source": "https://en.wikipedia.org/wiki/Little_Girl_in_a_Blue_Armchair#Commentaries"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q15130000",
+   "title": "Woman with a Pearl Necklace in a Loge",
+   "year": 1879,
+   "image": {
+    "file": "File:Mary Stevenson Cassatt, American - Woman with a Pearl Necklace in a Loge - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mary_Stevenson_Cassatt%2C_American_-_Woman_with_a_Pearl_Necklace_in_a_Loge_-_Google_Art_Project.jpg/960px-Mary_Stevenson_Cassatt%2C_American_-_Woman_with_a_Pearl_Necklace_in_a_Loge_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mary_Stevenson_Cassatt%2C_American_-_Woman_with_a_Pearl_Necklace_in_a_Loge_-_Google_Art_Project.jpg/1920px-Mary_Stevenson_Cassatt%2C_American_-_Woman_with_a_Pearl_Necklace_in_a_Loge_-_Google_Art_Project.jpg",
+    "pxW": 4127,
+    "pxH": 5689
+   },
+   "cm": {
+    "w": 60,
+    "h": 82
+   },
+   "collection": "Philadelphia Museum of Art",
+   "story": {
+    "extract": "Woman with a Pearl Necklace in a Loge is an 1879 painting by American artist Mary Cassatt. The Philadelphia Museum of Art acquired the painting in 1978 from the bequest of Charlotte Dorrance Wright. The style in which it was painted and the depiction of shifting light and color was influenced by Impressionism.",
+    "source": "https://en.wikipedia.org/wiki/Woman_with_a_Pearl_Necklace_in_a_Loge"
+   },
+   "facts": [
+    {
+     "text": "Cassatt was well praised for her work that was featured in the Avenue de L'Opéra in 1879 during the Fourth Impressionist Exhibition.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Pearl_Necklace_in_a_Loge#Reception"
+    },
+    {
+     "text": "This oil on canvas painting is 32 x 23 1/2 inches (81.3 x 59.7 cm). The painting shows a woman sitting on a large red chair in the balconies of the Paris Opéra House.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Pearl_Necklace_in_a_Loge#Description"
+    },
+    {
+     "text": "Cassatt depicted the modern woman, giving her an elegance and beauty. \"There is nothing more graciously honest and aristocratic than her portraits of young women\".",
+     "section": "Other work in the series",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Pearl_Necklace_in_a_Loge#Other_work_in_the_series"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Stevenson Cassatt, American, 1844 - 1926 (1844 - 1926) – Artist/Maker (American) Born in Alleghney City, Pennsylvania, United States. Died in Le Mesnil-Théribus, France. Details on Google Art Pro"
+   }
+  },
+  {
+   "qid": "Q12859910",
+   "title": "The Cup of Tea",
+   "year": 1880,
+   "image": {
+    "file": "File:Cassatt Mary The Cup of Tea 1880.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Cassatt_Mary_The_Cup_of_Tea_1880.jpg/960px-Cassatt_Mary_The_Cup_of_Tea_1880.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Cassatt_Mary_The_Cup_of_Tea_1880.jpg/1920px-Cassatt_Mary_The_Cup_of_Tea_1880.jpg",
+    "pxW": 4142,
+    "pxH": 5844
+   },
+   "cm": {
+    "w": 65,
+    "h": 92
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The American artist Mary Cassatt painted The Cup of Tea in Paris ca. 1879–1881. The painting depicts Mary's sister Lydia Cassatt in a typical, upper class-Parisian ritual of afternoon tea. Scholars have observed that Cassatt's choice to employ vivid colors, loose brushstrokes, and novel perspective to portray the scene makes it a quintessentially Impressionist painting.",
+    "source": "https://en.wikipedia.org/wiki/The_Cup_of_Tea"
+   },
+   "facts": [
+    {
+     "text": "Cassatt was born in the United States in 1844 to parents Robert and Catherine Cassatt. She began her art career at the Pennsylvania Academy of Fine Arts in 1861 at the age of seventeen.",
+     "section": "Cassatt's identity",
+     "source": "https://en.wikipedia.org/wiki/The_Cup_of_Tea#Cassatt%27s_identity"
+    },
+    {
+     "text": "The scene shown in The Cup of Tea is a depiction of Mary Cassatt's sister Lydia partaking in a daily ritual exclusive to upper-class Parisian women. The gold-edged teacup along with the silver spoon are luxury items that indicate the high social status of the subject depicted.",
+     "section": "Visual analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Cup_of_Tea#Visual_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q19925426",
+   "title": "Lady at the Tea Table",
+   "year": 1884,
+   "image": {
+    "file": "File:Lady at the Tea Table MET DT516.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lady_at_the_Tea_Table_MET_DT516.jpg/960px-Lady_at_the_Tea_Table_MET_DT516.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lady_at_the_Tea_Table_MET_DT516.jpg/1920px-Lady_at_the_Tea_Table_MET_DT516.jpg",
+    "pxW": 3120,
+    "pxH": 3709
+   },
+   "cm": {
+    "w": 61,
+    "h": 74
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Lady at the Tea Table is a late 19th-century painting by American artist Mary Cassatt. The work, done in oil on canvas, is in the collection of the Metropolitan Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/Lady_at_the_Tea_Table"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts Mary Dickinson Riddle, Cassatt's mother's first cousin, seated at a table set with a tea service. The tea set was a gift to Cassatt's family from Riddle's daughter.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Lady_at_the_Tea_Table#History"
+    },
+    {
+     "text": "The painting exemplifies much of Cassatt's unique impressionist style; much emphasis is placed on the subject's stark outline, and Mrs. Riddle's jewelry pairs with the gold gilt on the tea service.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Lady_at_the_Tea_Table#Painting"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q3633620",
+   "title": "Girl Arranging Her Hair",
+   "year": 1886,
+   "image": {
+    "file": "File:Mary Cassatt - Girl Arranging Her Hair - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mary_Cassatt_-_Girl_Arranging_Her_Hair_-_Google_Art_Project.jpg/960px-Mary_Cassatt_-_Girl_Arranging_Her_Hair_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mary_Cassatt_-_Girl_Arranging_Her_Hair_-_Google_Art_Project.jpg/1920px-Mary_Cassatt_-_Girl_Arranging_Her_Hair_-_Google_Art_Project.jpg",
+    "pxW": 3631,
+    "pxH": 4355
+   },
+   "cm": {
+    "w": 62,
+    "h": 75
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Girl Arranging Her Hair is an 1886 painting by American artist Mary Cassatt. The painting currently is in the collection of the National Gallery of Art, in Washington, D.C. It was originally exhibited at the Eighth and last Impressionist exhibition, which opened on May 15, 1886.",
+    "source": "https://en.wikipedia.org/wiki/Girl_Arranging_Her_Hair"
+   },
+   "facts": [
+    {
+     "text": "Girl Arranging Her Hair was the product of a debate between Cassatt and Edgar Degas, a good friend of hers and fellow Impressionist. Degas remarked that women did not have style in the arts, and Cassatt took Girl Arranging Her Hair as an opportunity to prove him wrong.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Girl_Arranging_Her_Hair#Background"
+    },
+    {
+     "text": "Girl Arranging Her Hair does not closely resemble Cassatt’s usual style, which was characterized by refined techniques and much attention to detail. In contrast, Girl Arranging Her Hair exhibits a greater emphasis on drawing, and shows Cassatt’s progression as an artist toward a more controlled approach.",
+     "section": "Composition and analysis",
+     "source": "https://en.wikipedia.org/wiki/Girl_Arranging_Her_Hair#Composition_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q3172226",
+   "title": "The Child's Bath",
+   "year": 1893,
+   "image": {
+    "file": "File:Mary Cassatt - The Child's Bath - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg/960px-Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg/1920px-Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
+    "pxW": 3219,
+    "pxH": 4912
+   },
+   "cm": {
+    "w": 66,
+    "h": 100
+   },
+   "collection": "Art Institute of Chicago",
+   "story": {
+    "extract": "The Child's Bath is an 1893 oil painting by American artist Mary Cassatt. The painting continues her interest in depicting bathing and motherhood, but it is distinct in its angle of vision. Both the subject matter and the overhead perspective were inspired by Japanese Woodcut prints and Edgar Degas.",
+    "source": "https://en.wikipedia.org/wiki/The_Child%27s_Bath"
+   },
+   "facts": [
+    {
+     "text": "During the late 1880s to 1890s, France favored domestic artists, and this made Cassatt feel excluded, prompting her to turn her attention back to her native country, the United States. Even though she was initially met with ambivalence from critics, the assistance of Paul Durand-Ruel was able to assure her success and status as an American artist.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Child%27s_Bath#Provenance"
+    },
+    {
+     "text": "The genre painting depicts a mother bathing a young child: an everyday scene that is \"special by not being special\". It is signed to the lower left \"Mary Cassatt\".",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Child%27s_Bath#Description"
+    },
+    {
+     "text": "In the mid-1880s, there were several cholera outbreaks in France, and public health campaigns called on people to bathe regularly. Bathing was coming to be understood as a medical prevention measure against diseases.",
+     "section": "Bathing",
+     "source": "https://en.wikipedia.org/wiki/The_Child%27s_Bath#Bathing"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q15876324",
+   "title": "The Boating Party",
+   "year": 1893,
+   "image": {
+    "file": "File:Mary Cassatt - The Boating Party - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Mary_Cassatt_-_The_Boating_Party_-_Google_Art_Project.jpg/960px-Mary_Cassatt_-_The_Boating_Party_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Mary_Cassatt_-_The_Boating_Party_-_Google_Art_Project.jpg/1920px-Mary_Cassatt_-_The_Boating_Party_-_Google_Art_Project.jpg",
+    "pxW": 4861,
+    "pxH": 3728
+   },
+   "cm": {
+    "w": 117,
+    "h": 90
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Boating Party is an oil painting by American artist Mary Cassatt created in 1893. It is also known under the titles La partie en bateau; La barque; Les canotiers; and En canot. Measuring nearly three by four feet, it is one of Cassatt’s largest and most ambitious paintings.",
+    "source": "https://en.wikipedia.org/wiki/The_Boating_Party"
+   },
+   "facts": [
+    {
+     "text": "1918 Durand-Ruel, New York October 1, 1929 sold to Chester Dale. 1963 National Gallery of Art. colorplate 75 35 7/16x46 1/8 in. (90 x117 cm) The Chester Dale Collection.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Boating_Party#Provenance"
+    },
+    {
+     "text": "Though the Boating Party was considered one of Cassatt’s largest and best works, Cassatt did not want to sell the painting because it held sentimental value for her. In 1914, Cassatt wrote “About the painting, La Barque, I do not want to sell it; I have already promised it to my family.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Boating_Party#Legacy"
+    },
+    {
+     "text": "The Boating Party was one of the rare instances in which Cassatt depicted a man. Though the roles of each figure in the painting are unclear, Griselda Pollock believes that Cassatt is referencing the family dynamic of the late 1800s.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Boating_Party#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q20170935",
+   "title": "Mother and Child (The Oval Mirror)",
+   "year": 1899,
+   "image": {
+    "file": "File:Cassat1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cassat1.jpg/960px-Cassat1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Cassat1.jpg",
+    "pxW": 1627,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 66,
+    "h": 82
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Mother and Child (The Oval Mirror) is an oil-on-canvas painting by the American Impressionist artist Mary Cassatt. The painting depicts a mother and her child in front of a mirror. The painting provides a glimpse of the domestic life of a mother and her child, evoking religious iconography from the Italian Renaissance.",
+    "source": "https://en.wikipedia.org/wiki/Mother_and_Child_%28Cassatt%29"
+   },
+   "facts": [
+    {
+     "text": "The work depicts a mother and child and appears to be drawing from the iconography of \"Mary and child\" religious imagery. Comparisons between Mother and Child and depictions of the Madonna and infant Christ from the Italian Renaissance show that Cassatt may have been influenced by religious imagery.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Mother_and_Child_%28Cassatt%29#Analysis"
+    },
+    {
+     "text": "From 1881 to 1891, Cassatt's reputation grew as she began to focus on mother-and-child subjects. In addition to Mother and Child (The Oval Mirror), Cassatt painted several other depictions of mother-and-child subjects.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/Mother_and_Child_%28Cassatt%29#Context"
+    },
+    {
+     "text": "Like many other Impressionists, Cassatt was influenced by Japanese art. In 1890, a Japanese graphic arts exhibition came to Paris and Cassatt frequently visited the exhibition.",
+     "section": "Kitagawa Utamaro",
+     "source": "https://en.wikipedia.org/wiki/Mother_and_Child_%28Cassatt%29#Kitagawa_Utamaro"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q19924621",
+   "title": "Young Mother Sewing",
+   "year": 1900,
+   "image": {
+    "file": "File:Young Mother Sewing MET DP139632.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Young_Mother_Sewing_MET_DP139632.jpg/960px-Young_Mother_Sewing_MET_DP139632.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Young_Mother_Sewing_MET_DP139632.jpg/1920px-Young_Mother_Sewing_MET_DP139632.jpg",
+    "pxW": 2921,
+    "pxH": 3653
+   },
+   "cm": {
+    "w": 74,
+    "h": 92
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Young Mother Sewing aka Little Girl Leaning on her Mother's Knee is a 1900 painting by the American artist Mary Cassatt. It is in the collection of the Metropolitan Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/Young_Mother_Sewing_%28Mary_Cassatt%29"
+   },
+   "facts": [
+    {
+     "text": "Mary Cassatt created the oil painting in 1900. It was purchased in Paris from Durand-Ruel by Louisine Havemeyer in 1901.",
+     "section": "Early history and creation",
+     "source": "https://en.wikipedia.org/wiki/Young_Mother_Sewing_%28Mary_Cassatt%29#Early_history_and_creation"
+    },
+    {
+     "text": "The painting was bequeathed to the Metropolitan Museum in 1929, as part of the H.O. Havemeyer Collection.",
+     "section": "Later history and display",
+     "source": "https://en.wikipedia.org/wiki/Young_Mother_Sewing_%28Mary_Cassatt%29#Later_history_and_display"
+    },
+    {
+     "text": "The work depicts a mother engaged in the act of sewing while seated in front of a window. A young child in a white dress leans on her mother's lap while gazing out of the picture plane toward the viewer.",
+     "section": "Description and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Young_Mother_Sewing_%28Mary_Cassatt%29#Description_and_interpretation"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Mary Cassatt"
+   }
+  },
+  {
+   "qid": "Q20190957",
+   "title": "Woman with a Sunflower",
+   "year": 1905,
+   "image": {
+    "file": "File:Mother and Child - Cassatt 1905.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mother_and_Child_-_Cassatt_1905.jpg/960px-Mother_and_Child_-_Cassatt_1905.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mother_and_Child_-_Cassatt_1905.jpg/1920px-Mother_and_Child_-_Cassatt_1905.jpg",
+    "pxW": 17513,
+    "pxH": 21806
+   },
+   "cm": {
+    "w": 74,
+    "h": 92
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Woman with a Sunflower is a 1905 oil painting by the American artist Mary Cassatt. It has been in the collection of the National Gallery of Art in Washington, DC since 1963.",
+    "source": "https://en.wikipedia.org/wiki/Woman_with_a_Sunflower"
+   },
+   "facts": [
+    {
+     "text": "Cassatt is known for mothers and children being the subject of her paintings, and this theme is portrayed in this painting. Woman with a Sunflower depicts a woman and a girl who are both looking into a small circular mirror, from which they are both looking at the child's reflection.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Sunflower#Description"
+    },
+    {
+     "text": "The sunflower depicted in Cassatt's painting is also a symbol of the suffrage movement, it is the Kansas state flower. The Suffragists Elizabeth Cady Stanton and Susan B.",
+     "section": "The sunflower",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Sunflower#The_sunflower"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Mary Cassatt"
+   }
+  }
+ ]
+}

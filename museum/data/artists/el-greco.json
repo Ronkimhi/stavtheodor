@@ -1,0 +1,380 @@
+{
+ "slug": "el-greco",
+ "name": "El Greco",
+ "qid": "Q301",
+ "born": 1541,
+ "died": 1614,
+ "periods": [
+  "mannerism"
+ ],
+ "oneLiner": "Greek artist, painter, sculptor and architect (1541–1614)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg/330px-El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg"
+ },
+ "bio": {
+  "extract": "Doménikos Theotokópoulos, most widely known as El Greco, was a Greek painter, sculptor and architect of the Spanish Renaissance, regarded as one of the greatest artists of all time. El Greco was a nickname, and the artist normally signed his paintings with his full birth name in Greek letters often adding the word Κρής, which means \"Cretan\" in Ancient Greek.",
+  "source": "https://en.wikipedia.org/wiki/El_Greco"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/El_Greco",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2714617",
+   "title": "The Disrobing of Christ",
+   "year": 1578,
+   "image": {
+    "file": "File:El Expolio, por El Greco.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/25/El_Expolio%2C_por_El_Greco.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/25/El_Expolio%2C_por_El_Greco.jpg",
+    "pxW": 745,
+    "pxH": 1280
+   },
+   "cm": {
+    "w": 173,
+    "h": 285
+   },
+   "collection": "Toledo Cathedral",
+   "story": {
+    "extract": "The Disrobing of Christ or El Expolio is a painting by El Greco begun in the summer of 1577 and completed in the spring of 1579 for the High Altar of the sacristy of the Cathedral of Toledo, where it still normally hangs. In late 2013 it was on temporary display at the Prado in Madrid, following a period of cleaning and conservation work there; it was returned to Toledo in 2014. It is one of El Greco's most famous works.",
+    "source": "https://en.wikipedia.org/wiki/The_Disrobing_of_Christ"
+   },
+   "facts": [
+    {
+     "text": "The painting shows Christ looking up to Heaven with an expression of serenity; His idealized figure seems segregated from the other people and the violence surrounding him. A figure dressed in black in the background points at Christ accusingly, while two others argue over who will have His garments.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Disrobing_of_Christ#Description"
+    },
+    {
+     "text": "Wethey regards the painting as a \"masterpiece of extraordinary originality\". The powerful effect of the painting especially depends upon his original and forceful use of colour.",
+     "section": "Critical analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Disrobing_of_Christ#Critical_analysis"
+    },
+    {
+     "text": "The Disrobing of Christ was a subject of a dispute between the painter and the representatives of the Cathedral regarding the price of the work; El Greco was forced to have recourse to legal arbitration and eventually received only 350 ducats, when his own appraiser had valued it at 950.",
+     "section": "Arbitration",
+     "source": "https://en.wikipedia.org/wiki/The_Disrobing_of_Christ#Arbitration"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q6402081",
+   "title": "The Nobleman with his Hand on his Chest",
+   "year": 1580,
+   "image": {
+    "file": "File:El caballero de la mano en el pecho, by El Greco, from Prado in Google Earth.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/El_caballero_de_la_mano_en_el_pecho%2C_by_El_Greco%2C_from_Prado_in_Google_Earth.jpg/960px-El_caballero_de_la_mano_en_el_pecho%2C_by_El_Greco%2C_from_Prado_in_Google_Earth.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/El_caballero_de_la_mano_en_el_pecho%2C_by_El_Greco%2C_from_Prado_in_Google_Earth.jpg/1920px-El_caballero_de_la_mano_en_el_pecho%2C_by_El_Greco%2C_from_Prado_in_Google_Earth.jpg",
+    "pxW": 12673,
+    "pxH": 16238
+   },
+   "cm": {
+    "w": 66,
+    "h": 82
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Nobleman with his Hand on his Chest is an oil painting by El Greco, one of the earliest works painted by the artist in Spain.",
+    "source": "https://en.wikipedia.org/wiki/The_Nobleman_with_his_Hand_on_his_Chest"
+   },
+   "facts": [
+    {
+     "text": "Some authors, including those of the Prado itself, suggest it may be a portrait of Juan de Silva y de Ribera, 3rd Marquis of Montemayor and warden of the Alcázar of Toledo.",
+     "section": "Identity of the subject",
+     "source": "https://en.wikipedia.org/wiki/The_Nobleman_with_his_Hand_on_his_Chest#Identity_of_the_subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q94802",
+   "title": "The Burial of the Count of Orgaz",
+   "year": 1586,
+   "image": {
+    "file": "File:El Greco - The Burial of the Count of Orgaz.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/El_Greco_-_The_Burial_of_the_Count_of_Orgaz.JPG/960px-El_Greco_-_The_Burial_of_the_Count_of_Orgaz.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/ff/El_Greco_-_The_Burial_of_the_Count_of_Orgaz.JPG",
+    "pxW": 1316,
+    "pxH": 1612
+   },
+   "cm": {
+    "w": 360,
+    "h": 480
+   },
+   "collection": "Church of Santo Tomé",
+   "story": {
+    "extract": "The Burial of the Count of Orgaz is a 1586 painting by El Greco, a prominent Renaissance painter, sculptor, and architect of Greek origin. Widely considered among his finest works, it illustrates a popular local legend of his time. An exceptionally large painting, it is divided into two sections, heavenly above and terrestrial below, but it gives little impression of duality, since the upper and lower sections are brought together compositionally.",
+    "source": "https://en.wikipedia.org/wiki/The_Burial_of_the_Count_of_Orgaz"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Andrés Núñez, the parish priest of Santo Tomé, for the side-chapel of the Virgin of the church of Santo Tomé. Núñez, who had initiated a project to refurbish the Count's burial chapel, is portrayed in the painting reading (on the right of the lower part of the composition).",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Burial_of_the_Count_of_Orgaz#History"
+    },
+    {
+     "text": "The theme of the painting is inspired by a legend of the early fourteenth century. In 1323, a certain Don Gonzalo Ruiz de Toledo, mayor of the town of Orgaz, died (his family later received the title of Count, by which he is generally and posthumously known).",
+     "section": "Theme",
+     "source": "https://en.wikipedia.org/wiki/The_Burial_of_the_Count_of_Orgaz#Theme"
+    },
+    {
+     "text": "According to the terms stipulated in the contract and the prevailing scholarly approach, the painting is divided into two zones, juxtaposing the earthly with the heavenly world, which are brought together compositionally (e.g., by the standing figures, by their varied participation in the earthly and heavenly event, by the torches, cross etc.).",
+     "section": "Analysis of the painting",
+     "source": "https://en.wikipedia.org/wiki/The_Burial_of_the_Count_of_Orgaz#Analysis_of_the_painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q883994",
+   "title": "View of Toledo",
+   "year": 1596,
+   "image": {
+    "file": "File:View of Toledo MET DP349564.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/View_of_Toledo_MET_DP349564.jpg/960px-View_of_Toledo_MET_DP349564.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/View_of_Toledo_MET_DP349564.jpg/1920px-View_of_Toledo_MET_DP349564.jpg",
+    "pxW": 3539,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 109,
+    "h": 121
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "View of Toledo, is one of the two surviving landscapes painted by El Greco, along with View and Plan of Toledo. View of Toledo is held by the Metropolitan Museum of Art in New York City.",
+    "source": "https://en.wikipedia.org/wiki/View_of_Toledo"
+   },
+   "facts": [
+    {
+     "text": "View of Toledo is a landscape portrait. The painting is vibrant with blues, black, white, and vivid greens.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/View_of_Toledo#Description"
+    },
+    {
+     "text": "Art historians, specifically Harold Wethey, have debated the exact dating of View of Toledo. There was some debate among art historians due to early literature that wrote about El Greco.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/View_of_Toledo#Dating"
+    },
+    {
+     "text": "Landscape paintings were rare among Spanish paintings of the Renaissance and Baroque periods. Due to landscape paintings being so rare, some speculate that View of Toledo is actually from a larger painting.",
+     "section": "Significance of landscape",
+     "source": "https://en.wikipedia.org/wiki/View_of_Toledo#Significance_of_landscape"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q6119366",
+   "title": "Saint Martin and the Beggar",
+   "year": 1597,
+   "image": {
+    "file": "File:El Greco - San Martín y el mendigo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/El_Greco_-_San_Mart%C3%ADn_y_el_mendigo.jpg/960px-El_Greco_-_San_Mart%C3%ADn_y_el_mendigo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/El_Greco_-_San_Mart%C3%ADn_y_el_mendigo.jpg/1920px-El_Greco_-_San_Mart%C3%ADn_y_el_mendigo.jpg",
+    "pxW": 2159,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 103,
+    "h": 194
+   },
+   "collection": "Widener Collection",
+   "story": {
+    "extract": "Saint Martin and the Beggar is a painting by the Greek mannerist painter El Greco, painted c. 1597–1599, that currently is in the collection of The National Gallery of Art, Washington, DC. It depicts a legend in the life of Christian saint Martin of Tours: the saint cut off half his cloak and gave it to a beggar.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Martin_and_the_Beggar_%28El_Greco%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q6106760",
+   "title": "Portrait of Jorge Manuel Theotocópuli",
+   "year": 1600,
+   "image": {
+    "file": "File:El Greco - Portrait of the Artist's Son Jorge Manuel Theotokopoulos - WGA10567.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/El_Greco_-_Portrait_of_the_Artist%27s_Son_Jorge_Manuel_Theotokopoulos_-_WGA10567.jpg/960px-El_Greco_-_Portrait_of_the_Artist%27s_Son_Jorge_Manuel_Theotokopoulos_-_WGA10567.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4e/El_Greco_-_Portrait_of_the_Artist%27s_Son_Jorge_Manuel_Theotokopoulos_-_WGA10567.jpg",
+    "pxW": 1000,
+    "pxH": 1468
+   },
+   "cm": {
+    "w": 52,
+    "h": 74
+   },
+   "collection": "Museo de Bellas Artes de Sevilla",
+   "story": {
+    "extract": "Portrait of Jorge Manuel Theotocópuli is a c. 1597–1603 painting by El Greco, painted during his time in Toledo. It depicts his son and collaborator Jorge Manuel Theotocópuli. It is now in the Museum of Fine Arts of Seville in Seville.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Jorge_Manuel_Theotoc%C3%B3puli"
+   },
+   "facts": [
+    {
+     "text": "Jorge Manuel Theotocópuli collaborated with his father, El Greco, on many works. In this portrait, he is shown wearing black clothes and a white ruff, in front of a dark background.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Jorge_Manuel_Theotoc%C3%B3puli#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q949323",
+   "title": "Fray Hortensio Félix Paravicino",
+   "year": 1609,
+   "image": {
+    "file": "File:El Greco (Domenikos Theotokopoulos) - Fray Hortensio Félix Paravicino - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/El_Greco_%28Domenikos_Theotokopoulos%29_-_Fray_Hortensio_F%C3%A9lix_Paravicino_-_Google_Art_Project.jpg/960px-El_Greco_%28Domenikos_Theotokopoulos%29_-_Fray_Hortensio_F%C3%A9lix_Paravicino_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/El_Greco_%28Domenikos_Theotokopoulos%29_-_Fray_Hortensio_F%C3%A9lix_Paravicino_-_Google_Art_Project.jpg/1920px-El_Greco_%28Domenikos_Theotokopoulos%29_-_Fray_Hortensio_F%C3%A9lix_Paravicino_-_Google_Art_Project.jpg",
+    "pxW": 4385,
+    "pxH": 5701
+   },
+   "cm": {
+    "w": 86,
+    "h": 112
+   },
+   "collection": "Museum of Fine Arts Boston",
+   "story": {
+    "extract": "Portrait of Fray Hortensio Félix Paravicino is a 1609 oil on canvas painting by El Greco, now in the Museum of Fine Arts, Boston. It shows Hortensio Félix Paravicino, a monk of the Trinitarian Order and major Spanish poet who was also a close friend of the painter. He is shown in the Trinitarian habit.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Fray_Hortensio_F%C3%A9lix_Paravacino"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q1220013",
+   "title": "Opening of the Fifth Seal",
+   "year": 1610,
+   "image": {
+    "file": "File:El Greco, The Vision of Saint John (1608-1614).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/El_Greco%2C_The_Vision_of_Saint_John_%281608-1614%29.jpg/960px-El_Greco%2C_The_Vision_of_Saint_John_%281608-1614%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2f/El_Greco%2C_The_Vision_of_Saint_John_%281608-1614%29.jpg",
+    "pxW": 1777,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 193,
+    "h": 222
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Opening of the Fifth Seal was painted in the last years of El Greco's life for a side-altar of the church of Saint John the Baptist outside the walls of Toledo. Before 1908, El Greco's painting had been referred to as Profane Love. The scholar Manuel B.",
+    "source": "https://en.wikipedia.org/wiki/Opening_of_the_Fifth_Seal"
+   },
+   "facts": [
+    {
+     "text": "The painting's subject is taken from the Book of Revelation 6:9–11, where the souls of martyrs cry out to God for justice upon their persecutors on Earth. The ecstatic figure of St.",
+     "section": "Subject of the painting",
+     "source": "https://en.wikipedia.org/wiki/Opening_of_the_Fifth_Seal#Subject_of_the_painting"
+    },
+    {
+     "text": "Upon El Greco's death in 1614, the work passed to his son, Jorge Manuel Theotocópuli. During the 19th century, it was owned by Antonio Cánovas del Castillo, Prime Minister of Spain.",
+     "section": "Ownership",
+     "source": "https://en.wikipedia.org/wiki/Opening_of_the_Fifth_Seal#Ownership"
+    },
+    {
+     "text": "It has been suggested that the Opening of the Fifth Seal served as an inspiration for the early Cubist works of Pablo Picasso, especially Les Demoiselles d'Avignon, which mirrors the expressionistic angularity of the painting.",
+     "section": "Comparison with Les Demoiselles d'Avignon",
+     "source": "https://en.wikipedia.org/wiki/Opening_of_the_Fifth_Seal#Comparison_with_Les_Demoiselles_d%27Avignon"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q2255224",
+   "title": "Laocoön",
+   "year": 1610,
+   "image": {
+    "file": "File:El Greco (Domenikos Theotokopoulos) - Laocoön - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg/960px-El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg/1920px-El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg",
+    "pxW": 14079,
+    "pxH": 11215
+   },
+   "cm": {
+    "w": 193,
+    "h": 142
+   },
+   "collection": "Samuel H. Kress Collection",
+   "story": {
+    "extract": "The Laocoön is an oil painting created between 1610 and 1614 by Greek painter El Greco. It is part of a collection at the National Gallery of Art in Washington, D.C.",
+    "source": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_%28El_Greco%29"
+   },
+   "facts": [
+    {
+     "text": "El Greco places the classical subject against a gloomy view of Toledo. El Greco's use of Toledo as the backdrop for his depiction of Laocoön's death may be based on local folklore that the people of Toledo descended from the Trojans.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_%28El_Greco%29#Background"
+    },
+    {
+     "text": "El Greco's oil painting of Laocoön represents the influence of both classical mythology and artistry.",
+     "section": "Inspiration",
+     "source": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_%28El_Greco%29#Inspiration"
+    },
+    {
+     "text": "According to Greco-Roman mythology, Laocoön was a figure in the Trojan War waged between the Achaeans (Greeks) and Trojans. Laocoön's tale appears in many of the numerous classical texts concerning the Trojan War.",
+     "section": "Classical Mythology",
+     "source": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_%28El_Greco%29#Classical_Mythology"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  },
+  {
+   "qid": "Q1114913",
+   "title": "Adoration of the Shepherds",
+   "year": 1612,
+   "image": {
+    "file": "File:La adoración de los pastores (El Greco).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/La_adoraci%C3%B3n_de_los_pastores_%28El_Greco%29.jpg/960px-La_adoraci%C3%B3n_de_los_pastores_%28El_Greco%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3f/La_adoraci%C3%B3n_de_los_pastores_%28El_Greco%29.jpg",
+    "pxW": 1698,
+    "pxH": 3051
+   },
+   "cm": {
+    "w": 180,
+    "h": 319
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Adoration of the Shepherds is a painting of the traditional subject which was painted during the last year of El Greco's life. The painting is a work which the artist made to hang over his own tomb in the convent of Santo Domingo el Antiguo in Toledo. His signature, in Greek, may be seen in the lower left corner.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Shepherds_%28El_Greco%2C_Madrid%29"
+   },
+   "facts": [
+    {
+     "text": "Extreme distortion of body characterizes the Adoration of the Shepherds like all the last paintings of El Greco. The infant Christ seems to emit a light which plays off the faces of the barefoot shepherds who have gathered to pay homage to his miraculous birth.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Shepherds_%28El_Greco%2C_Madrid%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "El Greco"
+   }
+  }
+ ]
+}

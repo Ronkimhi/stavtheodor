@@ -1,0 +1,418 @@
+{
+ "slug": "sandro-botticelli",
+ "name": "Sandro Botticelli",
+ "qid": "Q5669",
+ "born": 1445,
+ "died": 1510,
+ "periods": [
+  "early-renaissance"
+ ],
+ "oneLiner": "Italian painter (1445–1510)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sandro_Botticelli_083.jpg/330px-Sandro_Botticelli_083.jpg"
+ },
+ "bio": {
+  "extract": "Alessandro di Mariano di Vanni Filipepi, better known as Sandro Botticelli or simply Botticelli, was an Italian painter of the Early Renaissance. Botticelli's posthumous reputation suffered until the late 19th century, when he was rediscovered by the Pre-Raphaelites who stimulated a reappraisal of his work. Since then, his paintings have been seen to represent the linear grace of late Italian Gothic and some Early Renaissance painting, even though they date from the latter half of the Italian Renaissance period.",
+  "source": "https://en.wikipedia.org/wiki/Sandro_Botticelli"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Sandro_Botticelli",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q488825",
+   "title": "Adoration of the Magi",
+   "year": 1475,
+   "image": {
+    "file": "File:Zanobi-Altar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Zanobi-Altar.jpg/960px-Zanobi-Altar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Zanobi-Altar.jpg/1920px-Zanobi-Altar.jpg",
+    "pxW": 8585,
+    "pxH": 7013
+   },
+   "cm": {
+    "w": 134,
+    "h": 111
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Adoration of the Magi is a painting by the Italian Renaissance master Sandro Botticelli. Botticelli painted this piece for the altar in Gaspare di Zanobi del Lama's chapel in Santa Maria Novella around 1475. This painting depicts the Biblical story of the Three Magi following a star to find the newborn Jesus.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Botticelli%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was passed down to the descendants of Gasparre di Zanobi del Lama and remained in its original location for nearly 100 years. The rights to the altar were transferred to the Fedini family around 1522.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Botticelli%29#Provenance"
+    },
+    {
+     "text": "Botticelli's scene is set within a landscape that includes classical ruins from the Greco-Roman world, such as the classical arcade in the middle ground at the left. The Virgin Mary, Saint Joseph, and the Christ Child are sitting upon one of these classical ruins that served as a makeshift manger where the birth (nativity) of Christ occurred.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Botticelli%29#Description"
+    },
+    {
+     "text": "Around the year 1475, the Florentine banker and financial broker, Gaspare di Zanobi del Lama (alternately spelled: Guasparre dal Lama; Lami) commissioned the painting of the Adoration of the Magi by Sandro Botticelli. Gaspare di Zanobi, the son of a barber, was from Empoli, a small town outside of Florence.",
+     "section": "Patron",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Botticelli%29#Patron"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q549847",
+   "title": "Primavera",
+   "year": 1480,
+   "image": {
+    "file": "File:Sandro Botticelli - La Primavera - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg/960px-Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg/1920px-Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg",
+    "pxW": 5084,
+    "pxH": 3377
+   },
+   "cm": {
+    "w": 314,
+    "h": 207
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Primavera is a large panel painting in tempera paint by the Italian Renaissance painter Sandro Botticelli made in the late 1470s or early 1480s. It has been described as \"one of the most written about, and most controversial paintings in the world\", and also \"one of the most popular paintings in Western art\".",
+    "source": "https://en.wikipedia.org/wiki/Primavera_%28Botticelli%29"
+   },
+   "facts": [
+    {
+     "text": "The origin of the painting is unclear. Botticelli was away in Rome for many months in 1481/82, painting in the Sistine Chapel, and suggested dates are in recent years mostly later than this, but still sometimes before.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Primavera_%28Botticelli%29#History"
+    },
+    {
+     "text": "The painting features six female figures and two male, along with a cupid, in an orange grove.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Primavera_%28Botticelli%29#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q2426058",
+   "title": "Pallas and the Centaur",
+   "year": 1482,
+   "image": {
+    "file": "File:Pallade col Centauro, Sandro Botticelli (1482).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Pallade_col_Centauro%2C_Sandro_Botticelli_%281482%29.jpg/960px-Pallade_col_Centauro%2C_Sandro_Botticelli_%281482%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Pallade_col_Centauro%2C_Sandro_Botticelli_%281482%29.jpg/1920px-Pallade_col_Centauro%2C_Sandro_Botticelli_%281482%29.jpg",
+    "pxW": 10598,
+    "pxH": 14960
+   },
+   "cm": {
+    "w": 148,
+    "h": 205
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Pallas and the Centaur is a painting by the Italian Renaissance painter Sandro Botticelli, c. 1482. It is now in the Uffizi Gallery in Florence. It has been proposed as a companion piece to his Primavera, though it is a different shape.",
+    "source": "https://en.wikipedia.org/wiki/Pallas_and_the_Centaur"
+   },
+   "facts": [
+    {
+     "text": "The painting is usually dated to about 1482 or 1483 on stylistic grounds, soon after Botticelli's return from Rome, where he had been part of the project to paint the Sistine Chapel. The features of the centaur are close to those of Moses in one of his frescos there.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Pallas_and_the_Centaur#History"
+    },
+    {
+     "text": "If given by Lorenzo de' Medici for his cousin's wedding, the two figures may represent the couple, aside from any other interpretations. The lands of the bride's father, lord of Piombino on the Ligurian coast, and the island of Elba just off it, might be considered as part of Camilla's hunting grounds.",
+     "section": "Interpretations",
+     "source": "https://en.wikipedia.org/wiki/Pallas_and_the_Centaur#Interpretations"
+    },
+    {
+     "text": "There are three drawings in Botticelli's style of Pallas, which may possibly be early ideas for the painting, though none are very close to the final figure, and all seem to be studies for a single standing figure. In two she carries a large olive branch and holds a helmet.",
+     "section": "Drawings",
+     "source": "https://en.wikipedia.org/wiki/Pallas_and_the_Centaur#Drawings"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gennadii Saus i Segura"
+   }
+  },
+  {
+   "qid": "Q4373363",
+   "title": "Idealized Portrait of a Lady (Portrait of Simonetta Vespucci as Nymph)",
+   "year": 1482,
+   "image": {
+    "file": "File:Idealised Portrait of a Lady (Portrait of Simonetta Vespucci as Nymph) (SM 936).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Idealised_Portrait_of_a_Lady_%28Portrait_of_Simonetta_Vespucci_as_Nymph%29_%28SM_936%29.png/960px-Idealised_Portrait_of_a_Lady_%28Portrait_of_Simonetta_Vespucci_as_Nymph%29_%28SM_936%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Idealised_Portrait_of_a_Lady_%28Portrait_of_Simonetta_Vespucci_as_Nymph%29_%28SM_936%29.png/1920px-Idealised_Portrait_of_a_Lady_%28Portrait_of_Simonetta_Vespucci_as_Nymph%29_%28SM_936%29.png",
+    "pxW": 5187,
+    "pxH": 7828
+   },
+   "cm": {
+    "w": 54,
+    "h": 82
+   },
+   "collection": "Städel Museum",
+   "story": {
+    "extract": "Portrait of a Young Woman is a painting attributed to the Italian Renaissance painter Sandro Botticelli, who is thought to have executed it between 1480 and 1485, although some authorities attribute authorship to Jacopo da Sellaio.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Young_Woman_%28Botticelli%2C_Frankfurt%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q2551625",
+   "title": "Madonna of the Magnificat",
+   "year": 1483,
+   "image": {
+    "file": "File:Sandro Botticelli - Madonna del Magnificat C.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sandro_Botticelli_-_Madonna_del_Magnificat_C.jpg/960px-Sandro_Botticelli_-_Madonna_del_Magnificat_C.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Sandro_Botticelli_-_Madonna_del_Magnificat_C.jpg",
+    "pxW": 1710,
+    "pxH": 1710
+   },
+   "cm": null,
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Madonna of the Magnificat, is a painting of circular or tondo form by the Italian Renaissance painter Sandro Botticelli. It is also referred to as the Virgin and Child with Five Angels. In the tondo, we see the Virgin Mary writing the Magnificat with her right hand, with a pomegranate in her left, as two angels crown her with the Christ child on her lap.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Magnificat"
+   },
+   "facts": [
+    {
+     "text": "The history of the painting is not known, but the Uffizi acquired it from a private collection in 1784. It may have come from one of the many monasteries suppressed by the Archduke Pietro Leopoldo.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Magnificat#History"
+    },
+    {
+     "text": "The work portrays the Virgin Mary crowned by two of five angels, a sheer veil covering her flowing blonde hair and a Byzantine style scarf around her shoulders. She is writing the opening of the Magnificat on the right-hand page of a book; on the left page is part of the Benedictus.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Magnificat#Description"
+    },
+    {
+     "text": "Conventionally, the Madonna is depicted as a reader rather than a writer. In this painting, Botticelli made the decision to depict her as a writer.",
+     "section": "Madonna as a female writer",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Magnificat#Madonna_as_a_female_writer"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q151047",
+   "title": "The Birth of Venus",
+   "year": 1485,
+   "image": {
+    "file": "File:Sandro Botticelli - La nascita di Venere - Google Art Project - edited.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/960px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/1920px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "pxW": 30000,
+    "pxH": 18840
+   },
+   "cm": {
+    "w": 278,
+    "h": 172
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Birth of Venus is a painting by the Italian artist Sandro Botticelli, probably executed in the mid-1480s. It depicts the goddess Venus arriving at the shore after her birth, when she had emerged from the sea fully grown. The painting is in the Uffizi Gallery in Florence, Italy.",
+    "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus"
+   },
+   "facts": [
+    {
+     "text": "In the centre, the goddess Venus (newly born in fully grown state, in accordance with tradition) stands nude in a giant scallop shell. The size of the shell is purely imaginary, and is also found in classical depictions of the subject.",
+     "section": "Description and subject",
+     "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus#Description_and_subject"
+    },
+    {
+     "text": "The painting is large, but slightly smaller than the Primavera, and where that is a panel painting, this is on the cheaper support of canvas.",
+     "section": "Technical",
+     "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus#Technical"
+    },
+    {
+     "text": "Although the pose of Venus is classical in some respects, and borrows the position of the hands from the Venus Pudica type in Greco-Roman sculptures (see section below), the overall treatment of the figure, standing off-centre with a curved body of long flowing lines, is in many respects from Gothic art.",
+     "section": "Style",
+     "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus#Style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q2293953",
+   "title": "Venus and Mars",
+   "year": 1485,
+   "image": {
+    "file": "File:Venus and Mars.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Venus_and_Mars.jpg/960px-Venus_and_Mars.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Venus_and_Mars.jpg/1920px-Venus_and_Mars.jpg",
+    "pxW": 7689,
+    "pxH": 3075
+   },
+   "cm": {
+    "w": 174,
+    "h": 69
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Venus and Mars is a panel painting of about 1485 by the Italian Renaissance painter Sandro Botticelli. It shows the Roman gods Venus, goddess of love, and Mars, god of war, in an allegory of beauty and valour. The youthful and voluptuous couple recline in a forest setting, surrounded by playful baby satyrs.",
+    "source": "https://en.wikipedia.org/wiki/Venus_and_Mars_%28Botticelli%29"
+   },
+   "facts": [
+    {
+     "text": "Although today Botticelli is the most celebrated Florentine painter of second half of the 15th century, his reputation only reached this level in the late 19th century when his emphasis on line and contour chimed with the contemporary sensibility.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Venus_and_Mars_%28Botticelli%29#Provenance"
+    },
+    {
+     "text": "The usual view of scholars is that the painting was commissioned to celebrate a marriage, and is a relatively uncomplicated representation of sensual pleasure, with an added meaning of love conquering or outlasting war. This was a commonplace in Renaissance thinking, which might be elaborated in terms of Renaissance Neoplatonism.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Venus_and_Mars_%28Botticelli%29#Interpretation"
+    },
+    {
+     "text": "Venus watches Mars sleep while two infant satyrs play, carrying his helmet (a sallet) and lance as another rests inside his breastplate under his arm. A fourth blows a small conch shell in his ear in an effort, so far unsuccessful, to wake him.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Venus_and_Mars_%28Botticelli%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q2269291",
+   "title": "Madonna of the Pomegranate",
+   "year": 1487,
+   "image": {
+    "file": "File:Sandro Botticelli - Madonna della melagrana 1487.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sandro_Botticelli_-_Madonna_della_melagrana_1487.jpg/960px-Sandro_Botticelli_-_Madonna_della_melagrana_1487.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/75/Sandro_Botticelli_-_Madonna_della_melagrana_1487.jpg",
+    "pxW": 1560,
+    "pxH": 1560
+   },
+   "cm": {
+    "w": 144,
+    "h": 144
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Madonna of the Pomegranate is a tempera on panel painting created circa 1487 by the Italian Renaissance master Sandro Botticelli. It is now in the Uffizi in Florence. Sandro Botticelli was a leading Renaissance artist from Florence, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Pomegranate"
+   },
+   "facts": [
+    {
+     "text": "The Madonna of the Pomegranate is a painting by the Italian Renaissance artist, Alessandro di Mariano di Vanni dei Filipepi (1445–1510), better known as Sandro Botticelli. Botticelli was born and raised in Florence, where he spent a majority of his life as one of the most admired artists of the Florentine Renaissance.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Pomegranate#History"
+    },
+    {
+     "text": "In the painting, Madonna of the Pomegranate, by Sandro Botticelli, there are a few different interpretations of the meaning of the pomegranate that is held by the Virgin Mary.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Pomegranate#Interpretation"
+    },
+    {
+     "text": "In the painting Madonna of the Pomegranate, Botticelli made it very easy to identify the figures being displayed. In the middle of the painting, Madonna, better known as the Virgin Mary, is surrounded symmetrically by angels with three on each side of her.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Pomegranate#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q1217187",
+   "title": "Calumny of Apelles",
+   "year": 1497,
+   "image": {
+    "file": "File:Sandro Botticelli La calumnia de Apeles.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sandro_Botticelli_La_calumnia_de_Apeles.jpg/960px-Sandro_Botticelli_La_calumnia_de_Apeles.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sandro_Botticelli_La_calumnia_de_Apeles.jpg/1920px-Sandro_Botticelli_La_calumnia_de_Apeles.jpg",
+    "pxW": 3000,
+    "pxH": 2009
+   },
+   "cm": {
+    "w": 91,
+    "h": 62
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Calumny of Apelles is a panel painting in tempera by the Italian Renaissance painter Sandro Botticelli. Based on the description of a lost ancient painting by Apelles, the work was completed in about 1494–95, and is now in the Uffizi, Florence.",
+    "source": "https://en.wikipedia.org/wiki/Calumny_of_Apelles"
+   },
+   "facts": [
+    {
+     "text": "Some decades later Giorgio Vasari saw the painting in the collection of the son of Antonio Segna Guidi (c. 1460–1512), a Florentine banker whose period from 1497 overseeing the Papal Mint ended unhappily, on the rack.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Calumny_of_Apelles#History"
+    },
+    {
+     "text": "The figures are either personifications of vices or virtues, or in the case of the king and victim, of the roles of the powerful and the powerless.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Calumny_of_Apelles#Subject"
+    },
+    {
+     "text": "Ronald Lightbown considers the painting may have originally been intended for Botticelli's own pleasure and use, as the Mystic Nativity seems to have been.",
+     "section": "Borrowings and style",
+     "source": "https://en.wikipedia.org/wiki/Calumny_of_Apelles#Borrowings_and_style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  },
+  {
+   "qid": "Q974674",
+   "title": "The Mystical Nativity",
+   "year": 1500,
+   "image": {
+    "file": "File:Mystic Nativity, Sandro Botticelli.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Mystic_Nativity%2C_Sandro_Botticelli.jpg/960px-Mystic_Nativity%2C_Sandro_Botticelli.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Mystic_Nativity%2C_Sandro_Botticelli.jpg/1920px-Mystic_Nativity%2C_Sandro_Botticelli.jpg",
+    "pxW": 2780,
+    "pxH": 4026
+   },
+   "cm": {
+    "w": 75,
+    "h": 109
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Mystical Nativity is a modern name given to an oil painting on canvas executed c. 1500–1501 by the Italian Renaissance master Sandro Botticelli that is held in the National Gallery collection in London. It is his only signed work and has an unusual iconography for a painting of the Nativity. Other aspects of the work are unusual as well.",
+    "source": "https://en.wikipedia.org/wiki/The_Mystical_Nativity"
+   },
+   "facts": [
+    {
+     "text": "The Virgin Mary is shown kneeling before the Christ Child in the centre, both are on a larger scale than the other figures. Joseph sits on the ground next to the child, perhaps asleep, with his face not visible.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Mystical_Nativity#Description"
+    },
+    {
+     "text": "The painting depicts a scene of joy and celebration, of earthly and heavenly delight with angels dancing at the top of the painting, but art historians now have research and scientific tools that give more depth to the interpretation of the painting.",
+     "section": "Historical context",
+     "source": "https://en.wikipedia.org/wiki/The_Mystical_Nativity#Historical_context"
+    },
+    {
+     "text": "Normally Botticelli used wood panels for his paintings. This painting is on canvas.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/The_Mystical_Nativity#Technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sandro Botticelli"
+   }
+  }
+ ]
+}

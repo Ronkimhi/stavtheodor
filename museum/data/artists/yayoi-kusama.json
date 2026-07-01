@@ -1,0 +1,21 @@
+{
+ "slug": "yayoi-kusama",
+ "name": "Yayoi Kusama",
+ "qid": "Q231121",
+ "born": 1929,
+ "died": null,
+ "periods": [
+  "contemporary"
+ ],
+ "oneLiner": "Japanese artist (born 1929)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg/330px-Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg"
+ },
+ "bio": {
+  "extract": "Yayoi Kusama is a Japanese contemporary artist who works primarily in sculpture and installation. She is also active in painting, performance, video art, fashion, poetry, fiction, and other arts. Her work is based in conceptual art and shows some attributes of feminism, minimalism, surrealism, art brut, pop art, and abstract expressionism, and is infused with autobiographical, psychological, and sexual content. She has been acknowledged as one of the most important artists to come out of Japan, the world's top-selling female artist, and the world's most successful living artist.",
+  "source": "https://en.wikipedia.org/wiki/Yayoi_Kusama"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Yayoi_Kusama",
+ "hasGallery": false,
+ "paintings": []
+}

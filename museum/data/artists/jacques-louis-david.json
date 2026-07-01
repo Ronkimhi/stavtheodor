@@ -1,0 +1,432 @@
+{
+ "slug": "jacques-louis-david",
+ "name": "Jacques-Louis David",
+ "qid": "Q83155",
+ "born": 1748,
+ "died": 1825,
+ "periods": [
+  "neoclassicism"
+ ],
+ "oneLiner": "French painter (1748–1825)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/David_Self_Portrait.jpg/330px-David_Self_Portrait.jpg"
+ },
+ "bio": {
+  "extract": "Jacques-Louis David was a French painter in the Neoclassical style, considered to be the preeminent painter of the era. In the 1780s, his cerebral brand of history painting marked a change in taste away from Rococo frivolity toward classical austerity, severity, and heightened feeling, which harmonized with the moral climate of the final years of the Ancien Régime.",
+  "source": "https://en.wikipedia.org/wiki/Jacques-Louis_David"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3590926",
+   "title": "Erasistratus Discovering the Cause of Antiochus' Disease",
+   "year": 1774,
+   "image": {
+    "file": "File:David-Antiochus et Stratonice.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/David-Antiochus_et_Stratonice.jpg/960px-David-Antiochus_et_Stratonice.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/73/David-Antiochus_et_Stratonice.jpg",
+    "pxW": 1024,
+    "pxH": 801
+   },
+   "cm": {
+    "w": 155,
+    "h": 120
+   },
+   "collection": "Beaux-Arts de Paris",
+   "story": {
+    "extract": "Erasistratus Discovering the Cause of Antiochus' Disease is a 1774 oil painting by French neoclassical artist Jacques-Louis David. The work is a history painting depicting an episode from Plutarch's Lives in which Greek court physician Erasistratus diagnoses the illness of Antiochus, the son of Seleucus I, as lovesickness for his stepmother Stratonice. The painting was awarded the 1774 Prix de Rome by the Académie royale de peinture et de sculpture.",
+    "source": "https://en.wikipedia.org/wiki/Erasistratus_Discovering_the_Cause_of_Antiochus%27_Disease"
+   },
+   "facts": [
+    {
+     "text": "Painting painted in 1774. After its presentation in the competition for the Prix de Rome, it was recovered by David and entrusted to Michel-Jean Sedaine.",
+     "section": "Origin",
+     "source": "https://en.wikipedia.org/wiki/Erasistratus_Discovering_the_Cause_of_Antiochus%27_Disease#Origin"
+    },
+    {
+     "text": "Antiochus is bedridden, suffering from a sickly languor. His father, King Seleucus, is at the foot of the bed in the dark.",
+     "section": "The scene",
+     "source": "https://en.wikipedia.org/wiki/Erasistratus_Discovering_the_Cause_of_Antiochus%27_Disease#The_scene"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q476458",
+   "title": "The Oath of the Horatii",
+   "year": 1784,
+   "image": {
+    "file": "File:Le Serment des Horaces - Jacques-Louis David - Musée du Louvre Peintures INV 3692 ; MR 1432.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_%3B_MR_1432.jpg/960px-Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_%3B_MR_1432.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_%3B_MR_1432.jpg/1920px-Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_%3B_MR_1432.jpg",
+    "pxW": 10051,
+    "pxH": 7794
+   },
+   "cm": {
+    "w": 425,
+    "h": 330
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Oath of the Horatii is a large painting by the French artist Jacques-Louis David painted in 1784 and 1785 and now on display in the Louvre in Paris. The painting immediately became a huge success with critics and the public and remains one of the best-known paintings in the Neoclassical style.",
+    "source": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii"
+   },
+   "facts": [
+    {
+     "text": "David first exhibited the painting in Rome, where even the Pope requested a viewing. The painting was exhibited in France at the Salon of 1785, but it was delivered late.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii#Reception"
+    },
+    {
+     "text": "In 1774, David won the Prix de Rome with his work Érasistrate découvrant la cause de la Maladie d’Antiochius. This allowed him to stay five years (1775–1780) in Rome as a student of the French government.",
+     "section": "Commissioning the work",
+     "source": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii#Commissioning_the_work"
+    },
+    {
+     "text": "The painting depicts the Roman Horatius family, who, according to Titus Livius' Ab Urbe Condita (From the Founding of the City) had been chosen for a ritual duel against three members of the Curiatii, a family from Alba Longa, in order to settle disputes between the Romans and the latter city.",
+     "section": "Symbolic theme",
+     "source": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii#Symbolic_theme"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q1752990",
+   "title": "The Death of Socrates",
+   "year": 1787,
+   "image": {
+    "file": "File:The Death of Socrates MET DP-13139-001.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Death_of_Socrates_MET_DP-13139-001.jpg/960px-The_Death_of_Socrates_MET_DP-13139-001.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Death_of_Socrates_MET_DP-13139-001.jpg/1920px-The_Death_of_Socrates_MET_DP-13139-001.jpg",
+    "pxW": 4000,
+    "pxH": 2663
+   },
+   "cm": {
+    "w": 196,
+    "h": 130
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Death of Socrates is an oil on canvas painted by French painter Jacques-Louis David in 1787. The painting was part of the neoclassical style, popular in the 1780s, that depicted subjects from the Classical age, in this case the story of the execution of Socrates as told by Plato in his Phaedo. In this story, Socrates has been convicted of corrupting the youth of Athens and introducing strange gods, and has been sentenced to die by drinking poison hemlock.",
+    "source": "https://en.wikipedia.org/wiki/The_Death_of_Socrates"
+   },
+   "facts": [
+    {
+     "text": "After Charles-Michel Trudaine de la Sablière and his brother were executed in 1794 during the Reign of Terror, the painting passed to his brother's wife Louise Micault de Courbeton, Madame Trudaine de Montigny.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Socrates#Provenance"
+    },
+    {
+     "text": "In the painting, an elderly Socrates is dressed in a white robe and sits upright on a bed, one hand extended over a cup, the other gesturing in the air; he is still teaching. He is surrounded by his friends of varying ages, most showing emotional distress, unlike Socrates, who remains calm.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Socrates#Description"
+    },
+    {
+     "text": "Rather than a royal commission, David received a direct private commission for the work in 1786 from the wealthy Charles-Michel Trudaine de la Sablière, the youngest son of Trudaine de Montigny's and around 20 years old at the time. Trudaine was intrigued by a drama that Denis Diderot had considered writing but never completed.",
+     "section": "Creation and history",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Socrates#Creation_and_history"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q2533791",
+   "title": "The Lictors Bring to Brutus the Bodies of His Sons",
+   "year": 1789,
+   "image": {
+    "file": "File:David Brutus.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/David_Brutus.jpg/960px-David_Brutus.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/David_Brutus.jpg/1920px-David_Brutus.jpg",
+    "pxW": 5284,
+    "pxH": 4040
+   },
+   "cm": {
+    "w": 422,
+    "h": 323
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Lictors Bring to Brutus the Bodies of His Sons is a work in oils by the French artist Jacques-Louis David. On a canvas of 146 square feet, this painting was first exhibited at the Paris Salon in 1789. The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons.",
+    "source": "https://en.wikipedia.org/wiki/The_Lictors_Bring_to_Brutus_the_Bodies_of_His_Sons"
+   },
+   "facts": [
+    {
+     "text": "The Lictors Bring to Brutus the Bodies of His Sons is on permanent display in the Louvre in Paris. A study in ink and chalk from 1787 is housed in the Metropolitan Museum of Art in New York City.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Lictors_Bring_to_Brutus_the_Bodies_of_His_Sons#Legacy"
+    },
+    {
+     "text": "David labored over the painting for more than two years before he considered it complete. His attachment to the motif of Brutus had been evident for years before this painting, at least since the early 1780s when he was making The Oath of the Horatii (1784).",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Lictors_Bring_to_Brutus_the_Bodies_of_His_Sons#Background"
+    },
+    {
+     "text": "Like most of David's major works, Brutus is on a large canvas. It measures 323 centimetres (127 in) in height and 422 centimetres (166 in) in width.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Lictors_Bring_to_Brutus_the_Bodies_of_His_Sons#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q636537",
+   "title": "The Death of Marat",
+   "year": 1793,
+   "image": {
+    "file": "File:Jacques-Louis David - Marat assassinated - Google Art Project 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Jacques-Louis_David_-_Marat_assassinated_-_Google_Art_Project_2.jpg/960px-Jacques-Louis_David_-_Marat_assassinated_-_Google_Art_Project_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Jacques-Louis_David_-_Marat_assassinated_-_Google_Art_Project_2.jpg/1920px-Jacques-Louis_David_-_Marat_assassinated_-_Google_Art_Project_2.jpg",
+    "pxW": 16134,
+    "pxH": 20762
+   },
+   "cm": {
+    "w": 128,
+    "h": 165
+   },
+   "collection": "Royal Museums of Fine Arts of Belgium",
+   "story": {
+    "extract": "The Death of Marat is a 1793 painting by Jacques-Louis David depicting the artist's friend and murdered French revolutionary leader, Jean-Paul Marat. One of the most famous images from the era of the French Revolution, it was painted when David was the leading French Neoclassical painter, a Montagnard, and a member of the revolutionary Committee of General Security. Created in the months after Marat's death, the painting shows Marat lying dead in his bath after his assassination by Charlotte Corday on 13 July 1793.",
+    "source": "https://en.wikipedia.org/wiki/The_Death_of_Marat"
+   },
+   "facts": [
+    {
+     "text": "Jean-Paul Marat (24 May 1743 – 13 July 1793) was one of the leaders of the Montagnards, a radical faction active during the French Revolution from the Reign of Terror to the Thermidorian Reaction. Marat was stabbed to death by Charlotte Corday, a Girondin and political enemy of Marat who blamed Marat for the September Massacres.",
+     "section": "The assassination of Marat",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Marat#The_assassination_of_Marat"
+    },
+    {
+     "text": "The leading French painter of his generation, David was a prominent Montagnard and a Jacobin, aligned with Marat and Maximilien Robespierre.",
+     "section": "David's politics",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Marat#David%27s_politics"
+    },
+    {
+     "text": "The Death of Marat has often been compared to Michelangelo's Pietà, a major similarity being the elongated arm hanging down in both works. David admired Caravaggio's works, especially Entombment of Christ, which mirrors The Death of Marat's drama and light.",
+     "section": "Style",
+     "source": "https://en.wikipedia.org/wiki/The_Death_of_Marat#Style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q1314013",
+   "title": "The Intervention of the Sabine Women",
+   "year": 1799,
+   "image": {
+    "file": "File:The Intervention of the Sabine Women - David (Louvre INV 3691).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg/960px-The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg/1920px-The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg",
+    "pxW": 9837,
+    "pxH": 7396
+   },
+   "cm": {
+    "w": 522,
+    "h": 385
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Intervention of the Sabine Women is a 1799 painting by the French painter Jacques-Louis David, showing a legendary episode following the abduction of the Sabine women by the founding generation of Rome.",
+    "source": "https://en.wikipedia.org/wiki/The_Intervention_of_the_Sabine_Women"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts Romulus's wife Hersilia – the daughter of Titus Tatius, leader of the Sabines – rushing between her husband and her father and placing her babies between them. A vigorous Romulus prepares to strike a half-retreating Tatius with his spear, but hesitates.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Intervention_of_the_Sabine_Women#Description"
+    },
+    {
+     "text": "The genesis of Les Sabines and the work itself represented a significant departure for the day. Historical depictions had been typically commissioned.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/The_Intervention_of_the_Sabine_Women#Influence"
+    },
+    {
+     "text": "David began planning the work while he was imprisoned in the Luxembourg Palace from 29 May to 3 August 1795. France was at war with other European nations after a period of civil conflict culminating in the Reign of Terror and the Thermidorian Reaction, during which David had been imprisoned as a supporter of Robespierre.",
+     "section": "Production",
+     "source": "https://en.wikipedia.org/wiki/The_Intervention_of_the_Sabine_Women#Production"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q2619037",
+   "title": "Portrait of Madame Récamier",
+   "year": 1800,
+   "image": {
+    "file": "File:Juliette Récamier, née Bernard - Jacques-Louis David - Musée duLouvre Peintures INV 3708.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Juliette_R%C3%A9camier%2C_n%C3%A9e_Bernard_-_Jacques-Louis_David_-_Mus%C3%A9e_duLouvre_Peintures_INV_3708.jpg/960px-Juliette_R%C3%A9camier%2C_n%C3%A9e_Bernard_-_Jacques-Louis_David_-_Mus%C3%A9e_duLouvre_Peintures_INV_3708.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Juliette_R%C3%A9camier%2C_n%C3%A9e_Bernard_-_Jacques-Louis_David_-_Mus%C3%A9e_duLouvre_Peintures_INV_3708.jpg/1920px-Juliette_R%C3%A9camier%2C_n%C3%A9e_Bernard_-_Jacques-Louis_David_-_Mus%C3%A9e_duLouvre_Peintures_INV_3708.jpg",
+    "pxW": 11153,
+    "pxH": 7948
+   },
+   "cm": {
+    "w": 244,
+    "h": 174
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Portrait of Madame Récamier is an 1800 portrait of the Parisian socialite Juliette Récamier by Jacques-Louis David showing her in the height of Neoclassical fashion, reclining on a Directoire style sofa in a simple Empire line dress with almost bare arms, and short hair \"à la Titus.\" The work is unfinished.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_R%C3%A9camier"
+   },
+   "facts": [
+    {
+     "text": "The work has had substantial implications in the art world. The sofa on which Madame Récamier reclines is now known as a récamier, a backless couch with a high curved headrest and low footrest.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_R%C3%A9camier#Legacy"
+    },
+    {
+     "text": "The work is notable for the distance that it establishes between viewer and subject. The setting is a sparsely decorated interior, featuring a tall bronze candelabrum fixed with an oil lamp, which has been extinguished and whose smoke drifts into the blackness of the space.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_R%C3%A9camier#Description"
+    },
+    {
+     "text": "Madame Juliette Récamier was a Neoclassical French icon, salon hostess, and influential Parisian socialite in elite French circles of the time. Wife of a French banker and daughter of a banker from Lyon, she was considered to be among the most beautiful socialites of her time.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_R%C3%A9camier#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q1231009",
+   "title": "The Coronation of Napoleon",
+   "year": 1807,
+   "image": {
+    "file": "File:Le Sacre de Napoléon - Jacques-Louis David - Musée du Louvre Peintures INV 3699 ; MR 1437.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg/960px-Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg/1920px-Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg",
+    "pxW": 11058,
+    "pxH": 6874
+   },
+   "cm": {
+    "w": 979,
+    "h": 621
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Coronation of Napoleon is a painting completed in 1807 by Jacques-Louis David, the official painter of Napoleon, depicting the coronation of Napoleon at Notre-Dame de Paris. The oil painting has imposing dimensions – it is almost 10 metres (33 ft) wide by a little over 6 metres (20 ft) tall. The work is on display at the Louvre Museum in Paris, France.",
+    "source": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon"
+   },
+   "facts": [
+    {
+     "text": "The work was commissioned by Napoleon orally in September 1804, and Jacques-Louis David started work on it on 21 December 1805 in the former chapel of the College of Cluny, near the Sorbonne, which served as a workshop. Assisted by his student Georges Rouget, he put the finishing touches in January 1808.",
+     "section": "History of the work",
+     "source": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon#History_of_the_work"
+    },
+    {
+     "text": "The composition is organized around several axes, and incorporates the rules of neoclassicism. One axis is that which passes through the cross and has a vertical orientation.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon#Composition"
+    },
+    {
+     "text": "Napoleon I (1769–1821) is standing, dressed in coronation robes similar to those of Roman emperors. Others are merely passive spectators.",
+     "section": "Characters",
+     "source": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon#Characters"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q1313605",
+   "title": "The Emperor Napoleon in His Study at the Tuileries",
+   "year": 1812,
+   "image": {
+    "file": "File:The Emperor Napoleon in His Study at the Tuileries, by Jacques-Louis David (1812) - National Gallery of Art (Samuel H. Kress Foundation).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries%2C_by_Jacques-Louis_David_%281812%29_-_National_Gallery_of_Art_%28Samuel_H._Kress_Foundation%29.jpg/960px-The_Emperor_Napoleon_in_His_Study_at_the_Tuileries%2C_by_Jacques-Louis_David_%281812%29_-_National_Gallery_of_Art_%28Samuel_H._Kress_Foundation%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries%2C_by_Jacques-Louis_David_%281812%29_-_National_Gallery_of_Art_%28Samuel_H._Kress_Foundation%29.jpg/1920px-The_Emperor_Napoleon_in_His_Study_at_the_Tuileries%2C_by_Jacques-Louis_David_%281812%29_-_National_Gallery_of_Art_%28Samuel_H._Kress_Foundation%29.jpg",
+    "pxW": 16304,
+    "pxH": 26731
+   },
+   "cm": {
+    "w": 125,
+    "h": 204
+   },
+   "collection": "Samuel H. Kress Collection",
+   "story": {
+    "extract": "The Emperor Napoleon in His Study at the Tuileries is an 1812 painting by Jacques-Louis David. It shows Napoleon I, Emperor of the French in uniform in his study at the Tuileries Palace. Despite the detail, it is unlikely that Napoleon posed for the portrait.",
+    "source": "https://en.wikipedia.org/wiki/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries"
+   },
+   "facts": [
+    {
+     "text": "Vertical in format, it shows Napoleon standing, three-quarters life size, wearing the uniform of a colonel of the Imperial Guard Foot Grenadiers (blue with white facings and red cuffs). He also wears his Legion of Honour and Order of the Iron Crown decorations, along with gold epaulettes, white French-style culottes and white stockings.",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries#Iconography"
+    },
+    {
+     "text": "An analysis of the original painting reveals that the artist reedited the composition and details several times to balance the image, add allusions, and capture a complete story. Brush strokes and texture indicate that an earlier version had Napoleon's upper body flanked by two fluted columns about the width of the figure's torso.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries#Development"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  },
+  {
+   "qid": "Q835286",
+   "title": "Mars Being Disarmed by Venus",
+   "year": 1824,
+   "image": {
+    "file": "File:Jacques-Louis David - Mars desarme par Venus.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Jacques-Louis_David_-_Mars_desarme_par_Venus.JPG/960px-Jacques-Louis_David_-_Mars_desarme_par_Venus.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Jacques-Louis_David_-_Mars_desarme_par_Venus.JPG",
+    "pxW": 1702,
+    "pxH": 2022
+   },
+   "cm": {
+    "w": 265,
+    "h": 308
+   },
+   "collection": "Royal Museums of Fine Arts of Belgium",
+   "story": {
+    "extract": "Mars Being Disarmed by Venus is the last painting produced by the French artist Jacques-Louis David. He began it in 1822 during his exile in Brussels and completed it three years later, before dying in an accident in 1825. The work combines idealization with elements of realism.",
+    "source": "https://en.wikipedia.org/wiki/Mars_Being_Disarmed_by_Venus"
+   },
+   "facts": [
+    {
+     "text": "The painting initially received little commentary from critics, perhaps owing to the artist's position in political exile. Critics who discussed the work focused on the technical aspects of the painting, saying less about its political significance.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Mars_Being_Disarmed_by_Venus#Reception"
+    },
+    {
+     "text": "At over 3 m (10 ft) high, it is an imposing work. Set before a temple floating in the clouds, Venus, the goddess of love, and her followers, the three Graces and Cupid, are shown taking away the weapons, helmet, shield, and armor of Mars, the god of war.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Mars_Being_Disarmed_by_Venus#Description"
+    },
+    {
+     "text": "Art historians have sometimes seen the painting's treatment of Venus and Mars as a broader commentary on gender, showing femininity ultimately conquering masculinity. Venus, goddess of love, is here equated with femininity, emotionality, and pleasure.",
+     "section": "Power of the feminine",
+     "source": "https://en.wikipedia.org/wiki/Mars_Being_Disarmed_by_Venus#Power_of_the_feminine"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jacques-Louis David"
+   }
+  }
+ ]
+}

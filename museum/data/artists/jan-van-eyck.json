@@ -1,0 +1,432 @@
+{
+ "slug": "jan-van-eyck",
+ "name": "Jan van Eyck",
+ "qid": "Q102272",
+ "born": 1390,
+ "died": 1441,
+ "periods": [
+  "northern-renaissance"
+ ],
+ "oneLiner": "Flemish painter (c.1390–1441)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg/330px-Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg"
+ },
+ "bio": {
+  "extract": "Jan van Eyck was an early Netherlandish painter active in Bruges who was one of the early innovators of what became known as early Netherlandish painting, and one of the supreme figures of the Early Northern Renaissance. Such was his legacy, that he has been called \"the inventor of oil-painting\" by Vasari, Ernst Gombrich, and others, although this claim is now considered an oversimplification.",
+  "source": "https://en.wikipedia.org/wiki/Jan_van_Eyck"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jan_van_Eyck",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q1747569",
+   "title": "The Madonna in the Church",
+   "year": 1430,
+   "image": {
+    "file": "File:Jan van Eyck - Madonna in the Church - WGA7590.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Jan_van_Eyck_-_Madonna_in_the_Church_-_WGA7590.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Jan_van_Eyck_-_Madonna_in_the_Church_-_WGA7590.jpg",
+    "pxW": 670,
+    "pxH": 1500
+   },
+   "cm": {
+    "w": 14,
+    "h": 31
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "Madonna in the Church is a small panel painting by the early Netherlandish painter Jan van Eyck. Probably executed between c. 1438–1440, it depicts the Virgin Mary holding the Child Jesus in a Gothic cathedral. Mary is presented as Queen of Heaven wearing a jewel-studded crown, cradling a playful child Christ who gazes at her and grips the neckline of her red dress in a manner that recalls the 13th-century Byzantine tradition of the Eleusa icon.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_in_the_Church"
+   },
+   "facts": [
+    {
+     "text": "The provenance of the work contains many gaps, and even the better-documented periods are often complicated or \"murky\", according to Dhanens. There is almost no record from the early 16th century through 1851, and the theft in 1877 leaves doubt for some as to what exactly was returned.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Madonna_in_the_Church#Provenance"
+    },
+    {
+     "text": "At 31 cm × 14 cm, the painting's dimensions are small enough to be almost considered miniature, consistent with most 15th-century devotional diptychs. A reduced size increased portability and affordability, and encouraged the viewer to approach the piece to more closely see its intricate details.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_in_the_Church#Description"
+    },
+    {
+     "text": "The attribution of the panel reflects the progression and trends of 19th and 20th-century scholarship on Early Netherlandish art. It is now thought to have been completed c. 1438–1440, but there are still arguments for dates as early as 1424–1429.",
+     "section": "Attribution and dating",
+     "source": "https://en.wikipedia.org/wiki/Madonna_in_the_Church#Attribution_and_dating"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q1150782",
+   "title": "Léal Souvenir",
+   "year": 1432,
+   "image": {
+    "file": "File:Eyck, Jan van - Portrait of a Young Man (Tymotheos) - National Gallery, London.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Eyck%2C_Jan_van_-_Portrait_of_a_Young_Man_%28Tymotheos%29_-_National_Gallery%2C_London.jpg/960px-Eyck%2C_Jan_van_-_Portrait_of_a_Young_Man_%28Tymotheos%29_-_National_Gallery%2C_London.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Eyck%2C_Jan_van_-_Portrait_of_a_Young_Man_%28Tymotheos%29_-_National_Gallery%2C_London.jpg/1920px-Eyck%2C_Jan_van_-_Portrait_of_a_Young_Man_%28Tymotheos%29_-_National_Gallery%2C_London.jpg",
+    "pxW": 5339,
+    "pxH": 9594
+   },
+   "cm": {
+    "w": 19,
+    "h": 34
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Léal Souvenir is a small oil-on-oak panel portrait by the Early Netherlandish painter Jan van Eyck, dated 1432. The sitter has not been identified, but his distinctive features suggest a historical person rather than the hypothetical ideal typical of the time in northern Renaissance portraiture; his slight, unassuming torso contrasts with a sophisticated facial expression. His features have been described as \"plain and rustic\", yet thoughtful and inward-looking.",
+    "source": "https://en.wikipedia.org/wiki/L%C3%A9al_Souvenir"
+   },
+   "facts": [
+    {
+     "text": "The painting was widely copied and imitated during the 15th century. Near-contemporary copper reproductions are known from Bergamo and Turin.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/L%C3%A9al_Souvenir#Provenance"
+    },
+    {
+     "text": "Léal Souvenir is one of the earliest surviving examples of secular portraiture in medieval European art and one of the earliest extant unidealised representations. This is apparent in its realism and acute observation of the details of the man's everyday appearance.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/L%C3%A9al_Souvenir#Description"
+    },
+    {
+     "text": "The panel consists of a single 8-millimetre (0.3 in)-thick oak board, cut vertically down close to the painted surface. It has a small unpainted area at the upper left.",
+     "section": "Condition",
+     "source": "https://en.wikipedia.org/wiki/L%C3%A9al_Souvenir#Condition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q2392901",
+   "title": "Portrait of a Man (Self      Portrait?)",
+   "year": 1433,
+   "image": {
+    "file": "File:Jan van Eyck - Portrait of a Man (Self Portrait?) 1433.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg/960px-Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg/1920px-Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg",
+    "pxW": 8889,
+    "pxH": 12230
+   },
+   "cm": {
+    "w": 19,
+    "h": 27
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Portrait of a Man is the title given to a small oil painting by the Early Netherlandish painter Jan van Eyck, completed in 1433 in Bruges. The inscription at the top of the frame, which is original, contains his motto Als Ich Can was a common autograph for van Eyck. However this is his first known usage of the term, and it is unusually large and prominent.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Man_%28Self_Portrait%3F%29"
+   },
+   "facts": [
+    {
+     "text": "The painting is small at one-third life-size. The sitter is shown in three-quarters profile.",
+     "section": "Portrait",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Man_%28Self_Portrait%3F%29#Portrait"
+    },
+    {
+     "text": "The unusually large headdress is painted in vermilion red and forms the centrepiece of the painting. The depiction of its lines and folds in such an elaborate fashion allowed the artist to display his confidence in his abilities.",
+     "section": "Headdress",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Man_%28Self_Portrait%3F%29#Headdress"
+    },
+    {
+     "text": "The frame is original and, unusually for the period, is gilded. It is approximately 7 cm wide at the top and end, and 7 cm wide at the sides.",
+     "section": "Frame and inscriptions",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_a_Man_%28Self_Portrait%3F%29#Frame_and_inscriptions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q220859",
+   "title": "Arnolfini Portrait",
+   "year": 1434,
+   "image": {
+    "file": "File:Van Eyck - Arnolfini Portrait.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/960px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/1920px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "pxW": 4386,
+    "pxH": 6000
+   },
+   "cm": {
+    "w": 60,
+    "h": 82
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Arnolfini Portrait is an oil painting on oak panel by the Early Netherlandish painter Jan van Eyck, dated 1434 and now in the National Gallery, London. It is a full-length double portrait, believed to depict the Italian merchant Giovanni di Nicolao Arnolfini and his wife, presumably in their residence at the Flemish city of Bruges.",
+    "source": "https://en.wikipedia.org/wiki/Arnolfini_Portrait"
+   },
+   "facts": [
+    {
+     "text": "The provenance of the painting begins in 1435 when it was dated by van Eyck and presumably owned by the sitter(s). At some point before 1516 it came into the possession of Don Diego de Guevara (d.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Arnolfini_Portrait#Provenance"
+    },
+    {
+     "text": "Jan van Eyck's characteristic Early Netherlandish style depicts the scene with a high level of detail. The painting is generally in very good condition, though with small losses of original paint and damage, which have mostly been retouched.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Arnolfini_Portrait#Description"
+    },
+    {
+     "text": "In their book published in 1857, Crowe and Cavalcaselle were the first to link the double portrait with the early 16th century inventories of Margaret of Austria. They suggested that the painting shows portraits of Giovanni [di Arrigo] Arnolfini and his wife.",
+     "section": "Identity of subjects",
+     "source": "https://en.wikipedia.org/wiki/Arnolfini_Portrait#Identity_of_subjects"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q2734881",
+   "title": "Annunciation",
+   "year": 1435,
+   "image": {
+    "file": "File:Annunciation - Jan van Eyck - 1434 - NG Wash DC.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg/960px-Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg/1920px-Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg",
+    "pxW": 7669,
+    "pxH": 20230
+   },
+   "cm": {
+    "w": 34,
+    "h": 90
+   },
+   "collection": "Andrew W. Mellon collection",
+   "story": {
+    "extract": "The Annunciation is an oil painting by the Early Netherlandish master Jan van Eyck, from around 1434–1436. The panel is housed in the National Gallery of Art in Washington, D.C. It was originally on panel but has been transferred to canvas.",
+    "source": "https://en.wikipedia.org/wiki/Annunciation_%28van_Eyck%2C_Washington%29"
+   },
+   "facts": [
+    {
+     "text": "Mary was believed in the Middle Ages to have been a very studious girl who was engaged by the Temple of Jerusalem with other selected maidens to spin new curtains for the Holy of Holies. The book she is reading here is too large to be a lady's Book of Hours; as in other paintings she is engaged in serious study in a part of the temple.",
+     "section": "The Temple",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_%28van_Eyck%2C_Washington%29#The_Temple"
+    },
+    {
+     "text": "It has been suggested that Mary has been given the features of Isabella of Portugal, wife of Philip the Good, Duke of Burgundy, who may well have commissioned the painting from van Eyck, his (part-time) court painter.",
+     "section": "The figures",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_%28van_Eyck%2C_Washington%29#The_figures"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q2480921",
+   "title": "Madonna with Canon Joris van der Paele",
+   "year": 1436,
+   "image": {
+    "file": "File:Eyck, Jan van - Madonna with Canon van der Paele.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Eyck%2C_Jan_van_-_Madonna_with_Canon_van_der_Paele.jpeg/960px-Eyck%2C_Jan_van_-_Madonna_with_Canon_van_der_Paele.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Eyck%2C_Jan_van_-_Madonna_with_Canon_van_der_Paele.jpeg/1920px-Eyck%2C_Jan_van_-_Madonna_with_Canon_van_der_Paele.jpeg",
+    "pxW": 8089,
+    "pxH": 6279
+   },
+   "cm": {
+    "w": 160,
+    "h": 125
+   },
+   "collection": "Vlaamse Kunstcollectie",
+   "story": {
+    "extract": "The Virgin and Child with Canon van der Paele is a large oil-on-oak panel painting completed around 1434–1436 by the Early Netherlandish painter Jan van Eyck. It shows the painting's donor, Joris van der Paele, within an apparition of saints. The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the Christ Child on her lap.",
+    "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Canon_van_der_Paele"
+   },
+   "facts": [
+    {
+     "text": "The painting is set in a rounded church with ambulatories. Mary occupies the area where the altarpiece would usually be positioned.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Canon_van_der_Paele#Description"
+    },
+    {
+     "text": "Joris van der Paele is identifiable both from his resemblance and by the paternal and maternal coat of arms at the corners of each frame. He was born in Bruges around 1370, and spent his early career as a papal scribe in Rome before returning to his native city in 1425 as a wealthy man.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Canon_van_der_Paele#Commission"
+    },
+    {
+     "text": "As with van Eyck's Madonna of Chancellor Rolin, the panel creates an intimate setting between the donor and Virgin.",
+     "section": "Figures",
+     "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Canon_van_der_Paele#Figures"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q474409",
+   "title": "Lucca Madonna",
+   "year": 1437,
+   "image": {
+    "file": "File:Lucca Madonna (SM 944).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Lucca_Madonna_%28SM_944%29.png/960px-Lucca_Madonna_%28SM_944%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Lucca_Madonna_%28SM_944%29.png/1920px-Lucca_Madonna_%28SM_944%29.png",
+    "pxW": 8030,
+    "pxH": 10659
+   },
+   "cm": {
+    "w": 50,
+    "h": 66
+   },
+   "collection": "Städel Museum",
+   "story": {
+    "extract": "The Lucca Madonna is an oil painting by the Early Netherlandish master Jan van Eyck, painted in approximately 1437. It shows Mary seated on a wooden throne and crowned by a canopy, breastfeeding the infant Christ. Its carpentry suggests it was once the inner panel of a triptych, while its small size indicates it was meant for private devotion.",
+    "source": "https://en.wikipedia.org/wiki/Lucca_Madonna"
+   },
+   "facts": [
+    {
+     "text": "The Virgin sits on a wooden throne crowned by a canopy, with four small lion statues made of brass. This is a reference to the throne of Solomon which had twelve lions on the sides and steps.",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/Lucca_Madonna#Iconography"
+    },
+    {
+     "text": "The Lucca Madonna is one of six extant Madonna paintings by van Eyck that are dated to the period between his completion of the Ghent Altarpiece and his death in June 1441.",
+     "section": "Position in van Eyck's oeuvre",
+     "source": "https://en.wikipedia.org/wiki/Lucca_Madonna#Position_in_van_Eyck%27s_oeuvre"
+    }
+   ],
+   "license": {
+    "name": "PDM-owner",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q323079",
+   "title": "Dresden Triptych",
+   "year": 1437,
+   "image": {
+    "file": "File:Gemäldegalerie Alte Meister (Dresden) Galeriewerk Braun 1836a.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Gem%C3%A4ldegalerie_Alte_Meister_%28Dresden%29_Galeriewerk_Braun_1836a.jpg/960px-Gem%C3%A4ldegalerie_Alte_Meister_%28Dresden%29_Galeriewerk_Braun_1836a.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Gem%C3%A4ldegalerie_Alte_Meister_%28Dresden%29_Galeriewerk_Braun_1836a.jpg",
+    "pxW": 1245,
+    "pxH": 1400
+   },
+   "cm": {
+    "w": 38,
+    "h": 28
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "The Dresden Triptych is a very small hinged-triptych altarpiece by the Early Netherlandish painter Jan van Eyck. It consists of five individual panel paintings: a central inner panel, and two double-sided wings. It is signed and dated 1437, and in a permanent collection of the Gemäldegalerie Alte Meister, Dresden, with the panels still in their original frames.",
+    "source": "https://en.wikipedia.org/wiki/Dresden_Triptych"
+   },
+   "facts": [
+    {
+     "text": "The work measures 33 by 27.5 centimetres (13.0 in × 10.8 in) including the frames. Given this miniaturist scale, the triptych probably functioned as a portable devotional piece, or altare portabile.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Dresden_Triptych#Description"
+    },
+    {
+     "text": "The triptych is in poor condition, having suffered damage and heavy paint loss, and has undergone a number of restorations.",
+     "section": "Condition",
+     "source": "https://en.wikipedia.org/wiki/Dresden_Triptych#Condition"
+    },
+    {
+     "text": "The Dresden Triptych was probably in the possession of the Giustiniani family in the mid- to late-15th century. It is mentioned in a May 10, 1597 record of a purchase by Vincenzo Gonzaga, Duke of Mantua, and was then sold with the Gonzaga Collection to Charles I of England in 1627.",
+     "section": "Provenance and attribution",
+     "source": "https://en.wikipedia.org/wiki/Dresden_Triptych#Provenance_and_attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q574004",
+   "title": "Crucifixion and Last Judgement diptych",
+   "year": 1437,
+   "image": {
+    "file": "File:Jan van Eyck - Diptych - WGA07587.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Jan_van_Eyck_-_Diptych_-_WGA07587.jpg/960px-Jan_van_Eyck_-_Diptych_-_WGA07587.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Jan_van_Eyck_-_Diptych_-_WGA07587.jpg/1920px-Jan_van_Eyck_-_Diptych_-_WGA07587.jpg",
+    "pxW": 3904,
+    "pxH": 5586
+   },
+   "cm": {
+    "w": 20,
+    "h": 56
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Crucifixion and Last Judgement diptych consists of two small painted panels attributed to the Early Netherlandish artist Jan van Eyck, with areas finished by unidentified followers or members of his workshop. This diptych is one of the early oil-on-panel masterpieces of the Northern Renaissance, renowned for its unusually complex and highly detailed iconography, and for the technical skill evident in its completion. It was executed in a miniature format; the panels are just 56.5 cm (22.2 in) high by 19.7 cm (7.8 in) wide.",
+    "source": "https://en.wikipedia.org/wiki/Crucifixion_and_Last_Judgement_diptych"
+   },
+   "facts": [
+    {
+     "text": "Nothing is known of the work's provenance before the 1840s. Given the panels' diminutive size—which is typical of early diptychs—it seems probable that the work was commissioned for private rather than public devotion.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_and_Last_Judgement_diptych#Provenance"
+    },
+    {
+     "text": "Along with Robert Campin and later Rogier van der Weyden, Van Eyck revolutionised the approach towards naturalism and realism in Northern European painting during the early to mid 15th century.",
+     "section": "Format and technique",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_and_Last_Judgement_diptych#Format_and_technique"
+    },
+    {
+     "text": "The Crucifixion panel comprises three horizontal planes, each representing different moments from the Passion. The upper third shows the crucifixion before a view of Jerusalem; the lower two thirds detail the crowds and Jesus' followers at Golgotha (Place of the Skull).",
+     "section": "Crucifixion panel",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_and_Last_Judgement_diptych#Crucifixion_panel"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  },
+  {
+   "qid": "Q1516449",
+   "title": "Madonna of Chancellor Rolin",
+   "year": 1500,
+   "image": {
+    "file": "File:The Virgin with Chancellor Rolin by Jan van Eyck (Louvre).webp",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_%28Louvre%29.webp/960px-The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_%28Louvre%29.webp.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_%28Louvre%29.webp/1920px-The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_%28Louvre%29.webp.png",
+    "pxW": 2406,
+    "pxH": 2500
+   },
+   "cm": {
+    "w": 62,
+    "h": 66
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Madonna of Chancellor Rolin is an oil painting by the Early Netherlandish painter Jan van Eyck, dating from around 1435. It is now in the Musée du Louvre, Paris. It was commissioned by Nicolas Rolin chancellor of the Duchy of Burgundy, then aged about 60, whose votive portrait takes up the left side of the picture, for his parish church, Notre-Dame-du-Chastel in Autun, where it remained until the church burnt down in 1793.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_of_Chancellor_Rolin"
+   },
+   "facts": [
+    {
+     "text": "The scene depicts the Virgin Mary crowned by a hovering angel while she presents the infant Jesus to Rolin. It is set within a spacious loggia with a rich decoration of columns and bas-reliefs.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_Chancellor_Rolin#Description"
+    },
+    {
+     "text": "Infrared reflectograms have disclosed a number of changes from the underdrawing. Rolin had a large purse hanging from his belt; since he had grown very rich in public office he probably felt that would be inappropriate.",
+     "section": "Alterations",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_Chancellor_Rolin#Alterations"
+    },
+    {
+     "text": "The Virgin sits with the infant Christ \"on her knee\" (i.e. on her thighs), which make a platform for the infant. This very traditional motif is known as the Throne of Wisdom, and was often used by Jan van Eyck, who elaborated the meaning in complex allusions.",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_Chancellor_Rolin#Iconography"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jan van Eyck"
+   }
+  }
+ ]
+}

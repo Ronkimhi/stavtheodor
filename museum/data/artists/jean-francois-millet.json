@@ -1,0 +1,363 @@
+{
+ "slug": "jean-francois-millet",
+ "name": "Jean-François Millet",
+ "qid": "Q148458",
+ "born": 1814,
+ "died": 1875,
+ "periods": [
+  "realism"
+ ],
+ "oneLiner": "French painter (1814–1875)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg/330px-Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg"
+ },
+ "bio": {
+  "extract": "Jean-François Millet was a French painter and one of the founders of the Barbizon school in rural France. Millet is noted for his paintings of peasant farmers and can be categorized as part of the Realism art movement. Toward the end of his career, he became increasingly interested in painting pure landscapes. He is known best for his oil paintings but is also noted for his pastels, Conté crayon drawings, and etchings.",
+  "source": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Millet"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Millet",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3228018",
+   "title": "The Winnower",
+   "year": 1848,
+   "image": {
+    "file": "File:Jean-François Millet, The Winnower (London).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jean-Fran%C3%A7ois_Millet%2C_The_Winnower_%28London%29.jpg/960px-Jean-Fran%C3%A7ois_Millet%2C_The_Winnower_%28London%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jean-Fran%C3%A7ois_Millet%2C_The_Winnower_%28London%29.jpg/1920px-Jean-Fran%C3%A7ois_Millet%2C_The_Winnower_%28London%29.jpg",
+    "pxW": 4234,
+    "pxH": 6000
+   },
+   "cm": {
+    "w": 71,
+    "h": 100
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Winnower is the title of three oil on canvas paintings by French artist Jean-François Millet, created between 1847 and 1848. The first, now held at the National Gallery, in London, was painted in 1847-1848, and presented at the Salon of 1848. Subsequently, Millet created two other versions, one kept at the Louvre Museum, in Paris, much smaller than the original, and the other at the Musée d'Orsay, also in Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Winnower_%28Millet%29"
+   },
+   "facts": [
+    {
+     "text": "The first version of The Winnower was presented in the Grand Salon during the Salon of 1848, at the same time as The Captivity of the Jews of Babylon. If this work, as an history painting, was intended to attract buyers, the first marked Millet's entry into a new genre: the painting of peasant daily life.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Winnower_%28Millet%29#History"
+    },
+    {
+     "text": "Writer Théophile Gautier in his work about the Salon de 1848 described this painting thus: “It is impossible to see anything rougher, more fierce, more bristling, more uncultivated; well! this mortar, this thick mess to retain the brush, is of excellent locality, of a fine and warm tone when one steps back three paces.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Winnower_%28Millet%29#Reception"
+    },
+    {
+     "text": "This series indeed represents each time a winnower, dressed in his working clothes and with clogs on his feet, who, using a van, blows up the grain to separate it from the straw. An evolution in the representation is however notable in the three paintings.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Winnower_%28Millet%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q20540661",
+   "title": "The Sower",
+   "year": 1850,
+   "image": {
+    "file": "File:Jean-François Millet - The Sower - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg/960px-Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg/1920px-Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg",
+    "pxW": 3990,
+    "pxH": 4913
+   },
+   "cm": {
+    "w": 83,
+    "h": 102
+   },
+   "collection": "Museum of Fine Arts Boston",
+   "story": {
+    "extract": "The Sower is an oil painting by the French artist Jean-François Millet from 1850. It is one of several versions of the theme that he painted. The work has been in the collection of the Museum of Fine Arts in Boston since 1917.",
+    "source": "https://en.wikipedia.org/wiki/The_Sower_%28Millet%29"
+   },
+   "facts": [
+    {
+     "text": "Millet moved to Barbizon in 1849, a village in the Fontainebleau forest, outside Paris. There he was part of the artist group of the School of Barbizon, which painted subdued realistic landscapes and motifs in contrast to the traditional romantic dramatic landscape and painting.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Sower_%28Millet%29#History"
+    },
+    {
+     "text": "The painting depicts a peasant in the act of sowing land, apparently in winter. The Sun shines at the top of the painting, which indicates that it is dawn.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Sower_%28Millet%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q3212566",
+   "title": "The Potato Harvest",
+   "year": 1855,
+   "image": {
+    "file": "File:Jean-François Millet - The Potato Harvest - Walters 37115.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jean-Fran%C3%A7ois_Millet_-_The_Potato_Harvest_-_Walters_37115.jpg/960px-Jean-Fran%C3%A7ois_Millet_-_The_Potato_Harvest_-_Walters_37115.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Jean-Fran%C3%A7ois_Millet_-_The_Potato_Harvest_-_Walters_37115.jpg",
+    "pxW": 1799,
+    "pxH": 1486
+   },
+   "cm": {
+    "w": 65,
+    "h": 54
+   },
+   "collection": "Walters Art Museum",
+   "story": {
+    "extract": "The Potato Harvest is an oil-on-canvas painting by the French artist Jean-François Millet, created in 1855. It is held at The Walters Art Museum, in Baltimore.",
+    "source": "https://en.wikipedia.org/wiki/The_Potato_Harvest"
+   },
+   "facts": [
+    {
+     "text": "Jean-François Millet was raised in the area of France known as the old province of Normandy. He was brought up with hard out-of-door labor.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Potato_Harvest#History"
+    },
+    {
+     "text": "The Potato Harvest depicts peasants working in the plains between Barbizon and Chailly. It presents a theme representative of the peasants' struggle for survival.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Potato_Harvest#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q7494497",
+   "title": "Shepherdess Seated on a Rock",
+   "year": 1856,
+   "image": {
+    "file": "File:Mille - Shepherdess Seated on a Rock - Metropolitan.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mille_-_Shepherdess_Seated_on_a_Rock_-_Metropolitan.jpg/960px-Mille_-_Shepherdess_Seated_on_a_Rock_-_Metropolitan.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mille_-_Shepherdess_Seated_on_a_Rock_-_Metropolitan.jpg/1920px-Mille_-_Shepherdess_Seated_on_a_Rock_-_Metropolitan.jpg",
+    "pxW": 3003,
+    "pxH": 3807
+   },
+   "cm": {
+    "w": 28,
+    "h": 36
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Shepherdess Seated on a Rock or The Knitter or Shepherdess Knitting is an 1856 oil-on-wood painting by Jean-François Millet. It is in the collection of the Metropolitan Museum of Art in New York.",
+    "source": "https://en.wikipedia.org/wiki/Shepherdess_Seated_on_a_Rock"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q1368055",
+   "title": "The Gleaners",
+   "year": 1857,
+   "image": {
+    "file": "File:Jean-François Millet - Gleaners - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project.jpg/960px-Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project.jpg/1920px-Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project.jpg",
+    "pxW": 5357,
+    "pxH": 4009
+   },
+   "cm": {
+    "w": 110,
+    "h": 83
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Gleaners is an oil painting by Jean-François Millet completed in 1857. It is held in the Musée d'Orsay, in Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Gleaners"
+   },
+   "facts": [
+    {
+     "text": "Millet's The Gleaners was preceded by a vertical painting of the image in 1854 and an etching in 1855. Millet unveiled The Gleaners at the Salon of 1857.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Gleaners#History"
+    },
+    {
+     "text": "The Gleaners is one of Millet's best-known works. Its imagery of bending peasant women gleaning was paraphrased frequently in works by younger artists such as Pissarro, Renoir, Seurat, and van Gogh.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Gleaners#Legacy"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q2571560",
+   "title": "The Angelus",
+   "year": 1858,
+   "image": {
+    "file": "File:JEAN-FRANÇOIS MILLET - El Ángelus (Museo de Orsay, 1857-1859. Óleo sobre lienzo, 55.5 x 66 cm).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859._%C3%93leo_sobre_lienzo%2C_55.5_x_66_cm%29.jpg/960px-JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859._%C3%93leo_sobre_lienzo%2C_55.5_x_66_cm%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859._%C3%93leo_sobre_lienzo%2C_55.5_x_66_cm%29.jpg/1920px-JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859._%C3%93leo_sobre_lienzo%2C_55.5_x_66_cm%29.jpg",
+    "pxW": 7050,
+    "pxH": 5862
+   },
+   "cm": {
+    "w": 66,
+    "h": 56
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Angelus is an oil painting by French painter Jean-François Millet, completed between 1857 and 1859.",
+    "source": "https://en.wikipedia.org/wiki/The_Angelus_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The painting triggered a rush of patriotic fervour when the Louvre tried to buy it in 1889. In 1932 it was vandalized by a madman.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Angelus_%28painting%29#Provenance"
+    },
+    {
+     "text": "Millet’s painting, Prayer for the Potato Crop was modified by the painter with the addition a church steeple in the distant background, and was then renamed, The Angelus―a term for a daily Catholic prayer.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Angelus_%28painting%29#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q3823264",
+   "title": "Death and the Woodcutter",
+   "year": 1859,
+   "image": {
+    "file": "File:Death-and-the-woodcutter-jean-francois-millet3.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Death-and-the-woodcutter-jean-francois-millet3.jpg/960px-Death-and-the-woodcutter-jean-francois-millet3.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Death-and-the-woodcutter-jean-francois-millet3.jpg",
+    "pxW": 1200,
+    "pxH": 948
+   },
+   "cm": {
+    "w": 98,
+    "h": 78
+   },
+   "collection": "Ny Carlsberg Glyptotek",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q20180844",
+   "title": "Man with a Hoe",
+   "year": 1860,
+   "image": {
+    "file": "File:Jean-François Millet - L'Homme à la houe (1860-62).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Jean-Fran%C3%A7ois_Millet_-_L%27Homme_%C3%A0_la_houe_%281860-62%29.jpg/960px-Jean-Fran%C3%A7ois_Millet_-_L%27Homme_%C3%A0_la_houe_%281860-62%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Jean-Fran%C3%A7ois_Millet_-_L%27Homme_%C3%A0_la_houe_%281860-62%29.jpg/1920px-Jean-Fran%C3%A7ois_Millet_-_L%27Homme_%C3%A0_la_houe_%281860-62%29.jpg",
+    "pxW": 8479,
+    "pxH": 6884
+   },
+   "cm": {
+    "w": 99,
+    "h": 80
+   },
+   "collection": "J. Paul Getty Museum",
+   "story": {
+    "extract": "Man with a Hoe, sometimes called The Labourer, is a painting by the French Realist painter Jean-François Millet, created 1860–1862. It is held in the J. Paul Getty Museum, in Los Angeles.",
+    "source": "https://en.wikipedia.org/wiki/Man_with_a_Hoe"
+   },
+   "facts": [
+    {
+     "text": "L'homme à la houe was first exhibited at the salon of the Academie des Beaux-Arts in Paris in 1863.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Man_with_a_Hoe#History"
+    },
+    {
+     "text": "Along with Woman Pasturing Her Cow and The Gleaners, Man With a Hoe is a Millet painting that casts \"a critical light on the conditions of rural labor under the Second Empire and explains [Millet's] sometimes marginal status in the regime's fine arts institutions.\" The painting has long been seen to have a political and/or philosophical subtext.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Man_with_a_Hoe#Influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q47013750",
+   "title": "The Beaked",
+   "year": 1860,
+   "image": {
+    "file": "File:Lille PdBA millet la becquée.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lille_PdBA_millet_la_becqu%C3%A9e.jpg/960px-Lille_PdBA_millet_la_becqu%C3%A9e.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lille_PdBA_millet_la_becqu%C3%A9e.jpg/1920px-Lille_PdBA_millet_la_becqu%C3%A9e.jpg",
+    "pxW": 2150,
+    "pxH": 2637
+   },
+   "cm": {
+    "w": 60,
+    "h": 74
+   },
+   "collection": "Palais des Beaux-Arts de Lille",
+   "story": {
+    "extract": "The Beakful, in French, La Becquée, or Woman Feeding Her Children is an oil-on-canvas painting by French artist Jean-François Millet, made in 1860. It is held at the Palais des Beaux-Arts de Lille.",
+    "source": "https://en.wikipedia.org/wiki/The_Beakful"
+   },
+   "facts": [
+    {
+     "text": "In 1871, the painting was the property of Madame Maracci, a wealthy patron who wished to donate to the city of Lille a painting by Auguste-Joseph Herlin, then assistant to the curator of the city's painting museum. Herlin, embarrassed, dissuaded her, and convinced her to donate a work by another artist.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Beakful#Provenance"
+    },
+    {
+     "text": "This canvas was the culmination of a long process that began with sketches and preparatory drawings made during 1848–1849. Some of the drawings are also kept at the Palais des Beaux-Arts in Lille.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Beakful#History"
+    },
+    {
+     "text": "A mother, squatting on a stool in front of her farmhouse door, gives soup to her three children seated on the threshold, while the father, in the background, digs his garden. Three chickens are depicted.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Beakful#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  },
+  {
+   "qid": "Q3921662",
+   "title": "Le Printemps",
+   "year": 1870,
+   "image": {
+    "file": "File:Jean-François Millet (II) - Spring - WGA15693.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jean-Fran%C3%A7ois_Millet_%28II%29_-_Spring_-_WGA15693.jpg/960px-Jean-Fran%C3%A7ois_Millet_%28II%29_-_Spring_-_WGA15693.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/52/Jean-Fran%C3%A7ois_Millet_%28II%29_-_Spring_-_WGA15693.jpg",
+    "pxW": 1090,
+    "pxH": 850
+   },
+   "cm": {
+    "w": 111,
+    "h": 86
+   },
+   "collection": "Musée d'Orsay",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-François Millet"
+   }
+  }
+ ]
+}

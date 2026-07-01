@@ -1,0 +1,502 @@
+#!/usr/bin/env python3
+"""
+fetch_museum_data.py — builds museum/data/ from Wikipedia, Wikidata and Wikimedia Commons.
+
+Everything written to the data files is sourced verbatim from those APIs:
+this script selects and trims text at sentence boundaries, it never writes
+its own prose. Re-runnable; raw API responses are cached in tools/cache/.
+
+Usage:  python3 fetch_museum_data.py [--no-cache] [--artist SLUG]
+"""
+
+import hashlib
+import json
+import re
+import subprocess
+import sys
+import time
+import unicodedata
+import urllib.parse
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+DATA = HERE.parent / "data"
+CACHE = HERE / "cache"
+UA = "TheodoraMuseumBot/1.0 (https://stavtheodor.com; ronkkimhi@gmail.com)"
+SLEEP = 0.5          # seconds between uncached requests
+SPARQL_SLEEP = 1.0
+MIN_PAINTINGS = 6    # below this an artist is placard-only (hasGallery: false)
+DEFAULT_MAX = 10
+CURRENT_YEAR = 2026
+
+FREE_LICENSES = ("public domain", "pd", "cc0", "no restrictions")
+SECTION_STOPLIST = {
+    "references", "external links", "see also", "notes", "further reading",
+    "sources", "bibliography", "citations", "footnotes", "gallery", "works cited",
+}
+PREFERRED_SECTIONS = [
+    "provenance", "history", "theft", "reception", "legacy", "analysis",
+    "interpretation", "description", "background", "condition", "influence",
+]
+
+USE_CACHE = "--no-cache" not in sys.argv
+_last_req = [0.0]
+
+
+def http_get(url, headers=None, sleep=SLEEP):
+    key = hashlib.sha1(url.encode()).hexdigest()
+    cf = CACHE / (key + ".json")
+    if USE_CACHE and cf.exists():
+        return cf.read_text(encoding="utf-8")
+    wait = _last_req[0] + sleep - time.time()
+    if wait > 0:
+        time.sleep(wait)
+    # curl instead of urllib: the corporate TLS-inspection cert chain on this
+    # machine fails Python's OpenSSL verification but is trusted by the system.
+    cmd = ["curl", "-sS", "--fail-with-body", "--max-time", "60", "-A", UA]
+    for k, v in (headers or {}).items():
+        cmd += ["-H", f"{k}: {v}"]
+    cmd += ["-w", "\n%{http_code}", url]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    out = r.stdout
+    body, _, code = out.rpartition("\n")
+    if code == "404":
+        body = ""
+    elif not code.startswith("2"):
+        raise RuntimeError(f"HTTP {code or r.returncode} for {url}: {r.stderr[:200]}")
+    _last_req[0] = time.time()
+    cf.write_text(body, encoding="utf-8")
+    return body
+
+
+def get_json(url, sleep=SLEEP):
+    body = http_get(url, headers={"Accept": "application/json"}, sleep=sleep)
+    return json.loads(body) if body else None
+
+
+def sentences(text):
+    text = re.sub(r"\s+", " ", text or "").strip()
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-ɏ\"'(])", text)
+    return [p.strip() for p in parts if len(p.strip()) > 2]
+
+
+def first_sentences(text, n=2, max_chars=420):
+    out, total = [], 0
+    for s in sentences(text):
+        if len(out) >= n or total + len(s) > max_chars:
+            break
+        out.append(s)
+        total += len(s)
+    return " ".join(out)
+
+
+def strip_html(s):
+    return re.sub(r"<[^>]+>", "", s or "").strip()
+
+
+def norm_label(s):
+    s = unicodedata.normalize("NFKD", s.lower())
+    s = re.sub(r"\(.*?\)", "", s)
+    return re.sub(r"[^a-z0-9]+", "", s)
+
+
+# ---------- Wikipedia ----------
+
+def wp_summary(title):
+    return get_json(
+        "https://en.wikipedia.org/api/rest_v1/page/summary/"
+        + urllib.parse.quote(title.replace(" ", "_"), safe="")
+    )
+
+
+def wp_qid(title):
+    d = get_json(
+        "https://en.wikipedia.org/w/api.php?action=query&prop=pageprops"
+        "&ppprop=wikibase_item&redirects=1&format=json&titles="
+        + urllib.parse.quote(title, safe="")
+    )
+    for page in d["query"]["pages"].values():
+        return page.get("pageprops", {}).get("wikibase_item")
+    return None
+
+
+def wp_full_extract(title):
+    d = get_json(
+        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts"
+        "&explaintext=1&redirects=1&format=json&titles="
+        + urllib.parse.quote(title, safe="")
+    )
+    for page in d["query"]["pages"].values():
+        return page.get("extract", "")
+    return ""
+
+
+def wp_url(title):
+    return "https://en.wikipedia.org/wiki/" + urllib.parse.quote(
+        title.replace(" ", "_"), safe=""
+    )
+
+
+# ---------- Wikidata ----------
+
+def wd_entity(qid):
+    d = get_json(f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json")
+    return d["entities"][qid] if d else None
+
+
+def wd_year(claims, prop):
+    try:
+        t = claims[prop][0]["mainsnak"]["datavalue"]["value"]["time"]
+        return int(t[1:5]) * (-1 if t[0] == "-" else 1)
+    except (KeyError, IndexError, TypeError, ValueError):
+        return None
+
+
+def sparql_paintings(qid):
+    # Inner query first narrows to the 60 most-sitelinked paintings, so the
+    # expensive dimension paths and label service run on 60 rows, not thousands.
+    q = f"""SELECT ?p ?pLabel ?image ?inception ?collectionLabel ?h ?w ?sitelinks ?article WHERE {{
+  {{ SELECT ?p ?image ?sitelinks WHERE {{
+       ?p wdt:P31 wd:Q3305213; wdt:P170 wd:{qid}; wdt:P18 ?image; wikibase:sitelinks ?sitelinks .
+     }} ORDER BY DESC(?sitelinks) LIMIT 60 }}
+  OPTIONAL {{ ?p wdt:P571 ?inception }}
+  OPTIONAL {{ ?p wdt:P195 ?collection }}
+  OPTIONAL {{ ?p p:P2048/psn:P2048/wikibase:quantityAmount ?h }}
+  OPTIONAL {{ ?p p:P2049/psn:P2049/wikibase:quantityAmount ?w }}
+  OPTIONAL {{ ?article schema:about ?p ; schema:isPartOf <https://en.wikipedia.org/> }}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+}} ORDER BY DESC(?sitelinks)"""
+    url = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(q, safe="")
+    d = None
+    for attempt in range(3):
+        try:
+            d = get_json(url, sleep=SPARQL_SLEEP)
+            break
+        except RuntimeError as e:
+            print(f"    sparql retry {attempt + 1} ({e})", flush=True)
+            time.sleep(8 * (attempt + 1))
+    if d is None:
+        raise RuntimeError(f"SPARQL failed for {qid} after retries")
+    rows, seen = [], set()
+    for b in d["results"]["bindings"]:
+        pqid = b["p"]["value"].rsplit("/", 1)[-1]
+        if pqid in seen:
+            continue
+        seen.add(pqid)
+        label = b.get("pLabel", {}).get("value", "")
+        if not label or label == pqid:
+            continue
+        img = b["image"]["value"]  # Special:FilePath URL
+        fname = urllib.parse.unquote(img.rsplit("/", 1)[-1]).replace("_", " ")
+        year = None
+        if "inception" in b:
+            m = re.match(r"[+-]?(\d{4})", b["inception"]["value"])
+            if m:
+                year = int(m.group(1)) * (-1 if b["inception"]["value"].startswith("-") else 1)
+        cm = None
+        try:
+            # psn: normalized to SI metres
+            cm = {"w": round(float(b["w"]["value"]) * 100), "h": round(float(b["h"]["value"]) * 100)}
+            if not (10 <= cm["w"] <= 1200 and 10 <= cm["h"] <= 1200):
+                cm = None
+        except (KeyError, ValueError):
+            pass
+        rows.append({
+            "qid": pqid,
+            "title": label,
+            "file": "File:" + fname,
+            "year": year,
+            "cm": cm,
+            "collection": b.get("collectionLabel", {}).get("value") or None,
+            "sitelinks": int(b["sitelinks"]["value"]),
+            "article": (
+                urllib.parse.unquote(b["article"]["value"].rsplit("/wiki/", 1)[-1]).replace("_", " ")
+                if "article" in b else None
+            ),
+        })
+    return rows
+
+
+# ---------- Commons ----------
+
+def commons_imageinfo(files, width):
+    """Batched imageinfo for a list of 'File:...' titles at a given thumb width."""
+    out = {}
+    for i in range(0, len(files), 20):
+        batch = files[i : i + 20]
+        url = (
+            "https://commons.wikimedia.org/w/api.php?action=query&format=json"
+            "&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata"
+            f"&iiurlwidth={width}&redirects=1&titles="
+            + urllib.parse.quote("|".join(batch), safe="")
+        )
+        d = get_json(url)
+        if not d:
+            continue
+        redirect = {r["to"]: r["from"] for r in d["query"].get("redirects", [])}
+        normalized = {n["to"]: n["from"] for n in d["query"].get("normalized", [])}
+        for page in d["query"]["pages"].values():
+            title = page.get("title", "")
+            orig = normalized.get(title, title)
+            orig = redirect.get(orig, orig)
+            orig = normalized.get(orig, orig)
+            info = (page.get("imageinfo") or [None])[0]
+            if info:
+                out[orig] = info
+                out[title] = info
+    return out
+
+
+def license_ok(info):
+    lic = (info.get("extmetadata", {}).get("LicenseShortName", {}).get("value") or "").lower()
+    return any(k in lic for k in FREE_LICENSES), lic
+
+
+# ---------- facts ----------
+
+def extract_facts(article_title):
+    text = wp_full_extract(article_title)
+    if not text:
+        return []
+    chunks = re.split(r"\n==+\s*(.+?)\s*==+\n", text)
+    # chunks = [lead, h1, body1, h2, body2, ...]
+    section_bodies = []
+    for i in range(1, len(chunks) - 1, 2):
+        heading = chunks[i].strip()
+        body = chunks[i + 1].strip()
+        if heading.lower() in SECTION_STOPLIST or len(body) < 80:
+            continue
+        section_bodies.append((heading, body))
+    section_bodies.sort(
+        key=lambda hb: PREFERRED_SECTIONS.index(hb[0].lower())
+        if hb[0].lower() in PREFERRED_SECTIONS else 99
+    )
+    facts = []
+    base = wp_url(article_title)
+    for heading, body in section_bodies[:3]:
+        snippet = first_sentences(body, n=2, max_chars=350)
+        if len(snippet) < 60:
+            continue
+        facts.append({
+            "text": snippet,
+            "section": heading,
+            "source": base + "#" + urllib.parse.quote(heading.replace(" ", "_"), safe=""),
+        })
+    return facts
+
+
+# ---------- main ----------
+
+def build_artist(seed_artist, report):
+    slug = seed_artist["slug"]
+    title = seed_artist["wikipedia"]
+    print(f"— {slug}", flush=True)
+
+    qid = wp_qid(title)
+    summary = wp_summary(title)
+    entity = wd_entity(qid) if qid else None
+    if not (qid and summary and entity):
+        report[slug] = {"error": "could not resolve artist", "kept": 0}
+        return None
+
+    claims = entity.get("claims", {})
+    born = wd_year(claims, "P569")
+    died = wd_year(claims, "P570")
+    one_liner = entity.get("descriptions", {}).get("en", {}).get("value", "")
+    name = summary.get("title", title)
+    portrait = summary.get("thumbnail", {}).get("source")
+
+    rows = sparql_paintings(qid)
+
+    include = set(seed_artist.get("include", []))
+    exclude = set(seed_artist.get("exclude", []))
+    rows = [r for r in rows if r["qid"] not in exclude]
+    rows.sort(key=lambda r: (r["qid"] not in include, -r["sitelinks"]))
+
+    # dedupe near-identical titles (versions of the same work)
+    seen_labels, candidates = set(), []
+    for r in rows:
+        nl = norm_label(r["title"])
+        if nl in seen_labels:
+            continue
+        seen_labels.add(nl)
+        candidates.append(r)
+    candidates = candidates[:30]
+
+    info640 = commons_imageinfo([r["file"] for r in candidates], 640)
+    kept, rejected = [], []
+    max_p = seed_artist.get("maxPaintings", DEFAULT_MAX)
+    for r in candidates:
+        if len(kept) >= max_p:
+            break
+        info = info640.get(r["file"])
+        if not info:
+            rejected.append((r["title"], "no imageinfo"))
+            continue
+        ok, lic = license_ok(info)
+        if not ok:
+            rejected.append((r["title"], f"license: {lic or 'unknown'}"))
+            continue
+        if max(info.get("width", 0), info.get("height", 0)) < 1000:
+            rejected.append((r["title"], f"too small: {info.get('width')}x{info.get('height')}"))
+            continue
+        r["_info640"] = info
+        kept.append(r)
+
+    info1600 = commons_imageinfo([r["file"] for r in kept], 1600)
+
+    paintings = []
+    for r in kept:
+        i640, i1600 = r["_info640"], info1600.get(r["file"], r["_info640"])
+        story = None
+        facts = []
+        if r["article"]:
+            s = wp_summary(r["article"])
+            if s and s.get("extract"):
+                story = {
+                    "extract": first_sentences(s["extract"], n=3, max_chars=600),
+                    "source": wp_url(r["article"]),
+                }
+            facts = extract_facts(r["article"])
+        credit = strip_html(i640.get("extmetadata", {}).get("Artist", {}).get("value", ""))
+        lic_name = i640.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
+        paintings.append({
+            "qid": r["qid"],
+            "title": r["title"],
+            "year": r["year"],
+            "image": {
+                "file": r["file"],
+                "thumb640": i640.get("thumburl"),
+                "thumb1600": i1600.get("thumburl"),
+                "pxW": i640.get("width"),
+                "pxH": i640.get("height"),
+            },
+            "cm": r["cm"],
+            "collection": r["collection"],
+            "story": story,
+            "facts": facts,
+            "license": {"name": lic_name, "credit": credit[:200]},
+        })
+
+    paintings.sort(key=lambda p: (p["year"] is None, p["year"] or 0))
+    has_gallery = len(paintings) >= MIN_PAINTINGS
+
+    artist = {
+        "slug": slug,
+        "name": name,
+        "qid": qid,
+        "born": born,
+        "died": died,
+        "periods": seed_artist["periods"],
+        "oneLiner": one_liner,
+        "portrait": {"thumb": portrait},
+        "bio": {
+            "extract": first_sentences(summary.get("extract", ""), n=4, max_chars=700),
+            "source": wp_url(title),
+        },
+        "wikipedia": wp_url(title),
+        "hasGallery": has_gallery,
+        "paintings": paintings,
+    }
+    report[slug] = {
+        "kept": len(paintings),
+        "hasGallery": has_gallery,
+        "rejected": rejected[:12],
+        "sparqlRows": len(rows),
+    }
+    return artist
+
+
+def pack_lanes(periods):
+    lanes_end = []
+    for p in sorted(periods, key=lambda p: (p["start"], p["end"])):
+        for i, end in enumerate(lanes_end):
+            if p["start"] >= end - 2:  # small tolerated visual overlap
+                p["lane"] = i
+                lanes_end[i] = p["end"]
+                break
+        else:
+            p["lane"] = len(lanes_end)
+            lanes_end.append(p["end"])
+    return periods
+
+
+def main():
+    only = None
+    if "--artist" in sys.argv:
+        only = sys.argv[sys.argv.index("--artist") + 1]
+    CACHE.mkdir(exist_ok=True)
+    (DATA / "artists").mkdir(parents=True, exist_ok=True)
+    seed = json.loads((HERE / "seed.json").read_text(encoding="utf-8"))
+
+    periods = []
+    for p in seed["periods"]:
+        s = wp_summary(p["wikipedia"])
+        periods.append({
+            "id": p["id"],
+            "name": p["name"],
+            "start": p["start"],
+            "end": p["end"],
+            "summary": first_sentences((s or {}).get("extract", ""), n=2, max_chars=320),
+            "source": wp_url(p["wikipedia"]),
+        })
+    pack_lanes(periods)
+    periods.sort(key=lambda p: p["start"])
+
+    report = {}
+    index_artists = []
+    for sa in seed["artists"]:
+        if only and sa["slug"] != only:
+            continue
+        artist = build_artist(sa, report)
+        if not artist:
+            continue
+        (DATA / "artists" / f"{artist['slug']}.json").write_text(
+            json.dumps(artist, ensure_ascii=False, indent=1), encoding="utf-8"
+        )
+        died = artist["died"]
+        active_end = died if died else max(
+            (p["end"] for p in periods if p["id"] in artist["periods"]), default=CURRENT_YEAR
+        )
+        index_artists.append({
+            "slug": artist["slug"],
+            "name": artist["name"],
+            "born": artist["born"],
+            "died": died,
+            "activeStart": (artist["born"] + 20) if artist["born"] else None,
+            "activeEnd": active_end,
+            "periods": artist["periods"],
+            "oneLiner": artist["oneLiner"],
+            "hasGallery": artist["hasGallery"],
+            "paintingCount": len(artist["paintings"]),
+            "portrait": artist["portrait"]["thumb"],
+        })
+
+    if not only:
+        index = {
+            "generated": time.strftime("%Y-%m-%d"),
+            "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain).",
+            "periods": periods,
+            "artists": index_artists,
+        }
+        (DATA / "index.json").write_text(
+            json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8"
+        )
+
+    print("\n===== REPORT =====")
+    galleries = 0
+    for slug, r in report.items():
+        if "error" in r:
+            print(f"{slug:35s} ERROR: {r['error']}")
+            continue
+        mark = "GALLERY " if r["hasGallery"] else "placard-only"
+        if r["hasGallery"]:
+            galleries += 1
+        print(f"{slug:35s} {r['kept']:2d} kept  ({r['sparqlRows']:3d} sparql rows)  {mark}")
+        for t, why in r["rejected"]:
+            print(f"    - rejected: {t[:50]:50s} {why}")
+    print(f"\n{galleries} gallery artists / {len(report)} total")
+
+
+if __name__ == "__main__":
+    main()

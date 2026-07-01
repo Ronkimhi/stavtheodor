@@ -1,0 +1,432 @@
+{
+ "slug": "francisco-goya",
+ "name": "Francisco Goya",
+ "qid": "Q5432",
+ "born": 1746,
+ "died": 1828,
+ "periods": [
+  "romanticism"
+ ],
+ "oneLiner": "Spanish painter and printmaker (1746–1828)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg/330px-Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg"
+ },
+ "bio": {
+  "extract": "Francisco José de Goya y Lucientes was a Spanish romantic painter and printmaker. He is considered the most important Spanish artist of the late 18th and early 19th centuries. His paintings, drawings, and engravings reflected contemporary historical upheavals and influenced important 19th- and 20th-century painters. Goya is often referred to as the last of the Old Masters and the first of the moderns.",
+  "source": "https://en.wikipedia.org/wiki/Francisco_Goya"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Francisco_Goya",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3035829",
+   "title": "Don Manuel Osorio de Zuniga",
+   "year": 1787,
+   "image": {
+    "file": "File:Don Manuel Osorio Manrique de Zúñiga.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Don_Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga.jpg/960px-Don_Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Don_Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga.jpg/1920px-Don_Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga.jpg",
+    "pxW": 5151,
+    "pxH": 6981
+   },
+   "cm": {
+    "w": 102,
+    "h": 127
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Manuel Osorio Manrique de Zúñiga is a large full-length portrait in oil painted in 1787–88 by the Spanish artist Francisco Goya. It depicts a boy three or four years of age, standing in red clothes, with birds and cats. It is also known as Goya's \"Red Boy\".",
+    "source": "https://en.wikipedia.org/wiki/Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by the boy's father, Vicente Joaquín Osorio de Moscoso y Guzmán (1756–1816), conde de Altamira, who held many titles and was also a director of the Banco de San Carlos. Altamira was one of the six dignitaries of the newly formed Banco de San Carlos painted by Goya between 1785 and 1788.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga#History"
+    },
+    {
+     "text": "The painting was hung with other family portraits at Altamira's palace in Madrid. It was auctioned in Paris in 1878 for 1,200 francs, and then acquired by the playwright Henri Bernstein before 1903.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga#Legacy"
+    },
+    {
+     "text": "The pets in this portrait have been analysed in many different ways. The caged birds may symbolize the innocent soul, the cats may be an evil force.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Manuel_Osorio_Manrique_de_Z%C3%BA%C3%B1iga#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q152867",
+   "title": "La maja desnuda",
+   "year": 1800,
+   "image": {
+    "file": "File:Maja desnuda (museo del Prado).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Maja_desnuda_%28museo_del_Prado%29.jpg/960px-Maja_desnuda_%28museo_del_Prado%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Maja_desnuda_%28museo_del_Prado%29.jpg/1920px-Maja_desnuda_%28museo_del_Prado%29.jpg",
+    "pxW": 4724,
+    "pxH": 2396
+   },
+   "cm": {
+    "w": 191,
+    "h": 98
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Naked Maja or The Nude Maja is an oil-on-canvas painting made around 1797–1800 by the Spanish artist Francisco Goya, and has been in the Museo del Prado in Madrid since 1901. It portrays a nude woman reclining on a bed of pillows, and was probably commissioned by Manuel Godoy, to hang in his private collection in a separate cabinet reserved for nude paintings. Goya created a pendant of the same woman identically posed, but clothed, known today as La maja vestida, also in the Prado, and usually hung next to La maja desnuda.",
+    "source": "https://en.wikipedia.org/wiki/La_maja_desnuda"
+   },
+   "facts": [
+    {
+     "text": "La maja desnuda has always hung alongside, above, or before its companion. They were twice in the collection of the Royal Academy of Fine Arts of San Fernando, also in Madrid, being \"sequestered\" by the Inquisition between 1814 and 1836 before being returned.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/La_maja_desnuda#Provenance"
+    },
+    {
+     "text": "Although the two versions of the Maja are the same size, the sitter in the clothed version occupies a slightly larger proportion of the pictorial space; according to art historian Janis Tomlinson she seems almost to \"press boldly against the confines of her frame\", making her more brazen in comparison to the comparatively \"timid\" nude portrait.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/La_maja_desnuda#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q920030",
+   "title": "Charles IV of Spain and His Family",
+   "year": 1800,
+   "image": {
+    "file": "File:La familia de Carlos IV, por Francisco de Goya.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/La_familia_de_Carlos_IV%2C_por_Francisco_de_Goya.jpg/960px-La_familia_de_Carlos_IV%2C_por_Francisco_de_Goya.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/74/La_familia_de_Carlos_IV%2C_por_Francisco_de_Goya.jpg",
+    "pxW": 1911,
+    "pxH": 1595
+   },
+   "cm": {
+    "w": 336,
+    "h": 280
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Charles IV of Spain and His Family is an oil-on-canvas group portrait painting by the Spanish artist Francisco Goya. He began work on the painting in 1800, shortly after he became First Chamber Painter to the royal family, and completed it in the summer of 1801.",
+    "source": "https://en.wikipedia.org/wiki/Charles_IV_of_Spain_and_His_Family"
+   },
+   "facts": [
+    {
+     "text": "The French writer Theophile Gautier called it a 'picture of the corner grocer who has just won the lottery' and it has sometimes been suggested that Goya was in some way satirising his subjects. The idea has been dismissed by the art critic Robert Hughes: \"This is nonsense.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Charles_IV_of_Spain_and_His_Family#Interpretation"
+    },
+    {
+     "text": "The group portrait was completed the year after Goya first became court painter, the highest position available to a Spanish artist and one previously occupied by Diego Velázquez. Goya did not say why he chose to model the work after the older master, though the notion of a tradition of Spanish painting did not exist at the time.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Charles_IV_of_Spain_and_His_Family#Description"
+    },
+    {
+     "text": "The barely visible man in the background shadows at the left is Goya himself (2).",
+     "section": "Sitters",
+     "source": "https://en.wikipedia.org/wiki/Charles_IV_of_Spain_and_His_Family#Sitters"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q2735507",
+   "title": "The Clothed Maja",
+   "year": 1800,
+   "image": {
+    "file": "File:Goya Maja ubrana2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Goya_Maja_ubrana2.jpg/960px-Goya_Maja_ubrana2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Goya_Maja_ubrana2.jpg/1920px-Goya_Maja_ubrana2.jpg",
+    "pxW": 4724,
+    "pxH": 2375
+   },
+   "cm": {
+    "w": 190,
+    "h": 95
+   },
+   "collection": "Royal Academy of Fine Arts of San Fernando",
+   "story": {
+    "extract": "La maja vestida is an oil painting on canvas created between 1800 and 1807 by the Spanish Romantic painter and printmaker Francisco Goya. It is a clothed version of the earlier La maja desnuda, which was created between 1795 and 1800. The identity of the model and that of the commissioner have not been confirmed.",
+    "source": "https://en.wikipedia.org/wiki/La_maja_vestida"
+   },
+   "facts": [
+    {
+     "text": "The first written account of the vestida dates back to an 1808 inventory of Godoy's assets after their seizure by Ferdinand VII. Frederic Quillet had been tasked by his commander, Joseph Bonaparte, to make an inventory of Godoy's private collection during the French occupation of Spain.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/La_maja_vestida#Reception"
+    },
+    {
+     "text": "The origins of both paintings are unclear, with some sources claiming they were commissioned by the Prime Minister Manuel de Godoy for his private collection. This claim would suggest the woman in the paintings to be Pepita Tudó, the mistress of Godoy.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/La_maja_vestida#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q1091086",
+   "title": "The Third of May 1808",
+   "year": 1814,
+   "image": {
+    "file": "File:Francisco de Goya y Lucientes - Los fusilamientos del tres de mayo - 1814.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Francisco_de_Goya_y_Lucientes_-_Los_fusilamientos_del_tres_de_mayo_-_1814.jpg/960px-Francisco_de_Goya_y_Lucientes_-_Los_fusilamientos_del_tres_de_mayo_-_1814.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Francisco_de_Goya_y_Lucientes_-_Los_fusilamientos_del_tres_de_mayo_-_1814.jpg/1920px-Francisco_de_Goya_y_Lucientes_-_Los_fusilamientos_del_tres_de_mayo_-_1814.jpg",
+    "pxW": 3051,
+    "pxH": 2328
+   },
+   "cm": {
+    "w": 347,
+    "h": 268
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Third of May 1808 in Madrid and also known, in Spanish, as El tres de mayo de 1808 en Madrid or Los fusilamientos de la montaña del Príncipe Pío, or Los fusilamientos del tres de mayo, is a painting completed in 1814 by the Spanish painter Francisco Goya. In the work, Goya sought to commemorate Spanish resistance to Napoleon's armies during the occupation of Madrid in 1808 at the start of the Peninsular War.",
+    "source": "https://en.wikipedia.org/wiki/The_Third_of_May_1808"
+   },
+   "facts": [
+    {
+     "text": "Despite the work's commemorative value, no details about its first exhibition are known, and it is not mentioned in any surviving contemporaneous accounts.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Third_of_May_1808#Provenance"
+    },
+    {
+     "text": "The first paraphrasing of The Third of May was Édouard Manet's Execution of Emperor Maximilian, painted in several versions between 1867 and 1869.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Third_of_May_1808#Legacy"
+    },
+    {
+     "text": "The Third of May 1808 is set in the early hours of the morning following the uprising and centers on two masses of men: one a rigidly poised firing squad, the other a disorganized group of captives held at gunpoint.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Third_of_May_1808#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q2983399",
+   "title": "The Second of May 1808",
+   "year": 1814,
+   "image": {
+    "file": "File:El dos de mayo de 1808 en Madrid.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/El_dos_de_mayo_de_1808_en_Madrid.jpg/960px-El_dos_de_mayo_de_1808_en_Madrid.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/El_dos_de_mayo_de_1808_en_Madrid.jpg/1920px-El_dos_de_mayo_de_1808_en_Madrid.jpg",
+    "pxW": 3051,
+    "pxH": 2359
+   },
+   "cm": {
+    "w": 348,
+    "h": 268
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Second of May 1808, also known as The Charge of the Mamelukes, is a painting by the Spanish painter Francisco Goya. It is a companion to the painting The Third of May 1808 and is set in the Calle de Alcalá near Puerta del Sol, Madrid, during the Dos de Mayo Uprising. It depicts one of the many people's rebellions against the French occupation of Spain that sparked the Peninsular War.",
+    "source": "https://en.wikipedia.org/wiki/The_Second_of_May_1808"
+   },
+   "facts": [
+    {
+     "text": "The Second of May 1808 depicts the beginning of the uprising when the Egyptian Mamelukes of the French Imperial Guard are ordered to charge and subdue the rioting citizens. The crowd sees the Mamelukes as Moors, provoking an angry response.",
+     "section": "Historical background",
+     "source": "https://en.wikipedia.org/wiki/The_Second_of_May_1808#Historical_background"
+    },
+    {
+     "text": "There has been debate about the extent to which Goya was influenced by Rubens. Goya's Saturn Devouring His Son, c. 1819–1823 suggests a familiarity with Rubens' 1636 version in the Prado.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/The_Second_of_May_1808#Influences"
+    },
+    {
+     "text": "In 1936, during the Spanish Civil War, when Madrid was bombed by Nationalist troops, the republican government decided to evacuate the paintings from the Prado. A truck carrying Goya's paintings had an accident, and The Second of May was badly damaged: there were tears and even pieces missing.",
+     "section": "Damage",
+     "source": "https://en.wikipedia.org/wiki/The_Second_of_May_1808#Damage"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q2413468",
+   "title": "The Colossus",
+   "year": 1818,
+   "image": {
+    "file": "File:El coloso.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/El_coloso.jpg/960px-El_coloso.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/be/El_coloso.jpg",
+    "pxW": 1708,
+    "pxH": 1920
+   },
+   "cm": {
+    "w": 105,
+    "h": 116
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Colossus, is known in Spanish as El Coloso and also El Gigante, El Pánico and La Tormenta. It is a painting traditionally attributed to Francisco de Goya that shows a giant in the centre of the canvas walking towards the left hand side of the picture. Mountains obscure his legs up to his thighs and clouds surround his body; the giant appears to be adopting an aggressive posture as he is holding one of his fists up at shoulder height.",
+    "source": "https://en.wikipedia.org/wiki/The_Colossus_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The large body of the giant occupies the centre of the composition. It appears to be adopting a fighting pose due to the position of its one visible arm and its clenched fist.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Colossus_%28painting%29#Analysis"
+    },
+    {
+     "text": "The painting became part of the Museo del Prado's collection in 1931, when it was donated by the estate of Pedro Fernández Durán. The first documented attribution of the painting to Goya dates from 1946 when Francisco Javier Sánchez Cantón published the inventory of the estate of Josefa Bayeu, Goya's wife, on her death in 1812.",
+     "section": "History of the painting",
+     "source": "https://en.wikipedia.org/wiki/The_Colossus_%28painting%29#History_of_the_painting"
+    },
+    {
+     "text": "In June 2008 the Museo del Prado issued a press release in which Manuela Mena, Chief Curator of 18th-Century Painting and Goya, stated that the painting was \"with almost complete certainty\" the work of the painter Asensio Juliá who was a friend and collaborator of Goya.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/The_Colossus_%28painting%29#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q1150997",
+   "title": "Saturn Devouring His Son",
+   "year": 1820,
+   "image": {
+    "file": "File:Francisco de Goya, Saturno devorando a su hijo (1819-1823).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg/960px-Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg",
+    "pxW": 1661,
+    "pxH": 3051
+   },
+   "cm": {
+    "w": 81,
+    "h": 144
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Saturn Devouring His Son is a painting by Spanish artist Francisco Goya. The work is one of the 14 so-called Black Paintings that Goya painted directly on the walls of his house some time between 1820 and 1823. It was transferred to canvas after Goya's death and is now in the Museo del Prado in Madrid.",
+    "source": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son"
+   },
+   "facts": [
+    {
+     "text": "In 1819, Goya purchased a house on the banks of Manzanares near Madrid called Quinta del Sordo (Villa of the Deaf Man). It was a two-story house which was named after a previous occupant who had been deaf, although the name was fitting for Goya too, who had been left deaf after contracting a fever in 1792.",
+     "section": "Backstory",
+     "source": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son#Backstory"
+    },
+    {
+     "text": "Goya depicts a large figure feasting on a human form. The human head and part of the left arm have already been consumed.",
+     "section": "Composition and interpretations",
+     "source": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son#Composition_and_interpretations"
+    },
+    {
+     "text": "When Goya went into self-imposed exile in France in 1823, he passed the Quinta del Sordo to his grandson Mariano. After various changes of ownership, the house came into the possession of the French Baron Émile d'Erlanger in 1874.",
+     "section": "Transfer from the Quinta del Sordo",
+     "source": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son#Transfer_from_the_Quinta_del_Sordo"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q500936",
+   "title": "The Dog",
+   "year": 1820,
+   "image": {
+    "file": "File:Goya Dog.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Goya_Dog.jpg/960px-Goya_Dog.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/38/Goya_Dog.jpg",
+    "pxW": 1797,
+    "pxH": 3051
+   },
+   "cm": {
+    "w": 79,
+    "h": 131
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Dog is the name usually given to a painting by Spanish artist Francisco de Goya, now in the Museo del Prado, Madrid. It shows the head of a dog gazing upwards. The dog itself is almost lost in the vastness of the rest of the image, which is empty except for a dark sloping area near the bottom of the picture: an unidentifiable mass which conceals the animal's body.",
+    "source": "https://en.wikipedia.org/wiki/The_Dog_%28Goya%29"
+   },
+   "facts": [
+    {
+     "text": "Goya was long dead by the time the paintings were first exhibited publicly. Spanish painter Antonio Saura thought The Dog \"the world's most beautiful picture\", and his contemporary, Rafael Canogar referred to it as a \"visual poem\" and cited it as the first Symbolist painting of the Western world.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Dog_%28Goya%29#Reception"
+    },
+    {
+     "text": "In 1819, Goya purchased a house named Quinta del Sordo (Villa of the Deaf Man) on the banks of the Manzanares near Madrid. It was a small two-story house which was named after a previous occupant who had been deaf, though Goya also happened to be functionally deaf, as a result of an illness he had contracted (probably lead poisoning) in 1792.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Dog_%28Goya%29#Background"
+    },
+    {
+     "text": "Goya's influence is apparent in the dog in Pierre Bonnard's 1910 The Red-Checkered Tablecloth, but Bonnard's painting has a clear, cheerful theme, while Goya's work has a more ominous and mysterious meaning.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/The_Dog_%28Goya%29#Influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  },
+  {
+   "qid": "Q2528477",
+   "title": "Witches' Sabbath",
+   "year": 1820,
+   "image": {
+    "file": "File:El Aquelarre.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/El_Aquelarre.jpg/960px-El_Aquelarre.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/El_Aquelarre.jpg/1920px-El_Aquelarre.jpg",
+    "pxW": 3051,
+    "pxH": 966
+   },
+   "cm": {
+    "w": 438,
+    "h": 140
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Witches' Sabbath or The Great He-Goat are names given to an oil mural by the Spanish artist Francisco de Goya, completed sometime between 1820 and 1823. It depicts a Witches' Sabbath and evokes themes of violence, intimidation, ageing and death; Satan hulks in the form of a goat in moonlit silhouette over a coven of terrified old witches. Goya was then around 75 years old, living alone and suffering from acute mental and physical distress.",
+    "source": "https://en.wikipedia.org/wiki/Witches%27_Sabbath_%28The_Great_He-Goat%29"
+   },
+   "facts": [
+    {
+     "text": "There is no record of Goya's thoughts during this period. He completed the series while recuperating from an illness, possibly lead poisoning, in considerable mental and physical pain.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Witches%27_Sabbath_%28The_Great_He-Goat%29#Interpretation"
+    },
+    {
+     "text": "Satan is dressed in clerical clothing that may be a soutane, and wears a goat-like beard and horns. He preaches from an earth mound and is shown in silhouette, with lines that accentuate his heavy body and gaping mouth.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Witches%27_Sabbath_%28The_Great_He-Goat%29#Description"
+    },
+    {
+     "text": "Goya did not title any of the 14 Black Paintings; their modern names came about after his death. They are not inscribed, mentioned in his letters, and there are no records of him speaking of them.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Witches%27_Sabbath_%28The_Great_He-Goat%29#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Francisco Goya"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1481 @@
+{
+ "generated": "2026-07-01",
+ "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain).",
+ "periods": [
+  {
+   "id": "medieval-gothic",
+   "name": "Medieval & Gothic",
+   "start": 1200,
+   "end": 1400,
+   "summary": "Gothic art was a style of medieval art that developed in Northern France out of Romanesque art in the 12th century, led by the concurrent development of Gothic architecture. It spread to all of Western Europe, and much of Northern, Southern and Central Europe, never quite effacing more classical styles in Italy.",
+   "source": "https://en.wikipedia.org/wiki/Gothic_art",
+   "lane": 0
+  },
+  {
+   "id": "early-renaissance",
+   "name": "Early Renaissance",
+   "start": 1400,
+   "end": 1490,
+   "summary": "Italian Renaissance painting is the painting of the period beginning in the late 13th century and flourishing from the early 15th to late 16th centuries, occurring in the Italian Peninsula, which was at that time divided into many political states, some independent but others controlled by external powers.",
+   "source": "https://en.wikipedia.org/wiki/Italian_Renaissance_painting",
+   "lane": 0
+  },
+  {
+   "id": "northern-renaissance",
+   "name": "Northern Renaissance",
+   "start": 1430,
+   "end": 1570,
+   "summary": "The Northern Renaissance was the Renaissance that occurred in Europe north of the Alps, developing later than the Italian Renaissance, and in most respects only beginning in the last years of the 15th century.",
+   "source": "https://en.wikipedia.org/wiki/Northern_Renaissance",
+   "lane": 1
+  },
+  {
+   "id": "high-renaissance",
+   "name": "High Renaissance",
+   "start": 1490,
+   "end": 1530,
+   "summary": "In art history, the High Renaissance was a short period of the most exceptional artistic production in the Italian states, particularly Rome, capital of the Papal States, and in Florence, during the Italian Renaissance.",
+   "source": "https://en.wikipedia.org/wiki/High_Renaissance",
+   "lane": 0
+  },
+  {
+   "id": "mannerism",
+   "name": "Mannerism",
+   "start": 1520,
+   "end": 1600,
+   "summary": "Mannerism is a style in European art that emerged in the later years of the Italian High Renaissance around 1520, spreading by about 1530 and lasting until about the end of the 16th century in Italy, when the Baroque style largely replaced it. Northern Mannerism continued into the early 17th century.",
+   "source": "https://en.wikipedia.org/wiki/Mannerism",
+   "lane": 2
+  },
+  {
+   "id": "baroque",
+   "name": "Baroque",
+   "start": 1600,
+   "end": 1720,
+   "summary": "Baroque painting is the painting associated with the Baroque cultural movement.",
+   "source": "https://en.wikipedia.org/wiki/Baroque_painting",
+   "lane": 0
+  },
+  {
+   "id": "rococo",
+   "name": "Rococo",
+   "start": 1715,
+   "end": 1780,
+   "summary": "Rococo, less commonly Roccoco, is a Western style of architecture, art, and decoration that emerged in France in the 1730s as a reaction against the Louis XIV style. It is characterized by extensive ornamentation, fluid curves, asymmetry, and a smaller scale designed to foster intimacy.",
+   "source": "https://en.wikipedia.org/wiki/Rococo",
+   "lane": 1
+  },
+  {
+   "id": "neoclassicism",
+   "name": "Neoclassicism",
+   "start": 1760,
+   "end": 1830,
+   "summary": "Neoclassicism, also spelled Neo-classicism, emerged as a Western cultural movement in the decorative and visual arts, literature, theatre, music, and architecture that drew inspiration from the art and culture of classical antiquity.",
+   "source": "https://en.wikipedia.org/wiki/Neoclassicism",
+   "lane": 0
+  },
+  {
+   "id": "romanticism",
+   "name": "Romanticism",
+   "start": 1790,
+   "end": 1850,
+   "summary": "Romanticism was an artistic and intellectual movement that originated in Europe towards the end of the 18th century.",
+   "source": "https://en.wikipedia.org/wiki/Romanticism",
+   "lane": 1
+  },
+  {
+   "id": "realism",
+   "name": "Realism",
+   "start": 1840,
+   "end": 1880,
+   "summary": "Realism was an artistic movement that emerged in France in the 1840s. Realists rejected Romanticism, which had dominated French literature and art since the early 19th century.",
+   "source": "https://en.wikipedia.org/wiki/Realism_%28art_movement%29",
+   "lane": 0
+  },
+  {
+   "id": "impressionism",
+   "name": "Impressionism",
+   "start": 1860,
+   "end": 1890,
+   "summary": "Impressionism was a 19th-century art movement characterised by visible brush strokes, open composition, emphasis on accurate depiction of light in its changing qualities, ordinary subject matter, unusual visual angles, and inclusion of movement as a crucial element of human perception and experience.",
+   "source": "https://en.wikipedia.org/wiki/Impressionism",
+   "lane": 1
+  },
+  {
+   "id": "symbolism-art-nouveau",
+   "name": "Symbolism & Art Nouveau",
+   "start": 1880,
+   "end": 1915,
+   "summary": "Symbolism was a late 19th-century art movement of French and Belgian origin in poetry and other arts seeking to represent absolute truths symbolically through language and metaphorical images, mainly as a reaction against naturalism and realism.",
+   "source": "https://en.wikipedia.org/wiki/Symbolism_%28movement%29",
+   "lane": 0
+  },
+  {
+   "id": "post-impressionism",
+   "name": "Post-Impressionism",
+   "start": 1885,
+   "end": 1910,
+   "summary": "Post-Impressionism was a predominantly French art movement which developed roughly between 1886 and 1905, from the last Impressionist exhibition to the birth of Fauvism. Post-Impressionism emerged as a reaction against Impressionists' concern for the naturalistic depiction of light and colour.",
+   "source": "https://en.wikipedia.org/wiki/Post-Impressionism",
+   "lane": 2
+  },
+  {
+   "id": "expressionism",
+   "name": "Expressionism",
+   "start": 1905,
+   "end": 1935,
+   "summary": "Expressionism is a modernist movement, initially in poetry and painting, originating in Northern Europe around the beginning of the 20th century. Its typical trait is to present the world solely from a subjective perspective, distorting it radically for emotional effect in order to evoke moods or ideas.",
+   "source": "https://en.wikipedia.org/wiki/Expressionism",
+   "lane": 1
+  },
+  {
+   "id": "cubism",
+   "name": "Cubism",
+   "start": 1907,
+   "end": 1925,
+   "summary": "Cubism is an early-20th-century avant-garde art movement which began in Paris. It revolutionized painting and the visual arts, and sparked artistic innovations in music, ballet, literature, and architecture.",
+   "source": "https://en.wikipedia.org/wiki/Cubism",
+   "lane": 3
+  },
+  {
+   "id": "early-abstraction",
+   "name": "Early Abstraction",
+   "start": 1910,
+   "end": 1944,
+   "summary": "Abstract art uses visual language of shape, form, color, and line to create a composition which may exist with a degree of independence from visual references in the world. Abstract art, non-figurative art, non-objective art, and non-representational art are all closely related terms.",
+   "source": "https://en.wikipedia.org/wiki/Abstract_art",
+   "lane": 2
+  },
+  {
+   "id": "surrealism",
+   "name": "Surrealism",
+   "start": 1924,
+   "end": 1966,
+   "summary": "Surrealism is an art and cultural movement that developed in Europe in the aftermath of World War I in which artists aimed to allow the unconscious mind to express itself, often resulting in the depiction of illogical or dreamlike scenes and ideas.",
+   "source": "https://en.wikipedia.org/wiki/Surrealism",
+   "lane": 0
+  },
+  {
+   "id": "abstract-expressionism",
+   "name": "Abstract Expressionism",
+   "start": 1943,
+   "end": 1965,
+   "summary": "Abstract expressionism in the United States emerged as a distinct art movement in the aftermath of World War II and gained mainstream acceptance in the 1950s, a shift from the American social realism of the 1930s influenced by the Great Depression and Mexican muralists.",
+   "source": "https://en.wikipedia.org/wiki/Abstract_expressionism",
+   "lane": 1
+  },
+  {
+   "id": "pop-art",
+   "name": "Pop Art",
+   "start": 1955,
+   "end": 1975,
+   "summary": "Pop art is an art movement that emerged in the United Kingdom and the United States during the mid-to late 1950s.",
+   "source": "https://en.wikipedia.org/wiki/Pop_art",
+   "lane": 2
+  },
+  {
+   "id": "contemporary",
+   "name": "Contemporary",
+   "start": 1975,
+   "end": 2026,
+   "summary": "Contemporary art is generally art created from the 1970s onwards. Contemporary artists work in a globally influenced, culturally diverse, and technologically advancing world.",
+   "source": "https://en.wikipedia.org/wiki/Contemporary_art",
+   "lane": 0
+  }
+ ],
+ "artists": [
+  {
+   "slug": "cimabue",
+   "name": "Cimabue",
+   "born": 1240,
+   "died": 1302,
+   "activeStart": 1260,
+   "activeEnd": 1302,
+   "periods": [
+    "medieval-gothic"
+   ],
+   "oneLiner": "Italian artist (1240–1302)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/c/ce/CimabueSantaMariaNovella.jpg"
+  },
+  {
+   "slug": "duccio",
+   "name": "Duccio",
+   "born": 1255,
+   "died": 1319,
+   "activeStart": 1275,
+   "activeEnd": 1319,
+   "periods": [
+    "medieval-gothic"
+   ],
+   "oneLiner": "Italian painter",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Duccio_di_Buoninsegna%2C_Rucellai_Madonna%2C_after_1285%2C_Uffiz.jpg/330px-Duccio_di_Buoninsegna%2C_Rucellai_Madonna%2C_after_1285%2C_Uffiz.jpg"
+  },
+  {
+   "slug": "giotto",
+   "name": "Giotto",
+   "born": 1267,
+   "died": 1337,
+   "activeStart": 1287,
+   "activeEnd": 1337,
+   "periods": [
+    "medieval-gothic"
+   ],
+   "oneLiner": "Italian painter and architect (c. 1267–1337)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Giotto%2C_Santa_Maria_Novella.jpg/330px-Giotto%2C_Santa_Maria_Novella.jpg"
+  },
+  {
+   "slug": "simone-martini",
+   "name": "Simone Martini",
+   "born": 1284,
+   "died": 1344,
+   "activeStart": 1304,
+   "activeEnd": 1344,
+   "periods": [
+    "medieval-gothic"
+   ],
+   "oneLiner": "Italian painter",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Simone_Martini_-_Frontispice_du_Virgile.jpg/330px-Simone_Martini_-_Frontispice_du_Virgile.jpg"
+  },
+  {
+   "slug": "fra-angelico",
+   "name": "Fra Angelico",
+   "born": 1400,
+   "died": 1455,
+   "activeStart": 1420,
+   "activeEnd": 1455,
+   "periods": [
+    "early-renaissance"
+   ],
+   "oneLiner": "Italian Early Renaissance painter",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fra_Angelico_portrait.jpg/330px-Fra_Angelico_portrait.jpg"
+  },
+  {
+   "slug": "masaccio",
+   "name": "Masaccio",
+   "born": 1401,
+   "died": 1428,
+   "activeStart": 1421,
+   "activeEnd": 1428,
+   "periods": [
+    "early-renaissance"
+   ],
+   "oneLiner": "Italian painter (1401-1428)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/9/96/Masaccio_Self_Portrait.jpg"
+  },
+  {
+   "slug": "piero-della-francesca",
+   "name": "Piero della Francesca",
+   "born": 1415,
+   "died": 1492,
+   "activeStart": 1435,
+   "activeEnd": 1492,
+   "periods": [
+    "early-renaissance"
+   ],
+   "oneLiner": "Italian painter and mathematician (c. 1416–1492)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814799608033%29.jpg/330px-Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814799608033%29.jpg"
+  },
+  {
+   "slug": "sandro-botticelli",
+   "name": "Sandro Botticelli",
+   "born": 1445,
+   "died": 1510,
+   "activeStart": 1465,
+   "activeEnd": 1510,
+   "periods": [
+    "early-renaissance"
+   ],
+   "oneLiner": "Italian painter (1445–1510)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sandro_Botticelli_083.jpg/330px-Sandro_Botticelli_083.jpg"
+  },
+  {
+   "slug": "jan-van-eyck",
+   "name": "Jan van Eyck",
+   "born": 1390,
+   "died": 1441,
+   "activeStart": 1410,
+   "activeEnd": 1441,
+   "periods": [
+    "northern-renaissance"
+   ],
+   "oneLiner": "Flemish painter (c.1390–1441)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg/330px-Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg"
+  },
+  {
+   "slug": "hieronymus-bosch",
+   "name": "Hieronymus Bosch",
+   "born": 1450,
+   "died": 1516,
+   "activeStart": 1470,
+   "activeEnd": 1516,
+   "periods": [
+    "northern-renaissance"
+   ],
+   "oneLiner": "Dutch painter (c. 1450–1516)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Jheronimus_Bosch_%28cropped%29.jpg/330px-Jheronimus_Bosch_%28cropped%29.jpg"
+  },
+  {
+   "slug": "albrecht-durer",
+   "name": "Albrecht Dürer",
+   "born": 1471,
+   "died": 1528,
+   "activeStart": 1491,
+   "activeEnd": 1528,
+   "periods": [
+    "northern-renaissance"
+   ],
+   "oneLiner": "German painter, printmaker, mathematician, and theorist (1471-1528)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/D%C3%BCrer_Alte_Pinakothek.jpg/330px-D%C3%BCrer_Alte_Pinakothek.jpg"
+  },
+  {
+   "slug": "hans-holbein",
+   "name": "Hans Holbein the Younger",
+   "born": 1497,
+   "died": 1543,
+   "activeStart": 1517,
+   "activeEnd": 1543,
+   "periods": [
+    "northern-renaissance"
+   ],
+   "oneLiner": "German artist and printmaker (1497–1543)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/330px-Hans_Holbein_the_Younger%2C_self-portrait.jpg"
+  },
+  {
+   "slug": "pieter-bruegel",
+   "name": "Pieter Bruegel the Elder",
+   "born": 1525,
+   "died": 1569,
+   "activeStart": 1545,
+   "activeEnd": 1569,
+   "periods": [
+    "northern-renaissance"
+   ],
+   "oneLiner": "Flemish painter (1526–1569)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg/330px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg"
+  },
+  {
+   "slug": "leonardo-da-vinci",
+   "name": "Leonardo da Vinci",
+   "born": 1452,
+   "died": 1519,
+   "activeStart": 1472,
+   "activeEnd": 1519,
+   "periods": [
+    "high-renaissance"
+   ],
+   "oneLiner": "Italian Renaissance polymath (1452−1519)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/330px-Francesco_Melzi_-_Portrait_of_Leonardo.png"
+  },
+  {
+   "slug": "michelangelo",
+   "name": "Michelangelo",
+   "born": 1475,
+   "died": 1564,
+   "activeStart": 1495,
+   "activeEnd": 1564,
+   "periods": [
+    "high-renaissance"
+   ],
+   "oneLiner": "Italian artist and architect (1475-1564)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/330px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg"
+  },
+  {
+   "slug": "raphael",
+   "name": "Raphael",
+   "born": 1483,
+   "died": 1520,
+   "activeStart": 1503,
+   "activeEnd": 1520,
+   "periods": [
+    "high-renaissance"
+   ],
+   "oneLiner": "Italian painter and architect (1483–1520)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/330px-Raffaello_Sanzio.jpg"
+  },
+  {
+   "slug": "titian",
+   "name": "Titian",
+   "born": 1488,
+   "died": 1576,
+   "activeStart": 1508,
+   "activeEnd": 1576,
+   "periods": [
+    "high-renaissance",
+    "mannerism"
+   ],
+   "oneLiner": "Italian painter (c.1490–1576)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg/330px-Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg"
+  },
+  {
+   "slug": "parmigianino",
+   "name": "Parmigianino",
+   "born": 1503,
+   "died": 1540,
+   "activeStart": 1523,
+   "activeEnd": 1540,
+   "periods": [
+    "mannerism"
+   ],
+   "oneLiner": "Italian Mannerist painter and printmaker (1503–1540)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Parmigianino_Selfportrait.jpg/330px-Parmigianino_Selfportrait.jpg"
+  },
+  {
+   "slug": "bronzino",
+   "name": "Bronzino",
+   "born": 1503,
+   "died": 1572,
+   "activeStart": 1523,
+   "activeEnd": 1572,
+   "periods": [
+    "mannerism"
+   ],
+   "oneLiner": "Italian Mannerist painter (1503-1572)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg/330px-Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg"
+  },
+  {
+   "slug": "tintoretto",
+   "name": "Tintoretto",
+   "born": 1518,
+   "died": 1594,
+   "activeStart": 1538,
+   "activeEnd": 1594,
+   "periods": [
+    "mannerism"
+   ],
+   "oneLiner": "Renaissance painter (1518/1519–1594)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tintoretto-selfport.jpg/330px-Tintoretto-selfport.jpg"
+  },
+  {
+   "slug": "el-greco",
+   "name": "El Greco",
+   "born": 1541,
+   "died": 1614,
+   "activeStart": 1561,
+   "activeEnd": 1614,
+   "periods": [
+    "mannerism"
+   ],
+   "oneLiner": "Greek artist, painter, sculptor and architect (1541–1614)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg/330px-El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg"
+  },
+  {
+   "slug": "caravaggio",
+   "name": "Caravaggio",
+   "born": 1571,
+   "died": 1610,
+   "activeStart": 1591,
+   "activeEnd": 1610,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Italian painter (1571–1610)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bild-Ottavio_Leoni%2C_Caravaggio.jpg/330px-Bild-Ottavio_Leoni%2C_Caravaggio.jpg"
+  },
+  {
+   "slug": "peter-paul-rubens",
+   "name": "Peter Paul Rubens",
+   "born": 1577,
+   "died": 1640,
+   "activeStart": 1597,
+   "activeEnd": 1640,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Flemish painter (1577–1640)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg/330px-Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg"
+  },
+  {
+   "slug": "artemisia-gentileschi",
+   "name": "Artemisia Gentileschi",
+   "born": 1593,
+   "died": 1653,
+   "activeStart": 1613,
+   "activeEnd": 1653,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Italian Baroque painter (1593-1651)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg/330px-Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg"
+  },
+  {
+   "slug": "diego-velazquez",
+   "name": "Diego Velázquez",
+   "born": 1599,
+   "died": 1660,
+   "activeStart": 1619,
+   "activeEnd": 1660,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Spanish painter (1599-1660)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg/330px-Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg"
+  },
+  {
+   "slug": "rembrandt",
+   "name": "Rembrandt",
+   "born": 1606,
+   "died": 1669,
+   "activeStart": 1626,
+   "activeEnd": 1669,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Dutch painter and printmaker (1606–1669)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg/330px-Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg"
+  },
+  {
+   "slug": "johannes-vermeer",
+   "name": "Johannes Vermeer",
+   "born": 1632,
+   "died": 1675,
+   "activeStart": 1652,
+   "activeEnd": 1675,
+   "periods": [
+    "baroque"
+   ],
+   "oneLiner": "Dutch painter (1632–1675)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg/330px-Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg"
+  },
+  {
+   "slug": "antoine-watteau",
+   "name": "Antoine Watteau",
+   "born": 1684,
+   "died": 1721,
+   "activeStart": 1704,
+   "activeEnd": 1721,
+   "periods": [
+    "rococo"
+   ],
+   "oneLiner": "French painter (1684-1721)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%28Treviso%29_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg/330px-%28Treviso%29_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg"
+  },
+  {
+   "slug": "giovanni-battista-tiepolo",
+   "name": "Giovanni Battista Tiepolo",
+   "born": 1696,
+   "died": 1770,
+   "activeStart": 1716,
+   "activeEnd": 1770,
+   "periods": [
+    "rococo"
+   ],
+   "oneLiner": "Italian painter (1696–1770)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tiepolo%2C_Giovanni_Battista_-_Fresken_Treppenhaus_des_W%C3%BCrzburger_Residenzschlosses%2C_Szenen_zur_Apotheose_des_F%C3%BCrstbischofs%2C_Detail_Giovanni_Battista_Tiepolo_-_1750-1753.jpg/330px-thumbnail.jpg"
+  },
+  {
+   "slug": "francois-boucher",
+   "name": "François Boucher",
+   "born": 1703,
+   "died": 1770,
+   "activeStart": 1723,
+   "activeEnd": 1770,
+   "periods": [
+    "rococo"
+   ],
+   "oneLiner": "French painter (1703–1770)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Boucher_par_Gustav_Lundberg_1741.jpg/330px-Boucher_par_Gustav_Lundberg_1741.jpg"
+  },
+  {
+   "slug": "jean-honore-fragonard",
+   "name": "Jean-Honoré Fragonard",
+   "born": 1732,
+   "died": 1806,
+   "activeStart": 1752,
+   "activeEnd": 1806,
+   "periods": [
+    "rococo"
+   ],
+   "oneLiner": "French painter (1732–1806)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg/330px-Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg"
+  },
+  {
+   "slug": "angelica-kauffman",
+   "name": "Angelica Kauffman",
+   "born": 1741,
+   "died": 1807,
+   "activeStart": 1761,
+   "activeEnd": 1807,
+   "periods": [
+    "neoclassicism"
+   ],
+   "oneLiner": "Swiss artist (1741–1807)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Portrait_of_Angelica_Kauffman_%281764%29.jpg/330px-Portrait_of_Angelica_Kauffman_%281764%29.jpg"
+  },
+  {
+   "slug": "jacques-louis-david",
+   "name": "Jacques-Louis David",
+   "born": 1748,
+   "died": 1825,
+   "activeStart": 1768,
+   "activeEnd": 1825,
+   "periods": [
+    "neoclassicism"
+   ],
+   "oneLiner": "French painter (1748–1825)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/David_Self_Portrait.jpg/330px-David_Self_Portrait.jpg"
+  },
+  {
+   "slug": "jean-auguste-dominique-ingres",
+   "name": "Jean-Auguste-Dominique Ingres",
+   "born": 1780,
+   "died": 1867,
+   "activeStart": 1800,
+   "activeEnd": 1867,
+   "periods": [
+    "neoclassicism"
+   ],
+   "oneLiner": "French painter (1780–1867)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg/330px-Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg"
+  },
+  {
+   "slug": "francisco-goya",
+   "name": "Francisco Goya",
+   "born": 1746,
+   "died": 1828,
+   "activeStart": 1766,
+   "activeEnd": 1828,
+   "periods": [
+    "romanticism"
+   ],
+   "oneLiner": "Spanish painter and printmaker (1746–1828)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg/330px-Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg"
+  },
+  {
+   "slug": "caspar-david-friedrich",
+   "name": "Caspar David Friedrich",
+   "born": 1774,
+   "died": 1840,
+   "activeStart": 1794,
+   "activeEnd": 1840,
+   "periods": [
+    "romanticism"
+   ],
+   "oneLiner": "German Romantic landscape painter (1774–1840)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg/330px-Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg"
+  },
+  {
+   "slug": "jmw-turner",
+   "name": "J. M. W. Turner",
+   "born": 1775,
+   "died": 1851,
+   "activeStart": 1795,
+   "activeEnd": 1851,
+   "periods": [
+    "romanticism"
+   ],
+   "oneLiner": "English painter and draftsman (c.1775–1851)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Joseph_Mallord_William_Turner_auto-retrato.jpg/330px-Joseph_Mallord_William_Turner_auto-retrato.jpg"
+  },
+  {
+   "slug": "theodore-gericault",
+   "name": "Théodore Géricault",
+   "born": 1791,
+   "died": 1824,
+   "activeStart": 1811,
+   "activeEnd": 1824,
+   "periods": [
+    "romanticism"
+   ],
+   "oneLiner": "French painter (1791–1824)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg/330px-Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg"
+  },
+  {
+   "slug": "eugene-delacroix",
+   "name": "Eugène Delacroix",
+   "born": 1798,
+   "died": 1863,
+   "activeStart": 1818,
+   "activeEnd": 1863,
+   "periods": [
+    "romanticism"
+   ],
+   "oneLiner": "French painter (1798–1863)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg/330px-F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg"
+  },
+  {
+   "slug": "jean-francois-millet",
+   "name": "Jean-François Millet",
+   "born": 1814,
+   "died": 1875,
+   "activeStart": 1834,
+   "activeEnd": 1875,
+   "periods": [
+    "realism"
+   ],
+   "oneLiner": "French painter (1814–1875)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg/330px-Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg"
+  },
+  {
+   "slug": "rosa-bonheur",
+   "name": "Rosa Bonheur",
+   "born": 1822,
+   "died": 1899,
+   "activeStart": 1842,
+   "activeEnd": 1899,
+   "periods": [
+    "realism"
+   ],
+   "oneLiner": "French artist (1822-1899)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rosa_Bonheur_agee.jpg/330px-Rosa_Bonheur_agee.jpg"
+  },
+  {
+   "slug": "gustave-courbet",
+   "name": "Gustave Courbet",
+   "born": 1819,
+   "died": 1877,
+   "activeStart": 1839,
+   "activeEnd": 1877,
+   "periods": [
+    "realism"
+   ],
+   "oneLiner": "French painter (1819–1877)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg/330px-Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg"
+  },
+  {
+   "slug": "edouard-manet",
+   "name": "Édouard Manet",
+   "born": 1832,
+   "died": 1883,
+   "activeStart": 1852,
+   "activeEnd": 1883,
+   "periods": [
+    "realism",
+    "impressionism"
+   ],
+   "oneLiner": "French painter (1832–1883)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg/330px-%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg"
+  },
+  {
+   "slug": "camille-pissarro",
+   "name": "Camille Pissarro",
+   "born": 1830,
+   "died": 1903,
+   "activeStart": 1850,
+   "activeEnd": 1903,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "Danish-French painter (1830-1903)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pissarro-portrait.jpg/330px-Pissarro-portrait.jpg"
+  },
+  {
+   "slug": "edgar-degas",
+   "name": "Edgar Degas",
+   "born": 1834,
+   "died": 1917,
+   "activeStart": 1854,
+   "activeEnd": 1917,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "French Impressionist artist (1834–1917)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Self-portrait_by_Edgar_Degas.jpg/330px-Self-portrait_by_Edgar_Degas.jpg"
+  },
+  {
+   "slug": "claude-monet",
+   "name": "Claude Monet",
+   "born": 1840,
+   "died": 1926,
+   "activeStart": 1860,
+   "activeEnd": 1926,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "French painter (1840–1926)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Claude_Monet_1899_Nadar_crop.jpg/330px-Claude_Monet_1899_Nadar_crop.jpg"
+  },
+  {
+   "slug": "pierre-auguste-renoir",
+   "name": "Pierre-Auguste Renoir",
+   "born": 1841,
+   "died": 1919,
+   "activeStart": 1861,
+   "activeEnd": 1919,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "French painter and sculptor (1841–1919)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pierre_Auguste_Renoir%2C_uncropped_image.jpg/330px-Pierre_Auguste_Renoir%2C_uncropped_image.jpg"
+  },
+  {
+   "slug": "berthe-morisot",
+   "name": "Berthe Morisot",
+   "born": 1841,
+   "died": 1895,
+   "activeStart": 1861,
+   "activeEnd": 1895,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "French painter (1841-1895)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Morisot_berthe_photo.jpg/330px-Morisot_berthe_photo.jpg"
+  },
+  {
+   "slug": "mary-cassatt",
+   "name": "Mary Cassatt",
+   "born": 1844,
+   "died": 1926,
+   "activeStart": 1864,
+   "activeEnd": 1926,
+   "periods": [
+    "impressionism"
+   ],
+   "oneLiner": "American painter and printmaker (1844—1926)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mary_Cassatt_photograph_1913.jpg/330px-Mary_Cassatt_photograph_1913.jpg"
+  },
+  {
+   "slug": "paul-cezanne",
+   "name": "Paul Cézanne",
+   "born": 1839,
+   "died": 1906,
+   "activeStart": 1859,
+   "activeEnd": 1906,
+   "periods": [
+    "post-impressionism"
+   ],
+   "oneLiner": "French painter (1839–1906)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Paul-Cezanne.jpg"
+  },
+  {
+   "slug": "paul-gauguin",
+   "name": "Paul Gauguin",
+   "born": 1848,
+   "died": 1903,
+   "activeStart": 1868,
+   "activeEnd": 1903,
+   "periods": [
+    "post-impressionism"
+   ],
+   "oneLiner": "French painter and printmaker (1848–1903)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/330px-Paul_Gauguin_1891.png"
+  },
+  {
+   "slug": "vincent-van-gogh",
+   "name": "Vincent van Gogh",
+   "born": 1853,
+   "died": 1890,
+   "activeStart": 1873,
+   "activeEnd": 1890,
+   "periods": [
+    "post-impressionism"
+   ],
+   "oneLiner": "Dutch painter (1853–1890)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/330px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg"
+  },
+  {
+   "slug": "georges-seurat",
+   "name": "Georges Seurat",
+   "born": 1859,
+   "died": 1891,
+   "activeStart": 1879,
+   "activeEnd": 1891,
+   "periods": [
+    "post-impressionism"
+   ],
+   "oneLiner": "French painter (1859-1891)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Georges_Seurat_1888.jpg/330px-Georges_Seurat_1888.jpg"
+  },
+  {
+   "slug": "henri-de-toulouse-lautrec",
+   "name": "Henri de Toulouse-Lautrec",
+   "born": 1864,
+   "died": 1901,
+   "activeStart": 1884,
+   "activeEnd": 1901,
+   "periods": [
+    "post-impressionism"
+   ],
+   "oneLiner": "French painter and illustrator (1864–1901)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Photolautrec.jpg/330px-Photolautrec.jpg"
+  },
+  {
+   "slug": "odilon-redon",
+   "name": "Odilon Redon",
+   "born": 1840,
+   "died": 1916,
+   "activeStart": 1860,
+   "activeEnd": 1916,
+   "periods": [
+    "symbolism-art-nouveau"
+   ],
+   "oneLiner": "French painter (1840–1916)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Odilon_Redon_vers_1880.jpg/330px-Odilon_Redon_vers_1880.jpg"
+  },
+  {
+   "slug": "henri-rousseau",
+   "name": "Henri Rousseau",
+   "born": 1844,
+   "died": 1910,
+   "activeStart": 1864,
+   "activeEnd": 1910,
+   "periods": [
+    "symbolism-art-nouveau"
+   ],
+   "oneLiner": "French painter (1844–1910)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rousseau_Joyeux_Farceurs_Dornac_crop.jpg/330px-Rousseau_Joyeux_Farceurs_Dornac_crop.jpg"
+  },
+  {
+   "slug": "gustav-klimt",
+   "name": "Gustav Klimt",
+   "born": 1862,
+   "died": 1918,
+   "activeStart": 1882,
+   "activeEnd": 1918,
+   "periods": [
+    "symbolism-art-nouveau"
+   ],
+   "oneLiner": "Austrian symbolist painter (1862–1918)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Klimt.jpg/330px-Klimt.jpg"
+  },
+  {
+   "slug": "alphonse-mucha",
+   "name": "Alphonse Mucha",
+   "born": 1860,
+   "died": 1939,
+   "activeStart": 1880,
+   "activeEnd": 1939,
+   "periods": [
+    "symbolism-art-nouveau"
+   ],
+   "oneLiner": "Czech painter, illustrator and graphic artist (1860–1939)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg/330px-Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg"
+  },
+  {
+   "slug": "edvard-munch",
+   "name": "Edvard Munch",
+   "born": 1863,
+   "died": 1944,
+   "activeStart": 1883,
+   "activeEnd": 1944,
+   "periods": [
+    "expressionism"
+   ],
+   "oneLiner": "Norwegian painter (1863–1944)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Portrait_of_Edvard_Munch_%28cropped%29.png/330px-Portrait_of_Edvard_Munch_%28cropped%29.png"
+  },
+  {
+   "slug": "ernst-ludwig-kirchner",
+   "name": "Ernst Ludwig Kirchner",
+   "born": 1880,
+   "died": 1938,
+   "activeStart": 1900,
+   "activeEnd": 1938,
+   "periods": [
+    "expressionism"
+   ],
+   "oneLiner": "German painter, sculptor, engraver and printmaker (1880–1938)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg/330px-Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg"
+  },
+  {
+   "slug": "franz-marc",
+   "name": "Franz Marc",
+   "born": 1880,
+   "died": 1916,
+   "activeStart": 1900,
+   "activeEnd": 1916,
+   "periods": [
+    "expressionism"
+   ],
+   "oneLiner": "German artist (1880–1916)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Marc_autograph.png"
+  },
+  {
+   "slug": "amedeo-modigliani",
+   "name": "Amedeo Modigliani",
+   "born": 1884,
+   "died": 1920,
+   "activeStart": 1904,
+   "activeEnd": 1920,
+   "periods": [
+    "expressionism"
+   ],
+   "oneLiner": "Italian painter and sculptor (1884–1920)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amedeo_Modigliani_in_his_studio.jpg/330px-Amedeo_Modigliani_in_his_studio.jpg"
+  },
+  {
+   "slug": "egon-schiele",
+   "name": "Egon Schiele",
+   "born": 1890,
+   "died": 1918,
+   "activeStart": 1910,
+   "activeEnd": 1918,
+   "periods": [
+    "expressionism"
+   ],
+   "oneLiner": "Austrian painter (1890-1918)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg/330px-Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg"
+  },
+  {
+   "slug": "pablo-picasso",
+   "name": "Pablo Picasso",
+   "born": 1881,
+   "died": 1973,
+   "activeStart": 1901,
+   "activeEnd": 1973,
+   "periods": [
+    "cubism"
+   ],
+   "oneLiner": "Spanish painter and sculptor (1881–1973)",
+   "hasGallery": false,
+   "paintingCount": 1,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/330px-Pablo_picasso_1.jpg"
+  },
+  {
+   "slug": "georges-braque",
+   "name": "Georges Braque",
+   "born": 1882,
+   "died": 1963,
+   "activeStart": 1902,
+   "activeEnd": 1963,
+   "periods": [
+    "cubism"
+   ],
+   "oneLiner": "French painter and sculptor (1882-1963)",
+   "hasGallery": false,
+   "paintingCount": 1,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg/330px-Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg"
+  },
+  {
+   "slug": "juan-gris",
+   "name": "Juan Gris",
+   "born": 1887,
+   "died": 1927,
+   "activeStart": 1907,
+   "activeEnd": 1927,
+   "periods": [
+    "cubism"
+   ],
+   "oneLiner": "Spanish artist (1887–1927)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Juan_Gris%2C_1922%2C_photograph_by_Man_Ray%2C_Paris._Gelatin_silver_print.jpg/330px-Juan_Gris%2C_1922%2C_photograph_by_Man_Ray%2C_Paris._Gelatin_silver_print.jpg"
+  },
+  {
+   "slug": "fernand-leger",
+   "name": "Fernand Léger",
+   "born": 1881,
+   "died": 1955,
+   "activeStart": 1901,
+   "activeEnd": 1955,
+   "periods": [
+    "cubism"
+   ],
+   "oneLiner": "French painter (1881–1955)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/en/d/db/Fernand_L%C3%A9ger%2C_c._1916.jpg"
+  },
+  {
+   "slug": "wassily-kandinsky",
+   "name": "Wassily Kandinsky",
+   "born": 1866,
+   "died": 1944,
+   "activeStart": 1886,
+   "activeEnd": 1944,
+   "periods": [
+    "early-abstraction"
+   ],
+   "oneLiner": "avant-garde painter of Russian origin (1866-1944)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg/330px-Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg"
+  },
+  {
+   "slug": "kazimir-malevich",
+   "name": "Kazimir Malevich",
+   "born": 1878,
+   "died": 1935,
+   "activeStart": 1898,
+   "activeEnd": 1935,
+   "periods": [
+    "early-abstraction"
+   ],
+   "oneLiner": "Russian avant-garde artist of Polish ancestry. Founder of the Suprematist movement (1879–1935)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Casimir_Malevich_photo.jpg/330px-Casimir_Malevich_photo.jpg"
+  },
+  {
+   "slug": "piet-mondrian",
+   "name": "Piet Mondrian",
+   "born": 1872,
+   "died": 1944,
+   "activeStart": 1892,
+   "activeEnd": 1944,
+   "periods": [
+    "early-abstraction"
+   ],
+   "oneLiner": "Dutch painter (1872–1944)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Piet_Mondriaan.jpg/330px-Piet_Mondriaan.jpg"
+  },
+  {
+   "slug": "paul-klee",
+   "name": "Paul Klee",
+   "born": 1879,
+   "died": 1940,
+   "activeStart": 1899,
+   "activeEnd": 1940,
+   "periods": [
+    "early-abstraction"
+   ],
+   "oneLiner": "German-Swiss artist (1879–1940)",
+   "hasGallery": true,
+   "paintingCount": 10,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg/330px-Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg"
+  },
+  {
+   "slug": "max-ernst",
+   "name": "Max Ernst",
+   "born": 1891,
+   "died": 1976,
+   "activeStart": 1911,
+   "activeEnd": 1976,
+   "periods": [
+    "surrealism"
+   ],
+   "oneLiner": "German artist (1891–1976)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Max_Ernst_1968.jpg/330px-Max_Ernst_1968.jpg"
+  },
+  {
+   "slug": "joan-miro",
+   "name": "Joan Miró",
+   "born": 1893,
+   "died": 1983,
+   "activeStart": 1913,
+   "activeEnd": 1983,
+   "periods": [
+    "surrealism"
+   ],
+   "oneLiner": "Spanish painter, sculptor, and ceramicist (1893–1983)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg/330px-Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg"
+  },
+  {
+   "slug": "rene-magritte",
+   "name": "René Magritte",
+   "born": 1898,
+   "died": 1967,
+   "activeStart": 1918,
+   "activeEnd": 1967,
+   "periods": [
+    "surrealism"
+   ],
+   "oneLiner": "Belgian surrealist (1898–1967)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg/330px-Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg"
+  },
+  {
+   "slug": "salvador-dali",
+   "name": "Salvador Dalí",
+   "born": 1904,
+   "died": 1989,
+   "activeStart": 1924,
+   "activeEnd": 1989,
+   "periods": [
+    "surrealism"
+   ],
+   "oneLiner": "Spanish artist (1904–1989)",
+   "hasGallery": false,
+   "paintingCount": 1,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Salvador_Dal%C3%AD_1939.jpg/330px-Salvador_Dal%C3%AD_1939.jpg"
+  },
+  {
+   "slug": "frida-kahlo",
+   "name": "Frida Kahlo",
+   "born": 1907,
+   "died": 1954,
+   "activeStart": 1927,
+   "activeEnd": 1954,
+   "periods": [
+    "surrealism"
+   ],
+   "oneLiner": "Mexican painter (1907–1954)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg/330px-Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg"
+  },
+  {
+   "slug": "jackson-pollock",
+   "name": "Jackson Pollock",
+   "born": 1912,
+   "died": 1956,
+   "activeStart": 1932,
+   "activeEnd": 1956,
+   "periods": [
+    "abstract-expressionism"
+   ],
+   "oneLiner": "American painter (1912–1956)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Jackson_Pollock%27s_passport_%28cropped%29.jpg/330px-Jackson_Pollock%27s_passport_%28cropped%29.jpg"
+  },
+  {
+   "slug": "mark-rothko",
+   "name": "Mark Rothko",
+   "born": 1903,
+   "died": 1970,
+   "activeStart": 1923,
+   "activeEnd": 1970,
+   "periods": [
+    "abstract-expressionism"
+   ],
+   "oneLiner": "American painter of Latvian-Jewish descent (1903–1970)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg/330px-Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg"
+  },
+  {
+   "slug": "willem-de-kooning",
+   "name": "Willem de Kooning",
+   "born": 1904,
+   "died": 1997,
+   "activeStart": 1924,
+   "activeEnd": 1997,
+   "periods": [
+    "abstract-expressionism"
+   ],
+   "oneLiner": "Dutch-American abstract expressionist artist (1904–1997)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Willem_de_Kooning_in_his_studio.jpg/330px-Willem_de_Kooning_in_his_studio.jpg"
+  },
+  {
+   "slug": "lee-krasner",
+   "name": "Lee Krasner",
+   "born": 1908,
+   "died": 1984,
+   "activeStart": 1928,
+   "activeEnd": 1984,
+   "periods": [
+    "abstract-expressionism"
+   ],
+   "oneLiner": "American abstract expressionist painter (1908–1984)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Lee_Krasner%2C_artist%2C_cropped.jpg/330px-Lee_Krasner%2C_artist%2C_cropped.jpg"
+  },
+  {
+   "slug": "andy-warhol",
+   "name": "Andy Warhol",
+   "born": 1928,
+   "died": 1987,
+   "activeStart": 1948,
+   "activeEnd": 1987,
+   "periods": [
+    "pop-art"
+   ],
+   "oneLiner": "American artist, film director, and producer (1928–1987)",
+   "hasGallery": false,
+   "paintingCount": 1,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg/330px-Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg"
+  },
+  {
+   "slug": "roy-lichtenstein",
+   "name": "Roy Lichtenstein",
+   "born": 1923,
+   "died": 1997,
+   "activeStart": 1943,
+   "activeEnd": 1997,
+   "periods": [
+    "pop-art"
+   ],
+   "oneLiner": "American pop artist (1923–1997)",
+   "hasGallery": false,
+   "paintingCount": 1,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg/330px-Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg"
+  },
+  {
+   "slug": "david-hockney",
+   "name": "David Hockney",
+   "born": 1937,
+   "died": 2026,
+   "activeStart": 1957,
+   "activeEnd": 2026,
+   "periods": [
+    "pop-art",
+    "contemporary"
+   ],
+   "oneLiner": "English painter and printmaker (1937–2026)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg/330px-David_Hockney_in_Washington_Square_Park_%281977%29.jpg"
+  },
+  {
+   "slug": "jean-michel-basquiat",
+   "name": "Jean-Michel Basquiat",
+   "born": 1960,
+   "died": 1988,
+   "activeStart": 1980,
+   "activeEnd": 1988,
+   "periods": [
+    "contemporary"
+   ],
+   "oneLiner": "American artist (1960–1988)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg"
+  },
+  {
+   "slug": "gerhard-richter",
+   "name": "Gerhard Richter",
+   "born": 1932,
+   "died": null,
+   "activeStart": 1952,
+   "activeEnd": 2026,
+   "periods": [
+    "contemporary"
+   ],
+   "oneLiner": "German visual artist (b. 1932)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg/330px-Gerhard_Richter%2C_Prague_%282017%29.jpg"
+  },
+  {
+   "slug": "yayoi-kusama",
+   "name": "Yayoi Kusama",
+   "born": 1929,
+   "died": null,
+   "activeStart": 1949,
+   "activeEnd": 2026,
+   "periods": [
+    "contemporary"
+   ],
+   "oneLiner": "Japanese artist (born 1929)",
+   "hasGallery": false,
+   "paintingCount": 0,
+   "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg/330px-Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg"
+  }
+ ]
+}

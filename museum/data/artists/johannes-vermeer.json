@@ -1,0 +1,417 @@
+{
+ "slug": "johannes-vermeer",
+ "name": "Johannes Vermeer",
+ "qid": "Q41264",
+ "born": 1632,
+ "died": 1675,
+ "periods": [
+  "baroque"
+ ],
+ "oneLiner": "Dutch painter (1632–1675)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg/330px-Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg"
+ },
+ "bio": {
+  "extract": "Johannes Vermeer was a Dutch painter who specialized in domestic interior scenes of middle-class life. He is considered one of the greatest painters of the Dutch Golden Age. During his lifetime, he was a moderately successful provincial genre painter, recognized in Delft and The Hague. He produced relatively few paintings, primarily earning his living as an art dealer.",
+  "source": "https://en.wikipedia.org/wiki/Johannes_Vermeer"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Johannes_Vermeer",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q586035",
+   "title": "The Little Street",
+   "year": 1658,
+   "image": {
+    "file": "File:Johannes Vermeer - Gezicht op huizen in Delft, bekend als 'Het straatje' - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft%2C_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg/960px-Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft%2C_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft%2C_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg/1920px-Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft%2C_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg",
+    "pxW": 4000,
+    "pxH": 4954
+   },
+   "cm": {
+    "w": 44,
+    "h": 54
+   },
+   "collection": "Rijksmuseum",
+   "story": {
+    "extract": "The Little Street is a painting by the Dutch painter Johannes Vermeer, executed c. 1657–1658. It is exhibited at the Rijksmuseum of Amsterdam, and signed, below the window in the lower left-hand corner, \"I V MEER\".",
+    "source": "https://en.wikipedia.org/wiki/The_Little_Street"
+   },
+   "facts": [
+    {
+     "text": "The painting is made in oil on canvas, and it is a relatively small painting, being 54.3 centimetres (21.4 in) high by 44.0 centimetres (17.3 in) wide. The painting, showing a quiet street, depicts a typical aspect of the life in a Dutch Golden Age town.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/The_Little_Street#Painting"
+    },
+    {
+     "text": "Vermeer achieved the realistic depiction of the surfaces with the masterful application of a relatively limited number of pigments. He employed red ochre and madder lake for the reddish-brown brick wall, the blue in the sky contains lead white and natural ultramarine.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/The_Little_Street#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q700251",
+   "title": "Girl Reading a Letter at an Open Window",
+   "year": 1658,
+   "image": {
+    "file": "File:Jan Vermeer van Delft - Brieflezend meisje bij het venster (ca. 1657-59).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jan_Vermeer_van_Delft_-_Brieflezend_meisje_bij_het_venster_%28ca._1657-59%29.jpg/960px-Jan_Vermeer_van_Delft_-_Brieflezend_meisje_bij_het_venster_%28ca._1657-59%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jan_Vermeer_van_Delft_-_Brieflezend_meisje_bij_het_venster_%28ca._1657-59%29.jpg/1920px-Jan_Vermeer_van_Delft_-_Brieflezend_meisje_bij_het_venster_%28ca._1657-59%29.jpg",
+    "pxW": 3303,
+    "pxH": 4263
+   },
+   "cm": {
+    "w": 64,
+    "h": 83
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "Girl Reading a Letter at an Open Window, also known as Lady reading at an open window, is an oil painting by Dutch Golden Age painter Johannes Vermeer. Completed in approximately 1657–1659, the painting is on display at the Gemäldegalerie in Dresden, which has held it since 1742. For many years, the attribution of the painting—which features a young Dutch woman reading a letter before an open window—was lost, with first Rembrandt and then Pieter de Hooch being credited for the work before it was properly identified in 1880.",
+    "source": "https://en.wikipedia.org/wiki/Girl_Reading_a_Letter_at_an_Open_Window"
+   },
+   "facts": [
+    {
+     "text": "Vermeer completed the painting in approximately 1657–1659. In 1742, Augustus III of Poland, Elector of Saxony, purchased the painting under the mistaken belief that it had been painted by Rembrandt.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Girl_Reading_a_Letter_at_an_Open_Window#History"
+    },
+    {
+     "text": "This painting has been an inspiration to other artists, such as Tom Hunter, whose artistic photo interpretation of the somber tone of emotion and the bowl of fruit shows a young mother and her child reading an eviction notice.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Girl_Reading_a_Letter_at_an_Open_Window#Legacy"
+    },
+    {
+     "text": "The painting as seen for nearly 300 years depicts a young Dutch blonde girl standing at an open window, in profile, reading a letter. A red drapery hangs over the top of the window glass, which has opened inward and which, in its lower right quadrant, reflects her.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Girl_Reading_a_Letter_at_an_Open_Window#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q167605",
+   "title": "The Milkmaid",
+   "year": 1660,
+   "image": {
+    "file": "File:Johannes Vermeer - Het melkmeisje - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg/960px-Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg/1920px-Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg",
+    "pxW": 4000,
+    "pxH": 4485
+   },
+   "cm": {
+    "w": 41,
+    "h": 46
+   },
+   "collection": "Rijksmuseum",
+   "story": {
+    "extract": "The Milkmaid, sometimes called The Kitchen Maid, is an oil-on-canvas painting of a \"milkmaid\", in fact, a domestic kitchen maid, by the Dutch artist Johannes Vermeer. It is in the Rijksmuseum in Amsterdam, the Netherlands, which regards it as \"unquestionably one of the museum's finest attractions\".",
+    "source": "https://en.wikipedia.org/wiki/The_Milkmaid_%28Vermeer%29"
+   },
+   "facts": [
+    {
+     "text": "Pieter van Ruijven (1624–1674), Vermeer's patron in Delft (and, at his death, the owner of twenty-one of the painter's works), probably bought the painting directly from the artist. Liedtke doubts that the patron ordered the subject matter.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Milkmaid_%28Vermeer%29#Provenance"
+    },
+    {
+     "text": "The painting shows a milkmaid, a woman who milks cows and makes dairy products like butter and cheese, in a plain room carefully pouring milk into a squat earthenware container on a table. Milkmaids began working solely in the stables before large houses hired them to do housework as well rather than hiring out for more staff.",
+     "section": "Descriptions and commentary",
+     "source": "https://en.wikipedia.org/wiki/The_Milkmaid_%28Vermeer%29#Descriptions_and_commentary"
+    },
+    {
+     "text": "The woman would have been known as a \"kitchen maid\" or maid-of-all-work rather than a specialised \"milkmaid\" at the time the painting was created: \"milk maids\" were women who milked cows; kitchen maids worked in kitchens.",
+     "section": "Dutch iconography of maids",
+     "source": "https://en.wikipedia.org/wiki/The_Milkmaid_%28Vermeer%29#Dutch_iconography_of_maids"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q523974",
+   "title": "View of Delft",
+   "year": 1661,
+   "image": {
+    "file": "File:Johannes Vermeer - View of Delft - 92 - Mauritshuis.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Johannes_Vermeer_-_View_of_Delft_-_92_-_Mauritshuis.jpg/960px-Johannes_Vermeer_-_View_of_Delft_-_92_-_Mauritshuis.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Johannes_Vermeer_-_View_of_Delft_-_92_-_Mauritshuis.jpg/1920px-Johannes_Vermeer_-_View_of_Delft_-_92_-_Mauritshuis.jpg",
+    "pxW": 6000,
+    "pxH": 5002
+   },
+   "cm": {
+    "w": 116,
+    "h": 96
+   },
+   "collection": "Mauritshuis",
+   "story": {
+    "extract": "View of Delft is an oil painting by Johannes Vermeer, painted c. 1659–1661. The painting of the Dutch artist's hometown is among his best known. It is one of three known paintings of Delft by Vermeer, along with The Little Street and the lost painting House Standing in Delft, and his only cityscape.",
+    "source": "https://en.wikipedia.org/wiki/View_of_Delft"
+   },
+   "facts": [
+    {
+     "text": "Marcel Proust greatly admired Vermeer, and particularly this painting. The painting features in his novel In Search of Lost Time.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/View_of_Delft#Legacy"
+    },
+    {
+     "text": "A technical analysis shows that Vermeer used calcite, lead white, yellow ochre, natural ultramarine, and madder lake pigments. The landscape was painted from an elevated position to the southeast of Delft, possibly the upper floor of the Mechelen tavern where the artist's studio was located.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/View_of_Delft#Description"
+    },
+    {
+     "text": "Historians have hotly debated whether or not Vermeer used a camera obscura. A camera obscura, meaning \"dark chamber,\" was a closed room with a small hole covered with a convex lens through which light could pass, casting a reverse image onto the wall that the artist could then trace.",
+     "section": "Camera obscura",
+     "source": "https://en.wikipedia.org/wiki/View_of_Delft#Camera_obscura"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q544315",
+   "title": "The Astronomer",
+   "year": 1664,
+   "image": {
+    "file": "File:Johannes Vermeer - The Astronomer - 1668.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Johannes_Vermeer_-_The_Astronomer_-_1668.jpg/960px-Johannes_Vermeer_-_The_Astronomer_-_1668.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Johannes_Vermeer_-_The_Astronomer_-_1668.jpg/1920px-Johannes_Vermeer_-_The_Astronomer_-_1668.jpg",
+    "pxW": 4401,
+    "pxH": 5000
+   },
+   "cm": {
+    "w": 46,
+    "h": 51
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Astronomer is a painting finished in 1668 by the Johannes Vermeer, a painter of the Dutch Golden Age. It is in oil on canvas with dimensions 51 cm × 45 cm. The Astronomer is now in the collection of the Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Astronomer"
+   },
+   "facts": [
+    {
+     "text": "The provenance of The Astronomer can be traced back to 27 April 1713, when it was sold at the Rotterdam sale of an unknown collector (possibly Adriaen Paets or his father, of Rotterdam) together with The Geographer.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Astronomer#Provenance"
+    },
+    {
+     "text": "Portrayals of scientists were a favourite topic in 17th-century Dutch painting and Vermeer's oeuvre includes both this astronomer and the slightly later The Geographer. Both are believed to portray the same man, possibly Antonie van Leeuwenhoek.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Astronomer#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q166937",
+   "title": "Woman in Blue Reading a Letter",
+   "year": 1664,
+   "image": {
+    "file": "File:Vermeer, Johannes - Woman reading a letter - ca. 1662-1663.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vermeer%2C_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg/960px-Vermeer%2C_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vermeer%2C_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg/1920px-Vermeer%2C_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg",
+    "pxW": 4457,
+    "pxH": 5341
+   },
+   "cm": {
+    "w": 39,
+    "h": 47
+   },
+   "collection": "Amsterdam Museum",
+   "story": {
+    "extract": "Woman Reading a Letter is a painting by the Dutch Golden Age painter Johannes Vermeer, produced in around 1663. It has been part of the collection of the City of Amsterdam since the Van der Hoop bequest in 1854, and in the Rijksmuseum in Amsterdam since it opened in 1885, the first Vermeer it acquired.",
+    "source": "https://en.wikipedia.org/wiki/Woman_Reading_a_Letter_%28Vermeer%29"
+   },
+   "facts": [
+    {
+     "text": "The central element of the painting is a woman in blue standing in front of a window (not depicted) reading a letter. The woman appears to be pregnant, although many have argued that the woman's rounded figure is simply a result of the fashions of the day.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Woman_Reading_a_Letter_%28Vermeer%29#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q185372",
+   "title": "Girl with a Pearl Earring",
+   "year": 1665,
+   "image": {
+    "file": "File:1665 Girl with a Pearl Earring.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/960px-1665_Girl_with_a_Pearl_Earring.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/1920px-1665_Girl_with_a_Pearl_Earring.jpg",
+    "pxW": 12285,
+    "pxH": 14550
+   },
+   "cm": {
+    "w": 39,
+    "h": 44
+   },
+   "collection": "Mauritshuis",
+   "story": {
+    "extract": "Girl with a Pearl Earring is an oil painting by Dutch Golden Age painter Johannes Vermeer, dated c. 1665. Going by various names over the centuries, it acquired its present title towards the end of the 20th century. The work has been in the collection of the Mauritshuis in The Hague since 1902 and has been the subject of various literary and cinematic treatments.",
+    "source": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring"
+   },
+   "facts": [
+    {
+     "text": "The painting is a tronie, the Dutch 17th-century description of a \"head\" that was not meant to be a portrait. It depicts a European girl wearing \"exotic dress\", an \"oriental turban\", and what appears to be a very large pearl as an earring.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring#Description"
+    },
+    {
+     "text": "On the advice of Victor de Stuers, who for years tried to prevent Vermeer's rare works from being sold to parties abroad, Arnoldus Andries des Tombe purchased the work at an auction in The Hague in 1881, for only two guilders plus thirty cents buyer's premium (equivalent to roughly €24 in 2015).",
+     "section": "Ownership and display",
+     "source": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring#Ownership_and_display"
+    },
+    {
+     "text": "The painting has been studied by the scientists of the Netherlands Institute for Cultural Heritage and the FOM Institute for Atomic and Molecular Physics (AMOLF) Amsterdam. The ground is dense and yellowish in colour and is composed of chalk, lead white, ochre, and very little black.",
+     "section": "Painting technique",
+     "source": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring#Painting_technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q969367",
+   "title": "Woman Holding a Balance",
+   "year": 1665,
+   "image": {
+    "file": "File:Johannes Vermeer - Woman Holding a Balance - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg/960px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg/1920px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg",
+    "pxW": 7201,
+    "pxH": 8143
+   },
+   "cm": {
+    "w": 38,
+    "h": 42
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Woman Holding a Balance, also called Woman Testing a Balance, is an oil painting by Dutch Golden Age painter Johannes Vermeer, now in the National Gallery of Art in Washington, DC.",
+    "source": "https://en.wikipedia.org/wiki/Woman_Holding_a_Balance"
+   },
+   "facts": [
+    {
+     "text": "Completed in 1662 or 1663, the painting was previously called Woman Weighing Gold before microscopic evaluation confirms that the balance in her hands is empty. The painting was among the large collection of Vermeer works sold on May 16, 1696, in Amsterdam from the estate of Jacob Dissius (1653–1695).",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Woman_Holding_a_Balance#History"
+    },
+    {
+     "text": "In the painting, Vermeer has depicted what discreetly appears to be a young pregnant woman holding an empty balance before a table on which stands an open jewelry box, the pearls and gold within spilling over. A blue cloth rests in the left foreground, beneath a mirror, and a window to the left — unseen save its golden curtain — provides light.",
+     "section": "Theme",
+     "source": "https://en.wikipedia.org/wiki/Woman_Holding_a_Balance#Theme"
+    },
+    {
+     "text": "The first pigment analysis of this painting by Hermann Kühn revealed the use of ultramarine for the blue tablecloth and lead white for the grey wall. The pigment in the bright yellow curtain was at first misidentified as Indian yellow.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Woman_Holding_a_Balance#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q588695",
+   "title": "The Art of Painting",
+   "year": 1667,
+   "image": {
+    "file": "File:Jan Vermeer - The Art of Painting - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg/960px-Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg/1920px-Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg",
+    "pxW": 6209,
+    "pxH": 7377
+   },
+   "cm": {
+    "w": 100,
+    "h": 120
+   },
+   "collection": "Munich Central Collecting Point",
+   "story": {
+    "extract": "The Art of Painting, also known as The Allegory of Painting, or Painter in his Studio, is a 17th-century oil on canvas painting by Dutch painter Johannes Vermeer. It is owned by the Austrian Republic and is on display in the Kunsthistorisches Museum in Vienna.",
+    "source": "https://en.wikipedia.org/wiki/The_Art_of_Painting"
+   },
+   "facts": [
+    {
+     "text": "The painting is considered a work with significance for Vermeer because he did not part with it or sell it, even when he was in debt. On 24 February 1676, his widow Catharina bequeathed it to her mother, Maria Thins, in an attempt to avoid the sale of the painting to satisfy creditors.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Art_of_Painting#Provenance"
+    },
+    {
+     "text": "This canvas depicts an artist painting a woman dressed in blue posing as a model in his studio. The subject is standing by a window and a large map of the Low Countries hangs on the wall behind.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Art_of_Painting#Description"
+    },
+    {
+     "text": "The painting has only two figures, the painter and his subject, a woman with downcast eyes. The painter was thought to be a self-portrait of the artist; Jean-Louis Vaudoyer suggested the young woman could be his daughter.",
+     "section": "Elements",
+     "source": "https://en.wikipedia.org/wiki/The_Art_of_Painting#Elements"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  },
+  {
+   "qid": "Q45130",
+   "title": "The Geographer",
+   "year": 1668,
+   "image": {
+    "file": "File:Johannes Vermeer, Der Geograf, 1669.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Johannes_Vermeer%2C_Der_Geograf%2C_1669.png/960px-Johannes_Vermeer%2C_Der_Geograf%2C_1669.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Johannes_Vermeer%2C_Der_Geograf%2C_1669.png/1920px-Johannes_Vermeer%2C_Der_Geograf%2C_1669.png",
+    "pxW": 16557,
+    "pxH": 18526
+   },
+   "cm": {
+    "w": 45,
+    "h": 53
+   },
+   "collection": "Städel Museum",
+   "story": {
+    "extract": "The Geographer is a painting created by Dutch artist Johannes Vermeer in 1668–1669, and is now in the collection of the Städel museum in Frankfurt, Germany. It is closely related to Vermeer's The Astronomer, for instance using the same model in the same dress, and has sometimes been considered a pendant painting to it. A 2017 study indicated that the canvas for the two works came from the same bolt of material.",
+    "source": "https://en.wikipedia.org/wiki/The_Geographer"
+   },
+   "facts": [
+    {
+     "text": "This is one of only three paintings Vermeer signed and dated (the other two are The Astronomer and The Procuress).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Geographer#Description"
+    },
+    {
+     "text": "For much of the painting's early history (until 1797), it was owned together with The Astronomer, which it strongly resembles, and the two have long been considered pendants, although their measurements are not identical.",
+     "section": "Provenance and exhibitions",
+     "source": "https://en.wikipedia.org/wiki/The_Geographer#Provenance_and_exhibitions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johannes Vermeer"
+   }
+  }
+ ]
+}

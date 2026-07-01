@@ -1,0 +1,432 @@
+{
+ "slug": "artemisia-gentileschi",
+ "name": "Artemisia Gentileschi",
+ "qid": "Q212657",
+ "born": 1593,
+ "died": 1653,
+ "periods": [
+  "baroque"
+ ],
+ "oneLiner": "Italian Baroque painter (1593-1651)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg/330px-Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg"
+ },
+ "bio": {
+  "extract": "Artemisia Lomi Gentileschi was an Italian Baroque painter. Gentileschi is considered among the most accomplished 17th-century artists, initially working in the style of Caravaggio. She was producing professional work by the age of 15. In an era when women had few opportunities to pursue artistic training or work as professional artists, Gentileschi was the first woman to become a member of the Accademia di Arte del Disegno in Florence and she had an international clientele.",
+  "source": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q532486",
+   "title": "Judith and Her Maidservant",
+   "year": 1610,
+   "image": {
+    "file": "File:Gentileschi judith1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Gentileschi_judith1.jpg/960px-Gentileschi_judith1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Gentileschi_judith1.jpg",
+    "pxW": 1400,
+    "pxH": 1755
+   },
+   "cm": {
+    "w": 94,
+    "h": 114
+   },
+   "collection": "Galleria Palatina",
+   "story": {
+    "extract": "Judith and her Maidservant is a c. 1615 painting by the Italian baroque artist Artemisia Gentileschi. The painting depicts Judith and her maidservant leaving the scene where they have just beheaded general Holofernes, whose head is in the basket carried by the maidservant. It hangs in the Pitti Palace, Florence.",
+    "source": "https://en.wikipedia.org/wiki/Judith_and_Her_Maidservant_%28Artemisia_Gentileschi%2C_Florence%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was first documented as being in the collection of Grand Duchess Maria Maddalena of Austria, as part of a 1638 inventory. The painting has been altered several times and was likely significantly larger when first created, particularly to the top and the left side of the canvas.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Judith_and_Her_Maidservant_%28Artemisia_Gentileschi%2C_Florence%29#History"
+    },
+    {
+     "text": "The painting depicts the moments after the biblical heroine Judith has assassinated the general Holofernes, and is fleeing his tent with her servant Abra. The subject is one that Gentileschi portrayed several times during her career.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Judith_and_Her_Maidservant_%28Artemisia_Gentileschi%2C_Florence%29#Description"
+    },
+    {
+     "text": "The story of Judith and Holofernes is taken from the Book of Judith, a deuterocanonical book of the Bible that is included in the Septuagint, Catholic, and Eastern Orthodox Christian Old Testament of the Bible, but excluded from the Hebrew canon and assigned by Protestants to the Biblical apocrypha.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Judith_and_Her_Maidservant_%28Artemisia_Gentileschi%2C_Florence%29#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3978274",
+   "title": "Susanna and the Elders",
+   "year": 1610,
+   "image": {
+    "file": "File:Susanna and the Elders (1610), Artemisia GentileschiFXD.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Susanna_and_the_Elders_%281610%29%2C_Artemisia_GentileschiFXD.jpg/960px-Susanna_and_the_Elders_%281610%29%2C_Artemisia_GentileschiFXD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Susanna_and_the_Elders_%281610%29%2C_Artemisia_GentileschiFXD.jpg/1920px-Susanna_and_the_Elders_%281610%29%2C_Artemisia_GentileschiFXD.jpg",
+    "pxW": 4092,
+    "pxH": 5814
+   },
+   "cm": {
+    "w": 121,
+    "h": 170
+   },
+   "collection": "Schloss Weißenstein",
+   "story": {
+    "extract": "Susanna and the Elders is a 1610 painting by the Italian Baroque artist Artemisia Gentileschi and is her earliest-known signed and dated work. Artemisia painted several variations of the scene in her career. This one hangs at Schloss Weißenstein in Pommersfelden, Germany, where it can be seen from a distance.",
+    "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Artemisia_Gentileschi%2C_Pommersfelden%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was in the collection of the artist Benedetto Luti by summer 1714. At that time he was copying it for Lothar Franz von Schönborn.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Artemisia_Gentileschi%2C_Pommersfelden%29#Provenance"
+    },
+    {
+     "text": "The painting is a representation of a biblical narrative featured in chapter 13 of the Book of Daniel according to the text as maintained by the Catholic and Eastern Orthodox churches, although not generally by Protestants. Two elders are shown disturbing a young married woman named Susanna.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Artemisia_Gentileschi%2C_Pommersfelden%29#Subject_matter"
+    },
+    {
+     "text": "Gentileschi's painting has been compared to that of other artists who used the same subject, but were male. Gentileschi's Susanna sits uncomfortably, a twist to her body showing her distress, unlike many depictions that fail to reveal any discomfort.",
+     "section": "Interpretations of Gentileschi's work",
+     "source": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_%28Artemisia_Gentileschi%2C_Pommersfelden%29#Interpretations_of_Gentileschi%27s_work"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3701418",
+   "title": "Danaë",
+   "year": 1612,
+   "image": {
+    "file": "File:Artemisia Gentileschi - Danaë - 93-1986 - Saint Louis Art Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Artemisia_Gentileschi_-_Dana%C3%AB_-_93-1986_-_Saint_Louis_Art_Museum.jpg/960px-Artemisia_Gentileschi_-_Dana%C3%AB_-_93-1986_-_Saint_Louis_Art_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Artemisia_Gentileschi_-_Dana%C3%AB_-_93-1986_-_Saint_Louis_Art_Museum.jpg/1920px-Artemisia_Gentileschi_-_Dana%C3%AB_-_93-1986_-_Saint_Louis_Art_Museum.jpg",
+    "pxW": 3160,
+    "pxH": 2464
+   },
+   "cm": {
+    "w": 53,
+    "h": 41
+   },
+   "collection": "Saint Louis Art Museum",
+   "story": {
+    "extract": "Danaë is a 1612 painting by the Italian Baroque artist Artemisia Gentileschi. It hangs in the Saint Louis Art Museum, United States.",
+    "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Artemisia_Gentileschi%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was created while Artemisia was living in Rome, around 1612. The first documented appearance of the painting was at the Sotheby's sale in Monaco on February 22, 1986, where it was sold as a work of the artist's father Orazio.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Artemisia_Gentileschi%29#Provenance"
+    },
+    {
+     "text": "Art historians have debated this portrayal of Danaë, with some noting an open, inviting posture, while others observe the clenched fist and closed legs.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Artemisia_Gentileschi%29#Interpretation"
+    },
+    {
+     "text": "The story of Danaë is recorded in Ovid's Metamorphoses and recounts the plight of the daughter of King Acrisius of Argos. A prophecy led him to believe that his grandchild would lead to his death, and therefore imprisoned his daughter to prevent a potential pregnancy.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Artemisia_Gentileschi%29#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q2247406",
+   "title": "Judith Slaying Holofernes",
+   "year": 1613,
+   "image": {
+    "file": "File:Artemisia Gentileschi - Judith Beheading Holofernes - WGA8563.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Artemisia_Gentileschi_-_Judith_Beheading_Holofernes_-_WGA8563.jpg/960px-Artemisia_Gentileschi_-_Judith_Beheading_Holofernes_-_WGA8563.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Artemisia_Gentileschi_-_Judith_Beheading_Holofernes_-_WGA8563.jpg",
+    "pxW": 1178,
+    "pxH": 1500
+   },
+   "cm": {
+    "w": 125,
+    "h": 159
+   },
+   "collection": "Museo di Capodimonte",
+   "story": {
+    "extract": "Judith Slaying Holofernes is a painting by the Italian early Baroque artist Artemisia Gentileschi, completed in 1612–13 and now at the Museo Capodimonte, Naples, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Naples%29"
+   },
+   "facts": [
+    {
+     "text": "Little is known of the painting's early history, however many scholars believe it was created while Artemisia was still living in Rome. Its location was unknown until documented in the collection of Signora Saveria de Simone in Naples in 1827.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Naples%29#History"
+    },
+    {
+     "text": "The Florentine biographer Filippo Baldinucci described Judith Slaying Holofernes as “inspiring no little amount of terror.” The painting was at times noted for its dramatic and violent subject matter, which contributed to both its attention and its notoriety.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Naples%29#Reception"
+    },
+    {
+     "text": "The figure of Judith has been widely interpreted in art history as a symbol of female agency and strength, particularly in relation to Artemisia Gentileschi’s depiction of the subject. Judith, a biblical figure who kills Holofernes to save her city, is often associated with themes of courage and decisive action.",
+     "section": "Interpretation and gender representation",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Naples%29#Interpretation_and_gender_representation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3612415",
+   "title": "Allegory of Inclination",
+   "year": 1615,
+   "image": {
+    "file": "File:A Gentileschi Allegoria dell'inclinazione.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/43/A_Gentileschi_Allegoria_dell%27inclinazione.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/43/A_Gentileschi_Allegoria_dell%27inclinazione.jpg",
+    "pxW": 714,
+    "pxH": 1851
+   },
+   "cm": {
+    "w": 61,
+    "h": 152
+   },
+   "collection": "Casa Buonarroti",
+   "story": {
+    "extract": "Allegory of Inclination is a 1615-1617 oil on canvas painting by Artemisia Gentileschi on the ceiling of the Galleria in the Casa Buonarroti, in Florence. The painting depicts a young nude female seated in the heavens holding a compass. Her light-colored hair is elaborately styled and she is partially covered by swirling drapery.",
+    "source": "https://en.wikipedia.org/wiki/Allegory_of_Inclination"
+   },
+   "facts": [
+    {
+     "text": "It was commissioned by Michelangelo Buonarroti the Younger (1568–1646) as part of a series of paintings to glorify the life of his great uncle, Michelangelo Buonarroti. The painting depicts \"Inclination,\" or inborn creative ability, one of the \"eight Personifications\" attributed to the Renaissance master.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Allegory_of_Inclination#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi / Baldassare Franceschini"
+   }
+  },
+  {
+   "qid": "Q3769169",
+   "title": "Judith Beheading Holofernes",
+   "year": 1620,
+   "image": {
+    "file": "File:Artemisia Gentileschi - Giuditta decapita Oloferne - Google Art Project-Adjust.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg/960px-Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg/1920px-Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg",
+    "pxW": 2685,
+    "pxH": 3301
+   },
+   "cm": {
+    "w": 162,
+    "h": 199
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Judith Beheading Holofernes c. 1620, now at the Uffizi Gallery in Florence, is the renowned painting by Baroque artist Artemisia Gentileschi depicting the assassination of Holofernes from the deuterocanonical Book of Judith. When compared to her earlier interpretation from Naples c. 1612, there are subtle but marked improvements to the composition and detailed elements of the work. These differences display the skill of a cultivated Baroque painter, with the adept use of chiaroscuro and realism to express the violent tension between Judith, Abra, and the dying Holofernes.",
+    "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Florence%29"
+   },
+   "facts": [
+    {
+     "text": "Gentileschi was one of many artists who used Judith as a prominent and recurring subject throughout the Baroque period. In fact, Orazio Gentileschi, Artemisia Gentileschi's father, painted Judith and Her Maidservant with the Head of Holofernes c. 1610.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Florence%29#History"
+    },
+    {
+     "text": "Gentileschi centers her work on the labor of the killing, which forces the gaze to start amid the tangle of blood, limbs, and metal. Her ability to display brutal realism is shown particularly in the details, such as the arc of carotid blood that spatters across the frame.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Florence%29#Description"
+    },
+    {
+     "text": "Her sandal ravished his eye, Her beauty made captive his soul, The sword passed through his neck. The Book of Judith is a deuterocanonical text that follows the triumph of Judith, a Jewish widow from Bethulia, in her assassination of the Assyrian General Holofernes.",
+     "section": "The Book of Judith",
+     "source": "https://en.wikipedia.org/wiki/Judith_Slaying_Holofernes_%28Artemisia_Gentileschi%2C_Florence%29#The_Book_of_Judith"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3689716",
+   "title": "Conversion of the Magdalene",
+   "year": 1620,
+   "image": {
+    "file": "File:Artemisia Gentileschi Mary Magdalene Pitti.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Artemisia_Gentileschi_Mary_Magdalene_Pitti.jpg/960px-Artemisia_Gentileschi_Mary_Magdalene_Pitti.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Artemisia_Gentileschi_Mary_Magdalene_Pitti.jpg",
+    "pxW": 1115,
+    "pxH": 1500
+   },
+   "cm": {
+    "w": 108,
+    "h": 146
+   },
+   "collection": "Galleria Palatina",
+   "story": {
+    "extract": "Penitent Magdalene is a 1616–1618 painting by the Italian baroque artist Artemisia Gentileschi. This painting hangs in the Pitti Palace in Florence. The subject is the biblical figure Mary Magdalene, but the painting references another biblical woman, Mary, the sister of Lazarus.",
+    "source": "https://en.wikipedia.org/wiki/Mary_Magdalene_%28Artemisia_Gentileschi%29"
+   },
+   "facts": [
+    {
+     "text": "The figure portrayed is Mary Magdalene in a gown of yellow silk. This image of Mary Magdalene demonstrates the saint as a “model of Zealous devotion,” as she is shown in the moment of her changing from a sinner's path to one devoted to Christ.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Mary_Magdalene_%28Artemisia_Gentileschi%29#Subject_matter"
+    },
+    {
+     "text": "Gentileschi would not have been welcome in workshops or academies because she was a woman. Despite this, Gentileschi became a member of the Accademia delle Arti del Disegno in 1616.",
+     "section": "Style and influence",
+     "source": "https://en.wikipedia.org/wiki/Mary_Magdalene_%28Artemisia_Gentileschi%29#Style_and_influence"
+    },
+    {
+     "text": "This depiction blends elements from two different biblical women: Mary, the sister of Lazarus (as referenced by the engraving on the mirror) and Mary Magdalene, signified by the jar of ointment at her feet.",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/Mary_Magdalene_%28Artemisia_Gentileschi%29#Iconography"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3762348",
+   "title": "Jael and Sisera",
+   "year": 1620,
+   "image": {
+    "file": "File:Giaele e Sisara (ca.1620) - Artemisia Gentileschi (Museum of Fine Arts, Budapest).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Giaele_e_Sisara_%28ca.1620%29_-_Artemisia_Gentileschi_%28Museum_of_Fine_Arts%2C_Budapest%29.jpg/960px-Giaele_e_Sisara_%28ca.1620%29_-_Artemisia_Gentileschi_%28Museum_of_Fine_Arts%2C_Budapest%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/61/Giaele_e_Sisara_%28ca.1620%29_-_Artemisia_Gentileschi_%28Museum_of_Fine_Arts%2C_Budapest%29.jpg",
+    "pxW": 1516,
+    "pxH": 1100
+   },
+   "cm": {
+    "w": 128,
+    "h": 93
+   },
+   "collection": "Museum of Fine Arts, Budapest",
+   "story": {
+    "extract": "Jael and Sisera is a painting by the Italian Baroque artist Artemisia Gentileschi, executed around 1620.",
+    "source": "https://en.wikipedia.org/wiki/Jael_and_Sisera_%28Artemisia_Gentileschi%29"
+   },
+   "facts": [
+    {
+     "text": "The work was first documented in the imperial collection in Vienna in 1781, upon its transfer to Bratislava Castle. Three years later, it was transferred to the Royal Palace in Buda, from where it may have been dispersed in 1856.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Jael_and_Sisera_%28Artemisia_Gentileschi%29#Provenance"
+    },
+    {
+     "text": "The date, 1620, can be seen at the bottom of the artist's prominent signature, carved into the pillar. The awkward placement of Jael's right hand is thought to have been deliberately designed to highlight the signature.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Jael_and_Sisera_%28Artemisia_Gentileschi%29#History"
+    },
+    {
+     "text": "The topic of the canvas is taken from the Book of Judges, verses 4:11–22 and 5:24–31. It depicts the moment in which the Kenite woman Jael is about to kill Sisera, a defeated Canaanite general.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Jael_and_Sisera_%28Artemisia_Gentileschi%29#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3733425",
+   "title": "Esther before Ahasuerus",
+   "year": 1629,
+   "image": {
+    "file": "File:Gentileschi, Artemisia - Esther before Ahasuerus - c. 1628–1635.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg/960px-Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg/1920px-Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg",
+    "pxW": 3771,
+    "pxH": 2875
+   },
+   "cm": {
+    "w": 274,
+    "h": 208
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Esther Before Ahasuerus is a painting by the 17th-century Italian artist Artemisia Gentileschi. It shows the biblical heroine Esther going before Ahasuerus to beg him to spare her people. The painting is now in the Metropolitan Museum of Art in New York, having been donated to the museum by Elinor Dorrance Ingersoll in 1969.",
+    "source": "https://en.wikipedia.org/wiki/Esther_Before_Ahasuerus_%28Artemisia_Gentileschi%29"
+   },
+   "facts": [
+    {
+     "text": "Recent research suggests that the painting may have been started during Artemisia's time in Venice, before she moved to Naples. The work is first documented in the collection of Grafen von Harrach in Vienna from 1856.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Esther_Before_Ahasuerus_%28Artemisia_Gentileschi%29#Provenance"
+    },
+    {
+     "text": "Artemisia Gentileschi was one of the only women in the Baroque period who was given the training and ability to become a skilled painter, and became one of the most prominent painters of this era because of this.",
+     "section": "Background on the artist",
+     "source": "https://en.wikipedia.org/wiki/Esther_Before_Ahasuerus_%28Artemisia_Gentileschi%29#Background_on_the_artist"
+    },
+    {
+     "text": "The scene in the painting is from the Book of Esther and depicts Esther, the Jewish wife of the king Ahasuerus (sometimes named as Xerxes in modern texts). After the king ordered the execution of all Jewish people in the Persian Empire, Esther went before him, without being summoned, to beg for him to spare her people.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Esther_Before_Ahasuerus_%28Artemisia_Gentileschi%29#Subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  },
+  {
+   "qid": "Q3630745",
+   "title": "Self-Portrait as the Allegory of Painting",
+   "year": 1638,
+   "image": {
+    "file": "File:Self-Portrait as the Allegory of Painting (La Pittura) - Artemisia Gentileschi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Self-Portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg/960px-Self-Portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Self-Portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg/1920px-Self-Portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg",
+    "pxW": 34035,
+    "pxH": 44945
+   },
+   "cm": {
+    "w": 75,
+    "h": 99
+   },
+   "collection": "Royal Collection",
+   "story": {
+    "extract": "Self-Portrait as the Allegory of Painting, also known as Autoritratto in veste di Pittura or simply La Pittura, was painted by the Italian Baroque artist Artemisia Gentileschi. The oil-on-canvas painting measures 98.6 by 75.2 centimetres and was probably produced during Gentileschi's stay in England between 1638 and 1639. It was in the collection of Charles I and was returned to the Royal Collection at the Restoration (1660) and remains there.",
+    "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Allegory_of_Painting"
+   },
+   "facts": [
+    {
+     "text": "The painting was created during Artemisia's trip to England and was subsequently acquired by King Charles I. During the dispersal of the royal collection, it came into the hands of John Jackson, a lawyer employed by Parliamentary creditors, as noted by a record from October 1651.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Allegory_of_Painting#Provenance"
+    },
+    {
+     "text": "Because Ripa’s image of “Painting” took the form of a woman, Gentileschi could use the description to her advantage to paint herself in the best light as an artist. While being a female during the Baroque era was largely negative in terms of rights and lifestyle, Gentileschi found this gem in Iconologia to amp up her reputation.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Allegory_of_Painting#Interpretation"
+    },
+    {
+     "text": "The composition of the painting mirrors other artworks of the time, using diagonal lines to flaunt the female figure and emphasize her movement both in toward the canvas and out towards the viewers.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Allegory_of_Painting#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Artemisia Gentileschi"
+   }
+  }
+ ]
+}

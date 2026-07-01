@@ -1,0 +1,304 @@
+{
+ "slug": "kazimir-malevich",
+ "name": "Kazimir Malevich",
+ "qid": "Q130777",
+ "born": 1878,
+ "died": 1935,
+ "periods": [
+  "early-abstraction"
+ ],
+ "oneLiner": "Russian avant-garde artist of Polish ancestry. Founder of the Suprematist movement (1879–1935)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Casimir_Malevich_photo.jpg/330px-Casimir_Malevich_photo.jpg"
+ },
+ "bio": {
+  "extract": "Kazimir Severinovich Malevich was a Russian avant-garde artist and art theorist, whose work and writings pioneered the development of abstract painting in the 20th century. He is best known as the founder of Suprematism, a radically non-objective form of painting he introduced in 1915.",
+  "source": "https://en.wikipedia.org/wiki/Kazimir_Malevich"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Kazimir_Malevich",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q63568755",
+   "title": "Head of a Peasant",
+   "year": 1911,
+   "image": {
+    "file": "File:Malevich - Head of a Peasant, lot.2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Malevich_-_Head_of_a_Peasant%2C_lot.2.jpg/960px-Malevich_-_Head_of_a_Peasant%2C_lot.2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Malevich_-_Head_of_a_Peasant%2C_lot.2.jpg/1920px-Malevich_-_Head_of_a_Peasant%2C_lot.2.jpg",
+    "pxW": 2880,
+    "pxH": 2860
+   },
+   "cm": {
+    "w": 46,
+    "h": 46
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/2e33b26a8422f70ff423d777fca4248e",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q18112999",
+   "title": "The Knife Grinder",
+   "year": 1912,
+   "image": {
+    "file": "File:The Knife Grinder Principle of Glittering by Kazimir Malevich.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/The_Knife_Grinder_Principle_of_Glittering_by_Kazimir_Malevich.jpeg/960px-The_Knife_Grinder_Principle_of_Glittering_by_Kazimir_Malevich.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/The_Knife_Grinder_Principle_of_Glittering_by_Kazimir_Malevich.jpeg/1920px-The_Knife_Grinder_Principle_of_Glittering_by_Kazimir_Malevich.jpeg",
+    "pxW": 2986,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 80,
+    "h": 80
+   },
+   "collection": "Yale University Art Gallery",
+   "story": {
+    "extract": "The Knifegrinder or Principle of Glittering (Russian: Точильщик, romanized: Tochil'schik Printsip Mel'kaniia), also called The Knifegrinder (The Glittering Edge), and sometimes shortened to simply The Knifegrinder, is a 1912–1913 cubo-futurist painting by the artist Kazimir Malevich, hence the fragmentation of form associated with futurism as well as the abstract geometry related to cubism. As of 2014, it is in the collection of the Yale University Art Gallery in New Haven, Connecticut.",
+    "source": "https://en.wikipedia.org/wiki/The_Knifegrinder_%28Malevich%29"
+   },
+   "facts": [
+    {
+     "text": "Very little documentation of the work exists, but it is known that it was painted circa 1912–1913, during the artist's Cubo-Futurist phase. In 1941, it was given to the Yale University Art Gallery by the Collection Société Anonyme.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Knifegrinder_%28Malevich%29#History"
+    },
+    {
+     "text": "The artwork is typical of Malevich's other paintings, in that the subject matter is of a person generally overlooked by society. The painting depicts a moustached man in a suit and hat manually grinding a knife on a knife sharpener, or a grinding wheel.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Knifegrinder_%28Malevich%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q21086420",
+   "title": "The Woodcutter",
+   "year": 1912,
+   "image": {
+    "file": "File:Woodcutter by Kazimir Malevich.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Woodcutter_by_Kazimir_Malevich.jpg/960px-Woodcutter_by_Kazimir_Malevich.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Woodcutter_by_Kazimir_Malevich.jpg/1920px-Woodcutter_by_Kazimir_Malevich.jpg",
+    "pxW": 4100,
+    "pxH": 5338
+   },
+   "cm": {
+    "w": 72,
+    "h": 94
+   },
+   "collection": "Stedelijk Museum Amsterdam",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q19883621",
+   "title": "Woman with Pails: Dynamic Arrangement",
+   "year": 1912,
+   "image": {
+    "file": "File:Woman with Pails (Malevich, 1912).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Woman_with_Pails_%28Malevich%2C_1912%29.jpg/960px-Woman_with_Pails_%28Malevich%2C_1912%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Woman_with_Pails_%28Malevich%2C_1912%29.jpg/1920px-Woman_with_Pails_%28Malevich%2C_1912%29.jpg",
+    "pxW": 4500,
+    "pxH": 4469
+   },
+   "cm": {
+    "w": 80,
+    "h": 80
+   },
+   "collection": "Museum of Modern Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q1170315",
+   "title": "Black Square (1915)",
+   "year": 1915,
+   "image": {
+    "file": "File:Чёрный супрематический квадрат. 1915. ГТГ.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D1%81%D1%83%D0%BF%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82._1915._%D0%93%D0%A2%D0%93.png/960px-%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D1%81%D1%83%D0%BF%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82._1915._%D0%93%D0%A2%D0%93.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d9/%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D1%81%D1%83%D0%BF%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82._1915._%D0%93%D0%A2%D0%93.png",
+    "pxW": 1196,
+    "pxH": 1199
+   },
+   "cm": {
+    "w": 80,
+    "h": 80
+   },
+   "collection": "Tretyakov Gallery",
+   "story": {
+    "extract": "Black Square is a 1915 oil on linen canvas painting by the Russian avant-garde artist and theorist Kazimir Malevich. There are four painted versions, the first of which was completed in 1915 and described by the artist as his breakthrough work and the inception of his Suprematist art movement (1915–1919).",
+    "source": "https://en.wikipedia.org/wiki/Black_Square"
+   },
+   "facts": [
+    {
+     "text": "Black Square is widely regarded by art historians as foundational in the development of both modern and abstract art. Malevich said the paintings began the Suprematism movement, which emphasised colour and shape.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Black_Square#Interpretation"
+    },
+    {
+     "text": "The painting is in poor condition, in part because, under Stalin, it had been hidden and neglected in the Soviet archives. According to the American art critic Peter Schjeldahl, \"the painting looks terrible: crackled, scuffed, and discoloured, as if it had spent the past eighty-eight years patching a broken window\".",
+     "section": "Condition",
+     "source": "https://en.wikipedia.org/wiki/Black_Square#Condition"
+    },
+    {
+     "text": "A self-taught artist, Kazimir Malevich's early works, created while still a teenager, incorporate the style and motifs of Ukrainian and Russian folk art and Eastern Orthodox icons. In the early 1900s, when he was heavily influenced by late 19th-century Impressionism.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Black_Square#Conception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q1523466",
+   "title": "Suprematist Composition",
+   "year": 1916,
+   "image": {
+    "file": "File:Suprematist Composition - Kazimir Malevich.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Suprematist_Composition_-_Kazimir_Malevich.jpg/960px-Suprematist_Composition_-_Kazimir_Malevich.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Suprematist_Composition_-_Kazimir_Malevich.jpg/1920px-Suprematist_Composition_-_Kazimir_Malevich.jpg",
+    "pxW": 2296,
+    "pxH": 2869
+   },
+   "cm": null,
+   "collection": "Brett Gorvy",
+   "story": {
+    "extract": "Suprematist Composition (blue rectangle over the red beam) is a 1916 painting by Kazimir Malevich, Russian painter of geometric abstraction.",
+    "source": "https://en.wikipedia.org/wiki/Suprematist_Composition"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q579455",
+   "title": "Suprematist Composition: White on White",
+   "year": 1918,
+   "image": {
+    "file": "File:White on White (Malevich, 1918).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/White_on_White_%28Malevich%2C_1918%29.png/960px-White_on_White_%28Malevich%2C_1918%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/White_on_White_%28Malevich%2C_1918%29.png/1920px-White_on_White_%28Malevich%2C_1918%29.png",
+    "pxW": 2000,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 79,
+    "h": 79
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Suprematist Composition: White on White (1918) is an abstract oil-on-canvas painting by Kazimir Malevich. It is one of the more well-known examples of the Russian Suprematism movement, painted the year after the October Revolution. The white square is one of the Malevich's three suprematist squares, the other two being black and red.",
+    "source": "https://en.wikipedia.org/wiki/White_on_White"
+   },
+   "facts": [
+    {
+     "text": "Malevich took the work to Berlin in 1927, where it was displayed at the Große Berliner Austellung.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/White_on_White#History"
+    },
+    {
+     "text": "A critic from the rival Constructivist movement quipped that it was the only good canvas in an exhibition by Malevich's UNOVIS group: \"an absolutely pure, white canvas with a very good prime coating. Something could be done on it.\"",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/White_on_White#Reception"
+    },
+    {
+     "text": "Part of a series of \"white on white\" works begun by Malevich in 1916, the work depicts a white square, portrayed off-centre and at an angle on a ground which is also a white square of a slightly warmer tone. The work measures 79.5 by 79.5 centimetres (31.3 in × 31.3 in).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/White_on_White#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  },
+  {
+   "qid": "Q18246656",
+   "title": "To the Field II (Marthe and Jeannot)",
+   "year": 1929,
+   "image": {
+    "file": "File:Kazimir malevich, verso la vendemmia (martha e vanka), 1928-29.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kazimir_malevich%2C_verso_la_vendemmia_%28martha_e_vanka%29%2C_1928-29.JPG/960px-Kazimir_malevich%2C_verso_la_vendemmia_%28martha_e_vanka%29%2C_1928-29.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/56/Kazimir_malevich%2C_verso_la_vendemmia_%28martha_e_vanka%29%2C_1928-29.JPG",
+    "pxW": 1270,
+    "pxH": 1686
+   },
+   "cm": null,
+   "collection": "Russian Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": "Q60614512",
+   "title": "Sensation of danger",
+   "year": 1930,
+   "image": {
+    "file": "File:Malevich — Sensation of danger.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Malevich_%E2%80%94_Sensation_of_danger.jpg/960px-Malevich_%E2%80%94_Sensation_of_danger.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Malevich_%E2%80%94_Sensation_of_danger.jpg/1920px-Malevich_%E2%80%94_Sensation_of_danger.jpg",
+    "pxW": 5027,
+    "pxH": 6265
+   },
+   "cm": {
+    "w": 65,
+    "h": 79
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": "Q1523506",
+   "title": "Red Cavalry Riding",
+   "year": 1932,
+   "image": {
+    "file": "File:Red Cavalry Riding.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Red_Cavalry_Riding.jpg/960px-Red_Cavalry_Riding.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Red_Cavalry_Riding.jpg/1920px-Red_Cavalry_Riding.jpg",
+    "pxW": 4924,
+    "pxH": 3210
+   },
+   "cm": {
+    "w": 140,
+    "h": 91
+   },
+   "collection": "Russian Museum",
+   "story": {
+    "extract": "Red Cavalry Riding is an oil on canvas painting around 1932 by the Russian avant-garde artist Kazimir Malevich. It is held in the Russian Museum, in Saint Petersburg.",
+    "source": "https://en.wikipedia.org/wiki/Red_Cavalry_Riding"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Kazimir Malevich"
+   }
+  }
+ ]
+}

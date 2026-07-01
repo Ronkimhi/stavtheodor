@@ -1,0 +1,422 @@
+{
+ "slug": "pieter-bruegel",
+ "name": "Pieter Bruegel the Elder",
+ "qid": "Q43270",
+ "born": 1525,
+ "died": 1569,
+ "periods": [
+  "northern-renaissance"
+ ],
+ "oneLiner": "Flemish painter (1526–1569)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg/330px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg"
+ },
+ "bio": {
+  "extract": "Pieter Bruegel the Elder was among the most significant artists of Dutch and Flemish Renaissance painting, a painter and printmaker, known for his landscapes and peasant scenes ; he was a pioneer in presenting both types of subject as large paintings.",
+  "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q533619",
+   "title": "Netherlandish Proverbs",
+   "year": 1559,
+   "image": {
+    "file": "File:Pieter Bruegel (der Ältere) (ca. 1525 - 1569) - Die niederländischen Sprichwörter - 1720 - Gemäldegalerie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Pieter_Bruegel_%28der_%C3%84ltere%29_%28ca._1525_-_1569%29_-_Die_niederl%C3%A4ndischen_Sprichw%C3%B6rter_-_1720_-_Gem%C3%A4ldegalerie.jpg/960px-Pieter_Bruegel_%28der_%C3%84ltere%29_%28ca._1525_-_1569%29_-_Die_niederl%C3%A4ndischen_Sprichw%C3%B6rter_-_1720_-_Gem%C3%A4ldegalerie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Pieter_Bruegel_%28der_%C3%84ltere%29_%28ca._1525_-_1569%29_-_Die_niederl%C3%A4ndischen_Sprichw%C3%B6rter_-_1720_-_Gem%C3%A4ldegalerie.jpg/1920px-Pieter_Bruegel_%28der_%C3%84ltere%29_%28ca._1525_-_1569%29_-_Die_niederl%C3%A4ndischen_Sprichw%C3%B6rter_-_1720_-_Gem%C3%A4ldegalerie.jpg",
+    "pxW": 4000,
+    "pxH": 2854
+   },
+   "cm": {
+    "w": 163,
+    "h": 117
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "Netherlandish Proverbs is a 1559 oil-on-oak-panel painting by Pieter Bruegel the Elder that depicts a scene in which humans and, to a lesser extent, animals and objects, offer literal illustrations of Dutch-language proverbs and idioms.",
+    "source": "https://en.wikipedia.org/wiki/Netherlandish_Proverbs"
+   },
+   "facts": [
+    {
+     "text": "Proverbs were very popular in Bruegel's time and before; a hundred years before Bruegel's painting, illustrations of proverbs had been popular in the Flemish books of hours. A number of collections were published, including Adagia, by the Dutch humanist Desiderius Erasmus.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/Netherlandish_Proverbs#Context"
+    },
+    {
+     "text": "The painting, dated 1559, is considered the best of a series of similar paintings which at one time or another have all previously been attributed to Pieter Bruegel the Elder, has been x-rayed for its underdrawing to compare it to other versions.",
+     "section": "The painting",
+     "source": "https://en.wikipedia.org/wiki/Netherlandish_Proverbs#The_painting"
+    },
+    {
+     "text": "Critics have praised the composition for its ordered portrayal and integrated scene. There are approximately 126 identifiable proverbs and idioms in the scene, although Bruegel may have included others which cannot be determined because of the language change.",
+     "section": "Proverbs and idioms",
+     "source": "https://en.wikipedia.org/wiki/Netherlandish_Proverbs#Proverbs_and_idioms"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q644856",
+   "title": "The Triumph of Death",
+   "year": 1560,
+   "image": {
+    "file": "File:The Triumph of Death by Pieter Bruegel the Elder.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg/960px-The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg/1920px-The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg",
+    "pxW": 2126,
+    "pxH": 1517
+   },
+   "cm": {
+    "w": 162,
+    "h": 117
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Triumph of Death is an oil panel painting by Pieter Bruegel the Elder painted c. 1562. It has been in the Museo del Prado in Madrid since 1827.",
+    "source": "https://en.wikipedia.org/wiki/The_Triumph_of_Death"
+   },
+   "facts": [
+    {
+     "text": "The painting shows a panorama of an army of skeletons wreaking havoc across a blackened, desolate landscape. Fires burn in the distance, and the sea is littered with shipwrecks.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Triumph_of_Death#Description"
+    },
+    {
+     "text": "The Triumph of Death appears as a background image for the text intro of the second part of the Monty Python sketch The Spanish Inquisition.",
+     "section": "Popular culture",
+     "source": "https://en.wikipedia.org/wiki/The_Triumph_of_Death#Popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q697332",
+   "title": "Children's Games",
+   "year": 1560,
+   "image": {
+    "file": "File:Pieter Bruegel the Elder - Children’s Games - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pieter_Bruegel_the_Elder_-_Children%E2%80%99s_Games_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder_-_Children%E2%80%99s_Games_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pieter_Bruegel_the_Elder_-_Children%E2%80%99s_Games_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder_-_Children%E2%80%99s_Games_-_Google_Art_Project.jpg",
+    "pxW": 6567,
+    "pxH": 4770
+   },
+   "cm": {
+    "w": 161,
+    "h": 118
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "Children's Games is an oil-on-panel by Flemish Renaissance artist Pieter Bruegel the Elder, painted in 1560. It is now in the Kunsthistorisches Museum in Vienna. The entire composition is full of children playing a wide variety of games.",
+    "source": "https://en.wikipedia.org/wiki/Children%27s_Games_%28Bruegel%29"
+   },
+   "facts": [
+    {
+     "text": "This painting, mentioned for the first time by Karel van Mander in 1604, was acquired in 1594 by Archduke Ernest of Austria. It was suggested that it was the first in a projected series of paintings representing the Ages of Man, in which Children's Games would have stood for Youth.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Children%27s_Games_%28Bruegel%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q80869",
+   "title": "Dull Gret",
+   "year": 1563,
+   "image": {
+    "file": "File:Dulle Griet, by Pieter Brueghel (I).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Dulle_Griet%2C_by_Pieter_Brueghel_%28I%29.jpg/960px-Dulle_Griet%2C_by_Pieter_Brueghel_%28I%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Dulle_Griet%2C_by_Pieter_Brueghel_%28I%29.jpg/1920px-Dulle_Griet%2C_by_Pieter_Brueghel_%28I%29.jpg",
+    "pxW": 6000,
+    "pxH": 4334
+   },
+   "cm": {
+    "w": 162,
+    "h": 117
+   },
+   "collection": "Museum Mayer van den Bergh",
+   "story": {
+    "extract": "Dulle Griet, also known as Mad Meg, is a figure of Flemish folklore who is best known as the subject of a 1563 oil-on-panel by Flemish renaissance artist Pieter Bruegel the Elder. The painting depicts a virago, Dulle Griet, who leads an army of women to pillage Hell, and is currently held and exhibited at the Museum Mayer van den Bergh, in Antwerp. Dulle Griet is also the subject of at least two more paintings by other artists: a 1640s painting by Flemish painter David Teniers the Younger and a 1650s painting by David Ryckaert III.",
+    "source": "https://en.wikipedia.org/wiki/Dull_Gret"
+   },
+   "facts": [
+    {
+     "text": "A restoration of the painting in 2018 revealed that it was painted in 1563, shortly after the painter had moved to Brussels.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Dull_Gret#History_and_description"
+    },
+    {
+     "text": "While her female followers loot a house, Griet advances towards the mouth of Hell through a landscape populated by Boschian monsters (see detailed images). They represent the sins that are punished there.",
+     "section": "Details",
+     "source": "https://en.wikipedia.org/wiki/Dull_Gret#Details"
+    },
+    {
+     "text": "The pigment analysis was conducted by the scientists at the Ghent University. Bruegel used the cheap smalt for the robe of the central figure of Mad Meg instead of the more expensive ultramarine together with vermilion and copper resinate.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Dull_Gret#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q500985",
+   "title": "The Hunters in the Snow",
+   "year": 1565,
+   "image": {
+    "file": "File:Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg",
+    "pxW": 6819,
+    "pxH": 4853
+   },
+   "cm": {
+    "w": 162,
+    "h": 117
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "The Hunters in the Snow, also known as The Return of the Hunters, is a 1565 oil-on-wood painting by Pieter Bruegel the Elder. The Northern Renaissance work is one of a series of works, five of which still survive, that depict different times of the year. The painting is in the collection of the Kunsthistorisches Museum in Vienna, Austria.",
+    "source": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow"
+   },
+   "facts": [
+    {
+     "text": "The Hunters in the Snow, and the series to which it belongs, are in the medieval and early Renaissance tradition of the Labours of the Months: depictions of various rural activities and work understood by a spectator in Bruegel's time as representing the different months or times of the year.",
+     "section": "Background and origins",
+     "source": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow#Background_and_origins"
+    },
+    {
+     "text": "The painting shows a wintry scene in which three hunters are returning from an expedition accompanied by their dogs. By appearances the outing was not successful; the hunters appear to trudge wearily, and the dogs, rather lean and gaunt, seem to share the hunters' weariness.",
+     "section": "Description and composition",
+     "source": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow#Description_and_composition"
+    },
+    {
+     "text": "Writing in the \"opinion\" section of Nature, art historian Martin Kemp points out that Old Masters are popular subjects for Christmas cards and states that \"probably no 'secular' subject is more popular than ... Hunters in the Snow\".",
+     "section": "Interpretation and reception",
+     "source": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow#Interpretation_and_reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q776175",
+   "title": "The Harvesters",
+   "year": 1565,
+   "image": {
+    "file": "File:Pieter Bruegel the Elder- The Harvesters - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "pxW": 30000,
+    "pxH": 21851
+   },
+   "cm": {
+    "w": 160,
+    "h": 116
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Harvesters is an oil painting on wood completed by the Netherlandish Renaissance artist Pieter Bruegel the Elder in 1565. It depicts the harvest time set in a landscape, in the months of July and August or late summer. Nicolaes Jonghelinck, a merchant banker and art collector from Antwerp, commissioned this painting as part of a cycle of six paintings depicting various seasonal transitions during the year.",
+    "source": "https://en.wikipedia.org/wiki/The_Harvesters_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "Legendary animation director, Hayao Miyazaki took inspiration from this painting for his short film Mr. Dough and the Egg Princess.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Harvesters_%28painting%29#Legacy"
+    },
+    {
+     "text": "The painting is one in a series of six (or perhaps twelve) works, five of which are still extant, that depict different times of the year. As in many of his paintings, the focus is on peasants and their work and does not have the religious themes common in landscape works of the time.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/The_Harvesters_%28painting%29#Painting"
+    },
+    {
+     "text": "The surviving Months of the Year cycle are:The Gloomy Day, The Hunters in the Snow, and The Return of the Herd are on display in the Kunsthistorisches Museum in Vienna. The Hay Harvest is on display in the Lobkowicz Palace in Prague.",
+     "section": "Cycle",
+     "source": "https://en.wikipedia.org/wiki/The_Harvesters_%28painting%29#Cycle"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q1134250",
+   "title": "The Massacre of the Innocents",
+   "year": 1566,
+   "image": {
+    "file": "File:Pieter Bruegel the Elder - Massacre of the Innocents - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pieter_Bruegel_the_Elder_-_Massacre_of_the_Innocents_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder_-_Massacre_of_the_Innocents_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pieter_Bruegel_the_Elder_-_Massacre_of_the_Innocents_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder_-_Massacre_of_the_Innocents_-_Google_Art_Project.jpg",
+    "pxW": 6772,
+    "pxH": 4641
+   },
+   "cm": {
+    "w": 158,
+    "h": 109
+   },
+   "collection": "Royal Collection",
+   "story": {
+    "extract": "Several oil-on-oak-panel versions of The Massacre of the Innocents were painted by 16th-century Netherlandish painters Pieter Bruegel the Elder and his son Pieter Brueghel the Younger. The work translates the Biblical account of the Massacre of the Innocents into a winter scene in the Southern Netherlands in the prelude to the Dutch Revolt against Spanish rule, also known as the Eighty Years' War.",
+    "source": "https://en.wikipedia.org/wiki/Massacre_of_the_Innocents_%28Bruegel%29"
+   },
+   "facts": [
+    {
+     "text": "Like several of Bruegel's paintings, such as the Netherlandish Proverbs and Children's Games, the painting includes many parallel narrative scenes in a larger composition. Working from the church in the background towards the foreground: a mounted soldier with a lance guards a bridge.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Massacre_of_the_Innocents_%28Bruegel%29#Description"
+    },
+    {
+     "text": "The painting depicts an event described in the Gospel of Saint Matthew 2:16-18 in the New Testament of the Bible: after King Herod was told by the Magi of the birth of Jesus in Bethlehem, he ordered his soldiers to kill all of the infant children in Bethlehem below the age of 2 years.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Massacre_of_the_Innocents_%28Bruegel%29#Background"
+    },
+    {
+     "text": "The version by Bruegel the Elder in the Royal Collection was acquired by Holy Roman Emperor Rudolph II and was in Prague by about 1600.",
+     "section": "Versions",
+     "source": "https://en.wikipedia.org/wiki/Massacre_of_the_Innocents_%28Bruegel%29#Versions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q603751",
+   "title": "The Peasant Wedding",
+   "year": 1568,
+   "image": {
+    "file": "File:Pieter Bruegel the Elder - Peasant Wedding - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pieter_Bruegel_the_Elder_-_Peasant_Wedding_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder_-_Peasant_Wedding_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pieter_Bruegel_the_Elder_-_Peasant_Wedding_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder_-_Peasant_Wedding_-_Google_Art_Project.jpg",
+    "pxW": 7681,
+    "pxH": 5311
+   },
+   "cm": {
+    "w": 164,
+    "h": 113
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "The Peasant Wedding is a 1567 genre painting by the Dutch and Flemish Renaissance painter and printmaker Pieter Bruegel the Elder, one of his many depicting peasant life. It is now in the Kunsthistorisches Museum, Vienna. Pieter Bruegel the Elder enjoyed painting peasants and different aspects of their lives in so many of his paintings that he has been called Peasant-Bruegel, but he was an intellectual, and many of his paintings have a symbolic meaning as well as a moral aspect.",
+    "source": "https://en.wikipedia.org/wiki/The_Peasant_Wedding"
+   },
+   "facts": [
+    {
+     "text": "The bride is in front of the green textile wall-hanging, with a paper-crown hung above her head. She is also wearing a crown and sitting passively amidst the hearty eating and drinking around her.",
+     "section": "Scene",
+     "source": "https://en.wikipedia.org/wiki/The_Peasant_Wedding#Scene"
+    },
+    {
+     "text": "There has been much conjecture as to the identity of the groom in this painting. The critics Gilbert Highet and Gustav Glück have argued that the groom is the man in the centre of the painting, wearing a dark coat and seen in profile, or the ill-bred son of a wealthy couple, seen against the far wall to the right of the bride, eating with a spoon.",
+     "section": "The groom",
+     "source": "https://en.wikipedia.org/wiki/The_Peasant_Wedding#The_groom"
+    },
+    {
+     "text": "Many viewers have wondered why Bruegel appears to have given a third foot to the red-clad servant on the right, carrying the tray. Bruegel’s son, Brueghel the Younger, thought that this foot was an error or, at best, too confusing for viewers.",
+     "section": "Mystery of the \"third foot\"",
+     "source": "https://en.wikipedia.org/wiki/The_Peasant_Wedding#Mystery_of_the_%22third_foot%22"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q1192570",
+   "title": "The Blind Leading the Blind",
+   "year": 1568,
+   "image": {
+    "file": "File:Притча о слепых.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BE_%D1%81%D0%BB%D0%B5%D0%BF%D1%8B%D1%85.jpeg/960px-%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BE_%D1%81%D0%BB%D0%B5%D0%BF%D1%8B%D1%85.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BE_%D1%81%D0%BB%D0%B5%D0%BF%D1%8B%D1%85.jpeg/1920px-%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BE_%D1%81%D0%BB%D0%B5%D0%BF%D1%8B%D1%85.jpeg",
+    "pxW": 2700,
+    "pxH": 1520
+   },
+   "cm": {
+    "w": 154,
+    "h": 86
+   },
+   "collection": "Museo di Capodimonte",
+   "story": {
+    "extract": "The Blind Leading the Blind, Blind, or The Parable of the Blind is a painting by the Netherlandish Renaissance artist Pieter Bruegel the Elder, completed in 1568. Executed in distemper on linen canvas, it measures 86 cm × 154 cm. It depicts the Biblical parable of the blind leading the blind from Matthew 15:14, and is in the collection of the Museo di Capodimonte in Naples, Italy.",
+    "source": "https://en.wikipedia.org/wiki/The_Blind_Leading_the_Blind"
+   },
+   "facts": [
+    {
+     "text": "The Blind Leading the Blind and The Misanthrope were discovered in the collection of the Count Giovanni Battista Masi of Parma in 1612, when Ranuccio I Farnese, Duke of Parma confiscated Masi's property for his part in a conspiracy against the House of Farnese.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Blind_Leading_the_Blind#Provenance"
+    },
+    {
+     "text": "The Blind Leading the Blind has been considered one of the great masterpieces of painting.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Blind_Leading_the_Blind#Legacy"
+    },
+    {
+     "text": "Charles Bouleau wrote of the tension in Bruegel's compositional rhythms. The picture is divided into nine equal parts divided by a set of parallel oblique lines.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Blind_Leading_the_Blind#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  },
+  {
+   "qid": "Q1122842",
+   "title": "The Magpie on the Gallows",
+   "year": 1568,
+   "image": {
+    "file": "File:Die Elster auf dem Galgen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Die_Elster_auf_dem_Galgen.jpg/960px-Die_Elster_auf_dem_Galgen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Die_Elster_auf_dem_Galgen.jpg/1920px-Die_Elster_auf_dem_Galgen.jpg",
+    "pxW": 3782,
+    "pxH": 3363
+   },
+   "cm": {
+    "w": 51,
+    "h": 46
+   },
+   "collection": "Hessian State Museum Darmstadt",
+   "story": {
+    "extract": "The Magpie on the Gallows is a 1568 oil-on-wood panel painting by the Netherlandish Renaissance artist Pieter Bruegel the Elder. It is now in the Hessisches Landesmuseum, in Darmstadt.",
+    "source": "https://en.wikipedia.org/wiki/The_Magpie_on_the_Gallows"
+   },
+   "facts": [
+    {
+     "text": "Bruegel's painting was created the year after Fernando Álvarez de Toledo, 3rd Duke of Alba, arrived in the Netherlands, sent by the Spanish king, Philip II to suppress the Dutch Revolt. The gallows may represent the threat of execution of those preaching the new Protestant doctrine, and the painting may allude to several Netherlandish proverbs.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Magpie_on_the_Gallows#Analysis"
+    },
+    {
+     "text": "The painting shows a world landscape, with the foreground a woodland clearing containing three peasants dancing to a bagpipes, next to a gallows upon which a magpie is perched.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Magpie_on_the_Gallows#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Pieter Brueghel the Elder"
+   }
+  }
+ ]
+}

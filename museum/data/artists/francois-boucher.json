@@ -1,0 +1,335 @@
+{
+ "slug": "francois-boucher",
+ "name": "François Boucher",
+ "qid": "Q180932",
+ "born": 1703,
+ "died": 1770,
+ "periods": [
+  "rococo"
+ ],
+ "oneLiner": "French painter (1703–1770)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Boucher_par_Gustav_Lundberg_1741.jpg/330px-Boucher_par_Gustav_Lundberg_1741.jpg"
+ },
+ "bio": {
+  "extract": "François Boucher was a French painter, draughtsman and etcher, who worked in the Rococo style. Boucher is known for his idyllic and voluptuous paintings on classical themes, decorative allegories, and pastoral scenes. He was perhaps the most celebrated painter and decorative artist of the 18th century.",
+  "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boucher"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boucher",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q12900239",
+   "title": "Hercules and Omphale",
+   "year": 1732,
+   "image": {
+    "file": "File:Francois Boucher Heracles and Omphale.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Francois_Boucher_Heracles_and_Omphale.jpg/960px-Francois_Boucher_Heracles_and_Omphale.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Francois_Boucher_Heracles_and_Omphale.jpg",
+    "pxW": 1352,
+    "pxH": 1692
+   },
+   "cm": {
+    "w": 74,
+    "h": 90
+   },
+   "collection": "Pushkin Museum of Fine Arts",
+   "story": {
+    "extract": "Hercules and Omphale is an oil-on-canvas painting by French painter François Boucher, likely completed sometime between 1731 and 1734. The painting depicts the mythological romance between the Greek hero Hercules and Omphale, queen of Lydia. The painting represents an important work from Boucher's early career, completed shortly after his studies under his mentor François Lemoyne.",
+    "source": "https://en.wikipedia.org/wiki/Hercules_and_Omphale_%28Boucher%29"
+   },
+   "facts": [
+    {
+     "text": "In a lavishly decorated boudoir, Hercules and Omphale are shown locked in a tender embrace atop a bed. Their meeting takes place beneath a quickly assembled canopy of red velvet.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Hercules_and_Omphale_%28Boucher%29#Description"
+    },
+    {
+     "text": "Boucher's painting departs from traditional depictions of the narrative, which emphasize the humiliation of Hercules and his servitude to Omphale. Boucher instead focuses on raw, mutual desire.",
+     "section": "Style, cultural context and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Hercules_and_Omphale_%28Boucher%29#Style%2C_cultural_context_and_interpretation"
+    },
+    {
+     "text": "Technical examination of the painting reveals significant modifications during Boucher's creative process.",
+     "section": "Technical development and critiques",
+     "source": "https://en.wikipedia.org/wiki/Hercules_and_Omphale_%28Boucher%29#Technical_development_and_critiques"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q18783512",
+   "title": "Brown Odalisque",
+   "year": 1740,
+   "image": {
+    "file": "File:L'Odalisque - François Boucher - Musée du Louvre Peintures RF 2140 - version 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/L%27Odalisque_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2140_-_version_2.jpg/960px-L%27Odalisque_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2140_-_version_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/L%27Odalisque_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2140_-_version_2.jpg/1920px-L%27Odalisque_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2140_-_version_2.jpg",
+    "pxW": 9168,
+    "pxH": 7433
+   },
+   "cm": {
+    "w": 64,
+    "h": 54
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Brunette Odalisque is a 1745 oil-on-canvas painting by French artist François Boucher, now in the Louvre in Paris. The painter's signature is engraved on the low table. He later produced two other works in the odalisque genre, both known as The Blonde Odalisque.",
+    "source": "https://en.wikipedia.org/wiki/The_Brunette_Odalisque"
+   },
+   "facts": [
+    {
+     "text": "The Brunette Odalisque depicts a partially nude woman in the foreground. Some speculate that it may be improper to call this woman an “odalisque” or a female concubine.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Brunette_Odalisque#Description"
+    },
+    {
+     "text": "The subject and format of the picture might suggest that it represents a mythological figure. In the time period, a reclining nude woman would generally be expected to represent a goddess, not a contemporary person.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/The_Brunette_Odalisque#Subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q3227830",
+   "title": "The Triumph of Venus",
+   "year": 1740,
+   "image": {
+    "file": "File:François Boucher - The Triumph of Venus - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Fran%C3%A7ois_Boucher_-_The_Triumph_of_Venus_-_Google_Art_Project.jpg/960px-Fran%C3%A7ois_Boucher_-_The_Triumph_of_Venus_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Fran%C3%A7ois_Boucher_-_The_Triumph_of_Venus_-_Google_Art_Project.jpg/1920px-Fran%C3%A7ois_Boucher_-_The_Triumph_of_Venus_-_Google_Art_Project.jpg",
+    "pxW": 3988,
+    "pxH": 3217
+   },
+   "cm": {
+    "w": 162,
+    "h": 130
+   },
+   "collection": "Nationalmuseum",
+   "story": {
+    "extract": "The Triumph of Venus is a 1740 oil-on-canvas painting in Rococo style by the French artist François Boucher. It inspired The Birth of Venus by Jean-Honoré Fragonard.",
+    "source": "https://en.wikipedia.org/wiki/The_Triumph_of_Venus"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q3556817",
+   "title": "Diana leaving her Bath",
+   "year": 1742,
+   "image": {
+    "file": "File:Diane sortant du bain - François Boucher - Musée du Louvre Peintures INV 2712.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Diane_sortant_du_bain_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_INV_2712.jpg/960px-Diane_sortant_du_bain_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_INV_2712.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Diane_sortant_du_bain_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_INV_2712.jpg/1920px-Diane_sortant_du_bain_-_Fran%C3%A7ois_Boucher_-_Mus%C3%A9e_du_Louvre_Peintures_INV_2712.jpg",
+    "pxW": 10508,
+    "pxH": 8073
+   },
+   "cm": {
+    "w": 73,
+    "h": 56
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Diana Bathing or Diana Getting out of her Bath is an oil-on-canvas painting by French artist François Boucher, created in 1742. It depicts the Roman goddess Diana, with a nymph as her companion. The painting was acquired in 1852 by the Louvre, in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Diana_Bathing_%28Boucher%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts in the foreground the naked goddess Diana, having just come out from her bath, with a female companion. Diana is recognizable by the crown of pearls that she wears, with a crescent-shaped jewel, and is in the company of a nymph kneeling at her feet.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Diana_Bathing_%28Boucher%29#Description"
+    },
+    {
+     "text": "In 1987, painter Herman Braun-Vega appropriated Diana getting out of her bath in his painting Diane des tropiques. By adding two nude mixed-race women also emerging from the bath to the foreground in front of Diana and her nymph, Braun-Vega expresses the advent of a multiracial, multicultural world.",
+     "section": "Appropriations",
+     "source": "https://en.wikipedia.org/wiki/Diana_Bathing_%28Boucher%29#Appropriations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q11345762",
+   "title": "Jupiter and Callisto",
+   "year": 1744,
+   "image": {
+    "file": "File:François Boucher - Jupiter et Callisto.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Fran%C3%A7ois_Boucher_-_Jupiter_et_Callisto.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Fran%C3%A7ois_Boucher_-_Jupiter_et_Callisto.jpg",
+    "pxW": 899,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 72,
+    "h": 98
+   },
+   "collection": "Pushkin Museum of Fine Arts",
+   "story": {
+    "extract": "Jupiter and Callisto is a 1744 oil-on-canvas painting by the French artist François Boucher, now in the Pushkin Museum in Moscow. It shows Jupiter disguised as Diana to seduce Callisto.",
+    "source": "https://en.wikipedia.org/wiki/Jupiter_and_Callisto_%28Boucher%2C_1744%29"
+   },
+   "facts": [
+    {
+     "text": "Jupiter, who is in love with Callisto, takes on the appearance of Diana to seduce her. The painting depicts the flirtation between Jupiter, under the disguise of the goddess of the hunt, and her favorite nymph.",
+     "section": "Mythological theme",
+     "source": "https://en.wikipedia.org/wiki/Jupiter_and_Callisto_%28Boucher%2C_1744%29#Mythological_theme"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q12860070",
+   "title": "Venus Consoling Love",
+   "year": 1751,
+   "image": {
+    "file": "File:Venus Consoling Love, François Boucher, 1751.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Venus_Consoling_Love%2C_Fran%C3%A7ois_Boucher%2C_1751.jpg/960px-Venus_Consoling_Love%2C_Fran%C3%A7ois_Boucher%2C_1751.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Venus_Consoling_Love%2C_Fran%C3%A7ois_Boucher%2C_1751.jpg/1920px-Venus_Consoling_Love%2C_Fran%C3%A7ois_Boucher%2C_1751.jpg",
+    "pxW": 3130,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 85,
+    "h": 107
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Venus Consoling Love is an oil-on-canvas painting executed in 1751 by the French artist François Boucher. The painting depicts a mythological scene, where Venus, the goddess of Love, depicted as a charming and supple young woman, is impersonating the French Rococo's beauty ideals. She is about to disarm Cupid, by taking away his arrows, that he uses when shooting at people to make them fall in love.\"In Enlightenment France the dedicated search to define truth engendered a re–evaluation of the natural.",
+    "source": "https://en.wikipedia.org/wiki/Venus_Consoling_Love"
+   },
+   "facts": [
+    {
+     "text": "The painting belonged to Mme de Pompadour, the French king's mistress, displayed at Château de Bellevue, who commissioned it, and it was Madame de Pompadour who allegedly posed for the painting. Artists liked to work for her not only for the prestige of working for the aristocracy, but also because she paid her bills regularly.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Venus_Consoling_Love#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q3796075",
+   "title": "The setting of the sun",
+   "year": 1752,
+   "image": {
+    "file": "File:François Boucher 028.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fran%C3%A7ois_Boucher_028.jpg/960px-Fran%C3%A7ois_Boucher_028.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Fran%C3%A7ois_Boucher_028.jpg",
+    "pxW": 1576,
+    "pxH": 1911
+   },
+   "cm": {
+    "w": 261,
+    "h": 318
+   },
+   "collection": "Wallace Collection",
+   "story": {
+    "extract": "The Setting of the Sun is a 1752 oil-on-canvas painting by the French painter François Boucher. It and its pair The Rising of the Sun were both private commissions for Madame de Pompadour as full-scale models for the Gobelins Manufactory. The tapestries produced from the paintings were completed in 1754–1755 and hung in the king's bedroom at château de Bellevue.",
+    "source": "https://en.wikipedia.org/wiki/The_Setting_of_the_Sun"
+   },
+   "facts": [
+    {
+     "text": "Representing the rhythm of the day, Boucher creates an integrated pairing layered with allegory and symbolism. In The Setting of the Sun, the god Apollo returns to his mother's arms, bringing dusk along with him, represented by muted pinks, browns, and creams.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Setting_of_the_Sun#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q3211033",
+   "title": "La Naissance de Vénus",
+   "year": 1754,
+   "image": {
+    "file": "File:François Boucher 011.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Fran%C3%A7ois_Boucher_011.jpg/960px-Fran%C3%A7ois_Boucher_011.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Fran%C3%A7ois_Boucher_011.jpg/1920px-Fran%C3%A7ois_Boucher_011.jpg",
+    "pxW": 2048,
+    "pxH": 1198
+   },
+   "cm": {
+    "w": 139,
+    "h": 79
+   },
+   "collection": "Wallace Collection",
+   "story": {
+    "extract": "The Birth of Venus is an oil-on-canvas painting by the French Rococo artist François Boucher, created c. 1750–1770. It is held in the Wallace Collection, in London, England. The painting was adapted from a 1743 oval composition by Boucher, now part of a private collection in New York.",
+    "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus_%28Boucher%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q12841555",
+   "title": "Portrait of Madame de Pompadour",
+   "year": 1756,
+   "image": {
+    "file": "File:Madame de Pompadour.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Madame_de_Pompadour.jpg/960px-Madame_de_Pompadour.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Madame_de_Pompadour.jpg/1920px-Madame_de_Pompadour.jpg",
+    "pxW": 3672,
+    "pxH": 4707
+   },
+   "cm": {
+    "w": 157,
+    "h": 201
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  },
+  {
+   "qid": "Q18552705",
+   "title": "Madame de Pompadour",
+   "year": 1759,
+   "image": {
+    "file": "File:Madame de Pompadour 1759 - François Boucher.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Madame_de_Pompadour_1759_-_Fran%C3%A7ois_Boucher.jpg/960px-Madame_de_Pompadour_1759_-_Fran%C3%A7ois_Boucher.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Madame_de_Pompadour_1759_-_Fran%C3%A7ois_Boucher.jpg/1920px-Madame_de_Pompadour_1759_-_Fran%C3%A7ois_Boucher.jpg",
+    "pxW": 11693,
+    "pxH": 15396
+   },
+   "cm": {
+    "w": 68,
+    "h": 91
+   },
+   "collection": "Wallace Collection",
+   "story": {
+    "extract": "Portrait of Madame de Pompadour is a 1759 oil-on-canvas painting by the French Rococo artist François Boucher, now in the Wallace Collection in London. It was the last of a series of seven portraits by the artist of Madame de Pompadour. It was first exhibited at the Château de Versailles before passing to the subject's brother.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_de_Pompadour"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Boucher"
+   }
+  }
+ ]
+}

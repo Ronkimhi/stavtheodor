@@ -1,0 +1,374 @@
+{
+ "slug": "raphael",
+ "name": "Raphael",
+ "qid": "Q5597",
+ "born": 1483,
+ "died": 1520,
+ "periods": [
+  "high-renaissance"
+ ],
+ "oneLiner": "Italian painter and architect (1483–1520)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/330px-Raffaello_Sanzio.jpg"
+ },
+ "bio": {
+  "extract": "Raffaello Sanzio da Urbino, now generally known in English as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur. Together with Leonardo da Vinci and Michelangelo, he forms the traditional trinity of great masters of that period.",
+  "source": "https://en.wikipedia.org/wiki/Raphael"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Raphael",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2360329",
+   "title": "Three Graces",
+   "year": 1500,
+   "image": {
+    "file": "File:Raphaël - Les Trois Grâces - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Rapha%C3%ABl_-_Les_Trois_Gr%C3%A2ces_-_Google_Art_Project.jpg/960px-Rapha%C3%ABl_-_Les_Trois_Gr%C3%A2ces_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Rapha%C3%ABl_-_Les_Trois_Gr%C3%A2ces_-_Google_Art_Project.jpg/1920px-Rapha%C3%ABl_-_Les_Trois_Gr%C3%A2ces_-_Google_Art_Project.jpg",
+    "pxW": 3528,
+    "pxH": 3512
+   },
+   "cm": {
+    "w": 17,
+    "h": 17
+   },
+   "collection": "Condé Museum",
+   "story": {
+    "extract": "The Three Graces is an oil painting by the Italian painter Raphael in the Musée Condé in Chantilly, France. The date of origin has not been positively determined, though it seems to have been painted at some point after his arrival to study with Pietro Perugino in about 1500, possibly 1503-1505. According to James Patrick in 2007's Renaissance and Reformation, the painting represents the first time that Raphael had depicted the nude female form in front and back views.",
+    "source": "https://en.wikipedia.org/wiki/Three_Graces_%28Raphael%29"
+   },
+   "facts": [
+    {
+     "text": "The image depicts three of the Graces of classical mythology.",
+     "section": "Inspiration and theme",
+     "source": "https://en.wikipedia.org/wiki/Three_Graces_%28Raphael%29#Inspiration_and_theme"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q2030685",
+   "title": "The Marriage of the Virgin",
+   "year": 1504,
+   "image": {
+    "file": "File:Raffaello - Spozalizio - Web Gallery of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Raffaello_-_Spozalizio_-_Web_Gallery_of_Art.jpg/960px-Raffaello_-_Spozalizio_-_Web_Gallery_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/06/Raffaello_-_Spozalizio_-_Web_Gallery_of_Art.jpg",
+    "pxW": 1417,
+    "pxH": 2032
+   },
+   "cm": {
+    "w": 118,
+    "h": 175
+   },
+   "collection": "Pinacoteca di Brera",
+   "story": {
+    "extract": "The Marriage of the Virgin, also known as Lo Sposalizio, is an oil painting by the Italian High Renaissance artist Raphael. Completed in 1504 for the Franciscan church of San Francesco, Città di Castello, the painting depicts a marriage ceremony between Mary and Joseph. It changed hands several times before settling in 1806 at the Pinacoteca di Brera.",
+    "source": "https://en.wikipedia.org/wiki/The_Marriage_of_the_Virgin_%28Raphael%29"
+   },
+   "facts": [
+    {
+     "text": "In the later years of the 15th century, patrons in Citta di Castello sent three commissions to Raphael's teacher Pietro Perugino which, in Perugino's absence, were completed by Raphael. The Marriage of the Virgin, featuring the theme of the Marriage of the Virgin, was the last of these.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Marriage_of_the_Virgin_%28Raphael%29#History"
+    },
+    {
+     "text": "Several historians have disputed that Perugino's Marriage of the Virgin preceded Raphael's, and some have suggested the painting was not Perugino's at all but instead produced after Raphael's by one of Perugino's followers.",
+     "section": "Analysis and influence",
+     "source": "https://en.wikipedia.org/wiki/The_Marriage_of_the_Virgin_%28Raphael%29#Analysis_and_influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q552040",
+   "title": "The Dream of a Knight",
+   "year": 1504,
+   "image": {
+    "file": "File:Sanzio Raffaello - Visione del cavaliere (circa 1504).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sanzio_Raffaello_-_Visione_del_cavaliere_%28circa_1504%29.jpg/960px-Sanzio_Raffaello_-_Visione_del_cavaliere_%28circa_1504%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sanzio_Raffaello_-_Visione_del_cavaliere_%28circa_1504%29.jpg/1920px-Sanzio_Raffaello_-_Visione_del_cavaliere_%28circa_1504%29.jpg",
+    "pxW": 7616,
+    "pxH": 7546
+   },
+   "cm": {
+    "w": 17,
+    "h": 17
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Vision of a Knight, also called The Dream of Scipio or Allegory, is a small egg tempera painting on poplar by the Italian Renaissance artist Raphael, finished in 1503–1504. It is in the National Gallery in London. It probably formed a pair with the Three Graces panel, also 17 cm square, now in the Château de Chantilly museum.",
+    "source": "https://en.wikipedia.org/wiki/Vision_of_a_Knight_%28Raphael%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q555821",
+   "title": "Self-portrait",
+   "year": 1505,
+   "image": {
+    "file": "File:Raffaello Sanzio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/960px-Raffaello_Sanzio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/1920px-Raffaello_Sanzio.jpg",
+    "pxW": 3898,
+    "pxH": 5315
+   },
+   "cm": {
+    "w": 33,
+    "h": 48
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Self-Portrait is a small oil painting on poplar wood by the Italian Renaissance artist Raphael. It is believed to have been painted between 1504 and 1506 during his formative years in Florence. The work portrays the artist in a simple black robe and bonnet, set against a plain brown background with his shadow cast to the right.",
+    "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts Raphael's head and shoulders on a plain brown background, with his shadow projected to the right. The collar of the sitter’s shirt remains bare and unpainted, revealing exposed gesso and some underdrawing.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Description"
+    },
+    {
+     "text": "Raphael's self-portraits were a significant part of his repertoire and played an essential role in shaping his public image, contributing to his awarded reputation. He inserted his own portraits into his paintings of other themes, such as the School of Athens.",
+     "section": "Historical context",
+     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Historical_context"
+    },
+    {
+     "text": "The Self-Portrait is believed to have been painted between 1504 and 1506, during the early years of Raphael’s career when he was working in Florence. Raphael was a key figure of the High Renaissance in Italy, a time when self-portraits remained relatively uncommon.",
+     "section": "Provenance and exhibition history",
+     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Provenance_and_exhibition_history"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q2035209",
+   "title": "Madonna del Granduca",
+   "year": 1506,
+   "image": {
+    "file": "File:Raffaello (1483-1520) - La Madonna del Granduca - 178 - Galleria Palatina.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Raffaello_%281483-1520%29_-_La_Madonna_del_Granduca_-_178_-_Galleria_Palatina.jpg/960px-Raffaello_%281483-1520%29_-_La_Madonna_del_Granduca_-_178_-_Galleria_Palatina.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Raffaello_%281483-1520%29_-_La_Madonna_del_Granduca_-_178_-_Galleria_Palatina.jpg/1920px-Raffaello_%281483-1520%29_-_La_Madonna_del_Granduca_-_178_-_Galleria_Palatina.jpg",
+    "pxW": 2219,
+    "pxH": 3268
+   },
+   "cm": {
+    "w": 55,
+    "h": 84
+   },
+   "collection": "Galleria Palatina",
+   "story": {
+    "extract": "The Madonna del Granduca is a Madonna painting by the Italian renaissance artist Raphael. It was probably painted in 1505, shortly after Raphael had arrived in Florence. The influence of Leonardo da Vinci, whose works he got to know there, can be seen in the use of sfumato.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_del_Granduca"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q254923",
+   "title": "Alba Madonna",
+   "year": 1510,
+   "image": {
+    "file": "File:Raphael, The Alba Madonna, c. 1510, NGA 26.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Raphael%2C_The_Alba_Madonna%2C_c._1510%2C_NGA_26.jpg/960px-Raphael%2C_The_Alba_Madonna%2C_c._1510%2C_NGA_26.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Raphael%2C_The_Alba_Madonna%2C_c._1510%2C_NGA_26.jpg/1920px-Raphael%2C_The_Alba_Madonna%2C_c._1510%2C_NGA_26.jpg",
+    "pxW": 12090,
+    "pxH": 12090
+   },
+   "cm": {
+    "w": 98,
+    "h": 98
+   },
+   "collection": "Andrew W. Mellon collection",
+   "story": {
+    "extract": "The Alba Madonna is a tondo (circular) oil on wood transferred to canvas painting by the Italian High Renaissance artist Raphael, created c. 1510, depicting Mary, Jesus, and John the Baptist in a typical Italian countryside.",
+    "source": "https://en.wikipedia.org/wiki/Alba_Madonna"
+   },
+   "facts": [
+    {
+     "text": "Giovio became Bishop of Nocera de' Pagani in 1528, and he donated the painting to the Sanctuary of Santa Maria dei Miracoli in Nocera Inferiore. The painting was bought in 1686 by the Viceroy of Naples, Gaspar Méndez de Haro, 7th Marquis of Carpio, who took the painting to Spain.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Alba_Madonna#Provenance"
+    },
+    {
+     "text": "John the Baptist is holding up a cross to Jesus, which the baby Jesus is grasping. All three figures are contemplating the cross, which is being accepted by Jesus as a token of the Crucifixion.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Alba_Madonna#Description"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q328079",
+   "title": "Sistine Madonna",
+   "year": 1512,
+   "image": {
+    "file": "File:Raphael - The Sistine Madonna - Google Arts & Culture.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Raphael_-_The_Sistine_Madonna_-_Google_Arts_%26_Culture.jpg/960px-Raphael_-_The_Sistine_Madonna_-_Google_Arts_%26_Culture.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Raphael_-_The_Sistine_Madonna_-_Google_Arts_%26_Culture.jpg/1920px-Raphael_-_The_Sistine_Madonna_-_Google_Arts_%26_Culture.jpg",
+    "pxW": 7029,
+    "pxH": 9546
+   },
+   "cm": {
+    "w": 201,
+    "h": 270
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "The Sistine Madonna, also called the Madonna di San Sisto, is an oil painting by the Italian artist Raphael. The painting was commissioned in 1512 by Pope Julius II for the church of San Sisto, Piacenza, and probably executed c. 1513–1514. The canvas was one of the last Madonnas painted by Raphael.",
+    "source": "https://en.wikipedia.org/wiki/Sistine_Madonna"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Pope Julius II in honor of his late uncle, Pope Sixtus IV, as an altarpiece for the basilica church of the Benedictine Monastery of San Sisto in Piacenza, with which the Rovere family had a long-standing relationship. The commission required that the painting depict both Saints Sixtus and Barbara.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sistine_Madonna#History"
+    },
+    {
+     "text": "The oil on canvas painting measures 265 cm by 196 cm. In the painting the Madonna, holding Christ Child and flanked by Saint Sixtus and Saint Barbara, stands on clouds before dozens of obscured putti, while two distinctive winged putti rest on their elbows beneath her.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Sistine_Madonna#Composition"
+    },
+    {
+     "text": "Pigment analysis of the painting reveals the usual pigments of the Renaissance period, such as malachite mixed with orpiment in the green drapery on top of the painting, natural ultramarine mixed with lead white in the blue robe of Madonna, and a mixture of lead-tin-yellow, vermilion, and lead white in the yellow sleeve of St Barbara.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Sistine_Madonna#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q948034",
+   "title": "La velata",
+   "year": 1513,
+   "image": {
+    "file": "File:La velada, por Rafael.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/La_velada%2C_por_Rafael.jpg/960px-La_velada%2C_por_Rafael.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0d/La_velada%2C_por_Rafael.jpg",
+    "pxW": 1279,
+    "pxH": 1648
+   },
+   "cm": {
+    "w": 61,
+    "h": 82
+   },
+   "collection": "Galleria Palatina",
+   "story": {
+    "extract": "La velata, or La donna velata, is a well known portrait by the Italian Renaissance painter Raffaello Sanzio, more commonly known as Raphael. The subject of the painting appears in another portrait, La Fornarina, and is traditionally identified as the fornarina (bakeress) Margherita Luti, Raphael's Roman mistress.",
+    "source": "https://en.wikipedia.org/wiki/La_velata"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q966681",
+   "title": "Madonna della Seggiola",
+   "year": 1513,
+   "image": {
+    "file": "File:Raphael Madonna della seggiola.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Raphael_Madonna_della_seggiola.jpg/960px-Raphael_Madonna_della_seggiola.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/09/Raphael_Madonna_della_seggiola.jpg",
+    "pxW": 1600,
+    "pxH": 1635
+   },
+   "cm": {
+    "w": 71,
+    "h": 71
+   },
+   "collection": "Galleria Palatina",
+   "story": {
+    "extract": "The Madonna della Seggiola or The Madonna della Sedia is an oil on panel Madonna painting by the High Italian Renaissance artist Raphael, executed c. 1513–1514, and housed at the Palazzo Pitti Collection in Florence, Italy. Although there is documentation on its arrival to its current location, Palazzo Pitti, it is still unknown who commissioned the painting; however, it has been in the Medici family since the 16th century.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola"
+   },
+   "facts": [
+    {
+     "text": "Unfortunately, the Madonna della Sedia's commission is undocumented despite it being created while Raphael was spending a relatively well-documented period of twelve years in Rome.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Provenance"
+    },
+    {
+     "text": "The Madonna della Sedia is Raphael's most humanistic form of the Madonna. Throughout Raphael's life, this humanistic representation of the Madonna occupied his mind.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Description"
+    },
+    {
+     "text": "The Madonna della Sedia is the culmination of Raphael's use of the tondo form and influenced an equivalent singular male portrait, The Portrait of Baldassare Castiglione (c. 1514–1515). The painting is oil on panel, with St John the Baptist painted in a different key range.",
+     "section": "Techniques",
+     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Techniques"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  },
+  {
+   "qid": "Q153441",
+   "title": "La fornarina",
+   "year": 1519,
+   "image": {
+    "file": "File:Raffaello Sanzio - La Fornarina (ca. 1519-1520).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Raffaello_Sanzio_-_La_Fornarina_%28ca._1519-1520%29.jpg/960px-Raffaello_Sanzio_-_La_Fornarina_%28ca._1519-1520%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Raffaello_Sanzio_-_La_Fornarina_%28ca._1519-1520%29.jpg/1920px-Raffaello_Sanzio_-_La_Fornarina_%28ca._1519-1520%29.jpg",
+    "pxW": 9218,
+    "pxH": 12783
+   },
+   "cm": {
+    "w": 63,
+    "h": 85
+   },
+   "collection": "Galleria Nazionale d'Arte Antica",
+   "story": {
+    "extract": "The Portrait of a Young Woman is a painting by the Italian High Renaissance master Raphael, made between 1518 and 1519. It is in the Galleria Nazionale d'Arte Antica in Palazzo Barberini, Rome.",
+    "source": "https://en.wikipedia.org/wiki/La_Fornarina"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts a nude woman wearing a thin veil to cover her lower abdomen and is seen half covering her left breast. She wears a blue and yellow turban over her dark hair; a thicker red cloth covers her legs and genital region.",
+     "section": "Description of painting",
+     "source": "https://en.wikipedia.org/wiki/La_Fornarina#Description_of_painting"
+    },
+    {
+     "text": "X-ray analyses have shown that in the background was originally a Leonardesque-style landscape in place of the myrtle bush, which was sacred to Venus, goddess of love and passion. An overpainted ruby ring on the sitter's third left finger has caused speculation on whether there might have been a secret marriage with Raphael.",
+     "section": "Technical analysis",
+     "source": "https://en.wikipedia.org/wiki/La_Fornarina#Technical_analysis"
+    },
+    {
+     "text": "According to an explanation on the museum website, there are two copies of La Fornarina in the Borghese Gallery in Rome. La Fornarina (The Portrait of a Young Woman) is a painting by the Italian High Renaissance master Raphael, made between 1518 and 1519.",
+     "section": "Copies",
+     "source": "https://en.wikipedia.org/wiki/La_Fornarina#Copies"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Raphael"
+   }
+  }
+ ]
+}

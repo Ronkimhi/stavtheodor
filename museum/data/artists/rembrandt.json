@@ -1,0 +1,396 @@
+{
+ "slug": "rembrandt",
+ "name": "Rembrandt",
+ "qid": "Q5598",
+ "born": 1606,
+ "died": 1669,
+ "periods": [
+  "baroque"
+ ],
+ "oneLiner": "Dutch painter and printmaker (1606–1669)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg/330px-Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg"
+ },
+ "bio": {
+  "extract": "Rembrandt Harmenszoon van Rijn, known mononymously as Rembrandt, was a Dutch Golden Age painter, printmaker, and draughtsman. He is generally considered one of the greatest visual artists in the history of Western art. It is estimated that Rembrandt's surviving works amount to about three hundred paintings, three hundred etchings, and several hundred drawings.",
+  "source": "https://en.wikipedia.org/wiki/Rembrandt"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Rembrandt",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q661378",
+   "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+   "year": 1632,
+   "image": {
+    "file": "File:Rembrandt - The Anatomy Lesson of Dr Nicolaes Tulp.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg/960px-Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg/1920px-Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+    "pxW": 6000,
+    "pxH": 4520
+   },
+   "cm": {
+    "w": 216,
+    "h": 170
+   },
+   "collection": "Mauritshuis",
+   "story": {
+    "extract": "The Anatomy Lesson of Dr. Nicolaes Tulp is a 1632 oil painting on canvas by Rembrandt housed in the Mauritshuis museum in The Hague, Netherlands. It was originally created to be displayed by the Surgeons Guild in their meeting room.",
+    "source": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp"
+   },
+   "facts": [
+    {
+     "text": "The event can be dated to 31 January 1632: the Amsterdam Guild of Surgeons, of which Tulp was official City Anatomist, permitted only one public dissection a year, and the body would have to be that of an executed criminal.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp#Background"
+    },
+    {
+     "text": "The corpse is that of the criminal Aris Kindt (alias of Adriaan Adriaanszoon), who was convicted for armed robbery and sentenced to death by hanging. He was executed earlier on the same day of the scene.",
+     "section": "The corpse",
+     "source": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp#The_corpse"
+    },
+    {
+     "text": "The Anatomy Lesson of Dr. Deijman, painted by Rembrandt in 1656, was intended to be displayed in the Anatomical Hall in Amsterdam alongside The anatomy lesson of Tulp.",
+     "section": "Related works",
+     "source": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp#Related_works"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q2246489",
+   "title": "The Storm on the Sea of Galilee",
+   "year": 1633,
+   "image": {
+    "file": "File:Rembrandt Christ in the Storm on the Lake of Galilee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg/960px-Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg/1920px-Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg",
+    "pxW": 3002,
+    "pxH": 3731
+   },
+   "cm": {
+    "w": 128,
+    "h": 160
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/96339d00960f46af8f0348af5c1d2d2b",
+   "story": {
+    "extract": "Christ in the Storm on the Sea of Galilee is a 1633 oil-on-canvas painting by the Dutch Golden Age painter Rembrandt van Rijn. It is classified as a history painting and ranks among the largest and earliest of Rembrandt's works. Purchased by art historian Bernard Berenson for Isabella Stewart Gardner in 1898, it was displayed at the Isabella Stewart Gardner Museum in Boston until its theft in 1990; its whereabouts remain unknown.",
+    "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee"
+   },
+   "facts": [
+    {
+     "text": "The painting’s earliest known owner was Tymen Jacobsz Hinloopen, a prominent Dutch merchant and whaling company leader, who acquired it in 1644 under the title A Painting of St. Peter’s Ship.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee#Provenance"
+    },
+    {
+     "text": "Classified as a history painting, Christ in the Storm on the Sea of Galilee measures approximately 160 x 128 cm and represents Rembrandt’s earliest large-scale work, completed at age 27 (not 29, adjusting for his birth year of 1606). Painted during his transition from Leiden to Amsterdam, it reflects his burgeoning mastery of dramatic storytelling.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee#History"
+    },
+    {
+     "text": "On March 18, 1990, two thieves posing as police officers infiltrated the Isabella Stewart Gardner Museum, overpowering guards and stealing Christ in the Storm on the Sea of Galilee along with 12 other artworks—valued collectively at over $500 million—in the largest art heist in U.S. history.",
+     "section": "Theft",
+     "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee#Theft"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q2294441",
+   "title": "Danaë",
+   "year": 1636,
+   "image": {
+    "file": "File:Rembrandt Harmensz. van Rijn 026.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Rembrandt_Harmensz._van_Rijn_026.jpg/960px-Rembrandt_Harmensz._van_Rijn_026.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Rembrandt_Harmensz._van_Rijn_026.jpg/1920px-Rembrandt_Harmensz._van_Rijn_026.jpg",
+    "pxW": 3176,
+    "pxH": 2860
+   },
+   "cm": {
+    "w": 202,
+    "h": 185
+   },
+   "collection": "Collection Crozat",
+   "story": {
+    "extract": "Danaë is a painting by the Dutch artist Rembrandt van Rijn. It was first completed in 1636, but Rembrandt reworked it significantly by 1643 at the latest. Once part of Pierre Crozat's collection, it has been in the Hermitage Museum, in St.",
+    "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Rembrandt%29"
+   },
+   "facts": [
+    {
+     "text": "On 15 June 1985, Rembrandt's painting was attacked by Bronius Maigys, a Soviet Lithuanian national later judged insane; he threw sulphuric acid on the canvas and cut it twice with his knife. The entire central part of the composition was turned into a mixture of spots with a conglomerate of splashes and areas of dripping paint.",
+     "section": "Vandalism",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Rembrandt%29#Vandalism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q1167932",
+   "title": "Belshazzar's Feast",
+   "year": 1636,
+   "image": {
+    "file": "File:Rembrandt-Belsazar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Rembrandt-Belsazar.jpg/960px-Rembrandt-Belsazar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Rembrandt-Belsazar.jpg/1920px-Rembrandt-Belsazar.jpg",
+    "pxW": 5308,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 209,
+    "h": 168
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Belshazzar's Feast is a major painting by Rembrandt now in the National Gallery, London. The painting is Rembrandt's attempt to establish himself as a painter of large, baroque history paintings. The date of the painting is unknown, but most sources give a date between 1635 and 1638.",
+    "source": "https://en.wikipedia.org/wiki/Belshazzar%27s_Feast_%28Rembrandt%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was in possession of the Earl of Derby at Knowsley Hall since 1736. The picture, however, was barely known beyond England, and it was not considered a masterpiece.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Belshazzar%27s_Feast_%28Rembrandt%29#Reception"
+    },
+    {
+     "text": "The story of Belshazzar and the writing on the wall originates in the Old Testament Book of Daniel. The Babylonian king Nebuchadnezzar looted the Temple in Jerusalem and stole sacred artefacts such as golden cups.",
+     "section": "The story",
+     "source": "https://en.wikipedia.org/wiki/Belshazzar%27s_Feast_%28Rembrandt%29#The_story"
+    },
+    {
+     "text": "Rembrandt's handling of painting materials and his painting technique in Belshazzar's Feast are both exceptional and do not compare to any of his other works. The palette of this painting is unusually rich encompassing such pigments as vermilion, smalt, lead-tin-yellow, yellow and red lakes, ochres and azurite.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Belshazzar%27s_Feast_%28Rembrandt%29#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q219831",
+   "title": "The Night Watch",
+   "year": 1642,
+   "image": {
+    "file": "File:La ronda de noche, por Rembrandt van Rijn.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/960px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/1920px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg",
+    "pxW": 14168,
+    "pxH": 11528
+   },
+   "cm": {
+    "w": 437,
+    "h": 363
+   },
+   "collection": "Amsterdam Museum",
+   "story": {
+    "extract": "Militia Company of District II under the Command of Captain Frans Banninck Cocq, also known as The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch, but commonly referred to as The Night Watch, is a 1642 painting by Rembrandt van Rijn. It is in the collection of the Amsterdam Museum but is prominently displayed in the Rijksmuseum as the best-known painting in its collection. The Night Watch is one of the most famous Dutch Golden Age paintings.",
+    "source": "https://en.wikipedia.org/wiki/The_Night_Watch"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned around 1639 by Captain Banninck Cocq and seventeen members of his civic militia guards (Dutch: schutterij or kloveniers). Eighteen names appear on a shield, painted circa 1715, in the centre-right background, as the hired drummer was added to the painting for free.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Watch#Commission"
+    },
+    {
+     "text": "The Night Watch first hung in the Groote Zaal (Great Hall) of Amsterdam's Kloveniersdoelen. This structure currently houses the Doelen Hotel.",
+     "section": "Location",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Watch#Location"
+    },
+    {
+     "text": "For much of its existence, the painting was coated with a dark varnish, which gave the incorrect impression that it depicted a night scene, leading to the name by which it is now commonly known. On 13 January 1911, a jobless shoemaker and former Navy chef attempted to slash the painting with a shoemaker's knife protesting his inability to find work.",
+     "section": "Vandalism and restoration",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Watch#Vandalism_and_restoration"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q2404992",
+   "title": "Aristotle with a Bust of Homer",
+   "year": 1653,
+   "image": {
+    "file": "File:Rembrandt - Aristotle with a Bust of Homer - WGA19232.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_WGA19232.jpg/960px-Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_WGA19232.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_WGA19232.jpg/1920px-Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_WGA19232.jpg",
+    "pxW": 3397,
+    "pxH": 3567
+   },
+   "cm": {
+    "w": 136,
+    "h": 144
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Aristotle with a Bust of Homer, also known as Aristotle Contemplating a Bust of Homer, is an oil-on-canvas painting by Rembrandt that depicts Aristotle wearing a gold chain and contemplating a sculpted bust of Homer. It was created as a commission for Don Antonio Ruffo's collection. It was bought and sold by several collectors until it was eventually purchased by the Metropolitan Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/Aristotle_with_a_Bust_of_Homer"
+   },
+   "facts": [
+    {
+     "text": "Aristotle Contemplating a Bust of Homer was painted in 1653, as a commission from a Sicilian nobleman named Don Antonio Ruffo, who did not request any particular subject. Despite not knowing what Rembrandt would create, he was already eager to hang it in his Hall of Fame.",
+     "section": "Origins",
+     "source": "https://en.wikipedia.org/wiki/Aristotle_with_a_Bust_of_Homer#Origins"
+    },
+    {
+     "text": "In 1815, it was sent to Sir Abraham Hume and he lent it to an exhibition at the British Institution in London. When Hume died, his descendants sold it to Rodolphe Kann in Paris.",
+     "section": "Subsequent owners",
+     "source": "https://en.wikipedia.org/wiki/Aristotle_with_a_Bust_of_Homer#Subsequent_owners"
+    },
+    {
+     "text": "Eventually, it was purchased in 1961 for $2.3 million by the Metropolitan Museum of Art in New York City, United States. At the time this was the highest amount ever paid for any picture at public or private sale.",
+     "section": "Purchase by Metropolitan Museum of Art",
+     "source": "https://en.wikipedia.org/wiki/Aristotle_with_a_Bust_of_Homer#Purchase_by_Metropolitan_Museum_of_Art"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q32496",
+   "title": "Bathsheba at Her Bath",
+   "year": 1654,
+   "image": {
+    "file": "File:Bethsabée au bain tenant la lettre du roi David - Rembrandt - Musée du Louvre Peintures MI 957.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bethsab%C3%A9e_au_bain_tenant_la_lettre_du_roi_David_-_Rembrandt_-_Mus%C3%A9e_du_Louvre_Peintures_MI_957.jpg/960px-Bethsab%C3%A9e_au_bain_tenant_la_lettre_du_roi_David_-_Rembrandt_-_Mus%C3%A9e_du_Louvre_Peintures_MI_957.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bethsab%C3%A9e_au_bain_tenant_la_lettre_du_roi_David_-_Rembrandt_-_Mus%C3%A9e_du_Louvre_Peintures_MI_957.jpg/1920px-Bethsab%C3%A9e_au_bain_tenant_la_lettre_du_roi_David_-_Rembrandt_-_Mus%C3%A9e_du_Louvre_Peintures_MI_957.jpg",
+    "pxW": 7775,
+    "pxH": 7816
+   },
+   "cm": {
+    "w": 142,
+    "h": 142
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Bathsheba at Her Bath is an oil painting by the Dutch artist Rembrandt (1606–1669), finished in 1654.",
+    "source": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_%28Rembrandt%29"
+   },
+   "facts": [
+    {
+     "text": "The Second Book of Samuel (11:2-4) gives the account of King David who saw a woman bathing from his palace roof. When he asked after her, he was told that she was Bathsheba, daughter of Eliam and wife of Uriah the Hittite.",
+     "section": "Biblical account and variation",
+     "source": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_%28Rembrandt%29#Biblical_account_and_variation"
+    },
+    {
+     "text": "Apart from the lack of anecdotal devices, the painting is unusual in other ways. Bathsheba is presented in a space that is difficult to read.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_%28Rembrandt%29#Composition"
+    },
+    {
+     "text": "The traditionally accepted identification of the model is of Rembrandt's partner Hendrickje Stoffels, who would have been 28 at the time of the painting. Sluijter has proposed otherwise, stating that the likeness is of an ideal type used by Rembrandt over a long period.",
+     "section": "Model",
+     "source": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_%28Rembrandt%29#Model"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q1170480",
+   "title": "Syndics of the Drapers' Guild",
+   "year": 1662,
+   "image": {
+    "file": "File:Rembrandt - De Staalmeesters- het college van staalmeesters (waardijns) van het Amsterdamse lakenbereidersgilde - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_%28waardijns%29_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg/960px-Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_%28waardijns%29_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_%28waardijns%29_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg/1920px-Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_%28waardijns%29_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg",
+    "pxW": 5918,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 279,
+    "h": 192
+   },
+   "collection": "Amsterdam Museum",
+   "story": {
+    "extract": "The Sampling Officials, also called Syndics of the Drapers' Guild, is a 1662 oil painting by Rembrandt. It is now in the Rijksmuseum in Amsterdam. It has been described as his \"last great collective portrait\".",
+    "source": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers%27_Guild"
+   },
+   "facts": [
+    {
+     "text": "Rembrandt likely considered the placement of the painting on the wall, as he chose a perspective with a fairly low vantage point, allowing the viewer to look up at the table from below. This angle magnifies the stature of the \"staalmeesters\" (cloth inspectors) enhancing their sense of importance.",
+     "section": "Composition and style",
+     "source": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers%27_Guild#Composition_and_style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q766782",
+   "title": "The Jewish Bride",
+   "year": 1667,
+   "image": {
+    "file": "File:Rembrandt Harmensz. van Rijn - Portret van een paar als oudtestamentische figuren, genaamd 'Het Joodse bruidje' - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_oudtestamentische_figuren%2C_genaamd_%27Het_Joodse_bruidje%27_-_Google_Art_Project.jpg/960px-Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_oudtestamentische_figuren%2C_genaamd_%27Het_Joodse_bruidje%27_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_oudtestamentische_figuren%2C_genaamd_%27Het_Joodse_bruidje%27_-_Google_Art_Project.jpg/1920px-Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_oudtestamentische_figuren%2C_genaamd_%27Het_Joodse_bruidje%27_-_Google_Art_Project.jpg",
+    "pxW": 5486,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 166,
+    "h": 122
+   },
+   "collection": "collection Adriaan van der Hoop",
+   "story": {
+    "extract": "The Jewish Bride is a painting by Rembrandt, painted around 1665‒1669.",
+    "source": "https://en.wikipedia.org/wiki/The_Jewish_Bride"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  },
+  {
+   "qid": "Q512755",
+   "title": "The Return of the Prodigal Son",
+   "year": 1668,
+   "image": {
+    "file": "File:Rembrandt Harmensz van Rijn - Return of the Prodigal Son - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg/960px-Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg/1920px-Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg",
+    "pxW": 22991,
+    "pxH": 30000
+   },
+   "cm": {
+    "w": 205,
+    "h": 262
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "The Return of the Prodigal Son is an oil painting by Rembrandt, part of the collection of the Hermitage Museum in St. Petersburg. It is among the Dutch master's final works, likely completed within two years of his death in 1669.",
+    "source": "https://en.wikipedia.org/wiki/The_Return_of_the_Prodigal_Son_%28Rembrandt%29"
+   },
+   "facts": [
+    {
+     "text": "The Return of the Prodigal Son demonstrates the mastery of the late Rembrandt. His evocation of spirituality and the parable's message of forgiveness has been considered the height of his art.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Return_of_the_Prodigal_Son_%28Rembrandt%29#Reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rembrandt"
+   }
+  }
+ ]
+}

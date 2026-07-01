@@ -276,6 +276,11 @@ url_entries = [f"""  <url>
     <lastmod>{latest}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>""", f"""  <url>
+    <loc>{SITE}/museum/</loc>
+    <lastmod>{latest}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>"""]
 for p in sorted(posts, key=lambda x: x["datePublished"], reverse=True):
     url_entries.append(f"""  <url>
@@ -292,4 +297,4 @@ sitemap = (
     + "\n</urlset>\n"
 )
 open("sitemap.xml", "w", encoding="utf-8").write(sitemap)
-print(f"sitemap.xml updated with {len(posts) + 1} URLs")
+print(f"sitemap.xml updated with {len(posts) + 2} URLs")

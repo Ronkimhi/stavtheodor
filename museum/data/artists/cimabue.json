@@ -1,0 +1,302 @@
+{
+ "slug": "cimabue",
+ "name": "Cimabue",
+ "qid": "Q15790",
+ "born": 1240,
+ "died": 1302,
+ "periods": [
+  "medieval-gothic"
+ ],
+ "oneLiner": "Italian artist (1240–1302)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/ce/CimabueSantaMariaNovella.jpg"
+ },
+ "bio": {
+  "extract": "Giovanni Cimabue, also known as Cenni di Pepo or Cenni di Pepi, was an Italian painter and designer of mosaics from Florence.",
+  "source": "https://en.wikipedia.org/wiki/Cimabue"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Cimabue",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q11364492",
+   "title": "Vision of Angels at the Four Corners of the Earth",
+   "year": 1277,
+   "image": {
+    "file": "File:Cimabue, angeli ai quattro canti della terra.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cimabue%2C_angeli_ai_quattro_canti_della_terra.jpg/960px-Cimabue%2C_angeli_ai_quattro_canti_della_terra.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cimabue%2C_angeli_ai_quattro_canti_della_terra.jpg/1920px-Cimabue%2C_angeli_ai_quattro_canti_della_terra.jpg",
+    "pxW": 2147,
+    "pxH": 2462
+   },
+   "cm": null,
+   "collection": "Basilica of San Francesco d'Assisi",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q11364522",
+   "title": "Vision of the Throne",
+   "year": 1277,
+   "image": {
+    "file": "File:Cimabue, visione del trono.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Cimabue%2C_visione_del_trono.jpg/960px-Cimabue%2C_visione_del_trono.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Cimabue%2C_visione_del_trono.jpg/1920px-Cimabue%2C_visione_del_trono.jpg",
+    "pxW": 2155,
+    "pxH": 2484
+   },
+   "cm": null,
+   "collection": "Basilica of San Francesco d'Assisi",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q3843027",
+   "title": "Madonna Enthroned with the Child, St Francis and Four Angels",
+   "year": 1278,
+   "image": {
+    "file": "File:Cimabue - Maesta-di-assisi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Cimabue_-_Maesta-di-assisi.jpg/960px-Cimabue_-_Maesta-di-assisi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/96/Cimabue_-_Maesta-di-assisi.jpg",
+    "pxW": 1600,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 340,
+    "h": 320
+   },
+   "collection": "Lower Basilica of San Francesco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q68496636",
+   "title": "The Mocking of Christ",
+   "year": 1280,
+   "image": {
+    "file": "File:La Dérision du Christ - Cimabue - Musée du Louvre Peintures RFML.PE.2023.33.1 - après restauration.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/La_D%C3%A9rision_du_Christ_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_RFML.PE.2023.33.1_-_apr%C3%A8s_restauration.jpg/960px-La_D%C3%A9rision_du_Christ_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_RFML.PE.2023.33.1_-_apr%C3%A8s_restauration.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/La_D%C3%A9rision_du_Christ_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_RFML.PE.2023.33.1_-_apr%C3%A8s_restauration.jpg/1920px-La_D%C3%A9rision_du_Christ_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_RFML.PE.2023.33.1_-_apr%C3%A8s_restauration.jpg",
+    "pxW": 6404,
+    "pxH": 8134
+   },
+   "cm": {
+    "w": 20,
+    "h": 26
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Mocking of Christ is a small 13th-century panel painting by the Italian artist Cimabue, in tempera on a poplar panel. It depicts the mocking of Jesus and is one of three panels known from Cimabue's Diptych of Devotion.",
+    "source": "https://en.wikipedia.org/wiki/The_Mocking_of_Christ_%28Cimabue%29"
+   },
+   "facts": [
+    {
+     "text": "The Mocking of Christ measures 25.8 cm × 20.3 cm × 1.2 cm (10.16 in × 7.99 in × 0.47 in) and depicts the mocking of Jesus prior to his crucifixion. The work is painted with egg tempera on a gold leaf background, on a thinned and slightly bowed poplar panel prepared with layers of gesso ground in which a canvas is embedded.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Mocking_of_Christ_%28Cimabue%29#Description"
+    },
+    {
+     "text": "The painting was discovered hanging above the hotplate in the kitchen of an elderly woman living in Compiègne, northern France. The woman was in her nineties and was selling the house, which had been built in the 1960s, and moving from the area.",
+     "section": "Discovery and sale",
+     "source": "https://en.wikipedia.org/wiki/The_Mocking_of_Christ_%28Cimabue%29#Discovery_and_sale"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Shonagon"
+   }
+  },
+  {
+   "qid": "Q3276414",
+   "title": "Maestà di Santa Maria dei Servi",
+   "year": 1280,
+   "image": {
+    "file": "File:Cimabue, maestà di santa maria dei servi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Cimabue%2C_maest%C3%A0_di_santa_maria_dei_servi.jpg/960px-Cimabue%2C_maest%C3%A0_di_santa_maria_dei_servi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/52/Cimabue%2C_maest%C3%A0_di_santa_maria_dei_servi.jpg",
+    "pxW": 1019,
+    "pxH": 1790
+   },
+   "cm": {
+    "w": 118,
+    "h": 218
+   },
+   "collection": "basilica di Santa Maria dei Servi",
+   "story": {
+    "extract": "The Maestà of Santa Maria dei Servi is a tempera and gold on panel painting by Cimabue or his workshop, dating to c.1280-1285, between his Louvre Maestà (c.1280) on the one hand and the Assisi frescoes (1288–1292) and the Santa Trinita Maestà (c.1290-1300) on the other. It is named after the church of Santa Maria dei Servi in Bologna, where it hangs.",
+    "source": "https://en.wikipedia.org/wiki/Maest%C3%A0_of_Santa_Maria_dei_Servi"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q15974342",
+   "title": "The Virgin and Child with Two Angels",
+   "year": 1280,
+   "image": {
+    "file": "File:Cimabue, The Virgin and Child Enthroned with Two Angels.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Cimabue%2C_The_Virgin_and_Child_Enthroned_with_Two_Angels.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Cimabue%2C_The_Virgin_and_Child_Enthroned_with_Two_Angels.jpg",
+    "pxW": 863,
+    "pxH": 1080
+   },
+   "cm": {
+    "w": 21,
+    "h": 26
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Virgin and Child with Two Angels is a panel painting by the Italian artist Cimabue in egg tempera on a poplar panel, dated to c. 1280. It has been held by the National Gallery in London since 2000.",
+    "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Two_Angels_%28Cimabue%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q16556250",
+   "title": "The Flagellation of Christ",
+   "year": 1280,
+   "image": {
+    "file": "File:Cimabue - Flagellation.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Cimabue_-_Flagellation.jpg/960px-Cimabue_-_Flagellation.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Cimabue_-_Flagellation.jpg/1920px-Cimabue_-_Flagellation.jpg",
+    "pxW": 2053,
+    "pxH": 2587
+   },
+   "cm": {
+    "w": 20,
+    "h": 25
+   },
+   "collection": "The Frick Collection",
+   "story": {
+    "extract": "The Flagellation of Christ is a panel painting by the Italian artist Cimabue, in egg tempera and gold leaf on a poplar panel, dated to c. 1280. It has been held by the Frick Collection in New York since 1950, and is the only painting by Cimabue in the United States. The Frick Collection acquired the painting from the Knoedler gallery in Paris in 1950.",
+    "source": "https://en.wikipedia.org/wiki/The_Flagellation_of_Christ_%28Cimabue%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q1569622",
+   "title": "Madonna and Child Enthroned with Angels and Prophets. ˋSanta Trinità Maestà´",
+   "year": 1290,
+   "image": {
+    "file": "File:Cimabue - Maestà di Santa Trinita - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cimabue_-_Maest%C3%A0_di_Santa_Trinita_-_Google_Art_Project.jpg/960px-Cimabue_-_Maest%C3%A0_di_Santa_Trinita_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cimabue_-_Maest%C3%A0_di_Santa_Trinita_-_Google_Art_Project.jpg/1920px-Cimabue_-_Maest%C3%A0_di_Santa_Trinita_-_Google_Art_Project.jpg",
+    "pxW": 2008,
+    "pxH": 3596
+   },
+   "cm": {
+    "w": 223,
+    "h": 384
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Santa Trinita Maestà is a panel painting by the Italian medieval artist Cimabue, dating to c. 1290–1300. Originally painted for the church of Santa Trinita, Florence, where it remained until 1471, it is now in the Uffizi Gallery of Florence, Italy. It represents the Madonna enthroned with the Christ Child, who are surrounded by eight angels and, below, four half portraits of prophets.",
+    "source": "https://en.wikipedia.org/wiki/Santa_Trinita_Maest%C3%A0"
+   },
+   "facts": [
+    {
+     "text": "The commissioning client of the painting is unknown, but they could have been a member of the order of Vallombrosians, who governed the Santa Trinita at the time, or a member of another religious order that intended the painting for another destination.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Santa_Trinita_Maest%C3%A0#History"
+    },
+    {
+     "text": "The painting displays Byzantine iconography much like the Hodegetria archetype (in Greek, the name means \"pointing the way\"), because the Virgin is indicating toward the Baby Jesus. In this style, the Madonna symbolizes the Christian church and Jesus life, truth, and the proper way.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Santa_Trinita_Maest%C3%A0#Description"
+    },
+    {
+     "text": "The painting demonstrates the mature style of Cimabue, in which the artist overcomes the more rigid Byzantine styles with forms that are more loose and humanistic. According to Giorgio Vasari, this style made Cimabue the first to replace that style.",
+     "section": "Style",
+     "source": "https://en.wikipedia.org/wiki/Santa_Trinita_Maest%C3%A0#Style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  },
+  {
+   "qid": "Q15588902",
+   "title": "Saint Francis",
+   "year": 1290,
+   "image": {
+    "file": "File:Cimabue (attr.), tavola di san francesco, museo della porziuncola.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Cimabue_%28attr.%29%2C_tavola_di_san_francesco%2C_museo_della_porziuncola.jpg/960px-Cimabue_%28attr.%29%2C_tavola_di_san_francesco%2C_museo_della_porziuncola.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Cimabue_%28attr.%29%2C_tavola_di_san_francesco%2C_museo_della_porziuncola.jpg",
+    "pxW": 1486,
+    "pxH": 4436
+   },
+   "cm": {
+    "w": 41,
+    "h": 123
+   },
+   "collection": "Museo della Porziuncola",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Cimabue"
+   }
+  },
+  {
+   "qid": "Q1608116",
+   "title": "The Madonna and Child in Majesty Surrounded by Angels",
+   "year": 1300,
+   "image": {
+    "file": "File:La Vierge et l'Enfant en majesté entourés de six anges - Cimabue - Musée du Louvre Peintures INV 254 ; MR 159.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/La_Vierge_et_l%27Enfant_en_majest%C3%A9_entour%C3%A9s_de_six_anges_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_INV_254_%3B_MR_159.jpg/960px-La_Vierge_et_l%27Enfant_en_majest%C3%A9_entour%C3%A9s_de_six_anges_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_INV_254_%3B_MR_159.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/La_Vierge_et_l%27Enfant_en_majest%C3%A9_entour%C3%A9s_de_six_anges_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_INV_254_%3B_MR_159.jpg/1920px-La_Vierge_et_l%27Enfant_en_majest%C3%A9_entour%C3%A9s_de_six_anges_-_Cimabue_-_Mus%C3%A9e_du_Louvre_Peintures_INV_254_%3B_MR_159.jpg",
+    "pxW": 7134,
+    "pxH": 10759
+   },
+   "cm": {
+    "w": 280,
+    "h": 427
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Maestà is a painting by the Italian artist Cimabue, executed around 1280 and now in the Musée du Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Maest%C3%A0_%28Cimabue%29"
+   },
+   "facts": [
+    {
+     "text": "It was acquired by the Louvre in 1813 as part of Napoleonic looting of artworks in Italy, together with Giotto's Saint Francis Receiving the Stigmata, also from the church of San Francesco in Pisa.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Maest%C3%A0_%28Cimabue%29#History"
+    },
+    {
+     "text": "The work is considered to be from around 1280, thus preceding the Santa Trinita Maestà. It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the angels around the Virgin simply placed one above the other, rather than being spatially arranged.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Maest%C3%A0_%28Cimabue%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Cimabue"
+   }
+  }
+ ]
+}

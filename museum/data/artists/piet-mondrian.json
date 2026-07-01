@@ -1,0 +1,327 @@
+{
+ "slug": "piet-mondrian",
+ "name": "Piet Mondrian",
+ "qid": "Q151803",
+ "born": 1872,
+ "died": 1944,
+ "periods": [
+  "early-abstraction"
+ ],
+ "oneLiner": "Dutch painter (1872–1944)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Piet_Mondriaan.jpg/330px-Piet_Mondriaan.jpg"
+ },
+ "bio": {
+  "extract": "Pieter Cornelis Mondriaan, known after 1911 as Piet Mondrian, was a Dutch painter and art theoretician, who is regarded as one of the greatest artists of the 20th century. He was one of the pioneers of 20th-century abstract art, as he changed his artistic direction from figurative painting to an increasingly abstract style, until he reached a point where his artistic vocabulary was taken down to simple geometric elements.",
+  "source": "https://en.wikipedia.org/wiki/Piet_Mondrian"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Piet_Mondrian",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q24046529",
+   "title": "The red cloud",
+   "year": 1907,
+   "image": {
+    "file": "File:Piet Mondriaan - De rode wolk (authentiek) - 0333219 - Kunstmuseum Den Haag.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Piet_Mondriaan_-_De_rode_wolk_%28authentiek%29_-_0333219_-_Kunstmuseum_Den_Haag.jpg/960px-Piet_Mondriaan_-_De_rode_wolk_%28authentiek%29_-_0333219_-_Kunstmuseum_Den_Haag.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/67/Piet_Mondriaan_-_De_rode_wolk_%28authentiek%29_-_0333219_-_Kunstmuseum_Den_Haag.jpg",
+    "pxW": 1000,
+    "pxH": 829
+   },
+   "cm": {
+    "w": 75,
+    "h": 64
+   },
+   "collection": "Kunstmuseum Den Haag",
+   "story": {
+    "extract": "The Red Cloud is a 1907 early painting by the Dutch artist Piet Mondrian. It was painted in 1907. Mondrian completed the painting while staying near Oele, in the east of the Netherlands.",
+    "source": "https://en.wikipedia.org/wiki/The_Red_Cloud"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q3818263",
+   "title": "The Red Tree",
+   "year": 1909,
+   "image": {
+    "file": "File:Piet Mondrian, 1908-10, Evening; Red Tree (Avond; De rode boom), oil on canvas, 70 x 99 cm, Gemeentemuseum Den Haag.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Piet_Mondrian%2C_1908-10%2C_Evening%3B_Red_Tree_%28Avond%3B_De_rode_boom%29%2C_oil_on_canvas%2C_70_x_99_cm%2C_Gemeentemuseum_Den_Haag.jpg/960px-Piet_Mondrian%2C_1908-10%2C_Evening%3B_Red_Tree_%28Avond%3B_De_rode_boom%29%2C_oil_on_canvas%2C_70_x_99_cm%2C_Gemeentemuseum_Den_Haag.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Piet_Mondrian%2C_1908-10%2C_Evening%3B_Red_Tree_%28Avond%3B_De_rode_boom%29%2C_oil_on_canvas%2C_70_x_99_cm%2C_Gemeentemuseum_Den_Haag.jpg/1920px-Piet_Mondrian%2C_1908-10%2C_Evening%3B_Red_Tree_%28Avond%3B_De_rode_boom%29%2C_oil_on_canvas%2C_70_x_99_cm%2C_Gemeentemuseum_Den_Haag.jpg",
+    "pxW": 2362,
+    "pxH": 1667
+   },
+   "cm": {
+    "w": 99,
+    "h": 70
+   },
+   "collection": "Kunstmuseum Den Haag",
+   "story": {
+    "extract": "Evening; Red Tree is an oil-on-canvas painting by the Dutch artist Piet Mondrian from 1908. It is commonly referred to as The Red Tree. The painting is an Expressionist representation of an apple tree with branches that spread wide across the canvas.",
+    "source": "https://en.wikipedia.org/wiki/Evening%3B_Red_Tree"
+   },
+   "facts": [
+    {
+     "text": "Prior to 1907, Mondrian’s works were considered consistent with the trends of the time and were well-received by the public. However, in 1907 Mondrian became unsatisfied and his artwork began to change.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Evening%3B_Red_Tree#Background"
+    },
+    {
+     "text": "John Milner has observed that the composition focuses on the conflicting and interconnecting forces of trunk, branches, and surrounding space. Mondrian's tree, much like those of van Gogh, rotates in its growth, branching out across the air in smaller, twisting, extensions.",
+     "section": "Composition and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Evening%3B_Red_Tree#Composition_and_interpretation"
+    },
+    {
+     "text": "Mondrian's style at the time was characterized by his emphasis on color and his revolt against tonalism. Restricted to red and blue, The Red Tree represents Mondrian’s movement toward non-naturalistic colors.",
+     "section": "Color and brushwork",
+     "source": "https://en.wikipedia.org/wiki/Evening%3B_Red_Tree#Color_and_brushwork"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q5598238",
+   "title": "Gray Tree",
+   "year": 1911,
+   "image": {
+    "file": "File:Gray Tree 1911.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Gray_Tree_1911.jpg/960px-Gray_Tree_1911.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Gray_Tree_1911.jpg/1920px-Gray_Tree_1911.jpg",
+    "pxW": 2362,
+    "pxH": 1745
+   },
+   "cm": {
+    "w": 109,
+    "h": 80
+   },
+   "collection": "Kunstmuseum Den Haag",
+   "story": {
+    "extract": "Gray Tree is a 1911 oil painting by Piet Mondrian. The work was painted on canvas on a board measuring 78.5 × 107.5 cm. It is exhibited at Kunstmuseum Den Haag in The Hague, the Netherlands.",
+    "source": "https://en.wikipedia.org/wiki/Gray_Tree"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q19609196",
+   "title": "Composition 10 in Black and White",
+   "year": 1915,
+   "image": {
+    "file": "File:Mondrian - Composition 10 in Black and White (1915).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Mondrian_-_Composition_10_in_Black_and_White_%281915%29.jpg/960px-Mondrian_-_Composition_10_in_Black_and_White_%281915%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Mondrian_-_Composition_10_in_Black_and_White_%281915%29.jpg/1920px-Mondrian_-_Composition_10_in_Black_and_White_%281915%29.jpg",
+    "pxW": 8000,
+    "pxH": 6326
+   },
+   "cm": {
+    "w": 108,
+    "h": 86
+   },
+   "collection": "Kröller-Müller Museum",
+   "story": {
+    "extract": "Composition 10 in Black and White is a 1915 oil painting by Dutch artist Piet Mondrian. It is sometimes called Pier and Ocean, given its preceding works with similar titles. It is an abstract composition consisting of horizontal and vertical black lines on white.",
+    "source": "https://en.wikipedia.org/wiki/Composition_10_in_Black_and_White"
+   },
+   "facts": [
+    {
+     "text": "Inspired by this painting, FALT wrote the song Offshore for the music competition Art Rocks. == References ==",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Composition_10_in_Black_and_White#Influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q18710661",
+   "title": "Composition with Large Red Plane, Yellow, Black, Grey and Blue",
+   "year": 1921,
+   "image": {
+    "file": "File:Piet Mondriaan, 1921 - Composition en rouge, jaune, bleu et noir.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Piet_Mondriaan%2C_1921_-_Composition_en_rouge%2C_jaune%2C_bleu_et_noir.jpg/960px-Piet_Mondriaan%2C_1921_-_Composition_en_rouge%2C_jaune%2C_bleu_et_noir.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Piet_Mondriaan%2C_1921_-_Composition_en_rouge%2C_jaune%2C_bleu_et_noir.jpg/1920px-Piet_Mondriaan%2C_1921_-_Composition_en_rouge%2C_jaune%2C_bleu_et_noir.jpg",
+    "pxW": 3543,
+    "pxH": 3532
+   },
+   "cm": {
+    "w": 60,
+    "h": 60
+   },
+   "collection": "Kunstmuseum Den Haag",
+   "story": {
+    "extract": "Composition with Large Red Plane, Yellow, Black, Grey and Blue is an abstract painting from 1921 by the Dutch artist Piet Mondrian. The painting is part of the Kunstmuseum collection in The Hague.",
+    "source": "https://en.wikipedia.org/wiki/Composition_with_Large_Red_Plane%2C_Yellow%2C_Black%2C_Grey_and_Blue"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q19609193",
+   "title": "Composition II in Red, Blue, and Yellow",
+   "year": 1930,
+   "image": {
+    "file": "File:Piet Mondriaan, 1930 - Mondrian Composition II in Red, Blue, and Yellow.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg/960px-Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg/1920px-Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg",
+    "pxW": 5918,
+    "pxH": 6000
+   },
+   "cm": null,
+   "collection": "Kunsthaus Zürich",
+   "story": {
+    "extract": "Composition with Red, Blue and Yellow is an oil on canvas painting by Piet Mondrian, from 1930.",
+    "source": "https://en.wikipedia.org/wiki/Composition_with_Red%2C_Blue_and_Yellow"
+   },
+   "facts": [
+    {
+     "text": "It consists of thick, black brushwork, defining the borders of colored rectangles. As the title suggests, the only colors used in it besides black and white are red, blue, and yellow.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/Composition_with_Red%2C_Blue_and_Yellow#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q22115324",
+   "title": "New York City I",
+   "year": 1941,
+   "image": {
+    "file": "File:New York City I.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/New_York_City_I.jpg/960px-New_York_City_I.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fd/New_York_City_I.jpg",
+    "pxW": 978,
+    "pxH": 1025
+   },
+   "cm": {
+    "w": 115,
+    "h": 120
+   },
+   "collection": "Sidney Janis Gallery",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q2915406",
+   "title": "Broadway Boogie Woogie",
+   "year": 1942,
+   "image": {
+    "file": "File:Piet Mondrian, 1942 - Broadway Boogie Woogie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Piet_Mondrian%2C_1942_-_Broadway_Boogie_Woogie.jpg/960px-Piet_Mondrian%2C_1942_-_Broadway_Boogie_Woogie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Piet_Mondrian%2C_1942_-_Broadway_Boogie_Woogie.jpg/1920px-Piet_Mondrian%2C_1942_-_Broadway_Boogie_Woogie.jpg",
+    "pxW": 4104,
+    "pxH": 4111
+   },
+   "cm": {
+    "w": 127,
+    "h": 127
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Broadway Boogie Woogie is an oil on canvas painting by Piet Mondrian, completed in 1943, after he had moved to New York in 1940.",
+    "source": "https://en.wikipedia.org/wiki/Broadway_Boogie_Woogie"
+   },
+   "facts": [
+    {
+     "text": "When Piet Mondrian arrived in New York, he became fond of the neat, rigid architecture. He integrated the mood and tone of jazz into this work.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Broadway_Boogie_Woogie#Analysis"
+    },
+    {
+     "text": "Compared to his earlier work, the canvas is divided into many more squares. Although he spent most of his career creating abstract work, this painting is inspired by clear real-world examples: the city grid of Manhattan, and boogie-woogie, an African-American blues style of music Mondrian loved.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Broadway_Boogie_Woogie#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q1248830",
+   "title": "Victory Boogie Woogie",
+   "year": 1942,
+   "image": {
+    "file": "File:Piet Mondriaan Victory Boogie Woogie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Piet_Mondriaan_Victory_Boogie_Woogie.jpg/960px-Piet_Mondriaan_Victory_Boogie_Woogie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Piet_Mondriaan_Victory_Boogie_Woogie.jpg/1920px-Piet_Mondriaan_Victory_Boogie_Woogie.jpg",
+    "pxW": 4724,
+    "pxH": 4724
+   },
+   "cm": {
+    "w": 127,
+    "h": 127
+   },
+   "collection": "Cultural Heritage Agency of the Netherlands Art Collection",
+   "story": {
+    "extract": "Victory Boogie Woogie is the last, unfinished work of the Dutch abstract painter Piet Mondrian, left incomplete when Mondrian died in New York in 1944. He was still working on it three days before dying. Since 1998 it has been in the collection of the Kunstmuseum, in The Hague.",
+    "source": "https://en.wikipedia.org/wiki/Victory_Boogie_Woogie"
+   },
+   "facts": [
+    {
+     "text": "It was purchased at a cost of 80 million Dutch guilders (approximately 35 million euros, US$40 million) from the American collector Samuel Irving Newhouse, who previously had bought it the from Emily and Burton Tremaine for US$12 million in the mid 1980s.",
+     "section": "Purchase for the Kunstmuseum, The Hague",
+     "source": "https://en.wikipedia.org/wiki/Victory_Boogie_Woogie#Purchase_for_the_Kunstmuseum%2C_The_Hague"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  },
+  {
+   "qid": "Q18710663",
+   "title": "New York City",
+   "year": 1942,
+   "image": {
+    "file": "File:Piet Mondriaan, 1942 - New York City I.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Piet_Mondriaan%2C_1942_-_New_York_City_I.jpg/960px-Piet_Mondriaan%2C_1942_-_New_York_City_I.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Piet_Mondriaan%2C_1942_-_New_York_City_I.jpg/1920px-Piet_Mondriaan%2C_1942_-_New_York_City_I.jpg",
+    "pxW": 5692,
+    "pxH": 6000
+   },
+   "cm": {
+    "w": 114,
+    "h": 119
+   },
+   "collection": "Sidney Janis Gallery",
+   "story": {
+    "extract": "New York City is a 1942 oil-on-canvas painting by Piet Mondrian, completed in 1942. It is on display in the Musée National d'Art Moderne at the Centre Pompidou in Paris, France.",
+    "source": "https://en.wikipedia.org/wiki/New_York_City_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The Guardian states that the painting was first exhibited at the Museum of Modern Art (MoMA) in New York City in 1945, while the Netherlands Institute for Art History has no record of an exhibition at MoMA, and states that it was first exhibited at the Valentine Gallery in New York City in 1946 for about three weeks.",
+     "section": "New York City I",
+     "source": "https://en.wikipedia.org/wiki/New_York_City_%28painting%29#New_York_City_I"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Piet Mondrian"
+   }
+  }
+ ]
+}

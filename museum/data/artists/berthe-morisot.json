@@ -1,0 +1,390 @@
+{
+ "slug": "berthe-morisot",
+ "name": "Berthe Morisot",
+ "qid": "Q105320",
+ "born": 1841,
+ "died": 1895,
+ "periods": [
+  "impressionism"
+ ],
+ "oneLiner": "French painter (1841-1895)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Morisot_berthe_photo.jpg/330px-Morisot_berthe_photo.jpg"
+ },
+ "bio": {
+  "extract": "Berthe Marie Pauline Morisot was a French painter, printmaker and a member of the circle of painters in Paris who became known as the Impressionists.",
+  "source": "https://en.wikipedia.org/wiki/Berthe_Morisot"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Berthe_Morisot",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3225805",
+   "title": "The Port at Lorient",
+   "year": 1869,
+   "image": {
+    "file": "File:Berthe Morisot The Harbor at Lorient.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Berthe_Morisot_The_Harbor_at_Lorient.jpg/960px-Berthe_Morisot_The_Harbor_at_Lorient.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Berthe_Morisot_The_Harbor_at_Lorient.jpg/1920px-Berthe_Morisot_The_Harbor_at_Lorient.jpg",
+    "pxW": 2668,
+    "pxH": 1543
+   },
+   "cm": {
+    "w": 73,
+    "h": 44
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Harbor at Lorient is an oil-on-canvas painting by French artist Berthe Morisot, executed in 1869. The painting has the dimensions of 43 by 72 cm. It is held at the National Gallery of Art, in Washington, D.C.",
+    "source": "https://en.wikipedia.org/wiki/The_Harbor_at_Lorient"
+   },
+   "facts": [
+    {
+     "text": "Morisot traveled to Brittany several times in the years preceding the creation of this work. Since the arrival of the railway, the region welcomed painters to Pont-Aven, mainly during summer, and Morisot went there, as well as the nearby towns Douarnenez and Quimperlé in 1866 and 1867.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Harbor_at_Lorient#History"
+    },
+    {
+     "text": "The rectangular canvas depicts Morisot's sister seated on a parapet, under a parasol, bordering the outer port of Lorient. The sky and its clouds are reflected in the sea.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Harbor_at_Lorient#Description"
+    },
+    {
+     "text": "The painting was first the property of fellow painter Édouard Manet, to whom Berthe Morisot offered it in 1869. It subsequently changed hands, and was reported as belonging to financier Gabriel Thomas, a cousin of Berthe Morisot, in 1896 .",
+     "section": "Property",
+     "source": "https://en.wikipedia.org/wiki/The_Harbor_at_Lorient#Property"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q20188721",
+   "title": "The Mother and Sister of the Artist",
+   "year": 1869,
+   "image": {
+    "file": "File:Berthe Morisot 006.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Berthe_Morisot_006.jpg/960px-Berthe_Morisot_006.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Berthe_Morisot_006.jpg/1920px-Berthe_Morisot_006.jpg",
+    "pxW": 7839,
+    "pxH": 9660
+   },
+   "cm": {
+    "w": 82,
+    "h": 101
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Mother and Sister of the Artist, also known as The Reading, is an oil-on-canvas painting by French artist Berthe Morisot, created in 1869–1870. It is exhibited at the National Gallery of Art, in Washington, D.C.",
+    "source": "https://en.wikipedia.org/wiki/The_Mother_and_Sister_of_the_Artist"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts Berthe Morisot's mother, Marie-Joséphine, and her favourite sister, Edma Pontillon. Since the beginning of their artistic career, the two sisters had learned their art together.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Mother_and_Sister_of_the_Artist#History"
+    },
+    {
+     "text": "Two characters are depicted in the work, Edma Pontillon, Berthe's sister, and Mme. Morisot.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Mother_and_Sister_of_the_Artist#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q5966403",
+   "title": "The Cradle",
+   "year": 1872,
+   "image": {
+    "file": "File:Berthe Morisot - The Cradle - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg/960px-Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg/1920px-Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg",
+    "pxW": 4105,
+    "pxH": 5001
+   },
+   "cm": {
+    "w": 46,
+    "h": 56
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Cradle is an oil on canvas painting by the French Impressionist painter Berthe Morisot, executed in 1872. It is on display at the Musée d'Orsay in Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Cradle_%28Morisot%29"
+   },
+   "facts": [
+    {
+     "text": "Morisot painted her sister Edma Portillon, who is watching over her sleeping daughter Blanche. The painting was exhibited for the first time in the First Impressionist Exhibition, opened on April 15, 1874, in the former studio of the photographer Nadar, on the Parisian Boulevard des Capucines.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Cradle_%28Morisot%29#History"
+    },
+    {
+     "text": "The current painting constitutes the first representation of the theme of motherhood in Morisot's work, which the artist would later regularly cultivate. The canvas reveals the influence of Édouard Manet, a painter whom Morisot had met at the Louvre in 1868 and whose brother Eugène Manet she married in 1874.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Cradle_%28Morisot%29#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q80112683",
+   "title": "In a Park",
+   "year": 1874,
+   "image": {
+    "file": "File:Morisot - Dans le parc, Vers 1874.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Morisot_-_Dans_le_parc%2C_Vers_1874.jpg/960px-Morisot_-_Dans_le_parc%2C_Vers_1874.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Morisot_-_Dans_le_parc%2C_Vers_1874.jpg/1920px-Morisot_-_Dans_le_parc%2C_Vers_1874.jpg",
+    "pxW": 6620,
+    "pxH": 5287
+   },
+   "cm": {
+    "w": 92,
+    "h": 72
+   },
+   "collection": "Musée des Beaux-Arts de la ville de Paris",
+   "story": {
+    "extract": "In a Park is a pastel painting on paper mounted on cardboard, executed c. 1874 by French artist Berthe Morisot. It is held at the Petit Palais in Paris.",
+    "source": "https://en.wikipedia.org/wiki/In_a_Park"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts a young woman in a leisure time in a park with two little girls and a dog. The woman, dressed in black and with a hat, is seated in the foreground in a field of long grass, holding a reclined child, while her dog sits in front of them.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/In_a_Park#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q26164546",
+   "title": "Eugène Manet on Isle of Wight",
+   "year": 1875,
+   "image": {
+    "file": "File:Berthe Morisot - Eugène Manet à l'île de Wight.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Berthe_Morisot_-_Eug%C3%A8ne_Manet_%C3%A0_l%27%C3%AEle_de_Wight.jpg/960px-Berthe_Morisot_-_Eug%C3%A8ne_Manet_%C3%A0_l%27%C3%AEle_de_Wight.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Berthe_Morisot_-_Eug%C3%A8ne_Manet_%C3%A0_l%27%C3%AEle_de_Wight.jpg/1920px-Berthe_Morisot_-_Eug%C3%A8ne_Manet_%C3%A0_l%27%C3%AEle_de_Wight.jpg",
+    "pxW": 2536,
+    "pxH": 2157
+   },
+   "cm": {
+    "w": 46,
+    "h": 38
+   },
+   "collection": "Musée Marmottan Monet",
+   "story": {
+    "extract": "Eugène Manet on the Isle of Wight is an oil-on-canvas painting by French artist Berthe Morisot. The painting depicts a man, Eugène Manet, relaxing at a hotel window, with vases visible on the parapet. Manet is looking out the window as two elegantly dressed women in white pass by.",
+    "source": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Manet_on_the_Isle_of_Wight"
+   },
+   "facts": [
+    {
+     "text": "Eugène Manet on the Isle of Wight is an Impressionist depiction of everyday life on an English Island. We see a man looking at an ordinary scene of women walking and boats in a harbor.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Manet_on_the_Isle_of_Wight#Analysis"
+    },
+    {
+     "text": "'Morisot met other French Impressionist painter, Édouard Manet, in 1868 while she was a copyist in the Louvre. They quickly became close friends and colleagues, inspiring each other's works.",
+     "section": "Relationship with the Manet brothers",
+     "source": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Manet_on_the_Isle_of_Wight#Relationship_with_the_Manet_brothers"
+    },
+    {
+     "text": "While on her honeymoon Morisot created other paintings that may have served as studies for different elements of this painting. Morisot painted The Isle of Wight, 1875 which depicts the scene outside of the window of this painting.",
+     "section": "Related works",
+     "source": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Manet_on_the_Isle_of_Wight#Related_works"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q9498617",
+   "title": "The Psyche mirror",
+   "year": 1876,
+   "image": {
+    "file": "File:Berthe Morisot - Psyché.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Berthe_Morisot_-_Psych%C3%A9.JPG/960px-Berthe_Morisot_-_Psych%C3%A9.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Berthe_Morisot_-_Psych%C3%A9.JPG/1920px-Berthe_Morisot_-_Psych%C3%A9.JPG",
+    "pxW": 2248,
+    "pxH": 2750
+   },
+   "cm": {
+    "w": 54,
+    "h": 65
+   },
+   "collection": "Thyssen-Bornemisza Museum",
+   "story": {
+    "extract": "The Psyche Mirror, original French title La Psyché, is an oil-on-canvas painting by the French artist Berthe Morisot, created in 1876. The painting links the theme of a woman making her toilet with the mythical motif of Psyche. The work is held in the Thyssen-Bornemisza Museum, in Madrid.",
+    "source": "https://en.wikipedia.org/wiki/The_Psyche_Mirror"
+   },
+   "facts": [
+    {
+     "text": "Women in their toilets were often the subject of Morisot's paintings. Four of the eight paintings that she made in 1876 depicted that theme, including The Psyche Mirror.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Psyche_Mirror#History"
+    },
+    {
+     "text": "At first sight, the connection between Morisot's painting and the Greek myth of Psyche seems to be far-fetched. The woman depicted does not really come across as someone from the Greek mythology.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Psyche_Mirror#Analysis"
+    },
+    {
+     "text": "Morisot's The Psyche Mirror shows a young woman looking at herself in a large psyche mirror. It appears in the painting placed between two windows, while the whole scene is bathed in light.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Psyche_Mirror#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q14942039",
+   "title": "Summer's Day",
+   "year": 1879,
+   "image": {
+    "file": "File:Berthe Morisot - Jour d'été, 1879.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Berthe_Morisot_-_Jour_d%27%C3%A9t%C3%A9%2C_1879.jpg/960px-Berthe_Morisot_-_Jour_d%27%C3%A9t%C3%A9%2C_1879.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Berthe_Morisot_-_Jour_d%27%C3%A9t%C3%A9%2C_1879.jpg/1920px-Berthe_Morisot_-_Jour_d%27%C3%A9t%C3%A9%2C_1879.jpg",
+    "pxW": 6914,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 75,
+    "h": 46
+   },
+   "collection": "Hugh Lane Gallery",
+   "story": {
+    "extract": "Summer's Day is an oil-on-canvas painting by the French Impressionist painter Berthe Morisot, created in 1879. The painting depicts two women seated in a row boat, and was painted in the Bois de Boulogne. It is held at the National Gallery, in London.",
+    "source": "https://en.wikipedia.org/wiki/Summer%27s_Day"
+   },
+   "facts": [
+    {
+     "text": "During the winter of 1878–1879, Morisot had her first child, Julie. The following summer, she walked every day with Julie and her nurse in the Bois de Boulogne.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Summer%27s_Day#History"
+    },
+    {
+     "text": "On 12 April 1956, the painting was stolen from the Tate Gallery in London, by two Irish students, Paul Hogan and Billy Fogarty, while it was on display there. They stole it in order to highlight Ireland's claim to the Hugh Lane Bequest.",
+     "section": "Theft",
+     "source": "https://en.wikipedia.org/wiki/Summer%27s_Day#Theft"
+    },
+    {
+     "text": "The painting shows a sunny scene by the water, with two young women in a rowing boat. The venue is the Bois de Boulogne, where Parisians used to escape from their bustling city.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Summer%27s_Day#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q17491778",
+   "title": "Young Girl in a Ball Gown",
+   "year": 1879,
+   "image": {
+    "file": "File:Berthe Morisot - Young Girl in a Ball Gown - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Berthe_Morisot_-_Young_Girl_in_a_Ball_Gown_-_Google_Art_Project.jpg/960px-Berthe_Morisot_-_Young_Girl_in_a_Ball_Gown_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Berthe_Morisot_-_Young_Girl_in_a_Ball_Gown_-_Google_Art_Project.jpg/1920px-Berthe_Morisot_-_Young_Girl_in_a_Ball_Gown_-_Google_Art_Project.jpg",
+    "pxW": 3944,
+    "pxH": 5217
+   },
+   "cm": {
+    "w": 54,
+    "h": 72
+   },
+   "collection": "Musée d'Orsay",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q19973935",
+   "title": "In the Dining Room",
+   "year": 1886,
+   "image": {
+    "file": "File:Berthe Morisot 003.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Berthe_Morisot_003.jpg/960px-Berthe_Morisot_003.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Berthe_Morisot_003.jpg/1920px-Berthe_Morisot_003.jpg",
+    "pxW": 3250,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 50,
+    "h": 61
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "In the Dining Room is an oil-on-canvas painting by the French impressionist artist Berthe Morisot, created in 1886. It shows a young woman in the center of the domestic environment of a dining room. The painting is in the collection of the National Gallery of Art, in Washington, D.C.",
+    "source": "https://en.wikipedia.org/wiki/In_the_Dining_Room"
+   },
+   "facts": [
+    {
+     "text": "In the Dining Room was part of the collection of the French art collector Eugène Blot at the beginning of the 20th century. It was later owned by American art collectors, including the wealthy banker Chester Dale, from whose estate it came to the National Gallery of Art in 1963. == References ==",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/In_the_Dining_Room#Provenance"
+    },
+    {
+     "text": "Morisot was always highly regarded as a woman in the world of the Impressionists. Where her predominantly male colleagues, however, usually took inspiration in the modern city life, going into streets and cafes, painting parks and bridges, she, like Mary Cassatt, for example, often opted for the depiction of indoor domestic subjects.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/In_the_Dining_Room#History"
+    },
+    {
+     "text": "The painting shows a centrally positioned young woman wearing an ankle-length black skirt and a short grey-blue jacket. She has tied a white apron around her waist, which accentuates her domestic role, apparently as a maid.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/In_the_Dining_Room#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  },
+  {
+   "qid": "Q23926250",
+   "title": "The Little Girl from Nice",
+   "year": 1889,
+   "image": {
+    "file": "File:La petite Niçoise (1889) Berthe Morisot.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/La_petite_Ni%C3%A7oise_%281889%29_Berthe_Morisot.JPG/960px-La_petite_Ni%C3%A7oise_%281889%29_Berthe_Morisot.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fa/La_petite_Ni%C3%A7oise_%281889%29_Berthe_Morisot.JPG",
+    "pxW": 1096,
+    "pxH": 1332
+   },
+   "cm": null,
+   "collection": "Museum of Fine Arts of Lyon",
+   "story": {
+    "extract": "La Petite Niçoise is an oil-on-canvas painting by the French Impressionist artist Berthe Morisot, executed in 1889. It has been in the collection of the Musée des Beaux-Arts de Lyon since 1907.",
+    "source": "https://en.wikipedia.org/wiki/La_Petite_Ni%C3%A7oise"
+   },
+   "facts": [
+    {
+     "text": "The painting shows a young girl presented at the waist, seated and turned three-quarters. She stares at the viewer with her brown eyes, her hands resting one on the other at the level of her knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/La_Petite_Ni%C3%A7oise#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Berthe Morisot"
+   }
+  }
+ ]
+}

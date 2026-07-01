@@ -1,0 +1,21 @@
+{
+ "slug": "joan-miro",
+ "name": "Joan Miró",
+ "qid": "Q152384",
+ "born": 1893,
+ "died": 1983,
+ "periods": [
+  "surrealism"
+ ],
+ "oneLiner": "Spanish painter, sculptor, and ceramicist (1893–1983)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg/330px-Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg"
+ },
+ "bio": {
+  "extract": "Joan Miró i Ferrà was a Catalan painter, sculptor and ceramist from Spain. A museum dedicated to his work, the Fundació Joan Miró, was established in his native city of Barcelona in 1975, and another, the Fundació Pilar i Joan Miró, was established in his adoptive city of Palma, Mallorca in 1981. Earning international acclaim, his work has been interpreted as Surrealism but with a personal style, sometimes also veering into Fauvism and Expressionism. He was notable for his interest in the unconscious or the subconscious mind, reflected in his re-creation of the childlike.",
+  "source": "https://en.wikipedia.org/wiki/Joan_Mir%C3%B3"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Joan_Mir%C3%B3",
+ "hasGallery": false,
+ "paintings": []
+}

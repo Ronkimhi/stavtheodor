@@ -1,0 +1,411 @@
+{
+ "slug": "gustave-courbet",
+ "name": "Gustave Courbet",
+ "qid": "Q34618",
+ "born": 1819,
+ "died": 1877,
+ "periods": [
+  "realism"
+ ],
+ "oneLiner": "French painter (1819–1877)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg/330px-Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg"
+ },
+ "bio": {
+  "extract": "Jean Désiré Gustave Courbet was a French painter who led the Realism movement in 19th-century French painting. Committed to painting only what he could see, he rejected academic convention and the Romanticism of the previous generation of visual artists. His independence set an example that was important to later artists, such as the Impressionists and the Cubists. Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.",
+  "source": "https://en.wikipedia.org/wiki/Gustave_Courbet"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q540488",
+   "title": "A Burial at Ornans",
+   "year": 1841,
+   "image": {
+    "file": "File:Gustave Courbet - A Burial at Ornans - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/960px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/1920px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
+    "pxW": 6045,
+    "pxH": 2779
+   },
+   "cm": {
+    "w": 668,
+    "h": 315
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "A Burial at Ornans is a painting of 1849–50 by Gustave Courbet. It is widely regarded as a major turning point in 19th-century French art. The painting records a funeral in Courbet's birthplace, the small town of Ornans.",
+    "source": "https://en.wikipedia.org/wiki/A_Burial_at_Ornans"
+   },
+   "facts": [
+    {
+     "text": "Courbet likely drew inspiration from two different types of sources. One is seventeenth-century Dutch group portraits, such as Banquet of Captain Bicker (1648), Company of Captain Allaert Cloek (1632), or Meagre Company (1637).",
+     "section": "Creation",
+     "source": "https://en.wikipedia.org/wiki/A_Burial_at_Ornans#Creation"
+    },
+    {
+     "text": "At the bottom center of the painting, there is an open grave with a skull and bones along its edge. Behind the grave stands a group of attendees, arranged loosely in three groups: church members, veterans with a dog, and other officials and mourners.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/A_Burial_at_Ornans#Composition"
+    },
+    {
+     "text": "By 1848, Courbet showed an interest in representing common people in a realistic manner. He expressed in letters his belief that his art was democratic.",
+     "section": "Interpretations",
+     "source": "https://en.wikipedia.org/wiki/A_Burial_at_Ornans#Interpretations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q1167178",
+   "title": "The Painter's Studio",
+   "year": 1850,
+   "image": {
+    "file": "File:Courbet LAtelier du peintre.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Courbet_LAtelier_du_peintre.jpg/960px-Courbet_LAtelier_du_peintre.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Courbet_LAtelier_du_peintre.jpg/1920px-Courbet_LAtelier_du_peintre.jpg",
+    "pxW": 16951,
+    "pxH": 9989
+   },
+   "cm": {
+    "w": 598,
+    "h": 361
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Painter's Studio is an 1855 oil-on-canvas painting by Gustave Courbet. It is located in the Musée d'Orsay in Paris, France.",
+    "source": "https://en.wikipedia.org/wiki/The_Painter%27s_Studio"
+   },
+   "facts": [
+    {
+     "text": "The painting was produced during Courbet's involvement with Realism in art in the mid-19th century. Due to the short amount of time Courbet had to paint it, many original plans for the work had to be discarded.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Painter%27s_Studio#Description"
+    },
+    {
+     "text": "The left side of the painting depicts people of everyday life in France. The Jewish man and the Irishwoman were seen on a trip Courbet took to London in 1848, according to a letter Courbet wrote to Champfleury describing what the painting would look like.",
+     "section": "Left side",
+     "source": "https://en.wikipedia.org/wiki/The_Painter%27s_Studio#Left_side"
+    },
+    {
+     "text": "The center of the painting depicts Courbet painting a landscape, a nude female figure, a young boy, and a white cat. On his canvas, Courbet paints the Loue River valley.",
+     "section": "Center",
+     "source": "https://en.wikipedia.org/wiki/The_Painter%27s_Studio#Center"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q2914912",
+   "title": "The Stone Breakers",
+   "year": 1850,
+   "image": {
+    "file": "File:Gustave Courbet 018.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gustave_Courbet_018.jpg/960px-Gustave_Courbet_018.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gustave_Courbet_018.jpg/1920px-Gustave_Courbet_018.jpg",
+    "pxW": 2048,
+    "pxH": 1249
+   },
+   "cm": {
+    "w": 257,
+    "h": 165
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "The Stone Breakers, also known as Stonebreakers, was an 1849 oil painting on canvas by the French painter Gustave Courbet. Now destroyed, the image remains an often-cited example of the artistic movement Realism.",
+    "source": "https://en.wikipedia.org/wiki/The_Stone_Breakers"
+   },
+   "facts": [
+    {
+     "text": "Gustave Courbet was a leader of the artistic movement Realism, which he described it as \"my way of seeing\". In 1855, Courbet wrote that the \"title of Realist was thrust upon me\".",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Stone_Breakers#History"
+    },
+    {
+     "text": "Before the Paris Salon French poet Max Buchon viewed the painting and described the two men as \"the dawn and twilight of modern galley-slave existence\".",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Stone_Breakers#Reception"
+    },
+    {
+     "text": "The Stone Breakers is still considered one of the most famous examples of the artistic movement Courbet termed \"Realism\". It depicts two peasants (a young man and an old man) breaking rocks.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Stone_Breakers#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q3642171",
+   "title": "The Meeting, or Bonjour, Monsieur Courbet!",
+   "year": 1854,
+   "image": {
+    "file": "File:Gustave Courbet - Bonjour Monsieur Courbet - Musée Fabre.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg/960px-Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg/1920px-Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg",
+    "pxW": 3000,
+    "pxH": 2597
+   },
+   "cm": {
+    "w": 150,
+    "h": 132
+   },
+   "collection": "Musée Fabre",
+   "story": {
+    "extract": "The Meeting or \"Bonjour, Monsieur Courbet\" is an oil-on-canvas painting by Gustave Courbet, made in 1854. It depicts the artist on his way to Montpellier meeting his patron Alfred Bruyas, his servant Calas, and his dog Breton. One of Courbet's most popular works, it also serves as one of the artist's most emblematic contributions to the 19th-century movement of Realism.",
+    "source": "https://en.wikipedia.org/wiki/The_Meeting_%28Courbet%29"
+   },
+   "facts": [
+    {
+     "text": "The Meeting was commissioned by Alfred Bruyas, the son of a Montpellier banker who chose to employ his wealth in art patronage. His relationship with Courbet first began with his purchases of The Bathers (1853) and The Sleeping Spinner (1853) at the Salon of 1853 in Paris.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Meeting_%28Courbet%29#Background"
+    },
+    {
+     "text": "The painting signifies a departure from the darker, muted palette of color that was typical of Courbet's earlier work. The lighter tones adopted illustrate Courbet's effort to faithfully convey the bright, warm atmosphere of Montpellier, and more generally that of France's Mediterranean coastline.",
+     "section": "Courbet's painting style",
+     "source": "https://en.wikipedia.org/wiki/The_Meeting_%28Courbet%29#Courbet%27s_painting_style"
+    },
+    {
+     "text": "The Meeting's composition takes direct inspiration from the Wandering Jew, the popular legend of a wanderer bound to trek for eternity for condemning Christ. The image was well known in the 19th century, so much so that a common viewer of the painting would have likely picked up on Courbet's reference.",
+     "section": "The Wandering Jew",
+     "source": "https://en.wikipedia.org/wiki/The_Meeting_%28Courbet%29#The_Wandering_Jew"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q2561558",
+   "title": "The Wheat Sifters",
+   "year": 1854,
+   "image": {
+    "file": "File:Gustave Courbet 014.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gustave_Courbet_014.jpg/960px-Gustave_Courbet_014.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gustave_Courbet_014.jpg/1920px-Gustave_Courbet_014.jpg",
+    "pxW": 2000,
+    "pxH": 1580
+   },
+   "cm": {
+    "w": 167,
+    "h": 131
+   },
+   "collection": "Nantes Museum of Arts",
+   "story": {
+    "extract": "The Wheat Sifters is an oil-on-canvas painting created in 1854 by the French Realist painter Gustave Courbet in his hometown of Ornans.",
+    "source": "https://en.wikipedia.org/wiki/The_Wheat_Sifters"
+   },
+   "facts": [
+    {
+     "text": "In addition to The Wheat Sifters, Courbet worked on four pieces during the winter of 1853-1854. The painting belongs to the Realism movement.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/The_Wheat_Sifters#Context"
+    },
+    {
+     "text": "The figures in The Wheat Sifters are not portrayed as distinct individuals. Their faces are mostly hidden and Courbet instead draws attention to the tools, clothing, and scattered grain to emphasize the messy, physical nature of agricultural labor.",
+     "section": "Composition and analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Wheat_Sifters#Composition_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q1293985",
+   "title": "Young Ladies Beside the Seine",
+   "year": 1857,
+   "image": {
+    "file": "File:Gustave Courbet 027.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gustave_Courbet_027.jpg/960px-Gustave_Courbet_027.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gustave_Courbet_027.jpg/1920px-Gustave_Courbet_027.jpg",
+    "pxW": 4400,
+    "pxH": 3701
+   },
+   "cm": {
+    "w": 206,
+    "h": 206
+   },
+   "collection": "Musée des Beaux-Arts de la ville de Paris",
+   "story": {
+    "extract": "Young Ladies Beside the Seine (Summer) (French - Les Demoiselles des bords de la Seine (été)) is an oil-on-canvas painting by the French Realist Gustave Courbet, created between late 1856 and early 1857. It is held in the Petit Palais, in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Young_Ladies_Beside_the_Seine_%28Summer%29"
+   },
+   "facts": [
+    {
+     "text": "These two young ladies are city dwellers who have come to cool off one summer day at the water's edge. The realism of the scene, of an affirmed sensuality, imposes itself by the frankness of the faces and the attitudes.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Young_Ladies_Beside_the_Seine_%28Summer%29#Analysis"
+    },
+    {
+     "text": "It is a canvas of large dimensions representing two women lying in the grass beneath trees, at the edge of the river. Occupying the foreground of the painting, the first woman is dressed in a patterned white dress; she is lying on her stomach, her bare head rests on a cloth, and her eyes are half-closed.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Young_Ladies_Beside_the_Seine_%28Summer%29#Description"
+    },
+    {
+     "text": "He presented it to the Paris Salon jury, which accepted it and exhibited it on 15 June 1857, with five other paintings of his authorship, two portraits and three landscapes. It was bought by Courbet's friend and patron Étienne Baudry (1830–1908), then was bequeathed by him to the painter's sister Juliette, who left it to the French state in 1906.",
+     "section": "History and provenance",
+     "source": "https://en.wikipedia.org/wiki/Young_Ladies_Beside_the_Seine_%28Summer%29#History_and_provenance"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": "Q334138",
+   "title": "L'Origine du monde",
+   "year": 1866,
+   "image": {
+    "file": "File:Origin-of-the-World.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Origin-of-the-World.jpg/960px-Origin-of-the-World.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Origin-of-the-World.jpg/1920px-Origin-of-the-World.jpg",
+    "pxW": 11000,
+    "pxH": 9113
+   },
+   "cm": {
+    "w": 55,
+    "h": 46
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "L'Origine du monde is a picture painted in oil on canvas by the French painter Gustave Courbet in 1866. It is a close-up view of the vulva and abdomen of a naked woman, lying on a bed with legs spread.",
+    "source": "https://en.wikipedia.org/wiki/L%27Origine_du_monde"
+   },
+   "facts": [
+    {
+     "text": "The explicit nature of the picture may have served as an inspiration, albeit with a satirical twist, for Marcel Duchamp's last major work, Étant donnés (1946–1966), a construction also featuring the image of a woman lying on her back with her legs spread.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/L%27Origine_du_monde#Influence"
+    },
+    {
+     "text": "Art historians have speculated for years that Courbet's model for L'Origine du monde was his favourite model, Joanna Hiffernan, also known as Jo. Her lover at the time was the American painter James Whistler, a friend of Courbet.",
+     "section": "Identity of the model",
+     "source": "https://en.wikipedia.org/wiki/L%27Origine_du_monde#Identity_of_the_model"
+    },
+    {
+     "text": "Halil Şerif Pasha (Khalil Bey), an Ottoman diplomat, is believed to have commissioned the work shortly after he moved to Paris.",
+     "section": "Owners",
+     "source": "https://en.wikipedia.org/wiki/L%27Origine_du_monde#Owners"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q326503",
+   "title": "The Sleepers",
+   "year": 1866,
+   "image": {
+    "file": "File:Gustave Courbet - Le Sommeil (1866), Paris, Petit Palais.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Gustave_Courbet_-_Le_Sommeil_%281866%29%2C_Paris%2C_Petit_Palais.jpg/960px-Gustave_Courbet_-_Le_Sommeil_%281866%29%2C_Paris%2C_Petit_Palais.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Gustave_Courbet_-_Le_Sommeil_%281866%29%2C_Paris%2C_Petit_Palais.jpg/1920px-Gustave_Courbet_-_Le_Sommeil_%281866%29%2C_Paris%2C_Petit_Palais.jpg",
+    "pxW": 4932,
+    "pxH": 3309
+   },
+   "cm": {
+    "w": 224,
+    "h": 158
+   },
+   "collection": "Musée des Beaux-Arts de la ville de Paris",
+   "story": {
+    "extract": "Le Sommeil is an erotic oil painting on canvas by French artist Gustave Courbet created in 1866. The painting, which depicts a female couple, is also known as The Two Friends and Indolence and Lust.",
+    "source": "https://en.wikipedia.org/wiki/Le_Sommeil"
+   },
+   "facts": [
+    {
+     "text": "Le Sommeil was originally commissioned by the Turkish diplomat and art collector of the late Ottoman era, Halil Şerif Paşa, who had lived in Paris since 1860. The painting was not permitted to be shown publicly until 1988, like a number of Courbet's other works such as L'Origine du monde.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Le_Sommeil#History"
+    },
+    {
+     "text": "The painting was inspired by Charles Baudelaire's poem \"Delphine et Hippolyte\", from his collection Les Fleurs du mal. Le Sommeil has been interpreted as a realist painting, detailing the bodies without glossing over their imperfections.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Le_Sommeil#Analysis"
+    },
+    {
+     "text": "The painting shows two naked women lying asleep on a bed entwined in an erotic embrace. The setting is a bedroom with various textiles and ornamental furnishing.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Le_Sommeil#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": "Q8030760",
+   "title": "Woman with a Parrot",
+   "year": 1866,
+   "image": {
+    "file": "File:Woman with a Parrot MET DT43.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Woman_with_a_Parrot_MET_DT43.jpg/960px-Woman_with_a_Parrot_MET_DT43.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Woman_with_a_Parrot_MET_DT43.jpg",
+    "pxW": 1905,
+    "pxH": 1264
+   },
+   "cm": {
+    "w": 196,
+    "h": 130
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "La Femme au perroquet is an oil painting on canvas by French artist Gustave Courbet. It was the first nude by the artist to be accepted by the Paris Salon in 1866 after a previous entry in 1864 was rejected as indecent. It is in the collection of the Metropolitan Museum of Art in New York city.",
+    "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parrot_%28Courbet%29"
+   },
+   "facts": [
+    {
+     "text": "The painting shows a woman reclining on her back, with a pet parrot alighting on an outstretched hand. While painted in a style to gain Academy acceptance in its pose and smooth flesh tones, the model's discarded clothes and disheveled hair were controversial, although less so than Le Sommeil, painted the same year.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parrot_%28Courbet%29#Description"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Gustave Courbet"
+   }
+  },
+  {
+   "qid": "Q39013",
+   "title": "The Woman in the Waves",
+   "year": 1868,
+   "image": {
+    "file": "File:The Woman in the Waves MET DT887.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/The_Woman_in_the_Waves_MET_DT887.jpg/960px-The_Woman_in_the_Waves_MET_DT887.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/The_Woman_in_the_Waves_MET_DT887.jpg/1920px-The_Woman_in_the_Waves_MET_DT887.jpg",
+    "pxW": 3067,
+    "pxH": 3720
+   },
+   "cm": {
+    "w": 54,
+    "h": 65
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Woman in the Waves is an 1868 painting by the French Realist painter Gustave Courbet, now in the Metropolitan Museum of Art in New York.",
+    "source": "https://en.wikipedia.org/wiki/The_Woman_in_the_Waves"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gustave Courbet"
+   }
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+  "periods": [
+    { "id": "medieval-gothic", "name": "Medieval & Gothic", "start": 1200, "end": 1400, "wikipedia": "Gothic art" },
+    { "id": "early-renaissance", "name": "Early Renaissance", "start": 1400, "end": 1490, "wikipedia": "Italian Renaissance painting" },
+    { "id": "northern-renaissance", "name": "Northern Renaissance", "start": 1430, "end": 1570, "wikipedia": "Northern Renaissance" },
+    { "id": "high-renaissance", "name": "High Renaissance", "start": 1490, "end": 1530, "wikipedia": "High Renaissance" },
+    { "id": "mannerism", "name": "Mannerism", "start": 1520, "end": 1600, "wikipedia": "Mannerism" },
+    { "id": "baroque", "name": "Baroque", "start": 1600, "end": 1720, "wikipedia": "Baroque painting" },
+    { "id": "rococo", "name": "Rococo", "start": 1715, "end": 1780, "wikipedia": "Rococo" },
+    { "id": "neoclassicism", "name": "Neoclassicism", "start": 1760, "end": 1830, "wikipedia": "Neoclassicism" },
+    { "id": "romanticism", "name": "Romanticism", "start": 1790, "end": 1850, "wikipedia": "Romanticism" },
+    { "id": "realism", "name": "Realism", "start": 1840, "end": 1880, "wikipedia": "Realism (art movement)" },
+    { "id": "impressionism", "name": "Impressionism", "start": 1860, "end": 1890, "wikipedia": "Impressionism" },
+    { "id": "post-impressionism", "name": "Post-Impressionism", "start": 1885, "end": 1910, "wikipedia": "Post-Impressionism" },
+    { "id": "symbolism-art-nouveau", "name": "Symbolism & Art Nouveau", "start": 1880, "end": 1915, "wikipedia": "Symbolism (movement)" },
+    { "id": "expressionism", "name": "Expressionism", "start": 1905, "end": 1935, "wikipedia": "Expressionism" },
+    { "id": "cubism", "name": "Cubism", "start": 1907, "end": 1925, "wikipedia": "Cubism" },
+    { "id": "early-abstraction", "name": "Early Abstraction", "start": 1910, "end": 1944, "wikipedia": "Abstract art" },
+    { "id": "surrealism", "name": "Surrealism", "start": 1924, "end": 1966, "wikipedia": "Surrealism" },
+    { "id": "abstract-expressionism", "name": "Abstract Expressionism", "start": 1943, "end": 1965, "wikipedia": "Abstract expressionism" },
+    { "id": "pop-art", "name": "Pop Art", "start": 1955, "end": 1975, "wikipedia": "Pop art" },
+    { "id": "contemporary", "name": "Contemporary", "start": 1975, "end": 2026, "wikipedia": "Contemporary art" }
+  ],
+  "artists": [
+    { "slug": "cimabue", "wikipedia": "Cimabue", "periods": ["medieval-gothic"] },
+    { "slug": "duccio", "wikipedia": "Duccio", "periods": ["medieval-gothic"] },
+    { "slug": "giotto", "wikipedia": "Giotto", "periods": ["medieval-gothic"] },
+    { "slug": "simone-martini", "wikipedia": "Simone Martini", "periods": ["medieval-gothic"] },
+
+    { "slug": "fra-angelico", "wikipedia": "Fra Angelico", "periods": ["early-renaissance"] },
+    { "slug": "masaccio", "wikipedia": "Masaccio", "periods": ["early-renaissance"] },
+    { "slug": "piero-della-francesca", "wikipedia": "Piero della Francesca", "periods": ["early-renaissance"] },
+    { "slug": "sandro-botticelli", "wikipedia": "Sandro Botticelli", "periods": ["early-renaissance"] },
+
+    { "slug": "jan-van-eyck", "wikipedia": "Jan van Eyck", "periods": ["northern-renaissance"] },
+    { "slug": "hieronymus-bosch", "wikipedia": "Hieronymus Bosch", "periods": ["northern-renaissance"] },
+    { "slug": "albrecht-durer", "wikipedia": "Albrecht Dürer", "periods": ["northern-renaissance"] },
+    { "slug": "hans-holbein", "wikipedia": "Hans Holbein the Younger", "periods": ["northern-renaissance"] },
+    { "slug": "pieter-bruegel", "wikipedia": "Pieter Bruegel the Elder", "periods": ["northern-renaissance"] },
+
+    { "slug": "leonardo-da-vinci", "wikipedia": "Leonardo da Vinci", "periods": ["high-renaissance"] },
+    { "slug": "michelangelo", "wikipedia": "Michelangelo", "periods": ["high-renaissance"] },
+    { "slug": "raphael", "wikipedia": "Raphael", "periods": ["high-renaissance"] },
+    { "slug": "titian", "wikipedia": "Titian", "periods": ["high-renaissance", "mannerism"] },
+
+    { "slug": "parmigianino", "wikipedia": "Parmigianino", "periods": ["mannerism"] },
+    { "slug": "bronzino", "wikipedia": "Bronzino", "periods": ["mannerism"] },
+    { "slug": "tintoretto", "wikipedia": "Tintoretto", "periods": ["mannerism"] },
+    { "slug": "el-greco", "wikipedia": "El Greco", "periods": ["mannerism"] },
+
+    { "slug": "caravaggio", "wikipedia": "Caravaggio", "periods": ["baroque"] },
+    { "slug": "peter-paul-rubens", "wikipedia": "Peter Paul Rubens", "periods": ["baroque"] },
+    { "slug": "artemisia-gentileschi", "wikipedia": "Artemisia Gentileschi", "periods": ["baroque"] },
+    { "slug": "diego-velazquez", "wikipedia": "Diego Velázquez", "periods": ["baroque"] },
+    { "slug": "rembrandt", "wikipedia": "Rembrandt", "periods": ["baroque"] },
+    { "slug": "johannes-vermeer", "wikipedia": "Johannes Vermeer", "periods": ["baroque"] },
+
+    { "slug": "antoine-watteau", "wikipedia": "Antoine Watteau", "periods": ["rococo"] },
+    { "slug": "giovanni-battista-tiepolo", "wikipedia": "Giovanni Battista Tiepolo", "periods": ["rococo"] },
+    { "slug": "francois-boucher", "wikipedia": "François Boucher", "periods": ["rococo"] },
+    { "slug": "jean-honore-fragonard", "wikipedia": "Jean-Honoré Fragonard", "periods": ["rococo"] },
+
+    { "slug": "angelica-kauffman", "wikipedia": "Angelica Kauffman", "periods": ["neoclassicism"] },
+    { "slug": "jacques-louis-david", "wikipedia": "Jacques-Louis David", "periods": ["neoclassicism"] },
+    { "slug": "jean-auguste-dominique-ingres", "wikipedia": "Jean-Auguste-Dominique Ingres", "periods": ["neoclassicism"] },
+
+    { "slug": "francisco-goya", "wikipedia": "Francisco Goya", "periods": ["romanticism"] },
+    { "slug": "caspar-david-friedrich", "wikipedia": "Caspar David Friedrich", "periods": ["romanticism"] },
+    { "slug": "jmw-turner", "wikipedia": "J. M. W. Turner", "periods": ["romanticism"] },
+    { "slug": "theodore-gericault", "wikipedia": "Théodore Géricault", "periods": ["romanticism"] },
+    { "slug": "eugene-delacroix", "wikipedia": "Eugène Delacroix", "periods": ["romanticism"] },
+
+    { "slug": "jean-francois-millet", "wikipedia": "Jean-François Millet", "periods": ["realism"] },
+    { "slug": "rosa-bonheur", "wikipedia": "Rosa Bonheur", "periods": ["realism"] },
+    { "slug": "gustave-courbet", "wikipedia": "Gustave Courbet", "periods": ["realism"] },
+    { "slug": "edouard-manet", "wikipedia": "Édouard Manet", "periods": ["realism", "impressionism"] },
+
+    { "slug": "camille-pissarro", "wikipedia": "Camille Pissarro", "periods": ["impressionism"] },
+    { "slug": "edgar-degas", "wikipedia": "Edgar Degas", "periods": ["impressionism"] },
+    { "slug": "claude-monet", "wikipedia": "Claude Monet", "periods": ["impressionism"] },
+    { "slug": "pierre-auguste-renoir", "wikipedia": "Pierre-Auguste Renoir", "periods": ["impressionism"] },
+    { "slug": "berthe-morisot", "wikipedia": "Berthe Morisot", "periods": ["impressionism"] },
+    { "slug": "mary-cassatt", "wikipedia": "Mary Cassatt", "periods": ["impressionism"] },
+
+    { "slug": "paul-cezanne", "wikipedia": "Paul Cézanne", "periods": ["post-impressionism"] },
+    { "slug": "paul-gauguin", "wikipedia": "Paul Gauguin", "periods": ["post-impressionism"] },
+    { "slug": "vincent-van-gogh", "wikipedia": "Vincent van Gogh", "periods": ["post-impressionism"] },
+    { "slug": "georges-seurat", "wikipedia": "Georges Seurat", "periods": ["post-impressionism"] },
+    { "slug": "henri-de-toulouse-lautrec", "wikipedia": "Henri de Toulouse-Lautrec", "periods": ["post-impressionism"] },
+
+    { "slug": "odilon-redon", "wikipedia": "Odilon Redon", "periods": ["symbolism-art-nouveau"] },
+    { "slug": "henri-rousseau", "wikipedia": "Henri Rousseau", "periods": ["symbolism-art-nouveau"] },
+    { "slug": "gustav-klimt", "wikipedia": "Gustav Klimt", "periods": ["symbolism-art-nouveau"] },
+    { "slug": "alphonse-mucha", "wikipedia": "Alphonse Mucha", "periods": ["symbolism-art-nouveau"] },
+
+    { "slug": "edvard-munch", "wikipedia": "Edvard Munch", "periods": ["expressionism"] },
+    { "slug": "ernst-ludwig-kirchner", "wikipedia": "Ernst Ludwig Kirchner", "periods": ["expressionism"] },
+    { "slug": "franz-marc", "wikipedia": "Franz Marc", "periods": ["expressionism"] },
+    { "slug": "amedeo-modigliani", "wikipedia": "Amedeo Modigliani", "periods": ["expressionism"] },
+    { "slug": "egon-schiele", "wikipedia": "Egon Schiele", "periods": ["expressionism"] },
+
+    { "slug": "pablo-picasso", "wikipedia": "Pablo Picasso", "periods": ["cubism"] },
+    { "slug": "georges-braque", "wikipedia": "Georges Braque", "periods": ["cubism"] },
+    { "slug": "juan-gris", "wikipedia": "Juan Gris", "periods": ["cubism"] },
+    { "slug": "fernand-leger", "wikipedia": "Fernand Léger", "periods": ["cubism"] },
+
+    { "slug": "wassily-kandinsky", "wikipedia": "Wassily Kandinsky", "periods": ["early-abstraction"] },
+    { "slug": "kazimir-malevich", "wikipedia": "Kazimir Malevich", "periods": ["early-abstraction"] },
+    { "slug": "piet-mondrian", "wikipedia": "Piet Mondrian", "periods": ["early-abstraction"] },
+    { "slug": "paul-klee", "wikipedia": "Paul Klee", "periods": ["early-abstraction"] },
+
+    { "slug": "max-ernst", "wikipedia": "Max Ernst", "periods": ["surrealism"] },
+    { "slug": "joan-miro", "wikipedia": "Joan Miró", "periods": ["surrealism"] },
+    { "slug": "rene-magritte", "wikipedia": "René Magritte", "periods": ["surrealism"] },
+    { "slug": "salvador-dali", "wikipedia": "Salvador Dalí", "periods": ["surrealism"] },
+    { "slug": "frida-kahlo", "wikipedia": "Frida Kahlo", "periods": ["surrealism"] },
+
+    { "slug": "jackson-pollock", "wikipedia": "Jackson Pollock", "periods": ["abstract-expressionism"] },
+    { "slug": "mark-rothko", "wikipedia": "Mark Rothko", "periods": ["abstract-expressionism"] },
+    { "slug": "willem-de-kooning", "wikipedia": "Willem de Kooning", "periods": ["abstract-expressionism"] },
+    { "slug": "lee-krasner", "wikipedia": "Lee Krasner", "periods": ["abstract-expressionism"] },
+
+    { "slug": "andy-warhol", "wikipedia": "Andy Warhol", "periods": ["pop-art"] },
+    { "slug": "roy-lichtenstein", "wikipedia": "Roy Lichtenstein", "periods": ["pop-art"] },
+    { "slug": "david-hockney", "wikipedia": "David Hockney", "periods": ["pop-art", "contemporary"] },
+
+    { "slug": "jean-michel-basquiat", "wikipedia": "Jean-Michel Basquiat", "periods": ["contemporary"] },
+    { "slug": "gerhard-richter", "wikipedia": "Gerhard Richter", "periods": ["contemporary"] },
+    { "slug": "yayoi-kusama", "wikipedia": "Yayoi Kusama", "periods": ["contemporary"] }
+  ]
+}

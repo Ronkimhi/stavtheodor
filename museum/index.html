@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Museum · A Walkable Map of Art History · THEODORA</title>
+<meta name="description" content="An interactive map of art history: zoom through twenty periods, meet the artists where they worked in time, and step inside a walkable 3D gallery of their real paintings. All facts and images from Wikipedia and Wikimedia Commons.">
+<link rel="canonical" href="https://stavtheodor.com/museum/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="The Museum · A Walkable Map of Art History">
+<meta property="og:description" content="Zoom through eight centuries of art, open an artist's placard, and walk their gallery in 3D. Sourced entirely from Wikipedia and Wikimedia Commons.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stavtheodor.com/museum/">
+<meta property="og:image" content="https://stavtheodor.com/og-image.jpg">
+<meta property="og:site_name" content="THEODORA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/museum/css/museum-core.css">
+<link rel="stylesheet" href="/museum/css/timeline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "The Museum · A Walkable Map of Art History",
+  "url": "https://stavtheodor.com/museum/",
+  "description": "An interactive timeline of art history with first-person 3D galleries for each artist. Text from Wikipedia (CC BY-SA 4.0), public-domain images from Wikimedia Commons.",
+  "isPartOf": { "@type": "WebSite", "name": "THEODORA", "url": "https://stavtheodor.com/" },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4300MN0Q97');
+</script>
+</head>
+<body class="timeline-page">
+
+<nav class="m-nav">
+  <a class="m-nav-brand" href="/">THEODORA</a>
+  <span class="m-nav-title">The&nbsp;Museum</span>
+  <div class="m-nav-links">
+    <a href="/#about">About</a>
+    <a href="/#radar">Art&nbsp;Radar</a>
+  </div>
+</nav>
+
+<div id="stage" aria-label="Zoomable map of art history" role="application">
+  <div id="world"></div>
+</div>
+
+<div class="hud">
+  <button id="filter-btn" class="hud-pill" aria-haspopup="true" aria-expanded="false">Filter&ensp;✦</button>
+  <div class="hud-zoom">
+    <button id="zoom-out" class="hud-pill hud-sq" aria-label="Zoom out">−</button>
+    <button id="zoom-fit" class="hud-pill hud-sq" aria-label="Fit all" title="Fit all">◻</button>
+    <button id="zoom-in" class="hud-pill hud-sq" aria-label="Zoom in">+</button>
+  </div>
+</div>
+<p class="hint" id="hint">Scroll to zoom · drag to travel through time · click an artist</p>
+
+<div id="filter-panel" class="filter-panel" hidden></div>
+<div id="placard-root"></div>
+
+<noscript>
+  <div style="max-width:640px;margin:80px auto;padding:0 24px;font-family:Georgia,serif;">
+    <h1>The Museum</h1>
+    <p>This interactive map of art history requires JavaScript. The underlying data —
+    twenty periods and over eighty artists, sourced from Wikipedia and Wikimedia Commons —
+    is available as <a href="/museum/data/index.json">machine-readable JSON</a>.</p>
+  </div>
+</noscript>
+
+<script type="module" src="/museum/js/timeline/main.js"></script>
+</body>
+</html>

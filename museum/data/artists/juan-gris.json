@@ -1,0 +1,295 @@
+{
+ "slug": "juan-gris",
+ "name": "Juan Gris",
+ "qid": "Q151152",
+ "born": 1887,
+ "died": 1927,
+ "periods": [
+  "cubism"
+ ],
+ "oneLiner": "Spanish artist (1887–1927)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Juan_Gris%2C_1922%2C_photograph_by_Man_Ray%2C_Paris._Gelatin_silver_print.jpg/330px-Juan_Gris%2C_1922%2C_photograph_by_Man_Ray%2C_Paris._Gelatin_silver_print.jpg"
+ },
+ "bio": {
+  "extract": "José Victoriano González-Pérez , better known as Juan Gris, was a Spanish painter born in Madrid who lived and worked in France for most of his active period. Closely connected to the innovative artistic genre Cubism, his works are among the movement's most distinctive.",
+  "source": "https://en.wikipedia.org/wiki/Juan_Gris"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Juan_Gris",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q20190963",
+   "title": "Juan Legua",
+   "year": 1911,
+   "image": {
+    "file": "File:Juan Legua, 1911 - Juan Gris, MET DT4462.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg/960px-Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg/1920px-Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg",
+    "pxW": 3120,
+    "pxH": 3709
+   },
+   "cm": {
+    "w": 46,
+    "h": 55
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Juan Legua is an oil-on-canvas painting by Spanish cubist Juan Gris, created in 1911. It depicts a male sitter smoking a pipe and is one of Gris' earliest works in the cubist style. The work is in the collection of the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/Juan_Legua"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q3399451",
+   "title": "Portrait of Pablo Picasso",
+   "year": 1912,
+   "image": {
+    "file": "File:Juan Gris - Portrait of Pablo Picasso - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg/1920px-Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg",
+    "pxW": 6221,
+    "pxH": 7913
+   },
+   "cm": {
+    "w": 74,
+    "h": 93
+   },
+   "collection": "Art Institute of Chicago",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q19922091",
+   "title": "Violin and Playing Cards on a Table",
+   "year": 1913,
+   "image": {
+    "file": "File:Juan Gris - Violin and Playing Cards on a Table.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg/960px-Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg/1920px-Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg",
+    "pxW": 2400,
+    "pxH": 3680
+   },
+   "cm": {
+    "w": 65,
+    "h": 100
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Violin and Playing Cards on a Table is an oil on canvas painting by Spanish cubist Juan Gris, from 1913. The work is a still life, a typical motif for the cubists. It is in the collection of the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/Violin_and_Playing_Cards_on_a_Table"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q19922323",
+   "title": "Still Life with a Guitar",
+   "year": 1913,
+   "image": {
+    "file": "File:Juan Gris - Still Life with a Guitar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Juan_Gris_-_Still_Life_with_a_Guitar.jpg/960px-Juan_Gris_-_Still_Life_with_a_Guitar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Juan_Gris_-_Still_Life_with_a_Guitar.jpg/1920px-Juan_Gris_-_Still_Life_with_a_Guitar.jpg",
+    "pxW": 3728,
+    "pxH": 2432
+   },
+   "cm": {
+    "w": 100,
+    "h": 66
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Still Life with a Guitar is an oil on canvas painting by Spanish cubist Juan Gris, from 1913. The work is in the collection of the Metropolitan Museum of Art, in New York, Gallery 905.",
+    "source": "https://en.wikipedia.org/wiki/Still_Life_with_a_Guitar"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q6461080",
+   "title": "The Bottle of Anís del Mono",
+   "year": 1914,
+   "image": {
+    "file": "File:Juan Gris - La bouteille d'anis - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg/960px-Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg/1920px-Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg",
+    "pxW": 12707,
+    "pxH": 22297
+   },
+   "cm": {
+    "w": 24,
+    "h": 42
+   },
+   "collection": "Museo Nacional Centro de Arte Reina Sofía",
+   "story": {
+    "extract": "The Anisette Bottle is a 1914 painting by Juan Gris, now in the Museo Nacional Centro de Arte Reina Sofía in Madrid. It shows a bottle of anisette, specifically the Spanish brand Anís del Mono, with the names of Badalona, Madrid and Paris, all linked with the leaders of the Cubist movement, namely Gris himself, Pablo Picasso and Georges Braque.",
+    "source": "https://en.wikipedia.org/wiki/The_Anisette_Bottle"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q20189849",
+   "title": "Still Life with Checked Tablecloth",
+   "year": 1915,
+   "image": {
+    "file": "File:Juan Gris - Nature morte à la nappe à carreaux.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg/960px-Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg/1920px-Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg",
+    "pxW": 2429,
+    "pxH": 3200
+   },
+   "cm": {
+    "w": 89,
+    "h": 116
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Still Life with Checked Tablecloth is an early 20th century painting by Spanish Cubist artist Juan Gris. Done in oil and graphite on canvas, the painting depicts a table set with grapes, a bottle of red wine, beer, a newspaper and guitar. In addition, the composite image formed from these various objects can be seen as Gris' take on a bull's head.",
+    "source": "https://en.wikipedia.org/wiki/Still_Life_with_Checked_Tablecloth"
+   },
+   "facts": [
+    {
+     "text": "Formerly in the collection of Léonce Rosenberg, Paris (no. 5114), the work was reproduced in Bulletin de \"L'Effort Moderne\" no. 16, in June 1925, titled Le compotier. The painting later formed part of the collection of Gottlieb Reber.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Still_Life_with_Checked_Tablecloth#Background"
+    },
+    {
+     "text": "In 2014, Still Life with Checked Tablecloth was sold at Christie's London for £34.8 million ($57.1 million), attaining a world record price for a work by Juan Gris at a public auction. These surpassed previous records of $20.8 million for his 1915 work, Livre, pipe et verres, and $28.6 million for the 1913 painting, Violon et guitare.",
+     "section": "Art market",
+     "source": "https://en.wikipedia.org/wiki/Still_Life_with_Checked_Tablecloth#Art_market"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q60329141",
+   "title": "The Breakfast",
+   "year": 1915,
+   "image": {
+    "file": "File:Juan Gris - The Breakfast (Le Petit Déjeuner) (1915).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg/960px-Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg/1920px-Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg",
+    "pxW": 3193,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 73,
+    "h": 92
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": {
+    "extract": "The Bekfast is a painting by Juan Gris, painted in October 1915. It is in the collection of the Musée National d'Art Moderne, in Paris, purchased in 1947.",
+    "source": "https://en.wikipedia.org/wiki/The_Breakfast"
+   },
+   "facts": [
+    {
+     "text": "From 2018 to 2019, it was in the exhibition, Le Cubisme, at the Centre Pompidou, Paris. == References ==",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Breakfast#History"
+    },
+    {
+     "text": "This cubist canvas is executed in oil and charcoal. It is a still life depicting a coffee grinder, a coffee pot and a fruit bowl .",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Breakfast#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q20189543",
+   "title": "Harlequin with a Guitar",
+   "year": 1917,
+   "image": {
+    "file": "File:Juan Gris - Harlequin with a Guitar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Juan_Gris_-_Harlequin_with_a_Guitar.jpg/960px-Juan_Gris_-_Harlequin_with_a_Guitar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Juan_Gris_-_Harlequin_with_a_Guitar.jpg",
+    "pxW": 1262,
+    "pxH": 1938
+   },
+   "cm": {
+    "w": 65,
+    "h": 101
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Harlequin with a Guitar is an oil on canvas painting by Spanish cubist Juan Gris, from 1917. The work is in the collection of the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/Harlequin_with_a_Guitar"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q16653443",
+   "title": "Le Canigou",
+   "year": 1921,
+   "image": {
+    "file": "File:Le Canigou Juan Gris.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Le_Canigou_Juan_Gris.jpeg/960px-Le_Canigou_Juan_Gris.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Le_Canigou_Juan_Gris.jpeg",
+    "pxW": 1120,
+    "pxH": 727
+   },
+   "cm": {
+    "w": 124,
+    "h": 88
+   },
+   "collection": "Buffalo AKG Art Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  },
+  {
+   "qid": "Q27658378",
+   "title": "Guitar and Newspaper",
+   "year": 1925,
+   "image": {
+    "file": "File:Juan Gris - Guitare et journal - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg/1920px-Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg",
+    "pxW": 4603,
+    "pxH": 3672
+   },
+   "cm": {
+    "w": 81,
+    "h": 65
+   },
+   "collection": "Museo Nacional Centro de Arte Reina Sofía",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Juan Gris"
+   }
+  }
+ ]
+}

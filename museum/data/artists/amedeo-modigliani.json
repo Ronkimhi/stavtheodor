@@ -1,0 +1,305 @@
+{
+ "slug": "amedeo-modigliani",
+ "name": "Amedeo Modigliani",
+ "qid": "Q120993",
+ "born": 1884,
+ "died": 1920,
+ "periods": [
+  "expressionism"
+ ],
+ "oneLiner": "Italian painter and sculptor (1884–1920)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amedeo_Modigliani_in_his_studio.jpg/330px-Amedeo_Modigliani_in_his_studio.jpg"
+ },
+ "bio": {
+  "extract": "Amedeo Clemente Modigliani was an Italian painter and sculptor of the École de Paris who worked mainly in France. He is known for portraits and nudes in a modern style characterised by a surreal elongation of faces, necks, and figures — works that were not received well during his lifetime, but later became much sought after. Modigliani was born and spent his youth in Italy, where he studied the art of antiquity and the Renaissance. In 1906, he moved to Paris, where he came into contact with such artists as Pablo Picasso and Constantin Brâncuși.",
+  "source": "https://en.wikipedia.org/wiki/Amedeo_Modigliani"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Amedeo_Modigliani",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3937635",
+   "title": "Portrait of Moise Kiesling",
+   "year": 1915,
+   "image": {
+    "file": "File:Amedeo Modigliani (1884-1920) - Ritratto del pittore Moisè Kisling (1915) - Pinacoteca di Brera - Milano.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Amedeo_Modigliani_%281884-1920%29_-_Ritratto_del_pittore_Mois%C3%A8_Kisling_%281915%29_-_Pinacoteca_di_Brera_-_Milano.jpg/960px-Amedeo_Modigliani_%281884-1920%29_-_Ritratto_del_pittore_Mois%C3%A8_Kisling_%281915%29_-_Pinacoteca_di_Brera_-_Milano.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Amedeo_Modigliani_%281884-1920%29_-_Ritratto_del_pittore_Mois%C3%A8_Kisling_%281915%29_-_Pinacoteca_di_Brera_-_Milano.jpg/1920px-Amedeo_Modigliani_%281884-1920%29_-_Ritratto_del_pittore_Mois%C3%A8_Kisling_%281915%29_-_Pinacoteca_di_Brera_-_Milano.jpg",
+    "pxW": 4199,
+    "pxH": 5472
+   },
+   "cm": {
+    "w": 29,
+    "h": 37
+   },
+   "collection": "Pinacoteca di Brera",
+   "story": {
+    "extract": "Portrait of the Painter Moisè Kisling is 1915 oil painting by Italian painter Amedeo Modigliani, a portrait of Modigliani's friend, the Polish Jew painter Moïse Kisling. The painting is the collection of Pinacoteca di Brera in Milan, Italy",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_the_Painter_Mois%C3%A8_Kisling"
+   },
+   "facts": [
+    {
+     "text": "This portrait of Kisling was probably made in 1915, after his return to Paris, having been discharged from the French Foreign Legion following war wounds. The painting shows clearly the influence of cubism. == References ==",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_the_Painter_Mois%C3%A8_Kisling#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3879280",
+   "title": "Female Nude",
+   "year": 1916,
+   "image": {
+    "file": "File:Amedeo Modigliani 060.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Amedeo_Modigliani_060.jpg/960px-Amedeo_Modigliani_060.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Amedeo_Modigliani_060.jpg/1920px-Amedeo_Modigliani_060.jpg",
+    "pxW": 2052,
+    "pxH": 3174
+   },
+   "cm": {
+    "w": 60,
+    "h": 92
+   },
+   "collection": "Courtauld Gallery",
+   "story": {
+    "extract": "Seated Nude is a 1916 oil on canvas painting by Amedeo Modigliani, now in the Courtauld Gallery. The painting is one of a famous series of nudes that Modigliani painted between 1916 and 1918, which include many of his most famous works. Its model was Beatrice Hastings, then the artist's lover.",
+    "source": "https://en.wikipedia.org/wiki/Seated_Nude_%281916%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3806044",
+   "title": "Jacques and Berthe Lipchitz",
+   "year": 1916,
+   "image": {
+    "file": "File:Amedeo Modigliani - Jacques and Berthe Lipchitz - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Amedeo_Modigliani_-_Jacques_and_Berthe_Lipchitz_-_Google_Art_Project.jpg/960px-Amedeo_Modigliani_-_Jacques_and_Berthe_Lipchitz_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Amedeo_Modigliani_-_Jacques_and_Berthe_Lipchitz_-_Google_Art_Project.jpg/1920px-Amedeo_Modigliani_-_Jacques_and_Berthe_Lipchitz_-_Google_Art_Project.jpg",
+    "pxW": 3120,
+    "pxH": 4711
+   },
+   "cm": {
+    "w": 54,
+    "h": 81
+   },
+   "collection": "Helen Birch Bartlett Memorial Collection",
+   "story": {
+    "extract": "Jacques and Berthe Lipchitz is a 1916 oil on canvas painting by Amedeo Modigliani. It depicts Modigliani's friend, the sculptor Jacques Lipchitz, standing alongside his seated wife Berthe.",
+    "source": "https://en.wikipedia.org/wiki/Jacques_and_Berthe_Lipchitz"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3877556",
+   "title": "Nu couché",
+   "year": 1917,
+   "image": {
+    "file": "File:Modigliani - Nu couché.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Modigliani_-_Nu_couch%C3%A9.jpg/960px-Modigliani_-_Nu_couch%C3%A9.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Modigliani_-_Nu_couch%C3%A9.jpg/1920px-Modigliani_-_Nu_couch%C3%A9.jpg",
+    "pxW": 3200,
+    "pxH": 2015
+   },
+   "cm": {
+    "w": 92,
+    "h": 60
+   },
+   "collection": "Riccardo Gualino Collection (1910-1930)",
+   "story": {
+    "extract": "Nu couché is a 1917 oil on canvas painting by the Italian artist Amedeo Modigliani. It is one of his most widely reproduced and exhibited paintings.",
+    "source": "https://en.wikipedia.org/wiki/Nu_couch%C3%A9"
+   },
+   "facts": [
+    {
+     "text": "The painting is one of a famous series of nudes that Modigliani painted in 1917 under the patronage of his Polish dealer Léopold Zborowski. It is believed to have been included in Modigliani's first and only art show in 1917, at the Galerie Berthe Weill, which was shut down by the police.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Nu_couch%C3%A9#Painting"
+    },
+    {
+     "text": "The Guardian art critic Jonathan Jones claims that Modigliani continues the tradition of Titian's Venus of Urbino \"glorifying the human body infuses the sexuality of Modigliani's nude\", reinvented a decade before by the paintings of Pablo Picasso and Henri Matisse. Jones states that \"Modigliani is a religious artist and his religion is desire.\"",
+     "section": "Commentary",
+     "source": "https://en.wikipedia.org/wiki/Nu_couch%C3%A9#Commentary"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3879285",
+   "title": "Nude Sitting on a Divan",
+   "year": 1917,
+   "image": {
+    "file": "File:برهنه اثر آمادئو مودیلیانی.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%D8%A8%D8%B1%D9%87%D9%86%D9%87_%D8%A7%D8%AB%D8%B1_%D8%A2%D9%85%D8%A7%D8%AF%D8%A6%D9%88_%D9%85%D9%88%D8%AF%DB%8C%D9%84%DB%8C%D8%A7%D9%86%DB%8C.jpg/960px-%D8%A8%D8%B1%D9%87%D9%86%D9%87_%D8%A7%D8%AB%D8%B1_%D8%A2%D9%85%D8%A7%D8%AF%D8%A6%D9%88_%D9%85%D9%88%D8%AF%DB%8C%D9%84%DB%8C%D8%A7%D9%86%DB%8C.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/57/%D8%A8%D8%B1%D9%87%D9%86%D9%87_%D8%A7%D8%AB%D8%B1_%D8%A2%D9%85%D8%A7%D8%AF%D8%A6%D9%88_%D9%85%D9%88%D8%AF%DB%8C%D9%84%DB%8C%D8%A7%D9%86%DB%8C.jpg",
+    "pxW": 1778,
+    "pxH": 1276
+   },
+   "cm": {
+    "w": 63,
+    "h": 100
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/3905683c841c1a0a897572953b3ad6a4",
+   "story": {
+    "extract": "Nude Sitting on a Divan (The Beautiful Roman Woman) is an oil on canvas painting by Italian artist Amedeo Modigliani depicting a partially draped woman seated with crossed legs against a warm red background. The work was one of a series of nudes painted by Modigliani in 1917 that created a sensation when exhibited in Paris that year. On November 2, 2010, the painting sold at a New York auction for $68.9 million, a record price for an artwork by Modigliani.",
+    "source": "https://en.wikipedia.org/wiki/Nude_Sitting_on_a_Divan"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q2921123",
+   "title": "Seated Nude",
+   "year": 1917,
+   "image": {
+    "file": "File:Zittend naakt, Amedeo Modigliani, (1917), Koninklijk Museum voor Schone Kunsten Antwerpen, 2060.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Zittend_naakt%2C_Amedeo_Modigliani%2C_%281917%29%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2060.jpg/960px-Zittend_naakt%2C_Amedeo_Modigliani%2C_%281917%29%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2060.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Zittend_naakt%2C_Amedeo_Modigliani%2C_%281917%29%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2060.jpg/1920px-Zittend_naakt%2C_Amedeo_Modigliani%2C_%281917%29%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2060.jpg",
+    "pxW": 4880,
+    "pxH": 7892
+   },
+   "cm": {
+    "w": 74,
+    "h": 114
+   },
+   "collection": "Royal Museum of Fine Arts Antwerp",
+   "story": {
+    "extract": "Seated Nude is a 1917 painting by Amedeo Modigliani, now in the Royal Museum of Fine Arts, Antwerp.",
+    "source": "https://en.wikipedia.org/wiki/Seated_Nude_%281917%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q4062416",
+   "title": "Alice",
+   "year": 1918,
+   "image": {
+    "file": "File:Alice (Amedeo Modigliani).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alice_%28Amedeo_Modigliani%29.jpg/960px-Alice_%28Amedeo_Modigliani%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alice_%28Amedeo_Modigliani%29.jpg/1920px-Alice_%28Amedeo_Modigliani%29.jpg",
+    "pxW": 3664,
+    "pxH": 7323
+   },
+   "cm": {
+    "w": 39,
+    "h": 78
+   },
+   "collection": "Statens Museum for Kunst",
+   "story": {
+    "extract": "Alice is a c.1918 oil on canvas painting by Amedeo Modigliani. It now hangs in the National Gallery of Denmark, in Copenhagen, to which it was donated in 1928.",
+    "source": "https://en.wikipedia.org/wiki/Alice_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "Modigliani painted more than 300 portraits between 1915 and 1920. Alice is the portrait of a young girl seated, dressed in a blue Sunday dress with a gold cross upon her chest.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/Alice_%28painting%29#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3793584",
+   "title": "The Little Peasant",
+   "year": 1918,
+   "image": {
+    "file": "File:Amedeo Modigliani 010.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amedeo_Modigliani_010.jpg/960px-Amedeo_Modigliani_010.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Amedeo_Modigliani_010.jpg",
+    "pxW": 980,
+    "pxH": 1536
+   },
+   "cm": {
+    "w": 64,
+    "h": 100
+   },
+   "collection": "Tate",
+   "story": {
+    "extract": "The Little Peasant is a 1918 oil painting of a youth by Amedeo Modigliani. It is held in Tate Modern, in London. The painting has a faint chromatism, a delicate color variation and harmony.",
+    "source": "https://en.wikipedia.org/wiki/The_Little_Peasant_%28Modigliani%29"
+   },
+   "facts": [
+    {
+     "text": "Modigliani went to the south of France in April or May 1918 and seems to have stayed there at least until July of the same year. He lived in Cagnes-sur-Mer, and from there in Nice.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/The_Little_Peasant_%28Modigliani%29#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q769461",
+   "title": "Ritratto di Lunia Czechowska con ventaglio",
+   "year": 1919,
+   "image": {
+    "file": "File:Amedeo Modigliani 028.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Amedeo_Modigliani_028.jpg/960px-Amedeo_Modigliani_028.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/58/Amedeo_Modigliani_028.jpg",
+    "pxW": 1576,
+    "pxH": 2519
+   },
+   "cm": {
+    "w": 65,
+    "h": 100
+   },
+   "collection": "Musée d'art moderne de Paris",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  },
+  {
+   "qid": "Q3630728",
+   "title": "Self-portrait",
+   "year": 1919,
+   "image": {
+    "file": "File:Amedeo Modigliani 053.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Amedeo_Modigliani_053.jpg/960px-Amedeo_Modigliani_053.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/32/Amedeo_Modigliani_053.jpg",
+    "pxW": 1576,
+    "pxH": 2454
+   },
+   "cm": {
+    "w": 64,
+    "h": 100
+   },
+   "collection": "Riccardo Gualino Collection (1910-1930)",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Amedeo Modigliani"
+   }
+  }
+ ]
+}

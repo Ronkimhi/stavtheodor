@@ -1,0 +1,380 @@
+{
+ "slug": "claude-monet",
+ "name": "Claude Monet",
+ "qid": "Q296",
+ "born": 1840,
+ "died": 1926,
+ "periods": [
+  "impressionism"
+ ],
+ "oneLiner": "French painter (1840–1926)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Claude_Monet_1899_Nadar_crop.jpg/330px-Claude_Monet_1899_Nadar_crop.jpg"
+ },
+ "bio": {
+  "extract": "Oscar-Claude Monet was a French painter and founder of Impressionism who is seen as a key precursor to modernism, especially in his attempts to paint nature as he perceived it. During his long career, he was the most consistent and prolific practitioner of Impressionism's philosophy of expressing one's perceptions of nature, especially as applied to plein air (outdoor) landscape painting. The term \"Impressionism\" is derived from the title of his painting Impression, Sunrise, which was exhibited in 1874 at the First Impressionist Exhibition, initiated by Monet and a number of like-minded artists as an alternative to the Salon.",
+  "source": "https://en.wikipedia.org/wiki/Claude_Monet"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Claude_Monet",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2734892",
+   "title": "Women in the Garden",
+   "year": 1866,
+   "image": {
+    "file": "File:Claude Monet 024.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Claude_Monet_024.jpg/960px-Claude_Monet_024.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Claude_Monet_024.jpg/1920px-Claude_Monet_024.jpg",
+    "pxW": 2024,
+    "pxH": 2490
+   },
+   "cm": {
+    "w": 205,
+    "h": 255
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Women in the Garden is an oil painting begun in 1866 by French artist Claude Monet when he was 26. It is a large work painted en plein air; the size of the canvas necessitated Monet painting its upper half with the canvas lowered into a trench he had dug, so that he could maintain a single point of view for the entire work. The setting is the garden of a property he was renting.",
+    "source": "https://en.wikipedia.org/wiki/Women_in_the_Garden"
+   },
+   "facts": [
+    {
+     "text": "In 1984, Herman Braun-Vega incorporated Women in the Garden with The Balcony by Manet into an enlarged composition in the foreground of which two poor Peruvian women are seated waiting to sell some vegetable plants piled in front of them.",
+     "section": "Braun-Vega's appropriations",
+     "source": "https://en.wikipedia.org/wiki/Women_in_the_Garden#Braun-Vega%27s_appropriations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q1167912",
+   "title": "Le Déjeuner sur l'herbe",
+   "year": 1866,
+   "image": {
+    "file": "File:Claude Monet - Le dejeurner sur l'herbe (left panel).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Claude_Monet_-_Le_dejeurner_sur_l%27herbe_%28left_panel%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Claude_Monet_-_Le_dejeurner_sur_l%27herbe_%28left_panel%29.jpg",
+    "pxW": 538,
+    "pxH": 1020
+   },
+   "cm": {
+    "w": 150,
+    "h": 248
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Le Déjeuner sur l'herbe is an 1865–1866 oil-on-canvas painting by Claude Monet, produced in response to the 1863 work of the same title by Édouard Manet. It remains unfinished, but two large fragments are now in the Musée d'Orsay in Paris, while a smaller 1866 version is now in the Pushkin Museum in Moscow. Monet originally wanted to submit the painting to the Salon of 1866, but he underestimated how long it would take him to transfer his sketches to a life-size canvas, so it remained unfinished by the time of the exhibition.",
+    "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe_%28Monet%2C_Paris%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts twelve people clothed in the Parisian fashion of the time. They are having a picnic near a forest glade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe_%28Monet%2C_Paris%29#Description"
+    },
+    {
+     "text": "Many different paintings have been said to have influenced Monet's Le Déjeuner sur l'herbe. Joel Isaacson believes that, in addition to being influenced by the original Déjeuner, Monet also drew elements from Manet's Music in the Tuileries.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe_%28Monet%2C_Paris%29#Influence"
+    },
+    {
+     "text": "Monet's use of color is notable throughout the painting. He used bright accents on the dress in the left panel.",
+     "section": "Stylistic elements",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe_%28Monet%2C_Paris%29#Stylistic_elements"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q432253",
+   "title": "Garden at Sainte-Adresse",
+   "year": 1867,
+   "image": {
+    "file": "File:Claude Monet - Jardin à Sainte-Adresse.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg/960px-Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg/1920px-Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg",
+    "pxW": 5940,
+    "pxH": 4453
+   },
+   "cm": {
+    "w": 130,
+    "h": 98
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Garden at Sainte-Adresse is a painting by the French impressionist painter Claude Monet.. The painting was acquired by the Metropolitan Museum of Art after an auction sale at Christie's in December 1967, under the French title La terrasse à Sainte-Adresse. The painting was exhibited at the 4th Impressionist exhibition, Paris, April 10–May 11, 1879, as no. 157 under the title Jardin à Sainte-Adresse.",
+    "source": "https://en.wikipedia.org/wiki/Garden_at_Sainte-Adresse"
+   },
+   "facts": [
+    {
+     "text": "Monet spent the summer of 1867 at the resort town of Sainte-Adresse on the English Channel, near Le Havre (France). It was there, in a garden with a view of Honfleur on the horizon, that he painted this picture, which combines smooth, traditionally rendered areas with sparkling passages of rapid, separate brushwork, and spots of pure colour.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Garden_at_Sainte-Adresse#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q681876",
+   "title": "Woman in the Garden",
+   "year": 1867,
+   "image": {
+    "file": "File:Claude Monet 022.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Claude_Monet_022.jpg/960px-Claude_Monet_022.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Claude_Monet_022.jpg/1920px-Claude_Monet_022.jpg",
+    "pxW": 2790,
+    "pxH": 2260
+   },
+   "cm": {
+    "w": 101,
+    "h": 82
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Woman in the Garden is a painting begun in 1866 by Claude Monet when he was a young man of 26. The work was executed en plein air in oil on canvas with a relatively large size of 82 by 101 cm. and currently belongs in the collection of the Hermitage Museum in St Petersburg, Russia.",
+    "source": "https://en.wikipedia.org/wiki/Woman_in_the_Garden"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q734082",
+   "title": "Regatta at Sainte-Adresse",
+   "year": 1867,
+   "image": {
+    "file": "File:Claude Monet, 1867, Regatta at Sainte-Adresse, Metropolitan Museum of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Claude_Monet%2C_1867%2C_Regatta_at_Sainte-Adresse%2C_Metropolitan_Museum_of_Art.jpg/960px-Claude_Monet%2C_1867%2C_Regatta_at_Sainte-Adresse%2C_Metropolitan_Museum_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Claude_Monet%2C_1867%2C_Regatta_at_Sainte-Adresse%2C_Metropolitan_Museum_of_Art.jpg/1920px-Claude_Monet%2C_1867%2C_Regatta_at_Sainte-Adresse%2C_Metropolitan_Museum_of_Art.jpg",
+    "pxW": 3789,
+    "pxH": 2790
+   },
+   "cm": {
+    "w": 102,
+    "h": 75
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Regatta at Sainte-Adresse is an oil-on-canvas painting by the impressionist painter Claude Monet. It was painted in 1867 and is owned by the Metropolitan Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/Regatta_at_Sainte-Adresse_%28Monet%29"
+   },
+   "facts": [
+    {
+     "text": "?Henri Hecht, Paris (1873; bought in January for Fr 500 from the artist); ?sale, Hôtel Drouot, Paris, April 5, 1884, no. 25, as \"Sainte-Adresse\"; [Durand-Ruel, Paris, about 1888–91, sold on August 20, 1891 to Widener]; P.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Regatta_at_Sainte-Adresse_%28Monet%29#Provenance"
+    },
+    {
+     "text": "Sainte-Adresse, the well-to-do suburb of Le Havre, was the home of Monet's father. Destitute, Monet spent the summer of 1867 with his father and aunt Sophie Lecadre at the cost of abandoning his companion, Camille Doncieux, and their newborn son, Jean.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Regatta_at_Sainte-Adresse_%28Monet%29#Description"
+    },
+    {
+     "text": "Galerie de la société des amis des arts de Bordeaux. \"Salon des amis des arts de Bordeaux,\" 1868, no. 449 (as \"Les régates du Havre,\" possibly this picture) [see Wildenstein 1996, vol. 2].",
+     "section": "Selected exhibitions",
+     "source": "https://en.wikipedia.org/wiki/Regatta_at_Sainte-Adresse_%28Monet%29#Selected_exhibitions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q941549",
+   "title": "La Grenouillère",
+   "year": 1869,
+   "image": {
+    "file": "File:Claude Monet La Grenouillére.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Claude_Monet_La_Grenouill%C3%A9re.jpg/960px-Claude_Monet_La_Grenouill%C3%A9re.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Claude_Monet_La_Grenouill%C3%A9re.jpg/1920px-Claude_Monet_La_Grenouill%C3%A9re.jpg",
+    "pxW": 3679,
+    "pxH": 2752
+   },
+   "cm": {
+    "w": 100,
+    "h": 75
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "La Grenouillère is an 1869 painting by the French impressionist painter, Claude Monet. It depicts \"Flowerpot Island\", also known as the Camembert, and the gangplank to La Grenouillère, a floating restaurant and boat-hire on the Seine at Croissy-sur-Seine. He was accompanied by Pierre-Auguste Renoir, who also painted the scene at the same time.",
+    "source": "https://en.wikipedia.org/wiki/La_Grenouill%C3%A8re_%28Monet%29"
+   },
+   "facts": [
+    {
+     "text": "The painting is now in the New York Metropolitan Museum of Art. It was bequeathed by Louisine Havemeyer in 1929.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/La_Grenouill%C3%A8re_%28Monet%29#Provenance"
+    },
+    {
+     "text": "Monet wrote on September 25, 1869, in a letter to fellow artist Frédéric Bazille, \"I do have a dream, a painting (tableau), the baths of La Grenouillère, for which I have made some bad sketches (pochades), but it is only a dream.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/La_Grenouill%C3%A8re_%28Monet%29#History"
+    },
+    {
+     "text": "As in his earlier picture of the Garden at Sainte-Adresse, Monet concentrated on repetitive elements – the ripples on the water, the foliage, the boats, the human figures – to weave a fabric of brushstrokes which, although emphatically brushstrokes, retain a strong descriptive quality.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/La_Grenouill%C3%A8re_%28Monet%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q328523",
+   "title": "Impression, Sunrise",
+   "year": 1872,
+   "image": {
+    "file": "File:Monet - Impression, Sunrise.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/960px-Monet_-_Impression%2C_Sunrise.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/1920px-Monet_-_Impression%2C_Sunrise.jpg",
+    "pxW": 5773,
+    "pxH": 4478
+   },
+   "cm": {
+    "w": 63,
+    "h": 48
+   },
+   "collection": "Musée Marmottan Monet",
+   "story": {
+    "extract": "Impression, Sunrise is an 1872 painting by Claude Monet first shown at what would become known as the \"Exhibition of the Impressionists\" in Paris in April, 1874. The painting is credited with inspiring the name of the Impressionist movement.",
+    "source": "https://en.wikipedia.org/wiki/Impression%2C_Sunrise"
+   },
+   "facts": [
+    {
+     "text": "Monet visited his hometown of Le Havre in the Northwest of France in 1872 and proceeded to create a series of works depicting the port. The six painted canvases depict the port \"during dawn, day, dusk, and dark and from varying viewpoints, some from the water itself and others from a hotel room looking down over the port\".",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Impression%2C_Sunrise#History"
+    },
+    {
+     "text": "Impression, Sunrise depicts the port of Le Havre at sunrise, the two small rowboats in the foreground and the red Sun being the focal elements. In the middle ground, more fishing boats are included, while in the background on the left side of the painting are clipper ships with tall masts.",
+     "section": "Subject and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Impression%2C_Sunrise#Subject_and_interpretation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q3454959",
+   "title": "Régates à Argenteuil",
+   "year": 1872,
+   "image": {
+    "file": "File:Claude Monet - Regattas at Argenteuil - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Claude_Monet_-_Regattas_at_Argenteuil_-_Google_Art_Project.jpg/960px-Claude_Monet_-_Regattas_at_Argenteuil_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Claude_Monet_-_Regattas_at_Argenteuil_-_Google_Art_Project.jpg/1920px-Claude_Monet_-_Regattas_at_Argenteuil_-_Google_Art_Project.jpg",
+    "pxW": 5978,
+    "pxH": 3852
+   },
+   "cm": {
+    "w": 75,
+    "h": 48
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Regatta at Argenteuil is a c. 1872 painting by Claude Monet, now in the Musée d'Orsay. It was left to the French state in 1894 by the painter and collector Gustave Caillebotte.",
+    "source": "https://en.wikipedia.org/wiki/Regatta_at_Argenteuil"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q10322900",
+   "title": "Madame Monet wearing a kimono",
+   "year": 1876,
+   "image": {
+    "file": "File:Claude Monet-Madame Monet en costume japonais.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Claude_Monet-Madame_Monet_en_costume_japonais.jpg/960px-Claude_Monet-Madame_Monet_en_costume_japonais.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/99/Claude_Monet-Madame_Monet_en_costume_japonais.jpg",
+    "pxW": 1440,
+    "pxH": 2370
+   },
+   "cm": {
+    "w": 142,
+    "h": 232
+   },
+   "collection": "Museum of Fine Arts Boston",
+   "story": {
+    "extract": "La Japonaise is an 1876 oil painting by the French Impressionist painter Claude Monet. Painted on a 231.8 cm × 142.3 cm canvas, the full-length portrait depicts a European woman in a red uchikake kimono standing in front of a wall decorated by Japanese fans. Monet's first wife Camille Doncieux modeled for the painting.",
+    "source": "https://en.wikipedia.org/wiki/La_Japonaise_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "In the painting, Monet depicts Camille in a padded, heavily decorated red kimono (an uchikake) belonging to a famous Japanese actor, standing on a Japanese-style tatami mat and in front of a wall decorated by Japanese uchiwa fans.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/La_Japonaise_%28painting%29#Description"
+    },
+    {
+     "text": "Money became one of Monet's biggest troubles in the 1860s. His father had cut his allowance due to Monet's rebellious decision to create works unsuitable for the state-sponsored Salon exhibitions.",
+     "section": "Motivation",
+     "source": "https://en.wikipedia.org/wiki/La_Japonaise_%28painting%29#Motivation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q2395218",
+   "title": "Woman with a Parasol – Madame Monet and Her Son",
+   "year": 1886,
+   "image": {
+    "file": "File:Claude Monet - Woman with a Parasol - Madame Monet and Her Son - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg/960px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg/1920px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+    "pxW": 6001,
+    "pxH": 7455
+   },
+   "cm": {
+    "w": 82,
+    "h": 100
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Woman with a Parasol – Madame Monet and Her Son is an oil-on-canvas painting by Claude Monet from 1875. The Impressionist work depicts his wife Camille Monet and their son Jean Monet in the period from 1871 to 1877 while they were living in Argenteuil, capturing a moment on a stroll on a windy summer's day. Due to the subject matter, it is sometimes known as The Stroll although the term \"Promenade\" is actually present in the titles of several other Monet paintings in the same series.",
+    "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son"
+   },
+   "facts": [
+    {
+     "text": "Monet sold the painting in November 1876 to Georges de Bellio, Monet's Homeopath, who was regularly paid in Monet's paintings. It was inherited by de Bellio's daughter Victorine and her husband Ernest Donop de Monchy, acquired by Georges Menier in Paris, and sold in 1965 to Paul Mellon and his wife Bunny Mellon.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son#Provenance"
+    },
+    {
+     "text": "The painting was one of 18 works by Monet exhibited at the Second Impressionist Exhibition in April 1876, at the gallery of Paul Durand-Ruel. Ten years later, Monet returned to a similar subject, painting a pair of scenes featuring his second wife's daughter Suzanne Monet in 1886 with a parasol in a meadow at Giverny; they are in the Musée d'Orsay.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son#History"
+    },
+    {
+     "text": "The painting is one of Monet's most recognizable and revered works and of impressionism as a whole.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son#Legacy"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Claude Monet"
+   }
+  }
+ ]
+}

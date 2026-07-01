@@ -1,0 +1,391 @@
+{
+ "slug": "paul-klee",
+ "name": "Paul Klee",
+ "qid": "Q44007",
+ "born": 1879,
+ "died": 1940,
+ "periods": [
+  "early-abstraction"
+ ],
+ "oneLiner": "German-Swiss artist (1879–1940)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg/330px-Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg"
+ },
+ "bio": {
+  "extract": "Paul Klee was a Swiss-born German artist. His highly individual style was influenced by movements in art that included expressionism, cubism, and surrealism.",
+  "source": "https://en.wikipedia.org/wiki/Paul_Klee"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Paul_Klee",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2365608",
+   "title": "Sumpflegende",
+   "year": 1919,
+   "image": {
+    "file": "File:Sumpflegende, 1919 - Paul Klee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sumpflegende%2C_1919_-_Paul_Klee.jpg/960px-Sumpflegende%2C_1919_-_Paul_Klee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sumpflegende%2C_1919_-_Paul_Klee.jpg/1920px-Sumpflegende%2C_1919_-_Paul_Klee.jpg",
+    "pxW": 3485,
+    "pxH": 4020
+   },
+   "cm": {
+    "w": 41,
+    "h": 47
+   },
+   "collection": "\"degenerate art\" collection",
+   "story": {
+    "extract": "Swamp Legend (\"Sumpflegende\") is a 1919 oil-on-cardboard painting by Swiss-German painter Paul Klee. It has been in the Städtische Galerie im Lenbachhaus in Munich since 1982, but its ownership was disputed due to its provenance. The painting was one of the works that the Nazis declared \"degenerate art\", and they confiscated it from the Landesmuseum Hannover in 1937.",
+    "source": "https://en.wikipedia.org/wiki/Swamp_Legend"
+   },
+   "facts": [
+    {
+     "text": "The painting was purchased shortly after its completion by Paul Küppers, the director of the Hannoverscher Künstlerverein, and his wife Sophie, later Lissitzky-Küppers, directly from the artist's studio in Munich. In 1926, Sophie Lissitzky-Küppers loaned the painting to the Hanover Provincial Museum, along with 15 other modernist works.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Swamp_Legend#Provenance"
+    },
+    {
+     "text": "The painting belongs to a series of \"cosmic landscapes\" that Klee created in a large number from 1917 to 1919, expressing a symbolic conception of nature. In abstract color spaces, dominated by sulphurous yellow and contrasted with violet, the objects arrange themselves in a naïve way.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Swamp_Legend#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q41696660",
+   "title": "Villa R",
+   "year": 1919,
+   "image": {
+    "file": "File:Villa R, 1919 - Paul Klee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Villa_R%2C_1919_-_Paul_Klee.jpg/960px-Villa_R%2C_1919_-_Paul_Klee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Villa_R%2C_1919_-_Paul_Klee.jpg/1920px-Villa_R%2C_1919_-_Paul_Klee.jpg",
+    "pxW": 4869,
+    "pxH": 5756
+   },
+   "cm": {
+    "w": 22,
+    "h": 26
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "Villa R is an oil-on-carton painting from 1919 by the Swiss-born German artist Paul Klee.",
+    "source": "https://en.wikipedia.org/wiki/Villa_R"
+   },
+   "facts": [
+    {
+     "text": "In 1939 the painting was confiscated from an art gallery in Frankfurt am Main by the Nazis as \"degenerate art\" and sent with other confiscated works in the Degenerate Art auction by the Fischer gallery in the Grand Hotel National in Lucerne, Switzerland. There it was sold to its current owners, the Kunstmuseum Basel.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Villa_R#Provenance"
+    },
+    {
+     "text": "The work depicts a white villa standing beside a red road winding into the mountains beyond. A yellow full moon shines overhead.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Villa_R#Description"
+    },
+    {
+     "text": "The significance of the letter R is not revealed in the painting's title, but is believed to stand for Rosa. Klee had seen a Villa Rosa in the early 1900s on his travels through Italy, accompanied by Goethe's travel diary Italian Journey.",
+     "section": "Title",
+     "source": "https://en.wikipedia.org/wiki/Villa_R#Title"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q537640",
+   "title": "Angelus Novus",
+   "year": 1920,
+   "image": {
+    "file": "File:Angelus Novus, 1920 - Paul Klee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Angelus_Novus%2C_1920_-_Paul_Klee.jpg/960px-Angelus_Novus%2C_1920_-_Paul_Klee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Angelus_Novus%2C_1920_-_Paul_Klee.jpg",
+    "pxW": 1316,
+    "pxH": 1600
+   },
+   "cm": {
+    "w": 24,
+    "h": 32
+   },
+   "collection": "Israel Museum",
+   "story": {
+    "extract": "Angelus Novus is a 1920 monoprint by the Swiss-German artist Paul Klee, created using the oil transfer method he invented. It is now in the collection of the Israel Museum in Jerusalem.",
+    "source": "https://en.wikipedia.org/wiki/Angelus_Novus"
+   },
+   "facts": [
+    {
+     "text": "Walter Benjamin, a noted German critic and philosopher, purchased the print in 1921. When he had to flee Germany in 1933, he took it with him into exile in Paris.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Angelus_Novus#History"
+    },
+    {
+     "text": "The name and concept of Klee's \"New Angel\" has inspired works by other artists, filmmakers, writers and musicians, including John Akomfrah, Ariella Azoulay, Amichai Chasson, Laurie Anderson, Rabih Alameddine, Daniel Boyd, Carolyn Forché, Haru Nemuri, Rosa Menkman and Ruth Ozeki.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Angelus_Novus#Legacy"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q3210239",
+   "title": "Twittering Machine",
+   "year": 1922,
+   "image": {
+    "file": "File:Die Zwitscher-Maschine (Twittering Machine), 1922 - Paul Klee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Die_Zwitscher-Maschine_%28Twittering_Machine%29%2C_1922_-_Paul_Klee.jpg/960px-Die_Zwitscher-Maschine_%28Twittering_Machine%29%2C_1922_-_Paul_Klee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Die_Zwitscher-Maschine_%28Twittering_Machine%29%2C_1922_-_Paul_Klee.jpg",
+    "pxW": 994,
+    "pxH": 1350
+   },
+   "cm": null,
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Twittering Machine is a 1922 watercolor with gouache, pen-and-ink, and oil transfer on paper by Swiss-German painter Paul Klee. Like other artworks by Klee, it blends biology and machinery, depicting a loosely sketched group of birds on a wire or branch connected to a hand-crank. Interpretations of the work vary widely: it has been perceived as a nightmarish lure for the viewer or a depiction of the helplessness of the artist, but also as a triumph of nature over mechanical pursuits.",
+    "source": "https://en.wikipedia.org/wiki/Twittering_Machine"
+   },
+   "facts": [
+    {
+     "text": "The Swiss-born Klee had been teaching at the Bauhaus school in Germany for a year when he completed this ink and watercolor drawing in 1922. The work was displayed for several years in the Alte Nationalgalerie in Berlin until Adolf Hitler declared it and many other works by the Swiss-born Klee \"degenerate art\" in 1933.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Twittering_Machine#History"
+    },
+    {
+     "text": "The son of a musicologist, Klee himself drew parallels between sound and art, and Twittering Machine has been influential on several composers. In fact, as of 2018, Klee's painting has inspired more musical compositions than any other single piece of art, with more than 100 examples, from full symphony orchestra to solo piano.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Twittering_Machine#Legacy"
+    },
+    {
+     "text": "The picture depicts a group of birds, largely line drawings; all save the first are shackled on a wire or, according to The Washington Post, a \"sine-wave branch\" over a blue and purple background which the MoMA equates with the \"misty cool blue of night giving way to the pink flow of dawn\".",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Twittering_Machine#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q60497141",
+   "title": "Senecio",
+   "year": 1922,
+   "image": {
+    "file": "File:Paul Klee, 1922, Senecio, oil on gauze, 40.3 × 37.4 cm, Kunstmuseum Basel.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Paul_Klee%2C_1922%2C_Senecio%2C_oil_on_gauze%2C_40.3_%C3%97_37.4_cm%2C_Kunstmuseum_Basel.jpg/960px-Paul_Klee%2C_1922%2C_Senecio%2C_oil_on_gauze%2C_40.3_%C3%97_37.4_cm%2C_Kunstmuseum_Basel.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Paul_Klee%2C_1922%2C_Senecio%2C_oil_on_gauze%2C_40.3_%C3%97_37.4_cm%2C_Kunstmuseum_Basel.jpg/1920px-Paul_Klee%2C_1922%2C_Senecio%2C_oil_on_gauze%2C_40.3_%C3%97_37.4_cm%2C_Kunstmuseum_Basel.jpg",
+    "pxW": 3712,
+    "pxH": 4046
+   },
+   "cm": {
+    "w": 37,
+    "h": 40
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "Senecio or Head of a Man Going Senile is an oil on canvas mounted on panel Cubist painting by Swiss artist Paul Klee, from 1922. It is held in the Kunstmuseum Basel.",
+    "source": "https://en.wikipedia.org/wiki/Senecio_%28Klee%29"
+   },
+   "facts": [
+    {
+     "text": "Klee's adaptation of the human head divides an elderly face into rectangles of orange, pink, yellow, and white. The flat geometric squares within the circle resemble a mask or the patches of a harlequin, hence the title's reference to the artist-performer Senecio.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Senecio_%28Klee%29#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q30078904",
+   "title": "Limits of Reason",
+   "year": 1927,
+   "image": {
+    "file": "File:Grenzen des Verstandes, Paul Klee.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Grenzen_des_Verstandes%2C_Paul_Klee.jpg/960px-Grenzen_des_Verstandes%2C_Paul_Klee.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Grenzen_des_Verstandes%2C_Paul_Klee.jpg/1920px-Grenzen_des_Verstandes%2C_Paul_Klee.jpg",
+    "pxW": 2168,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 42,
+    "h": 56
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Limits of Reason is a 1927 painting by Paul Klee (1879–1940). It is in the permanent collection of the Pinakothek der Moderne in central Munich's Kunstareal.",
+    "source": "https://en.wikipedia.org/wiki/Limits_of_Reason"
+   },
+   "facts": [
+    {
+     "text": "The Limits of Reason was first exhibited in 1926 in Rudolf Probst's Galerie Neue Kunst Fides in Dresden, along with 99 other tempera/water colors by Klee. German art dealer, art collector, journalist and publisher Alfred Flechtheim (1878–1937) acquired it for his private collection in 1928 and displayed it in his gallery in both 1928 and 1929.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Limits_of_Reason#Provenance"
+    },
+    {
+     "text": "The work has been described as emblematic of \"his most prolific period as a teacher\" at the Bauhaus. The static nature of the perfect red sphere which appears frozen and floating in space, in the white primed canvas of the upper part of the painting, contrasts with the dynamic complicated filigree linear structure of the lower part of the painting.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Limits_of_Reason#Description"
+    },
+    {
+     "text": "The painting was produced during his \"most prolific period\"—the years spent at the Bauhaus, a German art school—which was established by Walter Gropius in Weimar in 1919 and closed in 1933, \"when the Nazis enforced their own definitions of art and its functions\".",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Limits_of_Reason#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q19883984",
+   "title": "Cat and Bird",
+   "year": 1928,
+   "image": {
+    "file": "File:NY Moma klee cat and bird.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/NY_Moma_klee_cat_and_bird.JPG/960px-NY_Moma_klee_cat_and_bird.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/NY_Moma_klee_cat_and_bird.JPG/1920px-NY_Moma_klee_cat_and_bird.JPG",
+    "pxW": 2500,
+    "pxH": 1698
+   },
+   "cm": null,
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Cat and Bird is a painting by Swiss German painter Paul Klee, created in 1928. It was made when Klee was a teacher at the Bauhaus Dessau. The painting depicts the wide face of a stylized cat with a small bird perched on its forehead.",
+    "source": "https://en.wikipedia.org/wiki/Cat_and_Bird"
+   },
+   "facts": [
+    {
+     "text": "Klee donated the painting to Alfred Flechtheim's gallery in Berlin in 1929, and it was loaned to the Museum of Modern Art, in New York, in 1930. In 1934 it was sold to Franz Herbert Hirschland.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Cat_and_Bird#Provenance"
+    },
+    {
+     "text": "Klee made many paintings and drawings depicting cats, the most well-known being the current. The little bird on the forehead of the cat is actually meant to be inside the cat's head; it can be assumed that he is dreaming of a potential prey.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Cat_and_Bird#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q1589802",
+   "title": "Highway and Byways",
+   "year": 1929,
+   "image": {
+    "file": "File:Hauptweg und Nebenwege - Paul Klee - Museum Ludwig-7026 (cropped).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptweg_und_Nebenwege_-_Paul_Klee_-_Museum_Ludwig-7026_%28cropped%29.jpg/960px-Hauptweg_und_Nebenwege_-_Paul_Klee_-_Museum_Ludwig-7026_%28cropped%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptweg_und_Nebenwege_-_Paul_Klee_-_Museum_Ludwig-7026_%28cropped%29.jpg/1920px-Hauptweg_und_Nebenwege_-_Paul_Klee_-_Museum_Ludwig-7026_%28cropped%29.jpg",
+    "pxW": 3009,
+    "pxH": 3734
+   },
+   "cm": {
+    "w": 68,
+    "h": 84
+   },
+   "collection": "Museum Ludwig",
+   "story": {
+    "extract": "Highway and Byways is an oil on canvas painting by German artist Paul Klee. It belongs to the group of his numerous layer and stripe paintings and was created in January 1929 after Klee's second trip to Egypt. On loan from Werner Vowinckel, it was first exhibited in the Wallraf-Richartz Museum in Cologne and can now be seen in the Museum Ludwig, also in Cologne.",
+    "source": "https://en.wikipedia.org/wiki/Highway_and_Byways"
+   },
+   "facts": [
+    {
+     "text": "The title of the painting correspond to its structure. In the middle, runs the straight, contoured main path, divided in several parts, differentiated by color contrasts, which moves mainly between blue-orange and red-green, almost aligned with the center of the painting and tapering in layers in its horizontal internal structure.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Highway_and_Byways#Description"
+    },
+    {
+     "text": "Inspired by the painting, the Swiss composer Christian Henking created his guitar solo Sillis in 1992. Thomas Blumenthal recorded it in 2002 on the album 8 Pieces on Paul Klee.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Highway_and_Byways#Influence"
+    },
+    {
+     "text": "In addition to the format and the programmatic title, the technique is also unusual: oil on a plaster-primed canvas stretched onto a stretcher, which Klee only used in few cases until 1929 and not very often later. Highway and Byways' is therefore unreservedly a key work of Klee.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Highway_and_Byways#Technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q16487556",
+   "title": "Ad Parnassum",
+   "year": 1932,
+   "image": {
+    "file": "File:Ad Parnassum (originaler, gefasster Holzrahmen), Paul Klee (1932).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ad_Parnassum_%28originaler%2C_gefasster_Holzrahmen%29%2C_Paul_Klee_%281932%29.jpg/960px-Ad_Parnassum_%28originaler%2C_gefasster_Holzrahmen%29%2C_Paul_Klee_%281932%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ad_Parnassum_%28originaler%2C_gefasster_Holzrahmen%29%2C_Paul_Klee_%281932%29.jpg/1920px-Ad_Parnassum_%28originaler%2C_gefasster_Holzrahmen%29%2C_Paul_Klee_%281932%29.jpg",
+    "pxW": 3368,
+    "pxH": 2653
+   },
+   "cm": {
+    "w": 126,
+    "h": 100
+   },
+   "collection": "Kunstmuseum Bern",
+   "story": {
+    "extract": "Ad Parnassum is a pointillist painting by Swiss-born artist Paul Klee. The painting is currently in the Kunstmuseum Bern.",
+    "source": "https://en.wikipedia.org/wiki/Ad_Parnassum"
+   },
+   "facts": [
+    {
+     "text": "It was created while Klee was teaching at the Dusseldorf Academy following his trip to Egypt three years prior. The painting process consisted of first applying large squares of muted color on unprimed canvas.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Ad_Parnassum#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  },
+  {
+   "qid": "Q29784159",
+   "title": "Angel, Still Groping",
+   "year": 1939,
+   "image": {
+    "file": "File:Paul Klee ~ Engel, noch tastend ~ 1939.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Paul_Klee_~_Engel%2C_noch_tastend_~_1939.jpg/960px-Paul_Klee_~_Engel%2C_noch_tastend_~_1939.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Paul_Klee_~_Engel%2C_noch_tastend_~_1939.jpg/1920px-Paul_Klee_~_Engel%2C_noch_tastend_~_1939.jpg",
+    "pxW": 2228,
+    "pxH": 3125
+   },
+   "cm": {
+    "w": 21,
+    "h": 29
+   },
+   "collection": "Zentrum Paul Klee",
+   "story": {
+    "extract": "Angel, Still Groping is a watercolor on paper painting by Swiss-German painter Paul Klee, from 1939. It is held at the Zentrum Paul Klee, in Bern.",
+    "source": "https://en.wikipedia.org/wiki/Angel%2C_Still_Groping"
+   },
+   "facts": [
+    {
+     "text": "Klee, after his dismissal in Germany as a professor, and being labeled as a “degenerate artist” following the Nazi takeover, in 1933, settled in Switzerland, his country of birth. He was also diagnosed with an incurable disease.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Angel%2C_Still_Groping#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Paul Klee"
+   }
+  }
+ ]
+}

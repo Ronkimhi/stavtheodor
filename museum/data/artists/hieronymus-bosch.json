@@ -1,0 +1,407 @@
+{
+ "slug": "hieronymus-bosch",
+ "name": "Hieronymus Bosch",
+ "qid": "Q130531",
+ "born": 1450,
+ "died": 1516,
+ "periods": [
+  "northern-renaissance"
+ ],
+ "oneLiner": "Dutch painter (c. 1450–1516)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Jheronimus_Bosch_%28cropped%29.jpg/330px-Jheronimus_Bosch_%28cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Hieronymus Bosch was a Dutch painter from Brabant. He is one of the most notable representatives of the Early Netherlandish painting school. His work, generally oil on oak wood, mainly contains fantastic illustrations of religious concepts and narratives. Within his lifetime, his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.",
+  "source": "https://en.wikipedia.org/wiki/Hieronymus_Bosch"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Hieronymus_Bosch",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q321303",
+   "title": "The Garden of Earthly Delights",
+   "year": 1490,
+   "image": {
+    "file": "File:The Garden of Earthly Delights by Bosch High Resolution 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution_2.jpg/960px-The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution_2.jpg/1920px-The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution_2.jpg",
+    "pxW": 19569,
+    "pxH": 11035
+   },
+   "cm": {
+    "w": 385,
+    "h": 206
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Garden of Earthly Delights is the modern title given to a five-panel triptych by the Early Netherlandish master Hieronymus Bosch, between 1490 and 1510, when Bosch was between 40 and 60 years old. Because of Bosch's religious beliefs, interpretations of the work typically assume it is a warning against the perils of temptation. The outer panels place the work on the Third Day of Creation.",
+    "source": "https://en.wikipedia.org/wiki/The_Garden_of_Earthly_Delights"
+   },
+   "facts": [
+    {
+     "text": "Because Bosch was such a unique and visionary artist, his influence has not spread as widely as that of other major painters of his era. However, there have been instances of later artists incorporating elements of The Garden of Earthly Delights into their work.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Garden_of_Earthly_Delights#Legacy"
+    },
+    {
+     "text": "Because only bare details are known of Bosch's life, interpretation of his work can be an extremely difficult area for academics as it is largely reliant on conjecture. Individual motifs and elements of symbolism may be explained, but so far, relating these to each other and his work as a whole has remained elusive.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/The_Garden_of_Earthly_Delights#Interpretation"
+    },
+    {
+     "text": "When the triptych's wings are closed, the design of the outer panels becomes visible.",
+     "section": "Exterior",
+     "source": "https://en.wikipedia.org/wiki/The_Garden_of_Earthly_Delights#Exterior"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q430069",
+   "title": "Ecce Homo",
+   "year": 1490,
+   "image": {
+    "file": "File:Ecce Homo (SM 1577).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Ecce_Homo_%28SM_1577%29.png/960px-Ecce_Homo_%28SM_1577%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Ecce_Homo_%28SM_1577%29.png/1920px-Ecce_Homo_%28SM_1577%29.png",
+    "pxW": 2322,
+    "pxH": 2713
+   },
+   "cm": {
+    "w": 60,
+    "h": 71
+   },
+   "collection": "Städel Museum",
+   "story": {
+    "extract": "Ecce Homo is a painting of the episode in the Passion of Jesus by the Early Netherlandish painter Hieronymus Bosch, painted between 1475 and 1485. The original version, with a provenance in collections in Ghent, is in the Städel Museum in Frankfurt; a copy is held the Museum of Fine Arts in Boston. The painting takes its title from the Latin words Ecce Homo, \"Behold the Man\" spoken by the Roman Prefect Pontius Pilate when Jesus is paraded before a baying, angry mob in Jerusalem before he is sentenced to be crucified.",
+    "source": "https://en.wikipedia.org/wiki/Ecce_Homo_%28Bosch%2C_Frankfurt%29"
+   },
+   "facts": [
+    {
+     "text": "Ecce Homo shows Jesus stripped and brought before the people by the members of the Roman council, who are flanked by soldiers. The people mock and jeer Jesus, who wears a Crown of Thorns.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Ecce_Homo_%28Bosch%2C_Frankfurt%29#Description"
+    },
+    {
+     "text": "The investigation by the scientist at The Bosch Research and Conservation Project has revealed the use of the usual pigments of the Renaissance period such as azurite, lead-tin-yellow and vermilion. He also employed red and green glazes and gold leaf.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Ecce_Homo_%28Bosch%2C_Frankfurt%29#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "PDM-owner",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q405814",
+   "title": "Ship of Fools",
+   "year": 1500,
+   "image": {
+    "file": "File:Jheronimus Bosch 011.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Jheronimus_Bosch_011.jpg/960px-Jheronimus_Bosch_011.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Jheronimus_Bosch_011.jpg",
+    "pxW": 1540,
+    "pxH": 2874
+   },
+   "cm": {
+    "w": 32,
+    "h": 58
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Ship of Fools is a painting by the Early Netherlandish artist Hieronymus Bosch, now in the Musée du Louvre, Paris. Camille Benoit donated it in 1918. The Louvre restored it in 2015.",
+    "source": "https://en.wikipedia.org/wiki/Ship_of_Fools_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "Dendrochronological study has dated the wood to 1491 (after which an extended period of seasoning would be normal), and it is tempting to see the painting as a response to Sebastian Brant's Das Narrenschiff or even the illustrations of the first edition of 1493.",
+     "section": "Dating/provenance",
+     "source": "https://en.wikipedia.org/wiki/Ship_of_Fools_%28painting%29#Dating%2Fprovenance"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q2304870",
+   "title": "The Seven Deadly Sins and the Four Last Things",
+   "year": 1500,
+   "image": {
+    "file": "File:Hieronymus Bosch- The Seven Deadly Sins and the Four Last Things.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG/960px-Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG/1920px-Hieronymus_Bosch-_The_Seven_Deadly_Sins_and_the_Four_Last_Things.JPG",
+    "pxW": 2863,
+    "pxH": 2441
+   },
+   "cm": {
+    "w": 140,
+    "h": 120
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Seven Deadly Sins and the Four Last Things is a painting attributed to the Early Netherlandish artist Hieronymus Bosch or to a follower of his, completed around 1500 or later. Since 1898 its authenticity has been questioned several times. In 2015 the Bosch Research Conservation Project claimed it to be by a follower, but scholars at the Prado, where the painting is on display in a sealed case, dismissed this argument.",
+    "source": "https://en.wikipedia.org/wiki/The_Seven_Deadly_Sins_and_the_Four_Last_Things"
+   },
+   "facts": [
+    {
+     "text": "In 1560, Felipe de Guevara wrote about a pupil of Bosch, an unnamed discipulo (pupil), who was as good as his master and even signed his works with his master's name. Immediately after this, and without starting a new paragraph, Guevara refers to the painting of the Seven Deadly Sins as characteristic of his style.",
+     "section": "Disputed authorship and dating",
+     "source": "https://en.wikipedia.org/wiki/The_Seven_Deadly_Sins_and_the_Four_Last_Things#Disputed_authorship_and_dating"
+    },
+    {
+     "text": "Each panel in the outer circle depicts a different sin. Clockwise from top (Latin names in brackets):",
+     "section": "Content",
+     "source": "https://en.wikipedia.org/wiki/The_Seven_Deadly_Sins_and_the_Four_Last_Things#Content"
+    },
+    {
+     "text": "Gluttony (gula): A drunkard swigs from a bottle while a fat man eats greedily, not heeding the plea of his equally obese young son, as his wife begrudgingly brings in a turkey for them. Sloth (acedia): A lazy man dozes in front of the fireplace while Faith appears to him in a dream, in the guise of a nun, to remind him to say his prayers.",
+     "section": "Seven Deadly Sins",
+     "source": "https://en.wikipedia.org/wiki/The_Seven_Deadly_Sins_and_the_Four_Last_Things#Seven_Deadly_Sins"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch or follower"
+   }
+  },
+  {
+   "qid": "Q2400652",
+   "title": "The Wayfarer",
+   "year": 1500,
+   "image": {
+    "file": "File:Jheronimus Bosch - The Pedlar - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jheronimus_Bosch_-_The_Pedlar_-_Google_Art_Project.jpg/960px-Jheronimus_Bosch_-_The_Pedlar_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jheronimus_Bosch_-_The_Pedlar_-_Google_Art_Project.jpg/1920px-Jheronimus_Bosch_-_The_Pedlar_-_Google_Art_Project.jpg",
+    "pxW": 5877,
+    "pxH": 5957
+   },
+   "cm": {
+    "w": 71,
+    "h": 71
+   },
+   "collection": "Jacques Goudstikker collection",
+   "story": {
+    "extract": "The Wayfarer is an oil-on-panel painting by the Early Netherlandish artist Hieronymus Bosch, created c. 1500. It is now in Museum Boijmans Van Beuningen in Rotterdam. This painting is round and 71.5 cm (28.1 in) in diameter.",
+    "source": "https://en.wikipedia.org/wiki/The_Wayfarer_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "Tim Storrier's self-portrait The Histrionic Wayfarer (after Bosch) won the 2012 Archibald Prize.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Wayfarer_%28painting%29#Legacy"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q2203011",
+   "title": "Death and the Miser",
+   "year": 1500,
+   "image": {
+    "file": "File:Jheronimus Bosch 050.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Jheronimus_Bosch_050.jpg/960px-Jheronimus_Bosch_050.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Jheronimus_Bosch_050.jpg/1920px-Jheronimus_Bosch_050.jpg",
+    "pxW": 5901,
+    "pxH": 17766
+   },
+   "cm": {
+    "w": 31,
+    "h": 93
+   },
+   "collection": "Samuel H. Kress Collection",
+   "story": {
+    "extract": "Death and the Miser is a Northern Renaissance painting produced between 1490 and 1516 by the Dutch artist Hieronymus Bosch. The piece was originally part of a triptych, but the center piece is missing. It is a memento mori painting, which is meant to remind the viewer of the inevitability of death and the futility of the pursuit of material wealth, illustrating the sin of greed.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_the_Miser"
+   },
+   "facts": [
+    {
+     "text": "Death and the Miser belongs to the tradition of memento mori, a term that describes works of art that remind the viewer of the inevitability of death.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Death_and_the_Miser#Description"
+    },
+    {
+     "text": "Death and the Miser combines different timelines into a single scene. It depicts the final moments of man called a miser, a hoarder of wealth, or an usurer, who gives loans while profiting from an often unfair interest rate.",
+     "section": "Subject and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Death_and_the_Miser#Subject_and_interpretation"
+    },
+    {
+     "text": "The meaning of the foreground is still unclear and debated by art historians, though they're reasonably certain about the symbolism inside the room. The Ars moriendi does not contain a depiction of armor, or even pieces of it, and no other influence has satisfactorily explained their presence.",
+     "section": "The foreground",
+     "source": "https://en.wikipedia.org/wiki/Death_and_the_Miser#The_foreground"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q1217288",
+   "title": "Temptation of Saint Anthony",
+   "year": 1501,
+   "image": {
+    "file": "File:Temptation of Saint Anthony.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Temptation_of_Saint_Anthony.jpg/960px-Temptation_of_Saint_Anthony.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Temptation_of_Saint_Anthony.jpg/1920px-Temptation_of_Saint_Anthony.jpg",
+    "pxW": 7800,
+    "pxH": 4042
+   },
+   "cm": {
+    "w": 238,
+    "h": 132
+   },
+   "collection": "National Museum of Ancient Art",
+   "story": {
+    "extract": "The Triptych of Temptation of St. Anthony is an oil painting on wood panels by the Early Netherlandish painter Hieronymus Bosch, dating from around 1501. The work portrays the mental and spiritual torments endured by Saint Anthony the Great, one of the most prominent of the Desert Fathers of Egypt in the late 3rd and early 4th centuries.",
+    "source": "https://en.wikipedia.org/wiki/Triptych_of_the_Temptation_of_St._Anthony"
+   },
+   "facts": [
+    {
+     "text": "According to some historians, the work could be one of the three Temptations recorded in the inventory of Philip II of Spain sent to the Escorial in 1574. From the 1950s, it had traditionally been considered more likely that the triptych was bought by the Portuguese humanist Damião de Góis between 1523 and 1545.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Triptych_of_the_Temptation_of_St._Anthony#History"
+    },
+    {
+     "text": "The Temptation of St. Anthony is an oil painting on three wooden panels, having the form of a triptych, the two outer panels being hinged shutters to the central section.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Triptych_of_the_Temptation_of_St._Anthony#Description"
+    },
+    {
+     "text": "The left panel portrays the legendary flight and the fall of St. Anthony.",
+     "section": "Left panel",
+     "source": "https://en.wikipedia.org/wiki/Triptych_of_the_Temptation_of_St._Anthony#Left_panel"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q2270768",
+   "title": "Cutting the Stone",
+   "year": 1503,
+   "image": {
+    "file": "File:Cutting the Stone (Bosch).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cutting_the_Stone_%28Bosch%29.jpg/960px-Cutting_the_Stone_%28Bosch%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cutting_the_Stone_%28Bosch%29.jpg/1920px-Cutting_the_Stone_%28Bosch%29.jpg",
+    "pxW": 2134,
+    "pxH": 3051
+   },
+   "cm": {
+    "w": 34,
+    "h": 48
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Cutting the Stone, also called The Extraction of the Stone of Madness or The Cure of Folly, is an oil-on-panel painting completed c.1494 or later by the Dutch painter Hieronymus Bosch. It is now in the Museo del Prado in Madrid.",
+    "source": "https://en.wikipedia.org/wiki/Cutting_the_Stone"
+   },
+   "facts": [
+    {
+     "text": "It is possible that the flower hints that the doctor is a charlatan as does the funnel hat. The woman balancing a book on her head is thought by Skemer to be a satire of the Flemish custom of wearing amulets made out of books and scripture, a pictogram for the word phylactery.",
+     "section": "Interpretations",
+     "source": "https://en.wikipedia.org/wiki/Cutting_the_Stone#Interpretations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  },
+  {
+   "qid": "Q2213811",
+   "title": "The Haywain Triptych",
+   "year": 1510,
+   "image": {
+    "file": "File:Jheronimus Bosch - De hooiwagen (c.1516, Prado).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jheronimus_Bosch_-_De_hooiwagen_%28c.1516%2C_Prado%29.jpg/960px-Jheronimus_Bosch_-_De_hooiwagen_%28c.1516%2C_Prado%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jheronimus_Bosch_-_De_hooiwagen_%28c.1516%2C_Prado%29.jpg/1920px-Jheronimus_Bosch_-_De_hooiwagen_%28c.1516%2C_Prado%29.jpg",
+    "pxW": 2918,
+    "pxH": 2065
+   },
+   "cm": {
+    "w": 212,
+    "h": 147
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Haywain Triptych is a panel painting by the Early Netherlandish painter Hieronymus Bosch, now in the Museo del Prado, Madrid, Spain. A date of around 1516 has been established by means of dendrochronological research. The central panel, signed \"Jheronimus Bosch\", measures 135 cm × 200 cm and the wings measure 147 cm × 66 cm.",
+    "source": "https://en.wikipedia.org/wiki/The_Haywain_Triptych"
+   },
+   "facts": [
+    {
+     "text": "The painting was part of a group of six acquired by King Philip II of Spain in 1570, and shipped to El Escorial four years later. It was later sold to the Marquis of Salamanca, and divided into three paintings.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Haywain_Triptych#History"
+    },
+    {
+     "text": "The exterior of the shutters, like most contemporary Netherlandish triptychs, was also painted, although in this case Bosch used full colors instead of the usual grisaille. When closed, they form a single scene depicting a wayfarer.",
+     "section": "Shutters",
+     "source": "https://en.wikipedia.org/wiki/The_Haywain_Triptych#Shutters"
+    },
+    {
+     "text": "The Haywain triptych follows a similar narrative to The Garden of Earthly Delights. The left panel shows God giving form to Eve.",
+     "section": "Main panels",
+     "source": "https://en.wikipedia.org/wiki/The_Haywain_Triptych#Main_panels"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch or workshop"
+   }
+  },
+  {
+   "qid": "Q680128",
+   "title": "Christ Carrying the Cross",
+   "year": 1510,
+   "image": {
+    "file": "File:Bosch - Christ Carrying the Cross, ca. 1510 - ca. 1516, Inv. 1902-H.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bosch_-_Christ_Carrying_the_Cross%2C_ca._1510_-_ca._1516%2C_Inv._1902-H.jpg/960px-Bosch_-_Christ_Carrying_the_Cross%2C_ca._1510_-_ca._1516%2C_Inv._1902-H.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bosch_-_Christ_Carrying_the_Cross%2C_ca._1510_-_ca._1516%2C_Inv._1902-H.jpg/1920px-Bosch_-_Christ_Carrying_the_Cross%2C_ca._1510_-_ca._1516%2C_Inv._1902-H.jpg",
+    "pxW": 3370,
+    "pxH": 3138
+   },
+   "cm": {
+    "w": 84,
+    "h": 77
+   },
+   "collection": "Museum of Fine Arts Ghent (MSK)",
+   "story": {
+    "extract": "Christ Carrying the Cross is a painting attributed to a follower of Hieronymus Bosch. It was painted in the early 16th century, presumably between 1510 and 1535. The work is housed in the Museum of Fine Arts in Ghent, Belgium.",
+    "source": "https://en.wikipedia.org/wiki/Christ_Carrying_the_Cross_%28Bosch%2C_Ghent%29"
+   },
+   "facts": [
+    {
+     "text": "The work was bought by the Museum of Fine Arts, Ghent in 1902, and was restored in 1956–1957. As for all Bosch-related works, the dating is uncertain, although most art historians assigned it to his late career.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Christ_Carrying_the_Cross_%28Bosch%2C_Ghent%29#History"
+    },
+    {
+     "text": "The work depicts Jesus carrying the cross above a dark background, primarily with black and red tones, surrounded by numerous heads. This painting focuses solely on the face and hands as a source of emotional expression, bodies being faded into the dark background.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Christ_Carrying_the_Cross_%28Bosch%2C_Ghent%29#Description"
+    },
+    {
+     "text": "The faces of agony depicted in the piece are meant to represent a mob that oppose the ideas of Christ and is imbued with the concept of sin. Jesus’s face, along with his likeness in Saint Veronica’s veil, is meant to show Jesus's emotions in his decision to die for the sins of the people.",
+     "section": "Religious symbolism",
+     "source": "https://en.wikipedia.org/wiki/Christ_Carrying_the_Cross_%28Bosch%2C_Ghent%29#Religious_symbolism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hieronymus Bosch"
+   }
+  }
+ ]
+}

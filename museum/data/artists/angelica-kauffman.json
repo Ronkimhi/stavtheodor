@@ -1,0 +1,332 @@
+{
+ "slug": "angelica-kauffman",
+ "name": "Angelica Kauffman",
+ "qid": "Q123098",
+ "born": 1741,
+ "died": 1807,
+ "periods": [
+  "neoclassicism"
+ ],
+ "oneLiner": "Swiss artist (1741–1807)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Portrait_of_Angelica_Kauffman_%281764%29.jpg/330px-Portrait_of_Angelica_Kauffman_%281764%29.jpg"
+ },
+ "bio": {
+  "extract": "Maria Anna Angelika Kauffmann, usually known in English as Angelica Kauffman, was a Swiss painter who had a successful career in London and Rome. Remembered primarily as a history painter, Kauffman was a skilled portraitist, landscape and decoration painter. She was, along with Mary Moser, one of two female painters among the founding members of the Royal Academy of Art in London in 1768.",
+  "source": "https://en.wikipedia.org/wiki/Angelica_Kauffman"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Angelica_Kauffman",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q860936",
+   "title": "Portrait of Winckelmann",
+   "year": 1764,
+   "image": {
+    "file": "File:Angelika Kauffmann - Bildnis Johann Joachim Winckelmann - 98 - Kunsthaus Zürich.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Angelika_Kauffmann_-_Bildnis_Johann_Joachim_Winckelmann_-_98_-_Kunsthaus_Z%C3%BCrich.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Angelika_Kauffmann_-_Bildnis_Johann_Joachim_Winckelmann_-_98_-_Kunsthaus_Z%C3%BCrich.jpg",
+    "pxW": 872,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 71,
+    "h": 97
+   },
+   "collection": "Kunsthaus Zürich",
+   "story": {
+    "extract": "Portrait of Winckelmann is an oil on canvas painting by the Swiss artist Angelica Kauffmann, from 1764. It was produced in Rome and represents the famous archaeologist and art historian Johann Joachim Winckelmann, whose work greatly contributed to the revival of classical studies and the change in style from rococo to neoclassicism. It is signed at the lower right by the artist and is now in the Kunsthaus Zürich.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Winckelmann"
+   },
+   "facts": [
+    {
+     "text": "Angelica Kauffmann, who was only twenty-two years old when she painted this portrait, truly began her career with this painting, thanks to which she was able to obtain new commissions in the cultivated circles of her time. The same year Winckelmann published his famous work History of the Art of Antiquity.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Winckelmann#Reception"
+    },
+    {
+     "text": "The painting depicts Winckelmann seated at his work table, with a pen in his right hand. Both his hands rest on an open book, who is placed on a flat antique bas-relief representing the Three Graces.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Winckelmann#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q5703908",
+   "title": "Ariadne Abandoned by Theseus",
+   "year": 1774,
+   "image": {
+    "file": "File:Angelica Kauffmann, Ariadne Abandoned by Theseus, 1774.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Angelica_Kauffmann%2C_Ariadne_Abandoned_by_Theseus%2C_1774.jpg/960px-Angelica_Kauffmann%2C_Ariadne_Abandoned_by_Theseus%2C_1774.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Angelica_Kauffmann%2C_Ariadne_Abandoned_by_Theseus%2C_1774.jpg/1920px-Angelica_Kauffmann%2C_Ariadne_Abandoned_by_Theseus%2C_1774.jpg",
+    "pxW": 3200,
+    "pxH": 2234
+   },
+   "cm": {
+    "w": 91,
+    "h": 64
+   },
+   "collection": "Museum of Fine Arts, Houston",
+   "story": {
+    "extract": "Ariadne Abandoned by Theseus is an oil-on-canvas painting by the Swiss artist Angelica Kauffman. It was painted in England in 1774. It is displayed in the Museum of Fine Arts, in Houston, Texas, as a gift from Mr. and Mrs.",
+    "source": "https://en.wikipedia.org/wiki/Ariadne_Abandoned_by_Theseus"
+   },
+   "facts": [
+    {
+     "text": "Ariadne Abandoned by Theseus is on oil painting on canvas. The painting is signed and dated in the lower left.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Ariadne_Abandoned_by_Theseus#Description"
+    },
+    {
+     "text": "Angelica Kauffman was recognized to have talent in her youth and her father encouraged her development in painting and education in Italy. She lived in England for 15 years, where she was highly regarded and sought after.",
+     "section": "Creation and early history",
+     "source": "https://en.wikipedia.org/wiki/Ariadne_Abandoned_by_Theseus#Creation_and_early_history"
+    },
+    {
+     "text": "Ariadne is the daughter of Minos, king of Crete, in Greek mythology. She is put in charge of Minos' labyrinth where seven humans from Athens were sacrificed to the Minotaur every 7 or 9 years.",
+     "section": "Myth",
+     "source": "https://en.wikipedia.org/wiki/Ariadne_Abandoned_by_Theseus#Myth"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q79358025",
+   "title": "Sappho Inspired by Love",
+   "year": 1775,
+   "image": {
+    "file": "File:Sappho Inspired by Love by Angelica Kauffmann.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sappho_Inspired_by_Love_by_Angelica_Kauffmann.jpg/960px-Sappho_Inspired_by_Love_by_Angelica_Kauffmann.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/88/Sappho_Inspired_by_Love_by_Angelica_Kauffmann.jpg",
+    "pxW": 1536,
+    "pxH": 1392
+   },
+   "cm": {
+    "w": 145,
+    "h": 132
+   },
+   "collection": "John and Mable Ringling Museum of Art",
+   "story": {
+    "extract": "Sappho Inspired by Love is an oil painting on canvas of 1775 by Angelica Kauffman, now in the John and Mable Ringling Museum of Art in Florida, having been in John Ringling's collection.",
+    "source": "https://en.wikipedia.org/wiki/Sappho_Inspired_by_Love"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q21715901",
+   "title": "Hector Calling Up Paris to a Battle",
+   "year": 1775,
+   "image": {
+    "file": "File:Angelica Kauffmann - Hector reproving Paris (Hermitage).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Angelica_Kauffmann_-_Hector_reproving_Paris_%28Hermitage%29.jpg/960px-Angelica_Kauffmann_-_Hector_reproving_Paris_%28Hermitage%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Angelica_Kauffmann_-_Hector_reproving_Paris_%28Hermitage%29.jpg",
+    "pxW": 1920,
+    "pxH": 1477
+   },
+   "cm": {
+    "w": 178,
+    "h": 137
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Hector Summoning Paris to Battle is an oil on canvas painting by Angelica Kauffman, from 1775. It is held in the Hermitage Museum, in Saint Petersburg. It shows a scene from the Iliad, with Paris sitting on a chair in the foreground with his bow at his feet, Helen of Troy and servants to the right and an armoured Hector with a lance to the left.",
+    "source": "https://en.wikipedia.org/wiki/Hector_Summoning_Paris_to_Battle"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q27978148",
+   "title": "Parting of Abelard and Heloise",
+   "year": 1780,
+   "image": {
+    "file": "File:Angelica Kauffmann 001.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Angelica_Kauffmann_001.png/960px-Angelica_Kauffmann_001.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Angelica_Kauffmann_001.png/1920px-Angelica_Kauffmann_001.png",
+    "pxW": 2332,
+    "pxH": 2332
+   },
+   "cm": {
+    "w": 66,
+    "h": 66
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "The Parting of Abelard and Heloise or Abelard and Heloise Say Farewell is an oil on canvas painting by Angelica Kauffman. It is signed on a block of stone at bottom centre Angelica K. pinx. It shows Peter Abelard and Héloïse parting as she enters the convent of Sainte-Marie at Argenteuil.",
+    "source": "https://en.wikipedia.org/wiki/The_Parting_of_Abelard_and_Heloise"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q19985096",
+   "title": "Ferdinand I and His Family",
+   "year": 1782,
+   "image": {
+    "file": "File:Painting of the family of Ferdinando IV (Angelica Kauffmann, 1782).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Painting_of_the_family_of_Ferdinando_IV_%28Angelica_Kauffmann%2C_1782%29.jpg/960px-Painting_of_the_family_of_Ferdinando_IV_%28Angelica_Kauffmann%2C_1782%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Painting_of_the_family_of_Ferdinando_IV_%28Angelica_Kauffmann%2C_1782%29.jpg/1920px-Painting_of_the_family_of_Ferdinando_IV_%28Angelica_Kauffmann%2C_1782%29.jpg",
+    "pxW": 3000,
+    "pxH": 2281
+   },
+   "cm": {
+    "w": 426,
+    "h": 310
+   },
+   "collection": "Museo di Capodimonte",
+   "story": {
+    "extract": "Ferdinand I and His Family is an oil-on-canvas painting by the Swiss artist Angelica Kauffman, from 1782. It is held in the National Museum of Capodimonte, in Naples.",
+    "source": "https://en.wikipedia.org/wiki/Ferdinand_I_and_His_Family"
+   },
+   "facts": [
+    {
+     "text": "The group portrait was created during Kauffmann's Neapolitan stay, between 1782 and 1783. She had come from London, and was welcomed by the Royal House with honors; she even became a close friend of Queen Maria Carolina of Austria.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/Ferdinand_I_and_His_Family#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q19912157",
+   "title": "Telemachus and the Nymphs of Calypso",
+   "year": 1782,
+   "image": {
+    "file": "File:Telemachus and the Nymphs of Calypso MET DP169393.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Telemachus_and_the_Nymphs_of_Calypso_MET_DP169393.jpg/960px-Telemachus_and_the_Nymphs_of_Calypso_MET_DP169393.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Telemachus_and_the_Nymphs_of_Calypso_MET_DP169393.jpg/1920px-Telemachus_and_the_Nymphs_of_Calypso_MET_DP169393.jpg",
+    "pxW": 3863,
+    "pxH": 2836
+   },
+   "cm": {
+    "w": 112,
+    "h": 83
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Telemachus and the Nymphs of Calypso is an oil painting by the Swiss artist Angelica Kauffman, from 1782. It is in the collection of the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/Telemachus_and_the_Nymphs_of_Calypso"
+   },
+   "facts": [
+    {
+     "text": "This painting and The Sorrow of Telemachus were painted for Monsignor Onorato Caetani (1742-1797). They show scenes from the French novel The Adventures of Telemachus published by François Fénelon in 1699, and based on the story of Telemachus, son of Odysseus.",
+     "section": "Early history and creation",
+     "source": "https://en.wikipedia.org/wiki/Telemachus_and_the_Nymphs_of_Calypso#Early_history_and_creation"
+    },
+    {
+     "text": "The work depicts the arrival of Telemachus on Ogygia, Calypso's island. He is welcomed by her nymphs with fruit, wine and flowers.",
+     "section": "Description and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Telemachus_and_the_Nymphs_of_Calypso#Description_and_interpretation"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q23037308",
+   "title": "Self-Portrait",
+   "year": 1784,
+   "image": {
+    "file": "File:Angelika Kauffmann - Self Portrait - 1784.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg/960px-Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg/1920px-Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg",
+    "pxW": 3816,
+    "pxH": 4852
+   },
+   "cm": {
+    "w": 51,
+    "h": 65
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Self-Portrait is an oil on canvas self portrait by Angelica Kauffman, from 1784. It is held in the Neue Pinakothek, in Munich, having been acquired by Louis I of Bavaria for his collection in 1826.",
+    "source": "https://en.wikipedia.org/wiki/Self-Portrait_%28Kauffman%2C_1784%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q21741326",
+   "title": "Virgil reading the ''Aeneid'' to Augustus and Octavia",
+   "year": 1788,
+   "image": {
+    "file": "File:Angelica Kauffmann - Virgil reading the ‚Aeneid‘ to Augustus and Octavia (Hermitage).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Angelica_Kauffmann_-_Virgil_reading_the_%E2%80%9AAeneid%E2%80%98_to_Augustus_and_Octavia_%28Hermitage%29.jpg/960px-Angelica_Kauffmann_-_Virgil_reading_the_%E2%80%9AAeneid%E2%80%98_to_Augustus_and_Octavia_%28Hermitage%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Angelica_Kauffmann_-_Virgil_reading_the_%E2%80%9AAeneid%E2%80%98_to_Augustus_and_Octavia_%28Hermitage%29.jpg",
+    "pxW": 1919,
+    "pxH": 1499
+   },
+   "cm": {
+    "w": 159,
+    "h": 123
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Virgil Reading the Aeneid to Augustus and Octavia is an oil on canvas painting by Angelica Kauffman, from 1788. It is held in the Hermitage Museum, in Saint Petersburg, which it entered in 1902. A preparatory study is in the Royal Collection.",
+    "source": "https://en.wikipedia.org/wiki/Virgil_Reading_the_Aeneid_to_Augustus_and_Octavia"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q16038758",
+   "title": "Venus Induces Helen to Fall in Love with Paris",
+   "year": 1790,
+   "image": {
+    "file": "File:Angelica Kauffmann - Venus Induces Helen to Fall in Love with Paris - WGA12099.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Angelica_Kauffmann_-_Venus_Induces_Helen_to_Fall_in_Love_with_Paris_-_WGA12099.jpg/960px-Angelica_Kauffmann_-_Venus_Induces_Helen_to_Fall_in_Love_with_Paris_-_WGA12099.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/57/Angelica_Kauffmann_-_Venus_Induces_Helen_to_Fall_in_Love_with_Paris_-_WGA12099.jpg",
+    "pxW": 1476,
+    "pxH": 1176
+   },
+   "cm": {
+    "w": 127,
+    "h": 102
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Venus Persuading Helen to Love Paris or Venus Induces Helen to Fall in Love with Paris is a 1790 oil on canvas painting by Angelica Kauffman. It is held in the Hermitage Museum, in Saint Petersburg.",
+    "source": "https://en.wikipedia.org/wiki/Venus_Persuading_Helen_to_Love_Paris"
+   },
+   "facts": [
+    {
+     "text": "It shows Helen of Troy (far left) being persuaded by Venus (centre) to fall in love with Paris (right), abandon her husband Menelaus and go with Paris to Troy, thus triggering the Trojan War. Venus' son Cupid holds Paris's hand.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/Venus_Persuading_Helen_to_Love_Paris#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Angelica Kauffmann"
+   }
+  }
+ ]
+}

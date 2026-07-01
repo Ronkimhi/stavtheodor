@@ -1,0 +1,21 @@
+{
+ "slug": "rene-magritte",
+ "name": "René Magritte",
+ "qid": "Q7836",
+ "born": 1898,
+ "died": 1967,
+ "periods": [
+  "surrealism"
+ ],
+ "oneLiner": "Belgian surrealist (1898–1967)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg/330px-Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg"
+ },
+ "bio": {
+  "extract": "René François Ghislain Magritte was a Belgian surrealist artist known for his depictions of familiar objects in unfamiliar, unexpected contexts, which often provoked questions about the nature and boundaries of reality and representation. His imagery has influenced pop art, minimalist art, and conceptual art.",
+  "source": "https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte",
+ "hasGallery": false,
+ "paintings": []
+}

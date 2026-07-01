@@ -1,0 +1,417 @@
+{
+ "slug": "vincent-van-gogh",
+ "name": "Vincent van Gogh",
+ "qid": "Q5582",
+ "born": 1853,
+ "died": 1890,
+ "periods": [
+  "post-impressionism"
+ ],
+ "oneLiner": "Dutch painter (1853–1890)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/330px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg"
+ },
+ "bio": {
+  "extract": "Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. His suicide at 37 followed years of mental illness and poverty.",
+  "source": "https://en.wikipedia.org/wiki/Vincent_van_Gogh"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q154469",
+   "title": "The Potato Eaters",
+   "year": 1885,
+   "image": {
+    "file": "File:De aardappeleters - s0005V1962 - Van Gogh Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/De_aardappeleters_-_s0005V1962_-_Van_Gogh_Museum.jpg/960px-De_aardappeleters_-_s0005V1962_-_Van_Gogh_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/De_aardappeleters_-_s0005V1962_-_Van_Gogh_Museum.jpg/1920px-De_aardappeleters_-_s0005V1962_-_Van_Gogh_Museum.jpg",
+    "pxW": 7695,
+    "pxH": 5441
+   },
+   "cm": {
+    "w": 114,
+    "h": 82
+   },
+   "collection": "Van Gogh Museum",
+   "story": {
+    "extract": "The Potato Eaters is an oil painting by Dutch artist Vincent van Gogh painted in April to May of 1885 in Nuenen, Netherlands.",
+    "source": "https://en.wikipedia.org/wiki/The_Potato_Eaters"
+   },
+   "facts": [
+    {
+     "text": "Thieves stole the early version of The Potato Eaters, the Weaver's Interior, and Dried Sunflowers from the Kröller-Müller Museum in December 1988. In April 1989, the thieves returned Weaver's Interior in an attempt to gain a $2.5 million ransom.",
+     "section": "Theft",
+     "source": "https://en.wikipedia.org/wiki/The_Potato_Eaters#Theft"
+    },
+    {
+     "text": "During March and the beginning of April 1885, Van Gogh sketched studies for the painting and corresponded with his brother Theo, who was not impressed with his current work nor the sketches Van Gogh sent him in Paris.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Potato_Eaters#Composition"
+    },
+    {
+     "text": "Van Gogh made a lithograph of the composition The Potato Eaters before embarking on the painting proper. He sent impressions to his brother, and in a letter to a friend wrote that he made the lithograph from memory in the space of a day.",
+     "section": "Lithograph",
+     "source": "https://en.wikipedia.org/wiki/The_Potato_Eaters#Lithograph"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q1025704",
+   "title": "Café Terrace at Night",
+   "year": 1888,
+   "image": {
+    "file": "File:Van Gogh - Terrace of a Café at Night (Place du Forum) 1888.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_%28Place_du_Forum%29_1888.jpg/960px-Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_%28Place_du_Forum%29_1888.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_%28Place_du_Forum%29_1888.jpg/1920px-Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_%28Place_du_Forum%29_1888.jpg",
+    "pxW": 6415,
+    "pxH": 8000
+   },
+   "cm": {
+    "w": 65,
+    "h": 81
+   },
+   "collection": "Kröller-Müller Museum",
+   "story": {
+    "extract": "Café Terrace at Night is an 1888 oil painting by the Dutch artist Vincent van Gogh. It is also known as The Cafe Terrace on the Place du Forum, and, when first exhibited in 1891, was entitled Coffeehouse, in the evening.",
+    "source": "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night"
+   },
+   "facts": [
+    {
+     "text": "After finishing Café Terrace at Night, Van Gogh wrote a letter to his sister expressing his enthusiasm: I was interrupted precisely by the work that a new painting of the outside of a café in the evening has been giving me these past few days. On the terrace, there are little figures of people drinking.",
+     "section": "Genesis",
+     "source": "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night#Genesis"
+    },
+    {
+     "text": "When exhibited for the first time, in 1891, the painting was entitled Coffeehouse, in the evening (Café, le soir). This is the first painting in which he used starry backgrounds; he went on to paint star-filled skies in Starry Night Over the Rhône (painted the same month), and the better known The Starry Night a year later.",
+     "section": "Night effects",
+     "source": "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night#Night_effects"
+    },
+    {
+     "text": "The painting and the café were both featured in the 1956 film Lust for Life starring Kirk Douglas and later in \"Vincent and the Doctor\" (2010), the tenth episode in the fifth series of British science fiction television series Doctor Who, and in the fully painted film Loving Vincent (2017). The café was also featured in the film Ronin (1998).",
+     "section": "In popular culture",
+     "source": "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night#In_popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q1464531",
+   "title": "Starry Night Over the Rhone",
+   "year": 1888,
+   "image": {
+    "file": "File:Vincent van Gogh - Starry Night - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1920px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "pxW": 4331,
+    "pxH": 3346
+   },
+   "cm": {
+    "w": 92,
+    "h": 72
+   },
+   "collection": "Frans Buffa & sons",
+   "story": {
+    "extract": "Starry Night, commonly known as Starry Night Over the Rhône, is one of Vincent van Gogh's paintings of Arles at night. It was painted on the bank of the Rhône that was only a one or two-minute walk from the Yellow House on the Place Lamartine, which van Gogh was renting at the time. The night sky and the effects of light at night provided the subject for some of van Gogh's more famous paintings, including Café Terrace at Night and the June 1889 canvas from Saint-Remy, The Starry Night.",
+    "source": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne"
+   },
+   "facts": [
+    {
+     "text": "The view was from the quay on the east side of the Rhône, into the knee of the river towards the western shore: coming down from the north, the Rhône turns to the right at this point to surround the rocks on which Arles is built.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne#Subject_matter"
+    },
+    {
+     "text": "Van Gogh announced and described this composition in a letter to his brother Theo: Included a small sketch of a 30 square canvas - in short the starry sky painted by night, actually under a gas jet. The sky is aquamarine, the water is royal blue, the ground is mauve.",
+     "section": "Genesis",
+     "source": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne#Genesis"
+    },
+    {
+     "text": "The challenge of painting at night intrigued van Gogh. The vantage point he chose for Starry Night allowed him to capture the reflections of the gas lighting in Arles across the glimmering blue water of the Rhône.",
+     "section": "Colours of the night",
+     "source": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne#Colours_of_the_night"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q674846",
+   "title": "The Night Café",
+   "year": 1888,
+   "image": {
+    "file": "File:Vincent Willem van Gogh 076.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vincent_Willem_van_Gogh_076.jpg/960px-Vincent_Willem_van_Gogh_076.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vincent_Willem_van_Gogh_076.jpg/1920px-Vincent_Willem_van_Gogh_076.jpg",
+    "pxW": 3000,
+    "pxH": 2368
+   },
+   "cm": {
+    "w": 92,
+    "h": 72
+   },
+   "collection": "Yale University Art Gallery",
+   "story": {
+    "extract": "The Night Café is an oil painting created by Dutch artist Vincent van Gogh in September 1888 in Arles. Its title is inscribed lower right beneath the signature. The painting is owned by Yale University and is currently held at the Yale University Art Gallery in New Haven, Connecticut.",
+    "source": "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9"
+   },
+   "facts": [
+    {
+     "text": "Van Gogh used the picture to settle debts with Ginoux, the landlord said to be depicted (standing) in it. Formerly a highlight of the Ivan Morozov collection in Moscow, the painting was nationalized and sold by the Soviet authorities in the 1930s.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9#History"
+    },
+    {
+     "text": "The painting was executed on industrial primed canvas of size 30 (French standard). It depicts the interior of the cafe, with a half-curtained doorway in the center background leading, presumably, to more private quarters.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9#Description"
+    },
+    {
+     "text": "In a jocular passage of a letter Van Gogh wrote to his brother, Theo, the artist said Ginoux had taken so much of his money that he'd told the cafe owner it was time to take his revenge by painting the place.",
+     "section": "Genesis",
+     "source": "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9#Genesis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q1926628",
+   "title": "The Red Vineyard",
+   "year": 1888,
+   "image": {
+    "file": "File:Vincent van Gogh - Red Vineyard at Arles (1888).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Vincent_van_Gogh_-_Red_Vineyard_at_Arles_%281888%29.jpg/960px-Vincent_van_Gogh_-_Red_Vineyard_at_Arles_%281888%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Vincent_van_Gogh_-_Red_Vineyard_at_Arles_%281888%29.jpg/1920px-Vincent_van_Gogh_-_Red_Vineyard_at_Arles_%281888%29.jpg",
+    "pxW": 11406,
+    "pxH": 9092
+   },
+   "cm": {
+    "w": 93,
+    "h": 75
+   },
+   "collection": "Pushkin Museum of Fine Arts",
+   "story": {
+    "extract": "The Red Vineyards near Arles is an oil painting by the Dutch painter Vincent van Gogh, executed on a privately primed Toile de 30 piece of burlap in early November 1888. It depicts workers in a vineyard, and it is the only painting known by name that van Gogh sold in his lifetime.",
+    "source": "https://en.wikipedia.org/wiki/The_Red_Vineyard"
+   },
+   "facts": [
+    {
+     "text": "The Red Vineyard was exhibited for the first time at the annual exhibition of Les XX, 1890, in Brussels, and sold for 400 francs (US$2,100 in 2025) to Belgian painter and collector Anna Boch, a member of Les XX.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Red_Vineyard#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q2200610",
+   "title": "The Yellow House",
+   "year": 1888,
+   "image": {
+    "file": "File:Vincent van Gogh - The yellow house ('The street').jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg/960px-Vincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg/1920px-Vincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg",
+    "pxW": 6917,
+    "pxH": 5366
+   },
+   "cm": {
+    "w": 92,
+    "h": 72
+   },
+   "collection": "Van Gogh Museum",
+   "story": {
+    "extract": "The Yellow House, alternatively named The Street, is an 1888 oil painting by the 19th-century Dutch Post-Impressionist painter Vincent van Gogh.",
+    "source": "https://en.wikipedia.org/wiki/The_Yellow_House"
+   },
+   "facts": [
+    {
+     "text": "The painting was executed in September 1888, at which time Van Gogh sent a sketch of the composition to his brother Theo: Also a sketch of a 30 square canvas representing the house and its setting under a sulphur sun under a pure cobalt sky. The theme is a hard one!",
+     "section": "Genesis",
+     "source": "https://en.wikipedia.org/wiki/The_Yellow_House#Genesis"
+    },
+    {
+     "text": "This painting never left the artist's estate. Since 1962, it has been in the possession of the Vincent van Gogh Foundation, established by Vincent Willem van Gogh, the artist's nephew, and on permanent loan to the Van Gogh Museum, Amsterdam.",
+     "section": "Pedigree",
+     "source": "https://en.wikipedia.org/wiki/The_Yellow_House#Pedigree"
+    },
+    {
+     "text": "The Yellow House itself no longer exists. It was severely damaged in bombing-raids during the Second World War, and later demolished.",
+     "section": "Since the 1940s",
+     "source": "https://en.wikipedia.org/wiki/The_Yellow_House#Since_the_1940s"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q45585",
+   "title": "The Starry Night",
+   "year": 1889,
+   "image": {
+    "file": "File:Van Gogh - Starry Night - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1920px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "pxW": 44567,
+    "pxH": 35291
+   },
+   "cm": {
+    "w": 92,
+    "h": 74
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "The Starry Night is an oil-on-canvas painting by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an imaginary village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P.",
+    "source": "https://en.wikipedia.org/wiki/The_Starry_Night"
+   },
+   "facts": [
+    {
+     "text": "After having initially held it back, Van Gogh sent The Starry Night to Theo in Paris on 28 September 1889, along with nine or ten other paintings. Theo died less than six months after Vincent, in January 1891.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Starry_Night#Provenance"
+    },
+    {
+     "text": "In the aftermath of the 23 December 1888 breakdown that resulted in the self-mutilation of his left ear, Van Gogh voluntarily admitted himself to the Saint-Paul-de-Mausole lunatic asylum on 8 May 1889.",
+     "section": "The asylum",
+     "source": "https://en.wikipedia.org/wiki/The_Starry_Night#The_asylum"
+    },
+    {
+     "text": "Although The Starry Night was painted during the day in Van Gogh's ground-floor studio, it would be inaccurate to state that the picture was painted from memory. The view has been identified as the one from his bedroom window, facing east, a view which Van Gogh painted variations of no fewer than twenty-one times, including The Starry Night.",
+     "section": "The painting",
+     "source": "https://en.wikipedia.org/wiki/The_Starry_Night#The_painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q2282256",
+   "title": "Irises",
+   "year": 1889,
+   "image": {
+    "file": "File:Irises-Vincent van Gogh.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/960px-Irises-Vincent_van_Gogh.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/1920px-Irises-Vincent_van_Gogh.jpg",
+    "pxW": 11516,
+    "pxH": 8801
+   },
+   "cm": {
+    "w": 94,
+    "h": 74
+   },
+   "collection": "J. Paul Getty Museum",
+   "story": {
+    "extract": "Irises is an oil painting by Dutch artist Vincent van Gogh. Painted in 1889, the work is a landscape with a cropped composition and is one of a series of several hundred paintings that van Gogh made at the Saint Paul-de-Mausole asylum in Saint-Rémy-de-Provence, France, in the last year before his death in 1890. It has been in the permanent collection of The Getty in Los Angeles, California since 1990.",
+    "source": "https://en.wikipedia.org/wiki/Irises_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The first owner was Julien \"Père\" Tanguy, a paint grinder and art dealer whose portrait Van Gogh painted three times. In 1892 Tanguy sold Irises to art critic and anarchist Octave Mirbeau who was also one of van Gogh's first supporters.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Irises_%28painting%29#Provenance"
+    },
+    {
+     "text": "In May 1889, Van Gogh voluntarily entered the Saint-Paul-de-Mausole asylum in nearby Saint-Rémy, where he painted around 150 canvases over the course of the next year.",
+     "section": "Saint-Rémy",
+     "source": "https://en.wikipedia.org/wiki/Irises_%28painting%29#Saint-R%C3%A9my"
+    },
+    {
+     "text": "Van Gogh was a dedicated collector of Japanese prints. Like many European artists of his generation, Van Gogh immersed himself in the art of Japan.",
+     "section": "Japanese influence",
+     "source": "https://en.wikipedia.org/wiki/Irises_%28painting%29#Japanese_influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q634122",
+   "title": "Wheatfield with Crows",
+   "year": 1890,
+   "image": {
+    "file": "File:Korenveld met kraaien - s0149V1962 - Van Gogh Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg/960px-Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg/1920px-Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg",
+    "pxW": 7762,
+    "pxH": 3718
+   },
+   "cm": {
+    "w": 103,
+    "h": 50
+   },
+   "collection": "Van Gogh Museum",
+   "story": {
+    "extract": "Wheatfield with Crows is a July 1890 painting by Vincent van Gogh. It has been cited by several critics as one of his greatest works.",
+    "source": "https://en.wikipedia.org/wiki/Wheatfield_with_Crows"
+   },
+   "facts": [
+    {
+     "text": "The Van Gogh Museum's Wheatfield with Crows was painted in July 1890, in the last weeks of Van Gogh's life. Many have claimed it as his last painting, while it is likely that Tree Roots was his final painting.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Wheatfield_with_Crows#Provenance"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  },
+  {
+   "qid": "Q1213917",
+   "title": "The Church at Auvers",
+   "year": 1890,
+   "image": {
+    "file": "File:Vincent van Gogh - The Church in Auvers-sur-Oise, View from the Chevet - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise%2C_View_from_the_Chevet_-_Google_Art_Project.jpg/960px-Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise%2C_View_from_the_Chevet_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise%2C_View_from_the_Chevet_-_Google_Art_Project.jpg/1920px-Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise%2C_View_from_the_Chevet_-_Google_Art_Project.jpg",
+    "pxW": 3434,
+    "pxH": 4433
+   },
+   "cm": {
+    "w": 74,
+    "h": 94
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Church at Auvers is an oil painting created by Dutch Post-Impressionist artist Vincent van Gogh in June 1890 which now hangs in the Musée d'Orsay in Paris, France.",
+    "source": "https://en.wikipedia.org/wiki/The_Church_at_Auvers"
+   },
+   "facts": [
+    {
+     "text": "The Church at Auvers — along with other canvases such as The Town Hall at Auvers and several drawings of small houses with thatched roofs — is reminiscent of scenes from his Nuenen period.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Church_at_Auvers#History"
+    },
+    {
+     "text": "The Church at Auvers plays a prominent role in \"Vincent and the Doctor\", a 2010 episode of the British science-fiction television programme Doctor Who, although the scenes at the church were filmed at Llandaff Cathedral in Wales.",
+     "section": "In popular culture",
+     "source": "https://en.wikipedia.org/wiki/The_Church_at_Auvers#In_popular_culture"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Vincent van Gogh"
+   }
+  }
+ ]
+}

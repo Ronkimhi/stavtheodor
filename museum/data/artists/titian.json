@@ -1,0 +1,412 @@
+{
+ "slug": "titian",
+ "name": "Titian",
+ "qid": "Q47551",
+ "born": 1488,
+ "died": 1576,
+ "periods": [
+  "high-renaissance",
+  "mannerism"
+ ],
+ "oneLiner": "Italian painter (c.1490–1576)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg/330px-Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg"
+ },
+ "bio": {
+  "extract": "Tiziano Vecellio, Latinized as Titianus, hence known in English as Titian, was an Italian Renaissance painter. The most important artist of Renaissance Venetian painting, he was born in Pieve di Cadore, near Belluno.",
+  "source": "https://en.wikipedia.org/wiki/Titian"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Titian",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q500812",
+   "title": "Sleeping Venus",
+   "year": 1509,
+   "image": {
+    "file": "File:Giorgione - Sleeping Venus - Google Art Project 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Giorgione_-_Sleeping_Venus_-_Google_Art_Project_2.jpg/960px-Giorgione_-_Sleeping_Venus_-_Google_Art_Project_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Giorgione_-_Sleeping_Venus_-_Google_Art_Project_2.jpg/1920px-Giorgione_-_Sleeping_Venus_-_Google_Art_Project_2.jpg",
+    "pxW": 6128,
+    "pxH": 3776
+   },
+   "cm": {
+    "w": 175,
+    "h": 108
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "The Sleeping Venus, also known as the Dresden Venus, is a painting traditionally attributed to the Italian Renaissance painter Giorgione, although it has long been widely thought that Titian completed it after Giorgione's death in 1510. The landscape and sky are generally accepted to be mainly by Titian. In the 21st century, much scholarly opinion has shifted further, to see the nude figure of Venus as also painted by Titian, leaving Giorgione's contribution uncertain.",
+    "source": "https://en.wikipedia.org/wiki/Sleeping_Venus_%28Giorgione%29"
+   },
+   "facts": [
+    {
+     "text": "According to the usual account, the painting was unfinished at the time of Giorgione's death. The landscape and sky were later finished by Titian, who in 1534 painted the similar Venus of Urbino, and several other reclining female nudes, such as his much repeated Venus and Musician and Danaë compositions, both from the 1540s onwards.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sleeping_Venus_%28Giorgione%29#History"
+    },
+    {
+     "text": "According to Sydney Freedberg, underlying erotic implications are made by Venus's raised arm and the placement of her left hand on her groin.",
+     "section": "Critical reception",
+     "source": "https://en.wikipedia.org/wiki/Sleeping_Venus_%28Giorgione%29#Critical_reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian / Giorgione"
+   }
+  },
+  {
+   "qid": "Q794077",
+   "title": "Sacred and Profane Love",
+   "year": 1514,
+   "image": {
+    "file": "File:Tiziano - Amor Sacro y Amor Profano (Galería Borghese, Roma, 1514)FXD.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29FXD.jpg/960px-Tiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29FXD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29FXD.jpg/1920px-Tiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29FXD.jpg",
+    "pxW": 6009,
+    "pxH": 2385
+   },
+   "cm": {
+    "w": 279,
+    "h": 118
+   },
+   "collection": "Galleria Borghese",
+   "story": {
+    "extract": "Sacred and Profane Love is an oil painting by Titian, probably painted in 1514, early in his career. The painting is presumed to have been commissioned by Niccolò Aurelio, a secretary to the Venetian Council of Ten, whose coat of arms appears on the sarcophagus or fountain, to celebrate his marriage to a young widow, Laura Bagarotto. It perhaps depicts a figure representing the bride dressed in white, sitting beside Cupid and accompanied by the goddess Venus.",
+    "source": "https://en.wikipedia.org/wiki/Sacred_and_Profane_Love"
+   },
+   "facts": [
+    {
+     "text": "The work was bought in 1608 by Cardinal Scipione Borghese, nephew of Pope Paul V and a major collector and patron of art. It is now kept with other works from the Borghese collection in the Galleria Borghese in Rome.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sacred_and_Profane_Love#History"
+    },
+    {
+     "text": "Two women, who appear to be modelled on the same person, sit on a carved Ancient Roman sarcophagus that has been converted to a water-trough, or a trough made to look like a Roman sarcophagus; the broad ledges here are not found in actual sarcophagi.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sacred_and_Profane_Love#Description"
+    },
+    {
+     "text": "There have been a number of conflicting interpretations of the painting. Their starting point is to identify the purpose of the painting, which most interpretations in recent decades see as commemorating a marriage.",
+     "section": "Meaning",
+     "source": "https://en.wikipedia.org/wiki/Sacred_and_Profane_Love#Meaning"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q1899740",
+   "title": "Assumption of the Virgin",
+   "year": 1517,
+   "image": {
+    "file": "File:Tizian 041.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tizian_041.jpg/960px-Tizian_041.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tizian_041.jpg",
+    "pxW": 1050,
+    "pxH": 1932
+   },
+   "cm": {
+    "w": 344,
+    "h": 668
+   },
+   "collection": "Santa Maria Gloriosa dei Frari",
+   "story": {
+    "extract": "The Assumption of the Virgin or Frari Assumption, popularly known as the Assunta, is a large altarpiece panel painting in oils by the Italian Renaissance artist Titian, painted in 1515–1518. It remains in the position it was designed for, on the high altar of the Basilica di Santa Maria Gloriosa dei Frari or Frari church in Venice. It is the largest altarpiece in the city, with the figures well over life-size, necessitated by the large church, with a considerable distance between the altar and the congregation.",
+    "source": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_%28Titian%29"
+   },
+   "facts": [
+    {
+     "text": "The Assumption of the Virgin was Titian's first major commission for a church in Venice, and brought his art great public attention. Although he was at work on a huge commission for the Doge's Palace, which he took until the 1530s to complete, most of his previous works were out of public view in palaces.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_%28Titian%29#History"
+    },
+    {
+     "text": "The figures are in three zones, divided by spaces filled only with light. On the ground are the Apostles, tightly packed in a group and in a variety of dramatic poses, most looking up at the unprecedented sight of the Virgin Mary rising to heaven.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_%28Titian%29#Description"
+    },
+    {
+     "text": "The Assumption of Mary was a Catholic doctrine that remained optional in the early 16th century; it was not declared an article of faith until 1950.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_%28Titian%29#Subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q2046100",
+   "title": "Flora",
+   "year": 1517,
+   "image": {
+    "file": "File:Tiziano - Flora - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tiziano_-_Flora_-_Google_Art_Project.jpg/960px-Tiziano_-_Flora_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tiziano_-_Flora_-_Google_Art_Project.jpg/1920px-Tiziano_-_Flora_-_Google_Art_Project.jpg",
+    "pxW": 3317,
+    "pxH": 4423
+   },
+   "cm": {
+    "w": 63,
+    "h": 79
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Flora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.",
+    "source": "https://en.wikipedia.org/wiki/Flora_%28Titian%29"
+   },
+   "facts": [
+    {
+     "text": "The work was reproduced in numerous 16th century etchings. Later, it followed an unclear series of changes of hands at Brussels and Vienna.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Flora_%28Titian%29#History"
+    },
+    {
+     "text": "It portrays an idealized beautiful woman, a model established in the Venetian school by Titian's master Giorgione with his Laura. Her left hand holds a pink-shaded mantle, and her right holds a handful of flowers and leaves.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Flora_%28Titian%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q1206860",
+   "title": "Bacchus and Ariadne",
+   "year": 1520,
+   "image": {
+    "file": "File:Titian Bacchus and Ariadne.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Titian_Bacchus_and_Ariadne.jpg/960px-Titian_Bacchus_and_Ariadne.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Titian_Bacchus_and_Ariadne.jpg/1920px-Titian_Bacchus_and_Ariadne.jpg",
+    "pxW": 4670,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 191,
+    "h": 176
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Bacchus and Ariadne (1520–1523) is an oil painting by Titian. It is one of a cycle of paintings on mythological subjects produced for Alfonso I d'Este, Duke of Ferrara, for the Camerino d'Alabastro – a private room in his palazzo in Ferrara decorated with paintings based on classical texts. An advance payment was given to Raphael, who originally held the commission for the subject of a Triumph of Bacchus.",
+    "source": "https://en.wikipedia.org/wiki/Bacchus_and_Ariadne"
+   },
+   "facts": [
+    {
+     "text": "Ariadne has been left on the island of Naxos, deserted by her lover Theseus, whose ship sails away to the far left. She is discovered on the shore by the god Bacchus, leading a procession of revellers in a chariot drawn by two cheetahs.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_and_Ariadne#Description"
+    },
+    {
+     "text": "There is continued discussion about which work or works of ancient literature Titian's painting is based on. Titian himself did not read Latin, still less Greek, but he had a number of friends who could help him with details from classical works not yet translated into Italian.",
+     "section": "Literary sources",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_and_Ariadne#Literary_sources"
+    },
+    {
+     "text": "The canvas on which Bacchus and Ariadne is painted was rolled up twice in the first century of its existence, which had consequences for the painting.",
+     "section": "Restoration",
+     "source": "https://en.wikipedia.org/wiki/Bacchus_and_Ariadne#Restoration"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q15008032",
+   "title": "The Feast of the Gods",
+   "year": 1529,
+   "image": {
+    "file": "File:Giovanni Bellini and Titian - The Feast of the Gods - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Giovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg/960px-Giovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Giovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg/1920px-Giovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg",
+    "pxW": 4034,
+    "pxH": 3732
+   },
+   "cm": {
+    "w": 188,
+    "h": 170
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Feast of the Gods is an oil painting by the Italian Renaissance master Giovanni Bellini, with substantial additions in stages to the left and center landscape by Dosso Dossi and Titian. It is one of the few mythological pictures by the Venetian artist. Completed in 1514, it was his last major work.",
+    "source": "https://en.wikipedia.org/wiki/The_Feast_of_the_Gods"
+   },
+   "facts": [
+    {
+     "text": "The work is atypical of Renaissance mythological painting in the down to earth treatment of the main deities, which may be accounted for by the figures beginning as ordinary citizens of Thebes, and by Bellini's inexperience in the emerging conventions of mythological art.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/The_Feast_of_the_Gods#Interpretation"
+    },
+    {
+     "text": "The painting is signed by an inscription on the fictive paper attached to the wooden tub at the lower right: \"joannes bellinus venetus / p MDXIIII\" (\"Giovanni Bellini of Venice, painted 1514\"), and his payment that year is recorded.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/The_Feast_of_the_Gods#Commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Bellini / Titian"
+   }
+  },
+  {
+   "qid": "Q727875",
+   "title": "Venus of Urbino",
+   "year": 1538,
+   "image": {
+    "file": "File:Tiziano's Venere di Urbino (from The History BLog).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tiziano%27s_Venere_di_Urbino_%28from_The_History_BLog%29.jpg/960px-Tiziano%27s_Venere_di_Urbino_%28from_The_History_BLog%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tiziano%27s_Venere_di_Urbino_%28from_The_History_BLog%29.jpg/1920px-Tiziano%27s_Venere_di_Urbino_%28from_The_History_BLog%29.jpg",
+    "pxW": 3633,
+    "pxH": 2574
+   },
+   "cm": {
+    "w": 166,
+    "h": 119
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Venus of Urbino is an oil painting by Italian painter Titian, depicting a nude young woman, traditionally identified with the goddess Venus, reclining on a couch or bed in the sumptuous surroundings of a Renaissance palace. Work on the painting seems to have begun anywhere from 1532 or 1534, and was perhaps completed in 1534, but not sold until 1538. It is currently held in the Galleria degli Uffizi in Florence.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Urbino"
+   },
+   "facts": [
+    {
+     "text": "Some critics have seen references to marriage in details such as the maids at the cassone, where the corredo or trousseau of clothes generally given to the bride by her husband's family were stored.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Urbino#Interpretation"
+    },
+    {
+     "text": "The painting's subject stares straight at the viewer, not embarrassed by her nudity. In her right hand, she holds a posy of roses, while she holds her other hand over her genitals.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Urbino#Description"
+    },
+    {
+     "text": "The detailed depiction of the interior setting is unusual, perhaps unique, for a Titian painting. Titian did work for the 21-year-old Ippolito de' Medici, reluctantly made a cardinal (though not a priest) by his uncle, Pope Clement VII.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Urbino#Commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q1123378",
+   "title": "Equestrian Portrait of Charles V",
+   "year": 1548,
+   "image": {
+    "file": "File:Carlos V en Mühlberg, by Titian, from Prado in Google Earth.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg/960px-Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg/1920px-Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg",
+    "pxW": 25284,
+    "pxH": 30000
+   },
+   "cm": {
+    "w": 283,
+    "h": 335
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "Equestrian Portrait of Charles V is an oil-on-canvas painting by the Italian Renaissance artist Titian. Created between April and September 1548 while Titian was at the imperial court of Augsburg, it is a tribute to Charles V, Holy Roman Emperor, following his victory in the April 1547 Battle of Mühlberg against the Protestant armies.",
+    "source": "https://en.wikipedia.org/wiki/Equestrian_Portrait_of_Charles_V"
+   },
+   "facts": [
+    {
+     "text": "The painting contains a mix of styles; passages such as the armor and harness display the realism of Titian's early work, while the trees, landscape and sky are built from the broad stretches of colour and strong brushstrokes associated with his work from the 1540s on. It contains surprisingly few iconographic elements, but they are not absent.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Equestrian_Portrait_of_Charles_V#Description"
+    },
+    {
+     "text": "Many later equestrian portraits of monarchs and rulers display a debt to Titian's depiction of Charles. More obvious and well known works include Anthony van Dyck's 1620 Portrait of Charles I on Horseback which incorporates many of Titian's ideals.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Equestrian_Portrait_of_Charles_V#Influence"
+    },
+    {
+     "text": "The portrait was commissioned by Charles' sister, Mary of Austria, Queen of Hungary, with Charles specifying how he wished to be presented.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Equestrian_Portrait_of_Charles_V#Commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q2528145",
+   "title": "Allegory of Prudence",
+   "year": 1550,
+   "image": {
+    "file": "File:Titian - Allegorie der Zeit.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Titian_-_Allegorie_der_Zeit.jpg/960px-Titian_-_Allegorie_der_Zeit.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Titian_-_Allegorie_der_Zeit.jpg/1920px-Titian_-_Allegorie_der_Zeit.jpg",
+    "pxW": 7548,
+    "pxH": 8432
+   },
+   "cm": {
+    "w": 68,
+    "h": 76
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Allegory of Prudence is an oil-on-canvas painting attributed to the Italian artist Titian and his assistants. The painting portrays three human heads, each facing in a different direction, above three animal heads. It is in the National Gallery, London.",
+    "source": "https://en.wikipedia.org/wiki/Allegory_of_Prudence"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  },
+  {
+   "qid": "Q2528177",
+   "title": "Diana and Actaeon",
+   "year": 1557,
+   "image": {
+    "file": "File:Titian - Diana and Actaeon - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Titian_-_Diana_and_Actaeon_-_Google_Art_Project.jpg/960px-Titian_-_Diana_and_Actaeon_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Titian_-_Diana_and_Actaeon_-_Google_Art_Project.jpg/1920px-Titian_-_Diana_and_Actaeon_-_Google_Art_Project.jpg",
+    "pxW": 3000,
+    "pxH": 2750
+   },
+   "cm": {
+    "w": 202,
+    "h": 184
+   },
+   "collection": "National Galleries Scotland",
+   "story": {
+    "extract": "Diana and Actaeon is a large painting by the Italian Renaissance painter Titian, finished in 1556–1559, and is considered amongst Titian's greatest works. It portrays the moment in which the hunter Actaeon comes across the goddess Diana and her nymphs as they are bathing. Diana is furious, and will turn Actaeon into a stag, who is then pursued and killed by his own hounds, a scene Titian later painted in his The Death of Actaeon.",
+    "source": "https://en.wikipedia.org/wiki/Diana_and_Actaeon_%28Titian%29"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts the seminal scene from the second story in book three of the Roman poet Ovid’s Metamorphoses. In the poem, Actaeon, grandson of Cadmus, calls off his friends after a successful hunt due to hot weather and inadvertently wanders off into the valley of Gargaphia, the sacred realm of Diana, the goddess of the hunt.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Diana_and_Actaeon_%28Titian%29#Description"
+    },
+    {
+     "text": "The environment of Diana and Actaeon is littered with contextual symbolism that alludes to both the coming events following the confrontation as well as to artistic conventions at the time.",
+     "section": "Iconography",
+     "source": "https://en.wikipedia.org/wiki/Diana_and_Actaeon_%28Titian%29#Iconography"
+    },
+    {
+     "text": "Titian's mythological epic is depicted in a classical style reminiscent of the masters of the early renaissance that took influence from both the art of antiquity as well as the remnants of medieval art that were still on display throughout most of Europe.",
+     "section": "Formal analysis",
+     "source": "https://en.wikipedia.org/wiki/Diana_and_Actaeon_%28Titian%29#Formal_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Titian"
+   }
+  }
+ ]
+}

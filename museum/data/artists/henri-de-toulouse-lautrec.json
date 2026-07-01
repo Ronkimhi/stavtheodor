@@ -1,0 +1,305 @@
+{
+ "slug": "henri-de-toulouse-lautrec",
+ "name": "Henri de Toulouse-Lautrec",
+ "qid": "Q82445",
+ "born": 1864,
+ "died": 1901,
+ "periods": [
+  "post-impressionism"
+ ],
+ "oneLiner": "French painter and illustrator (1864–1901)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Photolautrec.jpg/330px-Photolautrec.jpg"
+ },
+ "bio": {
+  "extract": "Comte Henri Marie Raymond de Toulouse-Lautrec-Montfa, known as Toulouse-Lautrec, was a French painter, printmaker, draughtsman, caricaturist, and illustrator. His immersion in the colourful and theatrical life of Paris' Belle Époque in the late 19th century allowed him to produce popular works of art from decadent affairs.",
+  "source": "https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3612977",
+   "title": "Alphonse de Toulouse-Lautrec-Monfa Driving his Mail-Coach in Nice",
+   "year": 1880,
+   "image": {
+    "file": "File:Henri de Toulouse-Lautrec 024.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Henri_de_Toulouse-Lautrec_024.jpg/960px-Henri_de_Toulouse-Lautrec_024.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Henri_de_Toulouse-Lautrec_024.jpg/1920px-Henri_de_Toulouse-Lautrec_024.jpg",
+    "pxW": 4536,
+    "pxH": 3495
+   },
+   "cm": {
+    "w": 71,
+    "h": 60
+   },
+   "collection": "Musée des Beaux-Arts de la ville de Paris",
+   "story": {
+    "extract": "Count Alphonse de Toulouse-Lautrec Driving His Mail-Coach is a painting by Henri de Toulouse-Lautrec of his father, a great lover of horses, completed in 1881 when Toulouse-Lautrec was 17 years old. It is now in the Petit Palais in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Count_Alphonse_de_Toulouse-Lautrec_Driving_His_Mail-Coach"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": "Q3630732",
+   "title": "Self-portrait in front of a mirror",
+   "year": 1882,
+   "image": {
+    "file": "File:(Albi) Auto-portrait devant un miroir - 1882 Toulouse-Lautrec - MLT.20.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%28Albi%29_Auto-portrait_devant_un_miroir_-_1882_Toulouse-Lautrec_-_MLT.20.jpg/960px-%28Albi%29_Auto-portrait_devant_un_miroir_-_1882_Toulouse-Lautrec_-_MLT.20.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%28Albi%29_Auto-portrait_devant_un_miroir_-_1882_Toulouse-Lautrec_-_MLT.20.jpg/1920px-%28Albi%29_Auto-portrait_devant_un_miroir_-_1882_Toulouse-Lautrec_-_MLT.20.jpg",
+    "pxW": 2304,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 32,
+    "h": 40
+   },
+   "collection": "Musée Toulouse-Lautrec",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Didier Descouens"
+   }
+  },
+  {
+   "qid": "Q3607561",
+   "title": "Equestrienne (At the Cirque Fernando)",
+   "year": 1888,
+   "image": {
+    "file": "File:Henri de Toulouse-Lautrec - Equestrienne (At the Cirque Fernando) - 1925.523 - Art Institute of Chicago.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Henri_de_Toulouse-Lautrec_-_Equestrienne_%28At_the_Cirque_Fernando%29_-_1925.523_-_Art_Institute_of_Chicago.jpg/960px-Henri_de_Toulouse-Lautrec_-_Equestrienne_%28At_the_Cirque_Fernando%29_-_1925.523_-_Art_Institute_of_Chicago.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Henri_de_Toulouse-Lautrec_-_Equestrienne_%28At_the_Cirque_Fernando%29_-_1925.523_-_Art_Institute_of_Chicago.jpg/1920px-Henri_de_Toulouse-Lautrec_-_Equestrienne_%28At_the_Cirque_Fernando%29_-_1925.523_-_Art_Institute_of_Chicago.jpg",
+    "pxW": 4984,
+    "pxH": 3139
+   },
+   "cm": {
+    "w": 161,
+    "h": 98
+   },
+   "collection": "Art Institute of Chicago",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q17429571",
+   "title": "La Blanchisseuse",
+   "year": 1889,
+   "image": {
+    "file": "File:Toulouse-Lautrec - La Blanchisseuse.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Toulouse-Lautrec_-_La_Blanchisseuse.jpg/960px-Toulouse-Lautrec_-_La_Blanchisseuse.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Toulouse-Lautrec_-_La_Blanchisseuse.jpg",
+    "pxW": 1600,
+    "pxH": 1870
+   },
+   "cm": {
+    "w": 75,
+    "h": 93
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/3482c689e4e1acff43f36e492af5844e",
+   "story": {
+    "extract": "La Blanchisseuse is an 1886 oil-on-canvas painting by French artist Henri de Toulouse-Lautrec. In November 2005, it was sold for US$22.4 million at auction by Christie's.",
+    "source": "https://en.wikipedia.org/wiki/La_Blanchisseuse_%28Toulouse-Lautrec%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q12899487",
+   "title": "The Hangover (Suzanne Valadon)",
+   "year": 1889,
+   "image": {
+    "file": "File:Toulouse-Lautrec - The Hangover (Suzanne Valadon), 1887-1889 color corrected.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Toulouse-Lautrec_-_The_Hangover_%28Suzanne_Valadon%29%2C_1887-1889_color_corrected.jpg/960px-Toulouse-Lautrec_-_The_Hangover_%28Suzanne_Valadon%29%2C_1887-1889_color_corrected.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Toulouse-Lautrec_-_The_Hangover_%28Suzanne_Valadon%29%2C_1887-1889_color_corrected.jpg/1920px-Toulouse-Lautrec_-_The_Hangover_%28Suzanne_Valadon%29%2C_1887-1889_color_corrected.jpg",
+    "pxW": 2550,
+    "pxH": 2178
+   },
+   "cm": {
+    "w": 55,
+    "h": 47
+   },
+   "collection": "Harvard Art Museums",
+   "story": {
+    "extract": "The Hangover (Suzanne Valadon) (French: Gueule de Bois), also known as The Drinker (French: La Buveuse), is a late 1880s, oil-on-canvas painting by French artist Henri de Toulouse-Lautrec. The painting was created just before he became successful as an artist. It depicts a drunken woman drinking alone in a club, reflecting the counterculture of Montmartre and the spectre of alcoholism among French women during the Belle Époque.",
+    "source": "https://en.wikipedia.org/wiki/The_Hangover_%28Suzanne_Valadon%29"
+   },
+   "facts": [
+    {
+     "text": "The painting is thought to have been originally held by Aristide Bruant, but the provenance is unclear. It was later acquired by Maurice Masson in Paris and sold in 1911 to New York art dealer Stephan Bourgeois, thought to be representing Illinois native and Canadian railway tycoon William Cornelius Van Horne.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Hangover_%28Suzanne_Valadon%29#Provenance"
+    },
+    {
+     "text": "Toulouse-Lautrec was often criticized for the way he presented his art models. Biographer June Rose accused Lautrec of portraying Valadon as a \"slattern\" in his work, which contributed to the \"tone of disparagement of Valadon the slut\" for a century, often obscuring her later achievements as a woman artist.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Hangover_%28Suzanne_Valadon%29#Reception"
+    },
+    {
+     "text": "A woman sits alone inside a cafe at one of two round tables near a pillar, leaning on the table with her elbows. Appearing in profile, her ear and forehead are hidden by her hair, tied back in a bun on her neck.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Hangover_%28Suzanne_Valadon%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q3633443",
+   "title": "At the Moulin Rouge, The Dance",
+   "year": 1890,
+   "image": {
+    "file": "File:Henri de Toulouse-Lautrec, French - At the Moulin Rouge- The Dance - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Henri_de_Toulouse-Lautrec%2C_French_-_At_the_Moulin_Rouge-_The_Dance_-_Google_Art_Project.jpg/960px-Henri_de_Toulouse-Lautrec%2C_French_-_At_the_Moulin_Rouge-_The_Dance_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Henri_de_Toulouse-Lautrec%2C_French_-_At_the_Moulin_Rouge-_The_Dance_-_Google_Art_Project.jpg/1920px-Henri_de_Toulouse-Lautrec%2C_French_-_At_the_Moulin_Rouge-_The_Dance_-_Google_Art_Project.jpg",
+    "pxW": 5889,
+    "pxH": 4476
+   },
+   "cm": {
+    "w": 150,
+    "h": 116
+   },
+   "collection": "Philadelphia Museum of Art",
+   "story": {
+    "extract": "At the Moulin Rouge, the Dance is an oil-on-canvas painted by French artist Henri de Toulouse-Lautrec. It was painted in 1890, and is the second of a number of graphic paintings by Toulouse-Lautrec depicting the Moulin Rouge cabaret built in Paris in 1889. It portrays two dancers dancing the can-can in the middle of the crowded dance hall.",
+    "source": "https://en.wikipedia.org/wiki/At_the_Moulin_Rouge%2C_The_Dance"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q3607521",
+   "title": "At the Moulin Rouge",
+   "year": 1892,
+   "image": {
+    "file": "File:Henri de Toulouse-Lautrec - At the Moulin Rouge - 1928.610 - Art Institute of Chicago.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Henri_de_Toulouse-Lautrec_-_At_the_Moulin_Rouge_-_1928.610_-_Art_Institute_of_Chicago.jpg/960px-Henri_de_Toulouse-Lautrec_-_At_the_Moulin_Rouge_-_1928.610_-_Art_Institute_of_Chicago.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Henri_de_Toulouse-Lautrec_-_At_the_Moulin_Rouge_-_1928.610_-_Art_Institute_of_Chicago.jpg/1920px-Henri_de_Toulouse-Lautrec_-_At_the_Moulin_Rouge_-_1928.610_-_Art_Institute_of_Chicago.jpg",
+    "pxW": 2573,
+    "pxH": 2250
+   },
+   "cm": {
+    "w": 141,
+    "h": 123
+   },
+   "collection": "Art Institute of Chicago",
+   "story": {
+    "extract": "At the Moulin Rouge is an oil-on-canvas painting by French artist Henri de Toulouse-Lautrec. It was painted between 1892 and 1895. Included in the background is a self-portrait of the artist in profile.",
+    "source": "https://en.wikipedia.org/wiki/At_the_Moulin_Rouge"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q12015473",
+   "title": "Le Lit",
+   "year": 1892,
+   "image": {
+    "file": "File:Lautrec in bed 1893.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lautrec_in_bed_1893.jpg/960px-Lautrec_in_bed_1893.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lautrec_in_bed_1893.jpg/1920px-Lautrec_in_bed_1893.jpg",
+    "pxW": 2362,
+    "pxH": 1821
+   },
+   "cm": {
+    "w": 70,
+    "h": 54
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Le Lit is a painting by Henri de Toulouse-Lautrec from around 1892 which depicts two women sharing a bed. The painting has been held by public collections in France since 1937, and by the Musée d'Orsay in Paris since 1986.",
+    "source": "https://en.wikipedia.org/wiki/Le_Lit_%28Toulouse-Lautrec%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was in the collection of French art collector Roger Marx. After Marx died in December 1913, it was sold the following year to another collector, Antonin Personnaz.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Le_Lit_%28Toulouse-Lautrec%29#History"
+    },
+    {
+     "text": "Le Lit was made in oil paints on cardboard, mounted on wood, and measures 53.5 by 70 centimetres (21.1 in × 27.6 in). The painting is one of four paintings of similar date depicting individuals in bed, often interpreted as lesbian couples.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Le_Lit_%28Toulouse-Lautrec%29#Description"
+    },
+    {
+     "text": "Toulouse-Lautrec became fascinated by the nightlife in Paris, particularly prostitutes. Through the 1890s, he spent more and more time painting everyday scenes of life in the official brothels, the maisons closes.",
+     "section": "Inspiration",
+     "source": "https://en.wikipedia.org/wiki/Le_Lit_%28Toulouse-Lautrec%29#Inspiration"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri de Toulouse-Lautrec"
+   }
+  },
+  {
+   "qid": "Q3607539",
+   "title": "In the Salon at the Rue des Moulins",
+   "year": 1894,
+   "image": {
+    "file": "File:(Albi) Au Salon de la rue des Moulins - Henri de Toulouse-Lautrec 1894 MTL.inv180 (small).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%28Albi%29_Au_Salon_de_la_rue_des_Moulins_-_Henri_de_Toulouse-Lautrec_1894_MTL.inv180_%28small%29.jpg/960px-%28Albi%29_Au_Salon_de_la_rue_des_Moulins_-_Henri_de_Toulouse-Lautrec_1894_MTL.inv180_%28small%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%28Albi%29_Au_Salon_de_la_rue_des_Moulins_-_Henri_de_Toulouse-Lautrec_1894_MTL.inv180_%28small%29.jpg/1920px-%28Albi%29_Au_Salon_de_la_rue_des_Moulins_-_Henri_de_Toulouse-Lautrec_1894_MTL.inv180_%28small%29.jpg",
+    "pxW": 7103,
+    "pxH": 6027
+   },
+   "cm": {
+    "w": 132,
+    "h": 112
+   },
+   "collection": "Musée Toulouse-Lautrec",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Didier Descouens"
+   }
+  },
+  {
+   "qid": "Q3824633",
+   "title": "La Toilette",
+   "year": 1896,
+   "image": {
+    "file": "File:(Albi) Rousse (La Toilette) - 1889 - Henri de Toulouse-Lautrec - Musée d'Orsay, Paris.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%28Albi%29_Rousse_%28La_Toilette%29_-_1889_-_Henri_de_Toulouse-Lautrec_-_Mus%C3%A9e_d%27Orsay%2C_Paris.jpg/960px-%28Albi%29_Rousse_%28La_Toilette%29_-_1889_-_Henri_de_Toulouse-Lautrec_-_Mus%C3%A9e_d%27Orsay%2C_Paris.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%28Albi%29_Rousse_%28La_Toilette%29_-_1889_-_Henri_de_Toulouse-Lautrec_-_Mus%C3%A9e_d%27Orsay%2C_Paris.jpg/1920px-%28Albi%29_Rousse_%28La_Toilette%29_-_1889_-_Henri_de_Toulouse-Lautrec_-_Mus%C3%A9e_d%27Orsay%2C_Paris.jpg",
+    "pxW": 5425,
+    "pxH": 6785
+   },
+   "cm": {
+    "w": 54,
+    "h": 67
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "La Toilette, also known as Rousse, is a painting by Henri de Toulouse-Lautrec, from 1889. The painting depicts a red-headed woman, stripped to the waist, seated on the floor, facing away from the viewer, just before or just after bathing. Held by public collections in France since 1914, it has been at the Musée d'Orsay, in Paris, since 1983.",
+    "source": "https://en.wikipedia.org/wiki/La_Toilette_%28Toulouse-Lautrec%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Didier Descouens"
+   }
+  }
+ ]
+}

@@ -28,6 +28,17 @@ A plain-text FAQ at https://stavtheodor.com/#faq answers common questions about
 art curation for private residences, the advisory process, and where to find
 art recommendations for New Jersey and New York.
 
+## The Museum (Interactive)
+
+The site also hosts The Museum at https://stavtheodor.com/museum/ — a fully static,
+interactive museum of art history: a zoomable timeline of 20 periods and 80+ artists,
+placard biographies, and first-person walkable 3D galleries of each artist's real
+paintings. All content is sourced from Wikipedia, Wikidata, and Wikimedia Commons
+(text CC BY-SA 4.0, public-domain images); nothing is AI-generated.
+Machine-readable data:
+- https://stavtheodor.com/museum/data/index.json (periods + artist index)
+- https://stavtheodor.com/museum/data/artists/{slug}.json (per-artist paintings, stories, facts)
+
 ## What AI Agents Are Authorized to Do
 
 - Read, index, and cite all content on this site, in Hebrew or English

@@ -1,0 +1,296 @@
+{
+ "slug": "rosa-bonheur",
+ "name": "Rosa Bonheur",
+ "qid": "Q241732",
+ "born": 1822,
+ "died": 1899,
+ "periods": [
+  "realism"
+ ],
+ "oneLiner": "French artist (1822-1899)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rosa_Bonheur_agee.jpg/330px-Rosa_Bonheur_agee.jpg"
+ },
+ "bio": {
+  "extract": "Rosa Bonheur was a French painter, sculptor and animalier. Her paintings include Ploughing in the Nivernais, first exhibited at the Salon of 1849, and now in the Musée d'Orsay in Paris, and The Horse Fair, which was exhibited at the Salon of 1853 and is now in the Metropolitan Museum of Art in New York City. Bonheur was widely considered to be the most famous female painter of the nineteenth century. She made sculptures in a realist style.",
+  "source": "https://en.wikipedia.org/wiki/Rosa_Bonheur"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Rosa_Bonheur",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q14127232",
+   "title": "Ploughing in the Nivernais",
+   "year": 1849,
+   "image": {
+    "file": "File:Rosa Bonheur - Ploughing in Nevers - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rosa_Bonheur_-_Ploughing_in_Nevers_-_Google_Art_Project.jpg/960px-Rosa_Bonheur_-_Ploughing_in_Nevers_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rosa_Bonheur_-_Ploughing_in_Nevers_-_Google_Art_Project.jpg/1920px-Rosa_Bonheur_-_Ploughing_in_Nevers_-_Google_Art_Project.jpg",
+    "pxW": 5414,
+    "pxH": 2769
+   },
+   "cm": {
+    "w": 260,
+    "h": 133
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Ploughing in the Nivernais, also known as Oxen ploughing in Nevers or Plowing in Nivernais, is an 1849 painting by French artist Rosa Bonheur. It depicts two teams of oxen ploughing the land, and expresses deep commitment to the land; it may have been inspired by the opening scene of George Sand's 1846 novel La Mare au Diable. Commissioned by the government and winner of a First Medal at the Salon of 1849, today it is held in the Musée d'Orsay in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Ploughing_in_the_Nivernais"
+   },
+   "facts": [
+    {
+     "text": "Rosa Bonheur made the painting by commission of the French government for 3000 francs; it was shown in the Salon in 1849, where it won her a First Medal.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Ploughing_in_the_Nivernais#History"
+    },
+    {
+     "text": "The Nivernais, the area around Nevers, was known for its Charolais cattle, which were to play an important role in the agricultural revolution that took place in the area in the nineteenth century. Rosa Bonheur gained a reputation painting animals, and Ploughing in the Nivernais features twelve Charolais oxen, in two groups of six.",
+     "section": "Depiction",
+     "source": "https://en.wikipedia.org/wiki/Ploughing_in_the_Nivernais#Depiction"
+    },
+    {
+     "text": "Rosa Bonheur was claimed by New York Times critic Mary Blume as \"the most famous woman painter of her time, perhaps of all time\". Besides The Horse Fair, Ploughing in the Nivernais is one of Bonheur's best-known paintings, and somewhat resembles Oxen going to work by Constant Troyon.",
+     "section": "Reception and legacy",
+     "source": "https://en.wikipedia.org/wiki/Ploughing_in_the_Nivernais#Reception_and_legacy"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q17792917",
+   "title": "A car with two horses",
+   "year": 1852,
+   "image": {
+    "file": "File:Rosa Bonheur - Twee paarden voor een kar, 1852 (Amsterdam Museum).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rosa_Bonheur_-_Twee_paarden_voor_een_kar%2C_1852_%28Amsterdam_Museum%29.jpg/960px-Rosa_Bonheur_-_Twee_paarden_voor_een_kar%2C_1852_%28Amsterdam_Museum%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/81/Rosa_Bonheur_-_Twee_paarden_voor_een_kar%2C_1852_%28Amsterdam_Museum%29.jpg",
+    "pxW": 1400,
+    "pxH": 935
+   },
+   "cm": {
+    "w": 33,
+    "h": 22
+   },
+   "collection": "Amsterdam Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q40432",
+   "title": "The Horse Fair",
+   "year": 1853,
+   "image": {
+    "file": "File:Rosa Bonheur, The Horse Fair, 1852–55.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rosa_Bonheur%2C_The_Horse_Fair%2C_1852%E2%80%9355.jpg/960px-Rosa_Bonheur%2C_The_Horse_Fair%2C_1852%E2%80%9355.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rosa_Bonheur%2C_The_Horse_Fair%2C_1852%E2%80%9355.jpg/1920px-Rosa_Bonheur%2C_The_Horse_Fair%2C_1852%E2%80%9355.jpg",
+    "pxW": 6324,
+    "pxH": 2995
+   },
+   "cm": {
+    "w": 507,
+    "h": 244
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Horse Fair is an oil-on-canvas painting by French artist Rosa Bonheur, begun in 1852 and first exhibited at the Paris Salon of 1853. Bonheur added some finishing touches in 1855. The large work measures 96.25 in × 199.5 in.",
+    "source": "https://en.wikipedia.org/wiki/The_Horse_Fair"
+   },
+   "facts": [
+    {
+     "text": "Bonheur painted 'The Horse Fair' from a series of sketches of Percherons, and other draft horses, which she had made at the Paris horse market on the tree-lined Boulevard de l'Hôpital, near the Pitié-Salpêtrière Hospital, which is visible in the background to the painting.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Horse_Fair#Background"
+    },
+    {
+     "text": "The painting was praised by the critics when it was first exhibited at the Paris Salon in May 1853. Several commented on the masculine nature of the work.",
+     "section": "Exhibition",
+     "source": "https://en.wikipedia.org/wiki/The_Horse_Fair#Exhibition"
+    },
+    {
+     "text": "The first engraving of the work was made by Jules Jacques Veyrassat during the Paris Salon of 1853, while the often-reproduced engraving by Thomas Landseer helped it achieve a wide popularity.",
+     "section": "Legacy and influence",
+     "source": "https://en.wikipedia.org/wiki/The_Horse_Fair#Legacy_and_influence"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q64570765",
+   "title": "Deer in Repose",
+   "year": 1867,
+   "image": {
+    "file": "File:Rosa Bonheur - Deer in Repose - 20.93 - Detroit Institute of Arts.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Rosa_Bonheur_-_Deer_in_Repose_-_20.93_-_Detroit_Institute_of_Arts.jpg/960px-Rosa_Bonheur_-_Deer_in_Repose_-_20.93_-_Detroit_Institute_of_Arts.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Rosa_Bonheur_-_Deer_in_Repose_-_20.93_-_Detroit_Institute_of_Arts.jpg",
+    "pxW": 1634,
+    "pxH": 2000
+   },
+   "cm": {
+    "w": 82,
+    "h": 101
+   },
+   "collection": "Detroit Institute of Arts",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q118435736",
+   "title": "King of the Forest",
+   "year": 1878,
+   "image": {
+    "file": "File:Rosa Bonheur - Le Roi de la forêt.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Rosa_Bonheur_-_Le_Roi_de_la_for%C3%AAt.jpg/960px-Rosa_Bonheur_-_Le_Roi_de_la_for%C3%AAt.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Rosa_Bonheur_-_Le_Roi_de_la_for%C3%AAt.jpg/1920px-Rosa_Bonheur_-_Le_Roi_de_la_for%C3%AAt.jpg",
+    "pxW": 2271,
+    "pxH": 3200
+   },
+   "cm": {
+    "w": 175,
+    "h": 245
+   },
+   "collection": null,
+   "story": {
+    "extract": "King of the Forest is an oil-on-canvas painting executed in 1878 by French artist Rosa Bonheur. The work measures 244.8 cm × 175 cm. In the catalogue for an auction sale at Christie's in 2017, it was described as \"Perhaps among the most important paintings by the renowned animalier Rosa Bonheur remaining in private hands\" and \"considered by the artist herself to be one of her masterpieces\".",
+    "source": "https://en.wikipedia.org/wiki/King_of_the_Forest"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q19912677",
+   "title": "Weaning the Calves",
+   "year": 1879,
+   "image": {
+    "file": "File:Rosa Bonheur Calves 1879.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Rosa_Bonheur_Calves_1879.jpg/960px-Rosa_Bonheur_Calves_1879.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Rosa_Bonheur_Calves_1879.jpg/1920px-Rosa_Bonheur_Calves_1879.jpg",
+    "pxW": 3712,
+    "pxH": 2944
+   },
+   "cm": {
+    "w": 81,
+    "h": 65
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "Weaning the Calves is an oil-on-canvas painting by the French artist Rosa Bonheur, painted in 1879. It is held at the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/Weaning_the_Calves"
+   },
+   "facts": [
+    {
+     "text": "The painting was probably inspired by the artist's trip to the Pyrenees, where she did several studies in 1850, or to the United Kingdom. It depicts a pasture where a cow looks upon five calves, who are separated from her by an artificial barrier made of wood, stone and debris.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Weaning_the_Calves#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q78699797",
+   "title": "Relay Hunting",
+   "year": 1887,
+   "image": {
+    "file": "File:Rosa Bonheur - Relay Hunting - 7-1917 - Saint Louis Art Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rosa_Bonheur_-_Relay_Hunting_-_7-1917_-_Saint_Louis_Art_Museum.jpg/960px-Rosa_Bonheur_-_Relay_Hunting_-_7-1917_-_Saint_Louis_Art_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rosa_Bonheur_-_Relay_Hunting_-_7-1917_-_Saint_Louis_Art_Museum.jpg/1920px-Rosa_Bonheur_-_Relay_Hunting_-_7-1917_-_Saint_Louis_Art_Museum.jpg",
+    "pxW": 4638,
+    "pxH": 3418
+   },
+   "cm": {
+    "w": 66,
+    "h": 46
+   },
+   "collection": "Saint Louis Art Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q124335778",
+   "title": "A Pyrenean Shepherd and his Flock",
+   "year": 1887,
+   "image": {
+    "file": "File:Catalogue of the highly important collection of modern pictures and water colour drawings of the English and continental schools of Stephen G. Holland (1908) (14784025442).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Catalogue_of_the_highly_important_collection_of_modern_pictures_and_water_colour_drawings_of_the_English_and_continental_schools_of_Stephen_G._Holland_%281908%29_%2814784025442%29.jpg/960px-thumbnail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Catalogue_of_the_highly_important_collection_of_modern_pictures_and_water_colour_drawings_of_the_English_and_continental_schools_of_Stephen_G._Holland_%281908%29_%2814784025442%29.jpg/1920px-thumbnail.jpg",
+    "pxW": 3488,
+    "pxH": 2512
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Christie, Manson &amp; Woods"
+   }
+  },
+  {
+   "qid": "Q124335678",
+   "title": "The Duel",
+   "year": 1896,
+   "image": {
+    "file": "File:Le Duel - Rosa Bonheur 01.webp",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Le_Duel_-_Rosa_Bonheur_01.webp/960px-Le_Duel_-_Rosa_Bonheur_01.webp.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Le_Duel_-_Rosa_Bonheur_01.webp",
+    "pxW": 1444,
+    "pxH": 920
+   },
+   "cm": {
+    "w": 244,
+    "h": 150
+   },
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q124335679",
+   "title": "The Grey Horse (At the Horse Fair)",
+   "year": 1900,
+   "image": {
+    "file": "File:The Grey Horse (At the Horse Fair) - Rosa Bonheur.webp",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp/960px-The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp/1920px-The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp.png",
+    "pxW": 2880,
+    "pxH": 2112
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  }
+ ]
+}

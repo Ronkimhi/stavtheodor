@@ -1,0 +1,395 @@
+{
+ "slug": "peter-paul-rubens",
+ "name": "Peter Paul Rubens",
+ "qid": "Q5599",
+ "born": 1577,
+ "died": 1640,
+ "periods": [
+  "baroque"
+ ],
+ "oneLiner": "Flemish painter (1577–1640)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg/330px-Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg"
+ },
+ "bio": {
+  "extract": "Sir Peter Paul Rubens was a Flemish artist and diplomat. He is considered the most influential artist of the Flemish Baroque tradition. Rubens's highly charged compositions reference erudite aspects of classical and Christian history. His unique and immensely popular Baroque style emphasised movement, colour, and sensuality, which followed the immediate, dramatic artistic style promoted in the Counter-Reformation.",
+  "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q571416",
+   "title": "Rubens and Isabella Brant in the honeysuckle bower",
+   "year": 1609,
+   "image": {
+    "file": "File:Peter Paul Rubens - Rubens and Isabella Brant in the honeysuckle bower.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Peter_Paul_Rubens_-_Rubens_and_Isabella_Brant_in_the_honeysuckle_bower.jpg/960px-Peter_Paul_Rubens_-_Rubens_and_Isabella_Brant_in_the_honeysuckle_bower.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Peter_Paul_Rubens_-_Rubens_and_Isabella_Brant_in_the_honeysuckle_bower.jpg/1920px-Peter_Paul_Rubens_-_Rubens_and_Isabella_Brant_in_the_honeysuckle_bower.jpg",
+    "pxW": 3382,
+    "pxH": 4499
+   },
+   "cm": {
+    "w": 136,
+    "h": 178
+   },
+   "collection": "Johann Wilhelm von der Pfalz collection",
+   "story": {
+    "extract": "The Honeysuckle Bower is a self-portrait of the Flemish Baroque painter Peter Paul Rubens and his first wife Isabella Brant, painted c. 1609.The couple is seated in fine clothes within a garden composition and a vine of honeysuckle is placed overhead. The symbolism of the double-portrait alludes to meanings of love and marriage, such as the holding of right hands, and the concept of the garden of love. The pose of the two figures and their fine clothing signify self-fashioning by Rubens.",
+    "source": "https://en.wikipedia.org/wiki/Honeysuckle_Bower"
+   },
+   "facts": [
+    {
+     "text": "The artwork was given to Isabella Brant’s father, Jan Brant after the two married in 1609. Around the 18th century the painting ended up in the gallery collection of Johann Wilhelm II von der Pfalz in Düsseldorf.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Honeysuckle_Bower#Provenance"
+    },
+    {
+     "text": "The painting is a full-length double portrait of the couple seated in a bower (wikt), also called an arbor of honeysuckle. The couple is dressed in fine clothing of an aristocratic class within this portrait while also maintaining a casual and adoring pose.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Honeysuckle_Bower#Description"
+    },
+    {
+     "text": "The honeysuckle plant has had various meanings over the years. Most notably, the meaning that is still associated with the flower, began in the Middle Ages.",
+     "section": "Symbolism",
+     "source": "https://en.wikipedia.org/wiki/Honeysuckle_Bower#Symbolism"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q2594673",
+   "title": "Samson and Delilah",
+   "year": 1609,
+   "image": {
+    "file": "File:Samson and Delilah by Rubens.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Samson_and_Delilah_by_Rubens.jpg/960px-Samson_and_Delilah_by_Rubens.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Samson_and_Delilah_by_Rubens.jpg/1920px-Samson_and_Delilah_by_Rubens.jpg",
+    "pxW": 6000,
+    "pxH": 5431
+   },
+   "cm": {
+    "w": 205,
+    "h": 185
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Samson and Delilah is a painting long attributed to the Flemish Baroque artist Peter Paul Rubens (1577–1640) in the National Gallery, London. It dates from about 1609 to 1610.",
+    "source": "https://en.wikipedia.org/wiki/Samson_and_Delilah_%28Rubens%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was originally commissioned by Nicolaas II Rockox, lord mayor of Antwerp, for Rockox House in that city. In addition to being a patron, Rockox was a close personal friend of Rubens.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Samson_and_Delilah_%28Rubens%29#Provenance"
+    },
+    {
+     "text": "Rubens depicts the moment when, Samson having fallen asleep on Delilah's lap, a young man cuts Samson's hair. Samson and Delilah are in a dark room, which is lit mostly by a candle held by an old woman to Delilah's left.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Samson_and_Delilah_%28Rubens%29#Description"
+    },
+    {
+     "text": "The painting was cleaned and investigated in the National Gallery in 1983. It is noteworthy for the masterful and elaborate painting of the draperies and for the absence of blue pigments.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Samson_and_Delilah_%28Rubens%29#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q2653851",
+   "title": "The Elevation of the Cross",
+   "year": 1610,
+   "image": {
+    "file": "File:Peter Paul Rubens - Raising of the Cross (Cathedral of Antwerp).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Peter_Paul_Rubens_-_Raising_of_the_Cross_%28Cathedral_of_Antwerp%29.jpg/960px-Peter_Paul_Rubens_-_Raising_of_the_Cross_%28Cathedral_of_Antwerp%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Peter_Paul_Rubens_-_Raising_of_the_Cross_%28Cathedral_of_Antwerp%29.jpg/1920px-Peter_Paul_Rubens_-_Raising_of_the_Cross_%28Cathedral_of_Antwerp%29.jpg",
+    "pxW": 2429,
+    "pxH": 1792
+   },
+   "cm": {
+    "w": 640,
+    "h": 460
+   },
+   "collection": "Onze-Lieve-Vrouwekathedraal",
+   "story": {
+    "extract": "The Elevation of the Cross or The Raising of the Cross is the title of a large triptych painted in oil on panel by the Flemish artist Peter Paul Rubens in Antwerp in the years 1610 and 1611. It hangs in the Cathedral of Our Lady in Antwerp. The work is a winged altarpiece, with hinged wings that can be folded over the central panel, allowing an 'open view' and a 'closed view'.",
+    "source": "https://en.wikipedia.org/wiki/The_Elevation_of_the_Cross_%28Rubens%29"
+   },
+   "facts": [
+    {
+     "text": "The obverse side of the triptych depicts scenes from the stories on the crucifixion of Jesus.",
+     "section": "Visual analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Elevation_of_the_Cross_%28Rubens%29#Visual_analysis"
+    },
+    {
+     "text": "For the muscular figures and their poses Rubens drew inspiration from the Antique sculptures of the (Laocoön, Niobids, Farnese Bull) which he studied and drew during his stays in Rome.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/The_Elevation_of_the_Cross_%28Rubens%29#Influences"
+    },
+    {
+     "text": "Rubens was commissioned to paint the triptych by the church authorities of the St. Walburga Church in Antwerp.",
+     "section": "Provenance and history of the work",
+     "source": "https://en.wikipedia.org/wiki/The_Elevation_of_the_Cross_%28Rubens%29#Provenance_and_history_of_the_work"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q2667782",
+   "title": "The Descent from the Cross",
+   "year": 1611,
+   "image": {
+    "file": "File:Peter Paul Rubens - Descent from the Cross - WGA20212.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg/960px-Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg/1920px-Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg",
+    "pxW": 7484,
+    "pxH": 4382
+   },
+   "cm": {
+    "w": 622,
+    "h": 421
+   },
+   "collection": "Onze-Lieve-Vrouwekathedraal",
+   "story": {
+    "extract": "The Descent from the Cross is the central panel of a triptych painting by the Baroque artist Peter Paul Rubens in 1612–1614. It is still in its original place, the Cathedral of Our Lady, Antwerp, Belgium. The painting is considered to be one of Rubens' masterpieces.",
+    "source": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_%28Rubens%2C_1612%E2%80%931614%29"
+   },
+   "facts": [
+    {
+     "text": "In general, the painting has its origins in the Italian artistic tradition, influenced by the Mannerist style of artists such as Francesco Salviati, Federico Barocci, Jacopino del Conte, Cigoli, and Daniele da Volterra. These artists may have been inspired by the ideas of Michelangelo and earlier examples from the fifteenth century.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_%28Rubens%2C_1612%E2%80%931614%29#History"
+    },
+    {
+     "text": "In The Descent from the Cross, Rubens highlights the triumphant element of the cross. The painting depicts the moment when Christ's body is taken down from the cross, and is similarly full of drama and emotion.",
+     "section": "Counter-Reformation Context",
+     "source": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_%28Rubens%2C_1612%E2%80%931614%29#Counter-Reformation_Context"
+    },
+    {
+     "text": "The deposition of the dead Christ from the Cross has been a symbolic theme since the fifteen century. Rubens got the idea for the painting Descent from the Cross before he was commissioned by the Harquebusiers.",
+     "section": "Subject Matter",
+     "source": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_%28Rubens%2C_1612%E2%80%931614%29#Subject_Matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q3940915",
+   "title": "Romulus and Remus",
+   "year": 1615,
+   "image": {
+    "file": "File:Romulus and Remus by Peter Paul Rubens.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Romulus_and_Remus_by_Peter_Paul_Rubens.jpg/960px-Romulus_and_Remus_by_Peter_Paul_Rubens.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Romulus_and_Remus_by_Peter_Paul_Rubens.jpg/1920px-Romulus_and_Remus_by_Peter_Paul_Rubens.jpg",
+    "pxW": 6598,
+    "pxH": 6589
+   },
+   "cm": {
+    "w": 212,
+    "h": 213
+   },
+   "collection": "Capitoline Museums",
+   "story": {
+    "extract": "Romulus and Remus is a 1615-1616 painting by the Flemish artist Peter Paul Rubens. It is housed in the Pinacoteca Capitolina in Rome, Italy. It depicts the brothers Romulus and Remus being cared for by a wolf.",
+    "source": "https://en.wikipedia.org/wiki/Romulus_and_Remus_%28Rubens%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q644936",
+   "title": "The Rape of the Daughters of Leucippus",
+   "year": 1618,
+   "image": {
+    "file": "File:Peter Paul Rubens - The Rape of the Daughters of Leucippus.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg/960px-Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg/1920px-Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg",
+    "pxW": 3543,
+    "pxH": 3758
+   },
+   "cm": {
+    "w": 210,
+    "h": 224
+   },
+   "collection": "Johann Wilhelm von der Pfalz collection",
+   "story": {
+    "extract": "The Rape of the Daughters of Leucippus is a 1618 painting by Peter Paul Rubens and Jan Wildens. It is displayed at the Alte Pinakothek in Munich.",
+    "source": "https://en.wikipedia.org/wiki/The_Rape_of_the_Daughters_of_Leucippus"
+   },
+   "facts": [
+    {
+     "text": "The painting was bought in Antwerp in 1716 by Johann Wilhelm, Elector Palatine. Initially sent to Mannheim, by 1805/06 it had reached Munich.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Rape_of_the_Daughters_of_Leucippus#History"
+    },
+    {
+     "text": "The painting depicts the mortal Castor and the immortal Pollux abducting Phoebe and Hilaeira, daughters of Leucippus of Messenia. Castor the horse-tamer is recognisable from his armour, whilst Pollux the boxer is shown with a bare and free upper body.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Rape_of_the_Daughters_of_Leucippus#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens / Jan Wildens"
+   }
+  },
+  {
+   "qid": "Q647202",
+   "title": "Head of Medusa",
+   "year": 1618,
+   "image": {
+    "file": "File:Rubens Medusa.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Rubens_Medusa.jpeg/960px-Rubens_Medusa.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Rubens_Medusa.jpeg/1920px-Rubens_Medusa.jpeg",
+    "pxW": 3815,
+    "pxH": 2195
+   },
+   "cm": {
+    "w": 118,
+    "h": 68
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "Medusa is a c.1618 painting by the Flemish painter Peter Paul Rubens, showing the severed head of Medusa. The snakes in the painting have been attributed to Frans Snyders. Frans Snyders also helped Peter Paul Rubens with his work Prometheus Bound, where he painted the eagle portrayed in it.",
+    "source": "https://en.wikipedia.org/wiki/Medusa_%28Rubens%29"
+   },
+   "facts": [
+    {
+     "text": "Medusa evoked strong reactions due to the intense imagery presented. Constantijin Huygens visited merchant Nicolaas Sohier's house in 1619 to view Head of the Medusa and stated in his autobiographical account, \"There is the compelling painted head of Medusa, wreathed by snakes that spring from her hair.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Rubens%29#Reception"
+    },
+    {
+     "text": "Medusa, or sometimes referred to as The Head of Medusa, was created c.1618 using oil on canvas and is 68.5 x 118 cm. Rubens enlisted the help of Frans Snyders who worked with him multiple times.",
+     "section": "Creation",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Rubens%29#Creation"
+    },
+    {
+     "text": "Originally, Medusa was put in the Brno museum on December 26, 1818 as Ein Oehlgemälde das Medusenhaupt vorstellend. This roughly translates into \"An oil painting depicting the head of Medusa.\" Rubens was not attributed to this painting during this time as there was no artist attribution when it first entered the museum.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/Medusa_%28Rubens%29#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q203259",
+   "title": "The Fall of the Damned",
+   "year": 1621,
+   "image": {
+    "file": "File:Peter Paul Rubens - Fall of the damned.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Peter_Paul_Rubens_-_Fall_of_the_damned.jpg/960px-Peter_Paul_Rubens_-_Fall_of_the_damned.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Peter_Paul_Rubens_-_Fall_of_the_damned.jpg/1920px-Peter_Paul_Rubens_-_Fall_of_the_damned.jpg",
+    "pxW": 2920,
+    "pxH": 3750
+   },
+   "cm": {
+    "w": 224,
+    "h": 286
+   },
+   "collection": "Johann Wilhelm von der Pfalz collection",
+   "story": {
+    "extract": "The Fall of the Damned, alternately known as The Fall of the Rebel Angels, is a monumental religious painting by Peter Paul Rubens dated around 1620. It depicts a jumble of the bodies of the damned, hurled into the abyss by archangel Michael and accompanying angels.",
+    "source": "https://en.wikipedia.org/wiki/The_Fall_of_the_Damned"
+   },
+   "facts": [
+    {
+     "text": "The sketch of The Fall of the Damned was made in black and red chalks, with a grey wash and is kept in the British Museum. It is assumed to be the work of a studio assistant, which Rubens then went over with a brush and oil colour.",
+     "section": "Sketch",
+     "source": "https://en.wikipedia.org/wiki/The_Fall_of_the_Damned#Sketch"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q2268524",
+   "title": "The Three Graces",
+   "year": 1630,
+   "image": {
+    "file": "File:The Three Graces, by Peter Paul Rubens, from Prado in Google Earth.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg/960px-The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg/1920px-The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg",
+    "pxW": 24620,
+    "pxH": 30000
+   },
+   "cm": {
+    "w": 182,
+    "h": 220
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Three Graces is an oil painting of the Three Graces by Peter Paul Rubens.",
+    "source": "https://en.wikipedia.org/wiki/The_Three_Graces_%28Rubens%2C_Madrid%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  },
+  {
+   "qid": "Q3788158",
+   "title": "Helena Fourment in a Fur Robe",
+   "year": 1638,
+   "image": {
+    "file": "File:Peter Paul Rubens 019.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Peter_Paul_Rubens_019.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Peter_Paul_Rubens_019.jpg",
+    "pxW": 883,
+    "pxH": 1861
+   },
+   "cm": {
+    "w": 83,
+    "h": 176
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": {
+    "extract": "The Fur or The Pelt, also called The Little Fur, or Helena Fourment in a Fur Robe, is a c. 1636–1638 portrait by Peter Paul Rubens of his second wife Helena Fourment getting out of her bath and wrapping her voluptuous body in a fur. It is now in the Kunsthistorisches Museum in Vienna.",
+    "source": "https://en.wikipedia.org/wiki/Het_Pelsken"
+   },
+   "facts": [
+    {
+     "text": "Mentioned in the will of Peter Paul Rubens in 1640; Mentioned in the will of Helena Fourment in 1658; Documented as being in the gallery in Vienna in 1730.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Het_Pelsken#Provenance"
+    },
+    {
+     "text": "According to art historian Louis Hourticq, Rubens was too much in love with his young wife to hesitate to celebrate her beauty in his art. He surprised her one day on the way to her bath, and she yielded to her husband's fancy for painting her as she was.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Het_Pelsken#History"
+    },
+    {
+     "text": "Her pose recalls the Venus pudica (lit. 'modest Venus') of Graeco-Roman sculpture, in which the goddess is shown nude as she prepares to bathe, discarding her drapery with one hand, while modestly shielding herself with the other.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Het_Pelsken#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Peter Paul Rubens"
+   }
+  }
+ ]
+}

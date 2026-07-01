@@ -1,0 +1,355 @@
+{
+ "slug": "jean-honore-fragonard",
+ "name": "Jean-Honoré Fragonard",
+ "qid": "Q127171",
+ "born": 1732,
+ "died": 1806,
+ "periods": [
+  "rococo"
+ ],
+ "oneLiner": "French painter (1732–1806)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg/330px-Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg"
+ },
+ "bio": {
+  "extract": "Jean-Honoré Fragonard was a French painter and printmaker whose late Rococo manner was distinguished by remarkable facility, exuberance, and hedonism. One of the most prolific artists active in the last decades of the Ancien Régime, Fragonard produced more than 550 paintings, of which only five are dated. Among his most popular works are genre paintings conveying an atmosphere of intimacy and veiled eroticism.",
+  "source": "https://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3828528",
+   "title": "The Bathers",
+   "year": 1765,
+   "image": {
+    "file": "File:Las bañistas, por Jean-Honoré Fragonard.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Las_ba%C3%B1istas%2C_por_Jean-Honor%C3%A9_Fragonard.JPG/960px-Las_ba%C3%B1istas%2C_por_Jean-Honor%C3%A9_Fragonard.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/99/Las_ba%C3%B1istas%2C_por_Jean-Honor%C3%A9_Fragonard.JPG",
+    "pxW": 1870,
+    "pxH": 1518
+   },
+   "cm": {
+    "w": 80,
+    "h": 64
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q19966728",
+   "title": "Coresus Sacrificing Himself to Save Callirhoe",
+   "year": 1765,
+   "image": {
+    "file": "File:Fragonard coresus sacrificing himselt to save callirhoe.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg/960px-Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/10/Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg",
+    "pxW": 1076,
+    "pxH": 818
+   },
+   "cm": {
+    "w": 400,
+    "h": 309
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Coresus Sacrificing Himself to Save Callirhoe is a large oil-on-canvas painting by the French Rococo artist Jean-Honoré Fragonard, created in 1765. The painting was exhibited at the Salon of 1765 and earned Fragonard entry into the Académie royale de peinture et de sculpture. It is now housed in the Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe"
+   },
+   "facts": [
+    {
+     "text": "The painting was exhibited at the Salon of 1765 and earned Fragonard entry into the Académie royale de peinture et de sculpture. It has often been described as Fragonard's attempt to reconcile his own exuberant style with academic requirements, standing in contrast to the intimate and playful works for which he would later become famous.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe#History"
+    },
+    {
+     "text": "The painting is a large-scale oil on canvas measuring 309 by 400 cm. The painting depicts a dramatic scene from ‘’Description of Greece’’ (VII, 21) by Pausanias.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q2629559",
+   "title": "The Swing",
+   "year": 1767,
+   "image": {
+    "file": "File:Fragonard, The Swing.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/960px-Fragonard%2C_The_Swing.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/1920px-Fragonard%2C_The_Swing.jpg",
+    "pxW": 4280,
+    "pxH": 5373
+   },
+   "cm": {
+    "w": 64,
+    "h": 81
+   },
+   "collection": "Wallace Collection",
+   "story": {
+    "extract": "The Swing, also known as The Happy Accidents of the Swing, is an 18th-century oil painting by Jean-Honoré Fragonard in the Wallace Collection in London. It is considered to be one of the masterpieces of the Rococo era, and is Fragonard's best-known work.",
+    "source": "https://en.wikipedia.org/wiki/The_Swing_%28Fragonard%29"
+   },
+   "facts": [
+    {
+     "text": "The original ownership is uncertain. A firm provenance begins only with the tax farmer Marie-François Ménage de Pressigny, who was guillotined in 1794, after which it was seized by the revolutionary government.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Fragonard%29#Provenance"
+    },
+    {
+     "text": "The painting depicts an elegantly dressed young woman on a swing. A smiling young man, hiding in the bushes below and to the left, points towards her billowing dress with hat in hand.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Fragonard%29#Description"
+    },
+    {
+     "text": "Between August and November 2021, The Swing underwent sensitive conservation at the Wallace Collection in an effort to reverse the natural aging process, which had diminished the painting's appearance. Because of its importance, the painting is rarely off public display, and it had not been cleaned for over 100 years.",
+     "section": "Conservation",
+     "source": "https://en.wikipedia.org/wiki/The_Swing_%28Fragonard%29#Conservation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q2629423",
+   "title": "A Young Girl Reading",
+   "year": 1770,
+   "image": {
+    "file": "File:Fragonard, The Reader.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fragonard%2C_The_Reader.jpg/960px-Fragonard%2C_The_Reader.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fragonard%2C_The_Reader.jpg/1920px-Fragonard%2C_The_Reader.jpg",
+    "pxW": 3182,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 65,
+    "h": 81
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Young Girl Reading, or The Reader, is an 18th-century oil painting by Jean-Honoré Fragonard. It depicts an unidentified girl seated in profile, wearing a lemon yellow dress with white ruff collar and cuffs and purple ribbons, and reading from a small book held in her right hand. The painting is in the National Gallery of Art in Washington, DC.",
+    "source": "https://en.wikipedia.org/wiki/A_Young_Girl_Reading"
+   },
+   "facts": [
+    {
+     "text": "Jean-Honoré Fragonard had an extensive career. After he won the 1753 Prix de Rome with a painting titled Jeroboam Sacrificing to Idols, he became one of the foremost French painters in the Rococo style, which was filled with light colors, asymmetrical designs, and curved, natural forms.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/A_Young_Girl_Reading#History"
+    },
+    {
+     "text": "In Young Girl Reading, color helps convey emotion and mood. Fragonard used a typical Rococo color scheme, which consisted of soft, delicate colors and hues of gold.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/A_Young_Girl_Reading#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q2886017",
+   "title": "The Chemise Withdrawn",
+   "year": 1770,
+   "image": {
+    "file": "File:Jean-Honoré Fragonard - The Shirt Withdrawn - WGA8069.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Jean-Honor%C3%A9_Fragonard_-_The_Shirt_Withdrawn_-_WGA8069.jpg/960px-Jean-Honor%C3%A9_Fragonard_-_The_Shirt_Withdrawn_-_WGA8069.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/47/Jean-Honor%C3%A9_Fragonard_-_The_Shirt_Withdrawn_-_WGA8069.jpg",
+    "pxW": 1246,
+    "pxH": 1000
+   },
+   "cm": {
+    "w": 42,
+    "h": 35
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Raised Chemise or The Shift Withdrawn is a small c.1770 oil-on-canvas painting by Jean-Honoré Fragonard, now in the Louvre in Paris, to which it was left by Dr Louis La Caze in 1869. Its earlier but similarly small pendant Fire to the Gunpowder was in Carlos de Beistegui's collection and is now also in the Louvre.",
+    "source": "https://en.wikipedia.org/wiki/The_Raised_Chemise"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q5967115",
+   "title": "The Music Lesson",
+   "year": 1770,
+   "image": {
+    "file": "File:Jean-Honoré Fragonard - Die Musikstunde - ca1770.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jean-Honor%C3%A9_Fragonard_-_Die_Musikstunde_-_ca1770.jpeg/960px-Jean-Honor%C3%A9_Fragonard_-_Die_Musikstunde_-_ca1770.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jean-Honor%C3%A9_Fragonard_-_Die_Musikstunde_-_ca1770.jpeg/1920px-Jean-Honor%C3%A9_Fragonard_-_Die_Musikstunde_-_ca1770.jpeg",
+    "pxW": 2748,
+    "pxH": 2484
+   },
+   "cm": {
+    "w": 121,
+    "h": 109
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Music Lesson is an oil-on-canvas painting by the French artist Jean Honoré Fragonard, created c. 1770, now held in the Louvre, in Paris, to which it was donated by Hippolyte Walferdin in 1849.",
+    "source": "https://en.wikipedia.org/wiki/The_Music_Lesson_%28Fragonard%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q28801539",
+   "title": "La Gimblette",
+   "year": 1770,
+   "image": {
+    "file": "File:Jean-Honoré Fragonard - Girl with Dog.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Jean-Honor%C3%A9_Fragonard_-_Girl_with_Dog.jpg/960px-Jean-Honor%C3%A9_Fragonard_-_Girl_with_Dog.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Jean-Honor%C3%A9_Fragonard_-_Girl_with_Dog.jpg/1920px-Jean-Honor%C3%A9_Fragonard_-_Girl_with_Dog.jpg",
+    "pxW": 3519,
+    "pxH": 4500
+   },
+   "cm": {
+    "w": 70,
+    "h": 89
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "La Gimblette is one of the most famous paintings by the French painter Jean-Honoré Fragonard and one of the most famous Rococo paintings. Like other paintings by Fragonard, such as The Swing, La Gimblette also has a frivolous component.\"The lovers' paradise of the mid-eighteenth century is no longer ours at the end of the twentieth. It is therefore not surprising that these pictures should, in some respects, remain strange to us.\"",
+    "source": "https://en.wikipedia.org/wiki/La_Gimblette"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts a girl lying beneath a canopy in a voluminous bed, richly furnished with bed linen, playing with a dog. The subject of the painting is also known by the titles: Young girl in her bed, making her dog dance and Girl playing with a dog or Girl with dog.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/La_Gimblette#Description"
+    },
+    {
+     "text": "According to auction sales catalogues and other sources, several versions of this painting existed. Three versions of La Gimblette can be traced back to the 18th century through contemporary auction catalogues.",
+     "section": "A Testament to the Ancien Régime in several versions",
+     "source": "https://en.wikipedia.org/wiki/La_Gimblette#A_Testament_to_the_Ancien_R%C3%A9gime_in_several_versions"
+    },
+    {
+     "text": "It is unknown how many versions of La Gimblette Jean-Honoré Fragonard painted. There are no records of it.",
+     "section": "The best known four versions of La Gimblette",
+     "source": "https://en.wikipedia.org/wiki/La_Gimblette#The_best_known_four_versions_of_La_Gimblette"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q8703547",
+   "title": "A Visit to the Nursery",
+   "year": 1775,
+   "image": {
+    "file": "File:Jean Honoré Fragonard, The Visit to the Nursery, c. 1775, NGA 32685.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Jean_Honor%C3%A9_Fragonard%2C_The_Visit_to_the_Nursery%2C_c._1775%2C_NGA_32685.jpg/960px-Jean_Honor%C3%A9_Fragonard%2C_The_Visit_to_the_Nursery%2C_c._1775%2C_NGA_32685.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Jean_Honor%C3%A9_Fragonard%2C_The_Visit_to_the_Nursery%2C_c._1775%2C_NGA_32685.jpg/1920px-Jean_Honor%C3%A9_Fragonard%2C_The_Visit_to_the_Nursery%2C_c._1775%2C_NGA_32685.jpg",
+    "pxW": 4000,
+    "pxH": 3163
+   },
+   "cm": {
+    "w": 92,
+    "h": 73
+   },
+   "collection": "Samuel H. Kress Collection",
+   "story": {
+    "extract": "The Visit to the Nursery is an oil-on-canvas painting by French artist Jean-Honoré Fragonard, created c. 1775, now held in the National Gallery of Art in Washington, D.C., which it entered in 1946 as part of the Samuel H. Kress collection. It was previously identified with a work auctioned in a 1780 sale of Fragonard's major client Jean François Leroy de Senneville (1715 – 1784), a fermier général, and then re-auctioned four years later, but a work more closely matching that work's description was rediscovered around 2009 in a collection in Estonia.",
+    "source": "https://en.wikipedia.org/wiki/The_Visit_to_the_Nursery"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q3228069",
+   "title": "The Lock",
+   "year": 1777,
+   "image": {
+    "file": "File:Le Verrou - Jean-Honoré Fragonard - Musée du Louvre Peintures RF 1974 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Verrou_-_Jean-Honor%C3%A9_Fragonard_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1974_2.jpg/960px-Le_Verrou_-_Jean-Honor%C3%A9_Fragonard_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1974_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Verrou_-_Jean-Honor%C3%A9_Fragonard_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1974_2.jpg/1920px-Le_Verrou_-_Jean-Honor%C3%A9_Fragonard_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1974_2.jpg",
+    "pxW": 6438,
+    "pxH": 5032
+   },
+   "cm": {
+    "w": 94,
+    "h": 74
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Bolt, also known as The Lock, is a galant scene painted by Jean-Honoré Fragonard in 1777. It is one of the most famous paintings by the painter. The common interpretation suggests that the scene depicts two lovers entwined in a bedroom, the man locking the door.",
+    "source": "https://en.wikipedia.org/wiki/The_Bolt_%28Fragonard%29"
+   },
+   "facts": [
+    {
+     "text": "The work was commissioned in 1773 by Louis-Gabriel Véri-Raionard, Marquis de Véri (1722–1785).",
+     "section": "Commissioned work",
+     "source": "https://en.wikipedia.org/wiki/The_Bolt_%28Fragonard%29#Commissioned_work"
+    },
+    {
+     "text": "Fragonard started by making several sketches and surveys of The Bolt. He may have used models for the realization of his work.",
+     "section": "Source of inspiration and realization",
+     "source": "https://en.wikipedia.org/wiki/The_Bolt_%28Fragonard%29#Source_of_inspiration_and_realization"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
+   "qid": "Q3220204",
+   "title": "The Stolen Kiss",
+   "year": 1787,
+   "image": {
+    "file": "File:Jean-Honoré Fragonard - The Stolen Kiss.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Jean-Honor%C3%A9_Fragonard_-_The_Stolen_Kiss.jpg/960px-Jean-Honor%C3%A9_Fragonard_-_The_Stolen_Kiss.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Jean-Honor%C3%A9_Fragonard_-_The_Stolen_Kiss.jpg/1920px-Jean-Honor%C3%A9_Fragonard_-_The_Stolen_Kiss.jpg",
+    "pxW": 7909,
+    "pxH": 6488
+   },
+   "cm": {
+    "w": 55,
+    "h": 45
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "The Stolen Kiss is an oil painting on canvas executed in 1787 and located in the Hermitage Museum, Saint Petersburg. It has been historically attributed to the French Rococo artist Jean-Honoré Fragonard (1732–1806). At 45 by 55 centimetres, the painting is a genre scene influenced by Dutch Golden Age painting, depicting a young couple in a secretive romance, set in the foreground – a subject that was favoured before the French Revolution among French aristocrats.",
+    "source": "https://en.wikipedia.org/wiki/The_Stolen_Kiss_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The earliest dated mention of The Stolen Kiss comes from the June 1788 issue of the Mercure de France magazine, where an engraving by Nicolas François Regnault of Fragonard's painting was advertised as a pendant to The Bolt.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Stolen_Kiss_%28painting%29#History"
+    },
+    {
+     "text": "The painting depicts a kiss between two lovers, showing a young lady in cream-coloured silk gown who appears to have left her company for a secret meeting with a young man.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/The_Stolen_Kiss_%28painting%29#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Honoré Fragonard / Marguerite Gérard"
+   }
+  }
+ ]
+}

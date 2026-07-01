@@ -1,0 +1,21 @@
+{
+ "slug": "willem-de-kooning",
+ "name": "Willem de Kooning",
+ "qid": "Q132305",
+ "born": 1904,
+ "died": 1997,
+ "periods": [
+  "abstract-expressionism"
+ ],
+ "oneLiner": "Dutch-American abstract expressionist artist (1904–1997)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Willem_de_Kooning_in_his_studio.jpg/330px-Willem_de_Kooning_in_his_studio.jpg"
+ },
+ "bio": {
+  "extract": "Willem de Kooning was a Dutch-American abstract expressionist artist. Born in Rotterdam, in the Netherlands, he moved to the United States in 1926, becoming a U.S. citizen in 1962. In 1943, he married painter Elaine Fried.",
+  "source": "https://en.wikipedia.org/wiki/Willem_de_Kooning"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Willem_de_Kooning",
+ "hasGallery": false,
+ "paintings": []
+}

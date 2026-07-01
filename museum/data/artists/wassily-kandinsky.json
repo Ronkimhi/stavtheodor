@@ -1,0 +1,298 @@
+{
+ "slug": "wassily-kandinsky",
+ "name": "Wassily Kandinsky",
+ "qid": "Q61064",
+ "born": 1866,
+ "died": 1944,
+ "periods": [
+  "early-abstraction"
+ ],
+ "oneLiner": "avant-garde painter of Russian origin (1866-1944)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg/330px-Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg"
+ },
+ "bio": {
+  "extract": "Wassily Wassilyevich Kandinsky was a Russian painter and art theorist active in Germany during the late Belle Époque and Interwar eras. Kandinsky is generally credited as one of the pioneers of abstraction in Western art. Born in Moscow, he began painting studies at the age of 30.",
+  "source": "https://en.wikipedia.org/wiki/Wassily_Kandinsky"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2990634",
+   "title": "Composition VII",
+   "year": 1913,
+   "image": {
+    "file": "File:Composition VII - Wassily Kandinsky, GAC.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg/960px-Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg/1920px-Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg",
+    "pxW": 7015,
+    "pxH": 4661
+   },
+   "cm": {
+    "w": 300,
+    "h": 200
+   },
+   "collection": "Tretyakov Gallery",
+   "story": {
+    "extract": "Composition VII is a 1913 abstract oil painting by Russian-born painter Wassily Kandinsky. It is in the collection of the Tretyakov Gallery, in Moscow. Art historians have concluded that the work is a combination of the themes of Resurrection, Judgment Day, the Flood and the Garden of Eden.",
+    "source": "https://en.wikipedia.org/wiki/Composition_VII"
+   },
+   "facts": [
+    {
+     "text": "Kandinsky's preliminary study was his first abstract watercolor. Untitled (Study for Composition VII, Première abstraction) was painted in 1913, and is the first of Kandinsky's \"Compositions\" and \"Improvisations\" series that began to emerge during his Blue Rider Period.",
+     "section": "Preliminary watercolor",
+     "source": "https://en.wikipedia.org/wiki/Composition_VII#Preliminary_watercolor"
+    },
+    {
+     "text": "The work demonstrates characteristics of Cubism and Futurism and is similar to the abstract work of Robert Delaunay, Francis Picabia, František Kupka, Léopold Survage, Piet Mondrian, and Hilma af Klint.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/Composition_VII#Context"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q16543389",
+   "title": "Composition VI",
+   "year": 1913,
+   "image": {
+    "file": "File:Vassily Kandinsky, 1913 - Composition 6.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Vassily_Kandinsky%2C_1913_-_Composition_6.jpg/960px-Vassily_Kandinsky%2C_1913_-_Composition_6.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vassily_Kandinsky%2C_1913_-_Composition_6.jpg",
+    "pxW": 1132,
+    "pxH": 745
+   },
+   "cm": {
+    "w": 300,
+    "h": 195
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Composition VI is a 1913 oil painting on canvas by the Russian artist Wassily Kandinsky, now in the Hermitage Museum, in Saint Petersburg.",
+    "source": "https://en.wikipedia.org/wiki/Composition_VI"
+   },
+   "facts": [
+    {
+     "text": "Composition VI was the artist's main entry for the Erster Deutscher Herbstsalon (First German Autumn Salon), organized in 1913 in Berlin by Herwarth Walden, alongside painters such as August Macke and Franz Marc.",
+     "section": "Exposition",
+     "source": "https://en.wikipedia.org/wiki/Composition_VI#Exposition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q3874360",
+   "title": "In Grey",
+   "year": 1919,
+   "image": {
+    "file": "File:Kandinsky - Im Grau, 1919, GAC.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg/960px-Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg/1920px-Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg",
+    "pxW": 7814,
+    "pxH": 5672
+   },
+   "cm": {
+    "w": 176,
+    "h": 129
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q18705520",
+   "title": "On White II",
+   "year": 1923,
+   "image": {
+    "file": "File:Vassily Kandinsky, 1923 - On White II.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vassily_Kandinsky%2C_1923_-_On_White_II.jpg/960px-Vassily_Kandinsky%2C_1923_-_On_White_II.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vassily_Kandinsky%2C_1923_-_On_White_II.jpg/1920px-Vassily_Kandinsky%2C_1923_-_On_White_II.jpg",
+    "pxW": 3730,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 98,
+    "h": 105
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": {
+    "extract": "Auf Weiss II (Sur blanc II), in English: On White II, is a 1923 oil-on-canvas painting by Russian painter Wassily Kandinsky. It was created when the artist was a teacher at the Bauhaus in Weimar. The painting initially hung in the dining room of Wassily and Nina Kandinsky's apartment at Bauhaus Dessau.",
+    "source": "https://en.wikipedia.org/wiki/Auf_Weiss_II_%28Sur_blanc_II%29"
+   },
+   "facts": [
+    {
+     "text": "In this image, art historian Vanessa Morisset sees a whirlpool of centripetal forces emanating from its surface. The white, understood as clarity and simplicity, creates the feeling that the \"struggle with the canvas\" of Kandinsky had succeeded.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Auf_Weiss_II_%28Sur_blanc_II%29#Reception"
+    },
+    {
+     "text": "The composition of the painting consists mainly of diagonals.",
+     "section": "Description and analysis",
+     "source": "https://en.wikipedia.org/wiki/Auf_Weiss_II_%28Sur_blanc_II%29#Description_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q19609199",
+   "title": "Composition VIII",
+   "year": 1923,
+   "image": {
+    "file": "File:Kandinsky - Composition 8, July 1923.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kandinsky_-_Composition_8%2C_July_1923.jpg/960px-Kandinsky_-_Composition_8%2C_July_1923.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kandinsky_-_Composition_8%2C_July_1923.jpg/1920px-Kandinsky_-_Composition_8%2C_July_1923.jpg",
+    "pxW": 3911,
+    "pxH": 2849
+   },
+   "cm": {
+    "w": 201,
+    "h": 140
+   },
+   "collection": "Solomon R. Guggenheim Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Xyxyzyz"
+   }
+  },
+  {
+   "qid": "Q18705525",
+   "title": "Yellow-Red-Blue",
+   "year": 1925,
+   "image": {
+    "file": "File:Kandinsky - Jaune Rouge Bleu.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kandinsky_-_Jaune_Rouge_Bleu.jpg/960px-Kandinsky_-_Jaune_Rouge_Bleu.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kandinsky_-_Jaune_Rouge_Bleu.jpg/1920px-Kandinsky_-_Jaune_Rouge_Bleu.jpg",
+    "pxW": 4780,
+    "pxH": 3074
+   },
+   "cm": {
+    "w": 202,
+    "h": 128
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q3609042",
+   "title": "Several Circles",
+   "year": 1926,
+   "image": {
+    "file": "File:Vassily Kandinsky, 1926 - Several Circles, Gugg 0910 25.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg/960px-Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg",
+    "pxW": 1800,
+    "pxH": 1833
+   },
+   "cm": {
+    "w": 140,
+    "h": 141
+   },
+   "collection": "Solomon R. Guggenheim Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q3685303",
+   "title": "Composition X",
+   "year": 1939,
+   "image": {
+    "file": "File:Vassily Kandinsky, 1939 - Composition 10.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Vassily_Kandinsky%2C_1939_-_Composition_10.jpg/960px-Vassily_Kandinsky%2C_1939_-_Composition_10.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/97/Vassily_Kandinsky%2C_1939_-_Composition_10.jpg",
+    "pxW": 1135,
+    "pxH": 744
+   },
+   "cm": {
+    "w": 195,
+    "h": 130
+   },
+   "collection": "Kunstsammlung Nordrhein-Westfalen",
+   "story": {
+    "extract": "Composition X is an abstract oil painting created in 1939 by the Russian émigré artist Wassily Kandinsky, then living near Paris. It is part of the collection of the Kunstsammlung Nordrhein-Westfalen in Düsseldorf, Germany.",
+    "source": "https://en.wikipedia.org/wiki/Composition_X"
+   },
+   "facts": [
+    {
+     "text": "Kandinsky compared abstract painting to the process of musical composition, and called his major conceptual works \"compositions\", as opposed to his lesser \"improvisations\". Composition X is the last of the ten compositions he painted during his lifetime (he was 73 at the time).",
+     "section": "Compositions",
+     "source": "https://en.wikipedia.org/wiki/Composition_X#Compositions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q3641124",
+   "title": "Sky Blue",
+   "year": 1940,
+   "image": {
+    "file": "File:Wassily Kandinsky - Sky Blue, 1940.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg/960px-Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg/1920px-Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg",
+    "pxW": 6548,
+    "pxH": 8907
+   },
+   "cm": {
+    "w": 73,
+    "h": 100
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  },
+  {
+   "qid": "Q3962697",
+   "title": "Tempered Elan",
+   "year": 1944,
+   "image": {
+    "file": "File:L'Élan tempéré, Kandinsky (1944).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg/960px-L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg/1920px-L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg",
+    "pxW": 3824,
+    "pxH": 2752
+   },
+   "cm": {
+    "w": 58,
+    "h": 42
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Wassily Kandinsky"
+   }
+  }
+ ]
+}

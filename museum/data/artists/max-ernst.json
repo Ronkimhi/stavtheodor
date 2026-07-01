@@ -1,0 +1,21 @@
+{
+ "slug": "max-ernst",
+ "name": "Max Ernst",
+ "qid": "Q154842",
+ "born": 1891,
+ "died": 1976,
+ "periods": [
+  "surrealism"
+ ],
+ "oneLiner": "German artist (1891–1976)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Max_Ernst_1968.jpg/330px-Max_Ernst_1968.jpg"
+ },
+ "bio": {
+  "extract": "Max Ernst was a German-born painter, sculptor, printmaker, graphic artist, and poet. A prolific artist, Ernst was a primary pioneer of the Dada movement and surrealism in Europe. He had no formal artistic training, but his experimental attitude toward the making of art resulted in his invention of frottage—a technique that uses pencil rubbings of textured objects and relief surfaces to create images—and grattage, an analogous technique in which paint is scraped across canvas to reveal the imprints of the objects placed beneath. Ernst is noted for his unconventional drawing methods as well as for creating novels and pamphlets using the method of collages.",
+  "source": "https://en.wikipedia.org/wiki/Max_Ernst"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Max_Ernst",
+ "hasGallery": false,
+ "paintings": []
+}

@@ -1,0 +1,417 @@
+{
+ "slug": "leonardo-da-vinci",
+ "name": "Leonardo da Vinci",
+ "qid": "Q762",
+ "born": 1452,
+ "died": 1519,
+ "periods": [
+  "high-renaissance"
+ ],
+ "oneLiner": "Italian Renaissance polymath (1452−1519)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/330px-Francesco_Melzi_-_Portrait_of_Leonardo.png"
+ },
+ "bio": {
+  "extract": "Leonardo di ser Piero da Vinci was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect. While his fame initially rested on his achievements as a painter, he has also become known for his notebooks, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and palaeontology. Leonardo is widely regarded as a genius who epitomised the Renaissance humanist ideal, and his collective works contributed to the development of European art to an extent rivalled only by that of his younger contemporary Michelangelo.",
+  "source": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q1059211",
+   "title": "The Baptism of Christ",
+   "year": 1470,
+   "image": {
+    "file": "File:Verrocchio and Leonardo, Baptism of Christ, c1470-75, Uffizi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg/960px-Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg/1920px-Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg",
+    "pxW": 3760,
+    "pxH": 4520
+   },
+   "cm": {
+    "w": 151,
+    "h": 177
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Baptism of Christ is an oil-on-panel painting finished around 1475 in the studio of the Italian Renaissance painter Andrea del Verrocchio and generally ascribed to him and his pupil Leonardo da Vinci. Some art historians discern the hands of other members of Verrocchio's workshop in the painting as well.",
+    "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was at some point transferred from the Church of San Salvi to the Vallombrosan Sisterhood in Santa Verdiana. In 1810, it entered the collection of the Accademia and passed to the Uffizi in 1959.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#Provenance"
+    },
+    {
+     "text": "Andrea del Verrocchio was a sculptor, goldsmith, painter and talented worker who ran a large and successful workshop in Florence in the second half of the 15th century. Verrocchio trained his apprentices by having them study surface anatomy, drawing, mechanics, sculpting, drapery studies, and the use of light and shade.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#History"
+    },
+    {
+     "text": "The picture depicts the Baptism of Jesus by John the Baptist on the banks of the Jordan River. There are two kneeling angels, one holding Jesus's garment, and the other with its hands folded, both in front of the symbolization of salvation and life, the palm tree.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andrea del Verrocchio / Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q1267893",
+   "title": "Ginevra de' Benci",
+   "year": 1476,
+   "image": {
+    "file": "File:Ginevra de' Benci - National Gallery of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Ginevra_de%27_Benci_-_National_Gallery_of_Art.jpg/960px-Ginevra_de%27_Benci_-_National_Gallery_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Ginevra_de%27_Benci_-_National_Gallery_of_Art.jpg/1920px-Ginevra_de%27_Benci_-_National_Gallery_of_Art.jpg",
+    "pxW": 23235,
+    "pxH": 23968
+   },
+   "cm": {
+    "w": 37,
+    "h": 39
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Ginevra de' Benci is a portrait painting by Leonardo da Vinci of the 15th-century Florentine aristocrat Ginevra de' Benci. It was acquired by the National Gallery of Art in Washington, D.C. US from Franz Joseph II, Prince of Liechtenstein in February 1967 for a record price for a painting of between $5 and $6 million.",
+    "source": "https://en.wikipedia.org/wiki/Ginevra_de%27_Benci"
+   },
+   "facts": [
+    {
+     "text": "Ginevra de' Benci, a well-known young Florentine woman, is universally considered to be the portrait's sitter. Leonardo painted the portrait in Florence between 1474 and 1478, possibly to commemorate Ginevra's marriage to Luigi di Bernardo Niccolini at the age of 16.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Ginevra_de%27_Benci#Subject"
+    },
+    {
+     "text": "As a woman of renowned beauty, Ginevra de' Benci was also the subject of ten poems written by members of the Medici circle, Cristoforo Landino and Alessandro Braccesi, and of two sonnets by Lorenzo de' Medici himself.",
+     "section": "Trivia",
+     "source": "https://en.wikipedia.org/wiki/Ginevra_de%27_Benci#Trivia"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q1142058",
+   "title": "Benois Madonna",
+   "year": 1480,
+   "image": {
+    "file": "File:Leonardo, Madonna Benois.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Leonardo%2C_Madonna_Benois.JPG/960px-Leonardo%2C_Madonna_Benois.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Leonardo%2C_Madonna_Benois.JPG/1920px-Leonardo%2C_Madonna_Benois.JPG",
+    "pxW": 2864,
+    "pxH": 4588
+   },
+   "cm": {
+    "w": 33,
+    "h": 50
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "The Benois Madonna, otherwise known as the Madonna and Child with Flowers, is a painting by the Italian Renaissance master Leonardo da Vinci in the Hermitage Museum, Saint Petersburg. One of two Madonnas begun by Leonardo in October 1478, it was completed c. 1478–1480; the other was the Madonna of the Carnation, now in the Alte Pinakothek, Munich.",
+    "source": "https://en.wikipedia.org/wiki/Benois_Madonna"
+   },
+   "facts": [
+    {
+     "text": "It is likely that the Benois Madonna was the first work painted by Leonardo independently from his master Andrea del Verrocchio. Two of Leonardo's preliminary sketches for this work are in the British Museum, although the painting was probably overpainted by other hands.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Benois_Madonna#History"
+    },
+    {
+     "text": "This small painting shows a dark room with the Virgin seated on a bench with her Child outstretched on her lap. Her young rounded face is lively; she is clothed in an olive and brown raiment, with brown and blue underwear covering her knees.",
+     "section": "Description and interpretation",
+     "source": "https://en.wikipedia.org/wiki/Benois_Madonna#Description_and_interpretation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q474338",
+   "title": "Lady with an Ermine",
+   "year": 1490,
+   "image": {
+    "file": "File:Lady with an Ermine - Leonardo da Vinci - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/960px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/1920px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg",
+    "pxW": 30894,
+    "pxH": 41545
+   },
+   "cm": {
+    "w": 53,
+    "h": 54
+   },
+   "collection": "Czartoryski Museum",
+   "story": {
+    "extract": "The Lady with an Ermine is a portrait painting by the Italian Renaissance artist Leonardo da Vinci. Dated to c. 1489–1491, the work is painted in oils on a panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza, Duke of Milan; Leonardo was painter to the Sforza court in Milan at the time of its execution.",
+    "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine"
+   },
+   "facts": [
+    {
+     "text": "It has always been known that Leonardo painted a portrait of Ludovico Sforza's mistress, Cecilia Gallerani, but the Lady with an Ermine remained largely unknown to scholars until nearly the 20th century.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine#History"
+    },
+    {
+     "text": "The painting was executed in oils on a relatively small, 54.8 cm × 40.3 cm (21.6 in × 15.9 in) walnut wood panel. It depicts a half-height woman turned toward her right at a three-quarter angle, but with her face turned toward her left.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine#Composition"
+    },
+    {
+     "text": "The subject has been identified with reasonable certainty as Cecilia Gallerani, the mistress of Leonardo's Milanese employer, Ludovico Sforza. She looks to her left at something out of frame, toward the light, where the biographer Walter Isaacson suggests Ludovico is.",
+     "section": "The Lady",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine#The_Lady"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q1327676",
+   "title": "Madonna Litta",
+   "year": 1490,
+   "image": {
+    "file": "File:Leonardo da Vinci attributed - Madonna Litta.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Leonardo_da_Vinci_attributed_-_Madonna_Litta.jpg/960px-Leonardo_da_Vinci_attributed_-_Madonna_Litta.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Leonardo_da_Vinci_attributed_-_Madonna_Litta.jpg/1920px-Leonardo_da_Vinci_attributed_-_Madonna_Litta.jpg",
+    "pxW": 6346,
+    "pxH": 8096
+   },
+   "cm": {
+    "w": 33,
+    "h": 42
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "The Madonna Litta is a late 15th-century painting, by Leonardo da Vinci, in the Hermitage Museum, Saint Petersburg. It depicts the Virgin Mary breastfeeding the Christ child, a devotional subject known as the Madonna lactans. The figures are set in a dark interior with two arched openings, as in Leonardo's earlier Madonna of the Carnation, and a mountainous landscape in aerial perspective can be seen beyond.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_Litta"
+   },
+   "facts": [
+    {
+     "text": "The Madonna Litta might be one of the paintings of the Madonna and Child recorded in Leonardo's studio before or during his first Milanese period (c.1481–1483 to 1499).",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Madonna_Litta#History"
+    },
+    {
+     "text": "That the painting was regarded in Leonardo's lifetime as his work is suggested by the large number of copies made of it. A popular candidate for authorship is Giovanni Antonio Boltraffio.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/Madonna_Litta#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q656434",
+   "title": "La Belle Ferronnière",
+   "year": 1495,
+   "image": {
+    "file": "File:La Belle Ferronière - Google Arts.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/La_Belle_Ferroni%C3%A8re_-_Google_Arts.jpg/960px-La_Belle_Ferroni%C3%A8re_-_Google_Arts.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/La_Belle_Ferroni%C3%A8re_-_Google_Arts.jpg/1920px-La_Belle_Ferroni%C3%A8re_-_Google_Arts.jpg",
+    "pxW": 2758,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 45,
+    "h": 63
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "La Belle Ferronnière is a portrait painting of a lady, by Leonardo da Vinci, in the Louvre. It is also known as Portrait of an Unknown Woman. The painting's title, applied as early as the seventeenth century, identifying the sitter as the wife or daughter of an ironmonger, was said to be discreetly alluding to a reputed mistress of Francis I of France, married to a certain Le Ferron.",
+    "source": "https://en.wikipedia.org/wiki/La_Belle_Ferronni%C3%A8re"
+   },
+   "facts": [
+    {
+     "text": "Although the model of the painting La Belle Ferronnière is still shrouded in mystery, the landmark exhibition \"Leonardo Da Vinci: Painter at the Court of Milan\" (National Gallery, London, 9 Nov. 2011 – 5 Feb. 2012) listed the portrait as possibly depicting Beatrice d'Este, wife of Ludovico Sforza.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/La_Belle_Ferronni%C3%A8re#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q1892745",
+   "title": "Salvator Mundi",
+   "year": 1500,
+   "image": {
+    "file": "File:Leonardo da Vinci, Salvator Mundi, c.1500, oil on walnut, 45.4 × 65.6 cm.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/960px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/1920px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg",
+    "pxW": 3300,
+    "pxH": 4856
+   },
+   "cm": {
+    "w": 45,
+    "h": 66
+   },
+   "collection": "Louvre Abu Dhabi",
+   "story": {
+    "extract": "Salvator Mundi is a painting attributed in whole or part to the Italian High Renaissance artist Leonardo da Vinci, dated c. 1499–1510. Long thought to be a copy of a lost original veiled with overpainting, it was rediscovered, restored, and included in an exhibition of Leonardo's work at the National Gallery, London, in 2011–2012.",
+    "source": "https://en.wikipedia.org/wiki/Salvator_Mundi_%28painting%29"
+   },
+   "facts": [
+    {
+     "text": "The rediscovered painting by Leonardo generated considerable interest within the media and general public amid its pre-auction viewings in Hong Kong, London, San Francisco and New York, as well as after the sale.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Salvator_Mundi_%28painting%29#Reception"
+    },
+    {
+     "text": "Art historians have suggested several possibilities for when the work was executed and who the patron may have been.",
+     "section": "Sixteenth century",
+     "source": "https://en.wikipedia.org/wiki/Salvator_Mundi_%28painting%29#Sixteenth_century"
+    },
+    {
+     "text": "The Salvator Mundi as an image type predates Leonardo. Thus, Martin Kemp argues that on the one hand Leonardo was constrained in his composition by the expected iconography of the Salvator Mundi, but on the other hand, he was able to use the image as a vehicle for spiritual communication between the spectator and the likeness of Christ.",
+     "section": "Origins",
+     "source": "https://en.wikipedia.org/wiki/Salvator_Mundi_%28painting%29#Origins"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q12418",
+   "title": "Mona Lisa",
+   "year": 1503,
+   "image": {
+    "file": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF natural color.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg/960px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg/1920px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg",
+    "pxW": 7601,
+    "pxH": 11348
+   },
+   "cm": {
+    "w": 53,
+    "h": 79
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as \"the best known, the most visited, the most written about, the most sung about, [and] the most parodied work of art in the world.\" The painting's novel qualities include the subject's enigmatic expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.",
+    "source": "https://en.wikipedia.org/wiki/Mona_Lisa"
+   },
+   "facts": [
+    {
+     "text": "The Mona Lisa began influencing contemporary Florentine painting even before its completion. Raphael, who had been to Leonardo's workshop several times, promptly used elements of the portrait's composition and format in several of his works, such as Young Woman with Unicorn (c. 1506), and Portrait of Maddalena Doni (c. 1506).",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Mona_Lisa#Legacy"
+    },
+    {
+     "text": "The Mona Lisa bears a strong resemblance to many Renaissance depictions of the Virgin Mary, who was at that time seen as an ideal for womanhood. The woman sits markedly upright in a pozzetto armchair with her arms folded, a sign of her reserved posture.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Mona_Lisa#Description"
+    },
+    {
+     "text": "The title of the painting, which is known in English as Mona Lisa, is based on the presumption that it depicts Lisa del Giocondo, although her likeness is uncertain.",
+     "section": "Title and subject",
+     "source": "https://en.wikipedia.org/wiki/Mona_Lisa#Title_and_subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q563727",
+   "title": "The Virgin and Child with Saint Anne",
+   "year": 1511,
+   "image": {
+    "file": "File:Sainte Anne Leonard.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sainte_Anne_Leonard.jpg/960px-Sainte_Anne_Leonard.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sainte_Anne_Leonard.jpg/1920px-Sainte_Anne_Leonard.jpg",
+    "pxW": 5565,
+    "pxH": 7359
+   },
+   "cm": {
+    "w": 130,
+    "h": 168
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Virgin and Child with Saint Anne is an unfinished oil painting by High Renaissance artist Leonardo da Vinci, dated to c. 1501–1519. It depicts Saint Anne, her daughter the Virgin Mary and the infant Jesus. Christ is shown grasping a sacrificial lamb symbolizing his Passion.",
+    "source": "https://en.wikipedia.org/wiki/The_Virgin_and_Child_with_Saint_Anne_%28Leonardo%29"
+   },
+   "facts": [
+    {
+     "text": "It is likely that the painting was commissioned by King Louis XII of France following the birth of his daughter in 1499, but never delivered to him. Leonardo probed into incorporating these figures together by drawing the Burlington House Cartoon (National Gallery).",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Virgin_and_Child_with_Saint_Anne_%28Leonardo%29#History"
+    },
+    {
+     "text": "The painting shows the Virgin Mary, sitting on the knee of her mother Saint Anne, and reaching out to baby Jesus who is playing with a lamb.",
+     "section": "Content and composition",
+     "source": "https://en.wikipedia.org/wiki/The_Virgin_and_Child_with_Saint_Anne_%28Leonardo%29#Content_and_composition"
+    },
+    {
+     "text": "Sigmund Freud undertook a psychoanalytic examination of Leonardo in his 1910 essay Leonardo da Vinci, A Memory of His Childhood. According to Freud, the Virgin's garment reveals a vulture when viewed sideways.",
+     "section": "Freud's interpretation",
+     "source": "https://en.wikipedia.org/wiki/The_Virgin_and_Child_with_Saint_Anne_%28Leonardo%29#Freud%27s_interpretation"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q783215",
+   "title": "Saint John the Baptist",
+   "year": 1514,
+   "image": {
+    "file": "File:Leonardo da Vinci - Saint John the Baptist C2RMF retouched.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg/960px-Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg/1920px-Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg",
+    "pxW": 10446,
+    "pxH": 13522
+   },
+   "cm": {
+    "w": 57,
+    "h": 69
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Saint John the Baptist is a High Renaissance oil painting on walnut wood by Leonardo da Vinci. Likely to have been completed between 1513 and 1516, it is believed to be his final painting. Its original size was 69 by 57 centimetres.",
+    "source": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_%28Leonardo%29"
+   },
+   "facts": [
+    {
+     "text": "Saint John the Baptist was apparently part of the French king Francis I's collection at Fontainebleau in 1542. In 1625, King Charles I of England received the painting from Louis XIII of France in return for a Titian – the Holy Family – and Hans Holbein's Portrait of Erasmus.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_%28Leonardo%29#Provenance"
+    },
+    {
+     "text": "Prior to this work, Saint John had traditionally been portrayed as a gaunt ascetic.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_%28Leonardo%29#Influence"
+    },
+    {
+     "text": "The work depicts the figure of John the Baptist in isolation through the use of chiaroscuro, with the figure appearing to emerge from the shadowy background. The saint is dressed in furs, has long curly hair and is smiling in an enigmatic manner reminiscent of Leonardo's famous Mona Lisa.",
+     "section": "Subject matter",
+     "source": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_%28Leonardo%29#Subject_matter"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  }
+ ]
+}

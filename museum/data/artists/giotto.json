@@ -1,0 +1,335 @@
+{
+ "slug": "giotto",
+ "name": "Giotto",
+ "qid": "Q7814",
+ "born": 1267,
+ "died": 1337,
+ "periods": [
+  "medieval-gothic"
+ ],
+ "oneLiner": "Italian painter and architect (c. 1267–1337)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Giotto%2C_Santa_Maria_Novella.jpg/330px-Giotto%2C_Santa_Maria_Novella.jpg"
+ },
+ "bio": {
+  "extract": "Giotto di Bondone, known mononymously as Giotto, was an Italian painter and architect from Florence during the Late Middle Ages. He worked during the Gothic and Proto-Renaissance period. Giotto's contemporary, the banker and chronicler Giovanni Villani, wrote that Giotto was \"the most sovereign master of painting in his time, who drew all his figures and their postures according to nature\" and of his publicly recognized \"talent and excellence\".",
+  "source": "https://en.wikipedia.org/wiki/Giotto"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Giotto",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3276180",
+   "title": "Madonna with the laughing Child",
+   "year": 1291,
+   "image": {
+    "file": "File:Giotto, madonna col bambino ridente, assisi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Giotto%2C_madonna_col_bambino_ridente%2C_assisi.jpg/960px-Giotto%2C_madonna_col_bambino_ridente%2C_assisi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Giotto%2C_madonna_col_bambino_ridente%2C_assisi.jpg/1920px-Giotto%2C_madonna_col_bambino_ridente%2C_assisi.jpg",
+    "pxW": 2184,
+    "pxH": 2116
+   },
+   "cm": {
+    "w": 110,
+    "h": 110
+   },
+   "collection": "Basilica of San Francesco d'Assisi",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q2866382",
+   "title": "Ascension",
+   "year": 1291,
+   "image": {
+    "file": "File:Giotto di Bondone - Ascension of Christ - WGA09156.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Giotto_di_Bondone_-_Ascension_of_Christ_-_WGA09156.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Giotto_di_Bondone_-_Ascension_of_Christ_-_WGA09156.jpg",
+    "pxW": 800,
+    "pxH": 1139
+   },
+   "cm": {
+    "w": 400,
+    "h": 500
+   },
+   "collection": "Basilica of San Francesco d'Assisi",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q23904",
+   "title": "St. Francis of Assisi Receiving the Stigmata",
+   "year": 1297,
+   "image": {
+    "file": "File:Saint François d'Assise recevant les stigmates - Giotto - Musée du Louvre Peintures INV 309 ; MR 253 - detoure fond blanc.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Saint_Fran%C3%A7ois_d%27Assise_recevant_les_stigmates_-_Giotto_-_Mus%C3%A9e_du_Louvre_Peintures_INV_309_%3B_MR_253_-_detoure_fond_blanc.jpg/960px-Saint_Fran%C3%A7ois_d%27Assise_recevant_les_stigmates_-_Giotto_-_Mus%C3%A9e_du_Louvre_Peintures_INV_309_%3B_MR_253_-_detoure_fond_blanc.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Saint_Fran%C3%A7ois_d%27Assise_recevant_les_stigmates_-_Giotto_-_Mus%C3%A9e_du_Louvre_Peintures_INV_309_%3B_MR_253_-_detoure_fond_blanc.jpg/1920px-Saint_Fran%C3%A7ois_d%27Assise_recevant_les_stigmates_-_Giotto_-_Mus%C3%A9e_du_Louvre_Peintures_INV_309_%3B_MR_253_-_detoure_fond_blanc.jpg",
+    "pxW": 5869,
+    "pxH": 10888
+   },
+   "cm": {
+    "w": 163,
+    "h": 313
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Saint Francis Receiving the Stigmata is a panel painting in tempera by the Italian artist Giotto, painted around 1295–1300 for the Church of Saint Francis in Pisa and it is now in the Musée du Louvre in Paris. It shows an episode from the life of Saint Francis of Assisi togther with three scenes from his life in a predella below, and is 314 cm high by 162 cm wide. It is signed, or at least inscribed, OPUS IOCTI FLORENTINI in painted letters on a flat and now dark strip of the frame at the bottom, the inscription centred below the middle predella scene.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Francis_Receiving_the_Stigmata_%28Giotto%29"
+   },
+   "facts": [
+    {
+     "text": "In his Le Vite, Giorgio Vasari mentions the work in a transept chapel of the church of San Francesco in Pisa. Despite having been disputed, the work is now generally recognized to be by Giotto, being also signed; it has been dated from shortly before or after the Stories of St.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Saint_Francis_Receiving_the_Stigmata_%28Giotto%29#History"
+    },
+    {
+     "text": "The work has a rectangular shape in the lower part, ending with a triangular cusp, and has a gold ground. It depicts St.",
+     "section": "Stigmatisation",
+     "source": "https://en.wikipedia.org/wiki/Saint_Francis_Receiving_the_Stigmata_%28Giotto%29#Stigmatisation"
+    },
+    {
+     "text": "The predella shows three scenes from the saint's life: The Dream of Pope Innocent III, The Approval of the Franciscan Rule, and The Sermon to the Birds. These depictions are also generally attributed to Giotto, and are strongly tied to the frescoes of Assisi.",
+     "section": "Predella",
+     "source": "https://en.wikipedia.org/wiki/Saint_Francis_Receiving_the_Stigmata_%28Giotto%29#Predella"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q2016193",
+   "title": "Madonna Enthroned",
+   "year": 1300,
+   "image": {
+    "file": "File:Madonna di Ognissanti by Giotto.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Madonna_di_Ognissanti_by_Giotto.jpg/960px-Madonna_di_Ognissanti_by_Giotto.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Madonna_di_Ognissanti_by_Giotto.jpg/1920px-Madonna_di_Ognissanti_by_Giotto.jpg",
+    "pxW": 2719,
+    "pxH": 4181
+   },
+   "cm": {
+    "w": 204,
+    "h": 325
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "Madonna Enthroned, also known as the Ognissanti Madonna or Madonna Ognissanti, is a painting in tempera on wood panel by the Italian late medieval artist Giotto di Bondone, now in the Uffizi Gallery of Florence, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Ognissanti_Madonna"
+   },
+   "facts": [
+    {
+     "text": "The 'Madonna Enthroned' shows the numerous styles of art that influenced Giotto. In both the gold coloring used throughout the artwork and the flat gold ground, Giotto's art continued the traditional Italo-Byzantine style usual in the proto-Renaissance period.",
+     "section": "Influences",
+     "source": "https://en.wikipedia.org/wiki/Ognissanti_Madonna#Influences"
+    },
+    {
+     "text": "Giotto used a much smaller space than other contemporary artists, further emphasizing the importance of the bodies in the artwork. Giotto did away with many aspects of Byzantine art that would flatten the painting.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Ognissanti_Madonna#Technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q734197",
+   "title": "Visitation",
+   "year": 1306,
+   "image": {
+    "file": "File:Giotto di Bondone - No. 16 Scenes from the Life of the Virgin - 7. Visitation - WGA09192.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Giotto_di_Bondone_-_No._16_Scenes_from_the_Life_of_the_Virgin_-_7._Visitation_-_WGA09192.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Giotto_di_Bondone_-_No._16_Scenes_from_the_Life_of_the_Virgin_-_7._Visitation_-_WGA09192.jpg",
+    "pxW": 848,
+    "pxH": 1000
+   },
+   "cm": {
+    "w": 140,
+    "h": 150
+   },
+   "collection": "Scrovegni Chapel",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3698227",
+   "title": "Crucifixion of Strasbourg",
+   "year": 1315,
+   "image": {
+    "file": "File:Giotto. Crucifiction. 1330s. Musée des Beaux-Arts, Strasbourg.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Giotto._Crucifiction._1330s._Mus%C3%A9e_des_Beaux-Arts%2C_Strasbourg.jpg/960px-Giotto._Crucifiction._1330s._Mus%C3%A9e_des_Beaux-Arts%2C_Strasbourg.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Giotto._Crucifiction._1330s._Mus%C3%A9e_des_Beaux-Arts%2C_Strasbourg.jpg/1920px-Giotto._Crucifiction._1330s._Mus%C3%A9e_des_Beaux-Arts%2C_Strasbourg.jpg",
+    "pxW": 2211,
+    "pxH": 3249
+   },
+   "cm": {
+    "w": 33,
+    "h": 45
+   },
+   "collection": "Musée des Beaux-Arts de Strasbourg",
+   "story": {
+    "extract": "The Strasbourg Crucifixion is a painting in tempera and gold on panel of c. 1315 attributed to Giotto, now in the Musée des Beaux-Arts of Strasbourg, France.",
+    "source": "https://en.wikipedia.org/wiki/Strasbourg_Crucifixion"
+   },
+   "facts": [
+    {
+     "text": "Previously attributed to the school of Giotto, Roberto Longhi attributed it to the master himself in 1948. It probably formed a diptych with the Madonna Enthroned between the Virtues (Wildenstein Collection, New York), attributed to the Master of the Sails.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Strasbourg_Crucifixion#History"
+    },
+    {
+     "text": "The scene follows traditional iconography, with the experimental innovations of the Crucifixion in Scrovegni Chapel. The cross of Christ occupies the center of the painting, on a uniform gold ground.",
+     "section": "Description and style",
+     "source": "https://en.wikipedia.org/wiki/Strasbourg_Crucifixion#Description_and_style"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3698217",
+   "title": "The Crucifixion of Christ",
+   "year": 1317,
+   "image": {
+    "file": "File:Die Kreuzigung Christi - Gemäldegalerie Berlin - 3817331.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Die_Kreuzigung_Christi_-_Gem%C3%A4ldegalerie_Berlin_-_3817331.jpg/960px-Die_Kreuzigung_Christi_-_Gem%C3%A4ldegalerie_Berlin_-_3817331.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Die_Kreuzigung_Christi_-_Gem%C3%A4ldegalerie_Berlin_-_3817331.jpg",
+    "pxW": 1536,
+    "pxH": 2500
+   },
+   "cm": {
+    "w": 36,
+    "h": 60
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "The Berlin Crucifixion is a tempera and gold on panel painting that was created c. 1320 and is attributed to Giotto. It is stored at the Gemäldegalerie in Berlin.",
+    "source": "https://en.wikipedia.org/wiki/Berlin_Crucifixion"
+   },
+   "facts": [
+    {
+     "text": "The first studies of the Berlin Crucifixion by Wilhelm von Bode attributed the work to Giotto. Following critics, like Roberto Longhi in 1948, have doubted the attribution.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Berlin_Crucifixion#History"
+    },
+    {
+     "text": "The scene is a turning point in traditional iconography, after the experimental innovations in the Crucifixion of Giotto's Scrovegni Chapel frescoes. The cross of Jesus is lifted from the center of the painting in hieratic splendor from a uniform gold ground.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Berlin_Crucifixion#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3472935",
+   "title": "Saint Stephen",
+   "year": 1320,
+   "image": {
+    "file": "File:Giotto. saint-stephen-1320-25 Florence, Museo Horne.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Giotto._saint-stephen-1320-25_Florence%2C_Museo_Horne.jpg/960px-Giotto._saint-stephen-1320-25_Florence%2C_Museo_Horne.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Giotto._saint-stephen-1320-25_Florence%2C_Museo_Horne.jpg/1920px-Giotto._saint-stephen-1320-25_Florence%2C_Museo_Horne.jpg",
+    "pxW": 2650,
+    "pxH": 4090
+   },
+   "cm": {
+    "w": 54,
+    "h": 84
+   },
+   "collection": "Museo Horne",
+   "story": {
+    "extract": "Saint Stephen is a panel painting by Giotto, dating to around 1330–1335. It is painted in tempera on gold ground. It is in the collection of and serves as the logo of the Museo Horne in Florence.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Stephen_%28Giotto%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3907474",
+   "title": "Baroncelli Polyptych",
+   "year": 1328,
+   "image": {
+    "file": "File:Baroncelli Polyptych c.1334 Baroncelli Chapel, Santa Croce, Florence 185x323cm..jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Baroncelli_Polyptych_c.1334_Baroncelli_Chapel%2C_Santa_Croce%2C_Florence_185x323cm..jpg/960px-Baroncelli_Polyptych_c.1334_Baroncelli_Chapel%2C_Santa_Croce%2C_Florence_185x323cm..jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Baroncelli_Polyptych_c.1334_Baroncelli_Chapel%2C_Santa_Croce%2C_Florence_185x323cm..jpg/1920px-Baroncelli_Polyptych_c.1334_Baroncelli_Chapel%2C_Santa_Croce%2C_Florence_185x323cm..jpg",
+    "pxW": 6869,
+    "pxH": 3818
+   },
+   "cm": {
+    "w": 323,
+    "h": 185
+   },
+   "collection": "Basilica of Santa Croce",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3907499",
+   "title": "Bologna Polyptych",
+   "year": 1333,
+   "image": {
+    "file": "File:Giotto. Polyptych. 1330-35. 91x340cm. Pinacoteca, Bologna..jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Giotto._Polyptych._1330-35._91x340cm._Pinacoteca%2C_Bologna..jpg/960px-Giotto._Polyptych._1330-35._91x340cm._Pinacoteca%2C_Bologna..jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Giotto._Polyptych._1330-35._91x340cm._Pinacoteca%2C_Bologna..jpg/1920px-Giotto._Polyptych._1330-35._91x340cm._Pinacoteca%2C_Bologna..jpg",
+    "pxW": 2500,
+    "pxH": 1657
+   },
+   "cm": {
+    "w": 340,
+    "h": 91
+   },
+   "collection": "Pinacoteca Nazionale di Bologna",
+   "story": {
+    "extract": "The Bologna Polyptych is a polyptych altarpiece in tempera on panel with gold backgrounds, attributed to Giotto with workshop participation and generally dated to the early 1330s. It is preserved in the Pinacoteca Nazionale di Bologna.",
+    "source": "https://en.wikipedia.org/wiki/Bologna_Polyptych"
+   },
+   "facts": [
+    {
+     "text": "The central panel depicts the Virgin enthroned with the Child. The side panels depict four standing saints, identified in modern descriptions as Saint Peter, the Archangel Gabriel, the Archangel Michael, and Saint Paul, arranged symmetrically on either side of the central figure.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Bologna_Polyptych#Description"
+    },
+    {
+     "text": "An inscription is visible on the step of the Virgin’s throne. In modern summaries it is transcribed as opus magistri jocti de florentia.",
+     "section": "Inscription",
+     "source": "https://en.wikipedia.org/wiki/Bologna_Polyptych#Inscription"
+    },
+    {
+     "text": "According to modern summaries, the polyptych was transferred in 1782 from the church of Santa Maria degli Angeli to a chapel of the Collegio Montalto in Bologna. It was disassembled during the Napoleonic period in 1808 and reassembled in 1894 in a new frame, a process that caused damage to some original panels.",
+     "section": "Provenance and historical context",
+     "source": "https://en.wikipedia.org/wiki/Bologna_Polyptych#Provenance_and_historical_context"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giotto"
+   }
+  }
+ ]
+}

@@ -1,0 +1,413 @@
+{
+ "slug": "edouard-manet",
+ "name": "Édouard Manet",
+ "qid": "Q40599",
+ "born": 1832,
+ "died": 1883,
+ "periods": [
+  "realism",
+  "impressionism"
+ ],
+ "oneLiner": "French painter (1832–1883)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg/330px-%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg"
+ },
+ "bio": {
+  "extract": "Édouard Manet was a French modernist painter. He was one of the first 19th-century artists to paint modern life, as well as a pivotal figure in the transition from Realism to Impressionism.",
+  "source": "https://en.wikipedia.org/wiki/%C3%89douard_Manet"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/%C3%89douard_Manet",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q210277",
+   "title": "Music in the Tuileries",
+   "year": 1862,
+   "image": {
+    "file": "File:MANET - Música en las Tullerías (National Gallery, Londres, 1862).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/MANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg/960px-MANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/MANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg/1920px-MANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg",
+    "pxW": 6653,
+    "pxH": 4225
+   },
+   "cm": {
+    "w": 118,
+    "h": 76
+   },
+   "collection": "Hugh Lane Gallery",
+   "story": {
+    "extract": "Music in the Tuileries is an 1862 oil-on-canvas painting by Édouard Manet. It is owned by the National Gallery, London and the Hugh Lane Gallery, Dublin as part of the shared Lane Bequest.",
+    "source": "https://en.wikipedia.org/wiki/Music_in_the_Tuileries"
+   },
+   "facts": [
+    {
+     "text": "Music in the Tuileries received substantial critical and public attention, most of it negative. In the words of one Manet biographer, \"it is difficult for us to imagine the kind of fury Music in the Tuileries provoked when it was exhibited\".",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Music_in_the_Tuileries#Reception"
+    },
+    {
+     "text": "The colors in greater areas of this painting are generally subdued and executed in ochres or in mixtures of several pigments. The dark green foliage in the upper part contains a glaze of emerald green and Scheele's green mixed with yellow lake with small addition of ivory black and yellow ochre.",
+     "section": "Painting materials",
+     "source": "https://en.wikipedia.org/wiki/Music_in_the_Tuileries#Painting_materials"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q59815",
+   "title": "The Old Musician",
+   "year": 1862,
+   "image": {
+    "file": "File:Édouard Manet - Le Vieux Musicien.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%C3%89douard_Manet_-_Le_Vieux_Musicien.jpg/960px-%C3%89douard_Manet_-_Le_Vieux_Musicien.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%C3%89douard_Manet_-_Le_Vieux_Musicien.jpg/1920px-%C3%89douard_Manet_-_Le_Vieux_Musicien.jpg",
+    "pxW": 19867,
+    "pxH": 15029
+   },
+   "cm": {
+    "w": 248,
+    "h": 187
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Old Musician is an 1862 oil painting on canvas by French painter Édouard Manet, produced during the period when the artist was influenced by Spanish art. The painting also betrays the influence of Gustave Courbet. This work is one of Manet's largest paintings and is now conserved at the National Gallery of Art in Washington, DC.",
+    "source": "https://en.wikipedia.org/wiki/The_Old_Musician"
+   },
+   "facts": [
+    {
+     "text": "The painting is composed of seven characters in a landscape. The old musician in the center who is preparing to play the violin is Jean Lagrène, the leader of a local gypsy band.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Old_Musician#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q152509",
+   "title": "Luncheon on the Grass",
+   "year": 1863,
+   "image": {
+    "file": "File:Edouard Manet - Luncheon on the Grass - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg/960px-Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg/1920px-Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+    "pxW": 5649,
+    "pxH": 4389
+   },
+   "cm": {
+    "w": 264,
+    "h": 208
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Le Déjeuner sur l'herbe – originally titled Le Bain – is a large oil on canvas painting by Édouard Manet created in 1862 and 1863.",
+    "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe"
+   },
+   "facts": [
+    {
+     "text": "The painting features a nude woman casually lunching with two fully dressed men. Her body is starkly lit and she stares directly at the viewer.",
+     "section": "Description and context",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe#Description_and_context"
+    },
+    {
+     "text": "The figures of this painting are a testament to how deeply connected Manet was to Le Déjeuner sur l'herbe. Some assume that the landscape of the painting is meant to be l'Île Saint-Ouen, which was just up the Seine from his family property in Gennevilliers.",
+     "section": "Figures in the painting",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe#Figures_in_the_painting"
+    },
+    {
+     "text": "What many critics find shocking about this painting is the interaction, or lack thereof, between the three main subjects in the foreground and the woman bathing in the background. There are many contrasting qualities to the painting that juxtapose and distance the female nude from the other two male subjects.",
+     "section": "Interactions of the figures",
+     "source": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe#Interactions_of_the_figures"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q737062",
+   "title": "Olympia",
+   "year": 1863,
+   "image": {
+    "file": "File:Edouard Manet - Olympia - Google Art Project 3.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg/960px-Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg/1920px-Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg",
+    "pxW": 3510,
+    "pxH": 2391
+   },
+   "cm": {
+    "w": 191,
+    "h": 130
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Olympia is an 1863 oil painting by Édouard Manet, depicting a nude white woman (\"Olympia\") lying on a bed being attended to by a black maid. The French government acquired the painting in 1890 after a public subscription organized by Claude Monet. The painting is now in the Musée d'Orsay, Paris.",
+    "source": "https://en.wikipedia.org/wiki/Olympia_%28Manet%29"
+   },
+   "facts": [
+    {
+     "text": "Contemporary audiences were shocked by Olympia's confrontational gaze, combined with details identifying her as a demi-mondaine, or courtesan. These include the fact that the name \"Olympia\" was associated with prostitutes in 1860s Paris.",
+     "section": "Content",
+     "source": "https://en.wikipedia.org/wiki/Olympia_%28Manet%29#Content"
+    },
+    {
+     "text": "Though Manet's The Luncheon on the Grass (Le déjeuner sur l'herbe) had sparked controversy in 1863, his Olympia stirred an even bigger uproar when it was first exhibited at the 1865 Paris Salon. Conservatives condemned the work as \"immoral\" and \"vulgar\".",
+     "section": "Critical reaction",
+     "source": "https://en.wikipedia.org/wiki/Olympia_%28Manet%29#Critical_reaction"
+    },
+    {
+     "text": "Although originally overlooked, the figure of the maid in the painting, modelled by a woman named Laure, has become a topic of discussion among contemporary scholars. As T.",
+     "section": "Olympia's maid",
+     "source": "https://en.wikipedia.org/wiki/Olympia_%28Manet%29#Olympia%27s_maid"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q26250",
+   "title": "The Fif",
+   "year": 1866,
+   "image": {
+    "file": "File:Manet, Edouard - Young Flautist, or The Fifer, 1866 (2).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Manet%2C_Edouard_-_Young_Flautist%2C_or_The_Fifer%2C_1866_%282%29.jpg/960px-Manet%2C_Edouard_-_Young_Flautist%2C_or_The_Fifer%2C_1866_%282%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Manet%2C_Edouard_-_Young_Flautist%2C_or_The_Fifer%2C_1866_%282%29.jpg/1920px-Manet%2C_Edouard_-_Young_Flautist%2C_or_The_Fifer%2C_1866_%282%29.jpg",
+    "pxW": 2071,
+    "pxH": 3534
+   },
+   "cm": {
+    "w": 97,
+    "h": 161
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Fifer or Young Flautist is a painting by French painter Édouard Manet, made in 1866. It is usually kept in the Musée d'Orsay, Paris.",
+    "source": "https://en.wikipedia.org/wiki/The_Fifer"
+   },
+   "facts": [
+    {
+     "text": "On a trip to Spain in 1865, Édouard Manet visited the Prado, where the art of Diego Velázquez was a revelation. Upon his return to Paris in 1866, he began work on a new painting, depicting an anonymous regimental fifer of the Spanish army.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Fifer#History"
+    },
+    {
+     "text": "As with a painting by Velázquez, Manet conceived a shallow depth, where vertical and horizontal planes are barely distinguishable. According to Peter H.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Fifer#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q775407",
+   "title": "The Balcony",
+   "year": 1868,
+   "image": {
+    "file": "File:Edouard Manet - The Balcony - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg/960px-Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg/1920px-Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg",
+    "pxW": 5804,
+    "pxH": 8066
+   },
+   "cm": {
+    "w": 125,
+    "h": 170
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "The Balcony is an 1868–69 oil painting by the French painter Édouard Manet. It depicts four figures on a balcony, one of whom is sitting: the painter Berthe Morisot, who married Manet's brother Eugène in 1874. In the centre is the painter Jean Baptiste Antoine Guillemet.",
+    "source": "https://en.wikipedia.org/wiki/The_Balcony_%28Manet%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was not well received after it was exhibited at the Paris Salon in 1869.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Balcony_%28Manet%29#Reception"
+    },
+    {
+     "text": "The painting, inspired by Majas on the Balcony by Francisco Goya, was created at the same time and with the same purpose as Luncheon in the Studio.",
+     "section": "Inspiration and description",
+     "source": "https://en.wikipedia.org/wiki/The_Balcony_%28Manet%29#Inspiration_and_description"
+    },
+    {
+     "text": "Manet's Portrait of Mademoiselle Claus has been considered a sketch for The Balcony. As a preparatory sketch for the finished product, Mademoiselle Claus' portrait captures the artist's overarching intentions.",
+     "section": "Manet's Flaneuse: Portrait of Mademoiselle Claus",
+     "source": "https://en.wikipedia.org/wiki/The_Balcony_%28Manet%29#Manet%27s_Flaneuse%3A_Portrait_of_Mademoiselle_Claus"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q2899286",
+   "title": "Berthe Morisot with a Bouquet of Violets",
+   "year": 1872,
+   "image": {
+    "file": "File:Edouard Manet - Berthe Morisot With a Bouquet of Violets - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Edouard_Manet_-_Berthe_Morisot_With_a_Bouquet_of_Violets_-_Google_Art_Project.jpg/960px-Edouard_Manet_-_Berthe_Morisot_With_a_Bouquet_of_Violets_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Edouard_Manet_-_Berthe_Morisot_With_a_Bouquet_of_Violets_-_Google_Art_Project.jpg/1920px-Edouard_Manet_-_Berthe_Morisot_With_a_Bouquet_of_Violets_-_Google_Art_Project.jpg",
+    "pxW": 2617,
+    "pxH": 3552
+   },
+   "cm": {
+    "w": 40,
+    "h": 56
+   },
+   "collection": "Musée d'Orsay",
+   "story": {
+    "extract": "Berthe Morisot with a Bouquet of Violets is an 1872 oil painting by Édouard Manet. It depicts fellow painter Berthe Morisot dressed in black mourning dress, with a barely visible bouquet of violets. The painting, sometimes known as Portrait of Berthe Morisot, Berthe Morisot in a black hat or Young woman in a black hat, is in the collection of the Musée d'Orsay in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Berthe_Morisot_with_a_Bouquet_of_Violets"
+   },
+   "facts": [
+    {
+     "text": "The work was quickly considered a masterpiece of Manet's work. It was praised by Paul Valéry in the catalogue of Manet's retrospective at the Orangerie in 1932 for the centenary of his birth.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Berthe_Morisot_with_a_Bouquet_of_Violets#Reception"
+    },
+    {
+     "text": "The half-length portrait is on a canvas measuring 55.5 × 40.5 centimetres (21.9 × 15.9 in) – 71.5 × 57.5 centimetres (28.1 × 22.6 in) with frame – and is signed \"Manet 72\" in the upper right corner. It is a study in shades of black.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Berthe_Morisot_with_a_Bouquet_of_Violets#Description"
+    },
+    {
+     "text": "Manet became acquainted with Berthe Morisot in 1868. She was the grand-niece of Fragonard, and also a painter; Morisot and Manet influenced each other's work.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Berthe_Morisot_with_a_Bouquet_of_Violets#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q1212098",
+   "title": "The Railway",
+   "year": 1873,
+   "image": {
+    "file": "File:Edouard Manet - Le Chemin de fer - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Edouard_Manet_-_Le_Chemin_de_fer_-_Google_Art_Project.jpg/960px-Edouard_Manet_-_Le_Chemin_de_fer_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Edouard_Manet_-_Le_Chemin_de_fer_-_Google_Art_Project.jpg/1920px-Edouard_Manet_-_Le_Chemin_de_fer_-_Google_Art_Project.jpg",
+    "pxW": 11359,
+    "pxH": 9251
+   },
+   "cm": {
+    "w": 112,
+    "h": 93
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "The Railway, widely known as Gare Saint-Lazare, is an 1873 painting by Édouard Manet. It is the last painting by Manet of his favourite model, the fellow painter Victorine Meurent, who was also the model for Olympia and the Luncheon on the Grass, among other paintings by Manet. It was exhibited at the Paris Salon in 1874 and donated to the National Gallery of Art in Washington, D.C. in 1956.",
+    "source": "https://en.wikipedia.org/wiki/The_Railway"
+   },
+   "facts": [
+    {
+     "text": "Historian Isabelle Dervaux has described the reception this painting received when it was first exhibited at the official Paris Salon of 1874: \"Visitors and critics found its subject baffling, its composition incoherent, and its execution sketchy.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Railway#Reception"
+    },
+    {
+     "text": "Meurent is depicted sitting to the left side of the frame, in front of an iron fence near the Gare Saint-Lazare in Paris. The pensive subject is wearing a dark hat and sombre deep blue dress with white details, and is looking towards the viewer, while a sleeping puppy, a fan and an open book rest in her lap.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/The_Railway#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q536024",
+   "title": "Nana",
+   "year": 1877,
+   "image": {
+    "file": "File:1877 Manet Nana anagoria.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/1877_Manet_Nana_anagoria.jpg/960px-1877_Manet_Nana_anagoria.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/1877_Manet_Nana_anagoria.jpg/1920px-1877_Manet_Nana_anagoria.jpg",
+    "pxW": 3580,
+    "pxH": 4752
+   },
+   "cm": {
+    "w": 115,
+    "h": 154
+   },
+   "collection": "Hamburger Kunsthalle",
+   "story": {
+    "extract": "Nana is a painting by French painter Édouard Manet. It was completed in 1877 and was refused at the Salon of Paris the same year. Manet decided to show his painting in the window of a shop on the Boulevard des Capucines, one of Paris’s main streets.",
+    "source": "https://en.wikipedia.org/wiki/Nana_%28Manet%29"
+   },
+   "facts": [
+    {
+     "text": "Manet wanted to present the painting at the Salon of Paris but it was rejected because it was deemed to be contemptuous of the morality of the time. French society was not prepared for such frank depictions of prostitution, and the critics did not see the artistic qualities of the work and concentrated solely on the scene which was represented.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Nana_%28Manet%29#Reception"
+    },
+    {
+     "text": "The painting shows a young and beautiful woman who stands before a mirror with two extinguished candles, her face turned to the spectator. Her dress is incomplete; she wears a white chemise, blue corset, silk stockings and high-heeled footwear.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Nana_%28Manet%29#Description"
+    },
+    {
+     "text": "Both the title and the numerous details suggest that the picture represents a high class prostitute and her client. \"Nana\" was a popular assumed name for female prostitutes during the second half of the 19th century (much like the connotation \"Candy\" has had for English-speakers more recently).",
+     "section": "Interpretations",
+     "source": "https://en.wikipedia.org/wiki/Nana_%28Manet%29#Interpretations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  },
+  {
+   "qid": "Q731639",
+   "title": "The Plum",
+   "year": 1878,
+   "image": {
+    "file": "File:Edouard Manet - The Plum - National Gallery of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg/960px-Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg/1920px-Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg",
+    "pxW": 2675,
+    "pxH": 4000
+   },
+   "cm": {
+    "w": 50,
+    "h": 74
+   },
+   "collection": "Q214867",
+   "story": {
+    "extract": "Plum Brandy, also known as The Plum, is an oil painting by Édouard Manet. It is undated but thought to have been painted about 1877. The painting measures 73.6 centimetres (29.0 in) by 50.2 centimetres (19.8 in).",
+    "source": "https://en.wikipedia.org/wiki/Plum_Brandy"
+   },
+   "facts": [
+    {
+     "text": "Manet sold the painting to collector Charles Deudon in about 1881. It was inherited by Deudon's wife on his death in 1914 and sold before 1919.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Plum_Brandy#History"
+    },
+    {
+     "text": "The painting is a study in loneliness, depicting a quiet, almost melancholy, scene of a young working girl seated in a café. The subject is viewed from nearby, perhaps by another seated customer.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Plum_Brandy#Analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Édouard Manet"
+   }
+  }
+ ]
+}

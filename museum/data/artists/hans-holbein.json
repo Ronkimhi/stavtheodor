@@ -1,0 +1,337 @@
+{
+ "slug": "hans-holbein",
+ "name": "Hans Holbein the Younger",
+ "qid": "Q48319",
+ "born": 1497,
+ "died": 1543,
+ "periods": [
+  "northern-renaissance"
+ ],
+ "oneLiner": "German artist and printmaker (1497–1543)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/330px-Hans_Holbein_the_Younger%2C_self-portrait.jpg"
+ },
+ "bio": {
+  "extract": "Hans Holbein the Younger was a German painter and printmaker active in Switzerland and England. He worked in a Northern Renaissance style, and is considered one of the greatest portraitists of the 16th century. He also produced religious art, satire, and Reformation propaganda, and he made a significant contribution to the history of book design. He is called \"the Younger\" to distinguish him from his father Hans Holbein the Elder, an accomplished painter of the Late Gothic school.",
+  "source": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q4310527",
+   "title": "The Body of the Dead Christ in the Tomb",
+   "year": 1520,
+   "image": {
+    "file": "File:Holbein — Dead Christ.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Holbein_%E2%80%94_Dead_Christ.jpg/960px-Holbein_%E2%80%94_Dead_Christ.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Holbein_%E2%80%94_Dead_Christ.jpg/1920px-Holbein_%E2%80%94_Dead_Christ.jpg",
+    "pxW": 4944,
+    "pxH": 739
+   },
+   "cm": {
+    "w": 200,
+    "h": 30
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "The Body of the Dead Christ in the Tomb, sometimes referred to as Dead Christ, is an oil and tempera on limewood painting created by the German artist and printmaker Hans Holbein the Younger between 1520 and 1522.",
+    "source": "https://en.wikipedia.org/wiki/The_Body_of_the_Dead_Christ_in_the_Tomb"
+   },
+   "facts": [
+    {
+     "text": "The panel has attracted fascination and praise since it was created. The work captivated the Russian author Fyodor Dostoevsky who said \"One can lose his faith from a painting like that\".",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Body_of_the_Dead_Christ_in_the_Tomb#Analysis"
+    },
+    {
+     "text": "The painting is especially notable for its dramatic dimensions (30.5 cm x 200 cm), and the fact that Christ's face, hands and feet, as well as the wounds in his torso, are depicted as realistic dead flesh in the early stages of putrefaction. His body is shown as long and emaciated while eyes and mouth are left open.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Body_of_the_Dead_Christ_in_the_Tomb#Description"
+    },
+    {
+     "text": "In common with many artists active during the early Protestant Reformation, Holbein was fascinated with the macabre. His father, Hans Holbein the Elder, took him to see Matthias Grünewald's altarpiece in Isenheim, a city in which the elder also received a number of commissions from the local hospice.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Body_of_the_Dead_Christ_in_the_Tomb#Background"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": "Q1661697",
+   "title": "Madonna enthroned with child and two figures",
+   "year": 1522,
+   "image": {
+    "file": "File:Hans Holbein d. J. 010.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hans_Holbein_d._J._010.jpg/960px-Hans_Holbein_d._J._010.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hans_Holbein_d._J._010.jpg/1920px-Hans_Holbein_d._J._010.jpg",
+    "pxW": 2024,
+    "pxH": 2856
+   },
+   "cm": {
+    "w": 102,
+    "h": 140
+   },
+   "collection": "Kunstmuseum Solothurn",
+   "story": {
+    "extract": "The Solothurn Madonna is an oil-on-panel painting created in 1522 by the German-Swiss artist Hans Holbein the Younger in Basel. The painting depicts the Virgin Mary and Christ enthroned, flanked by Martin of Tours, shown as a bishop giving alms to a beggar, and Ursus of Solothurn, depicted as a soldier in armour. Notably, Holbein used his wife, Elsbeth, as the model for the Madonna, and the baby is believed to have been modelled after Holbein and Elsbeth's infant son Philipp.",
+    "source": "https://en.wikipedia.org/wiki/Solothurn_Madonna"
+   },
+   "facts": [
+    {
+     "text": "Jacob Amiet: Hans Holbein's Madonna von Solothurn Und der Stifter Nicolaus Conrad, Solothurn, 1879. Reprint: Bibliolife, LaVergne, 2011.",
+     "section": "Bibliography (in German)",
+     "source": "https://en.wikipedia.org/wiki/Solothurn_Madonna#Bibliography_%28in_German%29"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q455319",
+   "title": "Darmstadt Madonna",
+   "year": 1526,
+   "image": {
+    "file": "File:Darmstadtmadonna.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Darmstadtmadonna.jpg/960px-Darmstadtmadonna.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Darmstadtmadonna.jpg/1920px-Darmstadtmadonna.jpg",
+    "pxW": 3300,
+    "pxH": 4672
+   },
+   "cm": {
+    "w": 102,
+    "h": 146
+   },
+   "collection": "Würth Collection",
+   "story": {
+    "extract": "The Darmstadt Madonna is an oil painting by the German-Swiss artist Hans Holbein the Younger. Completed ca. 1526—1530 in Basel, the work shows the Bürgermeister of Basel Jakob Meyer zum Hasen, his first wife, his current wife, and his daughter grouped around the Madonna and infant Jesus.",
+    "source": "https://en.wikipedia.org/wiki/Darmstadt_Madonna"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q3296800",
+   "title": "Venus and Cupid",
+   "year": 1526,
+   "image": {
+    "file": "File:Venus and Amor, by Hans Holbein the Younger.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Venus_and_Amor%2C_by_Hans_Holbein_the_Younger.jpg/960px-Venus_and_Amor%2C_by_Hans_Holbein_the_Younger.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Venus_and_Amor%2C_by_Hans_Holbein_the_Younger.jpg/1920px-Venus_and_Amor%2C_by_Hans_Holbein_the_Younger.jpg",
+    "pxW": 2502,
+    "pxH": 3324
+   },
+   "cm": {
+    "w": 26,
+    "h": 34
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "Venus and Amor is painting by Hans Holbein the Youngers workshop and is the collection of the Kunstmuseum Basel, Switzerland. It was assumed for a long time to be painting by Hans Holbein the Younger, but research showed that this could not be possible. It was discovered that the painter had used a sort of carbon paper with the contours of the already existing Laïs and used it to transfer those contours in reverse on the new portrait he was to paint of Venus.",
+    "source": "https://en.wikipedia.org/wiki/Venus_and_Amor"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger and workshop"
+   }
+  },
+  {
+   "qid": "Q5296650",
+   "title": "Portrait of Sir Thomas More",
+   "year": 1527,
+   "image": {
+    "file": "File:Hans Holbein, the Younger - Sir Thomas More - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg/960px-Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg/1920px-Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg",
+    "pxW": 4667,
+    "pxH": 5807
+   },
+   "cm": {
+    "w": 60,
+    "h": 75
+   },
+   "collection": "The Frick Collection",
+   "story": {
+    "extract": "Portrait of Sir Thomas More is an oak panel painting created in 1527 by the German artist and printmaker Hans Holbein the Younger, now in the Frick Collection in New York.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Sir_Thomas_More"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q6106766",
+   "title": "Portrait of Nicholas Kratzer",
+   "year": 1528,
+   "image": {
+    "file": "File:Hans Holbein d. J. - Portrait of Nikolaus Kratzer - WGA11530.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Hans_Holbein_d._J._-_Portrait_of_Nikolaus_Kratzer_-_WGA11530.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Hans_Holbein_d._J._-_Portrait_of_Nikolaus_Kratzer_-_WGA11530.jpg",
+    "pxW": 834,
+    "pxH": 1060
+   },
+   "cm": {
+    "w": 67,
+    "h": 83
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Portrait of Nicolaus Kratzer is a 1528 half-length portrait by Hans Holbein the Younger. It is now in the Louvre, whilst a copy after it hangs in the National Portrait Gallery. It shows the astronomer Nikolaus Kratzer, a friend of Thomas More and Holbein himself.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Nicolaus_Kratzer"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q1212937",
+   "title": "The Ambassadors",
+   "year": 1533,
+   "image": {
+    "file": "File:Hans Holbein the Younger - The Ambassadors - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/960px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/1920px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "pxW": 30000,
+    "pxH": 29560
+   },
+   "cm": {
+    "w": 209,
+    "h": 207
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Ambassadors is a 1533 painting by Hans Holbein the Younger. Also known as Jean de Dinteville and Georges de Selve, after the two people it portrays, it was created in the Tudor period, in the same year Elizabeth I was born. Franny Moyle speculates that Elizabeth's mother, Anne Boleyn, then Queen of England, might have commissioned it as a gift for Jean de Dinteville, the French ambassador, portrayed on the left.",
+    "source": "https://en.wikipedia.org/wiki/The_Ambassadors_%28Holbein%29"
+   },
+   "facts": [
+    {
+     "text": "Though he was a German-born artist who spent much of his time in England, Holbein here displays the influence of Early Netherlandish painting.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Ambassadors_%28Holbein%29#Description"
+    },
+    {
+     "text": "The most notable and famous of Holbein's symbols in the work is the distorted skull which is placed in the bottom centre of the composition.",
+     "section": "Anamorphic skull",
+     "source": "https://en.wikipedia.org/wiki/The_Ambassadors_%28Holbein%29#Anamorphic_skull"
+    },
+    {
+     "text": "The research and processes used in the 1997 restoration of the skull are described in detail in the National Gallery Technical Bulletin, volume 19 (1998). Restorers encountered difficulties with this area of the painting because sections were heavily degraded beneath earlier restorations.",
+     "section": "Restoration of the skull",
+     "source": "https://en.wikipedia.org/wiki/The_Ambassadors_%28Holbein%29#Restoration_of_the_skull"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q3937666",
+   "title": "Portrait of Sir Richard Southwell",
+   "year": 1536,
+   "image": {
+    "file": "File:Hans Holbein d. J. 060.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hans_Holbein_d._J._060.jpg/960px-Hans_Holbein_d._J._060.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hans_Holbein_d._J._060.jpg/1920px-Hans_Holbein_d._J._060.jpg",
+    "pxW": 2024,
+    "pxH": 2538
+   },
+   "cm": {
+    "w": 38,
+    "h": 48
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Portrait of Sir Richard Southwell is a painting by the German Renaissance master Hans Holbein the Younger, executed around 1536–1537. It is housed in the Uffizi, Florence.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Sir_Richard_Southwell"
+   },
+   "facts": [
+    {
+     "text": "Richard Southwell was a privy councillor of Henry VIII of England and was portrayed by Holbein, who had become court painter a short time before, in 1536, as recorded in the inscription.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Sir_Richard_Southwell#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q4373334",
+   "title": "Christina of Denmark, Duchess of Milan",
+   "year": 1538,
+   "image": {
+    "file": "File:Hans the Younger Holbein - Christina of Denmark, Duchess of Milan - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Hans_the_Younger_Holbein_-_Christina_of_Denmark%2C_Duchess_of_Milan_-_Google_Art_Project.jpg/960px-Hans_the_Younger_Holbein_-_Christina_of_Denmark%2C_Duchess_of_Milan_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Hans_the_Younger_Holbein_-_Christina_of_Denmark%2C_Duchess_of_Milan_-_Google_Art_Project.jpg",
+    "pxW": 1373,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 83,
+    "h": 179
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Portrait of Christina of Denmark is an oil on oak panel painting by Hans Holbein the Younger completed in 1538. It was commissioned that year by Thomas Cromwell, agent for Henry VIII, as a betrothal painting following the death of the English Queen Jane Seymour. It shows the then sixteen-year-old Christina of Denmark, widow of the Duke of Milan since age 13.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Christina_of_Denmark"
+   },
+   "facts": [
+    {
+     "text": "Christina stands in full length in a frontal pose. She is set against a turquoise background, reminiscent of 15th century Burgundian art.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Christina_of_Denmark#Description"
+    },
+    {
+     "text": "Following the 1537 death of the English Queen Jane Seymour, Holbein was commissioned to paint portraits of noblewomen eligible to marry Henry VIII. Christina was Duchess of Milan, and widowed to Francesco II Sforza, who had died in 1535 when she was just thirteen.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Christina_of_Denmark#Commission"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  },
+  {
+   "qid": "Q3630726",
+   "title": "Self-portrait",
+   "year": 1542,
+   "image": {
+    "file": "File:Hans Holbein the Younger, self-portrait.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/960px-Hans_Holbein_the_Younger%2C_self-portrait.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/1920px-Hans_Holbein_the_Younger%2C_self-portrait.jpg",
+    "pxW": 2424,
+    "pxH": 3312
+   },
+   "cm": {
+    "w": 26,
+    "h": 32
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Self-portrait is a small drawing by the German Renaissance artist and printmaker Hans Holbein the Younger, completed around 1542–1543, and housed in the Uffizi, Florence. The gold background was added later by a different artist. According to art historian John Rowlands, \"Although this drawing has been enlarged on all sides and heavily reworked, enough of it still shows to allow the assumption that the original work was executed by Holbein.",
+    "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Hans_Holbein_the_Younger%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hans Holbein the Younger"
+   }
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "jean-michel-basquiat",
+ "name": "Jean-Michel Basquiat",
+ "qid": "Q155407",
+ "born": 1960,
+ "died": 1988,
+ "periods": [
+  "contemporary"
+ ],
+ "oneLiner": "American artist (1960–1988)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Jean-Michel Basquiat was an American artist who rose to success during the 1980s as part of the Neo-expressionism movement.",
+  "source": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat",
+ "hasGallery": false,
+ "paintings": []
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Gallery · The Museum · THEODORA</title>
+<meta name="description" content="A first-person walkable 3D gallery of real paintings, sourced from Wikimedia Commons. Part of The Museum at stavtheodor.com.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/museum/css/museum-core.css">
+<link rel="stylesheet" href="/museum/css/gallery.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "/museum/vendor/three/three.module.min.js",
+    "three/addons/": "/museum/vendor/three/addons/"
+  }
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4300MN0Q97');
+</script>
+</head>
+<body class="gallery-page">
+
+<div id="entry" class="entry">
+  <div class="entry-card">
+    <a class="entry-brand" href="/museum/">THE MUSEUM</a>
+    <h1 id="entry-name" class="entry-name">…</h1>
+    <p id="entry-sub" class="entry-sub"></p>
+    <div class="entry-bar"><div id="entry-progress" class="entry-progress"></div></div>
+    <button id="entry-btn" class="placard-cta entry-btn" disabled>Preparing the room…</button>
+    <p class="entry-help" id="entry-help">Walk with <b>W A S D</b> · look with the mouse · click a painting to inspect · <b>Esc</b> to release</p>
+    <p class="entry-alt"><a id="list-link" href="#list">Prefer a quiet list view?</a></p>
+  </div>
+</div>
+
+<div id="hud" class="g-hud" hidden>
+  <div id="crosshair" class="crosshair"></div>
+  <div id="tooltip" class="tooltip" hidden></div>
+  <a class="g-back" href="/museum/">← Timeline</a>
+</div>
+
+<div id="inspect-root"></div>
+<div id="list-root"></div>
+<div id="touch-root"></div>
+<div id="placard-root"></div>
+
+<script type="module" src="/museum/js/gallery/main.js"></script>
+</body>
+</html>

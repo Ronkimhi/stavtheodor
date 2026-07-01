@@ -1,0 +1,45 @@
+{
+ "slug": "salvador-dali",
+ "name": "Salvador Dalí",
+ "qid": "Q5577",
+ "born": 1904,
+ "died": 1989,
+ "periods": [
+  "surrealism"
+ ],
+ "oneLiner": "Spanish artist (1904–1989)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Salvador_Dal%C3%AD_1939.jpg/330px-Salvador_Dal%C3%AD_1939.jpg"
+ },
+ "bio": {
+  "extract": "Salvador Domingo Felipe Jacinto Dalí i Domènech, Marquess of Dalí de Púbol, known as Salvador Dalí, was a Spanish surrealist artist renowned for his technical skill, precise draftsmanship, and the striking and bizarre images in his work.",
+  "source": "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+ "hasGallery": false,
+ "paintings": [
+  {
+   "qid": "Q61944806",
+   "title": "The Spectre of Sex-Appeal",
+   "year": 1934,
+   "image": {
+    "file": "File:Salvador Dali - Le spectre du sex-appeal.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg/960px-Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg",
+    "pxW": 1488,
+    "pxH": 1890
+   },
+   "cm": {
+    "w": 14,
+    "h": 18
+   },
+   "collection": "Gala-Salvador Dalí Foundation",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Salvador Dali"
+   }
+  }
+ ]
+}

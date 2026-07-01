@@ -1,0 +1,320 @@
+{
+ "slug": "masaccio",
+ "name": "Masaccio",
+ "qid": "Q5811",
+ "born": 1401,
+ "died": 1428,
+ "periods": [
+  "early-renaissance"
+ ],
+ "oneLiner": "Italian painter (1401-1428)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/96/Masaccio_Self_Portrait.jpg"
+ },
+ "bio": {
+  "extract": "Masaccio, born Tommaso di Ser Giovanni di Simone, was a Florentine artist who is regarded as the first great Italian painter of the Quattrocento period of the Italian Renaissance. According to Vasari, Masaccio was the best painter of his generation because of his skill at imitating nature, recreating lifelike figures and movements as well as a convincing sense of three-dimensionality. He employed nudes and foreshortenings in his figures. This had seldom been done before him.",
+  "source": "https://en.wikipedia.org/wiki/Masaccio"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Masaccio",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3947827",
+   "title": "St. Peter Healing the Sick with His Shadow",
+   "year": 1425,
+   "image": {
+    "file": "File:St. Peter Healing the Sick with His Shadow 00.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/St._Peter_Healing_the_Sick_with_His_Shadow_00.jpg/960px-St._Peter_Healing_the_Sick_with_His_Shadow_00.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/ad/St._Peter_Healing_the_Sick_with_His_Shadow_00.jpg",
+    "pxW": 1420,
+    "pxH": 2073
+   },
+   "cm": {
+    "w": 162,
+    "h": 230
+   },
+   "collection": "Santa Maria del Carmine",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "see filename or category"
+   }
+  },
+  {
+   "qid": "Q3711791",
+   "title": "The Distribution of Alms and Death of Ananias",
+   "year": 1425,
+   "image": {
+    "file": "File:The Distribution of Alms and Death of Ananias.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/64/The_Distribution_of_Alms_and_Death_of_Ananias.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/64/The_Distribution_of_Alms_and_Death_of_Ananias.jpg",
+    "pxW": 880,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 162,
+    "h": 230
+   },
+   "collection": "Santa Maria del Carmine",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q1054459",
+   "title": "Crucifixion",
+   "year": 1426,
+   "image": {
+    "file": "File:Masaccio - Crocifissione (Cuspide di Polittico di Pisa).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Masaccio_-_Crocifissione_%28Cuspide_di_Polittico_di_Pisa%29.jpg/960px-Masaccio_-_Crocifissione_%28Cuspide_di_Polittico_di_Pisa%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Masaccio_-_Crocifissione_%28Cuspide_di_Polittico_di_Pisa%29.jpg/1920px-Masaccio_-_Crocifissione_%28Cuspide_di_Polittico_di_Pisa%29.jpg",
+    "pxW": 3567,
+    "pxH": 4547
+   },
+   "cm": {
+    "w": 63,
+    "h": 83
+   },
+   "collection": "Museo di Capodimonte",
+   "story": {
+    "extract": "The Pisa Altarpiece was a large multi-paneled altarpiece produced by Masaccio for the chapel of Saint Julian in the church of Santa Maria del Carmine in Pisa. The chapel was owned by the notary Giuliano di Colino, who commissioned the work on February 19, 1426 for the sum of 80 florins. Payment for the work was recorded on December 26 of that year.",
+    "source": "https://en.wikipedia.org/wiki/Crucifixion_%28Masaccio%29"
+   },
+   "facts": [
+    {
+     "text": "Eleven surviving panels of the altarpiece, which is the only documented work by Masaccio, are in various museums. Scholars hypothesize the reconstruction of the altarpiece based on a very complete description by Vasari.",
+     "section": "Surviving panels",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_%28Masaccio%29#Surviving_panels"
+    },
+    {
+     "text": "The Crucifixion was placed above the central panel of the altarpiece, underlining the sacrificial (Eucharistic) nature of the central panel.",
+     "section": "Crucifixion",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_%28Masaccio%29#Crucifixion"
+    },
+    {
+     "text": "Now in the Museo Nazionale di Pisa, the panel of Paul of Tarsus is the only portion of the commissioned work which remains in Pisa. It is usually reconstructed as being one of two flanking panels to the left of the Crucifixion.",
+     "section": "Saints",
+     "source": "https://en.wikipedia.org/wiki/Crucifixion_%28Masaccio%29#Saints"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q369582",
+   "title": "Madonna and Child",
+   "year": 1426,
+   "image": {
+    "file": "File:Masaccio. Madonna and Child. 1426. National Gallery, London.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Masaccio._Madonna_and_Child._1426._National_Gallery%2C_London.jpg/960px-Masaccio._Madonna_and_Child._1426._National_Gallery%2C_London.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Masaccio._Madonna_and_Child._1426._National_Gallery%2C_London.jpg/1920px-Masaccio._Madonna_and_Child._1426._National_Gallery%2C_London.jpg",
+    "pxW": 2346,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 74,
+    "h": 135
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Pisa Altarpiece was a large multi-paneled altarpiece produced by Masaccio for the chapel of Saint Julian in the church of Santa Maria del Carmine in Pisa. The chapel was owned by the notary Giuliano di Colino, who commissioned the work on February 19, 1426 for the sum of 80 florins. Payment for the work was recorded on December 26 of that year.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_and_Child_%28Masaccio%29"
+   },
+   "facts": [
+    {
+     "text": "Eleven surviving panels of the altarpiece, which is the only documented work by Masaccio, are in various museums. Scholars hypothesize the reconstruction of the altarpiece based on a very complete description by Vasari.",
+     "section": "Surviving panels",
+     "source": "https://en.wikipedia.org/wiki/Madonna_and_Child_%28Masaccio%29#Surviving_panels"
+    },
+    {
+     "text": "The Crucifixion was placed above the central panel of the altarpiece, underlining the sacrificial (Eucharistic) nature of the central panel.",
+     "section": "Crucifixion",
+     "source": "https://en.wikipedia.org/wiki/Madonna_and_Child_%28Masaccio%29#Crucifixion"
+    },
+    {
+     "text": "Now in the Museo Nazionale di Pisa, the panel of Paul of Tarsus is the only portion of the commissioned work which remains in Pisa. It is usually reconstructed as being one of two flanking panels to the left of the Crucifixion.",
+     "section": "Saints",
+     "source": "https://en.wikipedia.org/wiki/Madonna_and_Child_%28Masaccio%29#Saints"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q2884282",
+   "title": "Saint Paul",
+   "year": 1426,
+   "image": {
+    "file": "File:Masaccio, san paolo, pisa.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Masaccio%2C_san_paolo%2C_pisa.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Masaccio%2C_san_paolo%2C_pisa.jpg",
+    "pxW": 572,
+    "pxH": 1028
+   },
+   "cm": {
+    "w": 30,
+    "h": 51
+   },
+   "collection": "National Museum of San Matteo",
+   "story": {
+    "extract": "The Pisa Altarpiece was a large multi-paneled altarpiece produced by Masaccio for the chapel of Saint Julian in the church of Santa Maria del Carmine in Pisa. The chapel was owned by the notary Giuliano di Colino, who commissioned the work on February 19, 1426 for the sum of 80 florins. Payment for the work was recorded on December 26 of that year.",
+    "source": "https://en.wikipedia.org/wiki/Saint_Paul_%28Masaccio%29"
+   },
+   "facts": [
+    {
+     "text": "Eleven surviving panels of the altarpiece, which is the only documented work by Masaccio, are in various museums. Scholars hypothesize the reconstruction of the altarpiece based on a very complete description by Vasari.",
+     "section": "Surviving panels",
+     "source": "https://en.wikipedia.org/wiki/Saint_Paul_%28Masaccio%29#Surviving_panels"
+    },
+    {
+     "text": "The Crucifixion was placed above the central panel of the altarpiece, underlining the sacrificial (Eucharistic) nature of the central panel.",
+     "section": "Crucifixion",
+     "source": "https://en.wikipedia.org/wiki/Saint_Paul_%28Masaccio%29#Crucifixion"
+    },
+    {
+     "text": "Now in the Museo Nazionale di Pisa, the panel of Paul of Tarsus is the only portion of the commissioned work which remains in Pisa. It is usually reconstructed as being one of two flanking panels to the left of the Crucifixion.",
+     "section": "Saints",
+     "source": "https://en.wikipedia.org/wiki/Saint_Paul_%28Masaccio%29#Saints"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q3850304",
+   "title": "The Decapitation of Saint John the Baptist",
+   "year": 1426,
+   "image": {
+    "file": "File:Masaccio martirio di san giovanni Battista.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Masaccio_martirio_di_san_giovanni_Battista.jpg/960px-Masaccio_martirio_di_san_giovanni_Battista.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Masaccio_martirio_di_san_giovanni_Battista.jpg",
+    "pxW": 1909,
+    "pxH": 1489
+   },
+   "cm": {
+    "w": 21,
+    "h": 30
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q3949530",
+   "title": "A Bearded Carmelite Saint",
+   "year": 1426,
+   "image": {
+    "file": "File:Masaccio (1401 - 1428) - A Carmelite - 58D-4 - Gemäldegalerie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Masaccio_%281401_-_1428%29_-_A_Carmelite_-_58D-4_-_Gem%C3%A4ldegalerie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Masaccio_%281401_-_1428%29_-_A_Carmelite_-_58D-4_-_Gem%C3%A4ldegalerie.jpg",
+    "pxW": 460,
+    "pxH": 1357
+   },
+   "cm": {
+    "w": 12,
+    "h": 38
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  },
+  {
+   "qid": "Q3949531",
+   "title": "A Beardless Carmelite Saint",
+   "year": 1426,
+   "image": {
+    "file": "File:Fra Filippo Lippi (ca. 1406 - 1469) - A Carmelite - 58D-3 - Gemäldegalerie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Fra_Filippo_Lippi_%28ca._1406_-_1469%29_-_A_Carmelite_-_58D-3_-_Gem%C3%A4ldegalerie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Fra_Filippo_Lippi_%28ca._1406_-_1469%29_-_A_Carmelite_-_58D-3_-_Gem%C3%A4ldegalerie.jpg",
+    "pxW": 472,
+    "pxH": 1357
+   },
+   "cm": {
+    "w": 12,
+    "h": 38
+   },
+   "collection": "Gemäldegalerie Berlin",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Filippo Lippi / Masaccio"
+   }
+  },
+  {
+   "qid": "Q3933568",
+   "title": "Raising of the Son of Teophilus and St. Peter Enthroned",
+   "year": 1427,
+   "image": {
+    "file": "File:Cappella brancacci, Resurrezione del figlio di Teofilo e San Pietro in cattedra (restaurato), Masaccio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Cappella_brancacci%2C_Resurrezione_del_figlio_di_Teofilo_e_San_Pietro_in_cattedra_%28restaurato%29%2C_Masaccio.jpg/960px-Cappella_brancacci%2C_Resurrezione_del_figlio_di_Teofilo_e_San_Pietro_in_cattedra_%28restaurato%29%2C_Masaccio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Cappella_brancacci%2C_Resurrezione_del_figlio_di_Teofilo_e_San_Pietro_in_cattedra_%28restaurato%29%2C_Masaccio.jpg/1920px-Cappella_brancacci%2C_Resurrezione_del_figlio_di_Teofilo_e_San_Pietro_in_cattedra_%28restaurato%29%2C_Masaccio.jpg",
+    "pxW": 2111,
+    "pxH": 864
+   },
+   "cm": {
+    "w": 599,
+    "h": 230
+   },
+   "collection": "Santa Maria del Carmine",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Filippino Lippi / Masaccio"
+   }
+  },
+  {
+   "qid": "Q3705918",
+   "title": "Desco da parto",
+   "year": 1500,
+   "image": {
+    "file": "File:Desco da parto (Geburtsteller) - Gemäldegalerie Berlin - 2679259.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Desco_da_parto_%28Geburtsteller%29_-_Gem%C3%A4ldegalerie_Berlin_-_2679259.jpg/960px-Desco_da_parto_%28Geburtsteller%29_-_Gem%C3%A4ldegalerie_Berlin_-_2679259.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Desco_da_parto_%28Geburtsteller%29_-_Gem%C3%A4ldegalerie_Berlin_-_2679259.jpg/1920px-Desco_da_parto_%28Geburtsteller%29_-_Gem%C3%A4ldegalerie_Berlin_-_2679259.jpg",
+    "pxW": 2500,
+    "pxH": 1253
+   },
+   "cm": null,
+   "collection": "Gemäldegalerie Berlin",
+   "story": {
+    "extract": "This painting, also commonly known as The Berlin Tondo, is a desco da parto, or birth tray, painted by the Italian Renaissance artist Masaccio. Stylistic analysis shows similarities with his San Giovenale Triptych, an early work of the painter from 1422, and the birth tray is dated a short time after it at around 1423. With the frame around it, the tondo has a diameter of 66 cm.",
+    "source": "https://en.wikipedia.org/wiki/Desco_da_parto_%28Masaccio%29"
+   },
+   "facts": [
+    {
+     "text": "The upper side of the tray shows a scene soon (probably a few days) after the actual birth of a child. It takes place on the ground floor of a well-to-do contemporary house, a palace with white and black stone facings in a very modern style for Tuscan architecture.",
+     "section": "Top side",
+     "source": "https://en.wikipedia.org/wiki/Desco_da_parto_%28Masaccio%29#Top_side"
+    },
+    {
+     "text": "On the reverse side of the tray is a painting of a naked baby boy, a common feature of birthing trays, probably exposed during the pregnancy to encourage the birth of a healthy boy. He is in a meadow playing with a cat (possibly a dog).",
+     "section": "Reverse",
+     "source": "https://en.wikipedia.org/wiki/Desco_da_parto_%28Masaccio%29#Reverse"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Masaccio"
+   }
+  }
+ ]
+}

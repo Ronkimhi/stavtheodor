@@ -1,0 +1,310 @@
+{
+ "slug": "giovanni-battista-tiepolo",
+ "name": "Giovanni Battista Tiepolo",
+ "qid": "Q186202",
+ "born": 1696,
+ "died": 1770,
+ "periods": [
+  "rococo"
+ ],
+ "oneLiner": "Italian painter (1696–1770)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tiepolo%2C_Giovanni_Battista_-_Fresken_Treppenhaus_des_W%C3%BCrzburger_Residenzschlosses%2C_Szenen_zur_Apotheose_des_F%C3%BCrstbischofs%2C_Detail_Giovanni_Battista_Tiepolo_-_1750-1753.jpg/330px-thumbnail.jpg"
+ },
+ "bio": {
+  "extract": "Giovanni Battista Tiepolo, also known as Giambattista Tiepolo, was an Italian painter and printmaker from the Republic of Venice who painted in the Rococo style, considered an important member of the 18th-century Venetian school. He was prolific, and worked not only in Italy, but also in Germany and Spain.",
+  "source": "https://en.wikipedia.org/wiki/Giovanni_Battista_Tiepolo"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Giovanni_Battista_Tiepolo",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q38197",
+   "title": "Scipio Africanus Freeing Massiva",
+   "year": 1719,
+   "image": {
+    "file": "File:Giovanni Battista Tiepolo - Scipio Africanus Freeing Massiva - Walters 37657.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Giovanni_Battista_Tiepolo_-_Scipio_Africanus_Freeing_Massiva_-_Walters_37657.jpg/960px-Giovanni_Battista_Tiepolo_-_Scipio_Africanus_Freeing_Massiva_-_Walters_37657.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/54/Giovanni_Battista_Tiepolo_-_Scipio_Africanus_Freeing_Massiva_-_Walters_37657.jpg",
+    "pxW": 1798,
+    "pxH": 1018
+   },
+   "cm": {
+    "w": 49,
+    "h": 28
+   },
+   "collection": "Walters Art Museum",
+   "story": {
+    "extract": "Scipio Africanus Freeing Massiva is a painting depicting a scene from ancient Roman history by the Venetian artist Giovanni Battista Tiepolo, painted between 1719 and 1721. The painting depicts the Roman general Scipio Africanus after the 209 BCE Battle of Baecula in present-day Spain where he defeated the Carthaginians, capturing their Iberian and North African allies. The painting details the moment in which one of the captured Africans is brought before Scipio, who recognises him to be Massiva, the nephew of a chieftain of Eastern Numidia, Massinissa.",
+    "source": "https://en.wikipedia.org/wiki/Scipio_Africanus_Freeing_Massiva"
+   },
+   "facts": [
+    {
+     "text": "Tiepolo's use of oil paints achieves bright pearlescent colours, with vibrant reds and blues drawing attention over the somewhat subdued orange and yellow tones of much of the painting. Because few colours are highly saturated the strong red at the centre of the painting draws the eye directly to Scipio on the top of the central dais.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Scipio_Africanus_Freeing_Massiva#Composition"
+    },
+    {
+     "text": "During the 18th century the French took the lead as culture makers in Europe. The French courts lead the way in fashion, art and thought and most of Europe looked towards them as the strongest example of culture.",
+     "section": "Historical context",
+     "source": "https://en.wikipedia.org/wiki/Scipio_Africanus_Freeing_Massiva#Historical_context"
+    },
+    {
+     "text": "In 2012 Scipio Africanus Freeing Massiva was featured in Off the Wall, an open-air exhibition on the streets of Baltimore, Maryland. A reproduction of the painting, the original is part of The Walters Art Museum collection, was on display at the Clarence M.",
+     "section": "Off the Wall",
+     "source": "https://en.wikipedia.org/wiki/Scipio_Africanus_Freeing_Massiva#Off_the_Wall"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q25442922",
+   "title": "The Rape of Europa",
+   "year": 1725,
+   "image": {
+    "file": "File:(Venice) Rape of Europa by Giambattista Tiepolo - Gallerie Accademia.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/%28Venice%29_Rape_of_Europa_by_Giambattista_Tiepolo_-_Gallerie_Accademia.jpg/960px-%28Venice%29_Rape_of_Europa_by_Giambattista_Tiepolo_-_Gallerie_Accademia.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/%28Venice%29_Rape_of_Europa_by_Giambattista_Tiepolo_-_Gallerie_Accademia.jpg/1920px-%28Venice%29_Rape_of_Europa_by_Giambattista_Tiepolo_-_Gallerie_Accademia.jpg",
+    "pxW": 7360,
+    "pxH": 5407
+   },
+   "cm": {
+    "w": 142,
+    "h": 106
+   },
+   "collection": "Gallerie dell'Accademia",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Didier Descouens"
+   }
+  },
+  {
+   "qid": "Q20093134",
+   "title": "Death of Consul L. J. Brutus in a duel with Aruns",
+   "year": 1727,
+   "image": {
+    "file": "File:Giovanni Battista Tiepolo 027.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Giovanni_Battista_Tiepolo_027.jpg/960px-Giovanni_Battista_Tiepolo_027.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/41/Giovanni_Battista_Tiepolo_027.jpg",
+    "pxW": 1000,
+    "pxH": 2274
+   },
+   "cm": {
+    "w": 182,
+    "h": 383
+   },
+   "collection": "Kunsthistorisches Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q5659648",
+   "title": "Hagar and Ishmael in the Desert",
+   "year": 1732,
+   "image": {
+    "file": "File:Giovanni Battista Tiepolo 068.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Giovanni_Battista_Tiepolo_068.jpg/960px-Giovanni_Battista_Tiepolo_068.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Giovanni_Battista_Tiepolo_068.jpg/1920px-Giovanni_Battista_Tiepolo_068.jpg",
+    "pxW": 2024,
+    "pxH": 2452
+   },
+   "cm": {
+    "w": 120,
+    "h": 140
+   },
+   "collection": "Scuola Grande di San Rocco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q18167078",
+   "title": "The Banquet of Cleopatra",
+   "year": 1743,
+   "image": {
+    "file": "File:Giambattista Tiepolo - The Banquet of Cleopatra - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Giambattista_Tiepolo_-_The_Banquet_of_Cleopatra_-_Google_Art_Project.jpg/960px-Giambattista_Tiepolo_-_The_Banquet_of_Cleopatra_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Giambattista_Tiepolo_-_The_Banquet_of_Cleopatra_-_Google_Art_Project.jpg/1920px-Giambattista_Tiepolo_-_The_Banquet_of_Cleopatra_-_Google_Art_Project.jpg",
+    "pxW": 5978,
+    "pxH": 4177
+   },
+   "cm": {
+    "w": 357,
+    "h": 250
+   },
+   "collection": "National Gallery of Victoria",
+   "story": {
+    "extract": "The Banquet of Cleopatra is a painting by Giovanni Battista Tiepolo completed in 1744. It is now in the National Gallery of Victoria in Melbourne, Australia.",
+    "source": "https://en.wikipedia.org/wiki/The_Banquet_of_Cleopatra_%28Tiepolo%29"
+   },
+   "facts": [
+    {
+     "text": "The Melbourne painting was commissioned for Frederick Augustus III, Elector of Saxony, by his agent Francesco Algarotti.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Banquet_of_Cleopatra_%28Tiepolo%29#Provenance"
+    },
+    {
+     "text": "All three large paintings show the banquet taking place in the open air or in a loggia with a grand architectural setting but with the sky visible, and include a raised terrace closing off the back of the pictorial space.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/The_Banquet_of_Cleopatra_%28Tiepolo%29#Composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q18573906",
+   "title": "Apollo and Daphne",
+   "year": 1743,
+   "image": {
+    "file": "File:Giovanni Battista Tiepolo - Apollo and Daphne - WGA22293.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg/960px-Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg",
+    "pxW": 1000,
+    "pxH": 1243
+   },
+   "cm": {
+    "w": 79,
+    "h": 96
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q5968478",
+   "title": "The Visit of Henry III to the Villa Contarini",
+   "year": 1750,
+   "image": {
+    "file": "File:Tiepolo Reception of Henri III at Villa Contarini.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tiepolo_Reception_of_Henri_III_at_Villa_Contarini.jpg/960px-Tiepolo_Reception_of_Henri_III_at_Villa_Contarini.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tiepolo_Reception_of_Henri_III_at_Villa_Contarini.jpg/1920px-Tiepolo_Reception_of_Henri_III_at_Villa_Contarini.jpg",
+    "pxW": 2984,
+    "pxH": 1691
+   },
+   "cm": null,
+   "collection": "Musée Jacquemart-André",
+   "story": {
+    "extract": "Henry III Received at the Villa Contarini or Henry III's Visit to the Villa Contarini is a 1750 fresco by Giovanni Battista Tiepolo, now in the Musée Jacquemart-André in Paris. It shows Henry III of France visiting the Italian Contarini family in 1574.",
+    "source": "https://en.wikipedia.org/wiki/Henry_III_Received_at_the_Villa_Contarini"
+   },
+   "facts": [
+    {
+     "text": "This is a historical genre painting. It represents the visit made by Henry III of France, son of Henry II and his wife Catherine de Medici, to the noble Italian family of Contarini in the year 1574.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Henry_III_Received_at_the_Villa_Contarini#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q20178078",
+   "title": "Apollo Pursuing Daphne",
+   "year": 1757,
+   "image": {
+    "file": "File:Giovanni Battista Tiepolo - Apollo Pursuing Daphne, 1755-1760.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg/960px-Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/06/Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg",
+    "pxW": 1200,
+    "pxH": 935
+   },
+   "cm": {
+    "w": 87,
+    "h": 68
+   },
+   "collection": "Samuel H. Kress Collection",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q5916308",
+   "title": "The Immaculate Conception",
+   "year": 1767,
+   "image": {
+    "file": "File:The Immaculate Conception, by Giovanni Battista Tiepolo, from Prado in Google Earth.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/The_Immaculate_Conception%2C_by_Giovanni_Battista_Tiepolo%2C_from_Prado_in_Google_Earth.jpg/960px-The_Immaculate_Conception%2C_by_Giovanni_Battista_Tiepolo%2C_from_Prado_in_Google_Earth.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/The_Immaculate_Conception%2C_by_Giovanni_Battista_Tiepolo%2C_from_Prado_in_Google_Earth.jpg/1920px-The_Immaculate_Conception%2C_by_Giovanni_Battista_Tiepolo%2C_from_Prado_in_Google_Earth.jpg",
+    "pxW": 16325,
+    "pxH": 30000
+   },
+   "cm": {
+    "w": 152,
+    "h": 281
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Immaculate Conception is a painting by Italian painter Giovanni Battista Tiepolo (1696–1770). The painting was one of seven altarpieces commissioned in March 1767 from Tiepolo by King Charles III of Spain for the Church of Saint Pascual in Aranjuez, then under construction. This was originally an Alcantarine (Franciscan) monastery that was later assigned to the Conceptionist nuns.",
+    "source": "https://en.wikipedia.org/wiki/The_Immaculate_Conception_%28Tiepolo%29"
+   },
+   "facts": [
+    {
+     "text": "Church of S. Pascual Baylon, Aranjuez (1770–1775) Convent of S.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Immaculate_Conception_%28Tiepolo%29#Provenance"
+    },
+    {
+     "text": "Baroque art was meant to evoke emotion and passion instead of the calm rationality that had been prized during the Renaissance. Tiepolo's works, many of which are on an imposing scale, are also characterized by tension, exuberance, hedonism and intricate designs.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Immaculate_Conception_%28Tiepolo%29#Background"
+    },
+    {
+     "text": "The imposing Baroque style of the painting is meant to evoke emotion. It was completed between 1767 and 1768.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/The_Immaculate_Conception_%28Tiepolo%29#Painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  },
+  {
+   "qid": "Q17390181",
+   "title": "Deposition",
+   "year": 1767,
+   "image": {
+    "file": "File:Deposicao Cristo Tumulo-Tie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Deposicao_Cristo_Tumulo-Tie.jpg/960px-Deposicao_Cristo_Tumulo-Tie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Deposicao_Cristo_Tumulo-Tie.jpg/1920px-Deposicao_Cristo_Tumulo-Tie.jpg",
+    "pxW": 1976,
+    "pxH": 2650
+   },
+   "cm": null,
+   "collection": "National Museum of Ancient Art",
+   "story": {
+    "extract": "Deposition is an oil-on-canvas painting by the Italian artist Giovanni Battista Tiepolo, one of his last works, produced in Madrid in 1770 less than a year before his death. It belonged to the Portuguese Pinto-Basto family for a long period and was bought in 2008 by the Museu Nacional de Arte Antiga in Lisbon, where it now hangs.",
+    "source": "https://en.wikipedia.org/wiki/Deposition_%28Tiepolo%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giovanni Battista Tiepolo"
+   }
+  }
+ ]
+}

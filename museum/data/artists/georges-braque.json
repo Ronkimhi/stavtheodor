@@ -1,0 +1,45 @@
+{
+ "slug": "georges-braque",
+ "name": "Georges Braque",
+ "qid": "Q153793",
+ "born": 1882,
+ "died": 1963,
+ "periods": [
+  "cubism"
+ ],
+ "oneLiner": "French painter and sculptor (1882-1963)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg/330px-Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg"
+ },
+ "bio": {
+  "extract": "Georges Braque was a major 20th-century French painter, collagist, draughtsman, printmaker and sculptor. His most notable contributions were in his alliance with Fauvism from 1905, and the role he played in the development of Cubism. Braque's work between 1908 and 1912 is closely associated with that of his colleague Pablo Picasso. Their respective Cubist works were indistinguishable for many years, yet the quiet nature of Braque was partially eclipsed by the fame and notoriety of Picasso.",
+  "source": "https://en.wikipedia.org/wiki/Georges_Braque"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Georges_Braque",
+ "hasGallery": false,
+ "paintings": [
+  {
+   "qid": "Q20426820",
+   "title": "Trees at l'Estaque",
+   "year": 1908,
+   "image": {
+    "file": "File:GeorgesBraqueTreesAtEstaque.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/GeorgesBraqueTreesAtEstaque.jpg/960px-GeorgesBraqueTreesAtEstaque.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c1/GeorgesBraqueTreesAtEstaque.jpg",
+    "pxW": 1600,
+    "pxH": 1938
+   },
+   "cm": {
+    "w": 60,
+    "h": 73
+   },
+   "collection": "Statens Museum for Kunst",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Agnes Weinrich"
+   }
+  }
+ ]
+}

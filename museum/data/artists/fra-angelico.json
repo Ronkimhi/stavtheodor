@@ -1,0 +1,365 @@
+{
+ "slug": "fra-angelico",
+ "name": "Fra Angelico",
+ "qid": "Q5664",
+ "born": 1400,
+ "died": 1455,
+ "periods": [
+  "early-renaissance"
+ ],
+ "oneLiner": "Italian Early Renaissance painter",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fra_Angelico_portrait.jpg/330px-Fra_Angelico_portrait.jpg"
+ },
+ "bio": {
+  "extract": "Fra Giovanni da Fiesole, known posthumously as Fra Angelico, was an Italian Dominican friar and painter active during the early Florentine Renaissance.",
+  "source": "https://en.wikipedia.org/wiki/Fra_Angelico"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Fra_Angelico",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2378567",
+   "title": "Annunciation",
+   "year": 1420,
+   "image": {
+    "file": "File:Fra Angelico - The Annunciation - WGA0454.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Fra_Angelico_-_The_Annunciation_-_WGA0454.jpg/960px-Fra_Angelico_-_The_Annunciation_-_WGA0454.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/50/Fra_Angelico_-_The_Annunciation_-_WGA0454.jpg",
+    "pxW": 1121,
+    "pxH": 1100
+   },
+   "cm": {
+    "w": 192,
+    "h": 162
+   },
+   "collection": "Museo del Prado",
+   "story": {
+    "extract": "The Prado Annunciation is an altarpiece painted by the Italian Renaissance painter Giovanni da Fiesole, known as Fra Angelico, in the 1420s. It is one of his best-known works. Originally destined for the convent of the observant Dominicans of Fiesole, the painting is currently in the collection of the Museo del Prado in Madrid.",
+    "source": "https://en.wikipedia.org/wiki/Annunciation_%28Fra_Angelico%2C_Madrid%29"
+   },
+   "facts": [
+    {
+     "text": "The work was painted for a side altar in the Convent of San Domenico, Fiesole, where Fra Angelico was a friar. For the same church he also contributed the main altarpiece, showing the Virgin and Child Enthroned with Dominican saints (c. 1425) and the Coronation of the Virgin, now in the Louvre (c. 1424–1435) .",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_%28Fra_Angelico%2C_Madrid%29#History"
+    },
+    {
+     "text": "The scenes have a structure similar to the other two Annunciations but with some differences.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_%28Fra_Angelico%2C_Madrid%29#Description"
+    },
+    {
+     "text": "In the predella there are five scenes from Mary's life ( Birth and Marriage, the Visitation, the Adoration of the Magi, Presentation at the temple and the dormition) where the master had worked freely on the composition, less subjected to the iconographic tradition of the main scene.",
+     "section": "Predella",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_%28Fra_Angelico%2C_Madrid%29#Predella"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q3531531",
+   "title": "Adoration of the Magi",
+   "year": 1430,
+   "image": {
+    "file": "File:Fra Angelico Adoration.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fra_Angelico_Adoration.jpg/960px-Fra_Angelico_Adoration.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fra_Angelico_Adoration.jpg/1920px-Fra_Angelico_Adoration.jpg",
+    "pxW": 5005,
+    "pxH": 4872
+   },
+   "cm": {
+    "w": 137,
+    "h": 137
+   },
+   "collection": "Cook collection",
+   "story": {
+    "extract": "The Adoration of the Magi is a tondo, or circular painting, of the Adoration of the Magi assumed to be that recorded in 1492 in the Palazzo Medici Riccardi in Florence as by Fra Angelico. It dates from the mid-15th century and is now in the National Gallery of Art in Washington, D.C. Most art historians think that Filippo Lippi painted more of the original work, and that it was added to some years after by other artists, as well as including work by assistants in the workshops of both the original masters.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Fra_Angelico_and_Filippo_Lippi%29"
+   },
+   "facts": [
+    {
+     "text": "The painting has been generally identified with one recorded in an inventory of the contents of the Medici Palace made in 1492 after the death of Lorenzo the Magnificent, by which time the painting was several decades old.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Fra_Angelico_and_Filippo_Lippi%29#History"
+    },
+    {
+     "text": "The painting shows the three Magi or \"kings\" presenting their gifts to the infant Jesus, who is held by his mother. Saint Joseph stands beside her, and the manger, ox and ass of the usual depiction of the Nativity are behind this main group.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Fra_Angelico_and_Filippo_Lippi%29#Description"
+    },
+    {
+     "text": "The painting as it now appears is believed to have developed in several stages. In the usual reconstruction, first advanced by Bernard Berenson, the painting was begun by Fra Angelico and his workshop, probably in the 1440s.",
+     "section": "Stages of painting",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Fra_Angelico_and_Filippo_Lippi%29#Stages_of_painting"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico / Filippo Lippi"
+   }
+  },
+  {
+   "qid": "Q4009968",
+   "title": "Madonna and Child",
+   "year": 1430,
+   "image": {
+    "file": "File:Angelico, maria tra i santi domenico e tommaso d'aquino.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Angelico%2C_maria_tra_i_santi_domenico_e_tommaso_d%27aquino.jpg/960px-Angelico%2C_maria_tra_i_santi_domenico_e_tommaso_d%27aquino.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/76/Angelico%2C_maria_tra_i_santi_domenico_e_tommaso_d%27aquino.jpg",
+    "pxW": 1206,
+    "pxH": 1255
+   },
+   "cm": {
+    "w": 187,
+    "h": 196
+   },
+   "collection": "Hermitage Museum",
+   "story": {
+    "extract": "Madonna and Child is a c. 1435 fresco fragment by the Italian Renaissance master Fra Angelico in the sacra conversazione style. It was originally painted in the dormitory of the Convent of San Domenico, Fiesole. It was removed from the wall after the convent's suppression during the Napoleonic occupation of Italy and is now in the Hermitage Museum in St Petersburg.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_and_Child_with_St_Dominic_and_St_Thomas_Aquinas"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q3223807",
+   "title": "The Last Judgment",
+   "year": 1431,
+   "image": {
+    "file": "File:Fra Angelico — The Last Judgment.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Fra_Angelico_%E2%80%94_The_Last_Judgment.jpg/960px-Fra_Angelico_%E2%80%94_The_Last_Judgment.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Fra_Angelico_%E2%80%94_The_Last_Judgment.jpg/1920px-Fra_Angelico_%E2%80%94_The_Last_Judgment.jpg",
+    "pxW": 8864,
+    "pxH": 4664
+   },
+   "cm": {
+    "w": 210,
+    "h": 105
+   },
+   "collection": "Museum of San Marco",
+   "story": {
+    "extract": "The Last Judgment is a painting by the Renaissance artist Fra Angelico. It was commissioned by the Camaldolese Order for the newly elected abbot, the humanist scholar Ambrogio Traversari. It is variously dated to c. 1425, 1425–1430 and 1431.",
+    "source": "https://en.wikipedia.org/wiki/The_Last_Judgment_%28Fra_Angelico%2C_Florence%29"
+   },
+   "facts": [
+    {
+     "text": "Like most of Fra Angelico's work, the iconography is standard for the contemporary treatments of the Last Judgement. Among the most common subjects of painting in churches, it is found more often on walls.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Last_Judgment_%28Fra_Angelico%2C_Florence%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": "Q3065237",
+   "title": "Madonna of Humility",
+   "year": 1433,
+   "image": {
+    "file": "File:Virgen humildad-fra angelico.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Virgen_humildad-fra_angelico.jpg/960px-Virgen_humildad-fra_angelico.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Virgen_humildad-fra_angelico.jpg",
+    "pxW": 1366,
+    "pxH": 2750
+   },
+   "cm": {
+    "w": 91,
+    "h": 147
+   },
+   "collection": "Museu Nacional d'Art de Catalunya",
+   "story": {
+    "extract": "The Madonna of Humility is a tempera-on-wood painting by Fra Angelico, executed in 1433–1435, which belongs to the Thyssen-Bornemisza Museum in Madrid and is conserved on loan at the National Art Museum of Catalonia.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_of_Humility_%28Fra_Angelico%29"
+   },
+   "facts": [
+    {
+     "text": "The Virgin seated on a cushion placed directly on the ground with the child standing on her lap, holds a vase in her left hand which contains roses and a lily, symbols of motherhood and purity. The Child, who is also holding a lily, rests his forehead on his mother's cheek.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Madonna_of_Humility_%28Fra_Angelico%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q3797771",
+   "title": "Coronation of the Virgin",
+   "year": 1434,
+   "image": {
+    "file": "File:Fra' Angelico - Incoronazione della Vergine - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fra%27_Angelico_-_Incoronazione_della_Vergine_-_Google_Art_Project.jpg/960px-Fra%27_Angelico_-_Incoronazione_della_Vergine_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fra%27_Angelico_-_Incoronazione_della_Vergine_-_Google_Art_Project.jpg/1920px-Fra%27_Angelico_-_Incoronazione_della_Vergine_-_Google_Art_Project.jpg",
+    "pxW": 2925,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 114,
+    "h": 112
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Coronation of the Virgin is a painting of the Coronation of the Virgin by the Italian early Renaissance painter Fra Angelico, executed around 1432. It is now in the Uffizi Gallery of Florence. The artist executed another Coronation of the Virgin, now in the Louvre in Paris.",
+    "source": "https://en.wikipedia.org/wiki/Coronation_of_the_Virgin_%28Fra_Angelico%2C_Uffizi%29"
+   },
+   "facts": [
+    {
+     "text": "The work is mentioned as by Fra Angelico in a manuscript of the Biblioteca Nazionale di Firenze. Giorgio Vasari writes that it was located in the church of Sant'Egidio at Florence.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Coronation_of_the_Virgin_%28Fra_Angelico%2C_Uffizi%29#History"
+    },
+    {
+     "text": "The painting is on a gold ground (gilded background), a feature of medieval painting, over which is a small paradise where the Coronation is being held. It portrays Christ crowning the Virgin; both are surrounded by rays (executed through an engraving technique above the gilded background) which symbolize the divine light.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Coronation_of_the_Virgin_%28Fra_Angelico%2C_Uffizi%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q3698209",
+   "title": "Crucifixion with St Dominic praying",
+   "year": 1438,
+   "image": {
+    "file": "File:Fra Angelico - Le Calvaire avec saint Dominique en prière, RF 265.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Fra_Angelico_-_Le_Calvaire_avec_saint_Dominique_en_pri%C3%A8re%2C_RF_265.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Fra_Angelico_-_Le_Calvaire_avec_saint_Dominique_en_pri%C3%A8re%2C_RF_265.jpg",
+    "pxW": 924,
+    "pxH": 1500
+   },
+   "cm": {
+    "w": 260,
+    "h": 435
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Crucifixion with Mourners and St Dominic is a fresco fragment by the Italian early Renaissance painter Fra Angelico, executed c. 1435, from the refectory of the Convent of San Domenico, Fiesole, now in the Louvre.",
+    "source": "https://en.wikipedia.org/wiki/Crucifixion_with_Mourners_and_St_Dominic"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q934458",
+   "title": "Perugia Altarpiece",
+   "year": 1438,
+   "image": {
+    "file": "File:Angelico - Perugia Altarpiece, National Gallery of Umbria.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg/960px-Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg/1920px-Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg",
+    "pxW": 6500,
+    "pxH": 5382
+   },
+   "cm": {
+    "w": 88,
+    "h": 128
+   },
+   "collection": "National Gallery of Umbria",
+   "story": {
+    "extract": "The Perugia Altarpiece is a painting by the Italian early Renaissance painter Fra Angelico, housed in the Galleria Nazionale dell'Umbria of Perugia, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece"
+   },
+   "facts": [
+    {
+     "text": "The painting was executed for the St. Nicholas Chapel in the Basilica of San Domenico, Perugia.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece#History"
+    },
+    {
+     "text": "The work includes a large central panel, depicting the Madonna Enthroned with Child and Angels, which was fully painted by Fra Angelico. The two side panels, each forming two arched sub-panels and including a figure of saint.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q2861696",
+   "title": "Armadio degli Argenti",
+   "year": 1450,
+   "image": {
+    "file": "File:Fra Angelico 007.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Fra_Angelico_007.jpg/960px-Fra_Angelico_007.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Fra_Angelico_007.jpg",
+    "pxW": 1576,
+    "pxH": 2458
+   },
+   "cm": {
+    "w": 112,
+    "h": 116
+   },
+   "collection": "Museum of San Marco",
+   "story": {
+    "extract": "The panels of the Armadio degli Argenti are a series of tempera paintings on panel created by Fra Angelico ca. 1451–1453 and completed later by other hands using his preparatory drawings. They are now in the Museo nazionale di San Marco in Florence.",
+    "source": "https://en.wikipedia.org/wiki/Armadio_degli_Argenti"
+   },
+   "facts": [
+    {
+     "text": "The Armadio was designed as an ex voto door for Santissima Annunziata. According to a passage in the chronicle of Benedetto Dei, they were commissioned from Fra Angelico's studio by Piero de' Medici.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Armadio_degli_Argenti#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico"
+   }
+  },
+  {
+   "qid": "Q61588",
+   "title": "Fiesole Altarpiece",
+   "year": 1520,
+   "image": {
+    "file": "File:Angelico, pala di fiesole, full.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Angelico%2C_pala_di_fiesole%2C_full.jpg/960px-Angelico%2C_pala_di_fiesole%2C_full.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Angelico%2C_pala_di_fiesole%2C_full.jpg",
+    "pxW": 1700,
+    "pxH": 1274
+   },
+   "cm": {
+    "w": 237,
+    "h": 212
+   },
+   "collection": "convent of San Domenico",
+   "story": {
+    "extract": "The Fiesole Altarpiece is a painting by the Italian early Renaissance master Fra Angelico, executed around 1424–1425. It is housed in the Convent of San Domenico, Fiesole, central Italy. The background was repainted by Lorenzo di Credi in 1501.",
+    "source": "https://en.wikipedia.org/wiki/Fiesole_Altarpiece"
+   },
+   "facts": [
+    {
+     "text": "The altarpiece is among the earliest known works by Fra Angelico. It was originally commissioned for the high altar in the convent's church, but was later moved to a side altar where it is currently visible.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Fiesole_Altarpiece#History"
+    },
+    {
+     "text": "The work is a Maestà, a Madonna enthroned, a theme particularly fashionable in Florentine art at the time. The central group with the Madonna and Child is surrounded by eight adoring angels depicted in smaller size.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Fiesole_Altarpiece#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Fra Angelico / Lorenzo di Credi"
+   }
+  }
+ ]
+}

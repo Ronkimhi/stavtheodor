@@ -1,0 +1,21 @@
+{
+ "slug": "mark-rothko",
+ "name": "Mark Rothko",
+ "qid": "Q160149",
+ "born": 1903,
+ "died": 1970,
+ "periods": [
+  "abstract-expressionism"
+ ],
+ "oneLiner": "American painter of Latvian-Jewish descent (1903–1970)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg/330px-Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg"
+ },
+ "bio": {
+  "extract": "Mark Rothko was a Latvian-born American abstract painter. He is best known for his color field paintings that depicted irregular and painterly rectangular regions of color, which he produced from 1949 to 1970. Although Rothko did not personally subscribe to any one school, he is associated with the American abstract expressionism movement of modern art.",
+  "source": "https://en.wikipedia.org/wiki/Mark_Rothko"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Mark_Rothko",
+ "hasGallery": false,
+ "paintings": []
+}

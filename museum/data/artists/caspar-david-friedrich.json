@@ -1,0 +1,411 @@
+{
+ "slug": "caspar-david-friedrich",
+ "name": "Caspar David Friedrich",
+ "qid": "Q104884",
+ "born": 1774,
+ "died": 1840,
+ "periods": [
+  "romanticism"
+ ],
+ "oneLiner": "German Romantic landscape painter (1774–1840)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg/330px-Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg"
+ },
+ "bio": {
+  "extract": "Caspar David Friedrich was a German Romantic landscape painter, generally considered the most important German artist of his generation, whose often symbolic, and anti-classical work, conveys a subjective, emotional response to the natural world. Friedrich's paintings often set contemplative human figures silhouetted against night skies, morning mists, barren trees or Gothic ruins. Art historian Christopher John Murray described their presence, in diminished perspective, amid expansive landscapes, as reducing the figures to a scale that directs \"the viewer's gaze towards their metaphysical dimension\".",
+  "source": "https://en.wikipedia.org/wiki/Caspar_David_Friedrich"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Caspar_David_Friedrich",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q693746",
+   "title": "The Monk by the Sea",
+   "year": 1800,
+   "image": {
+    "file": "File:Friedrich, Caspar David - Mönch am Meer - Alte Nationalgalerie in Berlin.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Friedrich%2C_Caspar_David_-_M%C3%B6nch_am_Meer_-_Alte_Nationalgalerie_in_Berlin.jpg/960px-Friedrich%2C_Caspar_David_-_M%C3%B6nch_am_Meer_-_Alte_Nationalgalerie_in_Berlin.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Friedrich%2C_Caspar_David_-_M%C3%B6nch_am_Meer_-_Alte_Nationalgalerie_in_Berlin.jpg/1920px-Friedrich%2C_Caspar_David_-_M%C3%B6nch_am_Meer_-_Alte_Nationalgalerie_in_Berlin.jpg",
+    "pxW": 3531,
+    "pxH": 2270
+   },
+   "cm": {
+    "w": 172,
+    "h": 110
+   },
+   "collection": "Alte Nationalgalerie",
+   "story": {
+    "extract": "The Monk by the Sea is an oil painting by the German Romantic artist Caspar David Friedrich. It was painted between 1808 and 1810 in Dresden and was first shown together with the painting The Abbey in the Oakwood in the Berlin Academy exhibition of 1810. On Friedrich's request The Monk by the Sea was hung above The Abbey in the Oakwood.",
+    "source": "https://en.wikipedia.org/wiki/The_Monk_by_the_Sea"
+   },
+   "facts": [
+    {
+     "text": "The Monk by the Sea inspired responses from painters like Gustave Courbet and James Abbott McNeill Whistler later in the 19th century. In works such as Gustave Courbet's The Coast Near Palavas a lone figure is depicted as a seeker, similarly exposed and looking out to sea.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/The_Monk_by_the_Sea#Influence"
+    },
+    {
+     "text": "A single figure, dressed in a long garment, stands on a low dune sprinkled with grass. The figure, usually identified as a monk, has turned almost completely away from the viewer and surveys a rough sea and a gray, blank sky that takes up about three quarters of the picture.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/The_Monk_by_the_Sea#Development"
+    },
+    {
+     "text": "The painting was exhibited in its current form at the Berlin Academy in October 1810, to much controversy and criticism. The composition notably lacks a repoussoir—a framing device that leads the viewer's gaze into the image.",
+     "section": "Contemporary reception",
+     "source": "https://en.wikipedia.org/wiki/The_Monk_by_the_Sea#Contemporary_reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q884782",
+   "title": "Altarpiece Tetschen",
+   "year": 1807,
+   "image": {
+    "file": "File:Caspar David Friedrich - Das Kreuz im Gebirge.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Caspar_David_Friedrich_-_Das_Kreuz_im_Gebirge.jpg/960px-Caspar_David_Friedrich_-_Das_Kreuz_im_Gebirge.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/91/Caspar_David_Friedrich_-_Das_Kreuz_im_Gebirge.jpg",
+    "pxW": 1865,
+    "pxH": 1944
+   },
+   "cm": {
+    "w": 110,
+    "h": 115
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "Cross in the Mountains, also known as the Tetschen Altar, is an oil painting by the German artist Caspar David Friedrich designed as an altarpiece. Among Friedrich's first major works, the 1808 painting marked an important break with the conventions of landscape painting by including Christian iconography.",
+    "source": "https://en.wikipedia.org/wiki/Cross_in_the_Mountains"
+   },
+   "facts": [
+    {
+     "text": "The canvas depicts a golden summit cross with the crucified Jesus silhouetted in profile on a rock atop a mountain, surrounded by fir trees below. The cross, facing toward the sun, reaches the highest point in the picture but is presented obliquely and from a distance.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cross_in_the_Mountains#Description"
+    },
+    {
+     "text": "The genesis of Friedrich's altarpiece is not straightforward. For decades, art historians accepted the account of Friedrich's close friend, August Otto Rühle von Lilienstern, until new evidence arose.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Cross_in_the_Mountains#Commission"
+    },
+    {
+     "text": "On Christmas Day of 1808, Friedrich, responding to his friends' interest in the painting, exhibited the work in his studio. The artist was reluctant to do so, given that the altarpiece was designed with a specific location, the Tetschen chapel, in mind.",
+     "section": "Exhibition and contemporary reception",
+     "source": "https://en.wikipedia.org/wiki/Cross_in_the_Mountains#Exhibition_and_contemporary_reception"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q334360",
+   "title": "The Abbey in the Oakwood",
+   "year": 1809,
+   "image": {
+    "file": "File:Caspar David Friedrich - Abtei im Eichwald - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg/960px-Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg/1920px-Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
+    "pxW": 4000,
+    "pxH": 2563
+   },
+   "cm": {
+    "w": 171,
+    "h": 110
+   },
+   "collection": "Alte Nationalgalerie",
+   "story": {
+    "extract": "The Abbey in the Oakwood is an oil painting by the German Romantic artist Caspar David Friedrich. It was painted between 1809 and 1810 in Dresden and was first shown together with the painting The Monk by the Sea in the Prussian Academy of Arts exhibition of 1810. On Friedrich's request The Abbey in the Oakwood was hung beneath The Monk by the Sea.",
+    "source": "https://en.wikipedia.org/wiki/The_Abbey_in_the_Oakwood"
+   },
+   "facts": [
+    {
+     "text": "This large painting is an example of a way Friedrich uses his painting skills to represent human life issues. In the painting, Friedrich painted an old abbey in the center.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Abbey_in_the_Oakwood#Description"
+    },
+    {
+     "text": "The picture appeared at a time when Friedrich had his first public success and critical acknowledgment with the controversial Tetschener Altar.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/The_Abbey_in_the_Oakwood#Development"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q507120",
+   "title": "Mountain Landscape with Rainbow",
+   "year": 1809,
+   "image": {
+    "file": "File:Caspar David Friedrich - Gebirgslandschaft mit Regenbogen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Caspar_David_Friedrich_-_Gebirgslandschaft_mit_Regenbogen.jpg/960px-Caspar_David_Friedrich_-_Gebirgslandschaft_mit_Regenbogen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Caspar_David_Friedrich_-_Gebirgslandschaft_mit_Regenbogen.jpg/1920px-Caspar_David_Friedrich_-_Gebirgslandschaft_mit_Regenbogen.jpg",
+    "pxW": 2834,
+    "pxH": 1933
+   },
+   "cm": {
+    "w": 102,
+    "h": 69
+   },
+   "collection": "Museum Folkwang",
+   "story": {
+    "extract": "Mountain Landscape with Rainbow, is an oil painting by the German Romantic artist Caspar David Friedrich, from 1809-1810. Depicting a traveler who has stopped to view a mountainous landscape with a rainbow shining above, the painting was inspired by Friedrich's travels through Germany and along the shores of the Baltic Sea in 1809. Influenced by the Romantic values of subjective experience, Friedrich portrays a figure enraptured by the sublimity of nature.",
+    "source": "https://en.wikipedia.org/wiki/Mountain_Landscape_with_Rainbow"
+   },
+   "facts": [
+    {
+     "text": "Friedrich was one of the leading artists of the German Romantic movement, which emphasized emotion, spirituality, and individual experience. He believed subjectivity was an essential part of being an artist, writing \"the artist's law is feeling.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Mountain_Landscape_with_Rainbow#Background"
+    },
+    {
+     "text": "In Mountain Landscape with Rainbow, Friedrich represents nature as a product of the artist’s individual inner experience of the world. He indicates this personal dimension by painting a Rückenfigur in the foreground with similar physical features to himself, a blond man with bushy facial hair.",
+     "section": "Composition and analysis",
+     "source": "https://en.wikipedia.org/wiki/Mountain_Landscape_with_Rainbow#Composition_and_analysis"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q311243",
+   "title": "Wanderer above the Sea of Fog",
+   "year": 1818,
+   "image": {
+    "file": "File:Friedrich, Caspar David - Wanderer über dem Nebelmeer.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Friedrich%2C_Caspar_David_-_Wanderer_%C3%BCber_dem_Nebelmeer.jpg/960px-Friedrich%2C_Caspar_David_-_Wanderer_%C3%BCber_dem_Nebelmeer.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Friedrich%2C_Caspar_David_-_Wanderer_%C3%BCber_dem_Nebelmeer.jpg/1920px-Friedrich%2C_Caspar_David_-_Wanderer_%C3%BCber_dem_Nebelmeer.jpg",
+    "pxW": 1962,
+    "pxH": 2500
+   },
+   "cm": {
+    "w": 75,
+    "h": 95
+   },
+   "collection": "Hamburger Kunsthalle",
+   "story": {
+    "extract": "Wanderer above the Sea of Fog is a painting by German Romanticist artist Caspar David Friedrich in 1818. It depicts a man standing upon a rocky precipice with his back to the viewer; he is gazing out on a landscape covered in a thick sea of fog through which other ridges, trees, and mountains pierce, which stretches out into the distance indefinitely.",
+    "source": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog"
+   },
+   "facts": [
+    {
+     "text": "While Friedrich was respected in German and Russian circles, Wanderer above the Sea of Fog and Friedrich's work in general were not immediately regarded as masterpieces. His fame waned as he grew older; he wrote that the art judges of his day did not appreciate winter landscapes and mist enough.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog#Reception"
+    },
+    {
+     "text": "In the foreground, a man stands upon a rocky precipice with his back to the viewer. He is wrapped in a dark green overcoat, and grips a walking stick in his right hand.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog#Description"
+    },
+    {
+     "text": "The date of creation of Wanderer is generally given as 1818, although some sources indicate 1817. The provenance of the painting in the 19th century is unclear, but it came to the ownership of the gallery of Wilhelm August Luz in Berlin in 1939.",
+     "section": "Creation and history",
+     "source": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog#Creation_and_history"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q1787143",
+   "title": "Chalk Cliffs at Ruegen",
+   "year": 1818,
+   "image": {
+    "file": "File:Friedrich, Caspar David - Kreidefelsen auf Rügen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/79/Friedrich%2C_Caspar_David_-_Kreidefelsen_auf_R%C3%BCgen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/79/Friedrich%2C_Caspar_David_-_Kreidefelsen_auf_R%C3%BCgen.jpg",
+    "pxW": 940,
+    "pxH": 1200
+   },
+   "cm": {
+    "w": 71,
+    "h": 90
+   },
+   "collection": "Kunst Museum Winterthur | Reinhart am Stadtgarten",
+   "story": {
+    "extract": "Chalk Cliffs on Rügen is an oil painting of circa 1818 by German Romantic artist Caspar David Friedrich.",
+    "source": "https://en.wikipedia.org/wiki/Chalk_Cliffs_on_R%C3%BCgen"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts the view from the chalk cliffs of the Stubbenkammer, at that time one of the most famous lookout points on the island.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Chalk_Cliffs_on_R%C3%BCgen#Description"
+    },
+    {
+     "text": "In January 1818, Caspar David Friedrich married Christiane Caroline Bommer, who was about 20 years his junior. On their honeymoon in July and August 1818, they visited relatives in Neubrandenburg and Greifswald.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Chalk_Cliffs_on_R%C3%BCgen#Development"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q232087",
+   "title": "Two men contemplating the Moon",
+   "year": 1819,
+   "image": {
+    "file": "File:Caspar David Friedrich - Two Men Contemplating the Moon - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Caspar_David_Friedrich_-_Two_Men_Contemplating_the_Moon_-_Google_Art_Project.jpg/960px-Caspar_David_Friedrich_-_Two_Men_Contemplating_the_Moon_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Caspar_David_Friedrich_-_Two_Men_Contemplating_the_Moon_-_Google_Art_Project.jpg/1920px-Caspar_David_Friedrich_-_Two_Men_Contemplating_the_Moon_-_Google_Art_Project.jpg",
+    "pxW": 4457,
+    "pxH": 3571
+   },
+   "cm": {
+    "w": 44,
+    "h": 33
+   },
+   "collection": "Staatliche Kunstsammlungen Dresden",
+   "story": {
+    "extract": "Two Men Contemplating the Moon and Man and Woman Contemplating the Moon are a series of similar paintings by Caspar David Friedrich, the setting being among his best-known works. Friedrich painted at least three versions, with one variation featuring a man and a woman. The 1819–20 version in the Galerie Neue Meister is considered the original; the c. 1824 variant with a woman is in the Alte Nationalgalerie; and the c. 1830 version is in the Metropolitan Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/Two_Men_Contemplating_the_Moon"
+   },
+   "facts": [
+    {
+     "text": "The painting in the Galerie Neue Meister in Dresden was included in 1830 in Johan Christian Dahl's collection under the title Mondscheinlandschaft. Zwei männliche Figuren betrachten den aufgehenden Halbmond (Moonlit Landscape: Two Male Figures Observing the Rising Half-Moon); he sold it to the Royal Art Gallery in Dresden in 1840 for 80 talers.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Two_Men_Contemplating_the_Moon#Provenance"
+    },
+    {
+     "text": "The paintings depict a foreground scene of two people on a mountain path leading up from the centre bottom of the picture to the left. The man on the right is wearing a grey-green cape and the black beret of the altdeutsche Tracht and has a stick in his right hand.",
+     "section": "Image description and composition",
+     "source": "https://en.wikipedia.org/wiki/Two_Men_Contemplating_the_Moon#Image_description_and_composition"
+    },
+    {
+     "text": "In this painting, the man and woman face away from the viewer, centered vertically, and located left of center horizontally. The woman's arm is resting on the man's shoulder.",
+     "section": "Man and Woman Contemplating the Moon",
+     "source": "https://en.wikipedia.org/wiki/Two_Men_Contemplating_the_Moon#Man_and_Woman_Contemplating_the_Moon"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q1198515",
+   "title": "Solitary Tree",
+   "year": 1822,
+   "image": {
+    "file": "File:Der einsame Baum - Caspar David Friedrich - Alte Nationalgalerie W.S. 52.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Der_einsame_Baum_-_Caspar_David_Friedrich_-_Alte_Nationalgalerie_W.S._52.jpg/960px-Der_einsame_Baum_-_Caspar_David_Friedrich_-_Alte_Nationalgalerie_W.S._52.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Der_einsame_Baum_-_Caspar_David_Friedrich_-_Alte_Nationalgalerie_W.S._52.jpg/1920px-Der_einsame_Baum_-_Caspar_David_Friedrich_-_Alte_Nationalgalerie_W.S._52.jpg",
+    "pxW": 9530,
+    "pxH": 7288
+   },
+   "cm": {
+    "w": 71,
+    "h": 55
+   },
+   "collection": "Alte Nationalgalerie",
+   "story": {
+    "extract": "The Lonely Tree is an 1822 oil-on-canvas painting by German painter Caspar David Friedrich. It measures 55 × 71 centimetres (22 × 28 in). The work depicts a panoramic view of a romantic landscape of plains with mountains in the background.",
+    "source": "https://en.wikipedia.org/wiki/The_Lonely_Tree"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Shonagon"
+   }
+  },
+  {
+   "qid": "Q194137",
+   "title": "The Sea of Ice",
+   "year": 1823,
+   "image": {
+    "file": "File:Friedrich, Caspar David - Eismeer.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Friedrich%2C_Caspar_David_-_Eismeer.jpg/960px-Friedrich%2C_Caspar_David_-_Eismeer.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Friedrich%2C_Caspar_David_-_Eismeer.jpg/1920px-Friedrich%2C_Caspar_David_-_Eismeer.jpg",
+    "pxW": 2048,
+    "pxH": 1552
+   },
+   "cm": {
+    "w": 127,
+    "h": 97
+   },
+   "collection": "Hamburger Kunsthalle",
+   "story": {
+    "extract": "The Sea of Ice is an 1823–1824 oil-on-canvas painting by the German Romantic painter Caspar David Friedrich. It depicts Friedrich's interpretation of an Arctic landscape, with a shipwreck half-buried in the ice. Its radical composition and subject matter were unusual for their time and the work was met with incomprehension.",
+    "source": "https://en.wikipedia.org/wiki/The_Sea_of_Ice"
+   },
+   "facts": [
+    {
+     "text": "The collector Johann Gottlob von Quandt commissioned two pictures that were to symbolize the south and the north. Johann Martin von Rohden received the commission to paint Southern Nature in her Abundant and Majestic Splendor, while the commission for Northern Nature in the whole of her Terrifying Beauty fell to Friedrich.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Sea_of_Ice#History"
+    },
+    {
+     "text": "The shipwreck in The Sea of Ice suggests the idea that nature will always be superior to men. Ice is a place of death and nature will always defeat anyone who tries to intrude on it.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Sea_of_Ice#Analysis"
+    },
+    {
+     "text": "The Sea of Ice was composed in one of Friedrich's studios near Dresden. This painting is clearly based on the Arctic, though Friedrich had never visited the Arctic.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Sea_of_Ice#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  },
+  {
+   "qid": "Q1214313",
+   "title": "Life stages",
+   "year": 1834,
+   "image": {
+    "file": "File:Caspar David Friedrich - Die Lebensstufen (ca. 1834).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Caspar_David_Friedrich_-_Die_Lebensstufen_%28ca._1834%29.jpg/960px-Caspar_David_Friedrich_-_Die_Lebensstufen_%28ca._1834%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Caspar_David_Friedrich_-_Die_Lebensstufen_%28ca._1834%29.jpg/1920px-Caspar_David_Friedrich_-_Die_Lebensstufen_%28ca._1834%29.jpg",
+    "pxW": 4374,
+    "pxH": 3396
+   },
+   "cm": {
+    "w": 94,
+    "h": 72
+   },
+   "collection": "Museum der bildenden Künste",
+   "story": {
+    "extract": "The Stages of Life is an allegorical oil painting of 1835 by the German Romantic landscape painter Caspar David Friedrich. Completed just five years before his death, this picture, like many of his works, forms a meditation both on his own mortality and on the transience of life.",
+    "source": "https://en.wikipedia.org/wiki/The_Stages_of_Life"
+   },
+   "facts": [
+    {
+     "text": "The painting depicts a Baltic Sea port in the dusk. On the sea, three sailing ships returning home can be seen.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Stages_of_Life#Description"
+    },
+    {
+     "text": "Friedrich's home town of Greifswald belonged to the Duchy of Pomerania until 1630, when the area passed to Sweden as Swedish Pomerania. In 1815, it became part of Prussian Province of Pomerania.",
+     "section": "Swedish pennant",
+     "source": "https://en.wikipedia.org/wiki/The_Stages_of_Life#Swedish_pennant"
+    },
+    {
+     "text": "In keeping with the Romantic ideals of the time, Friedrich intended his paintings to function purely in visual terms, and thus he was cautious that the titles given to his work were not overly descriptive or evocative.",
+     "section": "Title",
+     "source": "https://en.wikipedia.org/wiki/The_Stages_of_Life#Title"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Caspar David Friedrich"
+   }
+  }
+ ]
+}

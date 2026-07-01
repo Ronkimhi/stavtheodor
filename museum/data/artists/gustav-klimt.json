@@ -1,0 +1,407 @@
+{
+ "slug": "gustav-klimt",
+ "name": "Gustav Klimt",
+ "qid": "Q34661",
+ "born": 1862,
+ "died": 1918,
+ "periods": [
+  "symbolism-art-nouveau"
+ ],
+ "oneLiner": "Austrian symbolist painter (1862–1918)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Klimt.jpg/330px-Klimt.jpg"
+ },
+ "bio": {
+  "extract": "Gustav Klimt was an Austrian symbolist painter and a founding member of the Vienna Secession movement. His work helped define the Art Nouveau style in Europe. Klimt is known for his paintings, murals, sketches, and other objets d'art. Klimt's primary subject was the female body, and his works are marked by a frank eroticism.",
+  "source": "https://en.wikipedia.org/wiki/Gustav_Klimt"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2324643",
+   "title": "Judith I",
+   "year": 1901,
+   "image": {
+    "file": "File:Judith 1 (cropped).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Judith_1_%28cropped%29.jpg/960px-Judith_1_%28cropped%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Judith_1_%28cropped%29.jpg",
+    "pxW": 1666,
+    "pxH": 3392
+   },
+   "cm": {
+    "w": 42,
+    "h": 84
+   },
+   "collection": "Belvedere",
+   "story": {
+    "extract": "Judith and the Head of Holofernes is an oil painting by Gustav Klimt, painted in 1901. It depicts the biblical figure Judith holding the head of Holofernes after beheading him. The beheading and its aftermath have been commonly portrayed in art since the Renaissance, and Klimt himself painted a second work depicting the subject in 1909.",
+    "source": "https://en.wikipedia.org/wiki/Judith_I"
+   },
+   "facts": [
+    {
+     "text": "Judith's face exudes a mixed charge of voluptuousness and perversion. Its traits are transfigured so as to obtain the greatest degree of intensity and seduction, which Klimt achieves by placing the woman on an unattainable plane.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Judith_I#Analysis"
+    },
+    {
+     "text": "Judith was the biblical heroine who seduced and then decapitated General Holofernes in order to save her home city of Bethulia from destruction by the Assyrian army. When Klimt addressed the biblical theme of Judith, the historical course of art had already codified its main interpretation and preferred representation.",
+     "section": "Context and influences",
+     "source": "https://en.wikipedia.org/wiki/Judith_I#Context_and_influences"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q3829156",
+   "title": "The Three Ages of Woman",
+   "year": 1905,
+   "image": {
+    "file": "File:Klimt - The Three Ages of Woman (1905) Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Klimt_-_The_Three_Ages_of_Woman_%281905%29_Google_Art_Project.jpg/960px-Klimt_-_The_Three_Ages_of_Woman_%281905%29_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Klimt_-_The_Three_Ages_of_Woman_%281905%29_Google_Art_Project.jpg/1920px-Klimt_-_The_Three_Ages_of_Woman_%281905%29_Google_Art_Project.jpg",
+    "pxW": 8984,
+    "pxH": 8936
+   },
+   "cm": {
+    "w": 180,
+    "h": 180
+   },
+   "collection": "Galleria Nazionale d'Arte Moderna e Contemporanea di Roma",
+   "story": {
+    "extract": "The Three Ages of Woman is a painting that was completed in Austria in 1905 by Gustav Klimt, symbolist painter and one of the most prominent members of the Vienna Secession movement.",
+    "source": "https://en.wikipedia.org/wiki/The_Three_Ages_of_Woman_%28Klimt%29"
+   },
+   "facts": [
+    {
+     "text": "The work features women in varying stages of age, symbolizing the cycle of life. The three are central on the canvas and are the focal point of the work.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Three_Ages_of_Woman_%28Klimt%29#Description"
+    },
+    {
+     "text": "The artist, Gustav Klimt, was a prominent Austrian painter who was born in 1862. He worked as an apprentice of Ferdinand Laufberger during the early part of his art career.",
+     "section": "Klimt, and the Vienna Secession",
+     "source": "https://en.wikipedia.org/wiki/The_Three_Ages_of_Woman_%28Klimt%29#Klimt%2C_and_the_Vienna_Secession"
+    },
+    {
+     "text": "This is an oil on canvas painting that measures 180 by 180 centimeters. It shows signs of an impasto painting technique that was common of Klimt's work.",
+     "section": "Technical elements",
+     "source": "https://en.wikipedia.org/wiki/The_Three_Ages_of_Woman_%28Klimt%29#Technical_elements"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q698487",
+   "title": "The Kiss",
+   "year": 1907,
+   "image": {
+    "file": "File:The Kiss - Gustav Klimt - Google Cultural Institute.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/960px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/1920px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+    "pxW": 7376,
+    "pxH": 7401
+   },
+   "cm": {
+    "w": 180,
+    "h": 180
+   },
+   "collection": "Belvedere",
+   "story": {
+    "extract": "The Kiss is an oil-on-canvas painting with added gold leaf, silver and platinum by the Austrian Symbolist painter Gustav Klimt. It was painted at some point in 1907 and 1908, during the height of what scholars call his \"Golden Period\". It was exhibited in 1908 under the title Liebespaar as stated in the catalogue of the exhibition.",
+    "source": "https://en.wikipedia.org/wiki/The_Kiss_%28Klimt%29"
+   },
+   "facts": [
+    {
+     "text": "Klimt painted The Kiss soon after his three-part Vienna Ceiling series, which created a scandal and were criticized as both \"pornographic\" and evidence of \"perverted excess\". The works had recast the artist as an enfant terrible for his anti-authoritarian and anti-popularist views on art.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Kiss_%28Klimt%29#Reception"
+    },
+    {
+     "text": "Gustav Klimt depicts the couple locked in an intimate embrace against a gold, flat background. The two figures are situated at the edge of a patch of flowery meadow that ends under the woman's exposed feet.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Kiss_%28Klimt%29#Description"
+    },
+    {
+     "text": "Love, intimacy, and sexuality are common themes found in Gustav Klimt's works. The Stoclet Frieze and the Beethoven Frieze are such examples of Klimt's focus on romantic intimacy.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/The_Kiss_%28Klimt%29#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q354396",
+   "title": "Portrait of Adele Bloch-Bauer I",
+   "year": 1907,
+   "image": {
+    "file": "File:Gustav Klimt, 1907, Adele Bloch-Bauer I, Neue Galerie New York.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg/960px-Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg/1920px-Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg",
+    "pxW": 2036,
+    "pxH": 2035
+   },
+   "cm": {
+    "w": 162,
+    "h": 138
+   },
+   "collection": "Neue Galerie",
+   "story": {
+    "extract": "Portrait of Adele Bloch-Bauer I is an oil painting on canvas, with gold leaf, by Gustav Klimt, completed between 1903 and 1907. The portrait was commissioned by the sitter's husband, Ferdinand Bloch-Bauer, a Viennese and Jewish banker and sugar producer. The painting was stolen by the Nazis in 1941, and displayed at the Österreichische Galerie Belvedere.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_I"
+   },
+   "facts": [
+    {
+     "text": "Klimt exhibited his portrait at the 1907 Mannheim International Art Show, alongside the Portrait of Fritza Riedler (1906). Many of the critics had negative reactions to the two paintings, describing them as \"mosaic-like wall-grotesqueries\", \"bizarre\", \"absurdities\" and \"vulgarities\".",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_I#Reception"
+    },
+    {
+     "text": "The history of the Portrait of Adele Bloch-Bauer I and the other paintings taken from the Bloch-Bauers has been recounted in three documentary films, Stealing Klimt (2007), The Rape of Europa (2007) and Adele's Wish (2008).",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_I#Legacy"
+    },
+    {
+     "text": "The painting measures 138 by 138 cm (54 by 54 in); it is composed of oil paint and silver and gold leaf on canvas. The portrait shows Adele Bloch-Bauer sitting on a golden throne or chair, in front of a golden starry background.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_I#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q1445107",
+   "title": "Danaë",
+   "year": 1907,
+   "image": {
+    "file": "File:Gustav Klimt 010.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Gustav_Klimt_010.jpg/960px-Gustav_Klimt_010.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Gustav_Klimt_010.jpg/1920px-Gustav_Klimt_010.jpg",
+    "pxW": 2024,
+    "pxH": 1960
+   },
+   "cm": {
+    "w": 83,
+    "h": 77
+   },
+   "collection": "Leopold Museum",
+   "story": {
+    "extract": "Danaë is an oil painting by the Austrian artist Gustav Klimt, created in 1907. An example of Symbolism, the canvas measures 77 x 83 cm, and was in the Galerie Würthle in Vienna until it closed in 1995. The work belongs to the art collection of Hans Dichand (1921–2010) and is today in the possession of his three children.",
+    "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Klimt%29"
+   },
+   "facts": [
+    {
+     "text": "While imprisoned by her father Acrisius, King of Argos, in a tower of bronze, Danaë was visited by Zeus, symbolized here as the golden rain flowing between her legs. It is apparent from the subject's face that she is aroused by the golden stream.",
+     "section": "Subject and composition",
+     "source": "https://en.wikipedia.org/wiki/Dana%C3%AB_%28Klimt%29#Subject_and_composition"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q17001535",
+   "title": "Death and Life",
+   "year": 1910,
+   "image": {
+    "file": "File:Gustav Klimt - Death and Life - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg/960px-Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg/1920px-Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
+    "pxW": 4059,
+    "pxH": 3533
+   },
+   "cm": {
+    "w": 200,
+    "h": 180
+   },
+   "collection": "Leopold Museum",
+   "story": {
+    "extract": "Death and Life is an oil-on-canvas painting by Austrian painter Gustav Klimt. The painting was started in 1908 and completed in 1915. It depicts an allegorical subject in Art Nouveau style.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_Life"
+   },
+   "facts": [
+    {
+     "text": "The relationship of death and life is one of Klimt's central themes, central also to his time and to his contemporaries, among them Edvard Munch and Egon Schiele. The imagination of the artist is focused no longer on physical union, but rather on the expectation that precedes it.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Death_and_Life#Description"
+    },
+    {
+     "text": "Klimt made changes to the painting in 1915, after the first five exhibitions of the painting. He changed the background colour from golden to grey, and added some mosaics.",
+     "section": "1915 alteration",
+     "source": "https://en.wikipedia.org/wiki/Death_and_Life#1915_alteration"
+    },
+    {
+     "text": "In 1911 Death and Life received first prize in the world exhibitions in Rome. In 1912 Klimt exhibited the painting at an art exhibition in Dresden.",
+     "section": "Exhibition history",
+     "source": "https://en.wikipedia.org/wiki/Death_and_Life#Exhibition_history"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q4681871",
+   "title": "Adele Bloch-Bauer II",
+   "year": 1912,
+   "image": {
+    "file": "File:Gustav Klimt 047.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Gustav_Klimt_047.jpg/960px-Gustav_Klimt_047.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/33/Gustav_Klimt_047.jpg",
+    "pxW": 1576,
+    "pxH": 2590
+   },
+   "cm": {
+    "w": 120,
+    "h": 190
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/5cb94a9cbe24b9b1ddcd5d5b81fe206a",
+   "story": {
+    "extract": "Portrait of Adele Bloch-Bauer II is a 1912 painting by Gustav Klimt. The work is a portrait of Adele Bloch-Bauer (1881–1925), a Vienna socialite who was a patron and close friend of Klimt.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_II"
+   },
+   "facts": [
+    {
+     "text": "Adele Bloch-Bauer was the wife of Ferdinand Bloch-Bauer, a wealthy industrialist who sponsored the arts and supported Gustav Klimt. Adele Bloch-Bauer was the only person whose portrait was painted twice by Klimt; she also appeared in the much more famous Portrait of Adele Bloch-Bauer I.",
+     "section": "Ownership",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_II#Ownership"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q5967091",
+   "title": "The Maiden",
+   "year": 1913,
+   "image": {
+    "file": "File:KlimtPanna.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/KlimtPanna.jpg/960px-KlimtPanna.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/KlimtPanna.jpg/1920px-KlimtPanna.jpg",
+    "pxW": 4790,
+    "pxH": 4576
+   },
+   "cm": {
+    "w": 200,
+    "h": 190
+   },
+   "collection": "National Gallery Prague",
+   "story": {
+    "extract": "The Maiden is a painting by the Austrian painter Gustav Klimt painted in 1913. The Maiden was one of Klimt's last paintings before he died. Currently it is stored in the National Gallery in Prague, Czech Republic.",
+    "source": "https://en.wikipedia.org/wiki/The_Maiden_%28Klimt%29"
+   },
+   "facts": [
+    {
+     "text": "The abundance of the flowers in the painting symbolizes the evolution into womanhood. The painting depicts the central figure in blue with six women that are interlacing surrounding her.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Maiden_%28Klimt%29#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q136433749",
+   "title": "Portrait of Elisabeth Lederer",
+   "year": 1914,
+   "image": {
+    "file": "File:Gustav Klimt - Bildnis der Elisabeth Lederer (1914-1916).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gustav_Klimt_-_Bildnis_der_Elisabeth_Lederer_%281914-1916%29.jpg/960px-Gustav_Klimt_-_Bildnis_der_Elisabeth_Lederer_%281914-1916%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gustav_Klimt_-_Bildnis_der_Elisabeth_Lederer_%281914-1916%29.jpg/1920px-Gustav_Klimt_-_Bildnis_der_Elisabeth_Lederer_%281914-1916%29.jpg",
+    "pxW": 2500,
+    "pxH": 3458
+   },
+   "cm": {
+    "w": 130,
+    "h": 180
+   },
+   "collection": null,
+   "story": {
+    "extract": "Portrait of Elisabeth Lederer or Portrait of Elisabeth Bachofen-Echt is an oil painting on canvas by Austrian artist Gustav Klimt, painted 1914–1916. The life-size portrait depicts a young Elisabeth Lederer, daughter of Viennese art collectors August and Serena Lederer, who commissioned the work. The painting was later owned by American collector Leonard Lauder.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Elisabeth_Lederer"
+   },
+   "facts": [
+    {
+     "text": "Portrait of Elisabeth Lederer was commissioned by Elisabeth's parents in 1914, when she was a young woman but still living at home. Klimt worked on the portrait for several years and was reportedly reluctant to consider it finished.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Elisabeth_Lederer#History"
+    },
+    {
+     "text": "In Portrait of Elisabeth Lederer, Klimt depicts twenty-year-old Elisabeth in a flowing, white dress, as he had done for her mother in Portrait of Serena Lederer. For Elisabeth, however, it is not a loose gown but a close-fitting top and a skirt, over which she wears a white chiffon shawl with floral patterns.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Elisabeth_Lederer#Description"
+    },
+    {
+     "text": "Elisabeth Lederer was the daughter of Jewish industrialist August Lederer and Serena Lederer, some of Klimt's most prominent patrons. Klimt lived close to the Lederers and was a frequent visitor.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Elisabeth_Lederer#Subject"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  },
+  {
+   "qid": "Q106522623",
+   "title": "Woman With a Fan",
+   "year": 1917,
+   "image": {
+    "file": "File:Gustav Klimt - Dame mit Fächer.jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gustav_Klimt_-_Dame_mit_F%C3%A4cher.jpeg/960px-Gustav_Klimt_-_Dame_mit_F%C3%A4cher.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gustav_Klimt_-_Dame_mit_F%C3%A4cher.jpeg/1920px-Gustav_Klimt_-_Dame_mit_F%C3%A4cher.jpeg",
+    "pxW": 2772,
+    "pxH": 2760
+   },
+   "cm": {
+    "w": 100,
+    "h": 100
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/0a2330500176415932689991034663d6",
+   "story": {
+    "extract": "Lady with a Fan was the final portrait created by the Austrian painter Gustav Klimt. Painted in 1917, the uncommissioned piece depicting an unidentified woman was on an easel in his studio when he died in 1918. Like many of Klimt's late works, it incorporates strong Asian influences including many Chinese motifs.",
+    "source": "https://en.wikipedia.org/wiki/Lady_with_a_Fan_%28Klimt%29"
+   },
+   "facts": [
+    {
+     "text": "Lady with a Fan was still on an easel in Klimt's studio, along with his unfinished work, The Bride, when he had a stroke and eventually died in early 1918. Following his death in February 1918, the painting was held by the gallery of Gustav Nebehay of Vienna.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_a_Fan_%28Klimt%29#Provenance"
+    },
+    {
+     "text": "The square painting depicts a woman with chestnut curls against a yellow backdrop with Oriental motifs. As she gazes into the distance to the left, her patterned silk robe is slipping off her shoulder and she holds a fan concealing her bosom.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_a_Fan_%28Klimt%29#Description"
+    },
+    {
+     "text": "The portrait has been exhibited publicly on only four occasions: in 1920 at the Vienna Kunstschau; in 1981 as part of a Gustav Klimt exhibition in museums and galleries in Tokyo, Osaka, Iwaki, and Yamanashi, Japan; in 1992 at the International Cultural Centre in Krakow, Poland; and from 2021 to 2022 at the Belvedere in Vienna.",
+     "section": "Exhibits",
+     "source": "https://en.wikipedia.org/wiki/Lady_with_a_Fan_%28Klimt%29#Exhibits"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gustav Klimt"
+   }
+  }
+ ]
+}

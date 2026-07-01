@@ -1,0 +1,417 @@
+{
+ "slug": "jean-auguste-dominique-ingres",
+ "name": "Jean-Auguste-Dominique Ingres",
+ "qid": "Q23380",
+ "born": 1780,
+ "died": 1867,
+ "periods": [
+  "neoclassicism"
+ ],
+ "oneLiner": "French painter (1780–1867)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg/330px-Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg"
+ },
+ "bio": {
+  "extract": "Jean-Auguste-Dominique Ingres was a French Neoclassical painter. Ingres was profoundly influenced by past artistic traditions and aspired to become the guardian of academic orthodoxy against the ascendant Romantic style. Although he considered himself a painter of history in the tradition of Nicolas Poussin and Jacques-Louis David, it is his portraits, both painted and drawn, that are recognized as his greatest legacy. His expressive distortions of form and space made him an important precursor of modern art, influencing Henri Matisse, Pablo Picasso, and other modernists.",
+  "source": "https://en.wikipedia.org/wiki/Jean-Auguste-Dominique_Ingres"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Jean-Auguste-Dominique_Ingres",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q5818528",
+   "title": "Oedipus and the Sphinx",
+   "year": 1800,
+   "image": {
+    "file": "File:Œdipe explique l'énigme du sphinx - Jean-Auguste Dominique Ingres - Musée du Louvre Peintures RF 218.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/%C5%92dipe_explique_l%27%C3%A9nigme_du_sphinx_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_218.jpg/960px-%C5%92dipe_explique_l%27%C3%A9nigme_du_sphinx_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_218.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/%C5%92dipe_explique_l%27%C3%A9nigme_du_sphinx_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_218.jpg/1920px-%C5%92dipe_explique_l%27%C3%A9nigme_du_sphinx_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_218.jpg",
+    "pxW": 6844,
+    "pxH": 8957
+   },
+   "cm": {
+    "w": 144,
+    "h": 189
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Oedipus and the Sphinx is a painting by the French Neoclassical artist Jean-Auguste-Dominique Ingres. Originally a student work painted in 1808, it was enlarged and completed in 1827. The painting depicts Oedipus explaining the riddle of the Sphinx.",
+    "source": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_%28Ingres%29"
+   },
+   "facts": [
+    {
+     "text": "The painting was begun in Rome, where Ingres had arrived belatedly in 1806 after winning the Grand Prix de Rome in 1801. Working in a studio on the grounds of the Villa Medici, Ingres continued his studies and, as required of every winner of the Prix, he sent works at regular intervals to Paris so his progress could be judged.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_%28Ingres%29#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q1282840",
+   "title": "Napoleon I on his Imperial Throne",
+   "year": 1806,
+   "image": {
+    "file": "File:Ingres, Napoleon on his Imperial throne.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ingres%2C_Napoleon_on_his_Imperial_throne.jpg/960px-Ingres%2C_Napoleon_on_his_Imperial_throne.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ingres%2C_Napoleon_on_his_Imperial_throne.jpg/1920px-Ingres%2C_Napoleon_on_his_Imperial_throne.jpg",
+    "pxW": 2047,
+    "pxH": 3364
+   },
+   "cm": {
+    "w": 188,
+    "h": 235
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Napoleon I on his Imperial Throne is an 1806 portrait of Napoleon I of France in his coronation costume, painted by the French painter Jean-Auguste-Dominique Ingres.",
+    "source": "https://en.wikipedia.org/wiki/Napoleon_I_on_His_Imperial_Throne"
+   },
+   "facts": [
+    {
+     "text": "The painting was exhibited as work number 272 at the Salon of 1806 as His Majesty the Emperor on his throne, when it was recorded as being owned by the Corps législatif. At the same salon Robert Lefèvre exhibited his Portrait of Napoleon in his coronation costume.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Napoleon_I_on_His_Imperial_Throne#History"
+    },
+    {
+     "text": "At the Salon, it produced a disturbing impression on the public, due not only to Ingres's stylistic idiosyncrasies but also to his depiction of the Carolingian imagery worn by Napoleon at his coronation.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Napoleon_I_on_His_Imperial_Throne#Reception"
+    },
+    {
+     "text": "The painting shows Napoleon as emperor, in the costume he wore for his coronation, seated on a circular-backed throne with armrests adorned with ivory balls. In his right hand, he holds the scepter of Charlemagne.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Napoleon_I_on_His_Imperial_Throne#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q3080509",
+   "title": "The Valpinçon Bather",
+   "year": 1808,
+   "image": {
+    "file": "File:Jean-Auguste-Dominique Ingres - La Baigneuse Valpinçon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg/960px-Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg/1920px-Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg",
+    "pxW": 2890,
+    "pxH": 4312
+   },
+   "cm": {
+    "w": 98,
+    "h": 146
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Valpinçon Bather is an 1808 painting by the French Neoclassical artist Jean-Auguste-Dominique Ingres (1780–1867), held in the Louvre since 1879. Painted while the artist was studying at the French Academy in Rome, it was originally titled Seated Woman but later became known after one of its nineteenth-century owners.",
+    "source": "https://en.wikipedia.org/wiki/The_Valpin%C3%A7on_Bather"
+   },
+   "facts": [
+    {
+     "text": "Le violon d'Ingres is a 1924 photograph by Man Ray inspired by The Valpinçon Bather. There are more than twenty references to The Valpinçon Bather in Herman Braun-Vega's work.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/The_Valpin%C3%A7on_Bather#Influence"
+    },
+    {
+     "text": "Ingres had earlier painted female nudes, such as his Bathing Woman of 1807, yet this work is widely regarded as his first great treatment of the subject. As in the previous smaller work, the model is shown from behind; however, The Valpinçon Bather lacks the earlier painting's overt sexuality, instead depicting a calm and measured sensuality.",
+     "section": "Context",
+     "source": "https://en.wikipedia.org/wiki/The_Valpin%C3%A7on_Bather#Context"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q3498655",
+   "title": "Vénus Anadyomène",
+   "year": 1808,
+   "image": {
+    "file": "File:Ingres Venere Anadiomene.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ingres_Venere_Anadiomene.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ingres_Venere_Anadiomene.jpg",
+    "pxW": 563,
+    "pxH": 1000
+   },
+   "cm": {
+    "w": 92,
+    "h": 163
+   },
+   "collection": "Condé Museum",
+   "story": {
+    "extract": "Venus Anadyomene is a painting by the French painter Jean-Auguste-Dominique Ingres. It is now held at the Musée Condé, Chantilly, France. It is a female nude of the Venus Anadyomene type, showing the goddess Venus rising from the sea.",
+    "source": "https://en.wikipedia.org/wiki/Venus_Anadyomene_%28Ingres%29"
+   },
+   "facts": [
+    {
+     "text": "Ingres began the painting in 1808 during his stay in Rome at the French Academy. The first preparatory drawings showed Venus in the Venus Pudica position, standing and covering her breasts with her hands.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Venus_Anadyomene_%28Ingres%29#History"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q1978815",
+   "title": "Grande Odalisque",
+   "year": 1810,
+   "image": {
+    "file": "File:La grande odalisque - Jean-Auguste Dominique Ingres - Musée du Louvre Peintures RF 1158.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/La_grande_odalisque_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1158.jpg/960px-La_grande_odalisque_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1158.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/La_grande_odalisque_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1158.jpg/1920px-La_grande_odalisque_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1158.jpg",
+    "pxW": 9311,
+    "pxH": 5196
+   },
+   "cm": {
+    "w": 162,
+    "h": 91
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Grande Odalisque, also known as Une Odalisque or La Grande Odalisque, is an oil painting by Jean-Auguste-Dominique Ingres depicting an odalisque, or concubine in 1814. Ingres' contemporaries considered the work to signify Ingres' break from Neoclassicism, indicating a shift toward exotic Romanticism.",
+    "source": "https://en.wikipedia.org/wiki/Grande_Odalisque"
+   },
+   "facts": [
+    {
+     "text": "The painting was commissioned by Napoleon Bonaparte's sister, Queen Caroline Murat of Naples, and was finished in 1814.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Grande_Odalisque#History"
+    },
+    {
+     "text": "Stemming from the initial criticism the painting received, the figure in Grande Odalisque is thought to be drawn with \"two or three vertebrae too many.\" Critics at the time believed the elongations to be errors on the part of Ingres, but recent studies show the elongations to have been deliberate distortions.",
+     "section": "Anatomy",
+     "source": "https://en.wikipedia.org/wiki/Grande_Odalisque#Anatomy"
+    },
+    {
+     "text": "French painter Jules Flandrin made a copy of La Grande Odalisque in 1903 which is exhibited at the Ingres Museum in Montauban, France. In 1964, French artist Martial Raysse, in his series Made in Japan, reframed La Grande Odalisque to make a portrait in the style of American pop art.",
+     "section": "In other works",
+     "source": "https://en.wikipedia.org/wiki/Grande_Odalisque#In_other_works"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q3202169",
+   "title": "The Apotheosis of Homer",
+   "year": 1827,
+   "image": {
+    "file": "File:Homère déifié, dit aussi L'apothéose d'Homère - Jean-Auguste Dominique Ingres - Musée du Louvre Peintures INV 5417 ; C 196.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hom%C3%A8re_d%C3%A9ifi%C3%A9%2C_dit_aussi_L%27apoth%C3%A9ose_d%27Hom%C3%A8re_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_INV_5417_%3B_C_196.jpg/960px-Hom%C3%A8re_d%C3%A9ifi%C3%A9%2C_dit_aussi_L%27apoth%C3%A9ose_d%27Hom%C3%A8re_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_INV_5417_%3B_C_196.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hom%C3%A8re_d%C3%A9ifi%C3%A9%2C_dit_aussi_L%27apoth%C3%A9ose_d%27Hom%C3%A8re_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_INV_5417_%3B_C_196.jpg/1920px-Hom%C3%A8re_d%C3%A9ifi%C3%A9%2C_dit_aussi_L%27apoth%C3%A9ose_d%27Hom%C3%A8re_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_INV_5417_%3B_C_196.jpg",
+    "pxW": 10028,
+    "pxH": 7465
+   },
+   "cm": {
+    "w": 512,
+    "h": 386
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Apotheosis of Homer is a grand 1827 painting by the French Neoclassical artist Jean-Auguste-Dominique Ingres, now exhibited at the Louvre as INV 5417. The symmetrical composition depicts Homer being crowned by a winged figure personifying Victory or the Universe. Forty-four additional figures pay homage to the poet in a kind of classical confession of faith.",
+    "source": "https://en.wikipedia.org/wiki/The_Apotheosis_of_Homer_%28Ingres%29"
+   },
+   "facts": [
+    {
+     "text": "A state commission to decorate a ceiling of the musée Charles X at the Louvre (now the ancient Egyptian galleries), it formed part of a renovation project commissioned by Charles X to have himself remembered in the grand tradition of Bourbon building works at the Louvre.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Apotheosis_of_Homer_%28Ingres%29#History"
+    },
+    {
+     "text": "Surrounding Homer are poets, artists, and philosophers both ancient and modern—the modern personages are mostly confined to the lower register of the composition, although Ingres deemed Raphael and Michelangelo worthy of elevation to stand alongside the ancients. The figures are:",
+     "section": "Figures shown",
+     "source": "https://en.wikipedia.org/wiki/The_Apotheosis_of_Homer_%28Ingres%29#Figures_shown"
+    },
+    {
+     "text": "Ingres revisited the subject in several later works, including an undated watercolour (Lille, Musée des Beaux-Arts) and paintings such as Homer and His Guide (1861; Brussels, Royal Collection) and The Odyssey (Lyon, Musée des Beaux-Arts). In 1854 be began work on a drawing of the composition to be used as a model for the engraver Calamatta.",
+     "section": "Later repetitions",
+     "source": "https://en.wikipedia.org/wiki/The_Apotheosis_of_Homer_%28Ingres%29#Later_repetitions"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q2985455",
+   "title": "Portrait of Monsieur Bertin",
+   "year": 1832,
+   "image": {
+    "file": "File:Louis-Francois Bertin.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Louis-Francois_Bertin.jpg/960px-Louis-Francois_Bertin.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Louis-Francois_Bertin.jpg",
+    "pxW": 1139,
+    "pxH": 1400
+   },
+   "cm": {
+    "w": 95,
+    "h": 116
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "Portrait of Monsieur Bertin is an 1832 oil on canvas painting by Jean-Auguste-Dominique Ingres. It depicts Louis-François Bertin (1766–1841), the French writer, art collector and director of the pro-royalist Journal des débats. Ingres completed the portrait during his first period of success; having achieved acclaim as a history painter, he accepted portrait commissions with reluctance, regarding them as a distraction from more important work.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Monsieur_Bertin"
+   },
+   "facts": [
+    {
+     "text": "Monsieur Bertin was exhibited at the 1833 Salon alongside his 1807 Portrait of Madame Duvaucey. It met with near universal praise to become his most successful artwork to that point.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Monsieur_Bertin#Reception"
+    },
+    {
+     "text": "The Bertin portrait has been hugely influential. At first it served as a model for depictions of energetic and intellectual 19th-century men, and later as a more universal type.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Monsieur_Bertin#Legacy"
+    },
+    {
+     "text": "Bertin is presented as energetic, strong and warm-hearted. His hair is grey verging on white, his fingers spread across his knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Monsieur_Bertin#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q1215604",
+   "title": "The Source",
+   "year": 1856,
+   "image": {
+    "file": "File:Jean Auguste Dominique Ingres - The Spring - Google Art Project 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg/960px-Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg/1920px-Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg",
+    "pxW": 3099,
+    "pxH": 6190
+   },
+   "cm": {
+    "w": 80,
+    "h": 163
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Source is an oil painting on canvas by French neoclassical painter Jean-Auguste-Dominique Ingres. The work was begun in Florence around 1820 and not completed until 1856, in Paris. When Ingres completed The Source, he was seventy-six years old, already famous, and president of the École des Beaux-Arts.",
+    "source": "https://en.wikipedia.org/wiki/The_Source_%28Ingres%29"
+   },
+   "facts": [
+    {
+     "text": "The first exhibition of The Source was in 1856, the year it was completed. The painting was received enthusiastically.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/The_Source_%28Ingres%29#Reception"
+    },
+    {
+     "text": "The painting depicts a nude woman standing upright between an opening in the rocks and holding in her hands a pitcher, from which water flows. She thus represents a water source or spring, for which source is the normal French word, and which, in classical literature, is sacred to the Muses and a source of poetic inspiration.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Source_%28Ingres%29#Description"
+    },
+    {
+     "text": "Art historians Frances Fowle and Richard Thomson suggest that there is a \"symbolic unity of woman and nature\" in The Source, where the flowering plants and water serve as a background which Ingres fills with woman's \"secondary attributes\".",
+     "section": "Theme",
+     "source": "https://en.wikipedia.org/wiki/The_Source_%28Ingres%29#Theme"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q3137278",
+   "title": "Madame Moitessier",
+   "year": 1856,
+   "image": {
+    "file": "File:Dominique Ingres - Mme Moitessier.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Dominique_Ingres_-_Mme_Moitessier.jpg/960px-Dominique_Ingres_-_Mme_Moitessier.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Dominique_Ingres_-_Mme_Moitessier.jpg/1920px-Dominique_Ingres_-_Mme_Moitessier.jpg",
+    "pxW": 4577,
+    "pxH": 6000
+   },
+   "cm": {
+    "w": 92,
+    "h": 120
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "Madame Moitessier is a portrait of Marie-Clotilde-Inès Moitessier begun in 1844 and completed in 1856 by Jean-Auguste-Dominique Ingres. The portrait, which depicts Madame Moitessier seated, has been in the collection of the National Gallery in London since 1946.",
+    "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_Moitessier"
+   },
+   "facts": [
+    {
+     "text": "Pablo Picasso first encountered the painting at an exhibition in Paris, in 1921. Over the next decade, he repeatedly referenced Ingres in his art, particularly in his homage in the painting Woman with a Book.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_Moitessier#Legacy"
+    },
+    {
+     "text": "Marie-Clotilde-Inès de Foucauld (1821–1897) was the daughter of a French civil servant in the department of forests and waterways. In 1842 she married a widower twice her age, the rich banker and lace merchant Sigisbert Moitessier, thus becoming Madame Moitessier.",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_Moitessier#Subject"
+    },
+    {
+     "text": "He began work on the seated version, depicting the subject in a floral dress. Work on the commission proceeded slowly.",
+     "section": "Two portraits",
+     "source": "https://en.wikipedia.org/wiki/Portrait_of_Madame_Moitessier#Two_portraits"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  },
+  {
+   "qid": "Q2027662",
+   "title": "The Turkish Bath",
+   "year": 1862,
+   "image": {
+    "file": "File:Le Bain Turc, by Jean Auguste Dominique Ingres, from C2RMFFXD.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Le_Bain_Turc%2C_by_Jean_Auguste_Dominique_Ingres%2C_from_C2RMFFXD.jpg/960px-Le_Bain_Turc%2C_by_Jean_Auguste_Dominique_Ingres%2C_from_C2RMFFXD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Le_Bain_Turc%2C_by_Jean_Auguste_Dominique_Ingres%2C_from_C2RMFFXD.jpg/1920px-Le_Bain_Turc%2C_by_Jean_Auguste_Dominique_Ingres%2C_from_C2RMFFXD.jpg",
+    "pxW": 5000,
+    "pxH": 4978
+   },
+   "cm": {
+    "w": 108,
+    "h": 110
+   },
+   "collection": "Department of Paintings of the Louvre",
+   "story": {
+    "extract": "The Turkish Bath is an oil painting by Jean-Auguste-Dominique Ingres, initially completed between 1852 and 1859, but modified in 1862. The painting depicts a group of nude women at a pool in a harem. It has an erotic style that evokes both the Near East and earlier western styles associated with mythological subject matter.",
+    "source": "https://en.wikipedia.org/wiki/The_Turkish_Bath"
+   },
+   "facts": [
+    {
+     "text": "The painter's first buyer was a relation of Napoleon III, but he handed it back some days later, his wife having found it \"unsuitable\" (\"peu convenable\"). It was purchased in 1865 by Khalil Bey, a former Turkish diplomat who added it to his collection of erotic paintings.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Turkish_Bath#Provenance"
+    },
+    {
+     "text": "The Turkish Bath has inspired many modern artists. It can be seen in Félix Vallotton's 1907 painting Le Bain turc, in Pablo Picasso's Les demoiselles d'Avignon or in Tamara de Lempicka's Femmes au bain (1922).",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Turkish_Bath#Legacy"
+    },
+    {
+     "text": "The painting is known for its subtle colourisation, especially the very pale skin of the women resting in the privacy of a bathing area. The figures are arranged in a very harmonious, circular manner, forming a \"great curvaceous fugue\" that heightens the eroticism of the painting.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Turkish_Bath#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jean-Auguste-Dominique Ingres"
+   }
+  }
+ ]
+}

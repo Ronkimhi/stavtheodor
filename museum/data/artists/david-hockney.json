@@ -1,0 +1,22 @@
+{
+ "slug": "david-hockney",
+ "name": "David Hockney",
+ "qid": "Q159907",
+ "born": 1937,
+ "died": 2026,
+ "periods": [
+  "pop-art",
+  "contemporary"
+ ],
+ "oneLiner": "English painter and printmaker (1937–2026)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg/330px-David_Hockney_in_Washington_Square_Park_%281977%29.jpg"
+ },
+ "bio": {
+  "extract": "David Hockney was an English painter, stage designer and photographer. As an important contributor to the pop art movement of the 1960s, he is considered one of the most influential British artists of the 20th and 21st centuries. He was known for his vivid, stylised realism and championed figurative work, often in a bold style, during a period when abstract art predominated.",
+  "source": "https://en.wikipedia.org/wiki/David_Hockney"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/David_Hockney",
+ "hasGallery": false,
+ "paintings": []
+}

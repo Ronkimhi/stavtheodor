@@ -1,0 +1,419 @@
+{
+ "slug": "franz-marc",
+ "name": "Franz Marc",
+ "qid": "Q44054",
+ "born": 1880,
+ "died": 1916,
+ "periods": [
+  "expressionism"
+ ],
+ "oneLiner": "German artist (1880–1916)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Marc_autograph.png"
+ },
+ "bio": {
+  "extract": "Franz Moritz Wilhelm Marc was a German painter and printmaker, one of the key figures of German Expressionism. He was a founding member of Der Blaue Reiter, a journal whose name later became synonymous with the circle of artists collaborating in it.",
+  "source": "https://en.wikipedia.org/wiki/Franz_Marc"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Franz_Marc",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q52086946",
+   "title": "Moor huts in the Dachau moss",
+   "year": 1902,
+   "image": {
+    "file": "File:Franz Marc, Moorhütten im Dachauer Moos, 1902.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Franz_Marc%2C_Moorh%C3%BCtten_im_Dachauer_Moos%2C_1902.jpg/960px-Franz_Marc%2C_Moorh%C3%BCtten_im_Dachauer_Moos%2C_1902.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Franz_Marc%2C_Moorh%C3%BCtten_im_Dachauer_Moos%2C_1902.jpg/1920px-Franz_Marc%2C_Moorh%C3%BCtten_im_Dachauer_Moos%2C_1902.jpg",
+    "pxW": 3000,
+    "pxH": 1718
+   },
+   "cm": {
+    "w": 74,
+    "h": 44
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Hut in Dachau Moors is an oil on canvas painting by Franz Marc, executed in 1902. It is one of the painter's earliest known paintings and is part of the collection of the Franz Marc Museum, in Kochel am See.",
+    "source": "https://en.wikipedia.org/wiki/Hut_in_Dachau_Moors"
+   },
+   "facts": [
+    {
+     "text": "The painting was created in 1902 and thus comes from the time when Franz Marc studied painting at the Academy of Arts in Munich with Gabriel von Hackl (1843–1926) and Wilhelm von Diez (1839–1907). Through this, Marc received a solid basic education in the 19th century style of painting, but did not come into contact with newer art movements.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Hut_in_Dachau_Moors#History"
+    },
+    {
+     "text": "The lower half of the picture shows the landscape of the Dachau Moors, while the upper half is dominated by a cloudy sky. In the center of the picture stands a moor hut in the middle of a grove of trees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Hut_in_Dachau_Moors#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q30073976",
+   "title": "Two Women on the Hillside",
+   "year": 1906,
+   "image": {
+    "file": "File:Franz Marc - Zwei Frauen am Berg, 1906.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Franz_Marc_-_Zwei_Frauen_am_Berg%2C_1906.jpg/960px-Franz_Marc_-_Zwei_Frauen_am_Berg%2C_1906.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/02/Franz_Marc_-_Zwei_Frauen_am_Berg%2C_1906.jpg",
+    "pxW": 1600,
+    "pxH": 997
+   },
+   "cm": {
+    "w": 25,
+    "h": 16
+   },
+   "collection": "Bavarian State Painting Collections",
+   "story": {
+    "extract": "Two Women on the Hillside is an oil-on-canvas painting created in 1906 by German painter Franz Marc. It is part of the Bavarian State Painting Collections and is on a permanent loan at the Franz Marc Museum in Kochel am See.",
+    "source": "https://en.wikipedia.org/wiki/Two_Women_on_the_Hillside"
+   },
+   "facts": [
+    {
+     "text": "Marc met the fellow painters Marie Schnür and Maria Franck in 1905, who would both later become his wives. He spent the summer of 1906 in Kochel.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Two_Women_on_the_Hillside#History"
+    },
+    {
+     "text": "The painting is 15.5 cm high and 24.7 cm wide. It was painted with oil paint on canvas and mounted on cardboard.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Two_Women_on_the_Hillside#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q2592400",
+   "title": "Blue Horse I",
+   "year": 1911,
+   "image": {
+    "file": "File:Franz Marc Blaues Pferd 1911.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Franz_Marc_Blaues_Pferd_1911.jpg/960px-Franz_Marc_Blaues_Pferd_1911.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Franz_Marc_Blaues_Pferd_1911.jpg/1920px-Franz_Marc_Blaues_Pferd_1911.jpg",
+    "pxW": 2000,
+    "pxH": 2678
+   },
+   "cm": {
+    "w": 84,
+    "h": 112
+   },
+   "collection": "Lenbachhaus",
+   "story": {
+    "extract": "Blue Horse I is an oil painting by Franz Marc completed in 1911. It is one of the painter's most famous works and is part of the collection of the Städtische Galerie im Lenbachhaus in Munich. The painting was part of several exhibitions that Franz Marc and fellow Russian painter Wassily Kandinsky presented to the public under the name Der Blaue Reiter from late 1911 until 1914.",
+    "source": "https://en.wikipedia.org/wiki/Blue_Horse_I"
+   },
+   "facts": [
+    {
+     "text": "In 1911, Marc drew in his sketchbook no. XXIV a pencil drawing, about the size of a postcard, entitled Young Horse in Mountain Landscape, which already shows the composition of the later painting.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horse_I#History"
+    },
+    {
+     "text": "Almost the entire height of the portrait-format painting is taken up by a foal painted in blue, facing the viewer and tilting its head slightly to one side. The upper body is light blue with white spots, while the hooves and mane are painted in dark navy blue.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horse_I#Description"
+    },
+    {
+     "text": "The Deutsche Post issued a stamp with the painting on 9 February 2012, to celebrate the 100th anniversary of Der Blaue Reiter.",
+     "section": "Honours",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horse_I#Honours"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q1218349",
+   "title": "Yellow Cow",
+   "year": 1911,
+   "image": {
+    "file": "File:Franz Marc-The Yellow Cow-1911.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Franz_Marc-The_Yellow_Cow-1911.jpg/960px-Franz_Marc-The_Yellow_Cow-1911.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Franz_Marc-The_Yellow_Cow-1911.jpg",
+    "pxW": 1067,
+    "pxH": 797
+   },
+   "cm": {
+    "w": 189,
+    "h": 140
+   },
+   "collection": "Solomon R. Guggenheim Museum",
+   "story": {
+    "extract": "Yellow Cow is a painting by the German artist Franz Marc, dating to 1911. It is one of the artist's most well known works, and is one of several of his depictions of animals in Expressionist style. This work is oil on canvas and measures 140.5 x 189.2 centimeters.",
+    "source": "https://en.wikipedia.org/wiki/Yellow_Cow"
+   },
+   "facts": [
+    {
+     "text": "Yellow Cow dates to Marc's formative phase, during which he developed the Farbsymbolik (colour symbolism) that permeates the painting. For Marc, blue was equated with spirituality and maleness, yellow with femininity and sensuality, and red with the earth.",
+     "section": "Colour",
+     "source": "https://en.wikipedia.org/wiki/Yellow_Cow#Colour"
+    },
+    {
+     "text": "According to art historian Mark Rosenthal, Yellow Cow can be seen as a veiled depiction of Marc's wife, Maria Franck, whom he married the same year the painting was created.",
+     "section": "Interpretations",
+     "source": "https://en.wikipedia.org/wiki/Yellow_Cow#Interpretations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q15461864",
+   "title": "The Large Blue Horses",
+   "year": 1911,
+   "image": {
+    "file": "File:Franz Marc 005.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Franz_Marc_005.jpg/960px-Franz_Marc_005.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Franz_Marc_005.jpg/1920px-Franz_Marc_005.jpg",
+    "pxW": 2048,
+    "pxH": 1171
+   },
+   "cm": {
+    "w": 181,
+    "h": 106
+   },
+   "collection": "Walker Art Center",
+   "story": {
+    "extract": "Blue Horses is a 1911 painting by German painter and printmaker Franz Marc (1880–1916).",
+    "source": "https://en.wikipedia.org/wiki/Blue_Horses"
+   },
+   "facts": [
+    {
+     "text": "In 1942, Blue Horses was purchased by the Walker Art Center in Minneapolis, Minnesota through The T. Walker Foundation and its Gilbert M.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horses#Provenance"
+    },
+    {
+     "text": "This work, which represents three vividly coloured blue horses looking down in front of a landscape of rolling red hills, is characterized by its bright primary colors.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horses#Analysis"
+    },
+    {
+     "text": "In 1911 Marc was a founding member of Der Blaue Reiter (The Blue Rider), and was the center of a circle of German and Russian expatriate artists along with August Macke, Wassily Kandinsky, and several others whose works were seminal to the development of German Expressionism.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Blue_Horses#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q4016290",
+   "title": "Fox",
+   "year": 1911,
+   "image": {
+    "file": "File:Marc-blue-black fox.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Marc-blue-black_fox.jpg/960px-Marc-blue-black_fox.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Marc-blue-black_fox.jpg/1920px-Marc-blue-black_fox.jpg",
+    "pxW": 2560,
+    "pxH": 2042
+   },
+   "cm": {
+    "w": 64,
+    "h": 50
+   },
+   "collection": "Von der Heydt Museum",
+   "story": {
+    "extract": "Fox, also known as Blue and Black Fox or Blue Fox, is an oil on canvas painting by Franz Marc, from 1911. It is part of the collection of the Von der Heydt Museum in Wuppertal.",
+    "source": "https://en.wikipedia.org/wiki/Fox_%28Marc%29"
+   },
+   "facts": [
+    {
+     "text": "The work came into the possession of the Von der Heydt Museum in 1952 through a donation by Eduard von der Heydt from a collection that his father August von der Heydt had started.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Fox_%28Marc%29#Provenance"
+    },
+    {
+     "text": "The Fox depicts in the central position a fox with blue hues; the fox is lying on the ground, in a half-curled pose, turned to the left and under a tree. The tree trunk and some leaves are indicated on the right side of the painting.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Fox_%28Marc%29#Description"
+    },
+    {
+     "text": "The painting was created in July 1911 in fellow painter August Macke's studio in Bonn, when Marc was returning from a trip to England. A few months later, on December 18, 1911, the exhibition group Der Blaue Reiter, founded by Franz Marc and Wassily Kandinsky, had its first exhibition, in Munich.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Fox_%28Marc%29#Background"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q22570092",
+   "title": "Blue horse",
+   "year": 1912,
+   "image": {
+    "file": "File:Franz Marc - Il cavallino blu (1912).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Franz_Marc_-_Il_cavallino_blu_%281912%29.jpg/960px-Franz_Marc_-_Il_cavallino_blu_%281912%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Franz_Marc_-_Il_cavallino_blu_%281912%29.jpg/1920px-Franz_Marc_-_Il_cavallino_blu_%281912%29.jpg",
+    "pxW": 2060,
+    "pxH": 1559
+   },
+   "cm": null,
+   "collection": "Saarland Museum",
+   "story": {
+    "extract": "Little Blue Horse is an oil on canvas painting by German Expressionist painter Franz Marc, from 1912. it is held in the Saarland Museum, in Saarbrücken.",
+    "source": "https://en.wikipedia.org/wiki/Little_Blue_Horse"
+   },
+   "facts": [
+    {
+     "text": "Marc made the painting for Walterchen, the son of his friend and colleague August Macke, a fact that the inscription at his top right demonstrates. In 1956, the museum director Rudolf Bornschein acquired the painting for the Saarbrücker Stadt-und Heimatmuseum, which in 1968 merged with the Moderne Galerie.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Little_Blue_Horse#Provenance"
+    },
+    {
+     "text": "The has the dimensions of 57.5 x 73 centimeters. It is in the collection of the Saarland Museum, in Saarbrücken.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Little_Blue_Horse#Description"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q2432407",
+   "title": "The fate of the animals",
+   "year": 1913,
+   "image": {
+    "file": "File:Franz Marc-The fate of the animals-1913.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Franz_Marc-The_fate_of_the_animals-1913.jpg/960px-Franz_Marc-The_fate_of_the_animals-1913.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/32/Franz_Marc-The_fate_of_the_animals-1913.jpg",
+    "pxW": 1150,
+    "pxH": 838
+   },
+   "cm": {
+    "w": 264,
+    "h": 196
+   },
+   "collection": "Kunstmuseum Basel",
+   "story": {
+    "extract": "Fate of the Animals is an oil on canvas painting by Franz Marc created in 1913. In contrast to most of Marc's other works, this painting presents animals in a brutal way rather than depicting them in a peaceful manner. The reasons for Marc's strong ties with animals as his subjects remain uncertain, but it is thought to stem from his childhood dog.",
+    "source": "https://en.wikipedia.org/wiki/Fate_of_the_Animals"
+   },
+   "facts": [
+    {
+     "text": "The title of the work in English is Fate of the Animals, which is a translation of the German name Tierschicksale. According to Frederick S.",
+     "section": "Title and subject",
+     "source": "https://en.wikipedia.org/wiki/Fate_of_the_Animals#Title_and_subject"
+    },
+    {
+     "text": "The painting contains only diagonal lines. The lack of horizontal and vertical lines throughout the painting along with the deep colors, create tension.",
+     "section": "Techniques",
+     "source": "https://en.wikipedia.org/wiki/Fate_of_the_Animals#Techniques"
+    },
+    {
+     "text": "A forest fire is shown with many animals in the chaos. The scene starts at the top left corner where there are three main sparks present.",
+     "section": "Narration",
+     "source": "https://en.wikipedia.org/wiki/Fate_of_the_Animals#Narration"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q28839414",
+   "title": "The Foxes",
+   "year": 1913,
+   "image": {
+    "file": "File:Franz Marc - The Foxes - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg/960px-Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg/1920px-Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg",
+    "pxW": 2497,
+    "pxH": 3358
+   },
+   "cm": {
+    "w": 66,
+    "h": 88
+   },
+   "collection": "Museum Kunstpalast",
+   "story": {
+    "extract": "The Foxes is a 1913 painting by German painter Franz Marc. It was held by the Museum Kunstpalast in Düsseldorf until returned to the heirs of Kurt Grawi in 2022, and sold at auction by them.",
+    "source": "https://en.wikipedia.org/wiki/The_Foxes_%28Marc%29"
+   },
+   "facts": [
+    {
+     "text": "Jewish investment banker Kurt Grawi purchased the painting in 1928. Following the rise of Nazi Germany, Grawi was forced to sell much of his art collection and was incarcerated in Sachsenhausen concentration camp.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/The_Foxes_%28Marc%29#Provenance"
+    },
+    {
+     "text": "Prior to painting The Foxes in 1913, Marc was inspired by French Cubism and the Orphic works of Robert Delaunay. The Foxes reflects Marc's breakdown of the animals into abstract forms, presented in harmonized colors.",
+     "section": "Analysis",
+     "source": "https://en.wikipedia.org/wiki/The_Foxes_%28Marc%29#Analysis"
+    },
+    {
+     "text": "In 2017, the heirs of Kurt Grawi made a restitution claim for the painting. In 2021, the German advisory panel on Nazi-looted art urged the city of Düsseldorf to return the painting from the Museum Kunstpalast to the Grawi family.",
+     "section": "Restitution",
+     "source": "https://en.wikipedia.org/wiki/The_Foxes_%28Marc%29#Restitution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  },
+  {
+   "qid": "Q1197647",
+   "title": "The Tower of Blue Horses",
+   "year": 1914,
+   "image": {
+    "file": "File:Franz Marc 029a.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Franz_Marc_029a.jpg/960px-Franz_Marc_029a.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Franz_Marc_029a.jpg",
+    "pxW": 1000,
+    "pxH": 1568
+   },
+   "cm": {
+    "w": 130,
+    "h": 200
+   },
+   "collection": "\"degenerate art\" collection",
+   "story": {
+    "extract": "The Tower of Blue Horses is a 1913 oil painting by the German Expressionist artist Franz Marc. It has been called one of his best works, but went missing in 1945.",
+    "source": "https://en.wikipedia.org/wiki/The_Tower_of_Blue_Horses"
+   },
+   "facts": [
+    {
+     "text": "Marc created the painting in summer 1913. A preliminary sketch in ink and gouache survives in the form of a new year's postcard for that year to the poet Else Lasker-Schüler, one of 28 painted postcards which the artist sent to her and which she answered in illustrated letters later used in her novel Malik.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Tower_of_Blue_Horses#History"
+    },
+    {
+     "text": "The Tower of Blue Horses was a large work, 200 by 130 centimetres (6 ft 7 in × 4 ft 3 in).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Tower_of_Blue_Horses#Description"
+    },
+    {
+     "text": "The Tower of Blue Horses is one of several animal paintings by Marc, among which a large group depict horses. It is one of the most notable of those in which he attempts to \"see and paint through [the animal's] eyes\", or as Paul Klee put it, \"he raises them to his own level\".",
+     "section": "Reception and significance",
+     "source": "https://en.wikipedia.org/wiki/The_Tower_of_Blue_Horses#Reception_and_significance"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Franz Marc"
+   }
+  }
+ ]
+}

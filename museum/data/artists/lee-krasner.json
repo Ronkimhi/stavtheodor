@@ -1,0 +1,21 @@
+{
+ "slug": "lee-krasner",
+ "name": "Lee Krasner",
+ "qid": "Q237959",
+ "born": 1908,
+ "died": 1984,
+ "periods": [
+  "abstract-expressionism"
+ ],
+ "oneLiner": "American abstract expressionist painter (1908–1984)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Lee_Krasner%2C_artist%2C_cropped.jpg/330px-Lee_Krasner%2C_artist%2C_cropped.jpg"
+ },
+ "bio": {
+  "extract": "Lenore \"Lee\" Krasner was an American painter and visual artist active primarily in New York whose work has been associated with the Abstract Expressionist movement.",
+  "source": "https://en.wikipedia.org/wiki/Lee_Krasner"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Lee_Krasner",
+ "hasGallery": false,
+ "paintings": []
+}

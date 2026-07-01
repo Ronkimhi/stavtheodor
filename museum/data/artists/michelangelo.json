@@ -1,0 +1,324 @@
+{
+ "slug": "michelangelo",
+ "name": "Michelangelo",
+ "qid": "Q5592",
+ "born": 1475,
+ "died": 1564,
+ "periods": [
+  "high-renaissance"
+ ],
+ "oneLiner": "Italian artist and architect (1475-1564)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/330px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg"
+ },
+ "bio": {
+  "extract": "Michelangelo di Lodovico Buonarroti Simoni, known mononymously as Michelangelo, was an Italian sculptor, painter, architect, and poet of the High Renaissance. He was born in the Republic of Florence but was mostly active in Rome from his 30s onwards. His work was inspired by models from classical antiquity and had a lasting influence on Western art. Michelangelo's creative abilities and mastery in a range of artistic arenas define him as an archetypal Renaissance man, along with his rival and elder contemporary, Leonardo da Vinci.",
+  "source": "https://en.wikipedia.org/wiki/Michelangelo"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Michelangelo",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q2327759",
+   "title": "The Torment of Saint Anthony",
+   "year": 1487,
+   "image": {
+    "file": "File:Michelangelo Buonarroti - The Torment of Saint Anthony - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Michelangelo_Buonarroti_-_The_Torment_of_Saint_Anthony_-_Google_Art_Project.jpg/960px-Michelangelo_Buonarroti_-_The_Torment_of_Saint_Anthony_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Michelangelo_Buonarroti_-_The_Torment_of_Saint_Anthony_-_Google_Art_Project.jpg/1920px-Michelangelo_Buonarroti_-_The_Torment_of_Saint_Anthony_-_Google_Art_Project.jpg",
+    "pxW": 3001,
+    "pxH": 4104
+   },
+   "cm": {
+    "w": 34,
+    "h": 47
+   },
+   "collection": "Q1741629",
+   "story": {
+    "extract": "The Torment of Saint Anthony is a painting attributed to Michelangelo, though his authorship is disputed. If it is by Michelangelo, it is his earliest surviving work, having been produced in c. 1487–88 when he was 12-13 years old. It is in the collection of Kimbell Art Museum in Fort Worth, Texas.",
+    "source": "https://en.wikipedia.org/wiki/The_Torment_of_Saint_Anthony"
+   },
+   "facts": [
+    {
+     "text": "It is one of only four surviving panel paintings by Michelangelo, whom Vasari records as speaking disparagingly of oil painting in later life, and the only one, if the new attribution holds, from his adolescence. Schongauer's late-Gothic style is also in strong contrast with the rest of Michelangelo's oeuvre, even in his youth.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/The_Torment_of_Saint_Anthony#Legacy"
+    },
+    {
+     "text": "The painting was previously attributed to the workshop of Domenico Ghirlandaio, under whom Michelangelo had served his apprenticeship. Under that attribution it was bought at a Sotheby's auction in London in July 2008 by an American art dealer for US$2 million.",
+     "section": "Ownership",
+     "source": "https://en.wikipedia.org/wiki/The_Torment_of_Saint_Anthony#Ownership"
+    },
+    {
+     "text": "Giorgio Vasari in his Lives of the Artists noted that Michelangelo had painted St. Anthony after a print by Schongauer, and Ascanio Condivi recorded that Michelangelo had gone to a market to draw fish scales, a feature not present in the original engraving.",
+     "section": "Characteristics",
+     "source": "https://en.wikipedia.org/wiki/The_Torment_of_Saint_Anthony#Characteristics"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Michelangelo"
+   }
+  },
+  {
+   "qid": "Q1684762",
+   "title": "Manchester Madonna",
+   "year": 1494,
+   "image": {
+    "file": "File:MICHELANGELO - Manchester Madonna adjusted.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MICHELANGELO_-_Manchester_Madonna_adjusted.JPG/960px-MICHELANGELO_-_Manchester_Madonna_adjusted.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MICHELANGELO_-_Manchester_Madonna_adjusted.JPG/1920px-MICHELANGELO_-_Manchester_Madonna_adjusted.JPG",
+    "pxW": 2154,
+    "pxH": 2918
+   },
+   "cm": {
+    "w": 77,
+    "h": 105
+   },
+   "collection": "Borghese Collection",
+   "story": {
+    "extract": "The Madonna and Child with St John and Angels (c. 1497), also known as The Manchester Madonna, is an unfinished painting in the National Gallery, London, attributed to Michelangelo. It is one of three surviving panel paintings attributed to the artist and has been dated to his first period in Rome. The work first came to public attention in the Art Treasures Exhibition in Manchester in 1857, hence the title the \"Manchester Madonna\".",
+    "source": "https://en.wikipedia.org/wiki/Manchester_Madonna"
+   },
+   "facts": [
+    {
+     "text": "The completed angel nearest the Virgin is noted as being similar to a sketch the young Michelangelo made while he was apprenticed to Domenico Ghirlandaio.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/Manchester_Madonna#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q1473546",
+   "title": "Doni Tondo",
+   "year": 1500,
+   "image": {
+    "file": "File:Tondo Doni 2015.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tondo_Doni_2015.png/960px-Tondo_Doni_2015.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tondo_Doni_2015.png/1920px-Tondo_Doni_2015.png",
+    "pxW": 2318,
+    "pxH": 2387
+   },
+   "cm": null,
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Doni Tondo or Doni Madonna is the only finished panel painting by the mature Michelangelo to survive. Now in the Uffizi in Florence, Italy, and still in its original frame, the Doni Tondo commissioned by Agnolo Doni, probably to commemorate his marriage to Maddalena Strozzi, the daughter of a powerful Tuscan family. The painting is in the form of a tondo, meaning in Italian 'round', a shape which is frequently associated during the Renaissance with domestic ideas.",
+    "source": "https://en.wikipedia.org/wiki/Doni_Tondo"
+   },
+   "facts": [
+    {
+     "text": "Giorgio Vasari tells us that the work was commissioned by Agnolo Doni (portrait). The occasion may have been to celebrate his marriage in January 1504 to Maddelena Strozzi (portrait); the blazon of the Strozzi family with three crescent moons is carved in the frame.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Doni_Tondo#History"
+    },
+    {
+     "text": "Mary is the most prominent figure in the composition, taking up much of the center of the image. She sits directly on the ground without a cushion between herself and the grass, to better communicate the theme of her relationship to the earth (?).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doni_Tondo#Description"
+    },
+    {
+     "text": "The Doni Tondo is believed to be the only existing panel picture Michelangelo painted without the aid of assistants; and, unlike his Manchester Madonna and Entombment (both National Gallery, London), the attribution to him has never been questioned.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Doni_Tondo#Technique"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3944655",
+   "title": "The Sacrifice of Noah",
+   "year": 1508,
+   "image": {
+    "file": "File:Michelangelo, Sacrifice of Noah 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Michelangelo%2C_Sacrifice_of_Noah_01.jpg/960px-Michelangelo%2C_Sacrifice_of_Noah_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Michelangelo%2C_Sacrifice_of_Noah_01.jpg",
+    "pxW": 1132,
+    "pxH": 780
+   },
+   "cm": {
+    "w": 260,
+    "h": 170
+   },
+   "collection": "Sistine Chapel",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3707697",
+   "title": "The Deluge",
+   "year": 1509,
+   "image": {
+    "file": "File:El Diluvio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/El_Diluvio.jpg/960px-El_Diluvio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/El_Diluvio.jpg/1920px-El_Diluvio.jpg",
+    "pxW": 4328,
+    "pxH": 2887
+   },
+   "cm": null,
+   "collection": "Sistine Chapel",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q1213160",
+   "title": "The Entombment",
+   "year": 1510,
+   "image": {
+    "file": "File:Entombment Michelangelo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Entombment_Michelangelo.jpg/960px-Entombment_Michelangelo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Entombment_Michelangelo.jpg/1920px-Entombment_Michelangelo.jpg",
+    "pxW": 3884,
+    "pxH": 4226
+   },
+   "cm": {
+    "w": 150,
+    "h": 162
+   },
+   "collection": "National Gallery",
+   "story": {
+    "extract": "The Entombment is an unfinished oil-on-panel painting of the burial of Jesus, now generally attributed to the Italian Renaissance master Michelangelo Buonarroti and dated to around 1500 or 1501. It is in the National Gallery in London, which purchased the work in 1868 from Robert Macpherson, a Scottish photographer resident in Rome, who, according to various conflicting accounts, had acquired the painting there some 20 years earlier. It is one of a handful of paintings attributed to Michelangelo, alongside the Manchester Madonna, the Doni Tondo, and possibly, The Torment of Saint Anthony.",
+    "source": "https://en.wikipedia.org/wiki/The_Entombment_%28Michelangelo%29"
+   },
+   "facts": [
+    {
+     "text": "The chronological position of this work has been the source of some dispute, although it is generally considered an early work. Some authorities believe that it may have been executed by one of Michelangelo's pupils from a drawing by the master or was a direct imitation of his work.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Entombment_%28Michelangelo%29#History"
+    },
+    {
+     "text": "The centre of the panel portrays the naked body of the dead Christ being carried up a flight of steps to the sepulchre, which was intended to be painted in the blank area in the rocks at the top right of the work. Michelangelo's typically androgynous depiction of the other figures makes it difficult to identify them securely.",
+     "section": "Depiction",
+     "source": "https://en.wikipedia.org/wiki/The_Entombment_%28Michelangelo%29#Depiction"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3696827",
+   "title": "The Creation of the Sun, Moon and Planets",
+   "year": 1511,
+   "image": {
+    "file": "File:Michelangelo, Creation of the Sun, Moon, and Plants 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Michelangelo%2C_Creation_of_the_Sun%2C_Moon%2C_and_Plants_01.jpg/960px-Michelangelo%2C_Creation_of_the_Sun%2C_Moon%2C_and_Plants_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Michelangelo%2C_Creation_of_the_Sun%2C_Moon%2C_and_Plants_01.jpg",
+    "pxW": 1319,
+    "pxH": 670
+   },
+   "cm": {
+    "w": 570,
+    "h": 280
+   },
+   "collection": "Sistine Chapel",
+   "story": {
+    "extract": "The Creation of the Sun, Moon and Plants is one of the frescoes from Michelangelo's nine Books of Genesis scenes on the Sistine Chapel ceiling. It is the second scene in the chronological sequence on the ceiling, depicting the third and fourth day of the Creation narrative together in one panel.",
+    "source": "https://en.wikipedia.org/wiki/The_Creation_of_the_Sun%2C_Moon%2C_and_Plants"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3696835",
+   "title": "The Creation of Eve",
+   "year": 1511,
+   "image": {
+    "file": "File:Michelangelo, Creation of Eve 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Michelangelo%2C_Creation_of_Eve_01.jpg/960px-Michelangelo%2C_Creation_of_Eve_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Michelangelo%2C_Creation_of_Eve_01.jpg",
+    "pxW": 1080,
+    "pxH": 770
+   },
+   "cm": {
+    "w": 260,
+    "h": 170
+   },
+   "collection": "Vatican Museums",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3955632",
+   "title": "The Separation of the Earth and Waters",
+   "year": 1511,
+   "image": {
+    "file": "File:Sistine Chapel ceiling, Creation of Adam.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Sistine_Chapel_ceiling%2C_Creation_of_Adam.jpg/960px-Sistine_Chapel_ceiling%2C_Creation_of_Adam.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Sistine_Chapel_ceiling%2C_Creation_of_Adam.jpg/1920px-Sistine_Chapel_ceiling%2C_Creation_of_Adam.jpg",
+    "pxW": 6720,
+    "pxH": 4480
+   },
+   "cm": {
+    "w": 270,
+    "h": 155
+   },
+   "collection": "Sistine Chapel",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  },
+  {
+   "qid": "Q3955636",
+   "title": "Separation of Light from Darkness",
+   "year": 1512,
+   "image": {
+    "file": "File:Dividing Light from Darkness.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Dividing_Light_from_Darkness.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Dividing_Light_from_Darkness.jpg",
+    "pxW": 834,
+    "pxH": 1050
+   },
+   "cm": {
+    "w": 260,
+    "h": 180
+   },
+   "collection": "Vatican Museums",
+   "story": {
+    "extract": "The Separation of Light from Darkness is, from the perspective of the Genesis chronology, the first of nine central panels that run along the center of Michelangelo's Sistine Chapel ceiling and which depict scenes from the Book of Genesis. Michelangelo probably completed this panel in the summer of 1512, the last year of the Sistine ceiling project. It is one of five smaller scenes that alternate with four larger scenes that run along the center of the Sistine ceiling.",
+    "source": "https://en.wikipedia.org/wiki/Separation_of_Light_from_Darkness"
+   },
+   "facts": [
+    {
+     "text": "In the Separation of Light from Darkness, the image of God is framed by four ignudi and by two shields or medallions. The ignudi are young, nude males that Michelangelo painted as supporting figures at each corner of the five smaller narrative scenes along the center of the ceiling.",
+     "section": "Composition",
+     "source": "https://en.wikipedia.org/wiki/Separation_of_Light_from_Darkness#Composition"
+    },
+    {
+     "text": "Several authors have proposed that Michelangelo concealed anatomical images in this fresco and that these anatomical images account for its unusual features.",
+     "section": "Anatomical interpretations",
+     "source": "https://en.wikipedia.org/wiki/Separation_of_Light_from_Darkness#Anatomical_interpretations"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Michelangelo"
+   }
+  }
+ ]
+}

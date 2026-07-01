@@ -1,0 +1,64 @@
+{
+ "slug": "andy-warhol",
+ "name": "Andy Warhol",
+ "qid": "Q5603",
+ "born": 1928,
+ "died": 1987,
+ "periods": [
+  "pop-art"
+ ],
+ "oneLiner": "American artist, film director, and producer (1928–1987)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg/330px-Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg"
+ },
+ "bio": {
+  "extract": "Andy Warhol was an American artist and filmmaker. Widely regarded as the most important artist of the second half of the 20th century, Warhol's practice spanned various media, including painting, filmmaking, photography, publishing, and performance art. A leading figure in the Pop art movement, his work explores the relationship between advertising, consumerism, mass media, and celebrity culture. His embrace of mechanical reproduction challenged traditional boundaries between high and low culture.",
+  "source": "https://en.wikipedia.org/wiki/Andy_Warhol"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Andy_Warhol",
+ "hasGallery": false,
+ "paintings": [
+  {
+   "qid": "Q2697937",
+   "title": "Campbell's Soup Cans",
+   "year": 1962,
+   "image": {
+    "file": "File:Campbell's Soup Cans by Andy Warhol.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg/960px-Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg/1920px-Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg",
+    "pxW": 2604,
+    "pxH": 1514
+   },
+   "cm": {
+    "w": 414,
+    "h": 246
+   },
+   "collection": "Museum of Modern Art",
+   "story": {
+    "extract": "Campbell's Soup Cans is a series of 32 paintings produced by American artist Andy Warhol between 1961 and 1962. Each painting depicts a different variety of Campbell's soup cans in a uniform 20-by-16-inch format. First exhibited in July 1962 at the Ferus Gallery in Los Angeles, the pop art works challenged traditional distinctions between fine art and commercial imagery.",
+    "source": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans"
+   },
+   "facts": [
+    {
+     "text": "In retrospect, the debut of Warhol's Campbell's Soup Can paintings is regarded as a pivotal moment in the rise of Pop art. At the time, however, it generated little fanfare.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans#Legacy"
+    },
+    {
+     "text": "Warhol moved to New York City in 1949 after studying at the Carnegie Institute of Technology in Pittsburgh, and quickly found success as a commercial illustrator, with his first published drawing appearing in Glamour that same year.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans#Background"
+    },
+    {
+     "text": "In late 1961, Warhol began working on Campbell's Soup Cans at his home studio at 1342 Lexington Avenue in New York. The series consisted of 32 hand-painted canvases, each depicting a different variety of Campbell's soup.",
+     "section": "Production",
+     "source": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans#Production"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Brandon Fick"
+   }
+  }
+ ]
+}
