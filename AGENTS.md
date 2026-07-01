@@ -1,0 +1,105 @@
+# AGENTS.md — Rules for Every AI Working on stavtheodor.com
+
+**Read this file in full BEFORE making any change to this repository. No exceptions.**
+
+More than one AI assistant works on this site (different Claude/other-AI sessions, sometimes at the same time). This file is the single source of truth for how we work here, and the sync channel between us. Ron set this up on 2026-07-01 after two sessions edited the repo simultaneously and collided on push.
+
+---
+
+## 1. Sync protocol (multi-AI coordination)
+
+1. **Pull first.** Run `git fetch origin && git status` before touching anything. If `origin/main` is ahead, integrate it before you start. Assume another AI may have pushed since your context was built.
+2. **Read the Work Log** (bottom of this file) to see what the other AI did recently and whether anything is in flight.
+3. **Push promptly.** Do not sit on finished work; the longer you wait, the more likely a collision.
+4. **Never force-push.** If push is rejected, fetch and rebase, resolve carefully, keep BOTH sides' content (a rejected push here almost always means the other AI added something real, like a new post).
+5. **Leave other work alone.** If you find untracked files or changes you did not make (example: a work-in-progress directory), do NOT commit, delete, or "clean up" that work. It belongs to the other AI or to Ron. Commit only the files you yourself changed.
+6. **Append to the Work Log** (Section 7) in every commit that changes site content or tooling: one dated line, what you did, anything the other AI must know.
+7. **Keep this file updated.** If Ron gives you a new standing rule for this site, add it here in the same commit. This file is how the rule reaches the other AI.
+
+---
+
+## 2. Site facts
+
+| Fact | Value |
+|---|---|
+| Live site | https://stavtheodor.com (www redirects to apex) |
+| What it is | THEODORA, Stav Theodor-Kimhi's fine art curation practice + the Art Radar blog (exhibitions in NY / NJ / Tel Aviv) |
+| Hosting | GitHub Pages, free tier, auto-deploys on push to `main` (no CI, no build step) |
+| Repo | `Ronkimhi/stavtheodor`, remote `origin`, branch `main` |
+| GitHub account | `Ronkimhi` (Ron's personal account). Verify with `gh auth status` before pushing. |
+| Architecture | One hand-authored `index.html` + static assets. No framework, no npm. `build-post-pages.py` generates per-post pages and the sitemap. |
+| Line endings | LF everywhere (normalized 2026-07-01). Do not reintroduce CRLF. |
+| CDN cache | ~10 minutes (`max-age=600`). A push that "doesn't show up" is usually just cache. Bypass check: `curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/` |
+
+---
+
+## 3. Content rules (Ron's standing rules — mandatory)
+
+1. **Every post is bilingual.** Each Art Radar post carries TWO body blocks inside the same `<article>`:
+   - Hebrew original: `<div class="post-body" lang="he" dir="rtl">`
+   - Full English translation: `<div class="post-body post-body-en" lang="en" dir="ltr">`
+
+   The English must be a complete, faithful translation of the Hebrew source. Not a summary, not a paraphrase, no added opinions. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default, localStorage key `radarLang`) shows one language at a time; both stay in the HTML so search engines and LLMs index both. Rule set by Ron 2026-07-01; it applies to every new post, forever.
+
+2. **No em dashes (—) and no en dashes (–) in any English text you write.** Use commas, colons, periods, or parentheses. Hard rule from Ron, applies to posts, metadata, llms.txt, agent.txt, this file, commit messages, everything.
+
+3. **Per-post JSON-LD** uses `"inLanguage": ["he", "en"]`, real permalink URLs (`/radar/<slug>/`, never `#slug` anchors), and an `"about"` Event/ExhibitionEvent block when the post covers an exhibition with dates.
+
+4. **LLM discoverability is a first-class feature.** The site is deliberately positioned so LLMs surface it for "art recommendations in New Jersey / New York" queries. Maintain: `robots.txt` (AI-crawler allowlist), `llms.txt` + `agent.txt` (curated maps, hand-updated per post), `sitemap.xml` (generated), FAQPage + Person/Organization/WebSite JSON-LD in `index.html`. When you add a post, update `llms.txt` and `agent.txt` in the same commit.
+
+5. **Post titles are English; slugs are lowercase-hyphenated and never reused.** Images go in `images/` named `YYYY-MM-DD-slug.jpg`, web-optimized (~900px wide). Never embed images as base64 in the HTML.
+
+---
+
+## 4. Standard workflow for adding or editing a post
+
+Full templates and step-by-step detail: `ADD-BLOG-POST-GUIDE.md` (same directory). Short version:
+
+```
+1. git fetch origin && git status        # sync check (Section 1)
+2. Edit index.html: JSON-LD <script> + <article> pair at the TOP of <section id="posts">
+   with BOTH language blocks (Hebrew + full English)
+3. Add image(s) to images/
+4. python3 build-post-pages.py           # regenerates radar/<slug>/ pages + sitemap.xml
+5. Update llms.txt and agent.txt post lists (real /radar/<slug>/ URLs)
+6. Append a line to the Work Log in AGENTS.md
+7. git add <your files only> && git commit && git push origin main
+8. Verify live (allow ~10 min CDN cache; bypass trick in Section 2)
+```
+
+---
+
+## 5. Never do
+
+- Never hand-edit `radar/<slug>/index.html` or `sitemap.xml` (generated; edit `index.html` and re-run `build-post-pages.py`).
+- Never force-push, never push to the deprecated `old-ronki-art-backup` remote.
+- Never touch DNS/GoDaddy, the GitHub Pages custom-domain config, or the Google Analytics tag (`G-4300MN0Q97`) as part of content work. If the domain itself seems broken, stop and flag it to Ron.
+- Never commit secrets, credentials, or Ron's private/business files. This is a PUBLIC repo serving a public site.
+- Never delete or commit another AI's untracked work-in-progress.
+- Never publish content Stav/Ron did not provide as source material. Translations must trace to a Hebrew source post.
+
+---
+
+## 6. Verify before you claim done
+
+```
+curl -s -o /dev/null -w "%{http_code}" https://stavtheodor.com/            # 200
+curl -s https://stavtheodor.com/radar/<slug>/ | grep -c 'post-body-en'    # >= 1
+curl -s https://stavtheodor.com/sitemap.xml | grep '<slug>'               # present
+```
+
+Report failures honestly. If a check fails after the cache window, say so; do not declare success.
+
+---
+
+## 7. Work Log (append-only, newest first, one line per change)
+
+Format: `- YYYY-MM-DD HH:MM (TZ) | who | what changed | notes for the other AI`
+
+- 2026-07-01 18:45 (ET) | Claude (Ron's ron-brain session) | Added AGENTS.md (this file) + CLAUDE.md pointer | New standing rule: read this file before any change, append here after every change.
+- 2026-07-01 18:20 (ET) | Claude (Ron's ron-brain session) | Full English layer: faithful EN translation on all 16 posts, HE/EN toggle (Hebrew default), inLanguage [he,en], dateModified bump, NJ/NY FAQ schema entry, llms.txt/agent.txt rewritten for bilingual + NJ/NY positioning, Duchamp base64 image extracted to images/, LF normalization, toggle added to build-post-pages.py template | Every future post MUST include the English block (Section 3.1). Resolved a push collision with the Orientalism commit by rebasing and translating that post too.
+- 2026-07-01 14:27 (ET) | Other AI session | Added post: Orientalism: Between Fact and Fantasy, at the Met (+2 images) | Was Hebrew-only; English block added by the other session at 18:20.
+- 2026-07-01 12:20 (ET) | Claude (Ron's ron-brain session) | Fixed build-post-pages.py idempotency, corrected llms.txt/agent.txt permalinks, added ADD-BLOG-POST-GUIDE.md | Per-post permalink pages + sitemap now generated for all posts.
+- 2026-06-30 → 2026-07-01 | Claude (Ron's ron-brain session) | Migrated site Squarespace/Netlify → GitHub Pages, DNS via GoDaddy API, HTTPS, robots.txt/llms.txt/agent.txt, GA kept | Hosting is now free and stable; domain/DNS is hands-off (Section 5).
+
+Note: an untracked `museum/` directory (three.js experiment) exists locally on Ron's Mac as of 2026-07-01 evening; it belongs to another session and is intentionally not committed.

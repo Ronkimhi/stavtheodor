@@ -1,5 +1,7 @@
 # How to Add a Blog Post to stavtheodor.com
 
+> **First read `AGENTS.md` in this directory.** It carries the multi-AI sync protocol (pull first, work log, collision rules) and Ron's standing content rules. This guide is the detailed post-authoring reference; AGENTS.md is the law.
+
 Self-contained instructions for an AI agent adding a new "Art Radar" post to Stav Theodor-Kimhi's THEODORA website. Read this whole file before touching anything. It assumes only that you have this repository checked out and shell access on the machine that owns it (`git` and `gh` authenticated as below) — no other context is required.
 
 ---
