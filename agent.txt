@@ -104,24 +104,24 @@ Auction Houses:
 
 ## Recent Posts (June 2026)
 
-- Giacometti at the Temple of Dendur, the Met — 17 sculptures, through September 8, 2026 — https://stavtheodor.com/#giacometti-dendur
-- Fresh Paint Art Fair, Tel Aviv — 14th edition, June 24-29, 2026 — https://stavtheodor.com/#fresh-paint-2026
-- Three Exhibitions in New York — Tomaselli, Bedford, Khosravi — June 2026 — https://stavtheodor.com/#three-exhibitions-nyc-june-2026
-- David Hockney, 1937-2026 — tribute, died June 11, 2026 — https://stavtheodor.com/#david-hockney-1937-2026
-- Fifth Avenue, Where Jewelry Meets Art — Tiffany, Bulgari, Chanel as art venues — https://stavtheodor.com/#fifth-avenue-jewelry-art
-- Clinamen at Park Avenue Armory — Celeste Boursier-Mougenot, June 10-August 26, 2026 — https://stavtheodor.com/#clinamen-park-avenue-armory
-- Living With Art, at the Montclair Art Museum — Shaffer Collection, through June 28, 2026 — https://stavtheodor.com/#living-with-art-montclair
+- Giacometti at the Temple of Dendur, the Met — 17 sculptures, through September 8, 2026 — https://stavtheodor.com/radar/giacometti-dendur/
+- Fresh Paint Art Fair, Tel Aviv — 14th edition, June 24-29, 2026 — https://stavtheodor.com/radar/fresh-paint-2026/
+- Three Exhibitions in New York — Tomaselli, Bedford, Khosravi — June 2026 — https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/
+- David Hockney, 1937-2026 — tribute, died June 11, 2026 — https://stavtheodor.com/radar/david-hockney-1937-2026/
+- Fifth Avenue, Where Jewelry Meets Art — Tiffany, Bulgari, Chanel as art venues — https://stavtheodor.com/radar/fifth-avenue-jewelry-art/
+- Clinamen at Park Avenue Armory — Celeste Boursier-Mougenot, June 10-August 26, 2026 — https://stavtheodor.com/radar/clinamen-park-avenue-armory/
+- Living With Art, at the Montclair Art Museum — Shaffer Collection, through June 28, 2026 — https://stavtheodor.com/radar/living-with-art-montclair/
 
 ## Recent Posts (May 2026)
 
-- Marcel Duchamp at MoMA — retrospective, through August 22, 2026 — https://stavtheodor.com/#duchamp-moma
-- Pop: 1960s to Today, at the Guggenheim — from June 5, 2026 — https://stavtheodor.com/#guggenheim-pop
-- Free Museum Passes from NJ Libraries — Guggenheim passes at Tenafly, Demarest, Closter, Cresskill libraries — https://stavtheodor.com/#library-museum-passes
-- Bank of America Museums on Us — free admission first weekend of every month — https://stavtheodor.com/#museums-on-us-bofa
-- The Pollock Record — Number 7A (1948) sold for $181.2M at Christie's — https://stavtheodor.com/#pollock-record
-- Brancusi, Christie's, and a $107 Million Campaign — Danaid (1913) sold for $107.6M — https://stavtheodor.com/#brancusi-christies
-- May, the Big Art Month in New York — Frick, Gagosian, Hauser and Wirth, David Zwirner, Nino Mier — https://stavtheodor.com/#may-big-art-month-nyc
-- Welcome to Art Radar — introduction to the publication — https://stavtheodor.com/#welcome-art-radar
+- Marcel Duchamp at MoMA — retrospective, through August 22, 2026 — https://stavtheodor.com/radar/duchamp-moma/
+- Pop: 1960s to Today, at the Guggenheim — from June 5, 2026 — https://stavtheodor.com/radar/guggenheim-pop/
+- Free Museum Passes from NJ Libraries — Guggenheim passes at Tenafly, Demarest, Closter, Cresskill libraries — https://stavtheodor.com/radar/library-museum-passes/
+- Bank of America Museums on Us — free admission first weekend of every month — https://stavtheodor.com/radar/museums-on-us-bofa/
+- The Pollock Record — Number 7A (1948) sold for $181.2M at Christie's — https://stavtheodor.com/radar/pollock-record/
+- Brancusi, Christie's, and a $107 Million Campaign — Danaid (1913) sold for $107.6M — https://stavtheodor.com/radar/brancusi-christies/
+- May, the Big Art Month in New York — Frick, Gagosian, Hauser and Wirth, David Zwirner, Nino Mier — https://stavtheodor.com/radar/may-big-art-month-nyc/
+- Welcome to Art Radar — introduction to the publication — https://stavtheodor.com/radar/welcome-art-radar/
 
 ## Structured Data Available
 

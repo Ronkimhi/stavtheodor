@@ -90,6 +90,8 @@ for json_text, article_class, slug, article_inner in pairs:
 print(f"Found {len(posts)} posts")
 
 # ---- 1. Rewrite JSON-LD url/mainEntityOfPage in index.html to real permalinks ----
+# Safe to re-run: posts already using the real permalink (from a prior run, or
+# because the post was authored with the real URL directly) are left untouched.
 new_html = html
 for p in posts:
     frag_url = f"{SITE}/#{p['slug']}"
@@ -100,11 +102,14 @@ for p in posts:
     ).replace(
         f'"mainEntityOfPage": "{frag_url}"', f'"mainEntityOfPage": "{real_url}"'
     )
-    assert new_json != old_json, f"no url/mainEntityOfPage rewritten for {p['slug']}"
-    new_html = new_html.replace(old_json, new_json, 1)
+    if new_json != old_json:
+        new_html = new_html.replace(old_json, new_json, 1)
 
 # ---- 2. Add a small permalink link under each post's date (visual, minimal) ----
+# Safe to re-run: skips any post that already has its permalink link.
 for p in posts:
+    if f'href="/radar/{p["slug"]}/"' in new_html:
+        continue
     old_date_div = re.search(
         rf'(<article class="post[^"]*" id="{re.escape(p["slug"])}">\s*<div class="post-date">)([^<]*)(</div>)',
         new_html,

@@ -14,6 +14,8 @@ The site is served from the `Ronkimhi/stavtheodor` GitHub repo via GitHub Pages,
 
 ## Adding a new post (the dual-publish flow)
 
+**Full step-by-step instructions, exact templates, and a copy-paste checklist:** see [`ADD-BLOG-POST-GUIDE.md`](ADD-BLOG-POST-GUIDE.md) in this repo — written to be handed to any AI agent with no other context needed.
+
 From now on every post goes to both channels:
 
 1. Publish in the WhatsApp group as usual
@@ -22,7 +24,8 @@ From now on every post goes to both channels:
    - Save it to `B-brain/04-published/01-whatsapp/YYYY-MM-DD-[slug].md` (Published Posts Protocol)
    - Add it to `index.html` at the **top** of the posts section, using the commented `POST TEMPLATE` block inside the file
 4. Run `python3 build-post-pages.py`. This regenerates `radar/<slug>/index.html` (a standalone, indexable permalink page) for every post — including the new one — updates `sitemap.xml`, and points each post's JSON-LD `url`/`mainEntityOfPage` at its real permalink instead of a same-page anchor. It also adds a small "Permalink" link under the post's date on the homepage. The homepage's layout, content, and reading experience are untouched — this step only adds the per-post URLs SEO/LLM-citation needs.
-5. Commit and push (see Hosting above)
+5. **Update `llms.txt` and `agent.txt` by hand** — the build script does not touch them. Add the new post's real `/radar/<slug>/` permalink (not a `#slug` anchor) to both. These are what AI crawlers actually read to cite the site.
+6. Commit and push (see Hosting above)
 
 ## Adding photos to a post
 
