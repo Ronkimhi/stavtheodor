@@ -4,17 +4,11 @@ One self-contained file: `index.html`. No build step, no dependencies. Everythin
 
 ---
 
-## Publish on Netlify (2 minutes)
+## Hosting: GitHub Pages (migrated from Netlify 2026-06-30)
 
-1. Go to [app.netlify.com](https://app.netlify.com) and log in with the **ronkkimhi@gmail.com** account
-2. On the Sites page, find the deploy drop zone (or go to **Add new site → Deploy manually**)
-3. Drag the **whole `art-radar-website` folder** (not just the file) onto the drop zone
-4. Netlify gives you a link like `something-random.netlify.app`. Rename it: **Site settings → Site details → Change site name** → e.g. `art-radar` → the link becomes `art-radar.netlify.app`
-5. Paste that link into the Art Radar group description, as promised in the June 12 post
+The site is served from the `Ronkimhi/stavtheodor` GitHub repo via GitHub Pages, with `stavtheodor.com` (apex + `www`) pointed at it via `CNAME` and GoDaddy DNS. Pushing to `main` deploys automatically — no manual drag-and-drop step.
 
-**Updating the site later:** open the site in Netlify → **Deploys** tab → drag the folder onto the page again. The link stays the same.
-
-**Custom domain (optional, later):** Stav owns **www.stavtheodor.com** (it appears on the portfolio contact card). In Netlify: **Domain settings → Add custom domain** → e.g. `radar.stavtheodor.com`, then add the DNS record Netlify shows you at the domain registrar.
+**Deploying a change:** `git add`, `git commit`, `git push origin main`. GitHub Pages picks it up within a minute or two.
 
 ---
 
@@ -27,7 +21,8 @@ From now on every post goes to both channels:
 3. Claude will:
    - Save it to `B-brain/04-published/01-whatsapp/YYYY-MM-DD-[slug].md` (Published Posts Protocol)
    - Add it to `index.html` at the **top** of the posts section, using the commented `POST TEMPLATE` block inside the file
-4. Re-deploy: drag the folder onto the Netlify Deploys page again
+4. Run `python3 build-post-pages.py`. This regenerates `radar/<slug>/index.html` (a standalone, indexable permalink page) for every post — including the new one — updates `sitemap.xml`, and points each post's JSON-LD `url`/`mainEntityOfPage` at its real permalink instead of a same-page anchor. It also adds a small "Permalink" link under the post's date on the homepage. The homepage's layout, content, and reading experience are untouched — this step only adds the per-post URLs SEO/LLM-citation needs.
+5. Commit and push (see Hosting above)
 
 ## Adding photos to a post
 
@@ -45,5 +40,5 @@ To update it after editing the deck: send Claude the new `.pptx`. Claude renders
 - The original export (including the raw chat file, which contains member phone numbers and must NEVER be deployed or shared) lives at `B-brain/04-published/01-whatsapp/media-export-2026-06-12/`
 - Not used: 3 videos (too heavy for the page; the Clinamen post links the experience instead)
 - The June 4 Montclair Art Museum post (Shaffer collection) was added 2026-06-13 after it was initially missed
-- **Deploy only this folder** (`index.html`, `images/`, the favicon files, `og-image.jpg`, this README). Nothing else should be dragged onto Netlify.
+- The deployed set is everything in this repo: `index.html`, `images/`, `radar/` (generated permalinks), the favicon files, `og-image.jpg`, `sitemap.xml`, `robots.txt`, `llms.txt`, `agent.txt`, `CNAME`, this README. `.pptx`/PDF/build scratch files are never committed.
 - `og-image.jpg` is the social share card (the image shown when the link is pasted into WhatsApp, etc.). `favicon.svg` / `favicon-32.png` / `apple-touch-icon.png` are the browser-tab and home-screen icons. All are referenced by absolute URL in the page head, so if the site is ever renamed from `stavtheodor.com`, those URLs must be updated to match.
