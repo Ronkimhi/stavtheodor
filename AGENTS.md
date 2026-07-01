@@ -1,8 +1,8 @@
-# AGENTS.md — Rules for Every AI Working on stavtheodor.com
+# AGENTS.md: Rules for Every AI Working on stavtheodor.com
 
 **Read this file in full BEFORE making any change to this repository. No exceptions.**
 
-More than one AI assistant works on this site (different Claude/other-AI sessions, sometimes at the same time). This file is the single source of truth for how we work here, and the sync channel between us. Ron set this up on 2026-07-01 after two sessions edited the repo simultaneously and collided on push.
+More than one AI assistant works on this site (different Claude/other-AI sessions, sometimes at the same time). This file is the single source of truth for how we work here, and the sync channel between us. The site owner set this up on 2026-07-01 after two sessions edited the repo simultaneously and collided on push.
 
 ---
 
@@ -12,9 +12,9 @@ More than one AI assistant works on this site (different Claude/other-AI session
 2. **Read the Work Log** (bottom of this file) to see what the other AI did recently and whether anything is in flight.
 3. **Push promptly.** Do not sit on finished work; the longer you wait, the more likely a collision.
 4. **Never force-push.** If push is rejected, fetch and rebase, resolve carefully, keep BOTH sides' content (a rejected push here almost always means the other AI added something real, like a new post).
-5. **Leave other work alone.** If you find untracked files or changes you did not make (example: a work-in-progress directory), do NOT commit, delete, or "clean up" that work. It belongs to the other AI or to Ron. Commit only the files you yourself changed.
+5. **Leave other work alone.** If you find untracked files or changes you did not make (example: a work-in-progress directory), do NOT commit, delete, or "clean up" that work. It belongs to the other AI or to the site owner. Commit only the files you yourself changed.
 6. **Append to the Work Log** (Section 7) in every commit that changes site content or tooling: one dated line, what you did, anything the other AI must know.
-7. **Keep this file updated.** If Ron gives you a new standing rule for this site, add it here in the same commit. This file is how the rule reaches the other AI.
+7. **Keep this file updated.** If the site owner gives you a new standing rule for this site, add it here in the same commit. This file is how the rule reaches the other AI.
 
 ---
 
@@ -26,22 +26,22 @@ More than one AI assistant works on this site (different Claude/other-AI session
 | What it is | THEODORA, Stav Theodor-Kimhi's fine art curation practice + the Art Radar blog (exhibitions in NY / NJ / Tel Aviv) |
 | Hosting | GitHub Pages, free tier, auto-deploys on push to `main` (no CI, no build step) |
 | Repo | `Ronkimhi/stavtheodor`, remote `origin`, branch `main` |
-| GitHub account | `Ronkimhi` (Ron's personal account). Verify with `gh auth status` before pushing. |
+| GitHub account | `Ronkimhi`. Verify with `gh auth status` before pushing. |
 | Architecture | One hand-authored `index.html` + static assets. No framework, no npm. `build-post-pages.py` generates per-post pages and the sitemap. |
 | Line endings | LF everywhere (normalized 2026-07-01). Do not reintroduce CRLF. |
 | CDN cache | ~10 minutes (`max-age=600`). A push that "doesn't show up" is usually just cache. Bypass check: `curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/` |
 
 ---
 
-## 3. Content rules (Ron's standing rules — mandatory)
+## 3. Content rules (the site owner's standing rules, mandatory)
 
 1. **Every post is bilingual.** Each Art Radar post carries TWO body blocks inside the same `<article>`:
    - Hebrew original: `<div class="post-body" lang="he" dir="rtl">`
    - Full English translation: `<div class="post-body post-body-en" lang="en" dir="ltr">`
 
-   The English must be a complete, faithful translation of the Hebrew source. Not a summary, not a paraphrase, no added opinions. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default, localStorage key `radarLang`) shows one language at a time; both stay in the HTML so search engines and LLMs index both. Rule set by Ron 2026-07-01; it applies to every new post, forever.
+   The English must be a complete, faithful translation of the Hebrew source. Not a summary, not a paraphrase, no added opinions. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default, localStorage key `radarLang`) shows one language at a time; both stay in the HTML so search engines and LLMs index both. Rule set by the site owner 2026-07-01; it applies to every new post, forever.
 
-2. **No em dashes (—) and no en dashes (–) in any English text you write.** Use commas, colons, periods, or parentheses. Hard rule from Ron, applies to posts, metadata, llms.txt, agent.txt, this file, commit messages, everything.
+2. **No em dashes (—) and no en dashes (–) in any English text you write.** Use commas, colons, periods, or parentheses. Hard rule from the site owner, applies to posts, metadata, llms.txt, agent.txt, this file, commit messages, everything.
 
 3. **Per-post JSON-LD** uses `"inLanguage": ["he", "en"]`, real permalink URLs (`/radar/<slug>/`, never `#slug` anchors), and an `"about"` Event/ExhibitionEvent block when the post covers an exhibition with dates.
 
@@ -72,11 +72,11 @@ Full templates and step-by-step detail: `ADD-BLOG-POST-GUIDE.md` (same directory
 ## 5. Never do
 
 - Never hand-edit `radar/<slug>/index.html` or `sitemap.xml` (generated; edit `index.html` and re-run `build-post-pages.py`).
-- Never force-push, never push to the deprecated `old-ronki-art-backup` remote.
-- Never touch DNS/GoDaddy, the GitHub Pages custom-domain config, or the Google Analytics tag (`G-4300MN0Q97`) as part of content work. If the domain itself seems broken, stop and flag it to Ron.
-- Never commit secrets, credentials, or Ron's private/business files. This is a PUBLIC repo serving a public site.
+- Never force-push, never push to the deprecated `old-backup` remote.
+- Never touch DNS/GoDaddy, the GitHub Pages custom-domain config, or the Google Analytics tag (`G-4300MN0Q97`) as part of content work. If the domain itself seems broken, stop and flag it to the site owner.
+- Never commit secrets, credentials, or any of the owners' private or business files. This is a PUBLIC repo serving a public site.
 - Never delete or commit another AI's untracked work-in-progress.
-- Never publish content Stav/Ron did not provide as source material. Translations must trace to a Hebrew source post.
+- Never publish content that Stav or the site owner did not provide as source material. Translations must trace to a Hebrew source post.
 
 ---
 
@@ -96,10 +96,11 @@ Report failures honestly. If a check fails after the cache window, say so; do no
 
 Format: `- YYYY-MM-DD HH:MM (TZ) | who | what changed | notes for the other AI`
 
-- 2026-07-01 18:45 (ET) | Claude (Ron's ron-brain session) | Added AGENTS.md (this file) + CLAUDE.md pointer | New standing rule: read this file before any change, append here after every change.
-- 2026-07-01 18:20 (ET) | Claude (Ron's ron-brain session) | Full English layer: faithful EN translation on all 16 posts, HE/EN toggle (Hebrew default), inLanguage [he,en], dateModified bump, NJ/NY FAQ schema entry, llms.txt/agent.txt rewritten for bilingual + NJ/NY positioning, Duchamp base64 image extracted to images/, LF normalization, toggle added to build-post-pages.py template | Every future post MUST include the English block (Section 3.1). Resolved a push collision with the Orientalism commit by rebasing and translating that post too.
+- 2026-07-01 19:05 (ET) | Claude (main session) | Privacy scrub of public md files: removed local filesystem paths, personal account details, and machine references from AGENTS.md / CLAUDE.md / ADD-BLOG-POST-GUIDE.md; renamed the deprecated backup remote to `old-backup` (local git config too); em dash sweep | This repo is public: never reintroduce local paths, personal names beyond what the site itself publishes, or account details into committed files.
+- 2026-07-01 18:45 (ET) | Claude (main session) | Added AGENTS.md (this file) + CLAUDE.md pointer | New standing rule: read this file before any change, append here after every change.
+- 2026-07-01 18:20 (ET) | Claude (main session) | Full English layer: faithful EN translation on all 16 posts, HE/EN toggle (Hebrew default), inLanguage [he,en], dateModified bump, NJ/NY FAQ schema entry, llms.txt/agent.txt rewritten for bilingual + NJ/NY positioning, Duchamp base64 image extracted to images/, LF normalization, toggle added to build-post-pages.py template | Every future post MUST include the English block (Section 3.1). Resolved a push collision with the Orientalism commit by rebasing and translating that post too.
 - 2026-07-01 14:27 (ET) | Other AI session | Added post: Orientalism: Between Fact and Fantasy, at the Met (+2 images) | Was Hebrew-only; English block added by the other session at 18:20.
-- 2026-07-01 12:20 (ET) | Claude (Ron's ron-brain session) | Fixed build-post-pages.py idempotency, corrected llms.txt/agent.txt permalinks, added ADD-BLOG-POST-GUIDE.md | Per-post permalink pages + sitemap now generated for all posts.
-- 2026-06-30 → 2026-07-01 | Claude (Ron's ron-brain session) | Migrated site Squarespace/Netlify → GitHub Pages, DNS via GoDaddy API, HTTPS, robots.txt/llms.txt/agent.txt, GA kept | Hosting is now free and stable; domain/DNS is hands-off (Section 5).
+- 2026-07-01 12:20 (ET) | Claude (main session) | Fixed build-post-pages.py idempotency, corrected llms.txt/agent.txt permalinks, added ADD-BLOG-POST-GUIDE.md | Per-post permalink pages + sitemap now generated for all posts.
+- 2026-06-30 → 2026-07-01 | Claude (main session) | Migrated site Squarespace/Netlify → GitHub Pages, DNS via GoDaddy API, HTTPS, robots.txt/llms.txt/agent.txt, GA kept | Hosting is now free and stable; domain/DNS is hands-off (Section 5).
 
-Note: an untracked `museum/` directory (three.js experiment) exists locally on Ron's Mac as of 2026-07-01 evening; it belongs to another session and is intentionally not committed.
+Note: an untracked `museum/` directory (three.js experiment) exists in the local checkout as of 2026-07-01 evening; it belongs to another session and is intentionally not committed.
