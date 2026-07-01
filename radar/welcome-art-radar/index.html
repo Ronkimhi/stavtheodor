@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Welcome to Art Radar",
     "description": "Stav Theodor-Kimhi, art curator and advisor based in Tenafly, NJ, introduces Art Radar: a weekly curatorial newsletter covering must-see exhibitions, gallery openings, and art events in New York, New Jersey, and Tel Aviv, written in Hebrew for the Israeli community in the NY metro area.",
     "datePublished": "2026-05-19",
-    "dateModified": "2026-05-19",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/welcome-art-radar/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/welcome-art-radar/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -647,6 +661,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="welcome-art-radar">
     <div class="post-date">May 19, 2026</div>
     <a class="permalink" href="/radar/welcome-art-radar/">Permalink</a>
@@ -658,6 +676,18 @@
       <p>בכל שבוע אשתף כאן המלצות על תערוכות, פתיחות גלריה, מיצבים ציבוריים, ירידי אמנות, אירועים במוזיאונים (גם לילדים), וכל מה שנראה לי מעניין ושווה יציאה. לפעמים זו תהיה רשימה ארוכה, לפעמים המלצה אחת מדויקת ונראה יחד לאן זה יתפתח 🙂</p>
       <p>בקיץ אשתף גם המלצות אמנות בישראל, למי שקופץ לביקור מולדת 🇮🇱</p>
       <p>שמחה שאתם פה, ובקרוב הפוסט הראשון יוצא לדרך 🚀</p>
+      <figure>
+        <img src="images/2026-05-20-galleries-1.jpg" alt="Stav reflected in a mirror artwork at a gallery" loading="lazy">
+        <figcaption>Stav, reflected in a mirror work between the galleries.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>Hello to everyone joining 👋</p>
+      <p>For those who don't know me, I am Stav Theodor-Kimhi, an art curator and advisor. I moved to Tenafly a year and a half ago with my husband and our two boys (5 and 7), and since then I keep discovering, again and again, how rich, intriguing, and endless the art scene in our area is.</p>
+      <p>I opened this group to bring some order and share the things that are truly worth knowing, without feeling you have to follow a million places or drown in information.</p>
+      <p>Every week I will share recommendations here for exhibitions, gallery openings, public installations, art fairs, museum events (for kids too), and anything that looks interesting and worth going out for. Sometimes it will be a long list, sometimes one precise recommendation, and we will see together where it goes 🙂</p>
+      <p>In the summer I will also share art recommendations in Israel, for anyone hopping over on a home visit 🇮🇱</p>
+      <p>Happy you are here, and the first post is on its way soon 🚀</p>
       <figure>
         <img src="images/2026-05-20-galleries-1.jpg" alt="Stav reflected in a mirror artwork at a gallery" loading="lazy">
         <figcaption>Stav, reflected in a mirror work between the galleries.</figcaption>
@@ -706,6 +736,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

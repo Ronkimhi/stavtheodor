@@ -36,6 +36,32 @@ FAVICONS = """<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">"""
 
+LANG_TOGGLE = """<div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>"""
+
+LANG_JS = """<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
+</script>"""
+
 GA_SNIPPET = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
 <script>
@@ -117,7 +143,7 @@ for p in posts:
     if old_date_div:
         replacement = (
             f'{old_date_div.group(1)}{old_date_div.group(2)}{old_date_div.group(3)}'
-            f'\r\n    <a class="permalink" href="/radar/{p["slug"]}/">Permalink</a>'
+            f'\n    <a class="permalink" href="/radar/{p["slug"]}/">Permalink</a>'
         )
         new_html = new_html.replace(old_date_div.group(0), replacement, 1)
 
@@ -127,7 +153,7 @@ if ".permalink" not in new_html:
         "</style>",
         "  .permalink { display: inline-block; margin-top: 6px; font-size: 11px; "
         "letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); "
-        "text-decoration: none; }\r\n  .permalink:hover { text-decoration: underline; }\r\n</style>",
+        "text-decoration: none; }\n  .permalink:hover { text-decoration: underline; }\n</style>",
         1,
     )
 
@@ -209,6 +235,7 @@ def render_post_page(p, all_posts):
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  {LANG_TOGGLE}
   <article class="{p['article_class']}" id="{p['slug']}">{p['article_inner']}</article>
 </section>
 
@@ -227,6 +254,8 @@ def render_post_page(p, all_posts):
 {FOOTER}
 
 {GA_SNIPPET}
+
+{LANG_JS}
 
 </body>
 </html>

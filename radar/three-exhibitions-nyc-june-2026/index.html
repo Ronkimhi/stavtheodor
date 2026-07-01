@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Three Exhibitions in New York",
     "description": "Three concurrent New York exhibitions: Fred Tomaselli's Blooms Disrupted at James Cohan Gallery (through June 27), Whitney Bedford at Miles McEnery Gallery (through June 20), and Arghavan Khosravi's What Remains at Uffner and Liu Gallery (through July 2).",
     "datePublished": "2026-06-17",
-    "dateModified": "2026-06-17",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -670,6 +684,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="three-exhibitions-nyc-june-2026">
     <div class="post-date">June 17, 2026</div>
     <a class="permalink" href="/radar/three-exhibitions-nyc-june-2026/">Permalink</a>
@@ -709,6 +727,42 @@
         <figcaption>Arghavan Khosravi, What Remains, Uffner &amp; Liu Gallery, New York.</figcaption>
       </figure>
       <p>שלוש תערוכות, שלוש שפות חזותיות מן העבר, ושלוש דרכים שונות להביט דרכן על ההווה. איזו מהן הכי מסקרנת אתכם? 🤍</p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>Today I want to recommend <strong>three especially worthwhile exhibitions</strong> in New York, each of which uses a different historical artistic tradition to engage with contemporary questions. Despite the differences between them (enormous ones, it must be said), all three show how visual languages from the past can remain relevant, alive, and thought provoking today.</p>
+      <p>🌺 Fred Tomaselli | Blooms Disrupted</p>
+      <p>📍 James Cohan Gallery<br>🗓️ Through June 27, 2026</p>
+      <p>In his new exhibition, Blooms Disrupted, Fred Tomaselli takes the idea of the garden and breaks it apart into an almost psychedelic visual world. The works were inspired by the garden Robert Irwin designed at the Getty Museum in Los Angeles. Irwin saw the garden as a living work of art and not merely landscape design, and that idea of constant change and shifting visual perception echoes through Tomaselli's works as well.</p>
+      <p>The paintings explode with color, repeating patterns, and geometric forms, moving ceaselessly between order and chaos. The result is kaleidoscopic compositions that weave motifs from nature together with abstract structures, creating an almost hypnotic sense of motion.</p>
+      <p>Alongside the paintings are collages built from pages of the New York Times. The joining of the everyday news world with an imagined, botanical landscape raises questions about the relationship between nature, information, and media noise in the current era.</p>
+      <figure>
+        <div class="post-gallery">
+          <img src="images/2026-06-17-tomaselli-collage.jpg" alt="Fred Tomaselli, a kaleidoscopic collage built from New York Times pages with a tree and bright flowers on a blue ground" loading="lazy">
+          <img src="images/2026-06-17-tomaselli-garden.jpg" alt="Fred Tomaselli, a psychedelic flower garden of stars and blooms against a blue sky" loading="lazy">
+        </div>
+        <figcaption>Fred Tomaselli, Blooms Disrupted, James Cohan Gallery, New York.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/2026-06-17-getty-irwin-garden.jpg" alt="Aerial view of Robert Irwin's Central Garden at the Getty Center, with its circular maze of azaleas in a reflecting pool" loading="lazy">
+        <figcaption>Robert Irwin, Central Garden, Getty Center, Los Angeles. The inspiration for the series.</figcaption>
+      </figure>
+      <p>🌄 Whitney Bedford</p>
+      <p>📍 Miles McEnery Gallery<br>🗓️ Through June 20, 2026</p>
+      <p>Whitney Bedford, an American artist living in Los Angeles, is an excellent example of contemporary Romanticism (influenced by the Romantic movement of the 19th century). Bedford combines the classical landscape painting tradition with a painterly language marked by flattened space and reduced perspectival depth. She draws inspiration from Renaissance paintings and idyllic landscapes of the past, but unmistakable signs of the present soon break into them: neon sunsets, roads, geometric shapes, contemporary architecture, and the palm trees of Southern California.</p>
+      <p>The result is a landscape that moves between beauty and a persistent hint of instability. Alongside the romance of nature there is a sense of environmental crisis, shaped in part by the great fires that struck Los Angeles in January 2025. Bedford uses landscape not only as a painterly subject but as a tool for thinking about how climate change is reshaping our relationship with the natural environment.</p>
+      <figure>
+        <img src="images/2026-06-17-bedford-landscape.jpg" alt="Whitney Bedford, a landscape with a willow tree under a pink sky, framed by neon geometric lines" loading="lazy">
+        <figcaption>Whitney Bedford, Miles McEnery Gallery, New York.</figcaption>
+      </figure>
+      <p>🪞 Arghavan Khosravi | What Remains</p>
+      <p>📍 Uffner &amp; Liu Gallery<br>🗓️ Through July 2, 2026</p>
+      <p>Last but not least, and to my mind the most interesting, is What Remains by the Iranian artist Arghavan Khosravi. Khosravi builds a world that looks like a many layered dream; she combines the Persian miniature tradition with structures associated with medieval European altarpieces, creating rich compositions in which revealing and concealing happen at the same time. Doors, curtains, and ropes appear again and again in her works, hiding parts of the image and exposing others. Many female figures are only partly visible, as if caught between presence and absence.</p>
+      <p>Khosravi, who now lives and works in Connecticut, uses this visual language to explore the experience of women living under restrictive political, cultural, and religious systems, and the constant tension between visibility, control, and freedom.</p>
+      <figure>
+        <img src="images/2026-06-17-khosravi-what-remains.jpg" alt="Arghavan Khosravi, female figures partly hidden behind a curtain beside an arched altarpiece-like panel" loading="lazy">
+        <figcaption>Arghavan Khosravi, What Remains, Uffner &amp; Liu Gallery, New York.</figcaption>
+      </figure>
+      <p>Three exhibitions, three visual languages from the past, and three different ways of looking through them at the present. Which one intrigues you most? 🤍</p>
     </div>
   </article>
 </section>
@@ -753,6 +807,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

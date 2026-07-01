@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Fifth Avenue, Where Jewelry Meets Art",
     "description": "Tiffany and Co., Bulgari, and Chanel's Fifth Avenue flagships house significant contemporary art collections, including works by Basquiat and James Turrell at Tiffany, revealing that some of New York's most compelling art is displayed in luxury retail rather than museums.",
     "datePublished": "2026-06-12",
-    "dateModified": "2026-06-12",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/fifth-avenue-jewelry-art/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/fifth-avenue-jewelry-art/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -647,6 +661,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="fifth-avenue-jewelry-art">
     <div class="post-date">June 12, 2026</div>
     <a class="permalink" href="/radar/fifth-avenue-jewelry-art/">Permalink</a>
@@ -661,6 +679,27 @@
       <p>זה אולי נשמע מפתיע, אבל אולי זה רק מוכיח שאמנות, עיצוב ויוקרה תמיד היו שזורים זה בזה.</p>
       <p>האם הופתעתם מהחיבור בין שני העולמות? 💎🖼️</p>
       <p>אנקדוטה קצרה: וורהול הציע פעם לניקולה בולגרי, נכדו של מייסד הבית, כמה מהציורים שלו בתמורה לתכשיטים של בולגרי. בולגרי סירב, ולימים הודה שזו הייתה העסקה הגרועה בחייו 😅 לכן, כשהחנות נפתחה מחדש ב 2017 נתלו בה שלושה הדפסים של וורהול באיזור ה VIP.</p>
+      <figure>
+        <div class="post-gallery">
+          <img src="images/2026-06-12-fifth-avenue-basquiat-campaign.jpg" alt="Beyonce and Jay-Z with a Basquiat painting in the Tiffany campaign" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-tiffany-flagship.jpg" alt="Artworks inside the Tiffany flagship on Fifth Avenue" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-tiffany-lamp.jpg" alt="A Tiffany stained glass lamp" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-warhol-venus.jpg" alt="Warhol Venus prints displayed in a jewelry store" loading="lazy">
+          <img src="images/2026-06-12-fifth-avenue-chanel.jpg" alt="The Chanel salon with Coromandel screens" loading="lazy">
+        </div>
+        <figcaption>As shared with the original post.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>New York's art world has a little secret: some of the most intriguing contemporary art in the city is not shown in museums or galleries at all, but hides in the luxury jewelry houses of Fifth Avenue ✨</p>
+      <p>The first institution is Tiffany. From its earliest days, Tiffany has taken an active part in the art world. Its founder, Charles Tiffany, was a patron of the Metropolitan Museum and a founding member of New York's fine arts society. His son, Louis Tiffany, was one of the central artists of American Art Nouveau. Know the Tiffany lamps? 🙂</p>
+      <p>In Tiffany's Fifth Avenue flagship you will find an especially impressive art collection, including the famous Basquiat painting from the Beyonce and Jay-Z campaign. Alongside it are works by leading American artists such as James Turrell (who truly deserves a post of his own), Rashid Johnson, and more.</p>
+      <p>The interplay between art and fine jewelry does not stop at Tiffany. The Italian house Bulgari also boasts a close bond with the art world. As of this year the company has become an official partner of the Venice Biennale, it supports young artists, and it contributes substantially to the preservation of antiquities in Rome.</p>
+      <p>But the most intriguing connection is to the Pop artist Andy Warhol. Bulgari's jewelry of the 70s and 80s was directly influenced by Pop Art, and Warhol himself was obsessed with the brand and an avid collector of jewelry. He once said: &ldquo;When I'm in Rome, I always visit Bulgari. It is the most important museum of contemporary art.&rdquo; It is an interesting statement, because it unsettles the separation we usually make between art, design, fashion, and objects of desire. For Warhol, those boundaries were blurred anyway.</p>
+      <p>Another connection to art lives at Chanel. Coco Chanel was an obsessive collector of art and antiques. Her legendary Paris apartment was filled with art and cultural objects she collected. In that era, collecting art and objects from the East was considered the height of cultural sophistication and was a significant part of the influences on Western modernism, a phenomenon that began in the 19th century and continued deep into the 20th. That eclectic taste is present in Chanel's jewelry space today: part of the collection is displayed in the public space open to visitors, and part is reserved for private clients in the intimate rooms on the upper floor.</p>
+      <p>It may sound surprising, but perhaps it only proves that art, design, and luxury have always been interwoven.</p>
+      <p>Were you surprised by the connection between the two worlds? 💎🖼️</p>
+      <p>A short anecdote: Warhol once offered Nicola Bulgari, grandson of the house's founder, several of his paintings in exchange for Bulgari jewelry. Bulgari refused, and years later admitted it was the worst deal of his life 😅 Which is why, when the store reopened in 2017, three Warhol prints were hung in the VIP area.</p>
       <figure>
         <div class="post-gallery">
           <img src="images/2026-06-12-fifth-avenue-basquiat-campaign.jpg" alt="Beyonce and Jay-Z with a Basquiat painting in the Tiffany campaign" loading="lazy">
@@ -715,6 +754,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

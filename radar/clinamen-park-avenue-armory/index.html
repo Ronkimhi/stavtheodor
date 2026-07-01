@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Clinamen at Park Avenue Armory",
     "description": "Clinamen, the immersive sound installation by French artist Celeste Boursier-Mougenot, fills the Drill Hall of Park Avenue Armory with floating ceramic bowls that drift, collide, and generate live improvised music on water. June 10 through August 26, 2026.",
     "datePublished": "2026-06-09",
-    "dateModified": "2026-06-09",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/clinamen-park-avenue-armory/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/clinamen-park-avenue-armory/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -662,6 +676,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="clinamen-park-avenue-armory">
     <div class="post-date">June 9, 2026</div>
     <a class="permalink" href="/radar/clinamen-park-avenue-armory/">Permalink</a>
@@ -676,6 +694,21 @@
       <p>📍 Park Avenue Armory, New York<br>📅 10 ביוני – 26 באוגוסט 2026</p>
       <p>זו אחת מאותן עבודות שקשה להסביר במילים! צריך פשוט להיות שם, להקשיב, ולהיסחף. ✨</p>
       <p>חווייה מומלצת גם לילדים! 😊</p>
+      <figure>
+        <video src="videos/2026-06-09-clinamen-armory.mp4" controls preload="metadata" playsinline style="width:100%;height:auto;border-radius:inherit"></video>
+        <figcaption>Clinamen in motion, Bourse de Commerce &ndash; Pinault Collection, Paris. Video via <a href="https://www.youtube.com/watch?v=bvWcvbfctpw" target="_blank" rel="noopener">YouTube</a>.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>🎶 Clinamen | Celeste Boursier-Mougenot at Park Avenue Armory 🎶</p>
+      <p>Tomorrow, one of the most hypnotic and talked about works of recent years opens in New York: Clinamen by the French artist, musician, and composer Céleste Boursier-Mougenot.</p>
+      <p>At the center of the installation stand enormous basins filled with water, on whose surface float hundreds of white ceramic bowls. A gentle current moves them slowly, and when they meet one another they produce delicate, unexpected sounds. These acoustic chimes, without any performer's intervention, are the very heart of the work; a true symphony of the moment, unfolding with the flow of invisible waves.</p>
+      <p>In this work, sound becomes living material and the visitor is invited to take an active part in the experience. The work's title, Clinamen, is taken from Epicurean physics and describes the random swerve of atoms, an idea that mirrors the ever changing nature of the installation. Every movement of the water creates a new encounter between the bowls, and every encounter gives birth to a different sound. In this way a living symphony is built, one that never repeats itself.</p>
+      <p>The work continues Boursier-Mougenot's long engagement with the border between art, music, and sensory experience. Everyday objects take on a new role here, and sound becomes genuinely sculptural material. Visitors are invited to wander through the space, slow down, and give themselves over to a moment in which time feels almost suspended.</p>
+      <p>In the new version presented at Park Avenue Armory, the installation fills the enormous Drill Hall and turns it into an acoustic, meditative landscape in which water, ceramics, architecture, and human presence meet in a delicate, ongoing dialogue.</p>
+      <p>📍 Park Avenue Armory, New York<br>📅 June 10 through August 26, 2026</p>
+      <p>This is one of those works that is hard to explain in words! You simply have to be there, listen, and drift. ✨</p>
+      <p>A recommended experience for kids too! 😊</p>
       <figure>
         <video src="videos/2026-06-09-clinamen-armory.mp4" controls preload="metadata" playsinline style="width:100%;height:auto;border-radius:inherit"></video>
         <figcaption>Clinamen in motion, Bourse de Commerce &ndash; Pinault Collection, Paris. Video via <a href="https://www.youtube.com/watch?v=bvWcvbfctpw" target="_blank" rel="noopener">YouTube</a>.</figcaption>
@@ -724,6 +757,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

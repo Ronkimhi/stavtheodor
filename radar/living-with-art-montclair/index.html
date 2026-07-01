@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Living With Art, at the Montclair Art Museum",
     "description": "Living With Art at the Montclair Art Museum presents over one hundred works from the private collection of Ann and Mel Shaffer, assembled over four decades. The installation replicates the salon-style density of their home, offering collectors and designers a model for how art can be lived with rather than displayed. Through June 28, 2026.",
     "datePublished": "2026-06-04",
-    "dateModified": "2026-06-04",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/living-with-art-montclair/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/living-with-art-montclair/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -660,6 +674,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="living-with-art-montclair">
     <div class="post-date">June 4, 2026</div>
     <a class="permalink" href="/radar/living-with-art-montclair/">Permalink</a>
@@ -680,6 +698,33 @@
       <p>אם כבר מגיעים, שווה לשלב גם טיול במונטקלייר עצמה. ☕️ זו אחת העיירות המקסימות בניו ג'רזי, עם גלריות קטנות, בתי קפה ומסעדות ואווירה יצירתית שמורגשת כמעט בכל פינה.</p>
       <p>טיפ קטן: 📚 מחזיקי כרטיס Public Library באיזורינו יכולים ליהנות מכניסה חינם למוזיאון ל־2 מבוגרים וילדים חופשי.</p>
       <p>📅 התערוכה פתוחה עד 28 ביוני 2026</p>
+      <figure>
+        <div class="pair-bottom">
+          <img src="images/2026-06-04-montclair-sherman.jpg" alt="Cindy Sherman, Untitled #408, a portrait of a woman with big blonde curls in a blue satin dress" loading="lazy">
+          <img src="images/2026-06-04-montclair-goldin.jpg" alt="Nan Goldin, Misty and Jimmy Paulette in a Taxi, two drag queens in the back of a New York cab" loading="lazy">
+        </div>
+        <div class="pair-caps">
+          <figcaption>Cindy Sherman, Untitled #408, 2002.</figcaption>
+          <figcaption>Nan Goldin, Misty and Jimmy Paulette in a Taxi, NYC, 1991.</figcaption>
+        </div>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>This time I am taking us a little closer to home, to the town of Montclair, half an hour from us.</p>
+      <figure>
+        <img src="images/2026-06-04-montclair-shaffer.jpg" alt="Salon-style hung walls and a Nick Cave Soundsuit at the Montclair Art Museum" loading="lazy">
+      </figure>
+      <p>At the Montclair Art Museum, more than one hundred works from the private collection of Ann and Mel Shaffer are on view these days, a couple who collected contemporary art for more than four decades. But what makes this exhibition special is not only which artists are on the walls, but the way the art is displayed.</p>
+      <p>Serious art collectors usually own far more works than can be displayed at home, and rotate them from time to time. With the Shaffers the story is different. Over the years they acquired works that intrigued them, challenged them, or moved them, and not necessarily ones that matched market trends. Above all, they always lived with their art. They did not keep it in storage or hide it behind glass, they wove it into everyday life.</p>
+      <p>That is also why the exhibition does not feel like a typical museum show. The curatorial choice is clear from the very first moment: there are almost no labels or texts on the walls. Deliberately. That is what the Shaffers' home looks like too. The works are arranged according to how they were placed in the rooms of the house, and chairs are scattered through the gallery spaces, inviting visitors to stop, sit, and look. At moments you feel less like a museum visitor and more like a guest in a home full of art.</p>
+      <p>What stayed with me from the visit is the idea that art is not something you save for a special day. It is part of life itself. And although it is hard to ignore the monetary value of some of the works in the exhibition, collecting art is not reserved for the wealthy. It can begin with a photograph by a local artist you love, a small print you bought on a trip, or even a find in a neighborhood antique shop. The point is not prestige, but surrounding yourself with things that awaken emotion, thought, and curiosity in you. ✨</p>
+      <p><strong>What not to miss in the exhibition?</strong></p>
+      <p>🖼️ Untitled #408 by Cindy Sherman (2002), a work from a pivotal period in the career of one of the most influential artists of her generation.</p>
+      <p>🖼️ A 2018 work by Nick Cave, in which a bronze head is joined to a pile of United States flag shirts. One of the strongest presences in the exhibition.</p>
+      <p>🖼️ Jimmy Paulette and Misty in a Taxi, NYC by Nan Goldin (1991), a photograph that stays with you long after you leave the room.</p>
+      <p>If you are making the trip, it is worth combining it with a stroll through Montclair itself. ☕️ It is one of the most charming towns in New Jersey, with small galleries, cafes and restaurants, and a creative atmosphere you can feel on almost every corner.</p>
+      <p>A small tip: 📚 public library cardholders in our area can enjoy free museum admission for 2 adults, with children free.</p>
+      <p>📅 The exhibition is open through June 28, 2026</p>
       <figure>
         <div class="pair-bottom">
           <img src="images/2026-06-04-montclair-sherman.jpg" alt="Cindy Sherman, Untitled #408, a portrait of a woman with big blonde curls in a blue satin dress" loading="lazy">
@@ -734,6 +779,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

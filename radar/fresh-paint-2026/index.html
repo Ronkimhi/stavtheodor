@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Fresh Paint Art Fair, Tel Aviv",
     "description": "Fresh Paint, Israel's largest contemporary art fair, celebrates its 14th edition at Tachana Technit, Tel Aviv, June 24-29, 2026, showcasing Israeli artists at all career stages.",
     "datePublished": "2026-06-24",
-    "dateModified": "2026-06-24",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/fresh-paint-2026/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/fresh-paint-2026/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -661,6 +675,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="fresh-paint-2026">
     <div class="post-date">June 24, 2026</div>
     <a class="permalink" href="/radar/fresh-paint-2026/">Permalink</a>
@@ -673,6 +691,19 @@
       <p>מעבר לעבודות עצמן, צבע טרי הוא מקום שבו אפשר להרגיש את הדופק של הסצנה המקומית, לראות מה מעסיק אמנים היום, אילו חומרים ורעיונות תופסים מקום, ואיך אמנות מגיבה למציאות שסביבה. לצד אמנות עכשווית תמצאו גם עיצוב, פרויקטים מיוחדים, יוזמות חברתיות ושיתופי פעולה שמרחיבים את השיחה מעבר לקירות הגלריה.</p>
       <p>אם אתם נמצאים בישראל בימים הקרובים, אוהבים אמנות, מתעניינים באיסוף, או פשוט נהנים לגלות יוצרים חדשים- אני ממליצה בחום לקפוץ לביקור.</p>
       <p>ואם אתם מגיעים, ספרו לי אילו עבודות או אמנים תפסו לכם את העין 🎨✨<br>היריד יתקיים עד ה-29 ביוני.<br><a href="https://www.freshpaint.co.il/" target="_blank" rel="noopener">freshpaint.co.il</a></p>
+      <figure>
+        <img src="images/2026-06-26-fresh-paint-2026.jpg" alt="Fresh Paint 2026, the art and design fair, Tel Aviv, June 24–29, Tachana Technit" loading="lazy">
+        <figcaption>Fresh Paint 2026, Tachana Technit, Tel Aviv. June 24&ndash;29, 2026.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>Hi everyone,</p>
+      <p>Today's post is dedicated to the members of our community who are in Israel 🇮🇱</p>
+      <p>Fresh Paint opens today, one of the art events I love most and look forward to every year. This year the fair marks its 14th edition, and it continues to be one of the most intriguing and influential events in the Israeli art and design field.</p>
+      <p>As someone who has been following the art world for years, one of the things I love most about Fresh Paint is the chance to discover Israeli artists who are not yet on every radar. More than once I have met artists there at the very start of their careers, and then, a few years later, seen them showing in leading galleries, museums, and private collections. For me, that is one of the reasons this fair remains so relevant and exciting after so many years.</p>
+      <p>Beyond the works themselves, Fresh Paint is a place where you can feel the pulse of the local scene, see what is occupying artists today, which materials and ideas are taking hold, and how art responds to the reality around it. Alongside contemporary art you will also find design, special projects, social initiatives, and collaborations that expand the conversation beyond the gallery walls.</p>
+      <p>If you are in Israel in the coming days, love art, are interested in collecting, or simply enjoy discovering new artists, I warmly recommend a visit.</p>
+      <p>And if you go, tell me which works or artists caught your eye 🎨✨<br>The fair runs through June 29.<br><a href="https://www.freshpaint.co.il/" target="_blank" rel="noopener">freshpaint.co.il</a></p>
       <figure>
         <img src="images/2026-06-26-fresh-paint-2026.jpg" alt="Fresh Paint 2026, the art and design fair, Tel Aviv, June 24–29, Tachana Technit" loading="lazy">
         <figcaption>Fresh Paint 2026, Tachana Technit, Tel Aviv. June 24&ndash;29, 2026.</figcaption>
@@ -721,6 +752,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "A Tip: Free Museum Passes from Your Library",
     "description": "Public libraries in Tenafly, Demarest, Closter, and Cresskill, NJ offer free Guggenheim museum passes to cardholders. A practical tip for NJ and NY art audiences to access major museums at no cost.",
     "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/library-museum-passes/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/library-museum-passes/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -647,6 +661,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post note" id="library-museum-passes">
     <div class="post-date">May 28, 2026</div>
     <a class="permalink" href="/radar/library-museum-passes/">Permalink</a>
@@ -654,6 +672,10 @@
     <div class="post-body" lang="he" dir="rtl">
       <p>ועוד טיפ קטן: הספריות הציבוריות של טנפליי, דמרסט, קלוסטר וקרסקיל מעניקות לתושבים כניסה חינם לגוגנהיים. צריך רק לשאול את הפאס מראש עם כרטיס הספרייה.</p>
       <p>לידיעתכם, גם הספרייה בפיירלון מציעה Museum pass.</p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>And another small tip: the public libraries of Tenafly, Demarest, Closter, and Cresskill give residents free admission to the Guggenheim. You just need to reserve the pass in advance with your library card.</p>
+      <p>For your information, the Fair Lawn library also offers a Museum Pass.</p>
     </div>
   </article>
 </section>
@@ -698,6 +720,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

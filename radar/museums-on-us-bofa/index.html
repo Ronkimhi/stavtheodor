@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "A Tip: Museums on Us",
     "description": "Bank of America's Museums on Us program offers free admission to the Metropolitan Museum of Art, the Guggenheim, and hundreds of US museums on the first full weekend of each month to Bank of America and Merrill Lynch cardholders.",
     "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/museums-on-us-bofa/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/museums-on-us-bofa/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -647,6 +661,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post note" id="museums-on-us-bofa">
     <div class="post-date">May 28, 2026</div>
     <a class="permalink" href="/radar/museums-on-us-bofa/">Permalink</a>
@@ -654,6 +672,10 @@
     <div class="post-body" lang="he" dir="rtl">
       <p>למי שמחזיק כרטיס אשראי של Bank of America, יש הטבה מעולה שלא כולם יודעים עליה: בסופ״ש הראשון של כל חודש (השבוע ה-6-7 ביוני!) הכניסה למוזיאונים רבים ברחבי ארה״ב חינם לכל מחזיק כרטיס. כרטיס אחד לכל בעל חשבון, כלומר זוג = שני כרטיסים. ברשימה: מטרופוליטן, גוגנהיים ועוד רבים במנהטן ובכל ארה״ב.</p>
       <p>לרשימה המלאה: <a href="https://about.bankofamerica.com/en/making-an-impact/museums-on-us-partners" target="_blank" rel="noopener">about.bankofamerica.com/museums-on-us</a></p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>For anyone holding a Bank of America credit card, there is an excellent benefit not everyone knows about: on the first full weekend of every month (this week, June 6-7!) admission to many museums across the US is free for every cardholder. One ticket per account holder, meaning a couple = two tickets. On the list: the Metropolitan, the Guggenheim, and many more in Manhattan and across the US.</p>
+      <p>For the full list: <a href="https://about.bankofamerica.com/en/making-an-impact/museums-on-us-partners" target="_blank" rel="noopener">about.bankofamerica.com/museums-on-us</a></p>
     </div>
   </article>
 </section>
@@ -698,6 +720,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

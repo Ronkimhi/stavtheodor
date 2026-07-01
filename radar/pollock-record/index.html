@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "The Pollock Record",
     "description": "Jackson Pollock's Number 7A (1948) sold at Christie's New York for $181.2 million, a new auction record for the artist, nearly tripling his previous $61.2 million record. The post examines collector strategy through Sy Newhouse's curated 47-work collection versus Paul Allen's 155-work trove.",
     "datePublished": "2026-05-24",
-    "dateModified": "2026-05-24",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/pollock-record/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/pollock-record/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -660,6 +674,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="pollock-record">
     <div class="post-date">May 24, 2026</div>
     <a class="permalink" href="/radar/pollock-record/">Permalink</a>
@@ -673,6 +691,17 @@
         <figcaption>Jackson Pollock, Number 7A, 1948.</figcaption>
       </figure>
       <p>אבל מי שמכר אותו הוא הסיפור האמיתי. סאי ניוהאוס ניהל את קונדה נאסט 40 שנה ובנה את אוסף האמנות שלו לפי עיקרון אחד פשוט: לא לרכוש הרבה, אלא לרכוש את הגרסה הטובה ביותר של כל אמן שבחר, ואז לא לפחד למכור אותה כשמצא גרסה טובה יותר. הוא עבד צמוד עם הדילר טוביאס מאייר שנים על גבי שנים כדי לעצב ולערוך את האוסף, והשקיע עם אשתו ויקטוריה מעל 700 מיליון דולר. מאז מותו, מאייר מביא את האוסף למכירה בגלים מחושבים, בזהירות, כדי שהשוק לא יוצף ביצירות איקוניות בו-זמנית. אחרי המכירה הזו, 47 יצירות מאוסף ניוהאוס הניבו מעל מיליארד דולר. להשוואה: אוסף פול אלן, הגדול ביותר שנמכר אי פעם, חצה ב-2021 את שער 1.6 מיליארד. מ-155 יצירות. ניוהאוס: שליש מהיצירות, שני שלישים מהמחיר. זו התוצאה של עבודה אוצרותית איכותית.</p>
+      <p><a href="https://www.christies.com/en/stories/jackson-pollock-number7a-1948-john-elderfield-44b8c76206ad4793a8dccc3c899ea86f" target="_blank" rel="noopener">christies.com: Jackson Pollock, Number 7A</a></p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>Last week was one of the historic weeks in the world of the art market. But the sale is not the big story here.</p>
+      <p>🔨 Number 7A by Jackson Pollock sold at the auction house Christie's for $181.2 million!!! A new record, after Pollock's previous record stood at $61.2 million in 2021. But the story is not the painting. The story is what the sale reveals about the way a great collection is built.</p>
+      <p>Pollock is the American painter who invented drip painting: painting through movement, pouring paint directly onto the canvas laid on the floor. He shifted the art world's center of gravity from Paris to New York. This painting, from 1948, is one of the peaks of his career.</p>
+      <figure>
+        <img src="images/2026-05-24-pollock.jpg" alt="Jackson Pollock, Number 7A, 1948" loading="lazy" style="max-width:100%">
+        <figcaption>Jackson Pollock, Number 7A, 1948.</figcaption>
+      </figure>
+      <p>But the real story is who sold it. Sy Newhouse ran Conde Nast for 40 years and built his art collection on one simple principle: do not buy a lot, buy the best version of every artist he chose, and then do not be afraid to sell it when a better version turns up. He worked closely with the dealer Tobias Meyer for years on end to shape and edit the collection, and together with his wife Victoria invested over $700 million. Since his death, Meyer has been bringing the collection to sale in calculated waves, carefully, so the market is not flooded with iconic works all at once. After this sale, 47 works from the Newhouse collection have brought in over a billion dollars. For comparison: the Paul Allen collection, the largest ever sold, crossed the 1.6 billion mark in 2021. From 155 works. Newhouse: a third of the works, two thirds of the price. That is the result of high quality curatorial work.</p>
       <p><a href="https://www.christies.com/en/stories/jackson-pollock-number7a-1948-john-elderfield-44b8c76206ad4793a8dccc3c899ea86f" target="_blank" rel="noopener">christies.com: Jackson Pollock, Number 7A</a></p>
     </div>
   </article>
@@ -718,6 +747,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

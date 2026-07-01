@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Pop: 1960s to Today, at the Guggenheim",
     "description": "Pop: From the 1960s to Today at the Solomon R. Guggenheim Museum traces Pop art's influence from Warhol, Lichtenstein, and Oldenburg through Maurizio Cattelan and Yayoi Kusama. Opens June 5, 2026.",
     "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/guggenheim-pop/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/guggenheim-pop/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -660,6 +674,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="guggenheim-pop">
     <div class="post-date">May 28, 2026</div>
     <a class="permalink" href="/radar/guggenheim-pop/">Permalink</a>
@@ -670,6 +688,17 @@
       <p>המוזיאון צולל אל הארכיון העשיר שלו ומציג עבודות של ענקי התחום, בהם אנדי וורהול, רוי ליכטנשטיין וקלאס אולדנבורג (פסל שוודי אמריקאי שנודע בעיקר בזכות עבודתו על פסלים סביבתיים שמהווים גרסאות ענק של חפצים יום-יומיים. מוטיב מרכזי נוסף ביצירתו הוא גרסאות רכות של חפצים קשיחים), לצד אמנים עכשוויים פורצי דרך כמו מאוריציו קטלאן, שלו אקדיש פוסט נפרד. דרך עיסוק במדיה, צריכה, פרסום ותרבות המונים, התערוכה בוחנת מחדש שאלות יסוד: מהי אמנות? היכן עובר הגבול בין אמנות גבוהה לתרבות פופולרית? ומהו תפקידו של המוזיאון בהגדרת מה ראוי להיקרא יצירת אמנות?</p>
       <p>וכאילו שזה לא מספיק, כחלק מהתערוכה יוצג גם אחד מחדרי המראות האייקוניים של יאיו קוסאמה 🪩 תוספת חווייתית וסוחפת במיוחד, שמכניסה ממד כמעט אינסופי של השתקפות, צבע ודימוי אל תוך השיח על תרבות חזותית וצריכה.</p>
       <p>אין לי ספק שזו הולכת להיות תערוכה נועזת, צבעונית, חכמה וחווייתית 🎨 וכנראה גם התערוכה שאני באופן אישי הכי מחכה לראות בקיץ 2026.</p>
+      <figure>
+        <img src="images/2026-05-28-guggenheim-pop.jpg" alt="Pop art painting of a woman's eye with a tear" loading="lazy">
+        <figcaption>As shared with the original post.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>If May marks the opening shot of New York's art season, June is the crown jewel for art lovers everywhere. The city's iconic museums and innovative galleries open their most intriguing and ambitious exhibitions, and the whole city floods with visual culture at its best ✨</p>
+      <p>One museum that deserves a post of its own is the Guggenheim, where the exhibition Pop: From the 1960s to Today opens on June 5. As its name suggests, the exhibition examines the ongoing dialogue between iconic Pop works of the 1960s and contemporary pieces acquired over the years, which continue to expand, unsettle, and update the Pop language.</p>
+      <p>The museum dives into its rich archive and presents works by the giants of the field, among them Andy Warhol, Roy Lichtenstein, and Claes Oldenburg (a Swedish American sculptor known mainly for his environmental sculptures, giant versions of everyday objects. Another central motif in his work is soft versions of rigid objects), alongside groundbreaking contemporary artists like Maurizio Cattelan, to whom I will dedicate a separate post. Through its engagement with media, consumption, advertising, and mass culture, the exhibition revisits fundamental questions: What is art? Where does the line run between high art and popular culture? And what is the museum's role in defining what deserves to be called a work of art?</p>
+      <p>And as if that were not enough, the exhibition also includes one of Yayoi Kusama's iconic mirror rooms 🪩 an especially immersive, experiential addition that brings an almost infinite dimension of reflection, color, and image into the conversation on visual culture and consumption.</p>
+      <p>I have no doubt this is going to be a bold, colorful, smart, and experiential exhibition 🎨 and probably the one I am personally most looking forward to seeing in summer 2026.</p>
       <figure>
         <img src="images/2026-05-28-guggenheim-pop.jpg" alt="Pop art painting of a woman's eye with a tear" loading="lazy">
         <figcaption>As shared with the original post.</figcaption>
@@ -718,6 +747,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

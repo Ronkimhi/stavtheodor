@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Giacometti at the Temple of Dendur, the Met",
     "description": "Seventeen sculptures by Alberto Giacometti are installed inside and around the Temple of Dendur at the Metropolitan Museum of Art, creating a dialogue between ancient Egyptian representation and Giacometti's elongated human forms. On view through September 8, 2026.",
     "datePublished": "2026-06-26",
-    "dateModified": "2026-06-26",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/giacometti-dendur/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/giacometti-dendur/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -661,6 +675,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="giacometti-dendur">
     <div class="post-date">June 26, 2026</div>
     <a class="permalink" href="/radar/giacometti-dendur/">Permalink</a>
@@ -676,6 +694,22 @@
       <p>זו אינה רק תערוכת פסלים. זו חוויה של חלל, אור וקנה מידה, שבה כל תנועה של המבקר משנה את מערכת היחסים בין העבודות לבין המקדש.</p>
       <p>גם אם כבר ביקרתם במטרופוליטן בעבר, זו הזדמנות נדירה לראות את אחד החללים האייקוניים ביותר שלו מזווית חדשה.</p>
       <p>📍 The Met Fifth Avenue, ניו יורק<br>📅 עד 8 בספטמבר, 2026</p>
+      <figure>
+        <img src="images/2026-06-26-giacometti-walking-woman-dendur.png" alt="Alberto Giacometti, Walking Woman, a slender black bronze figure standing on a white plinth inside the Temple of Dendur, the Metropolitan Museum of Art" loading="lazy">
+        <figcaption>Alberto Giacometti, Walking Woman, inside the Temple of Dendur. The Metropolitan Museum of Art, New York.</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>Exactly 60 years ago, the Swiss sculptor Alberto Giacometti passed away. His sculptures, which became one of the most recognizable symbols of modern sculpture, reshaped the way we think about the human figure.</p>
+      <p>Giacometti was already a successful artist in his lifetime, but over the past decade and a half the value of his works has soared, and some of his sculptures have sold for more than $100 million. His human figures, thin, elongated, and fragile, became his signature, but for him they were never just a style. They were his way of exploring one of the questions that occupied him throughout his life: what is human representation? And yet his figures were given no identifying features. They belong to no age, social class, or ethnicity. They are universal, timeless, and manage to represent the human being as such.</p>
+      <p>About two weeks ago, one of the most intriguing exhibitions of the summer opened at the Metropolitan Museum in New York: 17 Giacometti sculptures installed inside and around the Temple of Dendur, one of the museum's most impressive spaces.</p>
+      <p>The choice is not accidental.</p>
+      <p>Giacometti's sculptural language was born, to a large extent, out of a deep familiarity with ancient Egyptian art. When he arrived in Paris in the 1920s, he spent long hours in the Egyptian galleries of the Louvre. His drawings and studies from that period show an ongoing engagement with the way the Egyptians depicted the human body: monumental, symbolic figures that are at the same time full of human presence.</p>
+      <p>Now, inside an Egyptian temple from the first century BCE, stand 17 of Giacometti's works, among them Woman Walking (1932) and sculptures from the Women of Venice series (1956). His elongated figures face the figures carved into the temple's stone, and a fascinating dialogue emerges between two artistic worlds thousands of years apart, both engaged with the same basic question: how do we represent the human being.</p>
+      <p>As the curator of the Giacometti Foundation in Paris put it:<br>"Egyptian art resonated with Giacometti's constant search for monumentality and humanity at once."</p>
+      <p>This is not just an exhibition of sculptures. It is an experience of space, light, and scale, in which every movement of the visitor changes the relationship between the works and the temple.</p>
+      <p>Even if you have visited the Met before, this is a rare opportunity to see one of its most iconic spaces from a new angle.</p>
+      <p>📍 The Met Fifth Avenue, New York<br>📅 Through September 8, 2026</p>
       <figure>
         <img src="images/2026-06-26-giacometti-walking-woman-dendur.png" alt="Alberto Giacometti, Walking Woman, a slender black bronze figure standing on a white plinth inside the Temple of Dendur, the Metropolitan Museum of Art" loading="lazy">
         <figcaption>Alberto Giacometti, Walking Woman, inside the Temple of Dendur. The Metropolitan Museum of Art, New York.</figcaption>
@@ -724,6 +758,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

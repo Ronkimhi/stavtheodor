@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Orientalism: Between Fact and Fantasy, at the Met",
     "description": "The Met's first exhibition devoted entirely to Orientalism traces how nineteenth century European painters imagined the 'Orient', and sets it beside the Ottoman painter Osman Hamdi Bey, who used the same visual language to paint his own world from within.",
     "datePublished": "2026-06-30",
-    "dateModified": "2026-06-30",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -660,6 +674,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="orientalism-between-fact-and-fantasy">
     <div class="post-date">June 30, 2026</div>
     <a class="permalink" href="/radar/orientalism-between-fact-and-fantasy/">Permalink</a>
@@ -683,6 +701,34 @@
       <p>בציורו La Grande Odalisque (1814) הוא מציג אישה עירומה השוכבת בהרמון דמיוני, מוקפת בדים יוקרתיים, מקטרת ומניפה. זה אינו ניסיון לתעד מציאות, אלא פנטזיה אירופית על המזרח.</p>
       <p>לעומתו, הנשים של עוסמאן חמדי ביי אינן מצוירות כמושא למבט הגברי. הן קוראות, לומדות, מתפללות ועוסקות בחיי היומיום. הדמויות המרכזיות בסיפור שלהן.</p>
       <p>אותה שפה אמנותית. אותה תקופה. אבל השאלה "מי מצייר?" משנה הכל</p>
+      <figure>
+        <img src="images/2026-06-30-orientalism-between-fact-and-fantasy-ingres.jpg" alt="Jean-Auguste-Dominique Ingres, La Grande Odalisque, 1814, oil on canvas" loading="lazy">
+        <figcaption>Jean-Auguste-Dominique Ingres, La Grande Odalisque, 1814</figcaption>
+      </figure>
+      <figure>
+        <img src="images/2026-06-30-orientalism-between-fact-and-fantasy-osman-hamdi-bey.jpg" alt="Osman Hamdi Bey, Young Woman Reading, 1880, oil on canvas" loading="lazy">
+        <figcaption>Osman Hamdi Bey, Young Woman Reading, 1880</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>There are exhibitions you leave with a list of works you loved.</p>
+      <p>And there are exhibitions you leave with a new way of looking.</p>
+      <p>This is one of those.</p>
+      <p>About two weeks ago, the Metropolitan opened, for the first time in its history, an exhibition devoted entirely to the idea of Orientalism: the way European artists of the 19th century imagined, described, and painted "the East" (the Middle East, North Africa, and parts of Asia). People of culture and scholarship were fascinated by the Orient, but they also created an image of an East that was exotic, mysterious, sensual, and at times wild. Often, that image said no less about Europe than about the East itself, since it reflected the curiosity, the fantasies, and the power relations of the era, and also the way Europe chose to see the "other". Because in the end, every gaze tells a story not only about what is seen, but also about who is looking.</p>
+      <p>While I wandered among the works, my mind actually drifted home. To the Mahane Yehuda market and the Old City of Jerusalem, the city of my childhood, to the colorful tiles of Jaffa and the Negev, and to the blazing, blinding sunlight of Israel. Everything on the walls no longer felt like an image of a faraway place. It felt familiar. Not because it was my reality, but because some of the works reflected fragments of landscapes I grew up beside, and they still live in my memory.</p>
+      <p>That led me to reflect on the exhibition's title: Between Fact and Fantasy. Suddenly it felt like far more than a title.</p>
+      <p>The exhibition does not try to decide whether Orientalism was truth or fantasy, appreciation or condescension. It shows that all of these existed together. It examines the complex relationship between Europe and the East in a period when colonialism, trade, travel, technological developments, and the exchange of ideas ran in parallel and shaped one another.</p>
+      <p>One of the moments I loved most was the encounter with the works of Osman Hamdi Bey (above), an Ottoman artist who studied painting in Paris in his youth, but returned to Istanbul and painted most of his works there. Unlike European artists who painted the East from the outside, sometimes without ever having visited it, he used the very European artistic language he absorbed in Paris to paint his own world.</p>
+      <p>At that moment you can no longer speak only about the question of who was looking at whom. The boundaries begin to blur.</p>
+      <p>Suddenly it is no longer only the West gazing at the East.</p>
+      <p>The East begins to gaze back.</p>
+      <p>In the end, I understood that this is not an exhibition about the East.</p>
+      <p>It is an exhibition about gazes.</p>
+      <p>🖼️ Orientalism: Between Fact and Fantasy<br>📅📍 The Metropolitan Museum of Art<br>Through February 28, 2027</p>
+      <p>One of the artists most identified with Orientalism is the French painter Jean-Auguste-Dominique Ingres. Although he never visited the Middle East, he built his image of the "Orient" out of imagination, literature, and objects he knew in Paris.</p>
+      <p>In his painting La Grande Odalisque (1814) he presents a nude woman reclining in an imaginary harem, surrounded by luxurious fabrics, a pipe, and a fan. It is not an attempt to document reality, but a European fantasy of the East.</p>
+      <p>By contrast, the women of Osman Hamdi Bey are not painted as objects of the male gaze. They read, study, pray, and go about everyday life. They are the central figures of their own story.</p>
+      <p>The same artistic language. The same period. But the question "who is painting?" changes everything</p>
       <figure>
         <img src="images/2026-06-30-orientalism-between-fact-and-fantasy-ingres.jpg" alt="Jean-Auguste-Dominique Ingres, La Grande Odalisque, 1814, oil on canvas" loading="lazy">
         <figcaption>Jean-Auguste-Dominique Ingres, La Grande Odalisque, 1814</figcaption>
@@ -735,6 +781,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>

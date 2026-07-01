@@ -45,7 +45,9 @@ There is also a deprecated backup remote called `old-ronki-art-backup` (points a
 
 ### Step 2.1 — Write the post content
 
-Posts are written primarily in **Hebrew** (the site's main audience), with **English** metadata (title, JSON-LD description, keywords) for SEO/LLM discoverability. Keep this pattern for every new post.
+Posts are written primarily in **Hebrew** (the site's main audience), with **English** metadata (title, JSON-LD description, keywords) for SEO/LLM discoverability.
+
+**MANDATORY (standing rule from Ron, 2026-07-01): every post is bilingual.** Each post carries TWO body blocks inside the same `<article>`: the Hebrew original, then a **full English translation** in a `<div class="post-body post-body-en" lang="en" dir="ltr">` block. The English version must be a complete, faithful translation of the Hebrew source: not a summary, not a paraphrase. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default) shows one language at a time; both live in the HTML so search engines and LLMs index both. Do not use em dashes or en dashes anywhere in the English text.
 
 ### Step 2.2 — Add the post block to `index.html`
 
@@ -64,7 +66,7 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
     "description": "{{1-3 sentence English summary — this is what search engines and LLMs read to describe the post}}",
     "datePublished": "{{YYYY-MM-DD}}",
     "dateModified": "{{YYYY-MM-DD, same as datePublished unless later edited}}",
-    "inLanguage": "he",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/{{slug}}/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/{{slug}}/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -84,6 +86,15 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
       <figure>
         <img src="images/{{YYYY-MM-DD-slug}}.jpg" alt="{{descriptive English alt text}}" loading="lazy">
         <figcaption>{{English caption}}</figcaption>
+      </figure>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>{{Full English translation of paragraph one, faithful to the Hebrew}}</p>
+      <p>{{Full English translation of paragraph two, etc.}}</p>
+      <p>📍 {{venue, in English}}<br>📅 {{dates, in English}}</p>
+      <figure>
+        <img src="images/{{YYYY-MM-DD-slug}}.jpg" alt="{{same English alt text}}" loading="lazy">
+        <figcaption>{{same English caption}}</figcaption>
       </figure>
     </div>
   </article>
@@ -123,7 +134,7 @@ Use `"@type": "Museum"` for museums, `"@type": "Place"` for galleries/other venu
     "description": "{{description}}",
     "datePublished": "{{YYYY-MM-DD}}",
     "dateModified": "{{YYYY-MM-DD}}",
-    "inLanguage": "he",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/{{slug}}/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/{{slug}}/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -138,6 +149,9 @@ Use `"@type": "Museum"` for museums, `"@type": "Place"` for galleries/other venu
     <h2 class="post-title">{{headline}}</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>{{Hebrew paragraph}}</p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p>{{Full English translation of the paragraph}}</p>
     </div>
   </article>
 ```
@@ -174,13 +188,13 @@ These two files are curated, hand-maintained summaries that AI crawlers (ChatGPT
 **In `llms.txt`**, under `## Recent Posts (Art Radar Archive)`, add a new line at the top of the list:
 
 ```
-- [{{English headline}}](https://stavtheodor.com/radar/{{slug}}/) — {{Month D, YYYY}}. {{1-sentence English summary}}
+- [{{English headline}}](https://stavtheodor.com/radar/{{slug}}/): {{Month D, YYYY}}. {{1-sentence English summary}}
 ```
 
 **In `agent.txt`**, under the matching `## Recent Posts` month heading (add a new month heading if needed), add:
 
 ```
-- {{English headline}} — {{1-sentence summary}}, {{key dates}} — https://stavtheodor.com/radar/{{slug}}/
+- {{English headline}} ({{1-sentence summary}}, {{key dates}}): https://stavtheodor.com/radar/{{slug}}/
 ```
 
 Also bump the "Structured Data Available" / archive references if you added a new venue not already listed in `agent.txt`'s "Venues Covered" section.
@@ -241,6 +255,7 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
 
 ```
 1. Add {JSON-LD <script> + <article>} pair to index.html, top of <section id="posts">
+   - Hebrew body block AND full English translation block (post-body-en). Both. Always.
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
 3. python3 build-post-pages.py
 4. Update llms.txt and agent.txt (real /radar/slug/ URL, not #slug anchor)

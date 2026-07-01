@@ -513,6 +513,20 @@
   }
   .permalink { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); text-decoration: none; }
   .permalink:hover { text-decoration: underline; }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
 </style>
 <script type="application/ld+json">
 {
@@ -521,8 +535,8 @@
     "headline": "Brancusi, Christie's, and a $107 Million Campaign",
     "description": "Constantin Brancusi's Danaid (1913) sold at Christie's New York for $107.6 million, a world auction record for the sculptor. The sale was preceded by a viral campaign starring Nicole Kidman, illustrating how auction houses use cinematic marketing to drive results.",
     "datePublished": "2026-05-20",
-    "dateModified": "2026-05-20",
-    "inLanguage": "he",
+    "dateModified": "2026-07-01",
+    "inLanguage": ["he", "en"],
     "url": "https://stavtheodor.com/radar/brancusi-christies/",
     "mainEntityOfPage": "https://stavtheodor.com/radar/brancusi-christies/",
     "author": { "@id": "https://stavtheodor.com/#stav" },
@@ -660,6 +674,10 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
   <article class="post" id="brancusi-christies">
     <div class="post-date">May 20, 2026</div>
     <a class="permalink" href="/radar/brancusi-christies/">Permalink</a>
@@ -671,6 +689,14 @@
       <p>התוצאה? בערב המכירה הפומבית בניו יורק, הפטיש נחת על מחיר בלתי נתפס של 93 מיליון דולר. יחד עם העמלות והמיסים, הסכום הסופי הגיע ל-107.6 מיליון דולר, מה ששבר רשמית את שיא המכירות של הפסל.</p>
       <p>הסיפור הזה הוא תזכורת לכך שאמנות גדולה לעולם אינה פועלת בחלל ריק; היא חיה, מגיבה ומנהלת דיאלוג עם התרבות העכשווית. זהו מהלך שיווקי מדויק, שמזכיר לנו שוב את הדיון לגבי חיבורים (מרתקים, אבל לא רק) המתרחשים בנקודת המפגש שבין היסטוריה, אמנות, תרבות עכשווית וכסף גדול.</p>
       <p>רוצים לראות את הסרטון? הנה הלינק: <a href="https://youtu.be/nMDlal5tQP8?si=_UVb5NXfZ5CU1DAU" target="_blank" rel="noopener">youtu.be/nMDlal5tQP8</a></p>
+    </div>
+    <div class="post-body post-body-en" lang="en" dir="ltr">
+      <p class="credit">From a post by ARTernative</p>
+      <p>When art, big money, and popular culture meet, you get the distilled drama that only the global art market knows how to deliver. This week we received a masterclass in how to turn a modernist sculpture more than a century old into a viral hit, and how a brilliant marketing campaign translates into millions of dollars.</p>
+      <p>It began with a short promo video produced by the auction house Christie's. On screen: Nicole Kidman, in Louboutin stilettos, striding confidently through the corridors of the company's headquarters, entering a private elevator, and revealing behind white curtains "Danaid" (named for the Danaides of Greek mythology), an iconic 1913 bronze head by Constantin Brancusi. The official goal was to build buzz ahead of the sale of the masterpiece, which came from the private collection of the late media mogul Samuel Irving Newhouse (who acquired it in 2002 for what was then considered a record sum: $18.2 million).</p>
+      <p>The result? On the evening of the New York auction, the hammer came down at an unfathomable $93 million. With fees and taxes, the final total reached $107.6 million, officially breaking the sculptor's auction record.</p>
+      <p>This story is a reminder that great art never operates in a vacuum; it lives, responds, and holds a dialogue with contemporary culture. It is a precise marketing move that brings us back, once again, to the conversation about the connections (fascinating, but not only that) taking place at the meeting point of history, art, contemporary culture, and big money.</p>
+      <p>Want to watch the video? Here is the link: <a href="https://youtu.be/nMDlal5tQP8?si=_UVb5NXfZ5CU1DAU" target="_blank" rel="noopener">youtu.be/nMDlal5tQP8</a></p>
     </div>
   </article>
 </section>
@@ -715,6 +741,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
 </script>
 
 </body>
