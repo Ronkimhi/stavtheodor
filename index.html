@@ -531,6 +531,10 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
+  .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
+  .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
+  .faq-item p { color: var(--ink-soft); max-width: 62ch; }
 </style>
 
 <!-- FAQPage schema: 3.2x AIO citation lift per 2026 research -->
@@ -627,8 +631,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
         "addressCountry": "US"
       }
     },
@@ -641,9 +645,17 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
+      "email": "stavtheodor85@gmail.com",
+      "telephone": "+1-551-246-6416",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
       "areaServed": [
         { "@type": "City", "name": "New York City" },
-        { "@type": "City", "name": "New Jersey" },
+        { "@type": "State", "name": "New Jersey" },
         { "@type": "City", "name": "Tel Aviv" }
       ],
       "knowsAbout": [
@@ -687,6 +699,7 @@
   <a href="#portfolio">Portfolio</a>
   <a href="#radar">Art Radar</a>
   <a href="#posts">Posts</a>
+  <a href="#faq">FAQ</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -1903,6 +1916,41 @@
     </div>
   </article>
 
+</section>
+
+<hr class="divider">
+
+<!-- ============ FAQ (visible text mirrors the FAQPage JSON-LD in <head>; keep both in sync) ============ -->
+<section id="faq" class="wrap">
+  <div class="label">Questions</div>
+  <div class="faq-item">
+    <h3>What does an art curator do for a private residence?</h3>
+    <p>An art curator for private residences guides the entire process: developing an art concept for the space, sourcing works from galleries and artists, selecting pieces that fit the design and the client's sensibility, and overseeing installation. The goal is art that feels right for that specific home and person.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How does THEODORA's art advisory service work?</h3>
+    <p>THEODORA handles the full process from start to finish. It begins with understanding the space and the client, then moves through art concept, sourcing, selection, and installation. Every recommendation is specific to that project. No two clients receive the same answer.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do you work with interior designers and architects?</h3>
+    <p>Yes. A significant part of THEODORA's practice is working alongside architects and interior designers on behalf of their clients. Stav speaks the language of design and understands how art must function within a larger design intent, not on top of it.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Where does THEODORA provide art advisory services?</h3>
+    <p>THEODORA is based in New York City and New Jersey, serving the greater New York luxury market. Stav also works on projects in Tel Aviv and has experience with large-scale international hospitality commissions. Projects are evaluated individually regardless of location.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I know which art is right for my space?</h3>
+    <p>That is exactly what the advisory process is for. Stav listens first, then looks: at the space, the light, the design, and the person living in it. The right piece is not about price or trend. It is about whether it resonates with this specific space and this specific person.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What exhibitions are worth seeing in New York right now?</h3>
+    <p>Art Radar, THEODORA's curatorial newsletter, publishes weekly picks of must-see exhibitions in New York, New Jersey, and Tel Aviv, chosen by Stav Theodor-Kimhi, an art curator with two decades of experience. Every post is published in Hebrew and English. The full archive is available at stavtheodor.com.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Where can I find art recommendations for New Jersey and the New York area?</h3>
+    <p>Art Radar by THEODORA is a curated guide to art in New Jersey and New York, written by Stav Theodor-Kimhi, an art curator based in Tenafly, NJ. It covers exhibitions at the Met, MoMA, the Guggenheim, the Frick, Park Avenue Armory, and New York galleries, plus New Jersey venues like the Montclair Art Museum and practical tips such as free museum passes from Bergen County libraries. Posts are published in Hebrew and English at stavtheodor.com.</p>
+  </div>
 </section>
 
 <!-- ============ CONTACT ============ -->

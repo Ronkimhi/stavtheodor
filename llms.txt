@@ -5,6 +5,8 @@
 ## About
 
 - [Art Radar by THEODORA](https://stavtheodor.com/) is the main site. It includes Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv, plus information about THEODORA's advisory services.
+- [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
+- Base: Tenafly, New Jersey. Serving New York City, New Jersey, and Tel Aviv.
 
 ## Services
 

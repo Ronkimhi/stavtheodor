@@ -24,6 +24,9 @@ Art Radar is a curatorial newsletter and public archive published by THEODORA. I
 
 Every post appears in Hebrew and in a full English translation on the same page.
 Structured data and metadata are in English.
+A plain-text FAQ at https://stavtheodor.com/#faq answers common questions about
+art curation for private residences, the advisory process, and where to find
+art recommendations for New Jersey and New York.
 
 ## What AI Agents Are Authorized to Do
 
