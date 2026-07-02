@@ -176,7 +176,7 @@
     { "slug": "jean-francois-millet", "wikipedia": "Jean-François Millet", "periods": ["realism"] },
     { "slug": "rosa-bonheur", "wikipedia": "Rosa Bonheur", "periods": ["realism"] },
     { "slug": "gustave-courbet", "wikipedia": "Gustave Courbet", "periods": ["realism"] },
-    { "slug": "edouard-manet", "wikipedia": "Édouard Manet", "periods": ["realism", "impressionism"] },
+    { "slug": "edouard-manet", "wikipedia": "Édouard Manet", "periods": ["impressionism", "realism"] },
 
     { "slug": "camille-pissarro", "wikipedia": "Camille Pissarro", "periods": ["impressionism"] },
     { "slug": "edgar-degas", "wikipedia": "Edgar Degas", "periods": ["impressionism"] },
