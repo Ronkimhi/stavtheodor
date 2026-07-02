@@ -16,8 +16,73 @@
   "source": "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD",
- "hasGallery": false,
+ "hasGallery": true,
  "paintings": [
+  {
+   "qid": "Q211293",
+   "title": "Portrait of Luis Buñuel",
+   "year": 1924,
+   "image": {
+    "file": "File:Madrid (49191190833).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Madrid_%2849191190833%29.jpg/960px-Madrid_%2849191190833%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Madrid_%2849191190833%29.jpg/1920px-Madrid_%2849191190833%29.jpg",
+    "pxW": 2736,
+    "pxH": 1824
+   },
+   "cm": {
+    "w": 60,
+    "h": 70
+   },
+   "collection": "Museo Nacional Centro de Arte Reina Sofía",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Jeremy Thompson from Los Angeles, California"
+   }
+  },
+  {
+   "qid": "Q167536",
+   "title": "The Great Masturbator",
+   "year": 1929,
+   "image": {
+    "file": "File:El gran masturbador.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/El_gran_masturbador.jpg/960px-El_gran_masturbador.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/El_gran_masturbador.jpg/1920px-El_gran_masturbador.jpg",
+    "pxW": 2816,
+    "pxH": 2112
+   },
+   "cm": {
+    "w": 150,
+    "h": 110
+   },
+   "collection": "Museo Nacional Centro de Arte Reina Sofía",
+   "story": {
+    "extract": "The Great Masturbator (1929) is a painting by Salvador Dalí, painted during the surrealist movement. It is currently displayed at the Museo Nacional Centro de Arte Reina Sofía, Madrid.",
+    "source": "https://en.wikipedia.org/wiki/The_Great_Masturbator"
+   },
+   "facts": [
+    {
+     "text": "Dalí kept the painting in his personal collection, and displayed at the Dalí Theatre and Museum in Figueres. He bequeathed it to the national collection of Spain upon his death, when it was removed to the Madrid museum.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Great_Masturbator#History"
+    },
+    {
+     "text": "The painting may represent Dalí's severely conflicted attitudes towards sexual intercourse. In Dalí's youth, his father had left out a book with explicit photos of people suffering advanced untreated venereal diseases to \"educate\" the boy.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/The_Great_Masturbator#Interpretation"
+    },
+    {
+     "text": "In the centre of the painting there is a distorted human face in profile looking downwards, based on the shape of a natural rock formation at Cap de Creus along the sea-shore of Catalonia. A similar profile is seen in Dalí's more famous painting from two years later, The Persistence of Memory.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Great_Masturbator#Description"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Wolf Gang"
+   }
+  },
   {
    "qid": "Q61944806",
    "title": "The Spectre of Sex-Appeal",
@@ -39,6 +104,180 @@
    "license": {
     "name": "Public domain",
     "credit": "Salvador Dali"
+   }
+  },
+  {
+   "qid": "Q2990594",
+   "title": "Lobster Telephone",
+   "year": 1936,
+   "image": {
+    "file": "File:Lobster Telephone Photo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lobster_Telephone_Photo.jpg/960px-Lobster_Telephone_Photo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Lobster_Telephone_Photo.jpg",
+    "pxW": 1280,
+    "pxH": 929
+   },
+   "cm": null,
+   "collection": "Minneapolis Institute of Art",
+   "story": {
+    "extract": "Lobster Telephone is a Surrealist object, created by Salvador Dalí in 1936 for the English poet Edward James (1907–1984), a leading collector of surrealist art. In his 1942 book The Secret Life of Salvador Dalí, Dalí wrote teasingly of his demand to know why, when he asked for a grilled lobster in a restaurant, he was never presented with a boiled telephone.",
+    "source": "https://en.wikipedia.org/wiki/Lobster_Telephone"
+   },
+   "facts": [
+    {
+     "text": "The work is a composite of an ordinary working telephone and a lobster made of plaster. It is approximately 15 × 30 × 17 cm (6 × 12 × 6.6 inches) in size.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Lobster_Telephone#Description"
+    },
+    {
+     "text": "Dalí produced four examples of the color version of his lobster telephone, currently displayed as part of the four following collections: Museum für Kommunikation Frankfurt, Germany National Gallery of Australia Tate Modern, London West Dean College, UK",
+     "section": "Present locations",
+     "source": "https://en.wikipedia.org/wiki/Lobster_Telephone#Present_locations"
+    },
+    {
+     "text": "Dalí also produced an off-white version of his telephone. The six examples are displayed as following: Salvador Dalí Museum in St.",
+     "section": "Off-white versions",
+     "source": "https://en.wikipedia.org/wiki/Lobster_Telephone#Off-white_versions"
+    }
+   ],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Nacaru"
+   }
+  },
+  {
+   "qid": "Q17986845",
+   "title": "Mae West Lips Sofa",
+   "year": 1938,
+   "image": {
+    "file": "File:Salvador dalì, divano labbra di mae west, 1938.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg/960px-Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg/1920px-Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg",
+    "pxW": 3726,
+    "pxH": 2384
+   },
+   "cm": null,
+   "collection": "Museum Boijmans Van Beuningen",
+   "story": {
+    "extract": "The Mae West Lips Sofa is a surrealist sculpture in the form of a sofa by Salvador Dalí. The light red, 110 cm × 183 cm × 81.5 cm sized seating furniture made of polyurethane foam coated with a red polidur coating was shaped after the lips of actress Mae West, whom Dalí apparently found fascinating. Dalí never intended for the sofa to serve a functional use.",
+    "source": "https://en.wikipedia.org/wiki/Mae_West_Lips_Sofa"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": "Q2663568",
+   "title": "The Face of War",
+   "year": 1940,
+   "image": {
+    "file": "File:Dalí en el palacio de BA 02.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dal%C3%AD_en_el_palacio_de_BA_02.jpg/960px-Dal%C3%AD_en_el_palacio_de_BA_02.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dal%C3%AD_en_el_palacio_de_BA_02.jpg/1920px-Dal%C3%AD_en_el_palacio_de_BA_02.jpg",
+    "pxW": 3120,
+    "pxH": 4160
+   },
+   "cm": {
+    "w": 79,
+    "h": 64
+   },
+   "collection": "Museum Boijmans Van Beuningen",
+   "story": {
+    "extract": "The Face of War is an oil painting by the Spanish surrealist Salvador Dalí, from 1940. It was painted during a brief period when the artist lived in California. The painting is owned by the Museum Boijmans Van Beuningen, in Rotterdam",
+    "source": "https://en.wikipedia.org/wiki/The_Face_of_War"
+   },
+   "facts": [
+    {
+     "text": "The trauma and the view of war had often served as inspiration for Dalí's work. He sometimes believed his artistic vision to be premonitions of war.",
+     "section": "History and description",
+     "source": "https://en.wikipedia.org/wiki/The_Face_of_War#History_and_description"
+    }
+   ],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Ferfive"
+   }
+  },
+  {
+   "qid": "Q3462260",
+   "title": "Saint-Georges et le Dragon de Salvador Dalí",
+   "year": 1984,
+   "image": {
+    "file": "File:Pommard2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pommard2.jpg/960px-Pommard2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pommard2.jpg/1920px-Pommard2.jpg",
+    "pxW": 4440,
+    "pxH": 3052
+   },
+   "cm": null,
+   "collection": "Château de Pommard",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jebulon"
+   }
+  },
+  {
+   "qid": "Q18175799",
+   "title": "Dolmen de Dalí",
+   "year": 1986,
+   "image": {
+    "file": "File:Plaza de Dalí.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Plaza_de_Dal%C3%AD.jpg/960px-Plaza_de_Dal%C3%AD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/48/Plaza_de_Dal%C3%AD.jpg",
+    "pxW": 1907,
+    "pxH": 2860
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Felipe Gabaldón"
+   }
+  },
+  {
+   "qid": "Q17530764",
+   "title": "Hombre sobre delfín",
+   "year": null,
+   "image": {
+    "file": "File:Estacion de Oviedo. Acceso superior.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Estacion_de_Oviedo._Acceso_superior.jpg/960px-Estacion_de_Oviedo._Acceso_superior.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Estacion_de_Oviedo._Acceso_superior.jpg/1920px-Estacion_de_Oviedo._Acceso_superior.jpg",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "AdelosRM"
+   }
+  },
+  {
+   "qid": "Q122397949",
+   "title": "Sundial by Salvador Dalí, Paris",
+   "year": null,
+   "image": {
+    "file": "File:Dali Sundial in Paris.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Dali_Sundial_in_Paris.jpg/960px-Dali_Sundial_in_Paris.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/63/Dali_Sundial_in_Paris.jpg",
+    "pxW": 1200,
+    "pxH": 894
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Ken Eckert"
    }
   }
  ]

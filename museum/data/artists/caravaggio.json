@@ -182,6 +182,43 @@
    }
   },
   {
+   "qid": "Q2470123",
+   "title": "Judith Beheading Holofernes",
+   "year": 1599,
+   "image": {
+    "file": "File:Judith Beheading Holofernes - Caravaggio.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Judith_Beheading_Holofernes_-_Caravaggio.jpg/960px-Judith_Beheading_Holofernes_-_Caravaggio.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Judith_Beheading_Holofernes_-_Caravaggio.jpg/1920px-Judith_Beheading_Holofernes_-_Caravaggio.jpg",
+    "pxW": 3998,
+    "pxH": 2951
+   },
+   "cm": {
+    "w": 195,
+    "h": 145
+   },
+   "collection": "Galleria Nazionale d'Arte Antica",
+   "story": {
+    "extract": "Judith Beheading Holofernes is a painting of the biblical episode by the Italian Baroque artist Caravaggio, painted in c. 1598 – 1599 or 1602, in which the widow Judith stayed with the Assyrian general Holofernes in his tent after a banquet then decapitated him after he passed out drunk. The painting was rediscovered in 1950 and is part of the collection of the Galleria Nazionale d'Arte Antica in Rome.",
+    "source": "https://en.wikipedia.org/wiki/Judith_Beheading_Holofernes_%28Caravaggio%29"
+   },
+   "facts": [
+    {
+     "text": "The deuterocanonical Book of Judith tells how Judith served her people by deceiving Holofernes, the Assyrian General. Judith gets Holofernes drunk, then seizes her sword and slays him: \"Approaching to his bed, she took hold of the hair of his head\" (Judith 13:7–8).",
+     "section": "Subject",
+     "source": "https://en.wikipedia.org/wiki/Judith_Beheading_Holofernes_%28Caravaggio%29#Subject"
+    },
+    {
+     "text": "When Caravaggio left Naples on 14 June 1607, he left two paintings - the Madonna of the Rosary and Judith beheading Holofernes - in the studio in Naples that was shared by the two Flemish painters and art dealers Louis Finson and Abraham Vinck. Vinck likely took the two paintings with him when he left Naples and settled in Amsterdam around 1609.",
+     "section": "Possible second version",
+     "source": "https://en.wikipedia.org/wiki/Judith_Beheading_Holofernes_%28Caravaggio%29#Possible_second_version"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Caravaggio"
+   }
+  },
+  {
    "qid": "Q318947",
    "title": "Supper at Emmaus",
    "year": 1601,
@@ -295,38 +332,6 @@
      "text": "This painting illustrates the iconographic and formal revolution that Caravaggio instigated in the late 16th and early 17th centuries. Distancing himself from the precious, affected mannerist vogue, the artist inaugurated a frank, robust, energetic style.",
      "section": "Influence",
      "source": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_%28Caravaggio%29#Influence"
-    }
-   ],
-   "license": {
-    "name": "Public domain",
-    "credit": "Caravaggio"
-   }
-  },
-  {
-   "qid": "Q2627056",
-   "title": "David with the Head of Goliath",
-   "year": 1605,
-   "image": {
-    "file": "File:David with the Head of Goliath-Caravaggio (1610).jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg/960px-David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg/1920px-David_with_the_Head_of_Goliath-Caravaggio_%281610%29.jpg",
-    "pxW": 5922,
-    "pxH": 7329
-   },
-   "cm": {
-    "w": 101,
-    "h": 125
-   },
-   "collection": "Galleria Borghese",
-   "story": {
-    "extract": "David with the Head of Goliath is a painting by the Italian Baroque master Caravaggio. It is housed in the Galleria Borghese, Rome. The painting, which was in the collection of Cardinal Scipione Borghese in 1650, has been dated as early as 1605 and as late as 1609–1610, with more recent scholars tending towards the former.",
-    "source": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_%28Caravaggio%2C_Rome%29"
-   },
-   "facts": [
-    {
-     "text": "The Netflix limited series, Ripley, features this painting when the protagonist visits the Galleria Borghese shortly after committing a murder. Symbol for the song \"Euclid\" on Sleep Token's album Take Me Back to Eden (2023).",
-     "section": "References in popular culture",
-     "source": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_%28Caravaggio%2C_Rome%29#References_in_popular_culture"
     }
    ],
    "license": {

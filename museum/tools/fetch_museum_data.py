@@ -25,11 +25,17 @@ CACHE = HERE / "cache"
 UA = "TheodoraMuseumBot/1.0 (https://stavtheodor.com; ronkkimhi@gmail.com)"
 SLEEP = 0.5          # seconds between uncached requests
 SPARQL_SLEEP = 1.0
-MIN_PAINTINGS = 6    # below this an artist is placard-only (hasGallery: false)
+MIN_PAINTINGS = 4    # below this an artist is placard-only (hasGallery: false)
 DEFAULT_MAX = 10
 CURRENT_YEAR = 2026
 
-FREE_LICENSES = ("public domain", "pd", "cc0", "no restrictions")
+# Licenses we accept from Commons: public domain marks plus attribution-style
+# Creative Commons (CC BY, CC BY-SA). Attribution is shown on every placard.
+# NC/ND variants are always rejected.
+FREE_LICENSES = ("public domain", "pd", "cc0", "no restrictions", "cc by", "attribution")
+BLOCKED_LICENSE = re.compile(r"by-nc|by-nd|\bnc\b|\bnd\b", re.I)
+# P31 type labels that mean the Wikidata "work" is really a venue, not a work.
+NON_WORK_TYPES = re.compile(r"building|church|museum|street|square|house|chapel", re.I)
 SECTION_STOPLIST = {
     "references", "external links", "see also", "notes", "further reading",
     "sources", "bibliography", "citations", "footnotes", "gallery", "works cited",
@@ -217,6 +223,68 @@ def sparql_paintings(qid):
     return rows
 
 
+def sparql_other_works(qid):
+    """Non-painting works credited to the artist (sculptures, murals, prints...).
+    Used only when the painting harvest leaves an artist below the gallery
+    threshold, which happens for modern artists whose paintings are still
+    under copyright."""
+    q = f"""SELECT ?p ?pLabel ?typeLabel ?image ?inception ?collectionLabel ?sitelinks ?article WHERE {{
+  {{ SELECT ?p ?image ?sitelinks WHERE {{
+       ?p wdt:P170 wd:{qid}; wdt:P18 ?image; wikibase:sitelinks ?sitelinks .
+       MINUS {{ ?p wdt:P31 wd:Q3305213 }}
+     }} ORDER BY DESC(?sitelinks) LIMIT 40 }}
+  OPTIONAL {{ ?p wdt:P31 ?type }}
+  OPTIONAL {{ ?p wdt:P571 ?inception }}
+  OPTIONAL {{ ?p wdt:P195 ?collection }}
+  OPTIONAL {{ ?article schema:about ?p ; schema:isPartOf <https://en.wikipedia.org/> }}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+}} ORDER BY DESC(?sitelinks)"""
+    url = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(q, safe="")
+    d = None
+    for attempt in range(3):
+        try:
+            d = get_json(url, sleep=SPARQL_SLEEP)
+            break
+        except RuntimeError as e:
+            print(f"    sparql retry {attempt + 1} ({e})", flush=True)
+            time.sleep(8 * (attempt + 1))
+    if d is None:
+        return []
+    rows, seen = [], set()
+    for b in d["results"]["bindings"]:
+        pqid = b["p"]["value"].rsplit("/", 1)[-1]
+        if pqid in seen:
+            continue
+        seen.add(pqid)
+        label = b.get("pLabel", {}).get("value", "")
+        if not label or label == pqid:
+            continue
+        type_label = b.get("typeLabel", {}).get("value", "")
+        if NON_WORK_TYPES.search(type_label):
+            continue
+        img = b["image"]["value"]
+        fname = urllib.parse.unquote(img.rsplit("/", 1)[-1]).replace("_", " ")
+        year = None
+        if "inception" in b:
+            m = re.match(r"[+-]?(\d{4})", b["inception"]["value"])
+            if m:
+                year = int(m.group(1)) * (-1 if b["inception"]["value"].startswith("-") else 1)
+        rows.append({
+            "qid": pqid,
+            "title": label,
+            "file": "File:" + fname,
+            "year": year,
+            "cm": None,
+            "collection": b.get("collectionLabel", {}).get("value") or None,
+            "sitelinks": int(b["sitelinks"]["value"]),
+            "article": (
+                urllib.parse.unquote(b["article"]["value"].rsplit("/wiki/", 1)[-1]).replace("_", " ")
+                if "article" in b else None
+            ),
+        })
+    return rows
+
+
 # ---------- Commons ----------
 
 def commons_imageinfo(files, width):
@@ -249,6 +317,8 @@ def commons_imageinfo(files, width):
 
 def license_ok(info):
     lic = (info.get("extmetadata", {}).get("LicenseShortName", {}).get("value") or "").lower()
+    if BLOCKED_LICENSE.search(lic):
+        return False, lic
     return any(k in lic for k in FREE_LICENSES), lic
 
 
@@ -323,25 +393,55 @@ def build_artist(seed_artist, report):
         candidates.append(r)
     candidates = candidates[:30]
 
-    info640 = commons_imageinfo([r["file"] for r in candidates], 640)
     kept, rejected = [], []
     max_p = seed_artist.get("maxPaintings", DEFAULT_MAX)
-    for r in candidates:
-        if len(kept) >= max_p:
-            break
-        info = info640.get(r["file"])
-        if not info:
-            rejected.append((r["title"], "no imageinfo"))
-            continue
-        ok, lic = license_ok(info)
-        if not ok:
-            rejected.append((r["title"], f"license: {lic or 'unknown'}"))
-            continue
-        if max(info.get("width", 0), info.get("height", 0)) < 1000:
-            rejected.append((r["title"], f"too small: {info.get('width')}x{info.get('height')}"))
-            continue
-        r["_info640"] = info
-        kept.append(r)
+
+    def keep_rows(rows, min_px=1000):
+        info640 = commons_imageinfo([r["file"] for r in rows], 640)
+        have = {k["file"] for k in kept}
+        for r in rows:
+            if len(kept) >= max_p:
+                break
+            if r["file"] in have:
+                continue
+            info = info640.get(r["file"])
+            if not info:
+                rejected.append((r["title"], "no imageinfo"))
+                continue
+            ok, lic = license_ok(info)
+            if not ok:
+                rejected.append((r["title"], f"license: {lic or 'unknown'}"))
+                continue
+            if max(info.get("width", 0), info.get("height", 0)) < min_px:
+                rejected.append((r["title"], f"too small: {info.get('width')}x{info.get('height')}"))
+                continue
+            r["_info640"] = info
+            have.add(r["file"])
+            kept.append(r)
+
+    keep_rows(candidates)
+
+    # Modern artists: copyrighted paintings leave the harvest short, so top up
+    # with the artist's non-painting works (sculptures, murals, installations).
+    if len(kept) < 6:
+        others = [r for r in sparql_other_works(qid) if r["qid"] not in exclude]
+        keep_rows(others)
+
+    # Hand-curated Commons files from seed.json (verified by a human; smaller
+    # minimum size since some legitimate early works only exist as small scans).
+    curated = []
+    for cw in seed_artist.get("commonsWorks", []):
+        curated.append({
+            "qid": None,
+            "title": cw["title"],
+            "file": cw["file"],
+            "year": cw.get("year"),
+            "cm": None,
+            "collection": cw.get("collection"),
+            "sitelinks": 0,
+            "article": cw.get("article"),
+        })
+    keep_rows(curated, min_px=440)
 
     info1600 = commons_imageinfo([r["file"] for r in kept], 1600)
 
@@ -475,7 +575,7 @@ def main():
     if not only:
         index = {
             "generated": time.strftime("%Y-%m-%d"),
-            "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain).",
+            "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain or Creative Commons; attribution on each work).",
             "periods": periods,
             "artists": index_artists,
         }

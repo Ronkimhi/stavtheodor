@@ -88,23 +88,49 @@
    }
   },
   {
-   "qid": "Q110158581",
-   "title": "Smoke Over Rooftops",
-   "year": 1911,
+   "qid": "Q60356845",
+   "title": "The Woman in Blue",
+   "year": 1912,
    "image": {
-    "file": "File:Smoke over Rooftops - Fernand Léger.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Smoke_over_Rooftops_-_Fernand_L%C3%A9ger.jpg/960px-Smoke_over_Rooftops_-_Fernand_L%C3%A9ger.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Smoke_over_Rooftops_-_Fernand_L%C3%A9ger.jpg",
-    "pxW": 1440,
-    "pxH": 916
+    "file": "File:Aerrapc Guggenheim art photo (134).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aerrapc_Guggenheim_art_photo_%28134%29.png/960px-Aerrapc_Guggenheim_art_photo_%28134%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Aerrapc_Guggenheim_art_photo_%28134%29.png",
+    "pxW": 1288,
+    "pxH": 1936
    },
-   "cm": null,
-   "collection": "Minneapolis Institute of Art",
+   "cm": {
+    "w": 129,
+    "h": 193
+   },
+   "collection": "Kunstmuseum Basel",
    "story": null,
    "facts": [],
    "license": {
-    "name": "Public domain",
-    "credit": "Fernand Léger"
+    "name": "CC BY-SA 4.0",
+    "credit": "Aerra Carnicom"
+   }
+  },
+  {
+   "qid": "Q60606881",
+   "title": "Contrast of Forms",
+   "year": 1913,
+   "image": {
+    "file": "File:Fernand léger, contrasto di forme, 1913.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg/960px-Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg/1920px-Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg",
+    "pxW": 2072,
+    "pxH": 2468
+   },
+   "cm": {
+    "w": 81,
+    "h": 100
+   },
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Francesco Bini"
    }
   },
   {
@@ -123,29 +149,6 @@
     "h": 100
    },
    "collection": "Musée National d'Art Moderne",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Fernand Léger"
-   }
-  },
-  {
-   "qid": "Q114405765",
-   "title": "The Pink Tug",
-   "year": 1918,
-   "image": {
-    "file": "File:Le remorqueur rose - Fernand Léger - Museum Ludwig-7057 (without frame).jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Le_remorqueur_rose_-_Fernand_L%C3%A9ger_-_Museum_Ludwig-7057_%28without_frame%29.jpg/960px-Le_remorqueur_rose_-_Fernand_L%C3%A9ger_-_Museum_Ludwig-7057_%28without_frame%29.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Le_remorqueur_rose_-_Fernand_L%C3%A9ger_-_Museum_Ludwig-7057_%28without_frame%29.jpg/1920px-Le_remorqueur_rose_-_Fernand_L%C3%A9ger_-_Museum_Ludwig-7057_%28without_frame%29.jpg",
-    "pxW": 3370,
-    "pxH": 2404
-   },
-   "cm": {
-    "w": 92,
-    "h": 66
-   },
-   "collection": "Museum Ludwig",
    "story": null,
    "facts": [],
    "license": {

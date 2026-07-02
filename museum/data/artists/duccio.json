@@ -19,6 +19,38 @@
  "hasGallery": true,
  "paintings": [
   {
+   "qid": "Q644734",
+   "title": "Gualino Madonna",
+   "year": 1280,
+   "image": {
+    "file": "File:Madone Gualino.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Madone_Gualino.jpg/960px-Madone_Gualino.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Madone_Gualino.jpg",
+    "pxW": 1486,
+    "pxH": 2632
+   },
+   "cm": {
+    "w": 86,
+    "h": 157
+   },
+   "collection": "Riccardo Gualino Collection (1910-1930)",
+   "story": {
+    "extract": "The Gualino Madonna is a painting attributed to Cimabue, precursor to the Italian primitives, after having been attributed for some time to one of his contemporaries, Duccio di Buoninsegna. It is housed in the Galleria Sabauda of Turin, northern Italy.",
+    "source": "https://en.wikipedia.org/wiki/Gualino_Madonna"
+   },
+   "facts": [
+    {
+     "text": "The provenance of the panel is unknown. In 1910 it was sold on the Florence antiquary market covered by a 16th-century repainting, which was removed in 1920.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Gualino_Madonna#History"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Ismoon (talk) 12:30, 8 February 2025 (UTC)"
+   }
+  },
+  {
    "qid": "Q3842715",
    "title": "Madonna di Crevole",
    "year": 1283,
@@ -98,6 +130,29 @@
    }
   },
   {
+   "qid": "Q4010476",
+   "title": "Original rose window",
+   "year": 1287,
+   "image": {
+    "file": "File:Original rose window of the Duomo by Duccio - Museo dell'Opera del Duomo - Siena 2016 (2).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg/960px-Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg/1920px-Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg",
+    "pxW": 3393,
+    "pxH": 3393
+   },
+   "cm": {
+    "w": 560,
+    "h": 560
+   },
+   "collection": "Museo dell'Opera Metropolitana del Duomo",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "José Luiz"
+   }
+  },
+  {
    "qid": "Q6728425",
    "title": "Madonna with Child and six Angels",
    "year": 1300,
@@ -162,52 +217,6 @@
     "h": 48
    },
    "collection": "Andrew W. Mellon collection",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Duccio di Buoninsegna"
-   }
-  },
-  {
-   "qid": "Q4015930",
-   "title": "The Calling of the Apostles Peter and Andrew",
-   "year": 1308,
-   "image": {
-    "file": "File:Duccio di Buoninsegna 036.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Duccio_di_Buoninsegna_036.jpg/960px-Duccio_di_Buoninsegna_036.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Duccio_di_Buoninsegna_036.jpg/1920px-Duccio_di_Buoninsegna_036.jpg",
-    "pxW": 2730,
-    "pxH": 2561
-   },
-   "cm": {
-    "w": 46,
-    "h": 44
-   },
-   "collection": "Samuel H. Kress Collection",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Duccio di Buoninsegna"
-   }
-  },
-  {
-   "qid": "Q11931777",
-   "title": "The Wedding at Cana",
-   "year": 1308,
-   "image": {
-    "file": "File:Duccio di Buoninsegna 038.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Duccio_di_Buoninsegna_038.jpg/960px-Duccio_di_Buoninsegna_038.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Duccio_di_Buoninsegna_038.jpg",
-    "pxW": 1520,
-    "pxH": 1400
-   },
-   "cm": {
-    "w": 46,
-    "h": 44
-   },
-   "collection": "Museo dell'Opera Metropolitana del Duomo",
    "story": null,
    "facts": [],
    "license": {

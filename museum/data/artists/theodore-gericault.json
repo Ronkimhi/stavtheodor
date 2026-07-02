@@ -121,6 +121,29 @@
    }
   },
   {
+   "qid": "Q18599152",
+   "title": "The Severed Heads",
+   "year": 1818,
+   "image": {
+    "file": "File:The Severed Heads, 1810s, by Théodore Géricault. Nationalmuseum, Stockholm, Sweden.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/The_Severed_Heads%2C_1810s%2C_by_Th%C3%A9odore_G%C3%A9ricault._Nationalmuseum%2C_Stockholm%2C_Sweden.jpg/960px-The_Severed_Heads%2C_1810s%2C_by_Th%C3%A9odore_G%C3%A9ricault._Nationalmuseum%2C_Stockholm%2C_Sweden.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/The_Severed_Heads%2C_1810s%2C_by_Th%C3%A9odore_G%C3%A9ricault._Nationalmuseum%2C_Stockholm%2C_Sweden.jpg/1920px-The_Severed_Heads%2C_1810s%2C_by_Th%C3%A9odore_G%C3%A9ricault._Nationalmuseum%2C_Stockholm%2C_Sweden.jpg",
+    "pxW": 4444,
+    "pxH": 3591
+   },
+   "cm": {
+    "w": 61,
+    "h": 50
+   },
+   "collection": "Nationalmuseum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Théodore Géricault"
+   }
+  },
+  {
    "qid": "Q19911548",
    "title": "Evening: Landscape with an Aqueduct",
    "year": 1818,
@@ -316,29 +339,6 @@
    },
    "collection": "Department of Paintings of the Louvre",
    "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Théodore Géricault"
-   }
-  },
-  {
-   "qid": "Q111912988",
-   "title": "The Melancholic Man",
-   "year": null,
-   "image": {
-    "file": "File:The Melancholic Man - Théodore Géricault.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg/960px-The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Melancholic_Man_-_Th%C3%A9odore_G%C3%A9ricault.jpg",
-    "pxW": 1902,
-    "pxH": 2560
-   },
-   "cm": null,
-   "collection": null,
-   "story": {
-    "extract": "The Melancholic Man is an oil-on-canvas painting discovered by Javier S. Burgos, a Spanish scientist, in Ravenna, Emilia-Romagna, Italy in 2019. It depicts a man with a furrowed brow, dressed in a red robe.",
-    "source": "https://en.wikipedia.org/wiki/The_Melancholic_Man"
-   },
    "facts": [],
    "license": {
     "name": "Public domain",

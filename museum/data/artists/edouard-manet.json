@@ -373,39 +373,44 @@
    }
   },
   {
-   "qid": "Q731639",
-   "title": "The Plum",
-   "year": 1878,
+   "qid": "Q1245354",
+   "title": "A Bar at the Folies-Bergère Sharon",
+   "year": 1882,
    "image": {
-    "file": "File:Edouard Manet - The Plum - National Gallery of Art.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg/960px-Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg/1920px-Edouard_Manet_-_The_Plum_-_National_Gallery_of_Art.jpg",
-    "pxW": 2675,
-    "pxH": 4000
+    "file": "File:Un bar aux Folies-Bergère d'E. Manet (Fondation Vuitton, Paris) (33539037428).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Un_bar_aux_Folies-Berg%C3%A8re_d%27E._Manet_%28Fondation_Vuitton%2C_Paris%29_%2833539037428%29.jpg/960px-Un_bar_aux_Folies-Berg%C3%A8re_d%27E._Manet_%28Fondation_Vuitton%2C_Paris%29_%2833539037428%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Un_bar_aux_Folies-Berg%C3%A8re_d%27E._Manet_%28Fondation_Vuitton%2C_Paris%29_%2833539037428%29.jpg/1920px-Un_bar_aux_Folies-Berg%C3%A8re_d%27E._Manet_%28Fondation_Vuitton%2C_Paris%29_%2833539037428%29.jpg",
+    "pxW": 4330,
+    "pxH": 3221
    },
    "cm": {
-    "w": 50,
-    "h": 74
+    "w": 130,
+    "h": 96
    },
-   "collection": "Q214867",
+   "collection": "Courtauld Gallery",
    "story": {
-    "extract": "Plum Brandy, also known as The Plum, is an oil painting by Édouard Manet. It is undated but thought to have been painted about 1877. The painting measures 73.6 centimetres (29.0 in) by 50.2 centimetres (19.8 in).",
-    "source": "https://en.wikipedia.org/wiki/Plum_Brandy"
+    "extract": "A Bar at the Folies-Bergère is a painting by Édouard Manet, considered to be his last major work. It was painted in 1882 and exhibited at the Paris Salon of that year. It depicts a scene in the Folies Bergère nightclub in Paris.",
+    "source": "https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re"
    },
    "facts": [
     {
-     "text": "Manet sold the painting to collector Charles Deudon in about 1881. It was inherited by Deudon's wife on his death in 1914 and sold before 1919.",
-     "section": "History",
-     "source": "https://en.wikipedia.org/wiki/Plum_Brandy#History"
+     "text": "The painting exemplifies Manet's commitment to realism in its detailed representation of a contemporary scene. Many features have puzzled critics but almost all of them have been shown to have a rationale, and the painting has been the subject of numerous popular and scholarly articles.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re#Painting"
     },
     {
-     "text": "The painting is a study in loneliness, depicting a quiet, almost melancholy, scene of a young working girl seated in a café. The subject is viewed from nearby, perhaps by another seated customer.",
-     "section": "Analysis",
-     "source": "https://en.wikipedia.org/wiki/Plum_Brandy#Analysis"
+     "text": "The 1934 ballet Bar aux Folies-Bergère with choreography by Ninette de Valois and music of Chabrier was created from, and based around, Manet's painting. The painting The Bar (1954) by Australian artist John Brack, which depicts a comparatively grim and austere Melbourne bar-room scene, is an ironic reference to A Bar at the Folies-Bergère.",
+     "section": "Cultural references",
+     "source": "https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re#Cultural_references"
+    },
+    {
+     "text": "References Sources Gary Tinterow, et al. Manet/Velázquez: The French Taste for Spanish Painting, Metropolitan Museum of Art, 2003.",
+     "section": "References and sources",
+     "source": "https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re#References_and_sources"
     }
    ],
    "license": {
-    "name": "Public domain",
+    "name": "CC BY 2.0",
     "credit": "Édouard Manet"
    }
   }

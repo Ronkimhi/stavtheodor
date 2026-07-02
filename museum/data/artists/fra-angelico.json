@@ -103,6 +103,43 @@
    }
   },
   {
+   "qid": "Q2376881",
+   "title": "Annunciation of Cortona",
+   "year": 1430,
+   "image": {
+    "file": "File:Beato angelico, annunciazione di cortona, 1434-36, da s. domenico, 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Beato_angelico%2C_annunciazione_di_cortona%2C_1434-36%2C_da_s._domenico%2C_01.jpg/960px-Beato_angelico%2C_annunciazione_di_cortona%2C_1434-36%2C_da_s._domenico%2C_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Beato_angelico%2C_annunciazione_di_cortona%2C_1434-36%2C_da_s._domenico%2C_01.jpg/1920px-Beato_angelico%2C_annunciazione_di_cortona%2C_1434-36%2C_da_s._domenico%2C_01.jpg",
+    "pxW": 3102,
+    "pxH": 3348
+   },
+   "cm": {
+    "w": 180,
+    "h": 175
+   },
+   "collection": "Diocesan Museum in Cortona",
+   "story": {
+    "extract": "The Annunciation of Cortona is a panel-painting altarpiece or retable by the Italian Renaissance painter Fra Angelico: once housed in the Church of Gesù of Cortona, it is now held at the Museo Diocesano in Cortona.",
+    "source": "https://en.wikipedia.org/wiki/Annunciation_of_Cortona"
+   },
+   "facts": [
+    {
+     "text": "The Annunciation of Cortona was painted by Fra Angelico in 1433–1434, in tempera on panel, 175 cm x 180 cm. This is one of three Annunciations by Fra Angelico on panel (the other two are in the Prado Museum, and the Museo della Basilica di Santa Maria delle Grazie, in San Giovanni Valdarno.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_of_Cortona#History"
+    },
+    {
+     "text": "This work is the main panel of a polyptych work, which includes a multi predella panels with scenes from the Life of the Virgin at the same Annunciazione di San Giovanni Valdarno: Marriage of the Virgin, Adoration of the Magi, Presentation in the Temple, Dormition. They are also attributed to Zanobi Strozzi, an assistant of Fra Angelico.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Annunciation_of_Cortona#Description"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Sailko"
+   }
+  },
+  {
    "qid": "Q4009968",
    "title": "Madonna and Child",
    "year": 1430,
@@ -256,72 +293,45 @@
    }
   },
   {
-   "qid": "Q934458",
-   "title": "Perugia Altarpiece",
-   "year": 1438,
+   "qid": "Q2529591",
+   "title": "Deposition of Christ",
+   "year": 1500,
    "image": {
-    "file": "File:Angelico - Perugia Altarpiece, National Gallery of Umbria.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg/960px-Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg/1920px-Angelico_-_Perugia_Altarpiece%2C_National_Gallery_of_Umbria.jpg",
-    "pxW": 6500,
-    "pxH": 5382
+    "file": "File:Beato angelico e lorenzo monaco, pala di santa trinita (deposizione e santi), ante 1432, 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Beato_angelico_e_lorenzo_monaco%2C_pala_di_santa_trinita_%28deposizione_e_santi%29%2C_ante_1432%2C_01.jpg/960px-Beato_angelico_e_lorenzo_monaco%2C_pala_di_santa_trinita_%28deposizione_e_santi%29%2C_ante_1432%2C_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Beato_angelico_e_lorenzo_monaco%2C_pala_di_santa_trinita_%28deposizione_e_santi%29%2C_ante_1432%2C_01.jpg/1920px-Beato_angelico_e_lorenzo_monaco%2C_pala_di_santa_trinita_%28deposizione_e_santi%29%2C_ante_1432%2C_01.jpg",
+    "pxW": 3216,
+    "pxH": 3496
    },
    "cm": {
-    "w": 88,
-    "h": 128
-   },
-   "collection": "National Gallery of Umbria",
-   "story": {
-    "extract": "The Perugia Altarpiece is a painting by the Italian early Renaissance painter Fra Angelico, housed in the Galleria Nazionale dell'Umbria of Perugia, Italy.",
-    "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece"
-   },
-   "facts": [
-    {
-     "text": "The painting was executed for the St. Nicholas Chapel in the Basilica of San Domenico, Perugia.",
-     "section": "History",
-     "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece#History"
-    },
-    {
-     "text": "The work includes a large central panel, depicting the Madonna Enthroned with Child and Angels, which was fully painted by Fra Angelico. The two side panels, each forming two arched sub-panels and including a figure of saint.",
-     "section": "Description",
-     "source": "https://en.wikipedia.org/wiki/Perugia_Altarpiece#Description"
-    }
-   ],
-   "license": {
-    "name": "Public domain",
-    "credit": "Fra Angelico"
-   }
-  },
-  {
-   "qid": "Q2861696",
-   "title": "Armadio degli Argenti",
-   "year": 1450,
-   "image": {
-    "file": "File:Fra Angelico 007.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Fra_Angelico_007.jpg/960px-Fra_Angelico_007.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Fra_Angelico_007.jpg",
-    "pxW": 1576,
-    "pxH": 2458
-   },
-   "cm": {
-    "w": 112,
-    "h": 116
+    "w": 285,
+    "h": 275
    },
    "collection": "Museum of San Marco",
    "story": {
-    "extract": "The panels of the Armadio degli Argenti are a series of tempera paintings on panel created by Fra Angelico ca. 1451–1453 and completed later by other hands using his preparatory drawings. They are now in the Museo nazionale di San Marco in Florence.",
-    "source": "https://en.wikipedia.org/wiki/Armadio_degli_Argenti"
+    "extract": "The Deposition of Christ also known as the Santa Trinita Altarpiece is a painting by the Italian Renaissance artist Fra Angelico, executed between 1432 and 1434. It is preserved in the National Museum of San Marco, Florence.",
+    "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Fra_Angelico%29"
    },
    "facts": [
     {
-     "text": "The Armadio was designed as an ex voto door for Santissima Annunziata. According to a passage in the chronicle of Benedetto Dei, they were commissioned from Fra Angelico's studio by Piero de' Medici.",
+     "text": "The altarpiece was originally commissioned to Lorenzo Monaco by the wealthy Florentine banker, humanist and rival of Cosimo de' Medici, Palla Strozzi, for the Strozzi Chapel in the church of Santa Trinita.",
      "section": "History",
-     "source": "https://en.wikipedia.org/wiki/Armadio_degli_Argenti#History"
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Fra_Angelico%29#History"
+    },
+    {
+     "text": "The Deposition is a pivotal work of the Early Italian Renaissance as it marks the transition from the International Gothic to the spatial realism and humanism of the 15th century.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Fra_Angelico%29#Legacy"
+    },
+    {
+     "text": "At the center of the composition, Christ is being lowered from the Cross by Joseph of Arimathea and Nicodemus, who according to the Gospel of John were responsible for the burial of Christ. They are being assisted by three other men, two of them in wooden stairs placed against the Cross.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Deposition_of_Christ_%28Fra_Angelico%29#Description"
     }
    ],
    "license": {
-    "name": "Public domain",
-    "credit": "Fra Angelico"
+    "name": "CC BY-SA 4.0",
+    "credit": "Francesco Bini"
    }
   },
   {

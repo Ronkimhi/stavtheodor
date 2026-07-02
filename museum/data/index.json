@@ -1,6 +1,6 @@
 {
  "generated": "2026-07-02",
- "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain).",
+ "license": "Text: Wikipedia, CC BY-SA 4.0. Images: Wikimedia Commons (public domain or Creative Commons; attribution on each work).",
  "periods": [
   {
    "id": "medieval-gothic",
@@ -1142,8 +1142,8 @@
     "cubism"
    ],
    "oneLiner": "Spanish painter and sculptor (1881–1973)",
-   "hasGallery": false,
-   "paintingCount": 1,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/330px-Pablo_picasso_1.jpg"
   },
   {
@@ -1157,8 +1157,8 @@
     "cubism"
    ],
    "oneLiner": "French painter and sculptor (1882-1963)",
-   "hasGallery": false,
-   "paintingCount": 1,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg/330px-Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg"
   },
   {
@@ -1262,8 +1262,8 @@
     "surrealism"
    ],
    "oneLiner": "German artist (1891–1976)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 5,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Max_Ernst_1968.jpg/330px-Max_Ernst_1968.jpg"
   },
   {
@@ -1277,8 +1277,8 @@
     "surrealism"
    ],
    "oneLiner": "Spanish painter, sculptor, and ceramicist (1893–1983)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 10,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg/330px-Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg"
   },
   {
@@ -1292,8 +1292,8 @@
     "surrealism"
    ],
    "oneLiner": "Belgian surrealist (1898–1967)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 5,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg/330px-Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg"
   },
   {
@@ -1307,8 +1307,8 @@
     "surrealism"
    ],
    "oneLiner": "Spanish artist (1904–1989)",
-   "hasGallery": false,
-   "paintingCount": 1,
+   "hasGallery": true,
+   "paintingCount": 10,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Salvador_Dal%C3%AD_1939.jpg/330px-Salvador_Dal%C3%AD_1939.jpg"
   },
   {
@@ -1322,8 +1322,8 @@
     "surrealism"
    ],
    "oneLiner": "Mexican painter (1907–1954)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 8,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg/330px-Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg"
   },
   {
@@ -1337,8 +1337,8 @@
     "abstract-expressionism"
    ],
    "oneLiner": "American painter (1912–1956)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Jackson_Pollock%27s_passport_%28cropped%29.jpg/330px-Jackson_Pollock%27s_passport_%28cropped%29.jpg"
   },
   {
@@ -1352,8 +1352,8 @@
     "abstract-expressionism"
    ],
    "oneLiner": "American painter of Latvian-Jewish descent (1903–1970)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg/330px-Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg"
   },
   {
@@ -1367,8 +1367,8 @@
     "abstract-expressionism"
    ],
    "oneLiner": "Dutch-American abstract expressionist artist (1904–1997)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 7,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Willem_de_Kooning_in_his_studio.jpg/330px-Willem_de_Kooning_in_his_studio.jpg"
   },
   {
@@ -1382,8 +1382,8 @@
     "abstract-expressionism"
    ],
    "oneLiner": "American abstract expressionist painter (1908–1984)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 4,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Lee_Krasner%2C_artist%2C_cropped.jpg/330px-Lee_Krasner%2C_artist%2C_cropped.jpg"
   },
   {
@@ -1397,8 +1397,8 @@
     "pop-art"
    ],
    "oneLiner": "American artist, film director, and producer (1928–1987)",
-   "hasGallery": false,
-   "paintingCount": 1,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg/330px-Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg"
   },
   {
@@ -1412,8 +1412,8 @@
     "pop-art"
    ],
    "oneLiner": "American pop artist (1923–1997)",
-   "hasGallery": false,
-   "paintingCount": 1,
+   "hasGallery": true,
+   "paintingCount": 4,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg/330px-Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg"
   },
   {
@@ -1428,8 +1428,8 @@
     "contemporary"
    ],
    "oneLiner": "English painter and printmaker (1937–2026)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg/330px-David_Hockney_in_Washington_Square_Park_%281977%29.jpg"
   },
   {
@@ -1443,8 +1443,8 @@
     "contemporary"
    ],
    "oneLiner": "American artist (1960–1988)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 5,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg"
   },
   {
@@ -1458,8 +1458,8 @@
     "contemporary"
    ],
    "oneLiner": "German visual artist (b. 1932)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 6,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg/330px-Gerhard_Richter%2C_Prague_%282017%29.jpg"
   },
   {
@@ -1473,8 +1473,8 @@
     "contemporary"
    ],
    "oneLiner": "Japanese artist (born 1929)",
-   "hasGallery": false,
-   "paintingCount": 0,
+   "hasGallery": true,
+   "paintingCount": 9,
    "portrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg/330px-Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg"
   }
  ]

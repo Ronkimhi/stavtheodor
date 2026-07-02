@@ -16,8 +16,77 @@
   "source": "https://en.wikipedia.org/wiki/Roy_Lichtenstein"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Roy_Lichtenstein",
- "hasGallery": false,
+ "hasGallery": true,
  "paintings": [
+  {
+   "qid": "Q5350918",
+   "title": "The Face of Barcelona",
+   "year": 1992,
+   "image": {
+    "file": "File:Barcelona (3392396182).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Barcelona_%283392396182%29.jpg/960px-Barcelona_%283392396182%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Barcelona_%283392396182%29.jpg/1920px-Barcelona_%283392396182%29.jpg",
+    "pxW": 2592,
+    "pxH": 3888
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "El Cap de Barcelona (1991–1992) is a Pop sculpture created by American artist Roy Lichtenstein for the 1992 Summer Olympics in Barcelona, Catalonia, Spain. Its English title is Brushstroke Head IV or Barcelona Head",
+    "source": "https://en.wikipedia.org/wiki/El_Cap_de_Barcelona"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Bert Kaufmann from Roermond, Netherlands"
+   }
+  },
+  {
+   "qid": "Q16947193",
+   "title": "Times Square Mural",
+   "year": 1994,
+   "image": {
+    "file": "File:42ART mural.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/42ART_mural.jpg/960px-42ART_mural.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/42ART_mural.jpg/1920px-42ART_mural.jpg",
+    "pxW": 4032,
+    "pxH": 3024
+   },
+   "cm": null,
+   "collection": "MTA Arts & Design Permanent Art Collection",
+   "story": {
+    "extract": "Times Square Mural is a mural by Roy Lichtenstein, fabricated in 1994 and installed in 2002 in Manhattan, New York City, United States. Located in the Times Square–42nd Street station of the New York City Subway, it is made from porcelain enamel on steel and measures 6 feet (1.8 m) by 53 feet (16 m). The work was commissioned by the Metropolitan Transportation Authority's Arts for Transit program.",
+    "source": "https://en.wikipedia.org/wiki/Times_Square_Mural"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "TFSyndicate"
+   }
+  },
+  {
+   "qid": "Q16903487",
+   "title": "Brushstrokes",
+   "year": 1996,
+   "image": {
+    "file": "File:Portland Art Museum Mark Building - Oregon.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Portland_Art_Museum_Mark_Building_-_Oregon.JPG/960px-Portland_Art_Museum_Mark_Building_-_Oregon.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Portland_Art_Museum_Mark_Building_-_Oregon.JPG/1920px-Portland_Art_Museum_Mark_Building_-_Oregon.JPG",
+    "pxW": 2539,
+    "pxH": 1346
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "Brushstrokes is a 1996 sculpture by Roy Lichtenstein, installed outside the Portland Art Museum's Mark Building, in Portland, Oregon. It is part of the Brushstrokes series of artworks that includes several paintings and sculptures whose subject is the actions made with a house-painter's brush.",
+    "source": "https://en.wikipedia.org/wiki/Brushstrokes_%28sculpture%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "M.O. Stevens at en.wikipedia"
+   }
+  },
   {
    "qid": "Q3567592",
    "title": "Whaam!",

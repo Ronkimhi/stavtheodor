@@ -130,6 +130,29 @@
    }
   },
   {
+   "qid": "Q11729455",
+   "title": "Danae and Jupiter",
+   "year": 1736,
+   "image": {
+    "file": "File:Danae e Giove - Giambattista Tiepolo c.1736 - Universitet Konsthistoriska Institutionen, Stockholm.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Danae_e_Giove_-_Giambattista_Tiepolo_c.1736_-_Universitet_Konsthistoriska_Institutionen%2C_Stockholm.jpg/960px-Danae_e_Giove_-_Giambattista_Tiepolo_c.1736_-_Universitet_Konsthistoriska_Institutionen%2C_Stockholm.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Danae_e_Giove_-_Giambattista_Tiepolo_c.1736_-_Universitet_Konsthistoriska_Institutionen%2C_Stockholm.jpg/1920px-Danae_e_Giove_-_Giambattista_Tiepolo_c.1736_-_Universitet_Konsthistoriska_Institutionen%2C_Stockholm.jpg",
+    "pxW": 6885,
+    "pxH": 5214
+   },
+   "cm": {
+    "w": 53,
+    "h": 41
+   },
+   "collection": "Stockholm University",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Didier Descouens"
+   }
+  },
+  {
    "qid": "Q18167078",
    "title": "The Banquet of Cleopatra",
    "year": 1743,
@@ -167,29 +190,6 @@
    }
   },
   {
-   "qid": "Q18573906",
-   "title": "Apollo and Daphne",
-   "year": 1743,
-   "image": {
-    "file": "File:Giovanni Battista Tiepolo - Apollo and Daphne - WGA22293.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg/960px-Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Giovanni_Battista_Tiepolo_-_Apollo_and_Daphne_-_WGA22293.jpg",
-    "pxW": 1000,
-    "pxH": 1243
-   },
-   "cm": {
-    "w": 79,
-    "h": 96
-   },
-   "collection": "Department of Paintings of the Louvre",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Giovanni Battista Tiepolo"
-   }
-  },
-  {
    "qid": "Q5968478",
    "title": "The Visit of Henry III to the Villa Contarini",
    "year": 1750,
@@ -219,26 +219,26 @@
    }
   },
   {
-   "qid": "Q20178078",
-   "title": "Apollo Pursuing Daphne",
-   "year": 1757,
+   "qid": "Q9395626",
+   "title": "The Death of Hyacinth",
+   "year": 1753,
    "image": {
-    "file": "File:Giovanni Battista Tiepolo - Apollo Pursuing Daphne, 1755-1760.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg/960px-Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/06/Giovanni_Battista_Tiepolo_-_Apollo_Pursuing_Daphne%2C_1755-1760.jpg",
-    "pxW": 1200,
-    "pxH": 935
+    "file": "File:Giambattista Tiepolo - La morte di Giacinto (1752-53) - Museo Nacional Thyssen-Bornemisza Madrid.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Giambattista_Tiepolo_-_La_morte_di_Giacinto_%281752-53%29_-_Museo_Nacional_Thyssen-Bornemisza_Madrid.jpg/960px-Giambattista_Tiepolo_-_La_morte_di_Giacinto_%281752-53%29_-_Museo_Nacional_Thyssen-Bornemisza_Madrid.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Giambattista_Tiepolo_-_La_morte_di_Giacinto_%281752-53%29_-_Museo_Nacional_Thyssen-Bornemisza_Madrid.jpg/1920px-Giambattista_Tiepolo_-_La_morte_di_Giacinto_%281752-53%29_-_Museo_Nacional_Thyssen-Bornemisza_Madrid.jpg",
+    "pxW": 7091,
+    "pxH": 8751
    },
    "cm": {
-    "w": 87,
-    "h": 68
+    "w": 232,
+    "h": 287
    },
-   "collection": "Samuel H. Kress Collection",
+   "collection": "Thyssen-Bornemisza Museum",
    "story": null,
    "facts": [],
    "license": {
-    "name": "Public domain",
-    "credit": "Giovanni Battista Tiepolo"
+    "name": "CC BY-SA 4.0",
+    "credit": "Didier Descouens"
    }
   },
   {

@@ -53,6 +53,7 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
               </p>`).join('')}
           </div>` : ''}
         <p class="inspect-attr">
+          ${p.license?.credit && !/^unknown/i.test(p.license.credit) ? esc(p.license.credit) + ' · ' : ''}
           ${p.license?.name ? esc(p.license.name) + ' · ' : ''}
           ${p.story?.source ? `Text: <a href="${esc(p.story.source)}" target="_blank" rel="noopener">Wikipedia</a> (CC BY-SA 4.0) · ` : ''}
           Image: <a href="https://commons.wikimedia.org/wiki/${esc(encodeURIComponent(p.image.file))}" target="_blank" rel="noopener">Wikimedia Commons</a>

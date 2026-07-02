@@ -16,6 +16,147 @@
   "source": "https://en.wikipedia.org/wiki/Willem_de_Kooning"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Willem_de_Kooning",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Litho #1 (Waves #1)",
+   "year": 1960,
+   "image": {
+    "file": "File:Litho -1 (Waves -1) by Willem de Kooning, 1960.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG",
+    "pxW": 1624,
+    "pxH": 2334
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Willem de Kooning"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Litho #2 (Waves #2)",
+   "year": 1960,
+   "image": {
+    "file": "File:Litho -2 (Waves -2) by Willem de Kooning, 1960.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG",
+    "pxW": 1576,
+    "pxH": 2334
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Willem de Kooning"
+   }
+  },
+  {
+   "qid": "Q20888403",
+   "title": "Reclining Figure",
+   "year": 1969,
+   "image": {
+    "file": "File:Rotterdam RecliningFigure04.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rotterdam_RecliningFigure04.jpg/960px-Rotterdam_RecliningFigure04.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rotterdam_RecliningFigure04.jpg/1920px-Rotterdam_RecliningFigure04.jpg",
+    "pxW": 2816,
+    "pxH": 2112
+   },
+   "cm": null,
+   "collection": "International Sculpture Collection",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gerardus"
+   }
+  },
+  {
+   "qid": "Q20888404",
+   "title": "Seated Woman",
+   "year": 1969,
+   "image": {
+    "file": "File:Seated woman by Willem de Kooning in Rotterdam.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg/960px-Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg/1920px-Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg",
+    "pxW": 2581,
+    "pxH": 1965
+   },
+   "cm": null,
+   "collection": "International Sculpture Collection",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "F. Eveleens"
+   }
+  },
+  {
+   "qid": "Q20888405",
+   "title": "Standing Figure",
+   "year": 1969,
+   "image": {
+    "file": "File:Rotterdam StandingFigure03.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rotterdam_StandingFigure03.jpg/960px-Rotterdam_StandingFigure03.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rotterdam_StandingFigure03.jpg/1920px-Rotterdam_StandingFigure03.jpg",
+    "pxW": 2816,
+    "pxH": 2112
+   },
+   "cm": null,
+   "collection": "International Sculpture Collection",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gerardus"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Untitled",
+   "year": 1976,
+   "image": {
+    "file": "File:Untitled (c. 1976) - Willem de Kooning (1904 -1997) (44566834812).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg/960px-Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg/1920px-Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg",
+    "pxW": 3112,
+    "pxH": 2366
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Pedro Ribeiro Simões from Lisboa, Portugal"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Untitled XIV",
+   "year": null,
+   "image": {
+    "file": "File:Untitled XIV, Willem de Kooning, Paintings in the San Francisco Museum of Modern Art, SFMOMA 11.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg/960px-Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg/1920px-Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  }
+ ]
 }

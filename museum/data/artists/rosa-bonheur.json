@@ -126,6 +126,38 @@
    }
   },
   {
+   "qid": "Q23008971",
+   "title": "Berger des Pyrénées",
+   "year": 1864,
+   "image": {
+    "file": "File:Château de Chantilly, Rosa Bonheur, sheeps in the Pyrenees.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ch%C3%A2teau_de_Chantilly%2C_Rosa_Bonheur%2C_sheeps_in_the_Pyrenees.JPG/960px-Ch%C3%A2teau_de_Chantilly%2C_Rosa_Bonheur%2C_sheeps_in_the_Pyrenees.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ch%C3%A2teau_de_Chantilly%2C_Rosa_Bonheur%2C_sheeps_in_the_Pyrenees.JPG/1920px-Ch%C3%A2teau_de_Chantilly%2C_Rosa_Bonheur%2C_sheeps_in_the_Pyrenees.JPG",
+    "pxW": 3535,
+    "pxH": 2194
+   },
+   "cm": {
+    "w": 100,
+    "h": 68
+   },
+   "collection": "Condé Museum",
+   "story": {
+    "extract": "Pyrenean Shepherd Offering Salt to his Sheep is an oil-on-canvas painting by French artist Rosa Bonheur, executed in 1864. It his held at the Musée Condé, in Chantilly. The painting was commissioned by Henri d'Orléans, Duke of Aumale.",
+    "source": "https://en.wikipedia.org/wiki/Pyrenean_Shepherd_Offering_Salt_to_his_Sheep"
+   },
+   "facts": [
+    {
+     "text": "Rosa Bonheur enjoyed great success at the Salon of 1853 with her painting The Horse Fair, then at the Universal Exhibition of 1855 with La Fenaison en Auvergne.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Pyrenean_Shepherd_Offering_Salt_to_his_Sheep#History"
+    }
+   ],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
    "qid": "Q64570765",
    "title": "Deer in Repose",
    "year": 1867,
@@ -171,6 +203,29 @@
    "facts": [],
    "license": {
     "name": "Public domain",
+    "credit": "Rosa Bonheur"
+   }
+  },
+  {
+   "qid": "Q23008989",
+   "title": "Portrait of a Lion",
+   "year": 1879,
+   "image": {
+    "file": "File:Museo del Prado - P004318 - El Cid.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Museo_del_Prado_-_P004318_-_El_Cid.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Museo_del_Prado_-_P004318_-_El_Cid.jpg",
+    "pxW": 816,
+    "pxH": 1024
+   },
+   "cm": {
+    "w": 76,
+    "h": 95
+   },
+   "collection": "Museo del Prado",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
     "credit": "Rosa Bonheur"
    }
   },
@@ -230,26 +285,6 @@
    }
   },
   {
-   "qid": "Q124335778",
-   "title": "A Pyrenean Shepherd and his Flock",
-   "year": 1887,
-   "image": {
-    "file": "File:Catalogue of the highly important collection of modern pictures and water colour drawings of the English and continental schools of Stephen G. Holland (1908) (14784025442).jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Catalogue_of_the_highly_important_collection_of_modern_pictures_and_water_colour_drawings_of_the_English_and_continental_schools_of_Stephen_G._Holland_%281908%29_%2814784025442%29.jpg/960px-thumbnail.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Catalogue_of_the_highly_important_collection_of_modern_pictures_and_water_colour_drawings_of_the_English_and_continental_schools_of_Stephen_G._Holland_%281908%29_%2814784025442%29.jpg/1920px-thumbnail.jpg",
-    "pxW": 3488,
-    "pxH": 2512
-   },
-   "cm": null,
-   "collection": null,
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "No restrictions",
-    "credit": "Christie, Manson &amp; Woods"
-   }
-  },
-  {
    "qid": "Q124335678",
    "title": "The Duel",
    "year": 1896,
@@ -264,26 +299,6 @@
     "w": 244,
     "h": 150
    },
-   "collection": null,
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Rosa Bonheur"
-   }
-  },
-  {
-   "qid": "Q124335679",
-   "title": "The Grey Horse (At the Horse Fair)",
-   "year": 1900,
-   "image": {
-    "file": "File:The Grey Horse (At the Horse Fair) - Rosa Bonheur.webp",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp/960px-The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp.png",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp/1920px-The_Grey_Horse_%28At_the_Horse_Fair%29_-_Rosa_Bonheur.webp.png",
-    "pxW": 2880,
-    "pxH": 2112
-   },
-   "cm": null,
    "collection": null,
    "story": null,
    "facts": [],

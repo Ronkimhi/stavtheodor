@@ -42,29 +42,6 @@
    }
   },
   {
-   "qid": "Q2866382",
-   "title": "Ascension",
-   "year": 1291,
-   "image": {
-    "file": "File:Giotto di Bondone - Ascension of Christ - WGA09156.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Giotto_di_Bondone_-_Ascension_of_Christ_-_WGA09156.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Giotto_di_Bondone_-_Ascension_of_Christ_-_WGA09156.jpg",
-    "pxW": 800,
-    "pxH": 1139
-   },
-   "cm": {
-    "w": 400,
-    "h": 500
-   },
-   "collection": "Basilica of San Francesco d'Assisi",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Giotto"
-   }
-  },
-  {
    "qid": "Q23904",
    "title": "St. Francis of Assisi Receiving the Stigmata",
    "year": 1297,
@@ -141,6 +118,43 @@
    "license": {
     "name": "Public domain",
     "credit": "Giotto"
+   }
+  },
+  {
+   "qid": "Q3907498",
+   "title": "Badia Polyptych",
+   "year": 1300,
+   "image": {
+    "file": "File:Galería Uffizi, Florencia, Italia, 2022-09-18, DD 23.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Galer%C3%ADa_Uffizi%2C_Florencia%2C_Italia%2C_2022-09-18%2C_DD_23.jpg/960px-Galer%C3%ADa_Uffizi%2C_Florencia%2C_Italia%2C_2022-09-18%2C_DD_23.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Galer%C3%ADa_Uffizi%2C_Florencia%2C_Italia%2C_2022-09-18%2C_DD_23.jpg/1920px-Galer%C3%ADa_Uffizi%2C_Florencia%2C_Italia%2C_2022-09-18%2C_DD_23.jpg",
+    "pxW": 7740,
+    "pxH": 3811
+   },
+   "cm": {
+    "w": 334,
+    "h": 91
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Badia Polyptych is a painting by the Italian artist Giotto, painted around 1300 and housed in the Uffizi Gallery of Florence.",
+    "source": "https://en.wikipedia.org/wiki/Badia_Polyptych"
+   },
+   "facts": [
+    {
+     "text": "Earlier sources such as Lorenzo Ghiberti's Commentarii and Giorgio Vasari's Lives agree in mentioning the presence of a polyptych by Giotto at the high altar in the Badia Fiorentina. However, the work was not documented anymore for centuries, and was considered to be lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Badia_Polyptych#History"
+    },
+    {
+     "text": "The work is composed by five framed paintings with a triangular cusp, and portrays the busts of the Virgin Mary (center) and, from the left, Saints Nicholas of Bari, John the Evangelist, Peter and Benedict, identified by their names below and their traditional attributes. Giotto made an extensive use of chiaroscuro.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Badia_Polyptych#Description"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Diego Delso"
    }
   },
   {

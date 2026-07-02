@@ -19,6 +19,32 @@
  "hasGallery": true,
  "paintings": [
   {
+   "qid": "Q3211034",
+   "title": "The Birth of Venus",
+   "year": 1753,
+   "image": {
+    "file": "File:Fragonnard Naissance de Vénus.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Fragonnard_Naissance_de_V%C3%A9nus.JPG/960px-Fragonnard_Naissance_de_V%C3%A9nus.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Fragonnard_Naissance_de_V%C3%A9nus.JPG/1920px-Fragonnard_Naissance_de_V%C3%A9nus.JPG",
+    "pxW": 2701,
+    "pxH": 1666
+   },
+   "cm": {
+    "w": 80,
+    "h": 49
+   },
+   "collection": "Musée Grobet-Labadié",
+   "story": {
+    "extract": "The Birth of Venus is an oil-on-canvas painting by the French Rococo painter Jean-Honoré Fragonard, produced between 1753 and 1755. It is held by the Musée Grobet-Labadié in Marseille.",
+    "source": "https://en.wikipedia.org/wiki/The_Birth_of_Venus_%28Fragonard%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Jean-Honoré Fragonard"
+   }
+  },
+  {
    "qid": "Q3828528",
    "title": "The Bathers",
    "year": 1765,
@@ -36,43 +62,6 @@
    "collection": "Department of Paintings of the Louvre",
    "story": null,
    "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Jean-Honoré Fragonard"
-   }
-  },
-  {
-   "qid": "Q19966728",
-   "title": "Coresus Sacrificing Himself to Save Callirhoe",
-   "year": 1765,
-   "image": {
-    "file": "File:Fragonard coresus sacrificing himselt to save callirhoe.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg/960px-Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/10/Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg",
-    "pxW": 1076,
-    "pxH": 818
-   },
-   "cm": {
-    "w": 400,
-    "h": 309
-   },
-   "collection": "Department of Paintings of the Louvre",
-   "story": {
-    "extract": "Coresus Sacrificing Himself to Save Callirhoe is a large oil-on-canvas painting by the French Rococo artist Jean-Honoré Fragonard, created in 1765. The painting was exhibited at the Salon of 1765 and earned Fragonard entry into the Académie royale de peinture et de sculpture. It is now housed in the Louvre in Paris.",
-    "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe"
-   },
-   "facts": [
-    {
-     "text": "The painting was exhibited at the Salon of 1765 and earned Fragonard entry into the Académie royale de peinture et de sculpture. It has often been described as Fragonard's attempt to reconcile his own exuberant style with academic requirements, standing in contrast to the intimate and playful works for which he would later become famous.",
-     "section": "History",
-     "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe#History"
-    },
-    {
-     "text": "The painting is a large-scale oil on canvas measuring 309 by 400 cm. The painting depicts a dramatic scene from ‘’Description of Greece’’ (VII, 21) by Pausanias.",
-     "section": "Description",
-     "source": "https://en.wikipedia.org/wiki/Coresus_Sacrificing_Himself_to_Save_Callirhoe#Description"
-    }
-   ],
    "license": {
     "name": "Public domain",
     "credit": "Jean-Honoré Fragonard"

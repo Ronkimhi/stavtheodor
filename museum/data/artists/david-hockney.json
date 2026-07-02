@@ -17,6 +17,127 @@
   "source": "https://en.wikipedia.org/wiki/David_Hockney"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/David_Hockney",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Queue for the Hockney exhibition at the Royal Academy, London",
+   "year": 2012,
+   "image": {
+    "file": "File:Waiting for the Hockney exhibition at the RA (7048871937).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Waiting_for_the_Hockney_exhibition_at_the_RA_%287048871937%29.jpg/960px-Waiting_for_the_Hockney_exhibition_at_the_RA_%287048871937%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Waiting_for_the_Hockney_exhibition_at_the_RA_%287048871937%29.jpg/1920px-Waiting_for_the_Hockney_exhibition_at_the_RA_%287048871937%29.jpg",
+    "pxW": 4828,
+    "pxH": 3296
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Tony Hisgett from Birmingham, UK"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Royal Academy exhibition banners, London",
+   "year": 2012,
+   "image": {
+    "file": "File:David Hockney, RA London, 2012-01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/David_Hockney%2C_RA_London%2C_2012-01.jpg/960px-David_Hockney%2C_RA_London%2C_2012-01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ef/David_Hockney%2C_RA_London%2C_2012-01.jpg",
+    "pxW": 1000,
+    "pxH": 750
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Kleon3"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Hockney retrospective at Tate Britain, London",
+   "year": 2017,
+   "image": {
+    "file": "File:Hockney at Tate Britain (33933083010).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Hockney_at_Tate_Britain_%2833933083010%29.jpg/960px-Hockney_at_Tate_Britain_%2833933083010%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Hockney_at_Tate_Britain_%2833933083010%29.jpg/1920px-Hockney_at_Tate_Britain_%2833933083010%29.jpg",
+    "pxW": 4933,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Tony Hisgett from Birmingham, UK"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Queen's Window, Westminster Abbey, London",
+   "year": 2018,
+   "image": {
+    "file": "File:View of a stained glass window in Westminster Abbey - geograph.org.uk - 6879744.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/View_of_a_stained_glass_window_in_Westminster_Abbey_-_geograph.org.uk_-_6879744.jpg/960px-View_of_a_stained_glass_window_in_Westminster_Abbey_-_geograph.org.uk_-_6879744.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/View_of_a_stained_glass_window_in_Westminster_Abbey_-_geograph.org.uk_-_6879744.jpg/1920px-View_of_a_stained_glass_window_in_Westminster_Abbey_-_geograph.org.uk_-_6879744.jpg",
+    "pxW": 3872,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Robert Lamb"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bigger Christmas Trees, light installation at Battersea Power Station, London",
+   "year": null,
+   "image": {
+    "file": "File:Hockney Bigger Christmas Trees light display Battersea Power Station.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Hockney_Bigger_Christmas_Trees_light_display_Battersea_Power_Station.jpg/960px-Hockney_Bigger_Christmas_Trees_light_display_Battersea_Power_Station.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/99/Hockney_Bigger_Christmas_Trees_light_display_Battersea_Power_Station.jpg",
+    "pxW": 1024,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "JuliaC2006"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Hockney exhibition banner at the Guggenheim Bilbao",
+   "year": null,
+   "image": {
+    "file": "File:Bilbao - Guggenheim 95.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Bilbao_-_Guggenheim_95.jpg/960px-Bilbao_-_Guggenheim_95.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Bilbao_-_Guggenheim_95.jpg/1920px-Bilbao_-_Guggenheim_95.jpg",
+    "pxW": 2036,
+    "pxH": 1476
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Zarateman"
+   }
+  }
+ ]
 }

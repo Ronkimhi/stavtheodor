@@ -16,8 +16,28 @@
   "source": "https://en.wikipedia.org/wiki/Georges_Braque"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Georges_Braque",
- "hasGallery": false,
+ "hasGallery": true,
  "paintings": [
+  {
+   "qid": "Q19882452",
+   "title": "Landscape near Antwerp",
+   "year": 1906,
+   "image": {
+    "file": "File:Aerrapc Guggenheim art photo (157).png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Aerrapc_Guggenheim_art_photo_%28157%29.png/960px-Aerrapc_Guggenheim_art_photo_%28157%29.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Aerrapc_Guggenheim_art_photo_%28157%29.png",
+    "pxW": 1556,
+    "pxH": 1225
+   },
+   "cm": null,
+   "collection": "Solomon R. Guggenheim Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Aerra Carnicom"
+   }
+  },
   {
    "qid": "Q20426820",
    "title": "Trees at l'Estaque",
@@ -39,6 +59,86 @@
    "license": {
     "name": "Public domain",
     "credit": "Agnes Weinrich"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Cubist room at the Armory Show",
+   "year": 1913,
+   "image": {
+    "file": "File:Armory Show, International Exhibition of Modern Art, Chicago, 1913. The Cubist room.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Armory_Show%2C_International_Exhibition_of_Modern_Art%2C_Chicago%2C_1913._The_Cubist_room.jpg/960px-Armory_Show%2C_International_Exhibition_of_Modern_Art%2C_Chicago%2C_1913._The_Cubist_room.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Armory_Show%2C_International_Exhibition_of_Modern_Art%2C_Chicago%2C_1913._The_Cubist_room.jpg/1920px-Armory_Show%2C_International_Exhibition_of_Modern_Art%2C_Chicago%2C_1913._The_Cubist_room.jpg",
+    "pxW": 5652,
+    "pxH": 3923
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Anonymous photographer. Shot 100 years ago."
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Georges Braque window, Church of Saint-Valery, Varengeville-sur-Mer",
+   "year": null,
+   "image": {
+    "file": "File:Varengeville-sur-Mer - l'Église Saint-Valéry - Side Nave - View East from Church Entrance towards the Georges Braque Window.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Varengeville-sur-Mer_-_l%27%C3%89glise_Saint-Val%C3%A9ry_-_Side_Nave_-_View_East_from_Church_Entrance_towards_the_Georges_Braque_Window.jpg/960px-Varengeville-sur-Mer_-_l%27%C3%89glise_Saint-Val%C3%A9ry_-_Side_Nave_-_View_East_from_Church_Entrance_towards_the_Georges_Braque_Window.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Varengeville-sur-Mer_-_l%27%C3%89glise_Saint-Val%C3%A9ry_-_Side_Nave_-_View_East_from_Church_Entrance_towards_the_Georges_Braque_Window.jpg/1920px-Varengeville-sur-Mer_-_l%27%C3%89glise_Saint-Val%C3%A9ry_-_Side_Nave_-_View_East_from_Church_Entrance_towards_the_Georges_Braque_Window.jpg",
+    "pxW": 6048,
+    "pxH": 4032
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Txllxt TxllxT"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stained glass by Braque, Varengeville-sur-Mer",
+   "year": null,
+   "image": {
+    "file": "File:Vitrail de l'Eglise de Varengeville.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vitrail_de_l%27Eglise_de_Varengeville.jpg/960px-Vitrail_de_l%27Eglise_de_Varengeville.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vitrail_de_l%27Eglise_de_Varengeville.jpg/1920px-Vitrail_de_l%27Eglise_de_Varengeville.jpg",
+    "pxW": 2304,
+    "pxH": 3072
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Elisecoline"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Braque's tomb with his dove mosaic, Varengeville-sur-Mer",
+   "year": null,
+   "image": {
+    "file": "File:Varengeville-sur-Mer Cimetiere-Georges Braque 1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Varengeville-sur-Mer_Cimetiere-Georges_Braque_1.JPG/960px-Varengeville-sur-Mer_Cimetiere-Georges_Braque_1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Varengeville-sur-Mer_Cimetiere-Georges_Braque_1.JPG/1920px-Varengeville-sur-Mer_Cimetiere-Georges_Braque_1.JPG",
+    "pxW": 3648,
+    "pxH": 2736
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Provencale"
    }
   }
  ]

@@ -16,6 +16,113 @@
   "source": "https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q1061035",
+   "title": "The Treachery of Images",
+   "year": 1929,
+   "image": {
+    "file": "File:Magritte treachery.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Magritte_treachery.jpg/960px-Magritte_treachery.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Magritte_treachery.jpg/1920px-Magritte_treachery.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": {
+    "w": 81,
+    "h": 60
+   },
+   "collection": "Los Angeles County Museum of Art",
+   "story": {
+    "extract": "The Treachery of Images is a 1929 painting by Belgian surrealist painter René Magritte. It is also known as This Is Not a Pipe, Ceci n'est pas une pipe and The Wind and the Song. It is on display at the Los Angeles County Museum of Art.",
+    "source": "https://en.wikipedia.org/wiki/The_Treachery_of_Images"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Caterpillar84"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Le Thérapeute (The Healer)",
+   "year": 1976,
+   "image": {
+    "file": "File:Le Thérapeute (1976) René Magritte - TMoCA, Tehran.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg/960px-Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg",
+    "pxW": 1200,
+    "pxH": 1600
+   },
+   "cm": null,
+   "collection": "Tehran Museum of Contemporary Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Farhad sh"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Magritte painting at TEFAF, Maastricht",
+   "year": 2014,
+   "image": {
+    "file": "File:Maastricht, TEFAF2014-09.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Maastricht%2C_TEFAF2014-09.jpg/960px-Maastricht%2C_TEFAF2014-09.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Maastricht%2C_TEFAF2014-09.jpg/1920px-Maastricht%2C_TEFAF2014-09.jpg",
+    "pxW": 3264,
+    "pxH": 2250
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Kleon3"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Magritte exhibition, Mexico City",
+   "year": null,
+   "image": {
+    "file": "File:Magritte Exposition Mexico City.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Magritte_Exposition_Mexico_City.JPG/960px-Magritte_Exposition_Mexico_City.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Magritte_Exposition_Mexico_City.JPG/1920px-Magritte_Exposition_Mexico_City.JPG",
+    "pxW": 7713,
+    "pxH": 5142
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "ProtoplasmaKid"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Magritte work at the Museu Brasileiro da Escultura, São Paulo",
+   "year": null,
+   "image": {
+    "file": "File:Obra da exposição no Museu Brasileiro da Escultura 02.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg/960px-Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg/1920px-Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg",
+    "pxW": 2448,
+    "pxH": 3264
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Ghiraldini"
+   }
+  }
+ ]
 }

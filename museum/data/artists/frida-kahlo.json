@@ -16,6 +16,167 @@
   "source": "https://en.wikipedia.org/wiki/Frida_Kahlo"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Frida_Kahlo",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Urban Landscape (Paisaje urbano)",
+   "year": 1925,
+   "image": {
+    "file": "File:Frida Kahlo, Paisaje urbano, 1925.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg/960px-Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg/1920px-Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg",
+    "pxW": 4381,
+    "pxH": 3250
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Artotem"
+   }
+  },
+  {
+   "qid": null,
+   "title": "A Few Small Nips (Unos cuantos piquetitos)",
+   "year": 1935,
+   "image": {
+    "file": "File:Unos cuantos piquetitos, Frida, Museo Dolores Olmedo.webp",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp/960px-Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/15/Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp",
+    "pxW": 1500,
+    "pxH": 1150
+   },
+   "cm": null,
+   "collection": "Museo Dolores Olmedo, Mexico City",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Frida Kahlo"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Self-Portrait with Small Monkey (Autorretrato con changuito)",
+   "year": 1945,
+   "image": {
+    "file": "File:Autorretrato con Changuito, Frida, Museo Dolores Olmedo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Autorretrato_con_Changuito%2C_Frida%2C_Museo_Dolores_Olmedo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Autorretrato_con_Changuito%2C_Frida%2C_Museo_Dolores_Olmedo.jpg",
+    "pxW": 580,
+    "pxH": 800
+   },
+   "cm": null,
+   "collection": "Museo Dolores Olmedo, Mexico City",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Frida Kahlo"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Tree of Hope, Remain Strong (Arbol de la Esperanza, Mantente Firme)",
+   "year": 1946,
+   "image": {
+    "file": "File:Arbol de la Esperanza, Mantente Firme (Tree of Hope, Remain Strong) by Frida Kahlo, created in 1946.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Arbol_de_la_Esperanza%2C_Mantente_Firme_%28Tree_of_Hope%2C_Remain_Strong%29_by_Frida_Kahlo%2C_created_in_1946.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Arbol_de_la_Esperanza%2C_Mantente_Firme_%28Tree_of_Hope%2C_Remain_Strong%29_by_Frida_Kahlo%2C_created_in_1946.jpg",
+    "pxW": 960,
+    "pxH": 1280
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Rebeccananonof"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Embroidery by Frida Kahlo",
+   "year": null,
+   "image": {
+    "file": "File:Bordado de Frida Kahlo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bordado_de_Frida_Kahlo.jpg/960px-Bordado_de_Frida_Kahlo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bordado_de_Frida_Kahlo.jpg/1920px-Bordado_de_Frida_Kahlo.jpg",
+    "pxW": 3600,
+    "pxH": 2937
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Juan Carlos Fonseca Mata"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Painted plaster corset, exhibited at the Palais Galliera, Paris",
+   "year": null,
+   "image": {
+    "file": "File:Frida Kahlo corset peint expo Galliera.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Frida_Kahlo_corset_peint_expo_Galliera.jpg/960px-Frida_Kahlo_corset_peint_expo_Galliera.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Frida_Kahlo_corset_peint_expo_Galliera.jpg/1280px-Frida_Kahlo_corset_peint_expo_Galliera.jpg",
+    "pxW": 1816,
+    "pxH": 4032
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Guallendra"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Painted orthopedic corset",
+   "year": null,
+   "image": {
+    "file": "File:Kahlo Frida corset avec dessin militant.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kahlo_Frida_corset_avec_dessin_militant.jpg/960px-Kahlo_Frida_corset_avec_dessin_militant.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/90/Kahlo_Frida_corset_avec_dessin_militant.jpg",
+    "pxW": 1726,
+    "pxH": 3087
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Guallendra"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Frida Kahlo painting on view at the Museum of Modern Art, New York",
+   "year": null,
+   "image": {
+    "file": "File:Frida Kahlo in The Museum of Modern Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg/960px-Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg/1920px-Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg",
+    "pxW": 2592,
+    "pxH": 1944
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Chris Urbanowicz"
+   }
+  }
+ ]
 }

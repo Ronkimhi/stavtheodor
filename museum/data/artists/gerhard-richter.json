@@ -16,6 +16,146 @@
   "source": "https://en.wikipedia.org/wiki/Gerhard_Richter"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Gerhard_Richter",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Stadtbild Madrid",
+   "year": 1968,
+   "image": {
+    "file": "File:Gerhard Richter, Stadtbild Madrid, 1968, SFMOMA 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg/960px-Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg/1920px-Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abstraktes Bild",
+   "year": 1984,
+   "image": {
+    "file": "File:Gerhard Richter, Abstract Bild, 1984, SFMOMA 07.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg/960px-Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg/1920px-Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lesende (Reader)",
+   "year": 1994,
+   "image": {
+    "file": "File:Gerhard Richter, Lesende (Reader), 1994, SFMOMA 09.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg/960px-Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg/1920px-Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Seestück (Seascape)",
+   "year": 1998,
+   "image": {
+    "file": "File:Gerhard Richter, Seestück (Seascape), 1998, SFMOMA 04.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg/960px-Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg/1920px-Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Fenster (Window)",
+   "year": 2002,
+   "image": {
+    "file": "File:Gerhard Richter, Fenster (Window), 2002, SFMOMA 03.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg/960px-Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg/1920px-Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": "Q2151270",
+   "title": "Cathedral Window",
+   "year": 2007,
+   "image": {
+    "file": "File:Kölner Dom - Richterfenster an der Südseite bei Nacht (7264-66).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg/960px-K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg/1920px-K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg",
+    "pxW": 2200,
+    "pxH": 3600
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Cologne Cathedral Window is the stained glass window in the south transept of the Cologne Cathedral designed by Cologne artist Gerhard Richter. On a surface of 106 square metres, 11,263 glass squares in 72 colours of 9.6 cm × 9.6 cm were principally arranged randomly, with others selected in response to architectural context. The window was inaugurated on 25 August 2007 as part of a Eucharistic celebration; the abstract execution was both celebrated and strongly criticized.",
+    "source": "https://en.wikipedia.org/wiki/Cologne_Cathedral_Window"
+   },
+   "facts": [
+    {
+     "text": "Georg Imdahl wrote in the Kölner Stadt-Anzeiger: \"In the 60s Richter painted his first colour grids as an attack against the falsehood and piety, how abstraction was celebrated, with phoney reverence; downright fulminating against \"devotional art\" and \"religious applied arts\", as which the grids were celebrated\".",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Reception"
+    },
+    {
+     "text": "Originally, in 1863, windows with the depiction of secular and Christian rulers made by the Royal Stained Glass Institute in Berlin-Charlottenburg had been installed, donated by the Kingdom of Prussia. The windows were destroyed in World War II and replaced in 1948 by a simple ornamental glazing by Wilhelm Teuwen, that was in need of restoration.",
+     "section": "Predecessors",
+     "source": "https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Predecessors"
+    },
+    {
+     "text": "In 2003 the cathedral chapter for the Cologne cathedral decided to have the window renewed. The original designs from the 19th century were, like the stained glass windows themselves, destroyed in World War II and no longer available.",
+     "section": "Prehistory and implementation",
+     "source": "https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Prehistory_and_implementation"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Raimond Spekking"
+   }
+  }
+ ]
 }

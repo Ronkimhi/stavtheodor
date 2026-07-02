@@ -16,6 +16,87 @@
   "source": "https://en.wikipedia.org/wiki/Lee_Krasner"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Lee_Krasner",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Polar Stampede",
+   "year": 1960,
+   "image": {
+    "file": "File:Polar Stampede, Lee Krasner, Paintings in the San Francisco Museum of Modern Art, SFMOMA 10.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg/960px-Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg/1920px-Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Works on Paper exhibition, Brooklyn Museum, 1984 to 1985",
+   "year": null,
+   "image": {
+    "file": "File:Lee Krasner Works on Paper Exhibition at the Brooklyn Museum Dec 1984- Feb 1985.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lee_Krasner_Works_on_Paper_Exhibition_at_the_Brooklyn_Museum_Dec_1984-_Feb_1985.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lee_Krasner_Works_on_Paper_Exhibition_at_the_Brooklyn_Museum_Dec_1984-_Feb_1985.jpg",
+    "pxW": 768,
+    "pxH": 507
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Brooklyn Museum"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The studio at the Pollock-Krasner House, Springs, New York",
+   "year": null,
+   "image": {
+    "file": "File:Pollock-green.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Pollock-green.jpg/960px-Pollock-green.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Pollock-green.jpg/1920px-Pollock-green.jpg",
+    "pxW": 2272,
+    "pxH": 1704
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Americasroof"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lee Krasner, photographed by Bernard Gotfryd",
+   "year": null,
+   "image": {
+    "file": "File:Lee Krasner, artist.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lee_Krasner%2C_artist.jpg/960px-Lee_Krasner%2C_artist.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lee_Krasner%2C_artist.jpg/1920px-Lee_Krasner%2C_artist.jpg",
+    "pxW": 3338,
+    "pxH": 4917
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gotfryd, Bernard, photographer"
+   }
+  }
+ ]
 }

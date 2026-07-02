@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Max_Ernst"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Max_Ernst",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q3223171",
+   "title": "Le Grand Assistant",
+   "year": 1967,
+   "image": {
+    "file": "File:Plaque Le Grand Assistant Paris.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Plaque_Le_Grand_Assistant_Paris.jpg/960px-Plaque_Le_Grand_Assistant_Paris.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Plaque_Le_Grand_Assistant_Paris.jpg",
+    "pxW": 1422,
+    "pxH": 1475
+   },
+   "cm": null,
+   "collection": "Musée National d'Art Moderne",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Benoît Prieur"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Der Assistent, Der Frosch, Die Schildkröte",
+   "year": 1967,
+   "image": {
+    "file": "File:Max Ernst Der Assistent-Der Frosch-Die Schildkroete 1967.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg/960px-Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg/1920px-Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg",
+    "pxW": 2388,
+    "pxH": 1878
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Photo: Rufus46\nSculpture: Max Ernst"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Habakuk, Kunsthalle Düsseldorf",
+   "year": null,
+   "image": {
+    "file": "File:Düsseldorf - Grabbeplatz+Kunsthalle - Habakuk 01 ies.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg/960px-D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg/1920px-D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg",
+    "pxW": 5616,
+    "pxH": 3744
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Frank Vincentz"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Max Ernst Fountain, Brühl",
+   "year": null,
+   "image": {
+    "file": "File:Brühl Uhlstr. Max-Ernst-Brunnen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg/960px-Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg/1920px-Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Erik Frohne"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Sculpture by Max Ernst, Lenbachhaus, Munich",
+   "year": null,
+   "image": {
+    "file": "File:Lenbachhaus - München 007.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenbachhaus_-_M%C3%BCnchen_007.jpg/960px-Lenbachhaus_-_M%C3%BCnchen_007.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenbachhaus_-_M%C3%BCnchen_007.jpg/1920px-Lenbachhaus_-_M%C3%BCnchen_007.jpg",
+    "pxW": 5152,
+    "pxH": 7728
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "DALIBRI"
+   }
+  }
+ ]
 }

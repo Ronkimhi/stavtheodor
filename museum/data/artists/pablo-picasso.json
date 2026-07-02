@@ -16,7 +16,7 @@
   "source": "https://en.wikipedia.org/wiki/Pablo_Picasso"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Pablo_Picasso",
- "hasGallery": false,
+ "hasGallery": true,
  "paintings": [
   {
    "qid": "Q4429116",
@@ -58,6 +58,140 @@
    "license": {
     "name": "Public domain",
     "credit": "Claude Monet"
+   }
+  },
+  {
+   "qid": "Q5792254",
+   "title": "Mountains of Málaga",
+   "year": 1896,
+   "image": {
+    "file": "File:Montes de Málaga.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Montes_de_M%C3%A1laga.jpg/960px-Montes_de_M%C3%A1laga.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Montes_de_M%C3%A1laga.jpg",
+    "pxW": 1024,
+    "pxH": 768
+   },
+   "cm": {
+    "w": 82,
+    "h": 60
+   },
+   "collection": "Museu Picasso",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Por los caminos de Málaga"
+   }
+  },
+  {
+   "qid": "Q60935829",
+   "title": "Buste de femme",
+   "year": 1926,
+   "image": {
+    "file": "File:Strasbourg Musée d'art moderne et contemporain février 2014-22.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014-22.jpg/960px-Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014-22.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014-22.jpg/1920px-Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014-22.jpg",
+    "pxW": 5460,
+    "pxH": 3640
+   },
+   "cm": {
+    "w": 65,
+    "h": 81
+   },
+   "collection": "Strasbourg Museum of Modern and Contemporary Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Photo Claude TRUONG-NGOC"
+   }
+  },
+  {
+   "qid": "Q175036",
+   "title": "Guernica",
+   "year": 1937,
+   "image": {
+    "file": "File:Mural del \"Guernica\" de Picasso.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mural_del_%22Guernica%22_de_Picasso.jpg/960px-Mural_del_%22Guernica%22_de_Picasso.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mural_del_%22Guernica%22_de_Picasso.jpg/1920px-Mural_del_%22Guernica%22_de_Picasso.jpg",
+    "pxW": 4520,
+    "pxH": 2060
+   },
+   "cm": {
+    "w": 776,
+    "h": 349
+   },
+   "collection": "Museo Nacional Centro de Arte Reina Sofía",
+   "story": {
+    "extract": "Guernica is a large 1937 oil painting by Spanish artist Pablo Picasso. It is one of his best-known works, regarded by many art critics as the most moving and powerful anti-war painting in history. It is exhibited in the Museo Reina Sofía in Madrid.",
+    "source": "https://en.wikipedia.org/wiki/Guernica_%28Picasso%29"
+   },
+   "facts": [
+    {
+     "text": "In January 1937, while Pablo Picasso was living in Paris on Rue des Grands Augustins, he was commissioned by the Spanish Republican government to create a large artwork for the Spanish pavilion at the Exposition Internationale des Arts et Techniques dans la Vie Moderne, a 1937 Paris International Exposition.",
+     "section": "Commission",
+     "source": "https://en.wikipedia.org/wiki/Guernica_%28Picasso%29#Commission"
+    },
+    {
+     "text": "On 26 April 1937, during the Spanish Civil War, the town of Guernica was razed to the ground by German aircraft belonging to the Condor Legion, sent by Adolf Hitler to support General Francisco Franco's troops. Bombs rained down on Guernica for hours in an \"experiment\" for the blitzkrieg tactics and bombing of civilians seen in later wars.",
+     "section": "Bombing of 26 April 1937",
+     "source": "https://en.wikipedia.org/wiki/Guernica_%28Picasso%29#Bombing_of_26_April_1937"
+    },
+    {
+     "text": "The Times journalist George Steer propelled this event onto the international scene, and brought it to Pablo Picasso's attention, in an eyewitness account published on 28 April in both The Times and The New York Times. On the 29th it appeared in L'Humanité.",
+     "section": "Aftermath",
+     "source": "https://en.wikipedia.org/wiki/Guernica_%28Picasso%29#Aftermath"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Jules Verne Times Two"
+   }
+  },
+  {
+   "qid": "Q3713986",
+   "title": "Women of Algiers, O version",
+   "year": 1955,
+   "image": {
+    "file": "File:Women of Algiers in Lagunillas.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Women_of_Algiers_in_Lagunillas.jpg/960px-Women_of_Algiers_in_Lagunillas.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Women_of_Algiers_in_Lagunillas.jpg/1920px-Women_of_Algiers_in_Lagunillas.jpg",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": {
+    "w": 146,
+    "h": 114
+   },
+   "collection": "http://www.wikidata.org/.well-known/genid/f060d311fed276266bd25f08333e2bca",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Daniel Capilla"
+   }
+  },
+  {
+   "qid": "Q112679010",
+   "title": "Personnage cueillant des fleurs",
+   "year": 1958,
+   "image": {
+    "file": "File:Strasbourg Musée d'art moderne et contemporain février 2014 07.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014_07.jpg/960px-Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014_07.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014_07.jpg/1920px-Strasbourg_Mus%C3%A9e_d%27art_moderne_et_contemporain_f%C3%A9vrier_2014_07.jpg",
+    "pxW": 5760,
+    "pxH": 3840
+   },
+   "cm": {
+    "w": 202,
+    "h": 200
+   },
+   "collection": "Strasbourg Museum of Modern and Contemporary Art",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Photo Claude TRUONG-NGOC"
    }
   }
  ]

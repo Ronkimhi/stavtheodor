@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Mark_Rothko"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Mark_Rothko",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Rothko Chapel interior, Houston",
+   "year": 1971,
+   "image": {
+    "file": "File:Rothko chapel interior.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rothko_chapel_interior.jpg/960px-Rothko_chapel_interior.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rothko_chapel_interior.jpg/1920px-Rothko_chapel_interior.jpg",
+    "pxW": 2448,
+    "pxH": 3264
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Alan Islas"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Seagram Murals, on view at the Fondation Louis Vuitton, Paris",
+   "year": null,
+   "image": {
+    "file": "File:Mark Rothko, Seagram Murals, shown at the Fondation Louis Vuitton, Paris in 2024.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mark_Rothko%2C_Seagram_Murals%2C_shown_at_the_Fondation_Louis_Vuitton%2C_Paris_in_2024.jpg/960px-Mark_Rothko%2C_Seagram_Murals%2C_shown_at_the_Fondation_Louis_Vuitton%2C_Paris_in_2024.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mark_Rothko%2C_Seagram_Murals%2C_shown_at_the_Fondation_Louis_Vuitton%2C_Paris_in_2024.jpg/1920px-Mark_Rothko%2C_Seagram_Murals%2C_shown_at_the_Fondation_Louis_Vuitton%2C_Paris_in_2024.jpg",
+    "pxW": 9832,
+    "pxH": 4495
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Jean-Pierre Dalbéra"
+   }
+  },
+  {
+   "qid": null,
+   "title": "No. 24 (Brown, Black and Blue)",
+   "year": null,
+   "image": {
+    "file": "File:Nº 24 (Brown, Black and Blue), Mark Rothko, Paintings in the San Francisco Museum of Modern Art, SFMOMA 12.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/N%C2%BA_24_%28Brown%2C_Black_and_Blue%29%2C_Mark_Rothko%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_12.jpg/960px-N%C2%BA_24_%28Brown%2C_Black_and_Blue%29%2C_Mark_Rothko%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_12.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/N%C2%BA_24_%28Brown%2C_Black_and_Blue%29%2C_Mark_Rothko%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_12.jpg/1920px-N%C2%BA_24_%28Brown%2C_Black_and_Blue%29%2C_Mark_Rothko%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_12.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "on view at SFMOMA, San Francisco",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "GualdimG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Rothko room at Tate Modern, London",
+   "year": null,
+   "image": {
+    "file": "File:A galley of paintings by Mark Rothko, Tate Modern.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_galley_of_paintings_by_Mark_Rothko%2C_Tate_Modern.jpg/960px-A_galley_of_paintings_by_Mark_Rothko%2C_Tate_Modern.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_galley_of_paintings_by_Mark_Rothko%2C_Tate_Modern.jpg/1920px-A_galley_of_paintings_by_Mark_Rothko%2C_Tate_Modern.jpg",
+    "pxW": 2048,
+    "pxH": 1536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Robert-brook"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Rothko Chapel, Houston",
+   "year": null,
+   "image": {
+    "file": "File:Rothko Chapel.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Rothko_Chapel.jpg/960px-Rothko_Chapel.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Rothko_Chapel.jpg/1920px-Rothko_Chapel.jpg",
+    "pxW": 4096,
+    "pxH": 3072
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "WhisperToMe"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Mark Rothko Art Centre, Daugavpils, Latvia",
+   "year": null,
+   "image": {
+    "file": "File:Twierdza Dyneburg 20.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Twierdza_Dyneburg_20.jpg/960px-Twierdza_Dyneburg_20.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Twierdza_Dyneburg_20.jpg/1920px-Twierdza_Dyneburg_20.jpg",
+    "pxW": 4000,
+    "pxH": 2250
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Zala"
+   }
+  }
+ ]
 }

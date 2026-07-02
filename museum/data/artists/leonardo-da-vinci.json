@@ -19,48 +19,6 @@
  "hasGallery": true,
  "paintings": [
   {
-   "qid": "Q1059211",
-   "title": "The Baptism of Christ",
-   "year": 1470,
-   "image": {
-    "file": "File:Verrocchio and Leonardo, Baptism of Christ, c1470-75, Uffizi.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg/960px-Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg/1920px-Verrocchio_and_Leonardo%2C_Baptism_of_Christ%2C_c1470-75%2C_Uffizi.jpg",
-    "pxW": 3760,
-    "pxH": 4520
-   },
-   "cm": {
-    "w": 151,
-    "h": 177
-   },
-   "collection": "Uffizi Gallery",
-   "story": {
-    "extract": "The Baptism of Christ is an oil-on-panel painting finished around 1475 in the studio of the Italian Renaissance painter Andrea del Verrocchio and generally ascribed to him and his pupil Leonardo da Vinci. Some art historians discern the hands of other members of Verrocchio's workshop in the painting as well.",
-    "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29"
-   },
-   "facts": [
-    {
-     "text": "The painting was at some point transferred from the Church of San Salvi to the Vallombrosan Sisterhood in Santa Verdiana. In 1810, it entered the collection of the Accademia and passed to the Uffizi in 1959.",
-     "section": "Provenance",
-     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#Provenance"
-    },
-    {
-     "text": "Andrea del Verrocchio was a sculptor, goldsmith, painter and talented worker who ran a large and successful workshop in Florence in the second half of the 15th century. Verrocchio trained his apprentices by having them study surface anatomy, drawing, mechanics, sculpting, drapery studies, and the use of light and shade.",
-     "section": "History",
-     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#History"
-    },
-    {
-     "text": "The picture depicts the Baptism of Jesus by John the Baptist on the banks of the Jordan River. There are two kneeling angels, one holding Jesus's garment, and the other with its hands folded, both in front of the symbolization of salvation and life, the palm tree.",
-     "section": "Subject matter",
-     "source": "https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Verrocchio_and_Leonardo%29#Subject_matter"
-    }
-   ],
-   "license": {
-    "name": "Public domain",
-    "credit": "Andrea del Verrocchio / Leonardo da Vinci"
-   }
-  },
-  {
    "qid": "Q1267893",
    "title": "Ginevra de' Benci",
    "year": 1476,
@@ -131,6 +89,48 @@
    ],
    "license": {
     "name": "Public domain",
+    "credit": "Leonardo da Vinci"
+   }
+  },
+  {
+   "qid": "Q1638622",
+   "title": "Adoration of the Magi",
+   "year": 1482,
+   "image": {
+    "file": "File:Leonardo da Vinci, Adoration, c1481, Uffizi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Leonardo_da_Vinci%2C_Adoration%2C_c1481%2C_Uffizi.jpg/960px-Leonardo_da_Vinci%2C_Adoration%2C_c1481%2C_Uffizi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Leonardo_da_Vinci%2C_Adoration%2C_c1481%2C_Uffizi.jpg/1920px-Leonardo_da_Vinci%2C_Adoration%2C_c1481%2C_Uffizi.jpg",
+    "pxW": 3794,
+    "pxH": 3783
+   },
+   "cm": {
+    "w": 246,
+    "h": 243
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Adoration of the Magi is an unfinished early painting by the Italian Renaissance artist Leonardo da Vinci. Leonardo was given the commission by the Augustinian monks of San Donato in Scopeto in Florence in 1481, but he departed for Milan the following year, leaving merely more than the preparatory underdrawing in charcoal, ink and watercolor. It has been in the Uffizi Gallery in Florence since 1670.",
+    "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Leonardo%29"
+   },
+   "facts": [
+    {
+     "text": "The Virgin Mary and Child are depicted in the foreground and form a triangular shape with the Magi kneeling in adoration. Behind them is a semicircle of accompanying figures, including what may be a self-portrait of the young Leonardo (on the far right).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Leonardo%29#Description"
+    },
+    {
+     "text": "Several preparatory drawings for the work by Leonardo survived in the Uffizi, the Louvre, Paris, the Wallraf-Richartz Museum, Cologne, and Fitzwilliam Museum in Cambridge.",
+     "section": "Related works",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Leonardo%29#Related_works"
+    },
+    {
+     "text": "In 2002 Maurizio Seracini, an art diagnostician alumnus of the University of California, San Diego, and a native Florentine, was commissioned by the Uffizi to undertake a study of the paint surface to determine whether the painting could be restored without damaging it.",
+     "section": "Diagnostic survey",
+     "source": "https://en.wikipedia.org/wiki/Adoration_of_the_Magi_%28Leonardo%29#Diagnostic_survey"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
     "credit": "Leonardo da Vinci"
    }
   },

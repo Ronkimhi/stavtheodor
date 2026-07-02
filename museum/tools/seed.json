@@ -100,7 +100,13 @@
     { "slug": "egon-schiele", "wikipedia": "Egon Schiele", "periods": ["expressionism"] },
 
     { "slug": "pablo-picasso", "wikipedia": "Pablo Picasso", "periods": ["cubism"] },
-    { "slug": "georges-braque", "wikipedia": "Georges Braque", "periods": ["cubism"] },
+    { "slug": "georges-braque", "wikipedia": "Georges Braque", "periods": ["cubism"],
+      "commonsWorks": [
+        {"file": "File:Armory Show, International Exhibition of Modern Art, Chicago, 1913. The Cubist room.jpg", "title": "The Cubist room at the Armory Show", "year": 1913},
+        {"file": "File:Varengeville-sur-Mer - l'Église Saint-Valéry - Side Nave - View East from Church Entrance towards the Georges Braque Window.jpg", "title": "The Georges Braque window, Church of Saint-Valery, Varengeville-sur-Mer"},
+        {"file": "File:Vitrail de l'Eglise de Varengeville.jpg", "title": "Stained glass by Braque, Varengeville-sur-Mer"},
+        {"file": "File:Varengeville-sur-Mer Cimetiere-Georges Braque 1.JPG", "title": "Braque's tomb with his dove mosaic, Varengeville-sur-Mer"}
+      ] },
     { "slug": "juan-gris", "wikipedia": "Juan Gris", "periods": ["cubism"] },
     { "slug": "fernand-leger", "wikipedia": "Fernand Léger", "periods": ["cubism"] },
 
@@ -109,23 +115,111 @@
     { "slug": "piet-mondrian", "wikipedia": "Piet Mondrian", "periods": ["early-abstraction"] },
     { "slug": "paul-klee", "wikipedia": "Paul Klee", "periods": ["early-abstraction"] },
 
-    { "slug": "max-ernst", "wikipedia": "Max Ernst", "periods": ["surrealism"] },
+    { "slug": "max-ernst", "wikipedia": "Max Ernst", "periods": ["surrealism"],
+      "commonsWorks": [
+        {"file": "File:Düsseldorf - Grabbeplatz+Kunsthalle - Habakuk 01 ies.jpg", "title": "Habakuk, Kunsthalle Düsseldorf"},
+        {"file": "File:Brühl Uhlstr. Max-Ernst-Brunnen.jpg", "title": "Max Ernst Fountain, Brühl"},
+        {"file": "File:Max Ernst Der Assistent-Der Frosch-Die Schildkroete 1967.jpg", "title": "Der Assistent, Der Frosch, Die Schildkröte", "year": 1967},
+        {"file": "File:Lenbachhaus - München 007.jpg", "title": "Sculpture by Max Ernst, Lenbachhaus, Munich"}
+      ] },
     { "slug": "joan-miro", "wikipedia": "Joan Miró", "periods": ["surrealism"] },
-    { "slug": "rene-magritte", "wikipedia": "René Magritte", "periods": ["surrealism"] },
+    { "slug": "rene-magritte", "wikipedia": "René Magritte", "periods": ["surrealism"],
+      "commonsWorks": [
+        {"file": "File:Le Thérapeute (1976) René Magritte - TMoCA, Tehran.jpg", "title": "Le Thérapeute (The Healer)", "year": 1976, "collection": "Tehran Museum of Contemporary Art"},
+        {"file": "File:Magritte Exposition Mexico City.JPG", "title": "Magritte exhibition, Mexico City"},
+        {"file": "File:Maastricht, TEFAF2014-09.jpg", "title": "Magritte painting at TEFAF, Maastricht", "year": 2014},
+        {"file": "File:Obra da exposição no Museu Brasileiro da Escultura 02.jpg", "title": "Magritte work at the Museu Brasileiro da Escultura, São Paulo"}
+      ] },
     { "slug": "salvador-dali", "wikipedia": "Salvador Dalí", "periods": ["surrealism"] },
-    { "slug": "frida-kahlo", "wikipedia": "Frida Kahlo", "periods": ["surrealism"] },
+    { "slug": "frida-kahlo", "wikipedia": "Frida Kahlo", "periods": ["surrealism"],
+      "commonsWorks": [
+        {"file": "File:Arbol de la Esperanza, Mantente Firme (Tree of Hope, Remain Strong) by Frida Kahlo, created in 1946.jpg", "title": "Tree of Hope, Remain Strong (Arbol de la Esperanza, Mantente Firme)", "year": 1946},
+        {"file": "File:Frida Kahlo, Paisaje urbano, 1925.jpg", "title": "Urban Landscape (Paisaje urbano)", "year": 1925},
+        {"file": "File:Unos cuantos piquetitos, Frida, Museo Dolores Olmedo.webp", "title": "A Few Small Nips (Unos cuantos piquetitos)", "year": 1935, "collection": "Museo Dolores Olmedo, Mexico City"},
+        {"file": "File:Autorretrato con Changuito, Frida, Museo Dolores Olmedo.jpg", "title": "Self-Portrait with Small Monkey (Autorretrato con changuito)", "year": 1945, "collection": "Museo Dolores Olmedo, Mexico City"},
+        {"file": "File:Bordado de Frida Kahlo.jpg", "title": "Embroidery by Frida Kahlo"},
+        {"file": "File:Frida Kahlo corset peint expo Galliera.jpg", "title": "Painted plaster corset, exhibited at the Palais Galliera, Paris"},
+        {"file": "File:Kahlo Frida corset avec dessin militant.jpg", "title": "Painted orthopedic corset"},
+        {"file": "File:Frida Kahlo in The Museum of Modern Art.jpg", "title": "Frida Kahlo painting on view at the Museum of Modern Art, New York"}
+      ] },
 
-    { "slug": "jackson-pollock", "wikipedia": "Jackson Pollock", "periods": ["abstract-expressionism"] },
-    { "slug": "mark-rothko", "wikipedia": "Mark Rothko", "periods": ["abstract-expressionism"] },
-    { "slug": "willem-de-kooning", "wikipedia": "Willem de Kooning", "periods": ["abstract-expressionism"] },
-    { "slug": "lee-krasner", "wikipedia": "Lee Krasner", "periods": ["abstract-expressionism"] },
+    { "slug": "jackson-pollock", "wikipedia": "Jackson Pollock", "periods": ["abstract-expressionism"],
+      "commonsWorks": [
+        {"file": "File:Circle by Jackson Pollock.jpg", "title": "Circle"},
+        {"file": "File:Peddler by Jackson Pollock.jpg", "title": "The Peddler"},
+        {"file": "File:Pollock-Krasner House studio floor.jpg", "title": "Paint-covered studio floor, Pollock-Krasner House, Springs, New York"},
+        {"file": "File:Pollock-Krasner House studio floor 2.jpg", "title": "Studio floor detail, Pollock-Krasner House"},
+        {"file": "File:Pollock-house.jpg", "title": "Pollock-Krasner House and Study Center, Springs, New York"},
+        {"file": "File:Utställning med Jackson Pollocks måleri på Moderna Museet. Besökare på utställningen.jpg", "title": "Pollock exhibition at Moderna Museet, Stockholm"}
+      ] },
+    { "slug": "mark-rothko", "wikipedia": "Mark Rothko", "periods": ["abstract-expressionism"],
+      "commonsWorks": [
+        {"file": "File:Mark Rothko, Seagram Murals, shown at the Fondation Louis Vuitton, Paris in 2024.jpg", "title": "Seagram Murals, on view at the Fondation Louis Vuitton, Paris"},
+        {"file": "File:Nº 24 (Brown, Black and Blue), Mark Rothko, Paintings in the San Francisco Museum of Modern Art, SFMOMA 12.jpg", "title": "No. 24 (Brown, Black and Blue)", "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:A galley of paintings by Mark Rothko, Tate Modern.jpg", "title": "Rothko room at Tate Modern, London"},
+        {"file": "File:Rothko chapel interior.jpg", "title": "Rothko Chapel interior, Houston", "year": 1971},
+        {"file": "File:Rothko Chapel.jpg", "title": "Rothko Chapel, Houston"},
+        {"file": "File:Twierdza Dyneburg 20.jpg", "title": "Mark Rothko Art Centre, Daugavpils, Latvia"}
+      ] },
+    { "slug": "willem-de-kooning", "wikipedia": "Willem de Kooning", "periods": ["abstract-expressionism"],
+      "commonsWorks": [
+        {"file": "File:Untitled XIV, Willem de Kooning, Paintings in the San Francisco Museum of Modern Art, SFMOMA 11.jpg", "title": "Untitled XIV", "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Litho -1 (Waves -1) by Willem de Kooning, 1960.JPG", "title": "Litho #1 (Waves #1)", "year": 1960},
+        {"file": "File:Litho -2 (Waves -2) by Willem de Kooning, 1960.JPG", "title": "Litho #2 (Waves #2)", "year": 1960},
+        {"file": "File:Untitled (c. 1976) - Willem de Kooning (1904 -1997) (44566834812).jpg", "title": "Untitled", "year": 1976}
+      ] },
+    { "slug": "lee-krasner", "wikipedia": "Lee Krasner", "periods": ["abstract-expressionism"],
+      "commonsWorks": [
+        {"file": "File:Polar Stampede, Lee Krasner, Paintings in the San Francisco Museum of Modern Art, SFMOMA 10.jpg", "title": "Polar Stampede", "year": 1960, "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Lee Krasner Works on Paper Exhibition at the Brooklyn Museum Dec 1984- Feb 1985.jpg", "title": "Works on Paper exhibition, Brooklyn Museum, 1984 to 1985"},
+        {"file": "File:Pollock-green.jpg", "title": "The studio at the Pollock-Krasner House, Springs, New York"},
+        {"file": "File:Lee Krasner, artist.jpg", "title": "Lee Krasner, photographed by Bernard Gotfryd"}
+      ] },
 
-    { "slug": "andy-warhol", "wikipedia": "Andy Warhol", "periods": ["pop-art"] },
+    { "slug": "andy-warhol", "wikipedia": "Andy Warhol", "periods": ["pop-art"],
+      "commonsWorks": [
+        {"file": "File:Andy Warhol Shadows.jpg", "title": "Shadows, installation view"},
+        {"file": "File:RSAWarhol.JPG", "title": "Warhol exhibition at the Royal Scottish Academy, Edinburgh"},
+        {"file": "File:Andy Warhol at the Jewish Museum (LOC).jpg", "title": "Andy Warhol at the Jewish Museum, New York"},
+        {"file": "File:Andy Warhol and the Factory 1969.jpg", "title": "Warhol and the Factory", "year": 1969}
+      ] },
     { "slug": "roy-lichtenstein", "wikipedia": "Roy Lichtenstein", "periods": ["pop-art"] },
-    { "slug": "david-hockney", "wikipedia": "David Hockney", "periods": ["pop-art", "contemporary"] },
+    { "slug": "david-hockney", "wikipedia": "David Hockney", "periods": ["pop-art", "contemporary"],
+      "commonsWorks": [
+        {"file": "File:Hockney at Tate Britain (33933083010).jpg", "title": "Hockney retrospective at Tate Britain, London", "year": 2017},
+        {"file": "File:Hockney Bigger Christmas Trees light display Battersea Power Station.jpg", "title": "Bigger Christmas Trees, light installation at Battersea Power Station, London"},
+        {"file": "File:View of a stained glass window in Westminster Abbey - geograph.org.uk - 6879744.jpg", "title": "The Queen's Window, Westminster Abbey, London", "year": 2018},
+        {"file": "File:Waiting for the Hockney exhibition at the RA (7048871937).jpg", "title": "Queue for the Hockney exhibition at the Royal Academy, London", "year": 2012},
+        {"file": "File:David Hockney, RA London, 2012-01.jpg", "title": "Royal Academy exhibition banners, London", "year": 2012},
+        {"file": "File:Bilbao - Guggenheim 95.jpg", "title": "Hockney exhibition banner at the Guggenheim Bilbao"}
+      ] },
 
-    { "slug": "jean-michel-basquiat", "wikipedia": "Jean-Michel Basquiat", "periods": ["contemporary"] },
-    { "slug": "gerhard-richter", "wikipedia": "Gerhard Richter", "periods": ["contemporary"] },
-    { "slug": "yayoi-kusama", "wikipedia": "Yayoi Kusama", "periods": ["contemporary"] }
+    { "slug": "jean-michel-basquiat", "wikipedia": "Jean-Michel Basquiat", "periods": ["contemporary"],
+      "commonsWorks": [
+        {"file": "File:バスキア展 (48920391627).jpg", "title": "Basquiat exhibition, Tokyo", "year": 2019},
+        {"file": "File:個人コレクターの方々 (48919644923).jpg", "title": "Works from private collections, Basquiat exhibition, Tokyo", "year": 2019},
+        {"file": "File:HK WCN 灣仔北 Wan Chai North 香港會展 HKCEC 佳士得 Christie's 拍賣前 Auction 預展 preview exhibition November 2021 SS2 286.jpg", "title": "Basquiat work at a Christie's auction preview, Hong Kong", "year": 2021},
+        {"file": "File:HK 中環 Central 畢打行 Pedder Building 佳士得 拍賣 Christie's Auction 預展 preview exhibition October 2022 Px3 018.jpg", "title": "Basquiat work at a Christie's auction preview, Hong Kong", "year": 2022},
+        {"file": "File:Jean-Michel Basquiat (1960-1988) home on 57 Great Jones Street.jpg", "title": "57 Great Jones Street, New York, Basquiat's studio from 1983 to 1988"}
+      ] },
+    { "slug": "gerhard-richter", "wikipedia": "Gerhard Richter", "periods": ["contemporary"],
+      "commonsWorks": [
+        {"file": "File:Gerhard Richter, Stadtbild Madrid, 1968, SFMOMA 01.jpg", "title": "Stadtbild Madrid", "year": 1968, "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Gerhard Richter, Lesende (Reader), 1994, SFMOMA 09.jpg", "title": "Lesende (Reader)", "year": 1994, "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Gerhard Richter, Seestück (Seascape), 1998, SFMOMA 04.jpg", "title": "Seestück (Seascape)", "year": 1998, "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Gerhard Richter, Fenster (Window), 2002, SFMOMA 03.jpg", "title": "Fenster (Window)", "year": 2002, "collection": "on view at SFMOMA, San Francisco"},
+        {"file": "File:Gerhard Richter, Abstract Bild, 1984, SFMOMA 07.jpg", "title": "Abstraktes Bild", "year": 1984, "collection": "on view at SFMOMA, San Francisco"}
+      ] },
+    { "slug": "yayoi-kusama", "wikipedia": "Yayoi Kusama", "periods": ["contemporary"],
+      "commonsWorks": [
+        {"file": "File:台北雙年展〈圓點的強迫妄想〉.jpg", "title": "Dots Obsession, Taipei Biennial"},
+        {"file": "File:草間彌生所作〈幻影的彼方〉.jpg", "title": "Beyond the Phantoms (幻影的彼方)"},
+        {"file": "File:草間彌生所作〈春之祭典〉.jpg", "title": "Rite of Spring (春之祭典)"},
+        {"file": "File:草間彌生所作〈永劫回歸〉.jpg", "title": "Eternal Recurrence (永劫回歸)"},
+        {"file": "File:Enjambre de Luciérnagas creación de Yayoi Kusama 01.jpg", "title": "Fireflies (Enjambre de Luciérnagas), infinity room installation, Mexico City"},
+        {"file": "File:Yayoi Kusama Obliteration Room.jpg", "title": "The Obliteration Room"},
+        {"file": "File:Outside Harrods - geograph.org.uk - 7388845.jpg", "title": "Pumpkin installation outside Harrods, London", "year": 2023},
+        {"file": "File:2015年秋 松本の旅 (21309541794).jpg", "title": "The Visionary Flowers, Matsumoto City Museum of Art, Japan"}
+      ] }
   ]
 }

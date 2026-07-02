@@ -150,32 +150,6 @@
    }
   },
   {
-   "qid": "Q27978148",
-   "title": "Parting of Abelard and Heloise",
-   "year": 1780,
-   "image": {
-    "file": "File:Angelica Kauffmann 001.png",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Angelica_Kauffmann_001.png/960px-Angelica_Kauffmann_001.png",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Angelica_Kauffmann_001.png/1920px-Angelica_Kauffmann_001.png",
-    "pxW": 2332,
-    "pxH": 2332
-   },
-   "cm": {
-    "w": 66,
-    "h": 66
-   },
-   "collection": "Hermitage Museum",
-   "story": {
-    "extract": "The Parting of Abelard and Heloise or Abelard and Heloise Say Farewell is an oil on canvas painting by Angelica Kauffman. It is signed on a block of stone at bottom centre Angelica K. pinx. It shows Peter Abelard and Héloïse parting as she enters the convent of Sainte-Marie at Argenteuil.",
-    "source": "https://en.wikipedia.org/wiki/The_Parting_of_Abelard_and_Heloise"
-   },
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Angelica Kauffmann"
-   }
-  },
-  {
    "qid": "Q19985096",
    "title": "Ferdinand I and His Family",
    "year": 1782,
@@ -242,6 +216,48 @@
    "license": {
     "name": "CC0",
     "credit": "Angelica Kauffmann"
+   }
+  },
+  {
+   "qid": "Q19912047",
+   "title": "The Sorrow of Telemachus",
+   "year": 1783,
+   "image": {
+    "file": "File:Angelica kauffmann, il dolore di telemaco, 1783 (nyc, met).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Angelica_kauffmann%2C_il_dolore_di_telemaco%2C_1783_%28nyc%2C_met%29.jpg/960px-Angelica_kauffmann%2C_il_dolore_di_telemaco%2C_1783_%28nyc%2C_met%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Angelica_kauffmann%2C_il_dolore_di_telemaco%2C_1783_%28nyc%2C_met%29.jpg/1920px-Angelica_kauffmann%2C_il_dolore_di_telemaco%2C_1783_%28nyc%2C_met%29.jpg",
+    "pxW": 4944,
+    "pxH": 3790
+   },
+   "cm": {
+    "w": 114,
+    "h": 83
+   },
+   "collection": "Metropolitan Museum of Art",
+   "story": {
+    "extract": "The Sorrow of Telemachus is an oil painting by the Swiss artist Angelica Kauffman, from 1783. It is in the collection of the Metropolitan Museum of Art, in New York.",
+    "source": "https://en.wikipedia.org/wiki/The_Sorrow_of_Telemachus"
+   },
+   "facts": [
+    {
+     "text": "This painting and Telemachus and the Nymphs of Calypso were painted for Monsignor Onorato Caetani (1742-1797). They show scenes from the French novel The Adventures of Telemachus published by François Fénelon in 1699, and based on the story of Telemachus, son of Odysseus.",
+     "section": "Early history and creation",
+     "source": "https://en.wikipedia.org/wiki/The_Sorrow_of_Telemachus#Early_history_and_creation"
+    },
+    {
+     "text": "Telemachus was shipwrecked off Calypso's island, and in this image she tells her nymphs to stop singing Odysseus's praises because of his son's grief.",
+     "section": "Description and interpretation",
+     "source": "https://en.wikipedia.org/wiki/The_Sorrow_of_Telemachus#Description_and_interpretation"
+    },
+    {
+     "text": "Kauffman painted two other versions of this work: in 1788 (held by the Bündner Museum of Art in Chur, Switzerland, and in 1789 (sold by Christie's in London in April 1998).",
+     "section": "Other versions",
+     "source": "https://en.wikipedia.org/wiki/The_Sorrow_of_Telemachus#Other_versions"
+    }
+   ],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
    }
   },
   {

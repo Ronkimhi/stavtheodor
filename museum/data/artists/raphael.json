@@ -114,44 +114,39 @@
    }
   },
   {
-   "qid": "Q555821",
-   "title": "Self-portrait",
+   "qid": "Q2344505",
+   "title": "Madonna of the Goldfinch",
    "year": 1505,
    "image": {
-    "file": "File:Raffaello Sanzio.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/960px-Raffaello_Sanzio.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/1920px-Raffaello_Sanzio.jpg",
-    "pxW": 3898,
-    "pxH": 5315
+    "file": "File:Raphael, Madonna del Cardellino, 1507, Uffizi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Raphael%2C_Madonna_del_Cardellino%2C_1507%2C_Uffizi.jpg/960px-Raphael%2C_Madonna_del_Cardellino%2C_1507%2C_Uffizi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Raphael%2C_Madonna_del_Cardellino%2C_1507%2C_Uffizi.jpg/1920px-Raphael%2C_Madonna_del_Cardellino%2C_1507%2C_Uffizi.jpg",
+    "pxW": 3822,
+    "pxH": 5327
    },
    "cm": {
-    "w": 33,
-    "h": 48
+    "w": 77,
+    "h": 107
    },
    "collection": "Uffizi Gallery",
    "story": {
-    "extract": "Self-Portrait is a small oil painting on poplar wood by the Italian Renaissance artist Raphael. It is believed to have been painted between 1504 and 1506 during his formative years in Florence. The work portrays the artist in a simple black robe and bonnet, set against a plain brown background with his shadow cast to the right.",
-    "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29"
+    "extract": "The Madonna of the Goldfinch is an oil on wood painting by the Italian Renaissance artist Raphael, from c. 1505–06. A 10-year restoration process was completed in 2008, after which the painting was returned to its home at the Uffizi in Florence. During the restoration, an antique copy replaced the painting in the gallery.",
+    "source": "https://en.wikipedia.org/wiki/Madonna_del_Cardellino"
    },
    "facts": [
     {
-     "text": "The painting depicts Raphael's head and shoulders on a plain brown background, with his shadow projected to the right. The collar of the sitter’s shirt remains bare and unpainted, revealing exposed gesso and some underdrawing.",
-     "section": "Description",
-     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Description"
+     "text": "Raphael is considered to be a “master” of the High Renaissance, a title he shares with Michelangelo and Leonardo da Vinci. He was born in 1483 and died in 1520, living a mere thirty-seven years.",
+     "section": "Painter",
+     "source": "https://en.wikipedia.org/wiki/Madonna_del_Cardellino#Painter"
     },
     {
-     "text": "Raphael's self-portraits were a significant part of his repertoire and played an essential role in shaping his public image, contributing to his awarded reputation. He inserted his own portraits into his paintings of other themes, such as the School of Athens.",
-     "section": "Historical context",
-     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Historical_context"
-    },
-    {
-     "text": "The Self-Portrait is believed to have been painted between 1504 and 1506, during the early years of Raphael’s career when he was working in Florence. Raphael was a key figure of the High Renaissance in Italy, a time when self-portraits remained relatively uncommon.",
-     "section": "Provenance and exhibition history",
-     "source": "https://en.wikipedia.org/wiki/Self-portrait_%28Raphael%29#Provenance_and_exhibition_history"
+     "text": "In this painting, as in most of the Madonnas of his Florentine period, Raphael arranged the three figures – Mary, Christ and the young John the Baptist – to fit into a geometrical design. Though the positions of the three bodies are natural, together they form an almost regular triangle.",
+     "section": "Painting",
+     "source": "https://en.wikipedia.org/wiki/Madonna_del_Cardellino#Painting"
     }
    ],
    "license": {
-    "name": "Public domain",
+    "name": "CC BY-SA 4.0",
     "credit": "Raphael"
    }
   },
@@ -287,44 +282,39 @@
    }
   },
   {
-   "qid": "Q966681",
-   "title": "Madonna della Seggiola",
-   "year": 1513,
+   "qid": "Q2344437",
+   "title": "Transfiguration",
+   "year": 1518,
    "image": {
-    "file": "File:Raphael Madonna della seggiola.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Raphael_Madonna_della_seggiola.jpg/960px-Raphael_Madonna_della_seggiola.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/09/Raphael_Madonna_della_seggiola.jpg",
-    "pxW": 1600,
-    "pxH": 1635
+    "file": "File:Transfigurazione (Raffaello) September 2015-1a.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Transfigurazione_%28Raffaello%29_September_2015-1a.jpg/960px-Transfigurazione_%28Raffaello%29_September_2015-1a.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Transfigurazione_%28Raffaello%29_September_2015-1a.jpg/1920px-Transfigurazione_%28Raffaello%29_September_2015-1a.jpg",
+    "pxW": 3269,
+    "pxH": 4763
    },
    "cm": {
-    "w": 71,
-    "h": 71
+    "w": 279,
+    "h": 410
    },
-   "collection": "Galleria Palatina",
+   "collection": "Pinacoteca Vaticana",
    "story": {
-    "extract": "The Madonna della Seggiola or The Madonna della Sedia is an oil on panel Madonna painting by the High Italian Renaissance artist Raphael, executed c. 1513–1514, and housed at the Palazzo Pitti Collection in Florence, Italy. Although there is documentation on its arrival to its current location, Palazzo Pitti, it is still unknown who commissioned the painting; however, it has been in the Medici family since the 16th century.",
-    "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola"
+    "extract": "The Transfiguration is the last painting by the Italian High Renaissance master Raphael. Cardinal Giulio de Medici – who later became Pope Clement VII – commissioned the work, conceived as an altarpiece for Narbonne Cathedral in France; Raphael worked on it in the years preceding his death in 1520. The painting exemplifies Raphael's development as an artist and the culmination of his career.",
+    "source": "https://en.wikipedia.org/wiki/Transfiguration_%28Raphael%29"
    },
    "facts": [
     {
-     "text": "Unfortunately, the Madonna della Sedia's commission is undocumented despite it being created while Raphael was spending a relatively well-documented period of twelve years in Rome.",
-     "section": "Provenance",
-     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Provenance"
+     "text": "The reception of the painting is well documented. Between the year 1525 and 1935, at least 229 written sources can be identified that describe, analyse, praise or criticise The Transfiguration.",
+     "section": "Reception",
+     "source": "https://en.wikipedia.org/wiki/Transfiguration_%28Raphael%29#Reception"
     },
     {
-     "text": "The Madonna della Sedia is Raphael's most humanistic form of the Madonna. Throughout Raphael's life, this humanistic representation of the Madonna occupied his mind.",
-     "section": "Description",
-     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Description"
-    },
-    {
-     "text": "The Madonna della Sedia is the culmination of Raphael's use of the tondo form and influenced an equivalent singular male portrait, The Portrait of Baldassare Castiglione (c. 1514–1515). The painting is oil on panel, with St John the Baptist painted in a different key range.",
-     "section": "Techniques",
-     "source": "https://en.wikipedia.org/wiki/Madonna_della_Seggiola#Techniques"
+     "text": "By December 1517, the latest date of commission, Cardinal Giulio de Medici, cousin to Pope Leo X (1513–1521), was also the Pope's vice-chancellor and chief advisor. He had been endowed with the legation of Bologna, the bishoprics of Albi, Ascoli, Worcester, Eger and others.",
+     "section": "History of the painting",
+     "source": "https://en.wikipedia.org/wiki/Transfiguration_%28Raphael%29#History_of_the_painting"
     }
    ],
    "license": {
-    "name": "Public domain",
+    "name": "CC BY-SA 4.0",
     "credit": "Raphael"
    }
   },

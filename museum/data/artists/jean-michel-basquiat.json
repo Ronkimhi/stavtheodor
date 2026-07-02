@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Basquiat exhibition, Tokyo",
+   "year": 2019,
+   "image": {
+    "file": "File:バスキア展 (48920391627).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg/960px-%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg/1920px-%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg",
+    "pxW": 3024,
+    "pxH": 4032
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Yuya Tamai from Chiba, Japan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Works from private collections, Basquiat exhibition, Tokyo",
+   "year": 2019,
+   "image": {
+    "file": "File:個人コレクターの方々 (48919644923).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg/960px-%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg/1920px-%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg",
+    "pxW": 3024,
+    "pxH": 4032
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Yuya Tamai from Chiba, Japan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Basquiat work at a Christie's auction preview, Hong Kong",
+   "year": 2021,
+   "image": {
+    "file": "File:HK WCN 灣仔北 Wan Chai North 香港會展 HKCEC 佳士得 Christie's 拍賣前 Auction 預展 preview exhibition November 2021 SS2 286.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg/960px-HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg/1920px-HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg",
+    "pxW": 3096,
+    "pxH": 4128
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "DTAICHWOM SIMLOOA"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Basquiat work at a Christie's auction preview, Hong Kong",
+   "year": 2022,
+   "image": {
+    "file": "File:HK 中環 Central 畢打行 Pedder Building 佳士得 拍賣 Christie's Auction 預展 preview exhibition October 2022 Px3 018.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg/960px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg/1920px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Fadchwizo Rodawomt"
+   }
+  },
+  {
+   "qid": null,
+   "title": "57 Great Jones Street, New York, Basquiat's studio from 1983 to 1988",
+   "year": null,
+   "image": {
+    "file": "File:Jean-Michel Basquiat (1960-1988) home on 57 Great Jones Street.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg/960px-Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg/1920px-Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg",
+    "pxW": 5760,
+    "pxH": 3840
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Flintmichigan"
+   }
+  }
+ ]
 }

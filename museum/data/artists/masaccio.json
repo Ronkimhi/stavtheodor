@@ -19,6 +19,69 @@
  "hasGallery": true,
  "paintings": [
   {
+   "qid": "Q3999132",
+   "title": "San Giovenale Triptych",
+   "year": 1422,
+   "image": {
+    "file": "File:Masaccio, trittico di san giovenale, 1422, 01.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Masaccio%2C_trittico_di_san_giovenale%2C_1422%2C_01.JPG/960px-Masaccio%2C_trittico_di_san_giovenale%2C_1422%2C_01.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Masaccio%2C_trittico_di_san_giovenale%2C_1422%2C_01.JPG/1920px-Masaccio%2C_trittico_di_san_giovenale%2C_1422%2C_01.JPG",
+    "pxW": 3044,
+    "pxH": 2188
+   },
+   "cm": {
+    "w": 65,
+    "h": 110
+   },
+   "collection": "Masaccio Museum",
+   "story": {
+    "extract": "San Giovenale Triptych is a 1422 painting by Italian Renaissance artist Masaccio, housed in the Masaccio Museum of Sacred Art at Cascia di Reggello, in the Metropolitan City of Florence. The triptych is the first work attributed to Masaccio and the earliest known painting essay using the geometric Renaissance perspective.",
+    "source": "https://en.wikipedia.org/wiki/San_Giovenale_Triptych"
+   },
+   "facts": [
+    {
+     "text": "Masaccio painted the Triptych when he was 21 years old, probably commissioned by the family of Castellani or by that of Carnesecchi for the small church of San Giovenale, 2 km (1.2 mi) from the Romanic Church at Cascia di Reggello. The presence on the painting of the eponymous saint confirms its original location.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/San_Giovenale_Triptych#History"
+    },
+    {
+     "text": "The Triptych is a tempera on wooden panels . The central panel is 108 cm × 65 cm (43 in × 26 in) and the two side panels are 88 cm × 44 cm (35 in × 17 in).",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/San_Giovenale_Triptych#Description"
+    }
+   ],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": "Q32381",
+   "title": "Virgin and Child with Saint Anne",
+   "year": 1424,
+   "image": {
+    "file": "File:Masolino, Masaccio, Virgin and Child with Saint Anne, c1424-25, Uffizi.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Masolino%2C_Masaccio%2C_Virgin_and_Child_with_Saint_Anne%2C_c1424-25%2C_Uffizi.jpg/960px-Masolino%2C_Masaccio%2C_Virgin_and_Child_with_Saint_Anne%2C_c1424-25%2C_Uffizi.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Masolino%2C_Masaccio%2C_Virgin_and_Child_with_Saint_Anne%2C_c1424-25%2C_Uffizi.jpg/1920px-Masolino%2C_Masaccio%2C_Virgin_and_Child_with_Saint_Anne%2C_c1424-25%2C_Uffizi.jpg",
+    "pxW": 3563,
+    "pxH": 5804
+   },
+   "cm": {
+    "w": 103,
+    "h": 175
+   },
+   "collection": "Uffizi Gallery",
+   "story": {
+    "extract": "The Virgin and Child with Saint Anne, also known as Sant'Anna Metterza, is a painting of c. 1424–1425 by the Italian Renaissance painter Masaccio, probably in collaboration with Masolino da Panicale. The painting is in the Galleria degli Uffizi in Florence, Italy, and measures 175 centimetres high and 103 centimetres wide.",
+    "source": "https://en.wikipedia.org/wiki/Virgin_and_Child_with_Saint_Anne_%28Masaccio%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Masolino da Panicale / Masaccio"
+   }
+  },
+  {
    "qid": "Q3947827",
    "title": "St. Peter Healing the Sick with His Shadow",
    "year": 1425,
@@ -211,52 +274,6 @@
    "license": {
     "name": "Public domain",
     "credit": "Masaccio"
-   }
-  },
-  {
-   "qid": "Q3949530",
-   "title": "A Bearded Carmelite Saint",
-   "year": 1426,
-   "image": {
-    "file": "File:Masaccio (1401 - 1428) - A Carmelite - 58D-4 - Gemäldegalerie.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Masaccio_%281401_-_1428%29_-_A_Carmelite_-_58D-4_-_Gem%C3%A4ldegalerie.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Masaccio_%281401_-_1428%29_-_A_Carmelite_-_58D-4_-_Gem%C3%A4ldegalerie.jpg",
-    "pxW": 460,
-    "pxH": 1357
-   },
-   "cm": {
-    "w": 12,
-    "h": 38
-   },
-   "collection": "Gemäldegalerie Berlin",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Masaccio"
-   }
-  },
-  {
-   "qid": "Q3949531",
-   "title": "A Beardless Carmelite Saint",
-   "year": 1426,
-   "image": {
-    "file": "File:Fra Filippo Lippi (ca. 1406 - 1469) - A Carmelite - 58D-3 - Gemäldegalerie.jpg",
-    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Fra_Filippo_Lippi_%28ca._1406_-_1469%29_-_A_Carmelite_-_58D-3_-_Gem%C3%A4ldegalerie.jpg",
-    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Fra_Filippo_Lippi_%28ca._1406_-_1469%29_-_A_Carmelite_-_58D-3_-_Gem%C3%A4ldegalerie.jpg",
-    "pxW": 472,
-    "pxH": 1357
-   },
-   "cm": {
-    "w": 12,
-    "h": 38
-   },
-   "collection": "Gemäldegalerie Berlin",
-   "story": null,
-   "facts": [],
-   "license": {
-    "name": "Public domain",
-    "credit": "Filippo Lippi / Masaccio"
    }
   },
   {

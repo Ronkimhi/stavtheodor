@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Jackson_Pollock"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Jackson_Pollock",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Circle",
+   "year": null,
+   "image": {
+    "file": "File:Circle by Jackson Pollock.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/63/Circle_by_Jackson_Pollock.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/63/Circle_by_Jackson_Pollock.jpg",
+    "pxW": 451,
+    "pxH": 420
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jackson Pollock"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Peddler",
+   "year": null,
+   "image": {
+    "file": "File:Peddler by Jackson Pollock.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Peddler_by_Jackson_Pollock.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Peddler_by_Jackson_Pollock.jpg",
+    "pxW": 506,
+    "pxH": 600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jackson Pollock"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Paint-covered studio floor, Pollock-Krasner House, Springs, New York",
+   "year": null,
+   "image": {
+    "file": "File:Pollock-Krasner House studio floor.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pollock-Krasner_House_studio_floor.jpg/960px-Pollock-Krasner_House_studio_floor.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pollock-Krasner_House_studio_floor.jpg/1920px-Pollock-Krasner_House_studio_floor.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Rhododendrites"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Studio floor detail, Pollock-Krasner House",
+   "year": null,
+   "image": {
+    "file": "File:Pollock-Krasner House studio floor 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Pollock-Krasner_House_studio_floor_2.jpg/960px-Pollock-Krasner_House_studio_floor_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Pollock-Krasner_House_studio_floor_2.jpg/1920px-Pollock-Krasner_House_studio_floor_2.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Rhododendrites"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pollock-Krasner House and Study Center, Springs, New York",
+   "year": null,
+   "image": {
+    "file": "File:Pollock-house.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pollock-house.jpg/960px-Pollock-house.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pollock-house.jpg/1920px-Pollock-house.jpg",
+    "pxW": 2272,
+    "pxH": 1704
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "The original uploader was Americasroof at English Wikipedia."
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pollock exhibition at Moderna Museet, Stockholm",
+   "year": null,
+   "image": {
+    "file": "File:Utställning med Jackson Pollocks måleri på Moderna Museet. Besökare på utställningen.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Utst%C3%A4llning_med_Jackson_Pollocks_m%C3%A5leri_p%C3%A5_Moderna_Museet._Bes%C3%B6kare_p%C3%A5_utst%C3%A4llningen.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Utst%C3%A4llning_med_Jackson_Pollocks_m%C3%A5leri_p%C3%A5_Moderna_Museet._Bes%C3%B6kare_p%C3%A5_utst%C3%A4llningen.jpg",
+    "pxW": 800,
+    "pxH": 800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Lindgren, Herbert (1919–1987), Stockholms stadsmuseum"
+   }
+  }
+ ]
 }
