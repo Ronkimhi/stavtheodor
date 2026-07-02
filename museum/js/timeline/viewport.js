@@ -60,7 +60,7 @@ export class Viewport {
       const [a, b] = [...this.pointers.values()];
       this.pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), s: this.cam.s };
     }
-    this.stage.setPointerCapture(e.pointerId);
+    try { this.stage.setPointerCapture(e.pointerId); } catch (err) { /* pointer already gone */ }
     this.stage.classList.add('dragging');
   }
 

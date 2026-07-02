@@ -149,7 +149,7 @@ function initPanZoom(stage, img) {
       const [a, b] = [...pointers.values()];
       pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) };
     }
-    stage.setPointerCapture(e.pointerId);
+    try { stage.setPointerCapture(e.pointerId); } catch (err) { /* pointer already gone */ }
     stage.classList.add('dragging');
   });
   stage.addEventListener('pointermove', (e) => {

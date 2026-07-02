@@ -33,6 +33,7 @@ export function createControls(camera, dom, room) {
   addEventListener('keydown', (e) => {
     if (e.target.closest('input, textarea')) return;
     state.keys.add(e.code);
+    state.glide = null; // walking takes over from a strip glide
   });
   addEventListener('keyup', (e) => state.keys.delete(e.code));
   addEventListener('blur', () => state.keys.clear());
@@ -127,6 +128,7 @@ export function initTouch(controlsApi, dom, onTap) {
 
   dom.addEventListener('pointerdown', (e) => {
     if (e.pointerType !== 'touch') return;
+    st.glide = null; // touching the world cancels a strip glide
     if (e.clientX < innerWidth * 0.45 && e.clientY > innerHeight * 0.4 && movePtr === null) {
       movePtr = e.pointerId;
       stickFrom(e);
