@@ -1,0 +1,138 @@
+{
+ "slug": "myron",
+ "name": "Myron",
+ "qid": "Q192211",
+ "born": -500,
+ "died": -500,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "Athenian sculptor, 5th century BC",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Discobolus_side_2.jpg/330px-Discobolus_side_2.jpg"
+ },
+ "bio": {
+  "extract": "Myron of Eleutherae was an Athenian sculptor from the mid-5th century BC. Alongside three other Greek sculptors, Polykleitos, Pheidias, and Praxiteles, Myron is considered as one of the most important sculptors of classical antiquity. He was born in Eleutherae on the borders of Boeotia and Attica. According to Natural History, a Latin encyclopedia by Pliny the Elder, a scholar in Ancient Rome, Ageladas of Argos was his teacher.",
+  "source": "https://en.wikipedia.org/wiki/Myron"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Myron",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q133732",
+   "title": "Discobolus",
+   "year": -450,
+   "image": {
+    "file": "File:Discobolus in National Roman Museum Palazzo Massimo alle Terme.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG/960px-Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG/1920px-Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG",
+    "pxW": 3235,
+    "pxH": 5409
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Discobolus by Myron is an ancient Greek sculpture completed at the start of the Classical period in around 460–450 BC that depicts an ancient Greek athlete throwing a discus. Though the original Greek bronze cast is lost, the work is known through numerous Roman copies, both full-scale ones in marble, which is cheaper than bronze, such as the Palombara Discobolus, the first to be recovered, and smaller scaled versions in bronze.",
+    "source": "https://en.wikipedia.org/wiki/Discobolus"
+   },
+   "facts": [
+    {
+     "text": "Myron's Discobolus was long known from descriptions, such as the dialogue in Lucian of Samosata's work Philopseudes: When you came into the hall,\" he said, \"didn't you notice a totally gorgeous statue up there, by Demetrios the portraitist?\" \"Surely you don't mean the discus-thrower,\" said I, \"the one bent over into the throwing-position, with his head turned back to the hand that holds the discus, and the opposite knee slightly flexed, like one who will spring up again after the throw?",
+     "section": "Reputation in the past",
+     "source": "https://en.wikipedia.org/wiki/Discobolus#Reputation_in_the_past"
+    },
+    {
+     "text": "Prior to this statue's discovery, the term Discobolus had been applied in the 17th and 18th centuries to a standing figure holding a discus, a Discophoros, which Ennio Quirino Visconti identified as the Discobolus of Naukydes of Argos, mentioned by Pliny (Haskell and Penny 1981:200).",
+     "section": "Discobolus and Discophorus",
+     "source": "https://en.wikipedia.org/wiki/Discobolus#Discobolus_and_Discophorus"
+    },
+    {
+     "text": "The Discobolus Palombara, the first copy of this famous sculpture to have been discovered, was found in 1781. It is a 1st-century AD copy of Myron's original bronze.",
+     "section": "Discobolus Palombara or Lancellotti",
+     "source": "https://en.wikipedia.org/wiki/Discobolus#Discobolus_Palombara_or_Lancellotti"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Livioandronico2013"
+   }
+  },
+  {
+   "qid": "Q3627892",
+   "title": "Athena and Marsyas",
+   "year": -450,
+   "image": {
+    "file": "File:Mirone (da), Atena e Marsia, copia romana da originale del 450 ac.ca 01.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mirone_%28da%29%2C_Atena_e_Marsia%2C_copia_romana_da_originale_del_450_ac.ca_01.JPG/960px-Mirone_%28da%29%2C_Atena_e_Marsia%2C_copia_romana_da_originale_del_450_ac.ca_01.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mirone_%28da%29%2C_Atena_e_Marsia%2C_copia_romana_da_originale_del_450_ac.ca_01.JPG",
+    "pxW": 1776,
+    "pxH": 1632
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Athena Marsyas Group was a bronze sculptural group by Myron that stood on the Acropolis of Athens in the high classical period, dated to c 450 BCE. Now lost, it has been reconstructed from copies, coins, other visual sources and literary testimonia. The work depicted the satyr Marsyas picking up an aulos dropped by Athena.",
+    "source": "https://en.wikipedia.org/wiki/Athena_Marsyas_Group"
+   },
+   "facts": [
+    {
+     "text": "There is no information about who commissioned the statue or the occasion of its dedication, but attempts have been repeatedly made to try to put the work in its historical context.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Athena_Marsyas_Group#Interpretation"
+    },
+    {
+     "text": "In Greek mythology, Athena was thought to be the inventor of the aulos, with which, according to the poet Pindar, she imitated the funeral dirge of the Gorgons after the beheading of her mortal sister Medusa and gave it as a gift to humans for this purpose.",
+     "section": "Myth and auletics",
+     "source": "https://en.wikipedia.org/wiki/Athena_Marsyas_Group#Myth_and_auletics"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": "Q24520194",
+   "title": "Discobole",
+   "year": 200,
+   "image": {
+    "file": "File:Discobole-Ra 334-P9020619-gradient.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Discobole-Ra_334-P9020619-gradient.jpg/960px-Discobole-Ra_334-P9020619-gradient.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Discobole-Ra_334-P9020619-gradient.jpg/1920px-Discobole-Ra_334-P9020619-gradient.jpg",
+    "pxW": 4000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "Musée Saint-Raymond",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": "Q5282107",
+   "title": "Discus Thrower",
+   "year": 1956,
+   "image": {
+    "file": "File:Discus Thrower - Washington, D.C. - 1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Discus_Thrower_-_Washington%2C_D.C._-_1.JPG/960px-Discus_Thrower_-_Washington%2C_D.C._-_1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Discus_Thrower_-_Washington%2C_D.C._-_1.JPG",
+    "pxW": 1811,
+    "pxH": 2589
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "Discus Thrower is a bronze sculpture in Washington, D.C. A copy of Myron's Discobolus, it is located in Edward J. Kelly Park, at 21st Street and Virginia Avenue, N.W.",
+    "source": "https://en.wikipedia.org/wiki/Discus_Thrower_%28Washington%2C_D.C.%29"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "AgnosticPreachersKid"
+   }
+  }
+ ]
+}

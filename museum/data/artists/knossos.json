@@ -1,0 +1,21 @@
+{
+ "slug": "knossos",
+ "name": "Knossos",
+ "qid": "Q173527",
+ "born": -1950,
+ "died": -1350,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "ancient Minoan through Roman administrative center and city",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Crete_integrated_map-en.svg/330px-Crete_integrated_map-en.svg.png"
+ },
+ "bio": {
+  "extract": "Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre. The site was occupied from the Neolithic period into the first millennium AD and became the largest and best-known centre of the Minoan civilisation.",
+  "source": "https://en.wikipedia.org/wiki/Knossos"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Knossos",
+ "hasGallery": false,
+ "paintings": []
+}

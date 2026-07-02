@@ -1,0 +1,21 @@
+{
+ "slug": "winged-victory-of-samothrace",
+ "name": "Winged Victory of Samothrace",
+ "qid": "Q216402",
+ "born": -200,
+ "died": -190,
+ "periods": [
+  "hellenistic"
+ ],
+ "oneLiner": "statue from Samothrace, Greece in the Louvre, Paris, France",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg/330px-Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg"
+ },
+ "bio": {
+  "extract": "The Winged Victory of Samothrace, or the Nike of Samothrace, is a votive monument originally discovered on the island of Samothrace in the northeastern Aegean Sea. It is a masterpiece of Greek sculpture from the Hellenistic era, dating from the beginning of the 2nd century BC. It is composed of a statue representing the goddess Nike (Victory), whose head and arms are missing, and a base in the shape of a ship's bow.",
+  "source": "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace",
+ "hasGallery": false,
+ "paintings": []
+}

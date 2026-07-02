@@ -1,0 +1,21 @@
+{
+ "slug": "mask-of-agamemnon",
+ "name": "Mask of Agamemnon",
+ "qid": "Q1126741",
+ "born": -1550,
+ "died": null,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "gold funeral mask discovered at the ancient Greek site of Mycenae",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Athens_%E2%80%94_Mask_of_Agamemnon.jpg/330px-Athens_%E2%80%94_Mask_of_Agamemnon.jpg"
+ },
+ "bio": {
+  "extract": "The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the \"Mona Lisa of prehistory\".",
+  "source": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon",
+ "hasGallery": false,
+ "paintings": []
+}

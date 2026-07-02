@@ -1,0 +1,150 @@
+{
+ "slug": "lysippos",
+ "name": "Lysippos",
+ "qid": "Q192222",
+ "born": -390,
+ "died": -300,
+ "periods": [
+  "late-classical-greece"
+ ],
+ "oneLiner": "4th-century BC Greek sculptor",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Statue_base_with_signature_of_Lysippos%2C_Corinth_%28inv._I_29%3B_Corinth_VIII.1%2C_34%29.jpg/330px-Statue_base_with_signature_of_Lysippos%2C_Corinth_%28inv._I_29%3B_Corinth_VIII.1%2C_34%29.jpg"
+ },
+ "bio": {
+  "extract": "Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period. Problems confront the study of Lysippos because of the difficulty in identifying his style in the copies which survive. Not only did he have a large workshop and many disciples in his immediate circle, but there is understood to have been a market for replicas of his work, supplied from outside his circle, both in his lifetime and later in the Hellenistic and Roman periods.",
+  "source": "https://en.wikipedia.org/wiki/Lysippos"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Lysippos",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q63533017",
+   "title": "Bronze ram",
+   "year": -400,
+   "image": {
+    "file": "File:Palermo-Museo-Archeologico-bjs-07.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Palermo-Museo-Archeologico-bjs-07.jpg/960px-Palermo-Museo-Archeologico-bjs-07.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/be/Palermo-Museo-Archeologico-bjs-07.jpg",
+    "pxW": 1536,
+    "pxH": 1028
+   },
+   "cm": null,
+   "collection": "Regional Archaeological Museum Antonino Salinas",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Bjs"
+   }
+  },
+  {
+   "qid": "Q23905864",
+   "title": "Hagias",
+   "year": -336,
+   "image": {
+    "file": "File:07Delphi Aghias.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/07Delphi_Aghias.jpg/960px-07Delphi_Aghias.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/07Delphi_Aghias.jpg/1920px-07Delphi_Aghias.jpg",
+    "pxW": 2448,
+    "pxH": 3264
+   },
+   "cm": null,
+   "collection": "Delphi Archaeological Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0 de",
+    "credit": "Fingalo"
+   }
+  },
+  {
+   "qid": "Q431029",
+   "title": "Apoxyomenos",
+   "year": -330,
+   "image": {
+    "file": "File:Apoxyomenos Pio-Clementino Inv1185.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg",
+    "pxW": 1500,
+    "pxH": 3500
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+    "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+   },
+   "facts": [
+    {
+     "text": "A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life.",
+     "section": "Croatian Apoxyomenos",
+     "source": "https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy after Lysippos"
+   }
+  },
+  {
+   "qid": "Q374591",
+   "title": "Farnese Hercules",
+   "year": -322,
+   "image": {
+    "file": "File:Herakles Farnese MAN Napoli Inv6001 n01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg/960px-Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg/1920px-Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg",
+    "pxW": 2300,
+    "pxH": 4025
+   },
+   "cm": null,
+   "collection": "Naples National Archaeological Museum",
+   "story": {
+    "extract": "The Farnese Hercules is an ancient statue of Hercules made in the early third century AD and signed by Glykon, who is otherwise unknown; he was an Athenian but he may have worked in Rome. Like many other Ancient Roman sculptures it is a copy or version of a much older Greek original that was well known, in this case a bronze by Lysippos that would have been made in the fourth century BC. This original survived for over 1500 years until it was melted down by Crusaders in 1205 during the Sack of Constantinople.",
+    "source": "https://en.wikipedia.org/wiki/Farnese_Hercules"
+   },
+   "facts": [
+    {
+     "text": "The rediscovered statue quickly made its way into the collection of Cardinal Alessandro Farnese, grandson of Pope Paul III. Alessandro Farnese was well placed to form one of the greatest collections of classical sculpture that had been assembled since antiquity.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Farnese_Hercules#History"
+    },
+    {
+     "text": "Hercules is depicted in a moment of rest, but full of strength. Leaning on his gnarled club, which is draped in the skin of the Nemean lion, he holds the golden apples stolen from the Hesperides, hiding them behind his back, in his right hand.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Farnese_Hercules#Description"
+    },
+    {
+     "text": "The prominently sited statue was well liked by the Ancient Romans, and copies have been found in Roman palaces and gymnasiums: another, coarser copy stood in the courtyard of Palazzo Farnese; another with the feigned (but probably ancient) inscription \"Lykippos\", has stood in the court of Palazzo Pitti, Florence, since the sixteenth century.",
+     "section": "List of other ancient copies",
+     "source": "https://en.wikipedia.org/wiki/Farnese_Hercules#List_of_other_ancient_copies"
+    }
+   ],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Glycon of Athens (copy), Lysippos (original type)"
+   }
+  },
+  {
+   "qid": "Q138599651",
+   "title": "Ares Ludovisi",
+   "year": null,
+   "image": {
+    "file": "File:Skulptur Zitadellenbrücke (Hasel) Ares&Lysipp&400.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Skulptur_Zitadellenbr%C3%BCcke_%28Hasel%29_Ares%26Lysipp%26400.jpg/960px-Skulptur_Zitadellenbr%C3%BCcke_%28Hasel%29_Ares%26Lysipp%26400.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Skulptur_Zitadellenbr%C3%BCcke_%28Hasel%29_Ares%26Lysipp%26400.jpg/1920px-Skulptur_Zitadellenbr%C3%BCcke_%28Hasel%29_Ares%26Lysipp%26400.jpg",
+    "pxW": 2070,
+    "pxH": 3920
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "OTFW, Berlin"
+   }
+  }
+ ]
+}

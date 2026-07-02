@@ -1,0 +1,21 @@
+{
+ "slug": "statue-of-ramesses-ii",
+ "name": "Statue of Ramesses II",
+ "qid": "Q130609110",
+ "born": -1250,
+ "died": null,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "ancient Egyptian red granite statue found in 1882 which is presented nowadays in the Grand Egyptian Museum of al-Giza, Egypt",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Grand_Egyptian_Museum_2019-11-07d.jpg/330px-Grand_Egyptian_Museum_2019-11-07d.jpg"
+ },
+ "bio": {
+  "extract": "The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+  "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II",
+ "hasGallery": false,
+ "paintings": []
+}

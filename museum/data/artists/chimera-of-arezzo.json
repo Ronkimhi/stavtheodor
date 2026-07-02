@@ -1,0 +1,21 @@
+{
+ "slug": "chimera-of-arezzo",
+ "name": "Chimera of Arezzo",
+ "qid": "Q478807",
+ "born": -400,
+ "died": null,
+ "periods": [
+  "etruscan"
+ ],
+ "oneLiner": "ancient Etruscan artwork",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chimera_d%27arezzo%2C_fi%2C_04.JPG/330px-Chimera_d%27arezzo%2C_fi%2C_04.JPG"
+ },
+ "bio": {
+  "extract": "The Chimera of Arezzo is regarded as the best example of ancient Etruscan art. The British art historian David Ekserdjian described the sculpture as \"one of the most arresting of all animal sculptures and the supreme masterpiece of Etruscan bronze-casting\". Made entirely of bronze and measuring 78.5 cm high with a length of 129 cm, it was found alongside a small collection of other bronze statues in Arezzo, an ancient Etruscan and Roman city in Tuscany. The statue was originally part of a larger sculptural group representing a fight between a chimera and the Greek hero Bellerophon.",
+  "source": "https://en.wikipedia.org/wiki/Chimera_of_Arezzo"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Chimera_of_Arezzo",
+ "hasGallery": false,
+ "paintings": []
+}

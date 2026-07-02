@@ -1,0 +1,102 @@
+{
+ "slug": "scopas",
+ "name": "Scopas",
+ "qid": "Q309579",
+ "born": -395,
+ "died": -350,
+ "periods": [
+  "late-classical-greece"
+ ],
+ "oneLiner": "Greek sculptor (394 BC–349 BC)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/NAMA_Hygie.jpg/330px-NAMA_Hygie.jpg"
+ },
+ "bio": {
+  "extract": "Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+  "source": "https://en.wikipedia.org/wiki/Scopas"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Scopas",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q96739375",
+   "title": "The Amazon Frieze from the Mausoleum at Halicarnassus",
+   "year": -350,
+   "image": {
+    "file": "File:Amazon Frieze BM GR 1865.7-23.1 n01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Amazon_Frieze_BM_GR_1865.7-23.1_n01.jpg/960px-Amazon_Frieze_BM_GR_1865.7-23.1_n01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Amazon_Frieze_BM_GR_1865.7-23.1_n01.jpg/1920px-Amazon_Frieze_BM_GR_1865.7-23.1_n01.jpg",
+    "pxW": 4112,
+    "pxH": 2056
+   },
+   "cm": null,
+   "collection": "British Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Marie-Lan Nguyen"
+   }
+  },
+  {
+   "qid": "Q3753728",
+   "title": "Pediments of the Athena Alea temple",
+   "year": -345,
+   "image": {
+    "file": "File:NAMA 180 Warrior head 1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/NAMA_180_Warrior_head_1.JPG/960px-NAMA_180_Warrior_head_1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/NAMA_180_Warrior_head_1.JPG/1920px-NAMA_180_Warrior_head_1.JPG",
+    "pxW": 2448,
+    "pxH": 3264
+   },
+   "cm": null,
+   "collection": "National Archaeological Museum of Athens",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Marsyas"
+   }
+  },
+  {
+   "qid": "Q12880820",
+   "title": "Grave relief of Skopas",
+   "year": -339,
+   "image": {
+    "file": "File:NAMA Stèle du chasseur.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/05/NAMA_St%C3%A8le_du_chasseur.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/05/NAMA_St%C3%A8le_du_chasseur.jpg",
+    "pxW": 900,
+    "pxH": 1356
+   },
+   "cm": null,
+   "collection": "National Archaeological Museum of Athens",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Scopas (or School of)"
+   }
+  },
+  {
+   "qid": "Q1657930",
+   "title": "Pothos",
+   "year": -330,
+   "image": {
+    "file": "File:Pothos Via Cavour Musei Capitolini MC2417 n1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Pothos_Via_Cavour_Musei_Capitolini_MC2417_n1.jpg/960px-Pothos_Via_Cavour_Musei_Capitolini_MC2417_n1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/18/Pothos_Via_Cavour_Musei_Capitolini_MC2417_n1.jpg",
+    "pxW": 1800,
+    "pxH": 3500
+   },
+   "cm": null,
+   "collection": "Centrale Montemartini",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Marie-Lan Nguyen"
+   }
+  }
+ ]
+}

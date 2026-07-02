@@ -1,6 +1,6 @@
 // Quiet list view: no-WebGL fallback, reduced-motion path, and the screen-reader path.
 
-import { filePathUrl, oneLinerOf } from '../shared/data.js';
+import { filePathUrl, oneLinerOf, fmtYear } from '../shared/data.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
   (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -19,7 +19,7 @@ export function showListView(artist) {
                  data-file="${esc(p.image.file)}" alt="${esc(p.title)}">
             <h2>${esc(p.title)}</h2>
             <div class="inspect-meta">
-              ${p.year ? `<span>${p.year}</span>` : ''}
+              ${p.year ? `<span>${fmtYear(p.year)}</span>` : ''}
               ${p.collection ? `<span>${esc(p.collection)}</span>` : ''}
             </div>
             ${p.story?.extract ? `<p>${esc(p.story.extract)}</p>` : ''}

@@ -1,0 +1,21 @@
+{
+ "slug": "togatus-barberini",
+ "name": "Togatus Barberini",
+ "qid": "Q4459289",
+ "born": -75,
+ "died": null,
+ "periods": [
+  "republican-rome"
+ ],
+ "oneLiner": "Roman marble sculpture",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Togato_Barberini.jpg/330px-Togato_Barberini.jpg"
+ },
+ "bio": {
+  "extract": "Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.",
+  "source": "https://en.wikipedia.org/wiki/Togatus_Barberini"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Togatus_Barberini",
+ "hasGallery": false,
+ "paintings": []
+}

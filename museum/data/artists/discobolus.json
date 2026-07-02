@@ -1,0 +1,21 @@
+{
+ "slug": "discobolus",
+ "name": "Discobolus",
+ "qid": "Q133732",
+ "born": -460,
+ "died": null,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "lost sculpture by Myron known through several copies",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Roman_bronze_copy_of_Myron%E2%80%99s_Discobolos%2C_2nd_century_CE_%28Glyptothek_Munich%29.jpg/330px-Roman_bronze_copy_of_Myron%E2%80%99s_Discobolos%2C_2nd_century_CE_%28Glyptothek_Munich%29.jpg"
+ },
+ "bio": {
+  "extract": "The Discobolus by Myron is an ancient Greek sculpture completed at the start of the Classical period in around 460–450 BC that depicts an ancient Greek athlete throwing a discus. Though the original Greek bronze cast is lost, the work is known through numerous Roman copies, both full-scale ones in marble, which is cheaper than bronze, such as the Palombara Discobolus, the first to be recovered, and smaller scaled versions in bronze.",
+  "source": "https://en.wikipedia.org/wiki/Discobolus"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Discobolus",
+ "hasGallery": false,
+ "paintings": []
+}

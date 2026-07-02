@@ -1,0 +1,277 @@
+{
+ "slug": "praxiteles",
+ "name": "Praxiteles",
+ "qid": "Q105290",
+ "born": -395,
+ "died": -330,
+ "periods": [
+  "late-classical-greece"
+ ],
+ "oneLiner": "Attic sculptor",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Leaning_satyr_Musei_Capitolini_MC739.jpg/330px-Leaning_satyr_Musei_Capitolini_MC739.jpg"
+ },
+ "bio": {
+  "extract": "Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue. While no indubitably attributable sculpture by Praxiteles is extant, numerous copies of his works have survived; several authors, including Pliny the Elder, wrote of his works; and coins engraved with silhouettes of his various famous statuary types from the period still exist.",
+  "source": "https://en.wikipedia.org/wiki/Praxiteles"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Praxiteles",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q60536554",
+   "title": "Satyr Pouring Wine",
+   "year": -369,
+   "image": {
+    "file": "File:DSC00214 - Satiro versante - Da Prassitele -370-60 aC- - Copia romana.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/DSC00214_-_Satiro_versante_-_Da_Prassitele_-370-60_aC-_-_Copia_romana.jpg/960px-DSC00214_-_Satiro_versante_-_Da_Prassitele_-370-60_aC-_-_Copia_romana.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/18/DSC00214_-_Satiro_versante_-_Da_Prassitele_-370-60_aC-_-_Copia_romana.jpg",
+    "pxW": 1536,
+    "pxH": 2048
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Attribution",
+    "credit": "Giovanni Dall'Orto\n\n\n\t\t\n\t\t\t\n\t\t\t1890s. (Crupi 0201)\n\t\t\n\t\t\n\t\t\t\n\t\t\t1890s (Crupi 0978)\n\t\t\n\t\t\n\t\t\t\n\t\t\tToday."
+   }
+  },
+  {
+   "qid": "Q38200660",
+   "title": "Venus of Sinuessa",
+   "year": -350,
+   "image": {
+    "file": "File:Venere di Sinuessa, da Mondragone, s.n., 02.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Venere_di_Sinuessa%2C_da_Mondragone%2C_s.n.%2C_02.JPG/960px-Venere_di_Sinuessa%2C_da_Mondragone%2C_s.n.%2C_02.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/51/Venere_di_Sinuessa%2C_da_Mondragone%2C_s.n.%2C_02.JPG",
+    "pxW": 1368,
+    "pxH": 3468
+   },
+   "cm": null,
+   "collection": "Naples National Archaeological Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": "Q680075",
+   "title": "The Cleveland Apollo: Apollo Sauroktonos (Lizard-Slayer) or Apollo the Python-Slayer",
+   "year": -349,
+   "image": {
+    "file": "File:Praxiteles - Apollo the Python-Slayer - 2004.30 - Cleveland Museum of Art.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praxiteles_-_Apollo_the_Python-Slayer_-_2004.30_-_Cleveland_Museum_of_Art.jpg/960px-Praxiteles_-_Apollo_the_Python-Slayer_-_2004.30_-_Cleveland_Museum_of_Art.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praxiteles_-_Apollo_the_Python-Slayer_-_2004.30_-_Cleveland_Museum_of_Art.jpg/1920px-Praxiteles_-_Apollo_the_Python-Slayer_-_2004.30_-_Cleveland_Museum_of_Art.jpg",
+    "pxW": 3497,
+    "pxH": 6144
+   },
+   "cm": null,
+   "collection": "Cleveland Museum of Art",
+   "story": {
+    "extract": "The Cleveland Apollo is a 4th-century BCE life-size bronze Ancient Greek statue, now in the Cleveland Museum of Art. It acquired it in 2004 using the Severance and Greta Millikin Purchase Fund. The Museum attributed the piece to Praxiteles.",
+    "source": "https://en.wikipedia.org/wiki/Cleveland_Apollo"
+   },
+   "facts": [
+    {
+     "text": "In 2004, the Apollo Sauroktonos was acquired by the Cleveland Museum of Art. The Apollo was thought to be the only known bronze version of the sculpture.",
+     "section": "Provenance",
+     "source": "https://en.wikipedia.org/wiki/Cleveland_Apollo#Provenance"
+    },
+    {
+     "text": "Apollo the Python-Slayer, also known as Apollo Sauroktonos (Lizard-Slayer), is attributed by the Cleveland Museum staff to Praxiteles from about 350 BCE. It is bronze with copper and a stone inlay.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cleveland_Apollo#Description"
+    },
+    {
+     "text": "Comparatively few bronzes like Apollo exist for study. The Cleveland Museum has a rare opportunity to expand the small body of knowledge regarding casting large bronzes during the classical period.",
+     "section": "Scientific investigation",
+     "source": "https://en.wikipedia.org/wiki/Cleveland_Apollo#Scientific_investigation"
+    }
+   ],
+   "license": {
+    "name": "CC0",
+    "credit": "Praxiteles"
+   }
+  },
+  {
+   "qid": "Q1518432",
+   "title": "Hermes and the Infant Dionysus",
+   "year": -329,
+   "image": {
+    "file": "File:02 2020 Grecia photo Paolo Villa FO190024 (Museo archeologico di Olimpia - Statua Ermes con Dioniso Bambino scolpita da Prassitele, Arte pre Ellenistica, senza gimp)-edit.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/02_2020_Grecia_photo_Paolo_Villa_FO190024_%28Museo_archeologico_di_Olimpia_-_Statua_Ermes_con_Dioniso_Bambino_scolpita_da_Prassitele%2C_Arte_pre_Ellenistica%2C_senza_gimp%29-edit.jpg/960px-thumbnail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/02_2020_Grecia_photo_Paolo_Villa_FO190024_%28Museo_archeologico_di_Olimpia_-_Statua_Ermes_con_Dioniso_Bambino_scolpita_da_Prassitele%2C_Arte_pre_Ellenistica%2C_senza_gimp%29-edit.jpg/1920px-thumbnail.jpg",
+    "pxW": 2439,
+    "pxH": 4924
+   },
+   "cm": null,
+   "collection": "Archaeological Museum of Olympia",
+   "story": {
+    "extract": "Hermes and the Infant Dionysus, also known as the Hermes of Praxiteles or the Hermes of Olympia is an ancient Greek sculpture of Hermes and the infant Dionysus discovered in 1877 in the ruins of the Temple of Hera, Olympia, in Greece. It is displayed at the Archaeological Museum of Olympia.",
+    "source": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus"
+   },
+   "facts": [
+    {
+     "text": "The Olympia site was hit by an earthquake during the reign of the Roman emperor Diocletian in the final years of the third century C.E, collapsing the roof of the Temple of Hera and burying the statue in rubble.",
+     "section": "Loss",
+     "source": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus#Loss"
+    },
+    {
+     "text": "In 1874, the Greek state signed an agreement with Germany for an archaeological exploration of the Olympia site, which was first dug in the French Morea expedition of 1829. The German excavations in 1875 were led by Ernst Curtius.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus#Rediscovery"
+    },
+    {
+     "text": "The group is sculpted from a block of the best quality of Parian marble. Hermes measures 2.10/2.12 m, 3.70 m with the base.",
+     "section": "Technical considerations",
+     "source": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus#Technical_considerations"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Paolo Villa, edited by MenkinAlRire"
+   }
+  },
+  {
+   "qid": "Q618535",
+   "title": "Aphrodite of Knidos",
+   "year": -300,
+   "image": {
+    "file": "File:Cnidus Aphrodite Altemps Inv8619.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cnidus_Aphrodite_Altemps_Inv8619.jpg/960px-Cnidus_Aphrodite_Altemps_Inv8619.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Cnidus_Aphrodite_Altemps_Inv8619.jpg",
+    "pxW": 1550,
+    "pxH": 3625
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Aphrodite of Knidos was an Ancient Greek sculpture of the goddess Aphrodite created by Praxiteles of Athens around the 4th century BC. It was one of the first life-sized representations of the nude female form in Greek history, displaying an alternative idea to male heroic nudity. Praxiteles' Aphrodite was shown nude, reaching for a bath towel while covering her pubis, which, in turn leaves her breasts exposed.",
+    "source": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos"
+   },
+   "facts": [
+    {
+     "text": "The Knidian Aphrodite was one of the most widely copied statues in the ancient world, so a general idea of the appearance of the statue can be gleaned from the descriptions and replicas that have survived to the modern day.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos#Influence"
+    },
+    {
+     "text": "The Aphrodite of Knidos was a marble carving of the goddess Aphrodite by the sculptor Praxiteles, which was bought by the people of Knidos in the middle of the 4th century BC.",
+     "section": "Original",
+     "source": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos#Original"
+    },
+    {
+     "text": "The temple of Aphrodite in Knidos where the statue was displayed is described by two ancient sources, Pliny the Elder in his Natural History and Pseudo-Lucian in his Amores. According to Pliny, the sculpture was housed in a small building, open on all sides – by which he likely meant a monopteros, a colonnade with a roof but no walls.",
+     "section": "Temple in Knidos",
+     "source": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos#Temple_in_Knidos"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy of Praxiteles; restorer: Ippolito Buzzi (Italian, 1562–1634)"
+   }
+  },
+  {
+   "qid": "Q3026255",
+   "title": "Diana of Gabii",
+   "year": 20,
+   "image": {
+    "file": "File:Artemis Gabii Louvre Ma529 n1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Artemis_Gabii_Louvre_Ma529_n1.jpg/960px-Artemis_Gabii_Louvre_Ma529_n1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Artemis_Gabii_Louvre_Ma529_n1.jpg",
+    "pxW": 1600,
+    "pxH": 3690
+   },
+   "cm": null,
+   "collection": "Department of Greek, Etruscan, and Roman Antiquities of the Louvre",
+   "story": {
+    "extract": "The Diana of Gabii is a statue of a woman in drapery which probably represents the goddess Artemis and is traditionally attributed to the sculptor Praxiteles. It became part of the Borghese collection and is now conserved in the Louvre with the inventory number Ma 529.",
+    "source": "https://en.wikipedia.org/wiki/Diana_of_Gabii"
+   },
+   "facts": [
+    {
+     "text": "The statue was discovered in 1792 by Gavin Hamilton on the property of the Prince Borghese at Gabii, not far from Rome It was immediately added to the prince's collections. In 1807, suffering from financial difficulties, the Prince was forced to sell the statue to Napoleon and it was on display in the Louvre from 1820.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Diana_of_Gabii#History"
+    },
+    {
+     "text": "The statue represents a young woman of more than life size, standing in drapery. The weight of the body rests on the right leg, supported by a tree stump; the left leg is left free.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Diana_of_Gabii#Description"
+    },
+    {
+     "text": "According to Pausanias, Praxiteles created the statue of Artemis of Brauron for the Athenian Acropolis. Temple inventories dating from 347/6 BC mention among other things, a \"dedicated statue,\" described as representing the goddess in a chitoniskos.",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/Diana_of_Gabii#Attribution"
+    }
+   ],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Copy after Praxiteles?"
+   }
+  },
+  {
+   "qid": "Q619115",
+   "title": "Apollo Citharoedus",
+   "year": 200,
+   "image": {
+    "file": "File:Apollo Kitharoidos Antikensammlung Berlin 1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Apollo_Kitharoidos_Antikensammlung_Berlin_1.jpg/960px-Apollo_Kitharoidos_Antikensammlung_Berlin_1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Apollo_Kitharoidos_Antikensammlung_Berlin_1.jpg",
+    "pxW": 1339,
+    "pxH": 2161
+   },
+   "cm": null,
+   "collection": "Antikensammlung Berlin",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Marcus Cyron"
+   }
+  },
+  {
+   "qid": "Q1584761",
+   "title": "Resting Satyr",
+   "year": null,
+   "image": {
+    "file": "File:Leaning satyr Musei Capitolini MC739.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Leaning_satyr_Musei_Capitolini_MC739.jpg/960px-Leaning_satyr_Musei_Capitolini_MC739.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Leaning_satyr_Musei_Capitolini_MC739.jpg/1920px-Leaning_satyr_Musei_Capitolini_MC739.jpg",
+    "pxW": 2000,
+    "pxH": 3667
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Resting Satyr or Leaning Satyr, also known as the Satyr anapauomenos is a statue type generally attributed to the ancient Greek sculptor Praxiteles. Some 115 examples of the type are known, of which the best known is in the Capitoline Museums.",
+    "source": "https://en.wikipedia.org/wiki/Resting_Satyr"
+   },
+   "facts": [
+    {
+     "text": "The Resting Satyr statue type shows a youthful satyr, sometimes referred to as a faun, who is identifiable by his clearly pointed ears and the Pardalide (panther pelt) worn across his torso or placed on a post near the satyr. The satyr rests his right elbow on a tree trunk, in a relaxed pose, supported only on his left leg.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Resting_Satyr#Description"
+    },
+    {
+     "text": "In ancient Greek mythology, satyrs are male companions to Dionysus, the god of grape harvest, ritual madness, theatre, and fertility. As followers of Dionysus, satyrs are known for their love of wine, women, and playing music on their pipes or flutes.",
+     "section": "Satyr origin and iconography",
+     "source": "https://en.wikipedia.org/wiki/Resting_Satyr#Satyr_origin_and_iconography"
+    },
+    {
+     "text": "The Resting Satyr is traditionally identified as the \"satyr periboêtos\" mentioned by Pliny the Elder in his Natural History XXXIV, 69: [Praxiteles produced in bronze] a Liber Pater, and a famous Drunkard, and a satyr that the Greeks call periboêtos (et Liberum patrum Ebriatem nobilemque una satyrum quem Græci periboeton cognominant) Since Winckelmann this word has traditionally been translated as \"famous\".",
+     "section": "Attribution",
+     "source": "https://en.wikipedia.org/wiki/Resting_Satyr#Attribution"
+    }
+   ],
+   "license": {
+    "name": "Public domain",
+    "credit": "Marie-Lan Nguyen"
+   }
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "slug": "polykleitos",
+ "name": "Polykleitos",
+ "qid": "Q193422",
+ "born": -490,
+ "died": -420,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "fifth century BCE Greek sculptor",
+ "portrait": {
+  "thumb": null
+ },
+ "bio": {
+  "extract": "Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity. The 4th century BCE catalogue attributed to Xenocrates, which was Pliny's guide in matters of art, ranked him between Pheidias and Myron. He is particularly known for his lost treatise, the Canon of Polykleitos, which set out his mathematical basis of an idealised male body shape.",
+  "source": "https://en.wikipedia.org/wiki/Polykleitos"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Polykleitos",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q938827",
+   "title": "Discophoros",
+   "year": -460,
+   "image": {
+    "file": "File:Discophoros Louvre Ma89.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Discophoros_Louvre_Ma89.jpg/960px-Discophoros_Louvre_Ma89.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Discophoros_Louvre_Ma89.jpg",
+    "pxW": 1900,
+    "pxH": 3800
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Discophoros, also spelled Discophorus, was a bronze sculpture by the classical Greek sculptor Polyclitus, which is known today through many Roman marble copies. It is not to be confused with Discobolus of Myron, which shows a discus being thrown, not carried.",
+    "source": "https://en.wikipedia.org/wiki/Discophoros"
+   },
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jastrow"
+   }
+  },
+  {
+   "qid": "Q1136305",
+   "title": "Doryphoros",
+   "year": -450,
+   "image": {
+    "file": "File:02 10 2024 Photo Paolo Villa-Napoli-mann-Museo Archeologico-FO232526tris-Arte Greca copia romana-Policleto Doriforo Polykleitos Doryphoros from Pompeii-marmo marble carrara.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg/960px-thumbnail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg/1920px-thumbnail.jpg",
+    "pxW": 6641,
+    "pxH": 11000
+   },
+   "cm": null,
+   "collection": "Naples National Archaeological Museum",
+   "story": {
+    "extract": "The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies. The work nonetheless forms an important early example of both Classical Greek contrapposto and classical realism; as such, the iconic Doryphoros proved highly influential elsewhere in ancient art.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Paolo Villa"
+   }
+  },
+  {
+   "qid": "Q3720135",
+   "title": "Westmacott athlete",
+   "year": -450,
+   "image": {
+    "file": "File:Westmacott athlete BM Sc1754 n2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Westmacott_athlete_BM_Sc1754_n2.jpg/960px-Westmacott_athlete_BM_Sc1754_n2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Westmacott_athlete_BM_Sc1754_n2.jpg",
+    "pxW": 1600,
+    "pxH": 3555
+   },
+   "cm": null,
+   "collection": "British Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Copy after Polykleitos?"
+   }
+  },
+  {
+   "qid": "Q36024140",
+   "title": "Cyniscus",
+   "year": -439,
+   "image": {
+    "file": "File:Roman - Young Athlete of Westmacott Type - Walters 2324.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Roman_-_Young_Athlete_of_Westmacott_Type_-_Walters_2324.jpg/960px-Roman_-_Young_Athlete_of_Westmacott_Type_-_Walters_2324.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/76/Roman_-_Young_Athlete_of_Westmacott_Type_-_Walters_2324.jpg",
+    "pxW": 1284,
+    "pxH": 1800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Anonymous (Roman artist)Unknown author\n\nCopy after Polykleitos (Greek, active 460-415 BC)"
+   }
+  },
+  {
+   "qid": "Q1208140",
+   "title": "Diadumenos",
+   "year": -430,
+   "image": {
+    "file": "File:Diadúmeno, Atenas, Grecia, 2019 07.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Diad%C3%BAmeno%2C_Atenas%2C_Grecia%2C_2019_07.jpg/960px-Diad%C3%BAmeno%2C_Atenas%2C_Grecia%2C_2019_07.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Diad%C3%BAmeno%2C_Atenas%2C_Grecia%2C_2019_07.jpg/1920px-Diad%C3%BAmeno%2C_Atenas%2C_Grecia%2C_2019_07.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Diadumenos, together with the Doryphoros, are two of the most famous figural types of the sculptor Polyclitus, forming a basic pattern of Ancient Greek sculpture that all present a strictly idealized representations of young male athletes in a naturalistic manner.",
+    "source": "https://en.wikipedia.org/wiki/Diadumenos"
+   },
+   "facts": [
+    {
+     "text": "Both Pliny's Natural History and Lucian's Philopseudes described Roman marbles of a Diadumenos copied from Greek originals in bronze, yet it was not recognized until 1878 that the Roman marble from Vaison-la-Romaine (Roman Vasio) in the British Museum and two others recreate the lost Polyclitan bronze original.",
+     "section": "Roman copies",
+     "source": "https://en.wikipedia.org/wiki/Diadumenos#Roman_copies"
+    },
+    {
+     "text": "Once the Diadumenos type had been reconnected with Polyclitus in 1878, it was recognised in the modern era by a copy included among the sculptures on the roof of the National Archaeological Museum, Athens when it was completed in 1889.",
+     "section": "Modern reception",
+     "source": "https://en.wikipedia.org/wiki/Diadumenos#Modern_reception"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Benjamín Núñez González"
+   }
+  }
+ ]
+}

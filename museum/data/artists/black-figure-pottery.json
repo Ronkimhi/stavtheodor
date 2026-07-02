@@ -1,0 +1,21 @@
+{
+ "slug": "black-figure-pottery",
+ "name": "Black-figure pottery",
+ "qid": "Q629602",
+ "born": -700,
+ "died": -530,
+ "periods": [
+  "archaic-greece"
+ ],
+ "oneLiner": "style of painting on ancient Greek vases",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Herakles_Geryon_Staatliche_Antikensammlungen_1379.jpg/330px-Herakles_Geryon_Staatliche_Antikensammlungen_1379.jpg"
+ },
+ "bio": {
+  "extract": "Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC. Stylistically it can be distinguished from the preceding orientalizing period and the subsequent red-figure pottery style.",
+  "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Black-figure_pottery",
+ "hasGallery": false,
+ "paintings": []
+}

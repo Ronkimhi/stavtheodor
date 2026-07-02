@@ -1,0 +1,21 @@
+{
+ "slug": "doryphoros",
+ "name": "Doryphoros",
+ "qid": "Q1136305",
+ "born": -440,
+ "died": null,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "lost statue by Polykleitos / type of statue",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg/330px-thumbnail.jpg"
+ },
+ "bio": {
+  "extract": "The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies. The work nonetheless forms an important early example of both Classical Greek contrapposto and classical realism; as such, the iconic Doryphoros proved highly influential elsewhere in ancient art.",
+  "source": "https://en.wikipedia.org/wiki/Doryphoros"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Doryphoros",
+ "hasGallery": false,
+ "paintings": []
+}

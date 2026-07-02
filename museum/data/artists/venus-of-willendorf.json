@@ -1,0 +1,21 @@
+{
+ "slug": "venus-of-willendorf",
+ "name": "Venus of Willendorf",
+ "qid": "Q131397",
+ "born": -28000,
+ "died": null,
+ "periods": [
+  "prehistoric-art"
+ ],
+ "oneLiner": "prehistoric figurine from Austria",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Venus_von_Willendorf_01.jpg/330px-Venus_von_Willendorf_01.jpg"
+ },
+ "bio": {
+  "extract": "The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. The figurine was found by a workman named either Johann Veran or Josef Veram and is carved from an oolitic limestone that is not local to the area, and tinted with red ochre. It is in the Natural History Museum in Vienna, Austria as of 2003.",
+  "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
+ "hasGallery": false,
+ "paintings": []
+}

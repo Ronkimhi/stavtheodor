@@ -1,0 +1,183 @@
+{
+ "slug": "phidias",
+ "name": "Phidias",
+ "qid": "Q177302",
+ "born": -480,
+ "died": -430,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "Greek sculptor, painter and architect (c.480–430 BC)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/The_Sculptor_Phidias-Ny_Carlsberg_Glyptotek.jpg/330px-The_Sculptor_Phidias-Ny_Carlsberg_Glyptotek.jpg"
+ },
+ "bio": {
+  "extract": "Phidias or Pheidias was an Ancient Greek sculptor, painter, and architect, active in the 5th century BC. His Statue of Zeus at Olympia was one of the Seven Wonders of the Ancient World. Phidias also designed the statues of the goddess Athena on the Athenian Acropolis, namely the Athena Parthenos inside the Parthenon, and the Athena Promachos, a colossal bronze which stood between it and the Propylaea, a monumental gateway that served as the entrance to the Acropolis in Athens. Phidias was the son of Charmides of Athens.",
+  "source": "https://en.wikipedia.org/wiki/Phidias"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Phidias",
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": "Q1116625",
+   "title": "Amazon Mattei",
+   "year": -500,
+   "image": {
+    "file": "File:Amazzone mattei.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/62/Amazzone_mattei.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/62/Amazzone_mattei.jpg",
+    "pxW": 402,
+    "pxH": 1146
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "see filename or category"
+   }
+  },
+  {
+   "qid": "Q950701",
+   "title": "Lemnian Athena",
+   "year": -450,
+   "image": {
+    "file": "File:Athena Lemnia (SK Dresden 49) 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Athena_Lemnia_%28SK_Dresden_49%29_01.jpg/960px-Athena_Lemnia_%28SK_Dresden_49%29_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Athena_Lemnia_%28SK_Dresden_49%29_01.jpg/1920px-Athena_Lemnia_%28SK_Dresden_49%29_01.jpg",
+    "pxW": 2488,
+    "pxH": 4559
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The Lemnian Athena, or Athena Lemnia, was a classical Greek statue of the goddess Athena that stood on the Acropolis of Athens. According to the traveler Pausanias, who visited Athens in the 2nd century CE, the statue was created by Pheidias, a sculptor of the 5th century BCE, and dedicated by the inhabitants of the island of Lemnos. In addition to Pausanias, two other authors of the Roman period, Lucian and Aelius Aristides, mention the statue by name, and it may also be alluded to by Pliny the Elder and the Late Roman rhetorician Himerius.",
+    "source": "https://en.wikipedia.org/wiki/Lemnian_Athena"
+   },
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Mark Landon"
+   }
+  },
+  {
+   "qid": "Q606662",
+   "title": "Elgin Marbles",
+   "year": -440,
+   "image": {
+    "file": "File:Elgin Marbles British Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Elgin_Marbles_British_Museum.jpg/960px-Elgin_Marbles_British_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Elgin_Marbles_British_Museum.jpg",
+    "pxW": 1298,
+    "pxH": 1007
+   },
+   "cm": null,
+   "collection": "British Museum",
+   "story": {
+    "extract": "The Elgin Marbles are a collection of Ancient Greek sculptures from the Parthenon and other structures from the Acropolis of Athens, removed from Ottoman Greece in the early 19th century and shipped to Britain by agents of Thomas Bruce, 7th Earl of Elgin, and now held in the British Museum in London. The majority of the sculptures were created in the 5th century BC under the direction of sculptor and architect Phidias.",
+    "source": "https://en.wikipedia.org/wiki/Elgin_Marbles"
+   },
+   "facts": [
+    {
+     "text": "The marbles acquired by Elgin include some 21 figures from the statuary from the east and west pediments, 15 of an original 92 metope panels depicting battles between the Lapiths and the centaurs, as well as 75 metres of the Parthenon frieze which decorated the horizontal course set above the interior architrave of the temple.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Elgin_Marbles#Description"
+    },
+    {
+     "text": "The Parthenon was built on the Acropolis of Athens from 447 BCE as a temple to the goddess Athena. It is likely that Phidias was responsible for the sculptural design.",
+     "section": "Background",
+     "source": "https://en.wikipedia.org/wiki/Elgin_Marbles#Background"
+    },
+    {
+     "text": "The Elgin Marbles are named after the 7th Earl of Elgin, who, between 1801 and 1812, oversaw their removal from the Parthenon, the Erechtheion, the Temple of Athena Nike and the Propylaia and their shipment to England.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Elgin_Marbles#Name"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": "Q2070605",
+   "title": "Athena Parthenos",
+   "year": -440,
+   "image": {
+    "file": "File:NashvilleParthenon9.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/NashvilleParthenon9.jpg/960px-NashvilleParthenon9.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/NashvilleParthenon9.jpg/1920px-NashvilleParthenon9.jpg",
+    "pxW": 3456,
+    "pxH": 4608
+   },
+   "cm": null,
+   "collection": null,
+   "story": {
+    "extract": "The statue of Athena Parthenos was a monumental chryselephantine sculpture of the goddess Athena. Attributed to Phidias and dated to the mid-fifth century BCE, it was an offering from the city of Athens to Athena, its tutelary deity. The naos of the Parthenon on the acropolis of Athens was designed exclusively to accommodate it.",
+    "source": "https://en.wikipedia.org/wiki/Athena_Parthenos"
+   },
+   "facts": [
+    {
+     "text": "Ivory, a fragile material and subject to desiccation, was maintained with oiled water that was left available in a basin at the foot of the statue. The oil layer left a protective film preventing evaporation and giving shine to the ivory.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Athena_Parthenos#History"
+    },
+    {
+     "text": "The statue was installed in the main room of the Parthenon to the east. Behind her and on her sides, Doric columns supported the roof and offered her the setting of a canopy.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Athena_Parthenos#Description"
+    },
+    {
+     "text": "In 480 BCE, the Persians ransacked the Acropolis of Athens, including the pre-Parthenon, which was under construction at the time. After their victories in Salamis and Plataea, the Athenians had sworn not to complete the destroyed temples but to leave them as they were, in memory of the Persian \"barbarism\".",
+     "section": "Parthenon and statue of Athena",
+     "source": "https://en.wikipedia.org/wiki/Athena_Parthenos#Parthenon_and_statue_of_Athena"
+    }
+   ],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Cdv1014"
+   }
+  },
+  {
+   "qid": "Q24260478",
+   "title": "General of Tivoli",
+   "year": -84,
+   "image": {
+    "file": "File:General de Tivoli (Massimo) 01.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/960px-General_de_Tivoli_%28Massimo%29_01.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/1920px-General_de_Tivoli_%28Massimo%29_01.JPG",
+    "pxW": 2708,
+    "pxH": 5076
+   },
+   "cm": null,
+   "collection": "Museum Palazzo Massimo alle Terme",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": "Q110796528",
+   "title": "Parthenon east pediment sculpture",
+   "year": null,
+   "image": {
+    "file": "File:East pediment KLM Parthenon BM.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/East_pediment_KLM_Parthenon_BM.jpg/960px-East_pediment_KLM_Parthenon_BM.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/East_pediment_KLM_Parthenon_BM.jpg/1920px-East_pediment_KLM_Parthenon_BM.jpg",
+    "pxW": 3800,
+    "pxH": 1900
+   },
+   "cm": null,
+   "collection": "British Museum",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Phidias"
+   }
+  }
+ ]
+}

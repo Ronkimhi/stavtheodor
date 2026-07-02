@@ -1,0 +1,21 @@
+{
+ "slug": "pergamon-altar",
+ "name": "Pergamon Altar",
+ "qid": "Q158058",
+ "born": -180,
+ "died": -160,
+ "periods": [
+  "hellenistic"
+ ],
+ "oneLiner": "ancient Greek building from Pergamon, today in the Antikensammlung Berlin",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Pergamon_Museum_in_Berlin.jpg/330px-Pergamon_Museum_in_Berlin.jpg"
+ },
+ "bio": {
+  "extract": "The Pergamon Altar was a monumental construction built during the reign of the Ancient Greek King Eumenes II of the Pergamon Empire in the first half of the 2nd century BC on one of the terraces of the acropolis of Pergamon in Asia Minor. It was described as one of the Seven Wonders of the Ancient World by three known classical lists.",
+  "source": "https://en.wikipedia.org/wiki/Pergamon_Altar"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Pergamon_Altar",
+ "hasGallery": false,
+ "paintings": []
+}

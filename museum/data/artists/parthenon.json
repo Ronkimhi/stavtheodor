@@ -1,0 +1,21 @@
+{
+ "slug": "parthenon",
+ "name": "Parthenon",
+ "qid": "Q10288",
+ "born": -447,
+ "died": -432,
+ "periods": [
+  "classical-greece"
+ ],
+ "oneLiner": "former temple of Athena on the Athenian Acropolis, Greece",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/330px-The_Parthenon_in_Athens.jpg"
+ },
+ "bio": {
+  "extract": "The Parthenon is a former temple on the Athenian Acropolis, Greece, that was dedicated to the goddess Athena. Its decorative sculptures are considered some of the high points of classical Greek art, and the Parthenon is considered an enduring symbol of ancient Greece, Western civilisation, and democracy.",
+  "source": "https://en.wikipedia.org/wiki/Parthenon"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Parthenon",
+ "hasGallery": false,
+ "paintings": []
+}

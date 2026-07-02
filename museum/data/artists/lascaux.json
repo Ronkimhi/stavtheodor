@@ -1,0 +1,21 @@
+{
+ "slug": "lascaux",
+ "name": "Lascaux",
+ "qid": "Q172125",
+ "born": -15000,
+ "died": null,
+ "periods": [
+  "prehistoric-art"
+ ],
+ "oneLiner": "cave in southwestern France famous for its Paleolithic cave paintings",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lascaux_painting.jpg/330px-Lascaux_painting.jpg"
+ },
+ "bio": {
+  "extract": "Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave. The paintings represent primarily large animals, typical local contemporary fauna that correspond with the fossil record of the Upper Paleolithic in the area. They are the combined effort of many generations.",
+  "source": "https://en.wikipedia.org/wiki/Lascaux"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Lascaux",
+ "hasGallery": false,
+ "paintings": []
+}

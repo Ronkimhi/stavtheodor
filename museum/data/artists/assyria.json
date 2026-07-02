@@ -1,0 +1,21 @@
+{
+ "slug": "assyria",
+ "name": "Assyria",
+ "qid": "Q41137",
+ "born": -2025,
+ "died": -609,
+ "periods": [
+  "mesopotamia"
+ ],
+ "oneLiner": "major Mesopotamian East Semitic kingdom",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ashur_symbol_Nimrud.png/330px-Ashur_symbol_Nimrud.png"
+ },
+ "bio": {
+  "extract": "Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia. Assyria is called the first true military superpower in human history, and pioneered major Mesopotamian inventions and advancements in the first libraries and large-scale preservation and accumulation of knowledge, statecraft, centralised government, bureaucracy, warfare, military organisation, propaganda, art, science and architecture.",
+  "source": "https://en.wikipedia.org/wiki/Assyria"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Assyria",
+ "hasGallery": false,
+ "paintings": []
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "verism",
+ "name": "Verism",
+ "qid": "Q14227427",
+ "born": null,
+ "died": null,
+ "periods": [
+  "republican-rome"
+ ],
+ "oneLiner": "artistic preference of contemporary everyday subject matter",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Head_old_Roman_Glyptothek_Munich_320.jpg/330px-Head_old_Roman_Glyptothek_Munich_320.jpg"
+ },
+ "bio": {
+  "extract": "Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas. The word comes from Latin verus (true).",
+  "source": "https://en.wikipedia.org/wiki/Verism"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Verism",
+ "hasGallery": false,
+ "paintings": []
+}

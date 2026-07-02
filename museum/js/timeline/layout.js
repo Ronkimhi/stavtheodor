@@ -4,6 +4,17 @@
 // One muted, gallery-grade accent per period. Used for band tint/border,
 // band label, artist dots and filter swatches.
 export const PERIOD_COLORS = {
+  'prehistoric-art':        '#6B5442', // cave umber
+  'mesopotamia':            '#8F6F2E', // ziggurat clay gold
+  'ancient-egypt':          '#2E8074', // faience teal
+  'aegean':                 '#3E6B9E', // aegean blue
+  'etruscan':               '#96522E', // etruscan red
+  'archaic-greece':         '#B07437', // amphora terracotta
+  'classical-greece':       '#77705C', // pentelic marble
+  'late-classical-greece':  '#8A5A64', // rosso antico
+  'hellenistic':            '#5E7D5A', // bronze patina
+  'republican-rome':        '#6A5D50', // travertine
+  'imperial-rome':          '#6D4A72', // imperial purple
   'medieval-gothic':        '#8A6A3B', // byzantine gold
   'early-renaissance':      '#A85F44', // terracotta
   'northern-renaissance':   '#6E7B4F', // moss green
@@ -46,6 +57,12 @@ export function inked(hex, k = 0.25) {
 
 const SEGMENTS = [
   // [fromYear, pxPerYear] — denser where art history is denser
+  [-38000, 0.006], // deep prehistory, heavily compressed
+  [-10000, 0.03],  // the neolithic approach
+  [-3500, 0.32],   // bronze-age civilizations
+  [-750, 2.4],     // the Greek centuries earn their room
+  [-100, 1.3],     // Rome
+  [330, 0.32],     // late antiquity to the Gothic dawn
   [1180, 2.2],
   [1400, 4.2],   // the Renaissance centuries earn their room
   [1600, 6.0],
@@ -158,10 +175,21 @@ export function layout(index) {
     }
   }
 
-  // Year axis ticks every 50y before 1850, every 25y after.
+  // Year axis ticks: per-segment step chosen so labels sit >= ~110 world px
+  // apart, from 20,000-year strides in deep prehistory down to 25-year ones
+  // in the modern era. Year 0 does not exist and is skipped.
+  const TICK_STEPS = [25, 50, 100, 250, 500, 1000, 2000, 5000, 10000, 20000];
   const ticks = [];
-  for (let y = 1200; y <= 2025; y += y < 1850 ? 50 : 25) {
-    ticks.push({ year: y, x: xForYear(y) });
+  const seenTick = new Set();
+  for (const s of bp) {
+    const step = TICK_STEPS.find((st) => st * s.ppy >= 110)
+      ?? TICK_STEPS[TICK_STEPS.length - 1];
+    const last = Math.min(s.y1, 2025);
+    for (let y = Math.ceil(s.y0 / step) * step; y <= last; y += step) {
+      if (y === 0 || seenTick.has(y)) continue;
+      seenTick.add(y);
+      ticks.push({ year: y, x: xForYear(y) });
+    }
   }
 
   const maxLane = Math.max(...periods.map((p) => p.lane));

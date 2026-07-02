@@ -1,0 +1,21 @@
+{
+ "slug": "stonehenge",
+ "name": "Stonehenge",
+ "qid": "Q39671",
+ "born": -3000,
+ "died": -2000,
+ "periods": [
+  "prehistoric-art"
+ ],
+ "oneLiner": "Neolithic henge monument in Amesbury, Wiltshire, England, UK",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/330px-Stonehenge2007_07_30.jpg"
+ },
+ "bio": {
+  "extract": "Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons, topped by connecting horizontal lintel stones which are held in place with mortise and tenon joints—a feature unique among contemporary monuments. Inside is a ring of smaller bluestones. Inside these are free-standing trilithons: two bulkier vertical sarsens joined by a single lintel.",
+  "source": "https://en.wikipedia.org/wiki/Stonehenge"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Stonehenge",
+ "hasGallery": false,
+ "paintings": []
+}

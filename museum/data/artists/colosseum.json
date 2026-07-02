@@ -1,0 +1,21 @@
+{
+ "slug": "colosseum",
+ "name": "Colosseum",
+ "qid": "Q10285",
+ "born": 70,
+ "died": 80,
+ "periods": [
+  "imperial-rome"
+ ],
+ "oneLiner": "ancient Roman amphitheatre, a landmark of Rome, Italy",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/330px-Colosseo_2020.jpg"
+ },
+ "bio": {
+  "extract": "The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world. Construction began under the Emperor Vespasian in 72 and was completed in AD 80 under his successor and heir, Titus. Further modifications were made during the reign of Domitian.",
+  "source": "https://en.wikipedia.org/wiki/Colosseum"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Colosseum",
+ "hasGallery": false,
+ "paintings": []
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "augustus-of-prima-porta",
+ "name": "Augustus of Prima Porta",
+ "qid": "Q667124",
+ "born": 15,
+ "died": null,
+ "periods": [
+  "imperial-rome"
+ ],
+ "oneLiner": "Ancient Roman sculpture of the emperor Augustus",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Augustus_of_Prima_Porta.jpg/330px-Augustus_of_Prima_Porta.jpg"
+ },
+ "bio": {
+  "extract": "The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.",
+  "source": "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta",
+ "hasGallery": false,
+ "paintings": []
+}

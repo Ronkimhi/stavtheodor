@@ -1,0 +1,21 @@
+{
+ "slug": "chauvet-cave",
+ "name": "Chauvet Cave",
+ "qid": "Q374096",
+ "born": -34500,
+ "died": null,
+ "periods": [
+  "prehistoric-art"
+ ],
+ "oneLiner": "cave in France",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg/330px-Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg"
+ },
+ "bio": {
+  "extract": "The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life. It is located near the commune of Vallon-Pont-d'Arc on a limestone cliff above the former bed of the river Ardèche, in the Gorges de l'Ardèche.",
+  "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Chauvet_Cave",
+ "hasGallery": false,
+ "paintings": []
+}

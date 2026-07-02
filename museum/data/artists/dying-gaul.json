@@ -1,0 +1,21 @@
+{
+ "slug": "dying-gaul",
+ "name": "Dying Gaul",
+ "qid": "Q848790",
+ "born": -230,
+ "died": -220,
+ "periods": [
+  "hellenistic"
+ ],
+ "oneLiner": "sculpture",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Dying_gaul.jpg/330px-Dying_gaul.jpg"
+ },
+ "bio": {
+  "extract": "The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze. The original may have been commissioned at some time between 230 and 220 BC by Attalus I of Pergamon to celebrate his victory over the Galatians, the Celtic or Gaulish people of parts of Anatolia. The original sculptor is believed to have been Epigonus, a court sculptor of the Attalid dynasty of Pergamon.",
+  "source": "https://en.wikipedia.org/wiki/Dying_Gaul"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Dying_Gaul",
+ "hasGallery": false,
+ "paintings": []
+}

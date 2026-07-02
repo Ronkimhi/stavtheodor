@@ -1,0 +1,21 @@
+{
+ "slug": "kore",
+ "name": "Kore (sculpture)",
+ "qid": "Q921657",
+ "born": -600,
+ "died": -480,
+ "periods": [
+  "archaic-greece"
+ ],
+ "oneLiner": "ancient Greek statue of a woman of the Archaic period",
+ "portrait": {
+  "thumb": null
+ },
+ "bio": {
+  "extract": "Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+  "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29",
+ "hasGallery": false,
+ "paintings": []
+}

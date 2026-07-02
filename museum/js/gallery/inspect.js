@@ -1,6 +1,6 @@
 // Click-to-inspect: zoomed hi-res view + placard panel with story and fun facts.
 
-import { filePathUrl } from '../shared/data.js';
+import { filePathUrl, fmtYear } from '../shared/data.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
   (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -12,7 +12,7 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
 
   function dims(p) {
     const parts = [];
-    if (p.year) parts.push(String(p.year));
+    if (p.year) parts.push(fmtYear(p.year));
     if (p.cm) parts.push(`${p.cm.h} × ${p.cm.w} cm`);
     return parts;
   }

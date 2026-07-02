@@ -1,0 +1,21 @@
+{
+ "slug": "giza-pyramids",
+ "name": "Giza pyramid complex",
+ "qid": "Q12508",
+ "born": -2600,
+ "died": -2500,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "archaeological site on the Giza Plateau, Egypt",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pyramids_of_the_Giza_Necropolis.jpg/330px-Pyramids_of_the_Giza_Necropolis.jpg"
+ },
+ "bio": {
+  "extract": "The Giza pyramid complex in Egypt is home to the Great Pyramid, the pyramid of Khafre, and the pyramid of Menkaure, along with their associated pyramid complexes and the Great Sphinx. All were built during the Fourth Dynasty of the Old Kingdom of ancient Egypt, between c. 2600 – c. 2500 BC. The site also includes several temples, cemeteries, and the remains of a workers' village.",
+  "source": "https://en.wikipedia.org/wiki/Giza_pyramid_complex"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+ "hasGallery": false,
+ "paintings": []
+}

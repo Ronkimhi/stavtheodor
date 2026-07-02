@@ -1,0 +1,21 @@
+{
+ "slug": "sumer",
+ "name": "Sumer",
+ "qid": "Q35355",
+ "born": -4500,
+ "died": -1900,
+ "periods": [
+  "mesopotamia"
+ ],
+ "oneLiner": "ancient Mesopotamian civilization from 5500 to 1800 BC",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sumer_satellite_map.jpg/330px-Sumer_satellite_map.jpg"
+ },
+ "bio": {
+  "extract": "Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC. Like nearby Elam, it is one of the cradles of civilization, along with Egypt, the Indus Valley, the Erligang culture of the Yellow River valley, Caral-Supe, and Mesoamerica. Living along the valleys of the Tigris and Euphrates rivers, Sumerian farmers grew an abundance of grain and other crops, a surplus of which enabled them to form urban settlements.",
+  "source": "https://en.wikipedia.org/wiki/Sumer"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Sumer",
+ "hasGallery": false,
+ "paintings": []
+}

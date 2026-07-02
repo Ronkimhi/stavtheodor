@@ -1,0 +1,21 @@
+{
+ "slug": "khafre-enthroned",
+ "name": "Khafre Enthroned",
+ "qid": "Q971646",
+ "born": -2570,
+ "died": null,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "funerary statue in the Egyptian Museum in Cairo",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kairo_Museum_Sitzstatue_Chephren_06.jpg/330px-Kairo_Museum_Sitzstatue_Chephren_06.jpg"
+ },
+ "bio": {
+  "extract": "Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo. Made of anorthosite gneiss, a valuable, extremely hard, and dark stone, it was brought 1,000 km (620 mi) down the Nile River from the \"Khafre quarries\" west of Gebel el-Asr. The statue was carved for the Pharaoh's valley temple near the Great Sphinx, a part of the necropolis used in funeral rituals.",
+  "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Khafre_Enthroned",
+ "hasGallery": false,
+ "paintings": []
+}

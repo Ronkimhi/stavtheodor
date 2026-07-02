@@ -88,10 +88,31 @@ def esc(s):
     return html.escape(str(s or ""), quote=True)
 
 
+def fmt_year(y):
+    # Negative years are BCE (the ancient wing of the timeline).
+    if y is None:
+        return ""
+    return f"{-y} BCE" if y < 0 else str(y)
+
+
+def fmt_range(start, end):
+    if start is None:
+        return ""
+    if end is None or end == start:
+        return fmt_year(start)
+    if start < 0 and end < 0:
+        return f"{-start}–{-end} BCE"
+    if start < 0:
+        return f"{-start} BCE–{end} CE"
+    return f"{start}–{end}"
+
+
 def life(a):
     if not a.get("born"):
         return ""
-    return f"{a['born']}–{a['died']}" if a.get("died") else f"b. {a['born']}"
+    if not a.get("died"):
+        return f"c. {fmt_year(a['born'])}" if a["born"] < 0 else f"b. {a['born']}"
+    return fmt_range(a["born"], a["died"])
 
 
 def one_liner(a):
@@ -146,8 +167,10 @@ def artist_jsonld(a):
             "@type": "Person",
             "name": a["name"],
             "description": one_liner(a),
-            "birthDate": str(a.get("born") or ""),
-            "deathDate": str(a.get("died") or ""),
+            # schema.org dates omitted for BCE entries (negative years are not
+            # valid ISO 8601, and ancient nodes are often works, not people)
+            "birthDate": str(a["born"]) if (a.get("born") or 0) > 0 else "",
+            "deathDate": str(a["died"]) if (a.get("died") or 0) > 0 else "",
             "sameAs": a.get("wikipedia"),
             "image": (a.get("portrait") or {}).get("thumb"),
         },
@@ -259,7 +282,7 @@ def build_directory(index, artists_full):
             f'</span></li>'
             for a in sorted(arts, key=lambda x: x.get("born") or 0))
         sections.append(f"""<section class="period">
-<h2>{esc(p['name'])} <span class="years">{p['start']}–{p['end']}</span></h2>
+<h2>{esc(p['name'])} <span class="years">{fmt_range(p['start'], p['end'])}</span></h2>
 <p>{esc(p['summary'])}</p>
 <ul>{items}</ul>
 </section>""")

@@ -1,0 +1,21 @@
+{
+ "slug": "minoan-civilization",
+ "name": "Minoan civilization",
+ "qid": "Q134178",
+ "born": -3100,
+ "died": -1100,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "Bronze Age civilization flourishing on Crete and other Aegean islands from c. 2600 to 1100 BC",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Map_Minoan_Crete-en.svg/330px-Map_Minoan_Crete-en.svg.png"
+ },
+ "bio": {
+  "extract": "The Minoan civilization was a Bronze Age culture which was centered on the island of Crete. Known for its monumental architecture and energetic art, it is often regarded as the first civilization in Europe. The ruins of the Minoan palaces at Knossos and Phaistos are popular tourist attractions.",
+  "source": "https://en.wikipedia.org/wiki/Minoan_civilization"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Minoan_civilization",
+ "hasGallery": false,
+ "paintings": []
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "capitoline-brutus",
+ "name": "Capitoline Brutus",
+ "qid": "Q1403024",
+ "born": -300,
+ "died": null,
+ "periods": [
+  "republican-rome"
+ ],
+ "oneLiner": "ancient Roman bronze bust",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg/330px-Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg"
+ },
+ "bio": {
+  "extract": "The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+  "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Capitoline_Brutus",
+ "hasGallery": false,
+ "paintings": []
+}

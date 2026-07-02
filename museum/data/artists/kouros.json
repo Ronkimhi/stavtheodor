@@ -1,0 +1,21 @@
+{
+ "slug": "kouros",
+ "name": "Kouros",
+ "qid": "Q937330",
+ "born": -615,
+ "died": -485,
+ "periods": [
+  "archaic-greece"
+ ],
+ "oneLiner": "free-standing ancient Greek sculpture depicting a young man",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kouros_anavissos.jpg/330px-Kouros_anavissos.jpg"
+ },
+ "bio": {
+  "extract": "Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily. Such statues are found across the Greek-speaking world; the preponderance of these were found in sanctuaries of Apollo with more than one hundred from the sanctuary of Apollo Ptoion, Boeotia, alone. These free-standing sculptures were typically marble, but the form is also rendered in limestone, wood, bronze, ivory and terracotta.",
+  "source": "https://en.wikipedia.org/wiki/Kouros"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Kouros",
+ "hasGallery": false,
+ "paintings": []
+}

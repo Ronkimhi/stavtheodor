@@ -1,0 +1,21 @@
+{
+ "slug": "nefertiti-bust",
+ "name": "Nefertiti Bust",
+ "qid": "Q582172",
+ "born": -1345,
+ "died": null,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "Bust of Queen Nefertiti from the Amarna Period in the Neues Museum, Berlin",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nofretete_Neues_Museum.jpg/330px-Nofretete_Neues_Museum.jpg"
+ },
+ "bio": {
+  "extract": "The Nefertiti Bust is a painted stucco-coated limestone bust of Nefertiti, the Great Royal Wife of Egyptian pharaoh Akhenaten. It is on display in the Neues Museum of Berlin.",
+  "source": "https://en.wikipedia.org/wiki/Nefertiti_Bust"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Nefertiti_Bust",
+ "hasGallery": false,
+ "paintings": []
+}

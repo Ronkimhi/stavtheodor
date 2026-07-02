@@ -48,6 +48,17 @@ PREFERRED_SECTIONS = [
 USE_CACHE = "--no-cache" not in sys.argv
 _last_req = [0.0]
 
+# The corporate DNS resolver on this machine intermittently returns nothing
+# for Wikimedia domains while the network path itself is fine. When curl fails
+# to resolve, retry once with the host pinned to Wikimedia's stable LB IPs.
+WMF_PINS = {
+    "en.wikipedia.org": "208.80.154.224",
+    "commons.wikimedia.org": "208.80.154.224",
+    "www.wikidata.org": "208.80.154.224",
+    "query.wikidata.org": "208.80.154.224",
+    "upload.wikimedia.org": "208.80.154.240",
+}
+
 
 def http_get(url, headers=None, sleep=SLEEP):
     key = hashlib.sha1(url.encode()).hexdigest()
@@ -59,11 +70,19 @@ def http_get(url, headers=None, sleep=SLEEP):
         time.sleep(wait)
     # curl instead of urllib: the corporate TLS-inspection cert chain on this
     # machine fails Python's OpenSSL verification but is trusted by the system.
-    cmd = ["curl", "-sS", "--fail-with-body", "--max-time", "60", "-A", UA]
+    base = ["curl", "-sS", "--fail-with-body", "--max-time", "60", "-A", UA]
     for k, v in (headers or {}).items():
-        cmd += ["-H", f"{k}: {v}"]
-    cmd += ["-w", "\n%{http_code}", url]
-    r = subprocess.run(cmd, capture_output=True, text=True)
+        base += ["-H", f"{k}: {v}"]
+    host = urllib.parse.urlsplit(url).hostname or ""
+    attempts = [base]
+    if host in WMF_PINS:
+        attempts.append(base + ["--resolve", f"{host}:443:{WMF_PINS[host]}"])
+    r = None
+    for cmd in attempts:
+        r = subprocess.run(cmd + ["-w", "\n%{http_code}", url],
+                           capture_output=True, text=True)
+        if r.returncode not in (6, 28):  # 6 = could not resolve, 28 = timeout
+            break
     out = r.stdout
     body, _, code = out.rpartition("\n")
     if code == "404":
@@ -89,7 +108,9 @@ def sentences(text):
 def first_sentences(text, n=2, max_chars=420):
     out, total = [], 0
     for s in sentences(text):
-        if len(out) >= n or total + len(s) > max_chars:
+        # always keep the first sentence, even when it alone busts the budget
+        # (several period leads run past 320 chars in a single sentence)
+        if out and (len(out) >= n or total + len(s) > max_chars):
             break
         out.append(s)
         total += len(s)
@@ -370,8 +391,10 @@ def build_artist(seed_artist, report):
         return None
 
     claims = entity.get("claims", {})
-    born = wd_year(claims, "P569")
-    died = wd_year(claims, "P570")
+    # Ancient-era nodes are often works, sites or cultures rather than people;
+    # seed.json may pin their dates (negative = BCE) when Wikidata has no P569/P570.
+    born = sa_born if (sa_born := seed_artist.get("born")) is not None else wd_year(claims, "P569")
+    died = sa_died if (sa_died := seed_artist.get("died")) is not None else wd_year(claims, "P570")
     one_liner = entity.get("descriptions", {}).get("en", {}).get("value", "")
     name = summary.get("title", title)
     portrait = summary.get("thumbnail", {}).get("source")
@@ -555,15 +578,29 @@ def main():
             json.dumps(artist, ensure_ascii=False, indent=1), encoding="utf-8"
         )
         died = artist["died"]
-        active_end = died if died else max(
-            (p["end"] for p in periods if p["id"] in artist["periods"]), default=CURRENT_YEAR
-        )
+        active_end = sa.get("activeEnd")
+        if active_end is None:
+            if died:
+                active_end = died
+            elif "born" in sa and artist["born"] is not None:
+                # single-dated work/site: keep it anchored at its own year
+                # rather than stretching to the period's end
+                active_end = artist["born"]
+            else:
+                active_end = max(
+                    (p["end"] for p in periods if p["id"] in artist["periods"]), default=CURRENT_YEAR
+                )
+        active_start = sa.get("activeStart")
+        if active_start is None and artist["born"] is not None:
+            # a seeded born year marks a work/site/culture: its dates ARE its
+            # active span; a person starts working ~20 years after birth
+            active_start = artist["born"] if "born" in sa else artist["born"] + 20
         index_artists.append({
             "slug": artist["slug"],
             "name": artist["name"],
             "born": artist["born"],
             "died": died,
-            "activeStart": (artist["born"] + 20) if artist["born"] else None,
+            "activeStart": active_start,
             "activeEnd": active_end,
             "periods": artist["periods"],
             "oneLiner": artist["oneLiner"],

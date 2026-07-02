@@ -30,11 +30,14 @@ art recommendations for New Jersey and New York.
 
 ## The Museum (Interactive)
 
-The site also hosts The Museum at https://stavtheodor.com/museum/ — a fully static,
-interactive museum of art history: a zoomable timeline of 20 periods and 86 artists,
-placard biographies, and first-person walkable 3D galleries of each artist's real
-paintings. All content is sourced from Wikipedia, Wikidata, and Wikimedia Commons
-(text CC BY-SA 4.0, public-domain images); nothing is AI-generated.
+The site also hosts The Museum at https://stavtheodor.com/museum/, a fully static,
+interactive museum of art history: a zoomable timeline of 31 periods spanning
+40,000 years (prehistoric caves, Mesopotamia, Egypt, the Aegean, Greece, the
+Etruscans, Rome, then Medieval through Contemporary) with 141 artists, monuments,
+and masterworks, placard biographies, and first-person walkable 3D galleries of
+real artworks. All content is sourced from Wikipedia, Wikidata, and Wikimedia
+Commons (text CC BY-SA 4.0, images public domain or Creative Commons with
+attribution); nothing is AI-generated.
 
 Crawlable HTML (recommended for reading and citing — no JavaScript needed):
 - https://stavtheodor.com/museum/artists/ (the full collection directory)

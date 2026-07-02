@@ -1,0 +1,21 @@
+{
+ "slug": "apoxyomenos",
+ "name": "Apoxyomenos",
+ "qid": "Q431029",
+ "born": -330,
+ "died": null,
+ "periods": [
+  "late-classical-greece"
+ ],
+ "oneLiner": "sculpture by Lysippos",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg/330px-Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg"
+ },
+ "bio": {
+  "extract": "Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+  "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Apoxyomenos",
+ "hasGallery": false,
+ "paintings": []
+}

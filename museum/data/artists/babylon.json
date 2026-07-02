@@ -1,0 +1,21 @@
+{
+ "slug": "babylon",
+ "name": "Babylon",
+ "qid": "Q5684",
+ "born": -1894,
+ "died": -539,
+ "periods": [
+  "mesopotamia"
+ ],
+ "oneLiner": "capital city of Babylonia and an archaeological site in modern-day Iraq",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ishtar_Gate.jpg/330px-Ishtar_Gate.jpg"
+ },
+ "bio": {
+  "extract": "Babylon was an ancient city located on the lower Euphrates river in southern Mesopotamia, within modern-day Hillah, Iraq, about 85 kilometres south of modern-day Baghdad. Babylon functioned as the main cultural and political centre of the Akkadian-speaking region of Babylonia. Its rulers established two important empires in antiquity, the 19th–16th century BC Old Babylonian Empire, and the 7th–6th century BC Neo-Babylonian Empire. Babylon was also used as a regional capital of other empires, such as the Achaemenid Empire.",
+  "source": "https://en.wikipedia.org/wiki/Babylon"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Babylon",
+ "hasGallery": false,
+ "paintings": []
+}

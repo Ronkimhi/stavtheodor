@@ -1,0 +1,21 @@
+{
+ "slug": "mycenaean-greece",
+ "name": "Mycenaean Greece",
+ "qid": "Q181264",
+ "born": -1750,
+ "died": -1050,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "late Bronze Age Greek civilization",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mycenaean_World_en.png/330px-Mycenaean_World_en.png"
+ },
+ "bio": {
+  "extract": "Mycenaean Greece was the last phase of the Bronze Age in ancient Greece, spanning the period from approximately 1750 to 1050 BC. It represents the first advanced and distinctively Greek civilization in mainland Greece with its palatial states, urban organization, works of art, and writing system. The Mycenaeans were mainland Greek peoples who were likely stimulated by their contact with insular Minoan Crete and other Mediterranean cultures to develop a more sophisticated sociopolitical culture of their own. The most prominent site was Mycenae, after which the culture of this era is named.",
+  "source": "https://en.wikipedia.org/wiki/Mycenaean_Greece"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Mycenaean_Greece",
+ "hasGallery": false,
+ "paintings": []
+}

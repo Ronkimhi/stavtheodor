@@ -1,0 +1,21 @@
+{
+ "slug": "book-of-the-dead",
+ "name": "Book of the Dead",
+ "qid": "Q174361",
+ "born": -1550,
+ "died": -50,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "ancient Egyptian funerary text",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg/330px-El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg"
+ },
+ "bio": {
+  "extract": "The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC. \"Book\" is the closest term to describe the loose collection of texts consisting of a number of magic spells intended to assist a dead person's journey through the Duat, or underworld, and into the afterlife and written by many priests over a period of about 1,000 years. In 1842, the Egyptologist Karl Richard Lepsius introduced for these texts the German name Todtenbuch, translated to English as 'Book of the Dead'.",
+  "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Book_of_the_Dead",
+ "hasGallery": false,
+ "paintings": []
+}

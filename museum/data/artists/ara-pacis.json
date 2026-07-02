@@ -1,0 +1,21 @@
+{
+ "slug": "ara-pacis",
+ "name": "Ara Pacis",
+ "qid": "Q623612",
+ "born": -13,
+ "died": -9,
+ "periods": [
+  "imperial-rome"
+ ],
+ "oneLiner": "ancient Roman monument in Rome",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ara_Pacis_%28SW%29.jpg/330px-Ara_Pacis_%28SW%29.jpg"
+ },
+ "bio": {
+  "extract": "The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC. Originally located on the northern outskirts of Rome, a Roman mile from the boundary of the pomerium on the west side of the Via Flaminia, the Ara Pacis stood in the northeastern corner of the Campus Martius, the former flood plain of the Tiber River and gradually became buried under 4 metres (13 ft) of silt deposits.",
+  "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Ara_Pacis",
+ "hasGallery": false,
+ "paintings": []
+}

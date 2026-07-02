@@ -1,0 +1,21 @@
+{
+ "slug": "bull-leaping-fresco",
+ "name": "Bull-Leaping Fresco",
+ "qid": "Q3566545",
+ "born": -1450,
+ "died": null,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "Minoan mural painting from Knossos, Crete",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Knossos_bull_leaping_fresco.jpg/330px-Knossos_bull_leaping_fresco.jpg"
+ },
+ "bio": {
+  "extract": "The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene. Although they were frescos, they were painted on stucco relief scenes. They were difficult to produce.",
+  "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco",
+ "hasGallery": false,
+ "paintings": []
+}

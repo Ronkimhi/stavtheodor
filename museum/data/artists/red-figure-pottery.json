@@ -1,0 +1,21 @@
+{
+ "slug": "red-figure-pottery",
+ "name": "Red-figure pottery",
+ "qid": "Q633683",
+ "born": -520,
+ "died": -300,
+ "periods": [
+  "archaic-greece"
+ ],
+ "oneLiner": "ancient Greek pottery style",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cup_Apatouria_Louvre_G138.jpg/330px-Cup_Apatouria_Louvre_G138.jpg"
+ },
+ "bio": {
+  "extract": "Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+  "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Red-figure_pottery",
+ "hasGallery": false,
+ "paintings": []
+}

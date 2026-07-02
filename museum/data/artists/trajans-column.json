@@ -1,0 +1,21 @@
+{
+ "slug": "trajans-column",
+ "name": "Trajan's Column",
+ "qid": "Q192784",
+ "born": 107,
+ "died": 113,
+ "periods": [
+  "imperial-rome"
+ ],
+ "oneLiner": "ancient Roman victory column, a landmark of Rome, Italy",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Trajan%27s_Column_HD.jpg/330px-Trajan%27s_Column_HD.jpg"
+ },
+ "bio": {
+  "extract": "Trajan's Column is a Roman triumphal column in Rome, Italy, that commemorates Roman emperor Trajan's victory in the Dacian Wars. It was probably constructed under the supervision of the architect Apollodorus of Damascus at the order of the Roman Senate. It is located in Trajan's Forum, north of the Roman Forum. Completed and dedicated on 12 May 113 AD, the freestanding column is most famous for its spiral bas relief, which depicts the wars between the Romans and Dacians.",
+  "source": "https://en.wikipedia.org/wiki/Trajan%27s_Column"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Trajan%27s_Column",
+ "hasGallery": false,
+ "paintings": []
+}

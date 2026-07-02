@@ -1,0 +1,21 @@
+{
+ "slug": "tomb-of-the-leopards",
+ "name": "Tomb of the Leopards",
+ "qid": "Q122664",
+ "born": -473,
+ "died": null,
+ "periods": [
+  "etruscan"
+ ],
+ "oneLiner": "Etruscan burial complex",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg/330px-Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg"
+ },
+ "bio": {
+  "extract": "The Tomb of the Leopards is an Etruscan burial chamber so called for the confronted leopards painted above a banquet scene. The tomb is located within the Necropolis of Monterozzi, near Tarquinia, Lazio, Italy, and dates to around 470–450 BC. The painting is one of the best-preserved murals of Tarquinia, and is known for \"its lively coloring, and its animated depictions rich with gestures.\" The subject matter is influenced by the Greek-Attic art of the first quarter of the fifth century BC. This Attic influence extends to the very figures of leopards being a main aspect of the fresco.",
+  "source": "https://en.wikipedia.org/wiki/Tomb_of_the_Leopards"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Tomb_of_the_Leopards",
+ "hasGallery": false,
+ "paintings": []
+}

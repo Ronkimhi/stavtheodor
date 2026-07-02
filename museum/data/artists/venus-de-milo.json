@@ -1,0 +1,21 @@
+{
+ "slug": "venus-de-milo",
+ "name": "Venus de Milo",
+ "qid": "Q151952",
+ "born": -150,
+ "died": -125,
+ "periods": [
+  "hellenistic"
+ ],
+ "oneLiner": "ancient Greek marble statue of a woman",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Front_views_of_the_Venus_de_Milo.jpg/330px-Front_views_of_the_Venus_de_Milo.jpg"
+ },
+ "bio": {
+  "extract": "The Venus de Milo or Aphrodite of Melos is an ancient Greek marble sculpture that was created during the Hellenistic period. Its exact dating is uncertain, but the modern consensus places it in the 2nd century BC, perhaps between 160 and 110 BC. It was discovered in 1820 on the island of Milos, Greece, and has been displayed at the Louvre Museum since 1821. Since the statue's discovery, it has become one of the most famous works of ancient Greek sculpture in the world.",
+  "source": "https://en.wikipedia.org/wiki/Venus_de_Milo"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Venus_de_Milo",
+ "hasGallery": false,
+ "paintings": []
+}

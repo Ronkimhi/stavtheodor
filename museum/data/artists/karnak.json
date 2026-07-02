@@ -1,0 +1,21 @@
+{
+ "slug": "karnak",
+ "name": "Karnak",
+ "qid": "Q522862",
+ "born": -2000,
+ "died": -300,
+ "periods": [
+  "ancient-egypt"
+ ],
+ "oneLiner": "ancient Egyptian temple complex",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Temple_de_Louxor_68.jpg/330px-Temple_de_Louxor_68.jpg"
+ },
+ "bio": {
+  "extract": "The Karnak Temple Complex, commonly known as Karnak, comprises a vast mix of temples, pylons, chapels, and other buildings near Luxor, Egypt. Construction at the complex began during the reign of Senusret I in the Middle Kingdom and continued into the Ptolemaic Kingdom, although most of the extant buildings date from the New Kingdom. The area around Karnak was the ancient Egyptian Ipet-isut and the main place of worship of the 18th Dynastic Theban Triad, with the god Amun as its head.",
+  "source": "https://en.wikipedia.org/wiki/Karnak"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Karnak",
+ "hasGallery": false,
+ "paintings": []
+}

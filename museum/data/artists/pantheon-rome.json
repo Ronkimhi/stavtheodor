@@ -1,0 +1,21 @@
+{
+ "slug": "pantheon-rome",
+ "name": "Pantheon, Rome",
+ "qid": "Q99309",
+ "born": 113,
+ "died": 125,
+ "periods": [
+  "imperial-rome"
+ ],
+ "oneLiner": "ancient Roman temple in Rome, Italy",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg/330px-Pantheon_%28Rome%29_-_Right_side_and_front.jpg"
+ },
+ "bio": {
+  "extract": "The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy. It is perhaps the most famous, and architecturally most influential, rotunda.",
+  "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome",
+ "hasGallery": false,
+ "paintings": []
+}

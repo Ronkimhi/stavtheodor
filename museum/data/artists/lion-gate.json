@@ -1,0 +1,21 @@
+{
+ "slug": "lion-gate",
+ "name": "Lion Gate",
+ "qid": "Q1450403",
+ "born": -1250,
+ "died": null,
+ "periods": [
+  "aegean"
+ ],
+ "oneLiner": "main entrance of the Bronze Age citadel of Mycenae",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/330px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg"
+ },
+ "bio": {
+  "extract": "The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.",
+  "source": "https://en.wikipedia.org/wiki/Lion_Gate"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Lion_Gate",
+ "hasGallery": false,
+ "paintings": []
+}

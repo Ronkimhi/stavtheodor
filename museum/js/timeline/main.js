@@ -1,6 +1,6 @@
 // Timeline boot: build the world DOM, wire viewport + filter + placard.
 
-import { loadIndex } from '../shared/data.js';
+import { loadIndex, fmtYear, fmtRange, lifeDates } from '../shared/data.js';
 import { openPlacard } from '../shared/ui.js';
 import { initThemeToggle } from '../shared/theme.js';
 import { layout, periodColor } from './layout.js';
@@ -41,7 +41,7 @@ async function boot() {
     lab.className = 'axis-label';
     lab.style.left = t.x + 'px';
     lab.style.top = '86px';
-    lab.textContent = t.year;
+    lab.textContent = fmtYear(t.year);
     frag.append(tick, lab);
   }
 
@@ -53,7 +53,7 @@ async function boot() {
     band.style.setProperty('--pc', periodColor(p.id));
     const label = document.createElement('div');
     label.className = 'band-label';
-    label.innerHTML = `<span class="band-name"></span><small>${p.start}–${p.end}</small>`;
+    label.innerHTML = `<span class="band-name"></span><small>${fmtRange(p.start, p.end)}</small>`;
     label.querySelector('.band-name').textContent = p.name;
     band.appendChild(label);
     if (p.summary) {
@@ -76,13 +76,13 @@ async function boot() {
     node.style.left = a.x + 'px';
     node.style.top = a.y + 'px';
     node.style.setProperty('--pc', periodColor(a.period.id));
-    node.setAttribute('aria-label', `${a.name}, ${a.born ?? ''}–${a.died ?? ''}`);
+    node.setAttribute('aria-label', lifeDates(a) ? `${a.name}, ${lifeDates(a)}` : a.name);
     node.innerHTML = `
       <span class="artist-dot"></span>
       ${a.portrait ? `<img class="artist-portrait" loading="lazy" src="${a.portrait}" alt="">` : ''}
       <span>
         <span class="artist-name"><span class="an-full"></span><span class="an-short"></span></span>
-        <span class="artist-years">${a.born ?? '?'}–${a.died ?? ''}</span>
+        <span class="artist-years">${lifeDates(a)}</span>
       </span>`;
     node.querySelector('.an-full').textContent = a.name;
     node.querySelector('.an-short').textContent = shortName(a.name);

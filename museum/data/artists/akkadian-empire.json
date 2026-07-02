@@ -1,0 +1,21 @@
+{
+ "slug": "akkadian-empire",
+ "name": "Akkadian Empire",
+ "qid": "Q4461035",
+ "born": -2334,
+ "died": -2154,
+ "periods": [
+  "mesopotamia"
+ ],
+ "oneLiner": "ancient empire in the Mesopotamia (2334–2154 BC)",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Empire_akkad.svg/330px-Empire_akkad.svg.png"
+ },
+ "bio": {
+  "extract": "The Akkadian Empire or the Kingdom of Akkad/Agade was an ancient kingdom established around 2334 BCE, and the first empire in world history, succeeding the long-lived city-states of Sumer. Centered on the city of Akkad and its surrounding region in modern-day Iraq, the empire united the Semitic Akkadian and Sumerian speakers under one rule and exercised significant influence across Mesopotamia, the Levant, modern-day Iran and Anatolia, sending military expeditions as far south as Dilmun and Magan in the Arabian Peninsula.",
+  "source": "https://en.wikipedia.org/wiki/Akkadian_Empire"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Akkadian_Empire",
+ "hasGallery": false,
+ "paintings": []
+}

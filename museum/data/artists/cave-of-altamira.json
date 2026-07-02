@@ -1,0 +1,21 @@
+{
+ "slug": "cave-of-altamira",
+ "name": "Cave of Altamira",
+ "qid": "Q133575",
+ "born": -34000,
+ "died": -13000,
+ "periods": [
+  "prehistoric-art"
+ ],
+ "oneLiner": "cave with prehistoric paintings in Spain",
+ "portrait": {
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg/330px-9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg"
+ },
+ "bio": {
+  "extract": "The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands. The earliest paintings were applied during the Upper Paleolithic, around 36,000 years ago. The site was discovered in 1868 by Modesto Cubillas and subsequently studied by Marcelino Sanz de Sautuola.",
+  "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+ },
+ "wikipedia": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+ "hasGallery": false,
+ "paintings": []
+}
