@@ -35,8 +35,7 @@ GA_SNIPPET = """<!-- Google tag (gtag.js) -->
 THEME_SNIPPET = """<script>
 (function () {
   try {
-    var t = localStorage.getItem('museumTheme')
-      || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var t = localStorage.getItem('museumTheme') || 'light';
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();

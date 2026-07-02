@@ -1,5 +1,5 @@
-// Day / night museum. The <head> of each page applies the stored (or system)
-// theme before first paint; this module wires the toggle button.
+// Day / night museum. The <head> of each page applies the stored theme, or
+// light by default, before first paint; this module wires the toggle button.
 
 export function initThemeToggle(btn) {
   if (!btn) return;
