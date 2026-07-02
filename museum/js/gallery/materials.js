@@ -131,8 +131,16 @@ export const matteMaterial = () => new THREE.MeshStandardMaterial({
 });
 
 export function canvasMaterial(texture) {
+  // Paintings are largely self-lit so the spotlights model the room's mood
+  // without burning highlights into the artwork; colors stay true and vibrant.
   return new THREE.MeshStandardMaterial({
-    map: texture, roughness: 0.62, metalness: 0, envMapIntensity: 0.18,
+    map: texture,
+    emissive: 0xffffff,
+    emissiveMap: texture,
+    emissiveIntensity: 0.66,
+    roughness: 0.85,
+    metalness: 0,
+    envMapIntensity: 0.05,
   });
 }
 

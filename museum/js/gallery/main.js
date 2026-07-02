@@ -60,6 +60,7 @@ async function boot() {
     e.preventDefault();
     showListView(artist);
   });
+  document.getElementById('list-btn').addEventListener('click', () => showListView(artist));
 
   if (!artist.hasGallery || !artist.paintings.length) {
     showListView(artist);
@@ -83,7 +84,7 @@ async function boot() {
   renderer.setSize(innerWidth, innerHeight);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.12;
+  renderer.toneMappingExposure = 1.06;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
   document.body.appendChild(renderer.domElement);
@@ -266,8 +267,9 @@ async function boot() {
   const crosshair = document.getElementById('crosshair');
   const tooltip = document.getElementById('tooltip');
 
+  let suppressUnlockToast = false;
   const inspector = createInspector(artist, {
-    onOpen: () => { controls.unlock(); tooltip.hidden = true; },
+    onOpen: () => { suppressUnlockToast = true; controls.unlock(); tooltip.hidden = true; },
     onClose: () => { if (!quality.mobile && DEBUG !== 'orbit') setTimeout(() => controls.lock(), 60); },
   });
 
@@ -352,7 +354,24 @@ async function boot() {
     controls.glideTo(new THREE.Vector3(tx, EYE, tz), pl.rotY);
   }
 
-  // ---------- entry ----------
+  // ---------- toast ----------
+  const toast = document.createElement('div');
+  toast.className = 'g-toast';
+  hud.appendChild(toast);
+  let toastTimer = 0;
+  function showToast(text, ms = 5000) {
+    toast.textContent = text;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), ms);
+  }
+  controls.plc?.addEventListener('lock', () => toast.classList.remove('show'));
+  controls.plc?.addEventListener('unlock', () => {
+    if (suppressUnlockToast) { suppressUnlockToast = false; return; }
+    showToast('Mouse released · press Esc again to leave the gallery');
+  });
+
+  // ---------- entry: loads, then walks the visitor straight in ----------
   const entry = document.getElementById('entry');
   const entryBtn = document.getElementById('entry-btn');
   if (!hasPointerLock()) {
@@ -361,17 +380,16 @@ async function boot() {
   }
 
   await texturesReady;
-  entryBtn.disabled = false;
-  entryBtn.textContent = 'Enter the gallery →';
-  entryBtn.focus({ preventScroll: true });
+  entryBtn.textContent = 'Entering…';
   const start = () => {
     entry.classList.add('leaving');
     setTimeout(() => entry.remove(), 700);
     hud.hidden = false;
-    if (!quality.mobile && DEBUG !== 'orbit') controls.lock();
+    if (!quality.mobile && DEBUG !== 'orbit') {
+      showToast('Click to look around · W A S D walks · Esc leaves', 6000);
+    }
   };
-  entryBtn.addEventListener('click', start);
-  if (DEBUG === 'orbit') start();
+  start();
 
   // ---------- loop ----------
   addEventListener('resize', () => {

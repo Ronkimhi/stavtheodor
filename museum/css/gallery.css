@@ -89,6 +89,35 @@ body.gallery-page canvas { display: block; }
   top: 16px; right: 20px;
   z-index: 71; /* stays usable above the entry overlay */
 }
+.g-list {
+  position: fixed; top: 64px; left: 22px; z-index: 30;
+  font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+  background: rgba(var(--paper), 0.85);
+  border: 1px solid var(--hairline);
+  padding: 8px 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.g-list:hover { color: var(--bronze); border-color: var(--bronze-soft); }
+.g-toast {
+  position: fixed;
+  bottom: 26px; left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 35;
+  background: rgba(var(--paper), 0.94);
+  border: 1px solid var(--bronze-soft);
+  padding: 11px 22px;
+  font-size: 15px;
+  font-style: italic;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.g-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (max-width: 640px) {
+  .g-toast { white-space: normal; text-align: center; width: calc(100vw - 60px); bottom: 88px; }
+}
 
 /* ---------- inspect overlay ---------- */
 .inspect {

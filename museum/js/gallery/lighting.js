@@ -15,7 +15,7 @@ export function buildLighting(scene, room, placements, quality) {
 
   for (const pl of placements) {
     const spot = new THREE.SpotLight(0xFFE3C2);
-    spot.intensity = 55 + pl.w * pl.h * 34; // scale with painting area
+    spot.intensity = 32 + pl.w * pl.h * 18; // scale with painting area
     spot.decay = 1.9;
     spot.penumbra = 0.55;
 
