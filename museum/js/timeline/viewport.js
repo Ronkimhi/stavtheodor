@@ -38,12 +38,20 @@ export class Viewport {
 
   fitAll(pad = 60) {
     const vw = Math.max(320, innerWidth), vh = Math.max(320, innerHeight);
-    const s = Math.max(0.02, Math.min((vw - pad * 2) / this.size.w, (vh - pad * 2) / this.size.h));
+    // The page title floats fixed over the canvas; fit the world into the
+    // clear area beneath it so the map never renders under the heading.
+    // Capped so short landscape viewports still keep most of the height.
+    const head = document.querySelector('.canvas-head');
+    const top = head
+      ? Math.min(head.getBoundingClientRect().bottom + 16, vh * 0.45)
+      : 0;
+    const availH = vh - top;
+    const s = Math.max(0.02, Math.min((vw - pad * 2) / this.size.w, (availH - pad * 2) / this.size.h));
     this.sMin = s * 0.85;
     this.sMax = 7;
     this.cam.s = s;
     this.cam.x = this.size.w / 2 - vw / 2 / s;
-    this.cam.y = this.size.h / 2 - vh / 2 / s;
+    this.cam.y = this.size.h / 2 - (top + availH / 2) / s;
     this.apply();
   }
 
