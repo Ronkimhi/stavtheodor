@@ -5,6 +5,8 @@ import { filePathUrl, oneLinerOf, fmtYear } from '../shared/data.js';
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
   (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+let escKeyBound = false;
+
 export function showListView(artist) {
   const root = document.getElementById('list-root');
   root.innerHTML = `
@@ -36,4 +38,15 @@ export function showListView(artist) {
     }, { once: true });
   });
   document.getElementById('entry')?.remove();
+
+  // Esc leaves the gallery here too, matching the 3D room's back-chain
+  // (main.js yields Esc to us whenever the list view is on screen)
+  if (!escKeyBound) {
+    escKeyBound = true;
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || !document.querySelector('.list-view')) return;
+      if (document.referrer.includes('/museum/')) history.back();
+      else location.href = '/museum/#artist=' + encodeURIComponent(artist.slug);
+    });
+  }
 }

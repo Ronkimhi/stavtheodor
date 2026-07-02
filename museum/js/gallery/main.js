@@ -314,7 +314,8 @@ async function boot() {
     if (document.getElementById('entry')) return;
     if (e.key === 'Enter' && !inspector.isOpen() && hovered) {
       inspector.open(hovered.userData.paintingIndex);
-    } else if (e.key === 'Escape' && !inspector.isOpen() && !controls.state.locked) {
+    } else if (e.key === 'Escape' && !inspector.isOpen() && !controls.state.locked
+               && !document.querySelector('.list-view')) {
       if (document.referrer.includes('/museum/')) history.back();
       else location.href = '/museum/#artist=' + encodeURIComponent(slug);
     }
