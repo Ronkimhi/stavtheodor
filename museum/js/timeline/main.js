@@ -90,6 +90,14 @@ async function boot() {
       history.replaceState(null, '', '#artist=' + a.slug);
       openArtist(a);
     });
+    // keyboard tour: tabbing to an artist flies the camera to them
+    node.addEventListener('focus', () => {
+      const r = node.getBoundingClientRect();
+      const offscreen = r.right < 0 || r.left > innerWidth || r.bottom < 0 || r.top > innerHeight;
+      if (viewport.cam.s < 1.6 || offscreen) {
+        viewport.flyTo({ x: a.x, y: a.y }, Math.max(viewport.cam.s, 2.1), 450);
+      }
+    });
     frag.appendChild(node);
   }
 
@@ -119,7 +127,15 @@ async function boot() {
 
   // keyboard
   document.addEventListener('keydown', (e) => {
-    if (e.target.closest('input, .placard')) return;
+    if (e.key === 'Escape') {
+      // progressive back: placard → filter panel → active filter → fit all
+      // (placard and panel close themselves via their own Escape handlers)
+      if (document.querySelector('.placard')) return;
+      if (!document.getElementById('filter-panel').hidden) return;
+      if (stage.classList.contains('filtered')) return filter.selectPeriod(null);
+      return viewport.fitAll();
+    }
+    if (e.target instanceof Element && e.target.closest('input, .placard')) return;
     const pan = 90 / viewport.cam.s;
     if (e.key === 'ArrowLeft') viewport.cam.x -= pan;
     else if (e.key === 'ArrowRight') viewport.cam.x += pan;

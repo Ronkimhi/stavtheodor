@@ -306,6 +306,18 @@ async function boot() {
     if (hovered) inspector.open(hovered.userData.paintingIndex);
   });
 
+  // keyboard: Enter inspects the painting in the crosshair; Escape goes back
+  // (inspect and pointer lock each consume their own Escape first)
+  document.addEventListener('keydown', (e) => {
+    if (document.getElementById('entry')) return;
+    if (e.key === 'Enter' && !inspector.isOpen() && hovered) {
+      inspector.open(hovered.userData.paintingIndex);
+    } else if (e.key === 'Escape' && !inspector.isOpen() && !controls.state.locked) {
+      if (document.referrer.includes('/museum/')) history.back();
+      else location.href = '/museum/#artist=' + encodeURIComponent(slug);
+    }
+  });
+
   // mobile: tap to inspect + teleport strip
   if (quality.mobile) {
     initTouch(controls, renderer.domElement, (sx, sy) => {
@@ -336,7 +348,8 @@ async function boot() {
     const dist = Math.max(1.6, Math.min(3.2, pl.w * 1.25 + 0.8));
     const tx = x + Math.sin(pl.rotY) * dist;
     const tz = z + Math.cos(pl.rotY) * dist;
-    controls.glideTo(new THREE.Vector3(tx, EYE, tz), pl.rotY + Math.PI);
+    // camera yaw equals the wall's rotY: standing off the wall, facing it
+    controls.glideTo(new THREE.Vector3(tx, EYE, tz), pl.rotY);
   }
 
   // ---------- entry ----------
@@ -350,6 +363,7 @@ async function boot() {
   await texturesReady;
   entryBtn.disabled = false;
   entryBtn.textContent = 'Enter the gallery →';
+  entryBtn.focus({ preventScroll: true });
   const start = () => {
     entry.classList.add('leaving');
     setTimeout(() => entry.remove(), 700);

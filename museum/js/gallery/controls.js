@@ -31,7 +31,7 @@ export function createControls(camera, dom, room) {
   }
 
   addEventListener('keydown', (e) => {
-    if (e.target.closest('input, textarea')) return;
+    if (e.target instanceof Element && e.target.closest('input, textarea')) return;
     state.keys.add(e.code);
     state.glide = null; // walking takes over from a strip glide
   });
@@ -77,6 +77,14 @@ export function createControls(camera, dom, room) {
     if (state.touchMove.x || state.touchMove.y) {
       wish.addScaledVector(fwd, -state.touchMove.y);
       wish.addScaledVector(right, -state.touchMove.x);
+    }
+
+    // keyboard-only turning (mouse-look needs pointer lock; Q/E never does)
+    const TURN = 1.7;
+    if (state.keys.has('KeyQ')) camera.rotation.y += TURN * dt;
+    if (state.keys.has('KeyE')) camera.rotation.y -= TURN * dt;
+    if (!state.usesPointerLock && (state.keys.has('KeyQ') || state.keys.has('KeyE'))) {
+      state.yaw = camera.rotation.y;
     }
 
     if (wish.lengthSq() > 0) {

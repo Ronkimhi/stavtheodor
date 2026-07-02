@@ -13,9 +13,12 @@ function ensureRoot() {
   return root;
 }
 
+let opener = null;
+
 export async function openPlacard(indexArtist, periodsById, { onClose } = {}) {
   closePlacard();
   onCloseCb = onClose || null;
+  opener = document.activeElement;
   const holder = ensureRoot();
 
   const scrim = document.createElement('div');
@@ -97,6 +100,8 @@ export function closePlacard() {
     el.classList.remove('open');
     setTimeout(() => el.remove(), 350);
   });
+  if (opener?.isConnected) opener.focus({ preventScroll: true });
+  opener = null;
   if (onCloseCb) { const cb = onCloseCb; onCloseCb = null; cb(); }
 }
 
