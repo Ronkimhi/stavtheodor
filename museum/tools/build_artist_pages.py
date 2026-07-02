@@ -15,6 +15,7 @@ sources from Wikipedia/Wikidata/Commons. Re-run after refreshing the data:
 
 import html
 import json
+import urllib.parse
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -66,6 +67,8 @@ PAGE_CSS = """<style>
   .work p { margin-top: 12px; font-size: 16.5px; line-height: 1.62; color: var(--ink-soft); }
   .fact { margin-top: 10px; }
   .fact a { font-size: 13px; font-style: italic; white-space: nowrap; }
+  .work-attr { font-size: 12px !important; opacity: 0.7; }
+  .work-attr a { color: inherit; }
   .attr { margin-top: 60px; font-size: 12.5px; color: var(--ink-soft); opacity: 0.8; }
   .attr a { color: inherit; }
   /* directory */
@@ -93,7 +96,7 @@ def life(a):
 
 def one_liner(a):
     import re
-    return re.sub(r"\s*\(\d{4}[^)]*\)", "", a.get("oneLiner") or "")
+    return re.sub(r"\s*\((?:born |b\. )?\d{4}[^)]*\)", "", a.get("oneLiner") or "")
 
 
 def head(title, desc, canonical, og_image):
@@ -173,11 +176,20 @@ def painting_block(p):
         f'<p class="fact">{esc(f["text"])} '
         f'<a href="{esc(f["source"])}" target="_blank" rel="noopener">{esc(f["section"])} →</a></p>'
         for f in p.get("facts") or [])
+    lic = p.get("license") or {}
+    credit_bits = " · ".join(
+        x for x in [lic.get("credit"), lic.get("name")]
+        if x and not x.lower().startswith("unknown"))
+    commons_url = ("https://commons.wikimedia.org/wiki/"
+                   + urllib.parse.quote(img.get("file") or "", safe=":"))
+    attr = (f'<p class="work-attr">{esc(credit_bits)}{" · " if credit_bits else ""}'
+            f'<a href="{esc(commons_url)}" target="_blank" rel="noopener">Wikimedia Commons</a></p>')
     return f"""<section class="work">
-<img loading="lazy" src="{esc(img.get('thumb640'))}" alt="{esc(p['title'])}, painting by the artist">
+<img loading="lazy" src="{esc(img.get('thumb640'))}" alt="{esc(p['title'])}">
 <h2>{esc(p['title'])}</h2>
 <div class="meta">{meta}</div>
 {story}{facts}
+{attr}
 </section>"""
 
 
@@ -223,7 +235,8 @@ def build_artist(a):
 <p class="attr">Text: <a href="{esc((a.get('bio') or {}).get('source') or a.get('wikipedia'))}"
 target="_blank" rel="noopener">Wikipedia</a> (CC BY-SA 4.0) ·
 Images: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>,
-public domain · Part of <a href="/museum/">The Museum</a> at THEODORA</p>
+public domain or Creative Commons (attribution with each work) ·
+Part of <a href="/museum/">The Museum</a> at THEODORA</p>
 </body>
 </html>
 """
@@ -254,7 +267,7 @@ def build_directory(index, artists_full):
     n_gallery = sum(1 for a in index["artists"] if a["hasGallery"])
     desc = (f"The full collection of The Museum at THEODORA: {len(index['periods'])} periods of art "
             f"history and {len(index['artists'])} artists, {n_gallery} of them with walkable 3D "
-            f"galleries of public-domain paintings. All facts from Wikipedia.")
+            f"galleries of freely licensed works. All facts from Wikipedia.")
     jsonld = ('<script type="application/ld+json">' + json.dumps({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -277,7 +290,8 @@ def build_directory(index, artists_full):
 {n_gallery} walkable 3D galleries. Every fact and image from Wikipedia and Wikimedia Commons.</p>
 <div class="ctas"><a class="cta" href="/museum/">Open the interactive timeline →</a></div>
 {''.join(sections)}
-<p class="attr">Text: Wikipedia (CC BY-SA 4.0) · Images: Wikimedia Commons, public domain ·
+<p class="attr">Text: Wikipedia (CC BY-SA 4.0) · Images: Wikimedia Commons, public domain or
+Creative Commons (attribution with each work) ·
 Machine-readable data: <a href="/museum/data/index.json">index.json</a></p>
 </body>
 </html>

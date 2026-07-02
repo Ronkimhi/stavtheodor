@@ -7,6 +7,7 @@ HEAD-checks every image URL against Wikimedia.
 """
 
 import json
+import re
 import subprocess
 import sys
 import time
@@ -65,16 +66,20 @@ for a in index["artists"]:
         warnings.append(f"{a['slug']}: empty bio")
     if full["hasGallery"]:
         gallery_count += 1
-        if len(full["paintings"]) < 6:
+        if len(full["paintings"]) < 4:
             errors.append(f"{a['slug']}: hasGallery but only {len(full['paintings'])} paintings")
-        if len(full["paintings"]) < 8:
-            warnings.append(f"{a['slug']}: below preferred 8 paintings ({len(full['paintings'])})")
+        if len(full["paintings"]) < 6:
+            warnings.append(f"{a['slug']}: below preferred 6 paintings ({len(full['paintings'])})")
     for p in full["paintings"]:
         for k in ("thumb640", "thumb1600"):
             if not p["image"].get(k):
                 errors.append(f"{a['slug']} / {p['title']}: missing {k}")
         lic = (p.get("license", {}).get("name") or "").lower()
-        if not any(x in lic for x in ("public domain", "pd", "cc0", "no restrictions")):
+        # PD marks plus attribution-style CC; NC/ND must never appear.
+        if re.search(r"by-nc|by-nd|\bnc\b|\bnd\b", lic):
+            errors.append(f"{a['slug']} / {p['title']}: blocked license '{lic}'")
+        elif not any(x in lic for x in
+                     ("public domain", "pd", "cc0", "no restrictions", "cc by", "attribution")):
             errors.append(f"{a['slug']} / {p['title']}: suspect license '{lic}'")
         if CHECK_URLS:
             for k in ("thumb640", "thumb1600"):

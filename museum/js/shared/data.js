@@ -40,5 +40,5 @@ export function lifeDates(a) {
 // Wikidata descriptions often embed life dates ("French painter (1840–1926)")
 // which we already display separately.
 export function oneLinerOf(a) {
-  return (a.oneLiner || '').replace(/\s*\(\d{4}[^)]*\)/, '');
+  return (a.oneLiner || '').replace(/\s*\((?:born |b\. )?\d{4}[^)]*\)/, '');
 }
