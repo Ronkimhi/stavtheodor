@@ -56,6 +56,10 @@ for pid, n in per_period.items():
 
 gallery_count = 0
 url_checked = url_bad = 0
+# seed.json may lower the 4-work gallery floor for objects Commons genuinely
+# has fewer usable photos of (minPaintings override, e.g. Togatus Barberini)
+seed = json.loads((HERE / "seed.json").read_text(encoding="utf-8"))
+seed_floor = {s["slug"]: s.get("minPaintings", 4) for s in seed["artists"]}
 for a in index["artists"]:
     f = DATA / "artists" / f"{a['slug']}.json"
     if not f.exists():
@@ -66,7 +70,7 @@ for a in index["artists"]:
         warnings.append(f"{a['slug']}: empty bio")
     if full["hasGallery"]:
         gallery_count += 1
-        if len(full["paintings"]) < 4:
+        if len(full["paintings"]) < seed_floor.get(a["slug"], 4):
             errors.append(f"{a['slug']}: hasGallery but only {len(full['paintings'])} paintings")
         if len(full["paintings"]) < 6:
             warnings.append(f"{a['slug']}: below preferred 6 paintings ({len(full['paintings'])})")

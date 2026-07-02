@@ -16,6 +16,167 @@
   "source": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Aphrodite head Kaufmann Louvre",
+   "year": null,
+   "image": {
+    "file": "File:Aphrodite head Kaufmann Louvre.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Aphrodite_head_Kaufmann_Louvre.jpg/960px-Aphrodite_head_Kaufmann_Louvre.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Aphrodite_head_Kaufmann_Louvre.jpg/1920px-Aphrodite_head_Kaufmann_Louvre.jpg",
+    "pxW": 1944,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Eric Gaba (User:Sting)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Aphrodite of Cnidus 2",
+   "year": null,
+   "image": {
+    "file": "File:Aphrodite of Cnidus 2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Aphrodite_of_Cnidus_2.jpg/960px-Aphrodite_of_Cnidus_2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Aphrodite_of_Cnidus_2.jpg/1920px-Aphrodite_of_Cnidus_2.jpg",
+    "pxW": 1944,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Aphrodite von Knidos",
+   "year": null,
+   "image": {
+    "file": "File:Aphrodite von Knidos.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Aphrodite_von_Knidos.jpg/960px-Aphrodite_von_Knidos.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Aphrodite_von_Knidos.jpg/1920px-Aphrodite_von_Knidos.jpg",
+    "pxW": 3441,
+    "pxH": 6500
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Privatarchiv Foto von MrArifnajafov fotografiert"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cnidus Aphrodite Altemps Inv8619",
+   "year": null,
+   "image": {
+    "file": "File:Cnidus Aphrodite Altemps Inv8619.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cnidus_Aphrodite_Altemps_Inv8619.jpg/960px-Cnidus_Aphrodite_Altemps_Inv8619.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Cnidus_Aphrodite_Altemps_Inv8619.jpg",
+    "pxW": 1550,
+    "pxH": 3625
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy of Praxiteles; restorer: Ippolito Buzzi (Italian, 1562–1634)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colonna-Venus-front",
+   "year": null,
+   "image": {
+    "file": "File:Colonna-Venus-front.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/49/Colonna-Venus-front.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/49/Colonna-Venus-front.jpg",
+    "pxW": 300,
+    "pxH": 536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Knidos Temple of Aphrodite 95 014",
+   "year": null,
+   "image": {
+    "file": "File:Knidos Temple of Aphrodite 95 014.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Knidos_Temple_of_Aphrodite_95_014.jpg/960px-Knidos_Temple_of_Aphrodite_95_014.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Knidos_Temple_of_Aphrodite_95_014.jpg/1920px-Knidos_Temple_of_Aphrodite_95_014.jpg",
+    "pxW": 6384,
+    "pxH": 4095
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Dosseman"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Satala Aphrodite Yerevan 2025",
+   "year": null,
+   "image": {
+    "file": "File:Satala Aphrodite Yerevan 2025.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Satala_Aphrodite_Yerevan_2025.jpg/960px-Satala_Aphrodite_Yerevan_2025.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Satala_Aphrodite_Yerevan_2025.jpg/1920px-Satala_Aphrodite_Yerevan_2025.jpg",
+    "pxW": 3213,
+    "pxH": 4801
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Yerevantsi"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Venus de Medici",
+   "year": null,
+   "image": {
+    "file": "File:Venus de Medici.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Venus_de_Medici.png/960px-Venus_de_Medici.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Venus_de_Medici.png",
+    "pxW": 1713,
+    "pxH": 4568
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Wai Laam Lo"
+   }
+  }
+ ]
 }

@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Stonehenge"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Stonehenge",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "BLEgerton3028Fol30rStonehengeCropped",
+   "year": null,
+   "image": {
+    "file": "File:BLEgerton3028Fol30rStonehengeCropped.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/a/a4/BLEgerton3028Fol30rStonehengeCropped.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a4/BLEgerton3028Fol30rStonehengeCropped.jpg",
+    "pxW": 613,
+    "pxH": 645
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown artistUnknown artist"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Constable - Stonehenge, 1629-1888, 2006AK8142",
+   "year": null,
+   "image": {
+    "file": "File:Constable - Stonehenge, 1629-1888, 2006AK8142.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg/960px-Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg/1920px-Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg",
+    "pxW": 2500,
+    "pxH": 1657
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "John Constable"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Expansion of farming in western Eurasia, 9600–4000 BCE",
+   "year": null,
+   "image": {
+    "file": "File:Expansion of farming in western Eurasia, 9600–4000 BCE.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png/960px-Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png/1920px-Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png",
+    "pxW": 3492,
+    "pxH": 2202
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Detlef Gronenborn, Barbara Horejs, Börner, Ober"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stone Henge 1920 restoration - newspaperphoto",
+   "year": null,
+   "image": {
+    "file": "File:Stone Henge 1920 restoration - newspaperphoto.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stone_Henge_1920_restoration_-_newspaperphoto.jpg/960px-Stone_Henge_1920_restoration_-_newspaperphoto.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stone_Henge_1920_restoration_-_newspaperphoto.jpg/1920px-Stone_Henge_1920_restoration_-_newspaperphoto.jpg",
+    "pxW": 5734,
+    "pxH": 2073
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Richmond times-dispatch"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stone Plan",
+   "year": null,
+   "image": {
+    "file": "File:Stone Plan.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stone_Plan.jpg/960px-Stone_Plan.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stone_Plan.jpg/1920px-Stone_Plan.jpg",
+    "pxW": 4016,
+    "pxH": 4252
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Anthony Johnson"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stonehenge, from Gough’s edition of Britannia, 1789",
+   "year": null,
+   "image": {
+    "file": "File:Stonehenge, from Gough’s edition of Britannia, 1789.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/72/Stonehenge%2C_from_Gough%E2%80%99s_edition_of_Britannia%2C_1789.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/72/Stonehenge%2C_from_Gough%E2%80%99s_edition_of_Britannia%2C_1789.jpg",
+    "pxW": 593,
+    "pxH": 461
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Richard Gough (1735 – 1809)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stonehenge2007 07 30",
+   "year": null,
+   "image": {
+    "file": "File:Stonehenge2007 07 30.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/960px-Stonehenge2007_07_30.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/1920px-Stonehenge2007_07_30.jpg",
+    "pxW": 2816,
+    "pxH": 2112
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "garethwiscombe"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stonehenge84",
+   "year": null,
+   "image": {
+    "file": "File:Stonehenge84.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Stonehenge84.jpg/960px-Stonehenge84.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/47/Stonehenge84.jpg",
+    "pxW": 1738,
+    "pxH": 1174
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Salix alba"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stonehenge - Wiltonia sive Comitatus Wiltoniensis; Anglice Wilshire",
+   "year": null,
+   "image": {
+    "file": "File:Stonehenge - Wiltonia sive Comitatus Wiltoniensis; Anglice Wilshire (Atlas van Loon).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg/960px-Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg/1920px-Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg",
+    "pxW": 2963,
+    "pxH": 2503
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Blaeu, J"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Stonehenge 1877",
+   "year": null,
+   "image": {
+    "file": "File:Stonehenge 1877.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Stonehenge_1877.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Stonehenge_1877.JPG",
+    "pxW": 635,
+    "pxH": 349
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Edwin J. Acott"
+   }
+  }
+ ]
 }

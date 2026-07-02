@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Red-figure_pottery",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Artemis hinds Louvre CA1795",
+   "year": null,
+   "image": {
+    "file": "File:Artemis hinds Louvre CA1795.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Artemis_hinds_Louvre_CA1795.jpg/960px-Artemis_hinds_Louvre_CA1795.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Artemis_hinds_Louvre_CA1795.jpg/1920px-Artemis_hinds_Louvre_CA1795.jpg",
+    "pxW": 2576,
+    "pxH": 2014
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Painter of the Great Athens Kantharos"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena Herakles Staatliche Antikensammlungen 2301 A",
+   "year": null,
+   "image": {
+    "file": "File:Athena Herakles Staatliche Antikensammlungen 2301 A.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg/960px-Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg/1920px-Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg",
+    "pxW": 2913,
+    "pxH": 2014
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andokides painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena Herakles Staatliche Antikensammlungen 2301 B",
+   "year": null,
+   "image": {
+    "file": "File:Athena Herakles Staatliche Antikensammlungen 2301 B.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg/960px-Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg/1920px-Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg",
+    "pxW": 2760,
+    "pxH": 1881
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andokides Painter or Lysippides Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena Poseidon Louvre CA7426",
+   "year": null,
+   "image": {
+    "file": "File:Athena Poseidon Louvre CA7426.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Athena_Poseidon_Louvre_CA7426.jpg/960px-Athena_Poseidon_Louvre_CA7426.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Athena_Poseidon_Louvre_CA7426.jpg/1920px-Athena_Poseidon_Louvre_CA7426.jpg",
+    "pxW": 2550,
+    "pxH": 3400
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Nazzano Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cup Apatouria Louvre G138",
+   "year": null,
+   "image": {
+    "file": "File:Cup Apatouria Louvre G138.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cup_Apatouria_Louvre_G138.jpg/960px-Cup_Apatouria_Louvre_G138.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cup_Apatouria_Louvre_G138.jpg/1920px-Cup_Apatouria_Louvre_G138.jpg",
+    "pxW": 2427,
+    "pxH": 2014
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Triptolemos Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dioskouroi Herakles BM E224",
+   "year": null,
+   "image": {
+    "file": "File:Dioskouroi Herakles BM E224.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Dioskouroi_Herakles_BM_E224.jpg/960px-Dioskouroi_Herakles_BM_E224.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/03/Dioskouroi_Herakles_BM_E224.jpg",
+    "pxW": 1816,
+    "pxH": 1816
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Meidias Painter (eponym vase, according to signature)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Euphronios Krater Antikensammlung Berlin",
+   "year": null,
+   "image": {
+    "file": "File:Euphronios Krater Antikensammlung Berlin.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Euphronios_Krater_Antikensammlung_Berlin.jpg/960px-Euphronios_Krater_Antikensammlung_Berlin.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Euphronios_Krater_Antikensammlung_Berlin.jpg",
+    "pxW": 1569,
+    "pxH": 1373
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Picture taken by Marcus Cyron"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Exekias Dionysos Staatliche Antikensammlungen 2044",
+   "year": null,
+   "image": {
+    "file": "File:Exekias Dionysos Staatliche Antikensammlungen 2044.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Exekias_Dionysos_Staatliche_Antikensammlungen_2044.jpg/960px-Exekias_Dionysos_Staatliche_Antikensammlungen_2044.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/df/Exekias_Dionysos_Staatliche_Antikensammlungen_2044.jpg",
+    "pxW": 1542,
+    "pxH": 1725
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Exekias"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Fight Andokides Louvre G1",
+   "year": null,
+   "image": {
+    "file": "File:Fight Andokides Louvre G1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Fight_Andokides_Louvre_G1.jpg/960px-Fight_Andokides_Louvre_G1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Fight_Andokides_Louvre_G1.jpg/1920px-Fight_Andokides_Louvre_G1.jpg",
+    "pxW": 2875,
+    "pxH": 2050
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andokides (potter, signed), Andokides Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Gnathia Ware, Southern Italy, 310-260 BC, Prague Kinsky, 140912",
+   "year": null,
+   "image": {
+    "file": "File:Gnathia Ware, Southern Italy, 310-260 BC, Prague Kinsky, 140912.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gnathia_Ware%2C_Southern_Italy%2C_310-260_BC%2C_Prague_Kinsky%2C_140912.jpg/960px-Gnathia_Ware%2C_Southern_Italy%2C_310-260_BC%2C_Prague_Kinsky%2C_140912.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gnathia_Ware%2C_Southern_Italy%2C_310-260_BC%2C_Prague_Kinsky%2C_140912.jpg/1920px-Gnathia_Ware%2C_Southern_Italy%2C_310-260_BC%2C_Prague_Kinsky%2C_140912.jpg",
+    "pxW": 2955,
+    "pxH": 4433
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Zde"
+   }
+  }
+ ]
 }

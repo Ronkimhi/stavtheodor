@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Mask of Agamemnon",
+   "year": null,
+   "image": {
+    "file": "File:Agamemnon mask NAMA Athens Greece.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Agamemnon_mask_NAMA_Athens_Greece.jpg/960px-Agamemnon_mask_NAMA_Athens_Greece.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Agamemnon_mask_NAMA_Athens_Greece.jpg/1920px-Agamemnon_mask_NAMA_Athens_Greece.jpg",
+    "pxW": 3000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": "National Archaeological Museum, Athens",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Jebulon"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Funeral mask known as the Mask of Agamemnon",
+   "year": null,
+   "image": {
+    "file": "File:Funeral mask Mycenae \"Agamemnon\", NAMA 624, 225545.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg/960px-Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg/1920px-Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg",
+    "pxW": 2619,
+    "pxH": 3491
+   },
+   "cm": null,
+   "collection": "National Archaeological Museum, Athens",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Zde"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Gold death mask from Grave Circle A, Mycenae",
+   "year": null,
+   "image": {
+    "file": "File:Gold death-mask known as ‘Mask of Agamemnon,’ Mycenae, Grave Circle A, Grave V, 16th cent. BC. (28423089016).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg/960px-Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg/1920px-Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gary Todd from Xinzheng, China"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Mask of Agamemnon in its display case",
+   "year": null,
+   "image": {
+    "file": "File:The mask of agamemnon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/The_mask_of_agamemnon.jpg/960px-The_mask_of_agamemnon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/The_mask_of_agamemnon.jpg/1920px-The_mask_of_agamemnon.jpg",
+    "pxW": 3192,
+    "pxH": 2128
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Xuan Che"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athens — Mask of Agamemnon",
+   "year": null,
+   "image": {
+    "file": "File:Athens — Mask of Agamemnon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Athens_%E2%80%94_Mask_of_Agamemnon.jpg/960px-Athens_%E2%80%94_Mask_of_Agamemnon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Athens_%E2%80%94_Mask_of_Agamemnon.jpg/1920px-Athens_%E2%80%94_Mask_of_Agamemnon.jpg",
+    "pxW": 3455,
+    "pxH": 3268
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Heinrich Schliemann",
+   "year": null,
+   "image": {
+    "file": "File:Heinrich Schliemann.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/1/15/Heinrich_Schliemann.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/15/Heinrich_Schliemann.jpg",
+    "pxW": 500,
+    "pxH": 712
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Photograph:  Ed. Schultze Hofphotograph Heidelberg Plöckstrasse 79"
+   }
+  }
+ ]
 }

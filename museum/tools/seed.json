@@ -35,7 +35,13 @@
   "artists": [
     { "slug": "chauvet-cave", "wikipedia": "Chauvet Cave", "periods": ["prehistoric-art"], "born": -34500 },
     { "slug": "cave-of-altamira", "wikipedia": "Cave of Altamira", "periods": ["prehistoric-art"], "born": -34000, "died": -13000 },
-    { "slug": "venus-of-willendorf", "wikipedia": "Venus of Willendorf", "periods": ["prehistoric-art"], "born": -28000 },
+    { "slug": "venus-of-willendorf", "wikipedia": "Venus of Willendorf", "periods": ["prehistoric-art"], "born": -28000,
+      "commonsWorks": [
+        {"file": "File:Venus von Willendorf 01.jpg", "title": "Venus of Willendorf, front view", "collection": "Natural History Museum, Vienna"},
+        {"file": "File:Venus of Willendorf, 20210730 1214 1255.jpg", "title": "Venus of Willendorf", "collection": "Natural History Museum, Vienna"},
+        {"file": "File:Venus of Willendorf 03.jpg", "title": "Venus of Willendorf, back view", "collection": "Natural History Museum, Vienna"},
+        {"file": "File:Willendorf-Venus-1468.jpg", "title": "Venus of Willendorf, profile view"}
+      ] },
     { "slug": "lascaux", "wikipedia": "Lascaux", "periods": ["prehistoric-art"], "born": -15000 },
     { "slug": "stonehenge", "wikipedia": "Stonehenge", "periods": ["prehistoric-art"], "born": -3000, "died": -2000 },
 
@@ -45,18 +51,35 @@
     { "slug": "assyria", "wikipedia": "Assyria", "periods": ["mesopotamia"], "born": -2025, "died": -609 },
 
     { "slug": "giza-pyramids", "wikipedia": "Giza pyramid complex", "periods": ["ancient-egypt"], "born": -2600, "died": -2500 },
-    { "slug": "khafre-enthroned", "wikipedia": "Khafre Enthroned", "periods": ["ancient-egypt"], "born": -2570 },
+    { "slug": "khafre-enthroned", "wikipedia": "Khafre Enthroned", "periods": ["ancient-egypt"], "born": -2570,
+      "commonsWorks": [
+        {"file": "File:Khafre Enthroned, side view.JPG", "title": "Khafre Enthroned, side view", "collection": "Egyptian Museum, Cairo"},
+        {"file": "File:Khafre Enthroned, near-front view.JPG", "title": "Khafre Enthroned, near-front view", "collection": "Egyptian Museum, Cairo"},
+        {"file": "File:Khafre Enthroned, three-quarter view.JPG", "title": "Khafre Enthroned, three-quarter view", "collection": "Egyptian Museum, Cairo"},
+        {"file": "File:Ägyptisches Museum Kairo 2016-03-29 Chephren 04.jpg", "title": "Statue of Khafre in the Egyptian Museum, Cairo"}
+      ] },
     { "slug": "the-seated-scribe", "wikipedia": "The Seated Scribe", "periods": ["ancient-egypt"], "born": -2450 },
     { "slug": "karnak", "wikipedia": "Karnak", "periods": ["ancient-egypt"], "born": -2000, "died": -300 },
     { "slug": "book-of-the-dead", "wikipedia": "Book of the Dead", "periods": ["ancient-egypt"], "born": -1550, "died": -50 },
     { "slug": "nefertiti-bust", "wikipedia": "Nefertiti Bust", "periods": ["ancient-egypt"], "born": -1345 },
     { "slug": "abu-simbel", "wikipedia": "Abu Simbel", "periods": ["ancient-egypt"], "born": -1264, "died": -1244 },
-    { "slug": "statue-of-ramesses-ii", "wikipedia": "Statue of Ramesses II", "periods": ["ancient-egypt"], "born": -1250 },
+    { "slug": "statue-of-ramesses-ii", "wikipedia": "Statue of Ramesses II", "periods": ["ancient-egypt"], "born": -1250,
+      "commonsWorks": [
+        {"file": "File:Statue of Ramesses II in Karnak Temple in Luxor Egypt.JPG", "title": "Colossal statue of Ramesses II at Karnak"},
+        {"file": "File:Templo de Karnak, Luxor, Egipto, 2022-04-03, DD 145.jpg", "title": "Colossus of Ramesses II, Karnak Temple, Luxor"},
+        {"file": "File:Colossus Of Ramesses (235168871).jpeg", "title": "Colossus of Ramesses II"}
+      ] },
 
     { "slug": "minoan-civilization", "wikipedia": "Minoan civilization", "periods": ["aegean"], "born": -3100, "died": -1100, "activeEnd": -1450 },
     { "slug": "knossos", "wikipedia": "Knossos", "periods": ["aegean"], "born": -1950, "died": -1350 },
     { "slug": "mycenaean-greece", "wikipedia": "Mycenaean Greece", "periods": ["aegean"], "born": -1750, "died": -1050 },
-    { "slug": "mask-of-agamemnon", "wikipedia": "Mask of Agamemnon", "periods": ["aegean"], "born": -1550 },
+    { "slug": "mask-of-agamemnon", "wikipedia": "Mask of Agamemnon", "periods": ["aegean"], "born": -1550,
+      "commonsWorks": [
+        {"file": "File:Agamemnon mask NAMA Athens Greece.jpg", "title": "Mask of Agamemnon", "collection": "National Archaeological Museum, Athens"},
+        {"file": "File:Funeral mask Mycenae \"Agamemnon\", NAMA 624, 225545.jpg", "title": "Funeral mask known as the Mask of Agamemnon", "collection": "National Archaeological Museum, Athens"},
+        {"file": "File:Gold death-mask known as ‘Mask of Agamemnon,’ Mycenae, Grave Circle A, Grave V, 16th cent. BC. (28423089016).jpg", "title": "Gold death mask from Grave Circle A, Mycenae"},
+        {"file": "File:The mask of agamemnon.jpg", "title": "The Mask of Agamemnon in its display case"}
+      ] },
     { "slug": "bull-leaping-fresco", "wikipedia": "Bull-Leaping Fresco", "periods": ["aegean"], "born": -1450 },
     { "slug": "lion-gate", "wikipedia": "Lion Gate", "periods": ["aegean"], "born": -1250 },
 
@@ -91,7 +114,10 @@
 
     { "slug": "verism", "wikipedia": "Verism", "periods": ["republican-rome"], "activeStart": -150, "activeEnd": -27 },
     { "slug": "capitoline-brutus", "wikipedia": "Capitoline Brutus", "periods": ["republican-rome"], "born": -300 },
-    { "slug": "togatus-barberini", "wikipedia": "Togatus Barberini", "periods": ["republican-rome"], "born": -75 },
+    { "slug": "togatus-barberini", "wikipedia": "Togatus Barberini", "periods": ["republican-rome"], "born": -75, "minPaintings": 2,
+      "commonsWorks": [
+        {"file": "File:The so-called Togatus Barberini group, a funerary statue depicting a Roman senator holding the imagines (effigies) of deceased ancestors, late 1st century BC, head (not belonging) middle 1st century BC, Centrale Montemartini, Rome.jpg", "title": "Togatus Barberini, a Roman senator holding busts of his ancestors", "collection": "Centrale Montemartini, Rome"}
+      ] },
 
     { "slug": "augustus-of-prima-porta", "wikipedia": "Augustus of Prima Porta", "periods": ["imperial-rome"], "born": 15 },
     { "slug": "ara-pacis", "wikipedia": "Ara Pacis", "periods": ["imperial-rome"], "born": -13, "died": -9 },

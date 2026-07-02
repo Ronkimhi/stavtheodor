@@ -16,6 +16,167 @@
   "source": "https://en.wikipedia.org/wiki/Tomb_of_the_Leopards"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Tomb_of_the_Leopards",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Danseurs et musiciens, tombe des léopards",
+   "year": null,
+   "image": {
+    "file": "File:Danseurs et musiciens, tombe des léopards.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Danseurs_et_musiciens%2C_tombe_des_l%C3%A9opards.jpg/960px-Danseurs_et_musiciens%2C_tombe_des_l%C3%A9opards.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Danseurs_et_musiciens%2C_tombe_des_l%C3%A9opards.jpg/1920px-Danseurs_et_musiciens%2C_tombe_des_l%C3%A9opards.jpg",
+    "pxW": 2892,
+    "pxH": 1603
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "La tombe étrusque des Léopards",
+   "year": null,
+   "image": {
+    "file": "File:La tombe étrusque des Léopards (Tarquinia, Italie) (27764406718).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/La_tombe_%C3%A9trusque_des_L%C3%A9opards_%28Tarquinia%2C_Italie%29_%2827764406718%29.jpg/960px-La_tombe_%C3%A9trusque_des_L%C3%A9opards_%28Tarquinia%2C_Italie%29_%2827764406718%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/La_tombe_%C3%A9trusque_des_L%C3%A9opards_%28Tarquinia%2C_Italie%29_%2827764406718%29.jpg/1920px-La_tombe_%C3%A9trusque_des_L%C3%A9opards_%28Tarquinia%2C_Italie%29_%2827764406718%29.jpg",
+    "pxW": 2400,
+    "pxH": 1600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Jean-Pierre Dalbéra from Paris, France"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Le tombe etrusche dipinte 09",
+   "year": null,
+   "image": {
+    "file": "File:Le tombe etrusche dipinte 09.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Le_tombe_etrusche_dipinte_09.JPG/960px-Le_tombe_etrusche_dipinte_09.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Le_tombe_etrusche_dipinte_09.JPG/1920px-Le_tombe_etrusche_dipinte_09.JPG",
+    "pxW": 2048,
+    "pxH": 1536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Franck Schneider"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Le tombe etrusche dipinte 10",
+   "year": null,
+   "image": {
+    "file": "File:Le tombe etrusche dipinte 10.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Le_tombe_etrusche_dipinte_10.JPG/960px-Le_tombe_etrusche_dipinte_10.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Le_tombe_etrusche_dipinte_10.JPG/1920px-Le_tombe_etrusche_dipinte_10.JPG",
+    "pxW": 2048,
+    "pxH": 1536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Franck Schneider"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Monterozzi necropolis — Tomb of the Leopards",
+   "year": null,
+   "image": {
+    "file": "File:Monterozzi necropolis — Tomb of the Leopards.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg/960px-Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg/1920px-Monterozzi_necropolis_%E2%80%94_Tomb_of_the_Leopards.jpg",
+    "pxW": 10187,
+    "pxH": 5234
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gleb Simonov"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Syriskos Painter - Psykter with Athlete and Servant Boy and Youth and a Dog - Walters 4877 - Side A",
+   "year": null,
+   "image": {
+    "file": "File:Syriskos Painter - Psykter with Athlete and Servant Boy and Youth and a Dog - Walters 4877 - Side A.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Syriskos_Painter_-_Psykter_with_Athlete_and_Servant_Boy_and_Youth_and_a_Dog_-_Walters_4877_-_Side_A.jpg/960px-Syriskos_Painter_-_Psykter_with_Athlete_and_Servant_Boy_and_Youth_and_a_Dog_-_Walters_4877_-_Side_A.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Syriskos_Painter_-_Psykter_with_Athlete_and_Servant_Boy_and_Youth_and_a_Dog_-_Walters_4877_-_Side_A.jpg",
+    "pxW": 1489,
+    "pxH": 1800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Syriskos"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Tomba dei leopardi, 470 ac ca. 01",
+   "year": null,
+   "image": {
+    "file": "File:Tomba dei leopardi, 470 ac ca. 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Tomba_dei_leopardi%2C_470_ac_ca._01.jpg/960px-Tomba_dei_leopardi%2C_470_ac_ca._01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Tomba_dei_leopardi%2C_470_ac_ca._01.jpg/1920px-Tomba_dei_leopardi%2C_470_ac_ca._01.jpg",
+    "pxW": 3392,
+    "pxH": 2432
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Tomba dei leopardi, 470 ac ca. 07 servo e simposianti",
+   "year": null,
+   "image": {
+    "file": "File:Tomba dei leopardi, 470 ac ca. 07 servo e simposianti.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Tomba_dei_leopardi%2C_470_ac_ca._07_servo_e_simposianti.jpg/960px-Tomba_dei_leopardi%2C_470_ac_ca._07_servo_e_simposianti.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Tomba_dei_leopardi%2C_470_ac_ca._07_servo_e_simposianti.jpg/1920px-Tomba_dei_leopardi%2C_470_ac_ca._07_servo_e_simposianti.jpg",
+    "pxW": 3648,
+    "pxH": 2432
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  }
+ ]
 }

@@ -147,6 +147,36 @@ def wp_qid(title):
     return None
 
 
+# Files that illustrate an article but are not artworks: maps, flags, plans,
+# diagrams, logos, audio, vector graphics.
+NON_ARTWORK_FILE = re.compile(
+    r"\.(svg|gif|ogg|oga|ogv|webm|pdf|djvu|mid)$"
+    r"|map|locator|logo|flag|icon|seal|coat[_ ]of[_ ]arms|diagram|plan[_ ]of"
+    r"|layout|chart|graph|scheme|reconstruction[_ ]drawing|timeline",
+    re.I,
+)
+
+
+def wp_article_images(title):
+    """File titles used on the entity's own Wikipedia article, in page order.
+    For monuments, sites and cultures these are the images that editors chose
+    to illustrate the subject, which is the closest thing to a curated set."""
+    d = get_json(
+        "https://en.wikipedia.org/w/api.php?action=query&prop=images"
+        "&imlimit=100&redirects=1&format=json&titles="
+        + urllib.parse.quote(title, safe="")
+    )
+    if not d:
+        return []
+    files = []
+    for page in d["query"]["pages"].values():
+        for im in page.get("images", []):
+            f = im.get("title", "")
+            if f.startswith("File:") and not NON_ARTWORK_FILE.search(f):
+                files.append(f)
+    return files
+
+
 def wp_full_extract(title):
     d = get_json(
         "https://en.wikipedia.org/w/api.php?action=query&prop=extracts"
@@ -466,6 +496,28 @@ def build_artist(seed_artist, report):
         })
     keep_rows(curated, min_px=440)
 
+    # Ancient-wing entities (seeded dates mark works, sites, cultures and
+    # sculptors known only through copies): no Wikidata creator credits exist,
+    # so hang the gallery with the images that illustrate the entity's own
+    # Wikipedia article, under the same license and size gates.
+    if len(kept) < max_p and ("born" in seed_artist or "activeStart" in seed_artist):
+        article_rows = []
+        for f in wp_article_images(title):
+            fname = f[len("File:"):]
+            clean = re.sub(r"\.[a-z0-9]+$", "", fname, flags=re.I).replace("_", " ")
+            clean = re.sub(r"\s*\(.*?\)\s*$", "", clean).strip() or fname
+            article_rows.append({
+                "qid": None,
+                "title": clean,
+                "file": f,
+                "year": None,
+                "cm": None,
+                "collection": None,
+                "sitelinks": 0,
+                "article": None,
+            })
+        keep_rows(article_rows, min_px=440)
+
     info1600 = commons_imageinfo([r["file"] for r in kept], 1600)
 
     paintings = []
@@ -502,7 +554,9 @@ def build_artist(seed_artist, report):
         })
 
     paintings.sort(key=lambda p: (p["year"] is None, p["year"] or 0))
-    has_gallery = len(paintings) >= MIN_PAINTINGS
+    # Per-entity gate override for objects Commons genuinely has few photos of
+    # (e.g. the Togatus Barberini exists in exactly two usable images).
+    has_gallery = len(paintings) >= seed_artist.get("minPaintings", MIN_PAINTINGS)
 
     artist = {
         "slug": slug,

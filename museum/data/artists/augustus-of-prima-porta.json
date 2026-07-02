@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Augusto di pirma porta, inv. 2290, 02",
+   "year": null,
+   "image": {
+    "file": "File:Augusto di pirma porta, inv. 2290, 02.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG/960px-Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG/1920px-Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG",
+    "pxW": 1944,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Augustus of Prima Porta",
+   "year": null,
+   "image": {
+    "file": "File:Augustus of Prima Porta.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Augustus_of_Prima_Porta.jpg/960px-Augustus_of_Prima_Porta.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Augustus_of_Prima_Porta.jpg/1920px-Augustus_of_Prima_Porta.jpg",
+    "pxW": 5437,
+    "pxH": 8156
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Justin Benttinen"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Brogi, Giacomo (1822-1881) - n. 4123 - Roma - Vaticano - Cesare Augusto - Statua in marmo",
+   "year": null,
+   "image": {
+    "file": "File:Brogi, Giacomo (1822-1881) - n. 4123 - Roma - Vaticano - Cesare Augusto - Statua in marmo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Brogi%2C_Giacomo_%281822-1881%29_-_n._4123_-_Roma_-_Vaticano_-_Cesare_Augusto_-_Statua_in_marmo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Brogi%2C_Giacomo_%281822-1881%29_-_n._4123_-_Roma_-_Vaticano_-_Cesare_Augusto_-_Statua_in_marmo.jpg",
+    "pxW": 570,
+    "pxH": 730
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Giacomo Brogi"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Oxford. Ashmolean Museum. Gods in Colour. Augustus of Prima Porta 1",
+   "year": null,
+   "image": {
+    "file": "File:Oxford. Ashmolean Museum. Gods in Colour. Augustus of Prima Porta 1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg/960px-Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg/1920px-Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg",
+    "pxW": 3864,
+    "pxH": 5152
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Enrique Íñiguez Rodríguez (Qoan)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ritrovamento della statue di cesare augusto a prima porta - Le scienze e le arti sotto il pontificato di Pio IX bw",
+   "year": null,
+   "image": {
+    "file": "File:Ritrovamento della statue di cesare augusto a prima porta - Le scienze e le arti sotto il pontificato di Pio IX bw.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg/960px-Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg",
+    "pxW": 1371,
+    "pxH": 1013
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "G. Bianchi?"
+   }
+  }
+ ]
 }

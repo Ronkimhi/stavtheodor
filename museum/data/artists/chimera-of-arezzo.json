@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Chimera_of_Arezzo"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Chimera_of_Arezzo",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Chimera d'arezzo, fi, 01",
+   "year": null,
+   "image": {
+    "file": "File:Chimera d'arezzo, fi, 01.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chimera_d%27arezzo%2C_fi%2C_01.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_01.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chimera_d%27arezzo%2C_fi%2C_01.JPG/1920px-Chimera_d%27arezzo%2C_fi%2C_01.JPG",
+    "pxW": 2664,
+    "pxH": 1770
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Chimera d'arezzo, fi, 04",
+   "year": null,
+   "image": {
+    "file": "File:Chimera d'arezzo, fi, 04.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chimera_d%27arezzo%2C_fi%2C_04.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_04.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chimera_d%27arezzo%2C_fi%2C_04.JPG/1920px-Chimera_d%27arezzo%2C_fi%2C_04.JPG",
+    "pxW": 2473,
+    "pxH": 1788
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Chimera d'arezzo, fi, 05",
+   "year": null,
+   "image": {
+    "file": "File:Chimera d'arezzo, fi, 05.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Chimera_d%27arezzo%2C_fi%2C_05.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_05.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Chimera_d%27arezzo%2C_fi%2C_05.JPG/1920px-Chimera_d%27arezzo%2C_fi%2C_05.JPG",
+    "pxW": 2350,
+    "pxH": 1884
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Chimera d'arezzo, fi, 07",
+   "year": null,
+   "image": {
+    "file": "File:Chimera d'arezzo, fi, 07.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chimera_d%27arezzo%2C_fi%2C_07.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_07.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Chimera_d%27arezzo%2C_fi%2C_07.JPG",
+    "pxW": 1232,
+    "pxH": 2212
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Chimera d'arezzo, fi, 09",
+   "year": null,
+   "image": {
+    "file": "File:Chimera d'arezzo, fi, 09.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Chimera_d%27arezzo%2C_fi%2C_09.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_09.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Chimera_d%27arezzo%2C_fi%2C_09.JPG/1920px-Chimera_d%27arezzo%2C_fi%2C_09.JPG",
+    "pxW": 2386,
+    "pxH": 2055
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "sailko"
+   }
+  }
+ ]
 }

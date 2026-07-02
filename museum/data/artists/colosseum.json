@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Colosseum"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Colosseum",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "046CupolaSPietro",
+   "year": null,
+   "image": {
+    "file": "File:046CupolaSPietro.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/5a/046CupolaSPietro.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/5a/046CupolaSPietro.jpg",
+    "pxW": 800,
+    "pxH": 600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "MarkusMark"
+   }
+  },
+  {
+   "qid": null,
+   "title": "0 Colosseum - Rome 111001",
+   "year": null,
+   "image": {
+    "file": "File:0 Colosseum - Rome 111001 (2).JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/0_Colosseum_-_Rome_111001_%282%29.JPG/960px-0_Colosseum_-_Rome_111001_%282%29.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/0_Colosseum_-_Rome_111001_%282%29.JPG/1920px-0_Colosseum_-_Rome_111001_%282%29.JPG",
+    "pxW": 3610,
+    "pxH": 2407
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Jean-Pol GRANDMONT"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ave Caesar Morituri te Salutant (Gérôme) 01",
+   "year": null,
+   "image": {
+    "file": "File:Ave Caesar Morituri te Salutant (Gérôme) 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ave_Caesar_Morituri_te_Salutant_%28G%C3%A9r%C3%B4me%29_01.jpg/960px-Ave_Caesar_Morituri_te_Salutant_%28G%C3%A9r%C3%B4me%29_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ave_Caesar_Morituri_te_Salutant_%28G%C3%A9r%C3%B4me%29_01.jpg/1920px-Ave_Caesar_Morituri_te_Salutant_%28G%C3%A9r%C3%B4me%29_01.jpg",
+    "pxW": 3000,
+    "pxH": 1881
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Christoffer Wilhelm Eckersberg - View of the interior of the Colosseum - Google Art Project",
+   "year": null,
+   "image": {
+    "file": "File:Christoffer Wilhelm Eckersberg - View of the interior of the Colosseum - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Christoffer_Wilhelm_Eckersberg_-_View_of_the_interior_of_the_Colosseum_-_Google_Art_Project.jpg/960px-Christoffer_Wilhelm_Eckersberg_-_View_of_the_interior_of_the_Colosseum_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Christoffer_Wilhelm_Eckersberg_-_View_of_the_interior_of_the_Colosseum_-_Google_Art_Project.jpg/1920px-Christoffer_Wilhelm_Eckersberg_-_View_of_the_interior_of_the_Colosseum_-_Google_Art_Project.jpg",
+    "pxW": 2509,
+    "pxH": 2848
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Christoffer Wilhelm Eckersberg"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cole Thomas Interior of the Colosseum Rome 1832",
+   "year": null,
+   "image": {
+    "file": "File:Cole Thomas Interior of the Colosseum Rome 1832.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Cole_Thomas_Interior_of_the_Colosseum_Rome_1832.jpg/960px-Cole_Thomas_Interior_of_the_Colosseum_Rome_1832.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/91/Cole_Thomas_Interior_of_the_Colosseum_Rome_1832.jpg",
+    "pxW": 1000,
+    "pxH": 549
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Thomas Cole"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Coliseo medieval",
+   "year": null,
+   "image": {
+    "file": "File:Coliseo medieval.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Coliseo_medieval.jpg/960px-Coliseo_medieval.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/78/Coliseo_medieval.jpg",
+    "pxW": 1299,
+    "pxH": 899
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colosseo 2020",
+   "year": null,
+   "image": {
+    "file": "File:Colosseo 2020.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1920px-Colosseo_2020.jpg",
+    "pxW": 12051,
+    "pxH": 8442
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "FeaturedPics"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colosseum, Eastern Interior",
+   "year": null,
+   "image": {
+    "file": "File:Colosseum, Eastern Interior.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Colosseum%2C_Eastern_Interior.jpg/960px-Colosseum%2C_Eastern_Interior.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Colosseum%2C_Eastern_Interior.jpg/1920px-Colosseum%2C_Eastern_Interior.jpg",
+    "pxW": 5872,
+    "pxH": 3915
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Julian Lupyan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colosseum, Rome",
+   "year": null,
+   "image": {
+    "file": "File:Colosseum, Rome.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Colosseum%2C_Rome.jpg/960px-Colosseum%2C_Rome.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Colosseum%2C_Rome.jpg/1920px-Colosseum%2C_Rome.jpg",
+    "pxW": 6000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Julian Lupyan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colosseum-Entrance LII",
+   "year": null,
+   "image": {
+    "file": "File:Colosseum-Entrance LII.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Colosseum-Entrance_LII.jpg/960px-Colosseum-Entrance_LII.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Colosseum-Entrance_LII.jpg",
+    "pxW": 1024,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "WarpFlyght"
+   }
+  }
+ ]
 }

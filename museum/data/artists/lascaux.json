@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Lascaux"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Lascaux",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Lascaux, Megaloceros",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux, Megaloceros.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Lascaux%2C_Megaloceros.jpg/960px-Lascaux%2C_Megaloceros.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Lascaux%2C_Megaloceros.jpg",
+    "pxW": 1775,
+    "pxH": 1744
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "HTO"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lascaux-IV 01",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux-IV 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Lascaux-IV_01.jpg/960px-Lascaux-IV_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Lascaux-IV_01.jpg/1920px-Lascaux-IV_01.jpg",
+    "pxW": 4288,
+    "pxH": 2848
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Traumrune"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lascaux2",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/07/Lascaux2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/07/Lascaux2.jpg",
+    "pxW": 598,
+    "pxH": 450
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lascaux II",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux II.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Lascaux_II.jpg/960px-Lascaux_II.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Lascaux_II.jpg/1920px-Lascaux_II.jpg",
+    "pxW": 2748,
+    "pxH": 1827
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Jack Versloot"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lascaux entrance",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux entrance.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Lascaux_entrance.jpg/960px-Lascaux_entrance.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lascaux_entrance.jpg",
+    "pxW": 1552,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Ethan Doyle White"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lascaux painting",
+   "year": null,
+   "image": {
+    "file": "File:Lascaux painting.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg",
+    "pxW": 720,
+    "pxH": 472
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "EU"
+   }
+  }
+ ]
 }

@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Khafre_Enthroned",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Khafre Enthroned, side view",
+   "year": null,
+   "image": {
+    "file": "File:Khafre Enthroned, side view.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Khafre_Enthroned%2C_side_view.JPG/960px-Khafre_Enthroned%2C_side_view.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Khafre_Enthroned%2C_side_view.JPG/1920px-Khafre_Enthroned%2C_side_view.JPG",
+    "pxW": 2248,
+    "pxH": 3582
+   },
+   "cm": null,
+   "collection": "Egyptian Museum, Cairo",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "A. Parrot"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Khafre Enthroned, near-front view",
+   "year": null,
+   "image": {
+    "file": "File:Khafre Enthroned, near-front view.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Khafre_Enthroned%2C_near-front_view.JPG/960px-Khafre_Enthroned%2C_near-front_view.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Khafre_Enthroned%2C_near-front_view.JPG/1920px-Khafre_Enthroned%2C_near-front_view.JPG",
+    "pxW": 2248,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": "Egyptian Museum, Cairo",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "A. Parrot"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Khafre Enthroned, three-quarter view",
+   "year": null,
+   "image": {
+    "file": "File:Khafre Enthroned, three-quarter view.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Khafre_Enthroned%2C_three-quarter_view.JPG/960px-Khafre_Enthroned%2C_three-quarter_view.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Khafre_Enthroned%2C_three-quarter_view.JPG/1920px-Khafre_Enthroned%2C_three-quarter_view.JPG",
+    "pxW": 2248,
+    "pxH": 3543
+   },
+   "cm": null,
+   "collection": "Egyptian Museum, Cairo",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "A. Parrot"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Statue of Khafre in the Egyptian Museum, Cairo",
+   "year": null,
+   "image": {
+    "file": "File:Ägyptisches Museum Kairo 2016-03-29 Chephren 04.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg/960px-%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg/1920px-%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Djehouty"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Chephren CG 14",
+   "year": null,
+   "image": {
+    "file": "File:Chephren CG 14.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chephren_CG_14.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chephren_CG_14.jpg",
+    "pxW": 423,
+    "pxH": 593
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ludwig Borchardt (1863-1938)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Kairo Museum Sitzstatue Chephren 06",
+   "year": null,
+   "image": {
+    "file": "File:Kairo Museum Sitzstatue Chephren 06.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kairo_Museum_Sitzstatue_Chephren_06.jpg/960px-Kairo_Museum_Sitzstatue_Chephren_06.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kairo_Museum_Sitzstatue_Chephren_06.jpg/1920px-Kairo_Museum_Sitzstatue_Chephren_06.jpg",
+    "pxW": 2626,
+    "pxH": 3499
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Olaf Tausch"
+   }
+  }
+ ]
 }

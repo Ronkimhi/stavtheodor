@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Knossos"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Knossos",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Armon Knossos P1060030",
+   "year": null,
+   "image": {
+    "file": "File:Armon Knossos P1060030.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Armon_Knossos_P1060030.JPG/960px-Armon_Knossos_P1060030.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Armon_Knossos_P1060030.JPG/1920px-Armon_Knossos_P1060030.JPG",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Deror_avi"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Armon Knossos P1060093",
+   "year": null,
+   "image": {
+    "file": "File:Armon Knossos P1060093.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Armon_Knossos_P1060093.JPG/960px-Armon_Knossos_P1060093.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Armon_Knossos_P1060093.JPG/1920px-Armon_Knossos_P1060093.JPG",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Deror_avi"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Armon Knossos P1060104",
+   "year": null,
+   "image": {
+    "file": "File:Armon Knossos P1060104.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Armon_Knossos_P1060104.JPG/960px-Armon_Knossos_P1060104.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Armon_Knossos_P1060104.JPG/1920px-Armon_Knossos_P1060104.JPG",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Deror_avi"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bronze Ax Messara Crete",
+   "year": null,
+   "image": {
+    "file": "File:Bronze Ax Messara Crete.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bronze_Ax_Messara_Crete.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bronze_Ax_Messara_Crete.jpg",
+    "pxW": 639,
+    "pxH": 311
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Delfiny w Knossos",
+   "year": null,
+   "image": {
+    "file": "File:Delfiny w Knossos.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Delfiny_w_Knossos.jpg/960px-Delfiny_w_Knossos.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Delfiny_w_Knossos.jpg/1920px-Delfiny_w_Knossos.jpg",
+    "pxW": 2048,
+    "pxH": 1365
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Przemek Pietrak"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Facade of Philip II tomb Vergina Greece",
+   "year": null,
+   "image": {
+    "file": "File:Facade of Philip II tomb Vergina Greece.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/960px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/1920px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg",
+    "pxW": 3872,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Panegyrics of Granovetter (Sarah Murray)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Heraklion — Blue birds fresco",
+   "year": null,
+   "image": {
+    "file": "File:Heraklion — Blue birds fresco.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Heraklion_%E2%80%94_Blue_birds_fresco.jpg/960px-Heraklion_%E2%80%94_Blue_birds_fresco.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Heraklion_%E2%80%94_Blue_birds_fresco.jpg/1920px-Heraklion_%E2%80%94_Blue_birds_fresco.jpg",
+    "pxW": 4425,
+    "pxH": 3248
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Heraklion — Blue monkeys fresco",
+   "year": null,
+   "image": {
+    "file": "File:Heraklion — Blue monkeys fresco.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Heraklion_%E2%80%94_Blue_monkeys_fresco.jpg/960px-Heraklion_%E2%80%94_Blue_monkeys_fresco.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Heraklion_%E2%80%94_Blue_monkeys_fresco.jpg/1920px-Heraklion_%E2%80%94_Blue_monkeys_fresco.jpg",
+    "pxW": 10056,
+    "pxH": 2917
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Heraklion — Cup bearer fresco",
+   "year": null,
+   "image": {
+    "file": "File:Heraklion — Cup bearer fresco.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Heraklion_%E2%80%94_Cup_bearer_fresco.jpg/960px-Heraklion_%E2%80%94_Cup_bearer_fresco.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Heraklion_%E2%80%94_Cup_bearer_fresco.jpg/1920px-Heraklion_%E2%80%94_Cup_bearer_fresco.jpg",
+    "pxW": 2544,
+    "pxH": 4751
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Heraklion — Dolphin fresco",
+   "year": null,
+   "image": {
+    "file": "File:Heraklion — Dolphin fresco.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heraklion_%E2%80%94_Dolphin_fresco.jpg/960px-Heraklion_%E2%80%94_Dolphin_fresco.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heraklion_%E2%80%94_Dolphin_fresco.jpg/1920px-Heraklion_%E2%80%94_Dolphin_fresco.jpg",
+    "pxW": 4290,
+    "pxH": 3018
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Gsimonov"
+   }
+  }
+ ]
 }

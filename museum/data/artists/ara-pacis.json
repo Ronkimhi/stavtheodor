@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Ara_Pacis",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Ara Pacis, Tellus panel",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis, Tellus panel.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ara_Pacis%2C_Tellus_panel.jpg/960px-Ara_Pacis%2C_Tellus_panel.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ara_Pacis%2C_Tellus_panel.jpg/1920px-Ara_Pacis%2C_Tellus_panel.jpg",
+    "pxW": 3288,
+    "pxH": 4440
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Joel Bellviure"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis (SW).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ara_Pacis_%28SW%29.jpg/960px-Ara_Pacis_%28SW%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ara_Pacis_%28SW%29.jpg/1920px-Ara_Pacis_%28SW%29.jpg",
+    "pxW": 5417,
+    "pxH": 3450
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Rabax63"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis Roma 04",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis Roma 04.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ara_Pacis_Roma_04.JPG/960px-Ara_Pacis_Roma_04.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ara_Pacis_Roma_04.JPG/1920px-Ara_Pacis_Roma_04.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 11",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 11.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Ara_Pacis_relieve_11.JPG/960px-Ara_Pacis_relieve_11.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Ara_Pacis_relieve_11.JPG/1920px-Ara_Pacis_relieve_11.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 19",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 19.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ara_Pacis_relieve_19.JPG/960px-Ara_Pacis_relieve_19.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ara_Pacis_relieve_19.JPG/1920px-Ara_Pacis_relieve_19.JPG",
+    "pxW": 3456,
+    "pxH": 5184
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 25",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 25.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ara_Pacis_relieve_25.JPG/960px-Ara_Pacis_relieve_25.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ara_Pacis_relieve_25.JPG/1920px-Ara_Pacis_relieve_25.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 26",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 26.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ara_Pacis_relieve_26.JPG/960px-Ara_Pacis_relieve_26.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ara_Pacis_relieve_26.JPG/1920px-Ara_Pacis_relieve_26.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 27",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 27.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Ara_Pacis_relieve_27.JPG/960px-Ara_Pacis_relieve_27.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Ara_Pacis_relieve_27.JPG/1920px-Ara_Pacis_relieve_27.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara Pacis relieve 28",
+   "year": null,
+   "image": {
+    "file": "File:Ara Pacis relieve 28.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ara_Pacis_relieve_28.JPG/960px-Ara_Pacis_relieve_28.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ara_Pacis_relieve_28.JPG/1920px-Ara_Pacis_relieve_28.JPG",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ara pacis Louvre",
+   "year": null,
+   "image": {
+    "file": "File:Ara pacis Louvre.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ara_pacis_Louvre.JPG/960px-Ara_pacis_Louvre.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ara_pacis_Louvre.JPG/1920px-Ara_pacis_Louvre.JPG",
+    "pxW": 2833,
+    "pxH": 2198
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Pascal Radigue"
+   }
+  }
+ ]
 }

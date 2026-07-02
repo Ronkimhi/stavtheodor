@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Dying_Gaul"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Dying_Gaul",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Dying Gaul, Perrier Engraving",
+   "year": null,
+   "image": {
+    "file": "File:Dying Gaul, Perrier Engraving.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Dying_Gaul%2C_Perrier_Engraving.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Dying_Gaul%2C_Perrier_Engraving.jpg",
+    "pxW": 720,
+    "pxH": 437
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "François Perrier"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dying Gaul-Musei CapitoliniI-2",
+   "year": null,
+   "image": {
+    "file": "File:Dying Gaul-Musei CapitoliniI-2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dying_Gaul-Musei_CapitoliniI-2.jpg/960px-Dying_Gaul-Musei_CapitoliniI-2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dying_Gaul-Musei_CapitoliniI-2.jpg/1920px-Dying_Gaul-Musei_CapitoliniI-2.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Yair Haklai"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dying GaulDSCF6738",
+   "year": null,
+   "image": {
+    "file": "File:Dying GaulDSCF6738.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dying_GaulDSCF6738.jpg/960px-Dying_GaulDSCF6738.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dying_GaulDSCF6738.jpg/1920px-Dying_GaulDSCF6738.jpg",
+    "pxW": 3000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Johnbod"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dying Gaul Musei Capitolini MC747",
+   "year": null,
+   "image": {
+    "file": "File:Dying Gaul Musei Capitolini MC747.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dying_Gaul_Musei_Capitolini_MC747.jpg/960px-Dying_Gaul_Musei_Capitolini_MC747.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dying_Gaul_Musei_Capitolini_MC747.jpg/1920px-Dying_Gaul_Musei_Capitolini_MC747.jpg",
+    "pxW": 3008,
+    "pxH": 2000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jastrow"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dying gaul",
+   "year": null,
+   "image": {
+    "file": "File:Dying gaul.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Dying_gaul.jpg/960px-Dying_gaul.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Dying_gaul.jpg",
+    "pxW": 1458,
+    "pxH": 1186
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "antmoose"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Galata capitolino, replica da donario di attalo I, da horti sallustiani, coll. ludovisi 08",
+   "year": null,
+   "image": {
+    "file": "File:Galata capitolino, replica da donario di attalo I, da horti sallustiani, coll. ludovisi 08.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG/960px-Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/03/Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG",
+    "pxW": 1772,
+    "pxH": 2204
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  }
+ ]
 }

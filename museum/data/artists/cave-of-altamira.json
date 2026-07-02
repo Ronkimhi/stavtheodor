@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "9 Bisonte Magdaleniense polícromo",
+   "year": null,
+   "image": {
+    "file": "File:9 Bisonte Magdaleniense polícromo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg/960px-9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/8b/9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg",
+    "pxW": 1181,
+    "pxH": 789
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Museo de Altamira y D. Rodríguez"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Altamira, bison",
+   "year": null,
+   "image": {
+    "file": "File:Altamira, bison.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Altamira%2C_bison.jpg/960px-Altamira%2C_bison.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Altamira%2C_bison.jpg",
+    "pxW": 1024,
+    "pxH": 648
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "unknown prehistoric artist"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Altamira-1880",
+   "year": null,
+   "image": {
+    "file": "File:Altamira-1880.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Altamira-1880.jpg/960px-Altamira-1880.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Altamira-1880.jpg",
+    "pxW": 1350,
+    "pxH": 682
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Altamira-3",
+   "year": null,
+   "image": {
+    "file": "File:Altamira-3.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Altamira-3.png/960px-Altamira-3.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Altamira-3.png/1920px-Altamira-3.png",
+    "pxW": 2034,
+    "pxH": 1090
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "José-Manuel Benito"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cave of Altamira and Paleolithic Cave Art of Northern Spain-110113",
+   "year": null,
+   "image": {
+    "file": "File:Cave of Altamira and Paleolithic Cave Art of Northern Spain-110113.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Cave_of_Altamira_and_Paleolithic_Cave_Art_of_Northern_Spain-110113.jpg/960px-Cave_of_Altamira_and_Paleolithic_Cave_Art_of_Northern_Spain-110113.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/30/Cave_of_Altamira_and_Paleolithic_Cave_Art_of_Northern_Spain-110113.jpg",
+    "pxW": 1417,
+    "pxH": 1417
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 igo",
+    "credit": "Yvon Fruneau"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Reproduction cave of Altamira 01",
+   "year": null,
+   "image": {
+    "file": "File:Reproduction cave of Altamira 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Reproduction_cave_of_Altamira_01.jpg/960px-Reproduction_cave_of_Altamira_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Reproduction_cave_of_Altamira_01.jpg/1920px-Reproduction_cave_of_Altamira_01.jpg",
+    "pxW": 3456,
+    "pxH": 2304
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "User:MatthiasKabel"
+   }
+  }
+ ]
 }

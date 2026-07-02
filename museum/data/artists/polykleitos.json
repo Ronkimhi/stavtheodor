@@ -153,6 +153,106 @@
     "name": "CC BY-SA 4.0",
     "credit": "Benjamín Núñez González"
    }
+  },
+  {
+   "qid": null,
+   "title": "Apollon de Mantoue Louvre MA689",
+   "year": null,
+   "image": {
+    "file": "File:Apollon de Mantoue Louvre MA689.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Apollon_de_Mantoue_Louvre_MA689.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Apollon_de_Mantoue_Louvre_MA689.jpg",
+    "pxW": 450,
+    "pxH": 603
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy after Polykleitos (?)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bronze statue of an athlete from Ephesus cleaning his strigil 1st century CE copy of 4th century BCE Greek original",
+   "year": null,
+   "image": {
+    "file": "File:Bronze statue of an athlete from Ephesus cleaning his strigil 1st century CE copy of 4th century BCE Greek original.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Bronze_statue_of_an_athlete_from_Ephesus_cleaning_his_strigil_1st_century_CE_copy_of_4th_century_BCE_Greek_original.jpg/960px-Bronze_statue_of_an_athlete_from_Ephesus_cleaning_his_strigil_1st_century_CE_copy_of_4th_century_BCE_Greek_original.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/77/Bronze_statue_of_an_athlete_from_Ephesus_cleaning_his_strigil_1st_century_CE_copy_of_4th_century_BCE_Greek_original.jpg",
+    "pxW": 1496,
+    "pxH": 1990
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Manfred Werner (Tsui); cropped and edited by Mary Harrsch"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Diadoumenos-Atenas",
+   "year": null,
+   "image": {
+    "file": "File:Diadoumenos-Atenas.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Diadoumenos-Atenas.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Diadoumenos-Atenas.jpg",
+    "pxW": 906,
+    "pxH": 1212
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Ricardo André Frantz (User:Tetraktys)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Discophoros BM",
+   "year": null,
+   "image": {
+    "file": "File:Discophoros BM.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Discophoros_BM.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Discophoros_BM.jpg",
+    "pxW": 830,
+    "pxH": 1643
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Ricardo André Frantz (User:Tetraktys)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Doryphoros MIA 866",
+   "year": null,
+   "image": {
+    "file": "File:Doryphoros MIA 866.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Doryphoros_MIA_866.jpg/960px-Doryphoros_MIA_866.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Doryphoros_MIA_866.jpg/1920px-Doryphoros_MIA_866.jpg",
+    "pxW": 2252,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Minneapolis Institute of Art"
+   }
   }
  ]
 }

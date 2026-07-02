@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "ACMA 679 Kore 1",
+   "year": null,
+   "image": {
+    "file": "File:ACMA 679 Kore 1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ACMA_679_Kore_1.JPG/960px-ACMA_679_Kore_1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e1/ACMA_679_Kore_1.JPG",
+    "pxW": 995,
+    "pxH": 2676
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Unknown artistUnknown artist"
+   }
+  },
+  {
+   "qid": null,
+   "title": "ACMA 681 Kore Antenor 1",
+   "year": null,
+   "image": {
+    "file": "File:ACMA 681 Kore Antenor 1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/b/bf/ACMA_681_Kore_Antenor_1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/bf/ACMA_681_Kore_Antenor_1.JPG",
+    "pxW": 900,
+    "pxH": 2102
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Antenor"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Kore 081088",
+   "year": null,
+   "image": {
+    "file": "File:Kore 081088.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kore_081088.jpg/960px-Kore_081088.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kore_081088.jpg/1920px-Kore_081088.jpg",
+    "pxW": 2088,
+    "pxH": 3059
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Zde"
+   }
+  },
+  {
+   "qid": null,
+   "title": "NAMABG-Peplos Kore as Artemis",
+   "year": null,
+   "image": {
+    "file": "File:NAMABG-Peplos Kore as Artemis.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/NAMABG-Peplos_Kore_as_Artemis.JPG/960px-NAMABG-Peplos_Kore_as_Artemis.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fc/NAMABG-Peplos_Kore_as_Artemis.JPG",
+    "pxW": 1218,
+    "pxH": 2816
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Etude : Vinzenz Brinkmann. Restauration des cassures : Alfons Neubauer, Christoph Bergmann. Dorure : Sylvia Kellner. Peinture : Ulrike Koch-Brinkmann"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Phrasikleia Kore Painted",
+   "year": null,
+   "image": {
+    "file": "File:Phrasikleia Kore Painted.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Phrasikleia_Kore_Painted.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Phrasikleia_Kore_Painted.jpg",
+    "pxW": 684,
+    "pxH": 2117
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Pierre Assier"
+   }
+  }
+ ]
 }

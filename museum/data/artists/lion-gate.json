@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Lion_Gate"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Lion_Gate",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Facade of Philip II tomb Vergina Greece",
+   "year": null,
+   "image": {
+    "file": "File:Facade of Philip II tomb Vergina Greece.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/960px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/1920px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg",
+    "pxW": 3872,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Panegyrics of Granovetter (Sarah Murray)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lion Gate - Mycenae by Joy of Museums",
+   "year": null,
+   "image": {
+    "file": "File:Lion Gate - Mycenae by Joy of Museums.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/960px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/1920px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg",
+    "pxW": 5046,
+    "pxH": 3366
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Joyofmuseums"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lions Gate detail",
+   "year": null,
+   "image": {
+    "file": "File:Lions Gate detail.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Lions_Gate_detail.JPG/960px-Lions_Gate_detail.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Lions_Gate_detail.JPG",
+    "pxW": 1783,
+    "pxH": 1400
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Orlovic"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Mycenae x05",
+   "year": null,
+   "image": {
+    "file": "File:Mycenae x05.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mycenae_x05.jpg/960px-Mycenae_x05.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Mycenae_x05.jpg",
+    "pxW": 1600,
+    "pxH": 798
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Ploync"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Mykene",
+   "year": null,
+   "image": {
+    "file": "File:Mykene.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Mykene.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Mykene.jpg",
+    "pxW": 500,
+    "pxH": 402
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Mystras palace",
+   "year": null,
+   "image": {
+    "file": "File:Mystras palace.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mystras_palace.JPG/960px-Mystras_palace.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mystras_palace.JPG/1920px-Mystras_palace.JPG",
+    "pxW": 2304,
+    "pxH": 1728
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Aeleftherios"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Parthenon",
+   "year": null,
+   "image": {
+    "file": "File:Parthenon (30276156187).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Parthenon_%2830276156187%29.jpg/960px-Parthenon_%2830276156187%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Parthenon_%2830276156187%29.jpg/1920px-Parthenon_%2830276156187%29.jpg",
+    "pxW": 8256,
+    "pxH": 5504
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Phanatic"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pithos 102972x",
+   "year": null,
+   "image": {
+    "file": "File:Pithos 102972x.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Pithos_102972x.jpg/960px-Pithos_102972x.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/24/Pithos_102972x.jpg",
+    "pxW": 1832,
+    "pxH": 1221
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Zde"
+   }
+  },
+  {
+   "qid": null,
+   "title": "RhodesIntérieurDuPalais",
+   "year": null,
+   "image": {
+    "file": "File:RhodesIntérieurDuPalais.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/RhodesInt%C3%A9rieurDuPalais.JPG/960px-RhodesInt%C3%A9rieurDuPalais.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/RhodesInt%C3%A9rieurDuPalais.JPG/1920px-RhodesInt%C3%A9rieurDuPalais.JPG",
+    "pxW": 2048,
+    "pxH": 1365
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Underwood & Underwood - The Lion Gate at Mycenae - Google Art Project",
+   "year": null,
+   "image": {
+    "file": "File:Underwood & Underwood - The Lion Gate at Mycenae - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg/960px-Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg/1920px-Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg",
+    "pxW": 4183,
+    "pxH": 2065
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Underwood &amp; Underwood Details on Google Art Project"
+   }
+  }
+ ]
 }

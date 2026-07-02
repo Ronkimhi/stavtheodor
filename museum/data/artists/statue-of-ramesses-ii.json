@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Colossal statue of Ramesses II at Karnak",
+   "year": null,
+   "image": {
+    "file": "File:Statue of Ramesses II in Karnak Temple in Luxor Egypt.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Statue_of_Ramesses_II_in_Karnak_Temple_in_Luxor_Egypt.JPG/960px-Statue_of_Ramesses_II_in_Karnak_Temple_in_Luxor_Egypt.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Statue_of_Ramesses_II_in_Karnak_Temple_in_Luxor_Egypt.JPG/1920px-Statue_of_Ramesses_II_in_Karnak_Temple_in_Luxor_Egypt.JPG",
+    "pxW": 3662,
+    "pxH": 5945
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "MusikAnimal"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colossus of Ramesses II, Karnak Temple, Luxor",
+   "year": null,
+   "image": {
+    "file": "File:Templo de Karnak, Luxor, Egipto, 2022-04-03, DD 145.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Templo_de_Karnak%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_145.jpg/960px-Templo_de_Karnak%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_145.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Templo_de_Karnak%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_145.jpg/1920px-Templo_de_Karnak%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_145.jpg",
+    "pxW": 4171,
+    "pxH": 8292
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Diego Delso"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Colossus of Ramesses II",
+   "year": null,
+   "image": {
+    "file": "File:Colossus Of Ramesses (235168871).jpeg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Colossus_Of_Ramesses_%28235168871%29.jpeg/960px-Colossus_Of_Ramesses_%28235168871%29.jpeg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Colossus_Of_Ramesses_%28235168871%29.jpeg/1920px-Colossus_Of_Ramesses_%28235168871%29.jpeg",
+    "pxW": 2048,
+    "pxH": 1562
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Ahnaf Saber"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Grand Egyptian Museum 2019-11-07d",
+   "year": null,
+   "image": {
+    "file": "File:Grand Egyptian Museum 2019-11-07d.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Grand_Egyptian_Museum_2019-11-07d.jpg/960px-Grand_Egyptian_Museum_2019-11-07d.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Grand_Egyptian_Museum_2019-11-07d.jpg/1920px-Grand_Egyptian_Museum_2019-11-07d.jpg",
+    "pxW": 3278,
+    "pxH": 4917
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Djehouty"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ramsesreplicasalehsalem",
+   "year": null,
+   "image": {
+    "file": "File:Ramsesreplicasalehsalem.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ramsesreplicasalehsalem.jpg/960px-Ramsesreplicasalehsalem.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ramsesreplicasalehsalem.jpg/1920px-Ramsesreplicasalehsalem.jpg",
+    "pxW": 2500,
+    "pxH": 1673
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "JasmineElias"
+   }
+  }
+ ]
 }

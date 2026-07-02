@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Trajan%27s_Column"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Trajan%27s_Column",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "001 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel I",
+   "year": null,
+   "image": {
+    "file": "File:001 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel I.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/001_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_I.jpg/960px-001_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_I.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/f3/001_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_I.jpg",
+    "pxW": 1307,
+    "pxH": 2000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Apollodorus of Damascus / Conrad Cichorius"
+   }
+  },
+  {
+   "qid": null,
+   "title": "002 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel II",
+   "year": null,
+   "image": {
+    "file": "File:002 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel II.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/002_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_II.jpg/960px-002_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_II.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b8/002_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_II.jpg",
+    "pxW": 1371,
+    "pxH": 2000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Apollodorus of Damascus / Conrad Cichorius"
+   }
+  },
+  {
+   "qid": null,
+   "title": "032 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel XXXII",
+   "year": null,
+   "image": {
+    "file": "File:032 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel XXXII.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/032_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XXXII.jpg/960px-032_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XXXII.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/032_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XXXII.jpg/1920px-032_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XXXII.jpg",
+    "pxW": 2000,
+    "pxH": 1115
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Apollodorus of Damascus / Conrad Cichorius"
+   }
+  },
+  {
+   "qid": null,
+   "title": "046 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel XLVI",
+   "year": null,
+   "image": {
+    "file": "File:046 Conrad Cichorius, Die Reliefs der Traianssäule, Tafel XLVI (Ausschnitt 01).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/046_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XLVI_%28Ausschnitt_01%29.jpg/960px-046_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XLVI_%28Ausschnitt_01%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a4/046_Conrad_Cichorius%2C_Die_Reliefs_der_Traianss%C3%A4ule%2C_Tafel_XLVI_%28Ausschnitt_01%29.jpg",
+    "pxW": 1593,
+    "pxH": 1097
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Apollodorus of Damascus / Conrad Cichorius"
+   }
+  },
+  {
+   "qid": null,
+   "title": "1586 Rome obelisk erection",
+   "year": null,
+   "image": {
+    "file": "File:1586 Rome obelisk erection.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/1586_Rome_obelisk_erection.jpg/960px-1586_Rome_obelisk_erection.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d3/1586_Rome_obelisk_erection.jpg",
+    "pxW": 1000,
+    "pxH": 842
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Niccola Zabaglia (1664-1750)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Charles Lock Eastlake - A View of Trajan's Forum, Rome - Google Art Project",
+   "year": null,
+   "image": {
+    "file": "File:Charles Lock Eastlake - A View of Trajan's Forum, Rome - Google Art Project.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Charles_Lock_Eastlake_-_A_View_of_Trajan%27s_Forum%2C_Rome_-_Google_Art_Project.jpg/960px-Charles_Lock_Eastlake_-_A_View_of_Trajan%27s_Forum%2C_Rome_-_Google_Art_Project.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Charles_Lock_Eastlake_-_A_View_of_Trajan%27s_Forum%2C_Rome_-_Google_Art_Project.jpg/1920px-Charles_Lock_Eastlake_-_A_View_of_Trajan%27s_Forum%2C_Rome_-_Google_Art_Project.jpg",
+    "pxW": 3109,
+    "pxH": 3856
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Charles Lock Eastlake (1793 - 1865) – Artist (British, active in Italy (1816-1830)) Born in Plymouth. Died in Pisa. Details on Google Art Project"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karlskirche Vienna Front",
+   "year": null,
+   "image": {
+    "file": "File:Karlskirche Vienna Front.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Karlskirche_Vienna_Front.jpg/960px-Karlskirche_Vienna_Front.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Karlskirche_Vienna_Front.jpg/1920px-Karlskirche_Vienna_Front.jpg",
+    "pxW": 2986,
+    "pxH": 2071
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0 de",
+    "credit": "The original uploader was Ranzpeter at German Wikipedia.\n\n(Original text: Angelo Laub)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Roma Plan",
+   "year": null,
+   "image": {
+    "file": "File:Roma Plan.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roma_Plan.jpg/960px-Roma_Plan.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Roma_Plan.jpg",
+    "pxW": 1840,
+    "pxH": 1463
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author (H. Jordan ?)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Roma PlanFXD",
+   "year": null,
+   "image": {
+    "file": "File:Roma PlanFXD.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roma_PlanFXD.jpg/960px-Roma_PlanFXD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/70/Roma_PlanFXD.jpg",
+    "pxW": 1840,
+    "pxH": 1463
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Henri Jordan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Trajan's Column HD",
+   "year": null,
+   "image": {
+    "file": "File:Trajan's Column HD.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Trajan%27s_Column_HD.jpg/960px-Trajan%27s_Column_HD.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Trajan%27s_Column_HD.jpg/1920px-Trajan%27s_Column_HD.jpg",
+    "pxW": 2340,
+    "pxH": 5456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Livioandronico2013"
+   }
+  }
+ ]
 }

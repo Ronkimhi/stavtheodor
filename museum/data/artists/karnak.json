@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Karnak"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Karnak",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Egypt, Luxor, Karnak temple complex - panoramio - Alx R",
+   "year": null,
+   "image": {
+    "file": "File:Egypt, Luxor, Karnak temple complex - panoramio - Alx R (4) (lintel).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/47/Egypt%2C_Luxor%2C_Karnak_temple_complex_-_panoramio_-_Alx_R_%284%29_%28lintel%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/47/Egypt%2C_Luxor%2C_Karnak_temple_complex_-_panoramio_-_Alx_R_%284%29_%28lintel%29.jpg",
+    "pxW": 573,
+    "pxH": 253
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Alx R"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Hall of columns, Karnac, RP-F-F25403-AG",
+   "year": null,
+   "image": {
+    "file": "File:Hall of columns, Karnac, RP-F-F25403-AG.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Hall_of_columns%2C_Karnac%2C_RP-F-F25403-AG.jpg/960px-Hall_of_columns%2C_Karnac%2C_RP-F-F25403-AG.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Hall_of_columns%2C_Karnac%2C_RP-F-F25403-AG.jpg/1920px-Hall_of_columns%2C_Karnac%2C_RP-F-F25403-AG.jpg",
+    "pxW": 3452,
+    "pxH": 2584
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Rijksmuseum"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnacs2",
+   "year": null,
+   "image": {
+    "file": "File:Karnacs2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Karnacs2.jpg/960px-Karnacs2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Karnacs2.jpg/1920px-Karnacs2.jpg",
+    "pxW": 4040,
+    "pxH": 5908
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "David Roberts"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak Temple, Luxor, Egypt",
+   "year": null,
+   "image": {
+    "file": "File:Karnak Temple, Luxor, Egypt (2504854811).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Karnak_Temple%2C_Luxor%2C_Egypt_%282504854811%29.jpg/960px-Karnak_Temple%2C_Luxor%2C_Egypt_%282504854811%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/37/Karnak_Temple%2C_Luxor%2C_Egypt_%282504854811%29.jpg",
+    "pxW": 1200,
+    "pxH": 1600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "eviljohnius"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak Temple pillar up-close",
+   "year": null,
+   "image": {
+    "file": "File:Karnak Temple pillar up-close.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Karnak_Temple_pillar_up-close.jpg/960px-Karnak_Temple_pillar_up-close.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Karnak_Temple_pillar_up-close.jpg/1920px-Karnak_Temple_pillar_up-close.jpg",
+    "pxW": 3024,
+    "pxH": 4032
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "WCmmns"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak Temples",
+   "year": null,
+   "image": {
+    "file": "File:Karnak Temples.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Karnak_Temples.jpg/960px-Karnak_Temples.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Karnak_Temples.jpg/1920px-Karnak_Temples.jpg",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Ahmed Bahloul Khier Galal"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak temple, Großer Säulensaal 9509",
+   "year": null,
+   "image": {
+    "file": "File:Karnak temple, Großer Säulensaal 9509.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Karnak_temple%2C_Gro%C3%9Fer_S%C3%A4ulensaal_9509.JPG/960px-Karnak_temple%2C_Gro%C3%9Fer_S%C3%A4ulensaal_9509.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Karnak_temple%2C_Gro%C3%9Fer_S%C3%A4ulensaal_9509.JPG/1920px-Karnak_temple%2C_Gro%C3%9Fer_S%C3%A4ulensaal_9509.JPG",
+    "pxW": 3888,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Hedwig Storch"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak temple Montou 03",
+   "year": null,
+   "image": {
+    "file": "File:Karnak temple Montou 03.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/65/Karnak_temple_Montou_03.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/65/Karnak_temple_Montou_03.JPG",
+    "pxW": 640,
+    "pxH": 480
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Neithsabes"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Karnak temple complex 2012",
+   "year": null,
+   "image": {
+    "file": "File:Karnak temple complex 2012.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Karnak_temple_complex_2012.JPG/960px-Karnak_temple_complex_2012.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Karnak_temple_complex_2012.JPG/1920px-Karnak_temple_complex_2012.JPG",
+    "pxW": 4000,
+    "pxH": 2664
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Taranis-iuppiter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lantern Slide Collection, Karnak",
+   "year": null,
+   "image": {
+    "file": "File:Lantern Slide Collection, Karnak.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lantern_Slide_Collection%2C_Karnak.jpg/960px-Lantern_Slide_Collection%2C_Karnak.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lantern_Slide_Collection%2C_Karnak.jpg/1920px-Lantern_Slide_Collection%2C_Karnak.jpg",
+    "pxW": 2768,
+    "pxH": 2713
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Brooklyn Museum"
+   }
+  }
+ ]
 }

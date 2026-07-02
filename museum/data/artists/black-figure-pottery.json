@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Black-figure_pottery",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Akhilleus Aias MGEt 16757",
+   "year": null,
+   "image": {
+    "file": "File:Akhilleus Aias MGEt 16757.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Akhilleus_Aias_MGEt_16757.jpg/960px-Akhilleus_Aias_MGEt_16757.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Akhilleus_Aias_MGEt_16757.jpg/1920px-Akhilleus_Aias_MGEt_16757.jpg",
+    "pxW": 4288,
+    "pxH": 2848
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Exekias"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Akhilleus Hektor Louvre CA601",
+   "year": null,
+   "image": {
+    "file": "File:Akhilleus Hektor Louvre CA601.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Akhilleus_Hektor_Louvre_CA601.jpg/960px-Akhilleus_Hektor_Louvre_CA601.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/83/Akhilleus_Hektor_Louvre_CA601.jpg",
+    "pxW": 1408,
+    "pxH": 2660
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Bibi Saint-Pol"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Altes Museum Berlin - Antikensammlung23 b",
+   "year": null,
+   "image": {
+    "file": "File:Altes Museum Berlin - Antikensammlung23 b.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Altes_Museum_Berlin_-_Antikensammlung23_b.jpg/960px-Altes_Museum_Berlin_-_Antikensammlung23_b.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Altes_Museum_Berlin_-_Antikensammlung23_b.jpg",
+    "pxW": 1480,
+    "pxH": 2042
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Marcus Cyron"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Amphora olive-gathering BM B226",
+   "year": null,
+   "image": {
+    "file": "File:Amphora olive-gathering BM B226.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/68/Amphora_olive-gathering_BM_B226.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/68/Amphora_olive-gathering_BM_B226.jpg",
+    "pxW": 579,
+    "pxH": 893
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Antimenes Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Amphora warriors Louvre E866",
+   "year": null,
+   "image": {
+    "file": "File:Amphora warriors Louvre E866.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Amphora_warriors_Louvre_E866.jpg/960px-Amphora_warriors_Louvre_E866.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Amphora_warriors_Louvre_E866.jpg/1920px-Amphora_warriors_Louvre_E866.jpg",
+    "pxW": 2025,
+    "pxH": 1476
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Prometheus Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Arkesilas Cup Cdm Paris DeRidder189 n2",
+   "year": null,
+   "image": {
+    "file": "File:Arkesilas Cup Cdm Paris DeRidder189 n2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Arkesilas_Cup_Cdm_Paris_DeRidder189_n2.jpg/960px-Arkesilas_Cup_Cdm_Paris_DeRidder189_n2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Arkesilas_Cup_Cdm_Paris_DeRidder189_n2.jpg/1920px-Arkesilas_Cup_Cdm_Paris_DeRidder189_n2.jpg",
+    "pxW": 3771,
+    "pxH": 2400
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Marie-Lan Nguyen"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Atalanta Peleus Staatliche Antikensammlungen 596",
+   "year": null,
+   "image": {
+    "file": "File:Atalanta Peleus Staatliche Antikensammlungen 596.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Atalanta_Peleus_Staatliche_Antikensammlungen_596.jpg/960px-Atalanta_Peleus_Staatliche_Antikensammlungen_596.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Atalanta_Peleus_Staatliche_Antikensammlungen_596.jpg/1920px-Atalanta_Peleus_Staatliche_Antikensammlungen_596.jpg",
+    "pxW": 2754,
+    "pxH": 1776
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "User:Bibi Saint-Pol"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena Herakles Staatliche Antikensammlungen 2301 A",
+   "year": null,
+   "image": {
+    "file": "File:Athena Herakles Staatliche Antikensammlungen 2301 A.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg/960px-Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg/1920px-Athena_Herakles_Staatliche_Antikensammlungen_2301_A.jpg",
+    "pxW": 2913,
+    "pxH": 2014
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andokides painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena Herakles Staatliche Antikensammlungen 2301 B",
+   "year": null,
+   "image": {
+    "file": "File:Athena Herakles Staatliche Antikensammlungen 2301 B.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg/960px-Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg/1920px-Athena_Herakles_Staatliche_Antikensammlungen_2301_B.jpg",
+    "pxW": 2760,
+    "pxH": 1881
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Andokides Painter or Lysippides Painter"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena aigis Cdm Paris 254",
+   "year": null,
+   "image": {
+    "file": "File:Athena aigis Cdm Paris 254.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Athena_aigis_Cdm_Paris_254.jpg/960px-Athena_aigis_Cdm_Paris_254.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Athena_aigis_Cdm_Paris_254.jpg/1920px-Athena_aigis_Cdm_Paris_254.jpg",
+    "pxW": 2300,
+    "pxH": 2300
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Marie-Lan Nguyen"
+   }
+  }
+ ]
 }

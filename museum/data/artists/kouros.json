@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Kouros"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Kouros",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "0006MAN-Kouros1",
+   "year": null,
+   "image": {
+    "file": "File:0006MAN-Kouros1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/3/35/0006MAN-Kouros1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/35/0006MAN-Kouros1.jpg",
+    "pxW": 750,
+    "pxH": 1000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Ricardo André Frantz (User:Tetraktys)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "0006MAN-Kouros2",
+   "year": null,
+   "image": {
+    "file": "File:0006MAN-Kouros2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/04/0006MAN-Kouros2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/04/0006MAN-Kouros2.jpg",
+    "pxW": 371,
+    "pxH": 800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "7262 - Piraeus Arch. Museum, Athens - The Piraeus Apollo - Photo by Giovanni Dall'Orto, Nov 14 2009",
+   "year": null,
+   "image": {
+    "file": "File:7262 - Piraeus Arch. Museum, Athens - The Piraeus Apollo - Photo by Giovanni Dall'Orto, Nov 14 2009.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/7262_-_Piraeus_Arch._Museum%2C_Athens_-_The_Piraeus_Apollo_-_Photo_by_Giovanni_Dall%27Orto%2C_Nov_14_2009.jpg/960px-7262_-_Piraeus_Arch._Museum%2C_Athens_-_The_Piraeus_Apollo_-_Photo_by_Giovanni_Dall%27Orto%2C_Nov_14_2009.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/7c/7262_-_Piraeus_Arch._Museum%2C_Athens_-_The_Piraeus_Apollo_-_Photo_by_Giovanni_Dall%27Orto%2C_Nov_14_2009.jpg",
+    "pxW": 1880,
+    "pxH": 2816
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Attribution",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Actium3",
+   "year": null,
+   "image": {
+    "file": "File:Actium3.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/4/41/Actium3.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/41/Actium3.jpg",
+    "pxW": 876,
+    "pxH": 1280
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Original description: (Ed. ne Alinari) N. ° 22544.PARIS - Musée National du Louvre. Apollon. Sculpture ancienne. - Temple d'Apollon, Actium."
+   }
+  },
+  {
+   "qid": null,
+   "title": "Advancing figure of a man, Saite dynasty, E 5345",
+   "year": null,
+   "image": {
+    "file": "File:Advancing figure of a man, Saite dynasty, E 5345.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Advancing_figure_of_a_man%2C_Saite_dynasty%2C_E_5345.jpg/960px-Advancing_figure_of_a_man%2C_Saite_dynasty%2C_E_5345.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Advancing_figure_of_a_man%2C_Saite_dynasty%2C_E_5345.jpg",
+    "pxW": 1200,
+    "pxH": 1600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Twospoonfuls"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Agrigent Museum Statue Young Man",
+   "year": null,
+   "image": {
+    "file": "File:Agrigent Museum Statue Young Man.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Agrigent_Museum_Statue_Young_Man.jpg/960px-Agrigent_Museum_Statue_Young_Man.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Agrigent_Museum_Statue_Young_Man.jpg/1920px-Agrigent_Museum_Statue_Young_Man.jpg",
+    "pxW": 3040,
+    "pxH": 4048
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Clemensfranz"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Apollo of Tenea Glyptothek Munich 168",
+   "year": null,
+   "image": {
+    "file": "File:Apollo of Tenea Glyptothek Munich 168.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/3/30/Apollo_of_Tenea_Glyptothek_Munich_168.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/30/Apollo_of_Tenea_Glyptothek_Munich_168.jpg",
+    "pxW": 269,
+    "pxH": 774
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "BM B474 kouros",
+   "year": null,
+   "image": {
+    "file": "File:BM B474 kouros.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/a/a5/BM_B474_kouros.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a5/BM_B474_kouros.jpg",
+    "pxW": 768,
+    "pxH": 1024
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Cubby_t_bear"
+   }
+  },
+  {
+   "qid": null,
+   "title": "KAMA Kouros Porte Sacrée",
+   "year": null,
+   "image": {
+    "file": "File:KAMA Kouros Porte Sacrée.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/91/KAMA_Kouros_Porte_Sacr%C3%A9e.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/91/KAMA_Kouros_Porte_Sacr%C3%A9e.jpg",
+    "pxW": 800,
+    "pxH": 1433
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.5",
+    "credit": "Marsyas"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Kouroi2",
+   "year": null,
+   "image": {
+    "file": "File:Kouroi2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/04/Kouroi2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/04/Kouroi2.jpg",
+    "pxW": 444,
+    "pxH": 586
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Ricardo André Frantz (User:Tetraktys)"
+   }
+  }
+ ]
 }

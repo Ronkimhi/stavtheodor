@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Parthenon"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Parthenon",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "1868 Lawrence Alma-Tadema - Phidias Showing the Frieze of the Parthenon to his Friends",
+   "year": null,
+   "image": {
+    "file": "File:1868 Lawrence Alma-Tadema - Phidias Showing the Frieze of the Parthenon to his Friends.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg/960px-1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg/1920px-1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg",
+    "pxW": 3935,
+    "pxH": 2551
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Lawrence Alma-Tadema"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Akropolis-detail",
+   "year": null,
+   "image": {
+    "file": "File:Akropolis-detail.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/52/Akropolis-detail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/52/Akropolis-detail.jpg",
+    "pxW": 575,
+    "pxH": 398
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Leo von Klenze"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athens Acropolis Parthenon Metope and pediment 03",
+   "year": null,
+   "image": {
+    "file": "File:Athens Acropolis Parthenon Metope and pediment 03.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Athens_Acropolis_Parthenon_Metope_and_pediment_03.jpg/960px-Athens_Acropolis_Parthenon_Metope_and_pediment_03.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Athens_Acropolis_Parthenon_Metope_and_pediment_03.jpg/1920px-Athens_Acropolis_Parthenon_Metope_and_pediment_03.jpg",
+    "pxW": 4933,
+    "pxH": 3525
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Ad Meskens\nYou are free to use this picture for any purpose as long as you credit its author, Ad Meskens.\nExample:  © Ad Meskens / Wikimedia Commons\n  If you use this work outside of the Wikimedia pro"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athens from the Parthenon",
+   "year": null,
+   "image": {
+    "file": "File:Athens from the Parthenon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Athens_from_the_Parthenon.jpg/960px-Athens_from_the_Parthenon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Athens_from_the_Parthenon.jpg/1920px-Athens_from_the_Parthenon.jpg",
+    "pxW": 4000,
+    "pxH": 2252
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Tom Corser"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill",
+   "year": null,
+   "image": {
+    "file": "File:Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg/960px-Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg/1920px-Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+    "pxW": 5000,
+    "pxH": 3125
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "A.Savin"
+   }
+  },
+  {
+   "qid": null,
+   "title": "British Museum, London (2014) - 07",
+   "year": null,
+   "image": {
+    "file": "File:British Museum, London (2014) - 07.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/British_Museum%2C_London_%282014%29_-_07.JPG/960px-British_Museum%2C_London_%282014%29_-_07.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/British_Museum%2C_London_%282014%29_-_07.JPG/1920px-British_Museum%2C_London_%282014%29_-_07.JPG",
+    "pxW": 4000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Another Believer"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ciriaco d'Ancona di Benozzo Gozzoli",
+   "year": null,
+   "image": {
+    "file": "File:Ciriaco d'Ancona di Benozzo Gozzoli.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/23/Ciriaco_d%27Ancona_di_Benozzo_Gozzoli.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/23/Ciriaco_d%27Ancona_di_Benozzo_Gozzoli.jpg",
+    "pxW": 600,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Benozzo Gozzoli"
+   }
+  },
+  {
+   "qid": null,
+   "title": "DoricParthenon",
+   "year": null,
+   "image": {
+    "file": "File:DoricParthenon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/1/16/DoricParthenon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/16/DoricParthenon.jpg",
+    "pxW": 279,
+    "pxH": 468
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "unknown engraver"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Flickr - Nic's events - London - 14-15 Dec 2007 - 067",
+   "year": null,
+   "image": {
+    "file": "File:Flickr - Nic's events - London - 14-15 Dec 2007 - 067.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Flickr_-_Nic%27s_events_-_London_-_14-15_Dec_2007_-_067.jpg/960px-Flickr_-_Nic%27s_events_-_London_-_14-15_Dec_2007_-_067.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/97/Flickr_-_Nic%27s_events_-_London_-_14-15_Dec_2007_-_067.jpg",
+    "pxW": 1021,
+    "pxH": 681
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Manuscript Hamilton 254 Page 85",
+   "year": null,
+   "image": {
+    "file": "File:Manuscript Hamilton 254 Page 85 (recto).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Manuscript_Hamilton_254_Page_85_%28recto%29.jpg/960px-Manuscript_Hamilton_254_Page_85_%28recto%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Manuscript_Hamilton_254_Page_85_%28recto%29.jpg/1920px-Manuscript_Hamilton_254_Page_85_%28recto%29.jpg",
+    "pxW": 2251,
+    "pxH": 3345
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  }
+ ]
 }

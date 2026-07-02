@@ -97,6 +97,126 @@
     "name": "CC BY 3.0",
     "credit": "Marie-Lan Nguyen"
    }
+  },
+  {
+   "qid": null,
+   "title": "Archaeological museum, Athens",
+   "year": null,
+   "image": {
+    "file": "File:Archaeological museum, Athens (5615666772).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Archaeological_museum%2C_Athens_%285615666772%29.jpg/960px-Archaeological_museum%2C_Athens_%285615666772%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Archaeological_museum%2C_Athens_%285615666772%29.jpg/1920px-Archaeological_museum%2C_Athens_%285615666772%29.jpg",
+    "pxW": 2848,
+    "pxH": 4288
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Aleksandr Zykov from Russia"
+   }
+  },
+  {
+   "qid": null,
+   "title": "MarbleHeadsScopas",
+   "year": null,
+   "image": {
+    "file": "File:MarbleHeadsScopas.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/MarbleHeadsScopas.jpg/960px-MarbleHeadsScopas.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/MarbleHeadsScopas.jpg/1920px-MarbleHeadsScopas.jpg",
+    "pxW": 3008,
+    "pxH": 2000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Parapher"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Meleager Pio-Clementino Inv490",
+   "year": null,
+   "image": {
+    "file": "File:Meleager Pio-Clementino Inv490.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/9/92/Meleager_Pio-Clementino_Inv490.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/92/Meleager_Pio-Clementino_Inv490.jpg",
+    "pxW": 850,
+    "pxH": 1500
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy after Skopas (?)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Meleager Skopas BM GR1906.1-17.1",
+   "year": null,
+   "image": {
+    "file": "File:Meleager Skopas BM GR1906.1-17.1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Meleager_Skopas_BM_GR1906.1-17.1.jpg/960px-Meleager_Skopas_BM_GR1906.1-17.1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Meleager_Skopas_BM_GR1906.1-17.1.jpg/1920px-Meleager_Skopas_BM_GR1906.1-17.1.jpg",
+    "pxW": 2350,
+    "pxH": 3560
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Copy of Skopas?"
+   }
+  },
+  {
+   "qid": null,
+   "title": "NAMA Hygie",
+   "year": null,
+   "image": {
+    "file": "File:NAMA Hygie.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/NAMA_Hygie.jpg/960px-NAMA_Hygie.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c8/NAMA_Hygie.jpg",
+    "pxW": 1200,
+    "pxH": 1591
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "Marsyas"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pothos Apollo Musei Capitolini MC649",
+   "year": null,
+   "image": {
+    "file": "File:Pothos Apollo Musei Capitolini MC649.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pothos_Apollo_Musei_Capitolini_MC649.jpg/960px-Pothos_Apollo_Musei_Capitolini_MC649.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Pothos_Apollo_Musei_Capitolini_MC649.jpg",
+    "pxW": 1660,
+    "pxH": 2760
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "After Scopas"
+   }
   }
  ]
 }

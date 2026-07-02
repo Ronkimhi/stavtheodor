@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Capitoline_Brutus",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Bruto capitolino, IV-III sec. ac. 06",
+   "year": null,
+   "image": {
+    "file": "File:Bruto capitolino, IV-III sec. ac. 06.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bruto_capitolino%2C_IV-III_sec._ac._06.JPG/960px-Bruto_capitolino%2C_IV-III_sec._ac._06.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bruto_capitolino%2C_IV-III_sec._ac._06.JPG/1920px-Bruto_capitolino%2C_IV-III_sec._ac._06.JPG",
+    "pxW": 2296,
+    "pxH": 2436
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Brutus Capitolin - détouré 05",
+   "year": null,
+   "image": {
+    "file": "File:Brutus Capitolin - détouré 05.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Brutus_Capitolin_-_d%C3%A9tour%C3%A9_05.jpg/960px-Brutus_Capitolin_-_d%C3%A9tour%C3%A9_05.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/13/Brutus_Capitolin_-_d%C3%A9tour%C3%A9_05.jpg",
+    "pxW": 1907,
+    "pxH": 2267
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "C.Salviani"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Capitoline Brutus - Sala dei Trionfi - Palazzo dei Conservatori - Musei Capitolini - Rome 2016",
+   "year": null,
+   "image": {
+    "file": "File:Capitoline Brutus - Sala dei Trionfi - Palazzo dei Conservatori - Musei Capitolini - Rome 2016.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Capitoline_Brutus_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg/960px-Capitoline_Brutus_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Capitoline_Brutus_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg/1920px-Capitoline_Brutus_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg",
+    "pxW": 3224,
+    "pxH": 5040
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "José Luiz"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Capitoline Brutus Musei Capitolini MC1183 03",
+   "year": null,
+   "image": {
+    "file": "File:Capitoline Brutus Musei Capitolini MC1183 03.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Capitoline_Brutus_Musei_Capitolini_MC1183_03.jpg/960px-Capitoline_Brutus_Musei_Capitolini_MC1183_03.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/04/Capitoline_Brutus_Musei_Capitolini_MC1183_03.jpg",
+    "pxW": 1200,
+    "pxH": 1800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "User:MatthiasKabel"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Capitoline Brutus Musei Capitolini MC1183 04",
+   "year": null,
+   "image": {
+    "file": "File:Capitoline Brutus Musei Capitolini MC1183 04.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg/960px-Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg/1920px-Capitoline_Brutus_Musei_Capitolini_MC1183_04.jpg",
+    "pxW": 1930,
+    "pxH": 2570
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Jastrow"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Capitoline Brutus inscription - Sala dei Trionfi - Palazzo dei Conservatori - Musei Capitolini - Rome 2016",
+   "year": null,
+   "image": {
+    "file": "File:Capitoline Brutus inscription - Sala dei Trionfi - Palazzo dei Conservatori - Musei Capitolini - Rome 2016.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Capitoline_Brutus_inscription_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg/960px-Capitoline_Brutus_inscription_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Capitoline_Brutus_inscription_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg/1920px-Capitoline_Brutus_inscription_-_Sala_dei_Trionfi_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg",
+    "pxW": 5184,
+    "pxH": 3456
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "José Luiz"
+   }
+  }
+ ]
 }

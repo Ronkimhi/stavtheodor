@@ -16,6 +16,47 @@
   "source": "https://en.wikipedia.org/wiki/Togatus_Barberini"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Togatus_Barberini",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Togatus Barberini, a Roman senator holding busts of his ancestors",
+   "year": null,
+   "image": {
+    "file": "File:The so-called Togatus Barberini group, a funerary statue depicting a Roman senator holding the imagines (effigies) of deceased ancestors, late 1st century BC, head (not belonging) middle 1st century BC, Centrale Montemartini, Rome.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_so-called_Togatus_Barberini_group%2C_a_funerary_statue_depicting_a_Roman_senator_holding_the_imagines_%28effigies%29_of_deceased_ancestors%2C_late_1st_century_BC%2C_head_%28not_belonging%29_middle_1st_century_BC%2C_Centrale_Montemartini%2C_Rome.jpg/960px-thumbnail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_so-called_Togatus_Barberini_group%2C_a_funerary_statue_depicting_a_Roman_senator_holding_the_imagines_%28effigies%29_of_deceased_ancestors%2C_late_1st_century_BC%2C_head_%28not_belonging%29_middle_1st_century_BC%2C_Centrale_Montemartini%2C_Rome.jpg/1920px-thumbnail.jpg",
+    "pxW": 2679,
+    "pxH": 4645
+   },
+   "cm": null,
+   "collection": "Centrale Montemartini, Rome",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Carole Raddato"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Togato Barberini",
+   "year": null,
+   "image": {
+    "file": "File:Togato Barberini.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Togato_Barberini.jpg/960px-Togato_Barberini.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Togato_Barberini.jpg/1920px-Togato_Barberini.jpg",
+    "pxW": 2592,
+    "pxH": 4608
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Carlo Dell'Orto"
+   }
+  }
+ ]
 }

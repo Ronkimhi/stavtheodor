@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Venus_de_Milo"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Venus_de_Milo",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Aphrodite of Milos",
+   "year": null,
+   "image": {
+    "file": "File:Aphrodite of Milos.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Aphrodite_of_Milos.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Aphrodite_of_Milos.jpg",
+    "pxW": 960,
+    "pxH": 1280
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Shawn Lipowski (Shawnlipowski)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dessin de Voutier",
+   "year": null,
+   "image": {
+    "file": "File:Dessin de Voutier.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Dessin_de_Voutier.jpg/960px-Dessin_de_Voutier.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Dessin_de_Voutier.jpg/1920px-Dessin_de_Voutier.jpg",
+    "pxW": 2203,
+    "pxH": 1517
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Olivier Voutier"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Front views of the Venus de Milo",
+   "year": null,
+   "image": {
+    "file": "File:Front views of the Venus de Milo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Front_views_of_the_Venus_de_Milo.jpg/960px-Front_views_of_the_Venus_de_Milo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Front_views_of_the_Venus_de_Milo.jpg/1920px-Front_views_of_the_Venus_de_Milo.jpg",
+    "pxW": 3088,
+    "pxH": 5808
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Livioandronico2013"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Furtwängler-Restortation-Venus-de-Milo",
+   "year": null,
+   "image": {
+    "file": "File:Furtwängler-Restortation-Venus-de-Milo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/5/52/Furtw%C3%A4ngler-Restortation-Venus-de-Milo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/52/Furtw%C3%A4ngler-Restortation-Venus-de-Milo.jpg",
+    "pxW": 635,
+    "pxH": 1101
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Joan Crawford as Venus de Milo",
+   "year": null,
+   "image": {
+    "file": "File:Joan Crawford as Venus de Milo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Joan_Crawford_as_Venus_de_Milo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Joan_Crawford_as_Venus_de_Milo.jpg",
+    "pxW": 652,
+    "pxH": 1415
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Joseph Warlencourt - L'ancienne salle du Tibre",
+   "year": null,
+   "image": {
+    "file": "File:Joseph Warlencourt - L'ancienne salle du Tibre.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Joseph_Warlencourt_-_L%27ancienne_salle_du_Tibre.jpg/960px-Joseph_Warlencourt_-_L%27ancienne_salle_du_Tibre.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/18/Joseph_Warlencourt_-_L%27ancienne_salle_du_Tibre.jpg",
+    "pxW": 1500,
+    "pxH": 1231
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Attributed to Joseph Warlencourt"
+   }
+  },
+  {
+   "qid": null,
+   "title": "MG-Paris-Aphrodite of Milos",
+   "year": null,
+   "image": {
+    "file": "File:MG-Paris-Aphrodite of Milos.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/MG-Paris-Aphrodite_of_Milos.jpg/960px-MG-Paris-Aphrodite_of_Milos.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/MG-Paris-Aphrodite_of_Milos.jpg/1920px-MG-Paris-Aphrodite_of_Milos.jpg",
+    "pxW": 2592,
+    "pxH": 3888
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Mattgirling"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Paris Louvre Venus de Milo Debay drawing",
+   "year": null,
+   "image": {
+    "file": "File:Paris Louvre Venus de Milo Debay drawing.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Paris_Louvre_Venus_de_Milo_Debay_drawing.jpg/960px-Paris_Louvre_Venus_de_Milo_Debay_drawing.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Paris_Louvre_Venus_de_Milo_Debay_drawing.jpg",
+    "pxW": 976,
+    "pxH": 1416
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Clarac, Frédéric, comte de"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Parthenon from west",
+   "year": null,
+   "image": {
+    "file": "File:Parthenon from west.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Parthenon_from_west.jpg/960px-Parthenon_from_west.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Parthenon_from_west.jpg/1920px-Parthenon_from_west.jpg",
+    "pxW": 2048,
+    "pxH": 1536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "User:Mountain"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Connoisseur MET DT637",
+   "year": null,
+   "image": {
+    "file": "File:The Connoisseur MET DT637.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Connoisseur_MET_DT637.jpg/960px-The_Connoisseur_MET_DT637.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Connoisseur_MET_DT637.jpg/1920px-The_Connoisseur_MET_DT637.jpg",
+    "pxW": 3063,
+    "pxH": 3714
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Honoré Daumier"
+   }
+  }
+ ]
 }

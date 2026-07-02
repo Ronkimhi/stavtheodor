@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Book_of_the_Dead",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Ani chap125",
+   "year": null,
+   "image": {
+    "file": "File:Ani chap125.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ani_chap125.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ani_chap125.jpg",
+    "pxW": 631,
+    "pxH": 377
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Soutekh67"
+   }
+  },
+  {
+   "qid": null,
+   "title": "BOTDSpell7980",
+   "year": null,
+   "image": {
+    "file": "File:BOTDSpell7980.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BOTDSpell7980.jpg/960px-BOTDSpell7980.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BOTDSpell7980.jpg/1920px-BOTDSpell7980.jpg",
+    "pxW": 3572,
+    "pxH": 4762
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Alanscottwalker"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Book of the Dead of the Goldworker of Amun, Sobekmose, Mummy Chamber, 31.1777e",
+   "year": null,
+   "image": {
+    "file": "File:Book of the Dead of the Goldworker of Amun, Sobekmose, Mummy Chamber, 31.1777e.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Book_of_the_Dead_of_the_Goldworker_of_Amun%2C_Sobekmose%2C_Mummy_Chamber%2C_31.1777e.jpg/960px-Book_of_the_Dead_of_the_Goldworker_of_Amun%2C_Sobekmose%2C_Mummy_Chamber%2C_31.1777e.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/df/Book_of_the_Dead_of_the_Goldworker_of_Amun%2C_Sobekmose%2C_Mummy_Chamber%2C_31.1777e.jpg",
+    "pxW": 1536,
+    "pxH": 1152
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bookofthedead-144145",
+   "year": null,
+   "image": {
+    "file": "File:Bookofthedead-144145.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bookofthedead-144145.jpg/960px-Bookofthedead-144145.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Bookofthedead-144145.jpg",
+    "pxW": 1087,
+    "pxH": 359
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bookofthedead-blackbg",
+   "year": null,
+   "image": {
+    "file": "File:Bookofthedead-blackbg.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Bookofthedead-blackbg.jpg/960px-Bookofthedead-blackbg.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Bookofthedead-blackbg.jpg/1920px-Bookofthedead-blackbg.jpg",
+    "pxW": 26555,
+    "pxH": 470
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Facsimiles produced by E. A. Wallis Budge; original artist unknown"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bookofthedeadspell17",
+   "year": null,
+   "image": {
+    "file": "File:Bookofthedeadspell17.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Bookofthedeadspell17.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Bookofthedeadspell17.jpg",
+    "pxW": 768,
+    "pxH": 322
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Carl Richard Lepsius",
+   "year": null,
+   "image": {
+    "file": "File:Carl Richard Lepsius (1810-1884).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Carl_Richard_Lepsius_%281810-1884%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Carl_Richard_Lepsius_%281810-1884%29.jpg",
+    "pxW": 750,
+    "pxH": 1073
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ernst Milster"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Egypt dauingevekten",
+   "year": null,
+   "image": {
+    "file": "File:Egypt dauingevekten.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/75/Egypt_dauingevekten.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/75/Egypt_dauingevekten.jpg",
+    "pxW": 893,
+    "pxH": 521
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "No machine-readable author provided. FinnBjo~commonswiki assumed (based on copyright claims)."
+   }
+  },
+  {
+   "qid": null,
+   "title": "El pesado del corazón en el Papiro de Hunefer",
+   "year": null,
+   "image": {
+    "file": "File:El pesado del corazón en el Papiro de Hunefer.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg/960px-El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg",
+    "pxW": 1035,
+    "pxH": 651
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Hunefer"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Hieroglyph Text from Teti I pyramid",
+   "year": null,
+   "image": {
+    "file": "File:Hieroglyph Text from Teti I pyramid.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hieroglyph_Text_from_Teti_I_pyramid.jpg/960px-Hieroglyph_Text_from_Teti_I_pyramid.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hieroglyph_Text_from_Teti_I_pyramid.jpg/1920px-Hieroglyph_Text_from_Teti_I_pyramid.jpg",
+    "pxW": 2272,
+    "pxH": 1704
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Chipdawes"
+   }
+  }
+ ]
 }

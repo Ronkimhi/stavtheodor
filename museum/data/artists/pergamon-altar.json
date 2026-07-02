@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Pergamon_Altar"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Pergamon_Altar",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "2005-12-28 Berlin Pergamon museum",
+   "year": null,
+   "image": {
+    "file": "File:2005-12-28 Berlin Pergamon museum (03).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2005-12-28_Berlin_Pergamon_museum_%2803%29.jpg/960px-2005-12-28_Berlin_Pergamon_museum_%2803%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2005-12-28_Berlin_Pergamon_museum_%2803%29.jpg/1920px-2005-12-28_Berlin_Pergamon_museum_%2803%29.jpg",
+    "pxW": 2272,
+    "pxH": 1704
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Magnus Manske"
+   }
+  },
+  {
+   "qid": null,
+   "title": "AltarPergamo",
+   "year": null,
+   "image": {
+    "file": "File:AltarPergamo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/29/AltarPergamo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/29/AltarPergamo.jpg",
+    "pxW": 508,
+    "pxH": 269
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Lourdes Cardenal"
+   }
+  },
+  {
+   "qid": null,
+   "title": "AtaloPergamo",
+   "year": null,
+   "image": {
+    "file": "File:AtaloPergamo.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/75/AtaloPergamo.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/75/AtaloPergamo.jpg",
+    "pxW": 440,
+    "pxH": 567
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Nicolás Pérez"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Athena and Nike fight Alkyoneus, Gaia rises up from the ground",
+   "year": null,
+   "image": {
+    "file": "File:Athena and Nike fight Alkyoneus, Gaia rises up from the ground (5336871341).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Athena_and_Nike_fight_Alkyoneus%2C_Gaia_rises_up_from_the_ground_%285336871341%29.jpg/960px-Athena_and_Nike_fight_Alkyoneus%2C_Gaia_rises_up_from_the_ground_%285336871341%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Athena_and_Nike_fight_Alkyoneus%2C_Gaia_rises_up_from_the_ground_%285336871341%29.jpg/1920px-Athena_and_Nike_fight_Alkyoneus%2C_Gaia_rises_up_from_the_ground_%285336871341%29.jpg",
+    "pxW": 4032,
+    "pxH": 3024
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Miia Ranta from Finland"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Berlin - Pergamonmuseum - Altar 01",
+   "year": null,
+   "image": {
+    "file": "File:Berlin - Pergamonmuseum - Altar 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Berlin_-_Pergamonmuseum_-_Altar_01.jpg/960px-Berlin_-_Pergamonmuseum_-_Altar_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Berlin_-_Pergamonmuseum_-_Altar_01.jpg/1920px-Berlin_-_Pergamonmuseum_-_Altar_01.jpg",
+    "pxW": 4483,
+    "pxH": 1367
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Lestat (Jan Mehlich)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Fundament des Pergamonaltars um 1879",
+   "year": null,
+   "image": {
+    "file": "File:Fundament des Pergamonaltars um 1879.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Fundament_des_Pergamonaltars_um_1879.jpg/960px-Fundament_des_Pergamonaltars_um_1879.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Fundament_des_Pergamonaltars_um_1879.jpg/1920px-Fundament_des_Pergamonaltars_um_1879.jpg",
+    "pxW": 2047,
+    "pxH": 1445
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Konstantinos Athanasiou"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Grundriss-Aufstellung-Pergamonaltar",
+   "year": null,
+   "image": {
+    "file": "File:Grundriss-Aufstellung-Pergamonaltar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Grundriss-Aufstellung-Pergamonaltar.jpg/960px-Grundriss-Aufstellung-Pergamonaltar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/64/Grundriss-Aufstellung-Pergamonaltar.jpg",
+    "pxW": 1360,
+    "pxH": 1254
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "see Source"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Grundriss-Pergamonlatar rotate",
+   "year": null,
+   "image": {
+    "file": "File:Grundriss-Pergamonlatar rotate.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/08/Grundriss-Pergamonlatar_rotate.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/08/Grundriss-Pergamonlatar_rotate.jpg",
+    "pxW": 927,
+    "pxH": 832
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "see Source"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Humann-Ideenskitze-Pergamonaltar",
+   "year": null,
+   "image": {
+    "file": "File:Humann-Ideenskitze-Pergamonaltar.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Humann-Ideenskitze-Pergamonaltar.jpg/960px-Humann-Ideenskitze-Pergamonaltar.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Humann-Ideenskitze-Pergamonaltar.jpg",
+    "pxW": 1898,
+    "pxH": 874
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Carl Humann"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Laocoön and his sons group",
+   "year": null,
+   "image": {
+    "file": "File:Laocoön and his sons group.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Laoco%C3%B6n_and_his_sons_group.jpg/960px-Laoco%C3%B6n_and_his_sons_group.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Laoco%C3%B6n_and_his_sons_group.jpg/1920px-Laoco%C3%B6n_and_his_sons_group.jpg",
+    "pxW": 8744,
+    "pxH": 9502
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Wilfredor"
+   }
+  }
+ ]
 }

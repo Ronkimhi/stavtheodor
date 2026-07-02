@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Babylon"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Babylon",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Ancient Remains in Babylon",
+   "year": null,
+   "image": {
+    "file": "File:Ancient Remains in Babylon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ancient_Remains_in_Babylon.jpg/960px-Ancient_Remains_in_Babylon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ancient_Remains_in_Babylon.jpg/1920px-Ancient_Remains_in_Babylon.jpg",
+    "pxW": 6000,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Osama Sarm"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Apocalypse figurée des ducs de Savoie - Escorial E Vit.5 - Fall of Babylon",
+   "year": null,
+   "image": {
+    "file": "File:Apocalypse figurée des ducs de Savoie - Escorial E Vit.5 - Fall of Babylon.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Apocalypse_figur%C3%A9e_des_ducs_de_Savoie_-_Escorial_E_Vit.5_-_Fall_of_Babylon.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Apocalypse_figur%C3%A9e_des_ducs_de_Savoie_-_Escorial_E_Vit.5_-_Fall_of_Babylon.png",
+    "pxW": 550,
+    "pxH": 548
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "medieval"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Babylon, 1932",
+   "year": null,
+   "image": {
+    "file": "File:Babylon, 1932.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Babylon%2C_1932.jpg/960px-Babylon%2C_1932.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Babylon%2C_1932.jpg/1920px-Babylon%2C_1932.jpg",
+    "pxW": 3922,
+    "pxH": 2847
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "American Colony (Jerusalem). Photo Dept., photographer."
+   }
+  },
+  {
+   "qid": null,
+   "title": "Charles Le Brun - Entry of Alexander into Babylon",
+   "year": null,
+   "image": {
+    "file": "File:Charles Le Brun - Entry of Alexander into Babylon.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG/960px-Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG/1920px-Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG",
+    "pxW": 4018,
+    "pxH": 2661
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Charles Le Brun"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Confluence of the Tigris and Euphrates near Al-Qurnah",
+   "year": null,
+   "image": {
+    "file": "File:Confluence of the Tigris and Euphrates near Al-Qurnah.tif",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Confluence_of_the_Tigris_and_Euphrates_near_Al-Qurnah.tif/lossy-page1-960px-Confluence_of_the_Tigris_and_Euphrates_near_Al-Qurnah.tif.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Confluence_of_the_Tigris_and_Euphrates_near_Al-Qurnah.tif/lossy-page1-1920px-Confluence_of_the_Tigris_and_Euphrates_near_Al-Qurnah.tif.jpg",
+    "pxW": 2400,
+    "pxH": 1446
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Ridpath, John Clark"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cuneiform cylinder- inscription of Nebuchadnezzar II commemorating the reconstruction of Etemenanki, the ziggurat at Babylon MET ME86 11 284",
+   "year": null,
+   "image": {
+    "file": "File:Cuneiform cylinder- inscription of Nebuchadnezzar II commemorating the reconstruction of Etemenanki, the ziggurat at Babylon MET ME86 11 284.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Cuneiform_cylinder-_inscription_of_Nebuchadnezzar_II_commemorating_the_reconstruction_of_Etemenanki%2C_the_ziggurat_at_Babylon_MET_ME86_11_284.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Cuneiform_cylinder-_inscription_of_Nebuchadnezzar_II_commemorating_the_reconstruction_of_Etemenanki%2C_the_ziggurat_at_Babylon_MET_ME86_11_284.jpg",
+    "pxW": 800,
+    "pxH": 715
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": ""
+   }
+  },
+  {
+   "qid": null,
+   "title": "Dynastic Chronicle",
+   "year": null,
+   "image": {
+    "file": "File:Dynastic Chronicle.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dynastic_Chronicle.jpg/960px-Dynastic_Chronicle.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Dynastic_Chronicle.jpg",
+    "pxW": 1014,
+    "pxH": 627
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "L. W. King"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ishtar Gate",
+   "year": null,
+   "image": {
+    "file": "File:Ishtar Gate.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ishtar_Gate.jpg/960px-Ishtar_Gate.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Ishtar_Gate.jpg",
+    "pxW": 1024,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "David Stanley"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ishtar Gate at Berlin Museum",
+   "year": null,
+   "image": {
+    "file": "File:Ishtar Gate at Berlin Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ishtar_Gate_at_Berlin_Museum.jpg/960px-Ishtar_Gate_at_Berlin_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Ishtar_Gate_at_Berlin_Museum.jpg",
+    "pxW": 1024,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Rictor Norton"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Johann Georg Platzer - Alexander der Große empfängt die Schlüssel von Babylon",
+   "year": null,
+   "image": {
+    "file": "File:Johann Georg Platzer - Alexander der Große empfängt die Schlüssel von Babylon.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Johann_Georg_Platzer_-_Alexander_der_Gro%C3%9Fe_empf%C3%A4ngt_die_Schl%C3%BCssel_von_Babylon.jpg/960px-Johann_Georg_Platzer_-_Alexander_der_Gro%C3%9Fe_empf%C3%A4ngt_die_Schl%C3%BCssel_von_Babylon.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Johann_Georg_Platzer_-_Alexander_der_Gro%C3%9Fe_empf%C3%A4ngt_die_Schl%C3%BCssel_von_Babylon.jpg/1920px-Johann_Georg_Platzer_-_Alexander_der_Gro%C3%9Fe_empf%C3%A4ngt_die_Schl%C3%BCssel_von_Babylon.jpg",
+    "pxW": 3200,
+    "pxH": 2165
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Johann Georg Platzer"
+   }
+  }
+ ]
 }

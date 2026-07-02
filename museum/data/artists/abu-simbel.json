@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Abu_Simbel",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "2N9A6519-Pano",
+   "year": null,
+   "image": {
+    "file": "File:2N9A6519-Pano.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/2N9A6519-Pano.jpg/960px-2N9A6519-Pano.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/2N9A6519-Pano.jpg/1920px-2N9A6519-Pano.jpg",
+    "pxW": 20303,
+    "pxH": 6795
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Dwkrider1"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abou Simbel, Nubia MET DP116347",
+   "year": null,
+   "image": {
+    "file": "File:Abou Simbel, Nubia MET DP116347.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Abou_Simbel%2C_Nubia_MET_DP116347.jpg/960px-Abou_Simbel%2C_Nubia_MET_DP116347.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Abou_Simbel%2C_Nubia_MET_DP116347.jpg/1920px-Abou_Simbel%2C_Nubia_MET_DP116347.jpg",
+    "pxW": 2913,
+    "pxH": 3918
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Francis Frith"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abou Simbel",
+   "year": null,
+   "image": {
+    "file": "File:Abou Simbel (DOI 957).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Abou_Simbel_%28DOI_957%29.jpg/960px-Abou_Simbel_%28DOI_957%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Abou_Simbel_%28DOI_957%29.jpg/1920px-Abou_Simbel_%28DOI_957%29.jpg",
+    "pxW": 2945,
+    "pxH": 1974
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "André Corboz"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abou Simbel 2004",
+   "year": null,
+   "image": {
+    "file": "File:Abou Simbel 2004.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Abou_Simbel_2004.jpg/960px-Abou_Simbel_2004.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Abou_Simbel_2004.jpg/1920px-Abou_Simbel_2004.jpg",
+    "pxW": 2048,
+    "pxH": 1536
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 4.0",
+    "credit": "Orange Mécanique"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu - Simbel - Inauguration ceremony to mark the completion of removal and reconstruction of the Abu Simbel Temples on their new site",
+   "year": null,
+   "image": {
+    "file": "File:Abu - Simbel - Inauguration ceremony to mark the completion of removal and reconstruction of the Abu Simbel Temples on their new site.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Abu_-_Simbel_-_Inauguration_ceremony_to_mark_the_completion_of_removal_and_reconstruction_of_the_Abu_Simbel_Temples_on_their_new_site.jpg/960px-Abu_-_Simbel_-_Inauguration_ceremony_to_mark_the_completion_of_removal_and_reconstruction_of_the_Abu_Simbel_Temples_on_their_new_site.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Abu_-_Simbel_-_Inauguration_ceremony_to_mark_the_completion_of_removal_and_reconstruction_of_the_Abu_Simbel_Temples_on_their_new_site.jpg",
+    "pxW": 1000,
+    "pxH": 1307
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 igo",
+    "credit": "UNESCO"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu Simbel, Great Temple, 1964",
+   "year": null,
+   "image": {
+    "file": "File:Abu Simbel, Great Temple, 1964.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Abu_Simbel%2C_Great_Temple%2C_1964.jpg/960px-Abu_Simbel%2C_Great_Temple%2C_1964.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Abu_Simbel%2C_Great_Temple%2C_1964.jpg/1920px-Abu_Simbel%2C_Great_Temple%2C_1964.jpg",
+    "pxW": 3945,
+    "pxH": 2663
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Manfred Niermann"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu Simbel",
+   "year": null,
+   "image": {
+    "file": "File:Abu Simbel ( 175 miles south of Aswan, left bank).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Abu_Simbel_%28_175_miles_south_of_Aswan%2C_left_bank%29.jpg/960px-Abu_Simbel_%28_175_miles_south_of_Aswan%2C_left_bank%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/98/Abu_Simbel_%28_175_miles_south_of_Aswan%2C_left_bank%29.jpg",
+    "pxW": 1000,
+    "pxH": 1000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 igo",
+    "credit": "UNESCO"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu Simbel - Ramses II temple dome",
+   "year": null,
+   "image": {
+    "file": "File:Abu Simbel - Ramses II temple dome.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Abu_Simbel_-_Ramses_II_temple_dome.jpg/960px-Abu_Simbel_-_Ramses_II_temple_dome.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Abu_Simbel_-_Ramses_II_temple_dome.jpg/1920px-Abu_Simbel_-_Ramses_II_temple_dome.jpg",
+    "pxW": 2520,
+    "pxH": 1680
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "E. Bonetti Rimatroko"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu Simbel - baboons detail",
+   "year": null,
+   "image": {
+    "file": "File:Abu Simbel - baboons detail.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Abu_Simbel_-_baboons_detail.jpg/960px-Abu_Simbel_-_baboons_detail.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Abu_Simbel_-_baboons_detail.jpg/1920px-Abu_Simbel_-_baboons_detail.jpg",
+    "pxW": 3872,
+    "pxH": 2592
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "WLU"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Abu Simbel Temple May 30 2007",
+   "year": null,
+   "image": {
+    "file": "File:Abu Simbel Temple May 30 2007.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Abu_Simbel_Temple_May_30_2007.jpg/960px-Abu_Simbel_Temple_May_30_2007.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Abu_Simbel_Temple_May_30_2007.jpg/1920px-Abu_Simbel_Temple_May_30_2007.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Than217 at English Wikipedia"
+   }
+  }
+ ]
 }

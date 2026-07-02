@@ -16,6 +16,167 @@
   "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/The_Seated_Scribe",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "F0829 Louvre Scribe accroupi detail E3023 rwk",
+   "year": null,
+   "image": {
+    "file": "File:F0829 Louvre Scribe accroupi detail E3023 rwk.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/F0829_Louvre_Scribe_accroupi_detail_E3023_rwk.jpg/960px-F0829_Louvre_Scribe_accroupi_detail_E3023_rwk.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/F0829_Louvre_Scribe_accroupi_detail_E3023_rwk.jpg/1920px-F0829_Louvre_Scribe_accroupi_detail_E3023_rwk.jpg",
+    "pxW": 2800,
+    "pxH": 2620
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Le Scribe accroupi - Musée du Louvre Antiquités égyptiennes E 3023",
+   "year": null,
+   "image": {
+    "file": "File:Le Scribe accroupi - Musée du Louvre Antiquités égyptiennes E 3023.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg/960px-Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg/1920px-Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg",
+    "pxW": 7062,
+    "pxH": 7887
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Shonagon"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Louvre-antiquites-egyptiennes-p1020382",
+   "year": null,
+   "image": {
+    "file": "File:Louvre-antiquites-egyptiennes-p1020382.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Louvre-antiquites-egyptiennes-p1020382.jpg/960px-Louvre-antiquites-egyptiennes-p1020382.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Louvre-antiquites-egyptiennes-p1020382.jpg/1920px-Louvre-antiquites-egyptiennes-p1020382.jpg",
+    "pxW": 2560,
+    "pxH": 1920
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Scribe-A 42-IMG 4488-gradient",
+   "year": null,
+   "image": {
+    "file": "File:Scribe-A 42-IMG 4488-gradient.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Scribe-A_42-IMG_4488-gradient.jpg/960px-Scribe-A_42-IMG_4488-gradient.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Scribe-A_42-IMG_4488-gradient.jpg/1920px-Scribe-A_42-IMG_4488-gradient.jpg",
+    "pxW": 6000,
+    "pxH": 6000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Scribe E3023 mp3h8778",
+   "year": null,
+   "image": {
+    "file": "File:Scribe E3023 mp3h8778.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Scribe_E3023_mp3h8778.jpg/960px-Scribe_E3023_mp3h8778.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Scribe_E3023_mp3h8778.jpg/1920px-Scribe_E3023_mp3h8778.jpg",
+    "pxW": 3504,
+    "pxH": 2336
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Scribe E3023 mp3h8780",
+   "year": null,
+   "image": {
+    "file": "File:Scribe E3023 mp3h8780.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Scribe_E3023_mp3h8780.jpg/960px-Scribe_E3023_mp3h8780.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Scribe_E3023_mp3h8780.jpg/1920px-Scribe_E3023_mp3h8780.jpg",
+    "pxW": 3504,
+    "pxH": 2336
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Seated scribe-E 3023-p1020377-gradient",
+   "year": null,
+   "image": {
+    "file": "File:Seated scribe-E 3023-p1020377-gradient.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Seated_scribe-E_3023-p1020377-gradient.jpg/960px-Seated_scribe-E_3023-p1020377-gradient.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Seated_scribe-E_3023-p1020377-gradient.jpg/1920px-Seated_scribe-E_3023-p1020377-gradient.jpg",
+    "pxW": 3000,
+    "pxH": 3000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "The Seated Scribe, Louvre 13 September 2017 001",
+   "year": null,
+   "image": {
+    "file": "File:The Seated Scribe, Louvre 13 September 2017 001.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Seated_Scribe%2C_Louvre_13_September_2017_001.jpg/960px-The_Seated_Scribe%2C_Louvre_13_September_2017_001.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Seated_Scribe%2C_Louvre_13_September_2017_001.jpg/1920px-The_Seated_Scribe%2C_Louvre_13_September_2017_001.jpg",
+    "pxW": 2450,
+    "pxH": 2450
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Jason Riedy from East Point, GA, USA"
+   }
+  }
+ ]
 }

@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Giza_pyramid_complex"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "\"Pyramids of Ghizeh.\" 1893",
+   "year": null,
+   "image": {
+    "file": "File:\"Pyramids of Ghizeh.\" 1893.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%22Pyramids_of_Ghizeh.%22_1893.jpg/960px-%22Pyramids_of_Ghizeh.%22_1893.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/47/%22Pyramids_of_Ghizeh.%22_1893.jpg",
+    "pxW": 1536,
+    "pxH": 1267
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Junghaendel, R. M."
+   }
+  },
+  {
+   "qid": null,
+   "title": "All Gizah Pyramids",
+   "year": null,
+   "image": {
+    "file": "File:All Gizah Pyramids.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/1920px-All_Gizah_Pyramids.jpg",
+    "pxW": 4372,
+    "pxH": 2906
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Ricardo Liberato"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Egypt, Giza",
+   "year": null,
+   "image": {
+    "file": "File:Egypt, Giza.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Egypt%2C_Giza.jpg/960px-Egypt%2C_Giza.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/6/61/Egypt%2C_Giza.jpg",
+    "pxW": 1200,
+    "pxH": 870
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Auguste Léon"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Giza-pyramids-uwm",
+   "year": null,
+   "image": {
+    "file": "File:Giza-pyramids-uwm.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Giza-pyramids-uwm.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Giza-pyramids-uwm.png",
+    "pxW": 640,
+    "pxH": 452
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Meader, Mary, 1916-2008"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Giza-pyramids",
+   "year": null,
+   "image": {
+    "file": "File:Giza-pyramids.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Giza-pyramids.JPG/960px-Giza-pyramids.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/9/94/Giza-pyramids.JPG",
+    "pxW": 1833,
+    "pxH": 1208
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Robster1983 at English Wikipedia"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Gizeh-Stele du reve",
+   "year": null,
+   "image": {
+    "file": "File:Gizeh-Stele du reve.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Gizeh-Stele_du_reve.jpg/960px-Gizeh-Stele_du_reve.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Gizeh-Stele_du_reve.jpg/1920px-Gizeh-Stele_du_reve.jpg",
+    "pxW": 3264,
+    "pxH": 2448
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Kurohito"
+   }
+  },
+  {
+   "qid": null,
+   "title": "On top̠ of Cheops Pyramid",
+   "year": null,
+   "image": {
+    "file": "File:On top̠ of Cheops Pyramid.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/On_top%CC%A0_of_Cheops_Pyramid.jpg/960px-On_top%CC%A0_of_Cheops_Pyramid.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/On_top%CC%A0_of_Cheops_Pyramid.jpg/1920px-On_top%CC%A0_of_Cheops_Pyramid.jpg",
+    "pxW": 2760,
+    "pxH": 1840
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Lorenz.King at JLU Giessen.de"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pyramids from afar",
+   "year": null,
+   "image": {
+    "file": "File:Pyramids from afar (2).tif",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramids_from_afar_%282%29.tif/lossy-page1-960px-Pyramids_from_afar_%282%29.tif.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramids_from_afar_%282%29.tif/lossy-page1-1920px-Pyramids_from_afar_%282%29.tif.jpg",
+    "pxW": 4362,
+    "pxH": 2762
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Zdravko Pečar"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Pyramids of the Giza Necropolis",
+   "year": null,
+   "image": {
+    "file": "File:Pyramids of the Giza Necropolis.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pyramids_of_the_Giza_Necropolis.jpg/960px-Pyramids_of_the_Giza_Necropolis.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pyramids_of_the_Giza_Necropolis.jpg/1920px-Pyramids_of_the_Giza_Necropolis.jpg",
+    "pxW": 10104,
+    "pxH": 4210
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "KennyOMG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "PyramidsofGiza at night",
+   "year": null,
+   "image": {
+    "file": "File:PyramidsofGiza at night.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/PyramidsofGiza_at_night.jpg/960px-PyramidsofGiza_at_night.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/PyramidsofGiza_at_night.jpg/1920px-PyramidsofGiza_at_night.jpg",
+    "pxW": 2048,
+    "pxH": 1360
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": ""
+   }
+  }
+ ]
 }

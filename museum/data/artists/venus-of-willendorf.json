@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Venus of Willendorf, front view",
+   "year": null,
+   "image": {
+    "file": "File:Venus von Willendorf 01.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Venus_von_Willendorf_01.jpg/960px-Venus_von_Willendorf_01.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/50/Venus_von_Willendorf_01.jpg",
+    "pxW": 1428,
+    "pxH": 2684
+   },
+   "cm": null,
+   "collection": "Natural History Museum, Vienna",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "User:MatthiasKabel"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Venus of Willendorf",
+   "year": null,
+   "image": {
+    "file": "File:Venus of Willendorf, 20210730 1214 1255.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Venus_of_Willendorf%2C_20210730_1214_1255.jpg/960px-Venus_of_Willendorf%2C_20210730_1214_1255.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Venus_of_Willendorf%2C_20210730_1214_1255.jpg",
+    "pxW": 1832,
+    "pxH": 2744
+   },
+   "cm": null,
+   "collection": "Natural History Museum, Vienna",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Jakub Hałun"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Venus of Willendorf, back view",
+   "year": null,
+   "image": {
+    "file": "File:Venus of Willendorf 03.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Venus_of_Willendorf_03.jpg/960px-Venus_of_Willendorf_03.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Venus_of_Willendorf_03.jpg/1920px-Venus_of_Willendorf_03.jpg",
+    "pxW": 2308,
+    "pxH": 3468
+   },
+   "cm": null,
+   "collection": "Natural History Museum, Vienna",
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.5",
+    "credit": "User:MatthiasKabel"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Venus of Willendorf, profile view",
+   "year": null,
+   "image": {
+    "file": "File:Willendorf-Venus-1468.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Willendorf-Venus-1468.jpg/960px-Willendorf-Venus-1468.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Willendorf-Venus-1468.jpg/1920px-Willendorf-Venus-1468.jpg",
+    "pxW": 2001,
+    "pxH": 3177
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Don Hitchcock"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Scan the World - Venus of Willendorf",
+   "year": null,
+   "image": {
+    "file": "File:Scan the World - Venus of Willendorf.stl",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Scan_the_World_-_Venus_of_Willendorf.stl/960px-Scan_the_World_-_Venus_of_Willendorf.stl.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Scan_the_World_-_Venus_of_Willendorf.stl/1920px-Scan_the_World_-_Venus_of_Willendorf.stl.png",
+    "pxW": 5120,
+    "pxH": 2880
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Scan the World"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Venus of Willendorf - All sides",
+   "year": null,
+   "image": {
+    "file": "File:Venus of Willendorf - All sides.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Venus_of_Willendorf_-_All_sides.jpg/960px-Venus_of_Willendorf_-_All_sides.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Venus_of_Willendorf_-_All_sides.jpg/1920px-Venus_of_Willendorf_-_All_sides.jpg",
+    "pxW": 9710,
+    "pxH": 4573
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Bjørn Christian Tørrissen"
+   }
+  }
+ ]
 }

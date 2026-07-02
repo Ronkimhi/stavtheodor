@@ -16,6 +16,107 @@
   "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Chauvet_Cave",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Deer Chauvet Cave",
+   "year": null,
+   "image": {
+    "file": "File:Deer Chauvet Cave.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Deer_Chauvet_Cave.jpg/960px-Deer_Chauvet_Cave.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/5/59/Deer_Chauvet_Cave.jpg",
+    "pxW": 1366,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Lions painting, Chauvet Cave",
+   "year": null,
+   "image": {
+    "file": "File:Lions painting, Chauvet Cave (museum replica).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg/960px-Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg/1920px-Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg",
+    "pxW": 2015,
+    "pxH": 1721
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "HTO"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Paintings from the Chauvet cave",
+   "year": null,
+   "image": {
+    "file": "File:Paintings from the Chauvet cave (museum replica).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg/960px-Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg",
+    "pxW": 1824,
+    "pxH": 1840
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "HTO"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Rhinos Chauvet Cave",
+   "year": null,
+   "image": {
+    "file": "File:Rhinos Chauvet Cave.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rhinos_Chauvet_Cave.jpg/960px-Rhinos_Chauvet_Cave.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/17/Rhinos_Chauvet_Cave.jpg",
+    "pxW": 1366,
+    "pxH": 768
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Romania stamp 2001 2400L Steppe Wisent Chauvet Cave",
+   "year": null,
+   "image": {
+    "file": "File:Romania stamp 2001 2400L Steppe Wisent Chauvet Cave.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/0/05/Romania_stamp_2001_2400L_Steppe_Wisent_Chauvet_Cave.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/05/Romania_stamp_2001_2400L_Steppe_Wisent_Chauvet_Cave.jpg",
+    "pxW": 777,
+    "pxH": 535
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Romanian Post"
+   }
+  }
+ ]
 }

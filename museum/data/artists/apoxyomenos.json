@@ -16,6 +16,87 @@
   "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Apoxyomenos",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Apoxyomenos Pio-Clementino Inv1185",
+   "year": null,
+   "image": {
+    "file": "File:Apoxyomenos Pio-Clementino Inv1185.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg",
+    "pxW": 1500,
+    "pxH": 3500
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy after Lysippos"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Apoxyomenos Pio-Clementino Inv1185 n2",
+   "year": null,
+   "image": {
+    "file": "File:Apoxyomenos Pio-Clementino Inv1185 n2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg/1920px-Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg",
+    "pxW": 3500,
+    "pxH": 2334
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Copy after Lysippos"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Zagreb Apoxyomenos - head",
+   "year": null,
+   "image": {
+    "file": "File:Zagreb Apoxyomenos - head.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/8/88/Zagreb_Apoxyomenos_-_head.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/88/Zagreb_Apoxyomenos_-_head.JPG",
+    "pxW": 720,
+    "pxH": 576
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "User:Zmaj"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Zagreb Apoxyomenos - lips",
+   "year": null,
+   "image": {
+    "file": "File:Zagreb Apoxyomenos - lips.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Zagreb_Apoxyomenos_-_lips.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Zagreb_Apoxyomenos_-_lips.JPG",
+    "pxW": 720,
+    "pxH": 576
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "User:Zmaj"
+   }
+  }
+ ]
 }

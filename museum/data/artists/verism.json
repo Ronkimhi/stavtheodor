@@ -16,6 +16,127 @@
   "source": "https://en.wikipedia.org/wiki/Verism"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Verism",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Face of a child-MGR Lyon-IMG 9850",
+   "year": null,
+   "image": {
+    "file": "File:Face of a child-MGR Lyon-IMG 9850.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Face_of_a_child-MGR_Lyon-IMG_9850.jpg/960px-Face_of_a_child-MGR_Lyon-IMG_9850.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Face_of_a_child-MGR_Lyon-IMG_9850.jpg/1920px-Face_of_a_child-MGR_Lyon-IMG_9850.jpg",
+    "pxW": 3687,
+    "pxH": 3687
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0 fr",
+    "credit": "Rama"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Galba",
+   "year": null,
+   "image": {
+    "file": "File:Galba.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/2/28/Galba.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/2/28/Galba.jpg",
+    "pxW": 800,
+    "pxH": 411
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "CNG"
+   }
+  },
+  {
+   "qid": null,
+   "title": "General de Tivoli (Massimo) 01",
+   "year": null,
+   "image": {
+    "file": "File:General de Tivoli (Massimo) 01.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/960px-General_de_Tivoli_%28Massimo%29_01.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/1920px-General_de_Tivoli_%28Massimo%29_01.JPG",
+    "pxW": 2708,
+    "pxH": 5076
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Miguel Hermoso Cuesta"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Head old Roman Glyptothek Munich 320",
+   "year": null,
+   "image": {
+    "file": "File:Head old Roman Glyptothek Munich 320.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Head_old_Roman_Glyptothek_Munich_320.jpg/960px-Head_old_Roman_Glyptothek_Munich_320.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/0/00/Head_old_Roman_Glyptothek_Munich_320.jpg",
+    "pxW": 1738,
+    "pxH": 2574
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Unknown artistUnknown artist"
+   }
+  },
+  {
+   "qid": null,
+   "title": "IMG 1075 - Perugia - Museo archeologico - Urna etrusca - 7 ago 2006 - Foto G. Dall'Orto2",
+   "year": null,
+   "image": {
+    "file": "File:IMG 1075 - Perugia - Museo archeologico - Urna etrusca - 7 ago 2006 - Foto G. Dall'Orto2.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg/960px-IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/e/e9/IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg",
+    "pxW": 1848,
+    "pxH": 1800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Attribution",
+    "credit": "G.dallorto"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Vespasianus01 pushkin",
+   "year": null,
+   "image": {
+    "file": "File:Vespasianus01 pushkin.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Vespasianus01_pushkin.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Vespasianus01_pushkin.jpg",
+    "pxW": 760,
+    "pxH": 966
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "shakko"
+   }
+  }
+ ]
 }

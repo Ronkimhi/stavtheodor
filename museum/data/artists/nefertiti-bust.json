@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Nefertiti_Bust"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Nefertiti_Bust",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "Akhenaten, Nefertiti and their children",
+   "year": null,
+   "image": {
+    "file": "File:Akhenaten, Nefertiti and their children.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Akhenaten%2C_Nefertiti_and_their_children.jpg/960px-Akhenaten%2C_Nefertiti_and_their_children.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Akhenaten%2C_Nefertiti_and_their_children.jpg/1920px-Akhenaten%2C_Nefertiti_and_their_children.jpg",
+    "pxW": 2592,
+    "pxH": 1944
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "myself (Gerbil from de.wikipedia)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Bust of Nefertiti at the Neues Museum, Berlin",
+   "year": null,
+   "image": {
+    "file": "File:Bust of Nefertiti at the Neues Museum, Berlin.stl",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bust_of_Nefertiti_at_the_Neues_Museum%2C_Berlin.stl/960px-Bust_of_Nefertiti_at_the_Neues_Museum%2C_Berlin.stl.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bust_of_Nefertiti_at_the_Neues_Museum%2C_Berlin.stl/1920px-Bust_of_Nefertiti_at_the_Neues_Museum%2C_Berlin.stl.png",
+    "pxW": 5120,
+    "pxH": 2880
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Original artist unknown, 3-D render made by https://www.myminifactory.com/users/Scan%20The%20World"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Nefertiti",
+   "year": null,
+   "image": {
+    "file": "File:Nefertiti (Nofretete in Berlin).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nefertiti_%28Nofretete_in_Berlin%29.jpg/960px-Nefertiti_%28Nofretete_in_Berlin%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nefertiti_%28Nofretete_in_Berlin%29.jpg/1920px-Nefertiti_%28Nofretete_in_Berlin%29.jpg",
+    "pxW": 2848,
+    "pxH": 4256
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Giovanni from Firenze, Italy"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Nefertiti bust",
+   "year": null,
+   "image": {
+    "file": "File:Nefertiti bust (back).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/3/33/Nefertiti_bust_%28back%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/33/Nefertiti_bust_%28back%29.jpg",
+    "pxW": 532,
+    "pxH": 800
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Magnus Manske"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Nefertiti bust",
+   "year": null,
+   "image": {
+    "file": "File:Nefertiti bust (right).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Nefertiti_bust_%28right%29.jpg/960px-Nefertiti_bust_%28right%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nefertiti_bust_%28right%29.jpg",
+    "pxW": 1408,
+    "pxH": 1925
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Magnus Manske"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Nefertiti bust atles",
+   "year": null,
+   "image": {
+    "file": "File:Nefertiti bust atles.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/7/79/Nefertiti_bust_atles.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/79/Nefertiti_bust_atles.jpg",
+    "pxW": 424,
+    "pxH": 582
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Hwei Shan Lo"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Neues Museum Berlin EP1",
+   "year": null,
+   "image": {
+    "file": "File:Neues Museum Berlin EP1.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Neues_Museum_Berlin_EP1.JPG/960px-Neues_Museum_Berlin_EP1.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Neues_Museum_Berlin_EP1.JPG/1920px-Neues_Museum_Berlin_EP1.JPG",
+    "pxW": 4330,
+    "pxH": 2246
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Gryffindor  stitched by Marku1988"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Nofretete Neues Museum",
+   "year": null,
+   "image": {
+    "file": "File:Nofretete Neues Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nofretete_Neues_Museum.jpg/960px-Nofretete_Neues_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Nofretete_Neues_Museum.jpg",
+    "pxW": 1282,
+    "pxH": 1877
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "Philip Pikart"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Photo-of-the-bust-of-Nefertiti-taken-1912-document-of-the-official-division-of-finds-©-Deutsche-Orient-Gesellschaft-DOG-Homa-Nasab-for-MuseumViews",
+   "year": null,
+   "image": {
+    "file": "File:Photo-of-the-bust-of-Nefertiti-taken-1912-document-of-the-official-division-of-finds-©-Deutsche-Orient-Gesellschaft-DOG-Homa-Nasab-for-MuseumViews (1) (1).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Photo-of-the-bust-of-Nefertiti-taken-1912-document-of-the-official-division-of-finds-%C2%A9-Deutsche-Orient-Gesellschaft-DOG-Homa-Nasab-for-MuseumViews_%281%29_%281%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Photo-of-the-bust-of-Nefertiti-taken-1912-document-of-the-official-division-of-finds-%C2%A9-Deutsche-Orient-Gesellschaft-DOG-Homa-Nasab-for-MuseumViews_%281%29_%281%29.jpg",
+    "pxW": 729,
+    "pxH": 960
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Photo-of-the-bust-of-Nefertiti-taken-1912-document-of-the-official-division-of-finds-©-Deutsche-Orient-Gesellschaft-DOG-Homa-Nasab-for-MuseumViews.jpg"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Queen nefertiti1",
+   "year": null,
+   "image": {
+    "file": "File:Queen nefertiti1.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Queen_nefertiti1.jpg/960px-Queen_nefertiti1.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Queen_nefertiti1.jpg",
+    "pxW": 1200,
+    "pxH": 1600
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 3.0",
+    "credit": "No machine-readable author provided. F. Cinquepalmi assumed (based on copyright claims)."
+   }
+  }
+ ]
 }

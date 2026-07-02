@@ -178,6 +178,86 @@
     "name": "CC BY 2.5",
     "credit": "Phidias"
    }
+  },
+  {
+   "qid": null,
+   "title": "1868 Lawrence Alma-Tadema - Phidias Showing the Frieze of the Parthenon to his Friends",
+   "year": null,
+   "image": {
+    "file": "File:1868 Lawrence Alma-Tadema - Phidias Showing the Frieze of the Parthenon to his Friends.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg/960px-1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg/1920px-1868_Lawrence_Alma-Tadema_-_Phidias_Showing_the_Frieze_of_the_Parthenon_to_his_Friends.jpg",
+    "pxW": 3935,
+    "pxH": 2551
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Lawrence Alma-Tadema"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Aphrodite Sappho Chiaramonti Inv1459",
+   "year": null,
+   "image": {
+    "file": "File:Aphrodite Sappho Chiaramonti Inv1459.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Aphrodite_Sappho_Chiaramonti_Inv1459.jpg/960px-Aphrodite_Sappho_Chiaramonti_Inv1459.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/7/71/Aphrodite_Sappho_Chiaramonti_Inv1459.jpg",
+    "pxW": 1850,
+    "pxH": 2810
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Phidian style"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Apollo ivory mask",
+   "year": null,
+   "image": {
+    "file": "File:Apollo ivory mask.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Apollo_ivory_mask.jpg/960px-Apollo_ivory_mask.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Apollo_ivory_mask.jpg/1920px-Apollo_ivory_mask.jpg",
+    "pxW": 3235,
+    "pxH": 4533
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Carole Raddato"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Elide, moneta di adriano con zeus olimpio",
+   "year": null,
+   "image": {
+    "file": "File:Elide, moneta di adriano con zeus olimpio.JPG",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Elide%2C_moneta_di_adriano_con_zeus_olimpio.JPG/960px-Elide%2C_moneta_di_adriano_con_zeus_olimpio.JPG",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Elide%2C_moneta_di_adriano_con_zeus_olimpio.JPG",
+    "pxW": 1068,
+    "pxH": 1041
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 3.0",
+    "credit": "Sailko"
+   }
   }
  ]
 }

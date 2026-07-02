@@ -16,6 +16,207 @@
   "source": "https://en.wikipedia.org/wiki/Assyria"
  },
  "wikipedia": "https://en.wikipedia.org/wiki/Assyria",
- "hasGallery": false,
- "paintings": []
+ "hasGallery": true,
+ "paintings": [
+  {
+   "qid": null,
+   "title": "2018 Ashurbanipal - Tile",
+   "year": null,
+   "image": {
+    "file": "File:2018 Ashurbanipal - Tile.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2018_Ashurbanipal_-_Tile.jpg/960px-2018_Ashurbanipal_-_Tile.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2018_Ashurbanipal_-_Tile.jpg/1920px-2018_Ashurbanipal_-_Tile.jpg",
+    "pxW": 4154,
+    "pxH": 3210
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "credit": "Anthony Huan"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Alabaster Stela of the Asirian King Ashurnasirpal II (884-859 BC) - British Museum",
+   "year": null,
+   "image": {
+    "file": "File:Alabaster Stela of the Asirian King Ashurnasirpal II (884-859 BC) - British Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Alabaster_Stela_of_the_Asirian_King_Ashurnasirpal_II_%28884-859_BC%29_-_British_Museum.jpg/960px-Alabaster_Stela_of_the_Asirian_King_Ashurnasirpal_II_%28884-859_BC%29_-_British_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Alabaster_Stela_of_the_Asirian_King_Ashurnasirpal_II_%28884-859_BC%29_-_British_Museum.jpg",
+    "pxW": 1588,
+    "pxH": 2655
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY 2.0",
+    "credit": "Andres Rueda"
+   }
+  },
+  {
+   "qid": null,
+   "title": "An Assyrian girl celebrating Akitu DSF8475",
+   "year": null,
+   "image": {
+    "file": "File:An Assyrian girl celebrating Akitu DSF8475.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/An_Assyrian_girl_celebrating_Akitu_DSF8475.jpg/960px-An_Assyrian_girl_celebrating_Akitu_DSF8475.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/An_Assyrian_girl_celebrating_Akitu_DSF8475.jpg/1920px-An_Assyrian_girl_celebrating_Akitu_DSF8475.jpg",
+    "pxW": 6063,
+    "pxH": 4042
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": "Levi Meir Clancy"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ancient Egyptian, Assyrian, and Persian costumes and decorations",
+   "year": null,
+   "image": {
+    "file": "File:Ancient Egyptian, Assyrian, and Persian costumes and decorations (1920) (14741970056).jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ancient_Egyptian%2C_Assyrian%2C_and_Persian_costumes_and_decorations_%281920%29_%2814741970056%29.jpg/960px-Ancient_Egyptian%2C_Assyrian%2C_and_Persian_costumes_and_decorations_%281920%29_%2814741970056%29.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ancient_Egyptian%2C_Assyrian%2C_and_Persian_costumes_and_decorations_%281920%29_%2814741970056%29.jpg/1920px-Ancient_Egyptian%2C_Assyrian%2C_and_Persian_costumes_and_decorations_%281920%29_%2814741970056%29.jpg",
+    "pxW": 1958,
+    "pxH": 2522
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "No restrictions",
+    "credit": "Internet Archive Book Images"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853",
+   "year": null,
+   "image": {
+    "file": "File:Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Artist%E2%80%99s_impression_of_Assyrian_palaces_from_The_Monuments_of_Nineveh_by_Sir_Austen_Henry_Layard%2C_1853.jpg/960px-Artist%E2%80%99s_impression_of_Assyrian_palaces_from_The_Monuments_of_Nineveh_by_Sir_Austen_Henry_Layard%2C_1853.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Artist%E2%80%99s_impression_of_Assyrian_palaces_from_The_Monuments_of_Nineveh_by_Sir_Austen_Henry_Layard%2C_1853.jpg/1920px-Artist%E2%80%99s_impression_of_Assyrian_palaces_from_The_Monuments_of_Nineveh_by_Sir_Austen_Henry_Layard%2C_1853.jpg",
+    "pxW": 1960,
+    "pxH": 1153
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Austen Henry Layard"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ashur symbol Nimrud",
+   "year": null,
+   "image": {
+    "file": "File:Ashur symbol Nimrud.png",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ashur_symbol_Nimrud.png/960px-Ashur_symbol_Nimrud.png",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ashur_symbol_Nimrud.png",
+    "pxW": 1074,
+    "pxH": 668
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "Public domain",
+    "credit": "Austen Henry Layard (1817–1894)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Ashurbanipal wall relief, 7th century BC, from Nineveh, the British Museum",
+   "year": null,
+   "image": {
+    "file": "File:Ashurbanipal wall relief, 7th century BC, from Nineveh, the British Museum.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ashurbanipal_wall_relief%2C_7th_century_BC%2C_from_Nineveh%2C_the_British_Museum.jpg/960px-Ashurbanipal_wall_relief%2C_7th_century_BC%2C_from_Nineveh%2C_the_British_Museum.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ashurbanipal_wall_relief%2C_7th_century_BC%2C_from_Nineveh%2C_the_British_Museum.jpg/1920px-Ashurbanipal_wall_relief%2C_7th_century_BC%2C_from_Nineveh%2C_the_British_Museum.jpg",
+    "pxW": 6016,
+    "pxH": 4016
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Assyrie general en",
+   "year": null,
+   "image": {
+    "file": "File:Assyrie general en.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Assyrie_general_en.jpg/960px-Assyrie_general_en.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/8/87/Assyrie_general_en.jpg",
+    "pxW": 1275,
+    "pxH": 810
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "File:Near East topographic map-blank.svg: Sémhur\nFile:Assyrie general.PNG: Zunkir\nderivative work: Morningstar1814"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cult wall relief from Assur. A deity, probably god Assur, is flanked by 2 water deities and 2 goats. 2000-1500 BCE. Pergamon Museum, Berlin",
+   "year": null,
+   "image": {
+    "file": "File:Cult wall relief from Assur. A deity, probably god Assur, is flanked by 2 water deities and 2 goats. 2000-1500 BCE. Pergamon Museum, Berlin.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Cult_wall_relief_from_Assur._A_deity%2C_probably_god_Assur%2C_is_flanked_by_2_water_deities_and_2_goats._2000-1500_BCE._Pergamon_Museum%2C_Berlin.jpg/960px-Cult_wall_relief_from_Assur._A_deity%2C_probably_god_Assur%2C_is_flanked_by_2_water_deities_and_2_goats._2000-1500_BCE._Pergamon_Museum%2C_Berlin.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Cult_wall_relief_from_Assur._A_deity%2C_probably_god_Assur%2C_is_flanked_by_2_water_deities_and_2_goats._2000-1500_BCE._Pergamon_Museum%2C_Berlin.jpg/1920px-Cult_wall_relief_from_Assur._A_deity%2C_probably_god_Assur%2C_is_flanked_by_2_water_deities_and_2_goats._2000-1500_BCE._Pergamon_Museum%2C_Berlin.jpg",
+    "pxW": 3688,
+    "pxH": 5062
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC BY-SA 4.0",
+    "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)"
+   }
+  },
+  {
+   "qid": null,
+   "title": "Cuneiform tablet- caravan account MET DP-13441-005",
+   "year": null,
+   "image": {
+    "file": "File:Cuneiform tablet- caravan account MET DP-13441-005.jpg",
+    "thumb640": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg/960px-Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg",
+    "thumb1600": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg/1920px-Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg",
+    "pxW": 3321,
+    "pxH": 4000
+   },
+   "cm": null,
+   "collection": null,
+   "story": null,
+   "facts": [],
+   "license": {
+    "name": "CC0",
+    "credit": ""
+   }
+  }
+ ]
 }
