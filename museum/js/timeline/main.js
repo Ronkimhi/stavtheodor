@@ -2,7 +2,8 @@
 
 import { loadIndex } from '../shared/data.js';
 import { openPlacard } from '../shared/ui.js';
-import { layout, periodColor, withAlpha, inked } from './layout.js';
+import { initThemeToggle } from '../shared/theme.js';
+import { layout, periodColor } from './layout.js';
 import { Viewport } from './viewport.js';
 import { initFilter } from './filter.js';
 
@@ -45,19 +46,15 @@ async function boot() {
   }
 
   laid.periods.forEach((p) => {
-    const c = periodColor(p.id);
     const band = document.createElement('div');
     band.className = 'band';
     band.dataset.period = p.id;
-    band.style.cssText =
-      `left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px;` +
-      `background:${withAlpha(c, 0.13)};border-color:${withAlpha(c, 0.65)};` +
-      `box-shadow:inset 0 3px 0 ${c}`;
+    band.style.cssText = `left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px`;
+    band.style.setProperty('--pc', periodColor(p.id));
     const label = document.createElement('div');
     label.className = 'band-label';
     label.innerHTML = `<span class="band-name"></span><small>${p.start}–${p.end}</small>`;
     label.querySelector('.band-name').textContent = p.name;
-    label.querySelector('.band-name').style.color = inked(c, 0.3);
     band.appendChild(label);
     if (p.summary) {
       const sum = document.createElement('div');
@@ -70,7 +67,6 @@ async function boot() {
   });
 
   for (const a of laid.artists) {
-    const c = periodColor(a.period.id);
     const node = document.createElement('button');
     node.className = 'artist-node';
     node.dataset.slug = a.slug;
@@ -79,10 +75,11 @@ async function boot() {
     if (a.flip) node.classList.add('flip');
     node.style.left = a.x + 'px';
     node.style.top = a.y + 'px';
+    node.style.setProperty('--pc', periodColor(a.period.id));
     node.setAttribute('aria-label', `${a.name}, ${a.born ?? ''}–${a.died ?? ''}`);
     node.innerHTML = `
-      <span class="artist-dot" style="background:${c}"></span>
-      ${a.portrait ? `<img class="artist-portrait" loading="lazy" src="${a.portrait}" alt="" style="border-color:${withAlpha(c, 0.65)}">` : ''}
+      <span class="artist-dot"></span>
+      ${a.portrait ? `<img class="artist-portrait" loading="lazy" src="${a.portrait}" alt="">` : ''}
       <span>
         <span class="artist-name"><span class="an-full"></span><span class="an-short"></span></span>
         <span class="artist-years">${a.born ?? '?'}–${a.died ?? ''}</span>
@@ -136,6 +133,7 @@ async function boot() {
     viewport.apply();
   });
 
+  initThemeToggle(document.getElementById('theme-btn'));
   document.getElementById('zoom-in').addEventListener('click', () => viewport.zoomCenter(1.45));
   document.getElementById('zoom-out').addEventListener('click', () => viewport.zoomCenter(1 / 1.45));
   document.getElementById('zoom-fit').addEventListener('click', () => viewport.fitAll());

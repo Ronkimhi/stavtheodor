@@ -13,6 +13,9 @@ import { buildLighting } from './lighting.js';
 import { createControls, initTouch, hasPointerLock } from './controls.js';
 import { createInspector } from './inspect.js';
 import { showListView } from './fallback.js';
+import { initThemeToggle } from '../shared/theme.js';
+
+initThemeToggle(document.getElementById('theme-btn'));
 
 const params = new URLSearchParams(location.search);
 const slug = params.get('artist') || 'claude-monet';

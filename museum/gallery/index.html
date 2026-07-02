@@ -12,6 +12,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('museumTheme')
+      || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <link rel="stylesheet" href="/museum/css/gallery.css">
 <script type="importmap">
@@ -32,6 +41,8 @@
 </script>
 </head>
 <body class="gallery-page">
+
+<button id="theme-btn" class="hud-pill hud-sq g-theme" aria-label="Switch theme">☾</button>
 
 <div id="entry" class="entry">
   <div class="entry-card">

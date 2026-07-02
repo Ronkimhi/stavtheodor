@@ -7,8 +7,24 @@
   --bronze: #A0815C;
   --bronze-soft: #C4AE8F;
   --hairline: rgba(28, 26, 23, 0.14);
+  --paper: 250, 248, 243;   /* rgb triplet of the page surface, for veils */
   --en: 'Cormorant Garamond', Georgia, serif;
+  color-scheme: light;
 }
+
+/* night museum */
+[data-theme="dark"] {
+  --ivory: #17150F;
+  --ink: #EAE4D6;
+  --ink-soft: #B3AA99;
+  --bronze: #C2A279;
+  --bronze-soft: #7E6C52;
+  --hairline: rgba(234, 228, 214, 0.16);
+  --paper: 23, 21, 15;
+  color-scheme: dark;
+}
+
+html { background: var(--ivory); transition: background 0.35s ease; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -31,7 +47,7 @@ a { color: var(--bronze); }
   align-items: baseline;
   gap: 18px;
   padding: 18px 28px 14px;
-  background: linear-gradient(to bottom, var(--ivory) 65%, rgba(250, 248, 243, 0));
+  background: linear-gradient(to bottom, var(--ivory) 65%, rgba(var(--paper), 0));
   pointer-events: none;
 }
 .m-nav > * { pointer-events: auto; }
@@ -64,7 +80,8 @@ a { color: var(--bronze); }
 /* ---------- pills / HUD ---------- */
 .hud-pill {
   border: 1px solid var(--bronze-soft);
-  background: rgba(250, 248, 243, 0.92);
+  background: rgba(var(--paper), 0.92);
+  color: var(--ink);
   backdrop-filter: blur(6px);
   border-radius: 999px;
   padding: 10px 22px;
@@ -109,7 +126,7 @@ a { color: var(--bronze); }
   filter: grayscale(60%) sepia(8%);
   border: 1px solid var(--hairline);
   flex-shrink: 0;
-  background: #efece4;
+  background: rgba(var(--paper), 1);
 }
 .placard-name {
   font-size: 26px;
