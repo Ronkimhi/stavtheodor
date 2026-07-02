@@ -207,7 +207,7 @@ body.timeline-page { overflow: hidden; height: 100vh; }
   z-index: 45;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 12px;
 }
 .hud-zoom { display: flex; gap: 8px; }
