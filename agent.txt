@@ -120,6 +120,10 @@ Auction Houses:
 - Christie's New York
 - Sotheby's
 
+## Recent Posts (July 2026)
+
+- What to See in July 2026: New York and New Jersey (monthly guide: Paul Klee through July 26, Carol Rama through July 31, Giacometti, Guggenheim Pop, Whitney Biennial free days July 10 and 12, Victoria Sambunaris at Montclair Art Museum through February 21, 2027): https://stavtheodor.com/radar/what-to-see-july-2026/
+
 ## Recent Posts (June 2026)
 
 Each URL serves the post in Hebrew and full English.
@@ -147,6 +151,7 @@ Each URL serves the post in Hebrew and full English.
 ## Structured Data Available
 
 - llms.txt: https://stavtheodor.com/llms.txt (curated content map)
+- answers.md: https://stavtheodor.com/answers.md (direct sourced answers to common NJ/NY art questions)
 - sitemap.xml: https://stavtheodor.com/sitemap.xml
 - robots.txt: https://stavtheodor.com/robots.txt
 - JSON-LD on page: Person, Organization, WebSite, FAQPage, BlogPosting (per post), ExhibitionEvent (per exhibition post)

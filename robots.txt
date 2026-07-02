@@ -45,3 +45,4 @@ Sitemap: https://stavtheodor.com/sitemap.xml
 # Curated maps for AI agents:
 # llms.txt:  https://stavtheodor.com/llms.txt
 # agent.txt: https://stavtheodor.com/agent.txt
+# answers:   https://stavtheodor.com/answers.md

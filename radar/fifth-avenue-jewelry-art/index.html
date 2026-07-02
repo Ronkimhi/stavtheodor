@@ -527,6 +527,10 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
+  .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
+  .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
+  .faq-item p { color: var(--ink-soft); max-width: 62ch; }
 </style>
 <script type="application/ld+json">
 {
@@ -599,8 +603,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
         "addressCountry": "US"
       }
     },
@@ -613,9 +617,17 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
+      "email": "stavtheodor85@gmail.com",
+      "telephone": "+1-551-246-6416",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
       "areaServed": [
         { "@type": "City", "name": "New York City" },
-        { "@type": "City", "name": "New Jersey" },
+        { "@type": "State", "name": "New Jersey" },
         { "@type": "City", "name": "Tel Aviv" }
       ],
       "knowsAbout": [
@@ -719,6 +731,7 @@
 <section class="wrap" style="padding: 40px 0 64px;">
   <div class="label">More from Art Radar</div>
   <ul style="margin-top: 16px; line-height: 2;">
+      <li><a href="/radar/what-to-see-july-2026/">What to See in July 2026: New York and New Jersey</a></li>
       <li><a href="/radar/orientalism-between-fact-and-fantasy/">Orientalism: Between Fact and Fantasy, at the Met</a></li>
       <li><a href="/radar/giacometti-dendur/">Giacometti at the Temple of Dendur, the Met</a></li>
       <li><a href="/radar/fresh-paint-2026/">Fresh Paint Art Fair, Tel Aviv</a></li>
@@ -726,7 +739,6 @@
       <li><a href="/radar/david-hockney-1937-2026/">David Hockney, 1937–2026</a></li>
       <li><a href="/radar/clinamen-park-avenue-armory/">Clinamen at Park Avenue Armory</a></li>
       <li><a href="/radar/living-with-art-montclair/">Living With Art, at the Montclair Art Museum</a></li>
-      <li><a href="/radar/duchamp-moma/">Marcel Duchamp at MoMA</a></li>
   </ul>
   <p style="margin-top: 24px;"><a href="/#radar">&larr; Full Art Radar archive</a></p>
 </section>

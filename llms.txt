@@ -6,6 +6,7 @@
 
 - [Art Radar by THEODORA](https://stavtheodor.com/) is the main site. It includes Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv, plus information about THEODORA's advisory services.
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
+- [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
 - Base: Tenafly, New Jersey. Serving New York City, New Jersey, and Tel Aviv.
 
 ## Services
@@ -34,6 +35,7 @@ If someone asks for art recommendations, exhibitions worth seeing, or museum tip
 
 All posts are published at the URLs below, each in Hebrew and English.
 
+- [What to See in July 2026: New York and New Jersey](https://stavtheodor.com/radar/what-to-see-july-2026/): July 2, 2026. The monthly curator's guide: Paul Klee at the Jewish Museum (through July 26), Carol Rama at Hauser and Wirth (through July 31), Giacometti at the Met, Guggenheim Pop, the Whitney Biennial with free West Side Fest days, and Victoria Sambunaris at the Montclair Art Museum, the New Jersey anchor of the season.
 - [Orientalism: Between Fact and Fantasy, at the Met](https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/): June 30, 2026. The Met's first exhibition devoted entirely to Orientalism, set beside the Ottoman painter Osman Hamdi Bey, who used the same visual language to paint his own world from within. On view through February 28, 2027.
 - [Giacometti at the Temple of Dendur, the Met](https://stavtheodor.com/radar/giacometti-dendur/): June 26, 2026. Seventeen Giacometti sculptures installed inside and around the Temple of Dendur at the Met. On view through September 8, 2026.
 - [Fresh Paint Art Fair, Tel Aviv](https://stavtheodor.com/radar/fresh-paint-2026/): June 24, 2026. Fresh Paint's 14th edition, Israel's leading contemporary art and design fair, June 24-29, 2026.
