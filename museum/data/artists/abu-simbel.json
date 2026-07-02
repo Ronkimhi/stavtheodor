@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "2N9A6519-Pano",
+   "title": "Frieze inside the Great Temple of Abu Simbel",
    "year": null,
    "image": {
     "file": "File:2N9A6519-Pano.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Frieze inside the Great Temple of Abu Simbel. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Dwkrider1"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Abou Simbel, Nubia MET DP116347",
+   "title": "Photograph of the Great Temple by Francis Frith in 1857",
    "year": null,
    "image": {
     "file": "File:Abou Simbel, Nubia MET DP116347.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Photograph of the Great Temple by Francis Frith in 1857. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Francis Frith"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Aerial view of the hill covering the rear of the Abu Simbel temples in 1969. The smaller of the two temporary holding storage areas used during relocation of the temple can be seen in the background. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "André Corboz"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Aerial view of Abu Simbel in September 2004. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Orange Mécanique"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Abu - Simbel - Inauguration ceremony to mark the completion of removal and reconstruction of the Abu Simbel Temples on their new site",
+   "title": "René Maheu, Director - General of the UNESCO giving his speech during the…",
    "year": null,
    "image": {
     "file": "File:Abu - Simbel - Inauguration ceremony to mark the completion of removal and reconstruction of the Abu Simbel Temples on their new site.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "René Maheu, Director - General of the UNESCO giving his speech during the ceremony to mark the completion of removal and reconstruction of the Abu Simbel Temples on their new site, 22 September 1968. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 igo",
     "credit": "UNESCO"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Front view of the Great Temple before relocation in 1963. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Manfred Niermann"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Genevese architect Jean Jacquet, a UNESCO expert, makes an architectural survey of the Great Temple of Ramesses II, in order to determine where to cut the temple in pieces. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 igo",
     "credit": "UNESCO"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Interior of the protective dome of the Great Temple of Abu Simbel built after the temple's relocation in the 1960s. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "E. Bonetti Rimatroko"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The carvings of baboons on the cornice above the heads of the statues of Ramesses II at the Great Temple. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "WLU"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Facade of the Temple of Ramesses II, photo taken in 2007. Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, Upper Egypt, near the border with Sudan. It is located on the western bank of Lake Nasser, about 230 km (140 mi) southwest of Aswan.",
+    "source": "https://en.wikipedia.org/wiki/Abu_Simbel"
+   },
+   "facts": [
+    {
+     "text": "The complex consists of two temples. The larger one is dedicated to Ra-Horakhty, Ptah and Amun, Egypt's three state deities of the time, and features four large statues of Ramesses II in the facade.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Description"
+    },
+    {
+     "text": "During his reign, Ramesses II embarked on an extensive building program throughout Egypt and Nubia, which Egypt controlled. As a major source of gold and many other precious trade goods, Nubia was of great importance to the Egyptians.",
+     "section": "Construction",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Construction"
+    },
+    {
+     "text": "With the passage of time, the temples fell into disuse and the Great Temple eventually became mostly covered by a sand dune. By the 6th century BC, the sand already covered the statues of the main temple up to their knees.",
+     "section": "Rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Abu_Simbel#Rediscovery"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Than217 at English Wikipedia"

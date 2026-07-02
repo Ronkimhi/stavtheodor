@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "F0829 Louvre Scribe accroupi detail E3023 rwk",
+   "title": "Detail",
    "year": null,
    "image": {
     "file": "File:F0829 Louvre Scribe accroupi detail E3023 rwk.jpg",
@@ -31,8 +31,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Detail. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown"
@@ -51,8 +65,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Le Scribe accroupi - Musée du Louvre Antiquités égyptiennes E 3023. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Shonagon"
@@ -60,7 +88,7 @@
   },
   {
    "qid": null,
-   "title": "Louvre-antiquites-egyptiennes-p1020382",
+   "title": "Detail",
    "year": null,
    "image": {
     "file": "File:Louvre-antiquites-egyptiennes-p1020382.jpg",
@@ -71,8 +99,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Detail. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 fr",
     "credit": "Rama"
@@ -80,7 +122,7 @@
   },
   {
    "qid": null,
-   "title": "Scribe-A 42-IMG 4488-gradient",
+   "title": "A 42, another seated 5th Dynasty scribe on display at the Louvre",
    "year": null,
    "image": {
     "file": "File:Scribe-A 42-IMG 4488-gradient.jpg",
@@ -91,8 +133,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A 42, another seated 5th Dynasty scribe on display at the Louvre. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 fr",
     "credit": "Rama"
@@ -100,7 +156,7 @@
   },
   {
    "qid": null,
-   "title": "Scribe E3023 mp3h8778",
+   "title": "Hand",
    "year": null,
    "image": {
     "file": "File:Scribe E3023 mp3h8778.jpg",
@@ -111,8 +167,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Hand. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 fr",
     "credit": "Rama"
@@ -131,8 +201,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work. The sculpture was discovered at Saqqara, north of the alley of sphinxes leading to the Serapeum of Saqqara, in 1850, and dated to the period of the Old Kingdom, from either the 5th Dynasty, c. 2450–2325 BCE or the 4th Dynasty, 2620–2500 BCE.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 fr",
     "credit": "Rama"
@@ -140,7 +224,7 @@
   },
   {
    "qid": null,
-   "title": "Seated scribe-E 3023-p1020377-gradient",
+   "title": "From the rear",
    "year": null,
    "image": {
     "file": "File:Seated scribe-E 3023-p1020377-gradient.jpg",
@@ -151,8 +235,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "From the rear. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 fr",
     "credit": "Rama"
@@ -171,8 +269,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Side view. The sculpture of the Seated Scribe or Squatting Scribe is a famous work of ancient Egyptian art. It represents a figure of a seated scribe at work.",
+    "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe"
+   },
+   "facts": [
+    {
+     "text": "The sculpture of the seated scribe was discovered in Saqqara on 19 November 1850, to the north of the Serapeum's line of sphinxes by French archeologist Auguste Mariette. The precise location remains unknown, as the document describing these excavations was published posthumously and the original excavation journal has been lost.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#History"
+    },
+    {
+     "text": "This painted limestone sculpture represents a man in a seated position, presumably a scribe. The figure is dressed in a white kilt stretched to its knees.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/The_Seated_Scribe#Description"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Jason Riedy from East Point, GA, USA"

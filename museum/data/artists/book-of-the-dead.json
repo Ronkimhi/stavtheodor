@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "Ani chap125",
+   "title": "Papyrus of Ani: some of the 42 Judges of Maat are visible, seated and in small…",
    "year": null,
    "image": {
     "file": "File:Ani chap125.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Papyrus of Ani: some of the 42 Judges of Maat are visible, seated and in small size. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Soutekh67"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "BOTDSpell7980",
+   "title": "Egyptian Book of the Dead, painted on a coffin fragment (c. 747–656 BC): Spell…",
    "year": null,
    "image": {
     "file": "File:BOTDSpell7980.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Egyptian Book of the Dead, painted on a coffin fragment (c. 747–656 BC): Spell 79 (attaching the soul to the body); and Spell 80 (preventing incoherent speech). The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Alanscottwalker"
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "Book of the Dead of the Goldworker of Amun, Sobekmose, Mummy Chamber, 31.1777e",
+   "title": "Book of the Dead of Sobekmose, the Goldworker of Amun, 31.1777e, Brooklyn Museum",
    "year": null,
    "image": {
     "file": "File:Book of the Dead of the Goldworker of Amun, Sobekmose, Mummy Chamber, 31.1777e.jpg",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Book of the Dead of Sobekmose, the Goldworker of Amun, 31.1777e, Brooklyn Museum. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "No restrictions",
     "credit": "Unknown authorUnknown author"
@@ -80,7 +137,7 @@
   },
   {
    "qid": null,
-   "title": "Bookofthedead-144145",
+   "title": "Two 'gate spells'",
    "year": null,
    "image": {
     "file": "File:Bookofthedead-144145.jpg",
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Two 'gate spells'. On the top register, Ani and his wife face the 'seven gates of the House of Osiris'. Below, they encounter ten of the 21 'mysterious portals of the House of Osiris in the Field of Reeds'. All are guarded by unpleasant protectors.[40]. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown authorUnknown author"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Complete scan of the 19th-century facsimiles of the Papyrus of Ani, a 78-foot-long papyrus scroll inscribed with the Egyptian Book of the Dead. The scroll is now in the British Museum. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Facsimiles produced by E. A. Wallis Budge; original artist unknown"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The mystical Spell 17, from the Papyrus of Ani. The vignette at the top illustrates, from left to right, the god Nu as a representation of the primordial ocean; a gateway to the realm of Osiris; the Eye of Horus; the celestial cow Mehet-Weret; and a human head rising from a coffin, guarded by the four Sons of Horus.[14]. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown authorUnknown author"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Karl Richard Lepsius, first translator of a complete Book of the Dead manuscript. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Ernst Milster"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A vignette in The Papyrus of Ani, from Spell 30B: Spell For Not Letting Ani's Heart Create Opposition Against Him, in the Gods' Domain, which contains a depiction of the ba of the deceased. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "No machine-readable author provided. FinnBjo~commonswiki assumed (based on copyright claims)."
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "This detailed scene, from the Papyrus of Hunefer (c. 1275 BC), shows the scribe Hunefer's heart being weighed on the scale of Maat against the feather of truth, by the jackal-headed Anubis. The ibis-headed Thoth, scribe of the gods, records the result. If his heart equals exactly the weight of the feather, Hunefer is allowed to pass into the afterlife. If not, he is eaten by the waiting chimeric devouring creature Ammit composed of the deadly crocodile, lion, and hippopotamus. Vignettes such as these were a common illustration in Egyptian books of the dead.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Hunefer"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Part of the Pyramid Texts, a precursor of the Book of the Dead, inscribed on the tomb of Teti. The Book of the Dead is the name given to an ancient Egyptian funerary text generally written on papyrus and used from the beginning of the New Kingdom to around 50 BC.",
+    "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead"
+   },
+   "facts": [
+    {
+     "text": "Papyrus of Ani, British Museum Papyrus of Hunefer, British Museum Papyrus of Pinedjem II, or \"Campbell Papyrus\", British Museum Book of the Dead of Kha, Tomb of Kha and Merit, Museo Egizio, Turin, Italy Book of the Dead of Nehem-es-Rataui, Museum August Kestner in Hanover, Germany Book of the Dead of Amen-em-hat, Royal Ontario Museum Book of the Dead of Qenna, Rijksmuseum van Oudheden, Leiden, Netherlands Book of the Dead (Art Institute of Chicago) Joseph Smith Papyri (Books of the Dead of TaSheritMin, Nefer-ir-nebu, and Amenhotep), fragments, many destroyed in modern times",
+     "section": "Examples in museums",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Examples_in_museums"
+    },
+    {
+     "text": "The Book of the Dead developed from a tradition of funerary manuscripts dating back to the Egyptian Old Kingdom. The first funerary texts were the Pyramid Texts, first used in the Pyramid of King Unas of the 5th Dynasty, around 2400 BC.",
+     "section": "Development",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Development"
+    },
+    {
+     "text": "The Book of the Dead is made up of a number of individual texts and their accompanying illustrations. Most sub-texts begin with the word r(ꜣ), which can mean \"mouth\", \"speech\", \"spell\", \"utterance\", \"incantation\", or \"chapter of a book\".",
+     "section": "Spells",
+     "source": "https://en.wikipedia.org/wiki/Book_of_the_Dead#Spells"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Chipdawes"

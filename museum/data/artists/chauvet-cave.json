@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Painting of deer. The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+    "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+   },
+   "facts": [
+    {
+     "text": "The cave is situated above the previous course of the Ardèche before the Pont d'Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance.",
+     "section": "Features",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Features"
+    },
+    {
+     "text": "Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings.",
+     "section": "Paintings",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings"
+    },
+    {
+     "text": "The cave contains some of the oldest known cave paintings, based on radiocarbon dating of \"black from drawings, from torch marks and from the floors\", according to Jean Clottes.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Dating"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown authorUnknown author"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Replica of painting of lions. The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+    "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+   },
+   "facts": [
+    {
+     "text": "The cave is situated above the previous course of the Ardèche before the Pont d'Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance.",
+     "section": "Features",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Features"
+    },
+    {
+     "text": "Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings.",
+     "section": "Paintings",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings"
+    },
+    {
+     "text": "The cave contains some of the oldest known cave paintings, based on radiocarbon dating of \"black from drawings, from torch marks and from the floors\", according to Jean Clottes.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Dating"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "HTO"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Replica of the painting from the Chauvet cave, in the Anthropos museum, Brno. The original art is approximately 31,000 years old, probably Aurignacien. The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+    "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+   },
+   "facts": [
+    {
+     "text": "The cave is situated above the previous course of the Ardèche before the Pont d'Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance.",
+     "section": "Features",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Features"
+    },
+    {
+     "text": "Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings.",
+     "section": "Paintings",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings"
+    },
+    {
+     "text": "The cave contains some of the oldest known cave paintings, based on radiocarbon dating of \"black from drawings, from torch marks and from the floors\", according to Jean Clottes.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Dating"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "HTO"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A group of rhinos. The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+    "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+   },
+   "facts": [
+    {
+     "text": "The cave is situated above the previous course of the Ardèche before the Pont d'Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance.",
+     "section": "Features",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Features"
+    },
+    {
+     "text": "Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings.",
+     "section": "Paintings",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings"
+    },
+    {
+     "text": "The cave contains some of the oldest known cave paintings, based on radiocarbon dating of \"black from drawings, from torch marks and from the floors\", according to Jean Clottes.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Dating"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown authorUnknown author"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Romania stamp 2001 2400L Steppe Wisent Chauvet Cave",
+   "title": "Image of steppe wisent (Bison priscus)",
    "year": null,
    "image": {
     "file": "File:Romania stamp 2001 2400L Steppe Wisent Chauvet Cave.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Image of steppe wisent (Bison priscus). Paintings in the Chauvet Cave on postage stamp of Romania 2001. The Chauvet-Pont-d'Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+    "source": "https://en.wikipedia.org/wiki/Chauvet_Cave"
+   },
+   "facts": [
+    {
+     "text": "The cave is situated above the previous course of the Ardèche before the Pont d'Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance.",
+     "section": "Features",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Features"
+    },
+    {
+     "text": "Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings.",
+     "section": "Paintings",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings"
+    },
+    {
+     "text": "The cave contains some of the oldest known cave paintings, based on radiocarbon dating of \"black from drawings, from torch marks and from the floors\", according to Jean Clottes.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Chauvet_Cave#Dating"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Romanian Post"

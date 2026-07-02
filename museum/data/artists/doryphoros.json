@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "02 10 2024 Photo Paolo Villa-Napoli-mann-Museo Archeologico-FO232526tris-Arte Greca copia romana-Policleto Doriforo Polykleitos Doryphoros from Pompeii-marmo marble carrara",
+   "title": "A well-preserved Roman period copy of the Doryphoros of Polykleitos from the…",
    "year": null,
    "image": {
     "file": "File:02 10 2024 Photo Paolo Villa-Napoli-mann-Museo Archeologico-FO232526tris-Arte Greca copia romana-Policleto Doriforo Polykleitos Doryphoros from Pompeii-marmo marble carrara.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A well-preserved Roman period copy of the Doryphoros of Polykleitos from the collection of Naples National Archaeological Museum. Material: marble. Height: 2.12 metres (6 feet 11 inches). The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Paolo Villa"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "A Doryphorus-type of the canon Polycleitus - DPLA - 00b65471884d85ce22e7c889251983b8",
+   "title": "A Doryphorus-type of the canon Polycleitus, ca. 1886–1889",
    "year": null,
    "image": {
     "file": "File:A Doryphorus-type of the canon Polycleitus - DPLA - 00b65471884d85ce22e7c889251983b8.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A Doryphorus-type of the canon Polycleitus, ca. 1886–1889. Nicholas Catsimpoolas Collection, Boston Public Library. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Catsimpoolas, Nicholas; Scull, S. A. (Sarah Amelia)"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Doryphoros (the Spear Bearer), in the collection of the Minneapolis Institute of Art. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Minneapolis Institute of Art"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Composite picture showing the difference between marble and bronze versions of the Doryphoros. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "User:Tetraktys"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Head-of-Doryphoros-Villa-of-the-Papyri-Herculaneum-Barker-1908",
+   "title": "Head of Doryphoros excavated at the Villa of the Papyri in Pompeii",
    "year": null,
    "image": {
     "file": "File:Head-of-Doryphoros-Villa-of-the-Papyri-Herculaneum-Barker-1908.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Head of Doryphoros excavated at the Villa of the Papyri in Pompeii. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Ethel Ross Barker"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "3D model of replica at the National Gallery of Denmark. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Polyklet (Polykleitos). Digitization: Statens Museum for Kunst."
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue of Augustus of Prima Porta. The Doryphoros of Polykleitos is one of the best known Greek sculptures of Classical antiquity, depicting a solidly built, muscular, standing warrior, originally bearing a spear balanced on his left shoulder. The lost bronze original of the work would have been cast circa 440 BC, but it is today known only from later marble copies.",
+    "source": "https://en.wikipedia.org/wiki/Doryphoros"
+   },
+   "facts": [
+    {
+     "text": "The original was made out of bronze in about 440 BC but is now lost (along with most other bronze sculptures made by a known Greek artist). Neither the original statue nor the treatise have yet been found; it is widely considered that they have not survived from antiquity.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Description"
+    },
+    {
+     "text": "The Doryphoros was created during the high Classical period. During this time, there was an emphasis put on the ideal man who was shown in heroic nudity.",
+     "section": "Influence",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Influence"
+    },
+    {
+     "text": "The renowned Greek sculptor Polykleitos designed a sculptural work as a demonstration of his written treatise, entitled the Κανών (or 'Canon'), translated as \"measure\" or \"rule\", exemplifying what he considered to be the perfectly harmonious and balanced proportions of the human body in the sculpted form.",
+     "section": "Conception",
+     "source": "https://en.wikipedia.org/wiki/Doryphoros#Conception"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Till Niermann"

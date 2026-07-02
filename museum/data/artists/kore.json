@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Peplos Kore, created circa 530 BCE. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+    "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+   },
+   "facts": [
+    {
+     "text": "The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History"
+    },
+    {
+     "text": "The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis.",
+     "section": "Function",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function"
+    },
+    {
+     "text": "Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be.",
+     "section": "Theories on identity",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Unknown artistUnknown artist"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Antenor Kore, circa 530 BCE. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+    "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+   },
+   "facts": [
+    {
+     "text": "The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History"
+    },
+    {
+     "text": "The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis.",
+     "section": "Function",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function"
+    },
+    {
+     "text": "Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be.",
+     "section": "Theories on identity",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Antenor"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Nikandre Kore, circa 650 BC. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+    "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+   },
+   "facts": [
+    {
+     "text": "The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History"
+    },
+    {
+     "text": "The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis.",
+     "section": "Function",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function"
+    },
+    {
+     "text": "Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be.",
+     "section": "Theories on identity",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Zde"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Reconstruction of the Peplos Kore as Artemis. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+    "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+   },
+   "facts": [
+    {
+     "text": "The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History"
+    },
+    {
+     "text": "The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis.",
+     "section": "Function",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function"
+    },
+    {
+     "text": "Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be.",
+     "section": "Theories on identity",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Etude : Vinzenz Brinkmann. Restauration des cassures : Alfons Neubauer, Christoph Bergmann. Dorure : Sylvia Kellner. Peinture : Ulrike Koch-Brinkmann"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Phrasikleia Kore painted. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.",
+    "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29"
+   },
+   "facts": [
+    {
+     "text": "The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History"
+    },
+    {
+     "text": "The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis.",
+     "section": "Function",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function"
+    },
+    {
+     "text": "Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be.",
+     "section": "Theories on identity",
+     "source": "https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Pierre Assier"

@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Amphora by Exekias, Achilles and Ajax engaged in a board game, c.540-530 BC, Vatican Museums, Vatican City. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Exekias"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Akhilleus Hektor Louvre CA601",
+   "title": "Black-figure, white-background lekythos by the Diosphos Painter showing…",
    "year": null,
    "image": {
     "file": "File:Akhilleus Hektor Louvre CA601.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Black-figure, white-background lekythos by the Diosphos Painter showing Achilles in a chariot dragging the corpse of Hector behind him, ca. 490 BC, found in Eretria, now in the Louvre, Paris. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Bibi Saint-Pol"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Competition painted on a Panathenaic prize amphora, attributed to the Berlin Painter, c. 480/470 BC, found in Nola, now in the Berlin Collection of Classical Antiquities, Altes Museum. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Marcus Cyron"
@@ -80,7 +137,7 @@
   },
   {
    "qid": null,
-   "title": "Amphora olive-gathering BM B226",
+   "title": "Olive harvest shown on a neck amphora by the Antimenes Painter, c. 520 BC, from…",
    "year": null,
    "image": {
     "file": "File:Amphora olive-gathering BM B226.jpg",
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Olive harvest shown on a neck amphora by the Antimenes Painter, c. 520 BC, from Vulci, now in the British Museum London. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Antimenes Painter"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Amphora warriors Louvre E866",
+   "title": "Scene from a black-figure amphora from Athens, 6th century BC, now in the…",
    "year": null,
    "image": {
     "file": "File:Amphora warriors Louvre E866.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Scene from a black-figure amphora from Athens, 6th century BC, now in the Louvre, Paris. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Prometheus Painter"
@@ -120,7 +215,7 @@
   },
   {
    "qid": null,
-   "title": "Arkesilas Cup Cdm Paris DeRidder189 n2",
+   "title": "Arcesilaus II, king of Cyrene, observes his subjects working, on a cup by the…",
    "year": null,
    "image": {
     "file": "File:Arkesilas Cup Cdm Paris DeRidder189 n2.jpg",
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Arcesilaus II, king of Cyrene, observes his subjects working, on a cup by the Arcesilaos Painter c. 565/560 BC, found in Vulci, now in the Cabinet des médailles de la Bibliothèque nationale de France in Paris. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Marie-Lan Nguyen"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Wrestling match between Peleus and Atalanta during the funeral games for King Pelias, hydria by the Inscription Painter, c. 550 BC, now in the Munich State Collections of Antiquities. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "User:Bibi Saint-Pol"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Herakles and Athena, red-figure side of the above amphora, by the Lysippides Painter, c. 520/510 BC, from Vulci, now in the Munich State Collection of Antiquities. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Andokides painter"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Heracles and Athena, black-figure side of a belly amphora by the Andokides Painter, c. 520/510 BC, from Vulci, now in the Munich State Collection of Antiquities. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Andokides Painter or Lysippides Painter"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Athena wearing the aegis, Attic black-figured hydria by the potter Pamphaios (signed) and the Euphiletos Painter, c. 540 BC. Found in Tuscania, now in the Cabinet des Médailles, BNF, Paris. Black-figure pottery painting is one of the styles of painting on antique Greek vases. It was especially common between the 7th and 5th centuries BC, although there are specimens dating in the 2nd century BC.",
+    "source": "https://en.wikipedia.org/wiki/Black-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "The foundation for pottery painting is the vase onto which an image is painted. Popular shapes alternated with passing fashions.",
+     "section": "Production techniques",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Production_techniques"
+    },
+    {
+     "text": "The evolution of black-figure pottery painting is traditionally described in terms of various regional styles and schools. Using Corinth as the hub, there were basic differences in the productions of the individual regions, even if they did influence each other.",
+     "section": "Developments",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Developments"
+    },
+    {
+     "text": "The black-figure technique was developed around 700 BC in Corinth and used for the first time in the early 7th century BC by Proto-Corinthian pottery painters, who were still painting in the orientalizing style.",
+     "section": "Corinth",
+     "source": "https://en.wikipedia.org/wiki/Black-figure_pottery#Corinth"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Marie-Lan Nguyen"

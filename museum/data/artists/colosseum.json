@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Città del Vaticano - Cupola della Basilica di S. Pietro. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "MarkusMark"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Colosseum arena, showing the hypogeum now filled with walls. The walls were added early in the Colosseum's existence when it was decided it would no longer be flooded and used for naval battles. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Jean-Pol GRANDMONT"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ave Imperator, morituri te salutant (Hail, Cesar, those who will die salute you), by Jean-Léon Gérôme, 1859. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown authorUnknown author"
@@ -80,7 +137,7 @@
   },
   {
    "qid": null,
-   "title": "Christoffer Wilhelm Eckersberg - View of the interior of the Colosseum - Google Art Project",
+   "title": "View of the interior of the Colosseum, by C",
    "year": null,
    "image": {
     "file": "File:Christoffer Wilhelm Eckersberg - View of the interior of the Colosseum - Google Art Project.jpg",
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "View of the interior of the Colosseum, by C. W. Eckersberg (1815). The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Christoffer Wilhelm Eckersberg"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Interior of the Colosseum, Rome (1832) by Thomas Cole, showing the Stations of the Cross around the arena and the extensive vegetation. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Thomas Cole"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Map of medieval Rome depicting the Colosseum. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": ""
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world. Construction began under the Emperor Vespasian in 72 and was completed in AD 80 under his successor and heir, Titus.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "FeaturedPics"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Eastern interior (viewed from west), 2023. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Julian Lupyan"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Colosseum viewed from Via Nicola Salvi in 2023. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Julian Lupyan"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Entrance LII of the Colosseum, with Roman numerals still visible. The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world.",
+    "source": "https://en.wikipedia.org/wiki/Colosseum"
+   },
+   "facts": [
+    {
+     "text": "Originally, the building's Latin name was simply amphitheatrum, 'amphitheatre'. Though the modern name Flavian Amphitheatre (Latin: Amphitheatrum Flavium) is often used, there is no evidence it was used in classical antiquity.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Name"
+    },
+    {
+     "text": "The site chosen was a flat area on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran as well as an artificial lake/marsh. By the 2nd century BC the area was densely inhabited.",
+     "section": "Construction, inauguration, and Roman renovations",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Construction%2C_inauguration%2C_and_Roman_renovations"
+    },
+    {
+     "text": "The Colosseum underwent several radical changes of use. By the late 6th century a small chapel had been built into the structure of the amphitheater, though this apparently did not confer any particular religious significance on the building as a whole.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Colosseum#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "WarpFlyght"

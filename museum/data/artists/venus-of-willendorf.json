@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": "Natural History Museum, Vienna",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. The figurine was found by a workman named either Johann Veran or Josef Veram and is carved from an oolitic limestone that is not local to the area, and tinted with red ochre.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "User:MatthiasKabel"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": "Natural History Museum, Vienna",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Venus of Willendorf, Natural History Museum in Vienna, Austria. The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Jakub Hałun"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": "Natural History Museum, Vienna",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Venus of Willendorf http://www.nhm-wien.ac.at/NHM/Prehist/Homepage_PA_E.html. The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "User:MatthiasKabel"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Die Venus von Willendorf, weitere Fotos und Informationen unter: https://donsmaps.com/willendorf.html. The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Don Hitchcock"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "3D model of replica (click to interact). The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Scan the World"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Figurine seen from four sides. The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 on an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria.",
+    "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+   },
+   "facts": [
+    {
+     "text": "The figure is associated with the Upper Paleolithic Gravettian industry, which dates to between 33,000 and 20,000 years ago. The figure itself is estimated to have been left in the ground around 30,000 years ago, based on radiocarbon dates from the layers surrounding it.",
+     "section": "Dating",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Dating"
+    },
+    {
+     "text": "Similar sculptures, first discovered in the nineteenth and early twentieth centuries, are traditionally referred to in archaeology as \"Venus figurines\", due to the widely held belief that depictions of nude women with exaggerated sexual features represented an early fertility deity, perhaps a mother goddess.",
+     "section": "Interpretation and purpose",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Interpretation_and_purpose"
+    },
+    {
+     "text": "Research published in 2022 indicates that the closest and most likely source of the oolite used is on the other side of the Alps in northern Italy, near Lake Garda. A lesser possibility is that it came from a site in eastern Ukraine some 1,600 km (1,000 mi) away.",
+     "section": "Stone's source",
+     "source": "https://en.wikipedia.org/wiki/Venus_of_Willendorf#Stone%27s_source"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Bjørn Christian Tørrissen"

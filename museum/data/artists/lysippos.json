@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": "Regional Archaeological Museum Antonino Salinas",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Museo Regionale Archeologico, Palermo Bronze of a ram. Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Bjs"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": "Delphi Archaeological Museum",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period. Problems confront the study of Lysippos because of the difficulty in identifying his style in the copies which survive.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0 de",
     "credit": "Fingalo"
@@ -139,8 +177,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Skulptur,\"Ares\" von Lysipp, 400 v. Chr., Zitadellenbrücke, Berlin-Haselhorst, Deutschland. Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "OTFW, Berlin"
@@ -148,7 +205,7 @@
   },
   {
    "qid": null,
-   "title": "0002MAN-Hermes",
+   "title": "Hermes of Atalante, a Roman marble copy of a lost bronze attributed to Lysippos…",
    "year": null,
    "image": {
     "file": "File:0002MAN-Hermes.jpg",
@@ -159,8 +216,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Hermes of Atalante, a Roman marble copy of a lost bronze attributed to Lysippos (National Archaeological Museum of Athens). Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ricardo André Frantz (User:Tetraktys)"
@@ -179,8 +255,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Hermes Azara, a Roman copy of an Alexander bust found at Tivoli, attributed to Lysippos (Louvre). Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Copy of Lysippos"
@@ -188,7 +283,7 @@
   },
   {
    "qid": null,
-   "title": "Head of Socrates, 210BC copy of bust by Lysippos of 320BC, Museum of Old Masters, Dresden",
+   "title": "Head of Socrates, 210BC copy of bust by Lysippos of 320BC, Museum of Old…",
    "year": null,
    "image": {
     "file": "File:Head of Socrates, 210BC copy of bust by Lysippos of 320BC, Museum of Old Masters, Dresden.jpg",
@@ -199,8 +294,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Head of Socrates, 210BC copy of bust by Lysippos of 320BC, Museum of Old Masters, Dresden. Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Stephencdickson"
@@ -219,8 +333,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Getty Victorious Youth[15]. Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Wtin"
@@ -239,8 +372,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue base with signature of the sculptor Lysippos (ΛΥΣΙΠΠΟΣ ΕΠ[ΟΗΣΕ]), found near the Sacred Spring, Corinth, in 1901. Late 340s–early 330s BCE (Edwards). Lysippos was a Greek sculptor of the 4th century BC. Together with Scopas and Praxiteles, he is considered one of the three greatest sculptors of the Classical Greek era, bringing transition into the Hellenistic period.",
+    "source": "https://en.wikipedia.org/wiki/Lysippos"
+   },
+   "facts": [
+    {
+     "text": "Born at Sicyon around 390 BC, Lysippos was a worker in bronze in his youth. He taught himself the art of sculpture, later becoming head of the school of Argos and Sicyon.",
+     "section": "Biography",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Biography"
+    },
+    {
+     "text": "Lysippos was successor in contemporary repute to the famous sculptor Polykleitos.",
+     "section": "Career and legacy",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Career_and_legacy"
+    },
+    {
+     "text": "Lysippos developed a more gracile style than his predecessor Polykleitos and this has become known as the Canon of Lysippos.",
+     "section": "Canon of Lysippos",
+     "source": "https://en.wikipedia.org/wiki/Lysippos#Canon_of_Lysippos"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Mark Landon"

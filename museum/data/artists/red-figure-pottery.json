@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "Artemis hinds Louvre CA1795",
+   "title": "Artemis in a Chariot, Kantharos by the Painter of the Great Athens Kantharos,…",
    "year": null,
    "image": {
     "file": "File:Artemis hinds Louvre CA1795.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Artemis in a Chariot, Kantharos by the Painter of the Great Athens Kantharos, ca 450/425 BC. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Painter of the Great Athens Kantharos"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Red-figure scene on the Belly Amphora by the Andokides Painter (Munich 2301). Munich: Staatliche Antikensammlungen. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Andokides painter"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Black-figure scene on the Belly Amphora by the Andokides Painter (Munich 2301). Munich: Staatliche Antikensammlungen. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Andokides Painter or Lysippides Painter"
@@ -80,7 +137,7 @@
   },
   {
    "qid": null,
-   "title": "Athena Poseidon Louvre CA7426",
+   "title": "Athena and Poseidon on a volute krater by the Nazzano Painter, circa 360 BC",
    "year": null,
    "image": {
     "file": "File:Athena Poseidon Louvre CA7426.jpg",
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Athena and Poseidon on a volute krater by the Nazzano Painter, circa 360 BC. Paris: Louvre. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Nazzano Painter"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Cup Apatouria Louvre G138",
+   "title": "Procession of men, kylix by the Triptolemos Painter, circa 480 BC",
    "year": null,
    "image": {
     "file": "File:Cup Apatouria Louvre G138.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Procession of men, kylix by the Triptolemos Painter, circa 480 BC. Paris: Louvre. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Triptolemos Painter"
@@ -120,7 +215,7 @@
   },
   {
    "qid": null,
-   "title": "Dioskouroi Herakles BM E224",
+   "title": "Hydria, name vase of the Meidias Painter",
    "year": null,
    "image": {
     "file": "File:Dioskouroi Herakles BM E224.jpg",
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Hydria, name vase of the Meidias Painter. The upper register depicts the abduction of the Leucippidae by the Dioscuri, the lower one shows Heracles in the garden of the Hesperides and a group of local Attic heroes. Circa 420/400 BC. London: British Museum. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Meidias Painter (eponym vase, according to signature)"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Krater with a palaestra scene: athletes preparing for a competition, ascribed to Euphronios, circa 510/500 BC, Berlin: Antikensammlung. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Picture taken by Marcus Cyron"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Dionysos on a boat, black-figure kylix by Exekias, circa 530 BC. Munich: Staatliche Antikensammlungen. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Exekias"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Warriors, flanked by Hermes and Athena. Amphora by the potter Andokides and the Andokides Painter, circa 530 BC. Paris: Louvre. Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Andokides (potter, signed), Andokides Painter"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Gnathia ware, southern Italy (Magna Graecia), Apulian vase painting of a blond woman, 310-260 BC, Kinský Palace (Prague). Red-figure pottery is a style of ancient Greek pottery in which the background of the pottery is painted black while the figures and details are left in the natural red or orange color of the clay.",
+    "source": "https://en.wikipedia.org/wiki/Red-figure_pottery"
+   },
+   "facts": [
+    {
+     "text": "Red figure is, put simply, the reverse of the black figure technique. Both were achieved by using the three-phase firing technique.",
+     "section": "Technique",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Technique"
+    },
+    {
+     "text": "Black-figure vase painting had been developed in Corinth in the 7th century BC and quickly became the dominant style of pottery decoration throughout the Greek world and beyond. Although Corinth dominated the overall market, regional markets and centers of production did develop.",
+     "section": "Attica",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Attica"
+    },
+    {
+     "text": "The first red-figure vases were produced around 530 BC. The invention of the technique normally is accredited to the Andokides Painter.",
+     "section": "Beginnings",
+     "source": "https://en.wikipedia.org/wiki/Red-figure_pottery#Beginnings"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Zde"

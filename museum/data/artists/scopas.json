@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": "British Museum",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Marie-Lan Nguyen"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": "National Archaeological Museum of Athens",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Marsyas"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": "National Archaeological Museum of Athens",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Stèle funéraire en marbre pentélique, trouvée dans le lit de l'Illissos à Athènes. Un jeune homme nu s'appuie sur un pilier, les jambes croisées. Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Scopas (or School of)"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": "Centrale Montemartini",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue of Pothos (330s BCE). Pentelic marble. Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "Marie-Lan Nguyen"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Hunter stele by Scopas (National Archaeological Museum of Athens). Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Aleksandr Zykov from Russia"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Two marble heads by Scopas, National Museum Athens. Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Parapher"
@@ -140,7 +254,7 @@
   },
   {
    "qid": null,
-   "title": "Meleager Pio-Clementino Inv490",
+   "title": "A Roman 1st-century AD marble Meleager with chlamys, a free improvisation on…",
    "year": null,
    "image": {
     "file": "File:Meleager Pio-Clementino Inv490.jpg",
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A Roman 1st-century AD marble Meleager with chlamys, a free improvisation on Scopas's model, from the Fusconi-Pighini collection (Museo Pio-Clementino, Rome). Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Copy after Skopas (?)"
@@ -160,7 +293,7 @@
   },
   {
    "qid": null,
-   "title": "Meleager Skopas BM GR1906.1-17.1",
+   "title": "Roman marble head of Meleager, after Scopas, on a restored bust (British Museum)",
    "year": null,
    "image": {
     "file": "File:Meleager Skopas BM GR1906.1-17.1.jpg",
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Roman marble head of Meleager, after Scopas, on a restored bust (British Museum). Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Copy of Skopas?"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Head of the goddess Hygieia by Scopas from the temple of Athena Alea at Tegea (National Archaeological Museum of Athens). Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Marsyas"
@@ -200,7 +371,7 @@
   },
   {
    "qid": null,
-   "title": "Pothos Apollo Musei Capitolini MC649",
+   "title": "One of many Roman copies of Pothos (Desire), a statue by Scopas, restored here…",
    "year": null,
    "image": {
     "file": "File:Pothos Apollo Musei Capitolini MC649.jpg",
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "One of many Roman copies of Pothos (Desire), a statue by Scopas, restored here as Apollo Kitharoidos (Apollo, the Cithara-player). Scopas was an ancient Greek sculptor and architect, most famous for his statue of Meleager, the copper statue of Aphrodite, and the head of goddess Hygieia, daughter of Asclepius.",
+    "source": "https://en.wikipedia.org/wiki/Scopas"
+   },
+   "facts": [
+    {
+     "text": "Scopas was born on the island of Paros. His father was the sculptor Aristander of Paros.",
+     "section": "Early life and family",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Early_life_and_family"
+    },
+    {
+     "text": "Scopas worked with Praxiteles, and he sculpted parts of the Mausoleum of Halicarnassus, especially the reliefs. He led the building of the new temple of Athena Alea at Tegea.",
+     "section": "Career",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Career"
+    },
+    {
+     "text": "Pothos, or Desire, was a celebrated and much imitated statue by Scopas. Roman copies featured the human figure with a variety of props, such as musical instruments and fabrics as depicted here, in an example that was in the collection of Cardinal Alessandro Albani.",
+     "section": "Pothos",
+     "source": "https://en.wikipedia.org/wiki/Scopas#Pothos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "After Scopas"

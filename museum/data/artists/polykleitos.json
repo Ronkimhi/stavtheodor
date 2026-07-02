@@ -93,8 +93,27 @@
    },
    "cm": null,
    "collection": "British Museum",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "So-called Westmacott Athlete, statue of a victorious athlete crowning himself. Marble, Roman copy of the 1st century AD after a Greek original (the statue of Kyniskos?) of ca. 440 BC. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Copy after Polykleitos?"
@@ -113,8 +132,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "On better preserved copies of this figure, the athlete raises his right arm to place a wreath, perhaps a prize for an athletic victory, on his head. The statue may be based on the \"Cyniscus\" by Polyclitus, a work depicting an Olympic champion boxer of the mid 5th century. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Anonymous (Roman artist)Unknown author\n\nCopy after Polykleitos (Greek, active 460-415 BC)"
@@ -156,7 +194,7 @@
   },
   {
    "qid": null,
-   "title": "Apollon de Mantoue Louvre MA689",
+   "title": "Apollo of the \"Mantua type\", marble Roman copy after a 5th-century-BC Greek…",
    "year": null,
    "image": {
     "file": "File:Apollon de Mantoue Louvre MA689.jpg",
@@ -167,8 +205,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Apollo of the \"Mantua type\", marble Roman copy after a 5th-century-BC Greek original attributed to Polykleitos, Musée du Louvre. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Copy after Polykleitos (?)"
@@ -176,7 +233,7 @@
   },
   {
    "qid": null,
-   "title": "Bronze statue of an athlete from Ephesus cleaning his strigil 1st century CE copy of 4th century BCE Greek original",
+   "title": "Bronze statue of an athlete from Ephesus cleaning his strigil; 1st century CE…",
    "year": null,
    "image": {
     "file": "File:Bronze statue of an athlete from Ephesus cleaning his strigil 1st century CE copy of 4th century BCE Greek original.jpg",
@@ -187,8 +244,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bronze statue of an athlete from Ephesus cleaning his strigil; 1st century CE copy of a possible original by Polykleitos. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Manfred Werner (Tsui); cropped and edited by Mary Harrsch"
@@ -207,8 +283,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A Polykleitan Diadumenos, in a Roman marble copy, National Archaeological Museum of Athens. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ricardo André Frantz (User:Tetraktys)"
@@ -227,8 +322,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Townley Marbles Discophoros, British Museum. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ricardo André Frantz (User:Tetraktys)"
@@ -247,8 +361,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Doryphoros, Minneapolis Institute of Art. Polykleitos was an ancient Greek sculptor, active in the 5th century BCE. Alongside the Athenian sculptors Pheidias, Myron and Praxiteles, he is considered as one of the most important sculptors of classical antiquity.",
+    "source": "https://en.wikipedia.org/wiki/Polykleitos"
+   },
+   "facts": [
+    {
+     "text": "His Greek name was traditionally Latinized Polycletus, but is also transliterated Polycleitus (Ancient Greek: Πολύκλειτος [polýkleːtos], \"much-renowned\") and, due to iotacism in the transition from Ancient to Modern Greek, Polyklitos or Polyclitus. He is called Sicyonius (lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Name"
+    },
+    {
+     "text": "As noted above, Polykleitos is called \"The Sicyonian\" by some authors, all writing in Latin, and who modern scholars view as relying on an error of Pliny the Elder in conflating another more minor sculptor from Sikyon, a disciple of Phidias, with Polykleitos of Argos.",
+     "section": "Early life and training",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Early_life_and_training"
+    },
+    {
+     "text": "Polykleitos's figure of an Amazon for Ephesus was admired, while his colossal gold and ivory statue of Hera which stood in her temple—the Heraion of Argos—was favourably compared with the Olympian Zeus by Pheidias.",
+     "section": "Works",
+     "source": "https://en.wikipedia.org/wiki/Polykleitos#Works"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Minneapolis Institute of Art"

@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue antiche, musei Capitolini, Roma. The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "Sailko"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Buste en bronze dit \"Brutus Capitolin\" (Musées Capitolins, Rome). The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "C.Salviani"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Palazzo dei Conservatori - Musei Capitolini - Rome. The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "José Luiz"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "User:MatthiasKabel"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Capitoline Brutus Musei Capitolini MC1183 04",
+   "title": "\"Capitoline Brutus\", bronze portrait head, glass-inlaid bone eyes, late 4th to…",
    "year": null,
    "image": {
     "file": "File:Capitoline Brutus Musei Capitolini MC1183 04.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "\"Capitoline Brutus\", bronze portrait head, glass-inlaid bone eyes, late 4th to early 3rd centuries BC, on a 16th-century bronze bust. The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Jastrow"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Palazzo dei Conservatori - Musei Capitolini - Rome. The Capitoline Brutus is an ancient Roman bronze bust that is traditionally, but probably wrongly, thought to be an imagined portrait of the Roman consul Lucius Junius Brutus. The bust has historically been dated to the late 4th to early 3rd centuries BC, but is perhaps as late as the 2nd century BC, or early 1st century BC.",
+    "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus"
+   },
+   "facts": [
+    {
+     "text": "The bust's modern history begins in Italy during the 16th century; nothing is known of its previous history before then. It was bequeathed to the city of Rome by Cardinal Rodolfo Pio da Carpi in 1564.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#History"
+    },
+    {
+     "text": "Speculation that the bust was meant to portray Lucius Junius Brutus of antiquity began with the writings of the 16th-century Italian naturalist Ulisse Aldrovandi. The Dutch 17th-century antiquary and editor of Lactantius Gallaeus Servatius alleged that a Roman coin minted during the consulship of Brutus bore similar facial features to the bust.",
+     "section": "Antiquarian speculation",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Antiquarian_speculation"
+    },
+    {
+     "text": "More recent scholars of the 20th century have been less concerned with whether or not it was an idealized portrait of Brutus and more preoccupied with the accurate dating and provenance of the bust.",
+     "section": "Modern scholarship",
+     "source": "https://en.wikipedia.org/wiki/Capitoline_Brutus#Modern_scholarship"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "José Luiz"

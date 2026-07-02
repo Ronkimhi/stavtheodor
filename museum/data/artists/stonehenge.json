@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "BLEgerton3028Fol30rStonehengeCropped",
+   "title": "The oldest known depiction of Stonehenge, from the second quarter of the 14th…",
    "year": null,
    "image": {
     "file": "File:BLEgerton3028Fol30rStonehengeCropped.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The oldest known depiction of Stonehenge, from the second quarter of the 14th century. A giant helps Merlin build Stonehenge. From a manuscript of the Roman de Brut by Wace in the British Library (Egerton 3028). Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Unknown artistUnknown artist"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Constable - Stonehenge, 1629-1888, 2006AK8142",
+   "title": "Stonehenge, by John Constable, 1835",
    "year": null,
    "image": {
     "file": "File:Constable - Stonehenge, 1629-1888, 2006AK8142.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Stonehenge, by John Constable, 1835. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "John Constable"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The ancestors of the people who built Stonehenge I and II were Neolithic farmers originating from Anatolia who brought agriculture to Europe.[63]. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "CC BY 4.0",
     "credit": "Detlef Gronenborn, Barbara Horejs, Börner, Ober"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A contemporary newspaper depiction of the 1920 restoration. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Richmond times-dispatch"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Plan of the central stone structure today; after Johnson 2008. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "Anthony Johnson"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "As shown in Camden's Britannia, edition of 1789. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Richard Gough (1735 – 1809)"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons, topped by connecting horizontal lintel stones which are held in place with mortise and tenon joints—a feature unique among contemporary monuments. Inside is a ring of smaller bluestones.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "garethwiscombe"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Dancing inside the stones, 1984 Stonehenge Free Festival. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Salix alba"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "17th-century depiction of Stonehenge from the Atlas van Loon. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Blaeu, J"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "An early photograph of Stonehenge taken July 1877. Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.",
+    "source": "https://en.wikipedia.org/wiki/Stonehenge"
+   },
+   "facts": [
+    {
+     "text": "The Oxford English Dictionary cites Ælfric's 10th-century glossary, in which henge-cliff is given the meaning 'precipice', or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ...",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Etymology"
+    },
+    {
+     "text": "Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Early_history"
+    },
+    {
+     "text": "Archaeologists have found four, or possibly five, large Mesolithic postholes (one may have been a natural tree throw), which date to around 8000 BC, beneath the site of the tourist car park that was in use until 2013. These held pine posts around two feet six inches (0.75 m) in diameter, which were erected and eventually rotted in place.",
+     "section": "Before the monument (from 8000 BC)",
+     "source": "https://en.wikipedia.org/wiki/Stonehenge#Before_the_monument_%28from_8000_BC%29"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Edwin J. Acott"

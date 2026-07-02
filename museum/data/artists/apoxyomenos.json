@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "Apoxyomenos Pio-Clementino Inv1185",
+   "title": "The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in…",
    "year": null,
    "image": {
     "file": "File:Apoxyomenos Pio-Clementino Inv1185.jpg",
@@ -31,8 +31,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in Trastevere, 1849. Height: 2.05 metres (6 feet 9 inches). Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+    "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+   },
+   "facts": [
+    {
+     "text": "A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life.",
+     "section": "Croatian Apoxyomenos",
+     "source": "https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Copy after Lysippos"
@@ -51,8 +60,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "So-called “Apoxyomenos” (“the Scraper”). Marble, Roman copy of the 1st century AD after a Greek bronze original ca. 320 BC. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+    "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+   },
+   "facts": [
+    {
+     "text": "A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life.",
+     "section": "Croatian Apoxyomenos",
+     "source": "https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Copy after Lysippos"
@@ -71,8 +89,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Head of a statue displayed at the Mimara Museum in Zagreb. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+    "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+   },
+   "facts": [
+    {
+     "text": "A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life.",
+     "section": "Croatian Apoxyomenos",
+     "source": "https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "User:Zmaj"
@@ -91,8 +118,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Closeup on the lips. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.",
+    "source": "https://en.wikipedia.org/wiki/Apoxyomenos"
+   },
+   "facts": [
+    {
+     "text": "A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life.",
+     "section": "Croatian Apoxyomenos",
+     "source": "https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "User:Zmaj"

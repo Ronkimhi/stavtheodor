@@ -31,8 +31,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Close-up of right figure of the Taureador Fresco. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Wolfgang Sauber"
@@ -51,8 +65,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Close-up of central figure of the Taureador Fresco.[3]. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Wolfgang Sauber"
@@ -71,8 +99,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Close-up of left figure of the Taureador Fresco. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Wolfgang Sauber"
@@ -91,8 +133,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "This close-up depicts a possible reconstruction of the fresco depicting the grip used by bull-leapers. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Wolfgang Sauber"
@@ -100,7 +156,7 @@
   },
   {
    "qid": null,
-   "title": "Bronze sculpture showing an acrobat leaping over a bulls head, Crete, Minoan, about 1700-1450 BC, British Museum",
+   "title": "Bronze bull-leaper group in the British Museum",
    "year": null,
    "image": {
     "file": "File:Bronze sculpture showing an acrobat leaping over a bulls head, Crete, Minoan, about 1700-1450 BC, British Museum (8207269149) (cropped).jpg",
@@ -111,8 +167,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bronze bull-leaper group in the British Museum. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Carole Raddato from FRANKFURT, Germany"
@@ -131,8 +201,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Fragment of painting on rock crystal, Knossos, 1600-1450 BC, AMH. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Zde"
@@ -151,8 +235,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ivory bull-leaper, \"Ivory Deposit\" at Knossos, prob. MM IIIB, AMH.[9]. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Carole Raddato from Frankfurt, Germany"
@@ -171,8 +269,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene. Although they were frescos, they were painted on stucco relief scenes.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Gleb Simonov"
@@ -180,7 +292,7 @@
   },
   {
    "qid": null,
-   "title": "Ring, a male leaping over bull, Archanes, Crete, 1450-1375 BC. Gold, AshmoleanM, AE 2237, 142528",
+   "title": "Bull-leaping on a gold signet ring",
    "year": null,
    "image": {
     "file": "File:Ring, a male leaping over bull, Archanes, Crete, 1450-1375 BC. Gold, AshmoleanM, AE 2237, 142528 (cropped).jpg",
@@ -191,8 +303,22 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bull-leaping on a gold signet ring. The Bull-Leaping Fresco is the most completely restored of several stucco panels originally sited on the upper-story portion of the east wall of the Minoan palace at Knossos in Crete. It shows a bull-leaping scene.",
+    "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco"
+   },
+   "facts": [
+    {
+     "text": "Arthur Evans recognized that depictions of bulls and bull-handling had a long tradition represented by copious instances in multi-media art, not only at Knossos, and other sites on Crete, but also in the Aegean and on mainland Greece, with a tradition even more ancient in Egypt and the Middle East.",
+     "section": "Minoan bull-leaping",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Minoan_bull-leaping"
+    },
+    {
+     "text": "Evans noted the survival of bull sports into classical times; for example, the taurokathapsia of Thessaly. The word means \"laying hold of the bull,\" which in modern times is sometimes used for dabing of the Taureador Fresco.",
+     "section": "Taurokathapsia and other classical words",
+     "source": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco#Taurokathapsia_and_other_classical_words"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Zde"

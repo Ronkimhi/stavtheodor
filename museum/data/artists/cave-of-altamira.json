@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands. The earliest paintings were applied during the Upper Paleolithic, around 36,000 years ago.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Museo de Altamira y D. Rodríguez"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A modern interpretation of a bison from the Altamira cave ceiling, one of the cave's most famous paintings. The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "unknown prehistoric artist"
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "Altamira-1880",
+   "title": "Great hall of polychromes of Altamira, published by M",
    "year": null,
    "image": {
     "file": "File:Altamira-1880.jpg",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Great hall of polychromes of Altamira, published by M. Sanz de Sautuola in 1880. The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": ""
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Association of the animals in the cave of Altamira, by Leroi-Gourhan. The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "José-Manuel Benito"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Cave of Altamira and Paleolithic Cave Art of Northern Spain-110113",
+   "title": "Bison on the roof of the pit",
    "year": null,
    "image": {
     "file": "File:Cave of Altamira and Paleolithic Cave Art of Northern Spain-110113.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bison on the roof of the pit. The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0 igo",
     "credit": "Yvon Fruneau"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Reproduction of the Cave of Altamira in the Deutsches Museum, Munich. The Cave of Altamira is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain. It is renowned for prehistoric cave art featuring charcoal drawings and polychrome paintings of contemporary local fauna and human hands.",
+    "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   },
+   "facts": [
+    {
+     "text": "The cave is approximately 270 m (890 ft) long and consists of a series of twisting passages and chambers. The main passage varies from two to six meters in height.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Description"
+    },
+    {
+     "text": "In 1879, following its discovery a decade earlier, amateur archaeologist Marcelino Sanz de Sautuola was led by his eight-year-old daughter María to the cave and realized that the markings on the walls constituted drawings.",
+     "section": "Discovery, excavation, scepticism",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Discovery%2C_excavation%2C_scepticism"
+    },
+    {
+     "text": "There is no scientific agreement on the dating of the archeological artifacts found in the cave, nor the drawings and paintings, and scientists continue to evaluate the age of the cave art at Altamira.",
+     "section": "Dating and periodization",
+     "source": "https://en.wikipedia.org/wiki/Cave_of_Altamira#Dating_and_periodization"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "User:MatthiasKabel"

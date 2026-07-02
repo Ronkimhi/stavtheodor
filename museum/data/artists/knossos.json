@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "Armon Knossos P1060030",
+   "title": "Bull-leaping fresco reconstruction at Knossos",
    "year": null,
    "image": {
     "file": "File:Armon Knossos P1060030.JPG",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bull-leaping fresco reconstruction at Knossos. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Deror_avi"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Armon Knossos P1060093",
+   "title": "Restored architectural detail at Knossos",
    "year": null,
    "image": {
     "file": "File:Armon Knossos P1060093.JPG",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Restored architectural detail at Knossos. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Deror_avi"
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "Armon Knossos P1060104",
+   "title": "View to the east from the west side of the palace",
    "year": null,
    "image": {
     "file": "File:Armon Knossos P1060104.JPG",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "View to the east from the west side of the palace. In the foreground is the west wall of the lustral basin. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Deror_avi"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A bronze labrys from the Messara Plain. The double axe became one of the most recognisable symbols associated with Minoan Crete. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": ""
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Dolphin fresco reconstruction. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Przemek Pietrak"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Facade of Philip II of Macedon tomb in Vergina, Greece. The door is made of marble and the order is doric. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Panegyrics of Granovetter (Sarah Murray)"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Blue Birds fresco. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Gsimonov"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Blue Monkeys fresco. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Gsimonov"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Cup-Bearer fresco. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Gsimonov"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Dolphin fresco. Knossos is an archaeological site and ancient urban centre in Crete, Greece. It is located within the southern periphery of Heraklion, about 5 km (3.1 mi) south of the city's historic centre.",
+    "source": "https://en.wikipedia.org/wiki/Knossos"
+   },
+   "facts": [
+    {
+     "text": "The ancient name of the city is attested in Greek as Κνωσσός and in Linear B as 𐀒𐀜𐀰, transliterated as Ko-no-so. The Latinised form Cnossus was also used in antiquity and in older scholarship.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Name"
+    },
+    {
+     "text": "Knossos lies on Kephala hill, in the valley of the Kairatos river, within the modern municipality of Heraklion. It is not a separate modern city outside Heraklion, but lies within the southern periphery of the present urban area, about 5 km (3.1 mi) from the historic centre.",
+     "section": "Location and setting",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Location_and_setting"
+    },
+    {
+     "text": "The chronology of Knossos extends from the Neolithic period to late antiquity. The dates below are approximate and reflect broad archaeological phases rather than fixed historical boundaries.",
+     "section": "Chronology",
+     "source": "https://en.wikipedia.org/wiki/Knossos#Chronology"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Gsimonov"

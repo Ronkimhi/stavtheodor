@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis: the so-called Tellus panel. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Joel Bellviure"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The front of the Ara Pacis Augustae. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Rabax63"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Section of the interior frieze, showing a damaged original section amid the modern reconstruction. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Relief showing a sacrifice performed by Aeneas or Numa Pompilius. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Roma, the personification of Rome. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis relief. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis relief. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis relief. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis relief. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Miguel Hermoso Cuesta"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ara Pacis relief in the Louvre Museum, Paris. The Ara Pacis Augustae is an altar in Rome dedicated to the Pax Romana. The monument was commissioned by the Roman Senate on July 4, 13 BC to honour the return of Augustus to Rome after three years in Hispania and Gaul and consecrated on January 30, 9 BC.",
+    "source": "https://en.wikipedia.org/wiki/Ara_Pacis"
+   },
+   "facts": [
+    {
+     "text": "The altar reflects the Augustan vision of Roman civil religion. The lower register of its frieze depicts agricultural imagery meant to evoke prosperity, abundance, and the renewed stability associated with the Pax Romana.",
+     "section": "Significance",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Significance"
+    },
+    {
+     "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, consists of a central sacrificial altar enclosed by precinct walls made of Luna marble. The monument sits on a podium and is entered from the west, where a small staircase would have led visitors into the open-air ritual space.",
+     "section": "Structure",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Structure"
+    },
+    {
+     "text": "The central altar preserves fragments of scenes illustrating the lex arae, or the rules for sacrifices performed there. The surviving reliefs show attendants leading animals for sacrifice, carved in a style common in the late Republic as seen in works like the Altar of Domitius Ahenobarbus.",
+     "section": "Altar",
+     "source": "https://en.wikipedia.org/wiki/Ara_Pacis#Altar"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Pascal Radigue"

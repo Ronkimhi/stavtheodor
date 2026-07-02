@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Great Ziggurat of Ur (Dhi Qar Governorate, Iraq), built during the Third Dynasty of Ur (c. 2100 BC), dedicated to the moon god Nanna. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "en:User:Hardnfast"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Bill of sale Louvre AO3765",
+   "title": "Bill of sale of a male slave and a building in Shuruppak, Sumerian tablet, c.…",
    "year": null,
    "image": {
     "file": "File:Bill of sale Louvre AO3765.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bill of sale of a male slave and a building in Shuruppak, Sumerian tablet, c. 2600 BC. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Unknown authorUnknown author"
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "Bill of sale Louvre AO3766",
+   "title": "A bill of sale of a field and a house, from Shuruppak, c. 2600 BC",
    "year": null,
    "image": {
     "file": "File:Bill of sale Louvre AO3766.jpg",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A bill of sale of a field and a house, from Shuruppak, c. 2600 BC. Height: 8.5 cm, width: 8.5 cm, depth: 2 cm. The Louvre. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Marie-Lan Nguyen"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Blau Monuments combine proto-cuneiform characters and illustrations of early Sumerians, Jemdet Nasr period, 3100–2700 BC. British Museum. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "King, L. W. (Leonard William), 1869-1919"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "British Museum Middle East 14022019 Gold and carnelian beads 2600-2300 BC Royal cemetery of Ur",
+   "title": "The etched carnelian beads with white designs in this necklace from the Royal…",
    "year": null,
    "image": {
     "file": "File:British Museum Middle East 14022019 Gold and carnelian beads 2600-2300 BC Royal cemetery of Ur (composite).jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The etched carnelian beads with white designs in this necklace from the Royal Cemetery of Ur, dating to the First Dynasty of Ur, are thought to have come from the Indus Valley. British Museum.[90]. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Vassil"
@@ -120,7 +215,7 @@
   },
   {
    "qid": null,
-   "title": "Bull's head ornament for a lyre MET DP260070",
+   "title": "Bull's head ornament from a lyre; 2600–2350 BC; bronze inlaid with shell and…",
    "year": null,
    "image": {
     "file": "File:Bull's head ornament for a lyre MET DP260070.jpg",
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Bull's head ornament from a lyre; 2600–2350 BC; bronze inlaid with shell and lapis lazuli; height: 13.3 cm, width: 10.5 cm; Metropolitan Museum of Art. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": ""
@@ -140,7 +254,7 @@
   },
   {
    "qid": null,
-   "title": "Cuneiform tablet- administrative account with entries concerning malt and barley groats MET DP293245",
+   "title": "A cuneiform tablet about an administrative account, with entries concerning…",
    "year": null,
    "image": {
     "file": "File:Cuneiform tablet- administrative account with entries concerning malt and barley groats MET DP293245.jpg",
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A cuneiform tablet about an administrative account, with entries concerning malt and barley groats, 3100–2900 BC. Clay, 6.8 x 4.5 x 1.6 cm, the Metropolitan Museum of Art, New York City. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": ""
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Standard of Ur; 2600–2400 BC; shell, red limestone and lapis lazuli on wood; length: 49.5 cm; from the Royal Cemetery at Ur; British Museum. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Denis Bourez from France"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Akkadian cylinder seal from sometime around 2300 BC or thereabouts depicting the deities Inanna, Utu, Enki, and Isimud. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": ""
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "An early writing tablet for recording the allocation of beer, 3100–3000 BC, from Iraq. British Museum, London. Sumer is the earliest known civilization, located in the historical region of southern Mesopotamia, emerging during the Chalcolithic and early Bronze Ages between the 5th and 4th millennium BC.",
+    "source": "https://en.wikipedia.org/wiki/Sumer"
+   },
+   "facts": [
+    {
+     "text": "The Sumerian city-states rose to power during the prehistoric Ubaid and Uruk periods.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Sumer#History"
+    },
+    {
+     "text": "Evidence of wheeled vehicles appeared in the mid-4th millennium BC, near-simultaneously in Mesopotamia, the Northern Caucasus (Maykop culture) and Central Europe. The wheel initially took the form of the potter's wheel.",
+     "section": "Legacy",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Legacy"
+    },
+    {
+     "text": "The term \"Sumer\" (Akkadian: 𒋗𒈨𒊒, romanized: šumeru) comes from the Akkadian name for the \"Sumerians\", the ancient non-Semitic-speaking inhabitants of southern Mesopotamia. In their inscriptions, the Sumerians called their land \"Kengir\", the \"Country of the noble lords\" (Sumerian: 𒆠𒂗𒄀, romanized: ki-en-gi(-r), lit.",
+     "section": "Name",
+     "source": "https://en.wikipedia.org/wiki/Sumer#Name"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "BabelStone"

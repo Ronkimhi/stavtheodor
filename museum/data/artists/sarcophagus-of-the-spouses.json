@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A different example in the Louvre, Caere (modern Cerveteri), 510–500 BCE. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Gary Todd from Xinzheng, China"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "Lastra di rivestimento fittile con scena di banchetto, murlo, antiquarium di poggio civitate, VI sec. ac.",
+   "title": "Banquet slab found at Poggio Civitate",
    "year": null,
    "image": {
     "file": "File:Lastra di rivestimento fittile con scena di banchetto, murlo, antiquarium di poggio civitate, VI sec. ac..JPG",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Banquet slab found at Poggio Civitate. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "sailko"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Heads of the couple, Rome. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Giuseppe Savo"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Fresco in the Triclinium Tomb of the Funerary Banquets. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "Sailko"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Sarcofago degli sposi, produzione etrusca di influenza ionica, 530-520 ac ca., dalla banditaccia 12 piedi",
+   "title": "Detail of the feet, Rome",
    "year": null,
    "image": {
     "file": "File:Sarcofago degli sposi, produzione etrusca di influenza ionica, 530-520 ac ca., dalla banditaccia 12 piedi.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Detail of the feet, Rome. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Sailko"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Sarcophagus of Spouses in the Louvre. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Shonagon"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Sarcòfag dels esposos del segle VI aC, de la ciutat etrusca de Cere (actual Cerveteri), ara al Museu Nacional Etrusc de la Vil·la Giulia de Roma. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Sailko"
@@ -160,7 +293,7 @@
   },
   {
    "qid": null,
-   "title": "Urna a kline con donna semidistesa che versa profumo, produzione etrusca di influenza ionica, 550-500 ac ca., dalla nec. di monte abatone 01",
+   "title": "Smaller similar piece, also in the Villa Giulia museum",
    "year": null,
    "image": {
     "file": "File:Urna a kline con donna semidistesa che versa profumo, produzione etrusca di influenza ionica, 550-500 ac ca., dalla nec. di monte abatone 01.jpg",
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Smaller similar piece, also in the Villa Giulia museum. The Sarcophagus of the Spouses is a tomb effigy considered one of the masterpieces of Etruscan art. The Etruscans lived in Italy between two main rivers, the Arno and the Tiber, and were in contact with the Ancient Greeks through trade, mainly during the Orientalizing and Archaic periods.",
+    "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses"
+   },
+   "facts": [
+    {
+     "text": "The sarcophagus cover is made out of terracotta and was once brightly painted. It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized.",
+     "section": "Description",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Description"
+    },
+    {
+     "text": "Etruscan culture had an appreciation for taking care of the remains of their loved ones; this is seen by how many resources were put into creating their tombs and funerary art, so much so that their cemeteries were often called the \"cities of the dead\" or necropolis.",
+     "section": "Cremation",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Cremation"
+    },
+    {
+     "text": "The funerary rituals that the Etruscans created ranged from a simple hut and small gathering to those a more elaborate space for loved ones such as a tomb or other funerary art or having mosaics and relief sculptures.",
+     "section": "Rituals",
+     "source": "https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses#Rituals"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Sailko"

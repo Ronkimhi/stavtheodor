@@ -6,10 +6,11 @@ Everything written to the data files is sourced verbatim from those APIs:
 this script selects and trims text at sentence boundaries, it never writes
 its own prose. Re-runnable; raw API responses are cached in tools/cache/.
 
-Usage:  python3 fetch_museum_data.py [--no-cache] [--artist SLUG]
+Usage:  python3 fetch_museum_data.py [--no-cache] [--artist SLUG[,SLUG...]]
 """
 
 import hashlib
+import html as html_lib
 import json
 import re
 import subprocess
@@ -175,6 +176,90 @@ def wp_article_images(title):
             if f.startswith("File:") and not NON_ARTWORK_FILE.search(f):
                 files.append(f)
     return files
+
+
+def wp_article_captions(title):
+    """File title -> the caption Wikipedia editors wrote for that image on the
+    entity's own article (figures, gallery boxes and legacy thumbs). The caption
+    describes the specific view in plain language, which is exactly what the
+    placard of an article-harvested work needs."""
+    d = get_json(
+        "https://en.wikipedia.org/w/api.php?action=parse&prop=text"
+        "&redirects=1&format=json&formatversion=2&page="
+        + urllib.parse.quote(title, safe="")
+    )
+    html = (d or {}).get("parse", {}).get("text", "")
+    if not html:
+        return {}
+
+    blocks = re.findall(r"<figure[^>]*>.*?</figure>", html, re.S)
+    blocks += re.findall(r'<li class="gallerybox".*?</li>', html, re.S)
+    blocks += re.findall(r'<div class="thumb[^"]*".*?</div>\s*</div>\s*</div>', html, re.S)
+    caps = {}
+    for block in blocks:
+        fm = re.search(r'/wiki/File:([^"&?#]+)', block)
+        cm = (re.search(r"<figcaption[^>]*>(.*?)</figcaption>", block, re.S)
+              or re.search(r'<div class="gallerytext"[^>]*>(.*?)</div>', block, re.S)
+              or re.search(r'<div class="thumbcaption"[^>]*>(.*?)</div>', block, re.S))
+        if not (fm and cm):
+            continue
+        f = "File:" + urllib.parse.unquote(fm.group(1)).replace("_", " ")
+        cap = tidy_text(re.sub(r"\[\d+\]", "", cm.group(1)))
+        if cap and f not in caps:
+            caps[f] = cap
+    return caps
+
+
+def tidy_text(s):
+    """Tag-stripped wiki text keeps entity refs and the spacing of removed
+    links; normalize it into plain prose."""
+    s = html_lib.unescape(strip_html(s or ""))
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"\s+([,.;:!?)\]])", r"\1", s)
+    s = re.sub(r"([(\[])\s+", r"\1", s)
+    return s.strip()
+
+
+# Commons file descriptions that carry no information for a visitor.
+BOILERPLATE_DESC = re.compile(r"^(photograph|photo|picture|image|scan)s?[\s;.,]*", re.I)
+
+
+# Photographer's processing and gear notes that ride along in descriptions.
+RETOUCH_NOTE = re.compile(
+    r"crop|retouch|levels? adjust|masked out|stitch|denoise|white balance"
+    r"|edited|upscaled|sharpened|camera|\biso\s?\d|\blens\b|exposure|f/\d", re.I)
+
+
+def usable_desc(s):
+    """Commons ImageDescription values range from curated prose to camera noise;
+    keep only readable English-looking sentences of placard length."""
+    s = tidy_text(s)
+    if not s or BOILERPLATE_DESC.fullmatch(s):
+        return None
+    kept = [x for x in sentences(s) if not RETOUCH_NOTE.search(x)][:2]
+    s = first_sentences(" ".join(kept), n=2, max_chars=350)
+    if len(s) < 30:
+        return None
+    if sum(1 for c in s if c.isascii()) / len(s) < 0.85:
+        return None
+    return s
+
+
+def junk_title(t):
+    """Camera-filename titles (2N9A6519-Pano, MET DP116347, DSC 0042) say
+    nothing on a placard; detect tokens that mix letters with digit runs."""
+    return bool(
+        re.search(r"\b(?:IMG|DSCF?|DSCN|PICT)\b", t, re.I)
+        or re.search(r"\b(?=[A-Za-z0-9-]*[A-Za-z])[A-Za-z0-9-]*\d{3,}[A-Za-z0-9-]*\b", t)
+    )
+
+
+def title_from_caption(cap):
+    # sentence-split, but not after "c."/"ca." (circa) date abbreviations
+    t = re.split(r"(?<!\bc\.)(?<!\bca\.)(?<=[.!?])\s", cap)[0]
+    if len(t) > 80:
+        t = t[:80].rsplit(" ", 1)[0] + "…"
+    return t.rstrip(" .,;")
 
 
 def wp_full_extract(title):
@@ -520,6 +605,16 @@ def build_artist(seed_artist, report):
 
     info1600 = commons_imageinfo([r["file"] for r in kept], 1600)
 
+    # Ancient-wing works (article-image and curated harvests) have no article
+    # of their own, so their placards are assembled from what Wikipedia and
+    # Commons say about the exact image: the caption editors wrote for it on
+    # the entity's article, else the Commons file description, always followed
+    # by the entity's own lead sentences for plain-language context.
+    ancient = "born" in seed_artist or "activeStart" in seed_artist
+    captions = wp_article_captions(title) if ancient else {}
+    entity_facts = extract_facts(title) if ancient else []
+    entity_context = first_sentences(summary.get("extract", ""), n=2, max_chars=350)
+
     paintings = []
     for r in kept:
         i640, i1600 = r["_info640"], info1600.get(r["file"], r["_info640"])
@@ -533,6 +628,23 @@ def build_artist(seed_artist, report):
                     "source": wp_url(r["article"]),
                 }
             facts = extract_facts(r["article"])
+        if ancient and not story:
+            caption = captions.get(r["file"])
+            lead = caption or usable_desc(
+                i640.get("extmetadata", {}).get("ImageDescription", {}).get("value", "")
+            )
+            if lead and not re.search(r"[.!?]$", lead):
+                lead += "."
+            if lead:
+                context = "" if len(lead) > 350 else entity_context
+                extract = (lead + " " + context).strip()
+            else:
+                extract = first_sentences(summary.get("extract", ""), n=3, max_chars=600)
+            if extract:
+                story = {"extract": extract, "source": wp_url(title)}
+                facts = entity_facts
+            if caption and (junk_title(r["title"]) or len(r["title"]) > 90):
+                r["title"] = title_from_caption(caption)
         credit = strip_html(i640.get("extmetadata", {}).get("Artist", {}).get("value", ""))
         lic_name = i640.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
         paintings.append({
@@ -601,7 +713,7 @@ def pack_lanes(periods):
 def main():
     only = None
     if "--artist" in sys.argv:
-        only = sys.argv[sys.argv.index("--artist") + 1]
+        only = set(sys.argv[sys.argv.index("--artist") + 1].split(","))
     CACHE.mkdir(exist_ok=True)
     (DATA / "artists").mkdir(parents=True, exist_ok=True)
     seed = json.loads((HERE / "seed.json").read_text(encoding="utf-8"))
@@ -623,7 +735,7 @@ def main():
     report = {}
     index_artists = []
     for sa in seed["artists"]:
-        if only and sa["slug"] != only:
+        if only and sa["slug"] not in only:
             continue
         artist = build_artist(sa, report)
         if not artist:

@@ -31,8 +31,17 @@
    },
    "cm": null,
    "collection": "Centrale Montemartini, Rome",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.",
+    "source": "https://en.wikipedia.org/wiki/Togatus_Barberini"
+   },
+   "facts": [
+    {
+     "text": "Little is known about the identity of those depicted in the sculpture, but it is known that the type of shoes the middle figure is depicted to wear distinguishes him as a member of the Roman noble class.",
+     "section": "Speculation of identity",
+     "source": "https://en.wikipedia.org/wiki/Togatus_Barberini#Speculation_of_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Carole Raddato"
@@ -51,8 +60,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.",
+    "source": "https://en.wikipedia.org/wiki/Togatus_Barberini"
+   },
+   "facts": [
+    {
+     "text": "Little is known about the identity of those depicted in the sculpture, but it is known that the type of shoes the middle figure is depicted to wear distinguishes him as a member of the Roman noble class.",
+     "section": "Speculation of identity",
+     "source": "https://en.wikipedia.org/wiki/Togatus_Barberini#Speculation_of_identity"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Carlo Dell'Orto"

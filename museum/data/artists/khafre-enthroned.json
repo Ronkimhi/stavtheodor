@@ -31,7 +31,10 @@
    },
    "cm": null,
    "collection": "Egyptian Museum, Cairo",
-   "story": null,
+   "story": {
+    "extract": "The statue of Khafre from his valley temple at Giza, now in the Egyptian Museum of Antiquities in Cairo. A figure of a falcon—the god Horus—extends his wings around the king's head. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "CC0",
@@ -51,7 +54,10 @@
    },
    "cm": null,
    "collection": "Egyptian Museum, Cairo",
-   "story": null,
+   "story": {
+    "extract": "The statue of Khafre from his valley temple at Giza, now in the Egyptian Museum of Antiquities in Cairo. Fourth Dynasty, 26th century BC. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "CC0",
@@ -71,7 +77,10 @@
    },
    "cm": null,
    "collection": "Egyptian Museum, Cairo",
-   "story": null,
+   "story": {
+    "extract": "The same statue, currently located at the Egyptian Museum in Cairo, as photographed from a similar angle in 2015. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "CC0",
@@ -91,7 +100,10 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
+   "story": {
+    "extract": "en:Egyptian Museum, Cairo: statue of king Khafre Enthroned, 4th Dynasty, en:Old Kingdom of Egypt. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "CC BY-SA 4.0",
@@ -111,7 +123,10 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
+   "story": {
+    "extract": "Khafre Enthroned, as photographed in 1911. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "Public domain",
@@ -131,7 +146,10 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
+   "story": {
+    "extract": "Sitzstatue des Königs Chephren der 4. altägyptischen Dynastie, ausgestellt im Ägyptischen Museum in Kairo, Ägypten. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.",
+    "source": "https://en.wikipedia.org/wiki/Khafre_Enthroned"
+   },
    "facts": [],
    "license": {
     "name": "CC BY 3.0",

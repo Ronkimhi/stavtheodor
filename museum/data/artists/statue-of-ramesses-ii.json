@@ -31,8 +31,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue of Ramesses II in Karnak Temple in Luxor, Egypt. The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+    "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+   },
+   "facts": [
+    {
+     "text": "In 1820, the statue was discovered, broken into six pieces, at Mit Rahina near ancient Memphis, Egypt, where it lay for several decades.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II#History"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "MusikAnimal"
@@ -51,8 +60,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+    "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+   },
+   "facts": [
+    {
+     "text": "In 1820, the statue was discovered, broken into six pieces, at Mit Rahina near ancient Memphis, Egypt, where it lay for several decades.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II#History"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Diego Delso"
@@ -71,8 +89,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "500px provided description: Colossus Of Ramesses [#architecture,#statue,#history,#colossus,#Africa,#Egypt,#Pharaoh,#Rameses,#Ramesses]. The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+    "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+   },
+   "facts": [
+    {
+     "text": "In 1820, the statue was discovered, broken into six pieces, at Mit Rahina near ancient Memphis, Egypt, where it lay for several decades.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II#History"
+    }
+   ],
    "license": {
     "name": "CC BY 3.0",
     "credit": "Ahnaf Saber"
@@ -80,7 +107,7 @@
   },
   {
    "qid": null,
-   "title": "Grand Egyptian Museum 2019-11-07d",
+   "title": "Statue of Ramesses II in the entrance hall of the Grand Egyptian Museum during…",
    "year": null,
    "image": {
     "file": "File:Grand Egyptian Museum 2019-11-07d.jpg",
@@ -91,8 +118,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Statue of Ramesses II in the entrance hall of the Grand Egyptian Museum during construction (November 2019). The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+    "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+   },
+   "facts": [
+    {
+     "text": "In 1820, the statue was discovered, broken into six pieces, at Mit Rahina near ancient Memphis, Egypt, where it lay for several decades.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II#History"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Djehouty"
@@ -111,8 +147,17 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A replica of the Ramesses II statue stands on Orouba street in Heliopolis, Cairo. The Statue of Ramesses II is a colossal 3,200-year-old figure of Ramesses II, depicting him standing. It is 11 metres (36 ft) tall and made from red granite, weighing about 83 short tons.",
+    "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II"
+   },
+   "facts": [
+    {
+     "text": "In 1820, the statue was discovered, broken into six pieces, at Mit Rahina near ancient Memphis, Egypt, where it lay for several decades.",
+     "section": "History",
+     "source": "https://en.wikipedia.org/wiki/Statue_of_Ramesses_II#History"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "JasmineElias"

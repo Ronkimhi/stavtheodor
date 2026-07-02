@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A glazed tile depicting a king and attendants, 9th century BC. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Anthony Huan"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A stele of the Neo-Assyrian king Ashurnasirpal II, r. 883–859 BC. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Andres Rueda"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "An Assyrian girl celebrating Akitu. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": "Levi Meir Clancy"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A 20th-century illustration of decorative patterns found in ancient Assyrian reliefs and garments. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "No restrictions",
     "credit": "Internet Archive Book Images"
@@ -100,7 +176,7 @@
   },
   {
    "qid": null,
-   "title": "Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853",
+   "title": "A 19th-century reconstruction of Nineveh, the Assyrian capital 705–612 BC",
    "year": null,
    "image": {
     "file": "File:Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg",
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A 19th-century reconstruction of Nineveh, the Assyrian capital 705–612 BC. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Austen Henry Layard"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Emblem of the god Ashur, from an ancient Assyrian relief in Nimrud. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Austen Henry Layard (1817–1894)"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A 7th-century BC relief depicting Ashurbanipal (r. 669–631 BC) and two royal attendants. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Assyrian heartland (in red) and the greatest extent of the Assyrian Empire (in orange) under the reign of Assurbanipal (668-627 BC). Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "File:Near East topographic map-blank.svg: Sémhur\nFile:Assyrie general.PNG: Zunkir\nderivative work: Morningstar1814"
@@ -180,7 +332,7 @@
   },
   {
    "qid": null,
-   "title": "Cult wall relief from Assur. A deity, probably god Assur, is flanked by 2 water deities and 2 goats. 2000-1500 BCE. Pergamon Museum, Berlin",
+   "title": "A wall relief probably depicting Ashur, 21st–16th century BC",
    "year": null,
    "image": {
     "file": "File:Cult wall relief from Assur. A deity, probably god Assur, is flanked by 2 water deities and 2 goats. 2000-1500 BCE. Pergamon Museum, Berlin.jpg",
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "A wall relief probably depicting Ashur, 21st–16th century BC. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)"
@@ -200,7 +371,7 @@
   },
   {
    "qid": null,
-   "title": "Cuneiform tablet- caravan account MET DP-13441-005",
+   "title": "An Old Assyrian cuneiform tablet, containing an account of a caravan journey",
    "year": null,
    "image": {
     "file": "File:Cuneiform tablet- caravan account MET DP-13441-005.jpg",
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "An Old Assyrian cuneiform tablet, containing an account of a caravan journey. Assyria was a major ancient Mesopotamian civilisation that existed from the 21st to 7th centuries BC, which conquered and administered most of West Asia from the Assyrian heartland in Upper Mesopotamia.",
+    "source": "https://en.wikipedia.org/wiki/Assyria"
+   },
+   "facts": [
+    {
+     "text": "In the Old Assyrian period, when Assyria was merely a city-state centered on the city of Assur, the state was typically referred to as ālu Aššur (\"city of Ashur\").",
+     "section": "Nomenclature",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Nomenclature"
+    },
+    {
+     "text": "Agricultural villages in the region that would later become Assyria are known to have existed by the time of the Hassuna culture, c. 6300–5800 BC.",
+     "section": "Early history",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Early_history"
+    },
+    {
+     "text": "Ashur-uballit I was the first native Assyrian ruler to claim the royal title šar (\"king\"). Shortly after achieving independence, he further claimed the dignity of a great king on the level of the Egyptian pharaohs and the Hittite kings.",
+     "section": "Assyrian Empire",
+     "source": "https://en.wikipedia.org/wiki/Assyria#Assyrian_Empire"
+    }
+   ],
    "license": {
     "name": "CC0",
     "credit": ""

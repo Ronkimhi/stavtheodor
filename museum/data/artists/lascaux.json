@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Irish elk (Megaloceros giganteus) with line of dots. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "HTO"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Part of Lascaux IV. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Traumrune"
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Cave painting of a dun horse (Equus ferus) at Lascaux. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": ""
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Reproduction of Lascaux artwork in Lascaux II. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Jack Versloot"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Modern entrance to the Lascaux cave. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ethan Doyle White"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Aurochs, horses and deer painted on a cave. Lascaux is a network of caves near the village of Montignac, in the department of Dordogne in southwestern France. Over 600 parietal wall paintings cover the interior walls and ceilings of the cave.",
+    "source": "https://en.wikipedia.org/wiki/Lascaux"
+   },
+   "facts": [
+    {
+     "text": "The interpretation of Palaeolithic Art is problematic, as it can be influenced by our own prejudices and beliefs. Some anthropologists and art historians theorize the paintings could be an account of past hunting success, or could represent a mystical ritual in order to improve future hunting endeavors.",
+     "section": "Interpretation",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Interpretation"
+    },
+    {
+     "text": "On 12 September 1940, the entrance to the Lascaux Cave was discovered on the La Rochefoucauld-Montbel lands by 18-year-old Marcel Ravidat when his dog investigated a hole left by an uprooted tree (Ravidat would embellish the story in later retellings, saying the dog had fallen into the cave).",
+     "section": "History since rediscovery",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#History_since_rediscovery"
+    },
+    {
+     "text": "Conservation problems, such as protecting crystal growth and conserving the paintings in the original cave, have made the creation of replicas open to the public more important.",
+     "section": "Replicas",
+     "source": "https://en.wikipedia.org/wiki/Lascaux#Replicas"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "EU"

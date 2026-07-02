@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Satyr of Torre del Greco, type the Pouring satyr. Marble, Roman copy of the 1st century BC/CE after a Greek original of the second quarter or last third of the 4th century BC attributed to Praxiteles, restored in 2002. Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue.",
+    "source": "https://en.wikipedia.org/wiki/Praxiteles"
+   },
+   "facts": [
+    {
+     "text": "Accurate dates for Praxiteles are elusive, but it is likely that he was no longer working in the time of Alexander the Great, in the absence of evidence that Alexander employed Praxiteles, as he probably would have done. Pliny's date, 364 BC, is probably that of one of his most noted works.",
+     "section": "Date",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Date"
+    },
+    {
+     "text": "This statue was discovered in 1877, in Olympia, Greece, by a team of German archeologists led by Ernst Curtius. It was discovered in the Temple of Hera, which the Greek writer Pausanias had visited in the 2nd century CE.",
+     "section": "Hermes and the Infant Dionysus",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Hermes_and_the_Infant_Dionysus"
+    },
+    {
+     "text": "Other works that appear to be copies of Praxiteles' sculpture express the same gracefulness in repose and indefinable charm as the Hermes and the Infant Dionysus. Among the most notable of these are the Apollo Sauroktonos, or the lizard-slayer, which portrays a youth leaning against a tree and idly striking with an arrow at a lizard.",
+     "section": "Apollo Sauroktonos",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Apollo_Sauroktonos"
+    }
+   ],
    "license": {
     "name": "Attribution",
     "credit": "Giovanni Dall'Orto\n\n\n\t\t\n\t\t\t\n\t\t\t1890s. (Crupi 0201)\n\t\t\n\t\t\n\t\t\t\n\t\t\t1890s (Crupi 0978)\n\t\t\n\t\t\n\t\t\t\n\t\t\tToday."
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": "Naples National Archaeological Museum",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Ancient Roman statues in the Museo Archeologico (Naples). Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue.",
+    "source": "https://en.wikipedia.org/wiki/Praxiteles"
+   },
+   "facts": [
+    {
+     "text": "Accurate dates for Praxiteles are elusive, but it is likely that he was no longer working in the time of Alexander the Great, in the absence of evidence that Alexander employed Praxiteles, as he probably would have done. Pliny's date, 364 BC, is probably that of one of his most noted works.",
+     "section": "Date",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Date"
+    },
+    {
+     "text": "This statue was discovered in 1877, in Olympia, Greece, by a team of German archeologists led by Ernst Curtius. It was discovered in the Temple of Hera, which the Greek writer Pausanias had visited in the 2nd century CE.",
+     "section": "Hermes and the Infant Dionysus",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Hermes_and_the_Infant_Dionysus"
+    },
+    {
+     "text": "Other works that appear to be copies of Praxiteles' sculpture express the same gracefulness in repose and indefinable charm as the Hermes and the Infant Dionysus. Among the most notable of these are the Apollo Sauroktonos, or the lizard-slayer, which portrays a youth leaning against a tree and idly striking with an arrow at a lizard.",
+     "section": "Apollo Sauroktonos",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Apollo_Sauroktonos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Sailko"
@@ -227,8 +265,27 @@
    },
    "cm": null,
    "collection": "Antikensammlung Berlin",
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Apollo Kitharoidos, Marmorstatue, wohl im 2. Jahrhundert in Rom gefertigt, um 1766 von Bartolomeo Cavaceppi restauriert, danach durch Agenten von Friedrichs des Großen erworben, Höhe 213 cm, Sk 44. Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue.",
+    "source": "https://en.wikipedia.org/wiki/Praxiteles"
+   },
+   "facts": [
+    {
+     "text": "Accurate dates for Praxiteles are elusive, but it is likely that he was no longer working in the time of Alexander the Great, in the absence of evidence that Alexander employed Praxiteles, as he probably would have done. Pliny's date, 364 BC, is probably that of one of his most noted works.",
+     "section": "Date",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Date"
+    },
+    {
+     "text": "This statue was discovered in 1877, in Olympia, Greece, by a team of German archeologists led by Ernst Curtius. It was discovered in the Temple of Hera, which the Greek writer Pausanias had visited in the 2nd century CE.",
+     "section": "Hermes and the Infant Dionysus",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Hermes_and_the_Infant_Dionysus"
+    },
+    {
+     "text": "Other works that appear to be copies of Praxiteles' sculpture express the same gracefulness in repose and indefinable charm as the Hermes and the Infant Dionysus. Among the most notable of these are the Apollo Sauroktonos, or the lizard-slayer, which portrays a youth leaning against a tree and idly striking with an arrow at a lizard.",
+     "section": "Apollo Sauroktonos",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Apollo_Sauroktonos"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Marcus Cyron"
@@ -286,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Louvre Apollo Sauroctonos. Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue.",
+    "source": "https://en.wikipedia.org/wiki/Praxiteles"
+   },
+   "facts": [
+    {
+     "text": "Accurate dates for Praxiteles are elusive, but it is likely that he was no longer working in the time of Alexander the Great, in the absence of evidence that Alexander employed Praxiteles, as he probably would have done. Pliny's date, 364 BC, is probably that of one of his most noted works.",
+     "section": "Date",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Date"
+    },
+    {
+     "text": "This statue was discovered in 1877, in Olympia, Greece, by a team of German archeologists led by Ernst Curtius. It was discovered in the Temple of Hera, which the Greek writer Pausanias had visited in the 2nd century CE.",
+     "section": "Hermes and the Infant Dionysus",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Hermes_and_the_Infant_Dionysus"
+    },
+    {
+     "text": "Other works that appear to be copies of Praxiteles' sculpture express the same gracefulness in repose and indefinable charm as the Hermes and the Infant Dionysus. Among the most notable of these are the Apollo Sauroktonos, or the lizard-slayer, which portrays a youth leaning against a tree and idly striking with an arrow at a lizard.",
+     "section": "Apollo Sauroktonos",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Apollo_Sauroktonos"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "After Praxiteles"
@@ -306,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The Aberdeen Head in gallery 20 at the British Museum. Praxiteles of Athens, the son of Cephisodotus the Elder, was the most renowned of the Attic sculptors of the 4th century BC. He was the first to sculpt the nude female form in a life-size statue.",
+    "source": "https://en.wikipedia.org/wiki/Praxiteles"
+   },
+   "facts": [
+    {
+     "text": "Accurate dates for Praxiteles are elusive, but it is likely that he was no longer working in the time of Alexander the Great, in the absence of evidence that Alexander employed Praxiteles, as he probably would have done. Pliny's date, 364 BC, is probably that of one of his most noted works.",
+     "section": "Date",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Date"
+    },
+    {
+     "text": "This statue was discovered in 1877, in Olympia, Greece, by a team of German archeologists led by Ernst Curtius. It was discovered in the Temple of Hera, which the Greek writer Pausanias had visited in the 2nd century CE.",
+     "section": "Hermes and the Infant Dionysus",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Hermes_and_the_Infant_Dionysus"
+    },
+    {
+     "text": "Other works that appear to be copies of Praxiteles' sculpture express the same gracefulness in repose and indefinable charm as the Hermes and the Infant Dionysus. Among the most notable of these are the Apollo Sauroktonos, or the lizard-slayer, which portrays a youth leaning against a tree and idly striking with an arrow at a lizard.",
+     "section": "Apollo Sauroktonos",
+     "source": "https://en.wikipedia.org/wiki/Praxiteles#Apollo_Sauroktonos"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Paul Hudson from United Kingdom"

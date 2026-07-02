@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Città del Vaticano - Cupola della Basilica di S. Pietro. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "MarkusMark"
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Back view. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY 2.0",
     "credit": "Sjaak Kempe from Groningen, The Netherlands"
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "20190406-DSC5193 Panteon",
+   "title": "The portico",
    "year": null,
    "image": {
     "file": "File:20190406-DSC5193 Panteon.jpg",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The portico. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Jfabrix101"
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Pantheon c. 1538-1540, with medieval belfry and eastern wall. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "PDM-owner",
     "credit": "Unknown authorUnknown author"
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Pantheon c. 1538-1540, with stairs descending into the portico. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "PDM-owner",
     "credit": "Unknown authorUnknown author"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Pantheon depicted in \"Vault of the Evangelists\" fresco by Cimabue c. 1277, Basilica of Saint Francis of Assisi. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Cimabue"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Floor plan of the Pantheon from Georg Dehio/Gustav von Bezold: Kirchliche Baukunst des Abendlandes. Stuttgart: Verlag der Cotta'schen Buchhandlung 1887–1901. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Georg Dehio/Gustav von Bezold"
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Panoramic interior view of the Pantheon, showing the marble floor and the coffered ceiling of the rotunda. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Stefan Bauer"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Sectional architectural model of the Pantheon by Georges Chedanne [fr]. On display at Museo Nazionale Scienza e Tecnologia Leonardo da Vinci. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 4.0",
     "credit": "Museoscienza53"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "The interior of the Pantheon c. 1734 with original attic design, painted by Giovanni Paolo Panini.[b]. The Pantheon is an ancient 2nd century Roman temple and, since AD 609, a Catholic church called the Basilica of St. Mary and the Martyrs in Rome, Italy.",
+    "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome"
+   },
+   "facts": [
+    {
+     "text": "The name \"Pantheon\" is from the Ancient Greek \"Pantheion\" (Πάνθειον) meaning \"of, relating to, or common to all the gods\": (pan- / \"παν-\" meaning \"all\" + theion / \"θεῖον\"= meaning \"of or sacred to a god\"). The simplest explanation for the name is that the Pantheon was a temple dedicated to all the gods.",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Etymology"
+    },
+    {
+     "text": "In the aftermath of the Battle of Actium (31 BC), Marcus Vipsanius Agrippa started an impressive building program. The Pantheon was a part of the complex created by him on his own property in the Campus Martius in 29–19 BC, which included three buildings aligned from south to north: the Baths of Agrippa, the Basilica of Neptune, and the Pantheon.",
+     "section": "Ancient",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Ancient"
+    },
+    {
+     "text": "In 609, the Byzantine emperor Phocas (who also had his namesake column constructed nearby) gave the building to Pope Boniface IV, who converted it into a Christian church and consecrated it to St.",
+     "section": "Medieval",
+     "source": "https://en.wikipedia.org/wiki/Pantheon%2C_Rome#Medieval"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Giovanni Paolo Panini"

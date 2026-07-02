@@ -20,7 +20,7 @@
  "paintings": [
   {
    "qid": null,
-   "title": "0006MAN-Kouros1",
+   "title": "Kouros[40] from Thera",
    "year": null,
    "image": {
     "file": "File:0006MAN-Kouros1.jpg",
@@ -31,8 +31,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Kouros[40] from Thera. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ricardo André Frantz (User:Tetraktys)"
@@ -40,7 +59,7 @@
   },
   {
    "qid": null,
-   "title": "0006MAN-Kouros2",
+   "title": "Anavysos Kouros",
    "year": null,
    "image": {
     "file": "File:0006MAN-Kouros2.jpg",
@@ -51,8 +70,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Anavysos Kouros. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": ""
@@ -60,7 +98,7 @@
   },
   {
    "qid": null,
-   "title": "7262 - Piraeus Arch. Museum, Athens - The Piraeus Apollo - Photo by Giovanni Dall'Orto, Nov 14 2009",
+   "title": "Piraeus Apollo",
    "year": null,
    "image": {
     "file": "File:7262 - Piraeus Arch. Museum, Athens - The Piraeus Apollo - Photo by Giovanni Dall'Orto, Nov 14 2009.jpg",
@@ -71,8 +109,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Piraeus Apollo. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "Attribution",
     "credit": ""
@@ -91,8 +148,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Actium 3, Louvre[43]. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "Public domain",
     "credit": "Original description: (Ed. ne Alinari) N. ° 22544.PARIS - Musée National du Louvre. Apollon. Sculpture ancienne. - Temple d'Apollon, Actium."
@@ -111,8 +187,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Saite sculpture from the Egyptian 26th dynasty, similar in proportion and form to the early kouros type, Louvre[18]. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Twospoonfuls"
@@ -131,8 +226,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Agrigento ephebe, Richter (1960).[10]: 182. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY 2.5",
     "credit": "Clemensfranz"
@@ -151,8 +265,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Tenea kouros, Munich 168. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": ""
@@ -160,7 +293,7 @@
   },
   {
    "qid": null,
-   "title": "BM B474 kouros",
+   "title": "British Museum, London[42]",
    "year": null,
    "image": {
     "file": "File:BM B474 kouros.jpg",
@@ -171,8 +304,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "British Museum, London[42]. Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.0",
     "credit": "Cubby_t_bear"
@@ -191,8 +343,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Kouros Porte Sacrée Kerameikos Archaeological Museum, Athens (KAMA). Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 2.5",
     "credit": "Marsyas"
@@ -211,8 +382,27 @@
    },
    "cm": null,
    "collection": null,
-   "story": null,
-   "facts": [],
+   "story": {
+    "extract": "Kleobis and Biton c. 580 BC (Delphi: Archaeological Museum). Kouros is the modern term given to free-standing Ancient Greek sculptures that depict nude male youths. They first appear in the Archaic period in Greece and are prominent in Attica and Boeotia, with a less frequent presence in many other Ancient Greek territories such as Sicily.",
+    "source": "https://en.wikipedia.org/wiki/Kouros"
+   },
+   "facts": [
+    {
+     "text": "The Ancient Greek word kouros (κοῦρος) refers to \"youth, boy, especially of noble rank.\" When a pubescent was received into the body of grown men, as a grown Kouros, he could enter the initiation fest of the brotherhood (phratry, φρατρία). Apellaios was the month of these rites, and Apollo (Apellon) was the \"megistos kouros\" (the greatest Kouros).",
+     "section": "Etymology",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Etymology"
+    },
+    {
+     "text": "The kouros type appears to have served several functions. It was previously thought that it was used only to represent the god Apollo, as attested by its depiction on a vase painting in the presence of supplicants.",
+     "section": "Purpose",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Purpose"
+    },
+    {
+     "text": "The evolution of the kouros type is inevitably linked to that of the overall development of monumental Archaic Greek sculpture.",
+     "section": "Origin and evolution",
+     "source": "https://en.wikipedia.org/wiki/Kouros#Origin_and_evolution"
+    }
+   ],
    "license": {
     "name": "CC BY-SA 3.0",
     "credit": "Ricardo André Frantz (User:Tetraktys)"
