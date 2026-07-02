@@ -1,9 +1,53 @@
 // World layout: piecewise-linear time scale + period lanes + artist rows.
 // All positions are world px (CSS px at zoom scale 1).
 
+// One muted, gallery-grade accent per period. Used for band tint/border,
+// band label, artist dots and filter swatches.
+export const PERIOD_COLORS = {
+  'medieval-gothic':        '#8A6A3B', // byzantine gold
+  'early-renaissance':      '#A85F44', // terracotta
+  'northern-renaissance':   '#6E7B4F', // moss green
+  'high-renaissance':       '#9C4038', // venetian red
+  'mannerism':              '#7D5470', // plum
+  'baroque':                '#5C4632', // deep umber
+  'rococo':                 '#B87D88', // powdered rose
+  'neoclassicism':          '#5C6E8C', // slate blue
+  'romanticism':            '#3F6E71', // storm teal
+  'realism':                '#77693C', // field olive
+  'impressionism':          '#5B7FA6', // plein-air blue
+  'post-impressionism':     '#A87621', // sunflower ochre
+  'symbolism-art-nouveau':  '#8A6796', // mauve
+  'expressionism':          '#B4472F', // vermilion
+  'cubism':                 '#726A5E', // faceted taupe
+  'early-abstraction':      '#3F5DA8', // cobalt
+  'surrealism':             '#3E8577', // sea green
+  'abstract-expressionism': '#4A4440', // dripped charcoal
+  'pop-art':                '#C24E7B', // magenta
+  'contemporary':           '#5F7D86', // steel cyan
+};
+
+export function periodColor(id) {
+  return PERIOD_COLORS[id] || '#A0815C';
+}
+
+export function withAlpha(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+}
+
+// mix toward ink for text-safe contrast on ivory
+export function inked(hex, k = 0.25) {
+  const n = parseInt(hex.slice(1), 16);
+  const ink = [28, 26, 23];
+  const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255]
+    .map((v, i) => Math.round(v * (1 - k) + ink[i] * k));
+  return `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
+}
+
 const SEGMENTS = [
   // [fromYear, pxPerYear] — denser where art history is denser
-  [1180, 2.3],
+  [1180, 2.2],
+  [1400, 4.2],   // the Renaissance centuries earn their room
   [1600, 6.0],
   [1850, 15.0],
   [1985, 8.0],
@@ -12,7 +56,7 @@ const END_YEAR = 2032;
 
 const X_PAD = 90;
 export const BAND_TOP = 130;
-export const LANE_H = 215;
+export const LANE_H = 242;   // 4 label rows + the summary line at the bottom
 export const LANE_GAP = 26;
 
 const bp = [];
@@ -51,38 +95,66 @@ export function layout(index) {
   // Artist nodes: x at active-years midpoint, rows resolve x collisions per band.
   const artists = index.artists.map((a) => {
     const home = byId[a.periods[0]];
-    const mid = ((a.activeStart ?? home.start) + (a.activeEnd ?? home.end)) / 2;
-    // clamp into the band before collision rows are assigned
-    const x = Math.max(home.x + 26, Math.min(home.x + home.w - 26, xForYear(mid)));
+    const s = a.activeStart ?? home.start;
+    const e = a.activeEnd ?? home.end;
+    // blend career midpoint with the midpoint of the years actually spent
+    // inside the movement, so long careers don't pile on the band edge
+    const careerMid = (s + e) / 2;
+    const inS = Math.max(s, home.start), inE = Math.min(e, home.end);
+    const inMid = inS <= inE ? (inS + inE) / 2 : careerMid;
+    const x = Math.max(home.x + 26, Math.min(home.x + home.w - 26,
+      xForYear(0.45 * careerMid + 0.55 * inMid)));
     return { ...a, x, period: home };
   });
 
-  const MIN_GAP = 132; // world px between node anchors in the same row
+  // Row packing that models real label footprints: text extends right of the
+  // dot, or LEFT when the node is flipped near the band's right edge.
+  // Tier-1 shows compact names, so 130 world px covers the worst zoom.
+  const EXTENT = 130;
+  const PAD = 10;
+  const ROWS = 4;
   const groups = new Map();
   for (const a of artists) {
+    // text must stay inside the band: flip if the flipped label fits (keeps
+    // the dot on the true year); in bands narrower than a label, pull the
+    // dot inward instead.
+    const L = a.period.x, R = a.period.x + a.period.w;
+    a.flip = false;
+    if (a.x + EXTENT > R - 14) {
+      if (a.x - EXTENT >= L + 14) a.flip = true;
+      else a.x = Math.max(L + 14, R - 14 - EXTENT);
+    }
     if (!groups.has(a.period.id)) groups.set(a.period.id, []);
     groups.get(a.period.id).push(a);
   }
   for (const group of groups.values()) {
     group.sort((a, b) => a.x - b.x);
-    const rowEnds = [];
+    const rowEnds = []; // rightmost occupied world x per row
+    const spanOf = (a) => (a.flip
+      ? [a.x - EXTENT, a.x + 16]
+      : [a.x - 16, a.x + EXTENT]);
     for (const a of group) {
-      let row = rowEnds.findIndex((end) => a.x - end >= MIN_GAP);
-      if (row === -1) {
+      let row = rowEnds.findIndex((end) => spanOf(a)[0] >= end + PAD);
+      if (row === -1 && rowEnds.length < ROWS) {
         row = rowEnds.length;
-        rowEnds.push(a.x);
-      } else {
-        rowEnds[row] = a.x;
+        rowEnds.push(-Infinity);
       }
-      // 4 vertical slots fit the band; if a 5th row is ever needed, nudge the
-      // anchor right instead of wrapping onto an occupied slot.
-      if (row > 3) {
-        a.x = rowEnds[row % 4] + MIN_GAP;
-        rowEnds[row % 4] = a.x;
-        rowEnds.pop();
-        row = row % 4;
+      if (row === -1) {
+        // all rows blocked: slide right of the least-crowded row if the band
+        // allows, else accept the row where the intrusion is smallest
+        row = rowEnds.indexOf(Math.min(...rowEnds));
+        const slid = rowEnds[row] + PAD + (a.flip ? EXTENT : 16);
+        const maxX = a.period.x + a.period.w - 26;
+        if (slid <= maxX) a.x = slid;
+        else {
+          a.x = maxX;
+          a.flip = true;
+          row = rowEnds.reduce((best, end, i) =>
+            end < rowEnds[best] ? i : best, 0);
+        }
       }
-      a.y = a.period.y + 58 + row * 40;
+      rowEnds[row] = spanOf(a)[1];
+      a.y = a.period.y + 56 + row * 39;
     }
   }
 

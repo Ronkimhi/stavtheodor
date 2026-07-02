@@ -2,18 +2,27 @@
 
 import { loadIndex } from '../shared/data.js';
 import { openPlacard } from '../shared/ui.js';
-import { layout } from './layout.js';
+import { layout, periodColor, withAlpha, inked } from './layout.js';
 import { Viewport } from './viewport.js';
 import { initFilter } from './filter.js';
 
 const stage = document.getElementById('stage');
 const world = document.getElementById('world');
 
-function tintFor(i, n) {
-  // subtle ivory→bronze ramp across periods, never leaving the palette
-  const t = i / Math.max(1, n - 1);
-  const alpha = 0.05 + 0.13 * t;
-  return `rgba(160, 129, 92, ${alpha.toFixed(3)})`;
+// Compact display name for the mid zoom tier ("Monet", "da Vinci", "van Eyck").
+const PARTICLES = new Set(['da', 'de', 'della', 'van', 'von', 'di', 'el', 'le']);
+const SHORT_OVERRIDES = { 'Piero della Francesca': 'Piero' };
+function shortName(name) {
+  if (SHORT_OVERRIDES[name]) return SHORT_OVERRIDES[name];
+  const tokens = name
+    .replace(/\s+the\s+(Elder|Younger)$/i, '')
+    .split(' ');
+  if (tokens.length === 1) return name;
+  const last = tokens[tokens.length - 1];
+  const prev = tokens[tokens.length - 2]?.toLowerCase();
+  return PARTICLES.has(prev) && last.length <= 6
+    ? tokens.slice(-2).join(' ')
+    : last;
 }
 
 async function boot() {
@@ -35,33 +44,51 @@ async function boot() {
     frag.append(tick, lab);
   }
 
-  laid.periods.forEach((p, i) => {
+  laid.periods.forEach((p) => {
+    const c = periodColor(p.id);
     const band = document.createElement('div');
     band.className = 'band';
     band.dataset.period = p.id;
-    band.style.cssText = `left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px;--band-tint:${tintFor(i, laid.periods.length)}`;
+    band.style.cssText =
+      `left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px;` +
+      `background:${withAlpha(c, 0.13)};border-color:${withAlpha(c, 0.65)};` +
+      `box-shadow:inset 0 3px 0 ${c}`;
     const label = document.createElement('div');
     label.className = 'band-label';
-    label.innerHTML = `${p.name}<small>${p.start}–${p.end}</small>`;
+    label.innerHTML = `<span class="band-name"></span><small>${p.start}–${p.end}</small>`;
+    label.querySelector('.band-name').textContent = p.name;
+    label.querySelector('.band-name').style.color = inked(c, 0.3);
     band.appendChild(label);
+    if (p.summary) {
+      const sum = document.createElement('div');
+      sum.className = 'band-summary';
+      sum.textContent = p.summary;
+      if (p.w < 300) band.classList.add('narrow');
+      band.appendChild(sum);
+    }
     frag.appendChild(band);
   });
 
   for (const a of laid.artists) {
+    const c = periodColor(a.period.id);
     const node = document.createElement('button');
     node.className = 'artist-node';
     node.dataset.slug = a.slug;
+    // dot-anchored: the dot sits exactly on the artist's position; text flows
+    // away from the nearer band edge so names never spill outside the period.
+    if (a.flip) node.classList.add('flip');
     node.style.left = a.x + 'px';
     node.style.top = a.y + 'px';
     node.setAttribute('aria-label', `${a.name}, ${a.born ?? ''}–${a.died ?? ''}`);
     node.innerHTML = `
-      <span class="artist-dot"></span>
-      ${a.portrait ? `<img class="artist-portrait" loading="lazy" src="${a.portrait}" alt="">` : ''}
+      <span class="artist-dot" style="background:${c}"></span>
+      ${a.portrait ? `<img class="artist-portrait" loading="lazy" src="${a.portrait}" alt="" style="border-color:${withAlpha(c, 0.65)}">` : ''}
       <span>
-        <span class="artist-name"></span>
+        <span class="artist-name"><span class="an-full"></span><span class="an-short"></span></span>
         <span class="artist-years">${a.born ?? '?'}–${a.died ?? ''}</span>
       </span>`;
-    node.querySelector('.artist-name').textContent = a.name;
+    node.querySelector('.an-full').textContent = a.name;
+    node.querySelector('.an-short').textContent = shortName(a.name);
     node.addEventListener('click', () => {
       history.replaceState(null, '', '#artist=' + a.slug);
       openArtist(a);

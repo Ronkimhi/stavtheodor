@@ -1,5 +1,7 @@
 // The filter dropdown: periods list + artist type-ahead, with fly-to and dimming.
 
+import { periodColor } from './layout.js';
+
 export function initFilter({ index, laid, viewport, stage, openArtist }) {
   const btn = document.getElementById('filter-btn');
   const panel = document.getElementById('filter-panel');
@@ -29,7 +31,8 @@ export function initFilter({ index, laid, viewport, stage, openArtist }) {
         <div class="fp-heading" style="${d()}">Periods</div>
         ${index.periods.map((p) => `
           <button class="fp-item ${p.id === activePeriod ? 'active' : ''}" style="${d()}" data-period="${esc(p.id)}">
-            <span>${esc(p.name)}</span><span class="fp-sub">${p.start}–${p.end}</span>
+            <span><i class="fp-swatch" style="background:${periodColor(p.id)}"></i>${esc(p.name)}</span>
+            <span class="fp-sub">${p.start}–${p.end}</span>
           </button>`).join('')}
       `}
       ${activePeriod ? `<button class="fp-clear" style="${d()}">Show every period</button>` : ''}
