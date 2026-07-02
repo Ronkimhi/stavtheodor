@@ -48,7 +48,10 @@ body.timeline-page { overflow: hidden; height: 100vh; }
   line-height: 1.55;
   color: var(--ink-soft);
 }
-/* get out of the way once the visitor is exploring up close */
+/* get out of the way once the visitor is exploring: fades as soon as any
+   map content slides under it (head-away, set per camera frame), and at
+   the deepest zoom tier regardless */
+.head-away .canvas-head,
 .tier-2 .canvas-head { opacity: 0; }
 
 /* ---------- year axis ---------- */

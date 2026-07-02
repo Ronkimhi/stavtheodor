@@ -105,10 +105,28 @@ async function boot() {
   world.style.width = laid.world.w + 'px';
   world.style.height = laid.world.h + 'px';
 
+  // Fade the page heading the moment any of the map slides under it, not
+  // just at the deepest zoom tier. Hysteresis keeps it from flickering at
+  // the boundary; the CSS opacity transition does the rest.
+  const canvasHead = document.querySelector('.canvas-head');
+  let headBottom = 0, headAway = false;
+  const measureHead = () => { headBottom = canvasHead.getBoundingClientRect().bottom; };
+  measureHead();
+  addEventListener('resize', measureHead);
+  document.fonts?.ready.then(measureHead);
+
   const viewport = new Viewport(stage, world, laid.world, {
     onZoomTier: (tier) => {
       stage.classList.remove('tier-0', 'tier-1', 'tier-2');
       stage.classList.add('tier-' + tier);
+    },
+    onChange: (cam) => {
+      const worldTop = -cam.y * cam.s; // screen y of the map's top edge
+      const away = worldTop < headBottom + (headAway ? 28 : 8);
+      if (away !== headAway) {
+        headAway = away;
+        stage.classList.toggle('head-away', away);
+      }
     },
   });
   viewport.fitAll();
