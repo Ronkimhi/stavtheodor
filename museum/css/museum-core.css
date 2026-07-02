@@ -92,7 +92,18 @@ a { color: var(--bronze); }
   transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
 }
 .hud-pill:hover { border-color: var(--bronze); color: var(--bronze); box-shadow: 0 2px 14px rgba(160, 129, 92, 0.18); }
-.hud-sq { width: 44px; height: 44px; padding: 0; font-size: 18px; letter-spacing: 0; }
+.hud-sq {
+  width: 44px; height: 44px;
+  padding: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+/* Cormorant's +/− glyphs sit low in the em box; nudge to optical center */
+#zoom-in, #zoom-out { padding-bottom: 5px; }
 
 /* ---------- placard (museum wall label) ---------- */
 .placard-scrim {
