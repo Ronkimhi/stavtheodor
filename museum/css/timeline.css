@@ -152,8 +152,9 @@ body.timeline-page { overflow: hidden; height: 100vh; }
 /* ---------- artist nodes ---------- */
 .artist-node {
   position: absolute;
-  /* dot-anchored: the colored dot marks the artist's exact spot in the band */
-  transform: translate(-10px, -50%) scale(var(--inv));
+  /* dot-anchored: the colored dot marks the artist's exact spot in the band.
+     --grow (set per camera frame) scales the node up at deep zoom */
+  transform: translate(-10px, -50%) scale(calc(var(--inv) * var(--grow, 1)));
   transform-origin: 10px center;
   display: flex;
   align-items: center;
@@ -169,7 +170,7 @@ body.timeline-page { overflow: hidden; height: 100vh; }
 }
 .artist-node.flip {
   flex-direction: row-reverse;
-  transform: translate(calc(-100% + 10px), -50%) scale(var(--inv));
+  transform: translate(calc(-100% + 10px), -50%) scale(calc(var(--inv) * var(--grow, 1)));
   transform-origin: calc(100% - 10px) center;
   text-align: right;
 }

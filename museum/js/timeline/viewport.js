@@ -200,6 +200,11 @@ export class Viewport {
     // Counter-scale for constant-size type; clamped so labels shrink a little
     // when zoomed far out instead of ballooning.
     this.world.style.setProperty('--inv', String(1 / Math.max(s, 0.55)));
+    // Past the deepest tier the artist nodes grow gently with the zoom
+    // (up to ~2.2x) instead of staying pinned at one screen size, so deep
+    // zoom actually brings you closer to the people.
+    const grow = Math.min(2.2, Math.pow(Math.max(1, s / 1.55), 0.55));
+    this.world.style.setProperty('--grow', String(grow));
     const tier = s < 0.82 ? 0 : s < 1.55 ? 1 : 2;
     if (tier !== this.tier) {
       this.tier = tier;
