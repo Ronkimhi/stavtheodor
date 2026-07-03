@@ -33,6 +33,17 @@ async function boot() {
 
   const frag = document.createDocumentFragment();
 
+  // Rounder years survive when labels collide on screen (see updateAxisLabels).
+  const tickPriority = (year) => {
+    const a = Math.abs(year);
+    for (const [step, pr] of [[20000, 8], [10000, 7], [5000, 6], [2000, 5],
+      [1000, 4], [500, 3], [250, 2], [100, 1]]) {
+      if (a % step === 0) return pr;
+    }
+    return 0;
+  };
+
+  const axisLabels = [];
   for (const t of laid.ticks) {
     const tick = document.createElement('div');
     tick.className = 'axis-tick';
@@ -43,7 +54,30 @@ async function boot() {
     lab.style.top = '86px';
     lab.textContent = fmtYear(t.year);
     frag.append(tick, lab);
+    axisLabels.push({ el: lab, x: t.x, w: 90, pr: tickPriority(t.year) });
   }
+
+  // Year labels keep a constant screen size while their world positions
+  // compress with zoom, so at low zoom (and across time-scale segment
+  // boundaries) they physically overlap. Cull per scale change: walk the
+  // ticks by priority and hide any label whose screen box would collide
+  // with one already kept.
+  const labelOrder = [...axisLabels].sort((p, q) => q.pr - p.pr || p.x - q.x);
+  let labelS = 0;
+  const updateAxisLabels = (s, force = false) => {
+    if (!force && Math.abs(s / labelS - 1) < 0.04) return;
+    labelS = s;
+    const scale = s / Math.max(s, 0.55); // on-screen label scale, mirrors --inv
+    const GAP = 16;
+    const kept = [];
+    for (const L of labelOrder) {
+      const half = (L.w * scale + GAP) / 2;
+      const c = L.x * s;
+      const clash = kept.some((k) => c - half < k.hi && c + half > k.lo);
+      L.el.classList.toggle('culled', clash);
+      if (!clash) kept.push({ lo: c - half, hi: c + half });
+    }
+  };
 
   laid.periods.forEach((p) => {
     const band = document.createElement('div');
@@ -127,9 +161,18 @@ async function boot() {
         headAway = away;
         stage.classList.toggle('head-away', away);
       }
+      updateAxisLabels(cam.s);
     },
   });
   viewport.fitAll();
+
+  // real label widths (fonts may swap in late; re-measure then)
+  const measureAxis = () => {
+    for (const L of axisLabels) L.w = L.el.offsetWidth || L.w;
+    updateAxisLabels(viewport.cam.s, true);
+  };
+  measureAxis();
+  document.fonts?.ready.then(measureAxis);
 
   function openArtist(a) {
     openPlacard(a, periodsById, {

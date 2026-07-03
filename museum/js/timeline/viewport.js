@@ -12,6 +12,7 @@ export class Viewport {
     this.tier = -1;
     this.pointers = new Map();
     this.vel = { x: 0, y: 0 };
+    this.samples = [];
     this.lastMove = 0;
     this.inertiaRaf = 0;
     this.tween = null;
@@ -60,21 +61,48 @@ export class Viewport {
   }
 
   down(e) {
-    if (e.target.closest('.artist-node')) return;
     this.stopMotion();
-    this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    // A press on an artist node stays a tap until it travels: the pointer is
+    // tracked but not engaged, so the node's click still fires. Past a small
+    // threshold (see move) it engages and becomes a normal pan.
+    const onNode = !!e.target.closest('.artist-node');
+    this.pointers.set(e.pointerId, {
+      x: e.clientX, y: e.clientY,
+      startX: e.clientX, startY: e.clientY,
+      engaged: !onNode,
+    });
     this.moved = false;
+    this.vel = { x: 0, y: 0 };
+    this.samples = [];
     if (this.pointers.size === 2) {
       const [a, b] = [...this.pointers.values()];
-      this.pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), s: this.cam.s };
+      this.pinch = {
+        d: Math.hypot(a.x - b.x, a.y - b.y),
+        s: this.cam.s,
+        cx: (a.x + b.x) / 2, cy: (a.y + b.y) / 2,
+      };
+      // a pinch is never a tap: engage both pointers immediately
+      for (const [id, p] of this.pointers) this.engage(id, p);
+    } else if (!onNode) {
+      this.engage(e.pointerId, this.pointers.get(e.pointerId));
     }
-    try { this.stage.setPointerCapture(e.pointerId); } catch (err) { /* pointer already gone */ }
     this.stage.classList.add('dragging');
+  }
+
+  // Capturing to the stage retargets the eventual click there, which is what
+  // cancels the artist-node tap once a press has turned into a drag.
+  engage(id, p) {
+    p.engaged = true;
+    try { this.stage.setPointerCapture(id); } catch (err) { /* pointer already gone */ }
   }
 
   move(e) {
     const p = this.pointers.get(e.pointerId);
     if (!p) return;
+    if (!p.engaged) {
+      if (Math.hypot(e.clientX - p.startX, e.clientY - p.startY) < 7) return;
+      this.engage(e.pointerId, p);
+    }
     const dx = e.clientX - p.x, dy = e.clientY - p.y;
     if (Math.abs(dx) + Math.abs(dy) > 3) this.moved = true;
 
@@ -83,6 +111,10 @@ export class Viewport {
       const [a, b] = [...this.pointers.values()];
       const d = Math.hypot(a.x - b.x, a.y - b.y);
       const cx = (a.x + b.x) / 2, cy = (a.y + b.y) / 2;
+      // two-finger pan: follow the centroid, then zoom about it
+      this.cam.x -= (cx - this.pinch.cx) / this.cam.s;
+      this.cam.y -= (cy - this.pinch.cy) / this.cam.s;
+      this.pinch.cx = cx; this.pinch.cy = cy;
       this.zoomAt(cx, cy, (this.pinch.s * d / this.pinch.d) / this.cam.s);
       return;
     }
@@ -90,22 +122,39 @@ export class Viewport {
     this.cam.x -= dx / this.cam.s;
     this.cam.y -= dy / this.cam.s;
     const now = performance.now();
-    const dt = Math.max(1, now - this.lastMove);
-    this.vel = { x: (-dx / this.cam.s) / dt, y: (-dy / this.cam.s) / dt };
     this.lastMove = now;
+    // fling velocity comes from ~100ms of samples, not one event delta
+    // (coalesced touch events make single deltas wildly noisy on phones)
+    this.samples.push({ t: now, x: e.clientX, y: e.clientY });
+    while (this.samples.length > 2 && now - this.samples[0].t > 100) this.samples.shift();
     this.clamp();
     this.apply();
   }
 
   up(e) {
     this.pointers.delete(e.pointerId);
-    this.stage.classList.remove('dragging');
-    if (this.pointers.size === 0 && this.moved) this.startInertia();
+    if (this.pointers.size === 1) {
+      // pinch over: the surviving finger continues as a clean pan
+      this.pinch = null;
+      this.samples = [];
+    }
+    if (this.pointers.size === 0) {
+      this.stage.classList.remove('dragging');
+      if (this.moved) this.startInertia();
+    }
   }
 
   startInertia() {
+    const n = this.samples.length;
     let last = performance.now();
-    if (performance.now() - this.lastMove > 90) return;
+    if (n < 2 || last - this.samples[n - 1].t > 90) return;
+    const a = this.samples[0], b = this.samples[n - 1];
+    const span = b.t - a.t;
+    if (span < 8) return;
+    let vx = (b.x - a.x) / span, vy = (b.y - a.y) / span; // screen px/ms
+    const v = Math.hypot(vx, vy), vmax = 2.2;
+    if (v > vmax) { vx *= vmax / v; vy *= vmax / v; }
+    this.vel = { x: -vx / this.cam.s, y: -vy / this.cam.s };
     const step = (t) => {
       const dt = t - last;
       last = t;

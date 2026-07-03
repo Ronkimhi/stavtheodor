@@ -73,7 +73,11 @@ body.timeline-page { overflow: hidden; height: 100vh; }
   color: var(--bronze);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  transition: opacity 0.35s ease;
 }
+/* hidden by the per-zoom collision pass (main.js) so year labels never
+   pile onto each other at low zoom or across time-scale segment seams */
+.axis-label.culled { opacity: 0; }
 
 /* ---------- period bands ---------- */
 .band {
