@@ -49,9 +49,15 @@ body.gallery-page canvas {
   background: var(--bronze);
   transition: width 0.3s ease;
 }
-.entry-btn { margin-top: 30px; }
+/* reuses .placard-cta but sits centered in the entry card, not sticky */
+.entry-btn {
+  margin: 30px 0 0;
+  position: static;
+  display: inline-block;
+  box-shadow: none;
+}
 .entry-btn:disabled { opacity: 0.45; cursor: default; }
-.entry-btn:disabled:hover { background: none; color: var(--bronze); }
+.entry-btn:disabled:hover { background: var(--bronze); color: var(--ivory); }
 .entry-help {
   margin-top: 26px;
   font-size: 14px;
@@ -77,11 +83,21 @@ body.gallery-page canvas {
   transform: translateX(-50%);
   background: rgba(var(--paper), 0.94);
   border: 1px solid var(--bronze-soft);
-  padding: 7px 16px;
+  padding: 7px 16px 8px;
   font-size: 15px;
   font-style: italic;
   white-space: nowrap;
   pointer-events: none;
+  text-align: center;
+}
+.tooltip .tooltip-go {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bronze);
 }
 .g-back {
   position: fixed; top: 18px; left: 22px; z-index: 30;
@@ -209,20 +225,23 @@ body.gallery-page canvas {
 }
 .inspect-close:hover { color: #fff; }
 .inspect-nav {
-  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
   display: flex; gap: 14px; z-index: 5;
+  max-width: calc(100% - 24px);
 }
 .inspect-nav button {
   border: 1px solid rgba(250, 248, 243, 0.4);
-  background: none;
+  background: rgba(16, 14, 12, 0.72);
   color: rgba(250, 248, 243, 0.9);
   font-size: 14px;
   letter-spacing: 0.14em;
   padding: 9px 20px;
   cursor: pointer;
+  white-space: nowrap;
   transition: border-color 0.25s;
 }
 .inspect-nav button:hover { border-color: var(--bronze-soft); color: #fff; }
+.inspect-nav button:active { transform: scale(0.96); }
 .inspect-zoomhint {
   position: absolute; top: 18px; left: 22px;
   font-size: 12.5px; font-style: italic;
@@ -240,7 +259,11 @@ body.gallery-page canvas {
     border-top: 1px solid var(--bronze-soft);
     padding: 26px 24px 30px;
   }
-  .inspect-nav { bottom: auto; top: 12px; }
+  /* stays at the stage bottom: fit() reserves this band so the buttons
+     never sit on the artwork, and they no longer collide with the close
+     button and zoom hint at the top */
+  .inspect-nav { bottom: 12px; gap: 10px; }
+  .inspect-nav button { font-size: 13px; padding: 8px 16px; }
 }
 
 /* ---------- list fallback ---------- */

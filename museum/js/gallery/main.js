@@ -295,6 +295,10 @@ async function boot() {
       crosshair.classList.toggle('on-target', !!obj);
       if (obj) {
         tooltip.textContent = obj.userData.title;
+        const go = document.createElement('span');
+        go.className = 'tooltip-go';
+        go.textContent = quality.mobile ? 'tap to view up close' : 'click to view up close';
+        tooltip.appendChild(go);
         tooltip.hidden = false;
       } else {
         tooltip.hidden = true;
@@ -387,7 +391,9 @@ async function boot() {
     setTimeout(() => entry.remove(), 700);
     hud.hidden = false;
     if (!quality.mobile && DEBUG !== 'orbit') {
-      showToast('Click to look around · W A S D walks · Esc leaves', 6000);
+      showToast('Click to look around · W A S D walks · click a painting to view it · Esc leaves', 6500);
+    } else if (quality.mobile) {
+      showToast('Walk up to any painting and tap it to view it up close', 6500);
     }
   };
   start();

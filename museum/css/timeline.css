@@ -214,6 +214,10 @@ body.timeline-page { overflow: hidden; height: 100vh; }
 .artist-node:focus-visible { outline: 1px solid var(--bronze); outline-offset: 3px; }
 
 /* ---------- semantic zoom tiers ---------- */
+/* zoomed all the way out: bare dots still mark every artist, so the bands
+   read as inhabited and zooming in has a visible promise */
+.tier-0 .artist-node { opacity: 0.55; }
+.tier-0 .artist-node .artist-name { display: none; }
 .tier-1 .artist-node,
 .tier-2 .artist-node {
   opacity: 1;
@@ -363,7 +367,13 @@ body.timeline-page { overflow: hidden; height: 100vh; }
   .m-nav { padding: 14px 18px 10px; gap: 12px; }
   .m-nav-links { display: none; }
   .hud { top: auto; bottom: 24px; right: 18px; }
-  .hint { display: none; }
+  .hint {
+    bottom: 140px; /* clear of the HUD pills pinned bottom-right */
+    font-size: 12.5px;
+    white-space: normal;
+    text-align: center;
+    width: min(320px, calc(100vw - 48px));
+  }
   .filter-panel {
     top: auto;
     bottom: 0;

@@ -9,6 +9,7 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
   const root = document.getElementById('inspect-root');
   let current = -1;
   let el = null;
+  let refit = null;
 
   function dims(p) {
     const parts = [];
@@ -27,9 +28,12 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
     el.className = 'inspect';
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-label', p.title);
+    const zoomhint = matchMedia('(pointer: coarse)').matches
+      ? 'pinch to zoom · drag to pan'
+      : 'scroll to zoom · drag to pan';
     el.innerHTML = `
       <div class="inspect-stage" id="ins-stage">
-        <span class="inspect-zoomhint">scroll to zoom · drag to pan</span>
+        <span class="inspect-zoomhint">${zoomhint}</span>
         <img class="inspect-img" id="ins-img" alt="${esc(p.title)}" draggable="false">
         <button class="inspect-close" aria-label="Close">×</button>
         <div class="inspect-nav">
@@ -79,6 +83,8 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
       open((index + 1) % artist.paintings.length));
 
     initPanZoom(el.querySelector('#ins-stage'), img);
+    refit = () => { if (img.isConnected && img.naturalWidth) fit(img); };
+    addEventListener('resize', refit);
     document.addEventListener('keydown', keys);
   }
 
@@ -90,6 +96,7 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
 
   function close(silent = false) {
     document.removeEventListener('keydown', keys);
+    if (refit) { removeEventListener('resize', refit); refit = null; }
     if (el) {
       const done = el;
       done.classList.remove('open');
@@ -109,8 +116,14 @@ export function createInspector(artist, { onOpen, onClose } = {}) {
 function fit(img) {
   const stage = img.parentElement;
   const sw = stage.clientWidth, sh = stage.clientHeight;
-  const s = Math.min((sw * 0.86) / img.naturalWidth, (sh * 0.86) / img.naturalHeight);
-  img._z = { s, min: s * 0.8, max: Math.max(s * 6, 2), x: (sw - img.naturalWidth * s) / 2, y: (sh - img.naturalHeight * s) / 2 };
+  // fit into the band that is clear of the close button / zoom hint on top
+  // and the Prev/Next bar pinned to the stage bottom, so UI never covers art
+  const nav = stage.querySelector('.inspect-nav');
+  const top = 56;
+  const bottom = nav ? Math.max(top + 90, nav.offsetTop - 14) : sh - 14;
+  const availH = bottom - top;
+  const s = Math.min((sw * 0.92) / img.naturalWidth, availH / img.naturalHeight);
+  img._z = { s, min: s * 0.8, max: Math.max(s * 6, 2), x: (sw - img.naturalWidth * s) / 2, y: top + (availH - img.naturalHeight * s) / 2 };
   apply(img);
 }
 

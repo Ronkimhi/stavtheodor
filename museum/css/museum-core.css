@@ -175,20 +175,32 @@ a { color: var(--bronze); }
 }
 .placard-attr a { color: inherit; }
 .placard-cta {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 13px 30px;
+  /* the doorway into the 3D gallery: a filled, edge-to-edge footer bar,
+     sticky at the bottom of the scrolling placard so no visitor can miss it.
+     The negative bottom/margins offset the card's own padding (40px 44px
+     34px) so the bar pins flush with the card's bottom edge while scrolling */
+  position: sticky;
+  bottom: -34px;
+  display: block;
+  text-align: center;
+  margin: 26px -44px -34px;
+  padding: 16px 28px;
   border: 1px solid var(--bronze);
-  color: var(--bronze);
-  background: none;
+  color: var(--ivory);
+  background: var(--bronze);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14.5px;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 0 6px 24px rgba(28, 26, 23, 0.28);
   transition: background 0.3s, color 0.3s;
 }
-.placard-cta:hover { background: var(--bronze); color: var(--ivory); }
+.placard-cta:hover {
+  background: color-mix(in srgb, var(--bronze) 80%, var(--ink));
+  color: var(--ivory);
+}
 .placard-copyright {
   display: block;
   margin-top: 24px;
@@ -212,4 +224,5 @@ a { color: var(--bronze); }
   .placard { padding: 30px 24px 26px; }
   .placard-portrait { width: 84px; height: 100px; }
   .placard-name { font-size: 21px; }
+  .placard-cta { bottom: -26px; margin: 22px -24px -26px; }
 }
