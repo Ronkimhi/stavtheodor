@@ -124,7 +124,8 @@ function shortestAngle(a, b) {
   return d;
 }
 
-// Mobile: left half = move stick, right half = look; short tap = inspect.
+// Mobile: bottom-left quadrant = move (stick recenters under the thumb),
+// everywhere else = look drag; short tap = inspect.
 export function initTouch(controlsApi, dom, onTap) {
   const root = document.getElementById('touch-root');
   root.innerHTML = '<div class="stick" id="stick"><div class="stick-knob" id="knob"></div></div>';
@@ -132,25 +133,44 @@ export function initTouch(controlsApi, dom, onTap) {
   const knob = document.getElementById('knob');
   const st = controlsApi.state;
 
-  let movePtr = null, lookPtr = null, lookLast = null, tapInfo = null;
+  const RADIUS = 46;     // px of thumb travel for full walk speed
+  const DEADZONE = 0.12; // fraction of RADIUS a resting thumb can wobble without drifting
+
+  let movePtr = null, moveFrom = null, lookPtr = null, lookLast = null, tapInfo = null;
+
+  // Belt and braces alongside touch-action: none on the canvas; older iOS Safari
+  // still turns canvas drags into page scroll/bounce and cancels the pointer.
+  const eat = (e) => e.preventDefault();
+  dom.addEventListener('touchstart', eat, { passive: false });
+  dom.addEventListener('touchmove', eat, { passive: false });
+  dom.addEventListener('contextmenu', eat);
 
   dom.addEventListener('pointerdown', (e) => {
     if (e.pointerType !== 'touch') return;
     st.glide = null; // touching the world cancels a strip glide
-    if (e.clientX < innerWidth * 0.45 && e.clientY > innerHeight * 0.4 && movePtr === null) {
+    try { dom.setPointerCapture(e.pointerId); } catch (err) { /* pointer already gone */ }
+    if (movePtr === null && e.clientX < innerWidth * 0.45 && e.clientY > innerHeight * 0.4) {
       movePtr = e.pointerId;
-      stickFrom(e);
+      moveFrom = { x: e.clientX, y: e.clientY };
+      const half = stick.offsetWidth / 2 || 54;
+      stick.style.left = Math.max(8, Math.min(innerWidth - half * 2 - 8, e.clientX - half)) + 'px';
+      stick.style.top = Math.max(8, Math.min(innerHeight - half * 2 - 8, e.clientY - half)) + 'px';
+      stick.classList.add('live');
+      st.touchMove = { x: 0, y: 0 };
+      knob.style.transform = '';
     } else if (lookPtr === null) {
       lookPtr = e.pointerId;
       lookLast = { x: e.clientX, y: e.clientY };
-      tapInfo = { x: e.clientX, y: e.clientY, t: performance.now() };
+      // e.timeStamp is the input time; performance.now() here would add
+      // main-thread jank and misclassify real taps as long presses
+      tapInfo = { x: e.clientX, y: e.clientY, t: e.timeStamp };
     }
   });
   dom.addEventListener('pointermove', (e) => {
     if (e.pointerId === movePtr) stickFrom(e);
     else if (e.pointerId === lookPtr) {
-      st.yaw -= (e.clientX - lookLast.x) * 0.0042;
-      st.pitch = Math.max(-1.35, Math.min(1.35, st.pitch - (e.clientY - lookLast.y) * 0.0038));
+      st.yaw -= (e.clientX - lookLast.x) * 0.005;
+      st.pitch = Math.max(-1.35, Math.min(1.35, st.pitch - (e.clientY - lookLast.y) * 0.0042));
       lookLast = { x: e.clientX, y: e.clientY };
       if (tapInfo && Math.hypot(e.clientX - tapInfo.x, e.clientY - tapInfo.y) > 12) tapInfo = null;
     }
@@ -158,12 +178,16 @@ export function initTouch(controlsApi, dom, onTap) {
   const end = (e) => {
     if (e.pointerId === movePtr) {
       movePtr = null;
+      moveFrom = null;
       st.touchMove = { x: 0, y: 0 };
+      stick.classList.remove('live');
+      stick.style.left = '';
+      stick.style.top = '';
       knob.style.transform = '';
     }
     if (e.pointerId === lookPtr) {
       lookPtr = null;
-      if (tapInfo && performance.now() - tapInfo.t < 260) onTap(tapInfo.x, tapInfo.y);
+      if (tapInfo && e.timeStamp - tapInfo.t < 350) onTap(tapInfo.x, tapInfo.y);
       tapInfo = null;
     }
   };
@@ -171,13 +195,16 @@ export function initTouch(controlsApi, dom, onTap) {
   dom.addEventListener('pointercancel', end);
 
   function stickFrom(e) {
-    const r = stick.getBoundingClientRect();
-    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-    let dx = (e.clientX - cx) / (r.width / 2);
-    let dy = (e.clientY - cy) / (r.height / 2);
-    const len = Math.hypot(dx, dy);
-    if (len > 1) { dx /= len; dy /= len; }
-    st.touchMove = { x: dx, y: dy };
+    let dx = (e.clientX - moveFrom.x) / RADIUS;
+    let dy = (e.clientY - moveFrom.y) / RADIUS;
+    let len = Math.hypot(dx, dy);
+    if (len > 1) { dx /= len; dy /= len; len = 1; }
     knob.style.transform = `translate(${dx * 30}px, ${dy * 30}px)`;
+    if (len < DEADZONE) {
+      st.touchMove = { x: 0, y: 0 };
+    } else {
+      const scale = (len - DEADZONE) / (1 - DEADZONE) / len;
+      st.touchMove = { x: dx * scale, y: dy * scale };
+    }
   }
 }
