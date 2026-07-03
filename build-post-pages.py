@@ -5,10 +5,12 @@ Generates a real, standalone, indexable URL for every Art Radar post
 and refreshes sitemap.xml to list every post URL.
 
 Run this after adding a new post block to index.html, before deploying.
-The homepage itself (index.html) is never restructured — this only adds
-extra pages and rewrites two pieces of metadata inside index.html:
-  - each post's JSON-LD `url` / `mainEntityOfPage` (fragment -> real URL)
-  - a small "Permalink" link under each post's date
+The homepage itself (index.html) is never restructured. The only thing it
+rewrites inside index.html is each post's JSON-LD `url` / `mainEntityOfPage`
+(fragment -> real URL). No visible "Permalink" link is added to posts: the
+site owner removed those on 2026-07-02 (they looked odd in the timeline).
+The /radar/<slug>/ pages still exist for SEO and LLM discoverability; they
+are simply not linked from each post's card.
 
 Everything else on the homepage (layout, content, styling) is untouched.
 """
@@ -130,34 +132,12 @@ for p in posts:
     if new_json != old_json:
         new_html = new_html.replace(old_json, new_json, 1)
 
-# ---- 2. Add a small permalink link under each post's date (visual, minimal) ----
-# Safe to re-run: skips any post that already has its permalink link.
-for p in posts:
-    if f'href="/radar/{p["slug"]}/"' in new_html:
-        continue
-    old_date_div = re.search(
-        rf'(<article class="post[^"]*" id="{re.escape(p["slug"])}">\s*<div class="post-date">)([^<]*)(</div>)',
-        new_html,
-    )
-    if old_date_div:
-        replacement = (
-            f'{old_date_div.group(1)}{old_date_div.group(2)}{old_date_div.group(3)}'
-            f'\n    <a class="permalink" href="/radar/{p["slug"]}/">Permalink</a>'
-        )
-        new_html = new_html.replace(old_date_div.group(0), replacement, 1)
-
-# add minimal CSS for .permalink once, right before </style>
-if ".permalink" not in new_html:
-    new_html = new_html.replace(
-        "</style>",
-        "  .permalink { display: inline-block; margin-top: 6px; font-size: 11px; "
-        "letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); "
-        "text-decoration: none; }\n  .permalink:hover { text-decoration: underline; }\n</style>",
-        1,
-    )
+# NOTE: this script used to inject a visible <a class="permalink"> link under each
+# post's date. The site owner removed those links on 2026-07-02. Do not reintroduce
+# the injection; the /radar/<slug>/ pages remain the canonical post URLs regardless.
 
 open(SRC, "w", encoding="utf-8", newline="").write(new_html)
-print("index.html updated (JSON-LD permalinks + permalink links)")
+print("index.html updated (JSON-LD permalink URLs)")
 
 # ---- 3. Generate radar/<slug>/index.html for every post ----
 os.makedirs(OUT_DIR, exist_ok=True)

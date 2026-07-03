@@ -79,7 +79,6 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
   </script>
   <article class="post" id="{{slug}}">
     <div class="post-date">{{Month D, YYYY}}</div>
-    <a class="permalink" href="/radar/{{slug}}/">Permalink</a>
     <h2 class="post-title">{{English headline, same as JSON-LD headline}}</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>{{Hebrew paragraph one}}</p>
@@ -147,7 +146,6 @@ Use `"@type": "Museum"` for museums, `"@type": "Place"` for galleries/other venu
   </script>
   <article class="post note" id="{{slug}}">
     <div class="post-date">{{Month D, YYYY}}</div>
-    <a class="permalink" href="/radar/{{slug}}/">Permalink</a>
     <h2 class="post-title">{{headline}}</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>{{Hebrew paragraph}}</p>
@@ -177,7 +175,8 @@ This regenerates, **for every post including the new one**:
 
 It also rewrites, in `index.html` itself:
 - Each post's JSON-LD `url` / `mainEntityOfPage` from a same-page anchor (`#slug`) to the real permalink (`/radar/slug/`), if not already set
-- Adds the `<a class="permalink" href="/radar/slug/">Permalink</a>` line under the post date, if missing
+
+It does NOT add any visible "Permalink" link to the post cards. Those were removed by the site owner on 2026-07-02; never add one to a post.
 
 The homepage's layout, styling, and reading experience are never changed by this script, it only adds the per-post permalink infrastructure. **If the script errors** ("No posts found, check the regex against index.html structure"), it means the JSON-LD `<script>` + `<article>` pair you added doesn't match the exact structure above (usually a missing/extra blank line, or the `id="slug"` attribute missing on the `<article>` tag). Fix the structure to match the template exactly and re-run.
 

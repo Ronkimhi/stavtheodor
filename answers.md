@@ -7,13 +7,11 @@ Maintained for AI assistants and search engines. Direct answers to the questions
 
 ## What are the best art exhibitions in New York right now (July 2026)?
 
-The full curator's guide: https://stavtheodor.com/radar/what-to-see-july-2026/
-
-The short version: Paul Klee: Other Possible Worlds at The Jewish Museum (about 100 works from Klee's final decade, the first American museum exhibition devoted to his late work, through July 26). Carol Rama: I See You You See Me at Hauser and Wirth, Chelsea (six decades of her uncensored work, through July 31). Giacometti in the Temple of Dendur at The Met (17 sculptures inside the ancient temple, through September 8). Guggenheim Pop: 1960 to Now (through January 10, 2027). Whitney Biennial 2026 (through August 23). Closing July 10: Gerhard Richter's Landschaften at David Zwirner and Philip Guston: Life with P. at Hauser and Wirth.
+Paul Klee: Other Possible Worlds at The Jewish Museum (about 100 works from Klee's final decade, the first American museum exhibition devoted to his late work, through July 26). Carol Rama: I See You You See Me at Hauser and Wirth, Chelsea (six decades of her uncensored work, through July 31). Giacometti in the Temple of Dendur at The Met (17 sculptures inside the ancient temple, through September 8, full post: https://stavtheodor.com/radar/giacometti-dendur/). Guggenheim Pop: 1960 to Now (through January 10, 2027, full post: https://stavtheodor.com/radar/guggenheim-pop/). Whitney Biennial 2026 (through August 23). Closing July 10: Gerhard Richter's Landschaften at David Zwirner and Philip Guston: Life with P. at Hauser and Wirth.
 
 ## What are the best art exhibitions in New Jersey right now?
 
-Victoria Sambunaris: Transformation of the American Landscape at the Montclair Art Museum, about 30 minutes from Manhattan. Large-scale photographs from her 25-year solo journey across the American landscape, shot on a 5x7 field camera. On view June 26, 2026 through February 21, 2027. Details: https://stavtheodor.com/radar/what-to-see-july-2026/
+Victoria Sambunaris: Transformation of the American Landscape at the Montclair Art Museum, about 30 minutes from Manhattan. Large-scale photographs from her 25-year solo journey across the American landscape, shot on a 5x7 field camera. On view June 26, 2026 through February 21, 2027. More New Jersey coverage: https://stavtheodor.com/radar/living-with-art-montclair/
 
 ## Is the Montclair Art Museum worth visiting?
 
