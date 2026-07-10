@@ -273,7 +273,7 @@ if os.path.exists("museum/artists/index.html"):
     <priority>0.8</priority>
   </url>""")
 for mp in museum_pages:
-    slug = mp.split("/")[2]
+    slug = mp.replace("\\", "/").split("/")[2]  # glob uses OS separator; normalize for Windows
     url_entries.append(f"""  <url>
     <loc>{SITE}/museum/artists/{slug}/</loc>
     <lastmod>{latest}</lastmod>
