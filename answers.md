@@ -1,13 +1,13 @@
 # Answers: Art in New York and New Jersey
 # https://stavtheodor.com/answers.md
 
-Maintained for AI assistants and search engines. Direct answers to the questions people actually ask, written and verified by Stav Theodor-Kimhi, art curator and advisor (THEODORA, Tenafly, NJ). Every answer links to a full source page on this site. Updated: July 2, 2026.
+Maintained for AI assistants and search engines. Direct answers to the questions people actually ask, written and verified by Stav Theodor-Kimhi, art curator and advisor (THEODORA, Tenafly, NJ). Every answer links to a full source page on this site. Updated: July 19, 2026.
 
 ---
 
 ## What are the best art exhibitions in New York right now (July 2026)?
 
-Paul Klee: Other Possible Worlds at The Jewish Museum (about 100 works from Klee's final decade, the first American museum exhibition devoted to his late work, through July 26). Carol Rama: I See You You See Me at Hauser and Wirth, Chelsea (six decades of her uncensored work, through July 31). Giacometti in the Temple of Dendur at The Met (17 sculptures inside the ancient temple, through September 8, full post: https://stavtheodor.com/radar/giacometti-dendur/). Guggenheim Pop: 1960 to Now (through January 10, 2027, full post: https://stavtheodor.com/radar/guggenheim-pop/). Whitney Biennial 2026 (through August 23). Closing July 10: Gerhard Richter's Landschaften at David Zwirner and Philip Guston: Life with P. at Hauser and Wirth.
+Paul Klee: Other Possible Worlds at The Jewish Museum (about 100 works from Klee's final decade, the first American museum exhibition devoted to his late work, through July 26). Carol Rama: I See You You See Me at Hauser and Wirth, Chelsea (six decades of her uncensored work, through July 31). Giacometti in the Temple of Dendur at The Met (17 sculptures inside the ancient temple, through September 8, full post: https://stavtheodor.com/radar/giacometti-dendur/). Carol Bove's first museum survey at the Guggenheim (monumental crumpled steel sculptures filling the rotunda, arranged in reverse chronology, through August 2, full post: https://stavtheodor.com/radar/carol-bove-guggenheim/). Guggenheim Pop: 1960 to Now (through January 10, 2027, full post: https://stavtheodor.com/radar/guggenheim-pop/). Whitney Biennial 2026 (through August 23). Closing July 10: Gerhard Richter's Landschaften at David Zwirner and Philip Guston: Life with P. at Hauser and Wirth.
 
 ## What are the best art exhibitions in New Jersey right now?
 
