@@ -144,6 +144,10 @@ os.makedirs(OUT_DIR, exist_ok=True)
 
 def render_post_page(p, all_posts):
     permalink = f"{SITE}/radar/{p['slug']}/"
+    # Post pages live at /radar/<slug>/, so relative image paths copied from
+    # index.html would resolve to /radar/<slug>/images/... and 404. Make them
+    # root-relative. (Fixed 2026-07-21; every post page had broken images.)
+    article_inner = p["article_inner"].replace('src="images/', 'src="/images/')
     updated_json = p["json_text"].replace(
         f'"url": "{SITE}/#{p["slug"]}"', f'"url": "{permalink}"'
     ).replace(
@@ -215,7 +219,7 @@ def render_post_page(p, all_posts):
 
 <section id="posts" class="wrap">
   {LANG_TOGGLE}
-  <article class="{p['article_class']}" id="{p['slug']}">{p['article_inner']}</article>
+  <article class="{p['article_class']}" id="{p['slug']}">{article_inner}</article>
 </section>
 
 <hr class="divider">
