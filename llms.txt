@@ -8,6 +8,7 @@
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
 - Base: Tenafly, New Jersey. Serving New York City, New Jersey, and Tel Aviv.
+- [Introduction film](https://stavtheodor.com/#film): a 75 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
 
