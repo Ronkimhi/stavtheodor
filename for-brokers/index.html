@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For real estate brokers and developers: art for the new home &middot; THEODORA</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Art advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel an &#x27;art for the new home&#x27; service for buyers at closing.">
+<meta property="og:title" content="For real estate brokers and developers: art for the new home">
+<meta property="og:description" content="Art advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel an &#x27;art for the new home&#x27; service for buyers at closing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://stavtheodor.com/for-brokers/">
+<meta property="og:image" content="https://stavtheodor.com/images/projects/herzliya-window.jpg">
+<meta property="og:site_name" content="THEODORA">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="For real estate brokers and developers: art for the new home">
+<meta name="twitter:description" content="Art advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel an &#x27;art for the new home&#x27; service for buyers at closing.">
+<meta name="twitter:image" content="https://stavtheodor.com/images/projects/herzliya-window.jpg">
+<link rel="canonical" href="https://stavtheodor.com/for-brokers/">
+<style>
+  :root {
+    --ivory: #FAF8F3;
+    --ink: #1C1A17;
+    --ink-soft: #4A463F;
+    --bronze: #A0815C;
+    --bronze-soft: #C4AE8F;
+    --hairline: rgba(28, 26, 23, 0.14);
+    --en: 'Cormorant Garamond', Georgia, serif;
+    --he: 'Frank Ruhl Libre', 'David Libre', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+  /* ---------- top nav ---------- */
+  nav {
+    padding: 26px 0 0;
+    text-align: center;
+  }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin: 0 14px;
+    transition: color .25s;
+  }
+  nav a:hover { color: var(--bronze); }
+
+  /* ---------- hero ---------- */
+  header.hero {
+    text-align: center;
+    padding: 84px 24px 72px;
+  }
+  .hero-logo {
+    display: block;
+    width: 190px;
+    height: auto;
+    margin: 0 auto 34px;
+  }
+  .cities {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-indent: 0.22em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+  h1 {
+    font-weight: 500;
+    font-size: clamp(40px, 7.5vw, 60px);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .role {
+    margin-top: 16px;
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    text-indent: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .rule {
+    width: 56px;
+    height: 1px;
+    background: var(--bronze);
+    margin: 36px auto;
+    border: none;
+  }
+  .tagline {
+    font-style: italic;
+    font-size: clamp(20px, 3.4vw, 24px);
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ---------- sections ---------- */
+  section { padding: 64px 0; }
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .prose p { margin-bottom: 1.35em; }
+  .prose p:last-child { margin-bottom: 0; }
+  .lead {
+    font-size: 23px;
+    line-height: 1.55;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .about-portrait {
+    margin: 6px 0 0;
+  }
+  .about-portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+  }
+  .about-portrait figcaption {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    text-align: center;
+  }
+  @media (max-width: 620px) {
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-portrait { max-width: 300px; margin: 0 auto; }
+  }
+
+  /* ---------- services ---------- */
+  .services {
+    width: min(1040px, calc(100vw - 48px));
+    margin: 56px 0 8px 50%;
+    transform: translateX(-50%);
+    padding: 46px 0 44px;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .services .label { margin-bottom: 38px; }
+  .services-intro {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    padding: 22px 32px;
+    border: 1px solid var(--bronze-soft);
+    text-align: center;
+    font-family: var(--en);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  @media (max-width: 540px) {
+    .services-intro { padding: 18px 20px; font-size: 19px; }
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px 30px;
+  }
+  .service { text-align: center; }
+  .service h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .service p {
+    font-style: italic;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .services-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+
+  /* ---------- buttons ---------- */
+  .btn-row { text-align: center; margin-top: 44px; }
+  .portfolio-invite {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .portfolio-invite .rule { margin: 0 auto 32px; }
+  .portfolio-invite p {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 0 auto 28px;
+  }
+
+  /* ---------- portfolio slideshow ---------- */
+  #portfolio { padding: 64px 0; }
+  .portfolio-lead {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
+  .film { width: min(880px, calc(100vw - 40px)); margin: 0 auto 40px; }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); border: 1px solid var(--hairline); }
+  .film-caption { text-align: center; margin-top: 14px; font-family: var(--en); font-style: italic; font-size: 16px; color: var(--ink-soft); }
+  .slideshow { width: min(880px, calc(100vw - 40px)); margin: 0 auto; }
+  .slideshow:focus { outline: none; }
+  .slide-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--ivory);
+    border: 1px solid var(--hairline);
+    overflow: hidden;
+  }
+  .slide-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .slide-btn, .slide-fs {
+    position: absolute;
+    border: 1px solid var(--hairline);
+    background: rgba(250, 248, 243, 0.86);
+    color: var(--bronze);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s, color .25s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slide-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-family: var(--en);
+    font-size: 26px;
+    line-height: 1;
+    padding-bottom: 3px;
+  }
+  .slide-btn:hover, .slide-fs:hover { background: var(--bronze); color: var(--ivory); }
+  .slide-btn.prev { left: 14px; }
+  .slide-btn.next { right: 14px; }
+  .slide-fs {
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 15px;
+  }
+  .slide-counter {
+    text-align: center;
+    margin-top: 22px;
+    font-family: var(--en);
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    color: var(--bronze);
+  }
+  .slide-frame:fullscreen { background: var(--ink); border: none; }
+  @media (max-width: 540px) {
+    .slide-btn { width: 40px; height: 40px; font-size: 22px; }
+    .slide-btn.prev { left: 8px; }
+    .slide-btn.next { right: 8px; }
+    .portfolio-lead { font-size: 18px; }
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--bronze);
+    padding: 15px 34px 13px;
+    margin: 8px 10px;
+    transition: background .3s, color .3s;
+  }
+  .btn:hover { background: var(--bronze); color: var(--ivory); }
+  .btn.solid { background: var(--ink); border-color: var(--ink); color: var(--ivory); }
+  .btn.solid:hover { background: var(--bronze); border-color: var(--bronze); }
+
+  /* ---------- timeline ---------- */
+  .timeline-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin: -18px 0 56px;
+  }
+  article.post {
+    position: relative;
+    padding: 0 0 72px 36px;
+    border-left: 1px solid var(--hairline);
+    margin-left: 8px;
+  }
+  article.post:last-of-type { padding-bottom: 8px; }
+  article.post::before {
+    content: "";
+    position: absolute;
+    left: -3.5px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--bronze);
+  }
+  .post-date {
+    font-size: 12.5px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+  .post-title {
+    font-family: var(--en);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 8px 0 22px;
+  }
+  .post-body {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--he);
+    font-weight: 300;
+    font-size: 17.5px;
+    line-height: 1.95;
+    color: var(--ink);
+  }
+  .post-body p { margin-bottom: 1.2em; }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-body a {
+    color: var(--bronze);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bronze-soft);
+    word-break: break-all;
+    transition: color .25s;
+  }
+  .post-body a:hover { color: var(--ink); }
+  .post-body strong { font-weight: 500; }
+  .credit {
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  article.post.note .post-title { font-size: 20px; font-weight: 500; }
+  article.post.note { padding-bottom: 56px; }
+  article.post.note .post-body { font-size: 16.5px; color: var(--ink-soft); }
+  figure {
+    margin: 30px 0;
+    text-align: center;
+  }
+  figure img {
+    max-width: min(380px, 100%);
+    filter: sepia(8%);
+    opacity: 0.92;
+  }
+  figcaption {
+    direction: ltr;
+    font-family: var(--en);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-top: 12px;
+  }
+  .post-gallery {
+    column-count: 2;
+    column-gap: 14px;
+    margin-bottom: -14px;
+  }
+  .post-gallery img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 14px;
+    filter: none;
+    opacity: 1;
+  }
+  @media (max-width: 540px) {
+    .post-gallery { column-count: 1; }
+  }
+  /* two images side by side, aligned along their bottom edge, each with its own caption */
+  .pair-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+  }
+  .pair-bottom img {
+    width: 50%;
+    max-width: 50%;
+    display: block;
+  }
+  .pair-caps {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .pair-caps figcaption {
+    width: 50%;
+    margin-top: 0;
+    text-align: center;
+  }
+  @media (max-width: 540px) {
+    .pair-bottom, .pair-caps { flex-direction: column; align-items: center; }
+    .pair-bottom img, .pair-caps figcaption { width: 100%; max-width: min(380px, 100%); }
+  }
+  /* gallery walk (a single post made of several stops, each image with its text) */
+  .walk-stop {
+    margin-top: 42px;
+    padding-top: 38px;
+    border-top: 1px solid var(--hairline);
+  }
+  .walk-venue {
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin-bottom: 18px;
+  }
+  .walk-stop figure { margin: 0 0 20px; }
+  .walk-stop figure img {
+    max-width: 100%;
+    filter: sepia(8%);
+    opacity: 0.95;
+  }
+  .walk-intro {
+    margin-top: 42px;
+    padding-top: 34px;
+    border-top: 1px solid var(--hairline);
+    font-size: 18px;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    border-top: 1px solid var(--hairline);
+    margin-top: 48px;
+    padding: 72px 0 64px;
+    text-align: center;
+  }
+  footer .name {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 28px;
+  }
+  footer .sub {
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-indent: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 10px 0 30px;
+  }
+  .contact-list { list-style: none; }
+  .contact-list li { padding: 5px 0; font-size: 18px; }
+  .contact-list a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bronze-soft);
+    transition: color .25s;
+  }
+  .contact-list a:hover { color: var(--bronze); }
+  .contact-list a .ig-icon { vertical-align: -3px; margin-right: 7px; }
+  .copyright {
+    margin-top: 44px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 540px) {
+    body { font-size: 18px; }
+    header.hero { padding: 60px 24px 52px; }
+    section { padding: 48px 0; }
+    article.post { padding-left: 24px; margin-left: 4px; }
+    nav a { margin: 0 8px; font-size: 11px; }
+    .lead { font-size: 20px; }
+  }
+  /* ---------- post language toggle ---------- */
+  .post-body-en {
+    display: none;
+    direction: ltr;
+    text-align: left;
+    font-family: var(--en);
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  body.lang-en .post-body[lang="he"] { display: none; }
+  body.lang-en .post-body-en { display: block; }
+  .post-title-he { font-family: var(--he); direction: rtl; text-align: right; }
+  .post-title-en { display: none; }
+  body.lang-en .post-title-he { display: none; }
+  body.lang-en .post-title-en { display: block; }
+  .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
+  .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
+  .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
+  .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
+  .faq-item p { color: var(--ink-soft); max-width: 62ch; }
+</style>
+<style>
+  .page { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
+  .page .kicker { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bronze); margin-bottom: 14px; }
+  .page h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(34px, 5vw, 52px); line-height: 1.08; margin: 0 0 18px; }
+  .page h1[lang="he"] { font-family: 'Frank Ruhl Libre', serif; direction: rtl; text-align: right; display: none; }
+  body.lang-en .page h1[lang="he"] { display: none; }
+  body:not(.lang-en) .page h1[lang="he"] { display: block; }
+  body:not(.lang-en) .page h1[lang="en"] { display: none; }
+  .page .lead { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 28px; }
+  .page .lead[lang="he"] { font-family: 'Frank Ruhl Libre', serif; direction: rtl; text-align: right; font-size: 19px; }
+  body.lang-en .page .lead[lang="he"] { display: none; }
+  body:not(.lang-en) .page .lead[lang="en"] { display: none; }
+  .page figure.hero { margin: 0 0 32px; }
+  .page figure.hero img { width: 100%; height: auto; border: 1px solid var(--hairline); background: var(--ivory); padding: 0; }
+  .page figure.hero figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--ink-soft); margin-top: 10px; text-align: center; }
+  .page .post-body h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.15; margin: 36px 0 12px; }
+  .page .post-body h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; margin: 28px 0 8px; }
+  .page .post-body ul, .page .post-body ol { margin: 0 0 1.2em; padding-inline-start: 1.4em; }
+  .page .post-body li { margin-bottom: 0.5em; }
+  .page .post-body blockquote { margin: 1.4em 0; padding-inline-start: 18px; border-inline-start: 2px solid var(--bronze); font-style: italic; color: var(--ink-soft); }
+  .page .post-body figure { margin: 28px 0; }
+  .page .post-body figure img { width: 100%; height: auto; border: 1px solid var(--hairline); background: var(--ivory); padding: 0; max-width: 100%; }
+  .page .post-body figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--ink-soft); margin-top: 8px; text-align: center; direction: ltr; }
+  .page .post-body[lang="he"] figcaption { direction: rtl; }
+  .faq { margin-top: 44px; border-top: 1px solid var(--hairline); padding-top: 28px; }
+  .faq h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 26px; margin: 0 0 16px; }
+  .faq details { border-bottom: 1px solid var(--hairline); padding: 12px 0; }
+  .faq summary { cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; list-style: none; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq details p { margin-top: 10px; font-size: 16.5px; line-height: 1.6; color: var(--ink-soft); }
+  .faq[lang="he"] { direction: rtl; text-align: right; font-family: 'Frank Ruhl Libre', serif; }
+  .faq[lang="he"] summary, .faq[lang="he"] h2 { font-family: 'Frank Ruhl Libre', serif; }
+  body.lang-en .faq[lang="he"] { display: none; }
+  body:not(.lang-en) .faq[lang="en"] { display: none; }
+  .cta-card { margin: 48px 0 0; padding: 28px 30px; background: rgba(160,129,92,0.08); border-left: 3px solid var(--bronze); }
+  .cta-card p { font-family: 'Cormorant Garamond', serif; font-size: 21px; line-height: 1.45; margin: 0 0 14px; }
+  .cta-card[lang="he"] { direction: rtl; text-align: right; border-left: 0; border-right: 3px solid var(--bronze); }
+  .cta-card[lang="he"] p { font-family: 'Frank Ruhl Libre', serif; font-size: 18px; }
+  body.lang-en .cta-card[lang="he"] { display: none; }
+  body:not(.lang-en) .cta-card[lang="en"] { display: none; }
+  .cta-card a.btn { display: inline-block; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ivory); background: var(--bronze); padding: 12px 22px; text-decoration: none; }
+  .related { margin-top: 44px; border-top: 1px solid var(--hairline); padding-top: 24px; }
+  .related ul { list-style: none; padding: 0; margin: 12px 0 0; line-height: 2; }
+  .hub { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; margin-top: 28px; }
+  .hub-card { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--hairline); background: var(--ivory); }
+  .hub-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+  .hub-card .in { padding: 16px 18px 20px; }
+  .hub-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 8px; }
+  .hub-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
+  .hub-card:hover { border-color: var(--bronze); }
+  .page .lang-switch, .hub .lang-switch { margin-bottom: 28px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "For real estate brokers and developers: art for the new home",
+  "headline": "For real estate brokers and developers: art for the new home",
+  "description": "Art advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel an 'art for the new home' service for buyers at closing.",
+  "url": "https://stavtheodor.com/for-brokers/",
+  "mainEntityOfPage": "https://stavtheodor.com/for-brokers/",
+  "inLanguage": [
+    "en",
+    "he"
+  ],
+  "datePublished": "2026-09-06",
+  "dateModified": "2026-09-06",
+  "image": "https://stavtheodor.com/images/projects/herzliya-window.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Stav Theodor-Kimhi",
+    "url": "https://stavtheodor.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "THEODORA",
+    "url": "https://stavtheodor.com/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "THEODORA",
+    "url": "https://stavtheodor.com/"
+  },
+  "areaServed": [
+    "New York City",
+    "New Jersey",
+    "Tel Aviv"
+  ],
+  "serviceType": "Art advisory for real estate brokers and developers"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "THEODORA",
+      "item": "https://stavtheodor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Working together",
+      "item": "https://stavtheodor.com/for-brokers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "For real estate brokers and developers: art for the new home",
+      "item": "https://stavtheodor.com/for-brokers/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a real estate broker offer art advisory as a closing gift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is the one closing gift that stays on the wall. The broker introduces me to the buyer at closing, I hold a first conversation with them about the home, and then I quote the work based on scope; the buyer decides what to acquire within a budget they set. Whether the broker funds part of this as a gift under their own name, or the buyer engages me directly, is agreed between the broker and me at the start of the first project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a new home buyer think about art, before or after moving in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before, when the timing allows. Between contract and move in, the floor plan exists, the walls are empty and the buyer already knows which rooms matter, so a commissioned work has time to be made; the 3.5 meter triptych I commissioned from an Italian artist for a sea view villa in Caesarea needed that time. After moving in is also fine. I work from the finished rooms, and one decisive work for the entrance can be chosen, framed and installed without the house becoming a project again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should a buyer budget for art in a new home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fixed rule, and I do not start from a number. I start from the buyer's approved budget and plan against it, with options at more than one level, so the buyer sees what one decisive work and what a fuller collection would each look like. Direct relationships with artists often bring the cost of the work itself down, and I negotiate with galleries on the buyer's behalf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with buyers moving to Israel from New York or New Jersey?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I am based in Tenafly, New Jersey, and my projects run across Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan and Hod Hasharon. The buyer and I can meet here before the move, and I manage sourcing, framing and installation in Israel, in Hebrew, with the buyer approving each step remotely or in person. Brokers and developers on both sides of the move can introduce me."
+      }
+    }
+  ]
+}
+</script>
+<!-- Structured data: Person + Organization + WebSite (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://stavtheodor.com/#stav",
+      "name": "Stav Theodor-Kimhi",
+      "jobTitle": "Art Curator and Advisor",
+      "description": "Fine art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. Founder of THEODORA.",
+      "url": "https://stavtheodor.com/",
+      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/stavtheodor",
+        "https://www.instagram.com/theodorafineart"
+      ],
+      "worksFor": { "@id": "https://stavtheodor.com/#org" },
+      "knowsAbout": [
+        "Fine Art Curation",
+        "Art Advisory",
+        "Hospitality Art",
+        "Private Art Collections",
+        "Contemporary Art",
+        "Israeli Art"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://stavtheodor.com/#org",
+      "name": "THEODORA",
+      "description": "Fine art curation and advisory. A to Z: art concept, sourcing, selection, and installation for private residences and hospitality projects in New York, New Jersey, and Tel Aviv.",
+      "url": "https://stavtheodor.com/",
+      "logo": "https://stavtheodor.com/images/theodora-logo.png",
+      "image": "https://stavtheodor.com/og-image.jpg",
+      "founder": { "@id": "https://stavtheodor.com/#stav" },
+      "email": "stavtheodor85@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "New York City" },
+        { "@type": "State", "name": "New Jersey" },
+        { "@type": "City", "name": "Tel Aviv" }
+      ],
+      "knowsAbout": [
+        "Art Curation",
+        "Art Advisory",
+        "Interior Art Consulting",
+        "Private Art Collections",
+        "Hospitality Art"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/theodora-art",
+        "https://www.instagram.com/theodorafineart"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stavtheodor.com/#site",
+      "name": "Art Radar · THEODORA",
+      "url": "https://stavtheodor.com/",
+      "description": "Art exhibitions, openings, and the stories behind them, chosen by curator Stav Theodor-Kimhi. Covering New York, New Jersey, and Tel Aviv.",
+      "publisher": { "@id": "https://stavtheodor.com/#org" },
+      "inLanguage": ["en", "he"]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/advisory/">Advisory</a>
+  <a href="/projects/">Projects</a>
+  <a href="/#radar">Art Radar</a>
+  <a href="/#contact">Contact</a>
+</nav>
+
+<header class="hero wrap" style="padding: 56px 24px 32px;">
+  <a href="/" style="text-decoration:none; display:inline-block;">
+    <img class="hero-logo" src="/images/theodora-logo.png" alt="THEODORA &middot; fine art living" width="440" height="195" style="width:150px; height:auto;">
+  </a>
+</header>
+
+<hr class="divider">
+
+<section class="page">
+  <div class="lang-switch" role="group" aria-label="Choose post language">
+    <button type="button" data-lang="he" class="active">עברית</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
+  <div class="kicker">For partners</div>
+  <h1 lang="en">For real estate brokers and developers: art for the new home</h1>
+  <h1 lang="he" dir="rtl">למתווכי נדל&quot;ן וליזמים: אמנות לבית החדש</h1>
+  <p class="lead" lang="en">If you sell or build homes in Bergen County, Manhattan or Israel, I can give your buyers the one thing the closing folder never contains: art chosen for that home and installed on its walls. You make one introduction, I do the work, and the buyer remembers who thought of it.</p>
+  <p class="lead" lang="he" dir="rtl">אם אתם מוכרים או בונים בתים במחוז ברגן, במנהטן או בישראל, אני יכולה לתת לקונים שלכם את הדבר האחד שאף פעם לא נמצא בתיק המסירה: אמנות שנבחרה בשביל הבית הזה ותלויה על קירותיו. אתם עושים היכרות אחת, אני עושה את העבודה, והקונה זוכר מי חשב על זה.</p>
+  <figure class="hero">
+    <img src="/images/projects/herzliya-window.jpg" alt="Large scale painting by Yigal Ozeri of an aged window near the entrance of a sea view apartment in Herzliya Pituach, with the living room and its sea facing windows beside it" loading="eager">
+    <figcaption>Herzliya Pituach, sea view apartment. A large scale painting by Yigal Ozeri near the entrance, sculptural elements and organic textures throughout.</figcaption>
+  </figure>
+  <div class="post-body" lang="he" dir="rtl">
+<p>בית חדש נמסר עם הכול חוץ מהקירות. הקונה השקיע חודשים במטבח, ברצפה ובתאורה, ואז נכנס לגור מול טיח חשוף. בחירת אמנות היא ההחלטה שלאף אחד לא נשאר כוח בשבילה. את הפער הזה אתם יכולים לסגור בשביל הקונים שלכם בהיכרות אחת.</p><h2>ההצעה: אמנות לבית החדש</h2><p>למתווכים וליזמים במחוז ברגן, במנהטן ובישראל, אני מציעה לכל קונה שאתם מפגישים איתי שיחה ראשונה על הבית, במעמד המסירה. השיחה מתקיימת בנכס עצמו כשאפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את העבודה לפי היקפה, והקונה מחליט.</p><p>השיחה הראשונה עוסקת בשני דברים:</p><ul><li><strong>איך הם חיים.</strong> מי הם, למה הם חוזרים שוב ושוב, איך ישתמשו בחדרים. האמנות נובעת מזה, לא מהספה.</li><li><strong>הקירות המרכזיים.</strong> הכניסה, הסלון, הקיר האחד שאורחים רואים ראשון. קנה מידה, מיקום, ומה אפשרי ביותר מרמה אחת בתוך תקציב שהקונה קובע.</li></ul><p>אם הקונה ממשיך, אני עושה את השאר: מחקר ואיתור בגלריות בניו יורק ובתל אביב ואצל אמנים שאני עובדת איתם ישירות, מה שמוריד לא פעם את עלות העבודה עצמה; הערכת שווי שוק ומשא ומתן על המחיר בשם הקונה; מדפיסי אמנות, מסגריות ומתקינים שאני מכירה. העבודה מסתיימת כשהיצירה על הקיר והקונה מרוצה, בין שמדובר ביצירה אחת מכריעה לכניסה ובין שבאוסף לכל הבית.</p><h2>איך אתם נראים</h2><p>הבאתם לקונה משהו שהוא יסתכל עליו כל יום, הרבה אחרי שמתנת המסירה נשכחה. למתווך, זו סיבה להיות בקשר אחרי המסירה, וזה בדיוק הרגע שבו נולדת ההפניה הבאה. ליזם, הבית נמסר גמור עד הקירות, לא רק עד הצבע.</p><p>הקרדיט שלכם. אני אומרת את זה לקונה.</p><h2>הוכחות מבתים אמיתיים</h2><p>קלוסטר, ניו ג'רזי: בית פרטי חדש, שבו אצרתי אוסף שייתן לאדריכלות עומק, בעבודה עם גלריות מובילות בניו יורק ובהצבת עבודות של אמנים יהודים וישראלים לצד קולות עכשוויים אחרים. מנהטן: קולאז' דיגיטלי בפורמט גדול שנבחר לעגן את הבר המותאם אישית של הדירה, כי הלקוח אוהב לארח; העבודה שואבת מהשפה החזותית של מפגשים חברתיים זוהרים ומתכתבת עם "בר בפולי ברז'ר" של מאנה. הרצליה פיתוח: דירה עם נוף לים שבה ציור גדול של יגאל עוזרי, חלון ישן ומחוספס, תלוי ליד הכניסה בדיאלוג עם החלונות הפונים לים.</p><figure><img src="/images/projects/bauhaus.jpg" alt="בית באוהאוס משופץ בתל אביב, יצירה כהה אחת על קיר בטון לצד דלתות זכוכית במסגרת פלדה"><figcaption>תל אביב, בית באוהאוס משופץ. יצירה אחת כנקודת מוקד, שמכניסה צבע וטקסטורה לחלל מונוכרומטי.</figcaption></figure><p>לקונים שעוברים לישראל, פרויקט אחד אומר כמעט הכול. וילה עם נוף לים בקיסריה הייתה זקוקה ליצירה בקנה מידה אדריכלי, ולכן הזמנתי טריפטיך באורך 3.5 מטרים מאמן איטלקי: שלוש חסידות במרכזו, לשיבה הביתה, לכוח ולשייכות, כהד למסע של בעל הבית כעולה חדש ולחסידות שנודדות דרך ישראל בכל עונה.</p><p>לצד הבתים הפרטיים, בניתי קונספטים ואוספים של אמנות עם קבוצות אירוח יוקרתיות, ובהן יחידות המגורים וחדרי האורחים של סנט רג'יס עמאן. ברשימת הלקוחות והשותפים שלי נמצאים שמות כמו איגל הילס, פור סיזנס ורוזווד הוטלס אנד ריזורטס.</p><h2>ההסדר בינינו</h2><p>את המנגנון, כולל האם השיחה הראשונה מוצעת כמתנת המסירה שלכם או כהיכרות מצדי, והאם היא נושאת את השם שלכם או שלי, אנחנו מסכמים יחד בתחילת הפרויקט הראשון, בכתב. אני מעדיפה כמה מתווכים ויזמים ששולחים אליי כל מסירה על פני רבים ששולחים אחת.</p><h2>איך מתחילים</h2><p>שלחו לי את הנכס או את תוכנית הדירה ושורה על הקונה. כתבו ל<a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> או השתמשו ב<a href="/#contact">טופס יצירת הקשר</a>. אולי תרצו לקרוא גם על <a href="/advisory/art-for-a-new-build-in-bergen-county/">אמנות לבית חדש במחוז ברגן</a>, על <a href="/advisory/art-for-a-home-in-israel-from-abroad/">אמנות לבית בישראל שמנוהלת מחו"ל</a>, ועל האופן שבו אני עובדת עם <a href="/for-designers/">מעצבי פנים ואדריכלים</a>.</p>
+  </div>
+  <div class="post-body post-body-en" lang="en" dir="ltr">
+<p>A new home closes with everything but the walls. The buyer has spent months on the kitchen, the floors and the lighting, then moves in to blank plaster. Choosing art is the decision nobody has energy left for. You can close that gap for your buyers with a single introduction.</p><h2>The offer: art for the new home</h2><p>For brokers and developers in Bergen County, Manhattan and Israel, I offer every buyer you introduce a first conversation about the home, at closing. It is held at the property where possible, because the home is the brief. After it I quote the work based on scope, and the buyer decides.</p><p>The first conversation covers two things:</p><ul><li><strong>How they live.</strong> Who they are, what they keep returning to, how they will use the rooms. The art follows from that, not from the sofa.</li><li><strong>The key walls.</strong> The entrance, the living room, the one wall guests see first. Scale, placement, and what is possible at more than one level inside a budget the buyer sets.</li></ul><p>If the buyer goes ahead, I do the rest: research and sourcing from galleries in New York and Tel Aviv and from artists I work with directly, which often brings the cost of the work itself down; market value assessed and the price negotiated on the buyer's behalf; printmakers, framers and installers I know. The job ends when the work is on the wall and the buyer is happy, whether that is one decisive work for the entrance or a collection for the whole house.</p><h2>How you look</h2><p>You introduced something the buyer will look at every day, long after the closing gift is forgotten. For a broker, it is a reason to be in touch after closing, which is when the next referral happens. For a developer, the home is handed over finished to the walls, not only to the paint.</p><p>The credit is yours. I say so to the buyer.</p><h2>Proof from real homes</h2><p>Closter, New Jersey: a newly built private residence, where I curated a collection to give the architecture depth, working with leading New York City galleries and placing works by Jewish and Israeli artists alongside other contemporary voices. Manhattan: a large format digital collage chosen to anchor an apartment's custom bar, because the client loves to entertain; the work draws on the visual language of glamorous gatherings and references Manet's "Un Bar aux Folies-Bergère". Herzliya Pituach: a sea view apartment where a large scale painting by Yigal Ozeri, an aged and textured window, hangs near the entrance in dialogue with the sea facing windows.</p><figure><img src="/images/projects/bauhaus.jpg" alt="Renovated Bauhaus home in Tel Aviv, a single dark artwork on a concrete wall beside steel framed glass doors"><figcaption>Tel Aviv, renovated Bauhaus home. One artwork as the focal point, bringing color and texture into a monochromatic space.</figcaption></figure><p>For buyers moving to Israel, one project says most of it. A sea view villa in Caesarea needed a work at architectural scale, so I commissioned a 3.5 meter triptych from an Italian artist: three storks at its center, for homecoming, strength and belonging, echoing the owner's journey as a new immigrant and the storks that migrate through Israel each season.</p><p>Alongside private homes, I have built art concepts and collections with luxury hospitality groups, including the residences and guest rooms of the St. Regis Amman. Names on my client and partner list include Eagle Hills, Four Seasons and Rosewood Hotels and Resorts.</p><h2>The arrangement between us</h2><p>The mechanics, including whether the first conversation is offered as your closing gift or as my introduction, and whether it carries your name or mine, are agreed together at the start of the first project, in writing. I would rather have a few brokers and developers who send me every closing than many who send one.</p><h2>How to start</h2><p>Send me the listing or the floor plan and a line about the buyer. Write to <a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> or use the <a href="/#contact">contact form</a>. You may also want to read about <a href="/advisory/art-for-a-new-build-in-bergen-county/">art for a new build in Bergen County</a>, <a href="/advisory/art-for-a-home-in-israel-from-abroad/">art for a home in Israel managed from abroad</a>, and how I work with <a href="/for-designers/">interior designers and architects</a>.</p>
+  </div>
+  <section class="faq" lang="en">
+    <h2>Questions people ask</h2>
+    <details><summary>Can a real estate broker offer art advisory as a closing gift?</summary><p>Yes. It is the one closing gift that stays on the wall. The broker introduces me to the buyer at closing, I hold a first conversation with them about the home, and then I quote the work based on scope; the buyer decides what to acquire within a budget they set. Whether the broker funds part of this as a gift under their own name, or the buyer engages me directly, is agreed between the broker and me at the start of the first project.</p></details>
+    <details><summary>When should a new home buyer think about art, before or after moving in?</summary><p>Before, when the timing allows. Between contract and move in, the floor plan exists, the walls are empty and the buyer already knows which rooms matter, so a commissioned work has time to be made; the 3.5 meter triptych I commissioned from an Italian artist for a sea view villa in Caesarea needed that time. After moving in is also fine. I work from the finished rooms, and one decisive work for the entrance can be chosen, framed and installed without the house becoming a project again.</p></details>
+    <details><summary>How much should a buyer budget for art in a new home?</summary><p>There is no fixed rule, and I do not start from a number. I start from the buyer's approved budget and plan against it, with options at more than one level, so the buyer sees what one decisive work and what a fuller collection would each look like. Direct relationships with artists often bring the cost of the work itself down, and I negotiate with galleries on the buyer's behalf.</p></details>
+    <details><summary>Do you work with buyers moving to Israel from New York or New Jersey?</summary><p>Yes. I am based in Tenafly, New Jersey, and my projects run across Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan and Hod Hasharon. The buyer and I can meet here before the move, and I manage sourcing, framing and installation in Israel, in Hebrew, with the buyer approving each step remotely or in person. Brokers and developers on both sides of the move can introduce me.</p></details>
+  </section>
+  <section class="faq" lang="he" dir="rtl">
+    <h2>שאלות נפוצות</h2>
+    <details><summary>האם מתווך נדל&quot;ן יכול להציע ייעוץ אמנות כמתנת מסירה?</summary><p>כן. זו מתנת המסירה היחידה שנשארת על הקיר. המתווך מקשר ביני לבין הקונה במעמד המסירה, אני מקיימת איתו שיחה ראשונה על הבית, ואז מתמחרת את העבודה לפי היקפה; הקונה מחליט מה לרכוש בתוך תקציב שהוא קובע. האם המתווך מממן חלק מזה כמתנה תחת שמו, או שהקונה שוכר אותי ישירות, מסוכם ביני לבין המתווך בתחילת הפרויקט הראשון.</p></details>
+    <details><summary>מתי כדאי לקונה של בית חדש לחשוב על אמנות, לפני המעבר או אחריו?</summary><p>לפני, כשלוח הזמנים מאפשר. בין החוזה למעבר כבר יש תוכנית דירה, הקירות ריקים והקונה כבר יודע אילו חדרים חשובים לו, כך שליצירה מוזמנת יש זמן להיווצר; הטריפטיך באורך 3.5 מטרים שהזמנתי מאמן איטלקי לווילה עם נוף לים בקיסריה היה זקוק לזמן הזה. גם אחרי המעבר זה בסדר. אני עובדת מהחדרים הגמורים, ויצירה אחת מכריעה לכניסה יכולה להיבחר, להתמסגר ולהיתלות בלי שהבית הופך שוב לפרויקט.</p></details>
+    <details><summary>כמה כדאי לקונה להקצות לאמנות בבית חדש?</summary><p>אין כלל קבוע, ואני לא מתחילה ממספר. אני מתחילה מהתקציב שהקונה אישר ומתכננת מולו, עם אפשרויות ביותר מרמה אחת, כך שהקונה רואה איך תיראה יצירה אחת מכריעה ואיך ייראה אוסף מלא יותר. קשר ישיר עם האמנים מוריד לא פעם את עלות העבודה עצמה, ואני מנהלת משא ומתן מול גלריות בשם הקונה.</p></details>
+    <details><summary>את עובדת עם קונים שעוברים לישראל מניו יורק או מניו ג&#x27;רזי?</summary><p>כן. אני יושבת בטנפלי, ניו ג'רזי, והפרויקטים שלי פרוסים בתל אביב, קיסריה, הרצליה פיתוח, רמת גן והוד השרון. הקונה ואני יכולים להיפגש כאן לפני המעבר, ואני מנהלת את האיתור, המסגור וההתקנה בישראל, בעברית, כשהקונה מאשר כל שלב מרחוק או פנים אל פנים. מתווכים ויזמים משני צידי המעבר יכולים לקשר בינינו.</p></details>
+  </section>
+  <div class="cta-card" lang="en">
+    <p>Send me the listing or the floor plan and a line about the buyer. I will tell you what I would propose for the home.</p>
+    <a class="btn" href="mailto:Stav@stavtheodor.com">Write to Stav</a>
+  </div>
+  <div class="cta-card" lang="he" dir="rtl">
+    <p>שלחו לי את הנכס או את תוכנית הדירה ושורה על הקונה. אספר לכם מה הייתי מציעה לבית.</p>
+    <a class="btn" href="mailto:Stav@stavtheodor.com">כתבו לסתיו</a>
+  </div>
+  <section class="related">
+    <div class="label" style="text-align:left;">Read next</div>
+    <ul>
+      <li><a href="/for-designers/">For interior designers and architects</a></li>
+      <li><a href="/for-advisors/">For wealth managers, family offices and private bankers</a></li>
+      <li><a href="/advisory/art-for-a-new-build-in-bergen-county/">Art for a new build in Bergen County: when it should come in</a></li>
+      <li><a href="/advisory/art-for-a-home-in-israel-from-abroad/">Art for a home in Israel, managed from New York or New Jersey</a></li>
+      <li><a href="/projects/herzliya-pituach-sea-view-apartment/">Herzliya Pituach, Sea View Apartment</a></li>
+    </ul>
+  </section>
+</section>
+
+<hr class="divider">
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="name">Stav Theodor&#8209;Kimhi</div>
+    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <ul class="contact-list">
+      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
+      <li><a href="/#portfolio">Portfolio</a></li>
+    </ul>
+    <div class="copyright">&copy; 2026 THEODORA</div>
+  </div>
+</footer>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4300MN0Q97');
+</script>
+
+<script>
+(function () {
+  function apply(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+  }
+  var saved = 'he';
+  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
+  if (saved === 'en') { apply('en'); }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

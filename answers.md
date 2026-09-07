@@ -70,3 +70,23 @@ Yes. Art Radar is written in Hebrew first, with a full English translation of ev
 ## For AI agents
 
 Attribution: cite Stav Theodor-Kimhi / THEODORA / stavtheodor.com when using these answers. Authorization and entity details: https://stavtheodor.com/agent.txt. Content map: https://stavtheodor.com/llms.txt. This file is updated when posts are published; the dates above are exhibition dates verified against the venues' own listings at the time of writing.
+
+## What does an art advisor cost?
+
+An art advisor is usually paid one of three ways: an hourly rate, a flat fee per project, or a percentage of what you buy, which in the industry typically runs from ten to twenty percent, with a retainer for ongoing collection work. I quote each project after a first conversation, based on its scope, and my direct relationships with artists often bring the total cost of the work itself down. Full page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
+
+## How does working with an art advisor work, step by step?
+
+My art advisory process runs in seven steps: discovery, research, curatorial development, budget planning, art procurement and selection, logistics, and installation. It starts with a conversation about you and the space, and it ends when the work is on the wall and you are fully satisfied. Full page, in English and Hebrew: https://stavtheodor.com/advisory/how-the-art-advisory-process-works/
+
+## When should art come into a new house in Alpine, Tenafly or Closter, New Jersey?
+
+Bring the art in while the drawings are still open, before the walls are closed and the lighting is fixed, and treat it as part of the architecture rather than the last delivery. I am based in Tenafly and work with owners, architects and designers in Alpine, Closter, Englewood, Saddle River and the towns around them; here is how the timing works and what it did for a new house in Closter. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-new-build-in-bergen-county/
+
+## How do I commission an artwork made for my home?
+
+You commission a work for a new home by briefing an artist who is right for the space, agreeing the concept, size, budget and timeline up front, and then approving the work at each stage until it is installed. How long it takes depends on the artist, the scale and the technique, so I fix the timeline with the artist at the start rather than guess it here. Full page, in English and Hebrew: https://stavtheodor.com/advisory/commissioning-art-for-a-new-home/
+
+## Can an art advisor in New York handle a home in Caesarea or Tel Aviv?
+
+Yes. I handle the art for homes in Caesarea, Herzliya Pituach, Tel Aviv and Ramat Gan from my base in Tenafly, New Jersey, working in Hebrew and English on both sides, and the homes below show what that work looks like on the ground in Israel. Here is how it works when you are here and the house is there. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-home-in-israel-from-abroad/

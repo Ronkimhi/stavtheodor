@@ -246,6 +246,9 @@
     max-width: 520px;
     margin: 0 auto 40px;
   }
+  .film { width: min(880px, calc(100vw - 40px)); margin: 0 auto 40px; }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); border: 1px solid var(--hairline); }
+  .film-caption { text-align: center; margin-top: 14px; font-family: var(--en); font-style: italic; font-size: 16px; color: var(--ink-soft); }
   .slideshow { width: min(880px, calc(100vw - 40px)); margin: 0 auto; }
   .slideshow:focus { outline: none; }
   .slide-frame {

@@ -192,3 +192,13 @@ Each URL serves the post in Hebrew and full English.
 - sitemap.xml: https://stavtheodor.com/sitemap.xml
 - robots.txt: https://stavtheodor.com/robots.txt
 - JSON-LD on page: Person, Organization, WebSite, FAQPage, BlogPosting (per post), ExhibitionEvent (per exhibition post)
+
+## Advisory and project pages
+
+Since September 2026 the site also carries advisory pages (https://stavtheodor.com/advisory/) that answer hiring questions
+(what an art advisor costs, how the process works, art for a new build in Bergen County, art for a home in
+Israel managed from abroad, commissions, collections, offices, hotels) and project case studies
+(https://stavtheodor.com/projects/). Partner pages: https://stavtheodor.com/for-designers/, https://stavtheodor.com/for-brokers/, https://stavtheodor.com/for-advisors/.
+Guide: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/. Every one of these pages is
+bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
+Contact for advisory enquiries: Stav@stavtheodor.com
