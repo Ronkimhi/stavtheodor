@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -548,6 +548,98 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  /* ---------- global language switch (site wide, 2026-09-08) ---------- */
+  .lang-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-switch button:hover:not(.active) { color: var(--bronze); }
+  body:not(.lang-he) [data-l="he"] { display: none !important; }
+  body.lang-he [data-l="en"] { display: none !important; }
+  [data-l="he"], [lang="he"] { font-family: var(--he); }
+  [data-l="he"] em, [data-l="he"] i { font-style: normal; }
+  body.lang-he .tagline { font-style: normal; }
+  body.lang-he .services-intro { font-style: normal; }
+  @media (max-width: 540px) {
+    .lang-bar { padding: 12px 20px 0; }
+    .lang-switch button { padding: 6px 14px; font-size: 12px; }
+  }
+
+  /* ---------- mail fallback panel (for browsers with no mail handler) ---------- */
+  .mail-fallback {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 26, 23, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .mail-fallback.open { display: flex; }
+  .mail-fallback .card {
+    background: var(--ivory);
+    border: 1px solid var(--bronze-soft);
+    max-width: 420px;
+    width: 100%;
+    padding: 30px 30px 26px;
+    text-align: center;
+  }
+  .mail-fallback h3 {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .mail-fallback p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .mail-fallback .addr {
+    display: block;
+    font-size: 19px;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    word-break: break-all;
+    direction: ltr;
+  }
+  .mail-fallback .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mail-fallback .row a, .mail-fallback .row button {
+    font-family: var(--en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--bronze);
+    background: transparent;
+    color: var(--bronze);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mail-fallback .row a.solid { background: var(--bronze); color: var(--ivory); }
+  .mail-fallback .close {
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
   .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
   .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
   .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
@@ -604,7 +696,6 @@
   .hub-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 8px; }
   .hub-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
   .hub-card:hover { border-color: var(--bronze); }
-  .page .lang-switch, .hub .lang-switch { margin-bottom: 28px; }
 </style>
 <script type="application/ld+json">
 {
@@ -737,7 +828,7 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
-      "email": "stavtheodor85@gmail.com",
+      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
@@ -776,12 +867,34 @@
 </head>
 <body>
 
+<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/advisory/">Advisory</a>
-  <a href="/projects/">Projects</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he">ייעוץ</span></a>
+  <a href="/projects/"><span data-l="en">Projects</span><span data-l="he">פרויקטים</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 32px;">
@@ -802,68 +915,68 @@
   <div class="hub-grid">
     <a class="hub-card" href="/projects/caesarea-garden-villa/">
       <img src="/images/projects/garden-villa.jpg" alt="Foyer of a Caesarea garden villa: two tall portraits in slim black frames, one in greens with a pink headdress, one in blues with orange hair, on the walls of the entrance hall, black front door and staircase beyond" loading="lazy">
-      <div class="in"><h3>Caesarea, Garden Villa</h3><p>Two large scale portraits of women, rich layered texture, slim contemporary frames, facing the front door of a Caesarea garden villa. By Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Caesarea, Garden Villa</h3><h3 data-l="he" dir="rtl">קיסריה, וילה עם גינה</h3><p data-l="en">Two large scale portraits of women, rich layered texture, slim contemporary frames, facing the front door of a Caesarea garden villa. By Stav Theodor.</p><p data-l="he" dir="rtl">במבואה של וילה עם גינה בקיסריה הצבתי שני דיוקנאות בקנה מידה גדול של נשים, מצוירים במרקם עשיר ורב שכבתי, מול דלת הכניסה, כך שהם הדבר הראשון שכל מי שנכנס רואה.</p></div>
     </a>
     <a class="hub-card" href="/projects/caesarea-luxury-residence-home-office/">
       <img src="/images/projects/caesarea-office.jpg" alt="Home office in a Caesarea residence: a painting of galloping horses in grey tones above the desk and two monitors, guitars on the wall, and a colorful painting of a musician at a piano on the wood panelled wall of the seating corner" loading="lazy">
-      <div class="in"><h3>Caesarea, Luxury Residence, Home Office</h3><p>Two artworks for a Caesarea home office, horses and music, by artists in the client&#x27;s country of origin: one acquired, one commissioned from the same artist.</p></div>
+      <div class="in"><h3 data-l="en">Caesarea, Luxury Residence, Home Office</h3><h3 data-l="he" dir="rtl">קיסריה, בית יוקרה, משרד ביתי</h3><p data-l="en">Two artworks for a Caesarea home office, horses and music, by artists in the client&#x27;s country of origin: one acquired, one commissioned from the same artist.</p><p data-l="he" dir="rtl">למשרד הביתי בבית יוקרה בקיסריה הבאתי שתי יצירות שמשקפות את שתי האהבות של בעלי הבית, סוסים ומוזיקה, מאת אמנים החיים ועובדים בארץ המוצא שלהם.</p></div>
     </a>
     <a class="hub-card" href="/projects/caesarea-private-estate/">
       <img src="/images/projects/caesarea-stone.jpg" alt="Large scale painting of a rider on a blue horse with gold detailing, hung high on a stone wall above the fireplace in a Caesarea private estate, brass sconces on either side" loading="lazy">
-      <div class="in"><h3>Caesarea, Private Estate</h3><p>Large scale works from France, layered pigments and 18k gold, sourced and negotiated for a private collector&#x27;s estate in Caesarea. By Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Caesarea, Private Estate</h3><h3 data-l="he" dir="rtl">קיסריה, אחוזה פרטית</h3><p data-l="en">Large scale works from France, layered pigments and 18k gold, sourced and negotiated for a private collector&#x27;s estate in Caesarea. By Stav Theodor.</p><p data-l="he" dir="rtl">לאחוזה של אספן פרטי בקיסריה איתרתי יצירות בקנה מידה גדול מצרפת, פיגמנטים בשכבות עם פרטי זהב 18 קראט, בשיתוף פעולה הדוק עם גלריה מובילה.</p></div>
     </a>
     <a class="hub-card" href="/projects/caesarea-sea-view-villa-triptych/">
       <img src="/images/projects/storks-triptych.jpg" alt="Three panel painting of storks, commissioned from an Italian artist for a sea view villa in Caesarea" loading="lazy">
-      <div class="in"><h3>Caesarea sea view villa: a 3.5 meter triptych of storks</h3><p>A 3.5 meter triptych by an Italian artist for a sea view villa in Caesarea. Three storks at its center stand for homecoming, strength and belonging.</p></div>
+      <div class="in"><h3 data-l="en">Caesarea sea view villa: a 3.5 meter triptych of storks</h3><h3 data-l="he" dir="rtl">וילה עם נוף לים בקיסריה: טריפטיך חסידות באורך 3.5 מטר</h3><p data-l="en">A 3.5 meter triptych by an Italian artist for a sea view villa in Caesarea. Three storks at its center stand for homecoming, strength and belonging.</p><p data-l="he" dir="rtl">עבור וילה עם נוף לים בקיסריה הזמנתי מאמן איטלקי טריפטיך באורך 3.5 מטר, ובמרכזו שלוש חסידות.</p></div>
     </a>
     <a class="hub-card" href="/projects/closter-new-jersey-new-construction/">
       <img src="/images/projects/closter-dining.jpg" alt="Dining room in Closter, New Jersey, three small paintings hung in a row above a long oak table under two black pendant lights" loading="lazy">
-      <div class="in"><h3>Closter, New Jersey: a collection for a newly built house</h3><p>A collection curated for a newly built residence in Closter, New Jersey, with leading New York galleries: Jewish and Israeli artists among contemporary voices.</p></div>
+      <div class="in"><h3 data-l="en">Closter, New Jersey: a collection for a newly built house</h3><h3 data-l="he" dir="rtl">קלוסטר, ניו ג&#x27;רזי: אוסף לבית שזה עתה נבנה</h3><p data-l="en">A collection curated for a newly built residence in Closter, New Jersey, with leading New York galleries: Jewish and Israeli artists among contemporary voices.</p><p data-l="he" dir="rtl">לבית מגורים פרטי שזה עתה נבנה בקלוסטר, ניו ג&#x27;רזי, הוזמנתי לאצור אוסף שייתן לאדריכלות יותר אופי ולעיצוב הפנים יותר עומק.</p></div>
     </a>
     <a class="hub-card" href="/projects/creating-hope-exhibition-un-geneva/">
       <img src="/images/projects/stav-gallery.jpg" alt="Stav Theodor in the gallery at the Creating Hope exhibition" loading="lazy">
-      <div class="in"><h3>Creating Hope: 27 Israeli artists, from billboards to the United Nations in Geneva</h3><p>Creating Hope, curated by Stav Theodor: 27 Israeli artists interpret the word hope. Shown across Israel, on billboards, and at the UN Offices in Geneva.</p></div>
+      <div class="in"><h3 data-l="en">Creating Hope: 27 Israeli artists, from billboards to the United Nations in Geneva</h3><h3 data-l="he" dir="rtl">Creating Hope: 27 אמנים ישראלים, משלטי חוצות ועד האו&quot;ם בז&#x27;נבה</h3><p data-l="en">Creating Hope, curated by Stav Theodor: 27 Israeli artists interpret the word hope. Shown across Israel, on billboards, and at the UN Offices in Geneva.</p><p data-l="he" dir="rtl">Creating Hope היא תערוכה שאצרתי, ובה עבודות של 27 אמנים ישראלים שכל אחד מהם פירש את המילה &quot;תקווה&quot;.</p></div>
     </a>
     <a class="hub-card" href="/projects/herzliya-pituach-sea-view-apartment/">
       <img src="/images/projects/herzliya-window.jpg" alt="Two views of the Herzliya Pituach apartment: a large scale Yigal Ozeri painting of an aged arched window near the entrance, two tall driftwood sculptures beside it, and the living room opening to the sea" loading="lazy">
-      <div class="in"><h3>Herzliya Pituach, Sea View Apartment</h3><p>A large scale Yigal Ozeri painting of an aged window near the entrance of a Herzliya Pituach apartment, in dialogue with the sea facing windows. Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Herzliya Pituach, Sea View Apartment</h3><h3 data-l="he" dir="rtl">הרצליה פיתוח, דירה עם נוף לים</h3><p data-l="en">A large scale Yigal Ozeri painting of an aged window near the entrance of a Herzliya Pituach apartment, in dialogue with the sea facing windows. Stav Theodor.</p><p data-l="he" dir="rtl">סמוך לכניסה לדירה עם נוף לים בהרצליה פיתוח הצבתי ציור בקנה מידה גדול של יגאל עוזרי, חלון ישן ומחוספס, כך שהוא מדבר אל החלונות האמיתיים הפונים לים.</p></div>
     </a>
     <a class="hub-card" href="/projects/hod-hasharon-private-villa/">
       <img src="/images/projects/hod-hasharon.jpg" alt="Open living space in a Hod Hasharon villa, a large figurative artwork of a woman&#x27;s face dissolving into red roses on a concrete wall, garden and pool beyond the glass" loading="lazy">
-      <div class="in"><h3>Hod Hasharon private villa: one work as the emotional center of the house</h3><p>One large scale figurative digital artwork chosen to define the emotional center of an open, light saturated villa in Hod Hasharon. Selected by Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Hod Hasharon private villa: one work as the emotional center of the house</h3><h3 data-l="he" dir="rtl">וילה פרטית בהוד השרון: עבודה אחת כמרכז הרגשי של הבית</h3><p data-l="en">One large scale figurative digital artwork chosen to define the emotional center of an open, light saturated villa in Hod Hasharon. Selected by Stav Theodor.</p><p data-l="he" dir="rtl">לווילה פרטית בהוד השרון, בית פתוח ורווי אור שבו בטון וטבע נפגשים, בחרתי עבודה דיגיטלית פיגורטיבית אחת בקנה מידה גדול שתגדיר את המרכז הרגשי של החלל.</p></div>
     </a>
     <a class="hub-card" href="/projects/hotels-and-hospitality-collections/">
       <img src="/images/projects/waldorf-lobby.jpg" alt="Lobby of the Waldorf Astoria Chengdu with sculptural artworks" loading="lazy">
-      <div class="in"><h3>Hotels and hospitality collections: Waldorf Astoria, St. Regis, cruise lines</h3><p>Art concepts and collections built with luxury hospitality leaders: Waldorf Astoria Chengdu, St. Regis Amman, Holland America Line, Costa Cruises and more.</p></div>
+      <div class="in"><h3 data-l="en">Hotels and hospitality collections: Waldorf Astoria, St. Regis, cruise lines</h3><h3 data-l="he" dir="rtl">אוספי מלונאות ואירוח: וולדורף אסטוריה, סנט רג&#x27;יס, קווי שיט</h3><p data-l="en">Art concepts and collections built with luxury hospitality leaders: Waldorf Astoria Chengdu, St. Regis Amman, Holland America Line, Costa Cruises and more.</p><p data-l="he" dir="rtl">במשך שנים עיצבתי קונספטים אמנותיים ובניתי אוספי אמנות עכשווית תפורים למידה עבור קבוצות אירוח יוקרתיות: מלונות פרימיום, אתרי נופש אקסקלוסיביים ואוניות שיט גדולות.</p></div>
     </a>
     <a class="hub-card" href="/projects/manhattan-skyline-residence/">
       <img src="/images/projects/manhattan-bar.jpg" alt="Custom marble bar in a Manhattan apartment with a large format digital collage of a glamorous gathering set between backlit shelves of bottles" loading="lazy">
-      <div class="in"><h3>Manhattan skyline residence: a collage that quotes Manet above the bar</h3><p>A large format digital collage anchors the custom bar of a Manhattan skyline apartment, chosen for a client who loves to entertain. It references Manet.</p></div>
+      <div class="in"><h3 data-l="en">Manhattan skyline residence: a collage that quotes Manet above the bar</h3><h3 data-l="he" dir="rtl">דירה מול קו הרקיע במנהטן: קולאז&#x27; שמצטט את מאנה מעל הבר</h3><p data-l="en">A large format digital collage anchors the custom bar of a Manhattan skyline apartment, chosen for a client who loves to entertain. It references Manet.</p><p data-l="he" dir="rtl">לדירה הזאת במנהטן, מול קו הרקיע, בחרתי קולאז&#x27; דיגיטלי אחד בפורמט גדול שיעגן את הבר שנבנה בה במיוחד.</p></div>
     </a>
     <a class="hub-card" href="/projects/ramat-gan-private-home/">
       <img src="/images/projects/ramat-gan.jpg" alt="Living room in a Ramat Gan private home: white sofa, oak cabinetry, and a large format photograph of two figures in green and pink ceremonial dress on the central wall" loading="lazy">
-      <div class="in"><h3>Ramat Gan, Private Home</h3><p>A large format photograph by a Korean artist, two figures in ceremonial dress, at the heart of a Ramat Gan living room after a trip to Korea. By Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Ramat Gan, Private Home</h3><h3 data-l="he" dir="rtl">רמת גן, בית פרטי</h3><p data-l="en">A large format photograph by a Korean artist, two figures in ceremonial dress, at the heart of a Ramat Gan living room after a trip to Korea. By Stav Theodor.</p><p data-l="he" dir="rtl">לבית פרטי ברמת גן הצבתי בלב חלל המגורים צילום בפורמט גדול של אמן קוריאני, שתי דמויות בלבוש טקסי.</p></div>
     </a>
     <a class="hub-card" href="/projects/tel-aviv-bauhaus-residence/">
       <img src="/images/projects/bauhaus-2.jpg" alt="Hyper collage digital artwork on glossy anti reflective acrylic, the central focal point of a Bauhaus residence in Tel Aviv" loading="lazy">
-      <div class="in"><h3>Tel Aviv Bauhaus residence: a hyper collage on anti reflective acrylic</h3><p>For a Bauhaus residence in Tel Aviv, a hyper collage digital artwork on glossy anti reflective acrylic is the focal point. Why that medium, and why there.</p></div>
+      <div class="in"><h3 data-l="en">Tel Aviv Bauhaus residence: a hyper collage on anti reflective acrylic</h3><h3 data-l="he" dir="rtl">בית באוהאוס בתל אביב: היפר קולאז&#x27; על אקריליק נגד השתקפות</h3><p data-l="en">For a Bauhaus residence in Tel Aviv, a hyper collage digital artwork on glossy anti reflective acrylic is the focal point. Why that medium, and why there.</p><p data-l="he" dir="rtl">נקודת המוקד של בית הבאוהאוס הזה בתל אביב היא עבודת היפר קולאז&#x27; דיגיטלית, מודפסת על אקריליק מבריק נגד השתקפות.</p></div>
     </a>
     <a class="hub-card" href="/projects/tel-aviv-home-of-roni-daloomi/">
       <img src="/images/projects/roni.jpg" alt="The Tel Aviv home of Roni Daloomi: a stool by the keyboard beside a minimalist painting of small figures, the kitchen with its pink banquette, and two of the artworks" loading="lazy">
-      <div class="in"><h3>Tel Aviv, home of Roni Daloomi: three works, two artists, visual candy</h3><p>For the Tel Aviv home of singer and actress Roni Daloomi, three joyful, minimalist works by two contemporary Israeli artists. Visual candy, by Stav Theodor.</p></div>
+      <div class="in"><h3 data-l="en">Tel Aviv, home of Roni Daloomi: three works, two artists, visual candy</h3><h3 data-l="he" dir="rtl">תל אביב, ביתה של רוני דלומי: שלוש עבודות, שני אמנים, ממתק חזותי</h3><p data-l="en">For the Tel Aviv home of singer and actress Roni Daloomi, three joyful, minimalist works by two contemporary Israeli artists. Visual candy, by Stav Theodor.</p><p data-l="he" dir="rtl">לביתה בתל אביב של הזמרת והשחקנית רוני דלומי בחרתי שלוש עבודות של שני אמנים ישראלים עכשוויים: יצירות שמחות ומינימליסטיות שמשקפות את הרוח האופטימית שלה.</p></div>
     </a>
     <a class="hub-card" href="/projects/tel-aviv-private-residence-shtisel-commission/">
       <img src="/images/projects/shtisel-seaview.jpg" alt="Tel Aviv living room with the sea on one side and the city on the other, a painting of a mother and baby on a red chair hung on the central concrete column" loading="lazy">
-      <div class="in"><h3>Tel Aviv private residence: a painting commissioned from the Shtisel artist</h3><p>For a Tel Aviv residence, a painting commissioned from the artist whose work appeared in Shtisel: a mother caressing her baby, hung between sea and city.</p></div>
+      <div class="in"><h3 data-l="en">Tel Aviv private residence: a painting commissioned from the Shtisel artist</h3><h3 data-l="he" dir="rtl">בית פרטי בתל אביב: ציור שהוזמן מהאמן של שטיסל</h3><p data-l="en">For a Tel Aviv residence, a painting commissioned from the artist whose work appeared in Shtisel: a mother caressing her baby, hung between sea and city.</p><p data-l="he" dir="rtl">לבית פרטי בתל אביב הזמנתי ציור מהאמן שציוריו הופיעו בסדרה הישראלית שטיסל, בתגובה לאהבת הלקוח לדימויים האינטימיים של הסדרה.</p></div>
     </a>
     <a class="hub-card" href="/projects/tel-aviv-renovated-bauhaus-home/">
       <img src="/images/projects/bauhaus.jpg" alt="A single artwork as the focal point of a minimalist, monochromatic renovated Bauhaus home in Tel Aviv" loading="lazy">
-      <div class="in"><h3>Tel Aviv renovated Bauhaus home: one artwork as the focal point</h3><p>In a minimalist, monochromatic renovated Bauhaus home in Tel Aviv, one artwork is the focal point, bringing color and texture without breaking the calm.</p></div>
+      <div class="in"><h3 data-l="en">Tel Aviv renovated Bauhaus home: one artwork as the focal point</h3><h3 data-l="he" dir="rtl">בית באוהאוס משופץ בתל אביב: יצירה אחת כנקודת מוקד</h3><p data-l="en">In a minimalist, monochromatic renovated Bauhaus home in Tel Aviv, one artwork is the focal point, bringing color and texture without breaking the calm.</p><p data-l="he" dir="rtl">בבית הבאוהאוס המשופץ הזה בתל אביב יצירה אחת היא נקודת המוקד, והיא מכניסה צבע ומרקם לחלל מונוכרומטי. בית מינימליסטי לא צריך עוד חפצים, הוא צריך החלטה אחת שנעשית היטב.</p></div>
     </a>
   </div>
   <div class="page" style="max-width: 760px;">
-    <div class="cta-card" lang="en"><p>Send me one photo of the wall, and a line about the space. I will tell you what I see.</p><a class="btn" href="mailto:Stav@stavtheodor.com">Write to Stav</a></div>
-    <div class="cta-card" lang="he" dir="rtl"><p>שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</p><a class="btn" href="mailto:Stav@stavtheodor.com">כתבו לסתיו</a></div>
+    <div class="cta-card" lang="en"><p>Send me one photo of the wall, and a line about the space. I will tell you what I see.</p><a class="btn" href="mailto:stav@stavtheodor.com">Write to Stav</a></div>
+    <div class="cta-card" lang="he" dir="rtl"><p>שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</p><a class="btn" href="mailto:stav@stavtheodor.com">כתבו לסתיו</a></div>
   </div>
 </section>
 
@@ -871,17 +984,33 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="/#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
     <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
 </footer>
+
+<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
@@ -894,21 +1023,91 @@
 
 <script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>

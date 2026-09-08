@@ -10,7 +10,7 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 - Certified art curator. M.A. in art history, Faculty of Arts, Ben-Gurion University (BGU). Curatorial and museum studies diploma, Faculty of Arts, Tel Aviv University (TAU).
 - Clients: interior designers and architects (on behalf of their clients), private collectors, home owners, business owners, hotels and hospitality groups.
 - Languages: Hebrew and English.
-- Contact for these pages: Stav@stavtheodor.com and https://www.stavtheodor.com. Never publish a phone number anywhere on the site (site owner rule, 2026-07-02).
+- Contact for these pages: stav@stavtheodor.com and https://www.stavtheodor.com. Never publish a phone number anywhere on the site (site owner rule, 2026-07-02).
 - Instagram: @theodorafineart.
 
 ## 2. Positioning (use this voice)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -549,6 +549,98 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  /* ---------- global language switch (site wide, 2026-09-08) ---------- */
+  .lang-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-switch button:hover:not(.active) { color: var(--bronze); }
+  body:not(.lang-he) [data-l="he"] { display: none !important; }
+  body.lang-he [data-l="en"] { display: none !important; }
+  [data-l="he"], [lang="he"] { font-family: var(--he); }
+  [data-l="he"] em, [data-l="he"] i { font-style: normal; }
+  body.lang-he .tagline { font-style: normal; }
+  body.lang-he .services-intro { font-style: normal; }
+  @media (max-width: 540px) {
+    .lang-bar { padding: 12px 20px 0; }
+    .lang-switch button { padding: 6px 14px; font-size: 12px; }
+  }
+
+  /* ---------- mail fallback panel (for browsers with no mail handler) ---------- */
+  .mail-fallback {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 26, 23, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .mail-fallback.open { display: flex; }
+  .mail-fallback .card {
+    background: var(--ivory);
+    border: 1px solid var(--bronze-soft);
+    max-width: 420px;
+    width: 100%;
+    padding: 30px 30px 26px;
+    text-align: center;
+  }
+  .mail-fallback h3 {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .mail-fallback p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .mail-fallback .addr {
+    display: block;
+    font-size: 19px;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    word-break: break-all;
+    direction: ltr;
+  }
+  .mail-fallback .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mail-fallback .row a, .mail-fallback .row button {
+    font-family: var(--en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--bronze);
+    background: transparent;
+    color: var(--bronze);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mail-fallback .row a.solid { background: var(--bronze); color: var(--ivory); }
+  .mail-fallback .close {
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
   .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
   .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
   .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
@@ -661,7 +753,7 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
-      "email": "stavtheodor85@gmail.com",
+      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
@@ -700,11 +792,33 @@
 </head>
 <body>
 
+<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/#about">About</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/#about"><span data-l="en">About</span><span data-l="he">אודות</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 40px;">
@@ -716,13 +830,11 @@
 <hr class="divider">
 
 <section id="posts" class="wrap">
-  <div class="lang-switch" role="group" aria-label="Choose post language">
-    <button type="button" data-lang="he" class="active">עברית</button>
-    <button type="button" data-lang="en">English</button>
-  </div>
   <article class="post" id="may-big-art-month-nyc">
-    <div class="post-date">May 20, 2026</div>
-    <h2 class="post-title">May, the Big Art Month in New York</h2>
+    <div class="post-date" data-l="en">May 20, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">20 במאי 2026</div>
+    <h2 class="post-title" data-l="en">May, the Big Art Month in New York</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">מאי, חודש האמנות הגדול בניו יורק</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p><strong>מאי הוא החודש הגדול ביותר לאמנות בניו יורק.</strong> שבוע ירידי האמנות הגדולים של ניו יורק אמנם נסגר בשבוע שעבר, עם ירידי אמנות דוגמת Frieze Art של הגלריות הגדולות והחזקות ביותר בעיר, ירידים מסקרנים כמו NADA‏ (New Art Dealers Alliance), יריד שמוקדש לגלריות צעירות, קולות חדשים ואמנות עכשווית ניסיונית, ו־Independent Art Fair, יריד אינטימי יותר שמתמקד בפרזנטציות אוצרותיות וסולו־שואוז איכותיים, אבל העיר עדיין מלאה בתערוכות ששווה מאוד לראות.</p>
 
@@ -835,7 +947,8 @@
 <hr class="divider">
 
 <section class="wrap" style="padding: 40px 0 64px;">
-  <div class="label">More from Art Radar</div>
+  <div class="label" data-l="en">More from Art Radar</div>
+  <div class="label" data-l="he">עוד מראדאר אמנות</div>
   <ul style="margin-top: 16px; line-height: 2;">
       <li><a href="/radar/four-tribeca-galleries-september-2026/">A September Gallery Walk in Tribeca: Four Shows to See</a></li>
       <li><a href="/radar/pool-in-israeli-art/">5 Artists, One Subject: The Pool in Israeli Art</a></li>
@@ -846,24 +959,40 @@
       <li><a href="/radar/botero-in-new-york/">Botero in New York at Sotheby's</a></li>
       <li><a href="/radar/three-exhibitions-three-mediums/">Three Exhibitions, Three Mediums, One Subject: Light</a></li>
   </ul>
-  <p style="margin-top: 24px;"><a href="/#radar">&larr; Full Art Radar archive</a></p>
+  <p style="margin-top: 24px;"><a href="/#radar"><span data-l="en">&larr; Full Art Radar archive</span><span data-l="he">&larr; לארכיון המלא של ראדאר אמנות</span></a></p>
 </section>
 
 <hr class="divider">
 
 <footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="/#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
     <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
 </footer>
+
+<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
@@ -876,21 +1005,91 @@
 
 <script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>

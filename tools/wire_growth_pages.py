@@ -64,7 +64,7 @@ Israel managed from abroad, commissions, collections, offices, hotels) and proje
 ({SITE}/projects/). Partner pages: {SITE}/for-designers/, {SITE}/for-brokers/, {SITE}/for-advisors/.
 Guide: {SITE}/guide/ten-questions-before-you-buy-your-first-serious-artwork/. Every one of these pages is
 bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
-Contact for advisory enquiries: Stav@stavtheodor.com
+Contact for advisory enquiries: stav@stavtheodor.com
 """
     open("agent.txt", "w", encoding="utf-8").write(s)
 

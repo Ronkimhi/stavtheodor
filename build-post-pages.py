@@ -38,28 +38,129 @@ FAVICONS = """<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">"""
 
-LANG_TOGGLE = """<div class="lang-switch" role="group" aria-label="Choose post language">
-    <button type="button" data-lang="he" class="active">עברית</button>
-    <button type="button" data-lang="en">English</button>
-  </div>"""
+LANG_TOGGLE = """<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>"""
+
+LANG_BOOT = """<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>"""
+
+MAIL_UI = """<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>"""
 
 LANG_JS = """<script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>"""
@@ -75,13 +176,15 @@ GA_SNIPPET = """<!-- Google tag (gtag.js) -->
 
 FOOTER = """<footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="/#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
     <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
@@ -171,7 +274,7 @@ def render_post_page(p, all_posts):
     )
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -203,11 +306,15 @@ def render_post_page(p, all_posts):
 </head>
 <body>
 
+{LANG_BOOT}
+
+{LANG_TOGGLE}
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/#about">About</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/#about"><span data-l="en">About</span><span data-l="he">אודות</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 40px;">
@@ -219,23 +326,25 @@ def render_post_page(p, all_posts):
 <hr class="divider">
 
 <section id="posts" class="wrap">
-  {LANG_TOGGLE}
   <article class="{p['article_class']}" id="{p['slug']}">{article_inner}</article>
 </section>
 
 <hr class="divider">
 
 <section class="wrap" style="padding: 40px 0 64px;">
-  <div class="label">More from Art Radar</div>
+  <div class="label" data-l="en">More from Art Radar</div>
+  <div class="label" data-l="he">עוד מראדאר אמנות</div>
   <ul style="margin-top: 16px; line-height: 2;">
 {more_links}
   </ul>
-  <p style="margin-top: 24px;"><a href="/#radar">&larr; Full Art Radar archive</a></p>
+  <p style="margin-top: 24px;"><a href="/#radar"><span data-l="en">&larr; Full Art Radar archive</span><span data-l="he">&larr; לארכיון המלא של ראדאר אמנות</span></a></p>
 </section>
 
 <hr class="divider">
 
 {FOOTER}
+
+{MAIL_UI}
 
 {GA_SNIPPET}
 

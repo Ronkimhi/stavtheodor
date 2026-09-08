@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -553,6 +553,98 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  /* ---------- global language switch (site wide, 2026-09-08) ---------- */
+  .lang-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-switch button:hover:not(.active) { color: var(--bronze); }
+  body:not(.lang-he) [data-l="he"] { display: none !important; }
+  body.lang-he [data-l="en"] { display: none !important; }
+  [data-l="he"], [lang="he"] { font-family: var(--he); }
+  [data-l="he"] em, [data-l="he"] i { font-style: normal; }
+  body.lang-he .tagline { font-style: normal; }
+  body.lang-he .services-intro { font-style: normal; }
+  @media (max-width: 540px) {
+    .lang-bar { padding: 12px 20px 0; }
+    .lang-switch button { padding: 6px 14px; font-size: 12px; }
+  }
+
+  /* ---------- mail fallback panel (for browsers with no mail handler) ---------- */
+  .mail-fallback {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 26, 23, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .mail-fallback.open { display: flex; }
+  .mail-fallback .card {
+    background: var(--ivory);
+    border: 1px solid var(--bronze-soft);
+    max-width: 420px;
+    width: 100%;
+    padding: 30px 30px 26px;
+    text-align: center;
+  }
+  .mail-fallback h3 {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .mail-fallback p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .mail-fallback .addr {
+    display: block;
+    font-size: 19px;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    word-break: break-all;
+    direction: ltr;
+  }
+  .mail-fallback .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mail-fallback .row a, .mail-fallback .row button {
+    font-family: var(--en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--bronze);
+    background: transparent;
+    color: var(--bronze);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mail-fallback .row a.solid { background: var(--bronze); color: var(--ivory); }
+  .mail-fallback .close {
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
   .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
   .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
   .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
@@ -667,7 +759,7 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
-      "email": "stavtheodor85@gmail.com",
+      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
@@ -715,47 +807,82 @@
 </head>
 <body>
 
+<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
 <nav>
-  <a href="#about">About</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="/advisory/">Advisory</a>
-  <a href="/projects/">Projects</a>
-  <a href="/museum/">Museum</a>
-  <a href="#radar">Art Radar</a>
-  <a href="#posts">Posts</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
+  <a href="#about"><span data-l="en">About</span><span data-l="he">אודות</span></a>
+  <a href="#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a>
+  <a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he">ייעוץ</span></a>
+  <a href="/projects/"><span data-l="en">Projects</span><span data-l="he">פרויקטים</span></a>
+  <a href="/museum/"><span data-l="en">Museum</span><span data-l="he">מוזיאון</span></a>
+  <a href="#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="#posts"><span data-l="en">Posts</span><span data-l="he">פוסטים</span></a>
+  <a href="#faq"><span data-l="en">FAQ</span><span data-l="he">שאלות</span></a>
+  <a href="#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap">
   <img class="hero-logo" src="images/theodora-logo.png" alt="THEODORA · fine art living" width="440" height="195">
-  <h1>Stav Theodor&#8209;Kimhi</h1>
-  <div class="role">Art Curator &amp; Advisor</div>
-  <div class="cities">New York City &nbsp;&middot;&nbsp; New Jersey &nbsp;&middot;&nbsp; Tel Aviv</div>
+  <h1 data-l="en">Stav Theodor&#8209;Kimhi</h1>
+  <h1 data-l="he">סתיו תאודור&#8209;קמחי</h1>
+  <div class="role" data-l="en">Art Curator &amp; Advisor</div>
+  <div class="role" data-l="he">אוצרת ויועצת אמנות</div>
+  <div class="cities" data-l="en">New York City &nbsp;&middot;&nbsp; New Jersey &nbsp;&middot;&nbsp; Tel Aviv</div>
+  <div class="cities" data-l="he">ניו יורק &nbsp;&middot;&nbsp; ניו ג'רזי &nbsp;&middot;&nbsp; תל אביב</div>
   <hr class="rule">
-  <p class="tagline">I don't simply place art in spaces, I connect people with the art they are meant to live with.</p>
+  <p class="tagline" data-l="en">I don't simply place art in spaces, I connect people with the art they are meant to live with.</p>
+  <p class="tagline" data-l="he">אני לא רק מציבה אמנות בחללים, אני מחברת בין אנשים לאמנות שנועדה לחיות איתם.</p>
 </header>
 
 <hr class="divider">
 
 <!-- ============ ABOUT ============ -->
 <section id="about" class="wrap">
-  <div class="label">About</div>
+  <div class="label" data-l="en">About</div>
+  <div class="label" data-l="he">אודות</div>
   <div class="about-grid">
     <figure class="about-portrait">
       <img src="images/stav-portrait.jpg" alt="Stav Theodor-Kimhi, founder and art curator" width="508" height="430">
-      <figcaption>Founder &amp; Art Curator</figcaption>
+      <figcaption data-l="en">Founder &amp; Art Curator</figcaption>
+      <figcaption data-l="he">מייסדת ואוצרת אמנות</figcaption>
     </figure>
-    <div class="prose">
+    <div class="prose" data-l="en">
     <p class="lead">Art is not an accessory. It is a meeting point between a person and a space. A conversation. An emotion. A reflection of identity.</p>
     <p>I founded THEODORA after two decades across the art world: museums, galleries, academia, and years of work alongside leaders in international hospitality, building art concepts and collections for projects from hotels to private homes. That experience taught me one thing above all: the right piece, in the right space, at the right moment, changes how a person sees.</p>
     <p>THEODORA exists to help people discover that connection. To find artworks that resonate on a personal level and create spaces that feel meaningful, distinctive, and alive. Recent projects include private residences in Caesarea, Tel Aviv, and Herzliya, large-scale hospitality commissions, and the exhibition Creating Hope.</p>
     </div>
+    <div class="prose" data-l="he" dir="rtl">
+    <p class="lead">אמנות היא לא אקססורי. היא נקודת מפגש בין אדם לחלל. שיחה. רגש. השתקפות של זהות.</p>
+    <p>הקמתי את THEODORA אחרי שני עשורים בעולם האמנות: מוזיאונים, גלריות, אקדמיה, ושנים של עבודה לצד מובילים בתחום האירוח הבינלאומי, בבניית קונספטים ואוספים של אמנות לפרויקטים ממלונות ועד בתים פרטיים. הניסיון הזה לימד אותי דבר אחד מעל הכול: היצירה הנכונה, בחלל הנכון, ברגע הנכון, משנה את האופן שבו אדם רואה.</p>
+    <p>THEODORA קיימת כדי לעזור לאנשים לגלות את החיבור הזה. למצוא יצירות שמהדהדות ברמה האישית, וליצור חללים שמרגישים משמעותיים, ייחודיים וחיים. בין הפרויקטים האחרונים: בתים פרטיים בקיסריה, בתל אביב ובהרצליה, הזמנות בקנה מידה גדול לעולם האירוח, והתערוכה Creating Hope.</p>
+    </div>
   </div>
   <div class="services">
-    <div class="label">Our Services</div>
-    <p class="services-intro">Through its global network of artists, galleries, and cultural institutions, Theodora offers clients exclusive access to exceptional artworks and unique opportunities within the international art world.</p>
-    <div class="services-grid">
+    <div class="label" data-l="en">Our Services</div>
+    <div class="label" data-l="he">השירותים שלנו</div>
+    <p class="services-intro" data-l="en">Through its global network of artists, galleries, and cultural institutions, Theodora offers clients exclusive access to exceptional artworks and unique opportunities within the international art world.</p>
+    <p class="services-intro" data-l="he">באמצעות רשת גלובלית של אמנים, גלריות ומוסדות תרבות, THEODORA מעניקה ללקוחותיה גישה בלעדית ליצירות יוצאות דופן ולהזדמנויות ייחודיות בעולם האמנות הבינלאומי.</p>
+    <div class="services-grid" data-l="en">
       <div class="service">
         <h3>Art Consulting &amp; Curation</h3>
         <p>From a single artwork to a complete collection</p>
@@ -773,18 +900,39 @@
         <p>Framing and placement, managed end to end</p>
       </div>
     </div>
+    <div class="services-grid" data-l="he" dir="rtl">
+      <div class="service">
+        <h3>ייעוץ ואוצרות אמנות</h3>
+        <p>מיצירה אחת ועד אוסף שלם</p>
+      </div>
+      <div class="service">
+        <h3>איתור ורכישה</h3>
+        <p>בהתאמה אישית, דרך רשת גלובלית של אמנים ויוצרים</p>
+      </div>
+      <div class="service">
+        <h3>הזמנות עבודה וניהול קריאייטיב</h3>
+        <p>מהקונספט הראשון ועד הביצוע הסופי</p>
+      </div>
+      <div class="service">
+        <h3>הפקה והתקנה</h3>
+        <p>מסגור והצבה, בניהול מלא מקצה לקצה</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ PORTFOLIO ============ -->
 <section id="portfolio">
   <div class="wrap">
-    <div class="label">Portfolio</div>
-    <p class="portfolio-lead">Hotels by the sea, private homes, commissioned works, and the artists behind them. The best introduction to what I do is to&nbsp;see&nbsp;it.</p>
+    <div class="label" data-l="en">Portfolio</div>
+    <div class="label" data-l="he">תיק עבודות</div>
+    <p class="portfolio-lead" data-l="en">Hotels by the sea, private homes, commissioned works, and the artists behind them. The best introduction to what I do is to&nbsp;see&nbsp;it.</p>
+    <p class="portfolio-lead" data-l="he" dir="rtl">מלונות מול הים, בתים פרטיים, עבודות מוזמנות והאמנים שמאחוריהן. הדרך הטובה ביותר להכיר את מה שאני עושה היא פשוט&nbsp;לראות.</p>
   </div>
   <div class="film" id="film">
     <video src="videos/theodora-film-2026-09.mp4" poster="images/theodora-film-poster.jpg" controls preload="metadata" playsinline aria-label="THEODORA, a 75 second introduction to Stav Theodor's art curation and advisory practice"></video>
-    <p class="film-caption">Seventy five seconds on what I do, for designers, private collectors, home and business owners.</p>
+    <p class="film-caption" data-l="en">Seventy five seconds on what I do, for designers, private collectors, home and business owners.</p>
+    <p class="film-caption" data-l="he" dir="rtl">שבעים וחמש שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</p>
   </div>
   <div class="slideshow" id="slideshow" tabindex="0">
     <div class="slide-frame" id="slide-frame">
@@ -802,9 +950,11 @@
 
 <!-- ============ ADVISORY LINKS (generated 2026-09-06 by tools/wire_growth_pages.py) ============ -->
 <section id="advisory-links" class="wrap">
-  <div class="label">Advisory</div>
-  <p class="portfolio-lead">If you are about to buy, build or move, start here. These pages answer the questions I am asked most, in plain terms, and show the work behind the answers.</p>
-  <ul style="list-style:none; padding:0; margin:18px 0 0; line-height:2;">
+  <div class="label" data-l="en">Advisory</div>
+  <div class="label" data-l="he">ייעוץ</div>
+  <p class="portfolio-lead" data-l="en">If you are about to buy, build or move, start here. These pages answer the questions I am asked most, in plain terms, and show the work behind the answers.</p>
+  <p class="portfolio-lead" data-l="he" dir="rtl">אם אתם עומדים לקנות, לבנות או לעבור דירה, התחילו כאן. העמודים האלה עונים בשפה פשוטה על השאלות שאני נשאלת הכי הרבה, ומראים את העבודה שמאחורי התשובות.</p>
+  <ul data-l="en" style="list-style:none; padding:0; margin:18px 0 0; line-height:2;">
     <li><a href="/advisory/">Art advisory, answered plainly: what it costs, how it works, where I work</a></li>
     <li><a href="/projects/">Projects: homes in Manhattan, New Jersey, Tel Aviv and Caesarea, hotels, one exhibition in Geneva</a></li>
     <li><a href="/for-designers/">For interior designers and architects</a></li>
@@ -812,18 +962,30 @@
     <li><a href="/for-advisors/">For wealth managers, family offices and private bankers</a></li>
     <li><a href="/guide/ten-questions-before-you-buy-your-first-serious-artwork/">Ten questions to answer before you buy your first serious artwork</a></li>
   </ul>
+  <ul data-l="he" dir="rtl" style="list-style:none; padding:0; margin:18px 0 0; line-height:2;">
+    <li><a href="/advisory/">ייעוץ אמנות בשפה פשוטה: כמה זה עולה, איך זה עובד, ואיפה אני עובדת</a></li>
+    <li><a href="/projects/">פרויקטים: בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות, ותערוכה אחת בז'נבה</a></li>
+    <li><a href="/for-designers/">למעצבי פנים ולאדריכלים</a></li>
+    <li><a href="/for-brokers/">למתווכי נדל"ן וליזמים: אמנות לבית החדש</a></li>
+    <li><a href="/for-advisors/">למנהלי הון, למשרדי משפחה ולבנקאים פרטיים</a></li>
+    <li><a href="/guide/ten-questions-before-you-buy-your-first-serious-artwork/">עשר שאלות שכדאי לענות עליהן לפני רכישת היצירה הרצינית הראשונה</a></li>
+  </ul>
 </section>
 
 <hr class="divider">
 
 <!-- ============ THE MUSEUM ============ -->
 <section id="museum" class="wrap">
-  <div class="label">The Museum</div>
-  <div class="prose">
+  <div class="label" data-l="en">The Museum</div>
+  <div class="label" data-l="he">המוזיאון</div>
+  <div class="prose" data-l="en">
     <p>An interactive museum of art history. Zoom through 40,000 years, from the painted caves through Egypt, Greece, and Rome to today, on a living timeline. Open a placard, and step inside a walkable 3D gallery hung with real artworks. Every fact and image comes from Wikipedia and Wikimedia Commons.</p>
   </div>
+  <div class="prose" data-l="he" dir="rtl">
+    <p>מוזיאון אינטראקטיבי של תולדות האמנות. שוטטו לאורך 40,000 שנה, מהמערות המצוירות דרך מצרים, יוון ורומא ועד ימינו, על ציר זמן חי. פתחו שלט הסבר, והיכנסו לגלריה תלת ממדית שאפשר להסתובב בתוכה, ובה יצירות אמיתיות על הקירות. כל עובדה וכל תמונה מגיעות מוויקיפדיה ומוויקישיתוף.</p>
+  </div>
   <div class="btn-row">
-    <a class="btn" href="/museum/">Enter the Museum</a>
+    <a class="btn" href="/museum/"><span data-l="en">Enter the Museum</span><span data-l="he">כניסה למוזיאון</span></a>
   </div>
 </section>
 
@@ -831,13 +993,18 @@
 
 <!-- ============ ART RADAR ============ -->
 <section id="radar" class="wrap">
-  <div class="label">Art Radar</div>
-  <div class="prose">
+  <div class="label" data-l="en">Art Radar</div>
+  <div class="label" data-l="he">ראדאר אמנות</div>
+  <div class="prose" data-l="en">
     <p>Art Radar began as a WhatsApp group for our community in northern New Jersey and New York: a weekly radar of the exhibitions, gallery openings, public installations, art fairs, and museum events that are truly worth your time. Some weeks it is a long list. Some weeks it is one precise recommendation.</p>
     <p>The posts are written in Hebrew and published in the group first. They are collected here in order, each with a full English translation, so you can always come back to them. Most cover exhibitions and events that are open around the date of the post, so the timeline reads like a living calendar of the art season.</p>
   </div>
+  <div class="prose" data-l="he" dir="rtl">
+    <p>ראדאר אמנות התחיל כקבוצת וואטסאפ לקהילה שלנו בצפון ניו ג'רזי ובניו יורק: ראדאר שבועי של התערוכות, פתיחות הגלריות, המיצבים הציבוריים, ירידי האמנות ואירועי המוזיאונים ששווים באמת את הזמן שלכם. יש שבועות שזו רשימה ארוכה. יש שבועות שזו המלצה אחת מדויקת.</p>
+    <p>הפוסטים נכתבים בעברית ומתפרסמים קודם כול בקבוצה. הם נאספים כאן לפי הסדר, כל אחד עם תרגום מלא לאנגלית, כדי שתמיד אפשר יהיה לחזור אליהם. רובם עוסקים בתערוכות ובאירועים שפתוחים סביב תאריך הפוסט, ולכן ציר הזמן נקרא כמו לוח שנה חי של עונת האמנות.</p>
+  </div>
   <div class="btn-row">
-    <a class="btn solid" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Join the WhatsApp Group</a>
+    <a class="btn solid" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Join the WhatsApp Group</span><span data-l="he">הצטרפו לקבוצת הוואטסאפ</span></a>
   </div>
 </section>
 
@@ -845,17 +1012,17 @@
 
 <!-- ============ POSTS ============ -->
 <section id="posts" class="wrap">
-  <div class="label">The Posts</div>
-  <p class="timeline-note">Hebrew and English · newest first</p>
-  <div class="lang-switch" role="group" aria-label="Choose post language">
-    <button type="button" data-lang="he" class="active">עברית</button>
-    <button type="button" data-lang="en">English</button>
-  </div>
+  <div class="label" data-l="en">The Posts</div>
+  <div class="label" data-l="he">הפוסטים</div>
+  <p class="timeline-note" data-l="en">Hebrew and English · newest first</p>
+  <p class="timeline-note" data-l="he">עברית ואנגלית · החדשים ראשונים</p>
 
   <!-- POST TEMPLATE (copy this block to add a new post, newest at the top):
   <article class="post">
-    <div class="post-date">Month D, 2026</div>
-    <h2 class="post-title">English topic label</h2>
+    <div class="post-date" data-l="en">Month D, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">D בחודש 2026</div>
+    <h2 class="post-title" data-l="en">English topic label</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">כותרת בעברית</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>Hebrew paragraph…</p>
     </div>
@@ -919,7 +1086,8 @@
   }
   </script>
   <article class="post" id="four-tribeca-galleries-september-2026">
-    <div class="post-date">September 2, 2026</div>
+    <div class="post-date" data-l="en">September 2, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">2 בספטמבר 2026</div>
     <h2 class="post-title post-title-he" dir="rtl">יום גלריות בטרייבקה: ארבע תערוכות לספטמבר</h2>
     <h2 class="post-title post-title-en" dir="ltr">A September Gallery Walk in Tribeca: Four Shows to See</h2>
     <div class="post-body" lang="he" dir="rtl">
@@ -1037,7 +1205,8 @@
   }
   </script>
   <article class="post" id="pool-in-israeli-art">
-    <div class="post-date">August 18, 2026</div>
+    <div class="post-date" data-l="en">August 18, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">18 באוגוסט 2026</div>
     <h2 class="post-title post-title-he" dir="rtl">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</h2>
     <h2 class="post-title post-title-en" dir="ltr">5 Artists, One Subject: The Pool in Israeli Art</h2>
     <div class="post-body" lang="he" dir="rtl">
@@ -1180,8 +1349,10 @@
   }
   </script>
   <article class="post" id="three-tel-aviv-shows">
-    <div class="post-date">August 13, 2026</div>
-    <h2 class="post-title">Three Exhibitions Worth Seeing in Tel Aviv</h2>
+    <div class="post-date" data-l="en">August 13, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">13 באוגוסט 2026</div>
+    <h2 class="post-title" data-l="en">Three Exhibitions Worth Seeing in Tel Aviv</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">שלוש תערוכות ששווה לראות בתל אביב</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>סוף אוגוסט, והחום התל אביבי בשיאו. אבל דווקא עכשיו, יש בעיר שלוש תערוכות שמחזיקות שקט מסוג נדיר. שלושתן, כל אחת בדרכה, עוסקות בהיעדר: בריכות בלי אדם, נוף שהתרוקן מרעש, וסטודיו שנותר בלי האמנית שלו. הנה שלוש תערוכות שלדעתי שווה לבקר בהן לפני תום הקיץ:</p>
       <p><strong>מלאני סיגל, "כל מבט היה חלון חדש"</strong></p>
@@ -1297,8 +1468,10 @@
   }
   </script>
   <article class="post" id="oren-fischer-hallel">
-    <div class="post-date">August 9, 2026</div>
-    <h2 class="post-title">Oren Fischer: Hallel at 81 Leonard Gallery, New York</h2>
+    <div class="post-date" data-l="en">August 9, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">9 באוגוסט 2026</div>
+    <h2 class="post-title" data-l="en">Oren Fischer: Hallel at 81 Leonard Gallery, New York</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">אורן פישר: הלל בגלריה 81 Leonard, ניו יורק</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>בשבועיים האחרונים של אוגוסט נדמה שעולם האמנות בניו יורק עוצר. רבות מהגלריות בצ׳לסי סגורות או פועלות בשעות מצומצמות, ואחרות מציגות תערוכות קבוצתיות במקום תערוכות יחיד. ההפוגה הזו מאפשרת להן לחשוף את הטון והכיוון האמנותי שלהן, להציג אמנים צעירים לצד שמות מוכרים ולהתכונן לפתיחת עונת הסתיו.</p>
       <p>אבל! יש גלריה אחת שדווקא עכשיו פותחת תערוכת יחיד, ולא סתם, אלא של אמן משלנו ששווה להכיר.</p>
@@ -1376,8 +1549,10 @@
   }
   </script>
   <article class="post" id="noa-wiegenfeld">
-    <div class="post-date">August 6, 2026</div>
-    <h2 class="post-title">Noa Wiegenfeld at the Bezalel Graduate Exhibition</h2>
+    <div class="post-date" data-l="en">August 6, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">6 באוגוסט 2026</div>
+    <h2 class="post-title" data-l="en">Noa Wiegenfeld at the Bezalel Graduate Exhibition</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">נועה ויגנפלד בתערוכת הבוגרים של בצלאל</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>כאוצרת, אני מאמינה שאם רוצים לגלות את האמנים של המחר, צריך להתחיל בתערוכות הבוגרים. דווקא שם, הרבה לפני שהשמות הופכים למוכרים, אפשר לפגוש את האמנים שעתידים לעצב את השיח האמנותי בשנים הקרובות. השנה, בתערוכת הבוגרים של בצלאל, הייתה אמנית אחת שמשכה את תשומת ליבי במיוחד.</p>
       <p>בציוריה של נעה ויגנפלד ניכרת איכות סינתטית ובימתית. הווירטואוזיות של המכחול פועלת כאן פעולה כפולה: במבט ראשון נדמה שאנו ניצבים מול דימוי דיגיטלי, מלוטש ומדויק מדי מכדי להיות צבוע ביד, ורק כשמתקרבים אל הבד מתגלות משיכות המכחול הצבעוניות ומחזירות את העבודה אל החומר.</p>
@@ -1439,8 +1614,10 @@
   }
   </script>
   <article class="post" id="tom-fima">
-    <div class="post-date">July 30, 2026</div>
-    <h2 class="post-title">Tom Fima: Women in White</h2>
+    <div class="post-date" data-l="en">July 30, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">30 ביולי 2026</div>
+    <h2 class="post-title" data-l="en">Tom Fima: Women in White</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">תום פימה: נשים בלבן</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>הצבע הלבן שולט בקנבסים של תום פימה. כותונות לילה, סדינים, תחרה, בדים שנשמטים אל הרצפה. המיטה היא הבמה, והחדר הביתי הוא הזירה כולה, מואר באור מלאכותי הבוקע ממנורת החדר. הדמויות הן נשים צעירות, חברותיה, שאותן היא מצלמת ומציירת מן הצילום. פנים רבות מכוסות בבד, מעין משחק בין הסתרה לחשיפה.</p>
       <figure>
@@ -1514,8 +1691,10 @@
   }
   </script>
   <article class="post" id="botero-in-new-york">
-    <div class="post-date">July 29, 2026</div>
-    <h2 class="post-title">Botero in New York at Sotheby's</h2>
+    <div class="post-date" data-l="en">July 29, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">29 ביולי 2026</div>
+    <h2 class="post-title" data-l="en">Botero in New York at Sotheby's</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">בוטרו בניו יורק בסותביס</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>בשנת 2007, רגע לפני שהתחלתי את לימודיי באוניברסיטה, יצאתי לטיול הגדול בדרום אמריקה. התחנה הראשונה שלי הייתה קולומביה, ואחד המקומות הראשונים שאליהם הגעתי היה קרטחנה, עיר קריבית, ציורית, צבעונית ומלאת חיים ששבתה את ליבי מיד.</p>
       <p>באחת הכיכרות המרכזיות בעיר העתיקה נתקלתי בפסל ברונזה מונומנטלי של אישה שופעת גוף השוכבת על צידה. סגנון הפסל היה כה ייחודי שנשביתי בקסמו ומיד התחלתי לברר מי האמן שיצר אותו. התשובה הובילה אותי מקרטחנה היישר למדיין, אל כיכר רחבת ידיים שבה מוצבים 23 מפסליו של האמן. הכיכר גם נקראת על שמו.</p>
@@ -1627,8 +1806,10 @@
   }
   </script>
   <article class="post" id="three-exhibitions-three-mediums">
-    <div class="post-date">July 21, 2026</div>
-    <h2 class="post-title">Three Exhibitions, Three Mediums, One Subject: Light</h2>
+    <div class="post-date" data-l="en">July 21, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">21 ביולי 2026</div>
+    <h2 class="post-title" data-l="en">Three Exhibitions, Three Mediums, One Subject: Light</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">שלוש תערוכות, שלוש טכניקות, נושא אחד: אור</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p><strong>שלוש תערוכות. שלושה מדיומים. שלוש סיבות טובות לצאת מהבית בסופ"ש.</strong></p>
       <p>יולי כמעט מסתיים, ואיתו גם שלוש תערוכות מצוינות שייסגרו בקרוב. שלושתן עוסקות באור: כחומר, כמטאפורה וככלי ליצירת דימוי.</p>
@@ -1714,8 +1895,10 @@
   }
   </script>
   <article class="post" id="carol-bove-guggenheim">
-    <div class="post-date">July 19, 2026</div>
-    <h2 class="post-title">Carol Bove: A Retrospective at the Guggenheim</h2>
+    <div class="post-date" data-l="en">July 19, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">19 ביולי 2026</div>
+    <h2 class="post-title" data-l="en">Carol Bove: A Retrospective at the Guggenheim</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">קרול בובה: רטרוספקטיבה בגוגנהיים</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p><strong>כמה כוח יכול להיות במשהו שנראה כאילו עוד רגע הוא עומד לקרוס?</strong></p>
       <p>זו לא רק השאלה שמלווה את התערוכה שמוצגת עכשיו בגוגנהיים. זו גם התחושה הראשונה שהיא מצליחה לייצר אצל כל מי שנכנס אליה.</p>
@@ -1799,8 +1982,10 @@
   }
   </script>
   <article class="post" id="in-a-free-state-luhring-augustine">
-    <div class="post-date">July 9, 2026</div>
-    <h2 class="post-title">In a Free State, curated by Doron Langberg and Salman Toor, at Luhring Augustine</h2>
+    <div class="post-date" data-l="en">July 9, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">9 ביולי 2026</div>
+    <h2 class="post-title" data-l="en">In a Free State, curated by Doron Langberg and Salman Toor, at Luhring Augustine</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">In a Free State, באוצרות דורון לנגברג וסלמאן טור, בגלריה Luhring Augustine</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>יש תערוכות שבהן דווקא לא האמנות עצמה היא שמטלטלת אותי, אלא מה שמסתתר מאחוריה.</p>
       <p>רציתי לכתוב לכם בהתלהבות על התערוכה In a Free State בגלריית Luhring Augustine בטרייבקה.</p>
@@ -1891,8 +2076,10 @@
   }
   </script>
   <article class="post" id="orientalism-between-fact-and-fantasy">
-    <div class="post-date">June 30, 2026</div>
-    <h2 class="post-title">Orientalism: Between Fact and Fantasy, at the Met</h2>
+    <div class="post-date" data-l="en">June 30, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">30 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Orientalism: Between Fact and Fantasy, at the Met</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">אוריינטליזם: בין עובדה לפנטזיה, במטרופוליטן</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>יש תערוכות שאתה יוצא מהן עם רשימת יצירות שאהבת.</p>
       <p>ויש תערוכות שאתה יוצא מהן עם דרך חדשה להסתכל.</p>
@@ -1983,8 +2170,10 @@
   }
   </script>
   <article class="post" id="giacometti-dendur">
-    <div class="post-date">June 26, 2026</div>
-    <h2 class="post-title">Giacometti at the Temple of Dendur, the Met</h2>
+    <div class="post-date" data-l="en">June 26, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">26 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Giacometti at the Temple of Dendur, the Met</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">ג'קומטי במקדש דנדור, במטרופוליטן</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>לפני 60 שנה בדיוק הלך לעולמו הפסל השווייצרי אלברטו ג'קומטי. פסליו, שהפכו לאחד הסמלים המזוהים ביותר עם הפיסול המודרני, עיצבו מחדש את האופן שבו אנחנו חושבים על הדמות האנושית.</p>
       <p>ג'קומטי היה אמן מצליח כבר בחייו, אך בעשור וחצי האחרון זינק ערכן של עבודותיו, וחלק מפסליו נמכרו ביותר מ-100 מיליון דולר. דמויותיו האנושיות - דקות, מאורכות ושבריריות - הפכו לסימן ההיכר שלו, אך עבורו הן מעולם לא היו רק סגנון. הן היו הדרך לחקור את אחת השאלות שהעסיקו אותו לאורך כל חייו: מהו ייצוג אנושי? עם זאת, לדמויות שלו לא ניתנו מאפיינים מזהים. הן אינן משויכות לגיל, למעמד חברתי או למוצא אתני. הן אוניברסליות, על-זמניות, ומצליחות לייצג את האדם באשר הוא.</p>
@@ -2051,8 +2240,10 @@
   }
   </script>
   <article class="post" id="fresh-paint-2026">
-    <div class="post-date">June 24, 2026</div>
-    <h2 class="post-title">Fresh Paint Art Fair, Tel Aviv</h2>
+    <div class="post-date" data-l="en">June 24, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">24 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Fresh Paint Art Fair, Tel Aviv</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">יריד האמנות פרש פיינט, תל אביב</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>היי כולם,</p>
       <p>הפוסט של היום מוקדש לחברי הקהילה שנמצאים בישראל 🇮🇱</p>
@@ -2122,8 +2313,10 @@
   }
   </script>
   <article class="post" id="three-exhibitions-nyc-june-2026">
-    <div class="post-date">June 17, 2026</div>
-    <h2 class="post-title">Three Exhibitions in New York</h2>
+    <div class="post-date" data-l="en">June 17, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">17 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Three Exhibitions in New York</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">שלוש תערוכות בניו יורק</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>היום אני רוצה להמליץ לכם על <strong>שלוש תערוכות שוות במיוחד</strong> בניו יורק, שכל אחת מהן עושה שימוש במסורת אמנותית היסטורית אחרת כדי לעסוק בשאלות עכשוויות. למרות ההבדלים (העצומים, יש לומר) ביניהן, שלושתן מדגימות כיצד שפות חזותיות מן העבר יכולות להישאר רלוונטיות, חיות ומעוררות מחשבה גם היום.</p>
       <p>🌺 Fred Tomaselli | Blooms Disrupted</p>
@@ -2219,8 +2412,10 @@
   }
   </script>
   <article class="post" id="david-hockney-1937-2026">
-    <div class="post-date">June 12, 2026</div>
-    <h2 class="post-title">David Hockney, 1937&ndash;2026</h2>
+    <div class="post-date" data-l="en">June 12, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">12 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">David Hockney, 1937&ndash;2026</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">דיוויד הוקני, 1937&ndash;2026</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>אתמול הלך לעולמו אחד האמנים האיקוניים והמשפיעים ביותר של תקופתנו, האמן הבריטי דייויד הוקני.<br>הוקני יצר למעלה משישה עשורים והמשיך לעבוד כמעט עד ליומו האחרון.</p>
       <p>לאורך הקריירה שלו הוא לא הפסיק להתחדש, לחקור ולדחוף את גבולות המדיום; מציור ורישום, דרך צילום והדפס, ועד יצירה דיגיטלית באייפד.</p>
@@ -2263,8 +2458,10 @@
   }
   </script>
   <article class="post" id="fifth-avenue-jewelry-art">
-    <div class="post-date">June 12, 2026</div>
-    <h2 class="post-title">Fifth Avenue, Where Jewelry Meets Art</h2>
+    <div class="post-date" data-l="en">June 12, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">12 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Fifth Avenue, Where Jewelry Meets Art</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">השדרה החמישית, במקום שבו תכשיטים פוגשים אמנות</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>יש סוד קטן לעולם האמנות של ניו יורק: חלק מהאמנות העכשווית המסקרנת ביותר בעיר בכלל לא מוצגת במוזיאונים או בגלריות, אלא מסתתרת דווקא בחנויות התכשיטים היוקרתיות של השדרה החמישית ✨</p>
       <p>המוסד הראשון הוא תכשיטי טיפאני. כבר מראשית דרכה, טיפאני לקחה חלק פעיל בעולם האמנות. המייסד, צ'ארלס טיפאני, היה פטרון של מוזיאון המטרופוליטן וממייסדי אגודת האמנויות היפות של ניו יורק. בנו, לואיס טיפאני, היה מהאמנים המרכזיים של זרם האר נובו האמריקאי. מכירים את מנורות טיפאני? 🙂</p>
@@ -2342,8 +2539,10 @@
   }
   </script>
   <article class="post" id="clinamen-park-avenue-armory">
-    <div class="post-date">June 9, 2026</div>
-    <h2 class="post-title">Clinamen at Park Avenue Armory</h2>
+    <div class="post-date" data-l="en">June 9, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">9 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Clinamen at Park Avenue Armory</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">Clinamen בפארק אווניו ארמורי</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>🎶 Clinamen | סלסט בורסייה-מוז'נו ב–Park Avenue Armory 🎶</p>
       <p>מחר נפתחת בניו יורק אחת העבודות המהפנטות והמדוברות של השנים האחרונות: Clinamen של האמן, המוזיקאי והמלחין הצרפתי Céleste Boursier-Mougenot.</p>
@@ -2407,8 +2606,10 @@
   }
   </script>
   <article class="post" id="living-with-art-montclair">
-    <div class="post-date">June 4, 2026</div>
-    <h2 class="post-title">Living With Art, at the Montclair Art Museum</h2>
+    <div class="post-date" data-l="en">June 4, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">4 ביוני 2026</div>
+    <h2 class="post-title" data-l="en">Living With Art, at the Montclair Art Museum</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">לחיות עם אמנות, במוזיאון האמנות של מונטקלייר</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>הפעם אני לוקחת אותנו קצת יותר קרוב לבית, אל העיירה מונטקלייר, חצי שעה מאיתנו.</p>
       <figure>
@@ -2497,8 +2698,10 @@
   }
   </script>
   <article class="post" id="duchamp-moma">
-    <div class="post-date">May 28, 2026</div>
-    <h2 class="post-title">Marcel Duchamp at MoMA</h2>
+    <div class="post-date" data-l="en">May 28, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">28 במאי 2026</div>
+    <h2 class="post-title" data-l="en">Marcel Duchamp at MoMA</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">מרסל דושאן במומה</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>בהמשך לשיח הביקורתי הבוחן את השאלה ״מהי אמנות?״, קשה להתעלם מהתערוכה של אחד האמנים שניתן לומר כי השפיעו על עולם האמנות יותר מכל אמן אחר במאה ה 20: האמן הצרפתי אמריקאי Marcel Duchamp. דושאן, בחשיבה פורצת דרך ורדיקלית לזמנה, סלל את הדרך לעידן חדש של חופש יצירתי שהדיו מורגשים עד היום. באמצעות תערוכה רטרוספקטיבית רחבת היקף, הכוללת כ 300 עבודות ומשתרעת על פני שישה עשורים של יצירה, מנסה Museum of Modern Art (MoMA) להתחקות אחר מסלולו של אמן יוצא דופן שבחר שלא להשתייך לזרמים האמנותיים שפעלו סביבו, אלא לעצב לעצמו שפה אמנותית ייחודית ועצמאית.</p>
       <p>דושאן מזוהה יותר מכל עם ה"רדי מיידס" שלו, חפצי יום יום שנלקחו מהקשרם המקורי והוצגו כאמנות. המפורסמת שבהן היא Fountain מ 1917, משתנה שהוגשה לתערוכה תחת שם בדוי ושינתה מן היסוד את השיח הפילוסופי סביב האמנות. העבודה עוררה שאלות עמוקות על גבולות המדיום, תפקידו של האמן, מושג המקוריות והאופן שבו אנו מגדירים יצירת אמנות.</p>
@@ -2560,8 +2763,10 @@
   }
   </script>
   <article class="post" id="guggenheim-pop">
-    <div class="post-date">May 28, 2026</div>
-    <h2 class="post-title">Pop: 1960s to Today, at the Guggenheim</h2>
+    <div class="post-date" data-l="en">May 28, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">28 במאי 2026</div>
+    <h2 class="post-title" data-l="en">Pop: 1960s to Today, at the Guggenheim</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">פופ: משנות השישים ועד היום, בגוגנהיים</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>אם חודש מאי מסמן את יריית הפתיחה של עונת האמנות בניו יורק, הרי שיוני הוא גולת הכותרת עבור אוהבי האמנות באשר הם. המוזיאונים האיקוניים והגלריות החדשניות בעיר פותחים את התערוכות המסקרנות והשאפתניות ביותר שלהם, והעיר כולה מוצפת בתרבות חזותית במיטבה ✨</p>
       <p>אחד המוזיאונים שראוי להקדיש לו פוסט בפני עצמו הוא הגוגנהיים, שבו תיפתח ב־5 ביוני התערוכה Pop: From the 1960s to Today. כפי ששמה מרמז, התערוכה בוחנת את הדיאלוג המתמשך בין עבודות פופ איקוניות משנות ה־60 לבין יצירות עכשוויות שנרכשו לאורך השנים וממשיכות להרחיב, לערער ולעדכן את השפה הפופית.</p>
@@ -2604,8 +2809,10 @@
   }
   </script>
   <article class="post note" id="library-museum-passes">
-    <div class="post-date">May 28, 2026</div>
-    <h2 class="post-title">A Tip: Free Museum Passes from Your Library</h2>
+    <div class="post-date" data-l="en">May 28, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">28 במאי 2026</div>
+    <h2 class="post-title" data-l="en">A Tip: Free Museum Passes from Your Library</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">טיפ: כרטיסי כניסה חינם למוזיאונים מהספרייה שלכם</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>ועוד טיפ קטן: הספריות הציבוריות של טנפליי, דמרסט, קלוסטר וקרסקיל מעניקות לתושבים כניסה חינם לגוגנהיים. צריך רק לשאול את הפאס מראש עם כרטיס הספרייה.</p>
       <p>לידיעתכם, גם הספרייה בפיירלון מציעה Museum pass.</p>
@@ -2634,8 +2841,10 @@
   }
   </script>
   <article class="post note" id="museums-on-us-bofa">
-    <div class="post-date">May 28, 2026</div>
-    <h2 class="post-title">A Tip: Museums on Us</h2>
+    <div class="post-date" data-l="en">May 28, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">28 במאי 2026</div>
+    <h2 class="post-title" data-l="en">A Tip: Museums on Us</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">טיפ: Museums on Us</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>למי שמחזיק כרטיס אשראי של Bank of America, יש הטבה מעולה שלא כולם יודעים עליה: בסופ״ש הראשון של כל חודש (השבוע ה-6-7 ביוני!) הכניסה למוזיאונים רבים ברחבי ארה״ב חינם לכל מחזיק כרטיס. כרטיס אחד לכל בעל חשבון, כלומר זוג = שני כרטיסים. ברשימה: מטרופוליטן, גוגנהיים ועוד רבים במנהטן ובכל ארה״ב.</p>
       <p>לרשימה המלאה: <a href="https://about.bankofamerica.com/en/making-an-impact/museums-on-us-partners" target="_blank" rel="noopener">about.bankofamerica.com/museums-on-us</a></p>
@@ -2677,8 +2886,10 @@
   }
   </script>
   <article class="post" id="pollock-record">
-    <div class="post-date">May 24, 2026</div>
-    <h2 class="post-title">The Pollock Record</h2>
+    <div class="post-date" data-l="en">May 24, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">24 במאי 2026</div>
+    <h2 class="post-title" data-l="en">The Pollock Record</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">שיא פולוק</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>שבוע שעבר היה אחד השבועות ההיסטוריים בעולם שוק האמנות. אבל המכירה היא לא הסיפור הגדול פה.</p>
       <p>🔨 Number 7A של ג'קסון פולוק נמכר בבית המכירות הפומביות-Christie's ב-181.2 מיליון דולר!!! שיא חדש אחרי שהשיא הקודם של פולוק היה 61.2 מליון בשנת 2021. אבל הסיפור הוא לא הציור. הסיפור הוא מה שהמכירה חושפת על הדרך שבה אוסף גדול נבנה.</p>
@@ -2734,8 +2945,10 @@
   }
   </script>
   <article class="post" id="brancusi-christies">
-    <div class="post-date">May 20, 2026</div>
-    <h2 class="post-title">Brancusi, Christie's, and a $107 Million Campaign</h2>
+    <div class="post-date" data-l="en">May 20, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">20 במאי 2026</div>
+    <h2 class="post-title" data-l="en">Brancusi, Christie's, and a $107 Million Campaign</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">ברנקוזי, כריסטיס, וקמפיין של 107 מיליון דולר</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p class="credit">מתוך פוסט של ARTernative</p>
       <p>כשאמנות, כסף גדול ותרבות פופולרית נפגשים, נוצרת הדרמה המזוקקת שרק שוק האמנות העולמי יודע לספק. השבוע קיבלנו שיעור מאלף באיך הופכים פסל מודרניסטי בן מעל מאה שנה ללהיט ויראלי, וכיצד קמפיין שיווקי מבריק מתרגם למיליוני דולרים.</p>
@@ -2794,8 +3007,10 @@
   }
   </script>
   <article class="post" id="may-big-art-month-nyc">
-    <div class="post-date">May 20, 2026</div>
-    <h2 class="post-title">May, the Big Art Month in New York</h2>
+    <div class="post-date" data-l="en">May 20, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">20 במאי 2026</div>
+    <h2 class="post-title" data-l="en">May, the Big Art Month in New York</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">מאי, חודש האמנות הגדול בניו יורק</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p><strong>מאי הוא החודש הגדול ביותר לאמנות בניו יורק.</strong> שבוע ירידי האמנות הגדולים של ניו יורק אמנם נסגר בשבוע שעבר, עם ירידי אמנות דוגמת Frieze Art של הגלריות הגדולות והחזקות ביותר בעיר, ירידים מסקרנים כמו NADA‏ (New Art Dealers Alliance), יריד שמוקדש לגלריות צעירות, קולות חדשים ואמנות עכשווית ניסיונית, ו־Independent Art Fair, יריד אינטימי יותר שמתמקד בפרזנטציות אוצרותיות וסולו־שואוז איכותיים, אבל העיר עדיין מלאה בתערוכות ששווה מאוד לראות.</p>
 
@@ -2922,8 +3137,10 @@
   }
   </script>
   <article class="post" id="welcome-art-radar">
-    <div class="post-date">May 19, 2026</div>
-    <h2 class="post-title">Welcome to Art Radar</h2>
+    <div class="post-date" data-l="en">May 19, 2026</div>
+    <div class="post-date" data-l="he" dir="rtl">19 במאי 2026</div>
+    <h2 class="post-title" data-l="en">Welcome to Art Radar</h2>
+    <h2 class="post-title" data-l="he" dir="rtl">ברוכים הבאים לראדאר אמנות</h2>
     <div class="post-body" lang="he" dir="rtl">
       <p>שלום לכל המצטרפים והמצטרפות 👋</p>
       <p>למי שלא מכיר/ה אותי, אני סתיו תאודור קמחי, אוצרת ויועצת אמנות. עברתי לטנפליי לפני שנה וחצי עם בעלי ושני הבנים שלנו (5 ו-7), ומאז אני מגלה שוב ושוב כמה סצנת האמנות באזור שלנו עשירה, מסקרנת ואינסופית.</p>
@@ -2956,51 +3173,96 @@
 
 <!-- ============ FAQ (visible text mirrors the FAQPage JSON-LD in <head>; keep both in sync) ============ -->
 <section id="faq" class="wrap">
-  <div class="label">Questions</div>
-  <div class="faq-item">
+  <div class="label" data-l="en">Questions</div>
+  <div class="label" data-l="he">שאלות</div>
+  <div class="faq-item" data-l="en">
     <h3>What does an art curator do for a private residence?</h3>
     <p>An art curator for private residences guides the entire process: developing an art concept for the space, sourcing works from galleries and artists, selecting pieces that fit the design and the client's sensibility, and overseeing installation. The goal is art that feels right for that specific home and person.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>מה אוצרת אמנות עושה בשביל בית פרטי?</h3>
+    <p>אוצרת אמנות לבתים פרטיים מלווה את התהליך כולו: פיתוח קונספט אמנותי לחלל, איתור עבודות מגלריות ומאמנים, בחירת יצירות שמתאימות לעיצוב ולטעם של הלקוח, וליווי ההתקנה. המטרה היא אמנות שמרגישה נכונה לבית הזה ולאדם הזה.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>How does THEODORA's art advisory service work?</h3>
     <p>THEODORA handles the full process from start to finish. It begins with understanding the space and the client, then moves through art concept, sourcing, selection, and installation. Every recommendation is specific to that project. No two clients receive the same answer.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>איך שירות ייעוץ האמנות של THEODORA עובד?</h3>
+    <p>THEODORA מלווה את התהליך מתחילתו ועד סופו. זה מתחיל בהיכרות עם החלל ועם הלקוח, וממשיך דרך קונספט אמנותי, איתור, בחירה והתקנה. כל המלצה היא ספציפית לפרויקט. אין שני לקוחות שמקבלים את אותה תשובה.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>Do you work with interior designers and architects?</h3>
     <p>Yes. A significant part of THEODORA's practice is working alongside architects and interior designers on behalf of their clients. Stav speaks the language of design and understands how art must function within a larger design intent, not on top of it.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>את עובדת עם מעצבי פנים ואדריכלים?</h3>
+    <p>כן. חלק משמעותי מהעבודה של THEODORA הוא עבודה לצד אדריכלים ומעצבי פנים בשביל הלקוחות שלהם. סתיו מדברת את שפת העיצוב ומבינה איך אמנות צריכה לתפקד בתוך כוונה עיצובית רחבה יותר, ולא מעליה.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>Where does THEODORA provide art advisory services?</h3>
     <p>THEODORA is based in New York City and New Jersey, serving the greater New York luxury market. Stav also works on projects in Tel Aviv and has experience with large-scale international hospitality commissions. Projects are evaluated individually regardless of location.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>איפה THEODORA נותנת שירותי ייעוץ אמנות?</h3>
+    <p>THEODORA יושבת בניו יורק ובניו ג'רזי ומשרתת את שוק היוקרה של אזור ניו יורק הגדול. סתיו עובדת גם על פרויקטים בתל אביב, ויש לה ניסיון בהזמנות בקנה מידה גדול לעולם האירוח הבינלאומי. כל פרויקט נבחן לגופו, בלי קשר למיקום.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>How do I know which art is right for my space?</h3>
     <p>That is exactly what the advisory process is for. Stav listens first, then looks: at the space, the light, the design, and the person living in it. The right piece is not about price or trend. It is about whether it resonates with this specific space and this specific person.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>איך אני יודע איזו אמנות נכונה לחלל שלי?</h3>
+    <p>בדיוק בשביל זה קיים תהליך הייעוץ. סתיו קודם כול מקשיבה, ואז מסתכלת: על החלל, על האור, על העיצוב ועל האדם שחי בו. היצירה הנכונה היא לא עניין של מחיר או של טרנד. היא עניין של האם היא מהדהדת בחלל הזה ואצל האדם הזה.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>What exhibitions are worth seeing in New York right now?</h3>
     <p>Art Radar, THEODORA's curatorial newsletter, publishes weekly picks of must-see exhibitions in New York, New Jersey, and Tel Aviv, chosen by Stav Theodor-Kimhi, an art curator with two decades of experience. Every post is published in Hebrew and English. The full archive is available at stavtheodor.com.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>אילו תערוכות שווה לראות בניו יורק עכשיו?</h3>
+    <p>ראדאר אמנות, הניוזלטר האוצרותי של THEODORA, מפרסם מדי שבוע המלצות על תערוכות שחובה לראות בניו יורק, בניו ג'רזי ובתל אביב, בבחירתה של סתיו תאודור-קמחי, אוצרת אמנות עם שני עשורים של ניסיון. כל פוסט מתפרסם בעברית ובאנגלית. הארכיון המלא נמצא באתר stavtheodor.com.</p>
+  </div>
+  <div class="faq-item" data-l="en">
     <h3>Where can I find art recommendations for New Jersey and the New York area?</h3>
     <p>Art Radar by THEODORA is a curated guide to art in New Jersey and New York, written by Stav Theodor-Kimhi, an art curator based in Tenafly, NJ. It covers exhibitions at the Met, MoMA, the Guggenheim, the Frick, Park Avenue Armory, and New York galleries, plus New Jersey venues like the Montclair Art Museum and practical tips such as free museum passes from Bergen County libraries. Posts are published in Hebrew and English at stavtheodor.com.</p>
+  </div>
+  <div class="faq-item" data-l="he" dir="rtl">
+    <h3>איפה אפשר למצוא המלצות אמנות לניו ג'רזי ולאזור ניו יורק?</h3>
+    <p>ראדאר אמנות של THEODORA הוא מדריך אוצרותי לאמנות בניו ג'רזי ובניו יורק, שנכתב על ידי סתיו תאודור-קמחי, אוצרת אמנות מטנפליי, ניו ג'רזי. הוא מכסה תערוכות במטרופוליטן, במומה, בגוגנהיים, בפריק, בפארק אווניו ארמורי ובגלריות של ניו יורק, לצד מקומות בניו ג'רזי כמו מוזיאון האמנות של מונטקלייר, וטיפים מעשיים כמו כרטיסי כניסה חינם למוזיאונים מספריות מחוז ברגן. הפוסטים מתפרסמים בעברית ובאנגלית באתר stavtheodor.com.</p>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
 <footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory · Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
-    <div class="copyright">© 2026 THEODORA</div>
+    <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
 </footer>
+
+<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -3060,21 +3322,91 @@
 
 <script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>

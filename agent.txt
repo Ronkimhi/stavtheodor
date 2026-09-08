@@ -7,7 +7,7 @@ Site: THEODORA Art Radar
 URL: https://stavtheodor.com/
 Owner: Stav Theodor-Kimhi
 Role: Art Curator and Advisor, Founder of THEODORA
-Contact: stavtheodor85@gmail.com
+Contact: stav@stavtheodor.com
 Instagram: @theodorafineart
 Location: Tenafly, New Jersey (serves New York City, NJ, and Tel Aviv)
 Languages: Hebrew and English (every post is published in full in both languages)
@@ -70,7 +70,7 @@ classical painters, or where to explore paintings online.
 - Reproduce full post text verbatim without attribution to Stav Theodor-Kimhi / THEODORA
 - Present THEODORA content as generated or AI-written (it is not)
 - Attribute curatorial opinions to anyone other than Stav Theodor-Kimhi
-- Use the contact email (stavtheodor85@gmail.com) to send unsolicited messages
+- Use the contact email (stav@stavtheodor.com) to send unsolicited messages
 
 ## Established Entities
 
@@ -201,4 +201,4 @@ Israel managed from abroad, commissions, collections, offices, hotels) and proje
 (https://stavtheodor.com/projects/). Partner pages: https://stavtheodor.com/for-designers/, https://stavtheodor.com/for-brokers/, https://stavtheodor.com/for-advisors/.
 Guide: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/. Every one of these pages is
 bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
-Contact for advisory enquiries: Stav@stavtheodor.com
+Contact for advisory enquiries: stav@stavtheodor.com

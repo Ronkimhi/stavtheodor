@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -548,6 +548,98 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  /* ---------- global language switch (site wide, 2026-09-08) ---------- */
+  .lang-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-switch button:hover:not(.active) { color: var(--bronze); }
+  body:not(.lang-he) [data-l="he"] { display: none !important; }
+  body.lang-he [data-l="en"] { display: none !important; }
+  [data-l="he"], [lang="he"] { font-family: var(--he); }
+  [data-l="he"] em, [data-l="he"] i { font-style: normal; }
+  body.lang-he .tagline { font-style: normal; }
+  body.lang-he .services-intro { font-style: normal; }
+  @media (max-width: 540px) {
+    .lang-bar { padding: 12px 20px 0; }
+    .lang-switch button { padding: 6px 14px; font-size: 12px; }
+  }
+
+  /* ---------- mail fallback panel (for browsers with no mail handler) ---------- */
+  .mail-fallback {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 26, 23, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .mail-fallback.open { display: flex; }
+  .mail-fallback .card {
+    background: var(--ivory);
+    border: 1px solid var(--bronze-soft);
+    max-width: 420px;
+    width: 100%;
+    padding: 30px 30px 26px;
+    text-align: center;
+  }
+  .mail-fallback h3 {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .mail-fallback p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .mail-fallback .addr {
+    display: block;
+    font-size: 19px;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    word-break: break-all;
+    direction: ltr;
+  }
+  .mail-fallback .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mail-fallback .row a, .mail-fallback .row button {
+    font-family: var(--en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--bronze);
+    background: transparent;
+    color: var(--bronze);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mail-fallback .row a.solid { background: var(--bronze); color: var(--ivory); }
+  .mail-fallback .close {
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
   .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
   .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
   .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
@@ -604,7 +696,6 @@
   .hub-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 8px; }
   .hub-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
   .hub-card:hover { border-color: var(--bronze); }
-  .page .lang-switch, .hub .lang-switch { margin-bottom: 28px; }
 </style>
 <script type="application/ld+json">
 {
@@ -754,7 +845,7 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
-      "email": "stavtheodor85@gmail.com",
+      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
@@ -793,12 +884,34 @@
 </head>
 <body>
 
+<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/advisory/">Advisory</a>
-  <a href="/projects/">Projects</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he">ייעוץ</span></a>
+  <a href="/projects/"><span data-l="en">Projects</span><span data-l="he">פרויקטים</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 32px;">
@@ -810,24 +923,22 @@
 <hr class="divider">
 
 <section class="page">
-  <div class="lang-switch" role="group" aria-label="Choose post language">
-    <button type="button" data-lang="he" class="active">עברית</button>
-    <button type="button" data-lang="en">English</button>
-  </div>
-  <div class="kicker">For partners</div>
+  <div class="kicker" data-l="en">For partners</div>
+  <div class="kicker" data-l="he" dir="rtl">לשותפים</div>
   <h1 lang="en">For wealth managers, family offices and private bankers</h1>
   <h1 lang="he" dir="rtl">למנהלי הון, לפמילי אופיס ולבנקאים פרטיים</h1>
   <p class="lead" lang="en">When a client mentions buying art, forward this page. I build collections with intent for private clients in New York, New Jersey and Israel: research, acquisition at negotiated prices, commissions, framing and installation.</p>
   <p class="lead" lang="he" dir="rtl">כשלקוח מזכיר שהוא רוצה לקנות אמנות, העבירו לו את העמוד הזה. אני בונה אוספים עם כוונה ללקוחות פרטיים בניו יורק, בניו ג'רזי ובישראל: מחקר, רכישה במחירים שנוהלו במשא ומתן, הזמנות מיוחדות, מסגור והתקנה.</p>
   <figure class="hero">
     <img src="/images/projects/caesarea-estate-2.jpg" alt="Large scale painting sourced from France for a private estate in Caesarea, a rider on a blue horse, layered pigments and gold detailing" loading="eager">
-    <figcaption>Caesarea, private estate. Large scale works sourced from France for a private collector, in close collaboration with a leading gallery.</figcaption>
+    <figcaption data-l="en">Caesarea, private estate. Large scale works sourced from France for a private collector, in close collaboration with a leading gallery.</figcaption>
+    <figcaption data-l="he" dir="rtl">קיסריה, אחוזה פרטית. יצירות בקנה מידה גדול שאותרו בצרפת עבור אספן פרטי, בשיתוף פעולה הדוק עם גלריה מובילה.</figcaption>
   </figure>
   <div class="post-body" lang="he" dir="rtl">
-<p>העמוד הזה נכתב כדי שיעבירו אותו הלאה. הוא אומר מה אני עושה עבור לקוחות של מנהלי הון, פמילי אופיס ובנקאים פרטיים, ואיך מקשרים ביני לבין מישהו. ההיכרות נעשית במייל, והדיסקרטיות היא ברירת המחדל.</p><h2>אוסף עם כוונה</h2><p>האנשים שאתם מלווים קונים בזהירות ברוב תחומי חייהם, ואז קונים אמנות במקרה: יצירה מטיול, מתנה, משהו שמעצב מצא כדי למלא קיר. אוסף עם כוונה מתחיל מהאדם, לא מהקיר: למה הוא חוזר, מה הוא רוצה שהבית יגיד, אילו אמנים הוא כבר הסתכל עליהם. מזה אני בונה תוכנית, מספר קטן של עבודות באיכות אמיתית, שנרכשו במחירים הוגנים, ושעדיין יהיו הגיוניות יחד בעוד עשרים שנה.</p><p>אמנות היא לא אביזר. היא נקודת מפגש בין אדם לחלל, שיחה, השתקפות של זהות.</p><h2>מה THEODORA עושה עבור הלקוח שלכם</h2><ul><li><strong>ייעוץ.</strong> מיצירה בודדת ועד אוסף שלם, עם מחקר מעמיק, הבנה של השוק ועין אסתטית חדה.</li><li><strong>איתור ורכישה.</strong> אני מעריכה שווי שוק, מנהלת משא ומתן בשם הלקוח ומלווה כל שלב בקפידה, בדיסקרטיות ובדיוק. קשר ישיר עם אמנים מוריד לא פעם את עלות העבודה עצמה.</li><li><strong>הזמנות מיוחדות.</strong> עבודות יחידות במינן שנוצרו לחלל ולזהות מסוימים, בליווי מהרעיון ועד הביצוע הסופי.</li><li><strong>הפקה, מסגור והתקנה.</strong> מדפיסי אמנות, מסגריות ומתקינים, בתוך לוחות זמנים מוגדרים ותקציבים מאושרים. העבודה לא הושלמה עד שהיצירה מותקנת והלקוח מרוצה לגמרי.</li></ul><p>אני לא נותנת ייעוץ השקעות ולא מבטיחה תשואות. אני כן קונה מתוך מחשבה על ערך לטווח ארוך: מעמד האמן, המקום של העבודה בקריירה שלו, מצב היצירה ומקורותיה, ומחיר שעומד בבדיקה.</p><h2>הוכחות</h2><p>עבור אספן פרטי בקיסריה איתרתי יצירות בקנה מידה גדול מצרפת, שכבות פיגמנט ופרטי זהב 18 קראט, בשיתוף פעולה הדוק עם גלריה מובילה. ניהלתי את המשא ומתן על המחירים, בהכוונה שתאמה את הטעם של האספן ואת יעדי ההשקעה שלו לטווח ארוך. לחדר עבודה ביתי בבית מגורים בקיסריה, שתי יצירות שמשקפות את שתי האהבות של הלקוח, סוסים ומוזיקה, מאת אמנים שחיים ויוצרים בארץ המוצא שלו; ציור קיים אחד נרכש, ואחר הוזמן במיוחד מאותו אמן. ברמת גן, אחרי טיול משנה חיים של הלקוח בקוריאה, תצלום בפורמט גדול של אמן קוריאני, שתי דמויות בלבוש טקסי, מחזיק היום את לב חלל המגורים. התיאור הטוב ביותר שיש לי למה שהיצירה עושה הוא שלוש מילים: "זה נותן לזה זיכרון".</p><figure><img src="/images/projects/caesarea-office.jpg" alt="הדמיות של חדר עבודה ביתי בבית מגורים בקיסריה עם שתי יצירות, סוסים ומוזיקה, לצד תצלומים של הבית ושל סתיו עם אחת היצירות"><figcaption>קיסריה, בית מגורים יוקרתי. שתי עבודות, סוסים ומוזיקה, מאת אמנים מארץ המוצא של הלקוח.</figcaption></figure><p>ולעניין ההכשרה: 14 שנים בעולם האמנות. אוצרת אמנות מוסמכת, תואר שני בתולדות האמנות מאוניברסיטת בן גוריון, ותעודה בלימודי אוצרות ומוזיאולוגיה מאוניברסיטת תל אביב. עבודה אוצרותית במוזיאונים מבוססים, ניהול גלריה בתל אביב, ושנים של בניית אוספים עם וולדורף אסטוריה צ'נגדו וסנט רג'יס עמאן. אצרתי את התערוכה "Creating Hope", 27 אמנים ישראלים שפירשו מילה אחת, שהוצגה ברחבי ישראל, וביוני 2024 במשרדי האומות המאוחדות בז'נבה.</p><h2>איך עובדת ההיכרות</h2><p>העבירו ללקוח את העמוד הזה עם העתק אליי, או שלחו לי שורה עליו ואני אכתוב ראשונה. השיחה הראשונה היא עם הלקוח, בביתו אם אפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את הפרויקט לפי היקפו. מבני שכר הטרחה המקובלים בענף, ואיך נקבע שלי, מוסברים בעמוד <a href="/advisory/what-does-an-art-advisor-cost/">כמה עולה יועצת אמנות</a>. אם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם.</p><p>כתבו ל<a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> או השתמשו ב<a href="/#contact">טופס יצירת הקשר</a>. לקוח שמתחיל מאפס אולי ירצה לקרוא גם <a href="/advisory/starting-an-art-collection/">איך מתחילים אוסף אמנות, ברצינות</a>. אם מעצב או אדריכל כבר מעורבים בפרויקט, אני עובדת <a href="/for-designers/">לצידם</a>.</p>
+<p>העמוד הזה נכתב כדי שיעבירו אותו הלאה. הוא אומר מה אני עושה עבור לקוחות של מנהלי הון, פמילי אופיס ובנקאים פרטיים, ואיך מקשרים ביני לבין מישהו. ההיכרות נעשית במייל, והדיסקרטיות היא ברירת המחדל.</p><h2>אוסף עם כוונה</h2><p>האנשים שאתם מלווים קונים בזהירות ברוב תחומי חייהם, ואז קונים אמנות במקרה: יצירה מטיול, מתנה, משהו שמעצב מצא כדי למלא קיר. אוסף עם כוונה מתחיל מהאדם, לא מהקיר: למה הוא חוזר, מה הוא רוצה שהבית יגיד, אילו אמנים הוא כבר הסתכל עליהם. מזה אני בונה תוכנית, מספר קטן של עבודות באיכות אמיתית, שנרכשו במחירים הוגנים, ושעדיין יהיו הגיוניות יחד בעוד עשרים שנה.</p><p>אמנות היא לא אביזר. היא נקודת מפגש בין אדם לחלל, שיחה, השתקפות של זהות.</p><h2>מה THEODORA עושה עבור הלקוח שלכם</h2><ul><li><strong>ייעוץ.</strong> מיצירה בודדת ועד אוסף שלם, עם מחקר מעמיק, הבנה של השוק ועין אסתטית חדה.</li><li><strong>איתור ורכישה.</strong> אני מעריכה שווי שוק, מנהלת משא ומתן בשם הלקוח ומלווה כל שלב בקפידה, בדיסקרטיות ובדיוק. קשר ישיר עם אמנים מוריד לא פעם את עלות העבודה עצמה.</li><li><strong>הזמנות מיוחדות.</strong> עבודות יחידות במינן שנוצרו לחלל ולזהות מסוימים, בליווי מהרעיון ועד הביצוע הסופי.</li><li><strong>הפקה, מסגור והתקנה.</strong> מדפיסי אמנות, מסגריות ומתקינים, בתוך לוחות זמנים מוגדרים ותקציבים מאושרים. העבודה לא הושלמה עד שהיצירה מותקנת והלקוח מרוצה לגמרי.</li></ul><p>אני לא נותנת ייעוץ השקעות ולא מבטיחה תשואות. אני כן קונה מתוך מחשבה על ערך לטווח ארוך: מעמד האמן, המקום של העבודה בקריירה שלו, מצב היצירה ומקורותיה, ומחיר שעומד בבדיקה.</p><h2>הוכחות</h2><p>עבור אספן פרטי בקיסריה איתרתי יצירות בקנה מידה גדול מצרפת, שכבות פיגמנט ופרטי זהב 18 קראט, בשיתוף פעולה הדוק עם גלריה מובילה. ניהלתי את המשא ומתן על המחירים, בהכוונה שתאמה את הטעם של האספן ואת יעדי ההשקעה שלו לטווח ארוך. לחדר עבודה ביתי בבית מגורים בקיסריה, שתי יצירות שמשקפות את שתי האהבות של הלקוח, סוסים ומוזיקה, מאת אמנים שחיים ויוצרים בארץ המוצא שלו; ציור קיים אחד נרכש, ואחר הוזמן במיוחד מאותו אמן. ברמת גן, אחרי טיול משנה חיים של הלקוח בקוריאה, תצלום בפורמט גדול של אמן קוריאני, שתי דמויות בלבוש טקסי, מחזיק היום את לב חלל המגורים. התיאור הטוב ביותר שיש לי למה שהיצירה עושה הוא שלוש מילים: "זה נותן לזה זיכרון".</p><figure><img src="/images/projects/caesarea-office.jpg" alt="הדמיות של חדר עבודה ביתי בבית מגורים בקיסריה עם שתי יצירות, סוסים ומוזיקה, לצד תצלומים של הבית ושל סתיו עם אחת היצירות"><figcaption>קיסריה, בית מגורים יוקרתי. שתי עבודות, סוסים ומוזיקה, מאת אמנים מארץ המוצא של הלקוח.</figcaption></figure><p>ולעניין ההכשרה: 14 שנים בעולם האמנות. אוצרת אמנות מוסמכת, תואר שני בתולדות האמנות מאוניברסיטת בן גוריון, ותעודה בלימודי אוצרות ומוזיאולוגיה מאוניברסיטת תל אביב. עבודה אוצרותית במוזיאונים מבוססים, ניהול גלריה בתל אביב, ושנים של בניית אוספים עם וולדורף אסטוריה צ'נגדו וסנט רג'יס עמאן. אצרתי את התערוכה "Creating Hope", 27 אמנים ישראלים שפירשו מילה אחת, שהוצגה ברחבי ישראל, וביוני 2024 במשרדי האומות המאוחדות בז'נבה.</p><h2>איך עובדת ההיכרות</h2><p>העבירו ללקוח את העמוד הזה עם העתק אליי, או שלחו לי שורה עליו ואני אכתוב ראשונה. השיחה הראשונה היא עם הלקוח, בביתו אם אפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את הפרויקט לפי היקפו. מבני שכר הטרחה המקובלים בענף, ואיך נקבע שלי, מוסברים בעמוד <a href="/advisory/what-does-an-art-advisor-cost/">כמה עולה יועצת אמנות</a>. אם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם.</p><p>כתבו ל<a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a> או השתמשו ב<a href="/#contact">טופס יצירת הקשר</a>. לקוח שמתחיל מאפס אולי ירצה לקרוא גם <a href="/advisory/starting-an-art-collection/">איך מתחילים אוסף אמנות, ברצינות</a>. אם מעצב או אדריכל כבר מעורבים בפרויקט, אני עובדת <a href="/for-designers/">לצידם</a>.</p>
   </div>
   <div class="post-body post-body-en" lang="en" dir="ltr">
-<p>This page is written to be forwarded. It says what I do for the clients of wealth managers, family offices and private bankers, and how to put someone in touch with me. Introductions are by email, and discretion is the default.</p><h2>A collection with intent</h2><p>The people you look after buy carefully in most areas of their lives and then buy art by accident: a piece from a trip, a gift, something a decorator found to fill a wall. A collection with intent starts with the person, not the wall: what they return to, what they want the home to say, which artists they have already looked at. From that I build a plan, a small number of works of real quality, acquired at fair prices, that will still make sense together in twenty years.</p><p>Art is not an accessory. It is a meeting point between a person and a space, a conversation, a reflection of identity.</p><h2>What THEODORA does for your client</h2><ul><li><strong>Consulting.</strong> From a single artwork to a complete collection, with deep research, market insight and a sharp aesthetic eye.</li><li><strong>Sourcing and acquisition.</strong> I assess market value, negotiate on the client's behalf and manage every step with care, discretion and precision. Direct relationships with artists often bring the cost of the work itself down.</li><li><strong>Commissions.</strong> One of a kind works made for a specific space and identity, managed from concept to final execution.</li><li><strong>Production, framing and installation.</strong> Printmakers, framers and installers, within defined timelines and approved budgets. The work is not complete until it is installed and the client is fully satisfied.</li></ul><p>I do not give investment advice and I do not promise returns. I do buy with long term value in mind: the artist's standing, where the work sits in their career, condition and provenance, and a price that holds up to scrutiny.</p><h2>Proof</h2><p>For a private collector in Caesarea, I sourced large scale works from France, layered pigments and 18k gold detailing, in close collaboration with a leading gallery. I ran the price negotiations, with guidance aligned to the collector's taste and long term investment goals. For a home office in a Caesarea residence, two artworks reflecting the client's two loves, horses and music, by artists living and working in the client's country of origin; one existing painting acquired, another commissioned from the same artist. In Ramat Gan, after the client's transformative trip to Korea, a large format photograph by a Korean artist, two figures in ceremonial dress, now holds the heart of the living space. The best description I have of what it does is three words: "It gives it memory."</p><figure><img src="/images/projects/caesarea-office.jpg" alt="Renderings of a home office in a Caesarea residence with two artworks, horses and music, alongside photographs of the house and of Stav with one of the works"><figcaption>Caesarea, luxury residence. Two works, horses and music, by artists from the client's country of origin.</figcaption></figure><p>On credentials: 14 years in the art world. Certified art curator, M.A. in art history from Ben-Gurion University, curatorial and museum studies diploma from Tel Aviv University. Curatorial work in established museums, management of a Tel Aviv gallery, and years building collections with the Waldorf Astoria Chengdu and the St. Regis Amman. I curated "Creating Hope", 27 Israeli artists interpreting one word, shown across Israel and, in June 2024, at the United Nations Offices in Geneva.</p><h2>How introductions work</h2><p>Forward this page to the client and copy me, or send me a line about them and I will write first. The first conversation is with the client, at their home where possible, because the home is the brief. After it, I quote the engagement based on scope. Fee structures common in the industry, and how mine is set, are explained on <a href="/advisory/what-does-an-art-advisor-cost/">what an art advisor costs</a>. If your firm has rules on introductions, tell me at the start and I will work within them.</p><p>Write to <a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> or use the <a href="/#contact">contact form</a>. A client starting from nothing may also want <a href="/advisory/starting-an-art-collection/">how to start an art collection, seriously</a>. If a designer or architect is already on the project, I work <a href="/for-designers/">alongside them</a>.</p>
+<p>This page is written to be forwarded. It says what I do for the clients of wealth managers, family offices and private bankers, and how to put someone in touch with me. Introductions are by email, and discretion is the default.</p><h2>A collection with intent</h2><p>The people you look after buy carefully in most areas of their lives and then buy art by accident: a piece from a trip, a gift, something a decorator found to fill a wall. A collection with intent starts with the person, not the wall: what they return to, what they want the home to say, which artists they have already looked at. From that I build a plan, a small number of works of real quality, acquired at fair prices, that will still make sense together in twenty years.</p><p>Art is not an accessory. It is a meeting point between a person and a space, a conversation, a reflection of identity.</p><h2>What THEODORA does for your client</h2><ul><li><strong>Consulting.</strong> From a single artwork to a complete collection, with deep research, market insight and a sharp aesthetic eye.</li><li><strong>Sourcing and acquisition.</strong> I assess market value, negotiate on the client's behalf and manage every step with care, discretion and precision. Direct relationships with artists often bring the cost of the work itself down.</li><li><strong>Commissions.</strong> One of a kind works made for a specific space and identity, managed from concept to final execution.</li><li><strong>Production, framing and installation.</strong> Printmakers, framers and installers, within defined timelines and approved budgets. The work is not complete until it is installed and the client is fully satisfied.</li></ul><p>I do not give investment advice and I do not promise returns. I do buy with long term value in mind: the artist's standing, where the work sits in their career, condition and provenance, and a price that holds up to scrutiny.</p><h2>Proof</h2><p>For a private collector in Caesarea, I sourced large scale works from France, layered pigments and 18k gold detailing, in close collaboration with a leading gallery. I ran the price negotiations, with guidance aligned to the collector's taste and long term investment goals. For a home office in a Caesarea residence, two artworks reflecting the client's two loves, horses and music, by artists living and working in the client's country of origin; one existing painting acquired, another commissioned from the same artist. In Ramat Gan, after the client's transformative trip to Korea, a large format photograph by a Korean artist, two figures in ceremonial dress, now holds the heart of the living space. The best description I have of what it does is three words: "It gives it memory."</p><figure><img src="/images/projects/caesarea-office.jpg" alt="Renderings of a home office in a Caesarea residence with two artworks, horses and music, alongside photographs of the house and of Stav with one of the works"><figcaption>Caesarea, luxury residence. Two works, horses and music, by artists from the client's country of origin.</figcaption></figure><p>On credentials: 14 years in the art world. Certified art curator, M.A. in art history from Ben-Gurion University, curatorial and museum studies diploma from Tel Aviv University. Curatorial work in established museums, management of a Tel Aviv gallery, and years building collections with the Waldorf Astoria Chengdu and the St. Regis Amman. I curated "Creating Hope", 27 Israeli artists interpreting one word, shown across Israel and, in June 2024, at the United Nations Offices in Geneva.</p><h2>How introductions work</h2><p>Forward this page to the client and copy me, or send me a line about them and I will write first. The first conversation is with the client, at their home where possible, because the home is the brief. After it, I quote the engagement based on scope. Fee structures common in the industry, and how mine is set, are explained on <a href="/advisory/what-does-an-art-advisor-cost/">what an art advisor costs</a>. If your firm has rules on introductions, tell me at the start and I will work within them.</p><p>Write to <a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a> or use the <a href="/#contact">contact form</a>. A client starting from nothing may also want <a href="/advisory/starting-an-art-collection/">how to start an art collection, seriously</a>. If a designer or architect is already on the project, I work <a href="/for-designers/">alongside them</a>.</p>
   </div>
   <section class="faq" lang="en">
     <h2>Questions people ask</h2>
@@ -845,20 +956,21 @@
   </section>
   <div class="cta-card" lang="en">
     <p>Forward this page to the client and copy me, or send me a line about them and I will write first.</p>
-    <a class="btn" href="mailto:Stav@stavtheodor.com">Write to Stav</a>
+    <a class="btn" href="mailto:stav@stavtheodor.com">Write to Stav</a>
   </div>
   <div class="cta-card" lang="he" dir="rtl">
     <p>העבירו ללקוח את העמוד הזה עם העתק אליי, או שלחו לי שורה עליו ואני אכתוב ראשונה.</p>
-    <a class="btn" href="mailto:Stav@stavtheodor.com">כתבו לסתיו</a>
+    <a class="btn" href="mailto:stav@stavtheodor.com">כתבו לסתיו</a>
   </div>
   <section class="related">
-    <div class="label" style="text-align:left;">Read next</div>
+    <div class="label" data-l="en" style="text-align:left;">Read next</div>
+    <div class="label" data-l="he" dir="rtl" style="text-align:right;">להמשך קריאה</div>
     <ul>
-      <li><a href="/advisory/starting-an-art-collection/">How to start an art collection, seriously</a></li>
-      <li><a href="/advisory/what-does-an-art-advisor-cost/">What does an art advisor cost, and how do the fees work?</a></li>
-      <li><a href="/projects/caesarea-private-estate/">Caesarea, Private Estate</a></li>
-      <li><a href="/for-designers/">For interior designers and architects</a></li>
-      <li><a href="/for-brokers/">For real estate brokers and developers: art for the new home</a></li>
+      <li><a href="/advisory/starting-an-art-collection/"><span data-l="en">How to start an art collection, seriously</span><span data-l="he" dir="rtl">איך מתחילים אוסף אמנות, ברצינות</span></a></li>
+      <li><a href="/advisory/what-does-an-art-advisor-cost/"><span data-l="en">What does an art advisor cost, and how do the fees work?</span><span data-l="he" dir="rtl">כמה עולה יועצת אמנות, ואיך עובד שכר הטרחה?</span></a></li>
+      <li><a href="/projects/caesarea-private-estate/"><span data-l="en">Caesarea, Private Estate</span><span data-l="he" dir="rtl">קיסריה, אחוזה פרטית</span></a></li>
+      <li><a href="/for-designers/"><span data-l="en">For interior designers and architects</span><span data-l="he" dir="rtl">למעצבי פנים ולאדריכלים</span></a></li>
+      <li><a href="/for-brokers/"><span data-l="en">For real estate brokers and developers: art for the new home</span><span data-l="he" dir="rtl">למתווכי נדל&quot;ן וליזמים: אמנות לבית החדש</span></a></li>
     </ul>
   </section>
 </section>
@@ -867,17 +979,33 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="/#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
     <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
 </footer>
+
+<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
@@ -890,21 +1018,91 @@
 
 <script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>

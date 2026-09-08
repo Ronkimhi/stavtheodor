@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -548,6 +548,98 @@
   .lang-switch { display: inline-flex; margin-top: 14px; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
   .lang-switch button { font-family: inherit; font-size: 13px; letter-spacing: 0.08em; padding: 6px 18px; background: transparent; border: 0; color: var(--ink-soft); cursor: pointer; }
   .lang-switch button.active { background: var(--bronze); color: var(--ivory); }
+  /* ---------- global language switch (site wide, 2026-09-08) ---------- */
+  .lang-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lang-switch button:hover:not(.active) { color: var(--bronze); }
+  body:not(.lang-he) [data-l="he"] { display: none !important; }
+  body.lang-he [data-l="en"] { display: none !important; }
+  [data-l="he"], [lang="he"] { font-family: var(--he); }
+  [data-l="he"] em, [data-l="he"] i { font-style: normal; }
+  body.lang-he .tagline { font-style: normal; }
+  body.lang-he .services-intro { font-style: normal; }
+  @media (max-width: 540px) {
+    .lang-bar { padding: 12px 20px 0; }
+    .lang-switch button { padding: 6px 14px; font-size: 12px; }
+  }
+
+  /* ---------- mail fallback panel (for browsers with no mail handler) ---------- */
+  .mail-fallback {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 26, 23, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .mail-fallback.open { display: flex; }
+  .mail-fallback .card {
+    background: var(--ivory);
+    border: 1px solid var(--bronze-soft);
+    max-width: 420px;
+    width: 100%;
+    padding: 30px 30px 26px;
+    text-align: center;
+  }
+  .mail-fallback h3 {
+    font-family: var(--en);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .mail-fallback p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .mail-fallback .addr {
+    display: block;
+    font-size: 19px;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    word-break: break-all;
+    direction: ltr;
+  }
+  .mail-fallback .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mail-fallback .row a, .mail-fallback .row button {
+    font-family: var(--en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--bronze);
+    background: transparent;
+    color: var(--bronze);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mail-fallback .row a.solid { background: var(--bronze); color: var(--ivory); }
+  .mail-fallback .close {
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    font-family: var(--en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
   .faq-item { border-top: 1px solid var(--hairline); padding: 22px 0 6px; }
   .faq-item:first-of-type { border-top: 0; padding-top: 8px; }
   .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
@@ -604,7 +696,6 @@
   .hub-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 8px; }
   .hub-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
   .hub-card:hover { border-color: var(--bronze); }
-  .page .lang-switch, .hub .lang-switch { margin-bottom: 28px; }
 </style>
 <script type="application/ld+json">
 {
@@ -702,7 +793,7 @@
       "logo": "https://stavtheodor.com/images/theodora-logo.png",
       "image": "https://stavtheodor.com/og-image.jpg",
       "founder": { "@id": "https://stavtheodor.com/#stav" },
-      "email": "stavtheodor85@gmail.com",
+      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
@@ -741,12 +832,34 @@
 </head>
 <body>
 
+<script>
+/* Resolve the language before anything paints. A stored choice is global and wins
+   everywhere; with no stored choice each page falls back to its own data-default-lang,
+   so first-time visitors see exactly what they saw before the switcher existed. */
+(function () {
+  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('lang-he', lang === 'he');
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
+    <button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/advisory/">Advisory</a>
-  <a href="/projects/">Projects</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he">ייעוץ</span></a>
+  <a href="/projects/"><span data-l="en">Projects</span><span data-l="he">פרויקטים</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 32px;">
@@ -758,40 +871,39 @@
 <hr class="divider">
 
 <section class="page">
-  <div class="lang-switch" role="group" aria-label="Choose post language">
-    <button type="button" data-lang="he" class="active">עברית</button>
-    <button type="button" data-lang="en">English</button>
-  </div>
-  <div class="kicker">Private residence, Manhattan</div>
+  <div class="kicker" data-l="en">Private residence, Manhattan</div>
+  <div class="kicker" data-l="he" dir="rtl">פרויקט</div>
   <h1 lang="en">Manhattan skyline residence: a collage that quotes Manet above the bar</h1>
   <h1 lang="he" dir="rtl">דירה מול קו הרקיע במנהטן: קולאז&#x27; שמצטט את מאנה מעל הבר</h1>
   <p class="lead" lang="en">For this Manhattan skyline apartment I selected one large format digital collage to anchor the custom bar. The client's love of entertaining guided the choice: the work draws on the visual language of glamorous social gatherings and references Un Bar aux Folies-Bergère by Édouard Manet (1882).</p>
   <p class="lead" lang="he" dir="rtl">לדירה הזאת במנהטן, מול קו הרקיע, בחרתי קולאז' דיגיטלי אחד בפורמט גדול שיעגן את הבר שנבנה בה במיוחד. אהבת האירוח של הלקוח הובילה את הבחירה: העבודה שואבת מהשפה החזותית של מפגשים חברתיים זוהרים ומתכתבת עם "בר בפולי ברז'ר" של אדואר מאנה (1882).</p>
   <figure class="hero">
     <img src="/images/projects/manhattan-bar.jpg" alt="Custom marble bar in a Manhattan apartment with a large format digital collage of a glamorous gathering set between backlit shelves of bottles" loading="eager">
-    <figcaption>Manhattan, Skyline Residence. The collage above the custom bar.</figcaption>
+    <figcaption data-l="en">Manhattan, Skyline Residence. The collage above the custom bar.</figcaption>
+    <figcaption data-l="he" dir="rtl">מנהטן, דירה מול קו הרקיע. הקולאז&#x27; מעל הבר.</figcaption>
   </figure>
   <div class="post-body" lang="he" dir="rtl">
-<h2>קיר אחד, שנבנה לעבודה אחת</h2><p>הבר הוא המרכז החברתי של הדירה: דלפק שיש, מדפים מוארים של בקבוקים וכוסות משני הצדדים, מוט פליז לרגליים, ובאמצע פאנל שנבנה בבירור כדי להחזיק תמונה אחת. הלקוח אוהב לארח. זה היה כל הבריף, וזה הסוג שאני מעדיפה, כי הדרך שבה אדם מארח אומרת לי מה הקיר צריך להגיד.</p><h2>מה הקיר היה צריך</h2><p>יצירה אחת, לא קבוצה. גדולה מספיק כדי להחזיק את מרכז קיר הבר בין המדפים, ועם האנרגיה של חדר מלא אורחים, כך שהאווירה נקבעת עוד לפני שמישהו מזג כוס. היא גם היתה צריכה לשבת בתוך עיצוב מאופק: כיסאות בר כהים, אבן אפורה, אור העיר דרך החלונות. משועשעת, אבל לא רועשת.</p><h2>הקולאז'</h2><p>קולאז' דיגיטלי בפורמט גדול ששואב מהשפה החזותית של מפגשים חברתיים זוהרים: אישה בשמלת ערב ליד שולחן ערוך, גבר בחליפת ערב רוכן אליה, כוסות ביד, והדמויות נחתכות וחוזרות על פני פאנלים אנכיים, כך שהסצנה נקראת כמו מסיבה שנתפסה במראה. העבודה מתכתבת עם "בר בפולי ברז'ר", שצייר אדואר מאנה בשנת 1882: הברמנית מאחורי דלפק השיש, והקהל שמופיע רק במראה שמאחוריה. עבודה שמצטטת את מאנה מעל בר פרטי נותנת לחדר שושלת. האורחים מרגישים את ההתייחסות עוד לפני שהם מזהים אותה, וללקוח יש עבודה שאומרת במבט אחד בשביל מה הדירה הזאת קיימת.</p><figure><img src="/images/projects/manet.jpg" alt="בר בפולי ברז'ר מאת אדואר מאנה, 1882, ברמנית מאחורי דלפק שיש ואולם הומה משתקף במראה"><figcaption>אדואר מאנה, בר בפולי ברז'ר (1882). הציור שממנו שואב הקולאז'.</figcaption></figure><h2>איך נעשתה הבחירה</h2><p>התחלתי מהלקוח, לא מהאמנות: איך הוא מארח, מי מגיע, איך החדר צריך להרגיש בשעה מאוחרת בלילה. משם צמצמתי לעבודות שנושאות את התחושה הזאת ושאפשר להפיק אותן בגודל שהפאנל דרש. ואז החלק המעשי שאני מנהלת בכל פרויקט: הפקה בקנה המידה הנכון, מסגור, והתקנה מעל בר, מקום שבו מדפים מוארים ושיש מייצרים השתקפויות מכל כיוון, וגובה התלייה נקבע לאנשים שעומדים, לא יושבים. הפרויקט הסתיים כשהיצירה היתה על הקיר והלקוח עמד מולה מרוצה.</p><p>אם אתם מרהטים דירה בניו יורק ורוצים עבודה אחת שנבחרת בתשומת לב כזאת, כתבו לי ל-<a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> או השתמשו ב<a href="/#contact">טופס יצירת הקשר</a>. קראו למה לצפות מ<a href="/advisory/art-advisor-manhattan-apartment/">יועצת אמנות לדירה במנהטן</a>, או ראו אוסף שלם שנבנה לבית חדש ב<a href="/projects/closter-new-jersey-new-construction/">קלוסטר, ניו ג'רזי</a>.</p>
+<h2>קיר אחד, שנבנה לעבודה אחת</h2><p>הבר הוא המרכז החברתי של הדירה: דלפק שיש, מדפים מוארים של בקבוקים וכוסות משני הצדדים, מוט פליז לרגליים, ובאמצע פאנל שנבנה בבירור כדי להחזיק תמונה אחת. הלקוח אוהב לארח. זה היה כל הבריף, וזה הסוג שאני מעדיפה, כי הדרך שבה אדם מארח אומרת לי מה הקיר צריך להגיד.</p><h2>מה הקיר היה צריך</h2><p>יצירה אחת, לא קבוצה. גדולה מספיק כדי להחזיק את מרכז קיר הבר בין המדפים, ועם האנרגיה של חדר מלא אורחים, כך שהאווירה נקבעת עוד לפני שמישהו מזג כוס. היא גם היתה צריכה לשבת בתוך עיצוב מאופק: כיסאות בר כהים, אבן אפורה, אור העיר דרך החלונות. משועשעת, אבל לא רועשת.</p><h2>הקולאז'</h2><p>קולאז' דיגיטלי בפורמט גדול ששואב מהשפה החזותית של מפגשים חברתיים זוהרים: אישה בשמלת ערב ליד שולחן ערוך, גבר בחליפת ערב רוכן אליה, כוסות ביד, והדמויות נחתכות וחוזרות על פני פאנלים אנכיים, כך שהסצנה נקראת כמו מסיבה שנתפסה במראה. העבודה מתכתבת עם "בר בפולי ברז'ר", שצייר אדואר מאנה בשנת 1882: הברמנית מאחורי דלפק השיש, והקהל שמופיע רק במראה שמאחוריה. עבודה שמצטטת את מאנה מעל בר פרטי נותנת לחדר שושלת. האורחים מרגישים את ההתייחסות עוד לפני שהם מזהים אותה, וללקוח יש עבודה שאומרת במבט אחד בשביל מה הדירה הזאת קיימת.</p><figure><img src="/images/projects/manet.jpg" alt="בר בפולי ברז'ר מאת אדואר מאנה, 1882, ברמנית מאחורי דלפק שיש ואולם הומה משתקף במראה"><figcaption>אדואר מאנה, בר בפולי ברז'ר (1882). הציור שממנו שואב הקולאז'.</figcaption></figure><h2>איך נעשתה הבחירה</h2><p>התחלתי מהלקוח, לא מהאמנות: איך הוא מארח, מי מגיע, איך החדר צריך להרגיש בשעה מאוחרת בלילה. משם צמצמתי לעבודות שנושאות את התחושה הזאת ושאפשר להפיק אותן בגודל שהפאנל דרש. ואז החלק המעשי שאני מנהלת בכל פרויקט: הפקה בקנה המידה הנכון, מסגור, והתקנה מעל בר, מקום שבו מדפים מוארים ושיש מייצרים השתקפויות מכל כיוון, וגובה התלייה נקבע לאנשים שעומדים, לא יושבים. הפרויקט הסתיים כשהיצירה היתה על הקיר והלקוח עמד מולה מרוצה.</p><p>אם אתם מרהטים דירה בניו יורק ורוצים עבודה אחת שנבחרת בתשומת לב כזאת, כתבו לי ל-<a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a> או השתמשו ב<a href="/#contact">טופס יצירת הקשר</a>. קראו למה לצפות מ<a href="/advisory/art-advisor-manhattan-apartment/">יועצת אמנות לדירה במנהטן</a>, או ראו אוסף שלם שנבנה לבית חדש ב<a href="/projects/closter-new-jersey-new-construction/">קלוסטר, ניו ג'רזי</a>.</p>
   </div>
   <div class="post-body post-body-en" lang="en" dir="ltr">
-<h2>One wall, built for one work</h2><p>The bar is the social center of this apartment: a marble counter, backlit shelves of bottles and glassware on either side, a brass rail at the foot, and in the middle a panel that was clearly built to hold a single picture. The client loves to entertain. That was the whole brief, and it is the kind I prefer, because how a person hosts tells me what the wall should say.</p><h2>What the wall needed</h2><p>One piece, not a group. Large enough to hold the center of the bar wall between the shelves, and with the energy of a room full of guests, so the mood is set before anyone has poured a drink. It also had to sit inside a restrained interior: dark stools, grey stone, city light through the windows. Playful, but not loud.</p><h2>The collage</h2><p>A large format digital collage that draws on the visual language of glamorous social gatherings: a woman in an evening dress at a laid table, a man in a dinner jacket leaning in, glasses in hand, the figures cut and repeated across vertical panels so the scene reads like a party caught in a mirror. The work references Un Bar aux Folies-Bergère, painted by Édouard Manet in 1882: the barmaid behind her marble counter, and the crowd that appears only in the mirror behind her. A work that quotes Manet above a private bar gives the room a lineage. Guests feel the reference before they place it, and the client has a work that says, in one glance, what the apartment is for.</p><figure><img src="/images/projects/manet.jpg" alt="Un Bar aux Folies-Bergère by Édouard Manet, 1882, a barmaid behind a marble counter with a crowded hall reflected in the mirror"><figcaption>Édouard Manet, Un Bar aux Folies-Bergère (1882). The painting the collage draws on.</figcaption></figure><h2>How the choice was made</h2><p>I started with the client, not with the art: how they host, who comes, what the room should feel like late at night. From there I narrowed to work that carried that feeling and could be produced at the size the panel required. Then the practical part I manage on every project: production at the right scale, framing, and installation above a bar, where lit shelves and marble put reflections everywhere and the hanging height has to be set for people standing, not sitting. The project was finished when the piece was up and the client was happy standing in front of it.</p><p>If you are furnishing a New York apartment and want one work chosen with this kind of attention, write to me at <a href="mailto:Stav@stavtheodor.com">Stav@stavtheodor.com</a> or use the <a href="/#contact">contact form</a>. Read what to expect from <a href="/advisory/art-advisor-manhattan-apartment/">an art advisor for a Manhattan apartment</a>, or see a whole collection built for a new house in <a href="/projects/closter-new-jersey-new-construction/">Closter, New Jersey</a>.</p>
+<h2>One wall, built for one work</h2><p>The bar is the social center of this apartment: a marble counter, backlit shelves of bottles and glassware on either side, a brass rail at the foot, and in the middle a panel that was clearly built to hold a single picture. The client loves to entertain. That was the whole brief, and it is the kind I prefer, because how a person hosts tells me what the wall should say.</p><h2>What the wall needed</h2><p>One piece, not a group. Large enough to hold the center of the bar wall between the shelves, and with the energy of a room full of guests, so the mood is set before anyone has poured a drink. It also had to sit inside a restrained interior: dark stools, grey stone, city light through the windows. Playful, but not loud.</p><h2>The collage</h2><p>A large format digital collage that draws on the visual language of glamorous social gatherings: a woman in an evening dress at a laid table, a man in a dinner jacket leaning in, glasses in hand, the figures cut and repeated across vertical panels so the scene reads like a party caught in a mirror. The work references Un Bar aux Folies-Bergère, painted by Édouard Manet in 1882: the barmaid behind her marble counter, and the crowd that appears only in the mirror behind her. A work that quotes Manet above a private bar gives the room a lineage. Guests feel the reference before they place it, and the client has a work that says, in one glance, what the apartment is for.</p><figure><img src="/images/projects/manet.jpg" alt="Un Bar aux Folies-Bergère by Édouard Manet, 1882, a barmaid behind a marble counter with a crowded hall reflected in the mirror"><figcaption>Édouard Manet, Un Bar aux Folies-Bergère (1882). The painting the collage draws on.</figcaption></figure><h2>How the choice was made</h2><p>I started with the client, not with the art: how they host, who comes, what the room should feel like late at night. From there I narrowed to work that carried that feeling and could be produced at the size the panel required. Then the practical part I manage on every project: production at the right scale, framing, and installation above a bar, where lit shelves and marble put reflections everywhere and the hanging height has to be set for people standing, not sitting. The project was finished when the piece was up and the client was happy standing in front of it.</p><p>If you are furnishing a New York apartment and want one work chosen with this kind of attention, write to me at <a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a> or use the <a href="/#contact">contact form</a>. Read what to expect from <a href="/advisory/art-advisor-manhattan-apartment/">an art advisor for a Manhattan apartment</a>, or see a whole collection built for a new house in <a href="/projects/closter-new-jersey-new-construction/">Closter, New Jersey</a>.</p>
   </div>
   <div class="cta-card" lang="en">
     <p>Send me one photo of the wall, and a line about the space. I will tell you what I see.</p>
-    <a class="btn" href="mailto:Stav@stavtheodor.com">Write to Stav</a>
+    <a class="btn" href="mailto:stav@stavtheodor.com">Write to Stav</a>
   </div>
   <div class="cta-card" lang="he" dir="rtl">
     <p>שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</p>
-    <a class="btn" href="mailto:Stav@stavtheodor.com">כתבו לסתיו</a>
+    <a class="btn" href="mailto:stav@stavtheodor.com">כתבו לסתיו</a>
   </div>
   <section class="related">
-    <div class="label" style="text-align:left;">Read next</div>
+    <div class="label" data-l="en" style="text-align:left;">Read next</div>
+    <div class="label" data-l="he" dir="rtl" style="text-align:right;">להמשך קריאה</div>
     <ul>
-      <li><a href="/advisory/art-advisor-manhattan-apartment/">Art advisor for a Manhattan apartment: what to expect</a></li>
-      <li><a href="/projects/closter-new-jersey-new-construction/">Closter, New Jersey: a collection for a newly built house</a></li>
-      <li><a href="/projects/hod-hasharon-private-villa/">Hod Hasharon private villa: one work as the emotional center of the house</a></li>
-      <li><a href="/advisory/how-the-art-advisory-process-works/">How does the art advisory process work, step by step?</a></li>
+      <li><a href="/advisory/art-advisor-manhattan-apartment/"><span data-l="en">Art advisor for a Manhattan apartment: what to expect</span><span data-l="he" dir="rtl">יועצת אמנות לדירה במנהטן: למה לצפות</span></a></li>
+      <li><a href="/projects/closter-new-jersey-new-construction/"><span data-l="en">Closter, New Jersey: a collection for a newly built house</span><span data-l="he" dir="rtl">קלוסטר, ניו ג&#x27;רזי: אוסף לבית שזה עתה נבנה</span></a></li>
+      <li><a href="/projects/hod-hasharon-private-villa/"><span data-l="en">Hod Hasharon private villa: one work as the emotional center of the house</span><span data-l="he" dir="rtl">וילה פרטית בהוד השרון: עבודה אחת כמרכז הרגשי של הבית</span></a></li>
+      <li><a href="/advisory/how-the-art-advisory-process-works/"><span data-l="en">How does the art advisory process work, step by step?</span><span data-l="he" dir="rtl">איך עובד תהליך הייעוץ לאמנות, שלב אחרי שלב?</span></a></li>
     </ul>
   </section>
 </section>
@@ -800,17 +912,33 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="name">Stav Theodor&#8209;Kimhi</div>
-    <div class="sub">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="name" data-l="en">Stav Theodor&#8209;Kimhi</div>
+    <div class="name" data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</div>
+    <div class="sub" data-l="en">Art Curation &amp; Advisory &middot; Tenafly, New Jersey</div>
+    <div class="sub" data-l="he" dir="rtl">אוצרות וייעוץ אמנות &middot; טנפליי, ניו ג'רזי</div>
     <ul class="contact-list">
-      <li><a href="mailto:stavtheodor85@gmail.com">stavtheodor85@gmail.com</a></li>
-      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener">Art Radar on WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
-      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a></li>
+      <li><a href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he">ראדאר אמנות בוואטסאפ</span></a></li>
+      <li><a href="https://www.instagram.com/theodorafineart/" target="_blank" rel="noopener" aria-label="THEODORA on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span data-l="en">Instagram</span><span data-l="he">אינסטגרם</span></a></li>
+      <li><a href="/#portfolio"><span data-l="en">Portfolio</span><span data-l="he">תיק עבודות</span></a></li>
     </ul>
     <div class="copyright">&copy; 2026 THEODORA</div>
   </div>
 </footer>
+
+<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+  <div class="card">
+    <h3 id="mail-fallback-title"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+    <div class="row">
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+    </div>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+  </div>
+</div>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
@@ -823,21 +951,91 @@
 
 <script>
 (function () {
+  var KEY = 'radarLang';
+
   function apply(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  var saved = 'he';
-  try { saved = localStorage.getItem('radarLang') || 'he'; } catch (e) {}
-  if (saved === 'en') { apply('en'); }
+
+  apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
+
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem('radarLang', lang); } catch (e) {}
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
       apply(lang);
     });
+  });
+
+  /* A mailto: link does nothing at all in a browser with no mail handler registered,
+     which is why the Write to Stav button felt dead. Keep the mailto (it is correct
+     and works on phones and with a real mail client), and if the click was swallowed,
+     offer the address, a copy button and webmail compose links instead. */
+  var panel = document.getElementById('mail-fallback');
+  if (!panel) { return; }
+  var addrEl = document.getElementById('mail-fallback-addr');
+  var gmail = document.getElementById('mail-fallback-gmail');
+  var outlook = document.getElementById('mail-fallback-outlook');
+  var copyBtn = document.getElementById('mail-fallback-copy');
+
+  function closePanel() { panel.classList.remove('open'); }
+
+  function openPanel(addr) {
+    addrEl.textContent = addr;
+    addrEl.setAttribute('href', 'mailto:' + addr);
+    gmail.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr));
+    outlook.setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(addr));
+    panel.classList.add('open');
+  }
+
+  panel.addEventListener('click', function (e) {
+    if (e.target === panel || e.target.classList.contains('close') || (e.target.parentNode && e.target.parentNode.classList && e.target.parentNode.classList.contains('close'))) {
+      closePanel();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closePanel(); }
+  });
+  copyBtn.addEventListener('click', function () {
+    var addr = addrEl.textContent;
+    var done = function () {
+      var spans = copyBtn.querySelectorAll('span');
+      var was = [];
+      spans.forEach(function (s, i) { was[i] = s.textContent; });
+      spans.forEach(function (s) { s.textContent = s.getAttribute('data-l') === 'he' ? 'הועתק' : 'Copied'; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = addr; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+    if (!a || a === addrEl) { return; }
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var handled = false;
+    function mark() { handled = true; }
+    window.addEventListener('blur', mark);
+    document.addEventListener('visibilitychange', mark);
+    setTimeout(function () {
+      window.removeEventListener('blur', mark);
+      document.removeEventListener('visibilitychange', mark);
+      if (handled) { return; }
+      openPanel(addr);
+    }, 1000);
   });
 })();
 </script>

@@ -20,7 +20,7 @@ bpp = open("build-post-pages.py", encoding="utf-8").read()
 def frag(name):
     m = re.search(name + r' = """(.*?)"""', bpp, re.S)
     return m.group(1)
-FAVICONS, LANG_TOGGLE, LANG_JS, GA, FOOTER = (frag(n) for n in ["FAVICONS", "LANG_TOGGLE", "LANG_JS", "GA_SNIPPET", "FOOTER"])
+FAVICONS, LANG_TOGGLE, LANG_BOOT, MAIL_UI, LANG_JS, GA, FOOTER = (frag(n) for n in ["FAVICONS", "LANG_TOGGLE", "LANG_BOOT", "MAIL_UI", "LANG_JS", "GA_SNIPPET", "FOOTER"])
 
 EXTRA_CSS = """<style>
   .page { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
@@ -73,15 +73,14 @@ EXTRA_CSS = """<style>
   .hub-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 8px; }
   .hub-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
   .hub-card:hover { border-color: var(--bronze); }
-  .page .lang-switch, .hub .lang-switch { margin-bottom: 28px; }
 </style>"""
 
 NAV = """<nav>
-  <a href="/">Home</a>
-  <a href="/advisory/">Advisory</a>
-  <a href="/projects/">Projects</a>
-  <a href="/#radar">Art Radar</a>
-  <a href="/#contact">Contact</a>
+  <a href="/"><span data-l="en">Home</span><span data-l="he">דף הבית</span></a>
+  <a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he">ייעוץ</span></a>
+  <a href="/projects/"><span data-l="en">Projects</span><span data-l="he">פרויקטים</span></a>
+  <a href="/#radar"><span data-l="en">Art Radar</span><span data-l="he">ראדאר אמנות</span></a>
+  <a href="/#contact"><span data-l="en">Contact</span><span data-l="he">יצירת קשר</span></a>
 </nav>
 
 <header class="hero wrap" style="padding: 56px 24px 32px;">
@@ -95,7 +94,7 @@ NAV = """<nav>
 def head(title, desc, url, og_image, ld_blocks):
     ld = "\n".join(f'<script type="application/ld+json">\n{json.dumps(b, ensure_ascii=False, indent=2)}\n</script>' for b in ld_blocks)
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="he" data-default-lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,6 +121,10 @@ def head(title, desc, url, og_image, ld_blocks):
 </head>
 <body>
 
+{LANG_BOOT}
+
+{LANG_TOGGLE}
+
 {NAV}
 """
 
@@ -130,6 +133,8 @@ def tail():
 <hr class="divider">
 
 {FOOTER}
+
+{MAIL_UI}
 
 {GA}
 
@@ -141,6 +146,20 @@ def tail():
 
 def strip_tags(s):
     return re.sub(r"<[^>]+>", "", s or "").strip()
+
+def snippet(s, n=165):
+    """Short Hebrew card blurb. The JSON carries no Hebrew meta_description, so the
+    Hebrew lead is trimmed at a sentence or word boundary instead."""
+    t = strip_tags(s)
+    if len(t) <= n:
+        return t
+    cut = t[:n]
+    for sep in (". ", "? ", "! "):
+        i = cut.rfind(sep)
+        if i > n * 0.5:
+            return cut[:i + 1]
+    i = cut.rfind(" ")
+    return (cut[:i] if i > 0 else cut).rstrip(",;:") + "..."
 
 def load_pages():
     pages = []
@@ -154,6 +173,10 @@ def render_page(p, all_pages):
     url = f"{SITE}/{p['path'].strip('/')}/"
     og = SITE + (p.get("og_image") or (p.get("hero_image") or {}).get("src") or "/og-image.jpg")
     kicker = p.get("kicker", {"advisory": "Art advisory", "projects": "Project", "partners": "Working together", "guide": "Guide"}.get(p["section"], "THEODORA"))
+    kicker_he = p.get("kicker_he", {
+        "Art advisory": "ייעוץ אמנות", "Project": "פרויקט", "Working together": "עבודה משותפת",
+        "Guide": "מדריך", "For partners": "לשותפים", "THEODORA": "THEODORA",
+    }.get(kicker, {"advisory": "ייעוץ אמנות", "projects": "פרויקט", "partners": "עבודה משותפת", "guide": "מדריך"}.get(p["section"], "THEODORA")))
     date = p.get("date", "2026-09-04")
     main = {
         "@context": "https://schema.org",
@@ -184,9 +207,14 @@ def render_page(p, all_pages):
     hero = ""
     hi = p.get("hero_image")
     if hi:
+        cap = ""
+        if hi.get("caption_en"):
+            cap += '<figcaption data-l="en">' + H.escape(hi["caption_en"]) + "</figcaption>\n    "
+        if hi.get("caption_he"):
+            cap += '<figcaption data-l="he" dir="rtl">' + H.escape(hi["caption_he"]) + "</figcaption>"
         hero = f"""  <figure class="hero">
     <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en',''), quote=True)}" loading="eager">
-    {('<figcaption>' + H.escape(hi['caption_en']) + '</figcaption>') if hi.get('caption_en') else ''}
+    {cap}
   </figure>
 """
     faq_html = ""
@@ -204,16 +232,17 @@ def render_page(p, all_pages):
 """
     cta_en = p.get("cta_en") or "Send me one photo of the wall, and a line about the space. I will tell you what I see."
     cta_he = p.get("cta_he") or "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
-    mail = "mailto:Stav@stavtheodor.com"
+    mail = "mailto:stav@stavtheodor.com"
     related = ""
     rel = [r for r in p.get("related", []) if any(o["path"].strip("/") == r.strip("/") for o in all_pages)]
     if rel:
         items = []
         for r in rel:
             o = next(o for o in all_pages if o["path"].strip("/") == r.strip("/"))
-            items.append(f'      <li><a href="/{o["path"].strip("/")}/">{H.escape(o["title_en"])}</a></li>')
+            items.append(f'      <li><a href="/{o["path"].strip("/")}/"><span data-l="en">{H.escape(o["title_en"])}</span><span data-l="he" dir="rtl">{H.escape(o.get("title_he") or o["title_en"])}</span></a></li>')
         related = f"""  <section class="related">
-    <div class="label" style="text-align:left;">Read next</div>
+    <div class="label" data-l="en" style="text-align:left;">Read next</div>
+    <div class="label" data-l="he" dir="rtl" style="text-align:right;">להמשך קריאה</div>
     <ul>
 {chr(10).join(items)}
     </ul>
@@ -221,8 +250,8 @@ def render_page(p, all_pages):
 """
     body = f"""
 <section class="page">
-  {LANG_TOGGLE}
-  <div class="kicker">{H.escape(kicker)}</div>
+  <div class="kicker" data-l="en">{H.escape(kicker)}</div>
+  <div class="kicker" data-l="he" dir="rtl">{H.escape(kicker_he)}</div>
   <h1 lang="en">{H.escape(p['title_en'])}</h1>
   <h1 lang="he" dir="rtl">{H.escape(p['title_he'])}</h1>
   <p class="lead" lang="en">{p['lead_en']}</p>
@@ -252,7 +281,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages):
         img = (p.get("hero_image") or {}).get("src") or p.get("og_image") or "/og-image.jpg"
         cards.append(f"""    <a class="hub-card" href="/{p['path'].strip('/')}/">
       <img src="{img}" alt="{H.escape((p.get('hero_image') or {}).get('alt_en', p['title_en']), quote=True)}" loading="lazy">
-      <div class="in"><h3>{H.escape(p['title_en'])}</h3><p>{H.escape(strip_tags(p['meta_description']))}</p></div>
+      <div class="in"><h3 data-l="en">{H.escape(p['title_en'])}</h3><h3 data-l="he" dir="rtl">{H.escape(p.get('title_he') or p['title_en'])}</h3><p data-l="en">{H.escape(strip_tags(p['meta_description']))}</p><p data-l="he" dir="rtl">{H.escape(snippet(p.get('lead_he') or ''))}</p></div>
     </a>""")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": title_en, "url": url, "inLanguage": ["en", "he"],
            "hasPart": [{"@type": "WebPage", "name": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in pages]}]
@@ -268,8 +297,8 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages):
 {chr(10).join(cards)}
   </div>
   <div class="page" style="max-width: 760px;">
-    <div class="cta-card" lang="en"><p>Send me one photo of the wall, and a line about the space. I will tell you what I see.</p><a class="btn" href="mailto:Stav@stavtheodor.com">Write to Stav</a></div>
-    <div class="cta-card" lang="he" dir="rtl"><p>שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</p><a class="btn" href="mailto:Stav@stavtheodor.com">כתבו לסתיו</a></div>
+    <div class="cta-card" lang="en"><p>Send me one photo of the wall, and a line about the space. I will tell you what I see.</p><a class="btn" href="mailto:stav@stavtheodor.com">Write to Stav</a></div>
+    <div class="cta-card" lang="he" dir="rtl"><p>שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</p><a class="btn" href="mailto:stav@stavtheodor.com">כתבו לסתיו</a></div>
   </div>
 </section>
 """
