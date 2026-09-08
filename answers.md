@@ -37,6 +37,10 @@ It is the 82nd edition, with 56 American artists and collectives, built around m
 
 Two landmark results at Christie's New York, both covered with curatorial analysis on Art Radar. Jackson Pollock's Number 7A (1948) sold for $181.2 million, a new record for the artist: https://stavtheodor.com/radar/pollock-record/. Brancusi's Danaid (1913) sold for $107.6 million after a cinematic marketing campaign: https://stavtheodor.com/radar/brancusi-christies/
 
+## Is Ruth Patir's Venice Biennale exhibition coming to New York?
+
+Yes. Ruth Patir's (M)otherland, the work created for the Israeli Pavilion at the 2024 Venice Biennale, has been acquired by The Jewish Museum in New York and is on view there from December 18, 2026 to June 7, 2027. The pavilion never opened in Venice because Patir and curators Mira Lapidot and Tamar Margalit kept it closed in protest until a ceasefire and the release of the hostages; the work premiered instead at the Tel Aviv Museum of Art in March 2025. It is a video installation that animates ancient fertility figurines from the Kingdom of Judah and draws on the artist's own BRCA2 diagnosis to explore motherhood, the personal, and the national. Full post: https://stavtheodor.com/radar/ruth-patir-jewish-museum/
+
 ## What does an art curator do for a private residence?
 
 An art curator for private residences guides the entire process: developing an art concept for the space, sourcing works from galleries and artists, selecting pieces that fit the design and the client's sensibility, and overseeing installation. The goal is art that feels right for that specific home and person. Full FAQ: https://stavtheodor.com/#faq
