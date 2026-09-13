@@ -645,8 +645,8 @@ def render_home(projects, posts):
 </section>
 
 <section class="section wrap" id="faq">
-  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Questions', 'שאלות')}</p><h2 class="serif">{T('What people ask before they write.', 'מה שואלים לפני שכותבים.')}</h2></div></div>
-  <div class="qas reveal">{faq}
+  <div class="head reveal" style="justify-content: center; text-align: center;"><div class="lead" style="align-items: center;"><p class="eyebrow">{T('Questions', 'שאלות')}</p><h2 class="serif">{T('What people ask before they write.', 'מה שואלים לפני שכותבים.')}</h2></div></div>
+  <div class="qas reveal" style="margin: 0 auto;">{faq}
   </div>
 </section>
 ''' + tail()
