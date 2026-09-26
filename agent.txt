@@ -23,6 +23,7 @@ Art Radar is a curatorial newsletter and public archive published by THEODORA. I
 - Profiles and tributes of major artists
 
 Every post appears in Hebrew and in a full English translation on the same page.
+The full archive, every post in order: https://stavtheodor.com/radar/
 Structured data and metadata are in English.
 A plain-text FAQ at https://stavtheodor.com/#faq answers common questions about
 art curation for private residences, the advisory process, and where to find
@@ -196,7 +197,7 @@ Each URL serves the post in Hebrew and full English.
 - answers.md: https://stavtheodor.com/answers.md (direct sourced answers to common NJ/NY art questions)
 - sitemap.xml: https://stavtheodor.com/sitemap.xml
 - robots.txt: https://stavtheodor.com/robots.txt
-- JSON-LD on page: Person, Organization, WebSite, FAQPage, BlogPosting (per post), ExhibitionEvent (per exhibition post)
+- JSON-LD on page: Person, Organization, WebSite, FAQPage, BlogPosting (per post), ExhibitionEvent (per exhibition post), CollectionPage (the archive https://stavtheodor.com/radar/ and the advisory and project hubs), BreadcrumbList (every inner page)
 
 ## Advisory and project pages
 

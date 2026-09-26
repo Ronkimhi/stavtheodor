@@ -1,0 +1,187 @@
+<!-- templates/home.html: the homepage body, rendered into index.html by build-home.py.
+     Slots (each appears exactly once below, as a double-braced name): NAV, PROJECT_CARDS, ADVISORY_ROWS, TIMELINE, POST_COUNT (twice), FAQ, FOOTER, MAIL_UI, LANG_JS, PAGE_JS.
+     Everything else is the approved v3 design (2026-09-26). Edit here, never in index.html. -->
+<body>
+
+<script>
+(function () {
+  /* Boot. The publisher wraps this page in its own html/body, so the classes and the
+     default-language attribute that the site sets in markup are set here instead. */
+  var root = document.documentElement;
+  root.classList.add('js');
+  if (!root.getAttribute('data-default-lang')) { root.setAttribute('data-default-lang', 'en'); }
+  var def = root.getAttribute('data-default-lang') || 'en';
+  var lang = def;
+  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
+  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  function setLang() {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-he', lang === 'he');
+    root.lang = lang;
+  }
+  if (document.body) { setLang(); } else { document.addEventListener('DOMContentLoaded', setLang); }
+  /* The opening: start in the WebGL state from the first paint so the static figure never flashes.
+     The brush script confirms the context and falls back to the static figures if it cannot. */
+  try {
+    var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var noGl = location.hash === '#nogl' || /[?&]nogl=1/.test(location.search);
+    if (document.body && !reduceMotion && !noGl && window.WebGLRenderingContext) { document.body.classList.add('gl', 'entering'); }
+  } catch (e) {}
+})();
+</script>
+
+{{NAV}}
+
+<canvas id="gl" class="gl-only" role="img" aria-label="A living room painted into view, then a proposal for the art on its wall."></canvas>
+
+<section class="hero" id="hero" aria-label="Opening">
+  <figure class="sfig static-only" style="--fx:63%;--fy:40%">
+    <img src="/images/home2/pairs/p3_after.webp" alt="A living room with city windows, a blue-grey wall and a large gold canvas above the sofa." loading="lazy" decoding="async">
+    <figcaption><span data-l="en">Proposal. Living room.</span><span data-l="he" dir="rtl">הצעה. סלון.</span></figcaption>
+  </figure>
+  <div class="hero-ui">
+    <p class="line" id="l1"><span data-l="en">A beautiful room.</span><span data-l="he" dir="rtl">חדר יפה.</span></p>
+    <p class="line" id="l2"><span data-l="en">The right art.</span><span data-l="he" dir="rtl">האמנות הנכונה.</span></p>
+    <div class="mark-wrap"><div class="mark-in">
+      <div class="cue" aria-hidden="true"><i></i></div>
+    </div></div>
+  </div>
+</section>
+
+<div class="chain" id="chain">
+  <figure class="sfig static-only" style="--fx:86%;--fy:38%">
+    <img src="/images/home2/pairs/p4_after.webp" alt="A white living room with a wood ceiling and a blue painting of swimmers on the right wall." loading="lazy" decoding="async">
+    <figcaption><span data-l="en">Proposal. Living room.</span><span data-l="he" dir="rtl">הצעה. סלון.</span></figcaption>
+  </figure>
+  <figure class="sfig static-only" style="--fx:15%;--fy:35%">
+    <img src="/images/home2/pairs/p5_after.webp" alt="A glass-walled living room in the trees with a tall painting of a girl in a meadow on the left wall." loading="lazy" decoding="async">
+    <figcaption><span data-l="en">Proposal. Living room.</span><span data-l="he" dir="rtl">הצעה. סלון.</span></figcaption>
+  </figure>
+  <figure class="sfig static-only" style="--fx:85%;--fy:40%">
+    <img src="/images/home2/pairs/p1_after.webp" alt="A living room with a blue carpet, a curved sofa and a red portrait on the right wall." loading="lazy" decoding="async">
+    <figcaption><span data-l="en">Proposal. Living room.</span><span data-l="he" dir="rtl">הצעה. סלון.</span></figcaption>
+  </figure>
+</div>
+<div class="band gl-only" aria-hidden="true"></div>
+<p class="cap gl-only" id="cap"><span class="cap-t" data-cap="living"><span data-l="en">Proposal. Living room.</span><span data-l="he" dir="rtl">הצעה. סלון.</span></span></p>
+
+<div class="page" id="page">
+<section class="intro" id="intro">
+  <h1 class="serif" id="intro-h1"><span data-l="en">Art is not an accessory.</span><span data-l="he" dir="rtl">אמנות היא לא אקססורי.</span></h1>
+  <div class="statement">
+    <p class="eyebrow reveal"><span data-l="en">What I do</span><span data-l="he" dir="rtl">מה אני עושה</span></p>
+    <h2 class="serif reveal"><span data-l="en">I don’t simply place art in spaces, I connect people with the art they are meant to live with.</span><span data-l="he" dir="rtl">אני לא רק מציבה אמנות בחללים, אני מחברת בין אנשים לאמנות שנועדה לחיות איתם.</span></h2>
+  </div>
+</section>
+
+<section class="cols" id="services" aria-label="Services">
+      <div class="col open">
+        <img src="/images/home2/col-curation.jpg" alt="Stav Theodor holding a framed work in a gallery corridor lined with paintings" loading="lazy">
+        <div class="scrim"></div>
+        <div class="text"><h3 class="serif"><span data-l="en">Art Consulting &amp; Curation</span><span data-l="he" dir="rtl">ייעוץ ואוצרות אמנות</span></h3><p class="desc"><span data-l="en">From a single artwork to a complete collection</span><span data-l="he" dir="rtl">מיצירה אחת ועד אוסף שלם</span></p></div>
+      </div>
+      <div class="col">
+        <img src="/images/home2/col-sourcing.jpg" alt="A tall blue portrait in a slim black frame on a lit wall" loading="lazy">
+        <div class="scrim"></div>
+        <div class="text"><h3 class="serif"><span data-l="en">Sourcing &amp; Acquisition</span><span data-l="he" dir="rtl">איתור ורכישה</span></h3><p class="desc"><span data-l="en">Personalized, through a global network of artists and makers</span><span data-l="he" dir="rtl">בהתאמה אישית, דרך רשת גלובלית של אמנים ויוצרים</span></p></div>
+      </div>
+      <div class="col">
+        <img src="/images/home2/col-commissions.jpg" alt="The three panel stork triptych installed on a white wall" loading="lazy">
+        <div class="scrim"></div>
+        <div class="text"><h3 class="serif"><span data-l="en">Commissions &amp; Creative Direction</span><span data-l="he" dir="rtl">הזמנות עבודה וניהול קריאייטיב</span></h3><p class="desc"><span data-l="en">From first concept to final execution</span><span data-l="he" dir="rtl">מהקונספט הראשון ועד הביצוע הסופי</span></p></div>
+      </div>
+      <div class="col">
+        <img src="/images/home2/col-production.jpg" alt="Stav Theodor at a print studio table, unwrapping a canvas" loading="lazy">
+        <div class="scrim"></div>
+        <div class="text"><h3 class="serif"><span data-l="en">Production &amp; Installation</span><span data-l="he" dir="rtl">הפקה והתקנה</span></h3><p class="desc"><span data-l="en">Framing and placement, managed end to end</span><span data-l="he" dir="rtl">מסגור והצבה, בניהול מלא מקצה לקצה</span></p></div>
+      </div>
+</section>
+
+<section class="section wrap" id="about">
+  <div class="about">
+    <div class="portrait reveal"><img src="/images/stav-portrait.jpg" alt="Stav Theodor-Kimhi" loading="lazy"></div>
+    <div class="text reveal">
+      <p class="eyebrow"><span data-l="en">About</span><span data-l="he" dir="rtl">אודות</span></p>
+      <h2 class="serif"><span data-l="en">Stav Theodor&#8209;Kimhi</span><span data-l="he" dir="rtl">סתיו תאודור&#8209;קמחי</span></h2>
+      <p class="role"><span data-l="en">Founder &amp; Art Curator</span><span data-l="he" dir="rtl">מייסדת ואוצרת אמנות</span></p>
+      <p class="body"><span data-l="en">I founded THEODORA after two decades across the art world: museums, galleries, academia, and years of work alongside leaders in international hospitality, building art concepts and collections for projects from hotels to private homes. That experience taught me one thing above all: the right piece, in the right space, at the right moment, changes how a person sees.</span><span data-l="he" dir="rtl">הקמתי את THEODORA אחרי שני עשורים בעולם האמנות: מוזיאונים, גלריות, אקדמיה, ושנים של עבודה לצד מובילים בתחום האירוח הבינלאומי, בבניית קונספטים ואוספים של אמנות לפרויקטים ממלונות ועד בתים פרטיים. הניסיון הזה לימד אותי דבר אחד מעל הכול: היצירה הנכונה, בחלל הנכון, ברגע הנכון, משנה את האופן שבו אדם רואה.</span></p>
+      <p class="body"><span data-l="en">THEODORA exists to help people discover that connection. To find artworks that resonate on a personal level and create spaces that feel meaningful, distinctive, and alive. Recent projects include private residences in Caesarea, Tel Aviv, and Herzliya, large-scale hospitality commissions, and the exhibition Creating Hope.</span><span data-l="he" dir="rtl">THEODORA קיימת כדי לעזור לאנשים לגלות את החיבור הזה. למצוא יצירות שמהדהדות ברמה האישית, וליצור חללים שמרגישים משמעותיים, ייחודיים וחיים. בין הפרויקטים האחרונים: בתים פרטיים בקיסריה, בתל אביב ובהרצליה, הזמנות בקנה מידה גדול לעולם האירוח, והתערוכה Creating Hope.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap film" id="film">
+  <div class="head reveal"><div class="lead"><p class="eyebrow"><span data-l="en">The film</span><span data-l="he" dir="rtl">הסרט</span></p><h2 class="serif"><span data-l="en">Sixty seven seconds on what I do.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה.</span></h2></div></div>
+  <video controls playsinline preload="metadata" poster="/images/home2/film-still.jpg" class="reveal">
+    <source src="/videos/theodora-film-2026-09-26.mp4" type="video/mp4">
+  </video>
+  <p class="cap"><span data-l="en">Sixty seven seconds on what I do, for designers, private collectors, home and business owners.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</span></p>
+</section>
+
+<div id="portfolio" aria-hidden="true"></div>
+<section class="section wrap" id="projects">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow"><span data-l="en">Projects</span><span data-l="he" dir="rtl">פרויקטים</span></p><h2 class="serif"><span data-l="en">Hotels by the sea, private homes, commissioned works, and the artists behind them.</span><span data-l="he" dir="rtl">מלונות מול הים, בתים פרטיים, עבודות מוזמנות והאמנים שמאחוריהן.</span></h2><p class="muted" style="font-size: 17px;"><span data-l="en">The best introduction to what I do is to see it.</span><span data-l="he" dir="rtl">הדרך הטובה ביותר להכיר את מה שאני עושה היא פשוט לראות.</span></p></div>
+    <a class="arrow" href="/projects/"><span class="ln"></span><span data-l="en">All projects</span><span data-l="he" dir="rtl">כל הפרויקטים</span></a>
+  </div>
+  <div class="grid3">{{PROJECT_CARDS}}
+  </div>
+</section>
+
+<section class="section wrap" id="advisory">
+  <div class="head reveal"><div class="lead"><p class="eyebrow"><span data-l="en">Advisory</span><span data-l="he" dir="rtl">ייעוץ</span></p><h2 class="serif"><span data-l="en">If you are about to buy, build or move, start here.</span><span data-l="he" dir="rtl">אם אתם עומדים לקנות, לבנות או לעבור דירה, התחילו כאן.</span></h2><p class="muted" style="font-size: 17px; max-width: 760px;"><span data-l="en">These pages answer the questions I am asked most, in plain terms, and show the work behind the answers.</span><span data-l="he" dir="rtl">העמודים האלה עונים בשפה פשוטה על השאלות שאני נשאלת הכי הרבה, ומראים את העבודה שמאחורי התשובות.</span></p></div></div>
+  <div class="rows reveal">{{ADVISORY_ROWS}}</div>
+</section>
+
+<section class="museum" id="museum">
+  <img class="bg" src="/images/home2/museum-timeline.jpg" alt="" loading="lazy">
+  <div class="scrim"></div>
+  <div class="text reveal">
+    <p class="eyebrow"><span data-l="en">The Museum</span><span data-l="he" dir="rtl">המוזיאון</span></p>
+    <h2 class="serif"><span data-l="en">A walkable map of art history</span><span data-l="he" dir="rtl">מפה של תולדות האמנות שאפשר לטייל בה</span></h2>
+    <p class="body"><span data-l="en">An interactive museum of art history. Zoom through 40,000 years, from the painted caves through Egypt, Greece, and Rome to today, on a living timeline. Open a placard, and step inside a walkable 3D gallery hung with real artworks. Every fact and image comes from Wikipedia and Wikimedia Commons.</span><span data-l="he" dir="rtl">מוזיאון אינטראקטיבי של תולדות האמנות. שוטטו לאורך 40,000 שנה, מהמערות המצוירות דרך מצרים, יוון ורומא ועד ימינו, על ציר זמן חי. פתחו שלט הסבר, והיכנסו לגלריה תלת ממדית שאפשר להסתובב בתוכה, ובה יצירות אמיתיות על הקירות. כל עובדה וכל תמונה מגיעות מוויקיפדיה ומוויקישיתוף.</span></p>
+    <a class="btn" href="/museum/" style="align-self: flex-start;"><span data-l="en">Enter the Museum</span><span data-l="he" dir="rtl">כניסה למוזיאון</span></a>
+  </div>
+</section>
+
+<section class="section wrap" id="radar">
+  <div class="radar-intro reveal">
+    <div class="left">
+      <p class="eyebrow"><span data-l="en">Art Radar</span><span data-l="he" dir="rtl">ראדאר אמנות</span></p>
+      <h2 class="serif"><span data-l="en">The art worth seeing, chosen by a curator.</span><span data-l="he" dir="rtl">האמנות ששווה לראות, בבחירת אוצרת.</span></h2>
+      <a class="btn" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 10px;"><span data-l="en">Join the WhatsApp Group</span><span data-l="he" dir="rtl">הצטרפו לקבוצת הוואטסאפ</span></a>
+    </div>
+    <div class="right">
+      <p class="body"><span data-l="en">Art Radar began as a WhatsApp group for our community in northern New Jersey and New York: a weekly radar of the exhibitions, gallery openings, public installations, art fairs, and museum events that are truly worth your time. Some weeks it is a long list. Some weeks it is one precise recommendation.</span><span data-l="he" dir="rtl">ראדאר אמנות התחיל כקבוצת וואטסאפ לקהילה שלנו בצפון ניו ג'רזי ובניו יורק: ראדאר שבועי של התערוכות, פתיחות הגלריות, המיצבים הציבוריים, ירידי האמנות ואירועי המוזיאונים ששווים באמת את הזמן שלכם. יש שבועות שזו רשימה ארוכה. יש שבועות שזו המלצה אחת מדויקת.</span></p>
+      <p class="body"><span data-l="en">The posts are written in Hebrew and published in the group first. They are collected here in order, each with a full English translation, so you can always come back to them.</span><span data-l="he" dir="rtl">הפוסטים נכתבים בעברית ומתפרסמים קודם כול בקבוצה. הם נאספים כאן לפי הסדר, כל אחד עם תרגום מלא לאנגלית, כדי שתמיד אפשר יהיה לחזור אליהם.</span></p>
+    </div>
+  </div>
+  <div class="timeline" id="posts">{{TIMELINE}}
+  </div>
+  <div class="cta-posts reveal">
+    <h2 class="serif"><span data-l="en">All {{POST_COUNT}} posts, in order, since the first radar.</span><span data-l="he" dir="rtl">כל {{POST_COUNT}} הפוסטים, לפי הסדר, מהראדאר הראשון ועד היום.</span></h2>
+    <a class="btn big" href="/radar/"><span data-l="en">See all posts</span><span data-l="he" dir="rtl">לכל הפוסטים</span></a>
+  </div>
+</section>
+
+<section class="section wrap" id="faq">
+  <div class="head reveal" style="justify-content: center; text-align: center;"><div class="lead" style="align-items: center;"><p class="eyebrow"><span data-l="en">Questions</span><span data-l="he" dir="rtl">שאלות</span></p><h2 class="serif"><span data-l="en">What people ask before they write.</span><span data-l="he" dir="rtl">מה שואלים לפני שכותבים.</span></h2></div></div>
+  <div class="qas reveal" style="margin: 0 auto;">{{FAQ}}
+  </div>
+</section>
+
+{{FOOTER}}
+</div>
+
+{{MAIL_UI}}
+{{LANG_JS}}
+{{PAGE_JS}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script src="/js/home-opening.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script src="/js/home-scroll.js"></script>
+
+</body>
+</html>

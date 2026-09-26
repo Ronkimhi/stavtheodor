@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://stavtheodor.com/#stav",
+      "name": "Stav Theodor-Kimhi",
+      "jobTitle": "Art Curator and Advisor",
+      "description": "Fine art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. Founder of THEODORA.",
+      "url": "https://stavtheodor.com/",
+      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/stavtheodor",
+        "https://www.instagram.com/theodorafineart"
+      ],
+      "worksFor": {
+        "@id": "https://stavtheodor.com/#org"
+      },
+      "knowsAbout": [
+        "Fine Art Curation",
+        "Art Advisory",
+        "Hospitality Art",
+        "Private Art Collections",
+        "Contemporary Art",
+        "Israeli Art"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://stavtheodor.com/#org",
+      "name": "THEODORA",
+      "description": "Fine art curation and advisory. A to Z: art concept, sourcing, selection, and installation for private residences and hospitality projects in New York, New Jersey, and Tel Aviv.",
+      "url": "https://stavtheodor.com/",
+      "logo": "https://stavtheodor.com/images/theodora-logo.png",
+      "image": "https://stavtheodor.com/og-image.jpg",
+      "founder": {
+        "@id": "https://stavtheodor.com/#stav"
+      },
+      "email": "stav@stavtheodor.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "New York City"
+        },
+        {
+          "@type": "State",
+          "name": "New Jersey"
+        },
+        {
+          "@type": "City",
+          "name": "Tel Aviv"
+        }
+      ],
+      "knowsAbout": [
+        "Art Curation",
+        "Art Advisory",
+        "Interior Art Consulting",
+        "Private Art Collections",
+        "Hospitality Art"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/theodora-art",
+        "https://www.instagram.com/theodorafineart"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stavtheodor.com/#site",
+      "name": "Art Radar · THEODORA",
+      "url": "https://stavtheodor.com/",
+      "description": "Art exhibitions, openings, and the stories behind them, chosen by curator Stav Theodor-Kimhi. Covering New York, New Jersey, and Tel Aviv.",
+      "publisher": {
+        "@id": "https://stavtheodor.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "he"
+      ]
+    }
+  ]
+}

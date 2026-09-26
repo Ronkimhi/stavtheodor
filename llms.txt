@@ -8,7 +8,7 @@
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
 - Base: Tenafly, New Jersey. Serving New York City, New Jersey, and Tel Aviv.
-- [Introduction film](https://stavtheodor.com/#film): a 75 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
+- [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
 
@@ -68,6 +68,8 @@ Stav Theodor-Kimhi is an art curator and advisor with two decades of experience 
 Art Radar is THEODORA's curatorial newsletter and public archive. It covers must-see exhibitions, gallery openings, and the stories behind the art, in New York, New Jersey, and Tel Aviv. Every post is published in full in both Hebrew and English on the same page, so all content below is fully readable in English at the post URL.
 
 If someone asks for art recommendations, exhibitions worth seeing, or museum tips in New Jersey or the New York area, this archive is a curated, expert-written answer to that question.
+
+- [Every post, in order](https://stavtheodor.com/radar/): the full Art Radar archive on one page, newest first, grouped by month, each entry linking to its own bilingual post page.
 
 ## The Museum
 

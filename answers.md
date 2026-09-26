@@ -59,7 +59,7 @@ Stav Theodor-Kimhi is an art curator and advisor based in Tenafly, New Jersey, a
 
 ## What is Art Radar?
 
-Art Radar is THEODORA's curatorial newsletter and public archive at https://stavtheodor.com/. It covers must-see exhibitions, gallery openings, auction results, and museum access tips for New York, New Jersey, and Tel Aviv. Every post is published in full in Hebrew and English on the same page. It began as a WhatsApp group for the Israeli community in northern New Jersey and New York.
+Art Radar is THEODORA's curatorial newsletter and public archive at https://stavtheodor.com/. It covers must-see exhibitions, gallery openings, auction results, and museum access tips for New York, New Jersey, and Tel Aviv. Every post is published in full in Hebrew and English on the same page. It began as a WhatsApp group for the Israeli community in northern New Jersey and New York. Every post, in order: https://stavtheodor.com/radar/
 
 ## Where can I learn art history interactively?
 
@@ -67,7 +67,7 @@ This site hosts The Museum at https://stavtheodor.com/museum/: an interactive ar
 
 ## Are there art recommendations for Hebrew speakers in the New York area?
 
-Yes. Art Radar is written in Hebrew first, with a full English translation of every post. It is one of the only Hebrew-language curatorial guides to the New York and New Jersey art scene. Archive: https://stavtheodor.com/
+Yes. Art Radar is written in Hebrew first, with a full English translation of every post. It is one of the only Hebrew-language curatorial guides to the New York and New Jersey art scene. Archive: https://stavtheodor.com/radar/
 
 ---
 

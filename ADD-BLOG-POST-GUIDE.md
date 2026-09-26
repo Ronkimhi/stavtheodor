@@ -8,9 +8,10 @@ Self-contained instructions for an AI agent adding a new "Art Radar" post to Sta
 
 ## 0. What this site is
 
-- **One page, one source of truth:** `index.html`. No framework, no build tool, no npm, no bundler. Static HTML/CSS/JS you edit directly.
-- **Generated files (do not hand-edit):** `radar/<slug>/index.html` (one standalone permalink page per post) and `sitemap.xml`. Both are regenerated from `index.html` by `build-post-pages.py`. If you edit them by hand your changes will be silently overwritten next time someone runs the script.
-- **Hand-maintained alongside `index.html`:** `llms.txt` and `agent.txt` (curated, human/LLM-readable summaries, the build script does NOT touch these, you must update them yourself, see Step 4).
+- **One file, one source of truth for posts:** `content/posts.html`. Every Art Radar post lives there, newest first. No framework, no npm: three small Python scripts render the site.
+- **`index.html` is GENERATED.** The homepage is rendered by `build-home.py` from `templates/home.html` and the data in `content/`. Never add a post to `index.html`, never edit `index.html` by hand: the build overwrites it, and it refuses to run while a post `<article>` is in it.
+- **Other generated files (do not hand-edit):** `radar/<slug>/index.html` (one standalone permalink page per post), `radar/index.html` (the archive of every post), `sitemap.xml`, and the advisory/projects/partner/guide pages. If you edit them by hand your changes will be silently overwritten next time someone runs the build.
+- **Hand-maintained alongside the posts:** `llms.txt`, `agent.txt` and `answers.md` (curated, human/LLM-readable summaries, the build does NOT touch these, you must update them yourself, see Step 4).
 - Live at **https://stavtheodor.com** (`www` redirects to the apex). Hosted free on **GitHub Pages**, auto-deploys on every push to `main`.
 
 ---
@@ -51,9 +52,9 @@ Posts are written primarily in **Hebrew** (the site's main audience), with **Eng
 
 **MANDATORY (standing rule from the site owner, 2026-07-01): every post is bilingual.** Each post carries TWO body blocks inside the same `<article>`: the Hebrew original, then a **full English translation** in a `<div class="post-body post-body-en" lang="en" dir="ltr">` block. The English version must be a complete, faithful translation of the Hebrew source: not a summary, not a paraphrase. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default) shows one language at a time; both live in the HTML so search engines and LLMs index both. Do not use em dashes or en dashes anywhere in the English text.
 
-### Step 2.2: Add the post block to `index.html`
+### Step 2.2: Add the post block to `content/posts.html`
 
-Open `index.html` and find `<section id="posts" class="wrap">` (currently starts around line 755). Every post is **newest-first**, add your new block immediately after the `<!-- POST TEMPLATE -->` comment and before the first existing `<script type="application/ld+json">` / `<article>` pair.
+Open `content/posts.html`. Every post is **newest-first**, add your new block immediately after the `<!-- POST TEMPLATE -->` comment at the top of the file and before the first existing `<script type="application/ld+json">` / `<article>` pair. Do NOT touch `index.html` (it is generated; the homepage timeline picks up the six newest posts from this file when you build).
 
 A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<article>` tag. Do not separate them or add anything between them.
 
@@ -166,19 +167,24 @@ Drop the image file into `images/`, named `YYYY-MM-DD-{{slug}}.jpg` (or `.png`),
 
 ```bash
 cd "$(git rev-parse --show-toplevel)"   # run from anywhere inside the checkout
-python3 build-post-pages.py
+python3 build.py
 ```
 
 This regenerates, **for every post including the new one**:
-- `radar/<slug>/index.html`, a standalone, indexable page for that post (title, meta tags, OpenGraph, JSON-LD, breadcrumb, the post content, and a "more from Art Radar" links list)
-- `sitemap.xml`, completely rewritten from scratch with the homepage plus every post URL
+- `radar/<slug>/index.html`, a standalone, indexable page for that post (title, meta tags, OpenGraph, JSON-LD, breadcrumb, the post content, and a "More from Art Radar" list)
+- `radar/index.html`, the archive of every post
+- `index.html`, the homepage: its Art Radar timeline shows the six newest posts and the post count
+- `sitemap.xml`, completely rewritten from scratch with every page of the site
+- the advisory, projects, partner and guide pages (unchanged unless their JSON changed)
 
-It also rewrites, in `index.html` itself:
+It also rewrites, in `content/posts.html` itself:
 - Each post's JSON-LD `url` / `mainEntityOfPage` from a same-page anchor (`#slug`) to the real permalink (`/radar/slug/`), if not already set
+
+Then it runs the gates in `tools/check_site.py`: no em or en dashes in the chrome, no phone numbers anywhere, every page has matching English and Hebrew twins, every internal link resolves, every JSON-LD block parses. A failed gate prints what and where; fix it and run again.
 
 It does NOT add any visible "Permalink" link to the post cards. Those were removed by the site owner on 2026-07-02; never add one to a post.
 
-The homepage's layout, styling, and reading experience are never changed by this script, it only adds the per-post permalink infrastructure. **If the script errors** ("No posts found, check the regex against index.html structure"), it means the JSON-LD `<script>` + `<article>` pair you added doesn't match the exact structure above (usually a missing/extra blank line, or the `id="slug"` attribute missing on the `<article>` tag). Fix the structure to match the template exactly and re-run.
+**If the build stops with "STOP: index.html contains an Art Radar article"**, a post was pasted into `index.html`. Move its JSON-LD `<script>` + `<article>` pair to the top of `content/posts.html`, run `git checkout index.html`, and build again. **If it errors with "No posts found in content/posts.html"**, the pair you added doesn't match the exact structure above (usually a missing/extra blank line, or the `id="slug"` attribute missing on the `<article>` tag). Fix the structure to match the template exactly and re-run.
 
 ---
 
@@ -213,7 +219,7 @@ git commit -m "Add post: {{headline}}"
 git push origin main
 ```
 
-`git add -A` is safe here, the only generated artifacts are `radar/<slug>/index.html` and `sitemap.xml`, and both belong in the commit (they are the live permalink pages and sitemap, not build scratch).
+`git add -A` is safe here: the generated artifacts (`radar/<slug>/index.html`, `radar/index.html`, `index.html`, `sitemap.xml`) all belong in the commit, they are the live pages, not build scratch. Check `git status` first and leave any file you did not change and do not recognize alone (AGENTS.md Section 1.5).
 
 GitHub Pages redeploys automatically within roughly a minute of the push. No manual deploy trigger, no build step on GitHub's side (the repo is served as-is).
 
@@ -222,8 +228,9 @@ GitHub Pages redeploys automatically within roughly a minute of the push. No man
 ## 6. Verify it went live
 
 ```bash
-# Homepage shows the new post
+# Homepage timeline (six newest) and the archive show the new post
 curl -s https://stavtheodor.com/ | grep -o '{{slug}}'
+curl -s https://stavtheodor.com/radar/ | grep -o '{{slug}}'
 
 # The standalone permalink page works
 curl -s -o /dev/null -w "%{http_code}\n" https://stavtheodor.com/radar/{{slug}}/
@@ -243,7 +250,7 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
 
 ## 7. What NOT to do
 
-- **Never hand-edit `radar/<slug>/index.html` or `sitemap.xml`.** They're generated. Edit `index.html` and re-run `build-post-pages.py` instead.
+- **Never hand-edit `index.html`, `radar/<slug>/index.html`, `radar/index.html` or `sitemap.xml`.** They're generated. Edit `content/posts.html` and run `python3 build.py` instead. A post pasted into `index.html` stops the build until it is moved.
 - **Never push to `old-backup`** (a deprecated, inert copy of this repo). Always push to `origin`.
 - **Never touch DNS, GoDaddy, or the domain/HTTPS setup** to add a blog post, none of that is relevant here, it's already configured and stable. If something about the *domain itself* seems broken (not the content), stop and flag it to the site owner rather than guessing.
 - **Never modify the Google Analytics tag** (`G-4300MN0Q97` in `index.html`'s `<head>`). It's domain-agnostic and needs no changes, ever.
@@ -255,11 +262,12 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
 ## 8. Quick reference (copy-paste checklist)
 
 ```
-1. Add {JSON-LD <script> + <article>} pair to index.html, top of <section id="posts">
+1. Add {JSON-LD <script> + <article>} pair to content/posts.html, right under the POST TEMPLATE comment
    - Hebrew body block AND full English translation block (post-body-en). Both. Always.
+   - NEVER into index.html (generated; the build stops if a post is there)
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
-3. python3 build-post-pages.py
-4. Update llms.txt and agent.txt (real /radar/slug/ URL, not #slug anchor)
+3. python3 build.py
+4. Update llms.txt, agent.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 5. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
 6. gh auth status  →  confirm active account = Ronkimhi
 7. git add -A && git commit -m "Add post: ..." && git push origin main

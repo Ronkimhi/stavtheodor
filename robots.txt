@@ -1,10 +1,10 @@
-# THEODORA — Art Radar by Stav Theodor-Kimhi
+# THEODORA: Art Radar by Stav Theodor-Kimhi
 # All crawlers, including AI/LLM crawlers, are welcome to read and index this site.
 
 User-agent: *
 Allow: /
 
-# AI / LLM crawlers — explicitly allowed
+# AI / LLM crawlers: explicitly allowed
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
