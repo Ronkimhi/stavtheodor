@@ -205,13 +205,17 @@ NAV_ITEMS = [
     ('#faq', 'Questions', 'שאלות'),
     ('#contact', 'Contact', 'יצירת קשר'),
 ]
+# Section links that have a page of their own: on the homepage they stay in-page, on every
+# other page they go to that page instead of scrolling the homepage (2026-09-26).
+SUBPAGE_FOR = {'#advisory': '/advisory/'}
 
 
 def _link(href, home):
-    """Section links stay in-page on the homepage. Elsewhere they go to the homepage,
-    except Contact: every page's footer carries id="contact"."""
+    """Section links stay in-page on the homepage. Elsewhere they go to their own page when
+    one exists (Advisory), otherwise to the homepage section, except Contact: every page's
+    footer carries id="contact"."""
     if href.startswith('#') and not home and href != '#contact':
-        return '/' + href
+        return SUBPAGE_FOR.get(href, '/' + href)
     return href
 
 
@@ -243,10 +247,10 @@ def footer(home=False):
   </div>
   <div class="cols2">
     <div>
-      <a href="{L('#about')}">{T('About', 'אודות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="{L('#advisory')}">{T('Advisory', 'ייעוץ')}</a><a href="/museum/">{T('The Museum', 'המוזיאון')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a>
+      <a href="/art-curator-new-jersey/">{T('Art curator in New Jersey', "אוצרת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art curator in New York', 'אוצרת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="/museum/">{T('The Museum', 'המוזיאון')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/for-designers/">{T('Working with designers', 'עבודה עם מעצבים')}</a>
     </div>
     <div>
-      <a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a><a href="/radar/">{T('All posts', 'כל הפוסטים')}</a><a href="/advisory/">{T('All advisory pages', 'כל עמודי הייעוץ')}</a>
+      <a href="{L('#about')}">{T('About', 'אודות')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
     </div>
     <p class="eyebrow copy">{T('Tenafly, New Jersey · © 2026 THEODORA', "טנפליי, ניו ג'רזי · © 2026 THEODORA")}</p>
   </div>
@@ -427,7 +431,9 @@ def tail(home=False):
 
 
 def redirect_stub(target, title='THEODORA'):
-    """A page that moved: canonical and meta refresh to its new address, noindex."""
+    """A page that moved: canonical and meta refresh to its new address, a location.replace
+    for browsers (no history entry, fragments included), noindex. Used for the retired /2/
+    tree and the old Squarespace paths (/about/, /our-team/, /our-team-1/, /contact/, /questions/)."""
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -436,6 +442,7 @@ def redirect_stub(target, title='THEODORA'):
 <link rel="canonical" href="{target}">
 <meta http-equiv="refresh" content="0; url={target}">
 <meta name="robots" content="noindex">
+<script>location.replace({json.dumps(target)});</script>
 </head>
 <body>
 <p>This page has moved. Continue to <a href="{target}">{target}</a>.</p>

@@ -86,15 +86,27 @@ def render_home(pages, posts, faq):
     return head + body
 
 
+OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: one consistent stub each
+    'about': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
+    'our-team': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
+    'our-team-1': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
+    'contact': (SITE + '/#contact', 'Contact Stav Theodor-Kimhi | THEODORA'),
+    'questions': (SITE + '/#faq', 'Questions people ask before they write | THEODORA'),
+}
+
+
 def write_redirects(pages):
-    """/2/ was the second homepage while it was being approved. Every address forwards."""
+    """/2/ was the second homepage while it was being approved, and the old Squarespace paths
+    still get visitors. Every address forwards: canonical, meta refresh, location.replace, noindex."""
     targets = {'2/index.html': SITE + '/', '2/projects/index.html': SITE + '/projects/', '2/radar/index.html': SITE + '/radar/'}
     for path in pages:
         if path.startswith('projects/'):
             targets[f'2/{path}/index.html'] = f'{SITE}/{path}/'
     for rel_path, target in targets.items():
         sc.write(rel_path, sc.redirect_stub(target))
-    return sorted(targets)
+    for d, (target, title) in OLD_PATHS.items():
+        sc.write(f'{d}/index.html', sc.redirect_stub(target, title))
+    return sorted(targets) + sorted(f'{d}/index.html' for d in OLD_PATHS)
 
 
 def main():
@@ -116,7 +128,7 @@ def main():
         raise SystemExit('index.html NOT written: ' + '; '.join(problems))
     sc.write('index.html', out)
     stubs = write_redirects(pages)
-    print(f'wrote index.html ({len(posts)} posts, timeline shows {min(6, len(posts))}, {len(faq)} questions) and {len(stubs)} /2/ redirect stubs')
+    print(f'wrote index.html ({len(posts)} posts, timeline shows {min(6, len(posts))}, {len(faq)} questions) and {len(stubs)} redirect stubs (/2/ and the old Squarespace paths)')
 
 
 if __name__ == '__main__':

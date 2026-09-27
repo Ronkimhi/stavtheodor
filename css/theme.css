@@ -310,8 +310,9 @@
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .post-date[data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .post-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 14px 0 36px; text-wrap: balance; }
-  .post-title[data-l="he"], .post-title-he { font-family: var(--he); letter-spacing: 0; }
+  .post-title[data-l="he"], .post-title-he, .post-title [data-l="he"] { font-family: var(--he); letter-spacing: 0; }
   .post-title-he { direction: rtl; }
+  h1.post-title span { display: block; }  /* the post page renders the title pair as one h1 with two twins (2026-09-26) */
   .post-body { font-size: 18px; line-height: 1.75; color: var(--soft); }
   .post-body[lang="he"] { font-family: var(--he); font-size: 19px; line-height: 1.85; }
   .post-body p { margin: 0 0 22px; }
