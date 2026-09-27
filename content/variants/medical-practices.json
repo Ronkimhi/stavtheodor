@@ -1,0 +1,106 @@
+{
+  "id": "medical-practices",
+  "path": "medical-practices",
+  "approved": "Ron 2026-09-27",
+  "head": {
+    "title": "Art Curator for Medical Practices · New York, New Jersey | THEODORA",
+    "description": "Stav Theodor, art curator and advisor: calm, readable art for the reception and consultation rooms of medical and aesthetic practices in New York and New Jersey.",
+    "og_title": "Art for medical and aesthetic practices · THEODORA",
+    "og_description": "Patients read your reception before they meet you. Calm, readable art, chosen by curator Stav Theodor."
+  },
+  "hero": {
+    "l1_en": "A calm welcome.",
+    "l1_he": "קבלת פנים רגועה.",
+    "l2_en": "The right art.",
+    "l2_he": "האמנות הנכונה."
+  },
+  "intro": {
+    "h1_en": "Art curator and advisor for medical and aesthetic practices in New York and New Jersey",
+    "h1_he": "אוצרת ויועצת אמנות למרפאות ולקליניקות לרפואה אסתטית בניו יורק ובניו ג'רזי",
+    "line_en": "Care starts at the door.",
+    "line_he": "האכפתיות מתחילה כבר בדלת.",
+    "eyebrow_en": "For medical practices",
+    "eyebrow_he": "למרפאות ולקליניקות",
+    "statement_en": "Patients read your reception before they meet you. I choose calm, readable art that makes the space feel cared for and serious.",
+    "statement_he": "מטופלים קוראים את הקבלה שלכם עוד לפני שהם פוגשים אתכם. אני בוחרת אמנות רגועה וברורה, שגורמת לחלל להרגיש מטופח ורציני."
+  },
+  "services": [
+    {
+      "desc_en": "Art for reception, consultation rooms and the corridors between them.",
+      "desc_he": "אמנות לקבלה, לחדרי הייעוץ ולמסדרונות שביניהם."
+    },
+    {
+      "desc_en": "Sourced from galleries and artists, within the budget you approve.",
+      "desc_he": "איתור בגלריות ואצל אמנים, בתוך התקציב שאתם מאשרים."
+    },
+    {
+      "desc_en": "A work made for your space, from first concept to final execution.",
+      "desc_he": "יצירה שנעשית לחלל שלכם, מהקונספט הראשון ועד הביצוע הסופי."
+    },
+    {
+      "desc_en": "Framing and glazing chosen for cleaning, glare and daily clinical use.",
+      "desc_he": "מסגור וזיגוג שנבחרים עם מחשבה על ניקוי, סנוור ושימוש קליני יומיומי."
+    }
+  ],
+  "what_i_do": {
+    "eyebrow_en": "How I would approach it",
+    "eyebrow_he": "איך הייתי ניגשת לזה",
+    "h2_en": "Arrival, the wait, the consultation: I would choose the art for each part of a patient's visit.",
+    "h2_he": "ההגעה, ההמתנה, הייעוץ: הייתי בוחרת את האמנות לכל חלק בביקור של מטופל.",
+    "p1_en": "A patient arrives, waits, then sits down with you, and each of those moments asks for something different. Reception takes one work that sets the tone and says the place is cared for. The waiting area needs something good to look at, with enough in it to return to. The consultation room needs calm. For a practice I lean toward warmth and calm: color that softens the room without becoming decoration, and images a patient can read at a glance rather than puzzle over. I would keep anything ambiguous or unsettling for offices and staff areas. You see a shortlist with a reason for each work, and nothing is bought without your approval.",
+    "p1_he": "מטופל מגיע, ממתין, ואז מתיישב מולכם, וכל אחד מהרגעים האלה מבקש משהו אחר. הקבלה מקבלת עבודה אחת שקובעת את הטון ואומרת שהמקום מטופח. אזור ההמתנה צריך משהו טוב להסתכל עליו, עם מספיק בתוכו כדי לחזור אליו. חדר הייעוץ צריך רוגע. במרפאה אני נוטה לחום ולרוגע: צבע שמרכך את החדר בלי להפוך לקישוט, ודימויים שמטופל קורא במבט אחד ולא צריך לפענח. כל מה שעמום או מטריד הייתי שומרת למשרדים ולאזורי הצוות. אתם רואים רשימה קצרה עם סיבה לכל יצירה, ושום דבר לא נקנה בלי האישור שלכם.",
+    "p2_en": "Then the practical side. Frames and glazing are chosen so the works can be wiped down, with anti reflective glass where the light calls for it. Placement is agreed with your architect or designer, who knows the code for your space, and the hanging hardware suits a room in daily use. Printmakers, framers and installers work to my brief, one timeline and one approved budget. A sensible first project is one reception and one consultation room, planned as the start of the whole practice. More on <a href=\"/advisory/art-for-an-office-or-business/\">art for an office, a clinic or a business</a>.",
+    "p2_he": "אחר כך הצד המעשי. המסגרות והזיגוג נבחרים כך שאפשר לנגב את העבודות, עם זכוכית נגד השתקפות כשהאור מחייב. המיקום נקבע יחד עם האדריכל או המעצב שלכם, שמכירים את התקנות החלות על החלל, ואביזרי התלייה מתאימים לחדר בשימוש יומיומי. מדפיסי אמנות, מסגרים ומתקינים עובדים לפי הבריף שלי, לוח זמנים אחד ותקציב מאושר אחד. פרויקט ראשון הגיוני הוא קבלה אחת וחדר ייעוץ אחד, שמתוכננים כתחילתה של המרפאה כולה. עוד על <a href=\"/advisory/art-for-an-office-or-business/\">אמנות למשרד, לקליניקה או לעסק</a>."
+  },
+  "advisory": {
+    "h2_en": "If your practice is moving, expanding or renovating, start here.",
+    "h2_he": "אם המרפאה שלכם עוברת, מתרחבת או משתפצת, התחילו כאן.",
+    "sub_en": "Art for an office or a clinic, framing and installation, the process step by step, and what an advisor costs.",
+    "sub_he": "אמנות למשרד או לקליניקה, מסגור והתקנה, התהליך שלב אחר שלב, וכמה עולה יועצת אמנות."
+  },
+  "advisory_rows": [
+    "advisory/art-for-an-office-or-business",
+    "advisory/framing-and-installing-large-scale-art",
+    "advisory/how-the-art-advisory-process-works",
+    "advisory/what-does-an-art-advisor-cost",
+    "/projects/"
+  ],
+  "faq": [
+    {
+      "q_en": "Does art actually help patients?",
+      "a_en": "It depends on what you mean by help. Research on waiting rooms suggests people judge a room, and the care in it, partly by how it looks: whether it is well kept, well lit and has art on the walls. I do not claim that art changes clinical results, and I would be wary of anyone who does. What I can do is choose calm, readable work that makes your rooms feel cared for.",
+      "q_he": "אמנות באמת עוזרת למטופלים?",
+      "a_he": "תלוי מה הכוונה ב\"עוזרת\". מחקרים על חדרי המתנה מצביעים על כך שאנשים שופטים חדר, ואת הטיפול שניתן בו, גם לפי המראה שלו: האם הוא מטופח, מואר היטב, ויש אמנות על הקירות. אני לא טוענת שאמנות משנה תוצאות קליניות, והייתי נזהרת ממי שטוען את זה. מה שאני כן יכולה לעשות הוא לבחור עבודות רגועות וברורות שגורמות לחדרים שלכם להרגיש מטופחים."
+    },
+    {
+      "q_en": "What kind of art belongs in a waiting or consultation room?",
+      "a_en": "Calm, readable work: landscapes, light, quiet color, images a patient can take in at a glance and return to while waiting. Warmth and calm come first, color that softens the room without becoming decoration or making the practice look like a spa. I would keep ambiguous or unsettling images, and anything that needs explaining, out of the rooms patients sit in. In a consultation room, one work that rewards a second look is usually enough.",
+      "q_he": "איזו אמנות מתאימה לחדר המתנה או לחדר ייעוץ?",
+      "a_he": "עבודה רגועה וברורה: נופים, אור, צבע שקט, דימויים שמטופל קולט במבט אחד וחוזר אליהם בזמן ההמתנה. חום ורוגע קודמים לכל, צבע שמרכך את החדר בלי להפוך לקישוט ובלי לגרום למרפאה להיראות כמו ספא. דימויים עמומים או מטרידים, וכל מה שצריך הסבר, הייתי משאירה מחוץ לחדרים שבהם מטופלים יושבים. בחדר ייעוץ, עבודה אחת שמתגמלת מבט שני היא בדרך כלל מספיק."
+    },
+    {
+      "q_en": "Can the art be cleaned and disinfected?",
+      "a_en": "It can, if it is specified for that from the start. In treatment rooms I would choose framed or encased works with smooth surfaces that can be wiped, and keep works on paper, photographs and textiles behind glazing or out of reach. Your infection control guidance comes first, so the materials and the cleaning routine are agreed with you and your team before anything is bought.",
+      "q_he": "אפשר לנקות ולחטא את האמנות?",
+      "a_he": "אפשר, אם מגדירים את זה מההתחלה. בחדרי טיפול הייתי בוחרת עבודות ממוסגרות או סגורות, עם משטחים חלקים שאפשר לנגב, ומשאירה עבודות על נייר, תצלומים וטקסטיל מאחורי זכוכית או מחוץ להישג יד. הנחיות מניעת הזיהומים שלכם קודמות לכל, ולכן החומרים ושגרת הניקוי נקבעים איתכם ועם הצוות שלכם לפני שמשהו נקנה."
+    },
+    {
+      "q_en": "Will you work with our designer, landlord or group?",
+      "a_en": "Yes. I work alongside architects and interior designers, not around them: their drawings, palette and lighting lead, and the art answers them. With a landlord, delivery and installation are coordinated with the building's management office before anything arrives. For a group with several locations, I would build one approach to the art that each practice can adapt to its own rooms, so the group reads as one without every waiting room looking the same.",
+      "q_he": "תעבדי עם המעצב, בעל הנכס או הקבוצה שלנו?",
+      "a_he": "כן. אני עובדת לצד אדריכלים ומעצבי פנים, לא סביבם: התוכניות, הפלטה והתאורה שלהם מובילות, והאמנות עונה להן. מול בעל הנכס, המשלוח וההתקנה מתואמים עם הנהלת הבניין לפני שמשהו מגיע. עבור קבוצה עם כמה סניפים, הייתי בונה גישה אחת לאמנות שכל מרפאה יכולה להתאים לחדרים שלה, כך שהקבוצה נראית כמקשה אחת בלי שכל חדר המתנה ייראה אותו דבר."
+    },
+    {
+      "q_en": "What does an art advisor cost?",
+      "a_en": "Across the industry, advisors charge by the hour, a flat fee per project, a percentage of acquisitions, typically in the ten to twenty percent range, or a retainer for ongoing collection work. Those are industry norms, not my price list. I do not publish a rate. I quote each project after a first conversation, based on its scope, and direct relationships with artists often bring the total cost of the work itself down.",
+      "q_he": "כמה עולה יועצת אמנות?",
+      "a_he": "בענף, יועצים גובים לפי שעה, שכר טרחה קבוע לפרויקט, אחוז מהרכישות, בדרך כלל בטווח של עשרה עד עשרים אחוזים, או ריטיינר לליווי אוסף לאורך זמן. אלה נורמות של הענף, לא המחירון שלי. אני לא מפרסמת תעריף. אני מתמחרת כל פרויקט אחרי שיחה ראשונה, לפי ההיקף שלו, וקשר ישיר עם אמנים מוריד לא פעם את העלות הכוללת של העבודה עצמה."
+    },
+    {
+      "home": "Where does THEODORA provide art advisory services?"
+    }
+  ],
+  "cta_en": "Send me one photo of your reception and a line about your patients. I will tell you what I see.",
+  "cta_he": "שלחו לי תמונה אחת של הקבלה שלכם ושורה על המטופלים שלכם. אספר לכם מה אני רואה.",
+  "mail_subject": "Art for our practice"
+}

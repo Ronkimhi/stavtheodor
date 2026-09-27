@@ -1,0 +1,107 @@
+{
+  "id": "restaurants",
+  "path": "restaurants",
+  "approved": "Ron 2026-09-27",
+  "head": {
+    "title": "Art Curator for Restaurants · New York | THEODORA",
+    "description": "Stav Theodor, art curator and advisor: art for New York restaurants and private dining rooms, your story on the walls, planned for light, cleaning and service.",
+    "og_title": "Art for New York restaurants and private dining · THEODORA",
+    "og_description": "The room is part of the meal. Art that carries your story and holds up to service, by Stav Theodor."
+  },
+  "hero": {
+    "l1_en": "A room to savor.",
+    "l1_he": "חדר להתענג בו.",
+    "l2_en": "The right art.",
+    "l2_he": "האמנות הנכונה."
+  },
+  "intro": {
+    "h1_en": "Art curator and advisor for New York restaurants and private dining rooms",
+    "h1_he": "אוצרת ויועצת אמנות למסעדות בניו יורק ולחדרים הפרטיים שלהן",
+    "line_en": "Your story, on the walls.",
+    "line_he": "הסיפור שלכם, על הקירות.",
+    "eyebrow_en": "For restaurants",
+    "eyebrow_he": "למסעדות",
+    "statement_en": "The room is part of the meal. I choose art that carries your story, works with the food and the service, and holds up to both.",
+    "statement_he": "החדר הוא חלק מהארוחה. אני בוחרת אמנות שנושאת את הסיפור שלכם, עובדת עם האוכל ועם השירות, ועומדת בשניהם."
+  },
+  "services": [
+    {
+      "desc_en": "One signature work for the dining room, or a program across every room.",
+      "desc_he": "עבודת דגל אחת לחדר האוכל, או תוכנית שעוברת בכל החדרים."
+    },
+    {
+      "desc_en": "Sourced from galleries and artists, within the budget you approve.",
+      "desc_he": "איתור בגלריות ואצל אמנים, בתוך התקציב שאתם מאשרים."
+    },
+    {
+      "desc_en": "A work made for your room and your story, from concept to execution.",
+      "desc_he": "יצירה שנעשית לחדר ולסיפור שלכם, מהקונספט ועד הביצוע."
+    },
+    {
+      "desc_en": "Framing and hanging planned for your light, your cleaning and the pace of service.",
+      "desc_he": "מסגור ותלייה שמתוכננים לפי האור, הניקיון וקצב השירות שלכם."
+    }
+  ],
+  "what_i_do": {
+    "eyebrow_en": "How I would approach it",
+    "eyebrow_he": "איך הייתי ניגשת לזה",
+    "h2_en": "Story first: the concept, the cuisine and the design, then the walls.",
+    "h2_he": "קודם הסיפור: הקונספט, המטבח והעיצוב, ורק אחר כך הקירות.",
+    "p1_en": "I would start where you started: the concept, the cuisine, the neighborhood and the people you cook for. From that comes a story the walls can carry, either one signature work in the dining room or a thread that runs from the entrance to the private room, chosen so it never competes with the plate. If a designer is doing the interiors, I work inside their scheme, not around it: their palette and their lighting lead, and the art answers them. You see a shortlist with a reason for each work and approve a budget plan, and nothing is bought without your approval.",
+    "p1_he": "הייתי מתחילה מהמקום שבו אתם התחלתם: הקונספט, המטבח, השכונה והאנשים שאתם מבשלים בשבילם. מזה נולד סיפור שהקירות יכולים לשאת, עבודת דגל אחת בחדר האוכל או חוט שעובר מהכניסה ועד החדר הפרטי, שנבחר כך שלעולם לא יתחרה בצלחת. אם מעצב אחראי על עיצוב הפנים, אני עובדת בתוך הקונספט שלו, לא סביבו: הפלטה והתאורה שלו מובילות, והאמנות עונה להן. אתם רואים רשימה קצרה עם סיבה לכל יצירה ומאשרים תוכנית תקציב, ושום דבר לא נקנה בלי האישור שלכם.",
+    "p2_en": "Then the practical side, which in a restaurant matters as much as the choice. Works hang away from steam, grease and direct sun, which can damage some materials and flatten others. Works on paper and photographs go behind glazing, with the glass chosen for how the room is lit at night, and the hanging hardware suits a room in full service every evening. The nearest thing to your room in my own work is a cruise dining room. I have spent years building art concepts and collections with luxury hospitality groups, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line, and for Holland America Line I worked on restaurant art for the ships. More in <a href=\"/projects/hotels-and-hospitality-collections/\">hotels and hospitality collections</a>.",
+    "p2_he": "אחר כך הצד המעשי, שבמסעדה חשוב לא פחות מהבחירה. העבודות נתלות הרחק מאדים, משומן ומשמש ישירה, שיכולים לפגוע בחומרים מסוימים ולהשטיח אחרים. עבודות על נייר ותצלומים נכנסים מאחורי זכוכית, שנבחרת לפי האופן שבו החדר מואר בערב, ואביזרי התלייה מתאימים לחדר בשירות מלא בכל ערב. הדבר הקרוב ביותר לחדר שלכם בעבודה שלי הוא חדר אוכל באוניית שיט. עבדתי שנים על קונספטים ואוספים של אמנות עם קבוצות אירוח יוקרתיות, ובהן וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין, ועבור הולנד אמריקה ליין עבדתי על אמנות למסעדות באוניות. עוד <a href=\"/projects/hotels-and-hospitality-collections/\">באוספי המלונאות והאירוח</a>."
+  },
+  "advisory": {
+    "h2_en": "If you are opening, redesigning or adding a private room, start here.",
+    "h2_he": "אם אתם פותחים, מעצבים מחדש או מוסיפים חדר פרטי, התחילו כאן.",
+    "sub_en": "The hospitality collections, how hospitality art is made, art for a business, framing and hanging, and the process step by step.",
+    "sub_he": "אוספי המלונאות והאירוח, איך נבנית אמנות לעולם האירוח, אמנות לעסק, מסגור ותלייה, והתהליך שלב אחר שלב."
+  },
+  "advisory_rows": [
+    "projects/hotels-and-hospitality-collections",
+    "advisory/art-for-hotels-and-hospitality",
+    "advisory/art-for-an-office-or-business",
+    "advisory/framing-and-installing-large-scale-art",
+    "advisory/how-the-art-advisory-process-works",
+    "/projects/"
+  ],
+  "faq": [
+    {
+      "q_en": "Artists offer to hang work for free. Why pay a curator?",
+      "a_en": "Sometimes free is fine, and I will say so. The trade-offs are real, though: you take what is offered, works leave the wall when they sell, and the walls often carry prices. I start from your story rather than someone else's stock, choose works that belong together and to the room, negotiate the price on your behalf, and manage framing and hanging for a working dining room. What you buy stays until you decide it goes.",
+      "q_he": "אמנים מציעים לתלות עבודות בחינם. למה לשלם לאוצרת?",
+      "a_he": "לפעמים חינם זה בסדר, ואני אגיד את זה. אבל יש לזה מחיר: לוקחים את מה שמוצע, עבודות יורדות מהקיר כשהן נמכרות, ועל הקירות תלויים לא פעם מחירים. אני מתחילה מהסיפור שלכם ולא מהמלאי של מישהו אחר, בוחרת עבודות ששייכות זו לזו ולחדר, מנהלת משא ומתן על המחיר בשמכם, ומנהלת מסגור ותלייה לחדר אוכל שעובד. מה שאתם קונים נשאר עד שאתם מחליטים שהוא יורד."
+    },
+    {
+      "q_en": "Our designer is doing the interiors. Where do you fit?",
+      "a_en": "Inside the designer's scheme, not around it. Their drawings, palette and lighting lead, and the art answers them. I bring what a design practice rarely has time for: artist and gallery relationships, market knowledge, negotiation, commissioned works, framing and installation. I present with the designer or through them, whichever they prefer, and the works are scheduled against the build so they arrive when the walls are ready and not before.",
+      "q_he": "המעצב שלנו אחראי על עיצוב הפנים. איפה את נכנסת?",
+      "a_he": "בתוך הקונספט של המעצב, לא סביבו. התוכניות, הפלטה והתאורה שלו מובילות, והאמנות עונה להן. אני מביאה את מה שלמשרד עיצוב לרוב אין זמן בשבילו: קשרים עם אמנים וגלריות, הבנה של השוק, משא ומתן, יצירות בהזמנה, מסגור והתקנה. אני מציגה יחד עם המעצב או דרכו, איך שנוח לו, והעבודות מתוזמנות מול הבנייה כך שיגיעו כשהקירות מוכנים ולא לפני."
+    },
+    {
+      "q_en": "Will the art hold up to steam, cleaning and sun?",
+      "a_en": "It can, if it is chosen and placed for them. Works stay away from the kitchen pass, steam and direct sun, which can damage some materials and flatten others. Works on paper and photographs go behind glazing that can be wiped, and some digital works can be printed on acrylic. Before I propose anything I look at the light across the day and the routes the staff take, so the placement is decided with the room in use.",
+      "q_he": "האמנות תעמוד באדים, בניקיון ובשמש?",
+      "a_he": "היא יכולה, אם היא נבחרת וממוקמת בשבילם. העבודות נשארות רחוק מפס המטבח, מהאדים ומהשמש הישירה, שיכולים לפגוע בחומרים מסוימים ולהשטיח אחרים. עבודות על נייר ותצלומים נכנסים מאחורי זכוכית שאפשר לנגב, ויש עבודות דיגיטליות שאפשר להדפיס על אקריליק. לפני שאני מציעה משהו אני בודקת את האור לאורך היום ואת המסלולים של הצוות, כך שהמיקום נקבע כשהחדר בשימוש."
+    },
+    {
+      "q_en": "Can we start with one room, like the private dining room?",
+      "a_en": "Yes. One room is a good way to begin, and the private dining room is a natural choice: a table stays there for a whole evening, so one strong work, bought or commissioned for your story, has time to be seen. I would still plan it as the first chapter of the whole restaurant, so the next room continues the same story rather than starting a new one.",
+      "q_he": "אפשר להתחיל מחדר אחד, כמו החדר הפרטי?",
+      "a_he": "כן. חדר אחד הוא דרך טובה להתחיל, והחדר הפרטי הוא בחירה טבעית: שולחן יושב שם ערב שלם, כך שלעבודה חזקה אחת, שנרכשה או הוזמנה בשביל הסיפור שלכם, יש זמן להיראות. עדיין הייתי מתכננת אותו כפרק הראשון של המסעדה כולה, כך שהחדר הבא ימשיך את אותו סיפור במקום להתחיל סיפור חדש."
+    },
+    {
+      "q_en": "What does an art advisor cost?",
+      "a_en": "Across the industry, advisors charge by the hour, a flat fee per project, a percentage of acquisitions, typically in the ten to twenty percent range, or a retainer for ongoing collection work. Those are industry norms, not my price list. I do not publish a rate. I quote each project after a first conversation, based on its scope, and direct relationships with artists often bring the total cost of the work itself down.",
+      "q_he": "כמה עולה יועצת אמנות?",
+      "a_he": "בענף, יועצים גובים לפי שעה, שכר טרחה קבוע לפרויקט, אחוז מהרכישות, בדרך כלל בטווח של עשרה עד עשרים אחוזים, או ריטיינר לליווי אוסף לאורך זמן. אלה נורמות של הענף, לא המחירון שלי. אני לא מפרסמת תעריף. אני מתמחרת כל פרויקט אחרי שיחה ראשונה, לפי ההיקף שלו, וקשר ישיר עם אמנים מוריד לא פעם את העלות הכוללת של העבודה עצמה."
+    },
+    {
+      "home": "Where does THEODORA provide art advisory services?"
+    }
+  ],
+  "cta_en": "Send me one photo of the dining room and a line about the menu. I will tell you what I see.",
+  "cta_he": "שלחו לי תמונה אחת של חדר האוכל ושורה על התפריט. אספר לכם מה אני רואה.",
+  "mail_subject": "Art for our restaurant"
+}

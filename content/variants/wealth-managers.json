@@ -1,0 +1,107 @@
+{
+  "id": "wealth-managers",
+  "path": "wealth-managers",
+  "approved": "Ron 2026-09-27",
+  "head": {
+    "title": "Art Curator for Wealth Managers · New York, New Jersey | THEODORA",
+    "description": "Stav Theodor, art curator and advisor: calm, personal art for the rooms where you meet clients, and a curator you can introduce to clients who collect.",
+    "og_title": "Art for the rooms where you meet clients · THEODORA",
+    "og_description": "Calm, personal, lasting, never showy. Stav Theodor, art curator and advisor in New York and New Jersey."
+  },
+  "hero": {
+    "l1_en": "A private room.",
+    "l1_he": "חדר פרטי.",
+    "l2_en": "The right art.",
+    "l2_he": "האמנות הנכונה."
+  },
+  "intro": {
+    "h1_en": "Art curator and advisor for wealth management offices in New York and New Jersey",
+    "h1_he": "אוצרת ויועצת אמנות למשרדי ניהול הון בניו יורק ובניו ג'רזי",
+    "line_en": "Calm, personal, lasting.",
+    "line_he": "רגוע, אישי, לאורך שנים.",
+    "eyebrow_en": "For wealth managers",
+    "eyebrow_he": "למנהלי הון",
+    "statement_en": "Your clients come to talk about what matters most to them. I choose art that makes the room calm, personal and lasting, never showy.",
+    "statement_he": "הלקוחות שלכם באים לדבר על מה שהכי חשוב להם. אני בוחרת אמנות שהופכת את החדר לרגוע ואישי, כזה שמחזיק שנים, ואף פעם לא ראוותני."
+  },
+  "services": [
+    {
+      "desc_en": "Art for reception and the rooms where you meet clients.",
+      "desc_he": "אמנות לקבלה ולחדרים שבהם אתם פוגשים לקוחות."
+    },
+    {
+      "desc_en": "Sourced with care, discretion and precision, negotiated on your behalf.",
+      "desc_he": "איתור בקפידה, בדיסקרטיות ובדיוק, ומשא ומתן בשמכם."
+    },
+    {
+      "desc_en": "A work made for your walls, from first concept to final execution.",
+      "desc_he": "יצירה שנעשית לקירות שלכם, מהקונספט הראשון ועד הביצוע הסופי."
+    },
+    {
+      "desc_en": "Framing and installation, managed end to end within an approved budget.",
+      "desc_he": "מסגור והתקנה, בניהול מלא מקצה לקצה ובתוך תקציב מאושר."
+    }
+  ],
+  "what_i_do": {
+    "eyebrow_en": "How I would approach it",
+    "eyebrow_he": "איך הייתי ניגשת לזה",
+    "h2_en": "From the door to the meeting room, every wall a client passes should read as calm and considered.",
+    "h2_he": "מהדלת ועד חדר הפגישות, כל קיר שלקוח עובר לידו צריך להיקרא כרגוע ומוקפד.",
+    "p1_en": "I would follow the path a client takes. Reception takes one anchor work that sets the tone. The room where you meet clients takes something that rewards a long look, because people spend an hour there, and it should be calm and readable rather than loud. Your own office takes the most personal piece. I choose for the room's real audience, and yours has come to talk about what matters most to them, so nothing on the walls should read as a display of wealth. You see a shortlist with a reason for each work and approve a budget plan, and then I source, frame and install to the end.",
+    "p1_he": "הייתי הולכת בדרך שהלקוח עושה. הקבלה מקבלת עבודת עוגן אחת שקובעת את הטון. החדר שבו אתם פוגשים לקוחות מקבל משהו שמתגמל מבט ארוך, כי אנשים מבלים בו שעה, והוא צריך להיות רגוע וברור ולא רועש. המשרד שלכם מקבל את העבודה האישית ביותר. אני בוחרת לקהל האמיתי של החדר, והקהל שלכם בא לדבר על מה שהכי חשוב לו, ולכן שום דבר על הקירות לא צריך להיראות כמו הפגנת עושר. אתם רואים רשימה קצרה עם סיבה לכל יצירה ומאשרים תוכנית תקציב, ואז אני מאתרת, ממסגרת ומתקינה עד הסוף.",
+    "p2_en": "When a client mentions buying art for their own home, you can forward one page. I build collections with intent for private clients in New York, New Jersey and Israel: research, acquisition at negotiated prices, commissions, framing and installation. Introductions are by email, and discretion is the default. I do not give investment advice and I do not promise returns, and if your firm has rules on introductions, tell me at the start and I will work within them. The page to forward is <a href=\"/for-advisors/\">for wealth managers, family offices and private bankers</a>.",
+    "p2_he": "כשלקוח מזכיר שהוא רוצה לקנות אמנות לביתו, אפשר להעביר לו עמוד אחד. אני בונה אוספים עם כוונה ללקוחות פרטיים בניו יורק, בניו ג'רזי ובישראל: מחקר, רכישה במחירים שנוהלו במשא ומתן, הזמנות מיוחדות, מסגור והתקנה. ההיכרות נעשית במייל, והדיסקרטיות היא ברירת המחדל. אני לא נותנת ייעוץ השקעות ולא מבטיחה תשואות, ואם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם. העמוד להעברה הוא <a href=\"/for-advisors/\">למנהלי הון, לפמילי אופיס ולבנקאים פרטיים</a>."
+  },
+  "advisory": {
+    "h2_en": "If you are opening, moving or merging an office, start here.",
+    "h2_he": "אם אתם פותחים, מעבירים או ממזגים משרד, התחילו כאן.",
+    "sub_en": "The page to forward to clients, art for an office, starting a collection, buying from a gallery, and what an advisor costs.",
+    "sub_he": "העמוד שאפשר להעביר ללקוחות, אמנות למשרד, איך מתחילים אוסף, איך קונים מגלריה, וכמה עולה יועצת אמנות."
+  },
+  "advisory_rows": [
+    "for-advisors",
+    "advisory/art-for-an-office-or-business",
+    "advisory/starting-an-art-collection",
+    "advisory/how-to-buy-from-a-gallery-without-overpaying",
+    "advisory/what-does-an-art-advisor-cost",
+    "/projects/"
+  ],
+  "faq": [
+    {
+      "q_en": "What kind of art suits a room where clients talk about their money?",
+      "a_en": "Calm, readable work with some depth: a landscape, a quiet abstraction, a photograph or a work on paper, well framed, that rewards a second look during a long meeting without pulling attention from the conversation. Nothing that reads as a display of wealth. One strong work in the meeting room says more than several small ones. And it should still be personal to the firm, because personal is what people trust.",
+      "q_he": "איזו אמנות מתאימה לחדר שבו לקוחות מדברים על הכסף שלהם?",
+      "a_he": "עבודה רגועה וברורה, עם עומק: נוף, הפשטה שקטה, צילום או עבודה על נייר, ממוסגרים היטב, שמתגמלים מבט שני במהלך פגישה ארוכה בלי למשוך את תשומת הלב מהשיחה. שום דבר שנקרא כהפגנת עושר. עבודה חזקה אחת בחדר הפגישות אומרת יותר מכמה עבודות קטנות. והיא עדיין צריכה להיות אישית למשרד, כי אישי הוא מה שאנשים סומכים עליו."
+    },
+    {
+      "q_en": "Do you give investment or tax advice?",
+      "a_en": "No. I am not a financial or tax advisor, I do not give investment advice, and I do not promise returns. I choose art for people to live with. Before any purchase I look closely at the artist's standing, where the work sits in their career, its condition and provenance, and whether the price holds up to scrutiny. Anything touching tax stays with you and the client's other professionals.",
+      "q_he": "את נותנת ייעוץ השקעות או מס?",
+      "a_he": "לא. אני לא יועצת פיננסית או יועצת מס, אני לא נותנת ייעוץ השקעות, ואני לא מבטיחה תשואות. אני בוחרת אמנות שאנשים יחיו איתה. לפני כל רכישה אני בודקת מקרוב את מעמד האמן, את המקום של העבודה בקריירה שלו, את מצבה ואת מקורותיה, והאם המחיר עומד בבדיקה. כל מה שנוגע למס נשאר אצלכם ואצל אנשי המקצוע האחרים של הלקוח."
+    },
+    {
+      "q_en": "How do introductions for our clients work?",
+      "a_en": "By email. Forward my page for advisors to the client and copy me, or send me a line about them and I will write first. The first conversation is with the client, at their home where possible, because the home is the brief. After it, I quote the engagement based on scope. Discretion is the default, and if your firm has rules on introductions, tell me at the start and I will work within them.",
+      "q_he": "איך עובדת ההיכרות עם הלקוחות שלנו?",
+      "a_he": "במייל. העבירו ללקוח את העמוד שלי ליועצים עם העתק אליי, או שלחו לי שורה עליו ואני אכתוב ראשונה. השיחה הראשונה היא עם הלקוח, בביתו אם אפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את הפרויקט לפי היקפו. הדיסקרטיות היא ברירת המחדל, ואם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם."
+    },
+    {
+      "q_en": "What would reception and two meeting rooms involve?",
+      "a_en": "A conversation about the firm and the people you see, then a concept, a shortlist per room and a budget plan you approve before anything is bought. One work in reception that sets the tone and one strong work in each meeting room is usually enough, bought or commissioned. Then framing and installation, managed end to end. The timeline depends on whether the works exist already or are commissioned, so I set it with you at the budget step rather than promise one here.",
+      "q_he": "מה כרוך בקבלה ובשני חדרי פגישות?",
+      "a_he": "שיחה על המשרד ועל האנשים שאתם פוגשים, ואחר כך קונספט, רשימה קצרה לכל חדר ותוכנית תקציב שאתם מאשרים לפני שנקנה משהו. עבודה אחת בקבלה שקובעת את הטון ועבודה חזקה אחת בכל חדר פגישות הן בדרך כלל מספיק, בין שנרכשו ובין שהוזמנו. אחר כך מסגור והתקנה, בניהול מלא מקצה לקצה. לוח הזמנים תלוי בשאלה אם העבודות כבר קיימות או מוזמנות, ולכן אני קובעת אותו איתכם בשלב התקציב, במקום להבטיח אותו כאן."
+    },
+    {
+      "q_en": "What does an art advisor cost?",
+      "a_en": "Across the industry, advisors charge by the hour, a flat fee per project, a percentage of acquisitions, typically in the ten to twenty percent range, or a retainer for ongoing collection work. Those are industry norms, not my price list. I do not publish a rate. I quote each project after a first conversation, based on its scope, and direct relationships with artists often bring the total cost of the work itself down.",
+      "q_he": "כמה עולה יועצת אמנות?",
+      "a_he": "בענף, יועצים גובים לפי שעה, שכר טרחה קבוע לפרויקט, אחוז מהרכישות, בדרך כלל בטווח של עשרה עד עשרים אחוזים, או ריטיינר לליווי אוסף לאורך זמן. אלה נורמות של הענף, לא המחירון שלי. אני לא מפרסמת תעריף. אני מתמחרת כל פרויקט אחרי שיחה ראשונה, לפי ההיקף שלו, וקשר ישיר עם אמנים מוריד לא פעם את העלות הכוללת של העבודה עצמה."
+    },
+    {
+      "home": "Where does THEODORA provide art advisory services?"
+    }
+  ],
+  "cta_en": "Send me one photo of the room where you meet clients. I will tell you what I see.",
+  "cta_he": "שלחו לי תמונה אחת של החדר שבו אתם פוגשים לקוחות. אספר לכם מה אני רואה.",
+  "mail_subject": "Art for our client rooms"
+}

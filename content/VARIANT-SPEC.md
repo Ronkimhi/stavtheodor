@@ -54,7 +54,7 @@ The example is shortened (two questions, "..." in the long fields): a real file 
 | `approved` | nowhere; who approved the copy and when | `Ron YYYY-MM-DD` or `Stav YYYY-MM-DD` |
 | `head.title`, `head.description` | title and meta description | 30 to 70 and 70 to 165 characters |
 | `head.og_title`, `head.og_description` | the share card (Open Graph, Twitter) | at most 70 and 160 |
-| `hero.l1`, `hero.l2` | the two lines of the opening | at most 18 characters, in both languages |
+| `hero.l1`, `hero.l2` | the two lines of the opening | at most 18 characters, in both languages (characters are a proxy; the render check measures pixels at 360px: `node tools/check_render.js` fails a line that ends past the right edge of a 360 by 780 screen, in either language; the homepage's "A beautiful room." ends at about 351) |
 | `intro.h1` | the page's h1, the small line in the black intro block | 40 to 110 |
 | `intro.line` | the large line under it ("Art is not an accessory.") | at most 32 |
 | `intro.eyebrow` | the eyebrow above the statement ("What I do") | at most 24 |

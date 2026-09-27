@@ -8,6 +8,11 @@
        (what a crawler that does not run scripts, or a reader with scripts blocked, gets)
    and once, on one inner page:
      - the switch works: clicking עברית shows Hebrew, and a reload keeps it (localStorage radarLang).
+   and on the homepage and every buyer variant, on a 360 by 780 screen, in English and in Hebrew:
+     - both opening lines (#l1, #l2) end inside the screen: the right edge of the visible language's
+       span is at most 360 px (2026-09-27; a restaurants line reached 398 px). The lines are measured
+       after the opening splits their letters, as a phone shows them; without WebGL they are laid out
+       for the measurement. Layout, not visibility: the letters may still be at opacity 0.
 
    Local (default): serves this repo on a loopback port and checks every URL in sitemap.xml
    outside /museum/, then the buyer variants of the homepage (content/variants/*.json: noindex
@@ -30,6 +35,7 @@ const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://stavtheodor.com';
 const MIN_LATIN = 0.9;
 const KEY_PAGES = ['/', '/advisory/', '/projects/', '/radar/', '/art-curator-new-jersey/', '/art-curator-new-york/'];
+const NARROW = { width: 360, height: 780 };  /* the smallest common phone: the opening lines must fit it */
 
 function loadPlaywright() {
   try { return require('playwright'); } catch (e) { /* not on the local path */ }
@@ -111,6 +117,57 @@ async function readPage(page) {
   }));
 }
 
+/* The two opening lines on a narrow phone, in both languages, on each homepage-shaped page: the right edge
+   of the visible language's span in #l1 and #l2 must stay inside the screen. Measured after the opening
+   has split the letters (what a phone with WebGL shows) or once it has fallen back to the static figures,
+   in which case the lines are laid out (body.gl) for the measurement only. Layout, not visibility. */
+async function heroWidths(browser, base, paths, quiet) {
+  const fails = [];
+  let widest = null;
+  for (const p of paths) {
+    for (const lang of ['en', 'he']) {
+      const context = await browser.newContext({ viewport: NARROW });
+      await context.route(/googletagmanager|google-analytics|gstatic|googleapis/, quiet);
+      if (lang === 'he') { await context.addInitScript(() => { try { localStorage.setItem('radarLang', 'he'); } catch (e) {} }); }
+      const page = await context.newPage();
+      const where = `hero width on ${p} (${lang === 'he' ? 'Hebrew' : 'English'}, ${NARROW.width}x${NARROW.height})`;
+      try {
+        const resp = await page.goto(base + p, { waitUntil: 'load', timeout: 45000 });
+        if (!resp || resp.status() !== 200) { fails.push(`${where}: HTTP ${resp ? resp.status() : 'no response'}`); continue; }
+        await page.waitForFunction(() => document.querySelector('#l1 .ch, #l2 .ch') || document.body.classList.contains('static'), null, { timeout: 15000 }).catch(() => {});
+        const lines = await page.evaluate(async (lang) => {
+          const body = document.body;
+          const shown = body.classList.contains('gl');
+          if (!shown) { body.classList.add('gl'); }  /* the lines are displayed only in the WebGL opening (body.gl .line) */
+          const spans = ['l1', 'l2'].map(id => [id, document.querySelector('#' + id + ' [data-l="' + lang + '"]')]);
+          for (const [, s] of spans) { if (s) { await document.fonts.load(getComputedStyle(s).font, s.textContent); } }
+          await document.fonts.ready;
+          const out = spans.map(([id, s]) => {
+            if (!s) { return { id, missing: true }; }
+            const r = s.getBoundingClientRect();
+            return { id, text: s.textContent.trim(), left: r.left, right: r.right, width: r.width };
+          });
+          if (!shown) { body.classList.remove('gl'); }
+          return out;
+        }, lang);
+        for (const l of lines) {
+          if (l.missing) { fails.push(`${where}: #${l.id} has no ${lang} span`); continue; }
+          if (!(l.width > 0)) { fails.push(`${where}: #${l.id} is not laid out (width ${l.width})`); continue; }
+          if (!widest || l.right > widest.right) { widest = { p, lang, id: l.id, right: l.right }; }
+          if (l.right > NARROW.width) {
+            fails.push(`${where}: #${l.id} "${l.text}" ends at ${l.right.toFixed(1)}px, past the ${NARROW.width}px screen (${l.width.toFixed(1)}px wide from left ${l.left.toFixed(1)}px)`);
+          }
+        }
+      } catch (e) {
+        fails.push(`${where}: ${e.message.split('\n')[0]}`);
+      } finally {
+        await context.close();
+      }
+    }
+  }
+  return { fails, widest };
+}
+
 async function main() {
   const opt = args();
   const { chromium } = loadPlaywright();
@@ -177,6 +234,11 @@ async function main() {
     await context.close();
   }
 
+  /* the opening lines on a narrow phone: the homepage and every buyer variant, English and Hebrew */
+  const heroPages = ['/'].concat(variantPaths());
+  const hero = await heroWidths(browser, base, heroPages, quiet);
+  fails.push(...hero.fails);
+
   await browser.close();
   if (server) { server.close(); }
   if (fails.length) {
@@ -184,7 +246,9 @@ async function main() {
     console.log(`\ncheck_render: ${fails.length} failure(s) over ${checked} page(s) at ${base}`);
     process.exit(1);
   }
-  console.log(`check_render: OK, ${checked} page(s) open in English with and without JavaScript (>= ${MIN_LATIN * 100}% Latin, lang="en") at ${base}; the switch shows Hebrew and remembers it (${inner})`);
+  const w = hero.widest;
+  console.log(`check_render: OK, ${checked} page(s) open in English with and without JavaScript (>= ${MIN_LATIN * 100}% Latin, lang="en") at ${base}; the switch shows Hebrew and remembers it (${inner}); `
+    + `the opening lines fit a ${NARROW.width}px screen on ${heroPages.length} page(s) in English and Hebrew (widest: ${w ? `${w.right.toFixed(1)}px, #${w.id} on ${w.p} in ${w.lang === 'he' ? 'Hebrew' : 'English'}` : 'none measured'})`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
