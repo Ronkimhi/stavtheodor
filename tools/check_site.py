@@ -35,7 +35,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-SKIP_DIRS = {'.git', 'museum', '__pycache__', 'node_modules'}
+SKIP_DIRS = {'.git', 'museum', '__pycache__', 'node_modules', '.perf'}  # .perf: gitignored Lighthouse reports (tools/perf.sh)
 GATE_FILES = ('tools/check_site.py', 'tools/check_pages.py')  # they carry the patterns they hunt
 DASH = re.compile('[\\u2013\\u2014]')
 PHONE = re.compile(r'\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]?\d{3}|\(\d{3}\) ?\d{3}[ .-]\d{4}|\b0\d{2}[ -]?\d{7}\b|\+972')

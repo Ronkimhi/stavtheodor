@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -301,13 +300,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -343,7 +346,7 @@
   <h1 class="serif"><span data-l="en">Art for a home in Israel, managed from New York or New Jersey</span><span data-l="he" dir="rtl">אמנות לבית בישראל, בניהול מניו יורק או מניו ג&#x27;רזי</span></h1>
   <p class="lead"><span data-l="en">Yes. As an art curator and advisor based in Tenafly, New Jersey, I handle the art for homes in Caesarea, Herzliya Pituach, Tel Aviv and Ramat Gan, working in Hebrew and English on both sides, and the homes below show what that work looks like on the ground in Israel. Here is how it works when you are here and the house is there.</span><span data-l="he" dir="rtl">כן. כאוצרת ויועצת אמנות שבסיסה בטנפליי, ניו ג'רזי, אני מטפלת באמנות לבתים בקיסריה, הרצליה פיתוח, תל אביב ורמת גן, עובדת בעברית ובאנגלית בשני הצדדים, והבתים שלמטה מראים איך העבודה הזו נראית בשטח בישראל. הנה איך זה עובד כשאתם כאן והבית שם.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/herzliya-window.jpg" alt="Large painting of an aged, textured window by Yigal Ozeri near the entrance of a sea view apartment in Herzliya Pituach" loading="eager">
+    <img src="/images/projects/herzliya-window.jpg" alt="Large painting of an aged, textured window by Yigal Ozeri near the entrance of a sea view apartment in Herzliya Pituach" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Herzliya Pituach. A painting by Yigal Ozeri, placed in dialogue with the sea facing windows.</span><span data-l="he" dir="rtl">הרצליה פיתוח. ציור של יגאל עוזרי, ממוקם בדיאלוג עם החלונות הפונים לים.</span></figcaption>
   </figure>
 </header>
@@ -363,12 +366,12 @@
 <h2>ארבעה בתים בישראל</h2>
 <h3>קיסריה, אחוזה פרטית</h3>
 <p>עבור אספן פרטי איתרתי יצירות בקנה מידה גדול מצרפת, עם שכבות פיגמנט ופרטי זהב 18 קראט. העבודה כללה שיתוף פעולה הדוק עם גלריה מובילה ומשא ומתן על מחירים בשם האספן, וההכוונה שלי הייתה מותאמת גם לטעם וגם ליעדי השקעה ארוכי טווח. זה סוג הפרויקט שבו מיקום הקונה משנה הכי פחות, והקשרים של היועצת משנים הכי הרבה.</p>
-<figure><img src="/images/projects/caesarea-estate-1.jpg" alt="יצירה בקנה מידה גדול עם שכבות פיגמנט ופרטי זהב באחוזה פרטית בקיסריה" /><figcaption>קיסריה, אחוזה פרטית. יצירות בקנה מידה גדול שאותרו בצרפת.</figcaption></figure>
+<figure><img src="/images/projects/caesarea-estate-1.jpg" alt="יצירה בקנה מידה גדול עם שכבות פיגמנט ופרטי זהב באחוזה פרטית בקיסריה" loading="lazy" decoding="async"><figcaption>קיסריה, אחוזה פרטית. יצירות בקנה מידה גדול שאותרו בצרפת.</figcaption></figure>
 <h3>הרצליה פיתוח, דירה עם נוף לים</h3>
 <p>ליד הכניסה מיקמתי ציור בקנה מידה גדול של יגאל עוזרי, המתאר חלון ישן ומחוספס, בדיאלוג עם החלונות הפונים לים. אלמנטים פיסוליים וטקסטורות אורגניות עוברים בשאר הבית. חלון מצויר שעונה לחלון אמיתי הוא סוג ההחלטה שעובד רק אם מישהו עמד בדירה והסתכל לשני הכיוונים.</p>
 <h3>רמת גן, בית פרטי</h3>
 <p>אחרי נסיעה לקוריאה ששינתה משהו אצל הלקוח, מצאתי צילום בפורמט גדול של אמן קוריאני המתאר שתי דמויות בלבוש טקסי, ומיקמתי אותו בלב חלל המגורים. המשפט שנשאר איתי מהפרויקט הזה הוא קצר: זה נותן לו זיכרון. זו כל הנקודה של בית שלא גרים בו כל השנה. האמנות צריכה להחזיק את מה שהבית אומר לכם כשאתם לא בו.</p>
-<figure><img src="/images/projects/ramat-gan.jpg" alt="צילום בפורמט גדול של שתי דמויות בלבוש טקסי קוריאני במרכז סלון ברמת גן" /><figcaption>רמת גן, בית פרטי. צילום של אמן קוריאני, ממוקם בלב חלל המגורים.</figcaption></figure>
+<figure><img src="/images/projects/ramat-gan.jpg" alt="צילום בפורמט גדול של שתי דמויות בלבוש טקסי קוריאני במרכז סלון ברמת גן" loading="lazy" decoding="async"><figcaption>רמת גן, בית פרטי. צילום של אמן קוריאני, ממוקם בלב חלל המגורים.</figcaption></figure>
 <h3>קיסריה, וילה עם נוף לים</h3>
 <p>עבור בעל בית שהגיע לישראל כעולה חדש, הזמנתי טריפטיך באורך 3.5 מטר מאמן איטלקי. שלוש חסידות עומדות במרכזו, מסמלות שיבה הביתה, כוח ושייכות, ומהדהדות גם את המסע של בעל הבית עצמו וגם את הנדידה העונתית של החסידות דרך ישראל. הזמנה בקנה מידה כזה, שנעשית בחו"ל לקיר מסוים בקיסריה, היא בדיוק סוג העבודה שצריכה אדם אחד שמנהל אותה מקצה לקצה.</p>
 <h2>מה אני צריכה מכם</h2>
@@ -392,12 +395,12 @@
 <h2>Four homes in Israel</h2>
 <h3>Caesarea, private estate</h3>
 <p>For a private collector I sourced large scale artworks from France, with layered pigments and 18k gold detailing. The work involved close collaboration with a leading gallery and price negotiations on the collector's behalf, and my guidance was aligned with both taste and long term investment goals. This is the kind of project where the buyer's location matters least and the advisor's relationships matter most.</p>
-<figure><img src="/images/projects/caesarea-estate-1.jpg" alt="Large scale artwork with layered pigments and gold detailing in a private estate in Caesarea" /><figcaption>Caesarea, private estate. Large scale works sourced from France.</figcaption></figure>
+<figure><img src="/images/projects/caesarea-estate-1.jpg" alt="Large scale artwork with layered pigments and gold detailing in a private estate in Caesarea" loading="lazy" decoding="async"><figcaption>Caesarea, private estate. Large scale works sourced from France.</figcaption></figure>
 <h3>Herzliya Pituach, sea view apartment</h3>
 <p>Near the entrance I placed a large scale painting by Yigal Ozeri depicting an aged, textured window, positioned in dialogue with the sea facing windows. Sculptural elements and organic textures run through the rest of the home. A painted window answering a real one is the kind of decision that only works if someone has stood in the apartment and looked both ways.</p>
 <h3>Ramat Gan, private home</h3>
 <p>After a trip to Korea that had changed something for the client, I found a large format photograph by a Korean artist depicting two figures in ceremonial dress, and placed it at the heart of the living space. The line that stays with me from that project is a short one: it gives it memory. That is the whole point of a home you do not live in year round. The art should hold what the house means to you when you are not in it.</p>
-<figure><img src="/images/projects/ramat-gan.jpg" alt="Large format photograph of two figures in Korean ceremonial dress at the center of a living room in Ramat Gan" /><figcaption>Ramat Gan, private home. A photograph by a Korean artist, placed at the heart of the living space.</figcaption></figure>
+<figure><img src="/images/projects/ramat-gan.jpg" alt="Large format photograph of two figures in Korean ceremonial dress at the center of a living room in Ramat Gan" loading="lazy" decoding="async"><figcaption>Ramat Gan, private home. A photograph by a Korean artist, placed at the heart of the living space.</figcaption></figure>
 <h3>Caesarea, sea view villa</h3>
 <p>For a homeowner who had come to Israel as a new immigrant, I commissioned a 3.5 meter triptych from an Italian artist. Three storks stand at its center, symbolizing homecoming, strength and belonging, and echoing both the owner's own journey and the seasonal migration of storks through Israel. A commission of that scale, made abroad for a specific wall in Caesarea, is exactly the kind of work that needs one person managing it end to end.</p>
 <h2>What I need from you</h2>

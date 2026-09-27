@@ -75,17 +75,24 @@ FAVICONS = '''<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">'''
 
-FONTS = '''<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">'''
+# The fonts are self-hosted in /fonts/ and declared at the top of css/theme.css (2026-09-26); only the
+# two faces the first paint needs are preloaded. No third-party font request, no preconnect.
+FONTS = '''<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>'''
 
-GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+# The same tag and dataLayer stub as before; gtag.js itself is fetched after the window load event
+# so it never competes with the page's own resources (approved performance change, 2026-09-26).
+GA_SNIPPET = f'''<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
   gtag('config', '{GA_ID}');
+  window.addEventListener('load', function () {{
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id={GA_ID}';
+    document.head.appendChild(s);
+  }});
 </script>'''
 
 _entity_cache = None

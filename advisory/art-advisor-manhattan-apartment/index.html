@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -309,13 +308,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -351,7 +354,7 @@
   <h1 class="serif"><span data-l="en">Art advisor for a Manhattan apartment: what to expect</span><span data-l="he" dir="rtl">יועצת אמנות לדירה במנהטן: למה לצפות</span></h1>
   <p class="lead"><span data-l="en">As an art curator and advisor for a Manhattan apartment, I do three things you do not have time for: I read the rooms, the light and the building, work inside your designer's plan rather than around it, and find the art that belongs there, from the first conversation to the day it is hung. Below is what that looks like in practice, including how a custom bar in a Manhattan skyline residence found the large format digital collage that now anchors it.</span><span data-l="he" dir="rtl">כאוצרת ויועצת אמנות לדירה במנהטן, אני עושה שלושה דברים שאין לכם זמן אליהם: קוראת את החדרים, את האור ואת הבניין, עובדת בתוך התוכנית של המעצב שלכם ולא סביבה, ומוצאת את האמנות ששייכת לשם, מהשיחה הראשונה ועד היום שבו היצירה תלויה על הקיר. למטה תמצאו איך זה נראה בפועל, כולל הסיפור של בר בדירת נוף במנהטן שמצא את הקולאז' הדיגיטלי בפורמט גדול שמעגן אותו היום.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/manhattan-bar.jpg" alt="Custom bar in a Manhattan apartment with a large format digital collage above it" loading="eager">
+    <img src="/images/projects/manhattan-bar.jpg" alt="Custom bar in a Manhattan apartment with a large format digital collage above it" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Manhattan, Skyline Residence. A large format digital collage anchors the custom bar.</span><span data-l="he" dir="rtl">מנהטן, דירת נוף. קולאז&#x27; דיגיטלי בפורמט גדול מעגן את הבר המעוצב.</span></figcaption>
   </figure>
 </header>

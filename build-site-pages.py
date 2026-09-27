@@ -43,6 +43,12 @@ def strip_tags(s):
     return re.sub(r"<[^>]+>", "", s or "").strip()
 
 
+def lazy_images(body):
+    """The reading column's figures sit below the fold: lazy and async unless the JSON says otherwise
+    (2026-09-26, speed pass). The hero image above the text stays eager."""
+    return re.sub(r'<img(?![^>]*\bloading=)([^>]*?)\s*/?>', r'<img\1 loading="lazy" decoding="async">', body or '')
+
+
 def snippet(s, n=165):
     """Short Hebrew card blurb. The JSON carries no Hebrew meta_description, so the
     Hebrew lead is trimmed at a sentence or word boundary instead."""
@@ -186,7 +192,7 @@ def render_article_page(p, all_pages):
             cap = f'\n    <figcaption>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>'
         hero = f'''
   <figure class="pfig reveal">
-    <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en', ''), quote=True)}" loading="eager">{cap}
+    <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en', ''), quote=True)}" loading="eager" fetchpriority="high">{cap}
   </figure>'''
     body = f'''
 <header class="phead">
@@ -197,10 +203,10 @@ def render_article_page(p, all_pages):
 
 <section class="section wrap tight">
   <div class="prose" data-l="he" dir="rtl">
-{p['body_he']}
+{lazy_images(p['body_he'])}
   </div>
   <div class="prose" data-l="en">
-{p['body_en']}
+{lazy_images(p['body_en'])}
   </div>
 </section>
 {faq_html(p)}{radar_html(p)}
@@ -237,10 +243,10 @@ def render_project_page(p, all_pages, projects):
 
 <section class="section wrap">
   <div class="prose" data-l="he" dir="rtl">
-{p['body_he']}
+{lazy_images(p['body_he'])}
   </div>
   <div class="prose" data-l="en">
-{p['body_en']}
+{lazy_images(p['body_en'])}
   </div>
 </section>
 {faq_html(p)}

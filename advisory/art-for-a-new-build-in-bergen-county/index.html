@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -309,13 +308,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -351,7 +354,7 @@
   <h1 class="serif"><span data-l="en">Art for a new build in Bergen County: when it should come in</span><span data-l="he" dir="rtl">אמנות לבית חדש במחוז ברגן: מתי היא צריכה להיכנס</span></h1>
   <p class="lead"><span data-l="en">Bring the art in while the drawings are still open, before the walls are closed and the lighting is fixed, and treat it as part of the architecture rather than the last delivery. I am an art curator and advisor based in Tenafly, and I work with owners, architects and designers in Alpine, Closter, Englewood, Saddle River and the towns around them; here is how the timing works and what it did for a new house in Closter.</span><span data-l="he" dir="rtl">הכניסו את האמנות בזמן שהתוכניות עדיין פתוחות, לפני שהקירות נסגרים והתאורה נקבעת, והתייחסו אליה כחלק מהאדריכלות ולא כמשלוח האחרון. אני אוצרת ויועצת אמנות מטנפליי, ועובדת עם בעלי בתים, אדריכלים ומעצבים באלפיין, קלוסטר, אנגלווד, סאדל ריבר והיישובים שסביבם; הנה איך התזמון עובד ומה הוא עשה לבית חדש בקלוסטר.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/closter-dining.jpg" alt="Dining room in a newly built house in Closter, New Jersey, with contemporary paintings on the wall" loading="eager">
+    <img src="/images/projects/closter-dining.jpg" alt="Dining room in a newly built house in Closter, New Jersey, with contemporary paintings on the wall" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Closter, New Jersey. New construction, collection curated with leading New York City galleries.</span><span data-l="he" dir="rtl">קלוסטר, ניו ג&#x27;רזי. בנייה חדשה, אוסף שנבחר יחד עם גלריות מובילות בניו יורק.</span></figcaption>
   </figure>
 </header>
@@ -368,10 +371,10 @@
 <p>ההתקנה מגיעה אחרונה, כשהריהוט במקומו, כך שהגבהים נקבעים לפי איך שחיים בחדרים ולא לפי שלד ריק. אני מנהלת את ההפקה, המסגור וההתקנה עם בתי דפוס, ממסגרים ומתקינים שאני עובדת איתם באופן קבוע. העבודה לא הושלמה עד שכל יצירה על הקיר ואתם מרוצים לגמרי.</p>
 <p>אם הבית שלכם כבר גמור, לא מאוחר מדי. פשוט יש פחות אפשרויות לתאורה ולמבנה התלייה, ואני עובדת עם מה שיש.</p>
 <h2>בית חדש בקלוסטר</h2>
-<figure><img src="/images/projects/closter-hall.jpg" alt="חלל כניסה בבית חדש בקלוסטר, ניו ג'רזי, עם יצירה עכשווית גדולה" /><figcaption>קלוסטר, ניו ג'רזי. חלל הכניסה.</figcaption></figure>
+<figure><img src="/images/projects/closter-hall.jpg" alt="חלל כניסה בבית חדש בקלוסטר, ניו ג'רזי, עם יצירה עכשווית גדולה" loading="lazy" decoding="async"><figcaption>קלוסטר, ניו ג'רזי. חלל הכניסה.</figcaption></figure>
 <p>הבית בקלוסטר היה חדש לגמרי כשהובאתי לפרויקט. המשימה הייתה לאצור אוסף שיחזק את האופי האדריכלי של הבית ויוסיף עומק לעיצוב הפנים. עבדתי בשיתוף פעולה הדוק עם גלריות מובילות בניו יורק, והאוסף מפגיש עבודות של אמנים יהודים וישראלים לצד קולות עכשוויים אחרים. עבור משפחות רבות בחלק הזה של ניו ג'רזי, השילוב הזה הוא לא נושא. זה מי שהם, והאמנות היא המקום שבו זה ניכר בלי שנאמרת מילה.</p>
 <blockquote>התוצאה הופכת בית מעוצב היטב לחלל עם נשמה, שבו האמנות והאדריכלות מדברות באותה שפה.</blockquote>
-<figure><img src="/images/projects/closter-office.jpg" alt="חדר עבודה ביתי בקלוסטר, ניו ג'רזי, עם ציור מעל השולחן" /><figcaption>קלוסטר, ניו ג'רזי. חדר העבודה.</figcaption></figure>
+<figure><img src="/images/projects/closter-office.jpg" alt="חדר עבודה ביתי בקלוסטר, ניו ג'רזי, עם ציור מעל השולחן" loading="lazy" decoding="async"><figcaption>קלוסטר, ניו ג'רזי. חדר העבודה.</figcaption></figure>
 <h2>לעבוד לצד האדריכל והמעצב שלכם</h2>
 <p>אני עובדת לצד אדריכלים ומעצבי פנים, לא סביבם. בבית חדש זה אומר שאני קוראת את התוכניות, מצטרפת לפגישות האתר שחשובות, ומכניסה את הבקשות שלי לאותו לוח זמנים שכולם עובדים לפיו. הבית נשאר של המעצב. אני מביאה את האמנות, ודואגת שהיא תנחת בדיוק במקום שהעיצוב כבר פינה לה.</p>
 <p>ביליתי שנים בבניית אוספי אמנות למלונות ולספינות קרוז, שם תאריך הפתיחה לא זז וכל יצירה לכל חדר מיוצרת ומותקנת לקראתו. בית עם תאריך כניסה הוא קרקע מוכרת.</p>
@@ -392,10 +395,10 @@
 <p>Installation comes last, with the furniture in place, so heights are set to how the rooms are lived in and not to an empty shell. I manage production, framing and installation with printmakers, framers and installers I work with regularly. The work is not complete until every piece is on the wall and you are fully satisfied.</p>
 <p>If your house is already finished, it is not too late. There are simply fewer options for lighting and hanging structure, and I work with what is there.</p>
 <h2>A new house in Closter</h2>
-<figure><img src="/images/projects/closter-hall.jpg" alt="Entrance hall of a new house in Closter, New Jersey, with a large contemporary artwork" /><figcaption>Closter, New Jersey. The entrance hall.</figcaption></figure>
+<figure><img src="/images/projects/closter-hall.jpg" alt="Entrance hall of a new house in Closter, New Jersey, with a large contemporary artwork" loading="lazy" decoding="async"><figcaption>Closter, New Jersey. The entrance hall.</figcaption></figure>
 <p>The Closter residence was newly built when I was brought in. The commission was to curate a collection that would strengthen the architectural character of the house and bring depth to the interior design. I worked closely with leading New York City galleries, and the collection brings together works by Jewish and Israeli artists alongside other contemporary voices. For many families in this part of New Jersey, that mix is not a theme. It is who they are, and the art is where it shows without a word being said.</p>
 <blockquote>The result transforms a well designed house into a space with soul, where art and architecture speak the same language.</blockquote>
-<figure><img src="/images/projects/closter-office.jpg" alt="Home office in Closter, New Jersey, with a painting above the desk" /><figcaption>Closter, New Jersey. The home office.</figcaption></figure>
+<figure><img src="/images/projects/closter-office.jpg" alt="Home office in Closter, New Jersey, with a painting above the desk" loading="lazy" decoding="async"><figcaption>Closter, New Jersey. The home office.</figcaption></figure>
 <h2>Working alongside your architect and designer</h2>
 <p>I work alongside architects and interior designers, not around them. In a new build that means I read the drawings, join the site meetings that matter, and put my requests into the same schedule everyone else is working from. The designer keeps the house. I bring the art, and I make sure it lands where the design already made room for it.</p>
 <p>I have spent years building art collections for hotels and cruise ships, where the opening date does not move and every piece for every room is produced and installed to it. A house with a move-in date is familiar ground.</p>

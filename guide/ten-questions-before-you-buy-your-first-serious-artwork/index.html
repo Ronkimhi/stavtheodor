@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -282,13 +281,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -324,7 +327,7 @@
   <h1 class="serif"><span data-l="en">Ten questions to answer before you buy your first serious artwork</span><span data-l="he" dir="rtl">עשר שאלות שכדאי לענות עליהן לפני שקונים יצירת אמנות רצינית ראשונה</span></h1>
   <p class="lead"><span data-l="en">Before you buy your first serious artwork, answer ten questions about the wall, the light, the life of the room, provenance, condition, framing, the full budget, resale, your designer and your advisor. I ask every new client these before I show a single work; here they are, with my answers from real homes.</span><span data-l="he" dir="rtl">לפני שקונים יצירת אמנות רצינית ראשונה, ענו על עשר שאלות: על הקיר, על האור, על החיים בחדר, על פרובננס, על מצב העבודה, על מסגור, על התקציב המלא, על מכירה חוזרת, על המעצב שלכם ועל מי שמייעץ לכם. אני שואלת כל לקוח חדש את השאלות האלה לפני שאני מראה עבודה אחת. הנה הן, עם התשובות שלי מבתים אמיתיים.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/stav-couch.jpg" alt="Stav Theodor seated on a couch beneath a large painting" loading="eager">
+    <img src="/images/projects/stav-couch.jpg" alt="Stav Theodor seated on a couch beneath a large painting" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Stav Theodor. These are the questions I ask before I show a client a single work.</span><span data-l="he" dir="rtl">סתיו תאודור. אלה השאלות שאני שואלת לפני שאני מראה ללקוח עבודה אחת.</span></figcaption>
   </figure>
 </header>

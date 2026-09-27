@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -309,13 +308,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -351,7 +354,7 @@
   <h1 class="serif"><span data-l="en">How to start an art collection, seriously</span><span data-l="he" dir="rtl">איך מתחילים אוסף אמנות, ברצינות</span></h1>
   <p class="lead"><span data-l="en">Begin with one work you would keep even if it were worth nothing tomorrow, by an artist whose practice you have looked into, at a price you understand. Almost every mistake new collectors make comes from skipping one of those three, and an advisor's job is to make the second, fifth and twentieth decision as good as the first.</span><span data-l="he" dir="rtl">מתחילים מעבודה אחת שהייתם שומרים גם אם מחר היא לא הייתה שווה כלום, של אמן שהתעמקתם בעבודה שלו, במחיר שאתם מבינים. כמעט כל טעות של אספנים מתחילים נובעת מדילוג על אחד משלושת אלה, והתפקיד של יועצת הוא לדאוג שההחלטה השנייה, החמישית והעשרים תהיה טובה כמו הראשונה.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/closter-hall.jpg" alt="Hall in Closter, New Jersey, a large abstract work in gold, olive and violet in a white frame above a wood bench with a bonsai, beside the stair" loading="eager">
+    <img src="/images/projects/closter-hall.jpg" alt="Hall in Closter, New Jersey, a large abstract work in gold, olive and violet in a white frame above a wood bench with a bonsai, beside the stair" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Closter, New Jersey. One work in the hall, part of a collection built room by room with New York galleries.</span><span data-l="he" dir="rtl">קלוסטר, ניו ג&#x27;רזי. עבודה אחת במבואה, חלק מאוסף שנבנה חדר אחרי חדר עם גלריות בניו יורק.</span></figcaption>
   </figure>
 </header>
@@ -378,7 +381,7 @@
 <h2>מעבודה אחת לאוסף: שני פרויקטים</h2>
 <p>לאספן פרטי בקיסריה איתרתי עבודות בקנה מידה גדול מצרפת, פיגמנטים בשכבות עם פרטי זהב 18 קראט, בשיתוף פעולה הדוק עם גלריה מובילה. ניהלתי את המשא ומתן על המחירים ונתתי הכוונה שתואמת את הטעם של האספן ואת יעדי ההשקעה ארוכי הטווח שלו. הטעם בא קודם, תמיד. עבודה שאתם לא אוהבים היא השקעה גרועה גם כשהמחיר עולה.</p>
 <p>בקלוסטר, ניו ג'רזי, בית מגורים פרטי חדש היה זקוק לאוסף ולא לעבודה אחת. בעבודה צמודה עם גלריות מובילות בניו יורק, הבאתי יחד עבודות של אמנים יהודים וישראלים לצד קולות עכשוויים אחרים, כדי שלבית יהיה קול אחד על הקירות ולא רבים. שלוש עבודות תלויות כקבוצה מעל שולחן האוכל, ציור אחד מחזיק את המשרד לבדו, ובמבואה נמצאת העבודה שבתמונה בראש העמוד. כל יצירה נבחרה לקיר שלה, והקירות נבחרו לפי מה שהם יכולים להחזיק.</p>
-<figure><img src="/images/projects/closter-dining.jpg" alt="פינת אוכל בקלוסטר, ניו ג'רזי, שלושה ציורים תלויים כקבוצה מעל שולחן אלון ארוך"><figcaption>קלוסטר, ניו ג'רזי. פינת האוכל, שלוש עבודות שנתלו כמחווה אחת.</figcaption></figure>
+<figure><img src="/images/projects/closter-dining.jpg" alt="פינת אוכל בקלוסטר, ניו ג'רזי, שלושה ציורים תלויים כקבוצה מעל שולחן אלון ארוך" loading="lazy" decoding="async"><figcaption>קלוסטר, ניו ג'רזי. פינת האוכל, שלוש עבודות שנתלו כמחווה אחת.</figcaption></figure>
 <h2>צעד ראשון</h2>
 <p>אם אתם מוכנים לקנות את העבודה הרצינית הראשונה שלכם, או שיש לכם חמש עבודות ואתם רוצים לדעת אם הן הופכות לאוסף, <a href="/#contact">כתבו לי</a>. שלחו כמה תמונות של מה שיש לכם ושל מה שמשך אתכם. בשיחה הראשונה אני מגלה מה אתם אוהבים, ושם מתחיל כל אוסף. אם אתם רוצים להבין איך פרויקט מתנהל משם, קראו <a href="/advisory/how-the-art-advisory-process-works/">איך התהליך עובד</a>.</p>
   </div>
@@ -403,7 +406,7 @@
 <h2>From one work to a collection: two projects</h2>
 <p>For a private collector in Caesarea, I sourced large scale works from France, layered pigments with 18k gold detailing, in close collaboration with a leading gallery. I handled the price negotiations and gave guidance aligned with the collector's taste and long term investment goals. Taste came first, always. A work you do not love is a bad investment even when the price goes up.</p>
 <p>In Closter, New Jersey, a newly built private residence needed a collection rather than a single work. Working closely with leading New York City galleries, I brought together works by Jewish and Israeli artists alongside other contemporary voices, so that the house would have one voice on its walls rather than many. Three works hang as a group above the dining table, one painting carries the office alone, and the hall has the work in the photograph at the top of this page. Each piece was chosen for its wall, and the walls were chosen for what they could hold.</p>
-<figure><img src="/images/projects/closter-dining.jpg" alt="Dining room in Closter, New Jersey, three paintings hung as a group above a long oak table"><figcaption>Closter, New Jersey. The dining room, three works hung as one gesture.</figcaption></figure>
+<figure><img src="/images/projects/closter-dining.jpg" alt="Dining room in Closter, New Jersey, three paintings hung as a group above a long oak table" loading="lazy" decoding="async"><figcaption>Closter, New Jersey. The dining room, three works hung as one gesture.</figcaption></figure>
 <h2>A first step</h2>
 <p>If you are ready to buy your first serious work, or you have five works and want to find out whether they are becoming a collection, <a href="/#contact">write to me</a>. Send a few photos of what you own and what you have been drawn to. The first conversation is where I find out what you love, and that is where every collection starts. If you want to understand how a project runs from there, read <a href="/advisory/how-the-art-advisory-process-works/">how the process works</a>.</p>
   </div>

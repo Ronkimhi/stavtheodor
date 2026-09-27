@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -309,13 +308,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -351,7 +354,7 @@
   <h1 class="serif"><span data-l="en">What does an art advisor cost, and how do the fees work?</span><span data-l="he" dir="rtl">כמה עולה יועצת אמנות, ואיך עובד שכר הטרחה?</span></h1>
   <p class="lead"><span data-l="en">An art advisor is usually paid one of three ways: an hourly rate, a flat fee per project, or a percentage of what you buy, which in the industry typically runs from ten to twenty percent, with a retainer for ongoing collection work. I quote each project after a first conversation, based on its scope, and my direct relationships with artists often bring the total cost of the work itself down.</span><span data-l="he" dir="rtl">יועצת אמנות מקבלת בדרך כלל תשלום באחת משלוש דרכים: תעריף שעתי, שכר טרחה קבוע לפרויקט, או אחוז ממה שאתם רוכשים, שבתעשייה נע לרוב בין עשרה לעשרים אחוז, ולעבודה מתמשכת על אוסף, ריטיינר. אני מתמחרת כל פרויקט אחרי שיחה ראשונה, לפי ההיקף שלו, והקשרים הישירים שלי עם אמנים מורידים לעיתים קרובות את העלות הכוללת של היצירה עצמה.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/caesarea-stone.jpg" alt="Large scale painting with layered pigments and gold detailing, framed and hung high on a stone wall between two wall lights, in a private estate in Caesarea" loading="eager">
+    <img src="/images/projects/caesarea-stone.jpg" alt="Large scale painting with layered pigments and gold detailing, framed and hung high on a stone wall between two wall lights, in a private estate in Caesarea" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Caesarea, private estate. Works sourced from France with a leading gallery, price negotiated on the client&#x27;s behalf.</span><span data-l="he" dir="rtl">קיסריה, אחוזה פרטית. יצירות שאותרו בצרפת עם גלריה מובילה, המחיר נסגר במשא ומתן בשם הלקוח.</span></figcaption>
   </figure>
 </header>

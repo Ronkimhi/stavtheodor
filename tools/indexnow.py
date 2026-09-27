@@ -40,13 +40,12 @@ def key():
 def url_for(path):
     """A file in the tree to its live URL, or None when it is not an indexable page."""
     path = path.replace('\\', '/')
-    if not path.endswith('.html') or path == '404.html' or path.split('/')[0] in STUBS:
-        return None
     if path == 'index.html':
         return SITE + '/'
-    if path.endswith('/index.html'):
-        return f'{SITE}/{path[:-len("index.html")]}'
-    return f'{SITE}/{path}'
+    # site URLs are directory index pages; templates/, content/ and the stubs are not pages
+    if not path.endswith('/index.html') or path.split('/')[0] in STUBS + ('templates', 'content', 'museum'):
+        return None
+    return f'{SITE}/{path[:-len("index.html")]}'
 
 
 def changed_since(sha):

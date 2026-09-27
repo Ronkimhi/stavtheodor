@@ -82,7 +82,8 @@ def render_home(pages, posts, faq):
     assert '{{' not in body, 'unfilled slot'
     head = sc.head(TITLE, DESCRIPTION, SITE + '/', og_title=OG_TITLE, og_desc=OG_DESC, og_card_dims=True,
                    og_image_alt=OG_IMAGE_ALT, lang='en', ld=[sc.faq_schema(faq)],
-                   extra='<link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp">\n')
+                   extra='<link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" fetchpriority="high">\n'
+                         '<link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp" fetchpriority="high">\n')
     return head + body
 
 

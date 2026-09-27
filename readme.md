@@ -18,6 +18,8 @@ Every page is generated. No framework, no npm: three Python scripts, one shared 
 | `site_chrome.py` | the nav, footer, language switch, mailto fallback, GA tag and `<head>` of every page |
 | `css/theme.css` | the one theme every page links |
 | `js/home-opening.js`, `js/home-scroll.js` | the homepage opening (WebGL brush) and smooth wheel |
+| `js/vendor/` | GSAP 3.13 (core, ScrollTrigger, SplitText) and Lenis 1.3.11, vendored with their licences, loaded with defer |
+| `fonts/` | the three font families as woff2 (latin, latin-ext, hebrew subsets), declared at the top of `css/theme.css` |
 
 One command, from the repo root:
 

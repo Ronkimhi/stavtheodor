@@ -21,9 +21,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
 <script type="application/ld+json">
 {
@@ -309,13 +308,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <body class="lang-en">
@@ -351,7 +354,7 @@
   <h1 class="serif"><span data-l="en">Framing, shipping and installing large scale art: how it works and who manages it</span><span data-l="he" dir="rtl">מסגור, שילוח והתקנה של אמנות בקנה מידה גדול: איך זה עובד ומי מנהל את זה</span></h1>
   <p class="lead"><span data-l="en">Large works are produced, framed, crated, shipped and hung by a chain of specialists, printmakers, framers, art handlers and installers, and one person has to manage that chain against a timeline and a budget. That is part of my service: I run every stage from the artist's studio to the moment the work is level on your wall, and the job is not complete until it is installed and you are fully satisfied.</span><span data-l="he" dir="rtl">עבודות גדולות מופקות, ממוסגרות, נארזות, נשלחות ונתלות על ידי שרשרת של אנשי מקצוע, מדפיסים, מסגרים, מובילי אמנות ומתקינים, ומישהו אחד צריך לנהל את השרשרת הזו מול לוח זמנים ותקציב. זה חלק מהשירות שלי: אני מנהלת כל שלב מהסטודיו של האמן ועד לרגע שבו העבודה מיושרת על הקיר שלכם, והעבודה לא נגמרת עד שהיא מותקנת ואתם מרוצים לגמרי.</span></p>
   <figure class="pfig reveal">
-    <img src="/images/projects/services-framing.jpg" alt="A framer&#x27;s table: hands positioning a small dark floral painting inside a white mat, with pencils and framing tools around it" loading="eager">
+    <img src="/images/projects/services-framing.jpg" alt="A framer&#x27;s table: hands positioning a small dark floral painting inside a white mat, with pencils and framing tools around it" loading="eager" fetchpriority="high">
     <figcaption><span data-l="en">Framing is decided with the work in hand: mat, frame and glazing chosen to serve the piece, not to compete with it.</span><span data-l="he" dir="rtl">על המסגור מחליטים כשהעבודה ביד: פספרטו, מסגרת וזיגוג שנבחרים כדי לשרת את היצירה, לא להתחרות בה.</span></figcaption>
   </figure>
 </header>
@@ -371,7 +374,7 @@
 <p>לפני יום ההתקנה סוקרים את האתר: מבנה הקיר, משקל, גובה, קווי מבט מהפתח ומהישיבה, התאורה שכבר קיימת. ואז המתקינים מגיעים עם אביזרי התלייה המתאימים לקיר ולעבודה. גובה התלייה, המרווחים והיישור נקבעים לפי הבריף שלי, והעבודה נבדקת לפני שהמתקינים עוזבים. אם היא לא יושבת נכון, היא לא גמורה.</p>
 <h2>טריפטיך באורך 3.5 מטר בקיסריה</h2>
 <p>לווילה עם נוף לים בקיסריה הזמנתי טריפטיך באורך 3.5 מטר מאמן איטלקי. שלוש חסידות במרכז מסמלות שיבה הביתה, כוח ושייכות, ומהדהדות את המסע של בעל הבית כעולה חדש ואת הנדידה העונתית של החסידות דרך ישראל. שלושה פאנלים בגודל כזה צריכים להיות מופקים, נשלחים ומותקנים כתמונה אחת: המרווחים ביניהם הם חלק מהקומפוזיציה, וסטייה של כמה מילימטרים הייתה נראית מהצד השני של החדר. הוא תלוי על קיר בגובה כפול, מואר מלמעלה, וכל שלב נוהל בלוח זמנים מוגדר ובתקציב מאושר.</p>
-<figure><img src="/images/projects/storks-wall.jpg" alt="ציור בשלושה פאנלים של חסידות בגן קלאסי, תלוי כתמונה אחת על קיר לבן בגובה כפול מעל קורות לבנות, מואר מלמעלה, בווילה עם נוף לים בקיסריה"><figcaption>קיסריה, וילה עם נוף לים. הטריפטיך באורך 3.5 מטר מותקן, שלושה פאנלים מיושרים כתמונה אחת.</figcaption></figure>
+<figure><img src="/images/projects/storks-wall.jpg" alt="ציור בשלושה פאנלים של חסידות בגן קלאסי, תלוי כתמונה אחת על קיר לבן בגובה כפול מעל קורות לבנות, מואר מלמעלה, בווילה עם נוף לים בקיסריה" loading="lazy" decoding="async"><figcaption>קיסריה, וילה עם נוף לים. הטריפטיך באורך 3.5 מטר מותקן, שלושה פאנלים מיושרים כתמונה אחת.</figcaption></figure>
 <h2>מי מנהל את זה</h2>
 <p>אני. יש לכם איש קשר אחד מהרגע שעבודה נבחרת ועד שהיא על הקיר, ותקציב מאושר אחד שמכסה הפקה, מסגור, הובלה והתקנה. המדפיסים, המסגרים והמתקינים עובדים לפי הבריף ולוח הזמנים שלי, והעבודה לא נגמרת עד שהיא מותקנת ואתם מרוצים לגמרי. אם מעצב הפנים שלכם מנהל את הפרויקט, אני מתאמת איתו ישירות כדי שהעבודות יגיעו כשהקירות מוכנים; ראו <a href="/advisory/working-with-your-interior-designer-on-art/">איך אני עובדת עם מעצבי פנים</a>.</p>
 <p>אם יש לכם עבודה גדולה להעביר, למסגר או להתקין, או קיר שמחכה לאחת כזו, <a href="/#contact">כתבו לי</a> עם המידות ותמונה של החלל. לתמונה המלאה של פרויקט מהקונספט ועד ההתקנה, קראו <a href="/advisory/how-the-art-advisory-process-works/">איך התהליך עובד</a>.</p>
@@ -390,7 +393,7 @@
 <p>Before install day, the site is surveyed: wall construction, weight, height, sightlines from the doorway and from the seating, the lighting already in place. Then the installers arrive with the right hanging hardware for the wall and the work. Hanging height, spacing and level are set to my brief, and the work is checked before the installers leave. If it does not sit correctly, it is not finished.</p>
 <h2>A 3.5 meter triptych in Caesarea</h2>
 <p>For a sea view villa in Caesarea, I commissioned a 3.5 meter triptych from an Italian artist. Three storks at the center symbolize homecoming, strength and belonging, echoing the homeowner's own journey as a new immigrant and the seasonal migration of storks through Israel. Three panels of that size have to be produced, shipped and installed as one image: the gaps between them are part of the composition, and a few millimeters of drift would show from across the room. It hangs on a double height wall, lit from above, and every stage was managed within a defined timeline and an approved budget.</p>
-<figure><img src="/images/projects/storks-wall.jpg" alt="Three panel painting of storks in a classical garden, hung as one image on a white double height wall above white beams, lit from above, in a sea view villa in Caesarea"><figcaption>Caesarea, sea view villa. The 3.5 meter triptych installed, three panels aligned as one image.</figcaption></figure>
+<figure><img src="/images/projects/storks-wall.jpg" alt="Three panel painting of storks in a classical garden, hung as one image on a white double height wall above white beams, lit from above, in a sea view villa in Caesarea" loading="lazy" decoding="async"><figcaption>Caesarea, sea view villa. The 3.5 meter triptych installed, three panels aligned as one image.</figcaption></figure>
 <h2>Who manages it</h2>
 <p>I do. You have one point of contact from the moment a work is chosen until it is on the wall, and one approved budget that covers production, framing, transport and installation. The printmakers, framers and installers work to my brief and my timeline, and the work is not complete until it is installed and you are fully satisfied. If your interior designer is running the project, I coordinate directly with them so the works arrive when the walls are ready; see <a href="/advisory/working-with-your-interior-designer-on-art/">how I work with interior designers</a>.</p>
 <p>If you have a large work to move, frame or install, or a wall waiting for one, <a href="/#contact">write to me</a> with the dimensions and a photo of the space. For the full picture of a project from concept to installation, read <a href="/advisory/how-the-art-advisory-process-works/">how the process works</a>.</p>

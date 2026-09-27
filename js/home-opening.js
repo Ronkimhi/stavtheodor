@@ -137,7 +137,7 @@
   gl.uniform1i(L.tBefore, 0); gl.uniform1i(L.tAfter, 1); gl.uniform1i(L.tNext, 2);
   gl.uniform3f(L.uBg, 15 / 255, 15 / 255, 20 / 255);
 
-  /* textures: touch devices upload at a 1600 px long edge */
+  /* textures: 1800 px wide webp (about 130 to 210 KB each, 2026-09-26); touch devices upload at a 1600 px long edge */
   var placeholder = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, placeholder);
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([15, 15, 20, 255]));
@@ -191,10 +191,10 @@
      fx, fy the cover focal points; `from` the side of the artwork with more wall, where the brush lands.
      A pair may carry a `port` variant for portrait and phone screens; none does at present. */
   var PAIRS = [
-    { id: 'p3', cap: 'p3',   seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 2400, h: 1600, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' } },
-    { id: 'p4', cap: 'p4',   seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 2400, h: 1573, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left' } },
-    { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 2400, h: 1601, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
-    { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 2400, h: 1601, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
+    { id: 'p3', cap: 'p3',   seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 1800, h: 1200, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' } },
+    { id: 'p4', cap: 'p4',   seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 1800, h: 1180, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left' } },
+    { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 1800, h: 1201, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
+    { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 1800, h: 1201, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
   ];
   /* the wall stroke runs across the artwork's vertical centre, lands half a radius outside the rect on the
      wall side and ends 0.6 radius past the far edge; radius 0.62 x rect height, capped for the tall canvases;

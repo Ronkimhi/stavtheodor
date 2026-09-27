@@ -1,2 +1,3 @@
 museum/tools/cache/
 __pycache__/
+.perf/

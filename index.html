@@ -24,11 +24,11 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
-<link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -269,13 +269,17 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"></script>
+<!-- Google tag (gtag.js), loaded after the page -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4300MN0Q97');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97';
+    document.head.appendChild(s);
+  });
 </script>
 </head>
 <!-- templates/home.html: the homepage body, rendered into index.html by build-home.py.
@@ -416,9 +420,16 @@
 
 <section class="section wrap film" id="film">
   <div class="head reveal"><div class="lead"><p class="eyebrow"><span data-l="en">The film</span><span data-l="he" dir="rtl">הסרט</span></p><h2 class="serif"><span data-l="en">Sixty seven seconds on what I do.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה.</span></h2></div></div>
-  <video controls playsinline preload="metadata" poster="/images/home2/film-still.jpg" class="reveal">
+  <video controls playsinline preload="none" data-poster="/images/home2/film-still.jpg" class="reveal">
     <source src="/videos/theodora-film-2026-09-26.mp4" type="video/mp4">
   </video>
+  <script>
+  /* The film sits five screens down: its poster and metadata are fetched once the page has loaded, so they
+     never compete with the opening's first textures for bandwidth (2026-09-26). */
+  (function () { var v = document.querySelector('video[data-poster]'); if (!v) { return; }
+    function arm() { v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
+    if (document.readyState === 'complete') { arm(); } else { window.addEventListener('load', arm); } })();
+  </script>
   <p class="cap"><span data-l="en">Sixty seven seconds on what I do, for designers, private collectors, home and business owners.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</span></p>
 </section>
 
@@ -751,12 +762,14 @@
   }, 1800);
 })();
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-<script src="/js/home-opening.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
-<script src="/js/home-scroll.js"></script>
+<!-- GSAP 3.13 (core, ScrollTrigger, SplitText) and Lenis 1.3.11 are vendored in /js/vendor/ with their licence
+     headers and loaded with defer, in order, so nothing blocks the parser (2026-09-26). -->
+<script src="/js/vendor/gsap.min.js" defer></script>
+<script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/js/vendor/SplitText.min.js" defer></script>
+<script src="/js/home-opening.js" defer></script>
+<script src="/js/vendor/lenis.min.js" defer></script>
+<script src="/js/home-scroll.js" defer></script>
 
 </body>
 </html>
