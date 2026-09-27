@@ -8,7 +8,8 @@ One nav, one footer, one language switch, one mailto fallback panel, one GA tag,
   content/faq.json     the seven homepage questions (visible FAQ and FAQPage schema come from it)
   content/entity.json  the Person + ProfessionalService + WebSite graph
 
-The generators import this module: build-home.py (index.html, the /2/ redirect stubs),
+The generators import this module: build-home.py (index.html, the buyer variants of it from
+content/variants/, whose footer and mail panel carry a mail subject, the /2/ redirect stubs),
 build-post-pages.py (radar/<slug>/, radar/, sitemap.xml) and build-site-pages.py
 (advisory, projects, partners, guide). The theme itself is css/theme.css.
 
@@ -22,6 +23,7 @@ import html as H
 import json
 import os
 import re
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = 'https://stavtheodor.com'
@@ -251,14 +253,27 @@ def nav(home=False):
 </nav>'''
 
 
-def footer(home=False):
+def mail_href(subject=''):
+    """The mailto link, with the subject line a buyer variant pre-fills (percent-encoded)."""
+    return f'mailto:{EMAIL}' + (f'?subject={quote(subject, safe="")}' if subject else '')
+
+
+FOOTER_CTA = ('Send me one photo of the wall and a line about the space. I’ll tell you what I see.',
+              'שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.')
+
+
+def footer(home=False, cta=None, subject=''):
+    """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
+    subject: the mail subject both mailto links carry. The defaults are every page's footer."""
     L = lambda h: _link(h, home)
+    cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
+    href = mail_href(subject)
     return f'''<footer class="foot" id="contact">
   <div class="left">
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
-    <h2 class="serif">{T('Send me one photo of the wall and a line about the space. I’ll tell you what I see.', 'שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.')}</h2>
-    <a class="arrow" href="mailto:{EMAIL}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
-    <a class="arrow" href="mailto:{EMAIL}" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>{EMAIL}</a>
+    <h2 class="serif">{T(cta_en, cta_he)}</h2>
+    <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="arrow" href="{href}" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>{EMAIL}</a>
     <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
     <p style="font-size: 15px; max-width: 560px;">{T('Stav Theodor-Kimhi, art curation and advisory. Tenafly, New Jersey, for New York, New Jersey and Tel Aviv.', "סתיו תאודור-קמחי, אוצרות וייעוץ אמנות. טנפליי, ניו ג'רזי, לניו יורק, ניו ג'רזי ולתל אביב.")}</p>
   </div>
@@ -274,19 +289,54 @@ def footer(home=False):
 </footer>'''
 
 
-MAIL_UI = f'''<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
+# A buyer variant's mail subject survives the fallback panel. LANG_JS (inlined in index.html, left
+# untouched) rebuilds the panel's three links from the bare address every time it opens the panel,
+# so this puts the subject back each time the panel gains the class "open". Only pages with a
+# subject carry it (2026-09-27).
+SUBJECT_JS = '''<script>
+(function () {
+  var panel = document.getElementById('mail-fallback');
+  var subject = panel ? panel.getAttribute('data-subject') : '';
+  if (!subject || !window.MutationObserver) { return; }
+  var su = encodeURIComponent(subject);
+  new MutationObserver(function () {
+    if (!panel.classList.contains('open')) { return; }
+    var addrEl = document.getElementById('mail-fallback-addr');
+    var addr = (addrEl.textContent || '').trim();
+    var to = encodeURIComponent(addr);
+    addrEl.setAttribute('href', 'mailto:' + addr + '?subject=' + su);
+    document.getElementById('mail-fallback-gmail').setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + to + '&su=' + su);
+    document.getElementById('mail-fallback-outlook').setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + to + '&subject=' + su);
+  }).observe(panel, { attributes: true, attributeFilter: ['class'] });
+})();
+</script>'''
+
+
+def mail_ui(subject=''):
+    """The mailto fallback panel (AGENTS.md content rule 8). With a subject (a buyer variant) the
+    panel carries it as data-subject, its three links carry it, and SUBJECT_JS follows the panel.
+    Without one it is the panel every page ships (MAIL_UI)."""
+    q = quote(subject, safe='')
+    data = f' data-subject="{H.escape(subject, quote=True)}"' if subject else ''
+    addr_q = f'?subject={q}' if subject else ''
+    gmail_q = f'&amp;su={q}' if subject else ''
+    outlook_q = f'&amp;subject={q}' if subject else ''
+    return f'''<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title"{data}>
   <div class="card">
     <h3 id="mail-fallback-title" class="serif"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
     <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
-    <a class="addr" id="mail-fallback-addr" href="mailto:{EMAIL}">{EMAIL}</a>
+    <a class="addr" id="mail-fallback-addr" href="mailto:{EMAIL}{addr_q}">{EMAIL}</a>
     <div class="row">
       <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
-      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={EMAIL}" target="_blank" rel="noopener">Gmail</a>
-      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to={EMAIL}" target="_blank" rel="noopener">Outlook</a>
+      <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={EMAIL}{gmail_q}" target="_blank" rel="noopener">Gmail</a>
+      <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to={EMAIL}{outlook_q}" target="_blank" rel="noopener">Outlook</a>
     </div>
     <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
   </div>
-</div>'''
+</div>''' + ('\n' + SUBJECT_JS if subject else '')
+
+
+MAIL_UI = mail_ui()
 
 LANG_JS = '''<script>
 (function () {

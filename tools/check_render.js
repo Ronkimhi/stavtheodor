@@ -10,7 +10,9 @@
      - the switch works: clicking עברית shows Hebrew, and a reload keeps it (localStorage radarLang).
 
    Local (default): serves this repo on a loopback port and checks every URL in sitemap.xml
-   outside /museum/. Against production, the key pages only:
+   outside /museum/, then the buyer variants of the homepage (content/variants/*.json: noindex
+   and in no sitemap, so they are read from their JSON; checked in both modes). Against
+   production, the key pages only:
 
        node tools/check_render.js
        node tools/check_render.js --base https://stavtheodor.com
@@ -59,6 +61,14 @@ function sitemapPaths() {
     urls = locs(index);
   }
   return urls.map(u => u.replace(SITE, '')).filter(p => !p.startsWith('/museum'));
+}
+
+function variantPaths() {
+  /* the buyer variants of the homepage, /<path>/ from content/variants/<id>.json (none is fine) */
+  const dir = path.join(ROOT, 'content', 'variants');
+  if (!fs.existsSync(dir)) { return []; }
+  return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
+    .map(f => '/' + JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).path.replace(/^\/+|\/+$/g, '') + '/');
 }
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json',
@@ -115,6 +125,7 @@ async function main() {
     pages = opt.all ? sm : KEY_PAGES.filter(p => sm.includes(p));  /* the key pages this tree actually publishes */
     if (!opt.all) { const post = sm.find(p => p.startsWith('/radar/') && p !== '/radar/'); if (post) { pages.push(post); } }
   }
+  pages = pages.concat(variantPaths());  /* after the sitemap paths, in both modes */
   const browser = await chromium.launch();
   const fails = [];
   let checked = 0;

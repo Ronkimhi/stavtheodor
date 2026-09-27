@@ -12,6 +12,7 @@ Every page is generated. No framework, no npm: three Python scripts, one shared 
 |---|---|
 | `content/posts.html` (every Art Radar post, newest first) | `radar/<slug>/index.html`, `radar/index.html`, the homepage timeline, `sitemap.xml` |
 | `content/pages/*.json` (advisory, projects, partners, guide) | `advisory/`, `projects/`, `for-*/`, `guide/` pages and the two hubs, the homepage project cards and advisory rows |
+| `content/variants/*.json` (buyer variants of the homepage, format `content/VARIANT-SPEC.md`) | one noindex copy of the homepage per file at `/<path>/`, with its own copy in the marked regions, questions and mail subject; in no sitemap, linked from nowhere |
 | `content/faq.json` | the homepage FAQ and its FAQPage schema (the same text, by construction) |
 | `content/entity.json` | the Person + ProfessionalService + WebSite JSON-LD on every page |
 | `templates/home.html` | `index.html` (the approved homepage design, with slots) |
@@ -27,7 +28,7 @@ One command, from the repo root:
 python3 build.py
 ```
 
-It runs `build-site-pages.py` (which runs `build-post-pages.py`), then `build-home.py`, then `tools/build_sitemap.py` (the sitemap index and its three children), then the gates in `tools/check_site.py` (dashes, phone numbers, language twins, anchors, internal links, JSON-LD, FAQ mirror, noindex, removed assets). Never hand-edit a generated file: `index.html`, `radar/`, `advisory/`, `projects/`, `for-*/`, `guide/`, `2/` (redirect stubs) and `sitemap.xml` are all rewritten by the build.
+It runs `build-site-pages.py` (which runs `build-post-pages.py`), then `tools/check_variants.py` (the buyer variants' JSON), then `build-home.py` (the homepage, the redirect stubs and the variant pages), then `tools/build_sitemap.py` (the sitemap index and its three children), then the gates in `tools/check_site.py` (dashes, phone numbers, language twins, anchors, internal links, JSON-LD, FAQ mirror, noindex, removed assets, language default, sitemap, variants). Never hand-edit a generated file: `index.html`, `radar/`, `advisory/`, `projects/`, `for-*/`, `guide/`, `2/` (redirect stubs), the buyer variant folders and `sitemap.xml` are all rewritten by the build.
 
 ---
 
@@ -61,6 +62,8 @@ Send Claude the image file(s) and say which post they belong to. They get optimi
 ## The homepage
 
 The homepage is the design approved on 2026-09-26 (near-black ground, a WebGL brush opening over four rooms, one serif line per screen, the film, six projects, the advisory rows, the Museum, the six newest posts, the seven questions). Its markup lives in `templates/home.html`; the opening's before and after photos are `images/home2/pairs/`; the film is `videos/theodora-film-2026-09-26.mp4` (67 seconds). To change the copy, edit the template and rebuild. The old portfolio slideshow is gone.
+
+Sixteen regions of the template (the hero lines, the h1, the intro, the service lines, the What I do block, the Advisory heading) sit between `<!--variant:NAME-->` markers: the homepage keeps the text between them, and each buyer variant (`content/variants/<id>.json`, AGENTS.md Section 3.9) replaces it at its own noindex address.
 
 ## Media notes
 

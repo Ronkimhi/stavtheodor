@@ -9,8 +9,10 @@
   anchors     index.html carries every id other pages link to
   links       every internal href and src on every page resolves to a file (or an id on index.html)
   jsonld      every ld+json block parses
-  faq         the visible homepage FAQ equals the FAQPage schema, word for word
-  noindex     the homepage and the generated pages are indexable; /2/ and the old stubs are not
+  faq         the visible FAQ equals the FAQPage schema, word for word, on the homepage and on
+              every buyer variant
+  noindex     the homepage and the generated pages are indexable; /2/, the old stubs and the
+              buyer variants are not
   posts       index.html carries no post article (posts live in content/posts.html)
   removed     nothing references the assets removed on 2026-09-26, and they are gone
   lang        every page outside museum/ opens in English: <html lang="en">, <body class="lang-en">,
@@ -23,9 +25,15 @@
               geo, address, https sameAs), no underscore keys leaking, every on-site URL resolving
   sitemap     sitemap.xml is an index over child sitemaps; every indexable page is listed in exactly
               one child, every loc resolves to a file, and no noindex page is listed
+  variants    the buyer variants of the homepage (content/variants/<id>.json, rendered by build-home.py
+              at /<path>/): every one is built, no other page links to one, llms.txt, agent.txt,
+              answers.md and robots.txt never name one, and no noindex page is left over that is
+              neither a stub nor a current variant (a stale variant folder after a path change);
+              the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
 
 Exit 1 on any failure.
 """
+import glob
 import html as H
 import json
 import os
@@ -44,11 +52,23 @@ GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
 HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
 REMOVED = ('images/portfolio/', 'theodora-film-2026-09.mp4')
+AGENT_FILES = ('llms.txt', 'agent.txt', 'answers.md', 'robots.txt')  # a buyer variant is never named in these
 fails = []
 
 
 def fail(gate, msg):
     fails.append(f'{gate}: {msg}')
+
+
+# The buyer variants (content/variants/<id>.json): {their page: their URL}. Noindex, never linked.
+VARIANTS = {}
+for _f in sorted(glob.glob(os.path.join('content', 'variants', '*.json'))):
+    try:
+        _path = json.load(open(_f, encoding='utf-8'))['path'].strip('/')
+    except (ValueError, KeyError, TypeError, AttributeError) as e:
+        fail('variants', f'{_f} has no readable path ({e}): run python3 tools/check_variants.py')
+        continue
+    VARIANTS[os.path.normpath(os.path.join(_path, 'index.html'))] = f'{SITE}/{_path}/'
 
 
 def walk(exts):
@@ -219,12 +239,18 @@ for path in walk(('.html', '.txt', '.md', '.json', '.py', '.css', '.js', '.xml')
 
 # ---- pages
 pages = ['index.html', '404.html'] + [p for p in walk(('.html',)) if p.split(os.sep)[0] in GENERATED_DIRS + STUB_DIRS]
+for path in VARIANTS:
+    if os.path.exists(path):
+        pages.append(path)
+    else:
+        fail('variants', f'{path} is missing: run python3 build.py')
 pages = sorted(set(pages))
 home = read('index.html')
 
 for path in pages:
     s = read(path)
     is_stub = path.split(os.sep)[0] in STUB_DIRS or path in ('404.html',)
+    must_noindex = is_stub or path in VARIANTS
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
@@ -238,9 +264,9 @@ for path in pages:
         if not is_stub:
             check_schema(path, parsed, i + 1)
     has_noindex = 'name="robots" content="noindex"' in s
-    if is_stub and not has_noindex:
+    if must_noindex and not has_noindex:
         fail('noindex', f'{path} should be noindex')
-    if not is_stub and has_noindex:
+    if not must_noindex and has_noindex:
         fail('noindex', f'{path} must be indexable')
     if not is_stub:
         if not re.search(r'<html lang="en"', s):
@@ -270,6 +296,8 @@ for path in pages:
             fs = fs.split('?')[0]
             if fs == '' or os.path.isdir(fs):
                 fs = os.path.join(fs, 'index.html') if fs else 'index.html'
+            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path:
+                fail('variants', f'{path} links to the buyer variant {target} (variants are never linked)')
             if not os.path.exists(fs):
                 fail('links', f'{path} -> {target}')
                 continue
@@ -284,15 +312,34 @@ for a in HOME_ANCHORS:
         fail('anchors', f'index.html has no id="{a}"')
 if '<article class="post' in home:
     fail('posts', 'index.html contains an Art Radar article; posts live in content/posts.html')
-m = re.search(r'<script type="application/ld\+json">\s*(\{\s*"@context": "https://schema.org",\s*"@type": "FAQPage".*?)</script>', home, re.S)
-if not m:
-    fail('faq', 'no FAQPage schema on index.html')
-else:
+
+
+def faq_mirror(path):
+    """The visible questions on a homepage-shaped page (index.html, a buyer variant) equal its FAQPage schema."""
+    s = read(path)
+    m = re.search(r'<script type="application/ld\+json">\s*(\{\s*"@context": "https://schema.org",\s*"@type": "FAQPage".*?)</script>', s, re.S)
+    if not m:
+        fail('faq', f'no FAQPage schema on {path}')
+        return
     schema = [(q['name'], q['acceptedAnswer']['text']) for q in json.loads(m.group(1))['mainEntity']]
     visible = [(H.unescape(q).strip(), H.unescape(a).strip()) for q, a in re.findall(
-        r'<details class="qa"[^>]*>\s*<summary><h3 class="serif"><span data-l="en">(.*?)</span>.*?<p class="body"><span data-l="en">(.*?)</span>', home, re.S)]
+        r'<details class="qa"[^>]*>\s*<summary><h3 class="serif"><span data-l="en">(.*?)</span>.*?<p class="body"><span data-l="en">(.*?)</span>', s, re.S)]
     if schema != visible:
-        fail('faq', f'visible FAQ differs from the FAQPage schema ({len(schema)} schema, {len(visible)} visible)')
+        fail('faq', f'{path}: visible FAQ differs from the FAQPage schema ({len(schema)} schema, {len(visible)} visible)')
+
+
+for path in ['index.html'] + sorted(p for p in VARIANTS if os.path.exists(p)):
+    faq_mirror(path)
+
+# ---- the buyer variants are named nowhere an agent or a crawler reads a map of the site
+for f in AGENT_FILES:
+    if not os.path.exists(f):
+        continue
+    s = read(f)
+    for url in VARIANTS.values():
+        vpath = url[len(SITE) + 1:].strip('/')
+        if re.search(r'(?:stavtheodor\.com|(?<![\w./-]))/' + re.escape(vpath) + r'(?![\w-])', s):
+            fail('variants', f'{f} names the buyer variant {url} (variants are never listed, linked or pinged)')
 
 # ---- the sitemaps: an index, every indexable page once, every loc a file, nothing noindex
 sitemap_index = read('sitemap.xml') if os.path.exists('sitemap.xml') else ''
@@ -319,6 +366,8 @@ for path in walk(('.html',)):
         continue
     s = read(path)
     if 'name="robots" content="noindex"' in s:
+        if path not in VARIANTS:
+            fail('variants', f'{path} is noindex but neither a stub nor a current variant: stale variant folder? git rm -r {os.path.dirname(path) or path}')
         continue
     if not path.endswith('index.html'):
         continue  # only directory index pages are site URLs
@@ -338,7 +387,7 @@ for r in REMOVED:
     if os.path.exists(r.rstrip('/')) or os.path.exists(os.path.join('videos', r)):
         fail('removed', f'{r} still exists in the tree')
 
-gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap']
+gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap', 'variants']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))
