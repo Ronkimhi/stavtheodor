@@ -35,6 +35,7 @@ TITLE = 'Art Curator & Advisor · New Jersey, New York, Tel Aviv | THEODORA'
 DESCRIPTION = 'Stav Theodor, art curator and advisor in Tenafly, New Jersey: art for homes and businesses in Bergen County, Manhattan, New York and Tel Aviv, from concept to installation.'
 OG_TITLE = 'Stav Theodor-Kimhi · Art Curator & Advisor'
 OG_DESC = 'Art for homes and businesses in New York, New Jersey and Tel Aviv, from concept to installation.'
+OG_IMAGE = SITE + '/og-home.jpg'
 OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
 # the opening's first texture pair, fetched with high priority (speed pass, 2026-09-26)
 PRELOAD = ('<link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" fetchpriority="high">\n'
@@ -185,7 +186,7 @@ def render_home(pages, posts, faq, v=None):
     meta = v['head'] if v else {'title': TITLE, 'description': DESCRIPTION, 'og_title': OG_TITLE, 'og_description': OG_DESC}
     url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, and noindex
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
-                   og_card_dims=True, og_image_alt=OG_IMAGE_ALT, lang='en', ld=[sc.faq_schema(questions)],
+                   og_image=OG_IMAGE, og_card_dims=True, og_image_alt=OG_IMAGE_ALT, lang='en', ld=[sc.faq_schema(questions)],
                    noindex=bool(v), extra=PRELOAD)
     return head + body
 
