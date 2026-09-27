@@ -6,7 +6,7 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 
 - Name: Stav Theodor-Kimhi. Professionally: Stav Theodor. Practice: THEODORA (tagline "fine · art · living"). Founder, art curator and art advisor.
 - Base: Tenafly, New Jersey. Serves New York City, New Jersey, and Tel Aviv. Projects across Israel (Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan, Hod Hasharon) and hospitality projects abroad (China, Jordan, cruise lines).
-- 14 years in the art world (deck, 2026). Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv, worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
+- Two decades in the art world (Ron, 2026-09-27; supersedes the 2026 deck's 14 years). Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv, worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
 - Certified art curator. M.A. in art history, Faculty of Arts, Ben-Gurion University (BGU). Curatorial and museum studies diploma, Faculty of Arts, Tel Aviv University (TAU).
 - Clients: interior designers and architects (on behalf of their clients), private collectors, home owners, business owners, hotels and hospitality groups.
 - Languages: Hebrew and English.
