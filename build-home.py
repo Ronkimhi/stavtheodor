@@ -33,8 +33,8 @@ TEMPLATE = sc.rel('templates', 'home.html')
 VARIANTS_DIR = sc.rel('content', 'variants')
 TITLE = 'Art Curator & Advisor · New Jersey, New York, Tel Aviv | THEODORA'
 DESCRIPTION = 'Stav Theodor, art curator and advisor in Tenafly, New Jersey: art for homes and businesses in Bergen County, Manhattan, New York and Tel Aviv, from concept to installation.'
-OG_TITLE = 'Art Radar · Stav Theodor-Kimhi'
-OG_DESC = 'The art worth seeing, chosen by a curator. Exhibitions, openings, and the stories behind them, and the art I help people live with.'
+OG_TITLE = 'Stav Theodor-Kimhi · Art Curator & Advisor'
+OG_DESC = 'Art for homes and businesses in New York, New Jersey and Tel Aviv, from concept to installation.'
 OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
 # the opening's first texture pair, fetched with high priority (speed pass, 2026-09-26)
 PRELOAD = ('<link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" fetchpriority="high">\n'
