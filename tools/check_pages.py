@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Mechanical gate for content/pages/*.json. Prints OK or the list of failures. Exit 1 on any failure."""
+"""Mechanical gate for content/pages/*.json. Prints OK or the list of failures. Exit 1 on any failure.
+build-site-pages.py runs it over every page before writing anything, so python3 build.py stops on a failure."""
 import json, re, sys, os
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
 LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 700), "guide": (900, 1400), "local": (1100, 1900)}
@@ -11,11 +12,22 @@ def post_slugs():
     except OSError: return set()
     return set(re.findall(r'<article class="post[^"]*" id="([a-z0-9\-]+)">', src))
 SLUGS = post_slugs()
+def internal_keys(node, trail=""):
+    """Key paths holding internal notes, at any depth: editor_note, or a key starting with "_" or "note" (any case).
+    Every file under content/ is served publicly, so none of them belongs in a page (content/PAGE-SPEC.md, 2026-09-27)."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            path = f"{trail}.{k}" if trail else k
+            if k.lower() == "editor_note" or k.startswith("_") or k.lower().startswith("note"): yield path
+            yield from internal_keys(v, path)
+    elif isinstance(node, list):
+        for i, v in enumerate(node): yield from internal_keys(v, f"{trail}[{i}]")
 fails_total = 0
 for f in sys.argv[1:]:
     fails = []
     try: p = json.load(open(f, encoding="utf-8"))
     except Exception as e: print(f"{f}: FAIL invalid JSON: {e}"); fails_total += 1; continue
+    for k in internal_keys(p): fails.append(f"internal key {k}: remove it. Every file under content/ is public; internal notes, decisions and open questions go to the site owner's private system, never into a page (content/PAGE-SPEC.md)")
     raw = json.dumps(p, ensure_ascii=False)
     if re.search(r"[—–]", raw): fails.append("em/en dash present")
     if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]|\b0\d{2}[ -]?\d{7}\b|\+972", raw): fails.append("phone number present")

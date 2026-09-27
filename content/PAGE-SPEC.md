@@ -32,4 +32,6 @@ Optional fields: `radar_posts` (a list of Art Radar slugs for the "From Art Rada
 
 Body HTML rules: p, h2, h3, ul, ol, li, strong, em, a, blockquote, figure, img, figcaption only. Root relative image paths. Links to other pages of this set use `/advisory/<slug>/` style absolute paths. No inline styles, no classes, no scripts.
 
+No internal notes in a page JSON. Every file under `content/` is served publicly exactly as it is in the repo (for example https://stavtheodor.com/content/pages/for-designers.json), so a key named `editor_note`, or any key starting with `_` or `note` (any case), at any depth, fails `tools/check_pages.py`, which `build-site-pages.py` runs on every page before writing anything, so `python3 build.py` stops. Internal notes, decisions and open questions go to the site owner's private system: `the-system-v8-ron/B-brain/06-deliverables/theodora-growth/decisions-for-stav.md` in the private ron-brain repo.
+
 Validate before you hand off: `python3 tools/check_pages.py content/pages/<slug>.json` must print OK.

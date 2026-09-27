@@ -3,6 +3,7 @@
 Renders content/pages/*.json into standalone bilingual pages at /<path>/index.html
 (advisory, projects, partners, guide, and the two local landing pages), plus the hub pages /advisory/ and /projects/,
 in the site's one theme (css/theme.css) with the shared chrome (site_chrome.py).
+Every page must first pass tools/check_pages.py; a failure stops the build before anything is written.
 Then runs build-post-pages.py (radar/<slug>/ and the archive). The sitemaps are
 written afterwards by tools/build_sitemap.py.
 Idempotent. Run from the repo root, or just run python3 build.py.
@@ -348,6 +349,10 @@ HUBS = {
 
 def main():
     sc.guard_index()
+    # every page JSON passes tools/check_pages.py before anything is written (2026-09-27): every file under content/ is
+    # served publicly, so a page carrying an internal key (editor_note, or a key starting with "_" or "note") stops the build
+    if subprocess.run([sys.executable, "tools/check_pages.py"] + sorted(glob.glob("content/pages/*.json"))).returncode:
+        sys.exit("build-site-pages: tools/check_pages.py failed, nothing was written (content/PAGE-SPEC.md)")
     pages = load_pages()
     projects = ordered_projects(pages)
     problems = 0
