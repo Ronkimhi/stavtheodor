@@ -14,6 +14,10 @@ approved; every /2/ address now forwards to its real page), and the buyer varian
 own copy in the sixteen regions the template marks <!--variant:NAME-->...<!--/variant:NAME-->,
 its own questions, closing line and mail subject. Variants are noindex, in no sitemap and
 linked from nowhere (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
+A variant may also put its own rooms in the opening ("rooms", entry i in slot i): the page then
+sets window.THEODORA_ROOMS for js/home-opening.js, preloads its first pair, and carries each
+replaced slot's static figure and #cap caption (the room_fig_N, room_cap_N and rooms_js regions);
+"head.og_image" gives it its own link preview.
 
 Never hand-edit index.html or a variant folder: run python3 build.py (or this script) after
 editing any of the files above. The build refuses to run if a post was pasted into index.html.
@@ -37,9 +41,15 @@ OG_TITLE = 'Stav Theodor-Kimhi · Art Curator & Advisor'
 OG_DESC = 'Art for homes and businesses in New York, New Jersey and Tel Aviv, from concept to installation.'
 OG_IMAGE = SITE + '/og-home.jpg'
 OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
-# the opening's first texture pair, fetched with high priority (speed pass, 2026-09-26)
-PRELOAD = ('<link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" fetchpriority="high">\n'
-           '<link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp" fetchpriority="high">\n')
+
+
+def preload(before, after):
+    """The opening's first texture pair, fetched with high priority (speed pass, 2026-09-26): the
+    homepage's p3, or a variant's first room. The paths are under /images/home2/, as in PAIRS."""
+    return ''.join(f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp" fetchpriority="high">\n' for n in (before, after))
+
+
+PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 
 PROJECT_ORDER = [
     'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'closter-new-jersey-new-construction',
@@ -72,6 +82,17 @@ ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'm
 SHARED_SECTIONS = ('about', 'film', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
 VARIANT_PATH = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$')
 
+# The opening's rooms (2026-09-27). PAIRS in js/home-opening.js lists them in slot order (p3, p4, p5, p1): slot 0 is
+# the first fold. templates/home.html marks each slot's static figure (room_fig_N) and the content of its #cap caption
+# (room_cap_N), and an empty region before the deferred scripts (rooms_js). A variant's "rooms" (entry i replaces
+# slot i) fill them; the homepage, and a variant without rooms, keep the bytes between the markers.
+HOME_ROOMS = re.findall(r"cap: '(\w+)',[^\n]*?land: \{ b: '([^']+)', a: '([^']+)'",
+                        open(sc.rel('js', 'home-opening.js'), encoding='utf-8').read())  # [(cap key, before, after)]
+if not HOME_ROOMS:
+    raise SystemExit('js/home-opening.js: no rooms read from PAIRS (did its format change?)')
+ROOM_REGIONS = {f'room_{kind}_{i}' for kind in ('fig', 'cap') for i in range(len(HOME_ROOMS))} | {'rooms_js'}
+ROOM_KEYS = ('b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from')  # what js/home-opening.js takes from a room, plus seed
+
 
 def load_pages():
     pages = {}
@@ -96,6 +117,10 @@ def load_variants(home_faq):
         where = f'content/variants/{f}'
         if v.get('id') != f[:-len('.json')] or not VARIANT_PATH.match(v.get('path') or ''):
             raise SystemExit(f'{where}: bad id or path (run python3 tools/check_variants.py {where})')
+        rooms = v.get('rooms')
+        if rooms is not None and not (isinstance(rooms, list) and 1 <= len(rooms) <= len(HOME_ROOMS) and all(
+                isinstance(r, dict) and set(ROOM_KEYS + ('cap_en', 'cap_he', 'alt_en')) <= set(r) for r in rooms)):
+            raise SystemExit(f'{where}: bad rooms (run python3 tools/check_variants.py {where})')
         faq = []
         for item in v.get('faq') or []:
             if 'home' in item:
@@ -138,14 +163,58 @@ def region_copy(v, name):
     return d[key + '_en'], d[key + '_he']
 
 
+def num(x):
+    """A room's value as the page writes it: numbers at four decimals (0.0001 of a room is under a pixel)."""
+    if isinstance(x, list):
+        return [num(y) for y in x]
+    return round(x, 4) if isinstance(x, float) else x
+
+
+def pct(x):
+    return f'{round(x * 100, 2):g}%'
+
+
+def room_region(name, inner, rooms):
+    """A room region: the homepage's bytes, unless the variant replaces that slot's room. rooms_js then
+    sets window.THEODORA_ROOMS (each room with its slot), room_cap_N is the room's caption, and
+    room_fig_N the homepage's static figure with the room's focal point, after image, alt and caption."""
+    if name == 'rooms_js':
+        if not rooms:
+            return inner
+        data = [{'slot': i, **{k: num(r[k]) for k in ROOM_KEYS + ('seed',) if k in r}} for i, r in enumerate(rooms)]
+        return inner + '\n<script>window.THEODORA_ROOMS = ' + json.dumps(data, separators=(',', ':')).replace('</', '<\\/') + ';</script>'
+    slot = int(name.rsplit('_', 1)[1])
+    if slot >= len(rooms):
+        return inner
+    r = rooms[slot]
+    cap = T(H.escape(r['cap_en']), H.escape(r['cap_he']))
+    if name.startswith('room_cap_'):
+        return cap
+    for pattern, new in ((r'style="--fx:[^;"]*;--fy:[^;"]*"', f'style="--fx:{pct(r["fx"])};--fy:{pct(r["fy"])}"'),
+                         (r'<img src="[^"]*" alt="[^"]*"', f'<img src="/images/home2/{H.escape(r["a"], quote=True)}" alt="{H.escape(r["alt_en"], quote=True)}"'),
+                         (r'<figcaption>.*?</figcaption>', f'<figcaption>{cap}</figcaption>')):
+        inner, n = re.subn(pattern, lambda _m: new, inner, count=1, flags=re.S)
+        if n != 1:
+            raise SystemExit(f'templates/home.html: the static figure in {name} no longer matches {pattern}')
+    return inner
+
+
 def fill_regions(body, v):
     """The marked regions: the template's own text for the homepage (the markers go, the bytes
-    between them stay), the variant's copy otherwise. Every region must appear exactly once."""
+    between them stay), the variant's copy otherwise. Every region must appear exactly once, and
+    room_fig_N and room_cap_N must hold slot N of PAIRS in js/home-opening.js."""
     seen = collections.Counter()
+    rooms = (v or {}).get('rooms') or []
+    inside = {m.group(1): m.group(2) for m in MARK.finditer(body)}
+    for i, (key, _, after) in enumerate(HOME_ROOMS):
+        if f'data-cap="{key}"><!--variant:room_cap_{i}-->' not in body or f'src="/images/home2/{after}"' not in inside.get(f'room_fig_{i}', ''):
+            raise SystemExit(f'templates/home.html: room_fig_{i} and room_cap_{i} must hold slot {i} of PAIRS in js/home-opening.js ({key}, {after})')
 
     def fill(m):
         name, inner = m.group(1), m.group(2)
         seen[name] += 1
+        if name in ROOM_REGIONS:
+            return room_region(name, inner, rooms)
         pair = region_copy(v, name) if v is not None and name in REGIONS else None
         if pair is None:
             return inner
@@ -153,7 +222,7 @@ def fill_regions(body, v):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
     return body
 
@@ -185,9 +254,12 @@ def render_home(pages, posts, faq, v=None):
     body = fill_regions(body, v)
     meta = v['head'] if v else {'title': TITLE, 'description': DESCRIPTION, 'og_title': OG_TITLE, 'og_description': OG_DESC}
     url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, and noindex
+    # a variant may bring its own preview image (head.og_image, 1200 by 630) and its own first room
+    og_image, og_alt = (SITE + meta['og_image'], meta['og_image_alt']) if meta.get('og_image') else (OG_IMAGE, OG_IMAGE_ALT)
+    rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
-                   og_image=OG_IMAGE, og_card_dims=True, og_image_alt=OG_IMAGE_ALT, lang='en', ld=[sc.faq_schema(questions)],
-                   noindex=bool(v), extra=PRELOAD)
+                   og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)],
+                   noindex=bool(v), extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
     return head + body
 
 

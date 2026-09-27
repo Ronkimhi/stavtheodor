@@ -26,13 +26,24 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      ending in "?", English answers of 40 to 90 words, Hebrew ones at least 0.6 of that, no repeats
   j  advisory_rows (optional): three to eight different content/pages paths or hubs, all built
   k  warning only: "we", "our" or "us" where Stav speaks for herself (questions and the subject exempt)
+  l  rooms (optional): one to four rooms for the opening, entry i in slot i (0 is the first fold);
+     b and a are two .webp files in images/home2/variants/<id>/, in the repo, each under 250 KB,
+     w by h pixels, about 3:2 (portrait phones draw every room whole in a 3:2 frame), and no
+     image of the homepage's rooms or of another slot; rect [u0, v0, u1, v1] inside 0..1 with
+     u0 < u1 and v0 < v1; fx and fy in 0..1; from "left" or "right"; seed a number when given;
+     cap_en and cap_he start "Proposal. " and "הצעה. "; the alt and caption twins take e to h
+  m  head.og_image with head.og_image_alt (optional): the variant's own link preview, a JPEG in
+     images/home2/variants/<id>/, 1200 by 630, under 300 KB
 """
 import ast
 import datetime
 import glob
+import hashlib
 import json
+import math
 import os
 import re
+import struct
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -67,21 +78,24 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
     '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'services', 'what_i_do', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
-         {'advisory', 'advisory_rows'}),
-    'head': ({'title', 'description', 'og_title', 'og_description'}, set()),
+         {'advisory', 'advisory_rows', 'rooms'}),
+    'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
     'intro': ({'h1_en', 'h1_he', 'line_en', 'line_he', 'statement_en', 'statement_he'}, {'eyebrow_en', 'eyebrow_he'}),
     'services': ({'desc_en', 'desc_he'}, set()),
     'what_i_do': ({'h2_en', 'h2_he', 'p1_en', 'p1_he', 'p2_en', 'p2_he'}, {'eyebrow_en', 'eyebrow_he'}),
     'advisory': (set(), {'h2_en', 'h2_he', 'sub_en', 'sub_he'}),
     'faq': ({'q_en', 'a_en', 'q_he', 'a_he'}, set()),
+    'rooms': ({'b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from', 'cap_en', 'cap_he', 'alt_en', 'alt_he'}, {'seed'}),
 }
 OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory'}
-LISTS = {'services', 'faq', 'advisory_rows'}
+LISTS = {'services', 'faq', 'advisory_rows', 'rooms'}
+NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are not strings (checked under l)
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
 # (field, min, max) in characters; the minimum and maximum read the English, the hero lines both languages
 CHAR_LIMITS = [
     ('head.title', 30, 70), ('head.description', 70, 165), ('head.og_title', 1, 70), ('head.og_description', 1, 160),
+    ('head.og_image_alt', 1, 160),
     ('hero.l1_en', 1, 18), ('hero.l1_he', 1, 18), ('hero.l2_en', 1, 18), ('hero.l2_he', 1, 18),
     ('intro.h1_en', 40, 110), ('intro.line_en', 1, 32), ('intro.eyebrow_en', 1, 24), ('intro.statement_en', 60, 160),
     ('what_i_do.eyebrow_en', 1, 24), ('what_i_do.h2_en', 1, 120), ('advisory.h2_en', 1, 90), ('advisory.sub_en', 1, 200),
@@ -99,6 +113,20 @@ STUBS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')
 RESERVED = {'2', 'about', 'advisory', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'content', 'css', 'fonts',
             'for-advisors', 'for-brokers', 'for-designers', 'guide', 'images', 'js', 'museum', 'our-team', 'our-team-1',
             'projects', 'questions', 'radar', 'templates', 'tools', 'videos'}
+# l and m: the opening's rooms and the link preview. HOME_ROOMS is PAIRS in js/home-opening.js, [(before, after)] in
+# slot order, paths under images/home2/; a variant's images live in images/home2/variants/<id>/.
+HOME2 = os.path.join(ROOT, 'images', 'home2')
+HOME_ROOMS = re.findall(r"cap: '\w+',[^\n]*?land: \{ b: '([^']+)', a: '([^']+)'",
+                        open(os.path.join(ROOT, 'js', 'home-opening.js'), encoding='utf-8').read())
+if not HOME_ROOMS:
+    raise SystemExit('check_variants: no rooms read from PAIRS in js/home-opening.js (did its format change?)')
+FILE_NAME = r'[a-z0-9]+(?:[_-][a-z0-9]+)*'
+ROOM_MAX_BYTES = 250000
+ROOM_ASPECT = (1.455, 1.545)  # 3:2 within 3 percent: FIT_ASPECT in js/home-opening.js draws portrait rooms at 3:2
+CAP_PREFIX = {'cap_en': 'Proposal. ', 'cap_he': 'הצעה. '}
+CAP_MAX, ALT_MAX = 120, 160  # English characters; the homepage's longest caption is 106
+OG_SIZE = (1200, 630)
+OG_MAX_BYTES = 300000
 
 PAGES = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, 'content', 'pages', '*.json'))):
@@ -133,10 +161,15 @@ def strings(v):
     out = []
     for key in ('head', 'hero', 'intro', 'what_i_do', 'advisory'):
         for k, s in (v.get(key) or {}).items():
-            out.append((f'{key}.{k}', s))
+            if (key, k) != ('head', 'og_image'):  # a path, checked under m
+                out.append((f'{key}.{k}', s))
     for i, item in enumerate(v.get('services') or []):
         for k, s in (item if isinstance(item, dict) else {}).items():
             out.append((f'services[{i}].{k}', s))
+    for i, item in enumerate(v['rooms'] if isinstance(v.get('rooms'), list) else []):
+        for k, s in (item if isinstance(item, dict) else {}).items():
+            if k in ('cap_en', 'cap_he', 'alt_en', 'alt_he'):
+                out.append((f'rooms[{i}].{k}', s))
     for i, item in enumerate(v.get('faq') or []):
         if isinstance(item, dict) and 'home' not in item:
             for k, s in item.items():
@@ -218,6 +251,137 @@ def html_problems(label, s, variant_paths):
     return problems, hrefs
 
 
+SOF = {0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf}  # the JPEG frame headers
+
+
+def image_size(path):
+    """('webp' or 'jpeg', width, height) read from the file's header, None for anything else."""
+    with open(path, 'rb') as f:
+        head = f.read(30)
+        if head[:4] == b'RIFF' and head[8:12] == b'WEBP' and len(head) == 30:
+            chunk = head[12:16]
+            if chunk == b'VP8 ' and head[23:26] == b'\x9d\x01\x2a':  # lossy
+                w, h = struct.unpack('<HH', head[26:30])
+                return 'webp', w & 0x3fff, h & 0x3fff
+            if chunk == b'VP8L' and head[20] == 0x2f:  # lossless
+                bits = int.from_bytes(head[21:25], 'little')
+                return 'webp', (bits & 0x3fff) + 1, ((bits >> 14) & 0x3fff) + 1
+            if chunk == b'VP8X':  # extended: the canvas size
+                return 'webp', int.from_bytes(head[24:27], 'little') + 1, int.from_bytes(head[27:30], 'little') + 1
+            return None
+        if head[:2] != b'\xff\xd8':
+            return None
+        f.seek(2)
+        while True:
+            marker = f.read(2)
+            while len(marker) == 2 and marker[1] == 0xff:  # fill bytes before a marker
+                marker = marker[1:] + f.read(1)
+            if len(marker) < 2 or marker[0] != 0xff or marker[1] in (0xd9, 0xda):  # broken, or no frame header before the scan
+                return None
+            if marker[1] == 0x01 or 0xd0 <= marker[1] <= 0xd7:  # markers without a length
+                continue
+            seg = f.read(2)
+            if len(seg) < 2:
+                return None
+            if marker[1] in SOF:
+                data = f.read(5)  # precision, height, width
+                return ('jpeg',) + struct.unpack('>HH', data[3:5] + data[1:3]) if len(data) == 5 else None
+            f.seek(struct.unpack('>H', seg)[0] - 2, 1)
+
+
+def digest(path):
+    return hashlib.sha256(open(path, 'rb').read()).hexdigest()
+
+
+def number(x, lo=None, hi=None):
+    """A JSON number (not true or false), finite, and from lo to hi when they are given."""
+    return isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x) and (lo is None or lo <= x <= hi)
+
+
+def room_problems(rooms, vid):
+    """l: the rooms a variant puts in the opening, entry i in slot i (the keys and the twins are checked under a and d)."""
+    if not isinstance(rooms, list) or not 1 <= len(rooms) <= len(HOME_ROOMS):
+        return [f'rooms: a list of 1 to {len(HOME_ROOMS)} rooms, entry i replacing slot i of the opening (0 is the first fold)']
+    fails, used = [], {}
+    home = {digest(os.path.join(HOME2, n)) for pair in HOME_ROOMS for n in pair if os.path.isfile(os.path.join(HOME2, n))}
+    for i, r in enumerate(rooms):
+        where = f'rooms[{i}]'
+        if not isinstance(r, dict):
+            continue
+        w, h = r.get('w'), r.get('h')
+        size_ok = all(isinstance(x, int) and not isinstance(x, bool) and x > 0 for x in (w, h))
+        if 'w' in r and 'h' in r:
+            if not size_ok:
+                fails.append(f'{where}: w and h are the images\' width and height in pixels, whole numbers')
+            elif not ROOM_ASPECT[0] <= w / h <= ROOM_ASPECT[1]:
+                fails.append(f'{where}: {w} by {h} is not 3:2 (w / h is {w / h:.3f}); portrait phones draw every room whole in a 3:2 frame')
+        for k in ('b', 'a'):
+            name, label = r.get(k), f'{where}.{k}'
+            if not isinstance(name, str) or not name:
+                continue
+            if not re.fullmatch(rf'variants/{re.escape(vid)}/{FILE_NAME}\.webp', name):
+                fails.append(f'{label} "{name}": a .webp in the variant\'s own folder, variants/{vid}/<name>.webp (under images/home2/)')
+                continue
+            path = os.path.join(HOME2, name)
+            if not os.path.isfile(path):
+                fails.append(f'{label}: images/home2/{name} is not in the repo')
+                continue
+            n = os.path.getsize(path)
+            if n >= ROOM_MAX_BYTES:
+                fails.append(f'{label}: images/home2/{name} is {n} bytes, keep each image under 250 KB')
+            size = image_size(path)
+            if not size or size[0] != 'webp':
+                fails.append(f'{label}: images/home2/{name} is not a WebP image')
+            elif size_ok and size[1:] != (w, h):
+                fails.append(f'{label}: images/home2/{name} is {size[1]} by {size[2]} pixels, w and h say {w} by {h}')
+            d = digest(path)
+            if d in home:
+                fails.append(f'{label}: images/home2/{name} is an image of the homepage\'s own rooms')
+            if d in used:
+                fails.append(f'{label}: images/home2/{name} is the same image as {used[d]}')
+            used.setdefault(d, label)
+        rect = r.get('rect')
+        if 'rect' in r and not (isinstance(rect, list) and len(rect) == 4 and all(number(x, 0, 1) for x in rect)
+                                and rect[0] < rect[2] and rect[1] < rect[3]):
+            fails.append(f'{where}.rect: the artwork in the after image, [u0, v0, u1, v1] inside 0..1 with u0 < u1 and v0 < v1')
+        for k in ('fx', 'fy'):
+            if k in r and not number(r[k], 0, 1):
+                fails.append(f'{where}.{k}: the focal point, a number from 0 to 1')
+        if 'from' in r and r['from'] not in ('left', 'right'):
+            fails.append(f'{where}.from: "left" or "right", the side of the artwork where the brush lands')
+        if 'seed' in r and not number(r['seed']):
+            fails.append(f'{where}.seed: a number; leave it out to keep the slot\'s own')
+        for k, prefix in CAP_PREFIX.items():
+            s = r.get(k)
+            if isinstance(s, str) and s and not (s.startswith(prefix) and len(s) > len(prefix)):
+                fails.append(f'{where}.{k}: starts "{prefix}" and then describes the room, like the homepage\'s captions')
+        for k, most in (('cap_en', CAP_MAX), ('alt_en', ALT_MAX)):
+            s = r.get(k)
+            if isinstance(s, str) and len(s) > most:
+                fails.append(f'{where}.{k}: {len(s)} characters, at most {most}')
+    return fails
+
+
+def og_problems(head, vid):
+    """m: the variant's own link preview, in place of og-home.jpg."""
+    img, alt = head.get('og_image'), head.get('og_image_alt')
+    if not (isinstance(img, str) and img and isinstance(alt, str) and alt):
+        return ['head.og_image and head.og_image_alt come together: the preview image and what it shows']
+    if not re.fullmatch(rf'/images/home2/variants/{re.escape(vid)}/{FILE_NAME}\.jpg', img):
+        return [f'head.og_image "{img}": a .jpg in the variant\'s own folder, /images/home2/variants/{vid}/<name>.jpg']
+    path = os.path.join(ROOT, img[1:])
+    if not os.path.isfile(path):
+        return [f'head.og_image: {img[1:]} is not in the repo']
+    fails, size, n = [], image_size(path), os.path.getsize(path)
+    if not size or size[0] != 'jpeg':
+        fails.append(f'head.og_image: {img[1:]} is not a JPEG')
+    elif size[1:] != OG_SIZE:
+        fails.append(f'head.og_image: {img[1:]} is {size[1]} by {size[2]} pixels, the preview card is 1200 by 630')
+    if n >= OG_MAX_BYTES:
+        fails.append(f'head.og_image: {img[1:]} is {n} bytes, keep it under 300 KB')
+    return fails
+
+
 def check(path, v, peers):
     fails, warns = [], []
     stem = os.path.splitext(os.path.basename(path))[0]
@@ -246,13 +410,13 @@ def check(path, v, peers):
         for k in sorted(required - set(obj)):
             fails.append(f'{where}{k}: missing')
         for k, s in obj.items():
-            if k in (required | optional) - OBJECTS - LISTS and not (isinstance(s, str) and s):
+            if k in (required | optional) - OBJECTS - LISTS - (NUMBERS if name == 'rooms' else set()) and not (isinstance(s, str) and s):
                 fails.append(f'{where}{k}: must be a non-empty string')
     keys(v, '', '')
     for name in sorted(OBJECTS):
         if name in v:
             keys(v[name], name, f'{name}.')
-    for name in ('services', 'faq'):
+    for name in ('services', 'faq', 'rooms'):
         items = v.get(name)
         if name in v and not isinstance(items, list):
             fails.append(f'{name} must be a list')
@@ -324,8 +488,8 @@ def check(path, v, peers):
     twins(v, '')
     for name in ('hero', 'intro', 'what_i_do', 'advisory'):
         twins(v[name] if isinstance(v[name], dict) else {}, f'{name}.')
-    for name in ('services', 'faq'):
-        for i, item in enumerate(v[name]):
+    for name in ('services', 'faq', 'rooms'):
+        for i, item in enumerate(v[name] if isinstance(v.get(name), list) else []):
             if isinstance(item, dict):
                 twins(item, f'{name}[{i}].')
 
@@ -452,6 +616,12 @@ def check(path, v, peers):
                     fails.append(f'advisory_rows: "{r}" is neither a content/pages path nor /advisory/ or /projects/')
                 elif not os.path.exists(os.path.join(ROOT, r.strip('/'), 'index.html')):
                     fails.append(f'advisory_rows: /{r.strip("/")}/ is not built (run python3 build.py)')
+
+    # l: the opening's rooms; m: the link preview
+    if 'rooms' in v:
+        fails.extend(room_problems(v['rooms'], vid))
+    if 'og_image' in v['head'] or 'og_image_alt' in v['head']:
+        fails.extend(og_problems(v['head'], vid))
     return fails, warns
 
 

@@ -13,6 +13,12 @@
        span is at most 360 px (2026-09-27; a restaurants line reached 398 px). The lines are measured
        after the opening splits their letters, as a phone shows them; without WebGL they are laid out
        for the measurement. Layout, not visibility: the letters may still be at opacity 0.
+   and on every buyer variant that brings its own rooms to the opening ("rooms" in its JSON), on a
+   1280 by 900 screen and on a 360 by 780 phone (where each room is drawn whole):
+     - the page requests the before and the after image of each of its rooms and each answers 200,
+       it never requests the homepage's images for a slot the variant replaced, and it logs no
+       console error (the blocked analytics requests aside); the entrance plays to its end. Without
+       WebGL only the first room is fetched (it is preloaded), so only that pair is required.
 
    Local (default): serves this repo on a loopback port and checks every URL in sitemap.xml
    outside /museum/, then the buyer variants of the homepage (content/variants/*.json: noindex
@@ -36,6 +42,7 @@ const SITE = 'https://stavtheodor.com';
 const MIN_LATIN = 0.9;
 const KEY_PAGES = ['/', '/advisory/', '/projects/', '/radar/', '/art-curator-new-jersey/', '/art-curator-new-york/'];
 const NARROW = { width: 360, height: 780 };  /* the smallest common phone: the opening lines must fit it */
+const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis/;  /* blocked in every context */
 
 function loadPlaywright() {
   try { return require('playwright'); } catch (e) { /* not on the local path */ }
@@ -75,6 +82,22 @@ function variantPaths() {
   if (!fs.existsSync(dir)) { return []; }
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
     .map(f => '/' + JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).path.replace(/^\/+|\/+$/g, '') + '/');
+}
+
+function variantRooms() {
+  /* the buyer variants that bring their own rooms to the opening: [{ path, rooms }] */
+  const dir = path.join(ROOT, 'content', 'variants');
+  if (!fs.existsSync(dir)) { return []; }
+  return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
+    .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+    .filter(v => Array.isArray(v.rooms) && v.rooms.length)
+    .map(v => ({ path: '/' + v.path.replace(/^\/+|\/+$/g, '') + '/', rooms: v.rooms }));
+}
+
+function homeRooms() {
+  /* the homepage's rooms in slot order, [before, after] under /images/home2/, from PAIRS in js/home-opening.js */
+  const js = fs.readFileSync(path.join(ROOT, 'js', 'home-opening.js'), 'utf8');
+  return [...js.matchAll(/cap: '\w+',[^\n]*?land: \{ b: '([^']+)', a: '([^']+)'/g)].map(m => [m[1], m[2]]);
 }
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json',
@@ -127,7 +150,7 @@ async function heroWidths(browser, base, paths, quiet) {
   for (const p of paths) {
     for (const lang of ['en', 'he']) {
       const context = await browser.newContext({ viewport: NARROW });
-      await context.route(/googletagmanager|google-analytics|gstatic|googleapis/, quiet);
+      await context.route(ANALYTICS, quiet);
       if (lang === 'he') { await context.addInitScript(() => { try { localStorage.setItem('radarLang', 'he'); } catch (e) {} }); }
       const page = await context.newPage();
       const where = `hero width on ${p} (${lang === 'he' ? 'Hebrew' : 'English'}, ${NARROW.width}x${NARROW.height})`;
@@ -168,6 +191,57 @@ async function heroWidths(browser, base, paths, quiet) {
   return { fails, widest };
 }
 
+/* A buyer variant with its own rooms, on a desktop screen and on a portrait phone (each room drawn whole): the page
+   requests the before and after image of every room it brings (only the preloaded first pair without WebGL) and
+   each answers 200, it requests no homepage image of a slot it replaced, it logs no console error outside the
+   blocked analytics, and the entrance plays to its end. */
+const ROOM_VIEWS = [{ viewport: { width: 1280, height: 900 } }, { viewport: NARROW, isMobile: true, hasTouch: true }];
+
+async function roomLoads(browser, base, quiet) {
+  const fails = [];
+  let checked = 0;
+  const variants = variantRooms(), home = homeRooms(), img = n => '/images/home2/' + n;
+  if (variants.length && !home.length) { return { fails: ['js/home-opening.js: no rooms read from PAIRS (did its format change?)'], checked }; }
+  for (const v of variants) {
+    for (const view of ROOM_VIEWS) {
+      const context = await browser.newContext(view);
+      await context.route(ANALYTICS, quiet);
+      const page = await context.newPage();
+      const seen = new Map(), errors = [];
+      const rel = u => (u.startsWith(base) ? u.slice(base.length) : u).split('?')[0];
+      page.on('response', r => seen.set(rel(r.url()), r.status()));
+      page.on('requestfailed', r => { if (!ANALYTICS.test(r.url())) { seen.set(rel(r.url()), (r.failure() || {}).errorText || 'failed'); } });
+      page.on('console', m => { if (m.type() === 'error' && !ANALYTICS.test(m.location().url || '')) { errors.push(m.text()); } });
+      page.on('pageerror', e => errors.push(e.message));
+      const where = `rooms on ${v.path} (${view.viewport.width}x${view.viewport.height})`;
+      try {
+        const resp = await page.goto(base + v.path, { waitUntil: 'load', timeout: 45000 });
+        if (!resp || resp.status() !== 200) { fails.push(`${where}: HTTP ${resp ? resp.status() : 'no response'}`); continue; }
+        const mode = await page.waitForFunction(() => { const d = window.__theodoraBrush; return d && d.mode !== 'boot' && d.mode; }, null, { timeout: 15000 })
+          .then(h => h.jsonValue()).catch(() => null);
+        if (!mode) { fails.push(`${where}: the opening never started (window.__theodoraBrush.mode stayed "boot")`); }
+        const want = (mode === 'gl' ? v.rooms : v.rooms.slice(0, 1)).flatMap(r => [img(r.b), img(r.a)]);
+        for (let t = 0; t < 60 && !want.every(u => seen.has(u)); t++) { await page.waitForTimeout(250); }
+        if (mode === 'gl') {
+          await page.waitForFunction(() => window.__theodoraBrush.done, null, { timeout: 20000 })
+            .catch(() => fails.push(`${where}: the entrance did not reach its end within 20 s`));
+        }
+        for (const u of want) { if (seen.get(u) !== 200) { fails.push(`${where}: ${u} ${seen.has(u) ? 'answered ' + seen.get(u) : 'was never requested'}`); } }
+        v.rooms.forEach((r, slot) => (home[slot] || []).forEach(n => {
+          if (seen.has(img(n))) { fails.push(`${where}: requested the homepage's ${img(n)}, but slot ${slot} is the variant's own room`); }
+        }));
+        errors.forEach(e => fails.push(`${where}: console error: ${e.split('\n')[0]}`));
+        checked++;
+      } catch (e) {
+        fails.push(`${where}: ${e.message.split('\n')[0]}`);
+      } finally {
+        await context.close();
+      }
+    }
+  }
+  return { fails, checked, pages: variants.length };
+}
+
 async function main() {
   const opt = args();
   const { chromium } = loadPlaywright();
@@ -190,7 +264,7 @@ async function main() {
   for (const p of pages) {
     for (const js of [true, false]) {
       const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, javaScriptEnabled: js });
-      await context.route(/googletagmanager|google-analytics|gstatic|googleapis/, quiet);
+      await context.route(ANALYTICS, quiet);
       const page = await context.newPage();
       const url = base + p;
       const mode = js ? '' : ' (no JS)';
@@ -215,7 +289,7 @@ async function main() {
   /* the switch, on one inner page: pick עברית, Hebrew shows, reload, still Hebrew */
   const inner = pages.find(p => p !== '/' && !p.startsWith('/radar/')) || pages.find(p => p !== '/') || '/';
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
-  await context.route(/googletagmanager|google-analytics|gstatic|googleapis/, quiet);
+  await context.route(ANALYTICS, quiet);
   const page = await context.newPage();
   try {
     await page.goto(base + inner, { waitUntil: 'load', timeout: 45000 });
@@ -239,6 +313,10 @@ async function main() {
   const hero = await heroWidths(browser, base, heroPages, quiet);
   fails.push(...hero.fails);
 
+  /* the buyer variants' own rooms in the opening */
+  const rooms = await roomLoads(browser, base, quiet);
+  fails.push(...rooms.fails);
+
   await browser.close();
   if (server) { server.close(); }
   if (fails.length) {
@@ -248,7 +326,8 @@ async function main() {
   }
   const w = hero.widest;
   console.log(`check_render: OK, ${checked} page(s) open in English with and without JavaScript (>= ${MIN_LATIN * 100}% Latin, lang="en") at ${base}; the switch shows Hebrew and remembers it (${inner}); `
-    + `the opening lines fit a ${NARROW.width}px screen on ${heroPages.length} page(s) in English and Hebrew (widest: ${w ? `${w.right.toFixed(1)}px, #${w.id} on ${w.p} in ${w.lang === 'he' ? 'Hebrew' : 'English'}` : 'none measured'})`);
+    + `the opening lines fit a ${NARROW.width}px screen on ${heroPages.length} page(s) in English and Hebrew (widest: ${w ? `${w.right.toFixed(1)}px, #${w.id} on ${w.p} in ${w.lang === 'he' ? 'Hebrew' : 'English'}` : 'none measured'}); `
+    + (rooms.pages ? `${rooms.pages} variant(s) load their own opening rooms, desktop and phone, with no console error` : 'no variant brings its own opening rooms'));
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

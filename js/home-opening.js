@@ -200,6 +200,21 @@
     { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 1800, h: 1201, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
     { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 1800, h: 1201, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
   ];
+  /* a buyer variant's own rooms (2026-09-27): build-home.py sets window.THEODORA_ROOMS on a variant page whose
+     content/variants/<id>.json has "rooms", one { slot, b, a, w, h, rect, fx, fy, from, seed } per room it
+     replaces (slot 0 is the first fold). The room takes over the slot's land fields and seed, and drops any
+     portrait variant, which belongs to the homepage's room; the slot keeps its cap key, and the build has put
+     the room's caption under that key in #cap. No list, nothing changes. */
+  var ROOMS = window.THEODORA_ROOMS;
+  if (Array.isArray(ROOMS)) {
+    ROOMS.forEach(function (r) {
+      var p = r && PAIRS[r.slot];
+      if (!p) { return; }
+      ['b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from'].forEach(function (k) { p.land[k] = r[k]; });
+      if (typeof r.seed === 'number') { p.seed = r.seed; }
+      delete p.port;
+    });
+  }
   /* the wall stroke runs across the artwork's vertical centre, lands half a radius outside the rect on the
      wall side and ends 0.6 radius past the far edge; radius 0.62 x rect height, capped for the tall canvases;
      the bloom opens from the rect centre */

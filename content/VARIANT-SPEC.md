@@ -45,7 +45,7 @@ A variant is noindex and its own canonical. It is in no sitemap, in none of llms
 }
 ```
 
-The example is shortened (two questions, "..." in the long fields): a real file carries five to seven questions and full paragraphs. Optional objects and fields: `intro.eyebrow_en/_he`, `what_i_do.eyebrow_en/_he`, `advisory` (`h2_en/_he`, `sub_en/_he`) and `advisory_rows`; when one is absent the homepage's own text or rows stay.
+The example is shortened (two questions, "..." in the long fields): a real file carries five to seven questions and full paragraphs. Optional objects and fields: `intro.eyebrow_en/_he`, `what_i_do.eyebrow_en/_he`, `advisory` (`h2_en/_he`, `sub_en/_he`), `advisory_rows`, `rooms`, and `head.og_image` with `head.og_image_alt` (the last two in their own sections below); when one is absent the homepage's own text, rows, rooms or preview image stay.
 
 | Field | Where it shows | Limit |
 |---|---|---|
@@ -72,11 +72,51 @@ Character limits read the English, except the two hero lines, which hold in both
 
 Text rules: every `_en` field has its `_he` twin and the reverse, the Hebrew a faithful translation with Hebrew letters in it; no en or em dashes, no phone number, no "contact form"; Stav speaks in the first person, "I" (the checker warns on "we", "our" and "us"); no hype words (the list in `tools/check_pages.py`); no fee of Stav's, and a $ or % figure only with the word "industry" (`content/BRIEF.md` section 5); facts only from `content/BRIEF.md`. Every field is plain text, written as it should read (`&`, quotes and apostrophes as they are), except `what_i_do.p1` and `p2`, which may use `<a href="...">`, `<em>` and `<strong>`: links go to existing pages (`/advisory/`) or homepage anchors (`#faq`), the English and the Hebrew link to the same set, never to a mailto, a redirect stub or another variant. No keys beyond the ones above, none starting with `_`.
 
-The homepage's own copy is the text between the markers in `templates/home.html`: edit it there, keep each marker flush against the element's content, and rebuild. A variant changes nothing else: the build refuses a variant whose About, film, Projects, Museum or Art Radar section differs from the homepage's.
+The homepage's own copy is the text between the markers in `templates/home.html`: edit it there, keep each marker flush against the element's content, and rebuild. A variant changes nothing else (its rooms and preview image aside, below): the build refuses a variant whose About, film, Projects, Museum or Art Radar section differs from the homepage's.
 
-Changing a variant's `path` leaves the old folder behind; `python3 build.py` then fails the `variants` gate ("stale variant folder? git rm -r <folder>") until it is removed. Deleting a variant: `git rm` the JSON and the folder.
+## Its own rooms in the opening (optional)
 
-Validate before you hand off, a draft anywhere on disk included (name it `<id>.json`):
+`rooms` replaces the rooms of the WebGL opening slot by slot: entry 0 is the first fold (the homepage's p3), entries 1 to 3 the three scroll chapters (p4, p5, p1). A shorter list keeps the homepage's rooms in the later slots. Each entry is one room: a before and an after photo of it at the same size, the art placed in the after.
+
+```json
+"rooms": [
+  {
+    "b": "variants/example-buyer/example-buyer_before.webp",
+    "a": "variants/example-buyer/example-buyer_after.webp",
+    "w": 1800, "h": 1200,
+    "rect": [0.5656, 0.1322, 0.7241, 0.5119],
+    "fx": 0.6357, "fy": 0.3407,
+    "from": "right",
+    "cap_en": "Proposal. A conference room with a long walnut table, a large grey canvas on the end wall.",
+    "cap_he": "הצעה. חדר ישיבות עם שולחן אגוז ארוך, קנבס אפור גדול על הקיר האחורי.",
+    "alt_en": "A conference room with a long walnut table and a large grey canvas on the end wall.",
+    "alt_he": "חדר ישיבות עם שולחן אגוז ארוך וקנבס אפור גדול על הקיר האחורי."
+  }
+]
+```
+
+| Field | What it is | Limit |
+|---|---|---|
+| `b`, `a` | the before and the after image, as paths under `images/home2/` (like `PAIRS` in `js/home-opening.js`) | two different `.webp` files in `images/home2/variants/<id>/` (names in lowercase letters, digits, `-` and `_`), committed with the JSON, each under 250 KB (1800 px wide, like the homepage's rooms), neither an image of the homepage's rooms nor of another slot |
+| `w`, `h` | their size in pixels | both files exactly this size, about 3:2 (w / h from 1.455 to 1.545): a portrait phone draws every room whole in a 3:2 frame |
+| `rect` | the artwork in the after image, `[u0, v0, u1, v1]` as fractions of its width and height | inside 0 to 1, u0 < u1, v0 < v1; the wall stroke crosses it and the bloom opens from its centre |
+| `fx`, `fy` | the focal point a cover crop keeps (and the static figure's `--fx`, `--fy`) | 0 to 1 |
+| `from` | the side of the artwork with more wall, where the brush lands | `"left"` or `"right"` |
+| `seed` | optional: the brush texture | a number; absent, the slot keeps the homepage's |
+| `cap_en`, `cap_he` | the caption while the room shows (`#cap`), and under the static figure | start `Proposal. ` and `הצעה. `, then describe the room; at most 120 characters in English |
+| `alt_en`, `alt_he` | the static figure's alt text (the page writes the English, as the growth pages do) | at most 160 characters in English |
+
+The text rules above apply to the captions and the alt text. `build-home.py` then sets `window.THEODORA_ROOMS` (each room with its slot, numbers at four decimals) in an inline script before the deferred scripts, preloads the first room's two images instead of p3's, and swaps each replaced slot's static figure (image, alt, caption, focal point) and its `#cap` caption, in nine more regions of `templates/home.html`: `room_fig_0` to `room_fig_3`, `room_cap_0` to `room_cap_3`, and `rooms_js`, empty on the homepage. `js/home-opening.js` merges the list into `PAIRS` by slot before anything reads it; the slot keeps its cap key (`p3` and so on), whose text the build has swapped. After the build, `node tools/check_render.js` loads the page at 1280 by 900 and on a 360 by 780 phone: it must request every image of the variant's rooms and get them, request none of the homepage's for a replaced slot, and log no console error.
+
+## Its own link preview (optional)
+
+`head.og_image` and `head.og_image_alt` come together: a 1200 by 630 JPEG under 300 KB, written as its address from the site root, `/images/home2/variants/<id>/<name>.jpg`, and one English line on what it shows (at most 160 characters). They replace `og-home.jpg` and its description in og:image, og:image:alt and twitter:image, for this variant only. Link previews are cached: after a change, re-scrape the page in the Facebook Sharing Debugger and the LinkedIn Post Inspector.
+
+## Paths, deleting, validating
+
+Changing a variant's `path` leaves the old folder behind; `python3 build.py` then fails the `variants` gate ("stale variant folder? git rm -r <folder>") until it is removed. Deleting a variant: `git rm` the JSON, the folder and its images, `images/home2/variants/<id>/`.
+
+Validate before you hand off, a draft anywhere on disk included (name it `<id>.json`; the image paths in it are read from the repo):
 
 ```
 python3 tools/check_variants.py content/variants/<id>.json
