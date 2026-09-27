@@ -35,7 +35,7 @@ DASH = re.compile('[\\u2013\\u2014]')
 PHONE = re.compile(r'\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]?\d{3}|\(\d{3}\) ?\d{3}[ .-]\d{4}|\b0\d{2}[ -]?\d{7}\b|\+972')
 GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york')
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
-HOME_ANCHORS = ('about', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
+HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
 REMOVED = ('images/portfolio/', 'theodora-film-2026-09.mp4')
 fails = []
 

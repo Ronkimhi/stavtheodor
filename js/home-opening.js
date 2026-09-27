@@ -191,10 +191,10 @@
      fx, fy the cover focal points; `from` the side of the artwork with more wall, where the brush lands.
      A pair may carry a `port` variant for portrait and phone screens; none does at present. */
   var PAIRS = [
-    { id: 'p3', cap: 'living',  seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 2400, h: 1600, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' } },
-    { id: 'p4', cap: 'living',  seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 2400, h: 1573, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left' } },
-    { id: 'p5', cap: 'living',  seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 2400, h: 1601, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
-    { id: 'p1', cap: 'living',  seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 2400, h: 1601, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
+    { id: 'p3', cap: 'p3',   seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 2400, h: 1600, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' } },
+    { id: 'p4', cap: 'p4',   seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 2400, h: 1573, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left' } },
+    { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 2400, h: 1601, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
+    { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 2400, h: 1601, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
   ];
   /* the wall stroke runs across the artwork's vertical centre, lands half a radius outside the rect on the
      wall side and ends 0.6 radius past the far edge; radius 0.62 x rect height, capped for the tall canvases;
@@ -277,7 +277,7 @@
   gsap.ticker.add(function () { if (glDead || covered) { return; } if (dirtyFlag || wetAlive()) { draw(); } });
   canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic(); });
 
-  /* caption for the proposal: visible whenever any after pixel is on screen, bilingual twins follow the switch */
+  /* caption for the proposal: one line per room (data-cap = the pair id), visible whenever any after pixel is on screen, bilingual twins follow the switch */
   var capKey = '', capOn = false;
   function capSet(key) {
     if (key === null) { if (capOn) { capOn = false; gsap.to(cap, { opacity: 0, duration: 0.2, overwrite: true }); } return; }

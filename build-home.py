@@ -25,8 +25,8 @@ import site_chrome as sc
 from site_chrome import SITE, T
 
 TEMPLATE = sc.rel('templates', 'home.html')
-TITLE = 'Art Advisor & Curator, NYC · NJ · Tel Aviv | THEODORA'
-DESCRIPTION = 'Art Advisor & Curator for private clients and businesses in NYC, NJ & Tel Aviv. Discover, select, and acquire exceptional art with expert guidance.'
+TITLE = 'Art Curator & Advisor · New Jersey, New York, Tel Aviv | THEODORA'
+DESCRIPTION = 'Stav Theodor, art curator and advisor in Tenafly, New Jersey: art for homes and businesses in Bergen County, Manhattan, New York and Tel Aviv, from concept to installation.'
 OG_TITLE = 'Art Radar · Stav Theodor-Kimhi'
 OG_DESC = 'The art worth seeing, chosen by a curator. Exhibitions, openings, and the stories behind them, and the art I help people live with.'
 OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
@@ -121,7 +121,7 @@ def main():
     en, he = out.count('data-l="en"'), out.count('data-l="he"')
     if en != he:
         problems.append(f'twins differ in index.html: {en} en, {he} he')
-    for anchor in ('about', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact'):
+    for anchor in ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact'):
         if f'id="{anchor}"' not in out:
             problems.append(f'anchor #{anchor} missing')
     if problems:

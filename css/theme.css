@@ -92,8 +92,12 @@
   /* The opening header after the rooms: one black block on the page ground. It slides over the fixed canvas
      while the canvas fades to the same ground, and the h1 settles in from near-visible, never from 0. */
   .intro { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(40px, 7vh, 72px); padding: clamp(112px, 14vh, 176px) clamp(20px, 8vw, 120px) clamp(96px, 12vh, 150px); text-align: center; background: var(--bg); }
-  .intro h1 { font-size: clamp(44px, 6vw, 92px); line-height: 1.02; text-wrap: balance; max-width: 12ch; }
-  body.gl .intro h1 { opacity: 0.5; transform: translateY(22px); }
+  .intro .intro-head { display: flex; flex-direction: column; align-items: center; gap: clamp(22px, 3vh, 32px); }
+  /* the page's h1: one small keyword line above the big serif line, which keeps its look as a p (2026-09-26) */
+  .intro .intro-kicker { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--taupe); line-height: 1.8; max-width: 760px; text-wrap: balance; }
+  .intro .intro-kicker [data-l="he"] { font-family: var(--he); font-size: 16px; letter-spacing: 0.04em; text-transform: none; }
+  .intro .intro-line { font-size: clamp(44px, 6vw, 92px); line-height: 1.02; text-wrap: balance; max-width: 12ch; }
+  body.gl .intro .intro-line { opacity: 0.5; transform: translateY(22px); }
   .intro .statement { display: flex; flex-direction: column; align-items: center; gap: 32px; }
   .intro .statement h2 { font-size: clamp(30px, 3.6vw, 52px); max-width: 1040px; }
   /* Lenis smooth wheel (fine-pointer devices only): the library scrolls the window itself */
@@ -105,7 +109,8 @@
   .band { position: fixed; left: 0; right: 0; bottom: 0; height: 24vh; height: 24svh; z-index: 2; pointer-events: none; background: linear-gradient(to top, rgba(15,15,20,0.6), rgba(15,15,20,0)); }
   #cap { position: fixed; right: clamp(20px, 3.4vw, 48px); bottom: calc(28px + env(safe-area-inset-bottom, 0px)); z-index: 2; text-align: right; font-size: 12px; letter-spacing: 0.04em; color: var(--muted); opacity: 0; pointer-events: none; text-shadow: 0 1px 3px rgba(15,15,20,0.8), 0 1px 14px rgba(15,15,20,0.7); }
   #cap .cap-t { display: none; }
-  #cap[data-show="living"] .cap-t[data-cap="living"] { display: inline; }
+  #cap[data-show="p3"] .cap-t[data-cap="p3"], #cap[data-show="p4"] .cap-t[data-cap="p4"], #cap[data-show="p5"] .cap-t[data-cap="p5"], #cap[data-show="p1"] .cap-t[data-cap="p1"] { display: inline; }
+  #cap, .sfig figcaption { max-width: min(62vw, 560px); }
   #cap [data-l="he"], .sfig figcaption [data-l="he"] { font-size: 14px; letter-spacing: 0; }
   .chain { position: relative; }
   body.gl .chain { height: 215vh; }
@@ -162,9 +167,11 @@
   .museum .text { position: relative; display: flex; flex-direction: column; gap: 24px; max-width: 640px; padding: 88px clamp(20px, 3.4vw, 48px); }
   .museum h2 { font-size: clamp(32px, 3.4vw, 48px); }
 
-  .radar-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
-  .radar-intro .left { display: flex; flex-direction: column; gap: 22px; }
-  .radar-intro .right { display: flex; flex-direction: column; gap: 18px; padding-top: 44px; }
+  .radar-intro, .what-i-do { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .radar-intro .left, .what-i-do .left { display: flex; flex-direction: column; gap: 22px; }
+  .radar-intro .right, .what-i-do .right { display: flex; flex-direction: column; gap: 18px; padding-top: 44px; }
+  .what-i-do .right a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .what-i-do .right a:hover { color: #C9A46B; }
 
   /* the posts timeline */
   .timeline { position: relative; margin-top: clamp(40px, 5vw, 64px); padding-left: 44px; }
@@ -243,8 +250,8 @@
     .museum { min-height: 0; }
     .museum .scrim { background: linear-gradient(180deg, rgba(15,15,20,0.55) 0%, rgba(15,15,20,0.92) 100%); }
     .museum .text { padding: 64px 20px; }
-    .radar-intro { grid-template-columns: 1fr; }
-    .radar-intro .right { padding-top: 0; }
+    .radar-intro, .what-i-do { grid-template-columns: 1fr; }
+    .radar-intro .right, .what-i-do .right { padding-top: 0; }
     .timeline { padding-left: 28px; }
     .month::before { left: -28px; }
     .entry { grid-template-columns: 1fr; gap: 12px; }
