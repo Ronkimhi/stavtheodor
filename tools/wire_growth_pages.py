@@ -9,7 +9,7 @@ import glob, json, re, html as H
 SITE = "https://stavtheodor.com"
 pages = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob("content/pages/*.json"))]
 by = {p["path"].strip("/"): p for p in pages}
-adv = [p for p in pages if p["section"] == "advisory"]
+adv = [p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == "advisory"]  # the two local landing pages first
 prj = [p for p in pages if p["section"] == "projects"]
 def t(path): return by[path]["title_en"] if path in by else None
 

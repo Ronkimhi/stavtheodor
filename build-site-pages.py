@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Renders content/pages/*.json into standalone bilingual pages at /<path>/index.html
-(advisory, projects, partners, guide), plus the hub pages /advisory/ and /projects/,
+(advisory, projects, partners, guide, and the two local landing pages), plus the hub pages /advisory/ and /projects/,
 in the site's one theme (css/theme.css) with the shared chrome (site_chrome.py).
 Then runs build-post-pages.py, which owns sitemap.xml and includes these pages.
 Idempotent. Run from the repo root, or just run python3 build.py.
@@ -26,8 +26,13 @@ KICKER_HE = {
     'Private residence, Manhattan': 'בית פרטי, מנהטן',
     'Sea view villa, Caesarea': 'וילה עם נוף לים, קיסריה',
 }
-SECTION_KICKER = {"advisory": "Art advisory", "projects": "Project", "partners": "Working together", "guide": "Guide"}
-SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרויקט", "partners": "עבודה משותפת", "guide": "מדריך"}
+SECTION_KICKER = {"advisory": "Art advisory", "projects": "Project", "partners": "Working together", "guide": "Guide", "local": "Art curator"}
+SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרויקט", "partners": "עבודה משותפת", "guide": "מדריך", "local": "אוצרת אמנות"}
+# Breadcrumb parents. The two local landing pages (/art-curator-new-jersey/, /art-curator-new-york/,
+# section "local", added 2026-09-26) sit under /advisory/ in the breadcrumb and open the advisory hub.
+CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Guides"}
+CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects"}
+DEFAULT_AREA = [{"@type": "City", "name": "New York City"}, {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "Tel Aviv"}]
 CTA_EN = "Send me one photo of the wall, and a line about the space. I will tell you what I see."
 CTA_HE = "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
 MAIL = f"mailto:{sc.EMAIL}"
@@ -83,13 +88,15 @@ def ld_blocks(p, url, og):
         "publisher": {"@type": "Organization", "name": "THEODORA", "url": SITE + "/"},
     }
     if p.get("schema_type") == "Service":
-        main.update({"provider": {"@type": "Organization", "name": "THEODORA", "url": SITE + "/"}, "areaServed": ["New York City", "New Jersey", "Tel Aviv"], "serviceType": p.get("service_type", "Art advisory")})
+        # provider is the entity itself (content/entity.json, @id #org, on every page), not a loose copy of it
+        main.update({"provider": {"@type": "ProfessionalService", "@id": SITE + "/#org", "name": "THEODORA", "url": SITE + "/"},
+                     "areaServed": p.get("area_served") or DEFAULT_AREA, "serviceType": p.get("service_type", "Art advisory")})
     main.update(p.get("schema_extra", {}))
     ld = [main, {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": {"advisory": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Guides"}.get(p["section"], "Pages"), "item": SITE + "/" + ({"advisory": "advisory", "projects": "projects"}.get(p["section"], p["path"].split("/")[0])) + "/"},
+            {"@type": "ListItem", "position": 2, "name": CRUMB_NAME.get(p["section"], "Pages"), "item": SITE + "/" + CRUMB_DIR.get(p["section"], p["path"].split("/")[0]) + "/"},
             {"@type": "ListItem", "position": 3, "name": p["title_en"], "item": url},
         ]}]
     if p.get("faq"):
@@ -126,6 +133,34 @@ def related_html(p, all_pages, exclude_projects=False):
         o = next(o for o in all_pages if o["path"].strip("/") == r.strip("/"))
         links.append(f'<a href="/{o["path"].strip("/")}/">{T(H.escape(o["title_en"]), H.escape(o.get("title_he") or o["title_en"]))}</a>')
     return f'<div class="readnext"><p class="eyebrow soft" style="margin-top: 24px;">{T("Read next", "להמשך קריאה")}</p>{"".join(links)}</div>'
+
+
+_posts_cache = None
+
+
+def posts():
+    """Every Art Radar post, newest first, read once per build."""
+    global _posts_cache
+    if _posts_cache is None:
+        _, _posts_cache = sc.read_posts()
+    return _posts_cache
+
+
+def radar_html(p):
+    """From Art Radar, on every article page: the posts named in radar_posts (in that order),
+    or the three newest. Same timeline markup as the homepage and the post pages."""
+    by = {q["slug"]: q for q in posts()}
+    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by] or posts()[:3]
+    return f'''
+<section class="section wrap tight">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
+    <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
+  </div>
+  <div class="timeline">{sc.timeline(chosen, with_months=False)}
+  </div>
+</section>
+'''
 
 
 def cta_html(p):
@@ -169,7 +204,7 @@ def render_article_page(p, all_pages):
 {p['body_en']}
   </div>
 </section>
-{faq_html(p)}
+{faq_html(p)}{radar_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
@@ -320,7 +355,10 @@ def main():
         sc.write(os.path.join(d, "index.html"), out)
         print(f"  wrote {d}/index.html")
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
-        sec_pages = projects if sec == "projects" else [p for p in pages if p["section"] == sec]
+        if sec == "projects":
+            sec_pages = projects
+        else:  # the advisory hub: the two local landing pages first, then the advisory pages
+            sec_pages = [p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == sec]
         sec_pages = [p for p in sec_pages if not check(p, "")]
         if not sec_pages: continue
         sc.write(os.path.join(sec, "index.html"), render_hub(sec, te, th, le, lh, sec_pages, hero_src, hero_alt))

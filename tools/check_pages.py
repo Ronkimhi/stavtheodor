@@ -2,9 +2,15 @@
 """Mechanical gate for content/pages/*.json. Prints OK or the list of failures. Exit 1 on any failure."""
 import json, re, sys, os
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
-LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 700), "guide": (900, 1400)}
+LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 700), "guide": (900, 1400), "local": (1100, 1900)}
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
+def post_slugs():
+    """Every Art Radar slug in content/posts.html, for the radar_posts field."""
+    try: src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts.html"), encoding="utf-8").read()
+    except OSError: return set()
+    return set(re.findall(r'<article class="post[^"]*" id="([a-z0-9\-]+)">', src))
+SLUGS = post_slugs()
 fails_total = 0
 for f in sys.argv[1:]:
     fails = []
@@ -13,6 +19,12 @@ for f in sys.argv[1:]:
     raw = json.dumps(p, ensure_ascii=False)
     if re.search(r"[—–]", raw): fails.append("em/en dash present")
     if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]|\b0\d{2}[ -]?\d{7}\b|\+972", raw): fails.append("phone number present")
+    if "contact form" in raw.lower(): fails.append("promises a contact form (there is none: say 'the contact details at the end of this page', linking #contact)")
+    if p.get("section") == "local":
+        for k in ("title_en", "lead_en"):
+            if "art curator" not in (p.get(k) or "").lower(): fails.append(f"local page: 'art curator' missing from {k}")
+    for slug in p.get("radar_posts", []) or []:
+        if slug not in SLUGS: fails.append(f"radar_posts slug does not exist in content/posts.html: {slug}")
     for k in ["path","section","title_en","title_he","meta_description","lead_en","lead_he","body_en","body_he"]:
         if not p.get(k): fails.append(f"missing {k}")
     if p.get("section") not in LIMITS: fails.append("bad section")

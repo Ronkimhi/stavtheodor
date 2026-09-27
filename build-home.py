@@ -35,6 +35,7 @@ PROJECT_ORDER = [
     'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'closter-new-jersey-new-construction',
     'herzliya-pituach-sea-view-apartment', 'hod-hasharon-private-villa', 'ramat-gan-private-home',
 ]
+LOCAL_PAGES = ['art-curator-new-jersey', 'art-curator-new-york']  # the first two Advisory rows (2026-09-26)
 ADVISORY_HUBS = [
     ('/advisory/', 'Art advisory, answered plainly: what it costs, how it works, where I work', 'ייעוץ אמנות בשפה פשוטה: כמה זה עולה, איך זה עובד, ואיפה אני עובדת'),
     ('/projects/', 'Projects: homes in Manhattan, New Jersey, Tel Aviv and Caesarea, hotels, one exhibition in Geneva', "פרויקטים: בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות, ותערוכה אחת בז'נבה"),
@@ -54,8 +55,11 @@ def load_pages():
 def render_home(pages, posts, faq):
     tmpl = open(TEMPLATE, encoding='utf-8').read()
     projects = [pages['projects/' + s] for s in PROJECT_ORDER]
-    rows = ''.join(f'<a class="row" href="{h}"><h3 class="serif">{T(en, he)}</h3><span class="ln"></span></a>' for h, en, he in ADVISORY_HUBS)
-    for path in ADVISORY_PAGES:
+    rows = ''
+    for path in LOCAL_PAGES + [None] + ADVISORY_PAGES:
+        if path is None:
+            rows += ''.join(f'<a class="row" href="{h}"><h3 class="serif">{T(en, he)}</h3><span class="ln"></span></a>' for h, en, he in ADVISORY_HUBS)
+            continue
         d = pages[path]
         rows += f'<a class="row" href="/{path}/"><h3 class="serif">{T(H.escape(d["title_en"]), H.escape(d["title_he"]))}</h3><span class="ln"></span></a>'
     fills = {

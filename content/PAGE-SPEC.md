@@ -26,7 +26,9 @@ One JSON file per page. build-site-pages.py renders it into /<path>/index.html w
 }
 ```
 
-Sections and paths: `advisory/<slug>` (schema_type Service or Article), `projects/<slug>` (schema_type CreativeWork or Article, hero_image required), `for-designers`, `for-brokers`, `for-advisors` (section "partners", schema_type Service), `guide/<slug>` (section "guide", schema_type Article).
+Sections and paths: `advisory/<slug>` (schema_type Service or Article), `projects/<slug>` (schema_type CreativeWork or Article, hero_image required), `for-designers`, `for-brokers`, `for-advisors` (section "partners", schema_type Service), `guide/<slug>` (section "guide", schema_type Article), and the two local landing pages `art-curator-new-jersey`, `art-curator-new-york` (section "local", schema_type Service, 1,100 to 1,900 English words, "art curator" in title_en and lead_en, breadcrumb under /advisory/, listed first on the advisory hub and in the homepage Advisory rows).
+
+Optional fields: `radar_posts` (a list of Art Radar slugs for the "From Art Radar" block every article page carries; without it the three newest posts show; every slug must exist in content/posts.html), `area_served` (a list of schema.org Place objects for Service pages; the default is New York City, New Jersey, Tel Aviv). Never promise a "contact form": there is none. Point people to `stav@stavtheodor.com` and to "the contact details at the end of this page" linking `#contact` (Hebrew: "פרטי יצירת הקשר בסוף העמוד").
 
 Body HTML rules: p, h2, h3, ul, ol, li, strong, em, a, blockquote, figure, img, figcaption only. Root relative image paths. Links to other pages of this set use `/advisory/<slug>/` style absolute paths. No inline styles, no classes, no scripts.
 

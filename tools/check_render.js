@@ -103,8 +103,9 @@ async function main() {
     pages = sitemapPaths();
   } else {
     base = base.replace(/\/$/, '');
-    pages = opt.all ? sitemapPaths() : KEY_PAGES.slice();
-    if (!opt.all) { const sm = sitemapPaths().filter(p => p.startsWith('/radar/') && p !== '/radar/'); if (sm[0]) { pages.push(sm[0]); } }
+    const sm = sitemapPaths();
+    pages = opt.all ? sm : KEY_PAGES.filter(p => sm.includes(p));  /* the key pages this tree actually publishes */
+    if (!opt.all) { const post = sm.find(p => p.startsWith('/radar/') && p !== '/radar/'); if (post) { pages.push(post); } }
   }
   const browser = await chromium.launch();
   const fails = [];
