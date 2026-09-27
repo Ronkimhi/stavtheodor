@@ -139,7 +139,8 @@ def cta_html(p):
 
 
 def render_article_page(p, all_pages):
-    """Advisory, partner and guide pages: text header, optional photo, the reading column."""
+    """Advisory, partner and guide pages: text header, optional photo, the reading column.
+    English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch."""
     url = f"{SITE}/{p['path'].strip('/')}/"
     og = SITE + (p.get("og_image") or (p.get("hero_image") or {}).get("src") or "/og-image.jpg")
     kicker, kicker_he = kickers(p)
@@ -174,7 +175,7 @@ def render_article_page(p, all_pages):
 </section>
 '''
     return (sc.head(f"{p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
-                    lang="he", ld=ld_blocks(p, url, og))
+                    lang="en", ld=ld_blocks(p, url, og))
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
@@ -221,7 +222,7 @@ def render_project_page(p, all_pages, projects):
 </section>
 '''
     return (sc.head(f"{p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
-                    lang="he", ld=ld_blocks(p, url, og))
+                    lang="en", ld=ld_blocks(p, url, og))
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
@@ -262,7 +263,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 </section>
 '''
     desc = strip_tags(lead_en)[:158]
-    return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="he", ld=ld)
+    return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 

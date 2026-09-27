@@ -1,6 +1,6 @@
 # Page JSON spec (content/pages/<slug>.json)
 
-One JSON file per page. build-site-pages.py renders it into /<path>/index.html with the site's nav, style, language toggle (Hebrew default, English on toggle), FAQ schema, breadcrumb schema and footer. Do not write HTML pages by hand.
+One JSON file per page. build-site-pages.py renders it into /<path>/index.html with the site's nav, style, language switch (English by default on every page since 2026-09-26, Hebrew when the visitor picks it, remembered site-wide), FAQ schema, breadcrumb schema and footer. Do not write HTML pages by hand.
 
 ```json
 {

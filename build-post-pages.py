@@ -83,7 +83,7 @@ def render_post_page(p, all_posts):
 </section>
 '''
     return (sc.head(f"{p['headline']} · Art Radar · THEODORA", p['description'], permalink,
-                    og_image=p['og_image'], og_type='article', lang='he',
+                    og_image=p['og_image'], og_type='article', lang='en',
                     ld=[p['json_text'], breadcrumb])
             + sc.body_open() + sc.nav() + body + sc.tail())
 

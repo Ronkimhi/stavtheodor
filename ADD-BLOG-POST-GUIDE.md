@@ -50,7 +50,7 @@ There is also a deprecated backup remote called `old-backup` (points at an old, 
 
 Posts are written primarily in **Hebrew** (the site's main audience), with **English** metadata (title, JSON-LD description, keywords) for SEO/LLM discoverability.
 
-**MANDATORY (standing rule from the site owner, 2026-07-01): every post is bilingual.** Each post carries TWO body blocks inside the same `<article>`: the Hebrew original, then a **full English translation** in a `<div class="post-body post-body-en" lang="en" dir="ltr">` block. The English version must be a complete, faithful translation of the Hebrew source: not a summary, not a paraphrase. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide toggle (Hebrew default) shows one language at a time; both live in the HTML so search engines and LLMs index both. Do not use em dashes or en dashes anywhere in the English text.
+**MANDATORY (standing rule from the site owner, 2026-07-01): every post is bilingual.** Each post carries TWO body blocks inside the same `<article>`: the Hebrew original, then a **full English translation** in a `<div class="post-body post-body-en" lang="en" dir="ltr">` block. The English version must be a complete, faithful translation of the Hebrew source: not a summary, not a paraphrase. Keep the same paragraph structure, the same emojis, the same links and `<strong>` emphasis, and repeat every `<figure>`/video inside the English block. A site-wide switch shows one language at a time: **every page opens in English** (site owner's decision, 2026-09-26; before that, post pages opened in Hebrew), and a reader who picks עברית once gets Hebrew everywhere after that. Both blocks live in the HTML so search engines and LLMs index both. Do not use em dashes or en dashes anywhere in the English text.
 
 ### Step 2.2: Add the post block to `content/posts.html`
 
@@ -180,7 +180,7 @@ This regenerates, **for every post including the new one**:
 It also rewrites, in `content/posts.html` itself:
 - Each post's JSON-LD `url` / `mainEntityOfPage` from a same-page anchor (`#slug`) to the real permalink (`/radar/slug/`), if not already set
 
-Then it runs the gates in `tools/check_site.py`: no em or en dashes in the chrome, no phone numbers anywhere, every page has matching English and Hebrew twins, every internal link resolves, every JSON-LD block parses. A failed gate prints what and where; fix it and run again.
+Then it runs the gates in `tools/check_site.py`: no em or en dashes in the chrome, no phone numbers anywhere, every page has matching English and Hebrew twins, every internal link resolves, every JSON-LD block parses, and every page opens in English (`<html lang="en">`, `<body class="lang-en">`, at least 90% of the visible words Latin). A failed gate prints what and where; fix it and run again. Before pushing, `node tools/check_render.js` repeats the language check in a real browser (headless Chromium through the global Playwright install) and proves the switch shows Hebrew and remembers it.
 
 It does NOT add any visible "Permalink" link to the post cards. Those were removed by the site owner on 2026-07-02; never add one to a post.
 

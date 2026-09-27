@@ -13,7 +13,9 @@ build-post-pages.py (radar/<slug>/, radar/, sitemap.xml) and build-site-pages.py
 (advisory, projects, partners, guide). The theme itself is css/theme.css.
 
 Rules honored everywhere: every visible string has an English and a Hebrew twin behind
-the global switch (localStorage radarLang); the mailto fallback ships on every page; no
+the global switch (localStorage radarLang); every page opens in English unless the
+visitor chose Hebrew (site owner's decision, 2026-09-26), so <body class="lang-en"> is in
+the markup and no hreflang tags are emitted; the mailto fallback ships on every page; no
 phone numbers; no em or en dashes in English.
 """
 import html as H
@@ -134,8 +136,10 @@ def ld_script(block):
 
 def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), noindex=False,
          og_title=None, og_desc=None, og_card_dims=False, og_image_alt=None, extra=''):
-    """Everything from <!DOCTYPE> to </head>. Canonical, Open Graph, Twitter, hreflang,
-    favicons, fonts, the theme, the page's JSON-LD blocks, the entity graph and GA."""
+    """Everything from <!DOCTYPE> to </head>. Canonical, Open Graph, Twitter, favicons,
+    fonts, the theme, the page's JSON-LD blocks, the entity graph and GA. No hreflang:
+    both languages live at the same URL and English is the default, so the tags would
+    only point every language at itself (dropped 2026-09-26)."""
     og_image = og_image or SITE + '/og-image.jpg'
     og_title = og_title or title
     og_desc = og_desc or desc
@@ -166,9 +170,6 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 <meta name="twitter:description" content="{H.escape(og_desc, quote=True)}">
 <meta name="twitter:image" content="{og_image}">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="en" href="{url}">
-<link rel="alternate" hreflang="he" href="{url}">
-<link rel="alternate" hreflang="x-default" href="{url}">
 {FAVICONS}
 {FONTS}
 <link rel="stylesheet" href="{THEME_CSS}">
@@ -181,15 +182,14 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 
 # ---------------------------------------------------------------- body pieces
 LANG_BOOT = '''<script>
-/* Resolve the language before anything paints. A stored choice is global and wins
-   everywhere; with no stored choice each page falls back to its own data-default-lang,
-   so first-time visitors see exactly what they saw before the switcher existed. */
+/* Resolve the language before anything paints. English is the default on every page
+   (it is already on <body> and <html> in the markup, so crawlers and no-JS readers get
+   English without this script). A choice the visitor made on any page, stored as
+   radarLang, wins everywhere. No browser-language guessing. */
 (function () {
   document.documentElement.classList.add('js');
-  var def = document.documentElement.getAttribute('data-default-lang') || 'en';
-  var lang = def;
-  try { lang = localStorage.getItem('radarLang') || def; } catch (e) {}
-  if (lang !== 'he' && lang !== 'en') { lang = def; }
+  var lang = 'en';
+  try { var s = localStorage.getItem('radarLang'); if (s === 'he' || s === 'en') { lang = s; } } catch (e) {}
   document.body.classList.toggle('lang-en', lang === 'en');
   document.body.classList.toggle('lang-he', lang === 'he');
   document.documentElement.lang = lang;
@@ -418,7 +418,8 @@ PAGE_JS = '''<script>
 
 
 def body_open():
-    return '<body>\n\n' + LANG_BOOT + '\n\n'
+    """English is set in the markup itself; LANG_BOOT only switches to a stored choice."""
+    return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
 
 
 def tail(home=False):
