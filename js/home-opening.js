@@ -389,8 +389,11 @@
     finishDom(0.3);
     capSet(PAIRS[0].cap);
   }
-  ['wheel', 'touchstart', 'keydown', 'pointerdown', 'scroll'].forEach(function (ev) {
-    window.addEventListener(ev, function onFirst() { window.removeEventListener(ev, onFirst); skipEntrance(); }, { passive: true });
+  /* touch, wheel, pointer and scroll no longer skip the entrance (2026-09-27): it runs to its end and the boot script in
+     templates/home.html holds the page still meanwhile. Escape is the one deliberate skip. */
+  window.addEventListener('keydown', function onEsc(e) {
+    if (e.key !== 'Escape') { return; }
+    window.removeEventListener('keydown', onEsc); skipEntrance();
   });
 
   function startEntrance() {
@@ -398,7 +401,8 @@
     computeFit(); buildPasses();
     U.spread = spreadMin;
     U.pair = PAIRS[0]; U.next = PAIRS[1];
-    if (wantSkip) { skipEntrance(); return; }
+    /* a page that opens already scrolled (restored position, a #hash link) skips straight to the end */
+    if (wantSkip || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
     var lang = body.classList.contains('lang-he') ? 'he' : 'en';
     var e1 = line1.querySelector('[data-l="' + lang + '"]') || line1, e2 = line2.querySelector('[data-l="' + lang + '"]') || line2;
     var n = passes.length, durA = (2.0 + (n - 1) * 0.08) / n;

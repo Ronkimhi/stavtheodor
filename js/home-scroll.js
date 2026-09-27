@@ -16,6 +16,7 @@
     smoothWheel: true, syncTouch: false, lerp: PAD.lerp, wheelMultiplier: 1, touchMultiplier: 1,
     virtualScroll: function (d) {
       var e = d.event;
+      if (document.body.classList.contains('entering')) { return false; } /* the entrance holds the page still */
       if (!e || e.type !== 'wheel') { return true; }
       var now = performance.now(), gap = now - lastWheel; lastWheel = now;
       var notch = e.deltaMode !== 0 || (Math.abs(e.deltaY) >= 40 && gap > 50);

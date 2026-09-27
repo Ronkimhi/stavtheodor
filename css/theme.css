@@ -91,7 +91,7 @@
      Three states, set on body by the scripts:
        (none)          static: the after photos as plain figures, the nav and hero line visible. This is the no-JS state.
        body.gl         WebGL is live: the fixed canvas draws, the chain is a 230vh scroll spacer, figures hidden.
-       body.entering   the entrance is playing: nav, hero line and cue hidden until it finishes or the visitor skips it. */
+       body.entering   the entrance is playing: nav, hero line and cue hidden until it finishes (only Escape skips it), and the page holds still. */
   .nav { transition: opacity .5s ease; }
   body.entering .nav { opacity: 0; }
   body.entering .nav * { pointer-events: none !important; }
@@ -116,9 +116,10 @@
      while the canvas fades to the same ground, and the h1 settles in from near-visible, never from 0. */
   .intro { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(40px, 7vh, 72px); padding: clamp(112px, 14vh, 176px) clamp(20px, 8vw, 120px) clamp(96px, 12vh, 150px); text-align: center; background: var(--bg); }
   .intro .intro-head { display: flex; flex-direction: column; align-items: center; gap: clamp(22px, 3vh, 32px); }
-  /* the page's h1: one small keyword line above the big serif line, which keeps its look as a p (2026-09-26) */
-  .intro .intro-kicker { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--taupe); line-height: 1.8; max-width: 760px; text-wrap: balance; }
-  .intro .intro-kicker [data-l="he"] { font-family: var(--he); font-size: 16px; letter-spacing: 0.04em; text-transform: none; }
+  /* the page's h1: one quiet keyword line in the caption register, directly under the big serif line, which keeps
+     its look as a p (2026-09-26). It sat above that line until 2026-09-27 and rose in first after the last room. */
+  .intro .intro-kicker { font-family: var(--sans); font-size: 13px; font-weight: 400; letter-spacing: 0.04em; color: var(--muted); line-height: 1.7; max-width: 34em; text-wrap: balance; }
+  .intro .intro-kicker [data-l="he"] { font-family: var(--he); font-size: 15px; letter-spacing: 0; }
   .intro .intro-line { font-size: clamp(44px, 6vw, 92px); line-height: 1.02; text-wrap: balance; max-width: 12ch; }
   body.gl .intro .intro-line { opacity: 0.5; transform: translateY(22px); }
   .intro .statement { display: flex; flex-direction: column; align-items: center; gap: 32px; }

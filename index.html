@@ -308,6 +308,16 @@
     var noGl = location.hash === '#nogl' || /[?&]nogl=1/.test(location.search);
     if (document.body && !reduceMotion && !noGl && window.WebGLRenderingContext) { document.body.classList.add('gl', 'entering'); }
   } catch (e) {}
+  /* The entrance always runs to its end (2026-09-27): while body.entering is on, wheel, touch drags and the
+     scroll keys do not move the page, so a touch never cuts it short. Escape still skips it (js/home-opening.js).
+     Each listener removes itself on its first event after the entrance, so later scrolling stays passive. */
+  var SCROLL_KEYS = { ' ': 1, PageUp: 1, PageDown: 1, Home: 1, End: 1, ArrowUp: 1, ArrowDown: 1 };
+  [['wheel', null], ['touchmove', null], ['keydown', SCROLL_KEYS]].forEach(function (d) {
+    window.addEventListener(d[0], function hold(e) {
+      if (!document.body || !document.body.classList.contains('entering')) { window.removeEventListener(d[0], hold, { passive: false }); return; }
+      if (!d[1] || d[1][e.key]) { e.preventDefault(); }
+    }, { passive: false });
+  });
 })();
 </script>
 
@@ -359,8 +369,8 @@
 <div class="page" id="page">
 <section class="intro" id="intro">
   <div class="intro-head">
-    <h1 class="intro-kicker"><span data-l="en">Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv</span><span data-l="he" dir="rtl">אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב</span></h1>
     <p class="serif intro-line" id="intro-h1"><span data-l="en">Art is not an accessory.</span><span data-l="he" dir="rtl">אמנות היא לא אקססורי.</span></p>
+    <h1 class="intro-kicker"><span data-l="en">Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv</span><span data-l="he" dir="rtl">אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב</span></h1>
   </div>
   <div class="statement">
     <p class="eyebrow reveal"><span data-l="en">What I do</span><span data-l="he" dir="rtl">מה אני עושה</span></p>
@@ -767,9 +777,9 @@
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20260927" defer></script>
+<script src="/js/home-opening.js?v=20260927b" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
-<script src="/js/home-scroll.js" defer></script>
+<script src="/js/home-scroll.js?v=20260927b" defer></script>
 
 </body>
 </html>
