@@ -149,6 +149,12 @@
     .cue { left: auto; right: clamp(20px, 3.4vw, 48px); margin-left: 0; }
     #cap, .sfig figcaption { right: auto; left: clamp(20px, 3.4vw, 48px); text-align: left; bottom: calc(124px + env(safe-area-inset-bottom, 0px)); }
   }
+  /* portrait phones: the opening draws each room whole across the width, centred on the ground (FIT_BELOW in
+     js/home-opening.js), so the entrance line sits just under the room and the caption at the foot of the screen */
+  @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
+    body.gl .line { top: calc(50% + 33.34vw + 22px); bottom: auto; }
+    body.gl #cap { bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
+  }
 
 
   .cols { display: flex; height: 720px; }

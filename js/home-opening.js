@@ -52,6 +52,7 @@
   'uniform vec2 uB0; uniform vec2 uBD; uniform float uBL; uniform float uBH; uniform float uBW; uniform float uBRad; uniform float uBSeed;',
   'uniform vec2 uBloomO; uniform float uBloomR; uniform vec2 uBloomBias; uniform float uBloomSeed;',
   'uniform float uScrim; uniform float uXfade;',
+  'uniform float uFit; uniform vec4 uRect; uniform float uRectAspect;',
   'float hash(vec2 p){ vec3 p3 = fract(vec3(p.xyx) * 0.1031); p3 += dot(p3, p3.yzx + 33.33); return fract((p3.x + p3.y) * p3.z); }',
   'float noise(vec2 p){ vec2 i = floor(p); vec2 f = fract(p); f = f*f*(3.0-2.0*f);',
   '  return mix(mix(hash(i), hash(i+vec2(1.0,0.0)), f.x), mix(hash(i+vec2(0.0,1.0)), hash(i+vec2(1.0,1.0)), f.x), f.y); }',
@@ -94,6 +95,9 @@
   'void main(){',
   '  vec2 fragN = gl_FragCoord.xy / uRes; vec2 td = vec2(fragN.x, 1.0 - fragN.y);',
   '  float aspect = uRes.x / uRes.y;',
+  /* portrait fit: the room is drawn whole inside uRect (x, y, w, h in viewport fractions, top down), the rest is ground */
+  '  if (uFit > 0.5){ td = (td - uRect.xy) / uRect.zw; aspect = uRectAspect;',
+  '    if (td.x < 0.0 || td.x > 1.0 || td.y < 0.0 || td.y > 1.0){ gl_FragColor = vec4(uBg, 1.0); return; } }',
   '  vec2 uv = coverUV(td, aspect, uImgAspect, uFocal);',
   '  vec3 before = texture2D(tBefore, uv).rgb; vec3 after = texture2D(tAfter, uv).rgb;',
   '  float wet = 0.0; float wetU = 0.0; float wetB = 0.17; float maskA = 1.0;',
@@ -133,7 +137,7 @@
   var pLoc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(pLoc); gl.vertexAttribPointer(pLoc, 2, gl.FLOAT, false, 0, 0);
   var L = {};
   ['uRes', 'uTime', 'tBefore', 'tAfter', 'tNext', 'uFocal', 'uImgAspect', 'uNextFocal', 'uNextAspect', 'uBg', 'uFade', 'uLayerA', 'uA0', 'uAD', 'uAL', 'uAH', 'uAW', 'uARad', 'uASeed', 'uASpread',
-   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
+   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade', 'uFit', 'uRect', 'uRectAspect'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
   gl.uniform1i(L.tBefore, 0); gl.uniform1i(L.tAfter, 1); gl.uniform1i(L.tNext, 2);
   gl.uniform3f(L.uBg, 15 / 255, 15 / 255, 20 / 255);
 
@@ -212,12 +216,28 @@
   function portrait() { return canvas.clientHeight > canvas.clientWidth; }
   function vr(p) { return (p.port && portrait()) ? p.port : p.land; }
 
-  /* the house painter's zigzag, viewport fractions, top down */
+  /* portrait fit (2026-09-27): below FIT_BELOW (width / height) a cover fit showed about a third of each
+     room and the wall stroke started and ended off screen, so the room is drawn whole instead: FIT_W of the
+     screen width, FIT_ASPECT (the rooms are 3:2), centred, on the ground colour. Every brush then works inside
+     that rectangle exactly as it does on a desktop screen of the same shape. Landscape keeps the cover fit. */
+  var FIT_BELOW = 0.9, FIT_ASPECT = 1.5, FIT_W = 1.0;
+  var fit = dbg.fit = { on: false, x: 0, y: 0, w: 1, h: 1, aspect: 1 };
+  function computeFit() {
+    var W = Math.max(1, canvas.width), H = Math.max(1, canvas.height);
+    fit.on = canvas.clientWidth / Math.max(1, canvas.clientHeight) <= FIT_BELOW; /* matches max-aspect-ratio: 9/10 in theme.css */
+    if (!fit.on) { fit.x = 0; fit.y = 0; fit.w = 1; fit.h = 1; fit.aspect = W / H; return; }
+    var rw = Math.round(W * FIT_W), rh = Math.round(rw / FIT_ASPECT);
+    if (rh > H) { rh = H; rw = Math.round(rh * FIT_ASPECT); }
+    fit.x = Math.round((W - rw) / 2) / W; fit.y = Math.round((H - rh) / 2) / H;
+    fit.w = rw / W; fit.h = rh / H; fit.aspect = rw / rh;
+  }
+
+  /* the house painter's zigzag, viewport fractions (or fit-rectangle fractions), top down */
   var DT = [[-0.05, 0.12, 1.05, 0.19], [1.05, 0.54, -0.05, 0.46], [-0.05, 0.81, 1.05, 0.87]];
   var PH = [[-0.05, 0.07, 1.05, 0.09], [1.05, 0.30, -0.05, 0.28], [-0.05, 0.49, 1.05, 0.51], [1.05, 0.72, -0.05, 0.70], [-0.05, 0.91, 1.05, 0.93]];
   var passes = [], spreadMin = 1.25, spreadMax = 1.45;
   function buildPasses() {
-    var aspect = canvas.clientWidth / Math.max(1, canvas.clientHeight);
+    var aspect = fit.on ? fit.aspect : canvas.clientWidth / Math.max(1, canvas.clientHeight);
     var fr = aspect < 1 ? PH : DT;
     spreadMin = aspect < 1 ? 1.5 : 1.25; spreadMax = aspect < 1 ? 1.9 : 1.45;
     var toU = function (x, y) { return aspect >= 1 ? [x * aspect, y] : [x, y / aspect]; };
@@ -260,6 +280,7 @@
     gl.uniform1f(L.uBH, U.bh * v.len); gl.uniform1f(L.uBW, U.bw); gl.uniform1f(L.uBRad, v.rad); gl.uniform1f(L.uBSeed, p.seed);
     gl.uniform2f(L.uBloomO, v.bo[0], v.bo[1]); gl.uniform1f(L.uBloomR, U.bloom); gl.uniform2f(L.uBloomBias, 0, 0); gl.uniform1f(L.uBloomSeed, p.seed * 1.7);
     gl.uniform1f(L.uScrim, U.scrim); gl.uniform1f(L.uXfade, U.xfade);
+    gl.uniform1f(L.uFit, fit.on ? 1 : 0); gl.uniform4f(L.uRect, fit.x, fit.y, fit.w, fit.h); gl.uniform1f(L.uRectAspect, fit.aspect);
     var n = texNames();
     gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, getTex(n.b));
     gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, getTex(n.a));
@@ -272,8 +293,8 @@
     if (canvas.width === w && canvas.height === h) { return; }
     canvas.width = w; canvas.height = h; dirty();
   }
-  sizeCanvas(); buildPasses();
-  window.addEventListener('resize', function () { sizeCanvas(); buildPasses(); dirty(); });
+  sizeCanvas(); computeFit(); buildPasses();
+  window.addEventListener('resize', function () { sizeCanvas(); computeFit(); buildPasses(); dirty(); });
   gsap.ticker.add(function () { if (glDead || covered) { return; } if (dirtyFlag || wetAlive()) { draw(); } });
   canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic(); });
 
@@ -374,7 +395,7 @@
 
   function startEntrance() {
     started = true; dbg.mode = 'gl';
-    buildPasses();
+    computeFit(); buildPasses();
     U.spread = spreadMin;
     U.pair = PAIRS[0]; U.next = PAIRS[1];
     if (wantSkip) { skipEntrance(); return; }
