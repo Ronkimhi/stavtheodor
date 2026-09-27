@@ -91,11 +91,21 @@ GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
 _entity_cache = None
 
 
+def strip_private(node):
+    """Keys that start with an underscore are editor notes (for example the Google Business
+    Profile placeholder in content/entity.json) and never reach a page."""
+    if isinstance(node, dict):
+        return {k: strip_private(v) for k, v in node.items() if not k.startswith('_')}
+    if isinstance(node, list):
+        return [strip_private(v) for v in node]
+    return node
+
+
 def entity_graph():
     """The Person + ProfessionalService + WebSite graph, from content/entity.json."""
     global _entity_cache
     if _entity_cache is None:
-        data = json.load(open(ENTITY_FILE, encoding='utf-8'))
+        data = strip_private(json.load(open(ENTITY_FILE, encoding='utf-8')))
         _entity_cache = ('<!-- Structured data: Person + Organization + WebSite (JSON-LD) -->\n'
                          '<script type="application/ld+json">\n'
                          + json.dumps(data, ensure_ascii=False, indent=2)

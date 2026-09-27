@@ -3,7 +3,8 @@
 Renders content/pages/*.json into standalone bilingual pages at /<path>/index.html
 (advisory, projects, partners, guide, and the two local landing pages), plus the hub pages /advisory/ and /projects/,
 in the site's one theme (css/theme.css) with the shared chrome (site_chrome.py).
-Then runs build-post-pages.py, which owns sitemap.xml and includes these pages.
+Then runs build-post-pages.py (radar/<slug>/ and the archive). The sitemaps are
+written afterwards by tools/build_sitemap.py.
 Idempotent. Run from the repo root, or just run python3 build.py.
 """
 import glob, json, os, re, sys, html as H, subprocess
@@ -92,13 +93,11 @@ def ld_blocks(p, url, og):
         main.update({"provider": {"@type": "ProfessionalService", "@id": SITE + "/#org", "name": "THEODORA", "url": SITE + "/"},
                      "areaServed": p.get("area_served") or DEFAULT_AREA, "serviceType": p.get("service_type", "Art advisory")})
     main.update(p.get("schema_extra", {}))
-    ld = [main, {
-        "@context": "https://schema.org", "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": CRUMB_NAME.get(p["section"], "Pages"), "item": SITE + "/" + CRUMB_DIR.get(p["section"], p["path"].split("/")[0]) + "/"},
-            {"@type": "ListItem", "position": 3, "name": p["title_en"], "item": url},
-        ]}]
+    crumbs = [{"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"}]
+    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb; partners and the guide go straight to the page
+        crumbs.append({"@type": "ListItem", "position": 2, "name": CRUMB_NAME[p["section"]], "item": SITE + "/" + CRUMB_DIR[p["section"]] + "/"})
+    crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": p["title_en"], "item": url})
+    ld = [main, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}]
     if p.get("faq"):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en",
                    "mainEntity": [{"@type": "Question", "name": q["q_en"], "acceptedAnswer": {"@type": "Answer", "text": strip_tags(q["a_en"])}} for q in p["faq"]]})

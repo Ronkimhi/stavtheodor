@@ -25,7 +25,7 @@ One command, from the repo root:
 python3 build.py
 ```
 
-It runs `build-site-pages.py` (which runs `build-post-pages.py`), then `build-home.py`, then the gates in `tools/check_site.py` (dashes, phone numbers, language twins, anchors, internal links, JSON-LD, FAQ mirror, noindex, removed assets). Never hand-edit a generated file: `index.html`, `radar/`, `advisory/`, `projects/`, `for-*/`, `guide/`, `2/` (redirect stubs) and `sitemap.xml` are all rewritten by the build.
+It runs `build-site-pages.py` (which runs `build-post-pages.py`), then `build-home.py`, then `tools/build_sitemap.py` (the sitemap index and its three children), then the gates in `tools/check_site.py` (dashes, phone numbers, language twins, anchors, internal links, JSON-LD, FAQ mirror, noindex, removed assets). Never hand-edit a generated file: `index.html`, `radar/`, `advisory/`, `projects/`, `for-*/`, `guide/`, `2/` (redirect stubs) and `sitemap.xml` are all rewritten by the build.
 
 ---
 

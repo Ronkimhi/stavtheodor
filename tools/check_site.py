@@ -17,6 +17,12 @@
               and at least 90% of the words a reader sees with the switch on English are Latin
               (the Hebrew twins, data-l="he" / lang="he" / .post-title-he, are dropped the way
               the stylesheet hides them; tools/check_render.js is the same test in a real browser)
+  schema      what Google's Rich Results Test checks, reproduced locally: FAQPage questions with
+              answers, BreadcrumbList positions and absolute items, BlogPosting headline/date/author,
+              Service name/provider/areaServed, the entity graph (Person and ProfessionalService with
+              geo, address, https sameAs), no underscore keys leaking, every on-site URL resolving
+  sitemap     sitemap.xml is an index over child sitemaps; every indexable page is listed in exactly
+              one child, every loc resolves to a file, and no noindex page is listed
 
 Exit 1 on any failure.
 """
@@ -33,6 +39,7 @@ SKIP_DIRS = {'.git', 'museum', '__pycache__', 'node_modules'}
 GATE_FILES = ('tools/check_site.py', 'tools/check_pages.py')  # they carry the patterns they hunt
 DASH = re.compile('[\\u2013\\u2014]')
 PHONE = re.compile(r'\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]?\d{3}|\(\d{3}\) ?\d{3}[ .-]\d{4}|\b0\d{2}[ -]?\d{7}\b|\+972')
+SITE = 'https://stavtheodor.com'
 GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york')
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
 HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
@@ -106,6 +113,83 @@ def visible_language(text):
     return len(LATIN_WORD.findall(seen)), len(HEBREW_WORD.findall(seen))
 
 
+def on_site_file(url):
+    """The file a stavtheodor.com URL serves, or None for an off-site URL."""
+    if not url.startswith(SITE + '/'):
+        return None
+    rel = url[len(SITE) + 1:].split('#')[0].split('?')[0]
+    if rel == '' or rel.endswith('/'):
+        rel += 'index.html'
+    return rel
+
+
+def check_schema(path, block, n):
+    """The Rich Results Test, the part of it that runs without Google: required fields per type,
+    sequential breadcrumbs, absolute URLs that resolve, no editor keys on the page."""
+    def bad(msg):
+        fail('schema', f'{path} block {n}: {msg}')
+
+    def types(d):
+        t = d.get('@type') if isinstance(d, dict) else None
+        return t if isinstance(t, list) else [t] if t else []
+
+    def walk(node, trail=''):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k.startswith('_'):
+                    bad(f'editor key {trail}{k} leaked onto the page')
+                if k in ('url', 'item', 'image', 'logo', 'mainEntityOfPage', 'sameAs') and isinstance(v, str) and v.startswith('http'):
+                    rel = on_site_file(v)
+                    if rel and not os.path.exists(rel):
+                        bad(f'{trail}{k} {v} does not resolve')
+                    if not v.startswith('https://'):
+                        bad(f'{trail}{k} {v} is not https')
+                walk(v, f'{trail}{k}.')
+        elif isinstance(node, list):
+            for v in node:
+                walk(v, trail)
+
+    walk(block)
+    nodes = block.get('@graph', [block]) if isinstance(block, dict) else []
+    for d in nodes:
+        t = types(d)
+        if 'FAQPage' in t:
+            qs = d.get('mainEntity') or []
+            if not qs:
+                bad('FAQPage without questions')
+            for q in qs:
+                if 'Question' not in types(q) or not q.get('name') or not (q.get('acceptedAnswer') or {}).get('text'):
+                    bad('FAQPage question without a name or an answer text')
+        if 'BreadcrumbList' in t:
+            items = d.get('itemListElement') or []
+            if not items:
+                bad('BreadcrumbList without items')
+            for i, it in enumerate(items, 1):
+                if it.get('position') != i or not it.get('name') or not str(it.get('item', '')).startswith('https://'):
+                    bad(f'BreadcrumbList item {i} needs position {i}, a name and an absolute item URL')
+        if 'BlogPosting' in t:
+            for k in ('headline', 'datePublished', 'author', 'url', 'mainEntityOfPage'):
+                if not d.get(k):
+                    bad(f'BlogPosting without {k}')
+        if 'Service' in t:
+            for k in ('name', 'provider', 'areaServed', 'serviceType'):
+                if not d.get(k):
+                    bad(f'Service without {k}')
+        if 'Person' in t and d.get('@id'):
+            for k in ('name', 'url', 'jobTitle', 'sameAs'):
+                if not d.get(k):
+                    bad(f'Person without {k}')
+        if 'ProfessionalService' in t and d.get('@id'):
+            for k in ('name', 'url', 'address', 'sameAs', 'areaServed', 'email'):
+                if not d.get(k):
+                    bad(f'ProfessionalService without {k}')
+            geo = d.get('geo') or {}
+            if not (isinstance(geo.get('latitude'), (int, float)) and isinstance(geo.get('longitude'), (int, float))):
+                bad('ProfessionalService without numeric geo coordinates')
+            if 'telephone' in d:
+                bad('ProfessionalService carries a telephone (content rule 6)')
+
+
 def chrome_only(text, path):
     """What the build wrote itself: scripts, post articles and timeline entries stripped."""
     text = re.sub(r'<script.*?</script>', '', text, flags=re.S)
@@ -147,9 +231,12 @@ for path in pages:
             fail('twins', f'{path}: {en} en, {he} he')
     for i, block in enumerate(re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)):
         try:
-            json.loads(block)
+            parsed = json.loads(block)
         except Exception as e:
             fail('jsonld', f'{path} block {i + 1}: {e}')
+            continue
+        if not is_stub:
+            check_schema(path, parsed, i + 1)
     has_noindex = 'name="robots" content="noindex"' in s
     if is_stub and not has_noindex:
         fail('noindex', f'{path} should be noindex')
@@ -207,6 +294,38 @@ else:
     if schema != visible:
         fail('faq', f'visible FAQ differs from the FAQPage schema ({len(schema)} schema, {len(visible)} visible)')
 
+# ---- the sitemaps: an index, every indexable page once, every loc a file, nothing noindex
+sitemap_index = read('sitemap.xml') if os.path.exists('sitemap.xml') else ''
+if '<sitemapindex' not in sitemap_index:
+    fail('sitemap', 'sitemap.xml is not a sitemap index (tools/build_sitemap.py writes it)')
+listed = {}
+for child_url in re.findall(r'<loc>([^<]+)</loc>', sitemap_index):
+    child = on_site_file(child_url)
+    if not child or not os.path.exists(child):
+        fail('sitemap', f'child sitemap {child_url} is missing')
+        continue
+    for loc in re.findall(r'<loc>([^<]+)</loc>', read(child)):
+        listed.setdefault(loc, []).append(child)
+for loc, where in listed.items():
+    if len(where) > 1:
+        fail('sitemap', f'{loc} is listed in {len(where)} sitemaps')
+    rel = on_site_file(loc)
+    if not rel or not os.path.exists(rel):
+        fail('sitemap', f'{loc} does not resolve to a file')
+    elif 'name="robots" content="noindex"' in read(rel):
+        fail('sitemap', f'{loc} is noindex and must not be listed')
+for path in walk(('.html',)):
+    if path == '404.html' or path.split(os.sep)[0] in STUB_DIRS:
+        continue
+    s = read(path)
+    if 'name="robots" content="noindex"' in s:
+        continue
+    if not path.endswith('index.html'):
+        continue  # only directory index pages are site URLs
+    url = SITE + '/' + path[:-len('index.html')].replace(os.sep, '/')
+    if url not in listed:
+        fail('sitemap', f'{path} is indexable but in no sitemap')
+
 # ---- removed assets: no reference anywhere, no file left
 for path in walk(('.html', '.txt', '.md', '.py', '.json', '.css', '.js', '.xml')):
     if path in GATE_FILES or path == 'AGENTS.md':
@@ -219,7 +338,7 @@ for r in REMOVED:
     if os.path.exists(r.rstrip('/')) or os.path.exists(os.path.join('videos', r)):
         fail('removed', f'{r} still exists in the tree')
 
-gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'faq', 'noindex', 'posts', 'removed', 'lang']
+gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))

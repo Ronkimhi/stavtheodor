@@ -48,9 +48,17 @@ function args() {
 }
 
 function sitemapPaths() {
-  const xml = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].replace(SITE, ''));
-  return locs.filter(p => !p.startsWith('/museum'));
+  /* sitemap.xml is an index over child sitemaps (tools/build_sitemap.py); a flat urlset still works */
+  const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
+  const locs = xml => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+  const index = read('sitemap.xml');
+  let urls = [];
+  if (index.includes('<sitemapindex')) {
+    for (const child of locs(index)) { urls = urls.concat(locs(read(child.replace(SITE + '/', '')))); }
+  } else {
+    urls = locs(index);
+  }
+  return urls.map(u => u.replace(SITE, '')).filter(p => !p.startsWith('/museum'));
 }
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json',
