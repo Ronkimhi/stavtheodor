@@ -24,6 +24,10 @@ W, H, QUALITY = 600, 400, 72
 # A tile cut from another room than the variant's first (index into its rooms). hotels: the olive and burgundy
 # lounge (hotels_s1), Ron's pick for the Boutique hotels tile on 2026-09-29; /hotels/ still opens on its first room.
 TILE_ROOM = {'hotels': 1}
+# Tiles kept by hand, never written here: investment-firms.webp is Ron's pick of 2026-09-29 (a dining room with an olive
+# tree, a round walnut table and a framed cactus collage), resized whole from a 1536 by 1024 source at the same 600 by
+# 400, quality 78 (about 28 KB); /investment-firms/ still opens on its own first room.
+BY_HAND = {'investment-firms'}
 
 
 def home_first_room():
@@ -40,6 +44,8 @@ def main():
         if not f.endswith('.json'):
             continue
         v = json.load(open(os.path.join(ROOT, 'content', 'variants', f), encoding='utf-8'))
+        if v['id'] in BY_HAND:
+            continue
         rooms = v.get('rooms') or []
         r = rooms[TILE_ROOM.get(v['id'], 0)] if rooms else None
         a, fx, fy = (r['a'], r['fx'], r['fy']) if r else home
