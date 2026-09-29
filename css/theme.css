@@ -177,6 +177,17 @@
   .value-strip h3 { font-size: clamp(24px, 2.2vw, 30px); line-height: 1.15; text-wrap: balance; }
   .value-strip .body { font-size: 16px; max-width: 34em; }
 
+  /* Who I work with: the homepage's tiles to the seven buyer pages (2026-09-28; build-home.py INDUSTRIES) */
+  .ind-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px; }
+  .ind { display: flex; flex-direction: column; gap: 12px; outline: none; }
+  .ind .ph { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--surface); }
+  .ind .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+  .ind:hover .ph img, .ind:focus-visible .ph img { transform: scale(1.04); }
+  .ind:focus-visible { outline: 1px solid var(--taupe); outline-offset: 6px; }
+  .ind h3 { font-size: 24px; margin-top: 6px; }
+  .ind p { font-size: 15px; line-height: 1.6; color: var(--soft); }
+  .ind:hover p { color: var(--soft); }
+
   .about { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
   .about .portrait { overflow: hidden; background: var(--surface); }
   .about .portrait img { width: 100%; height: auto; filter: grayscale(100%); }
@@ -280,6 +291,7 @@
     .col h3, .col.open h3 { font-size: 24px; }
     .col .desc { opacity: 1; font-size: 14px; }
     .value-strip { grid-template-columns: 1fr; gap: 36px; }
+    .ind-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .about { grid-template-columns: 1fr; }
     .about .portrait { max-width: 260px; }
     .grid3 { grid-template-columns: 1fr; gap: 32px; }
@@ -391,3 +403,4 @@
     .pair-bottom, .pair-caps { flex-direction: column; align-items: center; }
     .pair-bottom img, .pair-caps figcaption { width: 100%; max-width: 100%; }
   }
+  @media (max-width: 600px) { .ind-grid { grid-template-columns: 1fr; gap: 32px; } }

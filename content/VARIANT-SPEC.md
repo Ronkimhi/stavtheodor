@@ -2,7 +2,7 @@
 
 One JSON file per buyer variant of the homepage. build-home.py renders it into /<path>/index.html: the homepage itself (same design, nav, projects, About, Museum, Art Radar, footer links, language switch, English by default) with this file's copy in the sixteen regions `templates/home.html` marks as `<!--variant:NAME-->...<!--/variant:NAME-->`, plus its own value strip (a section the homepage does not have, rendered where the template's empty `<!--variant:value_strip--><!--/variant:value_strip-->` marker sits, right after the black intro block and before the services), its own questions, Advisory rows, footer line and mail subject. Do not write the HTML by hand, and never edit the output folder.
 
-A variant is noindex and its own canonical. It is in no sitemap, in none of llms.txt, agent.txt, answers.md and robots.txt, linked from no other page and never sent to IndexNow. `tools/check_site.py` (the `variants` gate) and `tools/indexnow.py` enforce that.
+A variant is noindex and its own canonical. It is in no sitemap, in none of llms.txt, agent.txt, answers.md and robots.txt, linked from nowhere but the homepage's "Who I work with" section (`#industries`, 2026-09-28: one tile per variant, from `INDUSTRIES` in `build-home.py`, its line the first sentence of `intro.statement`, its image `images/home2/industries/<id>.webp` from `python3 tools/make_industry_thumbs.py`; a new variant needs an entry there and a thumbnail) and never sent to IndexNow. `tools/check_site.py` (the `variants` gate) and `tools/indexnow.py` enforce that.
 
 ```json
 {

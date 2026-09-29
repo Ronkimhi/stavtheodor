@@ -26,7 +26,8 @@
   sitemap     sitemap.xml is an index over child sitemaps; every indexable page is listed in exactly
               one child, every loc resolves to a file, and no noindex page is listed
   variants    the buyer variants of the homepage (content/variants/<id>.json, rendered by build-home.py
-              at /<path>/): every one is built, no other page links to one, llms.txt, agent.txt,
+              at /<path>/): every one is built, the homepage's #industries section links each exactly once
+              and no other page or section links to one (2026-09-28), llms.txt, agent.txt,
               answers.md and robots.txt never name one, and no noindex page is left over that is
               neither a stub nor a current variant (a stale variant folder after a path change);
               the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
@@ -279,7 +280,11 @@ for path in pages:
         share = latin / max(1, latin + hebrew)
         if share < 0.9:
             fail('lang', f'{path}: only {share:.0%} of visible words are Latin ({latin} Latin, {hebrew} Hebrew)')
-    for attr, target in re.findall(r'\b(href|src)="([^"]+)"', s):
+    # the homepage's industries section (#industries, 2026-09-28) is the one place that may link a buyer variant
+    ind = re.search(r'<section\b[^>]*\bid="industries"[^>]*>.*?</section>', s, re.S) if path == 'index.html' else None
+    for m_link in re.finditer(r'\b(href|src)="([^"]+)"', s):
+        attr, target = m_link.group(1), m_link.group(2)
+        in_industries = bool(ind) and ind.start() <= m_link.start() < ind.end()
         if target.startswith(('http://', 'https://', 'mailto:', 'data:', 'tel:', '//')):
             if target.startswith('https://stavtheodor.com/'):
                 target = target[len('https://stavtheodor.com'):]
@@ -296,8 +301,8 @@ for path in pages:
             fs = fs.split('?')[0]
             if fs == '' or os.path.isdir(fs):
                 fs = os.path.join(fs, 'index.html') if fs else 'index.html'
-            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path:
-                fail('variants', f'{path} links to the buyer variant {target} (variants are never linked)')
+            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path and not in_industries:
+                fail('variants', f'{path} links to the buyer variant {target} (variants are linked only from the homepage\'s #industries section)')
             if not os.path.exists(fs):
                 fail('links', f'{path} -> {target}')
                 continue
@@ -330,6 +335,21 @@ def faq_mirror(path):
 
 for path in ['index.html'] + sorted(p for p in VARIANTS if os.path.exists(p)):
     faq_mirror(path)
+
+# ---- the homepage's industries section links every buyer variant once, and nothing links them elsewhere (above)
+_home = read('index.html') if os.path.exists('index.html') else ''
+_ind = re.search(r'<section\b[^>]*\bid="industries"[^>]*>.*?</section>', _home, re.S)
+if VARIANTS and not _ind:
+    fail('variants', 'index.html has no #industries section linking the buyer variants')
+elif _ind:
+    _links = re.findall(r'<a\b[^>]*\bhref="/([^"#?]*)"', _ind.group(0))
+    for _p in VARIANTS:
+        _want = os.path.dirname(_p).replace(os.sep, '/') + '/'
+        if _links.count(_want) != 1:
+            fail('variants', f'index.html #industries links /{_want} {_links.count(_want)} times, expected once')
+    for _l in _links:
+        if os.path.normpath(os.path.join(_l, 'index.html')) not in VARIANTS:
+            fail('variants', f'index.html #industries links /{_l}, which is not a buyer variant')
 
 # ---- the buyer variants are named nowhere an agent or a crawler reads a map of the site
 for f in AGENT_FILES:

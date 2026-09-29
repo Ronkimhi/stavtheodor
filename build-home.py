@@ -52,6 +52,20 @@ def preload(before, after):
 
 PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 
+# "Who I work with" on the homepage (Ron, 2026-09-28): one tile per buyer page, in this order, each linking to it.
+# The tile's line is the page's main message, the first sentence of its intro statement (Ron's locked messaging),
+# and its image images/home2/industries/<id>.webp, made from the page's first room by tools/make_industry_thumbs.py.
+INDUSTRIES = [
+    ('designers', 'Interior designers', 'מעצבי פנים'),
+    ('law-firms', 'Law firms', 'משרדי עורכי דין'),
+    ('investment-firms', 'Investment firms', 'חברות השקעה'),
+    ('wealth-managers', 'Wealth managers', 'מנהלי הון'),
+    ('hotels', 'Boutique hotels', 'מלונות בוטיק'),
+    ('restaurants', 'Restaurants', 'מסעדות'),
+    ('medical-practices', 'Clinics', 'מרפאות'),
+]
+INDUSTRY_THUMB = (600, 400)
+
 PROJECT_ORDER = [
     'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'closter-new-jersey-new-construction',
     'herzliya-pituach-sea-view-apartment', 'hod-hasharon-private-villa', 'ramat-gan-private-home',
@@ -83,11 +97,12 @@ HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (too
 BLOCKS = {'value_strip'}
 # Homepage-only sections: the homepage keeps the bytes between the markers, every variant drops them.
 # film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
-DROPS = {'film'}
+DROPS = {'film', 'industries'}
+# industries: the homepage's links to the seven buyer pages (2026-09-28), never on a buyer page itself.
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
 SHARED_SECTIONS = ('about', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
-VARIANT_ABSENT = ('film',)  # on the homepage, never on a variant (DROPS)
+VARIANT_ABSENT = ('film', 'industries')  # on the homepage, never on a variant (DROPS)
 VARIANT_PATH = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$')
 
 # The opening's rooms (2026-09-27). PAIRS in js/home-opening.js lists them in slot order (p3, p4, p5, p1): slot 0 is
@@ -157,6 +172,33 @@ def advisory_rows(pages, paths):
         d = pages[path.strip('/')]
         rows += f'<a class="row" href="/{path.strip("/")}/"><h3 class="serif">{T(H.escape(d["title_en"]), H.escape(d["title_he"]))}</h3><span class="ln"></span></a>'
     return rows
+
+
+def first_sentence(s):
+    """The main message: the statement's first sentence."""
+    m = re.match(r'(.+?[.?!])(?:\s|$)', s)
+    return m.group(1) if m else s
+
+
+def industries(variants):
+    """The homepage's industries section: one keyboard-focusable tile per buyer page, linking to it."""
+    by_id = {v['id']: v for v in variants}
+    missing = [i for i, _, _ in INDUSTRIES if i not in by_id] + [i for i in by_id if i not in {x for x, _, _ in INDUSTRIES}]
+    if missing:
+        raise SystemExit(f'build-home.py INDUSTRIES and content/variants/ disagree: {missing}')
+    w, h = INDUSTRY_THUMB
+    tiles = ''
+    for vid, en, he in INDUSTRIES:
+        v, img = by_id[vid], f'images/home2/industries/{vid}.webp'
+        if not os.path.exists(sc.rel(img)):
+            raise SystemExit(f'{img} is missing: run python3 tools/make_industry_thumbs.py')
+        line = T(H.escape(first_sentence(v['intro']['statement_en'])), H.escape(first_sentence(v['intro']['statement_he'])))
+        tiles += (f'<a class="ind reveal" href="/{v["path"]}/"><span class="ph"><img src="/{img}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async"></span>'
+                  f'<h3 class="serif">{T(H.escape(en), H.escape(he))}</h3><p>{line}</p></a>')
+    return ('\n\n<section class="section wrap" id="industries">\n'
+            f'  <div class="head reveal"><div class="lead"><p class="eyebrow">{T("Who I work with", "עם מי אני עובדת")}</p>'
+            f'<h2 class="serif">{T("Art for every kind of space", "אמנות לכל סוג של חלל")}</h2></div></div>\n'
+            f'  <div class="ind-grid">{tiles}</div>\n</section>')
 
 
 def region_copy(v, name):
@@ -261,7 +303,7 @@ def fill_regions(body, v):
     return body
 
 
-def render_home(pages, posts, faq, v=None):
+def render_home(pages, posts, faq, v=None, variants=()):
     """The homepage, or with v (a loaded variant) the same page with the variant's copy at /<path>/."""
     tmpl = open(TEMPLATE, encoding='utf-8').read()
     projects = [pages['projects/' + s] for s in PROJECT_ORDER]
@@ -269,6 +311,7 @@ def render_home(pages, posts, faq, v=None):
     questions = v['faq'] if v else faq
     fills = {
         'NAV': sc.nav(home=True),
+        'INDUSTRIES': '' if v else industries(variants),
         'PROJECT_CARDS': ''.join(sc.project_card(p) for p in projects),
         'ADVISORY_ROWS': advisory_rows(pages, (v.get('advisory_rows') if v else None) or HOME_ROWS),
         'TIMELINE': sc.timeline(posts[:6], with_months=False),
@@ -374,7 +417,7 @@ def main():
     pages = load_pages()
     _, posts = sc.read_posts()
     faq = sc.load_faq()
-    out = render_home(pages, posts, faq)
+    out = render_home(pages, posts, faq, variants=load_variants(faq))
     problems = page_problems(out, 'index.html')
     if problems:
         raise SystemExit('index.html NOT written: ' + '; '.join(problems))
