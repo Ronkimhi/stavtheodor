@@ -295,6 +295,19 @@
   <div class="contact-page">
     <a class="big-tel" href="tel:+12013518367" data-loc="contact">(201) 351-8367</a>
     <a class="mail" href="mailto:stav@stavtheodor.com" data-loc="contact">stav@stavtheodor.com</a>
+    <form class="contact-form" action="https://formspree.io/f/xjyklwyb" method="POST" data-loc="form">
+      <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label><span data-l="en">Your name</span><span data-l="he" dir="rtl">השם שלכם</span> <input type="text" name="name" autocomplete="name" required></label>
+      <label><span data-l="en">Email</span><span data-l="he" dir="rtl">אימייל</span> <input type="email" name="email" autocomplete="email" required></label>
+      <label><span data-l="en">Phone (optional)</span><span data-l="he" dir="rtl">טלפון (לא חובה)</span> <input type="tel" name="phone" autocomplete="tel"></label>
+      <label><span data-l="en">I am a</span><span data-l="he" dir="rtl">מי אתם</span> <select name="client_type"><option value="Homeowner" data-en="Homeowner" data-he="בעלי בית">Homeowner</option><option value="Interior designer or architect" data-en="Interior designer or architect" data-he="מעצבי פנים או אדריכלים">Interior designer or architect</option><option value="Business or hospitality" data-en="Business or hospitality" data-he="עסק או אירוח">Business or hospitality</option><option value="Other" data-en="Other" data-he="אחר">Other</option></select></label>
+      <label><span data-l="en">Tell me about your space</span><span data-l="he" dir="rtl">ספרו לי על החלל שלכם</span> <textarea name="message" rows="5" required></textarea></label>
+      <input type="hidden" name="page" value="/contact/">
+      <button type="submit"><span data-l="en">Send</span><span data-l="he" dir="rtl">שליחה</span></button>
+      <p class="form-note"><span data-l="en">I reply by email. If you have a photo of the wall, reply to my email with it.</span><span data-l="he" dir="rtl">אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.</span></p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
     <p class="area"><span data-l="en">Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.</span><span data-l="he" dir="rtl">מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב.</span></p>
     <div class="more">
       <a class="plain" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span data-l="en">Art Radar on WhatsApp</span><span data-l="he" dir="rtl">ראדאר אמנות בוואטסאפ</span></a>
@@ -493,6 +506,33 @@ document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
   if (!a || typeof window.gtag !== 'function') { return; }
   window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+});
+</script>
+<script>
+document.querySelectorAll('form.contact-form').forEach(function (f) {
+  var he = function () { return document.body.classList.contains('lang-he'); };
+  var opts = function () {
+    var l = he() ? 'he' : 'en';
+    f.querySelectorAll('option[data-he]').forEach(function (o) { o.textContent = o.getAttribute('data-' + l); });
+  };
+  opts();
+  if (window.MutationObserver) { new MutationObserver(opts).observe(document.body, { attributes: true, attributeFilter: ['class'] }); }
+  f.querySelector('[name=page]').value = location.pathname;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var status = f.querySelector('.form-status');
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error(r.status); }
+        f.reset();
+        f.querySelector('[name=page]').value = location.pathname;
+        status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+      })
+      .catch(function () {
+        status.textContent = he() ? 'משהו השתבש. התקשרו ל-(201) 351-8367 או כתבו ל-stav@stavtheodor.com.' : 'Something went wrong. Please call (201) 351-8367 or email stav@stavtheodor.com.';
+      });
+  });
 });
 </script>
 

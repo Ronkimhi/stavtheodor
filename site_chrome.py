@@ -40,12 +40,11 @@ PHONE = '(201) 351-8367'
 PHONE_TEL = 'tel:+12013518367'
 PHONE_SCHEMA = '+1-201-351-8367'
 YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
-# The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. The backend is a Google
-# Apps Script web app that appends each inquiry to a Google Sheet (Ron, 2026-09-29, in place of Formspree). Empty until
-# Ron deploys it and sends its address, https://script.google.com/macros/s/<deployment id>/exec. While it is empty no
-# form, no form script and no placeholder reaches any page; set it here, rebuild, and the form, its progressive
-# enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's #contact.
-FORM_ENDPOINT = ''
+# The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. The backend is Formspree
+# (Ron's form, target stav@stavtheodor.com; set 2026-09-29, replacing the short lived Google Apps Script plan). Set, so the
+# form, its progressive enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's
+# #contact; empty it and no form, no form script and no placeholder reaches any page.
+FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -370,7 +369,7 @@ def footer(home=False, cta=None, subject='', form=False):
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
     href = mail_href(subject)
     who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH)
-    form_html = ('\n    ' + contact_form()) if form and FORM_ENDPOINT else ''
+    form_html = ('\n    ' + contact_form('/')) if form and FORM_ENDPOINT else ''
     return f'''<footer class="foot" id="contact">
   <div class="left">
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
@@ -393,46 +392,66 @@ def footer(home=False, cta=None, subject='', form=False):
 </footer>'''
 
 
-def contact_form():
-    """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. A plain HTML POST to the
-    Google Apps Script web app (it appends a row to a Google Sheet): without JavaScript the browser posts and shows the
-    script's own reply; form_js() sends it with fetch instead and shows the status line. _gotcha is a honeypot the script
-    should ignore rows for when it is filled; page is set to the path by form_js(). No file field, so the note asks for
-    the photo by email."""
+def contact_form(path='/'):
+    """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. Formspree takes a plain
+    HTML POST: without JavaScript the form posts and Formspree shows its own thank-you page; form_js() sends it with
+    fetch instead and shows the status line. _subject names the mail Formspree sends to Stav, _gotcha is Formspree's
+    honeypot, page carries the page's path (path, written here so it survives without JavaScript; form_js() refreshes it). The select's options carry their
+    Hebrew in data-he (an option cannot hold the twin spans); form_js() swaps the visible text with the language, the
+    submitted value stays English. The free plan takes no files, so the note asks for the photo by email."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
+    opts = ''.join(f'<option value="{H.escape(en, quote=True)}" data-en="{H.escape(en, quote=True)}" data-he="{he}">{H.escape(en)}</option>'
+                   for en, he in CLIENT_TYPES)
     return f'''<form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
+      <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-      <label>{L('Name', 'שם')} <input type="text" name="name" autocomplete="name" required></label>
+      <label>{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label>{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
       <label>{L('Phone (optional)', 'טלפון (לא חובה)')} <input type="tel" name="phone" autocomplete="tel"></label>
-      <label>{L('Town', 'עיר')} <input type="text" name="town" autocomplete="address-level2" placeholder="Tenafly, Englewood, Manhattan..."></label>
-      <label>{L('Tell me about the space', 'ספרו לי על החלל')} <textarea name="message" rows="5" required></textarea></label>
-      <input type="hidden" name="page" value="">
-      <button type="submit">{L('Send to Stav', 'שליחה לסתיו')}</button>
+      <label>{L('I am a', 'מי אתם')} <select name="client_type">{opts}</select></label>
+      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="5" required></textarea></label>
+      <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>'''
 
 
+# The form's "I am a" choices (value and English label, Hebrew label), in Ron's order.
+CLIENT_TYPES = [
+    ('Homeowner', 'בעלי בית'),
+    ('Interior designer or architect', 'מעצבי פנים או אדריכלים'),
+    ('Business or hospitality', 'עסק או אירוח'),
+    ('Other', 'אחר'),
+]
+
+
 def form_js():
-    """The form's progressive enhancement (inline, no library), or '' while FORM_ENDPOINT is empty. It posts the fields
-    URL-encoded with fetch in no-cors mode: Apps Script answers through a redirect and the response is opaque, so a fetch
-    that resolves counts as sent and only a network error shows the fallback line with the phone and the email. On
-    success it says so in the visitor's language and sends GA4 generate_lead with the form id and the page path only:
-    never the name, email, phone or message."""
+    """The form's progressive enhancement (inline, no library), or '' while FORM_ENDPOINT is empty. It posts FormData
+    with fetch and Accept: application/json, a normal CORS request Formspree answers with JSON: on r.ok it resets the
+    form, says thank you in the visitor's language and sends GA4 generate_lead with the form id and the page path only
+    (never the name, email, phone or message); on any other answer or a network error it shows the phone and the email.
+    It also keeps the select's visible text in the page's language (the body's lang-he class)."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var he = function () { return document.body.classList.contains('lang-he'); };
+  var opts = function () {
+    var l = he() ? 'he' : 'en';
+    f.querySelectorAll('option[data-he]').forEach(function (o) { o.textContent = o.getAttribute('data-' + l); });
+  };
+  opts();
+  if (window.MutationObserver) { new MutationObserver(opts).observe(document.body, { attributes: true, attributeFilter: ['class'] }); }
   f.querySelector('[name=page]').value = location.pathname;
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var status = f.querySelector('.form-status');
-    fetch(f.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(f)) })
-      .then(function () {
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error(r.status); }
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
         status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';

@@ -281,13 +281,23 @@
   .contact-page .area { color: var(--soft); font-size: 18px; line-height: 1.6; }
   .contact-page .more { display: flex; flex-wrap: wrap; gap: 14px 28px; font-size: 15px; }
   .contact-page a.plain { color: var(--ink); border-bottom: 1px solid var(--line); }
-  .contact-form { display: grid; gap: 16px; max-width: 560px; margin-top: 8px; }
-  .contact-form label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; letter-spacing: 0.04em; color: var(--muted); }
-  .contact-form input, .contact-form textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: 12px 14px; letter-spacing: 0; }
+  .contact-form { display: grid; gap: 18px; width: 100%; max-width: 560px; margin-top: 8px; }
+  .contact-form label { display: flex; flex-direction: column; gap: 8px; min-width: 0; font-size: 13px; letter-spacing: 0.04em; color: var(--muted); }
+  .contact-form label [data-l="he"] { font-size: 15px; letter-spacing: 0; }
+  .contact-form input, .contact-form select, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 0; padding: 12px 14px; letter-spacing: 0; }
+  .contact-form textarea { resize: vertical; min-height: 140px; }
+  .contact-form select { -webkit-appearance: none; appearance: none; padding-right: 40px; cursor: pointer; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+  .contact-form select option { background: var(--surface); color: var(--ink); }
+  .contact-form input:focus-visible, .contact-form select:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; border-color: var(--taupe); }
   .contact-form button { justify-self: start; font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--ink); background: none; border: 1px solid rgba(242,240,236,0.45); padding: 16px 30px; cursor: pointer; }
   .contact-form button:hover { background: var(--ink); color: var(--bg); }
+  .contact-form button:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
   .contact-form .form-note { font-size: 14px; color: var(--muted); }
   .contact-form .form-status { font-size: 15px; color: var(--ink); min-height: 1.4em; }
+  body.lang-he .contact-form { direction: rtl; text-align: right; }
+  body.lang-he .contact-form input, body.lang-he .contact-form textarea, body.lang-he .contact-form select { font-family: var(--he), var(--sans); }
+  body.lang-he .contact-form input[type="email"], body.lang-he .contact-form input[type="tel"] { direction: ltr; text-align: right; font-family: var(--sans); }
+  body.lang-he .contact-form select { padding-right: 14px; padding-left: 40px; background-position: 15px 50%, 20px 50%; }
 
   .mail-fallback { position: fixed; inset: 0; background: rgba(15,15,20,0.72); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 9999; }
   .mail-fallback.open { display: flex; }

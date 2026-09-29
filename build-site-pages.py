@@ -422,7 +422,7 @@ def render_contact():
           {"@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "Contact", "item": url}]}]
-    form = sc.contact_form()
+    form = sc.contact_form(f"/{CONTACT['path']}/")
     form_html = '\n    ' + form if form else ''
     body = f'''
 <header class="phead">
