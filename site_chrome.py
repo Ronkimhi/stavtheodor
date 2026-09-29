@@ -237,8 +237,11 @@ def _link(href, home):
     return href
 
 
-def nav(home=False):
-    links = ''.join(f'<a href="{_link(h, home)}">{T(en, he)}</a>' for h, en, he in NAV_ITEMS)
+def nav(home=False, own=None):
+    """own: section links a homepage-shaped page sends to their own page because it lacks the section
+    (a buyer variant has no #museum: {'#museum': '/museum/'}, 2026-09-28)."""
+    own = own or {}
+    links = ''.join(f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>' for h, en, he in NAV_ITEMS)
     return f'''<nav class="nav" aria-label="Main">
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA</a>
   <div class="right">

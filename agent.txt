@@ -210,5 +210,6 @@ bilingual, Hebrew and English in the same HTML, with FAQPage structured data in 
 Two local pages (added September 2026) answer the "art curator near me" question directly:
 - Art curator in New Jersey (Tenafly, Bergen County: Closter, Alpine, Englewood, Cresskill, Demarest; the Closter house; local Art Radar tips): https://stavtheodor.com/art-curator-new-jersey/
 - Art curator in New York (private apartments, offices and collections in Manhattan; the skyline residence bar; SoHo and Tribeca gallery routes): https://stavtheodor.com/art-curator-new-york/
+Seven pages (added September 2026) are written for one kind of client each: law firms https://stavtheodor.com/law-firms/, investment firms and family offices https://stavtheodor.com/investment-firms/, wealth managers https://stavtheodor.com/wealth-managers/, medical and aesthetic practices https://stavtheodor.com/medical-practices/, boutique hotels https://stavtheodor.com/hotels/, restaurants https://stavtheodor.com/restaurants/ and interior designers https://stavtheodor.com/designers/.
 Every page opens in English; the Hebrew twin is one tap away on the same URL.
 Contact for advisory enquiries: stav@stavtheodor.com

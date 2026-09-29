@@ -13,9 +13,9 @@ approved; every /2/ address now forwards to its real page), and the buyer varian
 (2026-09-27): each content/variants/<id>.json renders this same page at /<path>/ with its
 own copy in the sixteen regions the template marks <!--variant:NAME-->...<!--/variant:NAME-->,
 its own value strip (a variant-only section under the intro block, 2026-09-28: the template's
-marker is empty, so the homepage gets nothing there), its own questions, closing line and mail subject. Variants are indexable, each its own canonical
-and listed in sitemap-pages.xml (Ron, 2026-09-28), and linked only from the homepage's #industries
-section (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
+marker is empty, so the homepage gets nothing there), its own questions, closing line and mail subject. Since 2026-09-28 variants
+are indexable (self canonical, in sitemap-pages.xml, Service and BreadcrumbList schema), and until then they were noindex, in no sitemap and
+linked from nowhere (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
 A variant may also put its own rooms in the opening ("rooms", entry i in slot i): the page then
 sets window.THEODORA_ROOMS for js/home-opening.js, preloads its first pair, and carries each
 replaced slot's static figure and #cap caption (the room_fig_N, room_cap_N and rooms_js regions);
@@ -54,7 +54,8 @@ def preload(before, after):
 PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 
 # "Who I work with" on the homepage (Ron, 2026-09-28): one tile per buyer page, in this order, each linking to it.
-# The tile's line is the page's main message, the first sentence of its intro statement (Ron's locked messaging),
+# The tile's line is the page's main message, its intro.line (Ron's locked messaging; until 2026-09-28 the first
+# sentence of the intro statement, which carried the message before it moved into the big line),
 # and its image images/home2/industries/<id>.webp, made from the page's first room by tools/make_industry_thumbs.py.
 INDUSTRIES = [
     ('designers', 'Interior designers', 'מעצבי פנים'),
@@ -97,15 +98,15 @@ OPTIONAL = {'intro_eyebrow', 'what_i_do_eyebrow', 'advisory_h2', 'advisory_sub'}
 HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (tools/check_variants.py); the rest is escaped
 # Variant-only blocks: the template's marker is empty, so the homepage renders nothing in its place and a
 # variant renders the whole block. value_strip: the three columns right after #intro (2026-09-28).
-BLOCKS = {'value_strip'}
+BLOCKS = {'value_strip', 'guide'}  # value_strip, then (2026-09-28) the long section after #what-i-do, which opens with the direct "who" answer
 # Homepage-only sections: the homepage keeps the bytes between the markers, every variant drops them.
 # film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
-DROPS = {'film', 'industries'}
+DROPS = {'film', 'industries', 'museum', 'radar'}  # museum, radar: the Museum and Art Radar stay on the homepage only (Ron, 2026-09-28)
 # industries: the homepage's links to the seven buyer pages (2026-09-28), never on a buyer page itself.
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
-SHARED_SECTIONS = ('about', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
-VARIANT_ABSENT = ('film', 'industries')  # on the homepage, never on a variant (DROPS)
+SHARED_SECTIONS = ('about', 'projects')  # byte for byte the homepage's on every variant
+VARIANT_ABSENT = ('film', 'industries', 'museum', 'radar', 'posts')  # on the homepage, never on a variant (DROPS)
 VARIANT_PATH = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$')
 
 # The opening's rooms (2026-09-27). PAIRS in js/home-opening.js lists them in slot order (p3, p4, p5, p1): slot 0 is
@@ -177,12 +178,6 @@ def advisory_rows(pages, paths):
     return rows
 
 
-def first_sentence(s):
-    """The main message: the statement's first sentence."""
-    m = re.match(r'(.+?[.?!])(?:\s|$)', s)
-    return m.group(1) if m else s
-
-
 def industries(variants):
     """The homepage's industries section: one keyboard-focusable tile per buyer page, linking to it."""
     by_id = {v['id']: v for v in variants}
@@ -195,7 +190,7 @@ def industries(variants):
         v, img = by_id[vid], f'images/home2/industries/{vid}.webp'
         if not os.path.exists(sc.rel(img)):
             raise SystemExit(f'{img} is missing: run python3 tools/make_industry_thumbs.py')
-        line = T(H.escape(first_sentence(v['intro']['statement_en'])), H.escape(first_sentence(v['intro']['statement_he'])))
+        line = T(H.escape(v['intro']['line_en']), H.escape(v['intro']['line_he']))
         tiles += (f'<a class="ind reveal" href="/{v["path"]}/"><span class="ph"><img src="/{img}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async"></span>'
                   f'<h3 class="serif">{T(H.escape(en), H.escape(he))}</h3><p>{line}</p></a>')
     return ('\n\n<section class="section wrap" id="industries">\n'
@@ -258,6 +253,22 @@ def room_region(name, inner, rooms, drop=False):
     return inner
 
 
+def guide(v):
+    """The variant's long section (600 to 900 English words), after #what-i-do, in the growth pages' reading column.
+    Its first paragraph is the direct answer to "who does this" (guide.who), never near the opening: the page opens
+    on Ron's agreed main message and nothing precedes or competes with it (Ron, 2026-09-28)."""
+    g = v['guide']
+    who = lambda lang: f'<p>{H.escape(g["who_" + lang])}</p>'
+    return ('\n\n<section class="section wrap" id="guide">\n'
+            f'  <div class="head reveal"><div class="lead"><p class="eyebrow">{T(H.escape(g["eyebrow_en"]), H.escape(g["eyebrow_he"]))}</p>'
+            f'<h2 class="serif">{T(H.escape(g["h2_en"]), H.escape(g["h2_he"]))}</h2></div></div>\n'
+            f'  <div class="prose" data-l="he" dir="rtl">{who("he")}{g["body_he"]}</div>\n'
+            f'  <div class="prose" data-l="en">{who("en")}{g["body_en"]}</div>\n</section>')
+
+
+BLOCK_RENDER = {'value_strip': None, 'guide': guide}
+
+
 def value_strip(v):
     """A variant's value strip: three columns, each a label and one line, in both languages."""
     items = ''.join(
@@ -293,7 +304,7 @@ def fill_regions(body, v):
                 return ''
             if not v.get(name):
                 raise SystemExit(f"content/variants/{v['id']}.json: {name} is missing")
-            return value_strip(v)
+            return (BLOCK_RENDER[name] or value_strip)(v)
         pair = region_copy(v, name) if v is not None and name in REGIONS else None
         if pair is None:
             return inner
@@ -313,7 +324,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     subject = v['mail_subject'] if v else ''
     questions = v['faq'] if v else faq
     fills = {
-        'NAV': sc.nav(home=True),
+        'NAV': sc.nav(home=True, own={'#museum': '/museum/'} if v else None),  # a variant has no #museum: its own page
         'INDUSTRIES': '' if v else industries(variants),
         'PROJECT_CARDS': ''.join(sc.project_card(p) for p in projects),
         'ADVISORY_ROWS': advisory_rows(pages, (v.get('advisory_rows') if v else None) or HOME_ROWS),
@@ -333,14 +344,32 @@ def render_home(pages, posts, faq, v=None, variants=()):
     assert '{{' not in body, 'unfilled slot'
     body = fill_regions(body, v)
     meta = v['head'] if v else {'title': TITLE, 'description': DESCRIPTION, 'og_title': OG_TITLE, 'og_description': OG_DESC}
-    url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, and indexable (Ron, 2026-09-28)
+    url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, indexable since 2026-09-28
     # a variant may bring its own preview image (head.og_image, 1200 by 630) and its own first room
     og_image, og_alt = (SITE + meta['og_image'], meta['og_image_alt']) if meta.get('og_image') else (OG_IMAGE, OG_IMAGE_ALT)
     rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
-                   og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)],
-                   extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
+                   og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
+                   noindex=False, extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
     return head + body
+
+
+def variant_schema(v, url, meta):
+    """A variant's Service (provider: the entity's #org, content/entity.json) and its BreadcrumbList:
+    THEODORA, Who I work with (the homepage's #industries), the page (2026-09-28)."""
+    sv = v['service']
+    area = [{'@type': 'City', 'name': 'New York'} if a == 'New York City' else {'@type': 'State', 'name': 'New Jersey'} if a == 'New Jersey'
+            else {'@type': 'City', 'name': a} for a in sv['area_served']]
+    service = {'@context': 'https://schema.org', '@type': 'Service', '@id': url + '#service', 'name': v['intro']['h1_en'],
+               'serviceType': sv['service_type'], 'description': meta['description'], 'url': url,
+               'provider': {'@type': 'ProfessionalService', '@id': SITE + '/#org', 'name': 'THEODORA', 'url': SITE + '/'},
+               'audience': {'@type': 'BusinessAudience', 'audienceType': sv['audience']}, 'areaServed': area}
+    name = dict((i, en) for i, en, _ in INDUSTRIES).get(v['id'], v['intro']['h1_en'])
+    crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'THEODORA', 'item': SITE + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': 'Who I work with', 'item': SITE + '/#industries'},
+        {'@type': 'ListItem', 'position': 3, 'name': name, 'item': url}]}
+    return [service, crumbs]
 
 
 def section(page, sid):
@@ -366,6 +395,8 @@ def page_problems(out, name, home=None):
                 problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
         if 'name="robots"' in out:
             problems.append(f'{name} carries a robots meta tag; buyer variants are indexable (Ron, 2026-09-28)')
+        if f'<link rel="canonical" href="{SITE}/' not in out:
+            problems.append(f'{name} has no self canonical')
         for sid in SHARED_SECTIONS:
             mine = section(out, sid)
             if mine is None or mine != section(home, sid):

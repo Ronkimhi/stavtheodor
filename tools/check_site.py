@@ -27,13 +27,12 @@
               geo, address, https sameAs), no underscore keys leaking, every on-site URL resolving
   sitemap     sitemap.xml is an index over child sitemaps; every indexable page is listed in exactly
               one child, every loc resolves to a file, and no noindex page is listed
-  variants    the buyer variants of the homepage (content/variants/<id>.json, rendered by build-home.py
-              at /<path>/): every one is built, the homepage's #industries section links each exactly once
-              and no other page or section links to one (2026-09-28), llms.txt, agent.txt,
-              answers.md and robots.txt never name one, no variant page (data-subject) is left over
-              that is not a current variant (a stale variant folder after a path change), and no
-              noindex page exists outside the stubs; the pages themselves go through twins, links,
-              jsonld, schema, faq, noindex (they must be indexable), lang and sitemap (each listed)
+  variants    the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/):
+              every one is built, indexable with a self canonical (2026-09-28) and in exactly one
+              sitemap; the homepage's #industries section links each exactly once; other links to
+              one come only from its paired pages (VARIANT_LINKERS) and nowhere else; llms.txt and
+              answers.md name every one; no noindex page is left over that is not a stub;
+              the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
 
 Exit 1 on any failure.
 """
@@ -64,7 +63,12 @@ BANNED_IMAGES = {
     '718c475ac20d8e15', 'd2725a41bbd80339', 'dea7bfad1d6585e2', '9f87b708d526a6cf', '4f06600f6a0706f9', '3631076c645d4096',
     '21db47b8abf26e62', 'b78ea3fe28ec1622', 'f6070dab13b23b81',
 }
-AGENT_FILES = ('llms.txt', 'agent.txt', 'answers.md', 'robots.txt')  # a buyer variant is never named in these
+AGENT_FILES = ('llms.txt', 'answers.md')  # every buyer page is named in these (2026-09-28)
+# The pages allowed to link a buyer page besides the homepage's #industries section (2026-09-28): the
+# pages each one overlaps with, which link it both ways (/designers/ and /for-designers/, /wealth-managers/
+# and /for-advisors/, the hotel and office advisory pages).
+VARIANT_LINKERS = ('for-designers/index.html', 'for-advisors/index.html',
+                   'advisory/art-for-hotels-and-hospitality/index.html', 'advisory/art-for-an-office-or-business/index.html')
 fails = []
 
 
@@ -263,7 +267,7 @@ home = read('index.html')
 for path in pages:
     s = read(path)
     is_stub = path.split(os.sep)[0] in STUB_DIRS or path in ('404.html',)
-    must_noindex = is_stub  # the buyer variants are indexable since 2026-09-28 (Ron)
+    must_noindex = is_stub  # the buyer variants are indexable since 2026-09-28
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
@@ -313,8 +317,8 @@ for path in pages:
             fs = fs.split('?')[0]
             if fs == '' or os.path.isdir(fs):
                 fs = os.path.join(fs, 'index.html') if fs else 'index.html'
-            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path and not in_industries:
-                fail('variants', f'{path} links to the buyer variant {target} (variants are linked only from the homepage\'s #industries section)')
+            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path and not in_industries and path not in VARIANT_LINKERS:
+                fail('variants', f'{path} links to the buyer page {target} (only the homepage\'s #industries section and VARIANT_LINKERS may)')
             if not os.path.exists(fs):
                 fail('links', f'{path} -> {target}')
                 continue
@@ -369,9 +373,8 @@ for f in AGENT_FILES:
         continue
     s = read(f)
     for url in VARIANTS.values():
-        vpath = url[len(SITE) + 1:].strip('/')
-        if re.search(r'(?:stavtheodor\.com|(?<![\w./-]))/' + re.escape(vpath) + r'(?![\w-])', s):
-            fail('variants', f'{f} names the buyer variant {url} (variants are never named in the agent maps)')
+        if url not in s:
+            fail('variants', f'{f} does not name the buyer page {url}')
 
 # ---- the sitemaps: an index, every indexable page once, every loc a file, nothing noindex
 sitemap_index = read('sitemap.xml') if os.path.exists('sitemap.xml') else ''
@@ -385,6 +388,11 @@ for child_url in re.findall(r'<loc>([^<]+)</loc>', sitemap_index):
         continue
     for loc in re.findall(r'<loc>([^<]+)</loc>', read(child)):
         listed.setdefault(loc, []).append(child)
+_all_locs = [loc for child_url in re.findall(r'<loc>([^<]+)</loc>', sitemap_index)
+             for loc in (re.findall(r'<loc>([^<]+)</loc>', read(on_site_file(child_url))) if on_site_file(child_url) and os.path.exists(on_site_file(child_url)) else [])]
+for _url in VARIANTS.values():
+    if _all_locs.count(_url) != 1:
+        fail('variants', f'the buyer page {_url} is listed {_all_locs.count(_url)} times across the sitemaps, expected once')
 for loc, where in listed.items():
     if len(where) > 1:
         fail('sitemap', f'{loc} is listed in {len(where)} sitemaps')
@@ -401,7 +409,7 @@ for path in walk(('.html',)):
         fail('variants', f'{path} is a buyer variant page but not a current variant: stale variant folder? git rm -r {os.path.dirname(path) or path}')
         continue
     if 'name="robots" content="noindex"' in s:
-        fail('noindex', f'{path} is noindex but not a stub: every page outside the stubs is indexable')
+        fail('variants', f'{path} is noindex but not a stub: a stale buyer page folder? git rm -r {os.path.dirname(path) or path}')
         continue
     if not path.endswith('index.html'):
         continue  # only directory index pages are site URLs

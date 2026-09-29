@@ -1,8 +1,8 @@
 # Buyer variant spec (content/variants/<id>.json)
 
-One JSON file per buyer variant of the homepage. build-home.py renders it into /<path>/index.html: the homepage itself (same design, nav, projects, About, Museum, Art Radar, footer links, language switch, English by default) with this file's copy in the sixteen regions `templates/home.html` marks as `<!--variant:NAME-->...<!--/variant:NAME-->`, plus its own value strip (a section the homepage does not have, rendered where the template's empty `<!--variant:value_strip--><!--/variant:value_strip-->` marker sits, right after the black intro block and before the services), its own questions, Advisory rows, footer line and mail subject. Do not write the HTML by hand, and never edit the output folder.
+One JSON file per buyer variant of the homepage. build-home.py renders it into /<path>/index.html: the homepage itself (same design, nav, projects, About, footer links, language switch, English by default; since 2026-09-28 without the film, the Museum and Art Radar) with this file's copy in the sixteen regions `templates/home.html` marks as `<!--variant:NAME-->...<!--/variant:NAME-->`, plus its own value strip (a section the homepage does not have, rendered where the template's empty `<!--variant:value_strip--><!--/variant:value_strip-->` marker sits, right after the black intro block and before the services), its own long section (`guide`, rendered at the empty `<!--variant:guide-->` marker after #what-i-do), its own questions, Advisory rows, footer line and mail subject. Do not write the HTML by hand, and never edit the output folder.
 
-A variant is indexable and its own canonical (Ron, 2026-09-28; until then every variant was noindex and in no sitemap). It is listed in `sitemap-pages.xml`, in none of llms.txt, agent.txt, answers.md and robots.txt, linked from nowhere but the homepage's "Who I work with" section (`#industries`, 2026-09-28: one tile per variant, from `INDUSTRIES` in `build-home.py`, its line the first sentence of `intro.statement`, its image `images/home2/industries/<id>.webp` from `python3 tools/make_industry_thumbs.py`; a new variant needs an entry there and a thumbnail), and sent to IndexNow like any other page. `tools/check_site.py` (the `noindex`, `sitemap` and `variants` gates) enforces that.
+Since 2026-09-28 a variant is indexable and its own canonical, listed once in `sitemap-pages.xml`, with a `Service` and a `BreadcrumbList` beside its FAQPage, and named in llms.txt, agent.txt and answers.md. It is linked only from its paired pages (`VARIANT_LINKERS` in `tools/check_site.py`) and from the homepage's "Who I work with" section (`#industries`: one tile per variant, from `INDUSTRIES` in `build-home.py`, its line the variant's `intro.line`, its image `images/home2/industries/<id>.webp` from `python3 tools/make_industry_thumbs.py`; a new variant needs an entry there and a thumbnail) and `tools/indexnow.py` pings it like any indexable page. `tools/check_site.py` (the `variants` gate) enforces all of it. The page opens on Ron's agreed main message: `intro.line` is that message verbatim, `intro.statement` the support sentence only, and search wording never goes into the hero, the big line or the statement.
 
 ```json
 {
@@ -23,6 +23,7 @@ A variant is indexable and its own canonical (Ron, 2026-09-28; until then every 
     "statement_en": "An example statement in Stav's first person voice, sixty to one hundred sixty characters long.",
     "statement_he": "הצהרה לדוגמה בגוף ראשון, בקולה של סתיו."
   },
+  "service": {"service_type": "Art consulting and curation for example buyers", "audience": "Example buyers", "area_served": ["New York City", "New Jersey"]},
   "services": [
     {"desc_en": "Example line under the first service", "desc_he": "שורה לדוגמה מתחת לשירות הראשון"},
     {"desc_en": "Example line under the second service", "desc_he": "שורה לדוגמה מתחת לשירות השני"},
@@ -39,6 +40,13 @@ A variant is indexable and its own canonical (Ron, 2026-09-28; until then every 
     "p1_en": "Example paragraph, 40 to 160 words, with a link to the <a href=\"/art-curator-new-jersey/\">New Jersey page</a>...",
     "p1_he": "פסקה לדוגמה, עם אותו קישור <a href=\"/art-curator-new-jersey/\">לעמוד ניו ג'רזי</a>...",
     "p2_en": "A second example paragraph, 40 to 160 words...", "p2_he": "פסקה שנייה לדוגמה..."
+  },
+  "guide": {
+    "eyebrow_en": "Step by step", "eyebrow_he": "שלב אחר שלב",
+    "h2_en": "An example heading for the long section", "h2_he": "כותרת לדוגמה לחלק הארוך",
+    "who_en": "I am Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jersey. I choose art for example buyers in New York and New Jersey.",
+    "who_he": "אני סתיו תאודור, אוצרת ויועצת אמנות...",
+    "body_en": "<p>600 to 900 words...</p><h3>A subheading</h3><p>...</p>", "body_he": "<p>...</p>"
   },
   "faq": [
     {"q_en": "An example question a buyer types?", "a_en": "An example answer of 40 to 90 words...", "q_he": "שאלה לדוגמה?", "a_he": "תשובה לדוגמה..."},
@@ -61,11 +69,13 @@ The example is shortened (two questions, "..." in the long fields): a real file 
 | `head.og_title`, `head.og_description` | the share card (Open Graph, Twitter) | at most 70 and 160 |
 | `hero.l1`, `hero.l2` | the two lines of the opening | at most 18 characters, in both languages (characters are a proxy; the render check measures pixels at 360px: `node tools/check_render.js` fails a line that ends past the right edge of a 360 by 780 screen, in either language; the homepage's "A beautiful room." ends at about 351) |
 | `intro.h1` | the page's h1, the small line in the black intro block | 40 to 110 |
-| `intro.line` | the large line under it ("Art is not an accessory.") | at most 32 |
+| `intro.line` | the large line ("Art is not an accessory."); on a buyer page Ron's agreed main message, verbatim | at most 60 (wider and balanced on buyer pages) |
 | `intro.eyebrow` | the eyebrow above the statement ("What I do") | at most 24 |
 | `intro.statement` | the statement | 60 to 160 |
 | `services[4].desc` | the line under each of the four service titles (the titles stay) | exactly four, at most 90 each |
 | `value_strip[3]` | the value strip, a variant-only section right after the intro block (#intro) and before the services: three columns on desktop, stacked on phones, each a label (serif) and one supporting line | exactly three, required; `label` at most 40, `line` at most 170; plain text, no item repeated |
+| `service` | the page's `Service` schema: `service_type` ("Art consulting and curation for law firms"), `audience` (the BusinessAudience), `area_served` (a list from New York City, New Jersey, Tel Aviv); provider is the entity's #org | required; English only, never shown |
+| `guide` | the long section after #what-i-do: `eyebrow`, `h2`, `who` (its first paragraph: the direct answer to "who does this", naming Stav Theodor, also the page's first question) and `body` (h3, p, ul, ol, li, a, em, strong; links as in `what_i_do`, the same set in both languages) | required; eyebrow at most 24, h2 at most 120, who 80 to 260 characters, body 600 to 900 English words, the Hebrew at least 0.6 of that |
 | `what_i_do.eyebrow`, `what_i_do.h2` | the eyebrow ("Where I work") and heading of #what-i-do | at most 24 and 120 |
 | `what_i_do.p1`, `what_i_do.p2` | its two paragraphs | 40 to 160 English words each, the Hebrew at least 0.6 of that |
 | `advisory.h2`, `advisory.sub` | the Advisory heading and the line under it | at most 90 and 200 |

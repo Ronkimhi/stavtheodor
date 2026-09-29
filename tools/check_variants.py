@@ -38,6 +38,10 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      images/home2/variants/<id>/, 1200 by 630, under 300 KB
   n  value_strip: exactly three items {label_en, label_he, line_en, line_he}, plain text, labels at most
      40 characters and lines at most 170 (the English), no label or line repeated
+  o  indexing (2026-09-28): guide.who (the direct "who does this" answer, the long section's first
+     paragraph, 80 to 260 characters, naming Stav Theodor); service {service_type, audience, area_served} for the Service schema, area_served
+     from New York City, New Jersey, Tel Aviv; guide {eyebrow, h2, body} with a body of 600 to 900
+     English words (p, h3, ul, ol, li, a, em, strong; links as in h, the same set in both languages)
 """
 import ast
 import datetime
@@ -81,11 +85,13 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
-    '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'services', 'value_strip', 'what_i_do', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
+    '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'service', 'services', 'value_strip', 'what_i_do', 'guide', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
          {'advisory', 'advisory_rows', 'rooms', 'rooms_rest'}),
     'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
     'intro': ({'h1_en', 'h1_he', 'line_en', 'line_he', 'statement_en', 'statement_he'}, {'eyebrow_en', 'eyebrow_he'}),
+    'service': ({'service_type', 'audience', 'area_served'}, set()),
+    'guide': ({'eyebrow_en', 'eyebrow_he', 'h2_en', 'h2_he', 'who_en', 'who_he', 'body_en', 'body_he'}, set()),
     'services': ({'desc_en', 'desc_he'}, set()),
     'value_strip': ({'label_en', 'label_he', 'line_en', 'line_he'}, set()),
     'what_i_do': ({'h2_en', 'h2_he', 'p1_en', 'p1_he', 'p2_en', 'p2_he'}, {'eyebrow_en', 'eyebrow_he'}),
@@ -93,20 +99,25 @@ SCHEMA = {
     'faq': ({'q_en', 'a_en', 'q_he', 'a_he'}, set()),
     'rooms': ({'b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from', 'cap_en', 'cap_he', 'alt_en', 'alt_he'}, {'seed'}),
 }
-OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory'}
-LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms'}
+OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory', 'service', 'guide'}
+LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms', 'area_served'}
 NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are not strings (checked under l)
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
+GUIDE_FIELDS = {'guide.body_en', 'guide.body_he'}  # the long section: a reading column's tags too
+GUIDE_TAGS = ('a', 'em', 'strong', 'p', 'h3', 'ul', 'ol', 'li')
+AREAS = ('New York City', 'New Jersey', 'Tel Aviv')
 # (field, min, max) in characters; the minimum and maximum read the English, the hero lines both languages
 CHAR_LIMITS = [
     ('head.title', 30, 70), ('head.description', 70, 165), ('head.og_title', 1, 70), ('head.og_description', 1, 160),
     ('head.og_image_alt', 1, 160),
     ('hero.l1_en', 1, 18), ('hero.l1_he', 1, 18), ('hero.l2_en', 1, 18), ('hero.l2_he', 1, 18),
-    ('intro.h1_en', 40, 110), ('intro.line_en', 1, 32), ('intro.eyebrow_en', 1, 24), ('intro.statement_en', 60, 160),
+    ('intro.h1_en', 40, 110), ('intro.line_en', 1, 60), ('intro.eyebrow_en', 1, 24), ('intro.statement_en', 60, 160),
     ('what_i_do.eyebrow_en', 1, 24), ('what_i_do.h2_en', 1, 120), ('advisory.h2_en', 1, 90), ('advisory.sub_en', 1, 200),
     ('cta_en', 40, 140), ('mail_subject', 8, 60),
+    ('guide.who_en', 80, 260), ('service.service_type', 10, 90), ('service.audience', 5, 90),
+    ('guide.eyebrow_en', 1, 24), ('guide.h2_en', 1, 120),
 ]
-WORD_LIMITS = [('what_i_do.p1_en', 40, 160), ('what_i_do.p2_en', 40, 160)]
+WORD_LIMITS = [('what_i_do.p1_en', 40, 160), ('what_i_do.p2_en', 40, 160), ('guide.body_en', 600, 900)]
 SERVICE_DESC_MAX = 90
 VALUE_STRIP_COUNT = 3
 VALUE_LABEL_MAX, VALUE_LINE_MAX = 40, 170
@@ -166,7 +177,7 @@ def get(v, field):
 def strings(v):
     """(label, text) for every string the variant writes onto the page, its own FAQ included."""
     out = []
-    for key in ('head', 'hero', 'intro', 'what_i_do', 'advisory'):
+    for key in ('head', 'hero', 'intro', 'what_i_do', 'advisory', 'service', 'guide'):
         for k, s in (v.get(key) or {}).items():
             if (key, k) != ('head', 'og_image'):  # a path, checked under m
                 out.append((f'{key}.{k}', s))
@@ -191,7 +202,7 @@ def strings(v):
 def language(label):
     if label.endswith('_he'):
         return 'he'
-    if label.endswith('_en') or label.startswith('head.') or label == 'mail_subject':
+    if label.endswith('_en') or label.startswith(('head.', 'service.')) or label == 'mail_subject':
         return 'en'
     return None
 
@@ -233,13 +244,13 @@ def link_problems(label, href, variant_paths):
     return []
 
 
-def html_problems(label, s, variant_paths):
-    """what_i_do.p1 and p2: a, em and strong only, balanced, links checked. Returns (problems, hrefs)."""
+def html_problems(label, s, variant_paths, allowed=('a', 'em', 'strong')):
+    """what_i_do.p1 and p2: a, em and strong only (guide.body: GUIDE_TAGS), balanced, links checked. Returns (problems, hrefs)."""
     problems, hrefs, depth = [], [], {}
     for close, name, attrs in TAG.findall(s):
         name = name.lower()
-        if name not in ('a', 'em', 'strong'):
-            problems.append(f'{label}: <{name}> is not allowed (a, em, strong only)')
+        if name not in allowed:
+            problems.append(f'{label}: <{name}> is not allowed ({", ".join(allowed)} only)')
             continue
         depth[name] = depth.get(name, 0) + (-1 if close else 1)
         if close or name != 'a':
@@ -496,7 +507,7 @@ def check(path, v, peers):
             if k.endswith('_he') and k[:-3] + '_en' not in obj:
                 fails.append(f'{where}{k} has no English twin {k[:-3]}_en')
     twins(v, '')
-    for name in ('hero', 'intro', 'what_i_do', 'advisory'):
+    for name in ('hero', 'intro', 'what_i_do', 'advisory', 'guide'):
         twins(v[name] if isinstance(v[name], dict) else {}, f'{name}.')
     for name in ('services', 'value_strip', 'faq', 'rooms'):
         for i, item in enumerate(v[name] if isinstance(v.get(name), list) else []):
@@ -539,8 +550,8 @@ def check(path, v, peers):
             if MONEY.search(s) and 'industry' not in low:
                 fails.append(f'{label}: a $ or % figure without the word "industry" (Stav\'s fees are never published)')
         # h: HTML only in the two paragraphs
-        if label in HTML_FIELDS:
-            problems, found = html_problems(label, s, variant_paths)
+        if label in HTML_FIELDS | GUIDE_FIELDS:
+            problems, found = html_problems(label, s, variant_paths, GUIDE_TAGS if label in GUIDE_FIELDS else ('a', 'em', 'strong'))
             fails.extend(problems)
             hrefs[label] = set(found)
         elif TAG.search(s) or re.search(r'<[A-Za-z!/]', s) or ENTITY.search(s):
@@ -550,10 +561,17 @@ def check(path, v, peers):
             found = sorted(set(WE.findall(re.sub(r'<[^>]+>', ' ', s))))
             if found:
                 warns.append(f'{label}: {", ".join(found)} (Stav speaks as "I"; fine if it means her and the client)')
-    for p in ('p1', 'p2'):
-        en, he = hrefs.get(f'what_i_do.{p}_en'), hrefs.get(f'what_i_do.{p}_he')
+    for obj, p in (('what_i_do', 'p1'), ('what_i_do', 'p2'), ('guide', 'body')):
+        en, he = hrefs.get(f'{obj}.{p}_en'), hrefs.get(f'{obj}.{p}_he')
         if en is not None and he is not None and en != he:
-            fails.append(f'what_i_do.{p}: the English and Hebrew link to different pages ({sorted(en)} and {sorted(he)})')
+            fails.append(f'{obj}.{p}: the English and Hebrew link to different pages ({sorted(en)} and {sorted(he)})')
+    # o: the who answer names her; the service areas
+    who = get(v, 'guide.who_en')
+    if isinstance(who, str) and who and 'Stav Theodor' not in who:
+        fails.append('guide.who_en: the direct answer names "Stav Theodor"')
+    areas = get(v, 'service.area_served')
+    if 'service' in v and not (isinstance(areas, list) and areas and all(a in AREAS for a in areas) and len(set(areas)) == len(areas)):
+        fails.append(f'service.area_served: a list from {AREAS}, no repeats')
 
     # g: lengths
     for field, lo, hi in CHAR_LIMITS:
