@@ -33,6 +33,12 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 
 Discovery. Research. Curatorial development. Budget planning. Art procurement and selection. Logistics. Installation. "We handle every detail. Our mission is to provide a seamless and refined acquisition experience, with full transparency and expertise, from initial concept through final installation, at the most favorable terms."
 
+## 4a. Installation and insurance (confirmed by Ron 2026-09-28)
+
+- Stav has her own installation team.
+- She carries insurance and can provide a certificate of insurance; it can name the landlord or managing agent on request.
+- She installs after hours, so offices, practices, restaurants and hotels can keep working.
+
 ## 5. Fees (hard rule)
 
 Stav's fees are not published. Never state a number for her fee. You may explain the fee structures common in the art advisory industry (hourly, flat project fee, or a percentage of acquisitions, typically in the ten to twenty percent range; retainer for ongoing collection work) and must label them as industry norms, then say that THEODORA quotes each project after a first conversation, based on scope, and that direct relationships with artists often bring the total cost of the work itself down. Anything about her own pricing is an editor note for Ron, not page copy.
