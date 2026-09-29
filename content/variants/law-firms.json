@@ -8,7 +8,7 @@
     "og_title": "Strong law firms need a strong entrance · THEODORA",
     "og_description": "One anchor work that holds the reception wall from the door, so clients read the firm before anyone speaks. By curator Stav Theodor.",
     "og_image": "/images/home2/variants/law-firms/law-firms_og.jpg",
-    "og_image_alt": "A law firm reception over Manhattan, a wide landscape painting in bright color above two leather chairs."
+    "og_image_alt": "A law firm reception over Manhattan: a wide, brightly painted landscape above two cognac leather chairs, law books on shelves at right."
   },
   "hero": {
     "l1_en": "Strong entrance.",
@@ -34,8 +34,65 @@
       "seed": 9,
       "cap_en": "Proposal. A law firm reception high over Manhattan, a wide landscape in bright color above the leather chairs.",
       "cap_he": "הצעה. קבלה של משרד עורכי דין גבוה מעל מנהטן, נוף רחב בצבעים עזים מעל כורסאות העור.",
-      "alt_en": "A law firm reception high over Manhattan, a wide landscape painting in bright color above two leather chairs.",
-      "alt_he": "קבלה של משרד עורכי דין גבוה מעל מנהטן, ציור נוף רחב בצבעים עזים מעל שתי כורסאות עור."
+      "alt_en": "A law firm reception over Manhattan: a wide, brightly painted landscape above two cognac leather chairs, law books on shelves at right.",
+      "alt_he": "קבלה של משרד עורכי דין מעל מנהטן: נוף מצויר רחב בצבעים עזים מעל שתי כורסאות עור בגוון קוניאק, ספרי משפט על המדפים מימין."
+    },
+    {
+      "b": "variants/law-firms/law-firms_s1_before.webp",
+      "a": "variants/law-firms/law-firms_s1_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.4171,
+        0.1225,
+        0.6046,
+        0.4119
+      ],
+      "fx": 0.5108,
+      "fy": 0.2672,
+      "from": "right",
+      "cap_en": "Proposal. A paneled meeting space in deep green, a gold leaf portrait above the sideboard.",
+      "cap_he": "הצעה. חלל ישיבות מחופה בירוק עמוק, דיוקן על עלי זהב מעל המזנון.",
+      "alt_en": "A green paneled law firm meeting space with a walnut table and oxblood leather chairs, a portrait on gold leaf above the sideboard.",
+      "alt_he": "חלל ישיבות של משרד עורכי דין מחופה עץ בירוק, שולחן אגוז וכיסאות עור בבורדו, דיוקן על עלי זהב מעל המזנון."
+    },
+    {
+      "b": "variants/law-firms/law-firms_s2_before.webp",
+      "a": "variants/law-firms/law-firms_s2_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.3887,
+        0.0769,
+        0.6117,
+        0.5038
+      ],
+      "fx": 0.5002,
+      "fy": 0.2903,
+      "from": "right",
+      "cap_en": "Proposal. A client lounge with a leather sofa, a tall abstract in gold and cream above it.",
+      "cap_he": "הצעה. טרקלין לקוחות עם ספת עור, מופשט גבוה בזהב ובשמנת מעליה.",
+      "alt_en": "A law firm client lounge: a tall abstract in gold and cream with small flecks of color above a cognac leather sofa, lit bookshelves at right.",
+      "alt_he": "טרקלין לקוחות במשרד עורכי דין: מופשט גבוה בזהב ובשמנת עם נקודות צבע קטנות, מעל ספת עור בגוון קוניאק, ומדפי ספרים מוארים מימין."
+    },
+    {
+      "b": "variants/law-firms/law-firms_s3_before.webp",
+      "a": "variants/law-firms/law-firms_s3_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.3379,
+        0.2519,
+        0.6604,
+        0.5062
+      ],
+      "fx": 0.4992,
+      "fy": 0.3791,
+      "from": "right",
+      "cap_en": "Proposal. A boardroom between two skyline windows, a wide painting of a sunlit modern interior at the far end.",
+      "cap_he": "הצעה. חדר ישיבות בין שני חלונות אל קו הרקיע, ציור רחב של פנים מודרני מואר בקצה החדר.",
+      "alt_en": "A law firm boardroom with a long walnut table and skyline windows on both sides, a wide colorful painting of a modern interior on the end wall.",
+      "alt_he": "חדר ישיבות של משרד עורכי דין עם שולחן אגוז ארוך וחלונות אל קו הרקיע משני הצדדים, ציור רחב וצבעוני של פנים מודרני על הקיר שבראש השולחן."
     }
   ],
   "intro": {

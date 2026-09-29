@@ -6,7 +6,9 @@
     "title": "Art Curator for Restaurants · New York | THEODORA",
     "description": "Stav Theodor, art curator and advisor: art for New York restaurants and private dining rooms, your story on the walls, planned for light, cleaning and service.",
     "og_title": "An unforgettable space for your unforgettable food · THEODORA",
-    "og_description": "Art chosen from your story and your space, placed so it never competes with the plate. By curator Stav Theodor."
+    "og_description": "Art chosen from your story and your space, placed so it never competes with the plate. By curator Stav Theodor.",
+    "og_image": "/images/home2/variants/restaurants/restaurants_og.jpg",
+    "og_image_alt": "A New York restaurant before service: a collage breaking an old master painting of cherubs into pixel blocks, above a green velvet banquette."
   },
   "hero": {
     "l1_en": "A space to savor.",
@@ -14,6 +16,47 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
+  "rooms": [
+    {
+      "b": "variants/restaurants/restaurants_before.webp",
+      "a": "variants/restaurants/restaurants_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.5058,
+        0.0425,
+        0.7292,
+        0.4444
+      ],
+      "fx": 0.6175,
+      "fy": 0.2434,
+      "from": "right",
+      "seed": 29,
+      "cap_en": "Proposal. A candlelit restaurant before service, a large collage of an old master painting above the velvet banquette.",
+      "cap_he": "הצעה. מסעדה לאור נרות לפני השירות, קולאז' גדול של ציור מאסטר ישן מעל ספת הקטיפה.",
+      "alt_en": "A New York restaurant before service: a collage breaking an old master painting of cherubs into pixel blocks, above a green velvet banquette.",
+      "alt_he": "מסעדה בניו יורק לפני השירות: קולאז' שמפרק ציור מאסטר ישן של כרובים לגושי פיקסלים, מעל ספת קטיפה ירוקה."
+    },
+    {
+      "b": "variants/restaurants/restaurants_s1_before.webp",
+      "a": "variants/restaurants/restaurants_s1_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.5042,
+        0.1412,
+        0.8175,
+        0.4681
+      ],
+      "fx": 0.6608,
+      "fy": 0.3047,
+      "from": "right",
+      "cap_en": "Proposal. A private dining space by the sea, a painting of a pink pool house above the long table.",
+      "cap_he": "הצעה. חלל אירוח פרטי מול הים, ציור של בית בריכה ורוד מעל השולחן הארוך.",
+      "alt_en": "A private dining space with a long wood table and a sea view, a painting of a pink pool house and turquoise water on the white wall.",
+      "alt_he": "חלל אירוח פרטי עם שולחן עץ ארוך ונוף לים, ציור של בית בריכה ורוד ומים בטורקיז על הקיר הלבן."
+    }
+  ],
   "intro": {
     "h1_en": "Art curator and advisor for New York restaurants and private dining rooms",
     "h1_he": "אוצרת ויועצת אמנות למסעדות בניו יורק ולחדרים הפרטיים שלהן",

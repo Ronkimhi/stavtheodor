@@ -6,7 +6,9 @@
     "title": "Art Curator for Boutique Hotels · NY, NJ and Tel Aviv | THEODORA",
     "description": "Stav Theodor, art curator and advisor: collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room.",
     "og_title": "An unforgettable arrival for unforgettable hospitality · THEODORA",
-    "og_description": "The arrival piece guests remember, and one collection from the lobby to the room. Hotel art by curator Stav Theodor."
+    "og_description": "The arrival piece guests remember, and one collection from the lobby to the room. Hotel art by curator Stav Theodor.",
+    "og_image": "/images/home2/variants/hotels/hotels_og.jpg",
+    "og_image_alt": "A boutique hotel lobby in late sun: a large relief of bronze and gold discs above a curved travertine desk, cognac leather club chairs at left."
   },
   "hero": {
     "l1_en": "A sense of place.",
@@ -14,6 +16,66 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
+  "rooms": [
+    {
+      "b": "variants/hotels/hotels_before.webp",
+      "a": "variants/hotels/hotels_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.3729,
+        0.095,
+        0.7567,
+        0.445
+      ],
+      "fx": 0.5648,
+      "fy": 0.27,
+      "from": "left",
+      "seed": 25,
+      "cap_en": "Proposal. A hotel lobby at arrival, a large wall relief of bronze and gold discs above the stone desk.",
+      "cap_he": "הצעה. לובי של מלון ברגע ההגעה, תבליט קיר גדול של דיסקיות ברונזה וזהב מעל דלפק האבן.",
+      "alt_en": "A boutique hotel lobby in late sun: a large relief of bronze and gold discs above a curved travertine desk, cognac leather club chairs at left.",
+      "alt_he": "לובי של מלון בוטיק בשמש של אחר הצהריים: תבליט גדול של דיסקיות ברונזה וזהב מעל דלפק טרוורטין מעוגל, כורסאות עור בגוון קוניאק משמאל."
+    },
+    {
+      "b": "variants/hotels/hotels_s1_before.webp",
+      "a": "variants/hotels/hotels_s1_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.4125,
+        0.0869,
+        0.6642,
+        0.5125
+      ],
+      "fx": 0.5383,
+      "fy": 0.2997,
+      "from": "left",
+      "cap_en": "Proposal. A hotel lounge in olive and burgundy, a wall work of folded red strips above the velvet chairs.",
+      "cap_he": "הצעה. טרקלין מלון בזית ובבורדו, עבודת קיר של רצועות אדומות מקופלות מעל כורסאות הקטיפה.",
+      "alt_en": "A dim hotel lounge: a tall wall work of folded strips in reds from coral to burgundy on an olive plaster wall above two velvet chairs.",
+      "alt_he": "טרקלין מלון מעומעם: עבודת קיר גבוהה של רצועות מקופלות באדומים, מאלמוג ועד בורדו, על קיר טיח בזית מעל שתי כורסאות קטיפה."
+    },
+    {
+      "b": "variants/hotels/hotels_s2_before.webp",
+      "a": "variants/hotels/hotels_s2_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.1892,
+        0.0638,
+        0.5038,
+        0.2975
+      ],
+      "fx": 0.3465,
+      "fy": 0.1806,
+      "from": "right",
+      "cap_en": "Proposal. A guest suite in soft linen tones, a wide blue water painting above the bed.",
+      "cap_he": "הצעה. סוויטת אורחים בגווני פשתן רכים, ציור רחב של מים כחולים מעל המיטה.",
+      "alt_en": "A boutique hotel suite with a linen bed, bench and two lamps, a wide painting of blue water with light flecks, matted in an oak frame above the bed.",
+      "alt_he": "סוויטה במלון בוטיק עם מיטה בפשתן, ספסל ושתי מנורות, ציור רחב של מים כחולים עם נקודות אור קטנות, בפספרטו ובמסגרת אלון מעל המיטה."
+    }
+  ],
   "intro": {
     "h1_en": "Art curator and advisor for boutique hotels in New York, New Jersey and Tel Aviv",
     "h1_he": "אוצרת ויועצת אמנות למלונות בוטיק בניו יורק, בניו ג'רזי ובתל אביב",

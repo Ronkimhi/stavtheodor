@@ -6,7 +6,9 @@
     "title": "Art Curator for Medical Practices · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor: calm, readable art for the reception and consultation rooms of medical and aesthetic practices in New York and New Jersey.",
     "og_title": "Your reputation starts at the entrance · THEODORA",
-    "og_description": "Patients read your reception before they meet you. Calm art for medical and aesthetic practices, by curator Stav Theodor."
+    "og_description": "Patients read your reception before they meet you. Calm art for medical and aesthetic practices, by curator Stav Theodor.",
+    "og_image": "/images/home2/variants/medical-practices/medical-practices_og.jpg",
+    "og_image_alt": "A medical practice waiting area: three paintings of garden flowers in pinks, reds and greens above a long sage bench, the reception desk at right."
   },
   "hero": {
     "l1_en": "A calm welcome.",
@@ -14,6 +16,66 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
+  "rooms": [
+    {
+      "b": "variants/medical-practices/medical-practices_before.webp",
+      "a": "variants/medical-practices/medical-practices_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.28,
+        0.1331,
+        0.715,
+        0.4131
+      ],
+      "fx": 0.4975,
+      "fy": 0.2731,
+      "from": "right",
+      "seed": 21,
+      "cap_en": "Proposal. A practice's waiting area above the city, three flower paintings in a row above the bench.",
+      "cap_he": "הצעה. אזור המתנה במרפאה מעל העיר, שלושה ציורי פרחים בשורה מעל הספסל.",
+      "alt_en": "A medical practice waiting area: three paintings of garden flowers in pinks, reds and greens above a long sage bench, the reception desk at right.",
+      "alt_he": "אזור ההמתנה של מרפאה: שלושה ציורי פרחי גן בוורוד, אדום וירוק בשורה מעל ספסל ארוך בירוק מרווה, ודלפק הקבלה מימין."
+    },
+    {
+      "b": "variants/medical-practices/medical-practices_s1_before.webp",
+      "a": "variants/medical-practices/medical-practices_s1_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.6204,
+        0.0725,
+        0.8446,
+        0.5356
+      ],
+      "fx": 0.7325,
+      "fy": 0.3041,
+      "from": "right",
+      "cap_en": "Proposal. A consultation space with a garden window, a tall abstract in turquoise above the oak cabinet.",
+      "cap_he": "הצעה. חלל ייעוץ עם חלון אל הירוק, מופשט גבוה בטורקיז מעל ארון האלון.",
+      "alt_en": "A consultation space at a medical practice: a tall abstract of small turquoise strokes with flecks of pink and red above an oak cabinet.",
+      "alt_he": "חלל ייעוץ במרפאה: מופשט גבוה של משיכות מכחול קטנות בטורקיז עם נקודות ורוד ואדום, מעל ארון אלון, ושולחן אבן עגול."
+    },
+    {
+      "b": "variants/medical-practices/medical-practices_s2_before.webp",
+      "a": "variants/medical-practices/medical-practices_s2_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.3042,
+        0.0988,
+        0.5446,
+        0.5044
+      ],
+      "fx": 0.4244,
+      "fy": 0.3016,
+      "from": "left",
+      "cap_en": "Proposal. A private lounge in sage green, a turquoise abstract above two boucle chairs.",
+      "cap_he": "הצעה. טרקלין פרטי בירוק מרווה, מופשט בטורקיז מעל שתי כורסאות בוקלה.",
+      "alt_en": "A private patient lounge with a sage plaster wall, a turquoise abstract of small bright strokes above two ivory boucle chairs and a walnut table.",
+      "alt_he": "טרקלין פרטי למטופלים עם קיר טיח בירוק מרווה, מופשט בטורקיז של משיכות מכחול קטנות ובהירות מעל שתי כורסאות בוקלה בשנהב ושולחן אגוז."
+    }
+  ],
   "intro": {
     "h1_en": "Art curator and advisor for medical and aesthetic practices in New York and New Jersey",
     "h1_he": "אוצרת ויועצת אמנות למרפאות ולקליניקות לרפואה אסתטית בניו יורק ובניו ג'רזי",

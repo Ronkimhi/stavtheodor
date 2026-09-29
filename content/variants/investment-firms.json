@@ -6,7 +6,9 @@
     "title": "Art Curator for Investment Firms · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor, chooses art for investment firms and family offices in New York and New Jersey, with discretion as the default.",
     "og_title": "Your judgment shows at the entrance · THEODORA",
-    "og_description": "A visitor reads your office before the meeting starts. Every work chosen for what it says, not what it cost. By curator Stav Theodor."
+    "og_description": "A visitor reads your office before the meeting starts. Every work chosen for what it says, not what it cost. By curator Stav Theodor.",
+    "og_image": "/images/home2/variants/investment-firms/investment-firms_og.jpg",
+    "og_image_alt": "An investment firm's lounge high over Manhattan: a wide abstract in crimson, magenta and coral above a charcoal sofa and black leather chairs."
   },
   "hero": {
     "l1_en": "A decisive space.",
@@ -14,6 +16,66 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
+  "rooms": [
+    {
+      "b": "variants/investment-firms/investment-firms_before.webp",
+      "a": "variants/investment-firms/investment-firms_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.3329,
+        0.1531,
+        0.7238,
+        0.455
+      ],
+      "fx": 0.5283,
+      "fy": 0.3041,
+      "from": "right",
+      "seed": 13,
+      "cap_en": "Proposal. A private office lounge high over Manhattan, a wide abstract in crimson and coral above the sofa.",
+      "cap_he": "הצעה. טרקלין של משרד פרטי גבוה מעל מנהטן, מופשט רחב בארגמן ובאלמוג מעל הספה.",
+      "alt_en": "An investment firm's lounge high over Manhattan: a wide abstract in crimson, magenta and coral above a charcoal sofa and black leather chairs.",
+      "alt_he": "טרקלין של חברת השקעות גבוה מעל מנהטן: מופשט רחב בארגמן, מג'נטה ואלמוג מעל ספה בצבע פחם וכורסאות עור שחורות."
+    },
+    {
+      "b": "variants/investment-firms/investment-firms_s1_before.webp",
+      "a": "variants/investment-firms/investment-firms_s1_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.0525,
+        0.1025,
+        0.385,
+        0.4275
+      ],
+      "fx": 0.2188,
+      "fy": 0.265,
+      "from": "left",
+      "cap_en": "Proposal. A boardroom above the skyline, a wide landscape in bright color over the walnut credenza.",
+      "cap_he": "הצעה. חדר ישיבות מעל קו הרקיע, נוף רחב בצבעים עזים מעל שידת האגוז.",
+      "alt_en": "An investment firm boardroom with an oval walnut table and a Manhattan skyline window, a wide brightly painted landscape above the credenza.",
+      "alt_he": "חדר ישיבות של חברת השקעות עם שולחן אגוז אובלי וחלון אל קו הרקיע של מנהטן, נוף מצויר רחב בצבעים עזים מעל שידת האגוז."
+    },
+    {
+      "b": "variants/investment-firms/investment-firms_s2_before.webp",
+      "a": "variants/investment-firms/investment-firms_s2_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.6517,
+        0.1325,
+        0.9004,
+        0.3775
+      ],
+      "fx": 0.776,
+      "fy": 0.255,
+      "from": "right",
+      "cap_en": "Proposal. A client salon facing the Empire State Building, a bronze and gold wall relief above the credenza.",
+      "cap_he": "הצעה. סלון לקוחות מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.",
+      "alt_en": "A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows.",
+      "alt_he": "סלון לקוחות בחברת השקעות: תבליט קיר של דיסקיות ברונזה וזהב על קיר אפור כחלחל מעל שידת אגוז, ספה בירוק זית וחלונות אל העיר."
+    }
+  ],
   "intro": {
     "h1_en": "Art curator and advisor for investment firms and family offices in New York and New Jersey",
     "h1_he": "אוצרת ויועצת אמנות לחברות השקעה ולפמילי אופיס בניו יורק ובניו ג'רזי",
