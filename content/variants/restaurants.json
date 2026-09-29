@@ -8,7 +8,7 @@
     "og_title": "An unforgettable space for your unforgettable food · THEODORA",
     "og_description": "Art chosen from your story and your space, placed so it never competes with the plate. By curator Stav Theodor.",
     "og_image": "/images/home2/variants/restaurants/restaurants_og.jpg",
-    "og_image_alt": "A New York restaurant before service: a collage breaking an old master painting of cherubs into pixel blocks, above a green velvet banquette."
+    "og_image_alt": "A dark wood restaurant bar with backlit shelves and a paper screen, a wide abstract in crimson and violet above the back bar, a bartender at work."
   },
   "hero": {
     "l1_en": "A space to savor.",
@@ -20,6 +20,25 @@
     {
       "b": "variants/restaurants/restaurants_before.webp",
       "a": "variants/restaurants/restaurants_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.4646,
+        0.0862,
+        0.8167,
+        0.4269
+      ],
+      "fx": 0.6406,
+      "fy": 0.2566,
+      "from": "left",
+      "cap_en": "Proposal. A bar at night, a wide abstract in crimson and violet on the back wall.",
+      "cap_he": "הצעה. בר בלילה, מופשט רחב בארגמן ובסגול על הקיר האחורי.",
+      "alt_en": "A dark wood restaurant bar with backlit shelves and a paper screen, a wide abstract in crimson and violet above the back bar, a bartender at work.",
+      "alt_he": "בר של מסעדה בעץ כהה עם מדפים מוארים ומחיצת נייר, מופשט רחב בארגמן ובסגול מעל הבר האחורי, וברמן בעבודה."
+    },
+    {
+      "b": "variants/restaurants/restaurants_s1_before.webp",
+      "a": "variants/restaurants/restaurants_s1_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [
@@ -38,8 +57,8 @@
       "alt_he": "מסעדה בניו יורק לפני השירות: קולאז' שמפרק ציור מאסטר ישן של כרובים לגושי פיקסלים, מעל ספת קטיפה ירוקה."
     },
     {
-      "b": "variants/restaurants/restaurants_s1_before.webp",
-      "a": "variants/restaurants/restaurants_s1_after.webp",
+      "b": "variants/restaurants/restaurants_s2_before.webp",
+      "a": "variants/restaurants/restaurants_s2_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [

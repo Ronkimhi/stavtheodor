@@ -8,7 +8,7 @@
     "og_title": "Trust starts in the space where you talk · THEODORA",
     "og_description": "Art that makes the space where you meet clients calm, personal and lasting, never showy. By curator Stav Theodor.",
     "og_image": "/images/home2/variants/wealth-managers/wealth-managers_og.jpg",
-    "og_image_alt": "A wealth firm's client lounge: a large painted landscape of trees and hills in greens, golds and pinks above a sage sofa, an arched garden window."
+    "og_image_alt": "An advisor's office: a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows."
   },
   "hero": {
     "l1_en": "A private space.",
@@ -20,6 +20,25 @@
     {
       "b": "variants/wealth-managers/wealth-managers_before.webp",
       "a": "variants/wealth-managers/wealth-managers_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.4333,
+        0.125,
+        0.7408,
+        0.395
+      ],
+      "fx": 0.5871,
+      "fy": 0.26,
+      "from": "right",
+      "cap_en": "Proposal. An advisor's office over a garden, a bronze and gold wall relief behind the desk.",
+      "cap_he": "הצעה. משרד יועץ מול גן, תבליט קיר בברונזה ובזהב מאחורי השולחן.",
+      "alt_en": "An advisor's office: a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows.",
+      "alt_he": "משרד יועץ בחברה לניהול הון: תבליט של דיסקיות ברונזה וזהב על קיר טיח כחול כהה מאחורי שולחן אגוז, שתי כורסאות עור בגוון קוניאק וחלונות אל הגן."
+    },
+    {
+      "b": "variants/wealth-managers/wealth-managers_s1_before.webp",
+      "a": "variants/wealth-managers/wealth-managers_s1_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [
@@ -38,8 +57,8 @@
       "alt_he": "טרקלין לקוחות בחברה לניהול הון: נוף מצויר גדול של עצים וגבעות בירוק, זהב וורוד מעל ספה בירוק מרווה, וחלון קשתי אל הגן."
     },
     {
-      "b": "variants/wealth-managers/wealth-managers_s1_before.webp",
-      "a": "variants/wealth-managers/wealth-managers_s1_after.webp",
+      "b": "variants/wealth-managers/wealth-managers_s2_before.webp",
+      "a": "variants/wealth-managers/wealth-managers_s2_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [
@@ -55,25 +74,6 @@
       "cap_he": "הצעה. קבלה באור חם, תבליט מגולף בטורקיז, כחול ושמנת מעל שידת האגוז.",
       "alt_en": "A wealth management reception with a travertine desk and a skyline window, a large carved wave relief in teal, blue and cream on the plaster wall.",
       "alt_he": "קבלה של חברה לניהול הון עם דלפק טרוורטין וחלון אל קו הרקיע, תבליט גלים מגולף וגדול בטורקיז, כחול ושמנת על קיר הטיח."
-    },
-    {
-      "b": "variants/wealth-managers/wealth-managers_s2_before.webp",
-      "a": "variants/wealth-managers/wealth-managers_s2_after.webp",
-      "w": 1800,
-      "h": 1200,
-      "rect": [
-        0.4333,
-        0.125,
-        0.7408,
-        0.395
-      ],
-      "fx": 0.5871,
-      "fy": 0.26,
-      "from": "right",
-      "cap_en": "Proposal. An advisor's office over a garden, a bronze and gold wall relief behind the desk.",
-      "cap_he": "הצעה. משרד יועץ מול גן, תבליט קיר בברונזה ובזהב מאחורי השולחן.",
-      "alt_en": "An advisor's office: a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows.",
-      "alt_he": "משרד יועץ בחברה לניהול הון: תבליט של דיסקיות ברונזה וזהב על קיר טיח כחול כהה מאחורי שולחן אגוז, שתי כורסאות עור בגוון קוניאק וחלונות אל הגן."
     }
   ],
   "intro": {

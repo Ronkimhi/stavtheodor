@@ -8,7 +8,7 @@
     "og_title": "Your judgment shows at the entrance · THEODORA",
     "og_description": "A visitor reads your office before the meeting starts. Every work chosen for what it says, not what it cost. By curator Stav Theodor.",
     "og_image": "/images/home2/variants/investment-firms/investment-firms_og.jpg",
-    "og_image_alt": "An investment firm's lounge high over Manhattan: a wide abstract in crimson, magenta and coral above a charcoal sofa and black leather chairs."
+    "og_image_alt": "A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows."
   },
   "hero": {
     "l1_en": "A decisive space.",
@@ -20,6 +20,25 @@
     {
       "b": "variants/investment-firms/investment-firms_before.webp",
       "a": "variants/investment-firms/investment-firms_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.6517,
+        0.1325,
+        0.9004,
+        0.3775
+      ],
+      "fx": 0.776,
+      "fy": 0.255,
+      "from": "right",
+      "cap_en": "Proposal. A client salon facing the Empire State Building, a bronze and gold wall relief above the credenza.",
+      "cap_he": "הצעה. סלון לקוחות מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.",
+      "alt_en": "A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows.",
+      "alt_he": "סלון לקוחות בחברת השקעות: תבליט קיר של דיסקיות ברונזה וזהב על קיר אפור כחלחל מעל שידת אגוז, ספה בירוק זית וחלונות אל העיר."
+    },
+    {
+      "b": "variants/investment-firms/investment-firms_s1_before.webp",
+      "a": "variants/investment-firms/investment-firms_s1_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [
@@ -38,8 +57,8 @@
       "alt_he": "טרקלין של חברת השקעות גבוה מעל מנהטן: מופשט רחב בארגמן, מג'נטה ואלמוג מעל ספה בצבע פחם וכורסאות עור שחורות."
     },
     {
-      "b": "variants/investment-firms/investment-firms_s1_before.webp",
-      "a": "variants/investment-firms/investment-firms_s1_after.webp",
+      "b": "variants/investment-firms/investment-firms_s2_before.webp",
+      "a": "variants/investment-firms/investment-firms_s2_after.webp",
       "w": 1800,
       "h": 1200,
       "rect": [
@@ -55,25 +74,6 @@
       "cap_he": "הצעה. חדר ישיבות מעל קו הרקיע, נוף רחב בצבעים עזים מעל שידת האגוז.",
       "alt_en": "An investment firm boardroom with an oval walnut table and a Manhattan skyline window, a wide brightly painted landscape above the credenza.",
       "alt_he": "חדר ישיבות של חברת השקעות עם שולחן אגוז אובלי וחלון אל קו הרקיע של מנהטן, נוף מצויר רחב בצבעים עזים מעל שידת האגוז."
-    },
-    {
-      "b": "variants/investment-firms/investment-firms_s2_before.webp",
-      "a": "variants/investment-firms/investment-firms_s2_after.webp",
-      "w": 1800,
-      "h": 1200,
-      "rect": [
-        0.6517,
-        0.1325,
-        0.9004,
-        0.3775
-      ],
-      "fx": 0.776,
-      "fy": 0.255,
-      "from": "right",
-      "cap_en": "Proposal. A client salon facing the Empire State Building, a bronze and gold wall relief above the credenza.",
-      "cap_he": "הצעה. סלון לקוחות מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.",
-      "alt_en": "A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows.",
-      "alt_he": "סלון לקוחות בחברת השקעות: תבליט קיר של דיסקיות ברונזה וזהב על קיר אפור כחלחל מעל שידת אגוז, ספה בירוק זית וחלונות אל העיר."
     }
   ],
   "intro": {
