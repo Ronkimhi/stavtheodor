@@ -453,6 +453,155 @@ def render_contact():
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.form_js()))
 
 
+# /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
+# states the entity facts in plain sentences (what THEODORA is, who runs it, where, for whom, how to reach her); everything
+# after it is copy already published on the site, read from its source at build time so the two never drift: the
+# homepage's #about and #what-i-do paragraphs and service lines (templates/home.html), the partner pages' two promises
+# (content/pages/for-designers.json, for-brokers.json) and the page titles of the pages it links. No new claim.
+ABOUT = {
+    "path": "about",
+    "title": "About THEODORA | Art Advisor Stav Theodor, Tenafly NJ",
+    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, New Jersey and New York City.",
+    "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
+    "portrait": ("/images/stav-portrait.jpg", 508, 430, "Stav Theodor-Kimhi", "סתיו תאודור-קמחי"),
+}
+# The places, in the footer's words and order (site_chrome.footer)
+ABOUT_PLACES = [
+    ("/art-consultant-tenafly-nj/", "Art consultant in Tenafly", "יועצת אמנות בטנפליי"),
+    ("/art-advisor-bergen-county/", "Art advisor in Bergen County", "יועצת אמנות במחוז ברגן"),
+    ("/art-curator-new-jersey/", "Art consultant in New Jersey", "יועצת אמנות בניו ג'רזי"),
+    ("/art-curator-new-york/", "Art advisor in New York", "יועצת אמנות בניו יורק"),
+]
+
+
+def home_twins(region):
+    """Twins read from templates/home.html: a variant region's (en, he) by its name; 'about' for the (en, he) of each
+    body paragraph of the #about section; 'services' for the ((en, he) heading, (en, he) line) of each service column."""
+    tpl = open("templates/home.html", encoding="utf-8").read()
+    pair = re.compile(r'<span data-l="en">(.*?)</span><span data-l="he" dir="rtl">(.*?)</span>', re.S)
+    if region == "about":
+        sec = re.search(r'<section class="section wrap" id="about">(.*?)</section>', tpl, re.S).group(1)
+        return [pair.match(m).groups() for m in re.findall(r'<p class="body">(.*?)</p>', sec, re.S)]
+    if region == "services":
+        sec = re.search(r'<section class="cols" id="services"[^>]*>(.*?)</section>', tpl, re.S).group(1)
+        return [(pair.search(h).groups(), pair.search(d).groups())
+                for h, d in re.findall(r'<h3 class="serif">(.*?)</h3><p class="desc">(.*?)</p>', sec, re.S)]
+    return pair.search(re.search(rf'<!--variant:{region}-->(.*?)<!--/variant:{region}-->', tpl, re.S).group(1)).groups()
+
+
+def page_by_path(pages, path):
+    return next(p for p in pages if p["path"].strip("/") == path)
+
+
+def about_body(pages):
+    """The reading column of /about/, (en, he): every sentence is the site's own, published elsewhere."""
+    bg = home_twins("about")  # [experience, THEODORA exists, credentials], in the homepage's order ("that connection")
+    statement = home_twins("intro_statement")
+    how = home_twins("what_i_do_p1")
+    where = home_twins("what_i_do_p2")
+    services = home_twins("services")
+    des, bro, adv = (page_by_path(pages, x) for x in ("for-designers", "for-brokers", "for-advisors"))
+    credit = ("The credit is yours. I say so to the buyer.", "הקרדיט שלכם. אני אומרת את זה לקונה.")
+    for text, src in ((credit[0], bro["body_en"]), (credit[1], bro["body_he"])):
+        assert text in src, "the brokers' promise changed on /for-brokers/; update the copy of it in about_body()"
+    tenafly = page_by_path(pages, "art-consultant-tenafly-nj")
+    bg_h2 = (re.findall(r"<h2>(.*?)</h2>", tenafly["body_en"])[5], re.findall(r"<h2>(.*?)</h2>", tenafly["body_he"])[5])
+    assert bg_h2 == ("My background", "הרקע שלי"), bg_h2
+    link = lambda p, lang: f'<a href="/{p["path"].strip("/")}/">{H.escape(p["title_" + lang])}</a>'
+    out = []
+    for i, lang in enumerate(("en", "he")):
+        li = "".join(f"<li><strong>{h[i]}.</strong> {d[i]}.</li>" for h, d in services)
+        out.append(f'''<h2>{bg_h2[i]}</h2>
+<p>{bg[0][i]}</p>
+<p>{bg[1][i]}</p>
+<p>{bg[2][i]}</p>
+<h2>{("What I do", "מה אני עושה")[i]}</h2>
+<p>{statement[i]}</p>
+<p>{how[i]}</p>
+<ul>{li}</ul>
+<h2>{("Where I work", "איפה אני עובדת")[i]}</h2>
+<p>{where[i]}</p>
+<h2>{("For partners", "לשותפים")[i]}</h2>
+<p>{des["lead_" + lang]} {link(des, lang)}.</p>
+<p>{credit[i]} {link(bro, lang)}.</p>
+<p>{link(adv, lang)}.</p>''')
+    return out
+
+
+def about_links(pages):
+    """Where to go from /about/: the advisory pages, the pages for one kind of client, the places, projects, contact."""
+    adv = [p for p in pages if p["section"] in ("advisory", "guide")]
+    rows = [
+        (("Art advisory", "ייעוץ אמנות"), [("/advisory/", "Art advisory", "ייעוץ אמנות")]
+         + [(f'/{p["path"].strip("/")}/', p["title_en"], p["title_he"]) for p in adv]),
+        (("Who I work with", "עם מי אני עובדת"), sc.WHO_I_WORK_WITH),
+        (("Where I work", "איפה אני עובדת"), ABOUT_PLACES),
+        (("Projects", "פרויקטים"), [("/projects/", "Projects", "פרויקטים"), ("/contact/", "Contact", "יצירת קשר")]),
+    ]
+    html = ""
+    for (h_en, h_he), links in rows:
+        a = "".join(f'<a href="{u}">{T(H.escape(en), H.escape(he))}</a>' for u, en, he in links)
+        html += f'''
+<section class="section wrap tight">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T(h_en, h_he)}</p></div></div>
+  <div class="readnext who-row reveal">{a}</div>
+</section>'''
+    return html
+
+
+def render_about(pages):
+    url = f"{SITE}/{ABOUT['path']}/"
+    src, w, h, alt_en, alt_he = ABOUT["portrait"]
+    body_en, body_he = about_body(pages)
+    tel = f'<a href="{sc.PHONE_TEL}" data-loc="about" dir="ltr">{sc.PHONE}</a>'
+    mail = f'<a href="{MAIL}" data-loc="about" dir="ltr">{sc.EMAIL}</a>'
+    lead_en = ("THEODORA is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
+               "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. "
+               "It works with private homes, interior designers and architects, private collectors, law firms, investment firms, "
+               f"wealth managers, medical practices, restaurants and boutique hotels. To reach Stav, call {tel} or email {mail}.")
+    lead_he = ("THEODORA היא פרקטיקה של אוצרות וייעוץ אמנות, שייסדה ומנהלת סתיו תאודור, אוצרת ויועצת אמנות. "
+               "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב. "
+               "היא עובדת עם בתים פרטיים, מעצבי פנים ואדריכלים, אספנים פרטיים, משרדי עורכי דין, חברות השקעה, "
+               f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}.")
+    ld = [{"@type": "AboutPage", "@id": url + "#page", "url": url, "name": ABOUT["title"], "description": ABOUT["description"],
+           "inLanguage": ["en", "he"], "isPartOf": {"@id": SITE + "/#site"},
+           "mainEntity": [{"@id": SITE + "/#org"}, {"@id": SITE + "/#stav"}], "about": {"@id": SITE + "/#org"},
+           "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + src}},
+          {"@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+              {"@type": "ListItem", "position": 2, "name": "About", "item": url}]}]
+    body = f'''
+<header class="phead">
+  <p class="eyebrow">{T('About', 'אודות')}</p>
+  <h1 class="serif">{T(*ABOUT["h1"])}</h1>
+  <p class="lead">{T(lead_en, lead_he)}</p>
+  <figure class="pfig reveal" style="max-width: {w}px;">
+    <img src="{src}" {sc.img_alt(alt_en, alt_he)} width="{w}" height="{h}" loading="eager" fetchpriority="high" decoding="async">
+  </figure>
+</header>
+
+<section class="section wrap tight">
+  <div class="prose" data-l="he" dir="rtl">
+{body_he}
+  </div>
+  <div class="prose" data-l="en">
+{body_en}
+  </div>
+</section>
+{about_links(pages)}
+<section class="section wrap tight">
+  <div class="cta reveal">
+    <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
+    <a class="btn" href="{MAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    {sc.phone_link('cta')}
+    <a class="arrow" href="/contact/"><span class="ln"></span>{T("All the ways to reach me", "כל הדרכים ליצור איתי קשר")}</a>
+  </div>
+</section>
+'''
+    return (sc.head(ABOUT["title"], ABOUT["description"], url, og_image=SITE + src, lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + body + sc.tail())
+
+
 def check(p, out):
     bad = []
     if sc.dash_leftovers(sc.undash_html(out)): bad.append("em/en dash the sanitizer cannot place")
@@ -517,6 +666,8 @@ def main():
         print(f"  wrote {d}/index.html")
     sc.write(os.path.join(CONTACT["path"], "index.html"), render_contact())
     print(f"  wrote {CONTACT['path']}/index.html" + (" (with the contact form)" if sc.FORM_ENDPOINT else " (no form: site_chrome.FORM_ENDPOINT is empty)"))
+    sc.write(os.path.join(ABOUT["path"], "index.html"), render_about(pages))
+    print(f"  wrote {ABOUT['path']}/index.html")
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects

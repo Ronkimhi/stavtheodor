@@ -128,7 +128,7 @@ QUESTION_MAX = 110
 HEBREW_SHARE = 0.6
 ROWS_COUNT = (3, 8)
 HUBS = ('/advisory/', '/projects/')
-STUBS = ('2', 'about', 'our-team', 'our-team-1', 'questions', 'designers')  # /contact/ is a real page since 2026-09-29; /designers/ forwards to /for-designers/
+STUBS = ('2', 'our-team', 'our-team-1', 'questions', 'designers')  # /contact/ and /about/ are real pages since 2026-09-29; /designers/ forwards to /for-designers/
 RESERVED = {'2', 'about', 'advisory', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'content', 'css', 'designers', 'fonts',
             'for-advisors', 'for-brokers', 'for-designers', 'guide', 'images', 'js', 'museum', 'our-team', 'our-team-1',
             'projects', 'questions', 'radar', 'templates', 'tools', 'videos'}

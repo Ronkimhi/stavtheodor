@@ -302,7 +302,7 @@ WHO_I_WORK_WITH = [
 ]
 # Section links that have a page of their own: on the homepage they stay in-page, on every
 # other page they go to that page instead of scrolling the homepage (2026-09-26).
-SUBPAGE_FOR = {'#advisory': '/advisory/'}
+SUBPAGE_FOR = {'#advisory': '/advisory/', '#about': '/about/'}  # /about/: a real page since 2026-09-29
 
 
 def _link(href, home):
@@ -393,7 +393,7 @@ def footer(home=False, cta=None, subject='', form=False):
   </div>
   <div class="cols2">
     <div>
-      <a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="{L('#about')}">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+      <a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
     </div>
     <div class="who">
       <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
@@ -806,7 +806,7 @@ def tail(home=False, scripts=''):
 def redirect_stub(target, title='THEODORA', noindex=True):
     """A page that moved: canonical and meta refresh to its new address, a location.replace
     for browsers (no history entry, fragments included), noindex. Used for the retired /2/
-    tree and the old Squarespace paths (/about/, /our-team/, /our-team-1/, /questions/).
+    tree and the old Squarespace paths (/our-team/, /our-team-1/, /questions/).
     noindex=False: a page merged into another (/designers/ into /for-designers/, Ron's SEO brief of 2026-09-29, P1.5),
     where the instant refresh should read as a permanent redirect and pass the old page's signals on."""
     robots = '\n<meta name="robots" content="noindex">' if noindex else ''

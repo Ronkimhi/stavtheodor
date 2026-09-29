@@ -421,11 +421,10 @@ def page_problems(out, name, home=None):
 
 
 OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: one consistent stub each
-    'about': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'our-team': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'our-team-1': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'questions': (SITE + '/#faq', 'Questions people ask before they write | THEODORA'),
-}  # /contact/ left this list on 2026-09-29: it is a real page now (build-site-pages.py, Ron's SEO brief P1.1)
+}  # /contact/ left this list on 2026-09-29, and /about/ the same day: both are real pages now (build-site-pages.py)
 # Pages merged into another (Ron's SEO brief, 2026-09-29, P1.5): the same stub without noindex, so the instant refresh
 # reads as a permanent redirect. GitHub Pages sends no server 301; move this to a real 301 if the hosting ever allows one.
 MERGED_PATHS = {

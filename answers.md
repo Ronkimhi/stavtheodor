@@ -47,7 +47,7 @@ An art curator for private residences guides the entire process: developing an a
 
 ## How do I find an art advisor in New Jersey or New York?
 
-THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: (201) 351-8367 or stav@stavtheodor.com. Details: https://stavtheodor.com/#about
+THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: (201) 351-8367 or stav@stavtheodor.com. Details: https://stavtheodor.com/about/
 
 ## Is there an art curator in Bergen County, New Jersey?
 

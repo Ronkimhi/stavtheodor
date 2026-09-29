@@ -28,7 +28,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 SITE = 'https://stavtheodor.com'
 HOST = 'stavtheodor.com'
-STUBS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')
+STUBS = ('2', 'our-team', 'our-team-1', 'questions')  # /about/ and /contact/ are real pages since 2026-09-29
 KEY_FILE = glob.glob('*.txt')
 
 
