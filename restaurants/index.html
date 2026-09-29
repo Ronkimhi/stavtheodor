@@ -376,7 +376,7 @@
 </script>
 
 <nav class="nav" aria-label="Main">
-  <a class="wordmark" href="#hero">THEODORA</a>
+  <a class="wordmark" href="#hero">THEODORA<span class="wm-sub" aria-hidden="true"><span data-l="en">for restaurants</span><span data-l="he" dir="rtl">למסעדות</span></span></a>
   <div class="right">
     <div class="links" id="links"><a href="#about"><span data-l="en">About</span><span data-l="he" dir="rtl">אודות</span></a><a href="/projects/"><span data-l="en">Projects</span><span data-l="he" dir="rtl">פרויקטים</span></a><a href="#advisory"><span data-l="en">Advisory</span><span data-l="he" dir="rtl">ייעוץ</span></a><a href="/#industries"><span data-l="en">For business</span><span data-l="he" dir="rtl">לעסקים</span></a><a href="/radar/"><span data-l="en">Art Radar</span><span data-l="he" dir="rtl">ראדאר אמנות</span></a><a href="#faq"><span data-l="en">Questions</span><span data-l="he" dir="rtl">שאלות</span></a><a href="/contact/"><span data-l="en">Contact</span><span data-l="he" dir="rtl">יצירת קשר</span></a></div>
     <a class="nav-call" href="tel:+12013518367" data-loc="header" aria-label="Call THEODORA at (201) 351-8367"><span class="num">(201) 351-8367</span><span class="short"><span data-l="en">Call</span><span data-l="he" dir="rtl">התקשרו</span></span></a>
@@ -780,6 +780,23 @@ document.addEventListener('click', function (e) {
   if (!a || typeof window.gtag !== 'function') { return; }
   window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
 });
+</script>
+<script>
+(function () {
+  var sub = document.querySelector('.nav .wm-sub'), intro = document.getElementById('intro');
+  if (!sub || !intro) { return; }
+  var queued = false;
+  function update() {
+    queued = false;
+    var vh = window.innerHeight;
+    sub.classList.toggle('on', window.scrollY > vh * 0.6 && intro.getBoundingClientRect().top > vh * 0.85);
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', update);
+  update();
+})();
 </script>
 <script>window.THEODORA_ROOMS = [{"slot":0,"b":"variants/restaurants/restaurants_before.webp","a":"variants/restaurants/restaurants_after.webp","w":1800,"h":1200,"rect":[0.4646,0.0862,0.8167,0.4269],"fx":0.6406,"fy":0.2566,"from":"left"},{"slot":1,"b":"variants/restaurants/restaurants_s1_before.webp","a":"variants/restaurants/restaurants_s1_after.webp","w":1800,"h":1200,"rect":[0.5058,0.0425,0.7292,0.4444],"fx":0.6175,"fy":0.2434,"from":"right","seed":29},{"slot":2,"b":"variants/restaurants/restaurants_s2_before.webp","a":"variants/restaurants/restaurants_s2_after.webp","w":1800,"h":1200,"rect":[0.5042,0.1412,0.8175,0.4681],"fx":0.6608,"fy":0.3047,"from":"right"}]; window.THEODORA_ROOMS_ONLY = true;</script>
 <!-- GSAP 3.13 (core, ScrollTrigger, SplitText) and Lenis 1.3.11 are vendored in /js/vendor/ with their licence

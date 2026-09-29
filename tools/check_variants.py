@@ -86,7 +86,7 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
-    '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'service', 'services', 'value_strip', 'what_i_do', 'guide', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
+    '': ({'id', 'path', 'approved', 'nav_sub_en', 'nav_sub_he', 'head', 'hero', 'intro', 'service', 'services', 'value_strip', 'what_i_do', 'guide', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
          {'advisory', 'advisory_rows', 'rooms', 'rooms_rest'}),
     'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
@@ -114,7 +114,7 @@ CHAR_LIMITS = [
     ('hero.l1_en', 1, 18), ('hero.l1_he', 1, 18), ('hero.l2_en', 1, 18), ('hero.l2_he', 1, 18),
     ('intro.h1_en', 40, 110), ('intro.line_en', 1, 60), ('intro.eyebrow_en', 1, 24), ('intro.statement_en', 60, 160),
     ('what_i_do.eyebrow_en', 1, 24), ('what_i_do.h2_en', 1, 120), ('advisory.h2_en', 1, 90), ('advisory.sub_en', 1, 200),
-    ('cta_en', 40, 140), ('mail_subject', 8, 60),
+    ('cta_en', 40, 140), ('mail_subject', 8, 60), ('nav_sub_en', 1, 32), ('nav_sub_he', 1, 32),
     ('guide.who_en', 80, 260), ('service.service_type', 10, 90), ('service.audience', 5, 90),
     ('guide.eyebrow_en', 1, 24), ('guide.h2_en', 1, 120),
 ]
@@ -194,7 +194,7 @@ def strings(v):
         if isinstance(item, dict) and 'home' not in item:
             for k, s in item.items():
                 out.append((f'faq[{i}].{k}', s))
-    for k in ('cta_en', 'cta_he', 'mail_subject'):
+    for k in ('nav_sub_en', 'nav_sub_he', 'cta_en', 'cta_he', 'mail_subject'):
         if k in v:
             out.append((k, v[k]))
     return out
@@ -452,7 +452,7 @@ def check(path, v, peers):
         v[k] = v[k] if isinstance(v.get(k), dict) else {}
     for k in ('services', 'value_strip', 'faq'):
         v[k] = v[k] if isinstance(v.get(k), list) else []
-    for k in ('id', 'path', 'approved', 'cta_en', 'cta_he', 'mail_subject'):
+    for k in ('id', 'path', 'approved', 'nav_sub_en', 'nav_sub_he', 'cta_en', 'cta_he', 'mail_subject'):
         v[k] = v[k] if isinstance(v.get(k), str) else ''
     vid, vpath = v.get('id') or '', v.get('path') or ''
     if vid != stem:

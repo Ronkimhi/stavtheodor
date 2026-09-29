@@ -319,13 +319,17 @@ def phone_link(loc='cta'):
     return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span>{PHONE}</a>'
 
 
-def nav(home=False, own=None):
+def nav(home=False, own=None, sub=None):
     """own: section links a homepage-shaped page sends to their own page because it lacks the section
-    (a buyer variant has no #museum: {'#museum': '/museum/'}, 2026-09-28)."""
+    (a buyer variant has no #museum: {'#museum': '/museum/'}, 2026-09-28).
+    sub: an (en, he) pair, the small orientation line under the wordmark ("for hotels"), buyer variants only
+    (Ron, 2026-09-29). It sits inside the wordmark so it lines up with it and stacks above the WebGL canvas;
+    WM_SUB_JS shows it between the first fold and the black intro block."""
     own = own or {}
     links = ''.join(f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>' for h, en, he in NAV_ITEMS)
+    wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
-  <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA</a>
+  <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA{wm_sub}</a>
   <div class="right">
     <div class="links" id="links">{links}</div>
     {nav_call()}
@@ -732,6 +736,27 @@ document.addEventListener('click', function (e) {
 });
 </script>'''
 PAGE_JS = PAGE_JS + '\n' + CALL_JS
+
+# The buyer pages' line under the wordmark (nav(sub=...), Ron, 2026-09-29): hidden on the first fold, shown from
+# the second room of the opening on, gone once the black intro block (#intro) enters the viewport. Scroll position
+# only, so the static fallback (no WebGL, reduced motion) behaves the same. Absent element: nothing runs.
+WM_SUB_JS = '''<script>
+(function () {
+  var sub = document.querySelector('.nav .wm-sub'), intro = document.getElementById('intro');
+  if (!sub || !intro) { return; }
+  var queued = false;
+  function update() {
+    queued = false;
+    var vh = window.innerHeight;
+    sub.classList.toggle('on', window.scrollY > vh * 0.6 && intro.getBoundingClientRect().top > vh * 0.85);
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', update);
+  update();
+})();
+</script>'''
 
 
 def body_open():

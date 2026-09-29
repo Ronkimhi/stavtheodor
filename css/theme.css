@@ -77,6 +77,12 @@
   .nav::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(96px + env(safe-area-inset-top, 0px)); background: linear-gradient(180deg, rgba(15,15,20,0.55) 0%, rgba(15,15,20,0) 100%); pointer-events: none; z-index: -1; }
   .nav .wordmark, .nav .links a, .nav .lang-switch, .nav .menu-btn { pointer-events: auto; }
   .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.22em; color: var(--ink); }
+  /* A buyer page's line under the wordmark ("for hotels", Ron 2026-09-29): shown by WM_SUB_JS (class on) from the
+     second room of the opening until the black intro block enters; never on the homepage */
+  .nav .wordmark { position: relative; }
+  .wm-sub { position: absolute; left: 0; top: 100%; margin-top: 1px; font-family: var(--sans); font-size: 12px; font-weight: 400; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.24em; white-space: nowrap; color: #F2F0EC; text-shadow: 0 1px 8px rgba(0,0,0,0.35); pointer-events: none; opacity: 0; transform: translateY(-4px); transition: opacity .35s ease, transform .35s ease; }
+  .wm-sub.on { opacity: 0.82; transform: none; }
+  .wm-sub [data-l="he"] { letter-spacing: 0.04em; font-size: 14px; }
   .links { display: flex; gap: 30px; align-items: center; }
   .links a { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
   .links a [data-l="he"] { font-size: 16px; }

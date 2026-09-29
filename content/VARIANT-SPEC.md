@@ -9,6 +9,8 @@ Since 2026-09-28 a variant is indexable and its own canonical, listed once in `s
   "id": "example-buyer",
   "path": "example-buyer",
   "approved": "Ron 2026-09-27",
+  "nav_sub_en": "for example buyers",
+  "nav_sub_he": "לקוחות לדוגמה",
   "head": {
     "title": "Example title for one kind of buyer | THEODORA",
     "description": "Example description of what this buyer gets, in one plain sentence of seventy to one hundred sixty five characters.",
@@ -65,6 +67,7 @@ The example is shortened (two questions, "..." in the long fields): a real file 
 | `id` | the file name, `<id>.json` | a slug: lowercase letters, digits, single hyphens |
 | `path` | the address, /<path>/ | one or two slug segments, the last one the id; not a folder of the site or a growth page |
 | `approved` | nowhere; who approved the copy and when | `Ron YYYY-MM-DD` or `Stav YYYY-MM-DD` |
+| `nav_sub_en`, `nav_sub_he` | the small line under the THEODORA wordmark in the nav ("for hotels", "למלונות"; Ron, 2026-09-29): hidden on the first fold, shown from the second room of the opening, gone once the black intro block enters, never on the homepage (`site_chrome.nav(sub=...)`, `WM_SUB_JS`, `.wm-sub` in `css/theme.css`) | required; at most 32 characters each, lowercase "for ..." in English |
 | `head.title`, `head.description` | title and meta description | 30 to 70 and 70 to 165 characters |
 | `head.og_title`, `head.og_description` | the share card (Open Graph, Twitter) | at most 70 and 160 |
 | `hero.l1`, `hero.l2` | the two lines of the opening | at most 18 characters, in both languages (characters are a proxy; the render check measures pixels at 360px: `node tools/check_render.js` fails a line that ends past the right edge of a 360 by 780 screen, in either language; the homepage's "A beautiful room." ends at about 351) |

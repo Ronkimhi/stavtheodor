@@ -340,7 +340,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     subject = v['mail_subject'] if v else ''
     questions = v['faq'] if v else faq
     fills = {
-        'NAV': sc.nav(home=True, own={'#industries': '/#industries'} if v else None),  # a variant has no #industries: the homepage's
+        'NAV': sc.nav(home=True, own={'#industries': '/#industries'} if v else None, sub=(v['nav_sub_en'], v['nav_sub_he']) if v else None),  # a variant has no #industries: the homepage's
         'INDUSTRIES': '' if v else industries(variants),
         'PROJECT_CARDS': ''.join(sc.project_card(p) for p in projects),
         'ADVISORY_ROWS': advisory_rows(pages, (v.get('advisory_rows') if v else None) or HOME_ROWS),
@@ -350,7 +350,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject, form=v is None),
         'MAIL_UI': sc.mail_ui(subject),
         'LANG_JS': sc.LANG_JS,
-        'PAGE_JS': sc.PAGE_JS + ('' if v else ('\n' + sc.form_js() if sc.form_js() else '')),
+        'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ('\n' + sc.form_js() if sc.form_js() else '')),
     }
     body = tmpl
     for k, val in fills.items():

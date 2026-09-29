@@ -2,6 +2,8 @@
   "id": "hotels",
   "path": "hotels",
   "approved": "Ron 2026-09-28",
+  "nav_sub_en": "for hotels",
+  "nav_sub_he": "למלונות",
   "head": {
     "title": "Boutique Hotel Art Consultant · New York, NJ, Tel Aviv | THEODORA",
     "description": "Boutique hotel art consultant in New York, New Jersey and Tel Aviv: Stav Theodor builds hotel collections from the arrival piece to the guest room.",
