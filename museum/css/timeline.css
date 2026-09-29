@@ -367,6 +367,7 @@ body.timeline-page { overflow: hidden; height: 100vh; }
 @media (max-width: 640px) {
   .m-nav { padding: 14px 18px 10px; gap: 12px; }
   .m-nav-links { display: none; }
+  .m-nav-call { margin-left: auto; }
   .hud { top: auto; bottom: 24px; right: 18px; }
   .hint {
     bottom: 140px; /* clear of the HUD pills pinned bottom-right */

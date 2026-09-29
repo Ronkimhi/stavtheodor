@@ -351,7 +351,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
                    noindex=False, extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
-    return head + body
+    return sc.undash_html(head + body)  # the shared dash sanitizer (site_chrome), before the checks in page_problems
 
 
 def variant_schema(v, url, meta):
@@ -362,7 +362,7 @@ def variant_schema(v, url, meta):
             else {'@type': 'City', 'name': a} for a in sv['area_served']]
     service = {'@context': 'https://schema.org', '@type': 'Service', '@id': url + '#service', 'name': v['intro']['h1_en'],
                'serviceType': sv['service_type'], 'description': meta['description'], 'url': url,
-               'provider': {'@type': 'ProfessionalService', '@id': SITE + '/#org', 'name': 'THEODORA', 'url': SITE + '/'},
+               'provider': {'@id': SITE + '/#org'},  # by reference: the one full ProfessionalService is the site-wide node
                'audience': {'@type': 'BusinessAudience', 'audienceType': sv['audience']}, 'areaServed': area}
     name = dict((i, en) for i, en, _ in INDUSTRIES).get(v['id'], v['intro']['h1_en'])
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
@@ -381,8 +381,8 @@ def page_problems(out, name, home=None):
     """What stops a page from being written. With home (the rendered homepage), out is a variant:
     it must also be indexable (since 2026-09-28) and carry the shared sections exactly as the homepage does."""
     problems = []
-    if re.search('[\\u2013\\u2014]', re.sub(r'<script.*?</script>', '', out, flags=re.S)):
-        problems.append(f'em or en dash in {name}')
+    if sc.dash_leftovers(out):
+        problems.append(f'em or en dash in {name}: {sc.dash_leftovers(out)[:2]!r}')
     en, he = out.count('data-l="en"'), out.count('data-l="he"')
     if en != he:
         problems.append(f'twins differ in {name}: {en} en, {he} he')

@@ -61,10 +61,6 @@
     {
       "@type": "State",
       "name": "New Jersey"
-    },
-    {
-      "@type": "City",
-      "name": "Tel Aviv"
     }
   ],
   "radar_posts": [

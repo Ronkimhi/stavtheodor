@@ -40,7 +40,7 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      40 characters and lines at most 170 (the English), no label or line repeated
   o  indexing (2026-09-28): guide.who (the direct "who does this" answer, the long section's first
      paragraph, 80 to 260 characters, naming Stav Theodor); service {service_type, audience, area_served} for the Service schema, area_served
-     from New York City, New Jersey, Tel Aviv; guide {eyebrow, h2, body} with a body of 600 to 900
+     from New York City and New Jersey (never Tel Aviv, 2026-09-29); guide {eyebrow, h2, body} with a body of 600 to 900
      English words (p, h3, ul, ol, li, a, em, strong; links as in h, the same set in both languages)
 """
 import ast
@@ -105,7 +105,7 @@ NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are n
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
 GUIDE_FIELDS = {'guide.body_en', 'guide.body_he'}  # the long section: a reading column's tags too
 GUIDE_TAGS = ('a', 'em', 'strong', 'p', 'h3', 'ul', 'ol', 'li')
-AREAS = ('New York City', 'New Jersey', 'Tel Aviv')
+AREAS = ('New York City', 'New Jersey')  # never Tel Aviv in an areaServed (Ron's SEO brief, 2026-09-29)
 # (field, min, max) in characters; the minimum and maximum read the English, the hero lines both languages
 CHAR_LIMITS = [
     ('head.title', 30, 70), ('head.description', 70, 165), ('head.og_title', 1, 70), ('head.og_description', 1, 160),

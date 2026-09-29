@@ -76,6 +76,11 @@ a { color: var(--bronze); }
   transition: color 0.25s;
 }
 .m-nav-links a:hover { color: var(--bronze); }
+/* click to call, the business line (2026-09-29) */
+.m-nav-call { font-size: 13px; letter-spacing: 0.08em; text-decoration: none; color: var(--ink-soft); white-space: nowrap; }
+.m-nav-call:hover { color: var(--bronze); }
+.m-nav-call .short { display: none; }
+@media (max-width: 480px) { .m-nav-call .num { display: none; } .m-nav-call .short { display: inline; } }
 
 /* ---------- pills / HUD ---------- */
 .hud-pill {

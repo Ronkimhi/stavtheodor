@@ -34,7 +34,10 @@ SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרוי�
 # section "local", added 2026-09-26) sit under /advisory/ in the breadcrumb and open the advisory hub.
 CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Guides"}
 CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects"}
-DEFAULT_AREA = [{"@type": "City", "name": "New York City"}, {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "Tel Aviv"}]
+# The service area in every Service block (Ron's SEO brief, 2026-09-29): the entity's own areaServed. Tel Aviv
+# stays in the copy and on the project pages but never in an areaServed.
+DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
+                {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "New York City"}]
 CTA_EN = "Send me one photo of the wall, and a line about the space. I will tell you what I see."
 CTA_HE = "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
 MAIL = f"mailto:{sc.EMAIL}"
@@ -92,12 +95,13 @@ def ld_blocks(p, url, og):
         "inLanguage": ["en", "he"],
         "datePublished": date, "dateModified": p.get("date_modified", date),
         "image": og,
-        "author": {"@type": "Person", "name": "Stav Theodor-Kimhi", "url": SITE + "/"},
-        "publisher": {"@type": "Organization", "name": "THEODORA", "url": SITE + "/"},
+        # Stav and THEODORA are defined once per page, in the site-wide nodes (content/entity.json); here by @id only
+        "author": {"@id": SITE + "/#stav"},
+        "publisher": {"@id": SITE + "/#org"},
     }
     if p.get("schema_type") == "Service":
-        # provider is the entity itself (content/entity.json, @id #org, on every page), not a loose copy of it
-        main.update({"provider": {"@type": "ProfessionalService", "@id": SITE + "/#org", "name": "THEODORA", "url": SITE + "/"},
+        # provider is the entity itself (content/entity.json, @id #org, on every page), by reference only
+        main.update({"provider": {"@id": SITE + "/#org"},
                      "areaServed": p.get("area_served") or DEFAULT_AREA, "serviceType": p.get("service_type", "Art advisory")})
     main.update(p.get("schema_extra", {}))
     crumbs = [{"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"}]
@@ -176,6 +180,7 @@ def cta_html(p):
   <div class="cta reveal">
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <a class="btn" href="{MAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    {sc.phone_link('cta')}
   </div>'''
 
 
@@ -327,6 +332,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
     <a class="btn" href="{MAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    {sc.phone_link('cta')}
   </div>
 </section>
 '''
@@ -337,8 +343,9 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 
 def check(p, out):
     bad = []
-    if re.search("[\u2013\u2014]", out): bad.append("em/en dash")
-    if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1 ?\(?\d{3}", out): bad.append("phone number")
+    if sc.dash_leftovers(sc.undash_html(out)): bad.append("em/en dash the sanitizer cannot place")
+    if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1 ?\(?\d{3}", out.replace(sc.PHONE_TEL, "").replace(sc.PHONE_SCHEMA, "").replace(sc.PHONE, "")):
+        bad.append("phone number other than the business line")
     for k in ["title_en", "title_he", "lead_en", "lead_he", "body_en", "body_he", "meta_description"]:
         if not p.get(k): bad.append(f"missing {k}")
     if p["section"] == "projects" and not p.get("hero_image") and not (p.get("place_en") and p.get("place_he")):

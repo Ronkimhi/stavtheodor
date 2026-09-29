@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """The gates every build must pass. Run from the repo root (python3 build.py runs it last).
 
-  dashes      no em or en dash in the chrome, the templates, the data files, the docs or any
-              page outside museum/ (post content authored in content/posts.html is Stav's text
-              and is not rewritten by the build, so article bodies and timeline entries are skipped)
-  phones      no phone number anywhere outside museum/ (AGENTS.md content rule 6)
+  dashes      no em or en dash in the chrome, the templates, the data files or the docs, and none on
+              any page, museum/ included, outside href, src and srcset values (every page goes through
+              site_chrome.undash_html; Ron's SEO brief, 2026-09-29, P0.2; the same test as qa_theodora.py)
+  phones      no phone number anywhere but the business line (201) 351-8367 (tel:+12013518367,
+              +1-201-351-8367), and never 551-246-6416 in any form (AGENTS.md content rule 6, 2026-09-29)
+  nap         every page but the redirect stubs, museum/ included, has the click to call link
+              tel:+12013518367; no street address anywhere (never Demott, never 41 Franklin)
   twins       every generated page has the same number of English and Hebrew twins
   anchors     index.html carries every id other pages link to
   links       every internal href and src on every page resolves to a file (or an id on index.html)
@@ -24,7 +27,10 @@
   schema      what Google's Rich Results Test checks, reproduced locally: FAQPage questions with
               answers, BreadcrumbList positions and absolute items, BlogPosting headline/date/author,
               Service name/provider/areaServed, the entity graph (Person and ProfessionalService with
-              geo, address, https sameAs), no underscore keys leaking, every on-site URL resolving
+              address, https sameAs, the business telephone, no geo and no streetAddress), exactly one
+              JSON-LD block per page with exactly one full ProfessionalService and every other mention of
+              THEODORA or Stav by @id only, no Tel Aviv or Israel in any areaServed, no old sameAs URL,
+              no underscore keys leaking, every on-site URL resolving (2026-09-29)
   sitemap     sitemap.xml is an index over child sitemaps; every indexable page is listed in exactly
               one child, every loc resolves to a file, and no noindex page is listed
   variants    the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/):
@@ -46,10 +52,15 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
+sys.path.insert(0, ROOT)
+import site_chrome as sc  # noqa: E402  (the business line, the dash sanitizer's own leftover test)
 SKIP_DIRS = {'.git', 'museum', '__pycache__', 'node_modules', '.perf'}  # .perf: gitignored Lighthouse reports (tools/perf.sh)
-GATE_FILES = ('tools/check_site.py', 'tools/check_pages.py')  # they carry the patterns they hunt
+GATE_FILES = ('tools/check_site.py', 'tools/check_pages.py', 'qa_theodora.py')  # they carry the patterns they hunt
 DASH = re.compile('[\\u2013\\u2014]')
-PHONE = re.compile(r'\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]?\d{3}|\(\d{3}\) ?\d{3}[ .-]\d{4}|\b0\d{2}[ -]?\d{7}\b|\+972')
+PHONE = re.compile(r'\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]?\d{3}|\(\d{3}\) ?\d{3}[ .-]\d{4}|\b0\d{2}[ -]?\d{7}\b|\+972|551\D{0,3}246\D{0,3}6416')
+BUSINESS_LINE = (sc.PHONE, sc.PHONE_TEL, sc.PHONE_SCHEMA)  # the one number allowed (Ron's SEO brief, 2026-09-29)
+STREET = re.compile(r'demott|41 franklin', re.I)  # never a street address on the site (the brief's hard rule)
+OLD_SAME_AS = ('facebook.com/stavtheodor/', 'stav-theodor-5542a476')
 SITE = 'https://stavtheodor.com'
 GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york')
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
@@ -220,11 +231,42 @@ def check_schema(path, block, n):
             for k in ('name', 'url', 'address', 'sameAs', 'areaServed', 'email'):
                 if not d.get(k):
                     bad(f'ProfessionalService without {k}')
-            geo = d.get('geo') or {}
-            if not (isinstance(geo.get('latitude'), (int, float)) and isinstance(geo.get('longitude'), (int, float))):
-                bad('ProfessionalService without numeric geo coordinates')
-            if 'telephone' in d:
-                bad('ProfessionalService carries a telephone (content rule 6)')
+            if d.get('telephone') != sc.PHONE_SCHEMA:
+                bad(f'ProfessionalService telephone is not {sc.PHONE_SCHEMA}')
+    graph_rules(bad, block)
+
+
+def graph_rules(bad, block):
+    """Ron's SEO brief of 2026-09-29, P0.4: one full ProfessionalService per graph, THEODORA and Stav referenced
+    elsewhere by @id only, no geo and no streetAddress on either, no Tel Aviv or Israel in any areaServed, no
+    old sameAs URL. Used for every page, museum pages included."""
+    fulls = []
+
+    def visit(node):
+        if isinstance(node, dict):
+            types = node.get('@type') if isinstance(node.get('@type'), list) else [node.get('@type')]
+            if any(x in ('ProfessionalService', 'LocalBusiness', 'Organization') for x in types) and (
+                    node.get('@id') == sc.ORG_ID or node.get('name') == 'THEODORA'):
+                fulls.append(node)
+            if any(x in ('Person',) for x in types) and node.get('@id') != sc.STAV_ID and str(node.get('name', '')).startswith('Stav Theodor'):
+                bad('a second copy of Stav (reference {"@id": "%s"} instead)' % sc.STAV_ID)
+            if node.get('@id') in (sc.ORG_ID, sc.STAV_ID) or node.get('name') == 'THEODORA' or str(node.get('name', '')).startswith('Stav Theodor'):
+                if 'geo' in node or 'streetAddress' in json.dumps(node.get('address', {})):
+                    bad(f'geo or streetAddress on {node.get("@id") or node.get("name")} (never a street address)')
+            if 'areaServed' in node and re.search(r'tel aviv|israel|"IL"', json.dumps(node['areaServed'], ensure_ascii=False), re.I):
+                bad('Tel Aviv or Israel in an areaServed (it stays in the copy, never in the schema)')
+            for u in node.get('sameAs') or [] if isinstance(node.get('sameAs'), list) else []:
+                if any(o in u for o in OLD_SAME_AS):
+                    bad(f'old sameAs URL {u}')
+            for v in node.values():
+                visit(v)
+        elif isinstance(node, list):
+            for v in node:
+                visit(v)
+
+    visit(block)
+    if len(fulls) != 1:
+        bad(f'{len(fulls)} definitions of THEODORA (want exactly one full node, {sc.ORG_ID}; reference it by @id elsewhere)')
 
 
 def chrome_only(text, path):
@@ -247,12 +289,22 @@ for path in walk(('.html', '.txt', '.md', '.json', '.py', '.css', '.js', '.xml')
         body = body.split('## 7. Work Log')[0].replace('No em dashes (\u2014) and no en dashes (\u2013)', '')
     if path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html'):
         body = re.sub(r'<head>.*?</head>', '', body, flags=re.S)  # title and meta carry the post's own headline
-    m = DASH.search(body)
+    if path.endswith('.html') and path.split(os.sep)[0] not in ('templates', 'content'):
+        left = sc.dash_leftovers(s)  # a page: everything outside href, src and srcset, scripts and JSON-LD included
+        if left:
+            fail('dashes', f'{path}: {len(left)} dash(es), first {left[0]!r}')
+    else:
+        m = DASH.search(body)
+        if m:
+            fail('dashes', f'{path}: {body[max(0, m.start() - 40):m.end() + 20]!r}')
+    bare = s
+    for allowed in BUSINESS_LINE:
+        bare = bare.replace(allowed, '')
+    m = PHONE.search(bare)
     if m:
-        fail('dashes', f'{path}: {body[max(0, m.start() - 40):m.end() + 20]!r}')
-    m = PHONE.search(s)
-    if m:
-        fail('phones', f'{path}: {m.group(0)!r}')
+        fail('phones', f'{path}: {m.group(0)!r} (only the business line {sc.PHONE} may appear)')
+    if STREET.search(s) and path not in ('AGENTS.md', 'content/BRIEF.md'):
+        fail('nap', f'{path}: a street address ({STREET.search(s).group(0)!r})')
 
 # ---- pages
 pages = ['index.html', '404.html'] + [p for p in walk(('.html',)) if p.split(os.sep)[0] in GENERATED_DIRS + STUB_DIRS]
@@ -272,7 +324,13 @@ for path in pages:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
             fail('twins', f'{path}: {en} en, {he} he')
-    for i, block in enumerate(re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)):
+    ld_blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
+    if not is_stub:
+        if len(ld_blocks) != 1:
+            fail('schema', f'{path}: {len(ld_blocks)} JSON-LD blocks (want exactly one graph)')
+        if f'href="{sc.PHONE_TEL}"' not in s:
+            fail('nap', f'{path}: no click to call link href="{sc.PHONE_TEL}"')
+    for i, block in enumerate(ld_blocks):
         try:
             parsed = json.loads(block)
         except Exception as e:
@@ -338,11 +396,12 @@ if '<article class="post' in home:
 def faq_mirror(path):
     """The visible questions on a homepage-shaped page (index.html, a buyer variant) equal its FAQPage schema."""
     s = read(path)
-    m = re.search(r'<script type="application/ld\+json">\s*(\{\s*"@context": "https://schema.org",\s*"@type": "FAQPage".*?)</script>', s, re.S)
-    if not m:
-        fail('faq', f'no FAQPage schema on {path}')
+    blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
+    faq = [n for b in blocks for n in (json.loads(b).get('@graph') or [json.loads(b)]) if n.get('@type') == 'FAQPage']
+    if len(faq) != 1:
+        fail('faq', f'{len(faq)} FAQPage nodes on {path} (want one)')
         return
-    schema = [(q['name'], q['acceptedAnswer']['text']) for q in json.loads(m.group(1))['mainEntity']]
+    schema = [(q['name'], q['acceptedAnswer']['text']) for q in faq[0]['mainEntity']]
     visible = [(H.unescape(q).strip(), H.unescape(a).strip()) for q, a in re.findall(
         r'<details class="qa"[^>]*>\s*<summary><h3 class="serif"><span data-l="en">(.*?)</span>.*?<p class="body"><span data-l="en">(.*?)</span>', s, re.S)]
     if schema != visible:
@@ -434,7 +493,38 @@ for path in walk(('.jpg', '.jpeg', '.png', '.webp')):
     if hashlib.sha256(open(path, 'rb').read()).hexdigest()[:16] in BANNED_IMAGES:
         fail('removed', f'{path} is one of the AI-marked photos removed on 2026-09-28 (AGENTS.md Work Log): delete it')
 
-gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap', 'variants']
+# ---- museum/ (skipped by walk() above: its data files quote Wikipedia): every page is dash free, has the
+# click to call link and one JSON-LD graph that follows the same rules (2026-09-29). The 3D gallery app is
+# noindex and in no sitemap; it only needs the link.
+for path in sorted(glob.glob(os.path.join('museum', '**', '*.html'), recursive=True)):
+    if path.startswith(os.path.join('museum', 'tools')) or path.startswith(os.path.join('museum', 'vendor')):
+        continue
+    s = read(path)
+    left = sc.dash_leftovers(s)
+    if left:
+        fail('dashes', f'{path}: {len(left)} dash(es), first {left[0]!r}')
+    bare = s
+    for allowed in BUSINESS_LINE:
+        bare = bare.replace(allowed, '')
+    m = PHONE.search(bare)
+    if m:
+        fail('phones', f'{path}: {m.group(0)!r}')
+    if STREET.search(s):
+        fail('nap', f'{path}: a street address')
+    if f'href="{sc.PHONE_TEL}"' not in s:
+        fail('nap', f'{path}: no click to call link href="{sc.PHONE_TEL}"')
+    blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
+    if path == os.path.join('museum', 'gallery', 'index.html'):
+        continue
+    if len(blocks) != 1:
+        fail('schema', f'{path}: {len(blocks)} JSON-LD blocks (want exactly one graph)')
+    for i, block in enumerate(blocks):
+        try:
+            graph_rules(lambda msg, p=path, n=i + 1: fail('schema', f'{p} block {n}: {msg}'), json.loads(block))
+        except ValueError as e:
+            fail('jsonld', f'{path} block {i + 1}: {e}')
+
+gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap', 'variants']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))

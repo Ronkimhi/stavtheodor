@@ -2,96 +2,43 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://stavtheodor.com/#stav",
-      "name": "Stav Theodor-Kimhi",
-      "alternateName": "Stav Theodor",
-      "jobTitle": "Art Curator and Advisor",
-      "description": "Fine art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. Founder of THEODORA.",
-      "url": "https://stavtheodor.com/",
-      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/stav-theodor-5542a476/",
-        "https://www.instagram.com/theodorafineart/",
-        "https://www.facebook.com/stavtheodor/"
-      ],
-      "worksFor": {
-        "@id": "https://stavtheodor.com/#org"
-      },
-      "knowsAbout": [
-        "Fine Art Curation",
-        "Art Advisory",
-        "Hospitality Art",
-        "Private Art Collections",
-        "Contemporary Art",
-        "Israeli Art"
-      ],
-      "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        },
-        {
-          "@type": "Language",
-          "name": "Hebrew",
-          "alternateName": "he"
-        }
-      ],
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Ben-Gurion University",
-          "url": "https://www.bgu.ac.il/",
-          "department": {
-            "@type": "Organization",
-            "name": "Faculty of Arts"
-          }
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Tel Aviv University",
-          "url": "https://www.tau.ac.il/",
-          "department": {
-            "@type": "Organization",
-            "name": "Faculty of Arts"
-          }
-        }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tenafly",
-        "addressRegion": "NJ",
-        "addressCountry": "US"
-      }
-    },
-    {
       "@type": "ProfessionalService",
       "@id": "https://stavtheodor.com/#org",
       "name": "THEODORA",
-      "description": "Fine art curation and advisory. A to Z: art concept, sourcing, selection, and installation for private residences and hospitality projects in New York, New Jersey, and Tel Aviv.",
+      "alternateName": [
+        "Theodora Fine Art",
+        "THEODORA Fine Art Advisory"
+      ],
+      "description": "Fine art advisory and curation led by Stav Theodor in Tenafly, New Jersey: art concept, sourcing, commissions, framing and installation for homes, interior designers, offices, practices, restaurants and hotels across Tenafly, Bergen County, New Jersey and New York City.",
       "url": "https://stavtheodor.com/",
-      "logo": "https://stavtheodor.com/images/theodora-logo.png",
-      "image": "https://stavtheodor.com/og-image.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://stavtheodor.com/images/theodora-logo.png"
+      },
+      "image": [
+        "https://stavtheodor.com/og-home.jpg",
+        "https://stavtheodor.com/images/stav-portrait.jpg"
+      ],
+      "telephone": "+1-201-351-8367",
+      "email": "stav@stavtheodor.com",
       "founder": {
         "@id": "https://stavtheodor.com/#stav"
       },
-      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
         "addressRegion": "NJ",
+        "postalCode": "07670",
         "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.9254,
-        "longitude": -73.9629
       },
       "areaServed": [
         {
           "@type": "City",
-          "name": "New York City"
+          "name": "Tenafly, New Jersey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bergen County, New Jersey"
         },
         {
           "@type": "State",
@@ -99,56 +46,137 @@
         },
         {
           "@type": "City",
-          "name": "Tel Aviv"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bergen County, New Jersey"
-        },
-        {
-          "@type": "City",
-          "name": "Tenafly, New Jersey"
-        },
-        {
-          "@type": "Place",
-          "name": "Manhattan, New York"
+          "name": "New York City"
         }
       ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+1-201-351-8367",
+        "email": "stav@stavtheodor.com",
+        "availableLanguage": [
+          "English",
+          "Hebrew"
+        ],
+        "areaServed": "US"
+      },
       "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        },
-        {
-          "@type": "Language",
-          "name": "Hebrew",
-          "alternateName": "he"
-        }
+        "en",
+        "he"
       ],
       "knowsAbout": [
-        "Art Curation",
-        "Art Advisory",
-        "Interior Art Consulting",
-        "Private Art Collections",
-        "Hospitality Art"
+        "Art advisory",
+        "Art consulting",
+        "Art curation for private homes",
+        "Art curation for interior designers",
+        "Corporate and office art",
+        "Hospitality art",
+        "Art commissions",
+        "Framing and installation",
+        "Contemporary art",
+        "Israeli art"
       ],
       "sameAs": [
         "https://www.instagram.com/theodorafineart/",
-        "https://www.facebook.com/stavtheodor/"
+        "https://www.facebook.com/profile.php?id=61594952339047",
+        "https://www.youtube.com/@theodorafineart",
+        "https://www.yelp.com/biz/the-odora-tenafly",
+        "https://www.behance.net/stavtheodor",
+        "https://www.trustpilot.com/review/stavtheodor.com",
+        "https://www.merchantcircle.com/theodora-tenafly-nj",
+        "https://www.alignable.com/tenafly-nj/theodora",
+        "https://www.houzz.com/pro/stav-theodor3/theodora",
+        "https://www.pinterest.com/theodorafineart/",
+        "https://www.manta.com/c/m1hjj31/theodora",
+        "https://nextdoor.com/page/theodora-tenafly-nj/",
+        "https://www.tupalo.co/tenafly-new-jersey/theodora",
+        "https://www.codaworx.com/profile/theodora",
+        "https://artradar.substack.com/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stavtheodor.com/#stav",
+      "name": "Stav Theodor",
+      "alternateName": [
+        "Stav Theodor-Kimhi",
+        "Stav Theodor Kimhi"
       ],
-      "_todo": {
-        "note": "Google Business Profile placeholder. Once the profile is verified, put the Maps URL in hasMap and the profile URL in sameAs, then delete this key. Keys that start with an underscore are stripped by site_chrome.entity_graph and never reach a page.",
-        "hasMap": "",
-        "googleBusinessProfile": ""
-      }
+      "jobTitle": "Art Curator and Advisor",
+      "description": "Art curator and advisor with more than 15 years of experience across museums, galleries, academia and international hospitality. Founder of THEODORA in Tenafly, New Jersey.",
+      "url": "https://stavtheodor.com/",
+      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
+      "email": "stav@stavtheodor.com",
+      "telephone": "+1-201-351-8367",
+      "worksFor": {
+        "@id": "https://stavtheodor.com/#org"
+      },
+      "knowsLanguage": [
+        "en",
+        "he"
+      ],
+      "knowsAbout": [
+        "Art curation",
+        "Art advisory",
+        "Contemporary art",
+        "Israeli art",
+        "Hospitality art",
+        "Private art collections"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Ben-Gurion University of the Negev",
+          "url": "https://www.bgu.ac.il/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Tel Aviv University",
+          "url": "https://www.tau.ac.il/"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "M.A. in Art History",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Ben-Gurion University of the Negev"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Diploma in Curatorial and Museum Studies",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Tel Aviv University"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/stavtheodor/",
+        "https://substack.com/@stavtheodor",
+        "https://www.artconnect.com/stav-theodor-1o1nKO32412m9IX7qUiHS"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://stavtheodor.com/#site",
-      "name": "Art Radar · THEODORA",
+      "name": "THEODORA",
+      "alternateName": [
+        "Theodora Fine Art",
+        "stavtheodor.com"
+      ],
       "url": "https://stavtheodor.com/",
-      "description": "Art exhibitions, openings, and the stories behind them, chosen by curator Stav Theodor-Kimhi. Covering New York, New Jersey, and Tel Aviv.",
+      "description": "Art advisory and curation by Stav Theodor in Tenafly, New Jersey, with Art Radar, weekly exhibition picks for New York, New Jersey and Tel Aviv.",
       "publisher": {
         "@id": "https://stavtheodor.com/#org"
       },

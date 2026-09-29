@@ -5,12 +5,12 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 ## 1. Who
 
 - Name: Stav Theodor-Kimhi. Professionally: Stav Theodor. Practice: THEODORA (tagline "fine · art · living"). Founder, art curator and art advisor.
-- Base: Tenafly, New Jersey. Serves New York City, New Jersey, and Tel Aviv. Projects across Israel (Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan, Hod Hasharon) and hospitality projects abroad (China, Jordan, cruise lines).
-- Two decades in the art world (Ron, 2026-09-27; supersedes the 2026 deck's 14 years). Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv, worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
-- Certified art curator. M.A. in art history, Faculty of Arts, Ben-Gurion University (BGU). Curatorial and museum studies diploma, Faculty of Arts, Tel Aviv University (TAU).
+- Base: Tenafly, New Jersey 07670 (Bergen County), home based: never a street address, on a page or in schema. Service area (schema, listings, NAP): Tenafly, Bergen County, New Jersey and New York City. Tel Aviv stays in the copy and on the project pages, never in an areaServed (Ron's SEO brief, 2026-09-29). Projects across Israel (Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan, Hod Hasharon) and hospitality projects abroad (China, Jordan, cruise lines).
+- More than 15 years in the art world, since 2010 (Ron's SEO brief, 2026-09-29; replaces "two decades", which overstated it). Hebrew: "יותר מ-15 שנה" (for example "יותר מ-15 שנות ניסיון"). Founded THEODORA in 2020, so never "founded THEODORA after 15 years". Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv, worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
+- Art curator (never "certified" / "מוסמכת": no certificate or issuer exists, 2026-09-29). M.A. in art history, Faculty of Arts, Ben-Gurion University (BGU). Curatorial and museum studies diploma, Faculty of Arts, Tel Aviv University (TAU).
 - Clients: interior designers and architects (on behalf of their clients), private collectors, home owners, business owners, hotels and hospitality groups.
 - Languages: Hebrew and English.
-- Contact for these pages: stav@stavtheodor.com and https://www.stavtheodor.com. Never publish a phone number anywhere on the site (site owner rule, 2026-07-02).
+- Contact: stav@stavtheodor.com, https://stavtheodor.com and the business line (201) 351-8367 (tel:+12013518367, schema +1-201-351-8367; Ron's SEO brief, 2026-09-29). The shared chrome puts the number in every header and footer; page copy does not repeat it, and no other number ever appears.
 - Instagram: @theodorafineart.
 
 ## 2. Positioning (use this voice)
@@ -75,7 +75,7 @@ Other photos available: stav-couch.jpg (Stav seated under a painting), stav-arch
 ## 7. Hard rules (checker fails the page on any of these)
 
 1. No em dashes and no en dashes anywhere, English or Hebrew, including alt text, captions, JSON fields and editor notes. Use commas, colons, periods, parentheses.
-2. No phone number.
+2. No phone number in page copy (the business line lives in the shared chrome), and never any other number.
 3. No invented facts: no client names beyond those in this brief, no prices for Stav, no dates, no awards, no press, no numbers that are not here. Industry ranges must be labeled as industry ranges.
 4. Every page carries a full Hebrew version (body_he, lead_he, title_he, FAQ he) that is a faithful translation of the English, same structure, same links. Hebrew is written by a native standard: modern, warm, no machine translation feel, right to left punctuation.
 5. English is in Stav's first person voice ("I"), precise, warm, no marketing hype words (no "elevate", "curated experience", "bespoke journey", "unparalleled", "world class", "transform your"). Short paragraphs. Specific over general. Written for a reader with money and taste who is short on time.

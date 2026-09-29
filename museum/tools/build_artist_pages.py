@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_artist_pages.py — generates static, crawlable HTML for The Museum:
+build_artist_pages.py: generates static, crawlable HTML for The Museum:
 
   museum/artists/index.html          the collection directory (20 periods, all artists)
   museum/artists/<slug>/index.html   one placard-style page per artist
@@ -8,18 +8,27 @@ build_artist_pages.py — generates static, crawlable HTML for The Museum:
 These are the indexable, LLM-readable faces of the interactive museum
 (the timeline and 3D galleries are JS apps that crawlers can't walk).
 All text comes verbatim from museum/data/*.json, which the fetch pipeline
-sources from Wikipedia/Wikidata/Commons. Re-run after refreshing the data:
+sources from Wikipedia/Wikidata/Commons, except the dashes: every page goes
+through the site's shared dash sanitizer (site_chrome.undash_html), so no em
+or en dash reaches a page. Each page also carries the business line in its
+header, the name, place and phone in its footer, and one JSON-LD graph that
+starts with the site-wide nodes (content/entity.json), all from site_chrome
+(Ron's SEO brief, 2026-09-29). python3 build.py runs this script. By hand:
 
     python3 museum/tools/build_artist_pages.py
 """
 
 import html
 import json
+import sys
 import urllib.parse
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 MUSEUM = HERE.parent
+sys.path.insert(0, str(MUSEUM.parent))
+import site_chrome as sc  # noqa: E402  (the repo root's shared chrome: dash sanitizer, phone, entity graph)
+
 DATA = MUSEUM / "data"
 OUT = MUSEUM / "artists"
 SITE = "https://stavtheodor.com"
@@ -81,6 +90,10 @@ PAGE_CSS = """<style>
   .period li a { text-decoration: none; color: var(--ink); }
   .period li a:hover { color: var(--bronze); }
   .period li .sub { color: var(--ink-soft); font-size: 14px; font-style: italic; }
+  .crumb .call { float: right; letter-spacing: 0.08em; }
+  .nap-foot { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--hairline); }
+  .nap { font-style: normal; font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); }
+  .nap a { color: inherit; }
 </style>"""
 
 
@@ -101,10 +114,10 @@ def fmt_range(start, end):
     if end is None or end == start:
         return fmt_year(start)
     if start < 0 and end < 0:
-        return f"{-start}–{-end} BCE"
+        return f"{-start} to {-end} BCE"
     if start < 0:
-        return f"{-start} BCE–{end} CE"
-    return f"{start}–{end}"
+        return f"{-start} BCE to {end} CE"
+    return f"{start} to {end}"
 
 
 def life(a):
@@ -179,12 +192,27 @@ def artist_jsonld(a):
                      "url": f"{SITE}/museum/"},
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
     }
+    return ld(data)
+
+
+def ld(data):
+    """The page's one JSON-LD graph: the site-wide nodes first, then this page's node."""
     return ('<script type="application/ld+json">'
-            + json.dumps(data, ensure_ascii=False) + "</script>")
+            + json.dumps(sc.page_graph([data]), ensure_ascii=False) + "</script>")
+
+
+def page_foot():
+    """The name, place and phone every page ends on (English: the museum has no language switch), and
+    the click_phone event for GA."""
+    return (f'<footer class="nap-foot"><address class="nap">THEODORA · Stav Theodor, art advisor and consultant<br>'
+            f'Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv<br>'
+            f'<a href="{sc.PHONE_TEL}" data-loc="footer">{sc.PHONE}</a> · '
+            f'<a href="mailto:{sc.EMAIL}" data-loc="footer">{sc.EMAIL}</a></address></footer>\n{sc.CALL_JS}')
 
 
 def crumb(extra=""):
-    return (f'<nav class="crumb"><a href="/">THEODORA</a> · '
+    return (f'<nav class="crumb"><a class="call" href="{sc.PHONE_TEL}" data-loc="header" '
+            f'aria-label="Call THEODORA at {sc.PHONE}">{sc.PHONE}</a><a href="/">THEODORA</a> · '
             f'<a href="/museum/">The Museum</a> · '
             f'<a href="/museum/artists/">The Collection</a>{extra}</nav>')
 
@@ -260,6 +288,7 @@ target="_blank" rel="noopener">Wikipedia</a> (CC BY-SA 4.0) ·
 Images: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>,
 public domain or Creative Commons (attribution with each work) ·
 Part of <a href="/museum/">The Museum</a> at THEODORA</p>
+{page_foot()}
 </body>
 </html>
 """
@@ -291,7 +320,7 @@ def build_directory(index, artists_full):
     desc = (f"The full collection of The Museum at THEODORA: {len(index['periods'])} periods of art "
             f"history and {len(index['artists'])} artists, {n_gallery} of them with walkable 3D "
             f"galleries of freely licensed works. All facts from Wikipedia.")
-    jsonld = ('<script type="application/ld+json">' + json.dumps({
+    jsonld = ld({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "The Collection · The Museum · THEODORA",
@@ -301,7 +330,7 @@ def build_directory(index, artists_full):
                      "url": f"{SITE}/museum/artists/{a['slug']}/",
                      "name": a["name"]} for a in index["artists"]],
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-    }, ensure_ascii=False) + "</script>")
+    })
 
     return f"""{head("The Collection · The Museum · THEODORA", desc, f"{SITE}/museum/artists/", f"{SITE}/og-image.jpg")}
 {jsonld}
@@ -316,9 +345,19 @@ def build_directory(index, artists_full):
 <p class="attr">Text: Wikipedia (CC BY-SA 4.0) · Images: Wikimedia Commons, public domain or
 Creative Commons (attribution with each work) ·
 Machine-readable data: <a href="/museum/data/index.json">index.json</a></p>
+{page_foot()}
 </body>
 </html>
 """
+
+
+def write(path, page):
+    """Through the site's dash sanitizer; a dash it cannot place stops the build."""
+    page = sc.undash_html(page)
+    left = sc.dash_leftovers(page)
+    if left:
+        raise SystemExit(f"{path} NOT written: em or en dash left: {left[:3]!r}")
+    path.write_text(page, encoding="utf-8")
 
 
 def main():
@@ -331,10 +370,28 @@ def main():
         artists_full[ia["slug"]] = a
         d = OUT / ia["slug"]
         d.mkdir(exist_ok=True)
-        (d / "index.html").write_text(build_artist(a), encoding="utf-8")
+        write(d / "index.html", build_artist(a))
         count += 1
-    (OUT / "index.html").write_text(build_directory(index, artists_full), encoding="utf-8")
-    print(f"wrote {count} artist pages + the collection directory")
+    write(OUT / "index.html", build_directory(index, artists_full))
+    sync_timeline_ld()
+    print(f"wrote {count} artist pages + the collection directory; museum/index.html graph in sync")
+
+
+def sync_timeline_ld():
+    """museum/index.html (the timeline app) is written by hand, but its JSON-LD graph starts with the same
+    site-wide nodes as every page: rebuild that graph from content/entity.json and keep the page's own nodes."""
+    import re
+    path = MUSEUM / "index.html"
+    page = path.read_text(encoding="utf-8")
+    m = re.search(r'(<script type="application/ld\+json">\n)(.*?)(\n</script>)', page, re.S)
+    if not m:
+        raise SystemExit("museum/index.html: no JSON-LD block to keep in sync")
+    site_ids = {n["@id"] for n in sc.entity_nodes()}
+    own = [n for n in json.loads(m.group(2))["@graph"] if n.get("@id") not in site_ids]
+    block = json.dumps(sc.page_graph(own), ensure_ascii=False, indent=2)
+    new = page[:m.start(2)] + block + page[m.end(2):]
+    if new != page:
+        write(path, new)
 
 
 if __name__ == "__main__":

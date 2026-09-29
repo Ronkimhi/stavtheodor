@@ -6,7 +6,7 @@ One nav, one footer, one language switch, one mailto fallback panel, one GA tag,
 
   content/posts.html   every Art Radar post (JSON-LD + <article> pairs, newest first)
   content/faq.json     the seven homepage questions (visible FAQ and FAQPage schema come from it)
-  content/entity.json  the Person + ProfessionalService + WebSite graph
+  content/entity.json  the site-wide nodes (ProfessionalService, Person, WebSite) every page's graph opens with
   content/spaces.json  the before/after space pairs (images/spaces/), for before_after()
 
 The generators import this module: build-home.py (index.html, the buyer variants of it from
@@ -17,8 +17,9 @@ build-post-pages.py (radar/<slug>/, radar/, sitemap.xml) and build-site-pages.py
 Rules honored everywhere: every visible string has an English and a Hebrew twin behind
 the global switch (localStorage radarLang); every page opens in English unless the
 visitor chose Hebrew (site owner's decision, 2026-09-26), so <body class="lang-en"> is in
-the markup and no hreflang tags are emitted; the mailto fallback ships on every page; no
-phone numbers; no em or en dashes in English.
+the markup and no hreflang tags are emitted; the mailto fallback ships on every page; the
+business line (201) 351-8367 and no other number; one JSON-LD graph per page (page_graph);
+no em or en dashes anywhere (write() runs the dash sanitizer on every page, 2026-09-29).
 """
 import html as H
 import json
@@ -32,6 +33,14 @@ GA_ID = 'G-4300MN0Q97'
 EMAIL = 'stav@stavtheodor.com'
 WHATSAPP = 'https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5'
 INSTAGRAM = 'https://www.instagram.com/theodorafineart/'
+# The business line (Ron's SEO brief, 2026-09-29, which replaces the 2026-07-02 rule of no phone at all):
+# shown as (201) 351-8367, dialed as tel:+12013518367, in schema as +1-201-351-8367. It is the only number
+# the site may carry; tools/check_site.py fails the build on any other (AGENTS.md content rule 6).
+PHONE = '(201) 351-8367'
+PHONE_TEL = 'tel:+12013518367'
+PHONE_SCHEMA = '+1-201-351-8367'
+ORG_ID = SITE + '/#org'
+STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
@@ -109,16 +118,56 @@ def strip_private(node):
     return node
 
 
-def entity_graph():
-    """The Person + ProfessionalService + WebSite graph, from content/entity.json."""
+def entity_nodes():
+    """The site-wide nodes (ProfessionalService #org, Person #stav, WebSite #site), from content/entity.json,
+    a fresh copy each call."""
     global _entity_cache
     if _entity_cache is None:
-        data = strip_private(json.load(open(ENTITY_FILE, encoding='utf-8')))
-        _entity_cache = ('<!-- Structured data: Person + Organization + WebSite (JSON-LD) -->\n'
-                         '<script type="application/ld+json">\n'
-                         + json.dumps(data, ensure_ascii=False, indent=2)
-                         + '\n</script>')
-    return _entity_cache
+        _entity_cache = json.dumps(strip_private(json.load(open(ENTITY_FILE, encoding='utf-8')))['@graph'], ensure_ascii=False)
+    return json.loads(_entity_cache)
+
+
+# Keys whose value names an agent. A copy of THEODORA or of Stav there becomes a bare @id reference, so each page
+# defines the business and the person once (Ron's SEO brief, 2026-09-29, P0.4 rule 2).
+REF_KEYS = ('provider', 'publisher', 'author', 'creator', 'founder', 'worksFor', 'brand', 'seller', 'organizer')
+
+
+def _ref(v):
+    if isinstance(v, list):
+        return [_ref(x) for x in v]
+    if not isinstance(v, dict):
+        return v
+    vid, name = v.get('@id'), str(v.get('name', ''))
+    if vid == ORG_ID or (not vid and name == 'THEODORA'):
+        return {'@id': ORG_ID}
+    if vid == STAV_ID or (not vid and name.startswith('Stav Theodor')):
+        return {'@id': STAV_ID}
+    return v
+
+
+def _tidy(node):
+    """A page node for the one graph: no nested @context, THEODORA and Stav by @id only."""
+    if isinstance(node, dict):
+        return {k: _tidy(_ref(v) if k in REF_KEYS else v) for k, v in node.items() if k != '@context'}
+    if isinstance(node, list):
+        return [_tidy(v) for v in node]
+    return node
+
+
+def page_graph(ld=()):
+    """Exactly one JSON-LD graph per page: the site-wide nodes first, then the page's own nodes
+    (BreadcrumbList, Service, FAQPage, BlogPosting, CollectionPage...). A block is a dict, a JSON string
+    (an Art Radar post's own block from content/posts.html) or a dict with an @graph."""
+    nodes = entity_nodes()
+    for b in ld:
+        d = json.loads(b) if isinstance(b, str) else b
+        items = d['@graph'] if isinstance(d, dict) and '@graph' in d else d if isinstance(d, list) else [d]
+        nodes += [_tidy(n) for n in items]
+    ids = [n['@id'] for n in nodes if isinstance(n, dict) and n.get('@id')]
+    dup = sorted({i for i in ids if ids.count(i) > 1})
+    if dup:
+        raise SystemExit(f'page graph: {dup} defined twice; reference the site-wide node by @id instead')
+    return {'@context': 'https://schema.org', '@graph': nodes}
 
 
 def load_faq():
@@ -155,7 +204,7 @@ def ld_script(block):
 def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), noindex=False,
          og_title=None, og_desc=None, og_card_dims=False, og_image_alt=None, extra=''):
     """Everything from <!DOCTYPE> to </head>. Canonical, Open Graph, Twitter, favicons,
-    fonts, the theme, the page's JSON-LD blocks, the entity graph and GA. No hreflang:
+    fonts, the theme, one JSON-LD graph (the site-wide nodes, then the page's ld blocks) and GA. No hreflang:
     both languages live at the same URL and English is the default, so the tags would
     only point every language at itself (dropped 2026-09-26)."""
     og_image = og_image or SITE + '/og-image.jpg'
@@ -167,7 +216,8 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
     if og_image_alt:
         dims += f'\n<meta property="og:image:alt" content="{H.escape(og_image_alt, quote=True)}">'
     robots = '\n<meta name="robots" content="noindex">' if noindex else ''
-    ld_html = ''.join(ld_script(b) + '\n' for b in ld)
+    ld_html = ('<!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page\'s -->\n'
+               + ld_script(page_graph(ld)))
     return f'''<!DOCTYPE html>
 <html lang="{lang}" data-default-lang="{lang}">
 <head>
@@ -191,7 +241,7 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 {FAVICONS}
 {FONTS}
 <link rel="stylesheet" href="{THEME_CSS}">
-{extra}{ld_html}{entity_graph()}
+{extra}{ld_html}
 
 {GA_SNIPPET}
 </head>
@@ -237,6 +287,18 @@ def _link(href, home):
     return href
 
 
+def nav_call():
+    """Click to call at the right of the nav, before the language switch (2026-09-29). On a narrow screen the
+    number gives way to the label Call (css/theme.css, .nav-call); the aria-label always reads the number."""
+    return (f'<a class="nav-call" href="{PHONE_TEL}" data-loc="header" aria-label="Call THEODORA at {PHONE}">'
+            f'<span class="num">{PHONE}</span><span class="short">{T("Call", "התקשרו")}</span></a>')
+
+
+def phone_link(loc='cta'):
+    """The number as a contact line under an email link or a Write to Stav button."""
+    return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span>{PHONE}</a>'
+
+
 def nav(home=False, own=None):
     """own: section links a homepage-shaped page sends to their own page because it lacks the section
     (a buyer variant has no #museum: {'#museum': '/museum/'}, 2026-09-28)."""
@@ -246,6 +308,7 @@ def nav(home=False, own=None):
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA</a>
   <div class="right">
     <div class="links" id="links">{links}</div>
+    {nav_call()}
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
       <button type="button" data-lang="he" aria-pressed="false">עברית</button>
       <button type="button" data-lang="en" aria-pressed="false">English</button>
@@ -264,6 +327,17 @@ FOOTER_CTA = ('Send me one photo of the wall and a line about the space. I’ll 
               'שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.')
 
 
+def nap(mail=None):
+    """Name, place and phone, the same on every page (Ron's SEO brief, 2026-09-29): no street address, no map.
+    mail: the mailto href (a buyer variant's carries its subject)."""
+    mail = mail or mail_href()
+    return f'''<address class="nap">
+  <span data-l="en">THEODORA · Stav Theodor, art advisor and consultant</span><span data-l="he" lang="he" dir="rtl">THEODORA · סתיו תאודור, יועצת אמנות</span><br>
+  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב</span><br>
+  <a href="{PHONE_TEL}" data-loc="footer">{PHONE}</a> · <a href="{mail}" data-loc="footer">{EMAIL}</a>
+</address>'''
+
+
 def footer(home=False, cta=None, subject=''):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
     subject: the mail subject both mailto links carry. The defaults are every page's footer."""
@@ -276,8 +350,9 @@ def footer(home=False, cta=None, subject=''):
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
     <a class="arrow" href="{href}" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>{EMAIL}</a>
+    {phone_link('cta')}
     <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
-    <p style="font-size: 15px; max-width: 560px;">{T('Stav Theodor-Kimhi, art curation and advisory. Tenafly, New Jersey, for New York, New Jersey and Tel Aviv.', "סתיו תאודור-קמחי, אוצרות וייעוץ אמנות. טנפליי, ניו ג'רזי, לניו יורק, ניו ג'רזי ולתל אביב.")}</p>
+    {nap(href)}
   </div>
   <div class="cols2">
     <div>
@@ -490,6 +565,19 @@ PAGE_JS = '''<script>
 </script>'''
 
 
+# A GA4 event for every tap on a tel: link (Ron's SEO brief, 2026-09-29, P0.3): click_phone with where the link
+# sits (its data-loc: header, footer, cta) and the page path. It only calls the gtag() the standard snippet in
+# <head> defines; the GA tag itself is untouched. The museum pages carry the same script (museum/tools/build_artist_pages.py).
+CALL_JS = '''<script>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+  if (!a || typeof window.gtag !== 'function') { return; }
+  window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+});
+</script>'''
+PAGE_JS = PAGE_JS + '\n' + CALL_JS
+
+
 def body_open():
     """English is set in the markup itself; LANG_BOOT only switches to a stored choice."""
     return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
@@ -688,8 +776,98 @@ def before_after(key, first=False):
   </figure>'''
 
 
+# ---------------------------------------------------------------- the dash sanitizer
+# No em dash (U+2014) and no en dash (U+2013) in anything a page says: visible text, titles, meta content, alt and
+# aria-label text, JSON-LD strings, and the entity spellings of both (Ron's SEO brief, 2026-09-29, P0.2). One step
+# every generator runs: write() below (build-site-pages.py, build-post-pages.py, build-home.py) and
+# museum/tools/build_artist_pages.py. href, src and srcset values are never touched. The rules, in order:
+#   1. a number range ("1571-1610" written with a dash, "27 BCE-130 CE", "19th-16th", "April 10-May 11") reads "to"
+#   2. a spaced dash used as a break becomes a comma
+#   3. an unspaced en dash joining two words (Wikipedia's "Greek-English Lexicon") becomes a hyphen
+#   4. any other dash becomes a comma; doubled commas and commas before a stop are cleaned up
+# Where a replacement reads badly, fix the source (the Art Radar posts in content/posts.html are fixed by hand).
+DASH_ENTITY = re.compile(r'&(?:(m)dash|ndash|#(8212)|#8211|#x(2014)|#x2013);', re.I)
+DASH_ANY = re.compile(r'[\u2013\u2014]|&(?:mdash|ndash|#8212|#8211|#x2014|#x2013);', re.I)
+_MONTHS = ('January|February|March|April|May|June|July|August|September|October|November|December|'
+           'Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec')
+_RANGE = re.compile(r'(\d(?:st|nd|rd|th|s)?(?:\s?(?:BCE|BC|CE|AD)\b)?)\s*[\u2013\u2014]\s*(?=\d|c\.\s?\d|(?:' + _MONTHS + r')\b)')
+_BREAK = re.compile(r'\s+[\u2013\u2014]\s+')
+_JOIN = re.compile(r'(?<=[^\W\d_])\u2013(?=[^\W\d_])')
+_REST = re.compile(r'\s*[\u2013\u2014]\s*')
+COPY_ATTRS = re.compile(r'(\s(?:title|content|alt|aria-label|placeholder|label)=")([^"]*)(")')
+_TOKENS = re.compile(r'(<script\b[^>]*>.*?</script\s*>|<style\b.*?</style\s*>|<!--.*?-->|<[^>]+>)', re.S | re.I)
+_JSON_STR = re.compile(r'"(?:[^"\\]|\\.)*"')
+_URLISH = re.compile(r'^(?:https?:|mailto:|tel:|/|#)')
+
+
+def undash(s, trailing=False):
+    """One piece of copy without em or en dashes. trailing: a JSON-LD string may end on a dash (a cut
+    description); drop it there instead of leaving a comma."""
+    if not s or not DASH_ANY.search(s):
+        return s
+    s = DASH_ENTITY.sub(lambda m: '\u2014' if (m.group(1) or m.group(2) or m.group(3)) else '\u2013', s)
+    if trailing:
+        s = re.sub(r'\s*[\u2013\u2014]\s*$', '', s)
+    s = _RANGE.sub(r'\1 to ', s)
+    s = _BREAK.sub(', ', s)
+    s = _JOIN.sub('-', s)
+    s = _REST.sub(', ', s)
+    s = re.sub(r',(\s*,)+', ',', s)
+    s = re.sub(r',\s*([.;:!?)\]])', r'\1', s)
+    s = re.sub(r'([(\[])\s*,\s*', r'\1', s)
+    return s
+
+
+def _undash_json(block):
+    """The JSON-LD inside a <script type="application/ld+json">: every string value that is not a URL, the
+    formatting kept byte for byte around it."""
+    def one(m):
+        lit = m.group(0)
+        if not DASH_ANY.search(lit) and '\\u201' not in lit:
+            return lit
+        val = json.loads(lit)
+        if _URLISH.match(val):
+            return lit
+        new = undash(val, trailing=True)
+        return lit if new == val else json.dumps(new, ensure_ascii=False)
+    return _JSON_STR.sub(one, block)
+
+
+def undash_html(page):
+    """A whole page through the sanitizer: text nodes, copy attributes and JSON-LD; other scripts, styles,
+    comments, href, src and srcset stay as they are."""
+    out = []
+    for i, part in enumerate(_TOKENS.split(page)):
+        if i % 2 == 0:
+            out.append(undash(part))
+        elif part[:7].lower() == '<script':
+            if 'application/ld+json' in part[:60]:
+                head_end = part.index('>') + 1
+                tail_start = part.lower().rindex('</script')
+                part = part[:head_end] + _undash_json(part[head_end:tail_start]) + part[tail_start:]
+            out.append(part)
+        elif part[:6].lower() == '<style' or part.startswith('<!--'):
+            out.append(part)
+        else:
+            out.append(COPY_ATTRS.sub(lambda m: m.group(1) + undash(m.group(2)) + m.group(3), part))
+    return ''.join(out)
+
+
+def dash_leftovers(page):
+    """What the QA script (qa_theodora.py) would still count: every dash outside href, src and srcset values."""
+    scrub = re.sub(r'(href|src|srcset)="[^"]*"', '', page)
+    return [scrub[max(0, m.start() - 50):m.end() + 30] for m in DASH_ANY.finditer(scrub)]
+
+
 def write(path, text):
+    """Every generated page goes out through here: CRLF normalized, dashes sanitized, and the build stops
+    if a dash is still left (hard rule, Ron's SEO brief of 2026-09-29)."""
+    text = undash_html(text.replace('\r\n', '\n'))
+    left = dash_leftovers(text)
+    if left:
+        raise SystemExit(f'{path} NOT written: {len(left)} em or en dash(es) the sanitizer could not place, '
+                         f'fix the source: {left[:3]!r}')
     full = rel(path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
-    open(full, 'w', encoding='utf-8', newline='\n').write(text.replace('\r\n', '\n'))
+    open(full, 'w', encoding='utf-8', newline='\n').write(text)
     return full

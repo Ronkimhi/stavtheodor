@@ -47,7 +47,7 @@ An art curator for private residences guides the entire process: developing an a
 
 ## How do I find an art advisor in New Jersey or New York?
 
-THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving New York City, New Jersey, and Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: stav@stavtheodor.com. Details: https://stavtheodor.com/#about
+THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: (201) 351-8367 or stav@stavtheodor.com. Details: https://stavtheodor.com/#about
 
 ## Is there an art curator in Bergen County, New Jersey?
 
@@ -91,7 +91,7 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 ## Who is Stav Theodor-Kimhi?
 
-Stav Theodor-Kimhi is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice serving New York City, New Jersey, and Tel Aviv. Her experience spans two decades across museums, galleries, academia, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
+Stav Theodor-Kimhi is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. She has more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
 
 ## What is Art Radar?
 

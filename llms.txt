@@ -1,13 +1,14 @@
 # THEODORA, Fine Art Curation & Advisory
 
-> THEODORA is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in New York City and New Jersey, with projects in Tel Aviv. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
+> THEODORA is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
 
 ## About
 
 - [Art Radar by THEODORA](https://stavtheodor.com/) is the main site. It includes Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv, plus information about THEODORA's advisory services.
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
-- Base: Tenafly, New Jersey. Serving New York City, New Jersey, and Tel Aviv.
+- Base: Tenafly, New Jersey 07670. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.
+- Contact: (201) 351-8367, stav@stavtheodor.com.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
@@ -74,7 +75,7 @@ Case studies of completed work, each with photographs. Hub: https://stavtheodor.
 
 ## Founder
 
-Stav Theodor-Kimhi is an art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. She is known for her design fluency: she works alongside architects and interior designers, not around them.
+Stav Theodor-Kimhi is an art curator and advisor with more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality. She is known for her design fluency: she works alongside architects and interior designers, not around them.
 
 ## Art Radar
 
@@ -117,7 +118,7 @@ All posts are published at the URLs below, each in Hebrew and English.
 - [Giacometti at the Temple of Dendur, the Met](https://stavtheodor.com/radar/giacometti-dendur/): June 26, 2026. Seventeen Giacometti sculptures installed inside and around the Temple of Dendur at the Met. On view through September 8, 2026.
 - [Fresh Paint Art Fair, Tel Aviv](https://stavtheodor.com/radar/fresh-paint-2026/): June 24, 2026. Fresh Paint's 14th edition, Israel's leading contemporary art and design fair, June 24-29, 2026.
 - [Three Exhibitions in New York](https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/): June 17, 2026. Fred Tomaselli at James Cohan Gallery, Whitney Bedford at Miles McEnery Gallery, and Arghavan Khosravi at Uffner and Liu Gallery.
-- [David Hockney, 1937-2026](https://stavtheodor.com/radar/david-hockney-1937-2026/): June 12, 2026. Tribute to David Hockney, who died June 11, 2026.
+- [David Hockney, 1937 to 2026](https://stavtheodor.com/radar/david-hockney-1937-2026/): June 12, 2026. Tribute to David Hockney, who died June 11, 2026.
 - [Fifth Avenue, Where Jewelry Meets Art](https://stavtheodor.com/radar/fifth-avenue-jewelry-art/): June 12, 2026. Tiffany, Bulgari, and Chanel as unexpected contemporary art venues on Fifth Avenue.
 - [Clinamen at Park Avenue Armory](https://stavtheodor.com/radar/clinamen-park-avenue-armory/): June 9, 2026. Celeste Boursier-Mougenot's immersive sound installation on water, June 10-August 26, 2026.
 - [Living With Art, at the Montclair Art Museum](https://stavtheodor.com/radar/living-with-art-montclair/): June 4, 2026. The Shaffer private collection of 100+ works, on view through June 28, 2026.

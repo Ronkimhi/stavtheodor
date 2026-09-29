@@ -24,158 +24,49 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Pop: 1960s to Today, at the Guggenheim",
-    "description": "Pop: From the 1960s to Today at the Solomon R. Guggenheim Museum traces Pop art's influence from Warhol, Lichtenstein, and Oldenburg through Maurizio Cattelan and Yayoi Kusama. Opens June 5, 2026.",
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-07-01",
-    "inLanguage": ["he", "en"],
-    "url": "https://stavtheodor.com/radar/guggenheim-pop/",
-    "mainEntityOfPage": "https://stavtheodor.com/radar/guggenheim-pop/",
-    "author": { "@id": "https://stavtheodor.com/#stav" },
-    "publisher": { "@id": "https://stavtheodor.com/#org" },
-    "isPartOf": { "@id": "https://stavtheodor.com/#site" },
-    "keywords": "Guggenheim, Pop art, Warhol, Lichtenstein, Yayoi Kusama, contemporary art, New York exhibition 2026",
-    "about": [
-      {
-        "@type": ["Event", "ExhibitionEvent"],
-        "name": "Pop: From the 1960s to Today",
-        "startDate": "2026-06-05",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "Museum",
-          "name": "Solomon R. Guggenheim Museum",
-          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
-        }
-      }
-    ]
-  }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "THEODORA",
-      "item": "https://stavtheodor.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Art Radar",
-      "item": "https://stavtheodor.com/radar/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Pop: 1960s to Today, at the Guggenheim",
-      "item": "https://stavtheodor.com/radar/guggenheim-pop/"
-    }
-  ]
-}
-</script>
-<!-- Structured data: Person + Organization + WebSite (JSON-LD) -->
+<!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page's -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://stavtheodor.com/#stav",
-      "name": "Stav Theodor-Kimhi",
-      "alternateName": "Stav Theodor",
-      "jobTitle": "Art Curator and Advisor",
-      "description": "Fine art curator and advisor with two decades of experience across museums, galleries, academia, and international hospitality. Founder of THEODORA.",
-      "url": "https://stavtheodor.com/",
-      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/stav-theodor-5542a476/",
-        "https://www.instagram.com/theodorafineart/",
-        "https://www.facebook.com/stavtheodor/"
-      ],
-      "worksFor": {
-        "@id": "https://stavtheodor.com/#org"
-      },
-      "knowsAbout": [
-        "Fine Art Curation",
-        "Art Advisory",
-        "Hospitality Art",
-        "Private Art Collections",
-        "Contemporary Art",
-        "Israeli Art"
-      ],
-      "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        },
-        {
-          "@type": "Language",
-          "name": "Hebrew",
-          "alternateName": "he"
-        }
-      ],
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Ben-Gurion University",
-          "url": "https://www.bgu.ac.il/",
-          "department": {
-            "@type": "Organization",
-            "name": "Faculty of Arts"
-          }
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Tel Aviv University",
-          "url": "https://www.tau.ac.il/",
-          "department": {
-            "@type": "Organization",
-            "name": "Faculty of Arts"
-          }
-        }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tenafly",
-        "addressRegion": "NJ",
-        "addressCountry": "US"
-      }
-    },
-    {
       "@type": "ProfessionalService",
       "@id": "https://stavtheodor.com/#org",
       "name": "THEODORA",
-      "description": "Fine art curation and advisory. A to Z: art concept, sourcing, selection, and installation for private residences and hospitality projects in New York, New Jersey, and Tel Aviv.",
+      "alternateName": [
+        "Theodora Fine Art",
+        "THEODORA Fine Art Advisory"
+      ],
+      "description": "Fine art advisory and curation led by Stav Theodor in Tenafly, New Jersey: art concept, sourcing, commissions, framing and installation for homes, interior designers, offices, practices, restaurants and hotels across Tenafly, Bergen County, New Jersey and New York City.",
       "url": "https://stavtheodor.com/",
-      "logo": "https://stavtheodor.com/images/theodora-logo.png",
-      "image": "https://stavtheodor.com/og-image.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://stavtheodor.com/images/theodora-logo.png"
+      },
+      "image": [
+        "https://stavtheodor.com/og-home.jpg",
+        "https://stavtheodor.com/images/stav-portrait.jpg"
+      ],
+      "telephone": "+1-201-351-8367",
+      "email": "stav@stavtheodor.com",
       "founder": {
         "@id": "https://stavtheodor.com/#stav"
       },
-      "email": "stav@stavtheodor.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tenafly",
         "addressRegion": "NJ",
+        "postalCode": "07670",
         "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.9254,
-        "longitude": -73.9629
       },
       "areaServed": [
         {
           "@type": "City",
-          "name": "New York City"
+          "name": "Tenafly, New Jersey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bergen County, New Jersey"
         },
         {
           "@type": "State",
@@ -183,57 +74,210 @@
         },
         {
           "@type": "City",
-          "name": "Tel Aviv"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bergen County, New Jersey"
-        },
-        {
-          "@type": "City",
-          "name": "Tenafly, New Jersey"
-        },
-        {
-          "@type": "Place",
-          "name": "Manhattan, New York"
+          "name": "New York City"
         }
       ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+1-201-351-8367",
+        "email": "stav@stavtheodor.com",
+        "availableLanguage": [
+          "English",
+          "Hebrew"
+        ],
+        "areaServed": "US"
+      },
       "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        },
-        {
-          "@type": "Language",
-          "name": "Hebrew",
-          "alternateName": "he"
-        }
+        "en",
+        "he"
       ],
       "knowsAbout": [
-        "Art Curation",
-        "Art Advisory",
-        "Interior Art Consulting",
-        "Private Art Collections",
-        "Hospitality Art"
+        "Art advisory",
+        "Art consulting",
+        "Art curation for private homes",
+        "Art curation for interior designers",
+        "Corporate and office art",
+        "Hospitality art",
+        "Art commissions",
+        "Framing and installation",
+        "Contemporary art",
+        "Israeli art"
       ],
       "sameAs": [
         "https://www.instagram.com/theodorafineart/",
-        "https://www.facebook.com/stavtheodor/"
+        "https://www.facebook.com/profile.php?id=61594952339047",
+        "https://www.youtube.com/@theodorafineart",
+        "https://www.yelp.com/biz/the-odora-tenafly",
+        "https://www.behance.net/stavtheodor",
+        "https://www.trustpilot.com/review/stavtheodor.com",
+        "https://www.merchantcircle.com/theodora-tenafly-nj",
+        "https://www.alignable.com/tenafly-nj/theodora",
+        "https://www.houzz.com/pro/stav-theodor3/theodora",
+        "https://www.pinterest.com/theodorafineart/",
+        "https://www.manta.com/c/m1hjj31/theodora",
+        "https://nextdoor.com/page/theodora-tenafly-nj/",
+        "https://www.tupalo.co/tenafly-new-jersey/theodora",
+        "https://www.codaworx.com/profile/theodora",
+        "https://artradar.substack.com/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stavtheodor.com/#stav",
+      "name": "Stav Theodor",
+      "alternateName": [
+        "Stav Theodor-Kimhi",
+        "Stav Theodor Kimhi"
+      ],
+      "jobTitle": "Art Curator and Advisor",
+      "description": "Art curator and advisor with more than 15 years of experience across museums, galleries, academia and international hospitality. Founder of THEODORA in Tenafly, New Jersey.",
+      "url": "https://stavtheodor.com/",
+      "image": "https://stavtheodor.com/images/stav-portrait.jpg",
+      "email": "stav@stavtheodor.com",
+      "telephone": "+1-201-351-8367",
+      "worksFor": {
+        "@id": "https://stavtheodor.com/#org"
+      },
+      "knowsLanguage": [
+        "en",
+        "he"
+      ],
+      "knowsAbout": [
+        "Art curation",
+        "Art advisory",
+        "Contemporary art",
+        "Israeli art",
+        "Hospitality art",
+        "Private art collections"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Ben-Gurion University of the Negev",
+          "url": "https://www.bgu.ac.il/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Tel Aviv University",
+          "url": "https://www.tau.ac.il/"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "M.A. in Art History",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Ben-Gurion University of the Negev"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Diploma in Curatorial and Museum Studies",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Tel Aviv University"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tenafly",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/stavtheodor/",
+        "https://substack.com/@stavtheodor",
+        "https://www.artconnect.com/stav-theodor-1o1nKO32412m9IX7qUiHS"
       ]
     },
     {
       "@type": "WebSite",
       "@id": "https://stavtheodor.com/#site",
-      "name": "Art Radar · THEODORA",
+      "name": "THEODORA",
+      "alternateName": [
+        "Theodora Fine Art",
+        "stavtheodor.com"
+      ],
       "url": "https://stavtheodor.com/",
-      "description": "Art exhibitions, openings, and the stories behind them, chosen by curator Stav Theodor-Kimhi. Covering New York, New Jersey, and Tel Aviv.",
+      "description": "Art advisory and curation by Stav Theodor in Tenafly, New Jersey, with Art Radar, weekly exhibition picks for New York, New Jersey and Tel Aviv.",
       "publisher": {
         "@id": "https://stavtheodor.com/#org"
       },
       "inLanguage": [
         "en",
         "he"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Pop: 1960s to Today, at the Guggenheim",
+      "description": "Pop: From the 1960s to Today at the Solomon R. Guggenheim Museum traces Pop art's influence from Warhol, Lichtenstein, and Oldenburg through Maurizio Cattelan and Yayoi Kusama. Opens June 5, 2026.",
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-07-01",
+      "inLanguage": [
+        "he",
+        "en"
+      ],
+      "url": "https://stavtheodor.com/radar/guggenheim-pop/",
+      "mainEntityOfPage": "https://stavtheodor.com/radar/guggenheim-pop/",
+      "author": {
+        "@id": "https://stavtheodor.com/#stav"
+      },
+      "publisher": {
+        "@id": "https://stavtheodor.com/#org"
+      },
+      "isPartOf": {
+        "@id": "https://stavtheodor.com/#site"
+      },
+      "keywords": "Guggenheim, Pop art, Warhol, Lichtenstein, Yayoi Kusama, contemporary art, New York exhibition 2026",
+      "about": [
+        {
+          "@type": [
+            "Event",
+            "ExhibitionEvent"
+          ],
+          "name": "Pop: From the 1960s to Today",
+          "startDate": "2026-06-05",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Museum",
+            "name": "Solomon R. Guggenheim Museum",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "New York",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "THEODORA",
+          "item": "https://stavtheodor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Art Radar",
+          "item": "https://stavtheodor.com/radar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pop: 1960s to Today, at the Guggenheim",
+          "item": "https://stavtheodor.com/radar/guggenheim-pop/"
+        }
       ]
     }
   ]
@@ -270,6 +314,7 @@
   <a class="wordmark" href="/">THEODORA</a>
   <div class="right">
     <div class="links" id="links"><a href="/#about"><span data-l="en">About</span><span data-l="he" dir="rtl">אודות</span></a><a href="/projects/"><span data-l="en">Projects</span><span data-l="he" dir="rtl">פרויקטים</span></a><a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he" dir="rtl">ייעוץ</span></a><a href="/#museum"><span data-l="en">Museum</span><span data-l="he" dir="rtl">מוזיאון</span></a><a href="/radar/"><span data-l="en">Art Radar</span><span data-l="he" dir="rtl">ראדאר אמנות</span></a><a href="/#faq"><span data-l="en">Questions</span><span data-l="he" dir="rtl">שאלות</span></a><a href="#contact"><span data-l="en">Contact</span><span data-l="he" dir="rtl">יצירת קשר</span></a></div>
+    <a class="nav-call" href="tel:+12013518367" data-loc="header" aria-label="Call THEODORA at (201) 351-8367"><span class="num">(201) 351-8367</span><span class="short"><span data-l="en">Call</span><span data-l="he" dir="rtl">התקשרו</span></span></a>
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
       <button type="button" data-lang="he" aria-pressed="false">עברית</button>
       <button type="button" data-lang="en" aria-pressed="false">English</button>
@@ -317,6 +362,7 @@
     <h2 class="serif"><span data-l="en">Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv.</span><span data-l="he" dir="rtl">אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב.</span></h2>
     <div class="readnext"><a href="/art-curator-new-york/"><span data-l="en">Art curator in New York</span><span data-l="he" dir="rtl">אוצרת אמנות בניו יורק</span></a><a href="/art-curator-new-jersey/"><span data-l="en">Art curator in New Jersey</span><span data-l="he" dir="rtl">אוצרת אמנות בניו ג'רזי</span></a></div>
     <a class="btn" href="mailto:stav@stavtheodor.com"><span data-l="en">Write to Stav</span><span data-l="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span>(201) 351-8367</a>
   </div>
 </section>
 
@@ -365,8 +411,13 @@
     <h2 class="serif"><span data-l="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <a class="arrow" href="mailto:stav@stavtheodor.com"><span class="ln"></span><span data-l="en">Write to Stav</span><span data-l="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow" href="mailto:stav@stavtheodor.com" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>stav@stavtheodor.com</a>
+    <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span>(201) 351-8367</a>
     <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
-    <p style="font-size: 15px; max-width: 560px;"><span data-l="en">Stav Theodor-Kimhi, art curation and advisory. Tenafly, New Jersey, for New York, New Jersey and Tel Aviv.</span><span data-l="he" dir="rtl">סתיו תאודור-קמחי, אוצרות וייעוץ אמנות. טנפליי, ניו ג'רזי, לניו יורק, ניו ג'רזי ולתל אביב.</span></p>
+    <address class="nap">
+  <span data-l="en">THEODORA · Stav Theodor, art advisor and consultant</span><span data-l="he" lang="he" dir="rtl">THEODORA · סתיו תאודור, יועצת אמנות</span><br>
+  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב</span><br>
+  <a href="tel:+12013518367" data-loc="footer">(201) 351-8367</a> · <a href="mailto:stav@stavtheodor.com" data-loc="footer">stav@stavtheodor.com</a>
+</address>
   </div>
   <div class="cols2">
     <div>
@@ -538,6 +589,13 @@
     window.addEventListener('resize', sweep);
   }, 1800);
 })();
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+  if (!a || typeof window.gtag !== 'function') { return; }
+  window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+});
 </script>
 
 </body>
