@@ -53,6 +53,9 @@ for f in sys.argv[1:]:
         if crumbs and (crumbs[0][2] != "/" or crumbs[-1][2] != "/" + p.get("path", "").strip("/") + "/"): fails.append("area page: breadcrumb must run from / to the page itself")
         for k in ("name", "serviceType", "areaServed", "description"):
             if not (p.get("service") or {}).get(k): fails.append(f"area page: service.{k} missing")
+    if bool(p.get("nav_sub_en")) != bool(p.get("nav_sub_he")): fails.append("nav_sub_en and nav_sub_he come together (the line under the wordmark, both languages)")
+    for k in ("nav_sub_en", "nav_sub_he"):
+        if p.get(k) and len(p[k]) > 32: fails.append(f"{k}: at most 32 characters")
     if p.get("head_title") and (len(p["head_title"]) + len(" · THEODORA") > 60): fails.append("head_title: the title with ' · THEODORA' is over 60 characters")
     for slug in p.get("radar_posts", []) or []:
         if slug not in SLUGS: fails.append(f"radar_posts slug does not exist in content/posts.html: {slug}")

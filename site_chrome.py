@@ -771,6 +771,26 @@ WM_SUB_JS = '''<script>
 })();
 </script>'''
 
+# The same line on a growth page with a text hero (nav(sub=...) from the page JSON's nav_sub_en and nav_sub_he;
+# /for-designers/, Ron, 2026-09-29): hidden on the first fold, shown once the page's h1 has scrolled fully out of
+# view, and kept for the rest of the page (there is no black intro block here to hide it at).
+WM_SUB_H1_JS = '''<script>
+(function () {
+  var sub = document.querySelector('.nav .wm-sub'), h1 = document.querySelector('.phead h1') || document.querySelector('h1');
+  if (!sub || !h1) { return; }
+  var queued = false;
+  function update() {
+    queued = false;
+    sub.classList.toggle('on', h1.getBoundingClientRect().bottom < 0);
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', update);
+  update();
+})();
+</script>'''
+
 
 def body_open():
     """English is set in the markup itself; LANG_BOOT only switches to a stored choice."""

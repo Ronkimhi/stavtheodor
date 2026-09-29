@@ -272,7 +272,13 @@ def render_article_page(p, all_pages):
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
                     og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.BA_SCRIPT if ba else ''))
+            + sc.body_open() + page_nav(p) + body + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
+
+
+def page_nav(p):
+    """The nav, with the small line under the wordmark when the page JSON has nav_sub_en and nav_sub_he
+    (/for-designers/, Ron, 2026-09-29; shown by WM_SUB_H1_JS once the h1 has scrolled away)."""
+    return sc.nav(sub=(p['nav_sub_en'], p['nav_sub_he'])) if p.get('nav_sub_en') else sc.nav()
 
 
 def render_project_page(p, all_pages, projects):

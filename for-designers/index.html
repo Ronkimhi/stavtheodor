@@ -359,7 +359,7 @@
 </script>
 
 <nav class="nav" aria-label="Main">
-  <a class="wordmark" href="/">THEODORA</a>
+  <a class="wordmark" href="/">THEODORA<span class="wm-sub" aria-hidden="true"><span data-l="en">for designers</span><span data-l="he" dir="rtl">למעצבים</span></span></a>
   <div class="right">
     <div class="links" id="links"><a href="/#about"><span data-l="en">About</span><span data-l="he" dir="rtl">אודות</span></a><a href="/projects/"><span data-l="en">Projects</span><span data-l="he" dir="rtl">פרויקטים</span></a><a href="/advisory/"><span data-l="en">Advisory</span><span data-l="he" dir="rtl">ייעוץ</span></a><a href="/#industries"><span data-l="en">For business</span><span data-l="he" dir="rtl">לעסקים</span></a><a href="/radar/"><span data-l="en">Art Radar</span><span data-l="he" dir="rtl">ראדאר אמנות</span></a><a href="/#faq"><span data-l="en">Questions</span><span data-l="he" dir="rtl">שאלות</span></a><a href="/contact/"><span data-l="en">Contact</span><span data-l="he" dir="rtl">יצירת קשר</span></a></div>
     <a class="nav-call" href="tel:+12013518367" data-loc="header" aria-label="Call THEODORA at (201) 351-8367"><span class="num">(201) 351-8367</span><span class="short"><span data-l="en">Call</span><span data-l="he" dir="rtl">התקשרו</span></span></a>
@@ -662,6 +662,22 @@ document.addEventListener('click', function (e) {
 });
 </script>
 <script src="/js/before-after.js?v=20260928" defer></script>
+<script>
+(function () {
+  var sub = document.querySelector('.nav .wm-sub'), h1 = document.querySelector('.phead h1') || document.querySelector('h1');
+  if (!sub || !h1) { return; }
+  var queued = false;
+  function update() {
+    queued = false;
+    sub.classList.toggle('on', h1.getBoundingClientRect().bottom < 0);
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', update);
+  update();
+})();
+</script>
 
 </body>
 </html>
