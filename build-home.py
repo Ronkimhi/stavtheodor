@@ -421,14 +421,16 @@ def page_problems(out, name, home=None):
 
 
 OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: one consistent stub each
-    'our-team': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
-    'our-team-1': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'questions': (SITE + '/#faq', 'Questions people ask before they write | THEODORA'),
 }  # /contact/ left this list on 2026-09-29, and /about/ the same day: both are real pages now (build-site-pages.py)
 # Pages merged into another (Ron's SEO brief, 2026-09-29, P1.5): the same stub without noindex, so the instant refresh
 # reads as a permanent redirect. GitHub Pages sends no server 301; move this to a real 301 if the hosting ever allows one.
+# The old Squarespace team pages /our-team/ and /our-team-1/ forward to the real /about/ page since 2026-09-29 (they went
+# to /#about before), the same way: canonical /about/, instant refresh, a visible link, no noindex, in no sitemap.
 MERGED_PATHS = {
     'designers': (SITE + '/for-designers/', 'Art Consultant for Interior Designers · THEODORA'),
+    'our-team': (SITE + '/about/', 'About THEODORA | Art Advisor Stav Theodor, Tenafly NJ'),
+    'our-team-1': (SITE + '/about/', 'About THEODORA | Art Advisor Stav Theodor, Tenafly NJ'),
 }
 
 

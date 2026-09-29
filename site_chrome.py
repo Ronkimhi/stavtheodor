@@ -806,8 +806,9 @@ def tail(home=False, scripts=''):
 def redirect_stub(target, title='THEODORA', noindex=True):
     """A page that moved: canonical and meta refresh to its new address, a location.replace
     for browsers (no history entry, fragments included), noindex. Used for the retired /2/
-    tree and the old Squarespace paths (/our-team/, /our-team-1/, /questions/).
-    noindex=False: a page merged into another (/designers/ into /for-designers/, Ron's SEO brief of 2026-09-29, P1.5),
+    tree and the old Squarespace path /questions/.
+    noindex=False: a page merged into another (/designers/ into /for-designers/, Ron's SEO brief of 2026-09-29, P1.5;
+    the old team pages /our-team/ and /our-team-1/ into /about/, 2026-09-29),
     where the instant refresh should read as a permanent redirect and pass the old page's signals on."""
     robots = '\n<meta name="robots" content="noindex">' if noindex else ''
     return f'''<!DOCTYPE html>
