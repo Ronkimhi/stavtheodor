@@ -80,7 +80,9 @@ def working_with_stav(p):
     Jersey one first when the post is about New Jersey), and the mailto."""
     nj = f'<a href="/art-curator-new-jersey/">{T("Art curator in New Jersey", "אוצרת אמנות בניו ג\'רזי")}</a>'
     ny = f'<a href="/art-curator-new-york/">{T("Art curator in New York", "אוצרת אמנות בניו יורק")}</a>'
-    links = (nj + ny) if about_new_jersey(p) else (ny + nj)
+    # a New Jersey post also links the Tenafly page (Ron's SEO brief, 2026-09-29, P1.2: /radar/library-museum-passes/ among them)
+    tenafly = f'<a href="/art-consultant-tenafly-nj/">{T("Art consultant in Tenafly", "יועצת אמנות בטנפליי")}</a>'
+    links = (nj + tenafly + ny) if about_new_jersey(p) else (ny + nj)
     return f'''
 <section class="section wrap tight">
   <div class="cta reveal" id="working-with-stav">

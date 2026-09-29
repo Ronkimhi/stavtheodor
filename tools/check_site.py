@@ -66,7 +66,8 @@ BUSINESS_LINE = (sc.PHONE, sc.PHONE_TEL, sc.PHONE_SCHEMA)  # the one number allo
 STREET = re.compile(r'demott|41 franklin', re.I)  # never a street address on the site (the brief's hard rule)
 OLD_SAME_AS = ('facebook.com/stavtheodor/', 'stav-theodor-5542a476')
 SITE = 'https://stavtheodor.com'
-GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york', 'contact')
+GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york', 'contact',
+                  'art-consultant-tenafly-nj', 'art-advisor-bergen-county')  # the town and county pages (Batch 3, 2026-09-29)
 MERGED_DIRS = ('designers',)  # merged into another page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'questions') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
 HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')

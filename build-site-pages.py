@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Renders content/pages/*.json into standalone bilingual pages at /<path>/index.html
-(advisory, projects, partners, guide, and the two local landing pages), plus the hub pages /advisory/ and /projects/,
+(advisory, projects, partners, guide, the two local landing pages and the town and county pages), plus the hub pages
+/advisory/ and /projects/,
 in the site's one theme (css/theme.css) with the shared chrome (site_chrome.py).
 Every page must first pass tools/check_pages.py; a failure stops the build before anything is written.
 Then runs build-post-pages.py (radar/<slug>/ and the archive). The sitemaps are
@@ -38,6 +39,11 @@ CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects"
 # stays in the copy and on the project pages but never in an areaServed.
 DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
                 {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "New York City"}]
+# The town and county pages (section "area": /art-consultant-tenafly-nj/ and /art-advisor-bergen-county/, Ron's SEO brief,
+# 2026-09-29, P1.2 and P1.3). Their JSON carries its own schema and path: `breadcrumb` (the visible trail and the
+# BreadcrumbList, [name_en, name_he, path] per step, the page itself last), `service` (the Service node: name,
+# serviceType, areaServed, audience, description) and `og_title`; `cta_sub_en`/`cta_sub_he` add a line under the CTA,
+# which also links /contact/. The FAQPage carries an @id, and its answers are the visible text, tags stripped.
 CTA_EN = "Send me one photo of the wall, and a line about the space. I will tell you what I see."
 CTA_HE = "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
 MAIL = f"mailto:{sc.EMAIL}"
@@ -84,7 +90,36 @@ def kickers(p):
     return kicker, kicker_he
 
 
+def ld_area(p, url):
+    """A town or county page: its Service, its BreadcrumbList and its FAQPage, as the brief writes them."""
+    sv = p["service"]
+    service = {"@type": "Service", "@id": url + "#service", "name": sv["name"], "serviceType": sv["serviceType"], "url": url,
+               "provider": {"@id": SITE + "/#org"}, "areaServed": sv["areaServed"]}
+    if sv.get("audience"):
+        service["audience"] = sv["audience"]
+    service["description"] = sv["description"]
+    crumbs = {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": en, "item": SITE + path} for i, (en, _he, path) in enumerate(p["breadcrumb"])]}
+    ld = [service, crumbs]
+    if p.get("faq"):
+        ld.append({"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
+            {"@type": "Question", "name": q["q_en"], "acceptedAnswer": {"@type": "Answer", "text": strip_tags(q["a_en"])}} for q in p["faq"]]})
+    return ld
+
+
+def crumbs_html(p):
+    """The visible breadcrumb of a town or county page, in place of the eyebrow: every step but the last is a link."""
+    steps = []
+    for i, (en, he, path) in enumerate(p["breadcrumb"]):
+        label = T(H.escape(en), H.escape(he))
+        steps.append(f'<a href="{path}">{label}</a>' if i < len(p["breadcrumb"]) - 1 else f'<span aria-current="page">{label}</span>')
+    sep = ' <span class="sep" aria-hidden="true">/</span> '
+    return f'<nav class="eyebrow crumbs" aria-label="Breadcrumb">{sep.join(steps)}</nav>'
+
+
 def ld_blocks(p, url, og):
+    if p["section"] == "area":
+        return ld_area(p, url)
     date = p.get("date", "2026-09-04")
     main = {
         "@context": "https://schema.org",
@@ -176,11 +211,17 @@ def radar_html(p):
 def cta_html(p):
     cta_en = p.get("cta_en") or CTA_EN
     cta_he = p.get("cta_he") or CTA_HE
+    sub = ""
+    if p.get("cta_sub_en"):
+        sub = f'\n    <p class="muted">{T(p["cta_sub_en"], p["cta_sub_he"])}</p>'
+    contact = ""
+    if p["section"] == "area":
+        contact = f'\n    <a class="arrow" href="/contact/"><span class="ln"></span>{T("All the ways to reach me", "כל הדרכים ליצור איתי קשר")}</a>'
     return f'''
   <div class="cta reveal">
-    <h2 class="serif">{T(cta_en, cta_he)}</h2>
+    <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}
     <a class="btn" href="{MAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
-    {sc.phone_link('cta')}
+    {sc.phone_link('cta')}{contact}
   </div>'''
 
 
@@ -201,13 +242,16 @@ def render_article_page(p, all_pages):
         cap = ""
         if hi.get("caption_en") or hi.get("caption_he"):
             cap = f'\n    <figcaption>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>'
+        dims = f' width="{hi["w"]}" height="{hi["h"]}"' if hi.get("w") and hi.get("h") else ''
+        tall = ' tall' if hi.get("w") and hi.get("h") and hi["h"] > hi["w"] else ''
         hero = f'''
-  <figure class="pfig reveal">
-    <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en', ''), quote=True)}" loading="eager" fetchpriority="high">{cap}
+  <figure class="pfig{tall} reveal">
+    <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en', ''), quote=True)}"{dims} loading="eager" fetchpriority="high" decoding="async">{cap}
   </figure>'''
+    top = crumbs_html(p) if p["section"] == "area" else f'<p class="eyebrow">{T(H.escape(kicker), H.escape(kicker_he))}</p>'
     body = f'''
 <header class="phead">
-  <p class="eyebrow">{T(H.escape(kicker), H.escape(kicker_he))}</p>
+  {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
   <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{hero}
 </header>
@@ -225,7 +269,8 @@ def render_article_page(p, all_pages):
   {related_html(p, all_pages)}
 </section>
 '''
-    return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
+    return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
+                    og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.BA_SCRIPT if ba else ''))
 
@@ -412,6 +457,9 @@ def check(p, out):
     if p["section"] == "projects" and not p.get("hero_image") and not (p.get("place_en") and p.get("place_he")):
         bad.append("project page without hero_image needs place_en and place_he for its card")
     if p.get("before_after") and p["before_after"] not in sc.spaces(): bad.append(f"before_after {p['before_after']} not in content/spaces.json")
+    if p["section"] == "area":
+        for k in ("breadcrumb", "service", "og_title"):
+            if not p.get(k): bad.append(f"town or county page without {k}")
     return bad
 
 
@@ -466,8 +514,8 @@ def main():
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects
-        else:  # the advisory hub: the two local landing pages first, then the advisory pages
-            sec_pages = [p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == sec]
+        else:  # the advisory hub: the two local landing pages first, the town and county pages, then the advisory pages
+            sec_pages = [p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == "area"] + [p for p in pages if p["section"] == sec]
         sec_pages = [p for p in sec_pages if not check(p, "")]
         if not sec_pages: continue
         sc.write(os.path.join(sec, "index.html"), render_hub(sec, te, th, le, lh, sec_pages, hero_src, hero_alt))

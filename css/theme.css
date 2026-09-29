@@ -353,6 +353,11 @@
   .phead .eyebrow a:hover { color: #C9A46B; }
   .pfig { margin: clamp(40px, 5vw, 64px) 0 0; max-width: 1100px; }
   .pfig img { width: 100%; height: auto; }
+  .pfig.tall { max-width: min(560px, 100%); }  /* a portrait-format hero (the Tenafly page, 2026-09-29) */
+  .phead .crumbs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }  /* the town and county pages' breadcrumb */
+  .phead .crumbs a { color: inherit; }
+  .phead .crumbs .sep { color: var(--muted); }
+  body.lang-he .phead .crumbs { direction: rtl; }
   .pfig figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .plead { padding: clamp(72px, 8vw, 120px) clamp(20px, 3.4vw, 48px) 0; max-width: 1000px; }
   .plead p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }

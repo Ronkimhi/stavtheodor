@@ -45,6 +45,7 @@
   "schema_type": "Service",
   "service_type": "Art advisory for new construction homes in Bergen County, New Jersey",
   "related": [
+    "art-advisor-bergen-county",
     "advisory/art-advisor-manhattan-apartment",
     "advisory/art-for-a-home-in-israel-from-abroad",
     "advisory/art-for-hotels-and-hospitality",

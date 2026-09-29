@@ -363,7 +363,8 @@ def footer(home=False, cta=None, subject='', form=False):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
     subject: the mail subject both mailto links carry; form: the contact form under the phone line (the homepage's
     #contact, and only once FORM_ENDPOINT is set). The defaults are every page's footer.
-    The link columns (Ron's SEO brief, 2026-09-29, P1.5 and P1.6): the site's main pages, then Who I work with, the
+    The link columns (Ron's SEO brief, 2026-09-29, P1.5 and P1.6): the site's main pages (the Tenafly and Bergen County
+    pages first since Batch 3, P1.2 and P1.3), then Who I work with, the
     seven pages for one kind of client each; no link to the museum (its pages stay live and indexed)."""
     L = lambda h: _link(h, home)
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
@@ -382,7 +383,7 @@ def footer(home=False, cta=None, subject='', form=False):
   </div>
   <div class="cols2">
     <div>
-      <a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="{L('#about')}">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+      <a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="{L('#about')}">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
     </div>
     <div class="who">
       <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}

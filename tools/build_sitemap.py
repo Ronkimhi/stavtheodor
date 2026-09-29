@@ -84,7 +84,7 @@ def main():
             pages.append((p, f.replace('\\', '/')))
     home_lm = newest(dates, HOME_SOURCES + [src for _, src in pages])
     page_entries = [(entry(SITE + '/', home_lm), home_lm)]
-    for hub, sections in (('advisory', ('local', 'advisory')), ('projects', ('projects',))):
+    for hub, sections in (('advisory', ('local', 'area', 'advisory')), ('projects', ('projects',))):
         if os.path.exists(os.path.join(hub, 'index.html')):
             lm = newest(dates, [src for p, src in pages if p['section'] in sections])
             page_entries.append((entry(f'{SITE}/{hub}/', lm), lm))

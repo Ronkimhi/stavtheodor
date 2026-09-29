@@ -4,7 +4,11 @@ build-site-pages.py runs it over every page before writing anything, so python3 
 import json, re, sys, os
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
 # partners up to 1000 since 2026-09-29: /designers/ was merged into /for-designers/ (Ron's SEO brief, P1.5)
-LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 1000), "guide": (900, 1400), "local": (1100, 1900)}
+# area: the town and county pages (Ron's SEO brief, 2026-09-29, P1.2 and P1.3), 700 to 1,200 English words counted over the
+# lead, the body and the questions, with the brief's own short answers (FAQ_AREA)
+LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 1000), "guide": (900, 1400), "local": (1100, 1900), "area": (700, 1200)}
+FAQ_WORDS = (30, 110)
+FAQ_AREA = (10, 110)
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 def post_slugs():
@@ -41,6 +45,14 @@ for f in sys.argv[1:]:
     if p.get("section") == "local":  # the h1 may lead with "art consultant" since 2026-09-29 (Ron's SEO brief, P1.4); the lead keeps "art curator"
         if not re.search(r"art (curator|consultant|advisor)", (p.get("title_en") or "").lower()): fails.append("local page: 'art curator', 'art consultant' or 'art advisor' missing from title_en")
         if "art curator" not in (p.get("lead_en") or "").lower(): fails.append("local page: 'art curator' missing from lead_en")
+    if p.get("section") == "area":  # the head term in the h1, the town or county in the h1 and the lead, the brief's schema fields
+        if not re.search(r"art (consultant|advisor)", (p.get("title_en") or "").lower()): fails.append("area page: 'art consultant' or 'art advisor' missing from title_en")
+        for k in ("breadcrumb", "service", "og_title"):
+            if not p.get(k): fails.append(f"area page: missing {k}")
+        crumbs = p.get("breadcrumb") or []
+        if crumbs and (crumbs[0][2] != "/" or crumbs[-1][2] != "/" + p.get("path", "").strip("/") + "/"): fails.append("area page: breadcrumb must run from / to the page itself")
+        for k in ("name", "serviceType", "areaServed", "description"):
+            if not (p.get("service") or {}).get(k): fails.append(f"area page: service.{k} missing")
     if p.get("head_title") and (len(p["head_title"]) + len(" · THEODORA") > 60): fails.append("head_title: the title with ' · THEODORA' is over 60 characters")
     for slug in p.get("radar_posts", []) or []:
         if slug not in SLUGS: fails.append(f"radar_posts slug does not exist in content/posts.html: {slug}")
@@ -63,6 +75,7 @@ for f in sys.argv[1:]:
         if re.search(r'style=|class=|<script', p.get(blk,"")): fails.append(f"{blk} has style/class/script")
     if p.get("section") in LIMITS and p.get("body_en"):
         lo, hi = LIMITS[p["section"]]; n = words(p["body_en"])
+        if p["section"] == "area": n = words(p["lead_en"] + " " + p["body_en"] + " " + " ".join(q.get("q_en", "") + " " + q.get("a_en", "") for q in p.get("faq", []) or []))
         if n < lo or n > hi: fails.append(f"body_en {n} words, expected {lo} to {hi}")
     if p.get("body_he") and words(p["body_he"]) < 0.6 * words(p.get("body_en","")): fails.append("body_he much shorter than body_en, translation incomplete")
     low = p.get("body_en","").lower()
@@ -72,8 +85,8 @@ for f in sys.argv[1:]:
     for q in p.get("faq", []) or []:
         for k in ["q_en","a_en","q_he","a_he"]:
             if not q.get(k): fails.append(f"faq item missing {k}")
-        n = words(q.get("a_en","")); 
-        if n and (n < 30 or n > 110): fails.append(f"faq answer {n} words, expected 40 to 90")
+        n = words(q.get("a_en","")); lo, hi = FAQ_AREA if p.get("section") == "area" else FAQ_WORDS
+        if n and (n < lo or n > hi): fails.append(f"faq answer {n} words, expected {lo} to {hi}")
     if p.get("hero_image") and not os.path.exists(p["hero_image"]["src"].lstrip("/")): fails.append("hero_image file missing")
     if len(p.get("related", [])) < 2 and p.get("section") != "guide": fails.append("fewer than 2 related pages")
     if fails: print(f"{f}: FAIL\n  - " + "\n  - ".join(fails)); fails_total += 1

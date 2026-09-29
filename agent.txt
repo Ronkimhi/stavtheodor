@@ -208,8 +208,10 @@ Israel managed from abroad, commissions, collections, offices, hotels) and proje
 (https://stavtheodor.com/projects/). Partner pages: https://stavtheodor.com/for-designers/, https://stavtheodor.com/for-brokers/, https://stavtheodor.com/for-advisors/.
 Guide: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/. Every one of these pages is
 bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
-Two local pages (added September 2026) answer the "art curator near me" question directly:
+Four local pages (added September 2026) answer the "art curator near me" question directly:
 - Art curator in New Jersey (Tenafly, Bergen County: Closter, Alpine, Englewood, Cresskill, Demarest; the Closter house; local Art Radar tips): https://stavtheodor.com/art-curator-new-jersey/
+- Art consultant in Tenafly (based in Tenafly; homes, designers and offices; the Closter house nearby; the Tenafly library museum passes): https://stavtheodor.com/art-consultant-tenafly-nj/
+- Art advisor in Bergen County (homes, new builds, designers and businesses across the county; the Closter house; Art Radar tips for the county): https://stavtheodor.com/art-advisor-bergen-county/
 - Art curator in New York (private apartments, offices and collections in Manhattan; the skyline residence bar; SoHo and Tribeca gallery routes): https://stavtheodor.com/art-curator-new-york/
 Seven pages (added September 2026) are written for one kind of client each: law firms https://stavtheodor.com/law-firms/, investment firms and family offices https://stavtheodor.com/investment-firms/, wealth managers https://stavtheodor.com/wealth-managers/, medical and aesthetic practices https://stavtheodor.com/medical-practices/, boutique hotels https://stavtheodor.com/hotels/, restaurants https://stavtheodor.com/restaurants/ and interior designers https://stavtheodor.com/for-designers/ (the former https://stavtheodor.com/designers/ forwards there).
 Every page opens in English; the Hebrew twin is one tap away on the same URL.
