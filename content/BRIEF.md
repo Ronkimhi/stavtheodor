@@ -81,6 +81,6 @@ Other photos available: stav-couch.jpg (Stav seated under a painting), stav-arch
 5. English is in Stav's first person voice ("I"), precise, warm, no marketing hype words (no "elevate", "curated experience", "bespoke journey", "unparalleled", "world class", "transform your"). Short paragraphs. Specific over general. Written for a reader with money and taste who is short on time.
 6. Every page answers its question in the first two sentences of the lead, then earns the rest. LLMs quote pages that answer directly.
 7. Each page links to at least two other pages of this set (related field) and to /#contact or the CTA email.
-8. Length: advisory pages 500 to 900 English words in body_en. Project pages 250 to 450. Partner pages 400 to 700. Guide 900 to 1400.
+8. Length: advisory pages 500 to 900 English words in body_en. Project pages 250 to 450. Partner pages 400 to 1000 (since 2026-09-29, when /designers/ was merged into /for-designers/). Guide 900 to 1400.
 9. HTML in body fields: only p, h2, h3, ul, ol, li, strong, em, a, blockquote, figure, img, figcaption. Images are root relative (/images/projects/...). Every img has alt text in the language of its block.
 10. FAQ: 3 to 6 questions per advisory and partner page, each answer 40 to 90 words, real questions people type into ChatGPT or Google.

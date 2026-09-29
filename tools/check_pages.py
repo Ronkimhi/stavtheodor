@@ -3,7 +3,8 @@
 build-site-pages.py runs it over every page before writing anything, so python3 build.py stops on a failure."""
 import json, re, sys, os
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
-LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 700), "guide": (900, 1400), "local": (1100, 1900)}
+# partners up to 1000 since 2026-09-29: /designers/ was merged into /for-designers/ (Ron's SEO brief, P1.5)
+LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 1000), "guide": (900, 1400), "local": (1100, 1900)}
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 def post_slugs():
@@ -37,9 +38,10 @@ for f in sys.argv[1:]:
     if re.search(r"[—–]", raw): fails.append("em/en dash present")
     if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1[ (]|\b0\d{2}[ -]?\d{7}\b|\+972", raw): fails.append("phone number present")
     if "contact form" in raw.lower(): fails.append("promises a contact form (there is none: say 'the contact details at the end of this page', linking #contact)")
-    if p.get("section") == "local":
-        for k in ("title_en", "lead_en"):
-            if "art curator" not in (p.get(k) or "").lower(): fails.append(f"local page: 'art curator' missing from {k}")
+    if p.get("section") == "local":  # the h1 may lead with "art consultant" since 2026-09-29 (Ron's SEO brief, P1.4); the lead keeps "art curator"
+        if not re.search(r"art (curator|consultant|advisor)", (p.get("title_en") or "").lower()): fails.append("local page: 'art curator', 'art consultant' or 'art advisor' missing from title_en")
+        if "art curator" not in (p.get("lead_en") or "").lower(): fails.append("local page: 'art curator' missing from lead_en")
+    if p.get("head_title") and (len(p["head_title"]) + len(" · THEODORA") > 60): fails.append("head_title: the title with ' · THEODORA' is over 60 characters")
     for slug in p.get("radar_posts", []) or []:
         if slug not in SLUGS: fails.append(f"radar_posts slug does not exist in content/posts.html: {slug}")
     for k in ["path","section","title_en","title_he","meta_description","lead_en","lead_he","body_en","body_he"]:

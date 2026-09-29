@@ -225,7 +225,7 @@ def render_article_page(p, all_pages):
   {related_html(p, all_pages)}
 </section>
 '''
-    return (sc.head(f"{p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
+    return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.BA_SCRIPT if ba else ''))
 
@@ -283,7 +283,7 @@ def render_project_page(p, all_pages, projects):
   </div>
 </section>
 '''
-    return (sc.head(f"{p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
+    return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og))
             + sc.body_open() + sc.nav() + body + sc.tail())
 
@@ -327,7 +327,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
   <div class="grid3">{cards}
   </div>
 </section>
-
+{who_row(section)}
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
@@ -339,6 +339,67 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
     desc = strip_tags(lead_en)[:158]
     return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail())
+
+
+def who_row(section):
+    """The projects hub's Who I work with row (Ron's SEO brief, 2026-09-29, P1.5): the seven pages for one kind of
+    client each, the same list as every footer (site_chrome.WHO_I_WORK_WITH)."""
+    if section != "projects":
+        return ""
+    links = "".join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in sc.WHO_I_WORK_WITH)
+    return f'''
+<section class="section wrap tight">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p></div></div>
+  <div class="readnext who-row reveal">{links}</div>
+</section>
+'''
+
+
+# /contact/ (Ron's SEO brief, 2026-09-29, P1.1): a real, indexable page in place of the old redirect stub to /#contact.
+# The phone, the email with the mail fallback panel, the contact form once site_chrome.FORM_ENDPOINT is set, the service
+# area, Art Radar on WhatsApp and the Yelp listing. No hours until Ron confirms them. No street address, ever.
+CONTACT = {
+    "path": "contact",
+    "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
+    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. Serving Tenafly, Bergen County, NJ and NYC.",
+    "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
+    "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.",
+             "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב."),
+    "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
+}
+
+
+def render_contact():
+    url = f"{SITE}/{CONTACT['path']}/"
+    intro_en, intro_he = sc.FOOTER_CTA
+    ld = [{"@type": "ContactPage", "@id": url + "#page", "url": url, "name": CONTACT["title"],
+           "about": {"@id": SITE + "/#org"}, "inLanguage": ["en", "he"]},
+          {"@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+              {"@type": "ListItem", "position": 2, "name": "Contact", "item": url}]}]
+    form = sc.contact_form()
+    form_html = '\n    ' + form if form else ''
+    body = f'''
+<header class="phead">
+  <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
+  <h1 class="serif">{T(*CONTACT["h1"])}</h1>
+  <p class="lead">{T(intro_en, intro_he)}</p>
+</header>
+
+<section class="section wrap tight">
+  <div class="contact-page">
+    <a class="big-tel" href="{sc.PHONE_TEL}" data-loc="contact">{sc.PHONE}</a>
+    <a class="mail" href="{MAIL}" data-loc="contact">{sc.EMAIL}</a>{form_html}
+    <p class="area">{T(*CONTACT["area"])}</p>
+    <div class="more">
+      <a class="plain" href="{sc.WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
+      <a class="plain" href="{sc.YELP}" target="_blank" rel="noopener">{T(*CONTACT["yelp"])}</a>
+    </div>
+  </div>
+</section>
+'''
+    return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.form_js()))
 
 
 def check(p, out):
@@ -400,6 +461,8 @@ def main():
         d = p["path"].strip("/")
         sc.write(os.path.join(d, "index.html"), out)
         print(f"  wrote {d}/index.html")
+    sc.write(os.path.join(CONTACT["path"], "index.html"), render_contact())
+    print(f"  wrote {CONTACT['path']}/index.html" + (" (with the contact form)" if sc.FORM_ENDPOINT else " (no form: site_chrome.FORM_ENDPOINT is empty)"))
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects

@@ -7,7 +7,9 @@ For each buyer variant, the after image of its first room (content/variants/<id>
 or the homepage's first room for a variant without rooms, cropped to 3:2 around the room's focal
 point and saved as images/home2/industries/<id>.webp at 600 by 400 (about 30 to 60 KB). Run it
 again when a variant's first room changes, and commit the images. Needs Pillow (a developer tool:
-the build itself only checks that the files exist).
+the build itself only checks that the files exist). images/home2/industries/designers.webp is kept by hand: the
+designers tile links /for-designers/ since /designers/ stopped being a variant (2026-09-29, build-home.py INDUSTRY_PAGES),
+so this script no longer writes it; it was cut from the homepage's first room, as above.
 """
 import json
 import os

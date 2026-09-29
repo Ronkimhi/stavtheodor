@@ -87,7 +87,7 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 ## Which art advisors work with interior designers in New York and New Jersey?
 
-Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jersey, works with interior designers and architects on their clients' projects, inside the studio's scheme: sourcing, commissions, framing and installation within the approved budget, with the client and the credit staying with the studio. Full page: https://stavtheodor.com/designers/ (how referrals and credit work: https://stavtheodor.com/for-designers/)
+Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jersey, works with interior designers and architects on their clients' projects, inside the studio's scheme: sourcing, commissions, framing and installation within the approved budget, with the client and the credit staying with the studio. Full page: https://stavtheodor.com/for-designers/
 
 ## Who is Stav Theodor-Kimhi?
 

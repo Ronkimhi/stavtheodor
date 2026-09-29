@@ -39,6 +39,12 @@ INSTAGRAM = 'https://www.instagram.com/theodorafineart/'
 PHONE = '(201) 351-8367'
 PHONE_TEL = 'tel:+12013518367'
 PHONE_SCHEMA = '+1-201-351-8367'
+YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
+# The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. Empty until Ron
+# creates the Formspree form (target stav@stavtheodor.com) and sends its address, https://formspree.io/f/<id>. While it
+# is empty no form, no form script and no placeholder reaches any page; set it here, rebuild, and the form, its
+# progressive enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's #contact.
+FORM_ENDPOINT = ''
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -264,14 +270,28 @@ LANG_BOOT = '''<script>
 })();
 </script>'''
 
+# Ron's SEO brief, 2026-09-29: For business (P1.5) replaces the Museum item (P1.6: no main page links the museum; its
+# pages stay live and indexed), and Contact goes to the real /contact/ page (P1.1). For business points at the
+# homepage's "Who I work with" section until the commercial hub /corporate-art-consulting/ ships (P2.1).
 NAV_ITEMS = [
     ('#about', 'About', 'אודות'),
     ('/projects/', 'Projects', 'פרויקטים'),
     ('#advisory', 'Advisory', 'ייעוץ'),
-    ('#museum', 'Museum', 'מוזיאון'),
+    ('#industries', 'For business', 'לעסקים'),
     ('/radar/', 'Art Radar', 'ראדאר אמנות'),
     ('#faq', 'Questions', 'שאלות'),
-    ('#contact', 'Contact', 'יצירת קשר'),
+    ('/contact/', 'Contact', 'יצירת קשר'),
+]
+# Who I work with (Ron's SEO brief, 2026-09-29, P1.5): the seven pages for one kind of client each, in every footer and
+# on the projects hub. Interior designers is /for-designers/ since /designers/ was merged into it (it redirects there).
+WHO_I_WORK_WITH = [
+    ('/for-designers/', 'Interior designers', 'מעצבי פנים'),
+    ('/law-firms/', 'Law firms', 'משרדי עורכי דין'),
+    ('/investment-firms/', 'Investment firms', 'חברות השקעה'),
+    ('/wealth-managers/', 'Wealth managers', 'מנהלי הון'),
+    ('/medical-practices/', 'Medical practices', 'מרפאות'),
+    ('/restaurants/', 'Restaurants', 'מסעדות'),
+    ('/hotels/', 'Boutique hotels', 'מלונות בוטיק'),
 ]
 # Section links that have a page of their own: on the homepage they stay in-page, on every
 # other page they go to that page instead of scrolling the homepage (2026-09-26).
@@ -338,32 +358,89 @@ def nap(mail=None):
 </address>'''
 
 
-def footer(home=False, cta=None, subject=''):
+def footer(home=False, cta=None, subject='', form=False):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
-    subject: the mail subject both mailto links carry. The defaults are every page's footer."""
+    subject: the mail subject both mailto links carry; form: the contact form under the phone line (the homepage's
+    #contact, and only once FORM_ENDPOINT is set). The defaults are every page's footer.
+    The link columns (Ron's SEO brief, 2026-09-29, P1.5 and P1.6): the site's main pages, then Who I work with, the
+    seven pages for one kind of client each; no link to the museum (its pages stay live and indexed)."""
     L = lambda h: _link(h, home)
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
     href = mail_href(subject)
+    who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH)
+    form_html = ('\n    ' + contact_form()) if form and FORM_ENDPOINT else ''
     return f'''<footer class="foot" id="contact">
   <div class="left">
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
     <a class="arrow" href="{href}" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>{EMAIL}</a>
-    {phone_link('cta')}
+    {phone_link('cta')}{form_html}
     <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
     {nap(href)}
   </div>
   <div class="cols2">
     <div>
-      <a href="/art-curator-new-jersey/">{T('Art curator in New Jersey', "אוצרת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art curator in New York', 'אוצרת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="/museum/">{T('The Museum', 'המוזיאון')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/for-designers/">{T('Working with designers', 'עבודה עם מעצבים')}</a>
+      <a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="{L('#about')}">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
     </div>
-    <div>
-      <a href="{L('#about')}">{T('About', 'אודות')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+    <div class="who">
+      <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
     </div>
     <p class="eyebrow copy">{T('Tenafly, New Jersey · © 2026 THEODORA', "טנפליי, ניו ג'רזי · © 2026 THEODORA")}</p>
   </div>
 </footer>'''
+
+
+def contact_form():
+    """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. Formspree takes a plain
+    HTML POST: without JavaScript the form posts and Formspree shows its own thank-you page; FORM_JS sends it with fetch
+    instead and shows the status line. _gotcha is Formspree's honeypot; page is filled with the path by FORM_JS. The free
+    plan takes no files, so the note asks for the photo by email."""
+    if not FORM_ENDPOINT:
+        return ''
+    L = lambda en, he: T(en, he)
+    return f'''<form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
+      <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>{L('Name', 'שם')} <input type="text" name="name" autocomplete="name" required></label>
+      <label>{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label>{L('Phone (optional)', 'טלפון (לא חובה)')} <input type="tel" name="phone" autocomplete="tel"></label>
+      <label>{L('Town', 'עיר')} <input type="text" name="town" autocomplete="address-level2" placeholder="Tenafly, Englewood, Manhattan..."></label>
+      <label>{L('Tell me about the space', 'ספרו לי על החלל')} <textarea name="message" rows="5" required></textarea></label>
+      <input type="hidden" name="page" value="">
+      <button type="submit">{L('Send to Stav', 'שליחה לסתיו')}</button>
+      <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>'''
+
+
+def form_js():
+    """The form's progressive enhancement (deferred work, inline, no library), or '' while FORM_ENDPOINT is empty.
+    It sends the form with fetch, says so in the visitor's language, and sends GA4 generate_lead with the form id and
+    the page path only: never the name, email, phone or message."""
+    if not FORM_ENDPOINT:
+        return ''
+    return '''<script>
+document.querySelectorAll('form.contact-form').forEach(function (f) {
+  var he = function () { return document.body.classList.contains('lang-he'); };
+  f.querySelector('[name=page]').value = location.pathname;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var status = f.querySelector('.form-status');
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error(r.status); }
+        f.reset();
+        f.querySelector('[name=page]').value = location.pathname;
+        status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+      })
+      .catch(function () {
+        status.textContent = he() ? 'משהו השתבש. התקשרו ל-(201) 351-8367 או כתבו ל-stav@stavtheodor.com.' : 'Something went wrong. Please call (201) 351-8367 or email stav@stavtheodor.com.';
+      });
+  });
+});
+</script>'''
 
 
 # A buyer variant's mail subject survives the fallback panel. LANG_JS (inlined in index.html, left
@@ -589,18 +666,20 @@ def tail(home=False, scripts=''):
     return '\n' + footer(home) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
 
 
-def redirect_stub(target, title='THEODORA'):
+def redirect_stub(target, title='THEODORA', noindex=True):
     """A page that moved: canonical and meta refresh to its new address, a location.replace
     for browsers (no history entry, fragments included), noindex. Used for the retired /2/
-    tree and the old Squarespace paths (/about/, /our-team/, /our-team-1/, /contact/, /questions/)."""
+    tree and the old Squarespace paths (/about/, /our-team/, /our-team-1/, /questions/).
+    noindex=False: a page merged into another (/designers/ into /for-designers/, Ron's SEO brief of 2026-09-29, P1.5),
+    where the instant refresh should read as a permanent redirect and pass the old page's signals on."""
+    robots = '\n<meta name="robots" content="noindex">' if noindex else ''
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>{H.escape(title)}</title>
 <link rel="canonical" href="{target}">
-<meta http-equiv="refresh" content="0; url={target}">
-<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={target}">{robots}
 <script>location.replace({json.dumps(target)});</script>
 </head>
 <body>

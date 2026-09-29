@@ -2,8 +2,8 @@
 """sitemap.xml for stavtheodor.com: a sitemap index over three child sitemaps (2026-09-26).
 
   sitemap-pages.xml    the homepage, the two hubs, every advisory, project, partner, guide and
-                       local landing page (content/pages/*.json), and the seven buyer pages
-                       (content/variants/*.json, indexable since 2026-09-28)
+                       local landing page (content/pages/*.json), /contact/ (since 2026-09-29), and the
+                       buyer pages (content/variants/*.json, indexable since 2026-09-28)
   sitemap-radar.xml    the Art Radar archive and every post (content/posts.html)
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
@@ -91,6 +91,10 @@ def main():
     for p, src in pages:
         lm = newest(dates, [src])
         page_entries.append((entry(f"{SITE}/{p['path'].strip('/')}/", lm), lm))
+    # /contact/, a real page since 2026-09-29 (Ron's SEO brief, P1.1), written by build-site-pages.py (CONTACT)
+    if os.path.exists(os.path.join('contact', 'index.html')):
+        lm = newest(dates, ['build-site-pages.py'])
+        page_entries.append((entry(f'{SITE}/contact/', lm), lm))
     # the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/)
     for f in sorted(glob.glob('content/variants/*.json')):
         v = json.load(open(f, encoding='utf-8'))

@@ -15,6 +15,10 @@ PHONE_HREF = 'href="tel:+12013518367"'
 GA_SRC = 'async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"'
 TWO_DECADES_OK = {"/museum/artists/tintoretto/", "/radar/three-tel-aviv-shows/"}  # not about Stav
 NEW_PAGES = ["/art-consultant-tenafly-nj/", "/art-advisor-bergen-county/"]
+# The museum's walkable 3D gallery (/museum/gallery/, ?artist=...) is an app shell, noindex since it shipped on 2026-07-01,
+# with no canonical, no JSON-LD and in no sitemap, so --live never fetches it. A folder run finds the file: it still gets
+# the dash, accuracy, phone and GA checks, but not the indexable-page checks (tools/check_site.py exempts it the same way).
+APP_SHELLS = {"/museum/gallery/index.html"}
 DASH_RE = re.compile(r"\u2014|\u2013|&mdash;|&ndash;|&#8212;|&#8211;|&#x2014;|&#x2013;", re.I)
 fails = []
 
@@ -48,6 +52,9 @@ def load_pages():
             html = open(f, encoding="utf-8", errors="replace").read()
             m = re.search(r'rel="canonical" href="https://stavtheodor\.com([^"]*)"', html)
             path = m.group(1) if m else "/" + os.path.relpath(f, root)
+            if 'http-equiv="refresh"' in html:  # a redirect stub's canonical names its target: key it by its own address
+                d = os.path.dirname(os.path.relpath(f, root))
+                path = "/" + (d + "/" if d else "")
             pages[path if path not in pages else "/" + os.path.relpath(f, root)] = html
     return pages
 
@@ -97,6 +104,8 @@ for path, html in sorted(pages.items()):
         fail(path, "gtag config count != 1")
     if "document.head.appendChild(s)" in html:
         fail(path, "deferred GA loader is back")
+    if path in APP_SHELLS:
+        continue
     if re.search(r'<meta[^>]+name="robots"[^>]+noindex', html, re.I):
         fail(path, "noindex on an indexable page")
     if f'rel="canonical" href="{BASE}{path}"' not in html:

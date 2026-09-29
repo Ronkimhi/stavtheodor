@@ -21,7 +21,8 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
   f  no hype word (tools/check_pages.py HYPE); a $ or % figure only beside the word "industry"
   g  lengths, per field (content/VARIANT-SPEC.md)
   h  HTML only in what_i_do.p1 and p2 (a, em, strong); links go to existing pages or homepage
-     anchors, the same set in both languages; no mailto, no link to a variant
+     anchors, the same set in both languages; no mailto, no link to the variant itself (links to the other
+     buyer pages are welcome since 2026-09-29, Ron's SEO brief P1.5)
   i  five to seven questions after resolving {"home": "<q_en>"}; each under 110 characters and
      ending in "?", English answers of 40 to 90 words, Hebrew ones at least 0.6 of that, no repeats
   j  advisory_rows (optional): three to eight different content/pages paths or hubs, all built
@@ -127,8 +128,8 @@ QUESTION_MAX = 110
 HEBREW_SHARE = 0.6
 ROWS_COUNT = (3, 8)
 HUBS = ('/advisory/', '/projects/')
-STUBS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')
-RESERVED = {'2', 'about', 'advisory', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'content', 'css', 'fonts',
+STUBS = ('2', 'about', 'our-team', 'our-team-1', 'questions', 'designers')  # /contact/ is a real page since 2026-09-29; /designers/ forwards to /for-designers/
+RESERVED = {'2', 'about', 'advisory', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'content', 'css', 'designers', 'fonts',
             'for-advisors', 'for-brokers', 'for-designers', 'guide', 'images', 'js', 'museum', 'our-team', 'our-team-1',
             'projects', 'questions', 'radar', 'templates', 'tools', 'videos'}
 # l and m: the opening's rooms and the link preview. HOME_ROOMS is PAIRS in js/home-opening.js, [(before, after)] in
@@ -232,7 +233,7 @@ def link_problems(label, href, variant_paths):
     if rel.split('/')[0] in STUBS:
         return [f'{label}: {href} is a redirect stub; link the page it forwards to']
     if any(rel.strip('/') == p or rel.startswith(p + '/') for p in variant_paths):
-        return [f'{label}: {href} is a buyer variant; variants are never linked']
+        return [f'{label}: {href} is this buyer page itself']
     target = os.path.join(ROOT, rel, 'index.html')
     if not os.path.exists(target):
         return [f'{label}: {href} is not a page on the site']
@@ -514,7 +515,7 @@ def check(path, v, peers):
             if isinstance(item, dict):
                 twins(item, f'{name}[{i}].')
 
-    variant_paths = [vpath] + [o.get('path') for _, o in peers if isinstance(o.get('path'), str)]
+    variant_paths = [vpath]  # the page itself; the other buyer pages may be linked since 2026-09-29 (Ron's SEO brief, P1.5)
     hrefs = {}
     for label, s in strings(v):
         if not isinstance(s, str) or not s:

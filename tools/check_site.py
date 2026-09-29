@@ -14,8 +14,11 @@
   jsonld      every ld+json block parses
   faq         the visible FAQ equals the FAQPage schema, word for word, on the homepage and on
               every buyer variant
-  noindex     the homepage, the generated pages and the buyer variants (since 2026-09-28, Ron)
-              are indexable; /2/, the old stubs and 404.html are not
+  noindex     the homepage, the generated pages (/contact/ among them since 2026-09-29) and the buyer
+              variants (since 2026-09-28, Ron) are indexable; /2/, the old stubs and 404.html are not;
+              /designers/, merged into /for-designers/, is a redirect without noindex (Ron's SEO brief, P1.5)
+  museum      no page outside museum/ links the museum (/museum/... or #museum): its pages stay live,
+              indexed and in sitemap-museum.xml, reached from the sitemap (Ron's SEO brief, 2026-09-29, P1.6)
   posts       index.html carries no post article (posts live in content/posts.html)
   removed     nothing references the assets removed on 2026-09-26, and they are gone; no image in
               the tree is one of the AI-marked photos removed on 2026-09-28 (matched by content hash,
@@ -35,9 +38,10 @@
               one child, every loc resolves to a file, and no noindex page is listed
   variants    the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/):
               every one is built, indexable with a self canonical (2026-09-28) and in exactly one
-              sitemap; the homepage's #industries section links each exactly once; other links to
-              one come only from its paired pages (VARIANT_LINKERS) and nowhere else; llms.txt and
-              answers.md name every one; no noindex page is left over that is not a stub;
+              sitemap; the homepage's #industries section links each exactly once (and /for-designers/,
+              the designers tile, and nothing else); since 2026-09-29 every footer and related pages link
+              them too (Ron's SEO brief, P1.5); llms.txt and answers.md name every one; no noindex page is
+              left over that is not a stub;
               the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
 
 Exit 1 on any failure.
@@ -62,9 +66,11 @@ BUSINESS_LINE = (sc.PHONE, sc.PHONE_TEL, sc.PHONE_SCHEMA)  # the one number allo
 STREET = re.compile(r'demott|41 franklin', re.I)  # never a street address on the site (the brief's hard rule)
 OLD_SAME_AS = ('facebook.com/stavtheodor/', 'stav-theodor-5542a476')
 SITE = 'https://stavtheodor.com'
-GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york')
-STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
-HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
+GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york', 'contact')
+MERGED_DIRS = ('designers',)  # merged into another page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
+STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'questions') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
+HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')
+MUSEUM_LINK = re.compile(r'href="(?:https://stavtheodor\.com)?/museum/|href="#museum"')  # never from a main page (P1.6, 2026-09-29)
 REMOVED = ('images/portfolio/', 'theodora-film-2026-09.mp4')
 # The first 16 hex digits of the SHA-256 of every Gemini-marked (or Gemini-processed) photo removed on 2026-09-28:
 # the nine project photos and three homepage copies, and the masters they were cut from. None may come back, under any name.
@@ -75,11 +81,9 @@ BANNED_IMAGES = {
     '21db47b8abf26e62', 'b78ea3fe28ec1622', 'f6070dab13b23b81',
 }
 AGENT_FILES = ('llms.txt', 'answers.md')  # every buyer page is named in these (2026-09-28)
-# The pages allowed to link a buyer page besides the homepage's #industries section (2026-09-28): the
-# pages each one overlaps with, which link it both ways (/designers/ and /for-designers/, /wealth-managers/
-# and /for-advisors/, the hotel and office advisory pages).
-VARIANT_LINKERS = ('for-designers/index.html', 'for-advisors/index.html',
-                   'advisory/art-for-hotels-and-hospitality/index.html', 'advisory/art-for-an-office-or-business/index.html')
+# The homepage's #industries tiles that are not buyer variants: the designers tile links /for-designers/ since
+# /designers/ was merged into it (Ron's SEO brief, 2026-09-29, P1.5; build-home.py INDUSTRY_PAGES).
+INDUSTRY_NON_VARIANTS = ('for-designers/',)
 fails = []
 
 
@@ -319,7 +323,7 @@ home = read('index.html')
 for path in pages:
     s = read(path)
     is_stub = path.split(os.sep)[0] in STUB_DIRS or path in ('404.html',)
-    must_noindex = is_stub  # the buyer variants are indexable since 2026-09-28
+    must_noindex = is_stub and path.split(os.sep)[0] not in MERGED_DIRS  # the buyer variants are indexable since 2026-09-28
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
@@ -354,11 +358,10 @@ for path in pages:
         share = latin / max(1, latin + hebrew)
         if share < 0.9:
             fail('lang', f'{path}: only {share:.0%} of visible words are Latin ({latin} Latin, {hebrew} Hebrew)')
-    # the homepage's industries section (#industries, 2026-09-28) is the one place that may link a buyer variant
-    ind = re.search(r'<section\b[^>]*\bid="industries"[^>]*>.*?</section>', s, re.S) if path == 'index.html' else None
+    if MUSEUM_LINK.search(s):
+        fail('museum', f'{path} links the museum ({MUSEUM_LINK.search(s).group(0)!r}); no main page does since 2026-09-29 (P1.6)')
     for m_link in re.finditer(r'\b(href|src)="([^"]+)"', s):
         attr, target = m_link.group(1), m_link.group(2)
-        in_industries = bool(ind) and ind.start() <= m_link.start() < ind.end()
         if target.startswith(('http://', 'https://', 'mailto:', 'data:', 'tel:', '//')):
             if target.startswith('https://stavtheodor.com/'):
                 target = target[len('https://stavtheodor.com'):]
@@ -375,8 +378,6 @@ for path in pages:
             fs = fs.split('?')[0]
             if fs == '' or os.path.isdir(fs):
                 fs = os.path.join(fs, 'index.html') if fs else 'index.html'
-            if os.path.normpath(fs) in VARIANTS and os.path.normpath(fs) != path and not in_industries and path not in VARIANT_LINKERS:
-                fail('variants', f'{path} links to the buyer page {target} (only the homepage\'s #industries section and VARIANT_LINKERS may)')
             if not os.path.exists(fs):
                 fail('links', f'{path} -> {target}')
                 continue
@@ -422,8 +423,11 @@ elif _ind:
         _want = os.path.dirname(_p).replace(os.sep, '/') + '/'
         if _links.count(_want) != 1:
             fail('variants', f'index.html #industries links /{_want} {_links.count(_want)} times, expected once')
+    for _p in INDUSTRY_NON_VARIANTS:
+        if _links.count(_p) != 1:
+            fail('variants', f'index.html #industries links /{_p} {_links.count(_p)} times, expected once')
     for _l in _links:
-        if os.path.normpath(os.path.join(_l, 'index.html')) not in VARIANTS:
+        if os.path.normpath(os.path.join(_l, 'index.html')) not in VARIANTS and _l not in INDUSTRY_NON_VARIANTS:
             fail('variants', f'index.html #industries links /{_l}, which is not a buyer variant')
 
 # ---- the buyer variants are named nowhere an agent or a crawler reads a map of the site
@@ -524,7 +528,7 @@ for path in sorted(glob.glob(os.path.join('museum', '**', '*.html'), recursive=T
         except ValueError as e:
             fail('jsonld', f'{path} block {i + 1}: {e}')
 
-gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap', 'variants']
+gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'museum', 'posts', 'removed', 'lang', 'sitemap', 'variants']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))

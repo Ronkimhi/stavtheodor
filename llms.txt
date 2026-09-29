@@ -8,7 +8,7 @@
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
 - Base: Tenafly, New Jersey 07670. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.
-- Contact: (201) 351-8367, stav@stavtheodor.com.
+- [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Send one photo of the wall and a line about the space.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
@@ -39,7 +39,7 @@ Plain answers for people about to buy, build or move, each in English and Hebrew
 - [Your interior designer is finishing the house. Why bring in an art advisor?](https://stavtheodor.com/advisory/working-with-your-interior-designer-on-art/): Why an art advisor belongs on the project alongside your interior designer, and how the two work together without friction. Stav Theodor, NY, NJ and Tel Aviv.
 - [For wealth managers, family offices and private bankers](https://stavtheodor.com/for-advisors/): A forwardable note from art advisor Stav Theodor for wealth managers and family offices: a client's art collection built with intent, by introduction.
 - [For real estate brokers and developers: art for the new home](https://stavtheodor.com/for-brokers/): Art curator and advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel an 'art for the new home' service for buyers at closing.
-- [For interior designers and architects](https://stavtheodor.com/for-designers/): How art curator and advisor Stav Theodor works alongside interior designers and architects in NY, NJ and Tel Aviv: art off your plate, client and credit stay yours.
+- [Art consultant for interior designers and architects](https://stavtheodor.com/for-designers/): Art consultant for interior designers and architects in New Jersey and New York. Stav sources, commissions and installs; the client and the credit stay yours. (The former page https://stavtheodor.com/designers/ now forwards here.)
 - [Ten questions to answer before you buy your first serious artwork](https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/): Ten questions to answer before a first serious art purchase: wall, light, life in the room, provenance, condition, framing, budget, resale, designer, advisor.
 
 ## Who I work with
@@ -51,7 +51,7 @@ One page per kind of client, each with its own questions and answers in English 
 - [Art for medical and aesthetic practices](https://stavtheodor.com/medical-practices/): Your reputation starts at the entrance. Calm, readable art for reception, waiting and consultation rooms of medical and aesthetic practices in New Jersey and New York, specified for daily clinical use.
 - [Boutique hotel art consultant](https://stavtheodor.com/hotels/): An unforgettable arrival for unforgettable hospitality. Collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room, built to a written concept, an artwork schedule and the opening date.
 - [Restaurant art consultant in New York City](https://stavtheodor.com/restaurants/): An unforgettable space for your unforgettable food. Art for restaurants and private dining rooms in New York City, from your story, inside your designer's scheme, planned around light, steam, cleaning and service.
-- [Art consultant for interior designers](https://stavtheodor.com/designers/): The last wall is the one clients remember. Art sourcing, commissions, framing and installation for interior designers and architects in New York and New Jersey, inside your scheme; the client and the credit stay yours.
+- [Art consultant for interior designers](https://stavtheodor.com/for-designers/): The last wall is the one clients remember. Art sourcing, commissions, framing and installation for interior designers and architects in New York and New Jersey, inside your scheme; the client and the credit stay yours.
 
 ## Project pages
 
@@ -134,4 +134,6 @@ All posts are published at the URLs below, each in Hebrew and English.
 ## Contact
 
 - Website: https://stavtheodor.com/
+- Contact page: https://stavtheodor.com/contact/
+- Phone: (201) 351-8367
 - Email: stav@stavtheodor.com

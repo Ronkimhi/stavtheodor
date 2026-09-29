@@ -37,10 +37,13 @@ from site_chrome import SITE, T
 
 TEMPLATE = sc.rel('templates', 'home.html')
 VARIANTS_DIR = sc.rel('content', 'variants')
-TITLE = 'Art Curator & Advisor · New Jersey, New York, Tel Aviv | THEODORA'
-DESCRIPTION = 'Stav Theodor, art curator and advisor in Tenafly, New Jersey: art for homes and businesses in Bergen County, Manhattan, New York and Tel Aviv, from concept to installation.'
-OG_TITLE = 'Stav Theodor-Kimhi · Art Curator & Advisor'
-OG_DESC = 'Art for homes and businesses in New York, New Jersey and Tel Aviv, from concept to installation.'
+# Title, description and share card (Ron's SEO brief, 2026-09-29, P1.4: the homepage carries "art advisor New Jersey",
+# /art-curator-new-jersey/ "art consultant New Jersey"). The visible opening, the h1 kicker included, stays as it is
+# (Ron, 2026-09-29: the opening line is for conversion, not SEO).
+TITLE = 'Art Advisor in New Jersey & NYC · THEODORA, Tenafly'
+DESCRIPTION = 'Stav Theodor, art advisor and consultant in Tenafly, NJ. Art for homes, designers, offices and hotels in Bergen County, New Jersey and NYC. (201) 351-8367.'
+OG_TITLE = 'THEODORA · Art advisor in New Jersey and NYC'
+OG_DESC = DESCRIPTION
 OG_IMAGE = SITE + '/og-home.jpg'
 OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
 
@@ -58,7 +61,7 @@ PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 # sentence of the intro statement, which carried the message before it moved into the big line),
 # and its image images/home2/industries/<id>.webp, made from the page's first room by tools/make_industry_thumbs.py.
 INDUSTRIES = [
-    ('designers', 'Interior designers', 'מעצבי פנים'),
+    ('for-designers', 'Interior designers', 'מעצבי פנים'),
     ('law-firms', 'Law firms', 'משרדי עורכי דין'),
     ('investment-firms', 'Investment firms', 'חברות השקעה'),
     ('wealth-managers', 'Wealth managers', 'מנהלי הון'),
@@ -67,6 +70,12 @@ INDUSTRIES = [
     ('medical-practices', 'Clinics', 'מרפאות'),
 ]
 INDUSTRY_THUMB = (600, 400)
+# A tile for a page that is not a buyer variant: /designers/ was merged into /for-designers/ (Ron's SEO brief, 2026-09-29,
+# P1.5), so the designers tile links the partner page and keeps the line and the image it had as a variant.
+INDUSTRY_PAGES = {
+    'for-designers': {'line_en': 'The last wall is the one clients remember.', 'line_he': 'הקיר האחרון הוא זה שהלקוחות זוכרים.',
+                      'img': 'images/home2/industries/designers.webp'},
+}
 
 # The six lead projects: each shows a photograph of its own (2026-09-28: Closter and Ramat Gan left this row when
 # their Gemini-marked photos were removed; they come back when Stav sends clean photographs of them).
@@ -101,12 +110,12 @@ HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (too
 BLOCKS = {'value_strip', 'guide'}  # value_strip, then (2026-09-28) the long section after #what-i-do, which opens with the direct "who" answer
 # Homepage-only sections: the homepage keeps the bytes between the markers, every variant drops them.
 # film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
-DROPS = {'film', 'industries', 'museum', 'radar'}  # museum, radar: the Museum and Art Radar stay on the homepage only (Ron, 2026-09-28)
+DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepage only (Ron, 2026-09-28); the Museum section is gone (P1.6, 2026-09-29)
 # industries: the homepage's links to the seven buyer pages (2026-09-28), never on a buyer page itself.
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
-ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
+ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')
 SHARED_SECTIONS = ('about', 'projects')  # byte for byte the homepage's on every variant
-VARIANT_ABSENT = ('film', 'industries', 'museum', 'radar', 'posts')  # on the homepage, never on a variant (DROPS)
+VARIANT_ABSENT = ('film', 'industries', 'radar', 'posts')  # on the homepage, never on a variant (DROPS)
 VARIANT_PATH = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$')
 
 # The opening's rooms (2026-09-27). PAIRS in js/home-opening.js lists them in slot order (p3, p4, p5, p1): slot 0 is
@@ -179,19 +188,25 @@ def advisory_rows(pages, paths):
 
 
 def industries(variants):
-    """The homepage's industries section: one keyboard-focusable tile per buyer page, linking to it."""
+    """The homepage's industries section: one keyboard-focusable tile per buyer page (and the designers tile, which
+    links /for-designers/, INDUSTRY_PAGES), linking to it. The tile image is decorative: the name and the line say it."""
     by_id = {v['id']: v for v in variants}
-    missing = [i for i, _, _ in INDUSTRIES if i not in by_id] + [i for i in by_id if i not in {x for x, _, _ in INDUSTRIES}]
+    missing = [i for i, _, _ in INDUSTRIES if i not in by_id and i not in INDUSTRY_PAGES] + [i for i in by_id if i not in {x for x, _, _ in INDUSTRIES}]
     if missing:
         raise SystemExit(f'build-home.py INDUSTRIES and content/variants/ disagree: {missing}')
     w, h = INDUSTRY_THUMB
     tiles = ''
     for vid, en, he in INDUSTRIES:
-        v, img = by_id[vid], f'images/home2/industries/{vid}.webp'
+        if vid in INDUSTRY_PAGES:
+            page = INDUSTRY_PAGES[vid]
+            href, img, line_en, line_he = f'/{vid}/', page['img'], page['line_en'], page['line_he']
+        else:
+            v = by_id[vid]
+            href, img, line_en, line_he = f'/{v["path"]}/', f'images/home2/industries/{vid}.webp', v['intro']['line_en'], v['intro']['line_he']
         if not os.path.exists(sc.rel(img)):
             raise SystemExit(f'{img} is missing: run python3 tools/make_industry_thumbs.py')
-        line = T(H.escape(v['intro']['line_en']), H.escape(v['intro']['line_he']))
-        tiles += (f'<a class="ind reveal" href="/{v["path"]}/"><span class="ph"><img src="/{img}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async"></span>'
+        line = T(H.escape(line_en), H.escape(line_he))
+        tiles += (f'<a class="ind reveal" href="{href}"><span class="ph"><img src="/{img}" alt="" aria-hidden="true" width="{w}" height="{h}" loading="lazy" decoding="async"></span>'
                   f'<h3 class="serif">{T(H.escape(en), H.escape(he))}</h3><p>{line}</p></a>')
     return ('\n\n<section class="section wrap" id="industries">\n'
             f'  <div class="head reveal"><div class="lead"><p class="eyebrow">{T("Who I work with", "עם מי אני עובדת")}</p>'
@@ -324,17 +339,17 @@ def render_home(pages, posts, faq, v=None, variants=()):
     subject = v['mail_subject'] if v else ''
     questions = v['faq'] if v else faq
     fills = {
-        'NAV': sc.nav(home=True, own={'#museum': '/museum/'} if v else None),  # a variant has no #museum: its own page
+        'NAV': sc.nav(home=True, own={'#industries': '/#industries'} if v else None),  # a variant has no #industries: the homepage's
         'INDUSTRIES': '' if v else industries(variants),
         'PROJECT_CARDS': ''.join(sc.project_card(p) for p in projects),
         'ADVISORY_ROWS': advisory_rows(pages, (v.get('advisory_rows') if v else None) or HOME_ROWS),
         'TIMELINE': sc.timeline(posts[:6], with_months=False),
         'POST_COUNT': str(len(posts)),
         'FAQ': sc.faq_details(questions, first_open=True),
-        'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject),
+        'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject, form=v is None),
         'MAIL_UI': sc.mail_ui(subject),
         'LANG_JS': sc.LANG_JS,
-        'PAGE_JS': sc.PAGE_JS,
+        'PAGE_JS': sc.PAGE_JS + ('' if v else ('\n' + sc.form_js() if sc.form_js() else '')),
     }
     body = tmpl
     for k, val in fills.items():
@@ -408,8 +423,12 @@ OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: 
     'about': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'our-team': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
     'our-team-1': (SITE + '/#about', 'About Stav Theodor-Kimhi, Art Curator and Advisor | THEODORA'),
-    'contact': (SITE + '/#contact', 'Contact Stav Theodor-Kimhi | THEODORA'),
     'questions': (SITE + '/#faq', 'Questions people ask before they write | THEODORA'),
+}  # /contact/ left this list on 2026-09-29: it is a real page now (build-site-pages.py, Ron's SEO brief P1.1)
+# Pages merged into another (Ron's SEO brief, 2026-09-29, P1.5): the same stub without noindex, so the instant refresh
+# reads as a permanent redirect. GitHub Pages sends no server 301; move this to a real 301 if the hosting ever allows one.
+MERGED_PATHS = {
+    'designers': (SITE + '/for-designers/', 'Art Consultant for Interior Designers · THEODORA'),
 }
 
 
@@ -424,7 +443,9 @@ def write_redirects(pages):
         sc.write(rel_path, sc.redirect_stub(target))
     for d, (target, title) in OLD_PATHS.items():
         sc.write(f'{d}/index.html', sc.redirect_stub(target, title))
-    return sorted(targets) + sorted(f'{d}/index.html' for d in OLD_PATHS)
+    for d, (target, title) in MERGED_PATHS.items():
+        sc.write(f'{d}/index.html', sc.redirect_stub(target, title, noindex=False))
+    return sorted(targets) + sorted(f'{d}/index.html' for d in list(OLD_PATHS) + list(MERGED_PATHS))
 
 
 def write_variants(pages, posts, faq, home):
@@ -457,7 +478,7 @@ def main():
         raise SystemExit('index.html NOT written: ' + '; '.join(problems))
     sc.write('index.html', out)
     stubs = write_redirects(pages)
-    print(f'wrote index.html ({len(posts)} posts, timeline shows {min(6, len(posts))}, {len(faq)} questions) and {len(stubs)} redirect stubs (/2/ and the old Squarespace paths)')
+    print(f'wrote index.html ({len(posts)} posts, timeline shows {min(6, len(posts))}, {len(faq)} questions) and {len(stubs)} redirect stubs (/2/, the old Squarespace paths, /designers/)')
     written = write_variants(pages, posts, faq, out)
     print(f'wrote {len(written)} buyer variant(s) from content/variants/' + (': ' + ', '.join('/' + p[:-len('index.html')] for p in written) if written else ''))
 
