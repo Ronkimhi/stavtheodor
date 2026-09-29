@@ -619,6 +619,7 @@
     <a class="arrow" href="mailto:stav@stavtheodor.com"><span class="ln"></span><span data-l="en">Write to Stav</span><span data-l="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow" href="mailto:stav@stavtheodor.com" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>stav@stavtheodor.com</a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span>(201) 351-8367</a>
+    <div class="contact-box" aria-live="polite">
     <form class="contact-form" action="https://formspree.io/f/xjyklwyb" method="POST" data-loc="form">
       <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -630,8 +631,23 @@
       <input type="hidden" name="page" value="/">
       <button type="submit"><span data-l="en">Send</span><span data-l="he" dir="rtl">שליחה</span></button>
       <p class="form-note"><span data-l="en">I reply by email. If you have a photo of the wall, reply to my email with it.</span><span data-l="he" dir="rtl">אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.</span></p>
-      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> or call <a href="tel:+12013518367" data-loc="form" dir="ltr">(201) 351-8367</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> או התקשרו ל-<a href="tel:+12013518367" data-loc="form" dir="ltr">(201) 351-8367</a>.</span></p>
     </form>
+    <div class="form-thanks" hidden>
+      <svg class="ty-check" viewBox="0 0 52 52" width="44" height="44" aria-hidden="true" focusable="false"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+      <h3 class="serif ty-head" tabindex="-1"><span data-l="en">Thank you<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>.</span><span data-l="he" dir="rtl">תודה<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>.</span></h3>
+      <p class="ty-next"><span data-l="en">Stav reads every message herself and replies personally from <bdi class="ty-addr">stav@stavtheodor.com</bdi>.</span><span data-l="he" dir="rtl">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת <bdi class="ty-addr">stav@stavtheodor.com</bdi>.</span></p>
+      <p class="ty-spam"><span data-l="en">If you do not hear back, check your spam folder or <a class="ty-link" href="mailto:stav@stavtheodor.com">write directly</a>.</span><span data-l="he" dir="rtl">אם לא קיבלתם תשובה, בדקו את תיקיית הספאם או <a class="ty-link" href="mailto:stav@stavtheodor.com">כתבו לה ישירות</a>.</span></p>
+      <div class="ty-wait">
+        <p class="eyebrow"><span data-l="en">While you wait</span><span data-l="he" dir="rtl">בינתיים</span></p>
+        <div class="ty-links">
+          <a class="arrow" href="/projects/"><span class="ln"></span><span data-l="en">See the projects</span><span data-l="he" dir="rtl">לפרויקטים</span></a>
+          <a class="arrow" href="/radar/"><span class="ln"></span><span data-l="en">Read Art Radar</span><span data-l="he" dir="rtl">לראדאר אמנות</span></a>
+          <a class="arrow" href="https://chat.whatsapp.com/CapF9HczSoL4szwUKKtkq5" target="_blank" rel="noopener"><span class="ln"></span><span data-l="en">Art Radar on WhatsApp</span><span data-l="he" dir="rtl">ראדאר אמנות בוואטסאפ</span></a>
+        </div>
+      </div>
+    </div>
+    </div>
     <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
     <address class="nap">
   <span data-l="en">THEODORA · Stav Theodor, art advisor and consultant</span><span data-l="he" lang="he" dir="rtl">THEODORA · סתיו תאודור, יועצת אמנות</span><br>
@@ -820,6 +836,10 @@ document.addEventListener('click', function (e) {
 </script>
 <script>
 document.querySelectorAll('form.contact-form').forEach(function (f) {
+  var box = f.closest('.contact-box');
+  var card = box && box.querySelector('.form-thanks');
+  var err = f.querySelector('.form-error');
+  var btn = f.querySelector('button[type=submit]');
   var he = function () { return document.body.classList.contains('lang-he'); };
   var opts = function () {
     var l = he() ? 'he' : 'en';
@@ -828,19 +848,43 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   opts();
   if (window.MutationObserver) { new MutationObserver(opts).observe(document.body, { attributes: true, attributeFilter: ['class'] }); }
   f.querySelector('[name=page]').value = location.pathname;
+  function thanks(first) {
+    card.querySelectorAll('.ty-name').forEach(function (s) { s.textContent = first; });
+    card.querySelectorAll('.ty-named').forEach(function (s) { s.hidden = !first; });
+    card.hidden = false;
+    void card.offsetWidth;
+    box.classList.add('sent');
+    f.setAttribute('aria-hidden', 'true');
+    var head = card.querySelector('.ty-head');
+    try { head.focus({ preventScroll: true }); } catch (e) { head.focus(); }
+    var r = card.getBoundingClientRect();
+    if (r.top < 80 || r.top > (window.innerHeight || 0) - 120) {
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lenis = window.__theodoraLenis;
+      if (lenis) { lenis.scrollTo(card, { offset: -120, immediate: still }); }
+      else { card.scrollIntoView({ block: 'start', behavior: still ? 'auto' : 'smooth' }); }
+    }
+  }
   f.addEventListener('submit', function (e) {
     e.preventDefault();
-    var status = f.querySelector('.form-status');
+    if (f.classList.contains('sending')) { return; }
+    f.classList.add('sending');
+    btn.setAttribute('aria-disabled', 'true');
+    err.hidden = true;
+    var first = (f.querySelector('[name=name]').value || '').trim().split(/\s+/)[0] || '';
+    if (first) { first = first.charAt(0).toUpperCase() + first.slice(1); }
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
-        status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';
+        if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
       })
       .catch(function () {
-        status.textContent = he() ? 'משהו השתבש. התקשרו ל-(201) 351-8367 או כתבו ל-stav@stavtheodor.com.' : 'Something went wrong. Please call (201) 351-8367 or email stav@stavtheodor.com.';
+        f.classList.remove('sending');
+        btn.removeAttribute('aria-disabled');
+        err.hidden = false;
       });
   });
 });

@@ -293,11 +293,49 @@
   .contact-form button:hover { background: var(--ink); color: var(--bg); }
   .contact-form button:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
   .contact-form .form-note { font-size: 14px; color: var(--muted); }
-  .contact-form .form-status { font-size: 15px; color: var(--ink); min-height: 1.4em; }
   body.lang-he .contact-form { direction: rtl; text-align: right; }
   body.lang-he .contact-form input, body.lang-he .contact-form textarea, body.lang-he .contact-form select { font-family: var(--he), var(--sans); }
   body.lang-he .contact-form input[type="email"], body.lang-he .contact-form input[type="tel"] { direction: ltr; text-align: right; font-family: var(--sans); }
   body.lang-he .contact-form select { padding-right: 14px; padding-left: 40px; background-position: 15px 50%, 20px 50%; }
+  .contact-form button[aria-disabled="true"] { opacity: .55; cursor: default; }
+  .contact-form .form-error { font-size: 15px; line-height: 1.6; color: var(--soft); border-left: 2px solid var(--taupe); padding: 2px 0 2px 14px; }
+  .contact-form .form-error a { color: var(--ink); border-bottom: 1px solid var(--line); white-space: nowrap; }
+  body.lang-he .contact-form .form-error { border-left: 0; border-right: 2px solid var(--taupe); padding: 2px 14px 2px 0; }
+  /* The thank-you card (2026-09-29): the box stacks the form and the card in one grid cell, so the card takes the
+     form's place and the box keeps the form's height (nothing below moves, the page does not scroll away). On success
+     form_js() adds .sent: the form fades out, the card fades in and its check draws itself (about 600ms). */
+  .contact-box { display: grid; width: 100%; max-width: 560px; }
+  .contact-box > .contact-form, .contact-box > .form-thanks { grid-area: 1 / 1; }
+  .contact-box [hidden] { display: none !important; }
+  .contact-box .contact-form { transition: opacity .3s ease, visibility 0s linear .3s; }
+  .contact-box.sent .contact-form { opacity: 0; visibility: hidden; pointer-events: none; }
+  .form-thanks { align-self: start; margin-top: 8px; display: flex; flex-direction: column; gap: 16px; padding: clamp(26px, 4vw, 40px); background: var(--surface); border: 1px solid var(--line); opacity: 0; transition: opacity .45s ease .25s; scroll-margin-top: 120px; scroll-margin-bottom: 24px; }
+  .contact-box.sent .form-thanks { opacity: 1; }
+  .ty-check { display: block; width: 44px; height: 44px; fill: none; stroke: var(--taupe); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .ty-check circle { stroke-dasharray: 151; stroke-dashoffset: 151; }
+  .ty-check path { stroke-dasharray: 32; stroke-dashoffset: 32; }
+  .contact-box.sent .ty-check circle { animation: ty-draw .4s ease-out .3s forwards; }
+  .contact-box.sent .ty-check path { animation: ty-draw .25s ease-out .65s forwards; }
+  @keyframes ty-draw { to { stroke-dashoffset: 0; } }
+  .form-thanks .ty-head { font-size: clamp(30px, 3vw, 40px); line-height: 1.12; color: var(--ink); outline: none; }
+  .form-thanks .ty-head:focus-visible { outline: 2px solid var(--taupe); outline-offset: 6px; }
+  .form-thanks .ty-next, .form-thanks .ty-spam { font-size: 16px; line-height: 1.65; color: var(--soft); max-width: 46ch; }
+  .form-thanks [data-l="he"] { font-size: 17px; }
+  .form-thanks .ty-head [data-l="he"] { font-size: inherit; }
+  .form-thanks .ty-spam { font-size: 15px; color: var(--muted); }
+  .form-thanks .ty-addr { color: var(--ink); white-space: nowrap; }
+  .form-thanks a.ty-link { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .form-thanks a.ty-link:hover { color: #C9A46B; }
+  .form-thanks .ty-wait { margin-top: 10px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+  .form-thanks .ty-wait .eyebrow { color: var(--muted); }
+  .form-thanks .ty-links { display: flex; flex-wrap: wrap; gap: 14px 30px; }
+  .form-thanks .ty-links .arrow { color: var(--ink); }
+  body.lang-he .form-thanks { direction: rtl; text-align: right; }
+  @media (prefers-reduced-motion: reduce) {
+    .contact-box .contact-form, .form-thanks { transition: none; }
+    .ty-check circle, .ty-check path { stroke-dashoffset: 0; }
+    .contact-box.sent .ty-check circle, .contact-box.sent .ty-check path { animation: none; }
+  }
 
   .mail-fallback { position: fixed; inset: 0; background: rgba(15,15,20,0.72); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 9999; }
   .mail-fallback.open { display: flex; }

@@ -392,19 +392,30 @@ def footer(home=False, cta=None, subject='', form=False):
 </footer>'''
 
 
-def contact_form(path='/'):
+def contact_form(path='/', h='h3'):
     """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. Formspree takes a plain
     HTML POST: without JavaScript the form posts and Formspree shows its own thank-you page; form_js() sends it with
-    fetch instead and shows the status line. _subject names the mail Formspree sends to Stav, _gotcha is Formspree's
+    fetch instead. _subject names the mail Formspree sends to Stav, _gotcha is Formspree's
     honeypot, page carries the page's path (path, written here so it survives without JavaScript; form_js() refreshes it). The select's options carry their
     Hebrew in data-he (an option cannot hold the twin spans); form_js() swaps the visible text with the language, the
-    submitted value stays English. The free plan takes no files, so the note asks for the photo by email."""
+    submitted value stays English. The free plan takes no files, so the note asks for the photo by email.
+    The thank-you card (2026-09-29) and the error line are in the markup, hidden, both languages as twins: the box
+    (.contact-box, aria-live) stacks the form and the card in one grid cell, so the card replaces the form in place and
+    the page does not move. h: the card's heading level (h3 under the footer's h2, h2 on /contact/ under its h1)."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
     opts = ''.join(f'<option value="{H.escape(en, quote=True)}" data-en="{H.escape(en, quote=True)}" data-he="{he}">{H.escape(en)}</option>'
                    for en, he in CLIENT_TYPES)
-    return f'''<form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
+    mail = mail_href()
+    email = f'<bdi class="ty-addr">{EMAIL}</bdi>'
+    # The check is drawn by CSS (stroke-dashoffset); the dash lengths are the circle's and the tick's own lengths.
+    check = ('<svg class="ty-check" viewBox="0 0 52 52" width="44" height="44" aria-hidden="true" focusable="false">'
+             '<circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>')
+    # Each language's name slot: filled by form_js() with the first word of the name field; the comma hides with it.
+    name = '<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>'
+    return f'''<div class="contact-box" aria-live="polite">
+    <form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
       <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <label>{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
@@ -415,8 +426,23 @@ def contact_form(path='/'):
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
-      <p class="form-status" role="status" aria-live="polite"></p>
-    </form>'''
+      <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span></p>
+    </form>
+    <div class="form-thanks" hidden>
+      {check}
+      <{h} class="serif ty-head" tabindex="-1"><span data-l="en">Thank you{name}.</span><span data-l="he" dir="rtl">תודה{name}.</span></{h}>
+      <p class="ty-next"><span data-l="en">Stav reads every message herself and replies personally from {email}.</span><span data-l="he" dir="rtl">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת {email}.</span></p>
+      <p class="ty-spam"><span data-l="en">If you do not hear back, check your spam folder or <a class="ty-link" href="{mail}">write directly</a>.</span><span data-l="he" dir="rtl">אם לא קיבלתם תשובה, בדקו את תיקיית הספאם או <a class="ty-link" href="{mail}">כתבו לה ישירות</a>.</span></p>
+      <div class="ty-wait">
+        <p class="eyebrow">{L('While you wait', 'בינתיים')}</p>
+        <div class="ty-links">
+          <a class="arrow" href="/projects/"><span class="ln"></span>{L('See the projects', 'לפרויקטים')}</a>
+          <a class="arrow" href="/radar/"><span class="ln"></span>{L('Read Art Radar', 'לראדאר אמנות')}</a>
+          <a class="arrow" href="{WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{L('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
+        </div>
+      </div>
+    </div>
+    </div>'''
 
 
 # The form's "I am a" choices (value and English label, Hebrew label), in Ron's order.
@@ -430,14 +456,21 @@ CLIENT_TYPES = [
 
 def form_js():
     """The form's progressive enhancement (inline, no library), or '' while FORM_ENDPOINT is empty. It posts FormData
-    with fetch and Accept: application/json, a normal CORS request Formspree answers with JSON: on r.ok it resets the
-    form, says thank you in the visitor's language and sends GA4 generate_lead with the form id and the page path only
-    (never the name, email, phone or message); on any other answer or a network error it shows the phone and the email.
-    It also keeps the select's visible text in the page's language (the body's lang-he class)."""
+    with fetch and Accept: application/json, a normal CORS request Formspree answers with JSON. On r.ok it fills the
+    first word of the name into the thank-you card, fades the form out and the card in, in the same place (the box keeps
+    its height, so nothing below moves), moves focus to the card's heading (and, only when the heading is out of view, glides
+    it into view, through the homepage's Lenis when present) and sends GA4 generate_lead with the form id
+    and the page path only (never the name, email, phone or message). On any other answer or a network error the form
+    stays and its error line shows the email and the phone. It also keeps the select's visible text in the page's
+    language (the body's lang-he class)."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
 document.querySelectorAll('form.contact-form').forEach(function (f) {
+  var box = f.closest('.contact-box');
+  var card = box && box.querySelector('.form-thanks');
+  var err = f.querySelector('.form-error');
+  var btn = f.querySelector('button[type=submit]');
   var he = function () { return document.body.classList.contains('lang-he'); };
   var opts = function () {
     var l = he() ? 'he' : 'en';
@@ -446,19 +479,43 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   opts();
   if (window.MutationObserver) { new MutationObserver(opts).observe(document.body, { attributes: true, attributeFilter: ['class'] }); }
   f.querySelector('[name=page]').value = location.pathname;
+  function thanks(first) {
+    card.querySelectorAll('.ty-name').forEach(function (s) { s.textContent = first; });
+    card.querySelectorAll('.ty-named').forEach(function (s) { s.hidden = !first; });
+    card.hidden = false;
+    void card.offsetWidth;
+    box.classList.add('sent');
+    f.setAttribute('aria-hidden', 'true');
+    var head = card.querySelector('.ty-head');
+    try { head.focus({ preventScroll: true }); } catch (e) { head.focus(); }
+    var r = card.getBoundingClientRect();
+    if (r.top < 80 || r.top > (window.innerHeight || 0) - 120) {
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lenis = window.__theodoraLenis;
+      if (lenis) { lenis.scrollTo(card, { offset: -120, immediate: still }); }
+      else { card.scrollIntoView({ block: 'start', behavior: still ? 'auto' : 'smooth' }); }
+    }
+  }
   f.addEventListener('submit', function (e) {
     e.preventDefault();
-    var status = f.querySelector('.form-status');
+    if (f.classList.contains('sending')) { return; }
+    f.classList.add('sending');
+    btn.setAttribute('aria-disabled', 'true');
+    err.hidden = true;
+    var first = (f.querySelector('[name=name]').value || '').trim().split(/\\s+/)[0] || '';
+    if (first) { first = first.charAt(0).toUpperCase() + first.slice(1); }
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
-        status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';
+        if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
       })
       .catch(function () {
-        status.textContent = he() ? 'משהו השתבש. התקשרו ל-(201) 351-8367 או כתבו ל-stav@stavtheodor.com.' : 'Something went wrong. Please call (201) 351-8367 or email stav@stavtheodor.com.';
+        f.classList.remove('sending');
+        btn.removeAttribute('aria-disabled');
+        err.hidden = false;
       });
   });
 });
