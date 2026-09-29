@@ -40,10 +40,11 @@ PHONE = '(201) 351-8367'
 PHONE_TEL = 'tel:+12013518367'
 PHONE_SCHEMA = '+1-201-351-8367'
 YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
-# The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. Empty until Ron
-# creates the Formspree form (target stav@stavtheodor.com) and sends its address, https://formspree.io/f/<id>. While it
-# is empty no form, no form script and no placeholder reaches any page; set it here, rebuild, and the form, its
-# progressive enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's #contact.
+# The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. The backend is a Google
+# Apps Script web app that appends each inquiry to a Google Sheet (Ron, 2026-09-29, in place of Formspree). Empty until
+# Ron deploys it and sends its address, https://script.google.com/macros/s/<deployment id>/exec. While it is empty no
+# form, no form script and no placeholder reaches any page; set it here, rebuild, and the form, its progressive
+# enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's #contact.
 FORM_ENDPOINT = ''
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
@@ -392,15 +393,15 @@ def footer(home=False, cta=None, subject='', form=False):
 
 
 def contact_form():
-    """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. Formspree takes a plain
-    HTML POST: without JavaScript the form posts and Formspree shows its own thank-you page; FORM_JS sends it with fetch
-    instead and shows the status line. _gotcha is Formspree's honeypot; page is filled with the path by FORM_JS. The free
-    plan takes no files, so the note asks for the photo by email."""
+    """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. A plain HTML POST to the
+    Google Apps Script web app (it appends a row to a Google Sheet): without JavaScript the browser posts and shows the
+    script's own reply; form_js() sends it with fetch instead and shows the status line. _gotcha is a honeypot the script
+    should ignore rows for when it is filled; page is set to the path by form_js(). No file field, so the note asks for
+    the photo by email."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
     return f'''<form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
-      <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <label>{L('Name', 'שם')} <input type="text" name="name" autocomplete="name" required></label>
       <label>{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
@@ -415,9 +416,11 @@ def contact_form():
 
 
 def form_js():
-    """The form's progressive enhancement (deferred work, inline, no library), or '' while FORM_ENDPOINT is empty.
-    It sends the form with fetch, says so in the visitor's language, and sends GA4 generate_lead with the form id and
-    the page path only: never the name, email, phone or message."""
+    """The form's progressive enhancement (inline, no library), or '' while FORM_ENDPOINT is empty. It posts the fields
+    URL-encoded with fetch in no-cors mode: Apps Script answers through a redirect and the response is opaque, so a fetch
+    that resolves counts as sent and only a network error shows the fallback line with the phone and the email. On
+    success it says so in the visitor's language and sends GA4 generate_lead with the form id and the page path only:
+    never the name, email, phone or message."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
@@ -427,9 +430,8 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var status = f.querySelector('.form-status');
-    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
-      .then(function (r) {
-        if (!r.ok) { throw new Error(r.status); }
+    fetch(f.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(f)) })
+      .then(function () {
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
         status.textContent = he() ? 'תודה. ההודעה שלכם בדרך לסתיו.' : 'Thank you. Your message is on its way to Stav.';
