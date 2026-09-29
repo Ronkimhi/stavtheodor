@@ -1,0 +1,61 @@
+{
+  "terms": [
+    {
+      "en": "Tenafly",
+      "he": "טנפליי",
+      "banned": ["טנפלי(?!י)"],
+      "note": "Spelled with a double yod in every form (בטנפליי, מטנפליי). Banned entries are regular expressions."
+    },
+    {
+      "en": "commissions (the service)",
+      "he": "יצירות בהזמנה",
+      "banned": ["הזמנות עבודה"],
+      "note": "הזמנות עבודה reads as work orders. The service label is יצירות בהזמנה."
+    },
+    {
+      "en": "space",
+      "he": "חלל",
+      "banned": [],
+      "note": "Where the English says space, the Hebrew says חלל, not חדר."
+    },
+    {
+      "en": "hospitality",
+      "he": "אירוח",
+      "banned": [],
+      "note": "מלונאות is correct for hotels only, so it is not banned."
+    },
+    {
+      "en": "Manet, A Bar at the Folies-Bergère",
+      "he": "בר בפולי-ברז'ר",
+      "banned": ["Folies-Berg[eè]re", "Un Bar aux"],
+      "note": "The painting's title is written in Hebrew inside Hebrew text."
+    }
+  ],
+  "latin_whitelist": [
+    "THEODORA",
+    "Creating Hope",
+    "In a Free State",
+    "Museums on Us",
+    "Waldorf Astoria Chengdu",
+    "St. Regis Amman",
+    "Holland America Line",
+    "Costa Cruises",
+    "Four Seasons",
+    "Rosewood Hotels and Resorts",
+    "The Ritz-Carlton Yacht Collection",
+    "Accor",
+    "Carnival",
+    "Guesty",
+    "Eagle Hills",
+    "Mandarin",
+    "Gmail",
+    "Outlook",
+    "WhatsApp",
+    "Instagram",
+    "Living With Art",
+    "Yelp",
+    "art consultant",
+    "art advisor",
+    "stavtheodor.com"
+  ]
+}

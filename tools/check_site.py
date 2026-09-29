@@ -43,6 +43,15 @@
               them too (Ron's SEO brief, P1.5); llms.txt and answers.md name every one; no noindex page is
               left over that is not a stub;
               the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
+  hebrew      the Hebrew QA gate (2026-09-29), over every built page but museum/ and the Art Radar posts
+              (content/posts.html is Stav's; the post articles and timeline entries are stripped on the
+              homepage and the /radar/ archive too): (i) every data-l="he" or lang="he" element is right to
+              left (dir="rtl" on it or an ancestor); (ii) every image whose source has alt_he (a page's
+              hero_image, a variant's rooms[], content/spaces.json, the before image) carries it as
+              data-alt-he, and no alt_en in content/pages, content/variants or content/spaces.json lacks an
+              alt_he; (iii) no Latin letters inside Hebrew text but the latin_whitelist of
+              content/glossary-he.json, URLs and emails; (iv) none of the glossary's banned variants
+              (regular expressions) in Hebrew text; (v) no em or en dash in Hebrew text
 
 Exit 1 on any failure.
 """
@@ -529,7 +538,117 @@ for path in sorted(glob.glob(os.path.join('museum', '**', '*.html'), recursive=T
         except ValueError as e:
             fail('jsonld', f'{path} block {i + 1}: {e}')
 
-gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'museum', 'posts', 'removed', 'lang', 'sitemap', 'variants']
+# ---- hebrew: the Hebrew QA gate (2026-09-29). Scope: every built page outside museum/ and the post pages.
+GLOSSARY = json.load(open(os.path.join('content', 'glossary-he.json'), encoding='utf-8'))
+LATIN_OK = sorted(GLOSSARY['latin_whitelist'], key=len, reverse=True)
+BANNED_HE = [(t['en'], re.compile(b)) for t in GLOSSARY['terms'] for b in t.get('banned', [])]
+URLISH = re.compile(r'https?://\S+|www\.\S+|[\w.+-]+@[\w-]+(?:\.[\w-]+)+|stavtheodor\.com(?:/[\w\-/#]*)?')
+
+
+class HebrewText(HTMLParser):
+    """Hebrew elements (data-l="he", or lang="he" below <html>) and their direction, their text, and every
+    image outside a language block (an image inside one, a body image, has that language's alt already).
+    Scripts and styles are skipped."""
+    VOID = VisibleText.VOID
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.he_text, self.no_rtl, self.imgs = [], [], [], []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'img':
+            if not any(t[4] for t in self.stack):
+                self.imgs.append(a)
+            if a.get('data-alt-he') is not None:
+                self.he_text.append(('alt', a['data-alt-he']))
+            return
+        if tag in self.VOID:
+            return
+        he = a.get('data-l') == 'he' or (a.get('lang') == 'he' and tag != 'html')
+        rtl = a.get('dir') == 'rtl' or (a.get('dir') is None and bool(self.stack) and self.stack[-1][2])
+        en = a.get('data-l') == 'en' or (a.get('lang') == 'en' and tag != 'html')
+        in_he = he or (bool(self.stack) and self.stack[-1][1] and not en)
+        if he and not rtl:
+            self.no_rtl.append(f'<{tag} {" ".join(k + "=" + repr(v) for k, v in attrs)[:80]}>')
+        self.stack.append((tag, in_he, rtl, tag in ('script', 'style'), he or en))
+
+    def handle_endtag(self, tag):
+        if tag in self.VOID or not any(t[0] == tag for t in self.stack):
+            return
+        while self.stack:
+            if self.stack.pop()[0] == tag:
+                break
+
+    def handle_data(self, data):
+        if self.stack and self.stack[-1][1] and not any(t[3] for t in self.stack) and data.strip():
+            self.he_text.append(('text', data))
+
+
+def alt_sources():
+    """{image src: its alt_he} from the sources, and the alt_en entries that have no alt_he."""
+    want, missing = {}, []
+
+    def scan(node, where):
+        if isinstance(node, dict):
+            if node.get('alt_en') and not node.get('alt_he'):
+                missing.append(where)
+            for k, v in node.items():
+                scan(v, f'{where}.{k}')
+        elif isinstance(node, list):
+            for i, v in enumerate(node):
+                scan(v, f'{where}[{i}]')
+    for f in sorted(glob.glob(os.path.join('content', 'pages', '*.json'))):
+        d = json.load(open(f, encoding='utf-8'))
+        scan(d, f)
+        hi = d.get('hero_image') or {}
+        if hi.get('src') and hi.get('alt_he'):
+            want[hi['src']] = hi['alt_he']
+    for f in sorted(glob.glob(os.path.join('content', 'variants', '*.json'))):
+        d = json.load(open(f, encoding='utf-8'))
+        scan(d, f)
+        for r in d.get('rooms') or []:
+            if r.get('a') and r.get('alt_he'):
+                want['/images/home2/' + r['a']] = r['alt_he']
+    sp = json.load(open(sc.SPACES_FILE, encoding='utf-8'))
+    scan(sp, 'content/spaces.json')
+    for k, v in sp['spaces'].items():
+        if v.get('alt_he'):
+            want[sc.space_src(k, 'after')] = v['alt_he']
+            want[f'/images/spaces/{k}_after-1000.webp'] = v['alt_he']
+        want[sc.space_src(k, 'before')] = sc.BA_BEFORE_ALT[1]
+    return want, missing
+
+
+ALT_HE, ALT_MISSING = alt_sources()
+for where in ALT_MISSING:
+    fail('hebrew', f'{where} has alt_en but no alt_he')
+for path in pages:
+    if path.split(os.sep)[0] in STUB_DIRS or (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')):
+        continue
+    p = HebrewText()
+    p.feed(chrome_only(read(path), path))
+    for el in p.no_rtl[:3]:
+        fail('hebrew', f'{path}: Hebrew element without dir="rtl" {el}')
+    for a in p.imgs:
+        want = ALT_HE.get(a.get('src', ''))
+        if want is not None and a.get('data-alt-he') != want:
+            fail('hebrew', f'{path}: <img src={a.get("src")!r}> lacks data-alt-he (its source has alt_he)')
+    for kind, t in p.he_text:
+        if DASH.search(t):
+            fail('hebrew', f'{path}: dash in Hebrew {kind} {t.strip()[:60]!r}')
+        for en, rx in BANNED_HE:
+            m = rx.search(t)
+            if m:
+                fail('hebrew', f'{path}: banned variant {m.group(0)!r} (glossary: {en}) in {t.strip()[:60]!r}')
+        rest = URLISH.sub('', t)
+        for w in LATIN_OK:
+            rest = rest.replace(w, '')
+        m = re.search(r'[A-Za-z]+', rest)
+        if m:
+            fail('hebrew', f'{path}: Latin {m.group(0)!r} inside Hebrew {kind} {t.strip()[:60]!r}')
+
+gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'museum', 'posts', 'removed', 'lang', 'sitemap', 'variants', 'hebrew']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))

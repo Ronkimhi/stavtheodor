@@ -168,7 +168,7 @@ def render_radar_index(posts):
   <div class="title">
     <p class="eyebrow">{T('Art Radar', 'ראדאר אמנות')}</p>
     <h1 class="serif">{T(f'Every post, in order. {n} so far.', f'כל הפוסטים, לפי הסדר. {n} עד היום.')}</h1>
-    <p class="cap">{T('The art worth seeing in New York, New Jersey and Tel Aviv, chosen by a curator. Written in Hebrew first, each with a full English translation.', "האמנות ששווה לראות בניו יורק, בניו ג'רזי ובתל אביב, בבחירת אוצרת. נכתב קודם בעברית, וכל פוסט עם תרגום מלא לאנגלית.")}</p>
+    <p class="cap">{T('The art worth seeing in New York, New Jersey and Tel Aviv, chosen by a curator. Written in Hebrew first, each with a full English translation.', "האמנות ששווה לראות בניו יורק, בניו ג'רזי ובתל אביב, בבחירת אוצרת. כל פוסט נכתב קודם בעברית ומגיע עם תרגום מלא לאנגלית.")}</p>
   </div>
 </header>
 

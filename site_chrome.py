@@ -89,6 +89,13 @@ def T(en, he, tag='span', cls=''):
     return f'<{tag}{c} data-l="en">{en}</{tag}><{tag}{c} data-l="he" dir="rtl">{he}</{tag}>'
 
 
+def img_alt(en, he=''):
+    """An image's alt: English in the markup (English opens first), and the Hebrew twin as data-alt-he,
+    which LANG_JS swaps in while Hebrew is on and back when it is off (2026-09-29, Hebrew QA)."""
+    a = f'alt="{H.escape(en or "", quote=True)}"'
+    return a + (f' data-alt-he="{H.escape(he, quote=True)}"' if he else '')
+
+
 # ---------------------------------------------------------------- head pieces
 FAVICONS = '''<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -560,15 +567,15 @@ def mail_ui(subject=''):
     outlook_q = f'&amp;subject={q}' if subject else ''
     return f'''<div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title"{data}>
   <div class="card">
-    <h3 id="mail-fallback-title" class="serif"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
-    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <h3 id="mail-fallback-title" class="serif"><span data-l="en">Write to Stav</span><span data-l="he" dir="rtl">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he" dir="rtl">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
     <a class="addr" id="mail-fallback-addr" href="mailto:{EMAIL}{addr_q}">{EMAIL}</a>
     <div class="row">
-      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he" dir="rtl">העתקה</span></button>
       <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={EMAIL}{gmail_q}" target="_blank" rel="noopener">Gmail</a>
       <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to={EMAIL}{outlook_q}" target="_blank" rel="noopener">Outlook</a>
     </div>
-    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he" dir="rtl">סגירה</span></button>
   </div>
 </div>''' + ('\n' + SUBJECT_JS if subject else '')
 
@@ -583,6 +590,12 @@ LANG_JS = '''<script>
     document.body.classList.toggle('lang-en', lang === 'en');
     document.body.classList.toggle('lang-he', lang === 'he');
     document.documentElement.lang = lang;
+    /* An image with a Hebrew alt (data-alt-he, site_chrome.img_alt) reads it while Hebrew is on;
+       the English alt the markup carries is kept in data-alt-en and comes back with English. */
+    document.querySelectorAll('img[data-alt-he]').forEach(function (im) {
+      if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
+      im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
+    });
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
@@ -886,7 +899,7 @@ def project_card(p):
     gets a quiet typographic panel with its place name, never a photo borrowed from another project."""
     hero = p.get('hero_image')
     if hero:
-        ph = f'<div class="ph"><img src="{hero["src"]}" alt="{H.escape(hero.get("alt_en", ""), quote=True)}" loading="lazy"></div>'
+        ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))} loading="lazy"></div>'
     else:
         ph = f'<div class="ph type" aria-hidden="true">{T(H.escape(p["place_en"]), H.escape(p["place_he"]), cls="serif")}</div>'
     return f'''
@@ -905,6 +918,7 @@ def project_card(p):
 # without either, the same markup is a still pair, side by side on a wide screen and stacked on a phone.
 BA_SCRIPT = '<script src="/js/before-after.js?v=20260928" defer></script>'
 BA_LABEL = ('Proposal · how THEODORA would dress this space', 'הצעה · כך THEODORA הייתה מלבישה את החלל הזה')
+BA_BEFORE_ALT = ('The same space before the proposal, its wall still bare.', 'אותו חלל לפני ההצעה, הקיר עדיין ריק.')
 BA_SIZES = '(max-width: 767px) 100vw, min(1100px, 92vw)'
 _spaces = None
 
@@ -946,11 +960,11 @@ def before_after(key, first=False):
     <div class="ba-pin">
       <div class="ba-stage">
         <div class="ba-pane ba-before">
-          <img src="{space_src(key, 'before')}" srcset="{space_srcset(key, 'before')}" sizes="{BA_SIZES}" width="{w}" height="{h}" alt="The same space before the proposal, its wall still bare." {eager} decoding="async">
+          <img src="{space_src(key, 'before')}" srcset="{space_srcset(key, 'before')}" sizes="{BA_SIZES}" width="{w}" height="{h}" {img_alt(*BA_BEFORE_ALT)} {eager} decoding="async">
           <span class="ba-chip">{T('Before', 'לפני')}</span>
         </div>
         <div class="ba-pane ba-after">
-          <div class="ba-wipe"><img src="{space_src(key, 'after')}" srcset="{space_srcset(key, 'after')}" sizes="{BA_SIZES}" width="{w}" height="{h}" alt="{H.escape(s['alt_en'], quote=True)}" loading="lazy" decoding="async"></div>
+          <div class="ba-wipe"><img src="{space_src(key, 'after')}" srcset="{space_srcset(key, 'after')}" sizes="{BA_SIZES}" width="{w}" height="{h}" {img_alt(s['alt_en'], s.get('alt_he', ''))} loading="lazy" decoding="async"></div>
           <span class="ba-chip">{T('After', 'אחרי')}</span>
         </div>
       </div>
@@ -977,7 +991,7 @@ _RANGE = re.compile(r'(\d(?:st|nd|rd|th|s)?(?:\s?(?:BCE|BC|CE|AD)\b)?)\s*[\u2013
 _BREAK = re.compile(r'\s+[\u2013\u2014]\s+')
 _JOIN = re.compile(r'(?<=[^\W\d_])\u2013(?=[^\W\d_])')
 _REST = re.compile(r'\s*[\u2013\u2014]\s*')
-COPY_ATTRS = re.compile(r'(\s(?:title|content|alt|aria-label|placeholder|label)=")([^"]*)(")')
+COPY_ATTRS = re.compile(r'(\s(?:title|content|alt|data-alt-he|aria-label|placeholder|label)=")([^"]*)(")')
 _TOKENS = re.compile(r'(<script\b[^>]*>.*?</script\s*>|<style\b.*?</style\s*>|<!--.*?-->|<[^>]+>)', re.S | re.I)
 _JSON_STR = re.compile(r'"(?:[^"\\]|\\.)*"')
 _URLISH = re.compile(r'^(?:https?:|mailto:|tel:|/|#)')

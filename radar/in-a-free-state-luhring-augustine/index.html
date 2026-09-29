@@ -468,15 +468,15 @@
 
 <div class="mail-fallback" id="mail-fallback" role="dialog" aria-modal="true" aria-labelledby="mail-fallback-title">
   <div class="card">
-    <h3 id="mail-fallback-title" class="serif"><span data-l="en">Write to Stav</span><span data-l="he">כתבו לסתיו</span></h3>
-    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
+    <h3 id="mail-fallback-title" class="serif"><span data-l="en">Write to Stav</span><span data-l="he" dir="rtl">כתבו לסתיו</span></h3>
+    <p><span data-l="en">This browser has no email app set up, so nothing opened. Copy the address, or open it in your webmail.</span><span data-l="he" dir="rtl">בדפדפן הזה לא מוגדרת תוכנת דואר, ולכן לא נפתח כלום. העתיקו את הכתובת, או פתחו אותה בדואר האינטרנטי שלכם.</span></p>
     <a class="addr" id="mail-fallback-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
     <div class="row">
-      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he">העתקה</span></button>
+      <button type="button" id="mail-fallback-copy"><span data-l="en">Copy</span><span data-l="he" dir="rtl">העתקה</span></button>
       <a class="solid" id="mail-fallback-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
       <a id="mail-fallback-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
     </div>
-    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he">סגירה</span></button>
+    <button type="button" class="close"><span data-l="en">Close</span><span data-l="he" dir="rtl">סגירה</span></button>
   </div>
 </div>
 <script>
@@ -487,6 +487,12 @@
     document.body.classList.toggle('lang-en', lang === 'en');
     document.body.classList.toggle('lang-he', lang === 'he');
     document.documentElement.lang = lang;
+    /* An image with a Hebrew alt (data-alt-he, site_chrome.img_alt) reads it while Hebrew is on;
+       the English alt the markup carries is kept in data-alt-en and comes back with English. */
+    document.querySelectorAll('img[data-alt-he]').forEach(function (im) {
+      if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
+      im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
+    });
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);

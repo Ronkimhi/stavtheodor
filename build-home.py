@@ -261,7 +261,7 @@ def room_region(name, inner, rooms, drop=False):
     if name.startswith('room_cap_'):
         return cap
     for pattern, new in ((r'style="--fx:[^;"]*;--fy:[^;"]*"', f'style="--fx:{pct(r["fx"])};--fy:{pct(r["fy"])}"'),
-                         (r'<img src="[^"]*" alt="[^"]*"', f'<img src="/images/home2/{H.escape(r["a"], quote=True)}" alt="{H.escape(r["alt_en"], quote=True)}"'),
+                         (r'<img src="[^"]*" alt="[^"]*"', f'<img src="/images/home2/{H.escape(r["a"], quote=True)}" {sc.img_alt(r["alt_en"], r.get("alt_he", ""))}'),
                          (r'<figcaption>.*?</figcaption>', f'<figcaption>{cap}</figcaption>')):
         inner, n = re.subn(pattern, lambda _m: new, inner, count=1, flags=re.S)
         if n != 1:

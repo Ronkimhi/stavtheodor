@@ -246,7 +246,7 @@ def render_article_page(p, all_pages):
         tall = ' tall' if hi.get("w") and hi.get("h") and hi["h"] > hi["w"] else ''
         hero = f'''
   <figure class="pfig{tall} reveal">
-    <img src="{hi['src']}" alt="{H.escape(hi.get('alt_en', ''), quote=True)}"{dims} loading="eager" fetchpriority="high" decoding="async">{cap}
+    <img src="{hi['src']}" {sc.img_alt(hi.get('alt_en', ''), hi.get('alt_he', ''))}{dims} loading="eager" fetchpriority="high" decoding="async">{cap}
   </figure>'''
     top = crumbs_html(p) if p["section"] == "area" else f'<p class="eyebrow">{T(H.escape(kicker), H.escape(kicker_he))}</p>'
     body = f'''
@@ -287,7 +287,7 @@ def render_project_page(p, all_pages, projects):
     if hero:
         header = f'''
 <header class="phero">
-  <img src="{hero['src']}" alt="{H.escape(hero.get('alt_en', ''), quote=True)}" fetchpriority="high">
+  <img src="{hero['src']}" {sc.img_alt(hero.get('alt_en', ''), hero.get('alt_he', ''))} fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <p class="eyebrow">{T('Projects · ' + H.escape(kicker), 'פרויקטים · ' + H.escape(kicker_he))}</p>
@@ -338,7 +338,7 @@ def ba_card(p):
     k = p["before_after"]
     return f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
-        <div class="ph"><img src="/images/spaces/{k}_after-1000.webp" alt="{H.escape(sc.spaces()[k]['alt_en'], quote=True)}" loading="lazy"><span class="ba-chip">{T('Proposal', 'הצעה')}</span></div>
+        <div class="ph"><img src="/images/spaces/{k}_after-1000.webp" {sc.img_alt(sc.spaces()[k]['alt_en'], sc.spaces()[k].get('alt_he', ''))} loading="lazy"><span class="ba-chip">{T('Proposal', 'הצעה')}</span></div>
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
         <p class="muted">{T(H.escape(sc.first_sentence(p['lead_en'])), H.escape(sc.first_sentence(p['lead_he'])))}</p>
       </a>'''
