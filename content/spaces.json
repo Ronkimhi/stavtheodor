@@ -1,18 +1,5 @@
 {
  "spaces": {
-  "designers": {
-   "w": 1800,
-   "h": 1200,
-   "fx": 0.8474,
-   "fy": 0.2473,
-   "art_x": [
-    0.7229,
-    0.9862
-   ],
-   "cap_en": "A living space with an oak panel wall, a lush green painting of palm leaves beside the fireplace.",
-   "cap_he": "סלון עם קיר חיפוי מעץ אלון, ציור ירוק ושופע של עלי דקל ליד האח.",
-   "alt_en": "A living space with an oak panel wall and a fireplace, a lush green painting of palm leaves beside it, white boucle seating in front."
-  },
   "hotels": {
    "w": 1800,
    "h": 1200,
@@ -48,9 +35,9 @@
     0.1892,
     0.5038
    ],
-   "cap_en": "A suite in soft linen tones, a wide blue water painting above the bed.",
-   "cap_he": "סוויטה בגווני פשתן רכים, ציור רחב של מים כחולים מעל המיטה.",
-   "alt_en": "A suite with a linen bed, bench and two lamps, a wide painting of blue water with light flecks, matted in an oak frame above the bed."
+   "cap_en": "A primary suite in soft linen tones, a wide blue water painting above the bed.",
+   "cap_he": "סוויטת הורים בגווני פשתן רכים, ציור רחב של מים כחולים מעל המיטה.",
+   "alt_en": "A primary suite at home, with a linen bed, bench and two lamps, a wide painting of blue water with light flecks, matted in an oak frame above the bed."
   },
   "investment-firms": {
    "w": 1800,

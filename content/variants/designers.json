@@ -6,9 +6,7 @@
     "title": "Art Curator for Interior Designers · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor, works inside your scheme: sourcing, commissions, framing and installation. The client and the credit stay yours.",
     "og_title": "The last wall is the one clients remember · THEODORA",
-    "og_description": "Your design leads and the art answers it. The client and the credit stay yours. Stav Theodor, art curator.",
-    "og_image": "/images/home2/variants/designers/designers_og.jpg",
-    "og_image_alt": "A living space with an oak panel wall and a fireplace, a lush green painting of palm leaves beside it, white boucle seating in front."
+    "og_description": "Your design leads and the art answers it. The client and the credit stay yours. Stav Theodor, art curator."
   },
   "hero": {
     "l1_en": "A finished space.",
@@ -16,29 +14,6 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
-  "rooms": [
-    {
-      "b": "variants/designers/designers_before.webp",
-      "a": "variants/designers/designers_after.webp",
-      "w": 1800,
-      "h": 1200,
-      "rect": [
-        0.7229,
-        0.0312,
-        0.9862,
-        0.4611
-      ],
-      "fx": 0.8474,
-      "fy": 0.2473,
-      "from": "left",
-      "seed": 5,
-      "cap_en": "Proposal. A living space with an oak panel wall, a lush green painting of palm leaves beside the fireplace.",
-      "cap_he": "הצעה. סלון עם קיר חיפוי מעץ אלון, ציור ירוק ושופע של עלי דקל ליד האח.",
-      "alt_en": "A living space with an oak panel wall and a fireplace, a lush green painting of palm leaves beside it, white boucle seating in front.",
-      "alt_he": "סלון עם קיר חיפוי מעץ אלון ואח, ציור ירוק ושופע של עלי דקל לידה, ומושבי בוקלה לבנים בחזית."
-    }
-  ],
-  "rooms_rest": "home",
   "intro": {
     "h1_en": "Art curator and advisor for interior designers in New York and New Jersey",
     "h1_he": "אוצרת ויועצת אמנות למעצבי פנים בניו יורק ובניו ג'רזי",
