@@ -325,7 +325,7 @@ def nav_call():
 
 def phone_link(loc='cta'):
     """The number as a contact line under an email link or a Write to Stav button."""
-    return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span>{PHONE}</a>'
+    return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span><bdi dir="ltr">{PHONE}</bdi></a>'
 
 
 def nav(home=False, own=None, sub=None):
@@ -371,34 +371,88 @@ def nap(mail=None):
 </address>'''
 
 
-def footer(home=False, cta=None, subject='', form=False):
+# What happens after a message (2026-09-29): three short steps beside the form, the same on the homepage's #contact
+# and on /contact/. Only what the site already says: Stav replies by email with what she sees, and the work starts
+# with a first conversation (no response time: none is in content/BRIEF.md).
+NEXT_STEPS = [
+    ('You send a photo of the wall and a line about the space.', 'אתם שולחים תמונה של הקיר ושורה על החלל.'),
+    ('I reply by email and tell you what I see.', 'אני עונה במייל ומספרת לכם מה אני רואה.'),
+    ('If it fits, a first conversation, by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה, בטלפון או בחלל עצמו.'),
+]
+
+
+def contact_act(path='/', h='h3', mail=None, loc='cta'):
+    """The contact block (2026-09-29): the three ways to reach Stav as arrow links (write, the address, the phone),
+    the What happens next steps, and the contact form. The homepage's #contact (footer(form=True)) and /contact/ share it,
+    so both change from here. Without FORM_ENDPOINT it is the ways and the steps alone, in one column."""
+    mail = mail or mail_href()
+    form = contact_form(path, h=h)
+    steps = ''.join(f'<li><span class="n" aria-hidden="true">{i}</span>{T(en, he)}</li>' for i, (en, he) in enumerate(NEXT_STEPS, 1))
+    form_col = f'\n    <div class="act-form">\n    {form}\n    </div>' if form else ''
+    return f'''<div class="act{'' if form else ' no-form'}">
+    <div class="act-ways">
+      <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
+      <a class="arrow way" href="{mail}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow way addr" href="{mail}" data-loc="{loc}"><span class="ln"></span>{EMAIL}</a>
+      {phone_link(loc).replace('class="arrow tel"', 'class="arrow way tel"')}
+    </div>
+    <div class="act-steps">
+      <p class="eyebrow">{T('What happens next', 'מה קורה אחר כך')}</p>
+      <ol>{steps}</ol>
+    </div>{form_col}
+  </div>'''
+
+
+def footer(home=False, cta=None, subject='', form=False, quiet=False):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
-    subject: the mail subject both mailto links carry; form: the contact form under the phone line (the homepage's
-    #contact, and only once FORM_ENDPOINT is set). The defaults are every page's footer.
+    subject: the mail subject both mailto links carry; form: the homepage's #contact, the closing act (2026-09-29): the
+    line, then contact_act() with the form (only once FORM_ENDPOINT is set); quiet: no closing block at all, only the
+    base (the /contact/ page, which is that block). The defaults are every page's footer: the line and the three ways.
     The link columns (Ron's SEO brief, 2026-09-29, P1.5 and P1.6): the site's main pages (the Tenafly and Bergen County
     pages first since Batch 3, P1.2 and P1.3), then Who I work with, the
-    seven pages for one kind of client each; no link to the museum (its pages stay live and indexed)."""
+    seven pages for one kind of client each; no link to the museum (its pages stay live and indexed).
+    Since 2026-09-29 the base sits under the closing block on every page: the wordmark and the name, place and phone
+    block, then the two link columns, then the copyright line."""
     L = lambda h: _link(h, home)
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
     href = mail_href(subject)
     who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH)
-    form_html = ('\n    ' + contact_form('/')) if form and FORM_ENDPOINT else ''
-    return f'''<footer class="foot" id="contact">
-  <div class="left">
+    if quiet:
+        top = ''
+    elif form and FORM_ENDPOINT:
+        top = f'''
+  <div class="foot-act">
+    <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
+    <h2 class="serif act-line">{T(cta_en, cta_he)}</h2>
+    {contact_act('/', mail=href)}
+  </div>'''
+    else:
+        top = f'''
+  <div class="foot-cta">
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
-    <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
-    <a class="arrow" href="{href}" style="text-transform: none; letter-spacing: 0.02em;"><span class="ln"></span>{EMAIL}</a>
-    {phone_link('cta')}{form_html}
-    <div class="wordmark" style="margin-top: 40px;">THEODORA</div>
-    {nap(href)}
-  </div>
-  <div class="cols2">
-    <div>
-      <a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+    <div class="foot-ways">
+      <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow addr" href="{href}"><span class="ln"></span>{EMAIL}</a>
+      {phone_link('cta')}
     </div>
-    <div class="who">
-      <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
+  </div>'''
+    return f'''<footer class="foot{' quiet' if quiet else ''}" id="contact">{top}
+  <div class="foot-base">
+    <div class="foot-brand">
+      <div class="wordmark">THEODORA</div>
+      {nap(href)}
+    </div>
+    <div class="cols2">
+      <div>
+        <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a>
+      </div>
+      <div>
+        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+      </div>
+      <div class="who">
+        <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
+      </div>
     </div>
     <p class="eyebrow copy">{T('Tenafly, New Jersey · © 2026 THEODORA', "טנפליי, ניו ג'רזי · © 2026 THEODORA")}</p>
   </div>
@@ -431,11 +485,11 @@ def contact_form(path='/', h='h3'):
     <form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
       <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-      <label>{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
-      <label>{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
-      <label>{L('Phone (optional)', 'טלפון (לא חובה)')} <input type="tel" name="phone" autocomplete="tel"></label>
-      <label>{L('I am a', 'מי אתם')} <select name="client_type">{opts}</select></label>
-      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="5" required></textarea></label>
+      <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
+      <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label class="half">{L('Phone (optional)', 'טלפון (לא חובה)')} <input type="tel" name="phone" autocomplete="tel"></label>
+      <label class="half">{L('I am a', 'מי אתם')} <select name="client_type">{opts}</select></label>
+      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="4" required></textarea></label>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
@@ -799,10 +853,11 @@ def body_open():
     return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
 
 
-def tail(home=False, scripts=''):
-    """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure)."""
+def tail(home=False, scripts='', quiet=False):
+    """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
+    without its closing block (/contact/, whose body is that block)."""
     extra = '\n' + scripts if scripts else ''
-    return '\n' + footer(home) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
+    return '\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
 
 
 def redirect_stub(target, title='THEODORA', noindex=True):

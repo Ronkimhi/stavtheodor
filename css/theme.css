@@ -206,10 +206,32 @@
   .ind p { font-size: 15px; line-height: 1.6; color: var(--soft); }
   .ind:hover p { color: var(--soft); }
 
-  .about { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
-  .about .portrait { overflow: hidden; background: var(--surface); }
-  .about .portrait img { width: 100%; height: auto; filter: grayscale(100%); }
-  .about .text { display: flex; flex-direction: column; gap: 22px; max-width: 680px; }
+  /* About (redesigned 2026-09-29): a tall portrait beside one serif statement, the name, two short paragraphs and two
+     arrow links, then the credentials strip across the full width. The same strip opens /about/ (build-site-pages.py
+     reads it from templates/home.html). Hebrew mirrors the whole block. Photographs are never filtered. */
+  .about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 112px); align-items: center; }
+  .about-portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+  .about-portrait img, .ah-portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .about-text { display: flex; flex-direction: column; gap: 22px; max-width: 700px; }
+  .about-line { font-size: clamp(34px, 3.6vw, 56px); line-height: 1.08; }
+  .about-sig { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .about-sig .nm { font-family: var(--serif); font-size: 24px; line-height: 1.2; color: var(--ink); }
+  .about-sig .nm [data-l="he"] { font-family: var(--he); }
+  .about-sig .role { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .about-sig .role [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; font-weight: 400; }
+  .about-text .body { max-width: 62ch; }
+  .about-links { display: flex; flex-wrap: wrap; gap: 16px 44px; margin-top: 10px; }
+  .about-links .arrow:hover .ln, .act .way:hover .ln, a.who-item:hover .ln { width: 56px; }
+  .ln { transition: width .35s ease; }
+  .creds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(56px, 6vw, 96px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .creds > div { display: flex; flex-direction: column; gap: 10px; padding-block: 30px 32px; padding-inline: 0 28px; }
+  .creds > div + div { padding-inline-start: 28px; border-inline-start: 1px solid var(--line); }
+  .creds dt { font-family: var(--serif); font-size: clamp(20px, 1.7vw, 25px); line-height: 1.2; color: var(--ink); }
+  .creds dt [data-l="he"] { font-family: var(--he); }
+  .creds dd { font-size: 14px; line-height: 1.6; color: var(--muted); }
+  .creds dd [data-l="he"] { font-size: 15px; }
+  body.lang-he .about, body.lang-he .creds, body.lang-he .about-hero, body.lang-he .story-row, body.lang-he .who-grid,
+  body.lang-he .about-photos, body.lang-he .about-more, body.lang-he .act, body.lang-he .foot, body.lang-he .contact-area, body.lang-he .contact-head { direction: rtl; }
   .role { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
   .role [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
 
@@ -266,43 +288,85 @@
   .qa .body { max-width: 820px; padding: 0 0 30px; }
 
   /* Footer: same near-black ground as the page, one hairline above it */
-  .foot { background: var(--bg); color: var(--soft); border-top: 1px solid var(--line); margin-top: clamp(88px, 10vw, 150px); padding: clamp(64px, 7vw, 96px) clamp(20px, 3.4vw, 48px) 48px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 80px); }
+  /* Footer (2026-09-29): the closing block (the line and the three ways; on the homepage the whole contact act with the
+     form), then the base under a hairline: the wordmark with the name, place and phone, the two link columns, the
+     copyright line. /contact/ and /about/ carry only the base (.quiet): their page is the closing block. */
+  .foot { background: var(--bg); color: var(--soft); border-top: 1px solid var(--line); margin-top: clamp(88px, 10vw, 150px); padding: clamp(64px, 7vw, 112px) clamp(20px, 3.4vw, 48px) 48px; }
+  .foot.quiet { padding-top: clamp(48px, 5vw, 72px); }
   .foot a { color: var(--ink); }
   .foot a:hover { color: #C9A46B; }
   .foot .eyebrow { color: var(--muted); }
-  .foot .left { display: flex; flex-direction: column; gap: 26px; }
   .foot h2 { color: var(--ink); font-size: clamp(30px, 3.2vw, 44px); line-height: 1.15; max-width: 680px; }
-  .foot .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-content: start; padding-top: 6px; }
-  .foot .cols2 > div { display: flex; flex-direction: column; gap: 12px; font-size: 14px; font-weight: 500; }
+  .foot-cta { display: flex; flex-direction: column; gap: 26px; padding-bottom: clamp(56px, 6vw, 88px); }
+  .foot-ways { display: flex; flex-wrap: wrap; gap: 16px 44px; }
+  .foot-ways .addr, .act .way.addr { text-transform: none; letter-spacing: 0.02em; }
+  .foot-act { display: flex; flex-direction: column; gap: 22px; padding-bottom: clamp(72px, 8vw, 128px); }
+  .foot h2.act-line { font-size: clamp(36px, 4.4vw, 66px); line-height: 1.06; max-width: 30ch; text-wrap: balance; }
+  .foot-base { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px clamp(40px, 6vw, 96px); padding-top: clamp(48px, 5vw, 72px); border-top: 1px solid var(--line); }
+  .foot.quiet .foot-base { border-top: 0; padding-top: 0; }
+  .foot-brand { display: flex; flex-direction: column; gap: 18px; }
+  .foot-brand .wordmark { font-size: 26px; }
+  .foot .nap a, .ah-lead a { unicode-bidi: isolate; direction: ltr; }
+  .foot .cols2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; align-content: start; }
+  .foot .cols2 > div { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; font-size: 14px; font-weight: 500; }
   .foot .cols2 [data-l="he"] { font-size: 16px; }
-  .foot .copy { grid-column: 1 / -1; margin-top: 40px; }
-  .foot .who .eyebrow { margin-bottom: 2px; }
+  .foot .cols2 .eyebrow { margin-bottom: 6px; }
+  .foot .copy { grid-column: 1 / -1; margin-top: 16px; padding-top: 24px; border-top: 1px solid var(--line); }
+
+  /* The contact act (site_chrome.contact_act, 2026-09-29): the three ways and What happens next on one side, the form on
+     the other; the homepage's #contact and /contact/ share it */
+  .act { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "ways form" "steps form"; gap: 56px clamp(48px, 8vw, 140px); margin-top: clamp(24px, 3vw, 40px); align-items: start; }
+  .act.no-form { grid-template-areas: "ways steps"; grid-template-columns: 1fr 1fr; }
+  .act-ways { grid-area: ways; display: flex; flex-direction: column; }
+  .act-ways .eyebrow, .act-steps .eyebrow { margin-bottom: 16px; }
+  .act .way { padding: 20px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: 13px; white-space: normal; }
+  .act .way:last-child { border-bottom: 1px solid var(--line); }
+  .act .way.addr, .act .way.tel { font-size: 17px; font-weight: 500; }
+  .act .way bdi { unicode-bidi: isolate; direction: ltr; }
+  .act-steps { grid-area: steps; }
+  .act-steps ol { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .act-steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 14px; align-items: baseline; font-size: 15px; line-height: 1.6; color: var(--soft); }
+  .act-steps li [data-l="he"] { font-size: 16px; }
+  .act-steps .n { font-family: var(--serif); font-size: 24px; line-height: 1; color: var(--taupe); }
+  .act-form { grid-area: form; min-width: 0; }
+  .act .contact-box { max-width: none; }
 
   /* /contact/ (Ron's SEO brief, 2026-09-29, P1.1) and the contact form, which appears there and in the homepage's
      #contact only once site_chrome.FORM_ENDPOINT is set */
-  .contact-page { display: flex; flex-direction: column; gap: 22px; max-width: 820px; }
-  .contact-page .big-tel { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); line-height: 1.1; color: var(--ink); align-self: flex-start; direction: ltr; }
-  .contact-page .big-tel:hover, .contact-page a.plain:hover { color: #C9A46B; }
-  .contact-page .mail { font-size: clamp(20px, 2vw, 26px); color: var(--ink); align-self: flex-start; border-bottom: 1px solid rgba(242,240,236,0.35); }
-  .contact-page .area { color: var(--soft); font-size: 18px; line-height: 1.6; }
-  .contact-page .more { display: flex; flex-wrap: wrap; gap: 14px 28px; font-size: 15px; }
-  .contact-page a.plain { color: var(--ink); border-bottom: 1px solid var(--line); }
-  .contact-form { display: grid; gap: 18px; width: 100%; max-width: 560px; margin-top: 8px; }
-  .contact-form label { display: flex; flex-direction: column; gap: 8px; min-width: 0; font-size: 13px; letter-spacing: 0.04em; color: var(--muted); }
-  .contact-form label [data-l="he"] { font-size: 15px; letter-spacing: 0; }
-  .contact-form input, .contact-form select, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 0; padding: 12px 14px; letter-spacing: 0; }
-  .contact-form textarea { resize: vertical; min-height: 140px; }
-  .contact-form select { -webkit-appearance: none; appearance: none; padding-right: 40px; cursor: pointer; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+  /* /contact/ (redesigned 2026-09-29): the h1 and the line, the contact act, then the service area as a row of names */
+  .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
+  .contact-head .lead [data-l="he"] { font-family: var(--he); }
+  .contact-page .act { margin-top: 0; }
+  .contact-area { display: flex; flex-direction: column; gap: 20px; margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
+  .places { list-style: none; display: flex; flex-wrap: wrap; row-gap: 4px; font-family: var(--serif); font-size: clamp(26px, 3vw, 44px); line-height: 1.2; color: var(--ink); }
+  .places [data-l="he"] { font-family: var(--he); }
+  .places li + li::before { content: "·"; color: var(--taupe); margin: 0 0.4em; }
+  .contact-area .area { color: var(--soft); font-size: 17px; line-height: 1.65; max-width: 760px; }
+  .contact-area .more { display: flex; flex-wrap: wrap; gap: 14px 44px; }
+  .contact-area .more .arrow { color: var(--ink); }
+  /* The form: underline fields on the dark ground, a taupe underline on focus, one filled button */
+  .contact-form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 34px 32px; width: 100%; }
+  .contact-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; grid-column: 1 / -1; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .contact-form label.half { grid-column: auto; }
+  .contact-form label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
+  .contact-form button, .contact-form .form-note, .contact-form .form-error { grid-column: 1 / -1; }
+  .contact-form input, .contact-form select, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 17px; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.28); border-radius: 0; padding: 10px 0 12px; transition: border-color .25s ease, box-shadow .25s ease; }
+  .contact-form input:hover, .contact-form select:hover, .contact-form textarea:hover { border-bottom-color: rgba(242,240,236,0.5); }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
+  .contact-form input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px var(--bg) inset; -webkit-text-fill-color: var(--ink); caret-color: var(--ink); }
+  .contact-form textarea { resize: vertical; min-height: 116px; }
+  .contact-form select { -webkit-appearance: none; appearance: none; padding-right: 28px; cursor: pointer; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 11px) 55%, calc(100% - 6px) 55%; background-size: 5px 5px; background-repeat: no-repeat; }
   .contact-form select option { background: var(--surface); color: var(--ink); }
-  .contact-form input:focus-visible, .contact-form select:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; border-color: var(--taupe); }
-  .contact-form button { justify-self: start; font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--ink); background: none; border: 1px solid rgba(242,240,236,0.45); padding: 16px 30px; cursor: pointer; }
-  .contact-form button:hover { background: var(--ink); color: var(--bg); }
+  .contact-form button { justify-self: start; margin-top: 4px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--bg); background: var(--ink); border: 1px solid var(--ink); padding: 18px 48px; cursor: pointer; transition: background .3s, border-color .3s, color .3s; }
+  .contact-form button [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 16px; }
+  .contact-form button:hover { background: var(--taupe); border-color: var(--taupe); color: var(--ink); }
   .contact-form button:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
-  .contact-form .form-note { font-size: 14px; color: var(--muted); }
+  .contact-form .form-note { font-size: 14px; line-height: 1.6; color: var(--muted); margin-top: -12px; }
+  .contact-form .form-note [data-l="he"] { font-size: 15px; }
   body.lang-he .contact-form { direction: rtl; text-align: right; }
   body.lang-he .contact-form input, body.lang-he .contact-form textarea, body.lang-he .contact-form select { font-family: var(--he), var(--sans); }
   body.lang-he .contact-form input[type="email"], body.lang-he .contact-form input[type="tel"] { direction: ltr; text-align: right; font-family: var(--sans); }
-  body.lang-he .contact-form select { padding-right: 14px; padding-left: 40px; background-position: 15px 50%, 20px 50%; }
+  body.lang-he .contact-form select { padding-right: 0; padding-left: 28px; background-position: 6px 55%, 11px 55%; }
   .contact-form button[aria-disabled="true"] { opacity: .55; cursor: default; }
   .contact-form .form-error { font-size: 15px; line-height: 1.6; color: var(--soft); border-left: 2px solid var(--taupe); padding: 2px 0 2px 14px; }
   .contact-form .form-error a { color: var(--ink); border-bottom: 1px solid var(--line); white-space: nowrap; }
@@ -315,7 +379,7 @@
   .contact-box [hidden] { display: none !important; }
   .contact-box .contact-form { transition: opacity .3s ease, visibility 0s linear .3s; }
   .contact-box.sent .contact-form { opacity: 0; visibility: hidden; pointer-events: none; }
-  .form-thanks { align-self: start; margin-top: 8px; display: flex; flex-direction: column; gap: 16px; padding: clamp(26px, 4vw, 40px); background: var(--surface); border: 1px solid var(--line); opacity: 0; transition: opacity .45s ease .25s; scroll-margin-top: 120px; scroll-margin-bottom: 24px; }
+  .form-thanks { align-self: start; margin-top: 0; display: flex; flex-direction: column; gap: 16px; padding: clamp(26px, 4vw, 40px); background: var(--surface); border: 1px solid var(--line); opacity: 0; transition: opacity .45s ease .25s; scroll-margin-top: 120px; scroll-margin-bottom: 24px; }
   .contact-box.sent .form-thanks { opacity: 1; }
   .ty-check { display: block; width: 44px; height: 44px; fill: none; stroke: var(--taupe); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   .ty-check circle { stroke-dasharray: 151; stroke-dashoffset: 151; }
@@ -371,8 +435,11 @@
     .col .desc { opacity: 1; font-size: 14px; }
     .value-strip { grid-template-columns: 1fr; gap: 36px; }
     .ind-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .about { grid-template-columns: 1fr; }
-    .about .portrait { max-width: 260px; }
+    .about, .about-hero, .story-row, .foot-base, .about-more { grid-template-columns: 1fr; }
+    .about-portrait, .ah-portrait { max-width: 520px; width: 100%; }
+    .creds { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; border-bottom: 0; }
+    .creds > div, .creds > div + div { padding: 22px 0; border-inline-start: 0; border-bottom: 1px solid var(--line); }
+    .act, .act.no-form { grid-template-columns: 1fr; grid-template-areas: "ways" "steps" "form"; gap: 48px; }
     .grid3 { grid-template-columns: 1fr; gap: 32px; }
     .card .ph { height: 240px; }
     .rows { grid-template-columns: 1fr; }
@@ -385,7 +452,6 @@
     .entry::before { left: -25px; top: 40px; }
     .entry .th { height: 200px; order: -1; }
     .entry h3 { font-size: 22px; }
-    .foot { grid-template-columns: 1fr; }
     .btn { display: block; text-align: center; }
   }
   @media (min-width: 901px) { .nav .right { display: flex; gap: 30px; align-items: center; } }
@@ -536,3 +602,67 @@
   body.lang-he .card .ph.type::before { left: auto; right: 24px; }
   .phero.type { height: auto; min-height: 0; max-height: none; padding-top: calc(170px + env(safe-area-inset-top, 0px)); background: radial-gradient(110% 90% at 85% 0%, rgba(157,118,99,0.16), rgba(15,15,20,0) 62%), var(--bg); border-bottom: 1px solid var(--line); }
   .phero.type .title { position: relative; padding-bottom: clamp(48px, 6vw, 84px); }
+
+/* ===================== Part 4: the About page (redesigned 2026-09-29) ===================== */
+  /* build-site-pages.py render_about(): a portrait-led opening (one serif statement, the h1 as a quiet line, the entity
+     paragraph, the name), the homepage's credentials strip, the practice story in rows (heading left, reading column
+     right), Who I work with, two project photographs with their own captions, the links, and one closing call. */
+  .about-hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 112px); align-items: center; padding-top: calc(128px + env(safe-area-inset-top, 0px)); }
+  .ah-portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+  .ah-text { display: flex; flex-direction: column; gap: 22px; max-width: 660px; }
+  .ah-line { font-size: clamp(38px, 4.4vw, 68px); line-height: 1.04; text-wrap: balance; color: var(--ink); }
+  .ah-h1 { font-family: var(--sans); font-size: 13px; font-weight: 600; line-height: 1.6; letter-spacing: 0.16em; text-transform: uppercase; color: var(--soft); }
+  .ah-h1 [data-l="he"] { font-family: var(--he); font-size: 17px; font-weight: 500; letter-spacing: 0; text-transform: none; }
+  .ah-lead { font-size: 17px; line-height: 1.75; color: var(--soft); }
+  .ah-lead [data-l="he"] { font-size: 18px; line-height: 1.85; }
+  .ah-lead a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); white-space: nowrap; }
+  .about-hero + .section .creds { margin-top: 0; }
+  .story { display: flex; flex-direction: column; }
+  .story-row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(40px, 6vw, 112px); padding: clamp(40px, 5vw, 64px) 0; border-top: 1px solid var(--line); }
+  .story-row:last-child { border-bottom: 1px solid var(--line); }
+  .story-row h2.serif { font-size: clamp(28px, 2.6vw, 38px); line-height: 1.1; align-self: start; position: sticky; top: 112px; }
+  .story-row .prose { max-width: 720px; }
+  .story-row .prose p:last-child, .story-row .prose ul:last-child { margin-bottom: 0; }
+  .who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(28px, 4vw, 56px); border-top: 1px solid var(--line); }
+  .who-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: clamp(21px, 1.8vw, 26px); line-height: 1.2; color: var(--soft); }
+  .who-item [data-l="he"] { font-family: var(--he); }
+  a.who-item { color: var(--ink); }
+  a.who-item .ln { width: 28px; color: var(--taupe); }
+  .about-photos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+  .about-photo { margin: 0; }
+  .about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--surface); }
+  .about-photo figcaption { display: flex; flex-direction: column; gap: 4px; margin-top: 14px; }
+  .about-photo figcaption a { font-size: 15px; font-weight: 500; color: var(--ink); }
+  .about-photo figcaption a:hover { color: #C9A46B; }
+  .about-photo .cap { font-size: 14px; line-height: 1.55; color: var(--muted); }
+  .about-more { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px clamp(28px, 4vw, 56px); padding-top: 36px; border-top: 1px solid var(--line); }
+  .about-more .eyebrow { margin-bottom: 14px; }
+  .about-more > div:first-child { grid-column: span 2; }
+  .about-more > div:first-child .readnext { display: block; columns: 2; column-gap: clamp(28px, 4vw, 56px); }
+  .about-more > div:first-child .readnext a { display: table; margin-bottom: 10px; break-inside: avoid; }
+  .about-more .readnext a [data-l="he"] { font-size: 17px; }
+  .about-cta { display: flex; flex-direction: column; align-items: center; gap: 34px; text-align: center; }
+  .about-cta h2.serif { font-size: clamp(32px, 3.8vw, 56px); line-height: 1.1; max-width: 20ch; }
+  .about-cta .acts { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px 44px; }
+  .btn.solid { background: var(--ink); color: var(--bg); border-color: var(--ink); padding: 18px 44px; }
+  .btn.solid:hover { background: var(--taupe); border-color: var(--taupe); color: var(--ink); }
+  @media (max-width: 900px) {
+    .about-hero, .story-row, .about-more { grid-template-columns: 1fr; }
+    .about-more > div:first-child { grid-column: auto; }
+    .about-more > div:first-child .readnext { columns: 1; }
+    .foot .cols2 { grid-template-columns: 1fr 1fr; }
+    .foot .cols2 > div:nth-child(2) { order: 3; }
+    .about-hero { padding-top: calc(104px + env(safe-area-inset-top, 0px)); }
+    .ah-portrait { max-width: 520px; width: 100%; }
+    .story-row h2.serif { position: static; }
+    .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about-photos { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 600px) {
+    .who-grid { grid-template-columns: 1fr; }
+    .contact-form { grid-template-columns: 1fr; gap: 28px; }
+    .contact-form label.half { grid-column: 1 / -1; }
+    .creds { grid-template-columns: 1fr; }
+    .foot .cols2 { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+    .foot .cols2 > div:nth-child(2) { order: 3; }
+  }

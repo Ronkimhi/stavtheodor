@@ -420,7 +420,15 @@ CONTACT = {
 }
 
 
+# The service area as a row of place names on /contact/ (2026-09-29), beside the full sentence in CONTACT["area"]
+CONTACT_PLACES = [("Tenafly", "טנפליי"), ("Bergen County", "מחוז ברגן"), ("New Jersey", "ניו ג'רזי"),
+                  ("New York City", "ניו יורק"), ("Tel Aviv", "תל אביב")]
+
+
 def render_contact():
+    """/contact/ (redesigned 2026-09-29): the h1 and the closing line, then the same contact block as the homepage's
+    #contact (site_chrome.contact_act: the three ways, What happens next, the form), then the service area. The footer
+    under it is the quiet one (no second closing block)."""
     url = f"{SITE}/{CONTACT['path']}/"
     intro_en, intro_he = sc.FOOTER_CTA
     ld = [{"@type": "ContactPage", "@id": url + "#page", "url": url, "name": CONTACT["title"],
@@ -428,29 +436,29 @@ def render_contact():
           {"@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "Contact", "item": url}]}]
-    form = sc.contact_form(f"/{CONTACT['path']}/", h='h2')
-    form_html = '\n    ' + form if form else ''
+    places = "".join(f"<li>{T(en, he)}</li>" for en, he in CONTACT_PLACES)
     body = f'''
-<header class="phead">
+<header class="phead contact-head">
   <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
   <h1 class="serif">{T(*CONTACT["h1"])}</h1>
   <p class="lead">{T(intro_en, intro_he)}</p>
 </header>
 
-<section class="section wrap tight">
-  <div class="contact-page">
-    <a class="big-tel" href="{sc.PHONE_TEL}" data-loc="contact">{sc.PHONE}</a>
-    <a class="mail" href="{MAIL}" data-loc="contact">{sc.EMAIL}</a>{form_html}
+<section class="section wrap tight contact-page">
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact')}
+  <div class="contact-area reveal">
+    <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
+    <ul class="places">{places}</ul>
     <p class="area">{T(*CONTACT["area"])}</p>
     <div class="more">
-      <a class="plain" href="{sc.WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
-      <a class="plain" href="{sc.YELP}" target="_blank" rel="noopener">{T(*CONTACT["yelp"])}</a>
+      <a class="arrow" href="{sc.WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
+      <a class="arrow" href="{sc.YELP}" target="_blank" rel="noopener"><span class="ln"></span>{T(*CONTACT["yelp"])}</a>
     </div>
   </div>
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.form_js()))
+            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.form_js(), quiet=True))
 
 
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
@@ -463,7 +471,18 @@ ABOUT = {
     "title": "About THEODORA | Art Advisor Stav Theodor, Tenafly NJ",
     "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, New Jersey and New York City.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
-    "portrait": ("/images/stav-portrait.jpg", 508, 430, "Stav Theodor-Kimhi", "סתיו תאודור-קמחי"),
+    # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
+    "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
+                 "Stav Theodor seated on a pale linen sofa beneath a framed painting of a woman playing the piano, hung on a walnut panelled wall",
+                 "סתיו תאודור יושבת על ספה מפשתן בהיר, מתחת לציור ממוסגר של אישה מנגנת בפסנתר, התלוי על קיר מחופה עץ אגוז"),
+    "og_image": "/images/stav-portrait.jpg",
+    # The credentials sentence the homepage's #about carried until 2026-09-29 (its facts are now the credentials strip there)
+    "credentials": ("I am an art curator with an M.A. in art history from the Faculty of Arts at Ben-Gurion University and a diploma in curatorial and museum studies from the Faculty of Arts at Tel Aviv University. Today I am based in Tenafly, New Jersey, and work in New York, across Bergen County and in Tel Aviv.",
+                    "אני אוצרת אמנות, בעלת תואר שני בתולדות האמנות מהפקולטה למדעי הרוח והחברה באוניברסיטת בן-גוריון ותעודה בלימודי אוצרות ומוזיאולוגיה מהפקולטה לאמנויות באוניברסיטת תל אביב. היום הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת בניו יורק, ברחבי מחוז ברגן ובתל אביב."),
+    # Two real project photographs, each with a caption already published on its project page (read at build time):
+    # (page path, image src, width, height, where the caption comes from: "hero" or the body figure)
+    "photos": [("projects/creating-hope-exhibition-un-geneva", "/images/projects/stav-gallery.jpg", 1600, 1153, "hero"),
+               ("projects/caesarea-sea-view-villa-triptych", "/images/projects/storks-wall.jpg", 1600, 1200, "body")],
 }
 # The places, in the footer's words and order (site_chrome.footer)
 ABOUT_PLACES = [
@@ -472,16 +491,24 @@ ABOUT_PLACES = [
     ("/art-curator-new-jersey/", "Art consultant in New Jersey", "יועצת אמנות בניו ג'רזי"),
     ("/art-curator-new-york/", "Art advisor in New York", "יועצת אמנות בניו יורק"),
 ]
+# Who I work with on /about/: the footer's seven client pages plus the two audiences without a page of their own
+# (AGENTS.md: designers, private collectors, home and business owners), in the order of the entity's opening sentence.
+ABOUT_WHO_EXTRA = [(None, "Private collectors", "אספנים פרטיים"), (None, "Home and business owners", "בעלי בתים ובעלי עסקים")]
 
 
 def home_twins(region):
     """Twins read from templates/home.html: a variant region's (en, he) by its name; 'about' for the (en, he) of each
-    body paragraph of the #about section; 'services' for the ((en, he) heading, (en, he) line) of each service column."""
+    body paragraph of the #about section; 'about_line' for its serif statement; 'creds' for the credentials strip's
+    markup, whole; 'services' for the ((en, he) heading, (en, he) line) of each service column."""
     tpl = open("templates/home.html", encoding="utf-8").read()
     pair = re.compile(r'<span data-l="en">(.*?)</span><span data-l="he" dir="rtl">(.*?)</span>', re.S)
+    about = re.search(r'<section class="section wrap" id="about">(.*?)</section>', tpl, re.S).group(1)
     if region == "about":
-        sec = re.search(r'<section class="section wrap" id="about">(.*?)</section>', tpl, re.S).group(1)
-        return [pair.match(m).groups() for m in re.findall(r'<p class="body">(.*?)</p>', sec, re.S)]
+        return [pair.match(m).groups() for m in re.findall(r'<p class="body">(.*?)</p>', about, re.S)]
+    if region == "about_line":
+        return pair.search(re.search(r'<h2 class="serif about-line">(.*?)</h2>', about, re.S).group(1)).groups()
+    if region == "creds":
+        return re.search(r'<dl class="creds[^"]*">.*?</dl>', about, re.S).group(0)
     if region == "services":
         sec = re.search(r'<section class="cols" id="services"[^>]*>(.*?)</section>', tpl, re.S).group(1)
         return [(pair.search(h).groups(), pair.search(d).groups())
@@ -493,9 +520,10 @@ def page_by_path(pages, path):
     return next(p for p in pages if p["path"].strip("/") == path)
 
 
-def about_body(pages):
-    """The reading column of /about/, (en, he): every sentence is the site's own, published elsewhere."""
-    bg = home_twins("about")  # [experience, THEODORA exists, credentials], in the homepage's order ("that connection")
+def about_rows(pages):
+    """The reading rows of /about/: [(h2 (en, he), [(en, he) block, ...])]; every sentence is the site's own, published
+    elsewhere. A block is a paragraph's inner html, or ('ul', [(en, he) item, ...])."""
+    bg = home_twins("about")  # [experience and THEODORA, before THEODORA and recent projects]
     statement = home_twins("intro_statement")
     how = home_twins("what_i_do_p1")
     where = home_twins("what_i_do_p2")
@@ -503,56 +531,92 @@ def about_body(pages):
     des, bro, adv = (page_by_path(pages, x) for x in ("for-designers", "for-brokers", "for-advisors"))
     credit = ("The credit is yours. I say so to the buyer.", "הקרדיט שלכם. אני אומרת את זה לקונה.")
     for text, src in ((credit[0], bro["body_en"]), (credit[1], bro["body_he"])):
-        assert text in src, "the brokers' promise changed on /for-brokers/; update the copy of it in about_body()"
+        assert text in src, "the brokers' promise changed on /for-brokers/; update the copy of it in about_rows()"
     tenafly = page_by_path(pages, "art-consultant-tenafly-nj")
     bg_h2 = (re.findall(r"<h2>(.*?)</h2>", tenafly["body_en"])[5], re.findall(r"<h2>(.*?)</h2>", tenafly["body_he"])[5])
     assert bg_h2 == ("My background", "הרקע שלי"), bg_h2
     link = lambda p, lang: f'<a href="/{p["path"].strip("/")}/">{H.escape(p["title_" + lang])}</a>'
-    out = []
-    for i, lang in enumerate(("en", "he")):
-        li = "".join(f"<li><strong>{h[i]}.</strong> {d[i]}.</li>" for h, d in services)
-        out.append(f'''<h2>{bg_h2[i]}</h2>
-<p>{bg[0][i]}</p>
-<p>{bg[1][i]}</p>
-<p>{bg[2][i]}</p>
-<h2>{("What I do", "מה אני עושה")[i]}</h2>
-<p>{statement[i]}</p>
-<p>{how[i]}</p>
-<ul>{li}</ul>
-<h2>{("Where I work", "איפה אני עובדת")[i]}</h2>
-<p>{where[i]}</p>
-<h2>{("For partners", "לשותפים")[i]}</h2>
-<p>{des["lead_" + lang]} {link(des, lang)}.</p>
-<p>{credit[i]} {link(bro, lang)}.</p>
-<p>{link(adv, lang)}.</p>''')
+    both = lambda f: tuple(f(i, lang) for i, lang in enumerate(("en", "he")))
+    return [
+        (bg_h2, [bg[0], bg[1], ABOUT["credentials"]]),
+        (("What I do", "מה אני עושה"), [statement, how,
+                                       ("ul", [both(lambda i, _: f"<strong>{h[i]}.</strong> {d[i]}.") for h, d in services])]),
+        (("Where I work", "איפה אני עובדת"), [where]),
+        (("For partners", "לשותפים"), [both(lambda i, l: f'{des["lead_" + l]} {link(des, l)}.'),
+                                       both(lambda i, l: f"{credit[i]} {link(bro, l)}."),
+                                       both(lambda i, l: f"{link(adv, l)}.")]),
+    ]
+
+
+def about_rows_html(pages):
+    out = ""
+    for (h_en, h_he), blocks in about_rows(pages):
+        cols = []
+        for i, lang in enumerate(("en", "he")):
+            html = ""
+            for b in blocks:
+                if b[0] == "ul":
+                    html += "<ul>" + "".join(f"<li>{it[i]}</li>" for it in b[1]) + "</ul>"
+                else:
+                    html += f"<p>{b[i]}</p>"
+            cols.append(html)
+        out += f'''
+  <div class="story-row reveal">
+    <h2 class="serif">{T(h_en, h_he)}</h2>
+    <div class="prose" data-l="en">{cols[0]}</div>
+    <div class="prose" data-l="he" dir="rtl">{cols[1]}</div>
+  </div>'''
     return out
 
 
+def about_photos(pages):
+    """Two real project photographs, each captioned with the words its project page already gives it."""
+    figs = ""
+    for path, src, w, h, where in ABOUT["photos"]:
+        p = page_by_path(pages, path)
+        if where == "hero":
+            hi = p["hero_image"]
+            assert hi["src"] == src, (path, hi["src"])
+            alt, cap = (hi["alt_en"], hi["alt_he"]), (hi["caption_en"], hi["caption_he"])
+        else:
+            got = []
+            for lang in ("en", "he"):
+                m = re.search(rf'<img src="{re.escape(src)}" alt="([^"]*)"\s*/?><figcaption>(.*?)</figcaption>', p["body_" + lang])
+                assert m, f"{path}: the figure with {src} left the {lang} body; update ABOUT['photos']"
+                got.append(m.groups())
+            alt, cap = (got[0][0], got[1][0]), (got[0][1], got[1][1])
+        figs += f'''
+    <figure class="about-photo reveal">
+      <a href="/{path}/"><img src="{src}" {sc.img_alt(*alt)} width="{w}" height="{h}" loading="lazy" decoding="async"></a>
+      <figcaption><a href="/{path}/">{T(H.escape(p["title_en"]), H.escape(p["title_he"]))}</a>{T(cap[0], cap[1], cls="cap")}</figcaption>
+    </figure>'''
+    return figs
+
+
 def about_links(pages):
-    """Where to go from /about/: the advisory pages, the pages for one kind of client, the places, projects, contact."""
+    """Where else to go from /about/: the advisory pages, the places, projects and contact, as three columns."""
     adv = [p for p in pages if p["section"] in ("advisory", "guide")]
-    rows = [
+    cols = [
         (("Art advisory", "ייעוץ אמנות"), [("/advisory/", "Art advisory", "ייעוץ אמנות")]
          + [(f'/{p["path"].strip("/")}/', p["title_en"], p["title_he"]) for p in adv]),
-        (("Who I work with", "עם מי אני עובדת"), sc.WHO_I_WORK_WITH),
         (("Where I work", "איפה אני עובדת"), ABOUT_PLACES),
         (("Projects", "פרויקטים"), [("/projects/", "Projects", "פרויקטים"), ("/contact/", "Contact", "יצירת קשר")]),
     ]
     html = ""
-    for (h_en, h_he), links in rows:
+    for (h_en, h_he), links in cols:
         a = "".join(f'<a href="{u}">{T(H.escape(en), H.escape(he))}</a>' for u, en, he in links)
         html += f'''
-<section class="section wrap tight">
-  <div class="head reveal"><div class="lead"><p class="eyebrow">{T(h_en, h_he)}</p></div></div>
-  <div class="readnext who-row reveal">{a}</div>
-</section>'''
+    <div><p class="eyebrow">{T(h_en, h_he)}</p><div class="readnext">{a}</div></div>'''
     return html
 
 
 def render_about(pages):
+    """/about/ (redesigned 2026-09-29): a portrait-led opening (the homepage's serif statement, the h1 as a quiet line,
+    the entity paragraph), the homepage's credentials strip, the practice story in short rows, Who I work with, two
+    real project photographs, the links, and a closing call to /contact/."""
     url = f"{SITE}/{ABOUT['path']}/"
     src, w, h, alt_en, alt_he = ABOUT["portrait"]
-    body_en, body_he = about_body(pages)
+    line = home_twins("about_line")
     tel = f'<a href="{sc.PHONE_TEL}" data-loc="about" dir="ltr">{sc.PHONE}</a>'
     mail = f'<a href="{MAIL}" data-loc="about" dir="ltr">{sc.EMAIL}</a>'
     lead_en = ("THEODORA is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
@@ -563,6 +627,10 @@ def render_about(pages):
                "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב. "
                "היא עובדת עם בתים פרטיים, מעצבי פנים ואדריכלים, אספנים פרטיים, משרדי עורכי דין, חברות השקעה, "
                f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}.")
+    who = [sc.WHO_I_WORK_WITH[0]] + ABOUT_WHO_EXTRA + sc.WHO_I_WORK_WITH[1:]
+    who_html = "".join(
+        (f'<a class="who-item" href="{u}"><span class="nm">{T(en, he)}</span><span class="ln"></span></a>' if u
+         else f'<span class="who-item"><span class="nm">{T(en, he)}</span></span>') for u, en, he in who)
     ld = [{"@type": "AboutPage", "@id": url + "#page", "url": url, "name": ABOUT["title"], "description": ABOUT["description"],
            "inLanguage": ["en", "he"], "isPartOf": {"@id": SITE + "/#site"},
            "mainEntity": [{"@id": SITE + "/#org"}, {"@id": SITE + "/#stav"}], "about": {"@id": SITE + "/#org"},
@@ -571,35 +639,53 @@ def render_about(pages):
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "About", "item": url}]}]
     body = f'''
-<header class="phead">
-  <p class="eyebrow">{T('About', 'אודות')}</p>
-  <h1 class="serif">{T(*ABOUT["h1"])}</h1>
-  <p class="lead">{T(lead_en, lead_he)}</p>
-  <figure class="pfig reveal" style="max-width: {w}px;">
-    <img src="{src}" {sc.img_alt(alt_en, alt_he)} width="{w}" height="{h}" loading="eager" fetchpriority="high" decoding="async">
-  </figure>
+<header class="about-hero wrap">
+  <figure class="ah-portrait"><img src="{src}" {sc.img_alt(alt_en, alt_he)} width="{w}" height="{h}" loading="eager" fetchpriority="high" decoding="async"></figure>
+  <div class="ah-text">
+    <p class="eyebrow">{T('About', 'אודות')}</p>
+    <p class="serif ah-line">{T(*line)}</p>
+    <h1 class="ah-h1">{T(*ABOUT["h1"])}</h1>
+    <p class="ah-lead">{T(lead_en, lead_he)}</p>
+    <p class="about-sig"><span class="nm">{T('Stav Theodor&#8209;Kimhi', 'סתיו תאודור&#8209;קמחי')}</span><span class="role">{T('Founder, art curator and advisor', 'מייסדת, אוצרת ויועצת אמנות')}</span></p>
+  </div>
 </header>
 
 <section class="section wrap tight">
-  <div class="prose" data-l="he" dir="rtl">
-{body_he}
-  </div>
-  <div class="prose" data-l="en">
-{body_en}
+  {home_twins("creds")}
+</section>
+
+<section class="section wrap story">{about_rows_html(pages)}
+</section>
+
+<section class="section wrap">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p><h2 class="serif">{T('Art for every kind of space', 'אמנות לכל סוג של חלל')}</h2></div></div>
+  <div class="who-grid reveal">{who_html}</div>
+</section>
+
+<section class="section wrap">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Projects', 'פרויקטים')}</p></div><a class="arrow" href="/projects/"><span class="ln"></span>{T('All projects', 'כל הפרויקטים')}</a></div>
+  <div class="about-photos">{about_photos(pages)}
   </div>
 </section>
-{about_links(pages)}
+
 <section class="section wrap tight">
-  <div class="cta reveal">
+  <div class="about-more reveal">{about_links(pages)}
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="about-cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
-    <a class="btn" href="{MAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
-    {sc.phone_link('cta')}
-    <a class="arrow" href="/contact/"><span class="ln"></span>{T("All the ways to reach me", "כל הדרכים ליצור איתי קשר")}</a>
+    <div class="acts">
+      <a class="btn solid" href="/contact/">{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
+      <a class="arrow" href="{MAIL}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      {sc.phone_link('cta')}
+    </div>
   </div>
 </section>
 '''
-    return (sc.head(ABOUT["title"], ABOUT["description"], url, og_image=SITE + src, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail())
+    return (sc.head(ABOUT["title"], ABOUT["description"], url, og_image=SITE + ABOUT["og_image"], lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))
 
 
 def check(p, out):
