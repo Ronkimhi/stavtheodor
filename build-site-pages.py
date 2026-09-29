@@ -252,7 +252,7 @@ def render_project_page(p, all_pages, projects):
 </section>
 {faq_html(p)}
 <section class="section wrap">
-  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('More projects', 'עוד פרויקטים')}</p></div><a class="arrow" href="/projects/"><span class="ln"></span>{T('All projects', 'כל הפרויקטים')}</a></div>
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('More projects', 'עוד פרויקטים')}</p></div><a class="arrow" href="/projects/"><span class="ln"></span>{T('Projects', 'פרויקטים')}</a></div>
   <div class="grid3">{''.join(sc.project_card(q) for q in more)}
   </div>
   <div class="next reveal">
