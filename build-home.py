@@ -13,8 +13,9 @@ approved; every /2/ address now forwards to its real page), and the buyer varian
 (2026-09-27): each content/variants/<id>.json renders this same page at /<path>/ with its
 own copy in the sixteen regions the template marks <!--variant:NAME-->...<!--/variant:NAME-->,
 its own value strip (a variant-only section under the intro block, 2026-09-28: the template's
-marker is empty, so the homepage gets nothing there), its own questions, closing line and mail subject. Variants are noindex, in no sitemap and
-linked from nowhere (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
+marker is empty, so the homepage gets nothing there), its own questions, closing line and mail subject. Variants are indexable, each its own canonical
+and listed in sitemap-pages.xml (Ron, 2026-09-28), and linked only from the homepage's #industries
+section (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
 A variant may also put its own rooms in the opening ("rooms", entry i in slot i): the page then
 sets window.THEODORA_ROOMS for js/home-opening.js, preloads its first pair, and carries each
 replaced slot's static figure and #cap caption (the room_fig_N, room_cap_N and rooms_js regions);
@@ -332,13 +333,13 @@ def render_home(pages, posts, faq, v=None, variants=()):
     assert '{{' not in body, 'unfilled slot'
     body = fill_regions(body, v)
     meta = v['head'] if v else {'title': TITLE, 'description': DESCRIPTION, 'og_title': OG_TITLE, 'og_description': OG_DESC}
-    url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, and noindex
+    url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, and indexable (Ron, 2026-09-28)
     # a variant may bring its own preview image (head.og_image, 1200 by 630) and its own first room
     og_image, og_alt = (SITE + meta['og_image'], meta['og_image_alt']) if meta.get('og_image') else (OG_IMAGE, OG_IMAGE_ALT)
     rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)],
-                   noindex=bool(v), extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
+                   extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
     return head + body
 
 
@@ -349,7 +350,7 @@ def section(page, sid):
 
 def page_problems(out, name, home=None):
     """What stops a page from being written. With home (the rendered homepage), out is a variant:
-    it must also be noindex and carry the shared sections exactly as the homepage does."""
+    it must also be indexable (since 2026-09-28) and carry the shared sections exactly as the homepage does."""
     problems = []
     if re.search('[\\u2013\\u2014]', re.sub(r'<script.*?</script>', '', out, flags=re.S)):
         problems.append(f'em or en dash in {name}')
@@ -363,8 +364,8 @@ def page_problems(out, name, home=None):
         for sid in VARIANT_ABSENT:
             if f'id="{sid}"' in out or f'href="#{sid}"' in out:
                 problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
-        if '<meta name="robots" content="noindex">' not in out:
-            problems.append(f'{name} is not noindex')
+        if 'name="robots"' in out:
+            problems.append(f'{name} carries a robots meta tag; buyer variants are indexable (Ron, 2026-09-28)')
         for sid in SHARED_SECTIONS:
             mine = section(out, sid)
             if mine is None or mine != section(home, sid):

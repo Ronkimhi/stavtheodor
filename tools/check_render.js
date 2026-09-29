@@ -21,8 +21,9 @@
        WebGL only the first room is fetched (it is preloaded), so only that pair is required.
 
    Local (default): serves this repo on a loopback port and checks every URL in sitemap.xml
-   outside /museum/, then the buyer variants of the homepage (content/variants/*.json: noindex
-   and in no sitemap, so they are read from their JSON; checked in both modes). Against
+   outside /museum/, then the buyer variants of the homepage (content/variants/*.json: read from
+   their JSON so they are checked in both modes; indexable and in the sitemap since 2026-09-28,
+   so a variant already in the list is not checked twice). Against
    production, the key pages only:
 
        node tools/check_render.js
@@ -269,7 +270,7 @@ async function main() {
     pages = opt.all ? sm : KEY_PAGES.filter(p => sm.includes(p));  /* the key pages this tree actually publishes */
     if (!opt.all) { const post = sm.find(p => p.startsWith('/radar/') && p !== '/radar/'); if (post) { pages.push(post); } }
   }
-  pages = pages.concat(variantPaths());  /* after the sitemap paths, in both modes */
+  pages = pages.concat(variantPaths().filter(p => !pages.includes(p)));  /* after the sitemap paths, in both modes, once each */
   const browser = await chromium.launch();
   const fails = [];
   let checked = 0;

@@ -11,8 +11,8 @@
   jsonld      every ld+json block parses
   faq         the visible FAQ equals the FAQPage schema, word for word, on the homepage and on
               every buyer variant
-  noindex     the homepage and the generated pages are indexable; /2/, the old stubs and the
-              buyer variants are not
+  noindex     the homepage, the generated pages and the buyer variants (since 2026-09-28, Ron)
+              are indexable; /2/, the old stubs and 404.html are not
   posts       index.html carries no post article (posts live in content/posts.html)
   removed     nothing references the assets removed on 2026-09-26, and they are gone; no image in
               the tree is one of the AI-marked photos removed on 2026-09-28 (matched by content hash,
@@ -30,9 +30,10 @@
   variants    the buyer variants of the homepage (content/variants/<id>.json, rendered by build-home.py
               at /<path>/): every one is built, the homepage's #industries section links each exactly once
               and no other page or section links to one (2026-09-28), llms.txt, agent.txt,
-              answers.md and robots.txt never name one, and no noindex page is left over that is
-              neither a stub nor a current variant (a stale variant folder after a path change);
-              the pages themselves go through twins, links, jsonld, schema, faq, noindex and lang
+              answers.md and robots.txt never name one, no variant page (data-subject) is left over
+              that is not a current variant (a stale variant folder after a path change), and no
+              noindex page exists outside the stubs; the pages themselves go through twins, links,
+              jsonld, schema, faq, noindex (they must be indexable), lang and sitemap (each listed)
 
 Exit 1 on any failure.
 """
@@ -71,7 +72,8 @@ def fail(gate, msg):
     fails.append(f'{gate}: {msg}')
 
 
-# The buyer variants (content/variants/<id>.json): {their page: their URL}. Noindex, never linked.
+# The buyer variants (content/variants/<id>.json): {their page: their URL}. Indexable and in sitemap-pages.xml
+# since 2026-09-28 (Ron); linked only from the homepage's #industries section.
 VARIANTS = {}
 for _f in sorted(glob.glob(os.path.join('content', 'variants', '*.json'))):
     try:
@@ -261,7 +263,7 @@ home = read('index.html')
 for path in pages:
     s = read(path)
     is_stub = path.split(os.sep)[0] in STUB_DIRS or path in ('404.html',)
-    must_noindex = is_stub or path in VARIANTS
+    must_noindex = is_stub  # the buyer variants are indexable since 2026-09-28 (Ron)
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
@@ -369,7 +371,7 @@ for f in AGENT_FILES:
     for url in VARIANTS.values():
         vpath = url[len(SITE) + 1:].strip('/')
         if re.search(r'(?:stavtheodor\.com|(?<![\w./-]))/' + re.escape(vpath) + r'(?![\w-])', s):
-            fail('variants', f'{f} names the buyer variant {url} (variants are never listed, linked or pinged)')
+            fail('variants', f'{f} names the buyer variant {url} (variants are never named in the agent maps)')
 
 # ---- the sitemaps: an index, every indexable page once, every loc a file, nothing noindex
 sitemap_index = read('sitemap.xml') if os.path.exists('sitemap.xml') else ''
@@ -395,9 +397,11 @@ for path in walk(('.html',)):
     if path == '404.html' or path.split(os.sep)[0] in STUB_DIRS:
         continue
     s = read(path)
+    if 'data-subject="' in s and path not in VARIANTS:
+        fail('variants', f'{path} is a buyer variant page but not a current variant: stale variant folder? git rm -r {os.path.dirname(path) or path}')
+        continue
     if 'name="robots" content="noindex"' in s:
-        if path not in VARIANTS:
-            fail('variants', f'{path} is noindex but neither a stub nor a current variant: stale variant folder? git rm -r {os.path.dirname(path) or path}')
+        fail('noindex', f'{path} is noindex but not a stub: every page outside the stubs is indexable')
         continue
     if not path.endswith('index.html'):
         continue  # only directory index pages are site URLs

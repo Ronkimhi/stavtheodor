@@ -2,14 +2,15 @@
 """sitemap.xml for stavtheodor.com: a sitemap index over three child sitemaps (2026-09-26).
 
   sitemap-pages.xml    the homepage, the two hubs, every advisory, project, partner, guide and
-                       local landing page (content/pages/*.json)
+                       local landing page (content/pages/*.json), then the buyer variants of the
+                       homepage (content/variants/*.json, indexable since 2026-09-28, Ron)
   sitemap-radar.xml    the Art Radar archive and every post (content/posts.html)
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
 
 lastmod comes from one `git log --format=%cI --name-only` pass, keyed on each page's source:
 content/pages/<slug>.json for a growth page (the homepage and the hubs take the newest of
-their sources), the post's own dateModified for a post, and the museum file itself. With no
+their sources, a buyer variant the newest of the homepage's sources and its own JSON), the post's own dateModified for a post, and the museum file itself. With no
 git available lastmod is omitted rather than invented. Run by python3 build.py after the
 pages are written; run it alone from the repo root after editing content.
 """
@@ -90,6 +91,12 @@ def main():
     for p, src in pages:
         lm = newest(dates, [src])
         page_entries.append((entry(f"{SITE}/{p['path'].strip('/')}/", lm), lm))
+    # the buyer variants: the homepage rendered at /<path>/ with one buyer's copy (build-home.py)
+    for f in sorted(glob.glob('content/variants/*.json')):
+        rel = json.load(open(f, encoding='utf-8'))['path'].strip('/')
+        if os.path.exists(os.path.join(rel, 'index.html')):
+            lm = newest(dates, HOME_SOURCES + [f.replace('\\', '/')])
+            page_entries.append((entry(f'{SITE}/{rel}/', lm), lm))
     pages_lm = write_sitemap('sitemap-pages.xml', page_entries)
 
     # ---- radar: the archive, then every post by its own dateModified

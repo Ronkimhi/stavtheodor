@@ -7,8 +7,8 @@ pages changed. The key file at the repo root is public by design (AGENTS.md, 202
     python3 tools/indexnow.py --all                every URL in the sitemaps
 
 Each changed file maps to its live URL (radar/<slug>/index.html -> /radar/<slug>/); the
-redirect stubs, 404.html and every noindex page (the buyer variants among them) are
-skipped. The script waits until every URL answers 200 on
+redirect stubs, 404.html and every noindex page are skipped (the buyer variants are
+indexable since 2026-09-28 and are pinged like any other page). The script waits until every URL answers 200 on
 the live site (GitHub Pages deploys in about a minute; --wait seconds, default 600), then
 POSTs one batch to api.indexnow.org with the key and its keyLocation. Exit 1 if a URL never
 went live or the API refused the batch. --dry-run prints the batch and stops.
@@ -48,7 +48,7 @@ def url_for(path):
         return None
     else:
         url = f'{SITE}/{path[:-len("index.html")]}'
-    # a noindex page is never pinged: the buyer variants (content/variants/) and anything else kept out of the index
+    # a noindex page is never pinged (the buyer variants are indexable since 2026-09-28, Ron)
     if os.path.exists(path) and 'name="robots" content="noindex"' in open(path, encoding='utf-8', errors='replace').read():
         return None
     return url

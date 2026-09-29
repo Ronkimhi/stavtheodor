@@ -12,7 +12,7 @@ Every page is generated. No framework, no npm: three Python scripts, one shared 
 |---|---|
 | `content/posts.html` (every Art Radar post, newest first) | `radar/<slug>/index.html`, `radar/index.html`, the homepage timeline, `sitemap.xml` |
 | `content/pages/*.json` (advisory, projects, partners, guide) | `advisory/`, `projects/`, `for-*/`, `guide/` pages and the two hubs, the homepage project cards and advisory rows |
-| `content/variants/*.json` (buyer variants of the homepage, format `content/VARIANT-SPEC.md`) | one noindex copy of the homepage per file at `/<path>/`, with its own copy in the marked regions, questions and mail subject; in no sitemap, linked from nowhere |
+| `content/variants/*.json` (buyer variants of the homepage, format `content/VARIANT-SPEC.md`) | one indexable copy of the homepage per file at `/<path>/` (since 2026-09-28, Ron), with its own copy in the marked regions, questions and mail subject; its own canonical, listed in `sitemap-pages.xml`, linked only from the homepage's `#industries` section |
 | `content/faq.json` | the homepage FAQ and its FAQPage schema (the same text, by construction) |
 | `content/entity.json` | the Person + ProfessionalService + WebSite JSON-LD on every page |
 | `templates/home.html` | `index.html` (the approved homepage design, with slots) |
@@ -63,7 +63,7 @@ Send Claude the image file(s) and say which post they belong to. They get optimi
 
 The homepage is the design approved on 2026-09-26 (near-black ground, a WebGL brush opening over four rooms, one serif line per screen, the film, six projects, the advisory rows, the Museum, the six newest posts, the seven questions). Its markup lives in `templates/home.html`; the opening's before and after photos are `images/home2/pairs/`; the film is `videos/theodora-film-2026-09-26.mp4` (67 seconds). To change the copy, edit the template and rebuild. The old portfolio slideshow is gone.
 
-Sixteen regions of the template (the hero lines, the h1, the intro, the service lines, the What I do block, the Advisory heading) sit between `<!--variant:NAME-->` markers: the homepage keeps the text between them, and each buyer variant (`content/variants/<id>.json`, AGENTS.md Section 3.9) replaces it at its own noindex address.
+Sixteen regions of the template (the hero lines, the h1, the intro, the service lines, the What I do block, the Advisory heading) sit between `<!--variant:NAME-->` markers: the homepage keeps the text between them, and each buyer variant (`content/variants/<id>.json`, AGENTS.md Section 3.9) replaces it at its own indexable address.
 
 ## Media notes
 

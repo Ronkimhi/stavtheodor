@@ -8,7 +8,7 @@ Runs, in order:
                            then build-post-pages.py: radar/<slug>/, radar/
   tools/check_variants.py  the buyer variants of the homepage, content/variants/*.json (none is fine)
   build-home.py            index.html from templates/home.html + content/, the redirect stubs, and
-                           one noindex page per buyer variant at /<path>/
+                           one indexable page per buyer variant at /<path>/
   tools/build_sitemap.py   sitemap.xml (an index) over sitemap-pages.xml, sitemap-radar.xml, sitemap-museum.xml
   tools/check_site.py      the gates: dashes, phone numbers, language twins, anchors, links, JSON-LD,
                            FAQ mirror, noindex, removed assets, language default, sitemap, variants
