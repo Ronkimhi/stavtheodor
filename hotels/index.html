@@ -411,20 +411,7 @@
   </div>
 </section>
 
-<section class="section wrap film" id="film">
-  <div class="head reveal"><div class="lead"><p class="eyebrow"><span data-l="en">The film</span><span data-l="he" dir="rtl">הסרט</span></p><h2 class="serif"><span data-l="en">Sixty seven seconds on what I do.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה.</span></h2></div></div>
-  <video controls playsinline preload="none" data-poster="/images/home2/film-still.jpg" class="reveal">
-    <source src="/videos/theodora-film-2026-09-26.mp4" type="video/mp4">
-  </video>
-  <script>
-  /* The film sits five screens down: its poster and metadata are fetched once the page has loaded, so they
-     never compete with the opening's first textures for bandwidth (2026-09-26). */
-  (function () { var v = document.querySelector('video[data-poster]'); if (!v) { return; }
-    function arm() { v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
-    if (document.readyState === 'complete') { arm(); } else { window.addEventListener('load', arm); } })();
-  </script>
-  <p class="cap"><span data-l="en">Sixty seven seconds on what I do, for designers, private collectors, home and business owners.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</span></p>
-</section>
+
 
 <div id="portfolio" aria-hidden="true"></div>
 <section class="section wrap" id="projects">

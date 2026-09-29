@@ -81,9 +81,13 @@ HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (too
 # Variant-only blocks: the template's marker is empty, so the homepage renders nothing in its place and a
 # variant renders the whole block. value_strip: the three columns right after #intro (2026-09-28).
 BLOCKS = {'value_strip'}
+# Homepage-only sections: the homepage keeps the bytes between the markers, every variant drops them.
+# film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
+DROPS = {'film'}
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
-SHARED_SECTIONS = ('about', 'film', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
+SHARED_SECTIONS = ('about', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
+VARIANT_ABSENT = ('film',)  # on the homepage, never on a variant (DROPS)
 VARIANT_PATH = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$')
 
 # The opening's rooms (2026-09-27). PAIRS in js/home-opening.js lists them in slot order (p3, p4, p5, p1): slot 0 is
@@ -122,6 +126,8 @@ def load_variants(home_faq):
         if v.get('id') != f[:-len('.json')] or not VARIANT_PATH.match(v.get('path') or ''):
             raise SystemExit(f'{where}: bad id or path (run python3 tools/check_variants.py {where})')
         rooms = v.get('rooms')
+        if v.get('rooms_rest', 'drop') not in ('drop', 'home') or ('rooms_rest' in v and not rooms):
+            raise SystemExit(f'{where}: rooms_rest is "drop" or "home", and only beside rooms (run python3 tools/check_variants.py {where})')
         if rooms is not None and not (isinstance(rooms, list) and 1 <= len(rooms) <= len(HOME_ROOMS) and all(
                 isinstance(r, dict) and set(ROOM_KEYS + ('cap_en', 'cap_he', 'alt_en')) <= set(r) for r in rooms)):
             raise SystemExit(f'{where}: bad rooms (run python3 tools/check_variants.py {where})')
@@ -178,18 +184,22 @@ def pct(x):
     return f'{round(x * 100, 2):g}%'
 
 
-def room_region(name, inner, rooms):
+def room_region(name, inner, rooms, drop=False):
     """A room region: the homepage's bytes, unless the variant replaces that slot's room. rooms_js then
     sets window.THEODORA_ROOMS (each room with its slot), room_cap_N is the room's caption, and
-    room_fig_N the homepage's static figure with the room's focal point, after image, alt and caption."""
+    room_fig_N the homepage's static figure with the room's focal point, after image, alt and caption.
+    With drop (rooms_rest "drop", the default beside rooms), the slots past the variant's last room are
+    dropped instead of showing the homepage's: no figure, an empty caption, and
+    window.THEODORA_ROOMS_ONLY tells js/home-opening.js to end the opening after the last room."""
     if name == 'rooms_js':
         if not rooms:
             return inner
         data = [{'slot': i, **{k: num(r[k]) for k in ROOM_KEYS + ('seed',) if k in r}} for i, r in enumerate(rooms)]
-        return inner + '\n<script>window.THEODORA_ROOMS = ' + json.dumps(data, separators=(',', ':')).replace('</', '<\\/') + ';</script>'
+        only = ' window.THEODORA_ROOMS_ONLY = true;' if drop else ''
+        return inner + '\n<script>window.THEODORA_ROOMS = ' + json.dumps(data, separators=(',', ':')).replace('</', '<\\/') + ';' + only + '</script>'
     slot = int(name.rsplit('_', 1)[1])
     if slot >= len(rooms):
-        return inner
+        return '' if (rooms and drop) else inner
     r = rooms[slot]
     cap = T(H.escape(r['cap_en']), H.escape(r['cap_he']))
     if name.startswith('room_cap_'):
@@ -219,6 +229,7 @@ def fill_regions(body, v):
     (BLOCKS) is empty in the template and rendered whole for a variant."""
     seen = collections.Counter()
     rooms = (v or {}).get('rooms') or []
+    drop = bool(rooms) and (v or {}).get('rooms_rest', 'drop') == 'drop'
     inside = {m.group(1): m.group(2) for m in MARK.finditer(body)}
     for i, (key, _, after) in enumerate(HOME_ROOMS):
         if f'data-cap="{key}"><!--variant:room_cap_{i}-->' not in body or f'src="/images/home2/{after}"' not in inside.get(f'room_fig_{i}', ''):
@@ -228,7 +239,9 @@ def fill_regions(body, v):
         name, inner = m.group(1), m.group(2)
         seen[name] += 1
         if name in ROOM_REGIONS:
-            return room_region(name, inner, rooms)
+            return room_region(name, inner, rooms, drop)
+        if name in DROPS:
+            return inner if v is None else ''
         if name in BLOCKS:
             assert inner == '', f'the {name} marker in the template must be empty (the homepage has no {name})'
             if v is None:
@@ -243,7 +256,7 @@ def fill_regions(body, v):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
     return body
 
@@ -299,9 +312,12 @@ def page_problems(out, name, home=None):
     if en != he:
         problems.append(f'twins differ in {name}: {en} en, {he} he')
     for anchor in ANCHORS:
-        if f'id="{anchor}"' not in out:
+        if f'id="{anchor}"' not in out and not (home is not None and anchor in VARIANT_ABSENT):
             problems.append(f'anchor #{anchor} missing')
     if home is not None:
+        for sid in VARIANT_ABSENT:
+            if f'id="{sid}"' in out or f'href="#{sid}"' in out:
+                problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
         if '<meta name="robots" content="noindex">' not in out:
             problems.append(f'{name} is not noindex')
         for sid in SHARED_SECTIONS:

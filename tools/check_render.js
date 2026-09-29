@@ -91,7 +91,7 @@ function variantRooms() {
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
     .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
     .filter(v => Array.isArray(v.rooms) && v.rooms.length)
-    .map(v => ({ path: '/' + v.path.replace(/^\/+|\/+$/g, '') + '/', rooms: v.rooms }));
+    .map(v => ({ path: '/' + v.path.replace(/^\/+|\/+$/g, '') + '/', rooms: v.rooms, drop: (v.rooms_rest || 'drop') === 'drop' }));
 }
 
 function homeRooms() {
@@ -227,9 +227,22 @@ async function roomLoads(browser, base, quiet) {
             .catch(() => fails.push(`${where}: the entrance did not reach its end within 20 s`));
         }
         for (const u of want) { if (seen.get(u) !== 200) { fails.push(`${where}: ${u} ${seen.has(u) ? 'answered ' + seen.get(u) : 'was never requested'}`); } }
-        v.rooms.forEach((r, slot) => (home[slot] || []).forEach(n => {
-          if (seen.has(img(n))) { fails.push(`${where}: requested the homepage's ${img(n)}, but slot ${slot} is the variant's own room`); }
-        }));
+        /* no homepage image of a replaced slot, and with rooms_rest "drop" none of a dropped slot either */
+        home.forEach((pair, slot) => {
+          if (slot >= v.rooms.length && !v.drop) { return; }
+          pair.forEach(n => {
+            if (seen.has(img(n))) { fails.push(`${where}: requested the homepage's ${img(n)}, but slot ${slot} is ${slot < v.rooms.length ? "the variant's own room" : 'dropped (rooms_rest "drop")'}`); }
+          });
+        });
+        /* the static figures: one per room of the variant, plus the homepage's later ones only with rooms_rest "home" */
+        if (mode === 'gl') {
+          const pairs = await page.evaluate(() => window.__theodoraBrush.pairs);
+          const wantPairs = v.drop ? v.rooms.length : Math.max(v.rooms.length, home.length);
+          if (pairs !== wantPairs) { fails.push(`${where}: the opening runs ${pairs} rooms, expected ${wantPairs}`); }
+        }
+        const figs = await page.evaluate(() => document.querySelectorAll('figure.sfig').length);
+        const wantFigs = v.drop ? v.rooms.length : Math.max(v.rooms.length, home.length);
+        if (figs !== wantFigs) { fails.push(`${where}: ${figs} static figures, expected ${wantFigs}`); }
         errors.forEach(e => fails.push(`${where}: console error: ${e.split('\n')[0]}`));
         checked++;
       } catch (e) {

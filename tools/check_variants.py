@@ -31,7 +31,9 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      w by h pixels, about 3:2 (portrait phones draw every room whole in a 3:2 frame), and no
      image of the homepage's rooms or of another slot; rect [u0, v0, u1, v1] inside 0..1 with
      u0 < u1 and v0 < v1; fx and fy in 0..1; from "left" or "right"; seed a number when given;
-     cap_en and cap_he start "Proposal. " and "הצעה. "; the alt and caption twins take e to h
+     cap_en and cap_he start "Proposal. " and "הצעה. "; the alt and caption twins take e to h;
+     rooms_rest (optional, only beside rooms): "drop" (the default) ends the opening after the last
+     room, "home" keeps the homepage's rooms in the slots after it
   m  head.og_image with head.og_image_alt (optional): the variant's own link preview, a JPEG in
      images/home2/variants/<id>/, 1200 by 630, under 300 KB
   n  value_strip: exactly three items {label_en, label_he, line_en, line_he}, plain text, labels at most
@@ -80,7 +82,7 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
     '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'services', 'value_strip', 'what_i_do', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
-         {'advisory', 'advisory_rows', 'rooms'}),
+         {'advisory', 'advisory_rows', 'rooms', 'rooms_rest'}),
     'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
     'intro': ({'h1_en', 'h1_he', 'line_en', 'line_he', 'statement_en', 'statement_he'}, {'eyebrow_en', 'eyebrow_he'}),
@@ -642,6 +644,11 @@ def check(path, v, peers):
     # l: the opening's rooms; m: the link preview
     if 'rooms' in v:
         fails.extend(room_problems(v['rooms'], vid))
+    if 'rooms_rest' in v:
+        if v['rooms_rest'] not in ('drop', 'home'):
+            fails.append(f'rooms_rest: "drop" or "home", not {v["rooms_rest"]!r}')
+        if not v.get('rooms'):
+            fails.append('rooms_rest: only beside rooms')
     if 'og_image' in v['head'] or 'og_image_alt' in v['head']:
         fails.extend(og_problems(v['head'], vid))
     return fails, warns

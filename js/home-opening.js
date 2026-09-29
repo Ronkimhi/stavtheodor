@@ -24,6 +24,7 @@
     if (window.gsap) { gsap.killTweensOf([markIn, cue, line1, line2, cap]); }
     [markIn, cue, line1, line2, introH1, band].forEach(function (el) { if (el) { el.style.opacity = ''; el.style.transform = ''; } });
     body.classList.remove('gl', 'entering');
+    if (chain) { chain.style.height = ''; }
     body.classList.add('static');
     if (reduce) { body.classList.add('reduced'); }
     if (window.ScrollTrigger) { ScrollTrigger.refresh(); }
@@ -214,6 +215,12 @@
       if (typeof r.seed === 'number') { p.seed = r.seed; }
       delete p.port;
     });
+    /* rooms_rest "drop" (the default beside rooms, 2026-09-28): the opening ends with the variant's last room instead
+       of going on through the homepage's, and the scroll spacer shrinks to match (50vh, then 55vh a chapter) */
+    if (window.THEODORA_ROOMS_ONLY && ROOMS.length) {
+      PAIRS.length = Math.min(PAIRS.length, ROOMS.length);
+      chain.style.height = (50 + 55 * (PAIRS.length - 1)) + 'vh';
+    }
   }
   /* the wall stroke runs across the artwork's vertical centre, lands half a radius outside the rect on the
      wall side and ends 0.6 radius past the far edge; radius 0.62 x rect height, capped for the tall canvases;
@@ -228,6 +235,7 @@
     v.rad = rad; v.bo = [(r[0] + r[2]) / 2, cy]; v.aspect = v.w / v.h;
   }
   PAIRS.forEach(function (p) { deriveStroke(p.land); if (p.port) { deriveStroke(p.port); } });
+  dbg.pairs = PAIRS.length;
   function portrait() { return canvas.clientHeight > canvas.clientWidth; }
   function vr(p) { return (p.port && portrait()) ? p.port : p.land; }
 
@@ -264,7 +272,7 @@
 
   /* uniforms as plain numbers so GSAP can tween them */
   var U = { layerA: 1, spread: 1.25, h0: 0, h1: 0, h2: 0, h3: 0, h4: 0, w0: 1, w1: 1, w2: 1, w3: 1, w4: 1,
-            bh: 0, bw: 1, bloom: 0, scrim: 0, xfade: 0, fade: 0, pair: PAIRS[0], next: PAIRS[1] };
+            bh: 0, bw: 1, bloom: 0, scrim: 0, xfade: 0, fade: 0, pair: PAIRS[0], next: PAIRS[1] || null };
   var dirtyFlag = true, t0 = performance.now(), covered = false;
   function dirty() { dirtyFlag = true; }
   function texNames() { var v = vr(U.pair), n = U.next ? vr(U.next) : null; return { b: v.b, a: v.a, n: n ? n.b : null }; }
@@ -350,12 +358,12 @@
     markIn.style.opacity = 1 - ss(0, 0.4, q);
     canvasOpacity(1);
     if (cp <= 0) {
-      U.pair = PAIRS[0]; U.next = PAIRS[1];
+      U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
       if (entranceDone && !skipping) { U.layerA = 0; U.bh = 1; U.bloom = 1.6; U.scrim = 0; U.bw = 0; killDry(); }
-      U.xfade = ss(0.4, 1, q); U.fade = 0;
+      U.xfade = PAIRS[1] ? ss(0.4, 1, q) : 0; U.fade = 0;
       if (entranceDone) { capSet(U.xfade < 1 ? PAIRS[0].cap : null); }
     } else {
-      var idx = Math.min(CH - 1, Math.floor(cp * CH)), local = cp * CH - idx;
+      var idx = CH > 0 ? Math.min(CH - 1, Math.floor(cp * CH)) : -1, local = CH > 0 ? cp * CH - idx : 1;
       var pr = PAIRS[idx + 1], nx = PAIRS[idx + 2] || null;
       U.pair = pr; U.next = nx; U.layerA = 0; U.scrim = 0;
       U.bh = ss(0, 0.80, local);
@@ -415,7 +423,7 @@
     started = true; dbg.mode = 'gl';
     computeFit(); buildPasses();
     U.spread = spreadMin;
-    U.pair = PAIRS[0]; U.next = PAIRS[1];
+    U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
     /* a page that opens already scrolled (restored position, a #hash link) skips straight to the end */
     if (wantSkip || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
     var lang = body.classList.contains('lang-he') ? 'he' : 'en';
