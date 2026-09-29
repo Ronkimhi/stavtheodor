@@ -66,9 +66,11 @@ INDUSTRIES = [
 ]
 INDUSTRY_THUMB = (600, 400)
 
+# The six lead projects: each shows a photograph of its own (2026-09-28: Closter and Ramat Gan left this row when
+# their Gemini-marked photos were removed; they come back when Stav sends clean photographs of them).
 PROJECT_ORDER = [
-    'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'closter-new-jersey-new-construction',
-    'herzliya-pituach-sea-view-apartment', 'hod-hasharon-private-villa', 'ramat-gan-private-home',
+    'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'herzliya-pituach-sea-view-apartment',
+    'hod-hasharon-private-villa', 'tel-aviv-home-of-roni-daloomi', 'caesarea-private-estate',
 ]
 ADVISORY_HUBS = {
     '/advisory/': ('Art advisory, answered plainly: what it costs, how it works, where I work', 'ייעוץ אמנות בשפה פשוטה: כמה זה עולה, איך זה עובד, ואיפה אני עובדת'),

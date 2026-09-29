@@ -7,6 +7,7 @@ One nav, one footer, one language switch, one mailto fallback panel, one GA tag,
   content/posts.html   every Art Radar post (JSON-LD + <article> pairs, newest first)
   content/faq.json     the seven homepage questions (visible FAQ and FAQPage schema come from it)
   content/entity.json  the Person + ProfessionalService + WebSite graph
+  content/spaces.json  the before/after space pairs (images/spaces/), for before_after()
 
 The generators import this module: build-home.py (index.html, the buyer variants of it from
 content/variants/, whose footer and mail panel carry a mail subject, the /2/ redirect stubs),
@@ -34,6 +35,7 @@ INSTAGRAM = 'https://www.instagram.com/theodorafineart/'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
+SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 THEME_CSS = '/css/theme.css'
 
 
@@ -490,8 +492,10 @@ def body_open():
     return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
 
 
-def tail(home=False):
-    return '\n' + footer(home) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + '\n\n</body>\n</html>\n'
+def tail(home=False, scripts=''):
+    """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure)."""
+    extra = '\n' + scripts if scripts else ''
+    return '\n' + footer(home) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
 
 
 def redirect_stub(target, title='THEODORA'):
@@ -603,14 +607,82 @@ def timeline(posts, with_months):
 
 
 def project_card(p):
-    """One project card, the same markup on the homepage, the hubs and the project pages."""
-    hero = p['hero_image']
+    """One project card, the same markup on the homepage, the hubs and the project pages.
+    A project with no clean photograph of its own (2026-09-28: the Gemini-marked photos were removed)
+    gets a quiet typographic panel with its place name, never a photo borrowed from another project."""
+    hero = p.get('hero_image')
+    if hero:
+        ph = f'<div class="ph"><img src="{hero["src"]}" alt="{H.escape(hero.get("alt_en", ""), quote=True)}" loading="lazy"></div>'
+    else:
+        ph = f'<div class="ph type" aria-hidden="true">{T(H.escape(p["place_en"]), H.escape(p["place_he"]), cls="serif")}</div>'
     return f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
-        <div class="ph"><img src="{hero['src']}" alt="{H.escape(hero.get('alt_en', ''), quote=True)}" loading="lazy"></div>
+        {ph}
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
         <p class="muted">{T(H.escape(first_sentence(p['lead_en'])), H.escape(first_sentence(p['lead_he'])))}</p>
       </a>'''
+
+
+# ---------------------------------------------------------------- before and after
+# The proposal spaces (2026-09-28): AI-rendered spaces with real catalog artworks composited onto the wall,
+# pixel-aligned pairs in images/spaces/<key>_{before,after}.webp (1800 px, plus a 1000 px twin) described in
+# content/spaces.json. Every one is labeled a proposal. With JavaScript and motion allowed, the figure pins
+# while the reader scrolls and js/before-after.js brushes the after over the before (css/theme.css, .ba);
+# without either, the same markup is a still pair, side by side on a wide screen and stacked on a phone.
+BA_SCRIPT = '<script src="/js/before-after.js?v=20260928" defer></script>'
+BA_LABEL = ('Proposal · how THEODORA would dress this space', 'הצעה · כך THEODORA הייתה מלבישה את החלל הזה')
+BA_SIZES = '(max-width: 767px) 100vw, min(1100px, 92vw)'
+_spaces = None
+
+
+def spaces():
+    global _spaces
+    if _spaces is None:
+        _spaces = json.load(open(SPACES_FILE, encoding='utf-8'))['spaces']
+    return _spaces
+
+
+def space_src(key, side):
+    return f'/images/spaces/{key}_{side}.webp'
+
+
+def space_srcset(key, side):
+    return f'/images/spaces/{key}_{side}-1000.webp 1000w, /images/spaces/{key}_{side}.webp 1800w'
+
+
+def space_og(key):
+    return f'/images/spaces/{key}_og.jpg'
+
+
+def ba_preload(key):
+    """The first pair's before, fetched early: it is the hero the reader sees first."""
+    return (f'<link rel="preload" as="image" href="{space_src(key, "before")}" imagesrcset="{space_srcset(key, "before")}" '
+            f'imagesizes="{BA_SIZES}" type="image/webp" fetchpriority="high">\n')
+
+
+def before_after(key, first=False):
+    """One before/after figure. first: the page's hero (the before loads eagerly, high priority)."""
+    s = spaces()[key]
+    w, h = s['w'], s['h']
+    eager = 'loading="eager" fetchpriority="high"' if first else 'loading="lazy"'
+    # data-art: the artwork's left and right edges and the focal point, as fractions of the image width, and the
+    # image size: the brush crosses only the wall around the artwork, the one place the two images differ
+    art = f"{s['art_x'][0]} {s['art_x'][1]} {s['fx']} {w} {h}"
+    return f'''<figure class="ba" data-art="{art}" style="--fx:{s['fx'] * 100:.1f}%;--fy:{s['fy'] * 100:.1f}%;--ar:{w}/{h}">
+    <div class="ba-pin">
+      <div class="ba-stage">
+        <div class="ba-pane ba-before">
+          <img src="{space_src(key, 'before')}" srcset="{space_srcset(key, 'before')}" sizes="{BA_SIZES}" width="{w}" height="{h}" alt="The same space before the proposal, its wall still bare." {eager} decoding="async">
+          <span class="ba-chip">{T('Before', 'לפני')}</span>
+        </div>
+        <div class="ba-pane ba-after">
+          <div class="ba-wipe"><img src="{space_src(key, 'after')}" srcset="{space_srcset(key, 'after')}" sizes="{BA_SIZES}" width="{w}" height="{h}" alt="{H.escape(s['alt_en'], quote=True)}" loading="lazy" decoding="async"></div>
+          <span class="ba-chip">{T('After', 'אחרי')}</span>
+        </div>
+      </div>
+      <figcaption><span class="ba-label">{T(*BA_LABEL)}</span> {T(H.escape(s['cap_en']), H.escape(s['cap_he']))}</figcaption>
+    </div>
+  </figure>'''
 
 
 def write(path, text):

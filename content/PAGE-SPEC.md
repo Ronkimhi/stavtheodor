@@ -12,7 +12,7 @@ One JSON file per page. build-site-pages.py renders it into /<path>/index.html w
   "meta_description": "Under 160 characters. The direct answer, in English, for search and LLM snippets.",
   "lead_en": "One or two sentences that answer the question outright. Plain text, no HTML.",
   "lead_he": "Faithful Hebrew translation of the lead.",
-  "hero_image": {"src": "/images/projects/closter-dining.jpg", "alt_en": "Dining room in Closter, New Jersey, three paintings above the table", "alt_he": "...", "caption_en": "Closter, New Jersey. New construction, collection curated with New York galleries.", "caption_he": "..."},
+  "before_after": "restaurants",
   "body_en": "<p>...</p><h2>...</h2><p>...</p>",
   "body_he": "<p>...</p><h2>...</h2><p>...</p>",
   "faq": [{"q_en": "...", "a_en": "...", "q_he": "...", "a_he": "..."}],
@@ -21,12 +21,14 @@ One JSON file per page. build-site-pages.py renders it into /<path>/index.html w
   "cta_en": "optional override of the closing call to action",
   "cta_he": "optional",
   "related": ["advisory/how-the-art-advisory-process-works", "projects/closter-new-jersey-new-construction"],
-  "og_image": "/images/projects/closter-dining.jpg",
+  "og_image": "/images/spaces/restaurants_og.jpg",
   "date": "2026-09-04"
 }
 ```
 
-Sections and paths: `advisory/<slug>` (schema_type Service or Article), `projects/<slug>` (schema_type CreativeWork or Article, hero_image required), `for-designers`, `for-brokers`, `for-advisors` (section "partners", schema_type Service), `guide/<slug>` (section "guide", schema_type Article), and the two local landing pages `art-curator-new-jersey`, `art-curator-new-york` (section "local", schema_type Service, 1,100 to 1,900 English words, "art curator" in title_en and lead_en, breadcrumb under /advisory/, listed first on the advisory hub and in the homepage Advisory rows).
+Sections and paths: `advisory/<slug>` (schema_type Service or Article), `projects/<slug>` (schema_type CreativeWork or Article; a `hero_image` that is a real photograph of that same project, or, when there is none, `place_en` and `place_he`, the place name its typographic hero card shows; never another project's photo and never a before/after), `for-designers`, `for-brokers`, `for-advisors` (section "partners", schema_type Service), `guide/<slug>` (section "guide", schema_type Article), and the two local landing pages `art-curator-new-jersey`, `art-curator-new-york` (section "local", schema_type Service, 1,100 to 1,900 English words, "art curator" in title_en and lead_en, breadcrumb under /advisory/, listed first on the advisory hub and in the homepage Advisory rows).
+
+The hero of an article page (advisory, local, partners, guide) is `before_after`, a key of `content/spaces.json` (added 2026-09-28): a pixel-aligned pair in `images/spaces/<key>_before.webp` and `_after.webp` (1800 px, with 1000 px twins `-1000.webp`) and a 1200 by 630 `<key>_og.jpg` for `og_image`. The spaces are AI-rendered with real catalog artworks placed on the wall, so the build labels every one "Proposal · how THEODORA would dress this space" and captions it from `spaces.json`, whose captions say "space", never "room". With JavaScript and motion allowed the figure pins for about 120vh while the after is brushed over the before (`js/before-after.js`, `.ba` in `css/theme.css`); otherwise it is a still pair. A page may use `hero_image` instead, for a real photograph. Give neighbouring pages different pairs.
 
 Optional fields: `radar_posts` (a list of Art Radar slugs for the "From Art Radar" block every article page carries; without it the three newest posts show; every slug must exist in content/posts.html), `area_served` (a list of schema.org Place objects for Service pages; the default is New York City, New Jersey, Tel Aviv). Never promise a "contact form": there is none. Point people to `stav@stavtheodor.com` and to "the contact details at the end of this page" linking `#contact` (Hebrew: "פרטי יצירת הקשר בסוף העמוד").
 

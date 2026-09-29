@@ -12,6 +12,11 @@ def post_slugs():
     except OSError: return set()
     return set(re.findall(r'<article class="post[^"]*" id="([a-z0-9\-]+)">', src))
 SLUGS = post_slugs()
+def space_keys():
+    """The before/after proposal pairs, content/spaces.json (images/spaces/<key>_before.webp and _after.webp)."""
+    try: return set(json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "spaces.json"), encoding="utf-8"))["spaces"])
+    except (OSError, ValueError, KeyError): return set()
+SPACES = space_keys()
 def internal_keys(node, trail=""):
     """Key paths holding internal notes, at any depth: editor_note, or a key starting with "_" or "note" (any case).
     Every file under content/ is served publicly, so none of them belongs in a page (content/PAGE-SPEC.md, 2026-09-27)."""
@@ -41,7 +46,10 @@ for f in sys.argv[1:]:
         if not p.get(k): fails.append(f"missing {k}")
     if p.get("section") not in LIMITS: fails.append("bad section")
     if len(p.get("meta_description","")) > 165: fails.append("meta_description over 165 chars")
-    if p.get("section") == "projects" and not p.get("hero_image"): fails.append("project page without hero_image")
+    if p.get("section") == "projects" and not p.get("hero_image") and not (p.get("place_en") and p.get("place_he")):
+        fails.append("project page without hero_image: give it place_en and place_he (its card shows the place name), or a photo of this project")
+    if p.get("section") == "projects" and p.get("before_after"): fails.append("before_after is for article pages: a project page shows only photos of that project")
+    if p.get("before_after") and p["before_after"] not in SPACES: fails.append(f"before_after {p['before_after']} is not a key of content/spaces.json")
     for blk in ["body_en","body_he"]:
         tags = set(t.lower() for t in re.findall(r"<\s*([a-zA-Z0-9]+)", p.get(blk,"")))
         bad = tags - ALLOWED

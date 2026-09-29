@@ -14,7 +14,9 @@
   noindex     the homepage and the generated pages are indexable; /2/, the old stubs and the
               buyer variants are not
   posts       index.html carries no post article (posts live in content/posts.html)
-  removed     nothing references the assets removed on 2026-09-26, and they are gone
+  removed     nothing references the assets removed on 2026-09-26, and they are gone; no image in
+              the tree is one of the AI-marked photos removed on 2026-09-28 (matched by content hash,
+              so a renamed copy is caught too; the site copies and the video project's masters)
   lang        every page outside museum/ opens in English: <html lang="en">, <body class="lang-en">,
               and at least 90% of the words a reader sees with the switch on English are Latin
               (the Hebrew twins, data-l="he" / lang="he" / .post-title-he, are dropped the way
@@ -53,6 +55,14 @@ GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers
 STUB_DIRS = ('2', 'about', 'our-team', 'our-team-1', 'contact', 'questions')  # redirect stubs written by build-home.py: noindex, never indexable pages
 HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
 REMOVED = ('images/portfolio/', 'theodora-film-2026-09.mp4')
+# The first 16 hex digits of the SHA-256 of every Gemini-marked (or Gemini-processed) photo removed on 2026-09-28:
+# the nine project photos and three homepage copies, and the masters they were cut from. None may come back, under any name.
+BANNED_IMAGES = {
+    '3f4cc55eb3845d10', 'c9fd6d649602759f', 'f5e14bd0de8efe4a', 'e117edd3a4973767', '95afc52c90fca405', '6e68c2dbc6d8738b',
+    '8dfb8935fa61135a', 'dfa0d6c9e46035c1', '90ec74ddff1f3de2', '8514f7097561228d', 'c976f3f6ce8144bd', '6e2497d4663bb830',
+    '718c475ac20d8e15', 'd2725a41bbd80339', 'dea7bfad1d6585e2', '9f87b708d526a6cf', '4f06600f6a0706f9', '3631076c645d4096',
+    '21db47b8abf26e62', 'b78ea3fe28ec1622', 'f6070dab13b23b81',
+}
 AGENT_FILES = ('llms.txt', 'agent.txt', 'answers.md', 'robots.txt')  # a buyer variant is never named in these
 fails = []
 
@@ -406,6 +416,11 @@ for path in walk(('.html', '.txt', '.md', '.py', '.json', '.css', '.js', '.xml')
 for r in REMOVED:
     if os.path.exists(r.rstrip('/')) or os.path.exists(os.path.join('videos', r)):
         fail('removed', f'{r} still exists in the tree')
+
+import hashlib
+for path in walk(('.jpg', '.jpeg', '.png', '.webp')):
+    if hashlib.sha256(open(path, 'rb').read()).hexdigest()[:16] in BANNED_IMAGES:
+        fail('removed', f'{path} is one of the AI-marked photos removed on 2026-09-28 (AGENTS.md Work Log): delete it')
 
 gates = ['dashes', 'phones', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'posts', 'removed', 'lang', 'sitemap', 'variants']
 if fails:

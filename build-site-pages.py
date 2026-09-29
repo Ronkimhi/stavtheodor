@@ -180,14 +180,19 @@ def cta_html(p):
 
 
 def render_article_page(p, all_pages):
-    """Advisory, partner and guide pages: text header, optional photo, the reading column.
-    English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch."""
+    """Advisory, partner and guide pages: text header, the hero figure, the reading column.
+    The hero figure is a before/after proposal space (before_after, a key of content/spaces.json, 2026-09-28):
+    pinned while the after is brushed over the before as the reader scrolls. A page may still carry a plain
+    hero_image instead. English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch."""
     url = f"{SITE}/{p['path'].strip('/')}/"
-    og = SITE + (p.get("og_image") or (p.get("hero_image") or {}).get("src") or "/og-image.jpg")
+    ba = p.get("before_after")
+    og = SITE + (p.get("og_image") or (sc.space_og(ba) if ba else None) or (p.get("hero_image") or {}).get("src") or "/og-image.jpg")
     kicker, kicker_he = kickers(p)
     hero = ""
     hi = p.get("hero_image")
-    if hi:
+    if ba:
+        hero = "\n  " + sc.before_after(ba, first=True)
+    elif hi:
         cap = ""
         if hi.get("caption_en") or hi.get("caption_he"):
             cap = f'\n    <figcaption>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>'
@@ -216,20 +221,21 @@ def render_article_page(p, all_pages):
 </section>
 '''
     return (sc.head(f"{p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
-                    lang="en", ld=ld_blocks(p, url, og))
-            + sc.body_open() + sc.nav() + body + sc.tail())
+                    lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
+            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.BA_SCRIPT if ba else ''))
 
 
 def render_project_page(p, all_pages, projects):
     """A project: full-bleed hero, one serif lead, the story, three more projects, the next one."""
     url = f"{SITE}/{p['path'].strip('/')}/"
-    hero = p["hero_image"]
-    og = SITE + (p.get("og_image") or hero["src"])
+    hero = p.get("hero_image")
+    og = SITE + (p.get("og_image") or (hero or {}).get("src") or "/og-image.jpg")
     kicker, kicker_he = kickers(p)
     i = projects.index(p)
     nxt = projects[(i + 1) % len(projects)]
     more = [projects[(i + j) % len(projects)] for j in (1, 2, 3)]
-    body = f'''
+    if hero:
+        header = f'''
 <header class="phero">
   <img src="{hero['src']}" alt="{H.escape(hero.get('alt_en', ''), quote=True)}" fetchpriority="high">
   <div class="scrim"></div>
@@ -239,7 +245,17 @@ def render_project_page(p, all_pages, projects):
     <p class="cap">{T(H.escape(hero.get('caption_en', '')), H.escape(hero.get('caption_he', '')))}</p>
   </div>
 </header>
-
+'''
+    else:  # no clean photograph of this project yet: a typographic hero, never another project's photo (2026-09-28)
+        header = f'''
+<header class="phero type">
+  <div class="title">
+    <p class="eyebrow">{T('Projects · ' + H.escape(kicker), 'פרויקטים · ' + H.escape(kicker_he))}</p>
+    <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
+  </div>
+</header>
+'''
+    body = header + f'''
 <section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p></section>
 
 <section class="section wrap">
@@ -267,9 +283,20 @@ def render_project_page(p, all_pages, projects):
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
+def ba_card(p):
+    """A hub card for a page whose hero is a before/after proposal: the after, marked a proposal."""
+    k = p["before_after"]
+    return f'''
+      <a class="card reveal" href="/{p['path'].strip('/')}/">
+        <div class="ph"><img src="/images/spaces/{k}_after-1000.webp" alt="{H.escape(sc.spaces()[k]['alt_en'], quote=True)}" loading="lazy"><span class="ba-chip">{T('Proposal', 'הצעה')}</span></div>
+        <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
+        <p class="muted">{T(H.escape(sc.first_sentence(p['lead_en'])), H.escape(sc.first_sentence(p['lead_he'])))}</p>
+      </a>'''
+
+
 def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, hero_alt):
     url = f"{SITE}/{section}/"
-    cards = "".join(sc.project_card(p) if p.get("hero_image") else f'''
+    cards = "".join(sc.project_card(p) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
         <p class="muted">{T(H.escape(strip_tags(p['meta_description'])), H.escape(snippet(p.get('lead_he') or '')))}</p>
@@ -314,7 +341,9 @@ def check(p, out):
     if re.search(r"\b\d{3}[ .-]\d{3}[ .-]\d{4}\b|\+1 ?\(?\d{3}", out): bad.append("phone number")
     for k in ["title_en", "title_he", "lead_en", "lead_he", "body_en", "body_he", "meta_description"]:
         if not p.get(k): bad.append(f"missing {k}")
-    if p["section"] == "projects" and not p.get("hero_image"): bad.append("project page without hero_image")
+    if p["section"] == "projects" and not p.get("hero_image") and not (p.get("place_en") and p.get("place_he")):
+        bad.append("project page without hero_image needs place_en and place_he for its card")
+    if p.get("before_after") and p["before_after"] not in sc.spaces(): bad.append(f"before_after {p['before_after']} not in content/spaces.json")
     return bad
 
 

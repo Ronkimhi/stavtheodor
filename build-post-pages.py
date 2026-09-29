@@ -143,7 +143,7 @@ for p in posts:
 def render_radar_index(posts):
     n = len(posts)
     url = f"{SITE}/radar/"
-    latest_img = posts[0]['img'] or '/images/home2/hero-caesarea.jpg'
+    latest_img = posts[0]['img'] or '/images/home2/garden-villa.jpg'
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": "Art Radar, every post", "url": url, "inLanguage": ["he", "en"],

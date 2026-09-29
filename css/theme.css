@@ -404,3 +404,54 @@
     .pair-bottom img, .pair-caps figcaption { width: 100%; max-width: 100%; }
   }
   @media (max-width: 600px) { .ind-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* ===================== Part 3: before and after (2026-09-28) ===================== */
+  /* A proposal space, before and after (site_chrome.before_after, js/before-after.js). Without JavaScript or with
+     reduced motion: a still pair, side by side on a wide screen, stacked on a phone, each marked. With both: the
+     figure pins for 120vh (110vh on a phone) and the after is brushed over the before as the reader scrolls. The brush is an alpha
+     mask with a torn, feathered edge (images/spaces/brush-l.webp, mirrored for Hebrew) that travels with the wipe
+     layer while the after image is held still inside it: both moves are transforms, so nothing repaints. The pairs
+     are pixel-aligned and differ only where the artwork hangs, so the brush's edge (--e, from the left; --er, from
+     the right in Hebrew; in stage widths, the wipe layer's opaque part ending at the edge) crosses just that wall. */
+  .ba { margin: clamp(40px, 5vw, 64px) 0 0; max-width: 1100px; }
+  .ba-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ba-pane { position: relative; aspect-ratio: var(--ar, 3/2); overflow: hidden; background: var(--surface); }
+  .ba-pane img, .ba-wipe img { width: 100%; height: 100%; object-fit: cover; }
+  .ba-wipe { position: absolute; inset: 0; }
+  .ba-chip { position: absolute; top: 14px; left: 14px; z-index: 2; font-size: 10.5px; line-height: 1; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; color: var(--ink); padding: 7px 10px 6px; background: rgba(15,15,20,0.5); border: 1px solid rgba(242,240,236,0.18); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); pointer-events: none; }
+  .ba-chip [data-l="he"] { letter-spacing: 0.04em; font-size: 13px; }
+  body.lang-he .ba-chip { left: auto; right: 14px; }
+  .ba figcaption { margin-top: 14px; font-size: 14px; line-height: 1.55; color: var(--muted); max-width: 820px; }
+  .ba-label { display: block; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
+  .ba-label [data-l="he"] { letter-spacing: 0.02em; font-size: 13px; }
+  @media (max-width: 767px) { .ba-stage { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .ba::after { content: ""; display: block; height: 120vh; } /* the pinned distance (a sticky box never enters its parent's padding) */
+    html.js .ba-pin { position: sticky; top: var(--pin-top, 88px); }
+    html.js .ba-stage { display: block; position: relative; aspect-ratio: var(--ar, 3/2); width: min(100%, calc((100vh - 230px) * 1.5)); width: min(100%, calc((100svh - 230px) * 1.5)); background: var(--surface); }
+    html.js .ba-pane { position: absolute; inset: 0; aspect-ratio: auto; background: none; }
+    html.js .ba-wipe { right: auto; width: 130%; -webkit-mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; transform: translate3d(calc((var(--e, -0.3) - 1) / 1.3 * 100%), 0, 0); will-change: transform; }
+    html.js .ba-wipe img { position: absolute; top: 0; left: 0; width: calc(100% / 1.3); transform: translate3d(calc((1 - var(--e, -0.3)) * 100%), 0, 0); will-change: transform; }
+    body.lang-he .ba-wipe { left: auto; right: 0; -webkit-mask-image: url(/images/spaces/brush-r.webp); mask-image: url(/images/spaces/brush-r.webp); transform: translate3d(calc((1 - var(--er, -0.3)) / 1.3 * 100%), 0, 0); }
+    body.lang-he .ba-wipe img { left: auto; right: 0; transform: translate3d(calc((var(--er, -0.3) - 1) * 100%), 0, 0); }
+    /* the chips sit on the side each image holds while the brush crosses: After where it starts, Before where it ends */
+    html.js .ba-before .ba-chip { left: auto; right: 14px; opacity: clamp(0, calc((0.72 - var(--p, 0)) * 5), 1); }
+    html.js .ba-after .ba-chip { opacity: clamp(0, calc((var(--p, 0) - 0.28) * 5), 1); }
+    body.lang-he .ba-before .ba-chip { left: 14px; right: auto; }
+  }
+  @media (prefers-reduced-motion: no-preference) and (max-width: 767px) {
+    html.js .ba::after { height: 110vh; }
+    html.js .ba-stage { aspect-ratio: 1 / 1; width: min(100%, calc(100vh - 250px)); width: min(100%, calc(100svh - 250px)); }
+    html.js .ba-pane img, html.js .ba-wipe img { object-position: var(--fx, 50%) 50%; }
+  }
+  .spaces .ba { margin-top: 20px; }
+  /* A hub card whose page opens on a proposal: the after, marked */
+  .card .ph { position: relative; }
+  /* A project with no clean photograph of its own yet: its place name, never a borrowed photo */
+  .card .ph.type { display: flex; align-items: flex-end; padding: 24px; background: linear-gradient(160deg, #1E1C22 0%, #141319 100%); border: 1px solid var(--line); }
+  .card .ph.type::before { content: ""; position: absolute; top: 26px; left: 24px; width: 36px; height: 1px; background: var(--taupe); }
+  .card .ph.type .serif { font-size: clamp(34px, 3.2vw, 46px); color: var(--soft); }
+  body.lang-he .card .ph.type { justify-content: flex-end; }
+  body.lang-he .card .ph.type::before { left: auto; right: 24px; }
+  .phero.type { height: auto; min-height: 0; max-height: none; padding-top: calc(170px + env(safe-area-inset-top, 0px)); background: radial-gradient(110% 90% at 85% 0%, rgba(157,118,99,0.16), rgba(15,15,20,0) 62%), var(--bg); border-bottom: 1px solid var(--line); }
+  .phero.type .title { position: relative; padding-bottom: clamp(48px, 6vw, 84px); }

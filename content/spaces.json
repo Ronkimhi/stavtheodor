@@ -1,0 +1,251 @@
+{
+ "spaces": {
+  "designers": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.8474,
+   "fy": 0.2473,
+   "art_x": [
+    0.7229,
+    0.9862
+   ],
+   "cap_en": "A living space with an oak panel wall, a lush green painting of palm leaves beside the fireplace.",
+   "cap_he": "סלון עם קיר חיפוי מעץ אלון, ציור ירוק ושופע של עלי דקל ליד האח.",
+   "alt_en": "A living space with an oak panel wall and a fireplace, a lush green painting of palm leaves beside it, white boucle seating in front."
+  },
+  "hotels": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5648,
+   "fy": 0.27,
+   "art_x": [
+    0.3729,
+    0.7567
+   ],
+   "cap_en": "A hotel lobby at arrival, a large wall relief of bronze and gold discs above the stone desk.",
+   "cap_he": "לובי של מלון ברגע ההגעה, תבליט קיר גדול של דיסקיות ברונזה וזהב מעל דלפק האבן.",
+   "alt_en": "A hotel lobby in late sun: a large relief of bronze and gold discs above a curved travertine desk, cognac leather club chairs at left."
+  },
+  "hotels_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5383,
+   "fy": 0.2997,
+   "art_x": [
+    0.4125,
+    0.6642
+   ],
+   "cap_en": "A hotel lounge in olive and burgundy, a wall work of folded red strips above the velvet chairs.",
+   "cap_he": "טרקלין מלון בזית ובבורדו, עבודת קיר של רצועות אדומות מקופלות מעל כורסאות הקטיפה.",
+   "alt_en": "A dim hotel lounge: a tall wall work of folded strips in reds from coral to burgundy on an olive plaster wall above two velvet chairs."
+  },
+  "hotels_s2": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.3465,
+   "fy": 0.1806,
+   "art_x": [
+    0.1892,
+    0.5038
+   ],
+   "cap_en": "A suite in soft linen tones, a wide blue water painting above the bed.",
+   "cap_he": "סוויטה בגווני פשתן רכים, ציור רחב של מים כחולים מעל המיטה.",
+   "alt_en": "A suite with a linen bed, bench and two lamps, a wide painting of blue water with light flecks, matted in an oak frame above the bed."
+  },
+  "investment-firms": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5283,
+   "fy": 0.3041,
+   "art_x": [
+    0.3329,
+    0.7238
+   ],
+   "cap_en": "A lounge high over Manhattan, a wide abstract in crimson and coral above the sofa.",
+   "cap_he": "טרקלין גבוה מעל מנהטן, מופשט רחב בארגמן ובאלמוג מעל הספה.",
+   "alt_en": "A lounge high over Manhattan: a wide abstract in crimson, magenta and coral above a charcoal sofa and black leather chairs."
+  },
+  "investment-firms_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.2188,
+   "fy": 0.265,
+   "art_x": [
+    0.0525,
+    0.385
+   ],
+   "cap_en": "A meeting space above the skyline, a wide landscape in bright color over the walnut credenza.",
+   "cap_he": "חלל ישיבות מעל קו הרקיע, נוף רחב בצבעים עזים מעל שידת האגוז.",
+   "alt_en": "A meeting space with an oval walnut table and a Manhattan skyline window, a wide brightly painted landscape above the credenza."
+  },
+  "investment-firms_s2": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.776,
+   "fy": 0.255,
+   "art_x": [
+    0.6517,
+    0.9004
+   ],
+   "cap_en": "A salon facing the Empire State Building, a bronze and gold wall relief above the credenza.",
+   "cap_he": "סלון מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.",
+   "alt_en": "A salon with a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa and city windows."
+  },
+  "law-firms": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.449,
+   "fy": 0.2994,
+   "art_x": [
+    0.2979,
+    0.6
+   ],
+   "cap_en": "A reception high over Manhattan, a wide landscape in bright color above the leather chairs.",
+   "cap_he": "קבלה גבוה מעל מנהטן, נוף רחב בצבעים עזים מעל כורסאות העור.",
+   "alt_en": "A reception over Manhattan: a wide, brightly painted landscape above two cognac leather chairs, books on shelves at right."
+  },
+  "law-firms_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5108,
+   "fy": 0.2672,
+   "art_x": [
+    0.4171,
+    0.6046
+   ],
+   "cap_en": "A paneled space in deep green, a gold leaf portrait above the sideboard.",
+   "cap_he": "חלל מחופה בירוק עמוק, דיוקן על עלי זהב מעל המזנון.",
+   "alt_en": "A green paneled space with a walnut table and oxblood leather chairs, a portrait on gold leaf above the sideboard."
+  },
+  "law-firms_s2": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5002,
+   "fy": 0.2903,
+   "art_x": [
+    0.3887,
+    0.6117
+   ],
+   "cap_en": "A lounge with a leather sofa, a tall abstract in gold and cream above it.",
+   "cap_he": "טרקלין עם ספת עור, מופשט גבוה בזהב ובשמנת מעליה.",
+   "alt_en": "A lounge with a tall abstract in gold and cream with small flecks of color above a cognac leather sofa, lit bookshelves at right."
+  },
+  "law-firms_s3": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4992,
+   "fy": 0.3791,
+   "art_x": [
+    0.3379,
+    0.6604
+   ],
+   "cap_en": "A long table between two skyline windows, a wide painting of a sunlit modern interior on the end wall.",
+   "cap_he": "שולחן ארוך בין שני חלונות אל קו הרקיע, ציור רחב של פנים מודרני מואר על הקיר שבקצה.",
+   "alt_en": "A long walnut table with skyline windows on both sides, a wide colorful painting of a modern interior on the end wall."
+  },
+  "medical-practices": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4975,
+   "fy": 0.2731,
+   "art_x": [
+    0.28,
+    0.715
+   ],
+   "cap_en": "A waiting area above the city, three flower paintings in a row above the bench.",
+   "cap_he": "אזור המתנה מעל העיר, שלושה ציורי פרחים בשורה מעל הספסל.",
+   "alt_en": "A waiting area: three paintings of garden flowers in pinks, reds and greens above a long sage bench, a reception desk at right."
+  },
+  "medical-practices_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.7325,
+   "fy": 0.3041,
+   "art_x": [
+    0.6204,
+    0.8446
+   ],
+   "cap_en": "A space with a garden window, a tall abstract in turquoise above the oak cabinet.",
+   "cap_he": "חלל עם חלון אל הירוק, מופשט גבוה בטורקיז מעל ארון האלון.",
+   "alt_en": "A space with a garden window: a tall abstract of small turquoise strokes with flecks of pink and red above an oak cabinet."
+  },
+  "medical-practices_s2": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4244,
+   "fy": 0.3016,
+   "art_x": [
+    0.3042,
+    0.5446
+   ],
+   "cap_en": "A lounge in sage green, a turquoise abstract above two boucle chairs.",
+   "cap_he": "טרקלין בירוק מרווה, מופשט בטורקיז מעל שתי כורסאות בוקלה.",
+   "alt_en": "A lounge with a sage plaster wall, a turquoise abstract of small bright strokes above two ivory boucle chairs and a walnut table."
+  },
+  "restaurants": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.6175,
+   "fy": 0.2434,
+   "art_x": [
+    0.5058,
+    0.7292
+   ],
+   "cap_en": "A candlelit restaurant before service, a large collage of an old master painting above the velvet banquette.",
+   "cap_he": "מסעדה לאור נרות לפני השירות, קולאז' גדול של ציור מאסטר ישן מעל ספת הקטיפה.",
+   "alt_en": "A restaurant before service: a collage breaking an old master painting of cherubs into pixel blocks, above a green velvet banquette."
+  },
+  "restaurants_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.6608,
+   "fy": 0.3047,
+   "art_x": [
+    0.5042,
+    0.8175
+   ],
+   "cap_en": "A dining space by the sea, a painting of a pink pool house above the long table.",
+   "cap_he": "חלל אירוח מול הים, ציור של בית בריכה ורוד מעל השולחן הארוך.",
+   "alt_en": "A dining space with a long wood table and a sea view, a painting of a pink pool house and turquoise water on the white wall."
+  },
+  "wealth-managers": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.3983,
+   "fy": 0.2362,
+   "art_x": [
+    0.2137,
+    0.5829
+   ],
+   "cap_en": "A lounge with a garden window, a large painted landscape of trees and hills above the sofa.",
+   "cap_he": "טרקלין עם חלון אל הגן, נוף מצויר גדול של עצים וגבעות מעל הספה.",
+   "alt_en": "A lounge with a large painted landscape of trees and hills in greens, golds and pinks above a sage sofa, an arched garden window."
+  },
+  "wealth-managers_s1": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.2712,
+   "fy": 0.2922,
+   "art_x": [
+    0.1758,
+    0.3667
+   ],
+   "cap_en": "A reception in warm light, a carved relief in teal, blue and cream above the walnut credenza.",
+   "cap_he": "קבלה באור חם, תבליט מגולף בטורקיז, כחול ושמנת מעל שידת האגוז.",
+   "alt_en": "A reception with a travertine desk and a skyline window, a large carved wave relief in teal, blue and cream on the plaster wall."
+  },
+  "wealth-managers_s2": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5871,
+   "fy": 0.26,
+   "art_x": [
+    0.4333,
+    0.7408
+   ],
+   "cap_en": "An office over a garden, a bronze and gold wall relief behind the desk.",
+   "cap_he": "משרד מול גן, תבליט קיר בברונזה ובזהב מאחורי השולחן.",
+   "alt_en": "An office with a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows."
+  }
+ }
+}
