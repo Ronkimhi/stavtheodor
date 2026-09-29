@@ -3,7 +3,8 @@
 
     python3 tools/make_industry_thumbs.py
 
-For each buyer variant, the after image of its first room (content/variants/<id>.json rooms[0].a),
+For each buyer variant, the after image of its first room (content/variants/<id>.json rooms[0].a, or the room
+TILE_ROOM names),
 or the homepage's first room for a variant without rooms, cropped to 3:2 around the room's focal
 point and saved as images/home2/industries/<id>.webp at 600 by 400 (about 30 to 60 KB). Run it
 again when a variant's first room changes, and commit the images. Needs Pillow (a developer tool:
@@ -20,6 +21,9 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H, QUALITY = 600, 400, 72
+# A tile cut from another room than the variant's first (index into its rooms). hotels: the olive and burgundy
+# lounge (hotels_s1), Ron's pick for the Boutique hotels tile on 2026-09-29; /hotels/ still opens on its first room.
+TILE_ROOM = {'hotels': 1}
 
 
 def home_first_room():
@@ -37,7 +41,8 @@ def main():
             continue
         v = json.load(open(os.path.join(ROOT, 'content', 'variants', f), encoding='utf-8'))
         rooms = v.get('rooms') or []
-        a, fx, fy = (rooms[0]['a'], rooms[0]['fx'], rooms[0]['fy']) if rooms else home
+        r = rooms[TILE_ROOM.get(v['id'], 0)] if rooms else None
+        a, fx, fy = (r['a'], r['fx'], r['fy']) if r else home
         im = Image.open(os.path.join(ROOT, 'images', 'home2', a)).convert('RGB')
         iw, ih = im.size
         if iw / ih > W / H:  # wider than 3:2: crop the width around fx
