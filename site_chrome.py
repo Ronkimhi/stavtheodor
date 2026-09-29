@@ -84,9 +84,11 @@ def first_sentence(s):
 
 
 def T(en, he, tag='span', cls=''):
-    """An English and a Hebrew twin. The site's switch shows one of them."""
+    """An English and a Hebrew twin. The site's switch shows one of them. Each carries its own lang (and the Hebrew
+    its dir), so a crawler or a screen reader reads each in its own language (2026-09-29; tag_twins() in write()
+    adds the same to every twin that does not come from here)."""
     c = f' class="{cls}"' if cls else ''
-    return f'<{tag}{c} data-l="en">{en}</{tag}><{tag}{c} data-l="he" dir="rtl">{he}</{tag}>'
+    return f'<{tag}{c} data-l="en" lang="en">{en}</{tag}><{tag}{c} data-l="he" lang="he" dir="rtl">{he}</{tag}>'
 
 
 def img_alt(en, he=''):
@@ -1077,10 +1079,43 @@ def dash_leftovers(page):
     return [scrub[max(0, m.start() - 50):m.end() + 30] for m in DASH_ANY.finditer(scrub)]
 
 
+_TWIN_TAG = re.compile(r'<[a-zA-Z][^<>]*\sdata-l="(en|he)"[^<>]*>')
+_H1 = re.compile(r'(<h1\b[^>]*>)(.*?)(</h1>)', re.S)
+_HE_AFTER_CLOSE = re.compile(r'(</[a-zA-Z0-9]+>)(<!--[^>]*-->)?(<[a-zA-Z][^<>]*\sdata-l="he")')
+
+
+def _tag_twin(m):
+    tag, lang = m.group(0), m.group(1)
+    end = -2 if tag.endswith('/>') else -1
+    add = ''
+    if not re.search(r'\slang="', tag):
+        add += f' lang="{lang}"'
+    if lang == 'he' and not re.search(r'\sdir="', tag):
+        add += ' dir="rtl"'
+    return tag[:end] + add + tag[end:] if add else tag
+
+
+def tag_twins(page):
+    """Every language twin says what language it is in (2026-09-29): an element with data-l="he" carries lang="he" and,
+    unless it sets its own direction, dir="rtl"; one with data-l="en" carries lang="en". The switch and the stylesheet
+    key on data-l and <body class="lang-...">, never on lang, so nothing a reader sees moves. Inside an h1 the Hebrew twin
+    starts after a space, so the heading's raw text reads "English Hebrew" rather than running the two together (the
+    space collapses at the edge of the line, so the visible h1 is unchanged). Scripts, styles and comments are left
+    as they are."""
+    out = []
+    for i, part in enumerate(_TOKENS.split(page)):
+        if i % 2 and part.startswith('<') and not part.startswith('<!--') and part[:7].lower() != '<script' and part[:6].lower() != '<style':
+            part = _TWIN_TAG.sub(_tag_twin, part)
+        out.append(part)
+    page = ''.join(out)
+    return _H1.sub(lambda m: m.group(1) + _HE_AFTER_CLOSE.sub(r'\1\2 \3', m.group(2)) + m.group(3), page)
+
+
 def write(path, text):
     """Every generated page goes out through here: CRLF normalized, dashes sanitized, and the build stops
-    if a dash is still left (hard rule, Ron's SEO brief of 2026-09-29)."""
-    text = undash_html(text.replace('\r\n', '\n'))
+    if a dash is still left (hard rule, Ron's SEO brief of 2026-09-29); every language twin tagged with its
+    language (tag_twins, 2026-09-29)."""
+    text = tag_twins(undash_html(text.replace('\r\n', '\n')))
     left = dash_leftovers(text)
     if left:
         raise SystemExit(f'{path} NOT written: {len(left)} em or en dash(es) the sanitizer could not place, '

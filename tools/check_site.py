@@ -414,7 +414,7 @@ def faq_mirror(path):
         return
     schema = [(q['name'], q['acceptedAnswer']['text']) for q in faq[0]['mainEntity']]
     visible = [(H.unescape(q).strip(), H.unescape(a).strip()) for q, a in re.findall(
-        r'<details class="qa"[^>]*>\s*<summary><h3 class="serif"><span data-l="en">(.*?)</span>.*?<p class="body"><span data-l="en">(.*?)</span>', s, re.S)]
+        r'<details class="qa"[^>]*>\s*<summary><h3 class="serif"><span data-l="en"[^>]*>(.*?)</span>.*?<p class="body"><span data-l="en"[^>]*>(.*?)</span>', s, re.S)]
     if schema != visible:
         fail('faq', f'{path}: visible FAQ differs from the FAQPage schema ({len(schema)} schema, {len(visible)} visible)')
 
