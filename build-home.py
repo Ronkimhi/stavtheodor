@@ -12,7 +12,8 @@ Also writes the /2/ redirect stubs (the second homepage lived there while it was
 approved; every /2/ address now forwards to its real page), and the buyer variants
 (2026-09-27): each content/variants/<id>.json renders this same page at /<path>/ with its
 own copy in the sixteen regions the template marks <!--variant:NAME-->...<!--/variant:NAME-->,
-its own questions, closing line and mail subject. Variants are noindex, in no sitemap and
+its own value strip (a variant-only section under the intro block, 2026-09-28: the template's
+marker is empty, so the homepage gets nothing there), its own questions, closing line and mail subject. Variants are noindex, in no sitemap and
 linked from nowhere (content/VARIANT-SPEC.md); the homepage keeps the text between the markers.
 A variant may also put its own rooms in the opening ("rooms", entry i in slot i): the page then
 sets window.THEODORA_ROOMS for js/home-opening.js, preloads its first pair, and carries each
@@ -77,6 +78,9 @@ REGIONS = {
 }
 OPTIONAL = {'intro_eyebrow', 'what_i_do_eyebrow', 'advisory_h2', 'advisory_sub'}  # absent: the homepage text stays
 HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (tools/check_variants.py); the rest is escaped
+# Variant-only blocks: the template's marker is empty, so the homepage renders nothing in its place and a
+# variant renders the whole block. value_strip: the three columns right after #intro (2026-09-28).
+BLOCKS = {'value_strip'}
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'museum', 'radar', 'posts', 'faq', 'contact')
 SHARED_SECTIONS = ('about', 'film', 'projects', 'museum', 'radar')  # byte for byte the homepage's on every variant
@@ -199,10 +203,20 @@ def room_region(name, inner, rooms):
     return inner
 
 
+def value_strip(v):
+    """A variant's value strip: three columns, each a label and one line, in both languages."""
+    items = ''.join(
+        f'<div class="vs-item reveal"><h3 class="serif">{T(H.escape(i["label_en"]), H.escape(i["label_he"]))}</h3>'
+        f'<p class="body">{T(H.escape(i["line_en"]), H.escape(i["line_he"]))}</p></div>'
+        for i in v['value_strip'])
+    return f'\n\n<section class="value-strip wrap" id="value">{items}</section>'
+
+
 def fill_regions(body, v):
     """The marked regions: the template's own text for the homepage (the markers go, the bytes
     between them stay), the variant's copy otherwise. Every region must appear exactly once, and
-    room_fig_N and room_cap_N must hold slot N of PAIRS in js/home-opening.js."""
+    room_fig_N and room_cap_N must hold slot N of PAIRS in js/home-opening.js. A variant-only block
+    (BLOCKS) is empty in the template and rendered whole for a variant."""
     seen = collections.Counter()
     rooms = (v or {}).get('rooms') or []
     inside = {m.group(1): m.group(2) for m in MARK.finditer(body)}
@@ -215,6 +229,13 @@ def fill_regions(body, v):
         seen[name] += 1
         if name in ROOM_REGIONS:
             return room_region(name, inner, rooms)
+        if name in BLOCKS:
+            assert inner == '', f'the {name} marker in the template must be empty (the homepage has no {name})'
+            if v is None:
+                return ''
+            if not v.get(name):
+                raise SystemExit(f"content/variants/{v['id']}.json: {name} is missing")
+            return value_strip(v)
         pair = region_copy(v, name) if v is not None and name in REGIONS else None
         if pair is None:
             return inner
@@ -222,7 +243,7 @@ def fill_regions(body, v):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) | ROOM_REGIONS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
     return body
 

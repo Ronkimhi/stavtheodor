@@ -1,12 +1,12 @@
 {
   "id": "hotels",
   "path": "hotels",
-  "approved": "Ron 2026-09-27",
+  "approved": "Ron 2026-09-28",
   "head": {
     "title": "Art Curator for Boutique Hotels · NY, NJ and Tel Aviv | THEODORA",
     "description": "Stav Theodor, art curator and advisor: collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room.",
-    "og_title": "Art for boutique hotels, from arrival to the room · THEODORA",
-    "og_description": "A guest should know where they are the moment they arrive. Hotel collections by curator Stav Theodor."
+    "og_title": "An unforgettable arrival for unforgettable hospitality · THEODORA",
+    "og_description": "The arrival piece guests remember, and one collection from the lobby to the room. Hotel art by curator Stav Theodor."
   },
   "hero": {
     "l1_en": "A sense of place.",
@@ -21,25 +21,45 @@
     "line_he": "מרגע ההגעה ועד החדר.",
     "eyebrow_en": "For boutique hotels",
     "eyebrow_he": "למלונות בוטיק",
-    "statement_en": "A guest should know where they are the moment they arrive. I build collections with a clear hierarchy, from the arrival piece to the room.",
-    "statement_he": "אורח צריך לדעת איפה הוא נמצא כבר ברגע שהוא מגיע. אני בונה אוספים עם היררכיה ברורה, מיצירת ההגעה ועד החדר."
+    "statement_en": "An unforgettable arrival for unforgettable hospitality. The arrival piece guests remember, and one collection from the lobby to the room.",
+    "statement_he": "הגעה בלתי נשכחת לאירוח בלתי נשכח. יצירת ההגעה שהאורחים זוכרים, ואוסף אחד מהלובי ועד החדר."
   },
+  "value_strip": [
+    {
+      "label_en": "The arrival piece first.",
+      "label_he": "קודם יצירת ההגעה.",
+      "line_en": "The work guests remember; corridors and rooms follow as the budget allows.",
+      "line_he": "היצירה שהאורחים זוכרים; המסדרונות והחדרים באים אחריה, ככל שהתקציב מאפשר."
+    },
+    {
+      "label_en": "Local depth, not local cliche.",
+      "label_he": "עומק מקומי, לא קלישאה מקומית.",
+      "line_en": "Artists and makers who carry the place.",
+      "line_he": "אמנים ויוצרים שנושאים איתם את המקום."
+    },
+    {
+      "label_en": "Built to the opening date.",
+      "label_he": "בנוי לתאריך הפתיחה.",
+      "line_en": "Every piece listed with size, location and budget line, signed off before anything is ordered.",
+      "line_he": "כל יצירה ברשימה עם גודל, מיקום ושורת תקציב, ומאושרת לפני שמזמינים משהו."
+    }
+  ],
   "services": [
     {
-      "desc_en": "A collection with hierarchy: the arrival piece, then corridors and rooms.",
-      "desc_he": "אוסף עם היררכיה: יצירת ההגעה, ואחריה המסדרונות והחדרים."
+      "desc_en": "A collection with a clear order: the lobby first, then corridors and guest rooms.",
+      "desc_he": "אוסף עם סדר ברור: קודם הלובי, ואחריו המסדרונות וחדרי האורחים."
     },
     {
-      "desc_en": "Sourced through a global network of artists and makers, to your budget.",
-      "desc_he": "איתור דרך רשת גלובלית של אמנים ויוצרים, לפי התקציב שלכם."
+      "desc_en": "Artists and makers from a global network, chosen for the place and your budget.",
+      "desc_he": "אמנים ויוצרים מרשת גלובלית, שנבחרים בשביל המקום ובתוך התקציב שלכם."
     },
     {
-      "desc_en": "Works made for the property, from first concept to final execution.",
-      "desc_he": "יצירות שנעשות לנכס, מהקונספט הראשון ועד הביצוע הסופי."
+      "desc_en": "Signature works made for the property, from first concept to final execution.",
+      "desc_he": "יצירות דגל שנוצרות בשביל המלון, מהקונספט הראשון ועד הביצוע הסופי."
     },
     {
-      "desc_en": "Production, framing and installation within your timeline and budget.",
-      "desc_he": "הפקה, מסגור והתקנה בתוך לוח הזמנים והתקציב שלכם."
+      "desc_en": "Production, framing and installation scheduled back from your opening date.",
+      "desc_he": "הפקה, מסגור והתקנה בלוח זמנים שנגזר מתאריך הפתיחה שלכם."
     }
   ],
   "what_i_do": {
@@ -47,8 +67,8 @@
     "eyebrow_he": "איך אני עובדת",
     "h2_en": "A hotel buys a story, told from the lobby to the guest room, and needs it on the walls by opening day.",
     "h2_he": "מלון קונה סיפור, שמסופר מהלובי ועד חדר האורחים, וצריך אותו על הקירות עד יום הפתיחה.",
-    "p1_en": "I have spent years building art concepts and collections with luxury hospitality groups, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. Those projects run on drawings, schedules and approved budgets. So do mine. The work starts with a written concept rooted in the place and the brand, approved before a single work is sourced. Then an artwork schedule gives every area a line, with the type of work, the size and the budget. Signature spaces get commissions and original works; repeated spaces get editions and series that hold quality at volume. The projects are in <a href=\"/projects/hotels-and-hospitality-collections/\">hotels and hospitality collections</a>.",
-    "p1_he": "עבדתי שנים על קונספטים ואוספים של אמנות עם קבוצות אירוח יוקרתיות, ובהן וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. הפרויקטים האלה רצים על תוכניות, לוחות זמנים ותקציבים מאושרים. כך גם שלי. העבודה מתחילה בקונספט כתוב שמושרש במקום ובמותג, ומאושר לפני שמאתרים יצירה אחת. אחר כך לוח יצירות מקצה שורה לכל אזור, עם סוג היצירה, הגודל והתקציב. חללי הדגל מקבלים הזמנות ויצירות מקור; חללים חוזרים מקבלים מהדורות וסדרות ששומרות על איכות גם בכמות. הפרויקטים מופיעים <a href=\"/projects/hotels-and-hospitality-collections/\">באוספי המלונאות והאירוח</a>.",
+    "p1_en": "I have spent years building art concepts and collections while collaborating with luxury hospitality leaders, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. Those projects run on drawings, schedules and approved budgets. So do mine. The work starts with a written concept rooted in the place and the brand, approved before a single work is sourced. Then an artwork schedule gives every area a line, with the type of work, the size and the budget. Signature spaces get commissions and original works; repeated spaces get editions and series that hold quality at volume. The projects are in <a href=\"/projects/hotels-and-hospitality-collections/\">hotels and hospitality collections</a>.",
+    "p1_he": "עבדתי שנים על קונספטים ואוספים של אמנות בשיתוף פעולה עם מובילים בתחום האירוח היוקרתי, ובהם וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. הפרויקטים האלה רצים על תוכניות, לוחות זמנים ותקציבים מאושרים. כך גם שלי. העבודה מתחילה בקונספט כתוב שמושרש במקום ובמותג, ומאושר לפני שמאתרים יצירה אחת. אחר כך לוח יצירות מקצה שורה לכל אזור, עם סוג היצירה, הגודל והתקציב. חללי הדגל מקבלים הזמנות ויצירות מקור; חללים חוזרים מקבלים מהדורות וסדרות ששומרות על איכות גם בכמות. הפרויקטים מופיעים <a href=\"/projects/hotels-and-hospitality-collections/\">באוספי המלונאות והאירוח</a>.",
     "p2_en": "For a boutique property I would start with the place itself: the building, the street, the city and the artists connected to them. The arrival piece gets the strongest work, the one guests remember; corridors and rooms continue the same story at a quieter volume, so the collection reads as one voice from the lobby to the room. I work inside the design team's scheme and the brand's standards, not around them, and plan every stage backward from the opening date. Printmakers, framers and installers work to my brief and one approved budget. More on <a href=\"/advisory/art-for-hotels-and-hospitality/\">art for hotels and hospitality</a>.",
     "p2_he": "במלון בוטיק הייתי מתחילה מהמקום עצמו: הבניין, הרחוב, העיר והאמנים שקשורים אליהם. יצירת ההגעה מקבלת את העבודה החזקה ביותר, זו שאורחים זוכרים; המסדרונות והחדרים ממשיכים את אותו סיפור בעוצמה שקטה יותר, כך שהאוסף נשמע כקול אחד מהלובי ועד החדר. אני עובדת בתוך הקונספט של צוות העיצוב ובתוך הסטנדרטים של המותג, לא סביבם, ומתכננת כל שלב לאחור מתאריך הפתיחה. מדפיסי אמנות, מסגרים ומתקינים עובדים לפי הבריף שלי ולפי תקציב מאושר אחד. עוד על <a href=\"/advisory/art-for-hotels-and-hospitality/\">אמנות למלונות ולאירוח</a>."
   },
@@ -69,9 +89,9 @@
   "faq": [
     {
       "q_en": "What hospitality work have you done?",
-      "a_en": "I have spent years building art concepts and collections with luxury hospitality groups, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. Those projects run on drawings, schedules and approved budgets. Before THEODORA I did curatorial work in established museums and managed a gallery in Tel Aviv, and I curated Creating Hope, an exhibition of 27 Israeli artists presented at the United Nations Offices in Geneva.",
+      "a_en": "I have spent years building art concepts and collections while collaborating with luxury hospitality leaders, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. Those projects run on drawings, schedules and approved budgets. Before THEODORA I did curatorial work in established museums and managed a gallery in Tel Aviv, and I curated Creating Hope, an exhibition of 27 Israeli artists presented at the United Nations Offices in Geneva.",
       "q_he": "איזו עבודה עשית בתחום האירוח?",
-      "a_he": "עבדתי שנים על קונספטים ואוספים של אמנות עם קבוצות אירוח יוקרתיות, ובהן וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. הפרויקטים האלה רצים על תוכניות, לוחות זמנים ותקציבים מאושרים. לפני THEODORA עסקתי בעבודה אוצרותית במוזיאונים מבוססים וניהלתי גלריה בתל אביב, ואצרתי את Creating Hope, תערוכה של 27 אמנים ישראלים שהוצגה במשרדי האומות המאוחדות בז'נבה."
+      "a_he": "עבדתי שנים על קונספטים ואוספים של אמנות בשיתוף פעולה עם מובילים בתחום האירוח היוקרתי, ובהם וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. הפרויקטים האלה רצים על תוכניות, לוחות זמנים ותקציבים מאושרים. לפני THEODORA עסקתי בעבודה אוצרותית במוזיאונים מבוססים וניהלתי גלריה בתל אביב, ואצרתי את Creating Hope, תערוכה של 27 אמנים ישראלים שהוצגה במשרדי האומות המאוחדות בז'נבה."
     },
     {
       "q_en": "Do you work with the owner, or inside the design team?",
@@ -107,7 +127,7 @@
       "home": "Where does THEODORA provide art advisory services?"
     }
   ],
-  "cta_en": "Send me the plans and the opening date, or one photo of the lobby. I will tell you what I see.",
-  "cta_he": "שלחו לי את התוכניות ואת תאריך הפתיחה, או תמונה אחת של הלובי. אספר לכם מה אני רואה.",
+  "cta_en": "Send me the plans and the opening date, or one photo of the lobby.",
+  "cta_he": "שלחו לי את התוכניות ואת תאריך הפתיחה, או תמונה אחת של הלובי.",
   "mail_subject": "Art for our hotel"
 }

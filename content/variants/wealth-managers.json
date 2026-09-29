@@ -1,16 +1,16 @@
 {
   "id": "wealth-managers",
   "path": "wealth-managers",
-  "approved": "Ron 2026-09-27",
+  "approved": "Ron 2026-09-28",
   "head": {
     "title": "Art Curator for Wealth Managers · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor: calm, personal art for the rooms where you meet clients, and a curator you can introduce to clients who collect.",
-    "og_title": "Art for the rooms where you meet clients · THEODORA",
-    "og_description": "Calm, personal, lasting, never showy. Stav Theodor, art curator and advisor in New York and New Jersey."
+    "og_title": "Trust starts in the space where you talk · THEODORA",
+    "og_description": "Art that makes the space where you meet clients calm, personal and lasting, never showy. By curator Stav Theodor."
   },
   "hero": {
-    "l1_en": "A private room.",
-    "l1_he": "חדר פרטי.",
+    "l1_en": "A private space.",
+    "l1_he": "חלל פרטי.",
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
@@ -21,25 +21,45 @@
     "line_he": "רגוע, אישי, לאורך שנים.",
     "eyebrow_en": "For wealth managers",
     "eyebrow_he": "למנהלי הון",
-    "statement_en": "Your clients come to talk about what matters most to them. I choose art that makes the room calm, personal and lasting, never showy.",
-    "statement_he": "הלקוחות שלכם באים לדבר על מה שהכי חשוב להם. אני בוחרת אמנות שהופכת את החדר לרגוע ואישי, כזה שמחזיק שנים, ואף פעם לא ראוותני."
+    "statement_en": "Trust starts in the space where you talk. I choose art that makes the space where you meet clients calm, personal and lasting, never showy.",
+    "statement_he": "אמון מתחיל בחלל שבו אתם מדברים. אני בוחרת אמנות שהופכת את החלל שבו אתם פוגשים לקוחות לרגוע, אישי ומחזיק שנים, אף פעם לא ראוותני."
   },
+  "value_strip": [
+    {
+      "label_en": "Calm, personal, never showy.",
+      "label_he": "רגוע, אישי, אף פעם לא ראוותני.",
+      "line_en": "Work chosen for the space where clients talk about what matters to them.",
+      "line_he": "עבודות שנבחרות לחלל שבו לקוחות מדברים על מה שחשוב להם."
+    },
+    {
+      "label_en": "Terms in writing.",
+      "label_he": "תנאים בכתב.",
+      "line_en": "A quote after a first conversation, a written plan before anything is bought. No investment advice, no promised returns.",
+      "line_he": "הצעת מחיר אחרי שיחה ראשונה, ותוכנית כתובה לפני שמשהו נקנה. בלי ייעוץ השקעות, בלי הבטחות לתשואה."
+    },
+    {
+      "label_en": "A curator you can introduce.",
+      "label_he": "אוצרת שאפשר להכיר ללקוחות.",
+      "line_en": "When a client asks about art for their home, forward one page; discretion is the default.",
+      "line_he": "כשלקוח שואל על אמנות לביתו, העבירו לו עמוד אחד; הדיסקרטיות היא ברירת המחדל."
+    }
+  ],
   "services": [
     {
-      "desc_en": "Art for reception and the rooms where you meet clients.",
-      "desc_he": "אמנות לקבלה ולחדרים שבהם אתם פוגשים לקוחות."
+      "desc_en": "Art for the path from the door to the table where you meet clients.",
+      "desc_he": "אמנות לאורך הדרך מהדלת ועד השולחן שבו אתם פוגשים לקוחות."
     },
     {
       "desc_en": "Sourced with care, discretion and precision, negotiated on your behalf.",
       "desc_he": "איתור בקפידה, בדיסקרטיות ובדיוק, ומשא ומתן בשמכם."
     },
     {
-      "desc_en": "A work made for your walls, from first concept to final execution.",
-      "desc_he": "יצירה שנעשית לקירות שלכם, מהקונספט הראשון ועד הביצוע הסופי."
+      "desc_en": "A work made for the space where you talk, from first concept to final execution.",
+      "desc_he": "יצירה שנוצרת לחלל שבו אתם מדברים, מהקונספט הראשון ועד הביצוע הסופי."
     },
     {
-      "desc_en": "Framing and installation, managed end to end within an approved budget.",
-      "desc_he": "מסגור והתקנה, בניהול מלא מקצה לקצה ובתוך תקציב מאושר."
+      "desc_en": "Framing and installation to a written plan, within the budget you approve.",
+      "desc_he": "מסגור והתקנה לפי תוכנית כתובה, בתוך התקציב שאתם מאשרים."
     }
   ],
   "what_i_do": {
@@ -81,9 +101,9 @@
     },
     {
       "q_en": "How do introductions for our clients work?",
-      "a_en": "By email. Forward my page for advisors to the client and copy me, or send me a line about them and I will write first. The first conversation is with the client, at their home where possible, because the home is the brief. After it, I quote the engagement based on scope. Discretion is the default, and if your firm has rules on introductions, tell me at the start and I will work within them.",
+      "a_en": "By email. Forward my page for advisors to the client and copy me. The first conversation is with the client, at their home where possible, because the home is the brief. After it, I quote the engagement based on scope. Discretion is the default, and if your firm has rules on introductions, tell me at the start and I will work within them.",
       "q_he": "איך עובדת ההיכרות עם הלקוחות שלנו?",
-      "a_he": "במייל. העבירו ללקוח את העמוד שלי ליועצים עם העתק אליי, או שלחו לי שורה עליו ואני אכתוב ראשונה. השיחה הראשונה היא עם הלקוח, בביתו אם אפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את הפרויקט לפי היקפו. הדיסקרטיות היא ברירת המחדל, ואם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם."
+      "a_he": "במייל. העבירו ללקוח את העמוד שלי ליועצים עם העתק אליי. השיחה הראשונה היא עם הלקוח, בביתו אם אפשר, כי הבית הוא הבריף. אחריה אני מתמחרת את הפרויקט לפי היקפו. הדיסקרטיות היא ברירת המחדל, ואם לחברה שלכם יש כללים לגבי היכרויות, אמרו לי בהתחלה ואעבוד בתוכם."
     },
     {
       "q_en": "What would reception and two meeting rooms involve?",
@@ -101,7 +121,7 @@
       "home": "Where does THEODORA provide art advisory services?"
     }
   ],
-  "cta_en": "Send me one photo of the room where you meet clients. I will tell you what I see.",
-  "cta_he": "שלחו לי תמונה אחת של החדר שבו אתם פוגשים לקוחות. אספר לכם מה אני רואה.",
+  "cta_en": "Send me one photo of the space where you meet clients.",
+  "cta_he": "שלחו לי תמונה אחת של החלל שבו אתם פוגשים לקוחות.",
   "mail_subject": "Art for our client rooms"
 }

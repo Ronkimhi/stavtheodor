@@ -1,6 +1,6 @@
 # Buyer variant spec (content/variants/<id>.json)
 
-One JSON file per buyer variant of the homepage. build-home.py renders it into /<path>/index.html: the homepage itself (same design, nav, projects, About, film, Museum, Art Radar, footer links, language switch, English by default) with this file's copy in the sixteen regions `templates/home.html` marks as `<!--variant:NAME-->...<!--/variant:NAME-->`, plus its own questions, Advisory rows, footer line and mail subject. Do not write the HTML by hand, and never edit the output folder.
+One JSON file per buyer variant of the homepage. build-home.py renders it into /<path>/index.html: the homepage itself (same design, nav, projects, About, film, Museum, Art Radar, footer links, language switch, English by default) with this file's copy in the sixteen regions `templates/home.html` marks as `<!--variant:NAME-->...<!--/variant:NAME-->`, plus its own value strip (a section the homepage does not have, rendered where the template's empty `<!--variant:value_strip--><!--/variant:value_strip-->` marker sits, right after the black intro block and before the services), its own questions, Advisory rows, footer line and mail subject. Do not write the HTML by hand, and never edit the output folder.
 
 A variant is noindex and its own canonical. It is in no sitemap, in none of llms.txt, agent.txt, answers.md and robots.txt, linked from no other page and never sent to IndexNow. `tools/check_site.py` (the `variants` gate) and `tools/indexnow.py` enforce that.
 
@@ -28,6 +28,11 @@ A variant is noindex and its own canonical. It is in no sitemap, in none of llms
     {"desc_en": "Example line under the second service", "desc_he": "שורה לדוגמה מתחת לשירות השני"},
     {"desc_en": "Example line under the third service", "desc_he": "שורה לדוגמה מתחת לשירות השלישי"},
     {"desc_en": "Example line under the fourth service", "desc_he": "שורה לדוגמה מתחת לשירות הרביעי"}
+  ],
+  "value_strip": [
+    {"label_en": "An example label.", "label_he": "תווית לדוגמה.", "line_en": "One supporting line for the first column.", "line_he": "שורה תומכת אחת לעמודה הראשונה."},
+    {"label_en": "A second label.", "label_he": "תווית שנייה.", "line_en": "One supporting line for the second column.", "line_he": "שורה תומכת אחת לעמודה השנייה."},
+    {"label_en": "A third label.", "label_he": "תווית שלישית.", "line_en": "One supporting line for the third column.", "line_he": "שורה תומכת אחת לעמודה השלישית."}
   ],
   "what_i_do": {
     "h2_en": "An example heading for the What I do block.", "h2_he": "כותרת לדוגמה לבלוק מה אני עושה.",
@@ -60,6 +65,7 @@ The example is shortened (two questions, "..." in the long fields): a real file 
 | `intro.eyebrow` | the eyebrow above the statement ("What I do") | at most 24 |
 | `intro.statement` | the statement | 60 to 160 |
 | `services[4].desc` | the line under each of the four service titles (the titles stay) | exactly four, at most 90 each |
+| `value_strip[3]` | the value strip, a variant-only section right after the intro block (#intro) and before the services: three columns on desktop, stacked on phones, each a label (serif) and one supporting line | exactly three, required; `label` at most 40, `line` at most 170; plain text, no item repeated |
 | `what_i_do.eyebrow`, `what_i_do.h2` | the eyebrow ("Where I work") and heading of #what-i-do | at most 24 and 120 |
 | `what_i_do.p1`, `what_i_do.p2` | its two paragraphs | 40 to 160 English words each, the Hebrew at least 0.6 of that |
 | `advisory.h2`, `advisory.sub` | the Advisory heading and the line under it | at most 90 and 200 |
@@ -72,7 +78,7 @@ Character limits read the English, except the two hero lines, which hold in both
 
 Text rules: every `_en` field has its `_he` twin and the reverse, the Hebrew a faithful translation with Hebrew letters in it; no en or em dashes, no phone number, no "contact form"; Stav speaks in the first person, "I" (the checker warns on "we", "our" and "us"); no hype words (the list in `tools/check_pages.py`); no fee of Stav's, and a $ or % figure only with the word "industry" (`content/BRIEF.md` section 5); facts only from `content/BRIEF.md`. Every field is plain text, written as it should read (`&`, quotes and apostrophes as they are), except `what_i_do.p1` and `p2`, which may use `<a href="...">`, `<em>` and `<strong>`: links go to existing pages (`/advisory/`) or homepage anchors (`#faq`), the English and the Hebrew link to the same set, never to a mailto, a redirect stub or another variant. No keys beyond the ones above, none starting with `_`.
 
-The homepage's own copy is the text between the markers in `templates/home.html`: edit it there, keep each marker flush against the element's content, and rebuild. A variant changes nothing else (its rooms and preview image aside, below): the build refuses a variant whose About, film, Projects, Museum or Art Radar section differs from the homepage's.
+The homepage's own copy is the text between the markers in `templates/home.html`: edit it there, keep each marker flush against the element's content, and rebuild. The `value_strip` marker is the one exception: it stays empty and sits flush after the intro's `</section>`, so `index.html` is unchanged (the build fails if anything is put between its two halves). A variant changes nothing else (its rooms and preview image aside, below): the build refuses a variant whose About, film, Projects, Museum or Art Radar section differs from the homepage's.
 
 ## Its own rooms in the opening (optional)
 

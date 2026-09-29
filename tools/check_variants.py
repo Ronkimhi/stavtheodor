@@ -34,6 +34,8 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      cap_en and cap_he start "Proposal. " and "הצעה. "; the alt and caption twins take e to h
   m  head.og_image with head.og_image_alt (optional): the variant's own link preview, a JPEG in
      images/home2/variants/<id>/, 1200 by 630, under 300 KB
+  n  value_strip: exactly three items {label_en, label_he, line_en, line_he}, plain text, labels at most
+     40 characters and lines at most 170 (the English), no label or line repeated
 """
 import ast
 import datetime
@@ -77,19 +79,20 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
-    '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'services', 'what_i_do', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
+    '': ({'id', 'path', 'approved', 'head', 'hero', 'intro', 'services', 'value_strip', 'what_i_do', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
          {'advisory', 'advisory_rows', 'rooms'}),
     'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
     'intro': ({'h1_en', 'h1_he', 'line_en', 'line_he', 'statement_en', 'statement_he'}, {'eyebrow_en', 'eyebrow_he'}),
     'services': ({'desc_en', 'desc_he'}, set()),
+    'value_strip': ({'label_en', 'label_he', 'line_en', 'line_he'}, set()),
     'what_i_do': ({'h2_en', 'h2_he', 'p1_en', 'p1_he', 'p2_en', 'p2_he'}, {'eyebrow_en', 'eyebrow_he'}),
     'advisory': (set(), {'h2_en', 'h2_he', 'sub_en', 'sub_he'}),
     'faq': ({'q_en', 'a_en', 'q_he', 'a_he'}, set()),
     'rooms': ({'b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from', 'cap_en', 'cap_he', 'alt_en', 'alt_he'}, {'seed'}),
 }
 OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory'}
-LISTS = {'services', 'faq', 'advisory_rows', 'rooms'}
+LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms'}
 NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are not strings (checked under l)
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
 # (field, min, max) in characters; the minimum and maximum read the English, the hero lines both languages
@@ -103,6 +106,8 @@ CHAR_LIMITS = [
 ]
 WORD_LIMITS = [('what_i_do.p1_en', 40, 160), ('what_i_do.p2_en', 40, 160)]
 SERVICE_DESC_MAX = 90
+VALUE_STRIP_COUNT = 3
+VALUE_LABEL_MAX, VALUE_LINE_MAX = 40, 170
 FAQ_COUNT = (5, 7)
 FAQ_ANSWER_WORDS = (40, 90)
 QUESTION_MAX = 110
@@ -163,9 +168,10 @@ def strings(v):
         for k, s in (v.get(key) or {}).items():
             if (key, k) != ('head', 'og_image'):  # a path, checked under m
                 out.append((f'{key}.{k}', s))
-    for i, item in enumerate(v.get('services') or []):
-        for k, s in (item if isinstance(item, dict) else {}).items():
-            out.append((f'services[{i}].{k}', s))
+    for name in ('services', 'value_strip'):
+        for i, item in enumerate(v.get(name) or []):
+            for k, s in (item if isinstance(item, dict) else {}).items():
+                out.append((f'{name}[{i}].{k}', s))
     for i, item in enumerate(v['rooms'] if isinstance(v.get('rooms'), list) else []):
         for k, s in (item if isinstance(item, dict) else {}).items():
             if k in ('cap_en', 'cap_he', 'alt_en', 'alt_he'):
@@ -416,7 +422,7 @@ def check(path, v, peers):
     for name in sorted(OBJECTS):
         if name in v:
             keys(v[name], name, f'{name}.')
-    for name in ('services', 'faq', 'rooms'):
+    for name in ('services', 'value_strip', 'faq', 'rooms'):
         items = v.get(name)
         if name in v and not isinstance(items, list):
             fails.append(f'{name} must be a list')
@@ -425,10 +431,12 @@ def check(path, v, peers):
             keys(item, name, f'{name}[{i}].')
     if isinstance(v.get('services'), list) and len(v['services']) != 4:
         fails.append(f'services: exactly 4 entries, one per service column (found {len(v["services"])})')
+    if isinstance(v.get('value_strip'), list) and len(v['value_strip']) != VALUE_STRIP_COUNT:
+        fails.append(f'value_strip: exactly {VALUE_STRIP_COUNT} items, one per column (found {len(v["value_strip"])})')
     v = dict(v)  # a normalized copy: what is missing or of the wrong type is reported above, empty below
     for k in OBJECTS:
         v[k] = v[k] if isinstance(v.get(k), dict) else {}
-    for k in ('services', 'faq'):
+    for k in ('services', 'value_strip', 'faq'):
         v[k] = v[k] if isinstance(v.get(k), list) else []
     for k in ('id', 'path', 'approved', 'cta_en', 'cta_he', 'mail_subject'):
         v[k] = v[k] if isinstance(v.get(k), str) else ''
@@ -488,7 +496,7 @@ def check(path, v, peers):
     twins(v, '')
     for name in ('hero', 'intro', 'what_i_do', 'advisory'):
         twins(v[name] if isinstance(v[name], dict) else {}, f'{name}.')
-    for name in ('services', 'faq', 'rooms'):
+    for name in ('services', 'value_strip', 'faq', 'rooms'):
         for i, item in enumerate(v[name] if isinstance(v.get(name), list) else []):
             if isinstance(item, dict):
                 twins(item, f'{name}[{i}].')
@@ -563,6 +571,20 @@ def check(path, v, peers):
         s = item.get('desc_en') if isinstance(item, dict) else None
         if isinstance(s, str) and len(s) > SERVICE_DESC_MAX:
             fails.append(f'services[{i}].desc_en: {len(s)} characters, at most {SERVICE_DESC_MAX}')
+    seen_strip = set()
+    for i, item in enumerate(v['value_strip']):
+        if not isinstance(item, dict):
+            continue
+        for key, hi in (('label_en', VALUE_LABEL_MAX), ('line_en', VALUE_LINE_MAX)):
+            s = item.get(key)
+            if isinstance(s, str) and len(s) > hi:
+                fails.append(f'value_strip[{i}].{key}: {len(s)} characters, at most {hi}')
+        for key in ('label_en', 'label_he', 'line_en', 'line_he'):
+            s = item.get(key)
+            if isinstance(s, str) and s:
+                if s in seen_strip:
+                    fails.append(f'value_strip[{i}].{key}: repeats another item of the strip')
+                seen_strip.add(s)
     subject = v.get('mail_subject') or ''
     if re.search(r'[\[\](){}<>]', subject):
         fails.append('mail_subject: no brackets (it reads as a natural subject line)')

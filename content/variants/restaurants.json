@@ -1,16 +1,16 @@
 {
   "id": "restaurants",
   "path": "restaurants",
-  "approved": "Ron 2026-09-27",
+  "approved": "Ron 2026-09-28",
   "head": {
     "title": "Art Curator for Restaurants · New York | THEODORA",
     "description": "Stav Theodor, art curator and advisor: art for New York restaurants and private dining rooms, your story on the walls, planned for light, cleaning and service.",
-    "og_title": "Art for New York restaurants and private dining · THEODORA",
-    "og_description": "The room is part of the meal. Art that carries your story and holds up to service, by Stav Theodor."
+    "og_title": "An unforgettable space for your unforgettable food · THEODORA",
+    "og_description": "Art chosen from your story and your space, placed so it never competes with the plate. By curator Stav Theodor."
   },
   "hero": {
-    "l1_en": "A room to savor.",
-    "l1_he": "חדר להתענג בו.",
+    "l1_en": "A space to savor.",
+    "l1_he": "חלל להתענג בו.",
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
@@ -21,25 +21,45 @@
     "line_he": "הסיפור שלכם, על הקירות.",
     "eyebrow_en": "For restaurants",
     "eyebrow_he": "למסעדות",
-    "statement_en": "The room is part of the meal. I choose art that carries your story, works with the food and the service, and holds up to both.",
-    "statement_he": "החדר הוא חלק מהארוחה. אני בוחרת אמנות שנושאת את הסיפור שלכם, עובדת עם האוכל ועם השירות, ועומדת בשניהם."
+    "statement_en": "An unforgettable space for your unforgettable food. Art chosen from your story and your space, placed so it never competes with the plate.",
+    "statement_he": "חלל בלתי נשכח לאוכל הבלתי נשכח שלכם. אמנות שנבחרת מתוך הסיפור שלכם והחלל שלכם, וממוקמת כך שלעולם לא תתחרה בצלחת."
   },
+  "value_strip": [
+    {
+      "label_en": "Your story, not a theme.",
+      "label_he": "הסיפור שלכם, לא תפאורה.",
+      "line_en": "Every piece has a reason: your food, your guests, your street.",
+      "line_he": "לכל יצירה יש סיבה: האוכל שלכם, האורחים שלכם, הרחוב שלכם."
+    },
+    {
+      "label_en": "Inside your designer's scheme.",
+      "label_he": "בתוך הקונספט של המעצב שלכם.",
+      "line_en": "The art and the room read as one.",
+      "line_he": "האמנות והחלל נקראים כמקשה אחת."
+    },
+    {
+      "label_en": "Planned around service.",
+      "label_he": "מתוכנן סביב השירות.",
+      "line_en": "Away from steam, grease and direct sun, planned around your light, cleaning and hours.",
+      "line_he": "הרחק מאדים, משומן ומשמש ישירה, ומתוכנן לפי האור, הניקיון ושעות הפעילות שלכם."
+    }
+  ],
   "services": [
     {
-      "desc_en": "One signature work for the dining room, or a program across every room.",
-      "desc_he": "עבודת דגל אחת לחדר האוכל, או תוכנית שעוברת בכל החדרים."
+      "desc_en": "One signature work for the dining room, or one story from the door to the private room.",
+      "desc_he": "עבודת דגל אחת לחדר האוכל, או סיפור אחד מהדלת ועד החדר הפרטי."
     },
     {
-      "desc_en": "Sourced from galleries and artists, within the budget you approve.",
-      "desc_he": "איתור בגלריות ואצל אמנים, בתוך התקציב שאתם מאשרים."
+      "desc_en": "Sourced from galleries and artists, negotiated on your behalf, within your budget.",
+      "desc_he": "מאותרת אצל גלריות ואמנים, במשא ומתן בשמכם, בתוך התקציב שלכם."
     },
     {
-      "desc_en": "A work made for your room and your story, from concept to execution.",
-      "desc_he": "יצירה שנעשית לחדר ולסיפור שלכם, מהקונספט ועד הביצוע."
+      "desc_en": "A work made for your story and your walls, from concept to execution.",
+      "desc_he": "יצירה שנוצרת בשביל הסיפור והקירות שלכם, מהקונספט ועד הביצוע."
     },
     {
-      "desc_en": "Framing and hanging planned for your light, your cleaning and the pace of service.",
-      "desc_he": "מסגור ותלייה שמתוכננים לפי האור, הניקיון וקצב השירות שלכם."
+      "desc_en": "Glazing and hanging hardware chosen for a dining room in full service every evening.",
+      "desc_he": "זיגוג ואביזרי תלייה שנבחרים לחדר אוכל בשירות מלא בכל ערב."
     }
   ],
   "what_i_do": {
@@ -49,8 +69,8 @@
     "h2_he": "קודם הסיפור: הקונספט, המטבח והעיצוב, ורק אחר כך הקירות.",
     "p1_en": "I would start where you started: the concept, the cuisine, the neighborhood and the people you cook for. From that comes a story the walls can carry, either one signature work in the dining room or a thread that runs from the entrance to the private room, chosen so it never competes with the plate. If a designer is doing the interiors, I work inside their scheme, not around it: their palette and their lighting lead, and the art answers them. You see a shortlist with a reason for each work and approve a budget plan, and nothing is bought without your approval.",
     "p1_he": "הייתי מתחילה מהמקום שבו אתם התחלתם: הקונספט, המטבח, השכונה והאנשים שאתם מבשלים בשבילם. מזה נולד סיפור שהקירות יכולים לשאת, עבודת דגל אחת בחדר האוכל או חוט שעובר מהכניסה ועד החדר הפרטי, שנבחר כך שלעולם לא יתחרה בצלחת. אם מעצב אחראי על עיצוב הפנים, אני עובדת בתוך הקונספט שלו, לא סביבו: הפלטה והתאורה שלו מובילות, והאמנות עונה להן. אתם רואים רשימה קצרה עם סיבה לכל יצירה ומאשרים תוכנית תקציב, ושום דבר לא נקנה בלי האישור שלכם.",
-    "p2_en": "Then the practical side, which in a restaurant matters as much as the choice. Works hang away from steam, grease and direct sun, which can damage some materials and flatten others. Works on paper and photographs go behind glazing, with the glass chosen for how the room is lit at night, and the hanging hardware suits a room in full service every evening. The nearest thing to your room in my own work is a cruise dining room. I have spent years building art concepts and collections with luxury hospitality groups, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line, and for Holland America Line I worked on restaurant art for the ships. More in <a href=\"/projects/hotels-and-hospitality-collections/\">hotels and hospitality collections</a>.",
-    "p2_he": "אחר כך הצד המעשי, שבמסעדה חשוב לא פחות מהבחירה. העבודות נתלות הרחק מאדים, משומן ומשמש ישירה, שיכולים לפגוע בחומרים מסוימים ולהשטיח אחרים. עבודות על נייר ותצלומים נכנסים מאחורי זכוכית, שנבחרת לפי האופן שבו החדר מואר בערב, ואביזרי התלייה מתאימים לחדר בשירות מלא בכל ערב. הדבר הקרוב ביותר לחדר שלכם בעבודה שלי הוא חדר אוכל באוניית שיט. עבדתי שנים על קונספטים ואוספים של אמנות עם קבוצות אירוח יוקרתיות, ובהן וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין, ועבור הולנד אמריקה ליין עבדתי על אמנות למסעדות באוניות. עוד <a href=\"/projects/hotels-and-hospitality-collections/\">באוספי המלונאות והאירוח</a>."
+    "p2_en": "Then the practical side, which in a restaurant matters as much as the choice. Works hang away from steam, grease and direct sun, which can damage some materials and flatten others. Works on paper and photographs go behind glazing, with the glass chosen for how the room is lit at night, and the hanging hardware suits a room in full service every evening. I have spent years building art concepts and collections while collaborating with luxury hospitality leaders, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. More in <a href=\"/projects/hotels-and-hospitality-collections/\">hotels and hospitality collections</a>.",
+    "p2_he": "אחר כך הצד המעשי, שבמסעדה חשוב לא פחות מהבחירה. העבודות נתלות הרחק מאדים, משומן ומשמש ישירה, שיכולים לפגוע בחומרים מסוימים ולהשטיח אחרים. עבודות על נייר ותצלומים נכנסים מאחורי זכוכית, שנבחרת לפי האופן שבו החדר מואר בערב, ואביזרי התלייה מתאימים לחדר בשירות מלא בכל ערב. עבדתי שנים על קונספטים ואוספים של אמנות בשיתוף פעולה עם מובילים בתחום האירוח היוקרתי, ובהם וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. עוד <a href=\"/projects/hotels-and-hospitality-collections/\">באוספי המלונאות והאירוח</a>."
   },
   "advisory": {
     "h2_en": "If you are opening, redesigning or adding a private room, start here.",
@@ -101,7 +121,7 @@
       "home": "Where does THEODORA provide art advisory services?"
     }
   ],
-  "cta_en": "Send me one photo of the dining room and a line about the menu. I will tell you what I see.",
-  "cta_he": "שלחו לי תמונה אחת של חדר האוכל ושורה על התפריט. אספר לכם מה אני רואה.",
+  "cta_en": "Send me one photo of the dining room and a line about the menu.",
+  "cta_he": "שלחו לי תמונה אחת של חדר האוכל ושורה על התפריט.",
   "mail_subject": "Art for our restaurant"
 }

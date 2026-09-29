@@ -1,16 +1,16 @@
 {
   "id": "law-firms",
   "path": "law-firms",
-  "approved": "Ron 2026-09-27",
+  "approved": "Ron 2026-09-28",
   "head": {
     "title": "Art Curator for Law Firms · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor, chooses, sources, frames and installs art for law firms in New York and New Jersey, from reception to the conference room.",
-    "og_title": "Art for law firms in New York and New Jersey · THEODORA",
-    "og_description": "Clients read the room before the meeting starts. Art that tells them the firm is steady, by Stav Theodor."
+    "og_title": "Strong law firms need a strong entrance · THEODORA",
+    "og_description": "One anchor work that holds the reception wall from the door, so clients read the firm before anyone speaks. By curator Stav Theodor."
   },
   "hero": {
-    "l1_en": "A steady room.",
-    "l1_he": "חדר יציב.",
+    "l1_en": "Strong entrance.",
+    "l1_he": "כניסה חזקה.",
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
@@ -21,25 +21,45 @@
     "line_he": "הקירות שלכם מדברים ראשונים.",
     "eyebrow_en": "For law firms",
     "eyebrow_he": "למשרדי עורכי דין",
-    "statement_en": "Clients read the room before the meeting starts. I choose art that tells them the firm is steady, and says it without a logo.",
-    "statement_he": "לקוחות קוראים את החדר עוד לפני שהפגישה מתחילה. אני בוחרת אמנות שאומרת להם שהמשרד יציב, ואומרת את זה בלי לוגו."
+    "statement_en": "Strong law firms need a strong entrance. One anchor work that holds the reception wall from the door, so clients read the firm before anyone speaks.",
+    "statement_he": "משרדי עורכי דין חזקים צריכים כניסה חזקה. עבודת עוגן אחת שמחזיקה את קיר הקבלה כבר מהדלת, כך שלקוחות קוראים את המשרד עוד לפני שמישהו מדבר."
   },
+  "value_strip": [
+    {
+      "label_en": "The entrance first.",
+      "label_he": "קודם הכניסה.",
+      "line_en": "One work, sized for the wall and the sightline from the door; the conference rooms follow.",
+      "line_he": "יצירה אחת, במידות של הקיר ושל קו המבט מהדלת; חדרי הישיבות באים אחריה."
+    },
+    {
+      "label_en": "A decision partners can sign off on.",
+      "label_he": "החלטה שהשותפים יכולים לחתום עליה.",
+      "line_en": "Budget and off-limits subjects agreed first, then a short list with one reason for each work.",
+      "line_he": "קודם מסכימים על התקציב ועל הנושאים שמחוץ לתחום, ואחר כך רשימה קצרה עם סיבה אחת לכל יצירה."
+    },
+    {
+      "label_en": "One curator through the move.",
+      "label_he": "אוצרת אחת לאורך כל המעבר.",
+      "line_en": "Planned with your architect, installed around your move date and building rules.",
+      "line_he": "מתוכנן יחד עם האדריכל שלכם, ומותקן לפי מועד המעבר ולפי כללי הבניין."
+    }
+  ],
   "services": [
     {
-      "desc_en": "One anchor work for reception, then the rooms where decisions are made.",
-      "desc_he": "עבודת עוגן אחת לקבלה, ואחריה החדרים שבהם מתקבלות ההחלטות."
+      "desc_en": "One anchor work for the entrance, then the rooms where decisions are made.",
+      "desc_he": "יצירת עוגן אחת לכניסה, ואחריה החדרים שבהם מתקבלות ההחלטות."
     },
     {
-      "desc_en": "Sourced from artists and galleries, within the budget you approve.",
-      "desc_he": "איתור אצל אמנים ובגלריות, בתוך התקציב שאתם מאשרים."
+      "desc_en": "Sourced from artists and galleries, negotiated on the firm's behalf, within your budget.",
+      "desc_he": "מאותרת אצל אמנים וגלריות, במשא ומתן בשם המשרד, בתוך התקציב שלכם."
     },
     {
-      "desc_en": "A work made for your walls, from first concept to final execution.",
-      "desc_he": "יצירה שנעשית לקירות שלכם, מהקונספט הראשון ועד הביצוע הסופי."
+      "desc_en": "A work made for your entrance wall, from first concept to final execution.",
+      "desc_he": "יצירה שנוצרת לקיר הכניסה שלכם, מהקונספט הראשון ועד הביצוע הסופי."
     },
     {
-      "desc_en": "Framing and installation, managed end to end within an approved budget.",
-      "desc_he": "מסגור והתקנה, בניהול מלא מקצה לקצה ובתוך תקציב מאושר."
+      "desc_en": "Framing and installation scheduled around your move, within an approved budget.",
+      "desc_he": "מסגור והתקנה שמתוזמנים סביב המעבר, בתוך תקציב מאושר."
     }
   ],
   "what_i_do": {
@@ -101,7 +121,7 @@
       "home": "Where does THEODORA provide art advisory services?"
     }
   ],
-  "cta_en": "Send me one photo of the reception and a line about the firm. I will tell you what I see.",
-  "cta_he": "שלחו לי תמונה אחת של הקבלה ושורה על המשרד. אספר לכם מה אני רואה.",
+  "cta_en": "Send me one photo of your reception and your move date.",
+  "cta_he": "שלחו לי תמונה אחת של הקבלה שלכם ואת מועד המעבר.",
   "mail_subject": "Art for our law offices"
 }

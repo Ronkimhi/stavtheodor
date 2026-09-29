@@ -169,6 +169,14 @@
   .col .desc { font-size: 15px; line-height: 1.65; color: #E6E3DE; opacity: 0; transition: opacity .5s .2s; }
   .col.open .desc { opacity: 1; }
 
+  /* The value strip: buyer variants only (content/variants/<id>.json value_strip, 2026-09-28). Three columns
+     right under the black intro block, before the services; the homepage has no such section. */
+  .value-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 64px); padding-bottom: clamp(88px, 10vw, 150px); background: var(--bg); }
+  .value-strip .vs-item { display: flex; flex-direction: column; gap: 14px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .value-strip .vs-item::before { content: ""; width: 36px; height: 1px; margin-top: -29px; margin-bottom: 14px; background: var(--taupe); }
+  .value-strip h3 { font-size: clamp(24px, 2.2vw, 30px); line-height: 1.15; text-wrap: balance; }
+  .value-strip .body { font-size: 16px; max-width: 34em; }
+
   .about { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
   .about .portrait { overflow: hidden; background: var(--surface); }
   .about .portrait img { width: 100%; height: auto; filter: grayscale(100%); }
@@ -271,6 +279,7 @@
     .col .scrim { background: linear-gradient(180deg, rgba(15,15,20,0.15) 0%, rgba(15,15,20,0.78) 100%); }
     .col h3, .col.open h3 { font-size: 24px; }
     .col .desc { opacity: 1; font-size: 14px; }
+    .value-strip { grid-template-columns: 1fr; gap: 36px; }
     .about { grid-template-columns: 1fr; }
     .about .portrait { max-width: 260px; }
     .grid3 { grid-template-columns: 1fr; gap: 32px; }
