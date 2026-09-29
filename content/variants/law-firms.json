@@ -6,7 +6,9 @@
     "title": "Art Curator for Law Firms · New York, New Jersey | THEODORA",
     "description": "Stav Theodor, art curator and advisor, chooses, sources, frames and installs art for law firms in New York and New Jersey, from reception to the conference room.",
     "og_title": "Strong law firms need a strong entrance · THEODORA",
-    "og_description": "One anchor work that holds the reception wall from the door, so clients read the firm before anyone speaks. By curator Stav Theodor."
+    "og_description": "One anchor work that holds the reception wall from the door, so clients read the firm before anyone speaks. By curator Stav Theodor.",
+    "og_image": "/images/home2/variants/law-firms/law-firms_og.jpg",
+    "og_image_alt": "A law firm reception over Manhattan, a wide landscape painting in bright color above two leather chairs."
   },
   "hero": {
     "l1_en": "Strong entrance.",
@@ -14,6 +16,28 @@
     "l2_en": "The right art.",
     "l2_he": "האמנות הנכונה."
   },
+  "rooms": [
+    {
+      "b": "variants/law-firms/law-firms_before.webp",
+      "a": "variants/law-firms/law-firms_after.webp",
+      "w": 1800,
+      "h": 1200,
+      "rect": [
+        0.2979,
+        0.1569,
+        0.6,
+        0.4419
+      ],
+      "fx": 0.449,
+      "fy": 0.2994,
+      "from": "right",
+      "seed": 9,
+      "cap_en": "Proposal. A law firm reception high over Manhattan, a wide landscape in bright color above the leather chairs.",
+      "cap_he": "הצעה. קבלה של משרד עורכי דין גבוה מעל מנהטן, נוף רחב בצבעים עזים מעל כורסאות העור.",
+      "alt_en": "A law firm reception high over Manhattan, a wide landscape painting in bright color above two leather chairs.",
+      "alt_he": "קבלה של משרד עורכי דין גבוה מעל מנהטן, ציור נוף רחב בצבעים עזים מעל שתי כורסאות עור."
+    }
+  ],
   "intro": {
     "h1_en": "Art curator and advisor for law firms in New York and New Jersey",
     "h1_he": "אוצרת ויועצת אמנות למשרדי עורכי דין בניו יורק ובניו ג'רזי",
