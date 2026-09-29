@@ -82,19 +82,16 @@ FAVICONS = '''<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 FONTS = '''<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>'''
 
-# The same tag and dataLayer stub as before; gtag.js itself is fetched after the window load event
-# so it never competes with the page's own resources (approved performance change, 2026-09-26).
-GA_SNIPPET = f'''<!-- Google tag (gtag.js), loaded after the page -->
+# Google's standard tag, the same snippet the museum pages carry (museum/tools/build_artist_pages.py).
+# gtag.js loads async from <head>, so fast bounces are counted (2026-09-28, the site owner's request;
+# replaces the 2026-09-26 load-event deferral).
+GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
   gtag('config', '{GA_ID}');
-  window.addEventListener('load', function () {{
-    var s = document.createElement('script'); s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id={GA_ID}';
-    document.head.appendChild(s);
-  }});
 </script>'''
 
 _entity_cache = None
