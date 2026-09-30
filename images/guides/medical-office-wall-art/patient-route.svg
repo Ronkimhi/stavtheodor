@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Plan of a medical practice showing the patient's route from the front desk to the waiting area, along the corridor and into an exam space, with the wall a patient faces in each space marked</title>
+<desc id="d">Plan of a medical practice showing the patient's route from the front desk to the waiting area, along the corridor and into an exam space, with the wall a patient faces in each space marked</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3 px; plan, north at the top, suite 480 by 204 in, northwest inside corner at (80, 194) -->
+<!-- marked walls: .tp rects 12 px deep on the room side of the wall line (drawn first, under the walls) -->
+<rect class="tp" x="260" y="194" width="288" height="12"/>
+<rect class="tp" x="788" y="446" width="12" height="216"/>
+<rect class="tp" x="1508" y="644" width="12" height="144"/>
+<rect class="tp" x="1148" y="326" width="12" height="120"/>
+<!-- walls: outer 480 by 204 with the entrance opening x 24 to 60 in the south wall -->
+<path class="ink" d="M152 806 L80 806 L80 194 L1520 194 L1520 806 L260 806"/>
+<!-- partition x 240, opening y 162 to 198; corridor north wall y 144 with door openings x 318 to 354 and 438 to 474; partition x 360 -->
+<line class="ink" x1="800" y1="194" x2="800" y2="680"/>
+<line class="ink" x1="800" y1="788" x2="800" y2="806"/>
+<line class="ink" x1="800" y1="626" x2="1034" y2="626"/>
+<line class="ink" x1="1142" y1="626" x2="1394" y2="626"/>
+<line class="ink" x1="1502" y1="626" x2="1520" y2="626"/>
+<line class="ink" x1="1160" y1="194" x2="1160" y2="626"/>
+<!-- doors: entrance hinged at (60, 204); exam hinged at (354, 144); office hinged at (474, 144); all leaves 36 in, arcs r 36 in -->
+<line class="soft" x1="260" y1="806" x2="260" y2="698"/>
+<path class="soft" d="M152 806 A108 108 0 0 1 260 698"/>
+<line class="soft" x1="1142" y1="626" x2="1142" y2="518"/>
+<path class="soft" d="M1034 626 A108 108 0 0 1 1142 518"/>
+<line class="soft" x1="1502" y1="626" x2="1502" y2="518"/>
+<path class="soft" d="M1394 626 A108 108 0 0 1 1502 518"/>
+<!-- front desk 96 by 30 in and the staff chair r 9 in -->
+<rect class="soft" x="260" y="302" width="288" height="90"/>
+<circle class="soft" cx="404" cy="248" r="27"/>
+<!-- waiting chairs: four 24 by 24 in against the west wall, y 72 to 168, facing east (a 4 in back strip on the wall side) -->
+<rect class="soft" x="86" y="410" width="72" height="72" rx="6"/>
+<rect class="soft" x="86" y="410" width="12" height="72" rx="4"/>
+<rect class="soft" x="86" y="482" width="72" height="72" rx="6"/>
+<rect class="soft" x="86" y="482" width="12" height="72" rx="4"/>
+<rect class="soft" x="86" y="554" width="72" height="72" rx="6"/>
+<rect class="soft" x="86" y="554" width="12" height="72" rx="4"/>
+<rect class="soft" x="86" y="626" width="72" height="72" rx="6"/>
+<rect class="soft" x="86" y="626" width="12" height="72" rx="4"/>
+<!-- exam space: the D3 layout shifted 240 in east; table 72 by 28 in at y 50 to 78, sink counter x 304 to 360, y 0 to 24 -->
+<rect class="soft" x="812" y="344" width="216" height="84"/>
+<rect class="soft" x="992" y="194" width="168" height="72"/>
+<!-- your office: desk 60 by 30 in and chair r 9 in; no marked wall (the choice there is personal) -->
+<rect class="soft" x="1268" y="284" width="180" height="90"/>
+<circle class="soft" cx="1358" cy="242" r="27"/>
+<!-- route: one .lead polyline door, desk, chairs, opening, corridor, exam door, table foot -->
+<path class="lead" d="M206 782 L404 434 L182 554 L530 644 L818 734 L1088 734 L1088 626 L1028 458"/>
+<!-- stops and sightlines: each anchor to the middle of its marked wall -->
+<line class="eye" x1="206" y1="782" x2="404" y2="200"/>
+<circle class="tp" cx="206" cy="782" r="6"/>
+<line class="eye" x1="158" y1="554" x2="794" y2="554"/>
+<circle class="tp" cx="158" cy="554" r="6"/>
+<line class="eye" x1="836" y1="716" x2="1514" y2="716"/>
+<circle class="tp" cx="836" cy="716" r="6"/>
+<line class="eye" x1="1010" y1="386" x2="1154" y2="386"/>
+<circle class="tp" cx="1010" cy="386" r="6"/>
+<!-- primary labels, one per space, placed clear of every line; the compact state doubles them -->
+<text class="l1" x="620" y="270" text-anchor="middle">front desk</text>
+<text class="l1" x="600" y="506" text-anchor="middle">waiting area</text>
+<text class="l1" x="1325" y="689" text-anchor="middle">corridor</text>
+<text class="l1" x="968" y="318" text-anchor="middle">exam space</text>
+<text class="l1" x="1340" y="464" text-anchor="middle">your office</text>
+<!-- secondary labels -->
+<text class="l2" x="206" y="846" text-anchor="middle">door</text>
+<text class="l2" x="356" y="290" text-anchor="end">from the door</text>
+<text class="l2" x="560" y="538">from the chairs</text>
+<text class="l2" x="1280" y="758" text-anchor="middle">walking the corridor</text>
+<text class="l2" x="914" y="456" text-anchor="middle">from the exam table</text>
+<text class="l2" x="1340" y="500" text-anchor="middle">bolder work, by choice</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan of an exam space: from the exam table the patient faces one wall, where a single work hangs clear of the sink counter, the wall equipment and the clinician's path from the door</title>
+<desc id="d">Plan of an exam space: from the exam table the patient faces one wall, where a single work hangs clear of the sink counter, the wall equipment and the clinician's path from the door</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; plan, north at the top, room 120 by 144 in, northwest inside corner at (500, 90) -->
+<!-- walls with the door opening x 78 to 114 in the south wall; leaf hinged at (114, 144), arc r 36 in -->
+<path class="ink" d="M890 810 L500 810 L500 90 L1100 90 L1100 810 L1070 810"/>
+<line class="soft" x1="1070" y1="810" x2="1070" y2="630"/>
+<path class="soft" d="M890 810 A180 180 0 0 1 1070 630"/>
+<!-- exam table 72 by 28 in, head end at the west wall, pillow 10 by 20 in -->
+<rect class="soft" x="520" y="340" width="360" height="140"/>
+<rect class="soft" x="530" y="360" width="50" height="100"/>
+<!-- sink counter 56 by 24 in with the sink 20 by 16 in; wall equipment 32 by 5 in on the north wall -->
+<rect class="soft" x="820" y="90" width="280" height="120"/>
+<rect class="soft" x="910" y="110" width="100" height="80" rx="16"/>
+<rect class="soft" x="540" y="90" width="160" height="25"/>
+<!-- clinician's stool r 9 in and path from the door to the table side -->
+<circle class="soft" cx="700" cy="560" r="45"/>
+<path class="lead" d="M980 790 L980 590 L760 560"/>
+<!-- the work in plan: 40 in wide on the east wall, y 44 to 84, drawn 2 in deep, center cross at (119, 64) -->
+<rect class="frame" x="1090" y="310" width="10" height="200"/>
+<rect class="art" x="1091" y="311" width="8" height="198"/>
+<line class="dim" x1="1073" y1="410" x2="1117" y2="410" stroke-width="2"/>
+<line class="dim" x1="1095" y1="388" x2="1095" y2="432" stroke-width="2"/>
+<!-- patient seated at the table's foot end facing east; sightline to the work -->
+<line class="eye" x1="850" y1="410" x2="1090" y2="410"/>
+<circle class="tp" cx="850" cy="410" r="6"/>
+<!-- primary labels outside the walls at x 1130 (13 px off the center cross's arm); the leader for the path from (984, 620) to (1118, 620) -->
+<text class="l1" x="1130" y="418">One work</text>
+<text class="l2" x="1130" y="450">on the wall the patient faces</text>
+<text class="l1" x="1130" y="158">sink</text>
+<text class="l1" x="488" y="110" text-anchor="end">equipment</text>
+<text class="l1" x="1130" y="628">clinician's path</text>
+<line class="lead" x1="984" y1="620" x2="1118" y2="620"/>
+<!-- secondary labels; 'from the table' at 976: the gap between the table's foot (x 880) and the cross arm (x 1073) holds 169 px at 12 px clear, and "from the exam table" is 194 px (Curator check 2026-09-30) -->
+<text class="l2" x="700" y="418" text-anchor="middle">exam table</text>
+<text class="l2" x="976" y="398" text-anchor="middle">from the table</text>
+<text class="l2" x="980" y="850" text-anchor="middle">door</text>
+</svg>

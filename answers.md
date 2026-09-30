@@ -202,3 +202,7 @@ Office wall art works when each area of the office gets one job: welcome at rece
 ## Is it better to buy or lease art for an office?
 
 Art leasing for offices means renting artworks for a set term, often with installation and rotation included, instead of buying them. Buying builds an asset the company keeps, commissioning creates a work for one wall, and leasing trades ownership for flexibility. For most offices I recommend a mix: buy or commission the works on the walls that define the firm, and lease the walls you want to change. Full guide: https://stavtheodor.com/guide/buy-lease-or-commission-office-art/
+
+## What art is appropriate for a doctor's office?
+
+Medical office wall art is art chosen for a practice's waiting area, exam spaces and corridors to give patients something calm to look at, to look professional and to survive clinical cleaning. For a practice I lean toward calm, readable, specific images where patients wait or lie still, bolder work where people pass by choice, and nothing ambiguous, clinical or confrontational where a patient sits. Full guide: https://stavtheodor.com/guide/medical-office-wall-art/

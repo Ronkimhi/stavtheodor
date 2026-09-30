@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Two drawings of the same practice wall: open, with wood blocking between the studs where the work will hang and an electrical box in the ceiling for its light; finished, with the work on a cleat screwed into the blocking and lit from the ceiling</title>
+<desc id="d">Two drawings of the same practice wall: open, with wood blocking between the studs where the work will hang and an electrical box in the ceiling for its light; finished, with the work on a cleat screwed into the blocking and lit from the ceiling</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px, both panels; floor at y=780, ceiling at 96 in (y 300); panel A elevation x = 100 + 5 x, panel B section, wall face at x 1040 -->
+<!-- panel A, walls open: elevation of a 112 in wall, studs 1.5 in at 16 in centers, plates, blocking in two rows -->
+<line class="ink" x1="100" y1="780" x2="660" y2="780"/>
+<line class="ink" x1="100" y1="300" x2="660" y2="300"/>
+<rect class="soft" x="100" y="772.5" width="560" height="7.5"/>
+<rect class="soft" x="100" y="307.5" width="560" height="7.5"/>
+<rect class="soft" x="100" y="300" width="560" height="7.5"/>
+<rect class="soft" x="100" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="180" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="260" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="340" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="420" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="500" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="580" y="315" width="7.5" height="457.5"/>
+<rect class="soft" x="652.5" y="315" width="7.5" height="457.5"/>
+<rect class="ink" x="187.5" y="405" width="72.5" height="27.5"/>
+<rect class="ink" x="187.5" y="562.5" width="72.5" height="27.5"/>
+<rect class="ink" x="267.5" y="405" width="72.5" height="27.5"/>
+<rect class="ink" x="267.5" y="562.5" width="72.5" height="27.5"/>
+<rect class="ink" x="347.5" y="405" width="72.5" height="27.5"/>
+<rect class="ink" x="347.5" y="562.5" width="72.5" height="27.5"/>
+<rect class="ink" x="427.5" y="405" width="72.5" height="27.5"/>
+<rect class="ink" x="427.5" y="562.5" width="72.5" height="27.5"/>
+<rect class="ink" x="507.5" y="405" width="72.5" height="27.5"/>
+<rect class="ink" x="507.5" y="562.5" width="72.5" height="27.5"/>
+<!-- the planned work, 60 by 40 in, h 38 to 78, as a .lead rectangle with no wash; center at (380, 490) = 58 in -->
+<rect class="lead" x="230" y="390" width="300" height="200"/>
+<line class="dim" x1="358" y1="490" x2="402" y2="490" stroke-width="2"/>
+<line class="dim" x1="380" y1="468" x2="380" y2="512" stroke-width="2"/>
+<!-- ceiling box 4 by 2.5 in at x 54 to 58 above the ceiling line; its wire along y 294 to the panel's left edge -->
+<rect class="ink" x="370" y="287.5" width="20" height="12.5"/>
+<line class="soft" x1="370" y1="294" x2="100" y2="294"/>
+<!-- panel B, finished: vertical section, room to the right; drywall both sides, cavity, blocking cut in section -->
+<rect class="soft" x="1017.5" y="300" width="2.5" height="480"/>
+<rect class="soft" x="1037.5" y="300" width="2.5" height="480"/>
+<rect class="ink" x="1030" y="405" width="7.5" height="27.5"/>
+<rect class="ink" x="1030" y="562.5" width="7.5" height="27.5"/>
+<line class="ink" x1="1040" y1="300" x2="1500" y2="300"/>
+<line class="ink" x1="1040" y1="780" x2="1500" y2="780"/>
+<!-- French cleat: two interlocking 45 degree strips x 1040 to 1047.5, h 70 to 74; the wall strip's bevel faces up and toward the wall so the work's strip hooks down behind it (Curator check 2026-09-30); screw into the upper blocking -->
+<path class="soft" d="M1040 430 L1047.5 430 L1047.5 415 L1040 422.5 Z"/>
+<path class="soft" d="M1040 410 L1047.5 410 L1047.5 415 L1040 422.5 Z"/>
+<line class="soft" x1="1046" y1="427.5" x2="1031" y2="427.5"/>
+<!-- the work in profile, 2 in deep, h 38 to 78, center at (1052.5, 490) -->
+<rect class="frame" x="1047.5" y="390" width="10" height="200"/>
+<rect class="art" x="1048.5" y="391" width="8" height="198"/>
+<line class="dim" x1="1030.5" y1="490" x2="1074.5" y2="490" stroke-width="2"/>
+<line class="dim" x1="1052.5" y1="468" x2="1052.5" y2="512" stroke-width="2"/>
+<!-- security fixing: L bracket under the work, leg up the wall, screw into the lower blocking -->
+<rect class="soft" x="1040" y="590" width="17.5" height="6"/>
+<rect class="soft" x="1040" y="570" width="6" height="26"/>
+<line class="soft" x1="1046" y1="578" x2="1031" y2="578"/>
+<!-- art light: ceiling box above the ceiling and a 4 by 4 in fixture below it, centered 25.5 in from the wall face; beam to the work's center -->
+<rect class="ink" x="1157.5" y="287.5" width="20" height="12.5"/>
+<rect class="soft" x="1157.5" y="300" width="20" height="20"/>
+<line class="dim" x1="1167.5" y1="300" x2="1057.5" y2="490"/>
+<!-- primary labels -->
+<text class="l1" x="380" y="836" text-anchor="middle">Walls open</text>
+<text class="l1" x="1240" y="836" text-anchor="middle">Finished</text>
+<text class="l1" x="672" y="424">blocking</text>
+<line class="lead" x1="664" y1="418" x2="582" y2="418"/>
+<text class="l1" x="442" y="274">art light</text>
+<text class="l2" x="442" y="242">on the electrical drawings</text>
+<!-- secondary labels; 'where the work will hang' sits outside the studs with a leader, since inside the wall every label crosses a stud -->
+<text class="l2" x="672" y="700">stud</text>
+<line class="lead" x1="664" y1="694" x2="654.5" y2="694"/>
+<text class="l2" x="672" y="384">where the work will hang</text>
+<line class="lead" x1="664" y1="378" x2="532" y2="388"/>
+<text class="l2" x="1112" y="440">cleat screwed into the blocking</text>
+<text class="l2" x="1080" y="598">security fixing</text>
+<text class="l2" x="1190" y="330">art light</text>
+<text class="l2" x="1004" y="700" text-anchor="end">drywall</text>
+<line class="lead" x1="1008" y1="694" x2="1036" y2="694"/>
+</svg>

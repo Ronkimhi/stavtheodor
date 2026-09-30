@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side section of a corridor wall in two panels: between 27 and 80 inches above the floor a work may project no more than 4 inches, so a flat frame centered at 57 to 60 inches passes and a deep shadow box does not</title>
+<desc id="d">Side section of a corridor wall in two panels: between 27 and 80 inches above the floor a work may project no more than 4 inches, so a flat frame centered at 57 to 60 inches passes and a deep shadow box does not</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:48px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px, both panels; floor at y=780; walls at x 240 (flat frame) and x 1000 (shadow box) -->
+<!-- compact .l1 48 px, not 52: at 52 "too deep for a corridor" ends 28 px from the canvas edge (Curator check 2026-09-30) -->
+<!-- panel wall at x 240, floor to 85 in; floor to x 720 -->
+<line class="ink" x1="240" y1="780" x2="240" y2="100"/>
+<line class="ink" x1="240" y1="780" x2="720" y2="780"/>
+<!-- panel wall at x 1000, floor to 85 in; floor to x 1480 -->
+<line class="ink" x1="1000" y1="780" x2="1000" y2="100"/>
+<line class="ink" x1="1000" y1="780" x2="1480" y2="780"/>
+<!-- panel A: flat frame 1.5 in deep, bottom 43 in, top 73 in, center 58 in -->
+<rect class="frame" x="240" y="196" width="12" height="240"/>
+<rect class="art" x="241" y="197" width="10" height="238"/>
+<line class="dim" x1="224" y1="316" x2="268" y2="316" stroke-width="2"/>
+<line class="dim" x1="246" y1="294" x2="246" y2="338" stroke-width="2"/>
+<!-- panel B: shadow box 6 in deep, bottom 46 in, top 70 in, center 58 in; a .dim outline (the wrong case) with the wash inside -->
+<rect class="art" x="1000" y="220" width="48" height="192"/>
+<rect class="dim" x="1000" y="220" width="48" height="192"/>
+<line class="dim" x1="1002" y1="316" x2="1046" y2="316" stroke-width="2"/>
+<line class="dim" x1="1024" y1="294" x2="1024" y2="338" stroke-width="2"/>
+<!-- the 4 in line in both panels, 27 to 80 in, with level ticks from the wall at 27 and 80 in -->
+<line class="lead" x1="272" y1="564" x2="272" y2="140"/>
+<line class="dim" x1="240" y1="564" x2="272" y2="564"/>
+<line class="dim" x1="240" y1="140" x2="272" y2="140"/>
+<line class="lead" x1="1032" y1="564" x2="1032" y2="140"/>
+<line class="dim" x1="1000" y1="564" x2="1032" y2="564"/>
+<line class="dim" x1="1000" y1="140" x2="1032" y2="140"/>
+<!-- panel A only: the 4 in dimension at y 500 -->
+<line class="dim" x1="240" y1="500" x2="272" y2="500"/>
+<line class="dim" x1="240" y1="492" x2="240" y2="508"/>
+<line class="dim" x1="272" y1="492" x2="272" y2="508"/>
+<!-- standing band from each work face to the panel's right end -->
+<line class="eye" x1="252" y1="324" x2="720" y2="324"/>
+<line class="eye" x1="252" y1="300" x2="720" y2="300"/>
+<line class="eye" x1="1048" y1="324" x2="1480" y2="324"/>
+<line class="eye" x1="1048" y1="300" x2="1480" y2="300"/>
+<!-- labels -->
+<text class="l1" x="284" y="572">27 in<tspan class="l2"> · 69 cm</tspan></text>
+<text class="l1" x="284" y="148">80 in<tspan class="l2"> · 203 cm</tspan></text>
+<text class="l1" x="284" y="508">4 in<tspan class="l2"> · 10 cm · the most it may project</tspan></text>
+<text class="l1" x="732" y="316">57 to 60 in</text>
+<text class="l2" x="732" y="348">145 to 152 cm</text>
+<text class="l1" x="1060" y="460">too deep for a corridor</text>
+<text class="l2" x="1060" y="492">projects past the 4 in line</text>
+<text class="l2" x="480" y="830" text-anchor="middle">flat frame</text>
+<text class="l2" x="1240" y="830" text-anchor="middle">shadow box</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two cross sections at the bottom edge of a work: a print face mounted on acrylic, with one smooth face and no mat, and a work on paper framed under acrylic over a mat with a sealed back, both fixed to the wall with a security hanger</title>
+<desc id="d">Two cross sections at the bottom edge of a work: a print face mounted on acrylic, with one smooth face and no mat, and a work on paper framed under acrylic over a mat with a sealed back, both fixed to the wall with a security hanger</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:44px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 60 px; vertical section of the lower 7 in of each work; h 0 (the bottom edge) at y 560, wall faces at x 240 and x 1000 -->
+<!-- compact .l1 44 px, not 52, the panel titles at y 60 and "sealed back" at y 108: it must fit between its title and the wall top at y 120 -->
+<!-- panel A, printed on acrylic: x = 240 + 60 d -->
+<line class="ink" x1="240" y1="120" x2="240" y2="680"/>
+<rect class="soft" x="240" y="440" width="45" height="60"/>
+<rect class="soft" x="285" y="140" width="7.5" height="420"/>
+<rect class="art" x="292.5" y="140" width="3.9" height="420"/>
+<rect class="soft" x="296.4" y="140" width="15" height="420"/>
+<rect class="soft" x="246" y="560" width="65.4" height="6"/>
+<rect class="soft" x="240" y="560" width="6" height="50"/>
+<line class="soft" x1="252" y1="590" x2="218" y2="590"/>
+<path class="soft" d="M277 140 L292.2 130 L304.2 150 L319.4 140"/>
+<!-- panel B, framed under acrylic: x = 1000 + 60 d -->
+<line class="ink" x1="1000" y1="120" x2="1000" y2="680"/>
+<rect class="soft" x="1000" y="524" width="15" height="18"/>
+<rect class="frame" x="1015" y="500" width="60" height="60"/>
+<rect class="frame" x="1060" y="476" width="15" height="24"/>
+<rect class="soft" x="1052.5" y="140" width="7.5" height="360"/>
+<rect class="soft" x="1048.9" y="410" width="3.6" height="90"/>
+<rect class="art" x="1045.3" y="140" width="3.6" height="330"/>
+<rect class="soft" x="1033.9" y="140" width="11.4" height="360"/>
+<line class="soft" x1="1015" y1="560" x2="1015" y2="140"/>
+<rect class="soft" x="1006" y="560" width="69" height="6"/>
+<rect class="soft" x="1000" y="560" width="6" height="50"/>
+<line class="soft" x1="1012" y1="590" x2="978" y2="590"/>
+<line class="soft" x1="1040" y1="570" x2="1040" y2="540"/>
+<path class="soft" d="M1007 140 L1031.5 130 L1043.5 150 L1068 140"/>
+<!-- primary labels and their leaders -->
+<text class="l1" x="240" y="60">Printed on acrylic</text>
+<text class="l1" x="1000" y="60">Framed under acrylic</text>
+<text class="l1" x="340" y="300">one smooth face to wipe</text>
+<line class="lead" x1="332" y1="292" x2="313.4" y2="292"/>
+<text class="l2" x="340" y="332">no mat, no frame edge</text>
+<text class="l1" x="1015" y="108" text-anchor="middle">sealed back</text>
+<line class="lead" x1="1015" y1="120" x2="1015" y2="140"/>
+<text class="l1" x="1100" y="600">security hanger</text>
+<line class="lead" x1="1092" y1="594" x2="1077" y2="566"/>
+<!-- secondary layer names, leaders horizontal to their layer -->
+<text class="l2" x="340" y="390">print</text>
+<line class="lead" x1="332" y1="382" x2="295.4" y2="382"/>
+<text class="l2" x="340" y="450">rigid backing</text>
+<line class="lead" x1="332" y1="442" x2="291.5" y2="442"/>
+<text class="l2" x="1100" y="200">acrylic glazing</text>
+<line class="lead" x1="1092" y1="192" x2="1062" y2="192"/>
+<text class="l2" x="1100" y="260">work on paper</text>
+<line class="lead" x1="1092" y1="252" x2="1047.9" y2="252"/>
+<text class="l2" x="1100" y="440">mat, sealed in</text>
+<line class="lead" x1="1092" y1="432" x2="1051.5" y2="432"/>
+<text class="l2" x="1100" y="530">frame</text>
+<line class="lead" x1="1092" y1="522" x2="1077" y2="522"/>
+</svg>
