@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three elevations of the same 84 inch sofa with art above it: a 24 inch work that is too small, a 42 inch work at half the sofa's width, and a 56 inch work at two thirds, each centered between 57 and 60 inches</title>
+<desc id="d">Three elevations of the same 84 inch sofa with art above it: a 24 inch work that is too small, a 42 inch work at half the sofa's width, and a 56 inch work at two thirds, each centered between 57 and 60 inches</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=580; three panels centered on x 320, 800 and 1280, one floor and one eye band -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="110" y1="295" x2="1490" y2="295"/>
+<line class="eye" x1="110" y1="280" x2="1490" y2="280"/>
+<rect class="soft" x="110" y="420" width="420" height="70"/>
+<rect class="soft" x="110" y="455" width="30" height="35"/>
+<rect class="soft" x="500" y="455" width="30" height="35"/>
+<rect class="soft" x="110" y="490" width="420" height="70"/>
+<rect class="soft" x="130" y="560" width="10" height="20"/>
+<rect class="soft" x="500" y="560" width="10" height="20"/>
+<rect class="soft" x="590" y="420" width="420" height="70"/>
+<rect class="soft" x="590" y="455" width="30" height="35"/>
+<rect class="soft" x="980" y="455" width="30" height="35"/>
+<rect class="soft" x="590" y="490" width="420" height="70"/>
+<rect class="soft" x="610" y="560" width="10" height="20"/>
+<rect class="soft" x="980" y="560" width="10" height="20"/>
+<rect class="soft" x="1070" y="420" width="420" height="70"/>
+<rect class="soft" x="1070" y="455" width="30" height="35"/>
+<rect class="soft" x="1460" y="455" width="30" height="35"/>
+<rect class="soft" x="1070" y="490" width="420" height="70"/>
+<rect class="soft" x="1090" y="560" width="10" height="20"/>
+<rect class="soft" x="1460" y="560" width="10" height="20"/>
+<!-- one work per panel, 36 in tall, bottom 41 in, top 77 in, center 59 in; widths 24, 42 and 56 in -->
+<rect class="frame" x="260" y="195" width="120" height="180"/>
+<rect class="art" x="268" y="203" width="104" height="164"/>
+<line class="dim" x1="298" y1="285" x2="342" y2="285" stroke-width="2"/>
+<line class="dim" x1="320" y1="263" x2="320" y2="307" stroke-width="2"/>
+<line class="dim" x1="260" y1="175" x2="380" y2="175"/>
+<line class="dim" x1="260" y1="167" x2="260" y2="183"/>
+<line class="dim" x1="380" y1="167" x2="380" y2="183"/>
+<text class="l1" x="320" y="630" text-anchor="middle">too small<tspan class="l2"> · 24 in · 61 cm</tspan></text>
+<rect class="frame" x="695" y="195" width="210" height="180"/>
+<rect class="art" x="703" y="203" width="194" height="164"/>
+<line class="dim" x1="778" y1="285" x2="822" y2="285" stroke-width="2"/>
+<line class="dim" x1="800" y1="263" x2="800" y2="307" stroke-width="2"/>
+<line class="dim" x1="695" y1="175" x2="905" y2="175"/>
+<line class="dim" x1="695" y1="167" x2="695" y2="183"/>
+<line class="dim" x1="905" y1="167" x2="905" y2="183"/>
+<text class="l1" x="800" y="630" text-anchor="middle">half<tspan class="l2"> · 42 in · 107 cm</tspan></text>
+<rect class="frame" x="1140" y="195" width="280" height="180"/>
+<rect class="art" x="1148" y="203" width="264" height="164"/>
+<line class="dim" x1="1258" y1="285" x2="1302" y2="285" stroke-width="2"/>
+<line class="dim" x1="1280" y1="263" x2="1280" y2="307" stroke-width="2"/>
+<line class="dim" x1="1140" y1="175" x2="1420" y2="175"/>
+<line class="dim" x1="1140" y1="167" x2="1140" y2="183"/>
+<line class="dim" x1="1420" y1="167" x2="1420" y2="183"/>
+<text class="l1" x="1280" y="630" text-anchor="middle">two thirds<tspan class="l2"> · 56 in · 142 cm</tspan></text>
+<text class="l2" x="118" y="268">57 to 60 in</text>
+<text class="l2" x="320" y="530" text-anchor="middle">sofa, 84 in · 213 cm</text>
+</svg>

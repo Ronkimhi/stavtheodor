@@ -179,6 +179,10 @@ One strong work or a matched pair, sized to the wall and placed facing or beside
 
 Start with the wall the space already turns toward and give it the strongest work you can find, about two thirds the width of the furniture below and centered 57 to 60 inches from the floor; let the other walls support it. Full guide: https://stavtheodor.com/guide/living-room-art/
 
+## How do I choose art for my home?
+
+How to choose art for your home comes down to a short sequence of decisions: how you want each space to feel, which wall comes first, how big the work must be, and which budget buys the best version of it. Start with one wall and one feeling, not a shopping list, and buy the work you keep returning to. Full guide: https://stavtheodor.com/guide/how-to-choose-art-for-your-home/
+
 ---
 
 ## Guides: offices, practices and hospitality

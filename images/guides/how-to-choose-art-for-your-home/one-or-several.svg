@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three elevations above the same sofa: one 56 inch work, five small frames scattered at different heights with no shared center, and six frames composed as one 56 inch group with one center</title>
+<desc id="d">Three elevations above the same sofa: one 56 inch work, five small frames scattered at different heights with no shared center, and six frames composed as one 56 inch group with one center</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=580; three panels centered on x 320, 800 and 1280, the same set as three-widths.svg -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="110" y1="295" x2="1490" y2="295"/>
+<line class="eye" x1="110" y1="280" x2="1490" y2="280"/>
+<rect class="soft" x="110" y="420" width="420" height="70"/>
+<rect class="soft" x="110" y="455" width="30" height="35"/>
+<rect class="soft" x="500" y="455" width="30" height="35"/>
+<rect class="soft" x="110" y="490" width="420" height="70"/>
+<rect class="soft" x="130" y="560" width="10" height="20"/>
+<rect class="soft" x="500" y="560" width="10" height="20"/>
+<rect class="soft" x="590" y="420" width="420" height="70"/>
+<rect class="soft" x="590" y="455" width="30" height="35"/>
+<rect class="soft" x="980" y="455" width="30" height="35"/>
+<rect class="soft" x="590" y="490" width="420" height="70"/>
+<rect class="soft" x="610" y="560" width="10" height="20"/>
+<rect class="soft" x="980" y="560" width="10" height="20"/>
+<rect class="soft" x="1070" y="420" width="420" height="70"/>
+<rect class="soft" x="1070" y="455" width="30" height="35"/>
+<rect class="soft" x="1460" y="455" width="30" height="35"/>
+<rect class="soft" x="1070" y="490" width="420" height="70"/>
+<rect class="soft" x="1090" y="560" width="10" height="20"/>
+<rect class="soft" x="1460" y="560" width="10" height="20"/>
+<!-- (1) one work 56 by 36 in, bottom 41, top 77, center 59 -->
+<rect class="frame" x="180" y="195" width="280" height="180"/>
+<rect class="art" x="188" y="203" width="264" height="164"/>
+<line class="dim" x1="298" y1="285" x2="342" y2="285" stroke-width="2"/>
+<line class="dim" x1="320" y1="263" x2="320" y2="307" stroke-width="2"/>
+<!-- (2) five frames scattered, uneven gaps, five different centers; no center cross by the spec's stated exception -->
+<rect class="frame" x="595" y="270" width="50" height="60"/>
+<rect class="art" x="599" y="274" width="42" height="52"/>
+<rect class="frame" x="690" y="220" width="40" height="50"/>
+<rect class="art" x="694" y="224" width="32" height="42"/>
+<rect class="frame" x="780" y="280" width="60" height="80"/>
+<rect class="art" x="784" y="284" width="52" height="72"/>
+<rect class="frame" x="890" y="250" width="40" height="40"/>
+<rect class="art" x="894" y="254" width="32" height="32"/>
+<rect class="frame" x="955" y="275" width="50" height="70"/>
+<rect class="art" x="959" y="279" width="42" height="62"/>
+<!-- (3) six frames 17 by 15 in, 3 by 2, gaps 2.5 in, group 56 by 32.5 in, bottom 41, center 57.25; one outer edge -->
+<rect class="frame" x="1140" y="300" width="85" height="75"/>
+<rect class="art" x="1148" y="308" width="69" height="59"/>
+<rect class="frame" x="1140" y="212.5" width="85" height="75"/>
+<rect class="art" x="1148" y="220.5" width="69" height="59"/>
+<rect class="frame" x="1237.5" y="300" width="85" height="75"/>
+<rect class="art" x="1245.5" y="308" width="69" height="59"/>
+<rect class="frame" x="1237.5" y="212.5" width="85" height="75"/>
+<rect class="art" x="1245.5" y="220.5" width="69" height="59"/>
+<rect class="frame" x="1335" y="300" width="85" height="75"/>
+<rect class="art" x="1343" y="308" width="69" height="59"/>
+<rect class="frame" x="1335" y="212.5" width="85" height="75"/>
+<rect class="art" x="1343" y="220.5" width="69" height="59"/>
+<rect class="lead" x="1140" y="212.5" width="280" height="162.5"/>
+<line class="dim" x1="1258" y1="293.8" x2="1302" y2="293.8" stroke-width="2"/>
+<line class="dim" x1="1280" y1="271.8" x2="1280" y2="315.8" stroke-width="2"/>
+<text class="l1" x="320" y="630" text-anchor="middle">one work<tspan class="l2"> · 56 in</tspan></text>
+<text class="l1" x="800" y="630" text-anchor="middle">scattered<tspan class="l2"> · no shared center</tspan></text>
+<text class="l1" x="1280" y="630" text-anchor="middle">one group<tspan class="l2"> · 56 in, one outer edge</tspan></text>
+</svg>

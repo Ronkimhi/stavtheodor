@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a work centered between 57 and 60 inches from the floor: a standing figure's eyes meet its center, a seated figure's eyes meet its lower half, and a bracket beside it shows the 55 to 66 inch range design guides publish</title>
+<desc id="d">Elevation of a work centered between 57 and 60 inches from the floor: a standing figure's eyes meet its center, a seated figure's eyes meet its lower half, and a bracket beside it shows the 55 to 66 inch range design guides publish</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=780 -->
+<line class="ink" x1="80" y1="780" x2="1520" y2="780"/>
+<!-- the work 40 by 30 in, bottom 43.5 in, top 73.5 in, center 58.5 in; eye band beside the work and through the center dimension, x 860 to 1300 -->
+<line class="eye" x1="860" y1="324" x2="1300" y2="324"/>
+<line class="eye" x1="860" y1="300" x2="1300" y2="300"/>
+<rect class="frame" x="900" y="192" width="320" height="240"/>
+<rect class="art" x="916" y="208" width="288" height="208"/>
+<line class="dim" x1="1038" y1="312" x2="1082" y2="312" stroke-width="2"/>
+<line class="dim" x1="1060" y1="290" x2="1060" y2="334" stroke-width="2"/>
+<!-- standing figure, 63 in, eye at 58.5 in; its sightline level to the center cross -->
+<circle class="soft" cx="300" cy="302" r="26"/>
+<line class="soft" x1="300" y1="328" x2="300" y2="520"/>
+<line class="soft" x1="300" y1="520" x2="280" y2="780"/>
+<line class="soft" x1="300" y1="520" x2="320" y2="780"/>
+<line class="soft" x1="300" y1="350" x2="280" y2="500"/>
+<line class="soft" x1="300" y1="350" x2="322" y2="496"/>
+<circle class="tp" cx="326" cy="312" r="6"/>
+<line class="eye" x1="332" y1="312" x2="1034" y2="312"/>
+<!-- chair: seat 18 in from x 560 to 704, back to 34 in at x 560, legs to the floor -->
+<line class="soft" x1="560" y1="636" x2="704" y2="636"/>
+<line class="soft" x1="560" y1="636" x2="560" y2="508"/>
+<line class="soft" x1="560" y1="636" x2="560" y2="780"/>
+<line class="soft" x1="704" y1="636" x2="704" y2="780"/>
+<!-- seated figure: hip at 19 in, head top 52 in, eye at 47 in; its sightline level to the work's left edge -->
+<circle class="soft" cx="610" cy="390" r="26"/>
+<line class="soft" x1="610" y1="416" x2="610" y2="628"/>
+<line class="soft" x1="610" y1="628" x2="742" y2="628"/>
+<line class="soft" x1="742" y1="628" x2="742" y2="780"/>
+<line class="soft" x1="610" y1="440" x2="670" y2="560"/>
+<line class="soft" x1="610" y1="440" x2="660" y2="566"/>
+<circle class="tp" cx="636" cy="404" r="6"/>
+<line class="eye" x1="642" y1="404" x2="900" y2="404"/>
+<!-- center from the floor at x 1250; the published range 55 to 66 in as a bracket at x 1340 -->
+<line class="dim" x1="1250" y1="312" x2="1250" y2="780"/>
+<line class="dim" x1="1242" y1="312" x2="1258" y2="312"/>
+<line class="dim" x1="1242" y1="780" x2="1258" y2="780"/>
+<line class="dim" x1="1340" y1="252" x2="1340" y2="340"/>
+<line class="dim" x1="1332" y1="252" x2="1348" y2="252"/>
+<line class="dim" x1="1332" y1="340" x2="1348" y2="340"/>
+<text class="l1" x="1262" y="548">57 to 60 in</text>
+<text class="l2" x="1262" y="578">145 to 152 cm</text>
+<text class="l2" x="1352" y="290">55 to 66 in</text>
+<text class="l2" x="1352" y="318">published range</text>
+<text class="l1" x="300" y="830" text-anchor="middle">standing</text>
+<text class="l1" x="632" y="830" text-anchor="middle">seated</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Floor plan with a window: a glazed work on the wall facing the window reflects the window back to the viewer, while a glazed work on a side wall reflects only the opposite wall</title>
+<desc id="d">Floor plan with a window: a glazed work on the wall facing the window reflects the window back to the viewer, while a glazed work on a side wall reflects only the opposite wall</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; plan, north wall at the top, inner faces 192 by 156 in, northwest corner at (320, 140) -->
+<!-- walls and the window, 72 in on the west wall -->
+<rect class="ink" x="320" y="140" width="960" height="780"/>
+<rect class="soft" x="314" y="350" width="12" height="360"/>
+<!-- work A, glazed, 40 in on the east wall facing the window; work B, glazed, 40 in on the north wall -->
+<rect class="frame" x="1265" y="430" width="15" height="200"/>
+<rect class="art" x="1268" y="433" width="9" height="194"/>
+<rect class="frame" x="700" y="140" width="200" height="15"/>
+<rect class="art" x="703" y="143" width="194" height="9"/>
+<!-- the viewer at (132, 84); sightlines to each glass and the reflected rays, angle in equals angle out -->
+<line class="eye" x1="980" y1="560" x2="1265" y2="530"/>
+<line class="dim" x1="1265" y1="530" x2="320" y2="430.5"/>
+<line class="eye" x1="980" y1="560" x2="800" y2="155"/>
+<line class="dim" x1="800" y1="155" x2="460" y2="920"/>
+<circle class="tp" cx="980" cy="560" r="6"/>
+<text class="l1" x="1250" y="680" text-anchor="end">shows the window</text>
+<text class="l1" x="660" y="220" text-anchor="end">shows a wall</text>
+<text class="l2" x="1296" y="538">glazed work</text>
+<text class="l2" x="800" y="124" text-anchor="middle">glazed work</text>
+<text class="l2" x="300" y="538" text-anchor="end">window</text>
+<text class="l2" x="996" y="590">you</text>
+</svg>

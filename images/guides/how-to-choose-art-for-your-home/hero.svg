@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Diagram of six decisions for choosing art for a home, in order: feeling, first wall, size, color, original or print, and budget, beside one wall where a work about two thirds the width of an 84 inch sofa hangs 9 inches above its back, with its center between 57 and 60 inches</title>
+<desc id="d">Diagram of six decisions for choosing art for a home, in order: feeling, first wall, size, color, original or print, and budget, beside one wall where a work about two thirds the width of an 84 inch sofa hangs 9 inches above its back, with its center between 57 and 60 inches</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=880; elevation x 96 to 864, the six steps x 920 to 1520 -->
+<!-- elevation: floor, the 84 in sofa centered on x 480, one work 56 by 36 in, bottom 41 in, top 77 in, center 59 in -->
+<line class="ink" x1="96" y1="880" x2="864" y2="880"/>
+<rect class="soft" x="144" y="624" width="672" height="112"/>
+<rect class="soft" x="144" y="680" width="48" height="56"/>
+<rect class="soft" x="768" y="680" width="48" height="56"/>
+<rect class="soft" x="144" y="736" width="672" height="112"/>
+<rect class="soft" x="176" y="848" width="16" height="32"/>
+<rect class="soft" x="768" y="848" width="16" height="32"/>
+<line class="eye" x1="96" y1="424" x2="864" y2="424"/>
+<line class="eye" x1="96" y1="400" x2="864" y2="400"/>
+<rect class="frame" x="256" y="264" width="448" height="288"/>
+<rect class="art" x="272" y="280" width="416" height="256"/>
+<line class="dim" x1="458" y1="408" x2="502" y2="408" stroke-width="2"/>
+<line class="dim" x1="480" y1="386" x2="480" y2="430" stroke-width="2"/>
+<!-- width 56 in above the work; the 9 in gap from the sofa back to the work's bottom edge -->
+<line class="dim" x1="256" y1="244" x2="704" y2="244"/>
+<line class="dim" x1="256" y1="236" x2="256" y2="252"/>
+<line class="dim" x1="704" y1="236" x2="704" y2="252"/>
+<line class="dim" x1="680" y1="624" x2="680" y2="552"/>
+<line class="dim" x1="672" y1="624" x2="688" y2="624"/>
+<line class="dim" x1="672" y1="552" x2="688" y2="552"/>
+<text class="l2" x="480" y="232" text-anchor="middle">56 in · 142 cm · two thirds of 84 in</text>
+<text class="l2" x="692" y="596">9 in · 23 cm</text>
+<text class="l2" x="104" y="388">57 to 60 in</text>
+<text class="l2" x="104" y="452">145 to 152 cm</text>
+<text class="l2" x="480" y="924" text-anchor="middle">sofa, 84 in · 213 cm</text>
+<!-- the six steps: a leader spine, six anchor dots, a primary and a secondary beside each -->
+<line class="lead" x1="920" y1="190" x2="920" y2="790"/>
+<circle class="tp" cx="920" cy="190" r="6"/>
+<text class="l1" x="948" y="199">1 Feeling</text>
+<text class="l2" x="948" y="233">name one for each space</text>
+<circle class="tp" cx="920" cy="310" r="6"/>
+<text class="l1" x="948" y="319">2 First wall</text>
+<text class="l2" x="948" y="353">the wall the space turns toward</text>
+<circle class="tp" cx="920" cy="430" r="6"/>
+<text class="l1" x="948" y="439">3 Size</text>
+<text class="l2" x="948" y="473">two thirds wide, center at 57 to 60 in</text>
+<circle class="tp" cx="920" cy="550" r="6"/>
+<text class="l1" x="948" y="559">4 Color</text>
+<text class="l2" x="948" y="593">relate to the space, never match it</text>
+<circle class="tp" cx="920" cy="670" r="6"/>
+<text class="l1" x="948" y="679">5 Original or print</text>
+<text class="l2" x="948" y="713">the best original on the first wall</text>
+<circle class="tp" cx="920" cy="790" r="6"/>
+<text class="l1" x="948" y="799">6 Budget</text>
+<text class="l2" x="948" y="833">per wall, not per piece</text>
+</svg>
