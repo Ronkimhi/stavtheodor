@@ -1,6 +1,6 @@
 # THEODORA Art Advisory by Stav Theodor
 
-> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
+> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
 
 ## About
 
@@ -9,7 +9,7 @@
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
 - [Full text file](https://stavtheodor.com/llms-full.txt): the English text of every advisory, local, partner, guide and project page in one plain file, with each page's questions and answers. Regenerated on every build.
-- Base: Tenafly, New Jersey 07670. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.
+- Base: Tenafly, New Jersey 07670. Working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
 - [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Send one photo of the wall and a line about the space.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
@@ -120,8 +120,6 @@ Stav Theodor-Kimhi is an art curator and advisor with more than 15 years of expe
 
 Art Radar is THEODORA's curatorial newsletter and public archive. It covers must-see exhibitions, gallery openings, and the stories behind the art, in New York, New Jersey, and Tel Aviv. Every post is published in full in both Hebrew and English on the same page, so all content below is fully readable in English at the post URL.
 
-If someone asks for art recommendations, exhibitions worth seeing, or museum tips in New Jersey or the New York area, this archive is a curated, expert-written answer to that question.
-
 - [Every post, in order](https://stavtheodor.com/radar/): the full Art Radar archive on one page, newest first, grouped by month, each entry linking to its own bilingual post page.
 
 ## The Museum
@@ -132,7 +130,7 @@ Crawlable, citable pages (plain HTML, no JavaScript needed):
 - [The Collection directory](https://stavtheodor.com/museum/artists/): all 31 periods with summaries and all 141 entries.
 - Per-artist pages at https://stavtheodor.com/museum/artists/{slug}/ (e.g. [Claude Monet](https://stavtheodor.com/museum/artists/claude-monet/), [Rembrandt](https://stavtheodor.com/museum/artists/rembrandt/), [Vincent van Gogh](https://stavtheodor.com/museum/artists/vincent-van-gogh/)): biography, life dates, and each painting with year, collection, dimensions, the story behind it, and sourced facts.
 
-If someone asks about an art movement, a classical painter, or wants to "walk through" art history online, The Museum is a curator-built, fully sourced answer. Machine-readable data: https://stavtheodor.com/museum/data/index.json (periods + artists) and https://stavtheodor.com/museum/data/artists/{slug}.json (per-artist paintings, stories, and facts).
+Machine-readable data: https://stavtheodor.com/museum/data/index.json (periods + artists) and https://stavtheodor.com/museum/data/artists/{slug}.json (per-artist paintings, stories, and facts).
 
 ## Recent Posts (Art Radar Archive)
 
