@@ -39,9 +39,20 @@ Discovery. Research. Curatorial development. Budget planning. Art procurement an
 - She carries insurance and can provide a certificate of insurance; it can name the landlord or managing agent on request.
 - She installs after hours, so offices, practices, restaurants and hotels can keep working.
 
-## 5. Fees (hard rule)
+## 5. Cost copy: the value story (hard rule, Ron 2026-09-29)
 
-Stav's fees are never stated anywhere on this site, not as dollars and not as percentages (Ron, 2026-09-29, binding). No fee number of hers, no percentage, no hourly figure and no dollar figure of any kind in the pages this brief governs (page copy, FAQ answers, meta descriptions, schema) or in what llms.txt, agent.txt and answers.md say about her services, and no percentage range for the industry either. Where a fee must come up, use deliberately general wording in her voice, for example: "My fees depend on the scope of the project, and I explain them clearly in our first conversation." You may describe the fee models common in the art advisory industry in the abstract (hourly, a flat project fee, a percentage of acquisitions, a retainer for ongoing collection work), with no numbers and never framed as her rates, and you may say that direct relationships with artists often bring the total cost of the work itself down. Anything about her own pricing is an editor note for Ron, not page copy.
+Wherever a page, FAQ answer, meta description, schema text or agent file (llms.txt, agent.txt, answers.md) answers what it costs, why hire a curator, galleries or auctions, the answer is this story, in Stav's first person ("I"), warm, confident and plain:
+
+1. **A better price, in most cases.** With a private art curator you can, in most cases, buy the art for less than at a large auction or through a gallery. At auction, many bidders fight for the same work, which pushes the price up. A gallery carries heavy costs (the venue, holding inventory, the gallerists) and prices with big margins to cover them. I have none of those costs, so in many cases buying through me is more affordable than almost anywhere else.
+2. **The service is included in that price.** Private, tailored consultation for the client's own home, venue or office, and a professional who works with them until the art is on the wall.
+3. **I represent the client, not the artists.** A gallery's job is to represent its artists and get them the highest price possible; that is its essence. I represent the client. I have no closed roster and am not obligated to any set of artists, so I can reach out to any artist in the world.
+
+How to write it:
+- Keep the hedges "in most cases" and "in many cases". Never promise a saving on every purchase, and never give a number: no price, no saving, no percentage, no dollar figure, no industry range.
+- Never talk about fees, commission (as a payment) or percentages, and do not frame the answer around "the relationship". Do not name the industry fee models (hourly, flat fee, percentage of acquisitions, retainer) and do not use a fee hand-off line. Commission as the art service (a commissioned work) is fine.
+- Respect galleries: they do their job, which is representing their artists. The point is whom I represent, not that galleries are bad. I still source from galleries and negotiate there on the client's behalf.
+- Stav's DAM and her network of artists are a starting point, never a roster.
+- Stav's own fees are never stated anywhere on this site, not as dollars and not as percentages (Ron, 2026-09-29, binding): not in page copy, FAQ answers, meta descriptions, schema or the agent files. Anything about her own pricing is an editor note for Ron in his private system, not page copy.
 
 ## 6. Projects (verbatim facts, do not add details)
 
@@ -76,7 +87,7 @@ Other photos available: stav-couch.jpg (Stav seated under a painting), stav-arch
 
 1. No em dashes and no en dashes anywhere, English or Hebrew, including alt text, captions, JSON fields and editor notes. Use commas, colons, periods, parentheses.
 2. No phone number in page copy (the business line lives in the shared chrome), and never any other number.
-3. No invented facts: no client names beyond those in this brief, no prices or fees for Stav, no dates, no awards, no press, no numbers that are not here. No fee or price figures at all, industry ranges included (section 5).
+3. No invented facts: no client names beyond those in this brief, no prices or fees for Stav, no dates, no awards, no press, no numbers that are not here. No fee or price figures at all, industry ranges included; cost copy tells the value story (section 5).
 4. Every page carries a full Hebrew version (body_he, lead_he, title_he, FAQ he) that is a faithful translation of the English, same structure, same links. Hebrew is written by a native standard: modern, warm, no machine translation feel, right to left punctuation.
 5. English is in Stav's first person voice ("I"), precise, warm, no marketing hype words (no "elevate", "curated experience", "bespoke journey", "unparalleled", "world class", "transform your"). Short paragraphs. Specific over general. Written for a reader with money and taste who is short on time.
 6. Every page answers its question in the first two sentences of the lead, then earns the rest. LLMs quote pages that answer directly.

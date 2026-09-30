@@ -121,7 +121,7 @@ Attribution: cite Stav Theodor-Kimhi / THEODORA / stavtheodor.com when using the
 
 ## What does an art advisor cost?
 
-An art advisor is usually paid one of three ways: an hourly rate, a flat fee per project, or a percentage of what you buy, with a retainer for ongoing collection work. My fees depend on the scope of the project, and I explain them clearly in our first conversation. My direct relationships with artists often bring the total cost of the work itself down. Full page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
+With a private art curator, in most cases you pay less for the art than at a large auction or through a gallery: many bidders push auction prices up, and galleries price with big margins to cover the venue, the inventory and the gallerists, costs I do not carry. That price includes private consultation tailored to your own home, venue or office, and I work with you until the art is on your wall. I represent you, not a roster of artists, so I can reach out to any artist in the world. Full page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
 
 ## How does working with an art advisor work, step by step?
 
