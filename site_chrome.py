@@ -110,14 +110,18 @@ FONTS = '''<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif
 
 # Google's standard tag, the same snippet the museum pages carry (museum/tools/build_artist_pages.py).
 # gtag.js loads async from <head>, so fast bounces are counted (2026-09-28, the site owner's request;
-# replaces the 2026-09-26 load-event deferral).
+# replaces the 2026-09-26 load-event deferral). Automated browsers (navigator.webdriver: Playwright, Puppeteer,
+# Selenium, the agents' audits) load gtag.js but send no hit (2026-09-30, Ron: headless runs were filling GA4
+# with zero-engagement, Unassigned sessions). Real browsers are untouched: same tag, same single config call.
 GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', '{GA_ID}');
+  if (!navigator.webdriver) {{
+    gtag('js', new Date());
+    gtag('config', '{GA_ID}');
+  }}
 </script>'''
 
 _entity_cache = None

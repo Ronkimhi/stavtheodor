@@ -38,8 +38,10 @@ GA_SNIPPET = """<!-- Google tag (gtag.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4300MN0Q97');
+  if (!navigator.webdriver) {
+    gtag('js', new Date());
+    gtag('config', 'G-4300MN0Q97');
+  }
 </script>"""
 
 THEME_SNIPPET = """<script>
