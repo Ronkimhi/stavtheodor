@@ -205,6 +205,11 @@ def posts():
     return _posts_cache
 
 
+def described(p):
+    """Pages whose card and Art Radar thumbnails carry alt text (Ron, 2026-09-30): /guide/ and /advisory/ pages."""
+    return p["path"].strip("/").split("/")[0] in ("guide", "advisory")
+
+
 def radar_html(p):
     """From Art Radar, on every article page: the posts named in radar_posts (in that order),
     or the three newest. Same timeline markup as the homepage and the post pages."""
@@ -216,7 +221,7 @@ def radar_html(p):
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
-  <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide")}
+  <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide", alts=described(p))}
   </div>
 </section>
 '''
@@ -371,7 +376,7 @@ def guide_next(p, all_pages):
     <div class="lead"><p class="eyebrow">{T('Read next', 'להמשך קריאה')}</p><h2 class="serif">{T(*h2)}</h2></div>
     {arrow}
   </div>
-  {sc.gcards(guides)}{more}
+  {sc.gcards(guides, described(p))}{more}
 </section>
 '''
 
@@ -383,7 +388,7 @@ def page_guides(p, all_pages):
         return ""
     built = built_pages(all_pages)
     h2 = (H.escape(p.get("guides_heading_en") or "The answers in more detail"), H.escape(p.get("guides_heading_he") or "התשובות, בפירוט"))
-    return sc.guides_section(sc.pick_guides(p["guides"], built, lambda o: True), h2, tight=True) + "\n"
+    return sc.guides_section(sc.pick_guides(p["guides"], built, lambda o: True), h2, tight=True, described=described(p)) + "\n"
 
 
 def render_article_page(p, all_pages):
@@ -571,7 +576,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 <section class="section wrap tight">
   <div class="grid3">{cards}
   </div>
-</section>{sc.guides_section(list(guides), GUIDES_HUB_H2, GUIDES_HUB_SUB, tight=True)}
+</section>{sc.guides_section(list(guides), GUIDES_HUB_H2, GUIDES_HUB_SUB, tight=True, described=section == "advisory")}
 {who_row(section)}
 <section class="section wrap tight">
   <div class="cta reveal">

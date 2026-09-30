@@ -130,7 +130,11 @@ def render_post_page(p, all_posts):
   </div>
 </section>
 '''
-    return (sc.head(f"{p['headline']} · Art Radar · THEODORA", p['description'], permalink,
+    # the <title> at most 60 characters (Ron, 2026-09-30): " · Art Radar" drops when the headline is too long for it
+    title = f"{p['headline']} · Art Radar · THEODORA"
+    if len(title) > 60:
+        title = f"{p['headline']} · THEODORA"
+    return (sc.head(title, p['description'], permalink,
                     og_image=p['og_image'], og_type='article', lang='en',
                     ld=[p['json_text'], breadcrumb])
             + sc.body_open() + sc.nav() + body + sc.tail())

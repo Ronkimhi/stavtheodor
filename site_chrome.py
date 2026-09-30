@@ -951,6 +951,9 @@ def read_posts(path=POSTS_FILE):
         p_he = re.search(r'<p[^>]*>(.*?)</p>', he_body.group(1), flags=re.S) if he_body else None
         img = re.search(r'<img[^>]+src="([^"]+)"', inner)
         img_src = img.group(1) if img else ''
+        img_tag = re.search(r'<img[^>]*>', inner)
+        img_alt_m = re.search(r'\balt="([^"]*)"', img_tag.group(0)) if img_tag else None
+        img_alt_en = H.unescape(img_alt_m.group(1)) if img_alt_m else ''
         if img_src and not img_src.startswith('/'):
             img_src = '/' + img_src
         assert date_en and date_he and title_en and title_he, f'post {slug}: date or title twin missing'
@@ -961,7 +964,7 @@ def read_posts(path=POSTS_FILE):
             date_en=date_en, date_he=date_he, title_en=title_en, title_he=title_he,
             teaser_en=first_sentence(p_en.group(1)) if p_en else '',
             teaser_he=first_sentence(p_he.group(1)) if p_he else '',
-            img=img_src,
+            img=img_src, img_alt=img_alt_en,
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
     return src, posts
@@ -975,9 +978,11 @@ def month_labels(post):
     return en, he
 
 
-def timeline(posts, with_months, dims=False):
+def timeline(posts, with_months, dims=False, alts=False):
     """The posts as timeline entries (the homepage, /radar/, and the More list on a post). dims=True (the guide
-    pages' From Art Radar block, 2026-09-30 SEO fixes) gives each thumbnail its file's width and height."""
+    pages' From Art Radar block, 2026-09-30 SEO fixes) gives each thumbnail its file's width and height. alts=True
+    (the From Art Radar block on /guide/ and /advisory/ pages, Ron 2026-09-30) gives each thumbnail the alt text of
+    the post's own image in content/posts.html instead of alt=""."""
     out = []
     last = None
     for p in posts:
@@ -987,7 +992,8 @@ def timeline(posts, with_months, dims=False):
             last = mon
         d = raster_dims(p['img']) if (dims and p['img']) else None
         wh = f' width="{d[0]}" height="{d[1]}"' if d else ''
-        th = f'<div class="th"><img src="{p["img"]}" alt=""{wh} loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
+        alt = img_alt(p.get('img_alt', '')) if alts else 'alt=""'
+        th = f'<div class="th"><img src="{p["img"]}" {alt}{wh} loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
         teaser = f'<p class="teaser">{T(H.escape(p["teaser_en"]), H.escape(p["teaser_he"]))}</p>' if p['teaser_en'] else ''
         out.append(f'''
       <a class="entry reveal" href="/radar/{p['slug']}/">
@@ -1139,17 +1145,21 @@ def guide_cardable(g):
     return bool(g.get('hero_image') or g.get('before_after'))
 
 
-def guide_card(g):
-    """One guide as a card: one <a>, a decorative thumbnail (the title says what it is), the title and one line."""
+def guide_card(g, described=False):
+    """One guide as a card: one <a>, a thumbnail, the title and one line. The thumbnail is decorative (alt="", the
+    title says what it is) unless described=True (the cards on /guide/ and /advisory/ pages, Ron 2026-09-30): then it
+    carries the guide's hero alt twin, or the after image's twin from content/spaces.json."""
     hi = g.get('hero_image')
     if hi:
         d = image_dims(hi)
         dims = f' width="{d[0]}" height="{d[1]}"' if d else ''
-        th = f'<span class="th"><img src="{hi["src"]}" alt=""{dims} loading="lazy" decoding="async"></span>'
+        alt = img_alt(hi.get('alt_en', ''), hi.get('alt_he', '')) if described else 'alt=""'
+        th = f'<span class="th"><img src="{hi["src"]}" {alt}{dims} loading="lazy" decoding="async"></span>'
     elif g.get('before_after'):
         k = g['before_after']
         s = spaces()[k]
-        th = (f'<span class="th ph-photo"><img src="/images/spaces/{k}_after-1000.webp" alt="" width="1000" height="{round(1000 * s["h"] / s["w"])}" '
+        alt = img_alt(s.get('alt_en', ''), s.get('alt_he', '')) if described else 'alt=""'
+        th = (f'<span class="th ph-photo"><img src="/images/spaces/{k}_after-1000.webp" {alt} width="1000" height="{round(1000 * s["h"] / s["w"])}" '
               f'loading="lazy" decoding="async"><span class="ba-chip">{T("Proposal", "הצעה")}</span></span>')
     else:
         raise SystemExit(f'{g["path"]}: a guide card needs the guide\'s hero_image (its diagram) or a before_after')
@@ -1163,12 +1173,12 @@ def guide_card(g):
     </a>'''
 
 
-def gcards(guides):
+def gcards(guides, described=False):
     """The card grid: two columns of two for exactly four cards, three columns otherwise."""
-    return f'<div class="gcards{" n4" if len(guides) == 4 else ""}">{"".join(guide_card(g) for g in guides)}\n  </div>'
+    return f'<div class="gcards{" n4" if len(guides) == 4 else ""}">{"".join(guide_card(g, described) for g in guides)}\n  </div>'
 
 
-def guides_section(guides, h2, sub=None, arrow=False, tight=False):
+def guides_section(guides, h2, sub=None, arrow=False, tight=False, described=False):
     """A #guides strip: eyebrow Guides, the h2, an optional one line sub, the "All guides" arrow to the hub's group
     (only where that group exists: the anchor must resolve), then the cards. '' without a guide."""
     if not guides:
@@ -1181,7 +1191,7 @@ def guides_section(guides, h2, sub=None, arrow=False, tight=False):
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('Guides', 'מדריכים')}</p><h2 class="serif">{T(*h2)}</h2>{sub_html}</div>{arrow_html}
   </div>
-  {gcards(guides)}
+  {gcards(guides, described)}
 </section>'''
 
 

@@ -135,6 +135,24 @@ def one_liner(a):
     return re.sub(r"\s*\((?:born |b\. )?\d{4}[^)]*\)", "", a.get("oneLiner") or "")
 
 
+def meta_desc(text, limit=155):
+    """A meta description of at most `limit` characters (Ron, 2026-09-30): the first sentence without its
+    parentheticals; if still too long, cut at a word boundary (never on a dangling small word) with an ellipsis,
+    so the cut reads as a cut and no clause is made to say something it did not."""
+    import re
+    s = text.split(". ")[0].strip()
+    s = re.sub(r"\s*\([^()]*\)", "", s)
+    s = re.sub(r"\s+", " ", s).strip().rstrip(".")
+    if len(s) + 1 <= limit:
+        return s + "."
+    words = s[:limit].split(" ")[:-1]
+    small = {"a", "an", "the", "of", "in", "on", "at", "to", "and", "or", "by", "for", "from", "with", "who",
+             "which", "that", "is", "was", "as", "its", "his", "her", "their"}
+    while words and words[-1].lower().strip(",;:") in small:
+        words.pop()
+    return " ".join(words).rstrip(" ,;:") + "…"
+
+
 def head(title, desc, canonical, og_image):
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -250,6 +268,8 @@ def build_artist(a):
     name = a["name"]
     desc_src = (a.get("bio") or {}).get("extract") or one_liner(a)
     desc = desc_src.split(". ")[0][:250] + "."
+    if len(desc) > 160:
+        desc = meta_desc(desc_src)
     og = ""
     if a["paintings"]:
         og = a["paintings"][0]["image"].get("thumb1600") or ""
@@ -319,9 +339,9 @@ def build_directory(index, artists_full):
 </section>""")
 
     n_gallery = sum(1 for a in index["artists"] if a["hasGallery"])
-    desc = (f"The full collection of The Museum at THEODORA: {len(index['periods'])} periods of art "
-            f"history and {len(index['artists'])} artists, {n_gallery} of them with walkable 3D "
-            f"galleries of freely licensed works. All facts from Wikipedia.")
+    desc = (f"The Museum at THEODORA: {len(index['periods'])} periods of art history and "
+            f"{len(index['artists'])} artists, {n_gallery} with walkable 3D galleries of freely "
+            f"licensed works. Facts from Wikipedia.")
     jsonld = ld({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
