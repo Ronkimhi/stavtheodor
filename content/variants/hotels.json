@@ -216,6 +216,7 @@
   "cta_he": "שלחו לי את התוכניות ואת תאריך הפתיחה, או תמונה אחת של הלובי.",
   "mail_subject": "Art for our hotel",
   "guides": [
+    "guide/hotel-artwork",
     "guide/large-wall-art-ideas"
   ],
   "guides_heading_en": "Guides for boutique hotels: art that belongs to your city",

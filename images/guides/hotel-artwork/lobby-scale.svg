@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of the same lobby wall under a high ceiling: a group of six small frames sized for a living room looks lost, while one large work sized for the wall holds it, both centered on the 57 to 60 inch eye level band</title>
+<desc id="d">Two elevations of the same lobby wall under a high ceiling: a group of six small frames sized for a living room looks lost, while one large work sized for the wall holds it, both centered on the 57 to 60 inch eye level band</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:40px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.25 px; floor at y=580; ceiling 180 in at y=175; two 288 in bays, A x 80 to 728, B x 872 to 1520 -->
+<!-- compact .l1 40 px, not 52: "57 to 60 in" from x 516.5 would cross the jamb at 728; 40 is the largest that keeps 12 px (Curator check 2026-09-30) -->
+<line class="ink" x1="80" y1="580" x2="728" y2="580"/>
+<line class="ink" x1="80" y1="175" x2="728" y2="175"/>
+<line class="ink" x1="80" y1="580" x2="80" y2="175"/>
+<line class="ink" x1="728" y1="580" x2="728" y2="175"/>
+<line class="eye" x1="80" y1="451.8" x2="728" y2="451.8"/>
+<line class="eye" x1="80" y1="445" x2="728" y2="445"/>
+<circle class="soft" cx="125" cy="464.2" r="26"/>
+<line class="soft" x1="125" y1="490.2" x2="125" y2="503.5"/>
+<line class="soft" x1="125" y1="503.5" x2="97" y2="580"/>
+<line class="soft" x1="125" y1="503.5" x2="153" y2="580"/>
+<line class="soft" x1="125" y1="463" x2="85" y2="505.8"/>
+<line class="soft" x1="125" y1="463" x2="165" y2="505.8"/>
+<line class="ink" x1="872" y1="580" x2="1520" y2="580"/>
+<line class="ink" x1="872" y1="175" x2="1520" y2="175"/>
+<line class="ink" x1="872" y1="580" x2="872" y2="175"/>
+<line class="ink" x1="1520" y1="580" x2="1520" y2="175"/>
+<line class="eye" x1="872" y1="451.8" x2="1520" y2="451.8"/>
+<line class="eye" x1="872" y1="445" x2="1520" y2="445"/>
+<circle class="soft" cx="917" cy="464.2" r="26"/>
+<line class="soft" x1="917" y1="490.2" x2="917" y2="503.5"/>
+<line class="soft" x1="917" y1="503.5" x2="889" y2="580"/>
+<line class="soft" x1="917" y1="503.5" x2="945" y2="580"/>
+<line class="soft" x1="917" y1="463" x2="877" y2="505.8"/>
+<line class="soft" x1="917" y1="463" x2="957" y2="505.8"/>
+<!-- panel A: six 24 by 30 frames, 3 in gaps, group 78 by 63, bottom 26.5, center 58 -->
+<rect class="frame" x="316.2" y="452.9" width="54" height="67.5"/>
+<rect class="art" x="324.2" y="460.9" width="38" height="51.5"/>
+<rect class="frame" x="377" y="452.9" width="54" height="67.5"/>
+<rect class="art" x="385" y="460.9" width="38" height="51.5"/>
+<rect class="frame" x="437.8" y="452.9" width="54" height="67.5"/>
+<rect class="art" x="445.8" y="460.9" width="38" height="51.5"/>
+<rect class="frame" x="316.2" y="378.6" width="54" height="67.5"/>
+<rect class="art" x="324.2" y="386.6" width="38" height="51.5"/>
+<rect class="frame" x="377" y="378.6" width="54" height="67.5"/>
+<rect class="art" x="385" y="386.6" width="38" height="51.5"/>
+<rect class="frame" x="437.8" y="378.6" width="54" height="67.5"/>
+<rect class="art" x="445.8" y="386.6" width="38" height="51.5"/>
+<line class="dim" x1="382" y1="449.5" x2="426" y2="449.5" stroke-width="2"/>
+<line class="dim" x1="404" y1="427.5" x2="404" y2="471.5" stroke-width="2"/>
+<!-- panel B: one 192 by 72 work, bottom 23, center 59 -->
+<rect class="frame" x="980" y="366.2" width="432" height="162"/>
+<rect class="art" x="996" y="382.2" width="400" height="130"/>
+<line class="dim" x1="1174" y1="447.2" x2="1218" y2="447.2" stroke-width="2"/>
+<line class="dim" x1="1196" y1="425.2" x2="1196" y2="469.2" stroke-width="2"/>
+<!-- labels -->
+<text class="l1" x="404" y="632" text-anchor="middle">sized for a living room<tspan class="l2" x="404" dy="34">a group of small pieces</tspan></text>
+<text class="l1" x="1196" y="632" text-anchor="middle">sized for the architecture<tspan class="l2" x="1196" dy="34">one large work</tspan></text>
+<text class="l1" x="516.5" y="433">57 to 60 in</text>
+<text class="l2" x="516.5" y="475.8">145 to 152 cm</text>
+</svg>

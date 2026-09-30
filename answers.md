@@ -210,3 +210,7 @@ Medical office wall art is art chosen for a practice's waiting area, exam spaces
 ## Where do interior designers get their art?
 
 Art sourcing for interior designers is how a design studio finds, buys and installs art for a client project: through trade programs and wholesale suppliers, galleries and artists, commissions, or an art curator who runs the whole art scope inside the designer's scheme. Trade programs are fastest for many walls, originals and commissions carry the walls a client lives with, and a curator can run all of them for you while the client stays yours. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/
+
+## How do hotels choose their artwork?
+
+Hotel artwork is a property's art program: the arrival piece in the lobby, the restaurant and bar works, the rhythm of the corridors and the guest room art, planned to one concept and bought within a budget per key. Public spaces usually carry originals and commissions, and guest rooms usually carry editions repeated with variation. Full guide: https://stavtheodor.com/guide/hotel-artwork/

@@ -56,6 +56,9 @@
   ],
   "og_image": "/images/spaces/hotels_s1_og.jpg",
   "date": "2026-09-06",
+  "guides": [
+    "guide/hotel-artwork"
+  ],
   "guides_heading_en": "Guides for hotels, restaurants and hospitality spaces",
   "guides_heading_he": "מדריכים למלונות, למסעדות ולחללי אירוח"
 }

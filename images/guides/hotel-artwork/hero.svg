@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Plan diagram of a hotel art program in five zones: the lobby with one large arrival piece at the end of the entry sightline, the restaurant and bar with one work, a corridor with works at a steady interval between the room doors, guest rooms with one work above each bed, and a suite with originals, each zone labelled with its usual approach: original, commission or edition</title>
+<desc id="d">Plan diagram of a hotel art program in five zones: the lobby with one large arrival piece at the end of the entry sightline, the restaurant and bar with one work, a corridor with works at a steady interval between the room doors, guest rooms with one work above each bed, and a suite with originals, each zone labelled with its usual approach: original, commission or edition</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 0.8 px, both plans; ground floor 840 by 360 in, inner north west corner at (80,260); guest floor 780 by 408 in at (832,260); no floor line (plans) -->
+<!-- ground floor: lobby x 0 to 480, restaurant and bar x 480 to 840 -->
+<line class="ink" x1="80" y1="260" x2="99.2" y2="260"/>
+<line class="ink" x1="156.8" y1="260" x2="387.2" y2="260"/>
+<line class="ink" x1="444.8" y1="260" x2="464" y2="260"/>
+<line class="ink" x1="80" y1="548" x2="243.2" y2="548"/>
+<line class="ink" x1="300.8" y1="548" x2="464" y2="548"/>
+<line class="ink" x1="80" y1="260" x2="80" y2="548"/>
+<line class="soft" x1="243.2" y1="548" x2="243.2" y2="519.2"/>
+<path class="soft" d="M243.2 519.2 A28.8 28.8 0 0 1 272 548"/>
+<line class="soft" x1="300.8" y1="548" x2="300.8" y2="519.2"/>
+<path class="soft" d="M300.8 519.2 A28.8 28.8 0 0 0 272 548"/>
+<rect class="tp" x="195.2" y="260" width="153.6" height="12"/>
+<rect class="soft" x="128" y="346.4" width="24" height="115.2"/>
+<rect class="soft" x="348.8" y="442.4" width="67.2" height="28.8"/>
+<rect class="soft" x="348.8" y="464.8" width="67.2" height="6.4"/>
+<rect class="soft" x="348.8" y="442.4" width="4.8" height="22.4"/>
+<rect class="soft" x="411.2" y="442.4" width="4.8" height="22.4"/>
+<rect class="soft" x="320" y="404" width="25.6" height="25.6" rx="6"/>
+<rect class="soft" x="419.2" y="404" width="25.6" height="25.6" rx="6"/>
+<line class="ink" x1="464" y1="260" x2="752" y2="260"/>
+<line class="ink" x1="464" y1="548" x2="752" y2="548"/>
+<line class="ink" x1="752" y1="260" x2="752" y2="548"/>
+<line class="ink" x1="464" y1="260" x2="464" y2="432.8"/>
+<line class="ink" x1="464" y1="509.6" x2="464" y2="548"/>
+<!-- entry sightline from the doors to the arrival piece -->
+<line class="eye" x1="272" y1="548" x2="272" y2="260"/>
+<circle class="tp" cx="272" cy="548" r="6"/>
+<!-- bar: counter, six stools, one work on the north wall; four tables -->
+<rect class="soft" x="536" y="308" width="144" height="19.2"/>
+<circle class="soft" cx="548" cy="340" r="6.4"/>
+<circle class="soft" cx="572" cy="340" r="6.4"/>
+<circle class="soft" cx="596" cy="340" r="6.4"/>
+<circle class="soft" cx="620" cy="340" r="6.4"/>
+<circle class="soft" cx="644" cy="340" r="6.4"/>
+<circle class="soft" cx="668" cy="340" r="6.4"/>
+<rect class="tp" x="569.6" y="260" width="76.8" height="12"/>
+<rect class="soft" x="529.6" y="405.6" width="28.8" height="28.8" rx="6"/>
+<rect class="soft" x="657.6" y="405.6" width="28.8" height="28.8" rx="6"/>
+<rect class="soft" x="529.6" y="477.6" width="28.8" height="28.8" rx="6"/>
+<rect class="soft" x="657.6" y="477.6" width="28.8" height="28.8" rx="6"/>
+<!-- guest floor: corridor y 0 to 72 open at the east end; suite x 0 to 312, three guest rooms of 156 in -->
+<line class="ink" x1="832" y1="260" x2="1456" y2="260"/>
+<line class="ink" x1="832" y1="260" x2="832" y2="586.4"/>
+<line class="ink" x1="832" y1="586.4" x2="1456" y2="586.4"/>
+<line class="ink" x1="1456" y1="317.6" x2="1456" y2="586.4"/>
+<line class="ink" x1="832" y1="317.6" x2="1043.2" y2="317.6"/>
+<line class="ink" x1="1072" y1="317.6" x2="1168" y2="317.6"/>
+<line class="ink" x1="1196.8" y1="317.6" x2="1292.8" y2="317.6"/>
+<line class="ink" x1="1321.6" y1="317.6" x2="1417.6" y2="317.6"/>
+<line class="ink" x1="1446.4" y1="317.6" x2="1456" y2="317.6"/>
+<line class="soft" x1="1072" y1="317.6" x2="1072" y2="346.4"/>
+<path class="soft" d="M1072 346.4 A28.8 28.8 0 0 1 1043.2 317.6"/>
+<line class="soft" x1="1196.8" y1="317.6" x2="1196.8" y2="346.4"/>
+<path class="soft" d="M1196.8 346.4 A28.8 28.8 0 0 1 1168 317.6"/>
+<line class="soft" x1="1321.6" y1="317.6" x2="1321.6" y2="346.4"/>
+<path class="soft" d="M1321.6 346.4 A28.8 28.8 0 0 1 1292.8 317.6"/>
+<line class="soft" x1="1446.4" y1="317.6" x2="1446.4" y2="346.4"/>
+<path class="soft" d="M1446.4 346.4 A28.8 28.8 0 0 1 1417.6 317.6"/>
+<line class="ink" x1="1081.6" y1="317.6" x2="1081.6" y2="586.4"/>
+<line class="ink" x1="1206.4" y1="317.6" x2="1206.4" y2="586.4"/>
+<line class="ink" x1="1331.2" y1="317.6" x2="1331.2" y2="586.4"/>
+<line class="ink" x1="956.8" y1="317.6" x2="956.8" y2="500"/>
+<line class="ink" x1="956.8" y1="548" x2="956.8" y2="586.4"/>
+<!-- corridor works [revised 2026-09-30]: five, 24 in wide, on the corridor face of the door wall (y 57 to 72), one centered in each stretch between doors, 156 in apart, 48 in clear of every casing; the north wall stays blank -->
+<rect class="tp" x="860.8" y="305.6" width="19.2" height="12"/>
+<rect class="tp" x="985.6" y="305.6" width="19.2" height="12"/>
+<rect class="tp" x="1110.4" y="305.6" width="19.2" height="12"/>
+<rect class="tp" x="1235.2" y="305.6" width="19.2" height="12"/>
+<rect class="tp" x="1360" y="305.6" width="19.2" height="12"/>
+<!-- guest rooms: king bed 80 by 76, headboard on the west party wall, a 50 in work above it -->
+<rect class="soft" x="1081.6" y="421.6" width="2.4" height="60.8"/>
+<rect class="soft" x="1084" y="421.6" width="61.6" height="60.8"/>
+<rect class="soft" x="1086.4" y="424" width="11.2" height="26.4" rx="4"/>
+<rect class="soft" x="1086.4" y="453.6" width="11.2" height="26.4" rx="4"/>
+<line class="soft" x1="1105.6" y1="421.6" x2="1105.6" y2="482.4"/>
+<rect class="tp" x="1081.6" y="432" width="12" height="40"/>
+<rect class="soft" x="1206.4" y="421.6" width="2.4" height="60.8"/>
+<rect class="soft" x="1208.8" y="421.6" width="61.6" height="60.8"/>
+<rect class="soft" x="1211.2" y="424" width="11.2" height="26.4" rx="4"/>
+<rect class="soft" x="1211.2" y="453.6" width="11.2" height="26.4" rx="4"/>
+<line class="soft" x1="1230.4" y1="421.6" x2="1230.4" y2="482.4"/>
+<rect class="tp" x="1206.4" y="432" width="12" height="40"/>
+<rect class="soft" x="1331.2" y="421.6" width="2.4" height="60.8"/>
+<rect class="soft" x="1333.6" y="421.6" width="61.6" height="60.8"/>
+<rect class="soft" x="1336" y="424" width="11.2" height="26.4" rx="4"/>
+<rect class="soft" x="1336" y="453.6" width="11.2" height="26.4" rx="4"/>
+<line class="soft" x1="1355.2" y1="421.6" x2="1355.2" y2="482.4"/>
+<rect class="tp" x="1331.2" y="432" width="12" height="40"/>
+<!-- suite: bedroom bed on the partition with a 50 in work; living area sofa on the west wall under a 56 in work -->
+<rect class="soft" x="956.8" y="421.6" width="2.4" height="60.8"/>
+<rect class="soft" x="959.2" y="421.6" width="61.6" height="60.8"/>
+<rect class="soft" x="961.6" y="424" width="11.2" height="26.4" rx="4"/>
+<rect class="soft" x="961.6" y="453.6" width="11.2" height="26.4" rx="4"/>
+<line class="soft" x1="980.8" y1="421.6" x2="980.8" y2="482.4"/>
+<rect class="tp" x="956.8" y="432" width="12" height="40"/>
+<rect class="soft" x="832" y="418.4" width="28.8" height="67.2"/>
+<rect class="soft" x="832" y="418.4" width="6.4" height="67.2"/>
+<rect class="soft" x="838.4" y="418.4" width="22.4" height="4.8"/>
+<rect class="soft" x="838.4" y="480.8" width="22.4" height="4.8"/>
+<rect class="tp" x="832" y="429.6" width="12" height="44.8"/>
+<!-- labels: five primaries with the approach from Table 1 on a second line -->
+<text class="l1" x="80" y="170">Lobby<tspan class="l2" x="80" dy="34">an original or a commission</tspan></text>
+<text class="l1" x="752" y="170" text-anchor="end">Restaurant and bar<tspan class="l2" x="752" dy="34">originals or one commission</tspan></text>
+<text class="l1" x="832" y="170">Corridor<tspan class="l2" x="832" dy="34">a series or editions</tspan></text>
+<text class="l1" x="956.8" y="640" text-anchor="middle">Suite<tspan class="l2" x="956.8" dy="34">originals</tspan></text>
+<text class="l1" x="1268.8" y="640" text-anchor="middle">Guest rooms<tspan class="l2" x="1268.8" dy="34">editions, varied across floors</tspan></text>
+<text class="l2" x="416" y="248" text-anchor="middle">elevators</text>
+<text class="l2" x="272" y="584" text-anchor="middle">entry</text>
+<text class="l2" x="96" y="492">reception desk</text>
+<text class="l2" x="1456" y="248" text-anchor="end">from the elevator</text>
+<text class="l2" x="416" y="728" text-anchor="middle">ground floor</text>
+<text class="l2" x="1144" y="728" text-anchor="middle">guest floor</text>
+</svg>

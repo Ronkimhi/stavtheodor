@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of the wall behind a hotel reception desk: the same work hung on the 57 to 60 inch eye level band sits behind the heads of the staff and the queue, and hung above their heads it stays in view from the doors</title>
+<desc id="d">Two elevations of the wall behind a hotel reception desk: the same work hung on the 57 to 60 inch eye level band sits behind the heads of the staff and the queue, and hung above their heads it stays in view from the doors</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:40px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=680; two elevations of the 144 in desk wall, (a) x 80 to 656, (b) x 784 to 1360; wall edges to 132 in; work 96 by 30, (a) bottom 43.5, (b) bottom 72 -->
+<!-- compact .l1 40 px, not 52: "57 to 60 in" from x 1372 would run past the 1600 edge; 44 is the largest that keeps 12 px (Curator check 2026-09-30) -->
+<line class="ink" x1="80" y1="680" x2="656" y2="680"/>
+<!-- the wall's two edges, floor to 132 in -->
+<line class="ink" x1="80" y1="680" x2="80" y2="152"/>
+<line class="ink" x1="656" y1="680" x2="656" y2="152"/>
+<!-- reception desk front, a 42 in transaction counter (drawing choice, never labelled) -->
+<rect class="soft" x="80" y="512" width="576" height="168"/>
+<line class="soft" x1="80" y1="520" x2="656" y2="520"/>
+<!-- the work: 96 by 30, x 24 to 120, bottom 43.5, center 58.5 -->
+<rect class="frame" x="176" y="386" width="384" height="120"/>
+<rect class="art" x="192" y="402" width="352" height="88"/>
+<line class="dim" x1="346" y1="446" x2="390" y2="446" stroke-width="2"/>
+<line class="dim" x1="368" y1="424" x2="368" y2="468" stroke-width="2"/>
+<line class="ink" x1="784" y1="680" x2="1360" y2="680"/>
+<!-- the wall's two edges, floor to 132 in -->
+<line class="ink" x1="784" y1="680" x2="784" y2="152"/>
+<line class="ink" x1="1360" y1="680" x2="1360" y2="152"/>
+<!-- reception desk front, a 42 in transaction counter (drawing choice, never labelled) -->
+<rect class="soft" x="784" y="512" width="576" height="168"/>
+<line class="soft" x1="784" y1="520" x2="1360" y2="520"/>
+<!-- the work: 96 by 30, x 24 to 120, bottom 72, center 87 -->
+<rect class="frame" x="880" y="272" width="384" height="120"/>
+<rect class="art" x="896" y="288" width="352" height="88"/>
+<line class="dim" x1="1050" y1="332" x2="1094" y2="332" stroke-width="2"/>
+<line class="dim" x1="1072" y1="310" x2="1072" y2="354" stroke-width="2"/>
+<!-- the eye band across both panels -->
+<line class="eye" x1="80" y1="452" x2="1360" y2="452"/>
+<line class="eye" x1="80" y1="440" x2="1360" y2="440"/>
+<!-- figures, drawn after the work with no fill (rule 0.6): staff at x 42 and 102 behind the desk, only what shows above the counter; the queue at x 92 and 124 in front of it, whole -->
+<circle class="soft" cx="248" cy="446" r="18"/>
+<line class="soft" x1="248" y1="464" x2="248" y2="472"/>
+<line class="soft" x1="212" y1="472" x2="284" y2="472"/>
+<line class="soft" x1="212" y1="472" x2="200" y2="512"/>
+<line class="soft" x1="284" y1="472" x2="296" y2="512"/>
+<circle class="soft" cx="488" cy="446" r="18"/>
+<line class="soft" x1="488" y1="464" x2="488" y2="472"/>
+<line class="soft" x1="452" y1="472" x2="524" y2="472"/>
+<line class="soft" x1="452" y1="472" x2="440" y2="512"/>
+<line class="soft" x1="524" y1="472" x2="536" y2="512"/>
+<circle class="soft" cx="448" cy="446" r="18"/>
+<line class="soft" x1="448" y1="464" x2="448" y2="472"/>
+<line class="soft" x1="412" y1="472" x2="484" y2="472"/>
+<line class="soft" x1="412" y1="472" x2="400" y2="548"/>
+<line class="soft" x1="484" y1="472" x2="496" y2="548"/>
+<line class="soft" x1="448" y1="472" x2="448" y2="544"/>
+<line class="soft" x1="448" y1="544" x2="420" y2="680"/>
+<line class="soft" x1="448" y1="544" x2="476" y2="680"/>
+<circle class="soft" cx="576" cy="446" r="18"/>
+<line class="soft" x1="576" y1="464" x2="576" y2="472"/>
+<line class="soft" x1="540" y1="472" x2="612" y2="472"/>
+<line class="soft" x1="540" y1="472" x2="528" y2="548"/>
+<line class="soft" x1="612" y1="472" x2="624" y2="548"/>
+<line class="soft" x1="576" y1="472" x2="576" y2="544"/>
+<line class="soft" x1="576" y1="544" x2="548" y2="680"/>
+<line class="soft" x1="576" y1="544" x2="604" y2="680"/>
+<circle class="soft" cx="952" cy="446" r="18"/>
+<line class="soft" x1="952" y1="464" x2="952" y2="472"/>
+<line class="soft" x1="916" y1="472" x2="988" y2="472"/>
+<line class="soft" x1="916" y1="472" x2="904" y2="512"/>
+<line class="soft" x1="988" y1="472" x2="1000" y2="512"/>
+<circle class="soft" cx="1192" cy="446" r="18"/>
+<line class="soft" x1="1192" y1="464" x2="1192" y2="472"/>
+<line class="soft" x1="1156" y1="472" x2="1228" y2="472"/>
+<line class="soft" x1="1156" y1="472" x2="1144" y2="512"/>
+<line class="soft" x1="1228" y1="472" x2="1240" y2="512"/>
+<circle class="soft" cx="1152" cy="446" r="18"/>
+<line class="soft" x1="1152" y1="464" x2="1152" y2="472"/>
+<line class="soft" x1="1116" y1="472" x2="1188" y2="472"/>
+<line class="soft" x1="1116" y1="472" x2="1104" y2="548"/>
+<line class="soft" x1="1188" y1="472" x2="1200" y2="548"/>
+<line class="soft" x1="1152" y1="472" x2="1152" y2="544"/>
+<line class="soft" x1="1152" y1="544" x2="1124" y2="680"/>
+<line class="soft" x1="1152" y1="544" x2="1180" y2="680"/>
+<circle class="soft" cx="1280" cy="446" r="18"/>
+<line class="soft" x1="1280" y1="464" x2="1280" y2="472"/>
+<line class="soft" x1="1244" y1="472" x2="1316" y2="472"/>
+<line class="soft" x1="1244" y1="472" x2="1232" y2="548"/>
+<line class="soft" x1="1316" y1="472" x2="1328" y2="548"/>
+<line class="soft" x1="1280" y1="472" x2="1280" y2="544"/>
+<line class="soft" x1="1280" y1="544" x2="1252" y2="680"/>
+<line class="soft" x1="1280" y1="544" x2="1308" y2="680"/>
+<!-- labels -->
+<text class="l1" x="368" y="732" text-anchor="middle">on the eye band<tspan class="l2" x="368" dy="34">hidden by staff and the queue</tspan></text>
+<text class="l1" x="1072" y="732" text-anchor="middle">above their heads<tspan class="l2" x="1072" dy="34">clears their heads, read from the doors</tspan></text>
+<text class="l1" x="1372" y="428">57 to 60 in<tspan class="l2" x="1372" dy="34">145 to 152 cm</tspan></text>
+<text class="l2" x="104" y="608">reception desk</text>
+</svg>
