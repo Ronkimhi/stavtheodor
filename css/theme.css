@@ -762,7 +762,6 @@
   .gcard p { font-size: 15px; line-height: 1.6; color: var(--muted); }
   .gcard p [data-l="he"] { font-size: 16px; }
   .gcards .gcard .th img { transition: transform 1.2s ease; }
-  body.lang-he .gcards { direction: rtl; }
 
   /* 5.9 Read next on a guide: the related guides as cards, the rest as the text links every article page has */
   .guide-next .gcards { margin-top: clamp(28px, 3vw, 40px); }
@@ -789,6 +788,9 @@
     .gcard h3 { font-size: 19px; text-wrap: pretty; }
     .gcard p { font-size: 14px; }
     .gcard:hover .th img, .gcard:focus-visible .th img { transform: none; }
+    /* Hebrew rows put the thumbnail on the reading side. Wider, the grid stays left anchored like .grid3 and every
+       section head on the site (design review, 2026-09-29): a right anchored grid under a left anchored head left a hole. */
+    body.lang-he .gcards { direction: rtl; }
   }
   @media (prefers-reduced-motion: reduce) { .gcard .th img { transition: none; } }
 
