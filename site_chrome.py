@@ -155,6 +155,8 @@ def _ref(v):
     vid, name = v.get('@id'), str(v.get('name', ''))
     if vid == ORG_ID or (not vid and name == 'THEODORA'):
         return {'@id': ORG_ID}
+    if vid == STAV_ID and v.get('url') and v.get('sameAs'):
+        return v  # a guide's byline author: same @id (still one Stav in the graph) with the about page and Instagram
     if vid == STAV_ID or (not vid and name.startswith('Stav Theodor')):
         return {'@id': STAV_ID}
     return v

@@ -14,7 +14,7 @@ GUIDE_PATH = re.compile(r"^guide/[a-z0-9]+(?:-[a-z0-9]+)*$")
 GUIDES_COUNT = (1, 6)
 # (field, max characters): the card's line, the breadcrumb's short name, the guides strip's heading, Read next's h2
 FIELD_MAX = {"dek_en": 120, "dek_he": 120, "crumb_en": 40, "crumb_he": 40, "guides_heading_en": 90, "guides_heading_he": 90,
-             "readnext_h2_en": 90, "readnext_h2_he": 90}
+             "readnext_h2_en": 90, "readnext_h2_he": 90, "byline_en": 160, "byline_he": 160}
 # partners up to 1000 since 2026-09-29: /designers/ was merged into /for-designers/ (Ron's SEO brief, P1.5)
 # area: the town and county pages (Ron's SEO brief, 2026-09-29, P1.2 and P1.3), 700 to 1,200 English words counted over the
 # lead, the body and the questions, with the brief's own short answers (FAQ_AREA)
@@ -128,9 +128,15 @@ for f in sys.argv[1:]:
         n = words(q.get("a_en","")); lo, hi = FAQ_AREA if p.get("section") == "area" else FAQ_WORDS
         if n and (n < lo or n > hi): fails.append(f"faq answer {n} words, expected {lo} to {hi}")
     if p.get("hero_image") and not os.path.exists(p["hero_image"]["src"].lstrip("/")): fails.append("hero_image file missing")
+    if guide and str((p.get("hero_image") or {}).get("src", "")).lower().endswith(".svg"):
+        og_img = p.get("og_image") or ""
+        if not og_img: fails.append("og_image: required on a guide whose hero is an SVG (no link preview can show an SVG; a 1200 by 630 JPEG)")
+        elif not og_img.lower().endswith((".jpg", ".jpeg")): fails.append("og_image: a 1200 by 630 JPEG")
+        elif not os.path.exists(og_img.lstrip("/")): fails.append(f"og_image file missing: {og_img}")
+    if p.get("byline_en") and not guide: fails.append("byline_en/byline_he: guide pages only")
     for k, n in FIELD_MAX.items():
         if p.get(k) is not None and not (isinstance(p[k], str) and 0 < len(p[k]) <= n): fails.append(f"{k}: a string of 1 to {n} characters")
-    for a in ("dek", "crumb", "guides_heading", "readnext_h2"):
+    for a in ("dek", "crumb", "guides_heading", "readnext_h2", "byline"):
         if bool(p.get(a + "_en")) != bool(p.get(a + "_he")): fails.append(f"{a}_en and {a}_he come together (both languages)")
     if "guides" in p:  # the #guides strip (Fable's design, 2026-09-29): 1 to 6 guide pages, in display order
         gs = p["guides"]
@@ -143,7 +149,9 @@ for f in sys.argv[1:]:
                 if not GUIDE_PATH.match(x): fails.append(f'guides: "{x}" is not a guide path ("guide/<slug>", no slashes around it)')
                 elif x not in GUIDES: fails.append(f'guides: "{x}" is not a guide page in content/pages')
                 elif not (GUIDES[x].get("hero_image") or GUIDES[x].get("before_after")): fails.append(f'guides: "{x}" has neither a hero_image nor a before_after, so it has no card')
-    elif "guides_heading_en" in p: fails.append("guides_heading_en: only beside guides")
+    if "guides" in p:
+        for k in ("guides_heading_en", "guides_heading_he"):
+            if not p.get(k): fails.append(f"{k}: required beside guides (the fallback heading is a safety net, never the copy)")
     if len(p.get("related", [])) < 2 and p.get("section") != "guide": fails.append("fewer than 2 related pages")
     if fails: print(f"{f}: FAIL\n  - " + "\n  - ".join(fails)); fails_total += 1
     else: print(f"{f}: OK ({words(p['body_en'])} en words)")

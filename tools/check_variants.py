@@ -45,8 +45,9 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      English words (p, h3, ul, ol, li, a, em, strong; links as in h, the same set in both languages)
   p  guides (optional, Fable's design, 2026-09-29): one to six different "guide/<slug>" paths, each a guide page in
      content/pages with a card (hero_image or before_after) and built (guide/<slug>/index.html); the strip's heading
-     guides_heading_en/_he (optional, at most 90 characters, "Guides" without it) and one line guides_sub_en/_he
-     (optional, at most 200), both only beside guides
+     guides_heading_en/_he (at most 90 characters; required beside guides, may be stored ahead of the
+     guides; the safety-net fallback is "The answers in more detail") and one line guides_sub_en/_he
+     (optional, at most 200), only beside guides
 """
 import ast
 import datetime
@@ -690,8 +691,11 @@ def check(path, v, peers):
                     fails.append(f'guides: "{g}" has neither a hero_image nor a before_after, so it has no card')
                 elif not os.path.exists(os.path.join(ROOT, g, 'index.html')):
                     fails.append(f'guides: /{g}/ is not built (run python3 build.py)')
+        for k in ('guides_heading_en', 'guides_heading_he'):
+            if not v.get(k):
+                fails.append(f'{k}: required beside guides (the fallback heading is a safety net, never the copy)')
     else:
-        for k in ('guides_heading_en', 'guides_heading_he', 'guides_sub_en', 'guides_sub_he'):
+        for k in ('guides_sub_en', 'guides_sub_he'):
             if k in v:
                 fails.append(f'{k}: only beside guides')
 

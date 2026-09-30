@@ -140,6 +140,9 @@ def ld_blocks(p, url, og):
         # provider is the entity itself (content/entity.json, @id #org, on every page), by reference only
         main.update({"provider": {"@id": SITE + "/#org"},
                      "areaServed": p.get("area_served") or DEFAULT_AREA, "serviceType": p.get("service_type", "Art advisory")})
+    if p["section"] == "guide":  # the byline's author: the site-wide Person (same @id, so one Stav), with the about page and Instagram
+        main["author"] = {"@type": "Person", "@id": SITE + "/#stav", "name": "Stav Theodor", "url": SITE + "/about/",
+                          "sameAs": [sc.INSTAGRAM]}
     main.update(p.get("schema_extra", {}))
     crumbs = [{"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"}]
     if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Advisory); partners go straight to the page
@@ -229,24 +232,24 @@ def cta_html(p):
 
 
 # ---------------------------------------------------------------- the guides (Fable's design spec, 2026-09-29)
-# A guide page (section "guide"): breadcrumb Home / Advisory / the guide, a tighter h1, the hero diagram as Fig. 1, the
+# A guide page (section "guide"): breadcrumb Home / Advisory / the guide, a tighter h1, the hero diagram as Figure 1, the
 # reading column as .prose.guide (text at 720px, figures and tables to 1000px), numbered figures and tables, h2 ids,
 # then Questions, the CTA, Read next as cards and links, and From Art Radar last. Body components (content/PAGE-SPEC.md):
 # figure.dia (a diagram img plus figcaption), figure.tbl (figcaption plus div.tbl-x holding the table), aside.cnote
-# (span.cn-l plus p), div.keynums of div.keynum (span.n, span.l). The build numbers the captions (Fig. N / תרשים N,
+# (span.cn-l plus p), div.keynums of div.keynum (span.n, span.l). The build numbers the captions (Figure N / תרשים N,
 # Table N / טבלה N; the JSON may leave the number out), adds width and height to diagram imgs from the SVG, and ids to
 # every h2 (slug of the English text; the Hebrew twin's h2 takes the same id plus "-he").
-FIG_LABEL = {("dia", "en"): "Fig.", ("dia", "he"): "תרשים", ("tbl", "en"): "Table", ("tbl", "he"): "טבלה"}
+FIG_LABEL = {("dia", "en"): "Figure", ("dia", "he"): "תרשים", ("tbl", "en"): "Table", ("tbl", "he"): "טבלה"}
 FIGURE_RE = re.compile(r'<figure class="(dia|tbl)">(.*?)</figure>', re.S)
 # The /advisory/ hub's guides group, in this order (slugs, like PROJECT_ORDER); guides not listed follow, newest first.
 GUIDE_ORDER = []
-GUIDES_HUB_H2 = ("Guides to size, hang and place art", "מדריכים לגודל, לתלייה ולמיקום של אמנות")
+GUIDES_HUB_H2 = ("Practical guides to choosing and placing art", "מדריכים מעשיים לבחירת אמנות ולמיקומה")
 GUIDES_HUB_SUB = ("Each guide answers one question with drawings to scale and the measurements in inches and centimeters.",
                   "כל מדריך עונה על שאלה אחת, עם שרטוטים בקנה מידה והמידות באינצ'ים ובסנטימטרים.")
 
 
 def number_figures(body, lang, fig_start):
-    """Number every diagram figure (from fig_start: the hero diagram is Fig. 1) and every table (from 1) in reading order,
+    """Number every diagram figure (from fig_start: the hero diagram is Figure 1) and every table (from 1) in reading order,
     in both twins alike, and give each diagram img its width and height from the SVG when the JSON does not."""
     n = {"dia": fig_start, "tbl": 1}
 
@@ -309,8 +312,24 @@ def guide_crumbs(p):
     clipped to one line by CSS and hidden on a phone, where the h1 sits right under it)."""
     sep = '<span class="sep" aria-hidden="true">/</span>'
     cur = T(H.escape(p.get("crumb_en") or p["title_en"]), H.escape(p.get("crumb_he") or p["title_he"]))
-    return (f'<nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="/">{T("Home", "ראשי")}</a> {sep} '
-            f'<a href="/advisory/">{T("Advisory", "ייעוץ")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
+    return (f'<nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="/">{T("Home", "דף הבית")}</a> {sep} '
+            f'<a href="/advisory/">{T("Art advisory", "ייעוץ אמנות")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
+
+
+BYLINE_DEFAULT = ("By Stav Theodor, art curator and advisor at THEODORA in Tenafly, New Jersey",
+                  "מאת סתיו תאודור, אוצרת ויועצת אמנות ב-THEODORA בטנפליי, ניו ג'רזי")
+BYLINE_NAME = ("Stav Theodor", "סתיו תאודור")  # linked to /about/ where it appears in the line
+
+
+def guide_byline(p):
+    """The visible byline under a guide's lead (Curator microcopy 2026-09-29): byline_en/_he, else the default line;
+    the name in it links to /about/. Small caps in muted ink, the site's eyebrow style."""
+    def one(text, name):
+        t = H.escape(text)
+        n = H.escape(name)
+        return t.replace(n, f'<a href="/about/">{n}</a>', 1) if n in t else t
+    en, he = p.get("byline_en") or BYLINE_DEFAULT[0], p.get("byline_he") or BYLINE_DEFAULT[1]
+    return f'\n  <p class="eyebrow soft byline">{T(one(en, BYLINE_NAME[0]), one(he, BYLINE_NAME[1]))}</p>'
 
 
 def built_pages(all_pages):
@@ -348,11 +367,11 @@ def guide_next(p, all_pages):
 
 def page_guides(p, all_pages):
     """A content page's #guides strip (the page's optional `guides`, 1 to 6 guide paths): after the reading column and
-    before the questions. Heading guides_heading_en/_he, else "Go deeper"; no arrow, no sub (design spec 3.2)."""
+    before the questions. Heading guides_heading_en/_he, else "The answers in more detail"; no arrow, no sub (design spec 3.2)."""
     if p["section"] == "guide" or not p.get("guides"):
         return ""
     built = built_pages(all_pages)
-    h2 = (H.escape(p.get("guides_heading_en") or "Go deeper"), H.escape(p.get("guides_heading_he") or "להעמיק"))
+    h2 = (H.escape(p.get("guides_heading_en") or "The answers in more detail"), H.escape(p.get("guides_heading_he") or "התשובות, בפירוט"))
     return sc.guides_section(sc.pick_guides(p["guides"], built, lambda o: True), h2, tight=True) + "\n"
 
 
@@ -380,7 +399,7 @@ def render_article_page(p, all_pages):
         hero = f'''
   <figure class="pfig dia">
     <img src="{hi['src']}" {sc.img_alt(hi.get('alt_en', ''), hi.get('alt_he', ''))}{dims} loading="eager" fetchpriority="high" decoding="async">
-    <figcaption><span class="fig-n">{T('Fig. 1', 'תרשים 1')}</span>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>
+    <figcaption><span class="fig-n">{T('Figure 1', 'תרשים 1')}</span>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>
   </figure>'''
     elif hi:
         cap = ""
@@ -401,14 +420,14 @@ def render_article_page(p, all_pages):
     body_en, body_he = lazy_images(p['body_en']), lazy_images(p['body_he'])
     prose = "prose"
     if guide:
-        start = 2 if (hi and not ba) else 1  # the hero diagram is Fig. 1
+        start = 2 if (hi and not ba) else 1  # the hero diagram is Figure 1
         body_en, body_he = h2_ids(number_figures(body_en, "en", start), number_figures(body_he, "he", start))
         prose = "prose guide"
     head = f'''
 <header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
-  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{hero}
+  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{hero}
 </header>
 
 <section class="section wrap tight">

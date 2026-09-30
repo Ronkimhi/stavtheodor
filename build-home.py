@@ -287,10 +287,10 @@ def guide(v):
 
 def guides(v, pages):
     """The variant's guides strip (#guides): its `guides` (1 to 6 guide paths, tools/check_variants.py) as cards, the
-    heading guides_heading_en/_he (else "Guides"), an optional sub, and the "All guides" arrow to the /advisory/ hub's
+    heading guides_heading_en/_he (else "The answers in more detail"), an optional sub, and the "All guides" arrow to the /advisory/ hub's
     guides group when that group exists. Only built guides are shown; none built, no section."""
     built = lambda g: os.path.exists(sc.rel(g['path'].strip('/'), 'index.html'))
-    h2 = (v.get('guides_heading_en') or 'Guides', v.get('guides_heading_he') or 'מדריכים')
+    h2 = (v.get('guides_heading_en') or 'The answers in more detail', v.get('guides_heading_he') or 'התשובות, בפירוט')
     sub = (v['guides_sub_en'], v['guides_sub_he']) if v.get('guides_sub_en') else None
     arrow = any(built(g) for g in sc.hub_guides(pages.values()))
     return sc.guides_section(sc.pick_guides(v['guides'], pages, built), (H.escape(h2[0]), H.escape(h2[1])),
