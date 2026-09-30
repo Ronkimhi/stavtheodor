@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two side sections of a dental operatory: sitting back, the patient's line of sight meets a work on the upper part of the wall ahead, above the 57 to 60 inch standing band; fully reclined, the view reaches only the ceiling, where a light printed panel sits in the ceiling grid, clear of the operatory light</title>
+<desc id="d">Two side sections of a dental operatory: sitting back, the patient's line of sight meets a work on the upper part of the wall ahead, above the 57 to 60 inch standing band; fully reclined, the view reaches only the ceiling, where a light printed panel sits in the ceiling grid, clear of the operatory light</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:44px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; two sections of the same operatory cut along the chair's axis, wall behind the head at the left of each panel, wall ahead at the right, 144 in apart; floor at y=680, ceiling 108 in at y=194 -->
+<!-- compact .l1 44 px, not 52: at 52 the top of "57 to 60 in" comes within 9 px of the 57 in band line and needs 12; 45 is the ceiling (Curator check 2026-09-30) -->
+<!-- floor, the two walls and the ceiling -->
+<path class="ink" d="M112 680 L760 680 L760 194 L112 194 Z"/>
+<!-- eye band 57 and 60 in against the wall ahead, x 120 to 144 -->
+<line class="eye" x1="652" y1="423.5" x2="760" y2="423.5"/>
+<line class="eye" x1="652" y1="410" x2="760" y2="410"/>
+<!-- the work on the wall ahead in profile, 1.5 in deep, 24 in tall, bottom 72 top 96, center 84 -->
+<rect class="frame" x="753.2" y="248" width="6.8" height="108"/>
+<rect class="art" x="755.2" y="250" width="2.8" height="104"/>
+<line class="dim" x1="734.6" y1="302" x2="778.6" y2="302" stroke-width="2"/>
+<line class="dim" x1="756.6" y1="280" x2="756.6" y2="324" stroke-width="2"/>
+<!-- the ceiling panel, 48 in long, 1.5 in deep, x 60 to 108, just under the ceiling; it is a work -->
+<rect class="frame" x="382" y="194" width="216" height="6.8"/>
+<rect class="art" x="384" y="196" width="212" height="2.8"/>
+<line class="dim" x1="468" y1="197.4" x2="512" y2="197.4" stroke-width="2"/>
+<line class="dim" x1="490" y1="175.4" x2="490" y2="219.4" stroke-width="2"/>
+<!-- operatory light: mount at x 20, arm to a head 12 by 5 in centered at (46, 64) -->
+<rect class="soft" x="193" y="194" width="18" height="9"/>
+<line class="soft" x1="202" y1="203" x2="319" y2="380.8"/>
+<rect class="soft" x="292" y="380.8" width="54" height="22.5"/>
+<!-- panel A chair, sitting back: base column x 70, seat pan 56 to 82 at 20, backrest to (40, 38), headrest to (36, 44), leg rest to (106, 10) -->
+<line class="soft" x1="427" y1="680" x2="427" y2="590"/>
+<line class="soft" x1="391" y1="680" x2="463" y2="680"/>
+<line class="soft" x1="364" y1="590" x2="481" y2="590"/>
+<path class="soft" d="M364 590 L292 509 L274 482"/>
+<line class="soft" x1="481" y1="590" x2="589" y2="635"/>
+<!-- the reclined patient glyph: head circle 9 in across, tangent to the headrest and clear of the backrest (Curator check 2026-09-30: the head rests on the headrest, S0.4); anchor dot on its edge; the sightline to the work's center -->
+<circle class="soft" cx="295.4" cy="477.5" r="20.2"/>
+<line class="eye" x1="315.6" y1="477.5" x2="760" y2="302"/>
+<circle class="tp" cx="315.6" cy="477.5" r="3"/>
+<text class="l1" x="436" y="720" text-anchor="middle">Sitting back</text>
+<!-- the band label, under the band against the wall; the secondary on its own line so neither crosses the sightline -->
+<text class="l1" x="748" y="469.9" text-anchor="end">57 to 60 in</text>
+<text class="l2" x="748" y="500" text-anchor="end">145 to 152 cm · standing</text>
+<text class="l2" x="740" y="271.8" text-anchor="end">wall ahead</text>
+<!-- floor, the two walls and the ceiling -->
+<path class="ink" d="M840 680 L1488 680 L1488 194 L840 194 Z"/>
+<!-- eye band 57 and 60 in against the wall ahead, x 120 to 144 -->
+<line class="eye" x1="1380" y1="423.5" x2="1488" y2="423.5"/>
+<line class="eye" x1="1380" y1="410" x2="1488" y2="410"/>
+<!-- the work on the wall ahead in profile, 1.5 in deep, 24 in tall, bottom 72 top 96, center 84 -->
+<rect class="frame" x="1481.2" y="248" width="6.8" height="108"/>
+<rect class="art" x="1483.2" y="250" width="2.8" height="104"/>
+<line class="dim" x1="1462.6" y1="302" x2="1506.6" y2="302" stroke-width="2"/>
+<line class="dim" x1="1484.6" y1="280" x2="1484.6" y2="324" stroke-width="2"/>
+<!-- the ceiling panel, 48 in long, 1.5 in deep, x 60 to 108, just under the ceiling; it is a work -->
+<rect class="frame" x="1110" y="194" width="216" height="6.8"/>
+<rect class="art" x="1112" y="196" width="212" height="2.8"/>
+<line class="dim" x1="1196" y1="197.4" x2="1240" y2="197.4" stroke-width="2"/>
+<line class="dim" x1="1218" y1="175.4" x2="1218" y2="219.4" stroke-width="2"/>
+<!-- operatory light: mount at x 20, arm to a head 12 by 5 in centered at (46, 64) -->
+<rect class="soft" x="921" y="194" width="18" height="9"/>
+<line class="soft" x1="930" y1="203" x2="1047" y2="380.8"/>
+<rect class="soft" x="1020" y="380.8" width="54" height="22.5"/>
+<!-- panel B chair, fully reclined: base column x 70, seat 58 to 82 at 22, backrest (58, 24) to (34, 30), headrest to (30, 32), leg rest to (108, 26) -->
+<line class="soft" x1="1155" y1="680" x2="1155" y2="581"/>
+<line class="soft" x1="1119" y1="680" x2="1191" y2="680"/>
+<line class="soft" x1="1101" y1="581" x2="1209" y2="581"/>
+<path class="soft" d="M1101 581 L1101 572 L993 545 L975 536"/>
+<line class="soft" x1="1209" y1="581" x2="1326" y2="563"/>
+<!-- head circle 9 in across at (38, 35), anchor on its top edge; the cone: center 20 degrees toward the feet, edges 10 toward the head and 50 toward the feet, meeting the ceiling at x 26, 63 and 120 -->
+<circle class="soft" cx="1011" cy="522.5" r="20.2"/>
+<line class="eye" x1="1011" y1="502.2" x2="956.6" y2="194"/>
+<line class="eye" x1="1011" y1="502.2" x2="1123.2" y2="194"/>
+<line class="eye" x1="1011" y1="502.2" x2="1378.4" y2="194"/>
+<circle class="tp" cx="1011" cy="502.2" r="3"/>
+<text class="l1" x="1164" y="720" text-anchor="middle">Fully reclined</text>
+<text class="l2" x="1218" y="156" text-anchor="middle">ceiling panel, printed or backlit, no glass</text>
+<text class="l2" x="1180.2" y="400.1">operatory light</text>
+</svg>

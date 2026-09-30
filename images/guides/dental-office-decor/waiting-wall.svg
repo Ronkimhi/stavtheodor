@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a waiting area wall: one artwork 56 inches wide, two thirds of the 84 inch bench below it, hung 10 inches above the seat backs, with acrylic glazing where heads lean</title>
+<desc id="d">Elevation of a waiting area wall: one artwork 56 inches wide, two thirds of the 84 inch bench below it, hung 10 inches above the seat backs, with acrylic glazing where heads lean</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; elevation, floor at y=680 -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<!-- a row of three linked waiting chairs, 84 in overall: seat 18 in, arms 26 in, back top 32 in, on a shared beam -->
+<rect class="soft" x="548" y="488" width="504" height="84"/>
+<line class="soft" x1="716" y1="488" x2="716" y2="572"/>
+<line class="soft" x1="884" y1="488" x2="884" y2="572"/>
+<rect class="soft" x="548" y="572" width="504" height="18"/>
+<rect class="soft" x="548" y="524" width="12" height="48"/>
+<rect class="soft" x="710" y="524" width="12" height="48"/>
+<rect class="soft" x="878" y="524" width="12" height="48"/>
+<rect class="soft" x="1040" y="524" width="12" height="48"/>
+<line class="soft" x1="554" y1="596" x2="1046" y2="596"/>
+<line class="soft" x1="572" y1="596" x2="572" y2="680"/>
+<line class="soft" x1="1028" y1="596" x2="1028" y2="680"/>
+<!-- the work 56 by 34 in, bottom 42 in (32 + 10), top 76 in, center 59 in -->
+<rect class="frame" x="632" y="224" width="336" height="204"/>
+<rect class="art" x="648" y="240" width="304" height="172"/>
+<line class="dim" x1="778" y1="326" x2="822" y2="326" stroke-width="2"/>
+<line class="dim" x1="800" y1="304" x2="800" y2="348" stroke-width="2"/>
+<!-- 56 in width, dimension above the work -->
+<line class="dim" x1="632" y1="200" x2="968" y2="200"/>
+<line class="dim" x1="632" y1="192" x2="632" y2="208"/>
+<line class="dim" x1="968" y1="192" x2="968" y2="208"/>
+<text class="l1" x="800" y="188" text-anchor="middle">56 in<tspan class="l2"> · 142 cm · two thirds of the 84 in bench</tspan></text>
+<!-- 10 in gap, seat back top to the frame's bottom edge, dimension right of the work -->
+<line class="dim" x1="992" y1="428" x2="992" y2="488"/>
+<line class="dim" x1="984" y1="428" x2="1000" y2="428"/>
+<line class="dim" x1="984" y1="488" x2="1000" y2="488"/>
+<text class="l1" x="1004" y="467">10 in<tspan class="l2"> · 25 cm · within 8 to 10 in</tspan></text>
+<!-- secondaries -->
+<text class="l2" x="800" y="724" text-anchor="middle">waiting bench, 84 in</text>
+<text class="l2" x="608" y="436" text-anchor="end">acrylic, not glass: heads lean here</text>
+</svg>

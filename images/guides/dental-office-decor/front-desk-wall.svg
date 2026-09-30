@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of the wall behind a front desk: a large logo in the middle pushes two small artworks to the edges; one long work, two thirds of the desk's width, sits above the heads of standing staff, with the logo smaller and to one side</title>
+<desc id="d">Two elevations of the wall behind a front desk: a large logo in the middle pushes two small artworks to the edges; one long work, two thirds of the desk's width, sits above the heads of standing staff, with the logo smaller and to one side</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:44px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; two elevations of the same 168 in wall behind a front desk; floor at y=680, ceiling 108 in at y=248 -->
+<!-- compact .l1 44 px, not 52: "One work, logo to one side" at 52 is 662 px, wider than its 648 px panel; at 50 the panel names' caps come within 4 px of the floor line (Curator check 2026-09-30) -->
+<!-- floor, side walls and ceiling -->
+<path class="ink" d="M80 680 L752 680 L752 248 L80 248 Z"/>
+<!-- front desk 96 in, x 36 to 132, transaction top 42 in, a 36 in lower section at 36 in high at its left end -->
+<path class="soft" d="M224 680 L224 536 L368 536 L368 512 L608 512 L608 680"/>
+<!-- logo panel 48 by 24 in centered over the desk, center 60 in: empty outline, not a work -->
+<rect class="soft" x="320" y="392" width="192" height="96"/>
+<!-- two small works 14 by 18 in, 12 in from each corner, centers at 58 in -->
+<rect class="frame" x="128" y="412" width="56" height="72"/>
+<rect class="art" x="138" y="422" width="36" height="52"/>
+<line class="dim" x1="134" y1="448" x2="178" y2="448" stroke-width="2"/>
+<line class="dim" x1="156" y1="426" x2="156" y2="470" stroke-width="2"/>
+<rect class="frame" x="648" y="412" width="56" height="72"/>
+<rect class="art" x="658" y="422" width="36" height="52"/>
+<line class="dim" x1="654" y1="448" x2="698" y2="448" stroke-width="2"/>
+<line class="dim" x1="676" y1="426" x2="676" y2="470" stroke-width="2"/>
+<text class="l1" x="416" y="720" text-anchor="middle">Logo in the middle</text>
+<text class="l2" x="416" y="606" text-anchor="middle">front desk, 96 in</text>
+<text class="l2" x="524" y="444">logo</text>
+<!-- floor, side walls and ceiling -->
+<path class="ink" d="M848 680 L1520 680 L1520 248 L848 248 Z"/>
+<!-- front desk 96 in, x 36 to 132, transaction top 42 in, a 36 in lower section at 36 in high at its left end -->
+<path class="soft" d="M992 680 L992 536 L1136 536 L1136 512 L1376 512 L1376 680"/>
+<!-- one work 64 by 24 in centered on the desk, bottom 72, top 96, center 84 -->
+<rect class="frame" x="1056" y="296" width="256" height="96"/>
+<rect class="art" x="1072" y="312" width="224" height="64"/>
+<line class="dim" x1="1162" y1="344" x2="1206" y2="344" stroke-width="2"/>
+<line class="dim" x1="1184" y1="322" x2="1184" y2="366" stroke-width="2"/>
+<!-- the logo 24 by 8 in, centered 18 in from the right corner, center 58 in: empty outline -->
+<rect class="soft" x="1400" y="432" width="96" height="32"/>
+<!-- a standing figure, 63 in, behind the desk right of center: head, torso and arms above the counter, the rest behind it -->
+<circle class="soft" cx="1288" cy="454" r="26"/>
+<line class="soft" x1="1288" y1="480" x2="1288" y2="512"/>
+<line class="soft" x1="1288" y1="472" x2="1266.9" y2="512"/>
+<line class="soft" x1="1288" y1="472" x2="1309.1" y2="512"/>
+<!-- two thirds of the desk: dimension under the ceiling above the work; its label above the ceiling line, because the 12 in between the work's top and the ceiling cannot hold a doubled label -->
+<line class="dim" x1="1056" y1="266" x2="1312" y2="266"/>
+<line class="dim" x1="1056" y1="258" x2="1056" y2="274"/>
+<line class="dim" x1="1312" y1="258" x2="1312" y2="274"/>
+<text class="l1" x="1184" y="236" text-anchor="middle">two thirds of the desk</text>
+<text class="l1" x="1184" y="720" text-anchor="middle">One work, logo to one side</text>
+<text class="l2" x="1388" y="452" text-anchor="end">logo</text>
+<text class="l2" x="1140" y="424" text-anchor="middle">above staff heads</text>
+</svg>

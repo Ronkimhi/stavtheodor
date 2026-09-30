@@ -190,3 +190,7 @@ Law office decor is the art and finish that tell a client, within the first minu
 ## What is the difference between an art advisor and an art consultant?
 
 An art advisor works for a buyer, usually a private collector, to find, assess and negotiate artworks for a collection. An art consultant works for a space, such as an office, a hotel, a clinic or a home, choosing and installing art that fits the design, the brand and the budget. I am Stav Theodor, and at THEODORA in Tenafly, New Jersey, I work as both. Full guide: https://stavtheodor.com/guide/art-advisor-vs-art-consultant/
+
+## What are some good decorations for a dentist office?
+
+Dental office decor is the art and finish a patient sees from the door to the chair, chosen with anxious patients in mind and to show the standard of care. Most practices forget the view a patient looks at longest, the ceiling and upper wall seen from the chair, so I plan that first. Full guide: https://stavtheodor.com/guide/dental-office-decor/

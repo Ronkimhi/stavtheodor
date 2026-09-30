@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan of a dental operatory: from the doorway the eye lands on a work on the side wall, while from the reclined chair the view reaches the wall ahead and the side wall falls outside it</title>
+<desc id="d">Plan of a dental operatory: from the doorway the eye lands on a work on the side wall, while from the reclined chair the view reaches the wall ahead and the side wall falls outside it</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:40px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; plan, north wall at the top, door in the west wall; operatory 132 by 144 in, top left at (470, 90) -->
+<!-- compact .l1 40 px, not 52: "from the doorway" doubled at 52 is 442 px and would start at x 4, past the 80 px margin; 43 is the largest size that clears (Curator check 2026-09-30) -->
+<!-- walls with the door gap y 12 to 48 in the west wall -->
+<path class="ink" d="M470 150 L470 90 L1130 90 L1130 810 L470 810 L470 330"/>
+<!-- door 36 in, hinge at y 48 (south), leaf east, swing arc inward -->
+<line class="soft" x1="470" y1="330" x2="650" y2="330"/>
+<path class="soft" d="M470 150 A180 180 0 0 1 650 330"/>
+<!-- rear cabinet 72 by 24 in against the north wall, x 30 to 102 -->
+<rect class="soft" x="620" y="90" width="360" height="120"/>
+<!-- chair 24 by 72 in, x 54 to 78, y 32 to 104, head to the north, rx 16; headrest line at y 50 -->
+<path class="soft" d="M740 610 L740 266 A16 16 0 0 1 756 250 L844 250 A16 16 0 0 1 860 266 L860 610 Z"/>
+<line class="soft" x1="740" y1="340" x2="860" y2="340"/>
+<!-- the works, 12 px deep on the inner face: wall ahead (south) x 46 to 86; side wall (east) y 60 to 100 -->
+<rect class="tp" x="700" y="798" width="200" height="12"/>
+<rect class="tp" x="1118" y="390" width="12" height="200"/>
+<!-- the patient's 60 degree cone from the reclined eye (66, 42): 30 degrees either side of due south, meeting the south wall at x 7 and x 125 (102 x tan 30 = 59 in) -->
+<line class="eye" x1="800" y1="300" x2="505.6" y2="810"/>
+<line class="eye" x1="800" y1="300" x2="1094.4" y2="810"/>
+<!-- the doorway viewer at (6, 30) and the sightline to the side wall work's center (132, 80) -->
+<line class="eye" x1="500" y1="240" x2="1130" y2="490"/>
+<circle class="tp" cx="800" cy="300" r="3"/>
+<circle class="tp" cx="500" cy="240" r="3"/>
+<!-- primaries beside the two viewers; the chair's label sits at the mouth of its cone, below the chair, because beside the anchor every position crosses the chair, the door arc, the west wall or the east wall (see the questions list) -->
+<text class="l1" x="446" y="248" text-anchor="end">from the doorway</text>
+<text class="l1" x="800" y="668" text-anchor="middle">from the chair</text>
+<!-- secondaries -->
+<text class="l2" x="560" y="364" text-anchor="middle">door</text>
+<text class="l2" x="800" y="470" text-anchor="middle">chair</text>
+<text class="l2" x="800" y="850" text-anchor="middle">wall ahead</text>
+<text class="l2" x="1154" y="480">side wall: out of view</text>
+<text class="l2" x="1154" y="512">once the chair reclines</text>
+</svg>
