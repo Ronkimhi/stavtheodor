@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side section of a restaurant banquette: the frame hangs 8 to 10 inches above the banquette back, a seated guest's head reaches the frame, the back of the frame shows two hanging points, and a guest across the table sees the center of the work above the banquette guest's head</title>
+<desc id="d">Side section of a restaurant banquette: the frame hangs 8 to 10 inches above the banquette back, a seated guest's head reaches the frame, the back of the frame shows two hanging points, and a guest across the table sees the center of the work above the banquette guest's head</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=780; wall face at x=1300; horizontal distances from the wall face; inset at the same scale -->
+<line class="ink" x1="80" y1="780" x2="1300" y2="780"/>
+<line class="ink" x1="1300" y1="780" x2="1300" y2="140"/>
+<!-- banquette: seat 18 in high, 22 in deep; back cushion to 36 in, 6 in thick at the seat, 4 in at the top -->
+<rect class="soft" x="1124" y="636" width="176" height="144"/>
+<line class="soft" x1="1124" y1="668" x2="1252" y2="668"/>
+<path class="soft" d="M1300 636 L1252 636 L1268 492 L1300 492 Z"/>
+<!-- the work in profile, 1.5 in deep: bottom 45 in, top 73 in, center 59 in -->
+<rect class="frame" x="1288" y="196" width="12" height="224"/>
+<rect class="art" x="1291" y="202" width="6" height="212"/>
+<line class="dim" x1="1272" y1="308" x2="1316" y2="308" stroke-width="2"/>
+<line class="dim" x1="1294" y1="286" x2="1294" y2="330" stroke-width="2"/>
+<!-- table: top 30 in, 30 in deep, 24 to 54 in from the wall -->
+<rect class="soft" x="868" y="540" width="240" height="12"/>
+<rect class="soft" x="976" y="552" width="24" height="216"/>
+<rect class="soft" x="908" y="768" width="160" height="12"/>
+<!-- guest on the banquette, facing away from the wall, leaning back: head 9 in across, center 8 in from the wall, 47.5 in high -->
+<circle class="soft" cx="1236" cy="400" r="36"/>
+<line class="soft" x1="1236" y1="436" x2="1196" y2="636"/>
+<line class="soft" x1="1196" y1="636" x2="1052" y2="636"/>
+<line class="soft" x1="1052" y1="636" x2="1052" y2="780"/>
+<line class="soft" x1="1228" y1="468" x2="1164" y2="532"/>
+<line class="soft" x1="1164" y1="532" x2="1092" y2="540"/>
+<!-- guest across the table on a chair, 60 to 78 in from the wall, back to 34 in; eye 63 in from the wall, 47 in high -->
+<rect class="soft" x="676" y="636" width="144" height="12"/>
+<line class="soft" x1="676" y1="636" x2="676" y2="508"/>
+<line class="soft" x1="676" y1="508" x2="692" y2="508"/>
+<line class="soft" x1="684" y1="648" x2="684" y2="780"/>
+<line class="soft" x1="812" y1="648" x2="812" y2="780"/>
+<circle class="soft" cx="764.8" cy="400" r="36"/>
+<line class="soft" x1="764.8" y1="436" x2="764.8" y2="636"/>
+<line class="soft" x1="764.8" y1="636" x2="908.8" y2="636"/>
+<line class="soft" x1="908.8" y1="636" x2="908.8" y2="780"/>
+<line class="soft" x1="764.8" y1="468" x2="828.8" y2="532"/>
+<line class="soft" x1="828.8" y1="532" x2="900.8" y2="540"/>
+<circle class="tp" cx="796" cy="404" r="3"/>
+<!-- sightline from the eye across the table (63 in out, 47 in high) to the center cross -->
+<line class="eye" x1="796" y1="404" x2="1294" y2="308"/>
+<!-- gap dimension: cushion top 36 in to frame bottom 45 in -->
+<line class="dim" x1="1320" y1="420" x2="1320" y2="492"/>
+<line class="dim" x1="1312" y1="420" x2="1328" y2="420"/>
+<line class="dim" x1="1312" y1="492" x2="1328" y2="492"/>
+<!-- inset, top left: the back of the 48 by 28 in frame, two D rings 8 in in from the sides and 7 in below the top, each on a hook, no wire -->
+<rect class="frame" x="120" y="150" width="384" height="224"/>
+<rect class="soft" x="134" y="164" width="356" height="196"/>
+<circle class="soft" cx="184" cy="206" r="10"/>
+<circle class="tp" cx="184" cy="206" r="4"/>
+<circle class="soft" cx="440" cy="206" r="10"/>
+<circle class="tp" cx="440" cy="206" r="4"/>
+<text class="l1" x="1332" y="465">8 to 10 in<tspan class="l2" x="1332" dy="30">20 to 25 cm</tspan></text>
+<text class="l1" x="1180" y="444" text-anchor="end">heads reach<tspan x="1180" dy="1.15em">the frame</tspan></text>
+<text class="l2" x="1180" y="504" text-anchor="end">acrylic or unglazed where heads lean</text>
+<line class="lead" x1="1188" y1="438" x2="1207" y2="422"/>
+<text class="l1" x="920" y="282" text-anchor="middle">seen from across the table</text>
+<text class="l1" x="120" y="420">two points,<tspan x="120" dy="1.15em">never one wire</tspan></text>
+<text class="l2" x="120" y="134">back of the frame</text>
+</svg>

@@ -218,3 +218,7 @@ Hotel artwork is a property's art program: the arrival piece in the lobby, the r
 ## How should a financial advisor decorate their office?
 
 Financial advisor office decor is the art and finish of the space where clients talk about money, chosen to feel stable, discreet and personal rather than showy. The meeting space matters most: one strong, calm work does more than a wall of market imagery. Full guide: https://stavtheodor.com/guide/financial-advisor-office-art/
+
+## What are some good ways to decorate a restaurant?
+
+Restaurant wall decor is the art and wall treatment that carries a restaurant's concept to every table, chosen to read under evening light and to survive steam, grease and cleaning. The feature wall matters most, because most diners see it and many photograph it. Full guide: https://stavtheodor.com/guide/restaurant-wall-decor/

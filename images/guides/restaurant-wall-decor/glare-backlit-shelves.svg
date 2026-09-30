@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side section of a restaurant: a seated guest looks at a glazed work on the far wall, and the line of sight reflects off the glass to the lit shelves of the bar behind the guest, so the glass shows the bottles instead of the art</title>
+<desc id="d">Side section of a restaurant: a seated guest looks at a glazed work on the far wall, and the line of sight reflects off the glass to the lit shelves of the bar behind the guest, so the glass shows the bottles instead of the art</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=780; glass face at x=1250, art wall at x=1257.5; horizontal distances from the glass -->
+<!-- compact .l1 46 px, not 52: at 52 px "anti-reflective" from x 1288 ends about 10 px from the canvas edge (Curator check 2026-09-30) -->
+<line class="ink" x1="80" y1="780" x2="1257.5" y2="780"/>
+<line class="ink" x1="1257.5" y1="780" x2="1257.5" y2="280"/>
+<line class="ink" x1="80" y1="780" x2="80" y2="280"/>
+<!-- back bar shelving 18 in deep, face 216 in from the glass: unit top 84 in, shelves at 50, 64 and 78 in -->
+<rect class="soft" x="80" y="360" width="90" height="420"/>
+<line class="soft" x1="80" y1="530" x2="170" y2="530"/>
+<line class="soft" x1="80" y1="460" x2="170" y2="460"/>
+<line class="soft" x1="80" y1="390" x2="170" y2="390"/>
+<!-- bar counter 24 in deep, 36 to 60 in out from the shelving, top 42 in -->
+<rect class="soft" x="350" y="570" width="120" height="210"/>
+<!-- table: top 30 in, 54 to 84 in from the glass; seated guest facing the glass, eye 96 in from it and 47 in high; chair behind -->
+<rect class="soft" x="830" y="630" width="150" height="7.5"/>
+<rect class="soft" x="897.5" y="637.5" width="15" height="135"/>
+<rect class="soft" x="855" y="772.5" width="100" height="7.5"/>
+<rect class="soft" x="700" y="690" width="125" height="7.5"/>
+<line class="soft" x1="700" y1="690" x2="700" y2="610"/>
+<line class="soft" x1="700" y1="610" x2="710" y2="610"/>
+<line class="soft" x1="705" y1="697.5" x2="705" y2="780"/>
+<line class="soft" x1="820" y1="697.5" x2="820" y2="780"/>
+<circle class="soft" cx="750.5" cy="542.5" r="22.5"/>
+<line class="soft" x1="750.5" y1="565" x2="750.5" y2="690"/>
+<line class="soft" x1="750.5" y1="690" x2="840.5" y2="690"/>
+<line class="soft" x1="840.5" y1="690" x2="840.5" y2="780"/>
+<line class="soft" x1="750.5" y1="585" x2="790.5" y2="625"/>
+<line class="soft" x1="790.5" y1="625" x2="835.5" y2="630"/>
+<circle class="tp" cx="770" cy="545" r="3"/>
+<!-- eye at 96 in from the glass, 47 in high -->
+<!-- the glazed work in profile, 1.5 in deep: bottom 43 in, top 73 in, center 58 in -->
+<!-- incident sightlines (eye dash) to the glass at 58 and 52 in; reflections (dim, solid) at equal angles to the shelving face: 58 + 0.1146 x 216 = 82.75 in and 52 + 0.0521 x 216 = 63.25 in -->
+<line class="eye" x1="770" y1="545" x2="1250" y2="490"/>
+<line class="dim" x1="1250" y1="490" x2="170" y2="366.2"/>
+<circle class="tp" cx="170" cy="366.2" r="3"/>
+<line class="eye" x1="770" y1="545" x2="1250" y2="520"/>
+<line class="dim" x1="1250" y1="520" x2="170" y2="463.8"/>
+<circle class="tp" cx="170" cy="463.8" r="3"/>
+<rect class="frame" x="1250" y="415" width="7.5" height="150"/>
+<rect class="art" x="1252" y="421" width="3.5" height="138"/>
+<line class="dim" x1="1231.8" y1="490" x2="1275.8" y2="490" stroke-width="2"/>
+<line class="dim" x1="1253.8" y1="468" x2="1253.8" y2="512" stroke-width="2"/>
+<text class="l1" x="800" y="384" text-anchor="middle">the shelves reflect in the glass</text>
+<text class="l1" x="1288" y="480">anti-reflective<tspan x="1288" dy="1.15em">glazing here</tspan></text>
+<text class="l2" x="1288" y="540">glazed work</text>
+<text class="l2" x="182" y="420">backlit shelves</text>
+<text class="l2" x="1000" y="566" text-anchor="middle">line of sight</text>
+</svg>

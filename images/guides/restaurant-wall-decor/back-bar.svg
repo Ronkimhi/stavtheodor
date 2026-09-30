@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a restaurant back bar: backlit shelves fill the lower wall, and one wide work 120 inches across, two thirds of the back bar's width, hangs above them, well above the 57 to 60 inch eye level band</title>
+<desc id="d">Elevation of a restaurant back bar: backlit shelves fill the lower wall, and one wide work 120 inches across, two thirds of the back bar's width, hangs above them, well above the 57 to 60 inch eye level band</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=880; bar wall 228 in, x 160 to 1300; ceiling at 144 in (y 160) -->
+<line class="ink" x1="80" y1="880" x2="1520" y2="880"/>
+<line class="ink" x1="160" y1="160" x2="1300" y2="160"/>
+<!-- back bar shelving 180 in wide, x 280 to 1180: unit top 84 in, shelves at 50, 64 and 78 in, uprights at the ends and thirds; nothing drawn below the 42 in counter, which hides it -->
+<rect class="soft" x="280" y="460" width="900" height="210"/>
+<line class="soft" x1="580" y1="460" x2="580" y2="670"/>
+<line class="soft" x1="880" y1="460" x2="880" y2="670"/>
+<line class="soft" x1="280" y1="630" x2="1180" y2="630"/>
+<line class="soft" x1="280" y1="560" x2="1180" y2="560"/>
+<line class="soft" x1="280" y1="490" x2="1180" y2="490"/>
+<!-- bar counter, x 260 to 1200, floor to 42 in -->
+<rect class="soft" x="260" y="670" width="940" height="210"/>
+<!-- eye band 57 and 60 in across the wall, through the shelving -->
+<line class="eye" x1="160" y1="595" x2="1300" y2="595"/>
+<line class="eye" x1="160" y1="580" x2="1300" y2="580"/>
+<!-- the work 120 by 40 in, x 430 to 1030, bottom 92 in, top 132 in, center 112 in -->
+<rect class="frame" x="430" y="220" width="600" height="200"/>
+<rect class="art" x="446" y="236" width="568" height="168"/>
+<line class="dim" x1="708" y1="320" x2="752" y2="320" stroke-width="2"/>
+<line class="dim" x1="730" y1="298" x2="730" y2="342" stroke-width="2"/>
+<!-- width dimension above the ceiling at y 130, leaders to the work's top corners -->
+<line class="dim" x1="430" y1="130" x2="1030" y2="130"/>
+<line class="dim" x1="430" y1="122" x2="430" y2="138"/>
+<line class="dim" x1="1030" y1="122" x2="1030" y2="138"/>
+<line class="lead" x1="430" y1="130" x2="430" y2="220"/>
+<line class="lead" x1="1030" y1="130" x2="1030" y2="220"/>
+<text class="l1" x="730" y="118" text-anchor="middle">120 in<tspan class="l2"> · 305 cm · two thirds of the back bar</tspan></text>
+<text class="l1" x="1312" y="596">57 to 60 in<tspan class="l2" x="1312" dy="30">145 to 152 cm</tspan></text>
+<text class="l1" x="1042" y="330">the shelves<tspan x="1042" dy="1.15em">set the height</tspan></text>
+<text class="l2" x="1042" y="392">read from the tables</text>
+<text class="l2" x="292" y="543">backlit shelves</text>
+<text class="l2" x="730" y="780" text-anchor="middle">bar counter</text>
+</svg>

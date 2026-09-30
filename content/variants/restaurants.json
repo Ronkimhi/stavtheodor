@@ -215,6 +215,7 @@
   "cta_he": "שלחו לי תמונה אחת של חדר האוכל ושורה על התפריט.",
   "mail_subject": "Art for our restaurant",
   "guides": [
+    "guide/restaurant-wall-decor",
     "guide/dining-room-art",
     "guide/gallery-wall-ideas"
   ],

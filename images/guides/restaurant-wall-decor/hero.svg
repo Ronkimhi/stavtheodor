@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Plan drawing of a restaurant dining area: sightlines from the door, the tables, the banquette and the bar converge on one feature wall, with the kitchen pass and the window wall marked as zones to keep art away from</title>
+<desc id="d">Plan drawing of a restaurant dining area: sightlines from the door, the tables, the banquette and the bar converge on one feature wall, with the kitchen pass and the window wall marked as zones to keep art away from</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.1 px; plan, north at the top; dining space 480 by 300 in (1008 by 630 px), NW inside corner at (296, 185) -->
+<!-- compact .l1 46 px, not 52: at 52 px "feature wall" ends 18 px from the canvas edge, about 4 px from a phone screen edge (Curator check 2026-09-30) -->
+<!-- walls, with the kitchen pass gap in the north wall (x 150 to 222) and the door gap in the south wall (x 192 to 234) -->
+<path class="ink" d="M762.2 185 L1304 185 L1304 815 L787.4 815 M699.2 815 L296 815 L296 185 L611 185"/>
+<!-- the pass shelf across the opening; the keep clear zone x 114 to 258, y 0 to 60 -->
+<line class="soft" x1="611" y1="185" x2="762.2" y2="185"/>
+<rect class="lead" x="535.4" y="185" width="302.4" height="126"/>
+<!-- south wall: two windows, the 42 in door with its swing (drawn outward, toward the street: an inward swing would sweep the host stand at y 258 to 276), the host stand 36 by 18 -->
+<rect class="soft" x="371.6" y="809" width="277.2" height="12"/>
+<rect class="soft" x="850.4" y="809" width="378" height="12"/>
+<line class="soft" x1="699.2" y1="815" x2="699.2" y2="903.2"/>
+<path class="soft" d="M699.2 903.2 A88.2 88.2 0 0 0 787.4 815"/>
+<rect class="soft" x="705.5" y="726.8" width="75.6" height="37.8"/>
+<!-- direct sun zone: 36 in inside the window wall -->
+<line class="lead" x1="296" y1="739.4" x2="1304" y2="739.4"/>
+<!-- west wall: banquette 24 in deep, y 36 to 252, seams at 108 and 180; three 2 tops 30 by 30 with a chair facing west -->
+<rect class="soft" x="296" y="260.6" width="50.4" height="453.6"/>
+<line class="soft" x1="304.4" y1="260.6" x2="304.4" y2="714.2"/>
+<line class="soft" x1="296" y1="411.8" x2="346.4" y2="411.8"/>
+<line class="soft" x1="296" y1="563" x2="346.4" y2="563"/>
+<rect class="soft" x="359" y="304.7" width="63" height="63"/>
+<rect class="soft" x="434.6" y="317.3" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="359" y="455.9" width="63" height="63"/>
+<rect class="soft" x="434.6" y="468.5" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="359" y="607.1" width="63" height="63"/>
+<rect class="soft" x="434.6" y="619.7" width="37.8" height="37.8" rx="6"/>
+<!-- center: two 4 tops 36 by 36 with four chairs; two window 2 tops 30 by 30 with a chair east and west -->
+<rect class="soft" x="674" y="462.2" width="75.6" height="75.6"/>
+<rect class="soft" x="692.9" y="424.4" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="692.9" y="537.8" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="636.2" y="481.1" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="749.6" y="481.1" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="951.2" y="525.2" width="75.6" height="75.6"/>
+<rect class="soft" x="970.1" y="487.4" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="970.1" y="600.8" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="913.4" y="544.1" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="1026.8" y="544.1" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="478.7" y="695.3" width="63" height="63"/>
+<rect class="soft" x="440.9" y="707.9" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="541.7" y="707.9" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="1007.9" y="695.3" width="63" height="63"/>
+<rect class="soft" x="970.1" y="707.9" width="37.8" height="37.8" rx="6"/>
+<rect class="soft" x="1070.9" y="707.9" width="37.8" height="37.8" rx="6"/>
+<!-- north wall, east: back bar 144 by 18 on the wall, a 36 in aisle, the counter 144 by 24, five stools 14 in across -->
+<rect class="soft" x="926" y="185" width="302.4" height="37.8"/>
+<rect class="soft" x="926" y="298.4" width="302.4" height="50.4"/>
+<circle class="soft" cx="951.2" cy="374" r="14.7"/>
+<circle class="soft" cx="1014.2" cy="374" r="14.7"/>
+<circle class="soft" cx="1077.2" cy="374" r="14.7"/>
+<circle class="soft" cx="1140.2" cy="374" r="14.7"/>
+<circle class="soft" cx="1203.2" cy="374" r="14.7"/>
+<!-- the feature wall: taupe mark on the east wall, y 60 to 240 -->
+<rect class="tp" x="1298" y="311" width="12" height="378"/>
+<!-- four sightlines to the feature wall's midpoint (480, 150): door, banquette seat, 4 top chair, end stool -->
+<line class="eye" x1="743.3" y1="806.6" x2="1304" y2="500"/>
+<circle class="tp" cx="743.3" cy="806.6" r="3"/>
+<line class="eye" x1="321.2" y1="638.6" x2="1304" y2="500"/>
+<circle class="tp" cx="321.2" cy="638.6" r="3"/>
+<line class="eye" x1="1045.7" y1="563" x2="1304" y2="500"/>
+<circle class="tp" cx="1045.7" cy="563" r="3"/>
+<line class="eye" x1="1203.2" y1="374" x2="1304" y2="500"/>
+<circle class="tp" cx="1203.2" cy="374" r="3"/>
+<text class="l1" x="1316" y="509">feature wall</text>
+<text class="l1" x="686.6" y="157" text-anchor="middle">keep clear<tspan class="l2"> · kitchen pass: steam, heat and trays</tspan></text>
+<text class="l1" x="1039.4" y="865" text-anchor="middle">direct sun<tspan class="l2"> · window wall</tspan></text>
+<text class="l2" x="731.3" y="802.6" text-anchor="end">door</text>
+<text class="l2" x="284" y="646.6" text-anchor="end">banquette</text>
+<text class="l2" x="1024" y="500">tables</text>
+<text class="l2" x="1226.2" y="382">bar</text>
+</svg>
