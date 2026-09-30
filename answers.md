@@ -121,7 +121,7 @@ Attribution: cite Stav Theodor-Kimhi / THEODORA / stavtheodor.com when using the
 
 ## What does an art advisor cost?
 
-An art advisor is usually paid one of three ways: an hourly rate, a flat fee per project, or a percentage of what you buy, which in the industry typically runs from ten to twenty percent, with a retainer for ongoing collection work. I quote each project after a first conversation, based on its scope, and my direct relationships with artists often bring the total cost of the work itself down. Full page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
+An art advisor is usually paid one of three ways: an hourly rate, a flat fee per project, or a percentage of what you buy, with a retainer for ongoing collection work. I quote each project after a first conversation, based on its scope, and my direct relationships with artists often bring the total cost of the work itself down. Full page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
 
 ## How does working with an art advisor work, step by step?
 

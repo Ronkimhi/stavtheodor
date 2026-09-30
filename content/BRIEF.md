@@ -41,7 +41,7 @@ Discovery. Research. Curatorial development. Budget planning. Art procurement an
 
 ## 5. Fees (hard rule)
 
-Stav's fees are not published. Never state a number for her fee. You may explain the fee structures common in the art advisory industry (hourly, flat project fee, or a percentage of acquisitions, typically in the ten to twenty percent range; retainer for ongoing collection work) and must label them as industry norms, then say that THEODORA quotes each project after a first conversation, based on scope, and that direct relationships with artists often bring the total cost of the work itself down. Anything about her own pricing is an editor note for Ron, not page copy.
+Stav's fees are never stated anywhere on this site, not as dollars and not as percentages (Ron, 2026-09-29, binding). No fee number of hers, no percentage, no hourly figure and no dollar figure of any kind in the pages this brief governs (page copy, FAQ answers, meta descriptions, schema) or in what llms.txt, agent.txt and answers.md say about her services, and no percentage range for the industry either. Where a fee must come up, use deliberately general wording in her voice, for example: "My fees depend on the scope of the project, and I explain them clearly in our first conversation." You may describe the fee models common in the art advisory industry in the abstract (hourly, a flat project fee, a percentage of acquisitions, a retainer for ongoing collection work), with no numbers and never framed as her rates, and you may say that direct relationships with artists often bring the total cost of the work itself down. Anything about her own pricing is an editor note for Ron, not page copy.
 
 ## 6. Projects (verbatim facts, do not add details)
 
@@ -76,7 +76,7 @@ Other photos available: stav-couch.jpg (Stav seated under a painting), stav-arch
 
 1. No em dashes and no en dashes anywhere, English or Hebrew, including alt text, captions, JSON fields and editor notes. Use commas, colons, periods, parentheses.
 2. No phone number in page copy (the business line lives in the shared chrome), and never any other number.
-3. No invented facts: no client names beyond those in this brief, no prices for Stav, no dates, no awards, no press, no numbers that are not here. Industry ranges must be labeled as industry ranges.
+3. No invented facts: no client names beyond those in this brief, no prices or fees for Stav, no dates, no awards, no press, no numbers that are not here. No fee or price figures at all, industry ranges included (section 5).
 4. Every page carries a full Hebrew version (body_he, lead_he, title_he, FAQ he) that is a faithful translation of the English, same structure, same links. Hebrew is written by a native standard: modern, warm, no machine translation feel, right to left punctuation.
 5. English is in Stav's first person voice ("I"), precise, warm, no marketing hype words (no "elevate", "curated experience", "bespoke journey", "unparalleled", "world class", "transform your"). Short paragraphs. Specific over general. Written for a reader with money and taste who is short on time.
 6. Every page answers its question in the first two sentences of the lead, then earns the rest. LLMs quote pages that answer directly.
