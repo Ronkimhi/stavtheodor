@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two side sections of a glazed work on paper lit by a ceiling spot: with the light behind the viewer, the reflection in the glass reaches the viewer's eyes; with the spot close to the wall at about 30 degrees from vertical, the reflection falls to the floor</title>
+<desc id="d">Two side sections of a glazed work on paper lit by a ceiling spot: with the light behind the viewer, the reflection in the glass reaches the viewer's eyes; with the spot close to the wall at about 30 degrees from vertical, the reflection falls to the floor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 3.5 px per in, two sections, floor at y 580 -->
+<!-- panel A: wall at x 740; spot 168 in from the wall; the reflection reaches the eye (mirror geometry) -->
+<line class="ink" x1="100" y1="580" x2="740" y2="580"/>
+<line class="ink" x1="100" y1="244" x2="740" y2="244"/>
+<line class="ink" x1="740" y1="244" x2="740" y2="580"/>
+<path class="soft" d="M144 244 L160 244 L157 251 L147 251 Z"/>
+<line class="dim" x1="152" y1="244" x2="734.8" y2="331.5"/>
+<line class="dim" x1="734.8" y1="331.5" x2="446" y2="375.2"/>
+<rect class="frame" x="734.8" y="324.5" width="5.2" height="105"/>
+<rect class="art" x="736.2" y="330.5" width="2.2" height="93"/>
+<circle class="soft" cx="446" cy="385.5" r="26"/>
+<line class="soft" x1="446" y1="411.5" x2="446" y2="461"/>
+<line class="soft" x1="446" y1="461" x2="418" y2="580"/>
+<line class="soft" x1="446" y1="461" x2="474" y2="580"/>
+<line class="soft" x1="446" y1="398" x2="406" y2="464.5"/>
+<line class="soft" x1="446" y1="398" x2="486" y2="464.5"/>
+<text class="l1" x="100" y="634">Reflection in the eyes</text>
+<text class="l2" x="100" y="312">ceiling light behind the viewer</text>
+<!-- panel B: wall at x 1500; spot 22 in from the wall, beam at 30 degrees from vertical to the work's center at 58 in -->
+<line class="ink" x1="840" y1="580" x2="1500" y2="580"/>
+<line class="ink" x1="840" y1="244" x2="1500" y2="244"/>
+<line class="ink" x1="1500" y1="244" x2="1500" y2="580"/>
+<path class="soft" d="M1415 244 L1431 244 L1428 251 L1418 251 Z"/>
+<line class="dim" x1="1423" y1="244" x2="1494.8" y2="377"/>
+<line class="lead" x1="1423" y1="244" x2="1423" y2="310"/>
+<path class="dim" d="M1423 304 A60 60 0 0 0 1453.1 295.9"/>
+<text class="l1" x="1409" y="306" text-anchor="end">30°<tspan class="l2"> · from vertical</tspan></text>
+<!-- reflections: from the center at 30 degrees to the floor 33.5 in out; from the top edge to the floor 69.8 in out -->
+<line class="dim" x1="1494.8" y1="377" x2="1382.8" y2="580"/>
+<line class="lead" x1="1423" y1="244" x2="1494.8" y2="324.5"/>
+<line class="dim" x1="1494.8" y1="324.5" x2="1255.7" y2="580"/>
+<rect class="frame" x="1494.8" y="324.5" width="5.2" height="105"/>
+<rect class="art" x="1496.2" y="330.5" width="2.2" height="93"/>
+<circle class="soft" cx="1206" cy="385.5" r="26"/>
+<line class="soft" x1="1206" y1="411.5" x2="1206" y2="461"/>
+<line class="soft" x1="1206" y1="461" x2="1178" y2="580"/>
+<line class="soft" x1="1206" y1="461" x2="1234" y2="580"/>
+<line class="soft" x1="1206" y1="398" x2="1166" y2="464.5"/>
+<line class="soft" x1="1206" y1="398" x2="1246" y2="464.5"/>
+<text class="l2" x="1449" y="336" text-anchor="end">glazed work on paper</text>
+<text class="l1" x="1488" y="634" text-anchor="end">Reflection to the floor</text>
+</svg>

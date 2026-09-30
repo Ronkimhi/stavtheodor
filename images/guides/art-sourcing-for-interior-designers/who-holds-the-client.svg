@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Diagram of who holds the client: the client works with the designer's studio, which is credited on the project; the curator works inside the studio's scheme, presents with or through the designer, and sources from any gallery or artist until the art is on the wall</title>
+<desc id="d">Diagram of who holds the client: the client works with the designer's studio, which is credited on the project; the curator works inside the studio's scheme, presents with or through the designer, and sources from any gallery or artist until the art is on the wall</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- schematic: no physical scale, relative positions only -->
+<!-- nodes as text, top to bottom: client, studio, curator, sources -->
+<text class="l1" x="800" y="150" text-anchor="middle">Client</text>
+<text class="l1" x="800" y="380" text-anchor="middle">Your studio</text>
+<text class="l1" x="800" y="580" text-anchor="middle">Curator</text>
+<text class="l1" x="800" y="752" text-anchor="middle">Any gallery or artist</text>
+<!-- client to studio: the one strong link -->
+<line class="dim" x1="800" y1="172" x2="800" y2="328" stroke-width="2"/>
+<text class="l1" x="824" y="265">The client stays yours</text>
+<!-- the scheme encloses the studio and the curator -->
+<rect class="lead" x="460" y="320" width="680" height="320"/>
+<text class="l2" x="476" y="350">inside your scheme</text>
+<text class="l2" x="800" y="412" text-anchor="middle">credited on the project</text>
+<line class="dim" x1="800" y1="424" x2="800" y2="528"/>
+<!-- presentation: joins the studio's link, never the client node -->
+<path class="lead" d="M676 572 L400 572 L400 260 L800 260"/>
+<text class="l2" x="388" y="410" text-anchor="end">presents with you</text>
+<text class="l2" x="388" y="440" text-anchor="end">or through you</text>
+<!-- curator to sources, then a fan of three for the three routes, and the work -->
+<line class="dim" x1="800" y1="602" x2="800" y2="700"/>
+<line class="dim" x1="800" y1="776" x2="640" y2="808"/>
+<line class="dim" x1="800" y1="776" x2="800" y2="808"/>
+<line class="dim" x1="800" y1="776" x2="960" y2="808"/>
+<text class="l2" x="624" y="815" text-anchor="end">no closed roster</text>
+<rect class="frame" x="1212" y="736" width="96" height="72"/>
+<rect class="art" x="1218" y="742" width="84" height="60"/>
+<line class="dim" x1="960" y1="808" x2="1212" y2="772"/>
+<text class="l2" x="1260" y="716" text-anchor="middle">until the art is on the wall</text>
+</svg>

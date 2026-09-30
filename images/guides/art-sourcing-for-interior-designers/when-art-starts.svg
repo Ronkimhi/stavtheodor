@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Timeline of a design project from plans to move in, with two art tracks: art started with the plans leaves time for every route, including a commission, while art left to the end fits only trade stock and available originals, and a commission would land after move in</title>
+<desc id="d">Timeline of a design project from plans to move in, with two art tracks: art started with the plans leaves time for every route, including a commission, while art left to the end fits only trade stock and available originals, and a commission would land after move in</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- schematic: not to time scale; milestones evenly spaced (inference), bar lengths show order only (inference) -->
+<!-- the project line with four milestones -->
+<line class="ink" x1="160" y1="200" x2="1440" y2="200"/>
+<line class="ink" x1="160" y1="188" x2="160" y2="212"/>
+<line class="ink" x1="587" y1="188" x2="587" y2="212"/>
+<line class="ink" x1="1013" y1="188" x2="1013" y2="212"/>
+<line class="ink" x1="1440" y1="188" x2="1440" y2="212"/>
+<text class="l1" x="160" y="170">Plans</text>
+<text class="l1" x="587" y="170" text-anchor="middle">Walls painted</text>
+<text class="l2" x="1013" y="170" text-anchor="middle">furniture in</text>
+<text class="l1" x="1440" y="170" text-anchor="end">Move in</text>
+<!-- the deadline: move in -->
+<line class="lead" x1="1440" y1="212" x2="1440" y2="800"/>
+<!-- track A: art starts with the plans; commission 800 px, original 300 px, trade 200 px (order only) -->
+<line class="dim" x1="160" y1="320" x2="1440" y2="320"/>
+<line class="dim" x1="160" y1="312" x2="160" y2="328"/>
+<line class="dim" x1="1440" y1="312" x2="1440" y2="328"/>
+<text class="l1" x="160" y="292">Art starts with the plans</text>
+<line class="dim" x1="240" y1="380" x2="1040" y2="380"/>
+<line class="dim" x1="240" y1="372" x2="240" y2="388"/>
+<line class="dim" x1="1040" y1="372" x2="1040" y2="388"/>
+<text class="l2" x="228" y="368">commission</text>
+<rect class="frame" x="1056" y="362" width="48" height="36"/>
+<rect class="art" x="1062" y="368" width="36" height="24"/>
+<line class="dim" x1="800" y1="436" x2="1100" y2="436"/>
+<line class="dim" x1="800" y1="428" x2="800" y2="444"/>
+<line class="dim" x1="1100" y1="428" x2="1100" y2="444"/>
+<text class="l2" x="788" y="424">original</text>
+<rect class="frame" x="1116" y="418" width="48" height="36"/>
+<rect class="art" x="1122" y="424" width="36" height="24"/>
+<line class="dim" x1="1000" y1="492" x2="1200" y2="492"/>
+<line class="dim" x1="1000" y1="484" x2="1000" y2="500"/>
+<line class="dim" x1="1200" y1="484" x2="1200" y2="500"/>
+<text class="l2" x="988" y="480">trade</text>
+<rect class="frame" x="1216" y="474" width="48" height="36"/>
+<rect class="art" x="1222" y="480" width="36" height="24"/>
+<text class="l2" x="1428" y="444" text-anchor="end">every route still fits</text>
+<!-- track B: art left to the end; the commission cannot finish before move in (lead outline, no wash) -->
+<line class="dim" x1="1013" y1="600" x2="1440" y2="600"/>
+<line class="dim" x1="1013" y1="592" x2="1013" y2="608"/>
+<line class="dim" x1="1440" y1="592" x2="1440" y2="608"/>
+<text class="l1" x="1428" y="572" text-anchor="end">Art left to the end</text>
+<line class="dim" x1="1013" y1="660" x2="1213" y2="660"/>
+<line class="dim" x1="1013" y1="652" x2="1013" y2="668"/>
+<line class="dim" x1="1213" y1="652" x2="1213" y2="668"/>
+<text class="l2" x="1001" y="648">trade</text>
+<rect class="frame" x="1229" y="642" width="48" height="36"/>
+<rect class="art" x="1235" y="648" width="36" height="24"/>
+<line class="dim" x1="1013" y1="716" x2="1313" y2="716"/>
+<line class="dim" x1="1013" y1="708" x2="1013" y2="724"/>
+<line class="dim" x1="1313" y1="708" x2="1313" y2="724"/>
+<text class="l2" x="1001" y="704">original</text>
+<rect class="frame" x="1329" y="698" width="48" height="36"/>
+<rect class="art" x="1335" y="704" width="36" height="24"/>
+<line class="dim" x1="1013" y1="772" x2="1440" y2="772"/>
+<line class="dim" x1="1013" y1="764" x2="1013" y2="780"/>
+<text class="l2" x="1001" y="760">commission</text>
+<line class="lead" x1="1440" y1="772" x2="1452" y2="772"/>
+<rect class="lead" x="1452" y="754" width="48" height="36"/>
+<text class="l2" x="1500" y="822" text-anchor="end">lands after move in</text>
+</svg>

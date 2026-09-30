@@ -206,3 +206,7 @@ Art leasing for offices means renting artworks for a set term, often with instal
 ## What art is appropriate for a doctor's office?
 
 Medical office wall art is art chosen for a practice's waiting area, exam spaces and corridors to give patients something calm to look at, to look professional and to survive clinical cleaning. For a practice I lean toward calm, readable, specific images where patients wait or lie still, bolder work where people pass by choice, and nothing ambiguous, clinical or confrontational where a patient sits. Full guide: https://stavtheodor.com/guide/medical-office-wall-art/
+
+## Where do interior designers get their art?
+
+Art sourcing for interior designers is how a design studio finds, buys and installs art for a client project: through trade programs and wholesale suppliers, galleries and artists, commissions, or an art curator who runs the whole art scope inside the designer's scheme. Trade programs are fastest for many walls, originals and commissions carry the walls a client lives with, and a curator can run all of them for you while the client stays yours. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/

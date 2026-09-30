@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Decision diagram for choosing an art route for one wall: if people do not stop at the wall, a trade program; if they do and a work on the market fits its size and story, a gallery or an artist; if nothing fits, a commission; a curator partnership can run all three</title>
+<desc id="d">Decision diagram for choosing an art route for one wall: if people do not stop at the wall, a trade program; if they do and a work on the market fits its size and story, a gallery or an artist; if nothing fits, a commission; a curator partnership can run all three</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- schematic: no physical scale, relative positions only -->
+<!-- start, then Q1 (the question is the node, no box) -->
+<circle class="tp" cx="800" cy="96" r="3"/>
+<line class="dim" x1="800" y1="102" x2="800" y2="124"/>
+<text class="l1" x="800" y="170" text-anchor="middle">Do people stop at this wall?</text>
+<!-- Q1 branches: No to the trade program, Yes to Q2 -->
+<line class="dim" x1="800" y1="190" x2="320" y2="604"/>
+<line class="dim" x1="800" y1="190" x2="1020" y2="370"/>
+<text class="l1" x="548" y="389" text-anchor="end">No</text>
+<text class="l1" x="934" y="280">Yes</text>
+<!-- Q2 and its branches: Yes to a gallery or artist, No to a commission -->
+<text class="l1" x="1040" y="420" text-anchor="middle">Does a work on the market fit?<tspan class="l2"> · its size and its story</tspan></text>
+<line class="dim" x1="1040" y1="440" x2="800" y2="604"/>
+<line class="dim" x1="1040" y1="440" x2="1280" y2="604"/>
+<text class="l1" x="908" y="514" text-anchor="end">Yes</text>
+<text class="l1" x="1174" y="514">No</text>
+<!-- outcomes: frame icons 96 by 72, the route under each, then the curator bracket that runs all three -->
+<rect class="frame" x="272" y="604" width="96" height="72"/>
+<rect class="art" x="278" y="610" width="84" height="60"/>
+<text class="l1" x="320" y="730" text-anchor="middle">Trade program</text>
+<text class="l2" x="320" y="760" text-anchor="middle">prints and editions</text>
+<line class="lead" x1="320" y1="772" x2="320" y2="800"/>
+<rect class="frame" x="752" y="604" width="96" height="72"/>
+<rect class="art" x="758" y="610" width="84" height="60"/>
+<text class="l1" x="800" y="730" text-anchor="middle">Gallery or artist</text>
+<text class="l2" x="800" y="760" text-anchor="middle">an original</text>
+<line class="lead" x1="800" y1="772" x2="800" y2="800"/>
+<rect class="frame" x="1232" y="604" width="96" height="72"/>
+<rect class="art" x="1238" y="610" width="84" height="60"/>
+<text class="l1" x="1280" y="730" text-anchor="middle">Commission</text>
+<text class="l2" x="1280" y="760" text-anchor="middle">made for this wall</text>
+<line class="lead" x1="1280" y1="772" x2="1280" y2="800"/>
+<line class="lead" x1="200" y1="800" x2="1400" y2="800"/>
+<line class="lead" x1="200" y1="800" x2="200" y2="784"/>
+<line class="lead" x1="1400" y1="800" x2="1400" y2="784"/>
+<text class="l1" x="800" y="856" text-anchor="middle">Curator partnership<tspan class="l2"> · can run all three</tspan></text>
+<text class="l2" x="800" y="888" text-anchor="middle">when there are many walls, originals or a date that cannot slip</text>
+</svg>

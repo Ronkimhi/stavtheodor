@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Diagram of four routes from a designer's project to the finished wall: trade programs and wholesale suppliers, galleries and artists, commissions, and a curator partnership that can run all three, with lead time growing from the first route to commissions</title>
+<desc id="d">Diagram of four routes from a designer's project to the finished wall: trade programs and wholesale suppliers, galleries and artists, commissions, and a curator partnership that can run all three, with lead time growing from the first route to commissions</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- schematic: no physical scale, relative positions only -->
+<!-- lead time axis: order only, no duration -->
+<line class="dim" x1="400" y1="160" x2="1520" y2="160"/>
+<line class="dim" x1="400" y1="152" x2="400" y2="168"/>
+<line class="dim" x1="1520" y1="152" x2="1520" y2="168"/>
+<text class="l1" x="960" y="136" text-anchor="middle">lead time grows</text>
+<text class="l2" x="400" y="190">shorter</text>
+<text class="l2" x="1520" y="190" text-anchor="end">longer</text>
+<!-- the project sheet: a floor plan suggested by three soft lines -->
+<rect class="soft" x="110" y="380" width="220" height="180"/>
+<line class="soft" x1="110" y1="470" x2="250" y2="470"/>
+<line class="soft" x1="250" y1="380" x2="250" y2="470"/>
+<line class="soft" x1="190" y1="470" x2="190" y2="560"/>
+<text class="l1" x="220" y="350" text-anchor="middle">Your project</text>
+<line class="soft" x1="330" y1="470" x2="400" y2="470"/>
+<line class="soft" x1="400" y1="300" x2="400" y2="840"/>
+<!-- three route lanes; each ends in a range (proportions are inference, no number printed) and a frame icon -->
+<line class="soft" x1="400" y1="300" x2="600" y2="300"/>
+<line class="dim" x1="600" y1="300" x2="880" y2="300"/>
+<line class="dim" x1="600" y1="292" x2="600" y2="308"/>
+<line class="dim" x1="880" y1="292" x2="880" y2="308"/>
+<rect class="frame" x="904" y="272" width="72" height="56"/>
+<rect class="art" x="910" y="278" width="60" height="44"/>
+<text class="l1" x="540" y="260">Trade programs and wholesale</text>
+<text class="l2" x="540" y="340">prints and editions from a catalog</text>
+<line class="soft" x1="400" y1="480" x2="740" y2="480"/>
+<line class="dim" x1="740" y1="480" x2="1040" y2="480"/>
+<line class="dim" x1="740" y1="472" x2="740" y2="488"/>
+<line class="dim" x1="1040" y1="472" x2="1040" y2="488"/>
+<rect class="frame" x="1064" y="452" width="72" height="56"/>
+<rect class="art" x="1070" y="458" width="60" height="44"/>
+<text class="l1" x="540" y="440">Galleries and artists</text>
+<text class="l2" x="540" y="520">originals, one by one</text>
+<line class="soft" x1="400" y1="660" x2="1080" y2="660"/>
+<line class="dim" x1="1080" y1="660" x2="1380" y2="660"/>
+<line class="dim" x1="1080" y1="652" x2="1080" y2="668"/>
+<line class="dim" x1="1380" y1="652" x2="1380" y2="668"/>
+<rect class="frame" x="1404" y="632" width="72" height="56"/>
+<rect class="art" x="1410" y="638" width="60" height="44"/>
+<text class="l1" x="540" y="620">Commissions</text>
+<text class="l2" x="540" y="700">made for one wall</text>
+<!-- lane 4, the curator partnership: no range and no frame of its own, it runs the other three -->
+<line class="soft" x1="400" y1="840" x2="500" y2="840"/>
+<line class="lead" x1="500" y1="840" x2="500" y2="300"/>
+<line class="lead" x1="500" y1="300" x2="524" y2="300"/>
+<line class="lead" x1="500" y1="480" x2="524" y2="480"/>
+<line class="lead" x1="500" y1="660" x2="524" y2="660"/>
+<text class="l1" x="540" y="816">Curator partnership</text>
+<text class="l2" x="540" y="880">can run all three inside your scheme</text>
+</svg>
