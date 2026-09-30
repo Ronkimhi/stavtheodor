@@ -13,7 +13,7 @@
   .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
   .tp{fill:#9D7663}
   @media (max-width:560px){
-    .l1{font-size:52px}
+    .l1{font-size:64px}
     .l2{display:none}
     .ink,.frame{stroke-width:3.5}
     .soft{stroke-width:3}
@@ -64,10 +64,10 @@
 <rect class="dim" x="1181.8" y="376" width="102" height="68"/>
 <rect class="dim" x="1368.8" y="338.6" width="54.4" height="54.4"/>
 <text class="l1" x="1520" y="322" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
-<line class="lead" x1="1500" y1="332" x2="1500" y2="376"/>
-<text class="l1" x="440.2" y="628" text-anchor="middle">A series</text>
-<text class="l2" x="440.2" y="660" text-anchor="middle">framed alike</text>
-<text class="l1" x="1168.2" y="628" text-anchor="middle">Avoid</text>
-<text class="l2" x="1168.2" y="660" text-anchor="middle">unrelated frames, no shared line</text>
+<line class="lead" x1="1500" y1="346" x2="1500" y2="376"/>
+<text class="l1" x="440.2" y="646" text-anchor="middle">A series</text>
+<text class="l2" x="440.2" y="676" text-anchor="middle">framed alike</text>
+<text class="l1" x="1168.2" y="646" text-anchor="middle">Avoid</text>
+<text class="l2" x="1168.2" y="676" text-anchor="middle">unrelated frames, no shared line</text>
 <text class="l2" x="185.2" y="450.8" text-anchor="middle">door</text>
 </svg>

@@ -13,7 +13,7 @@
   .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
   .tp{fill:#9D7663}
   @media (max-width:560px){
-    .l1{font-size:52px}
+    .l1{font-size:64px}
     .l2{display:none}
     .ink,.frame{stroke-width:3.5}
     .soft{stroke-width:3}
@@ -80,8 +80,9 @@
 <line class="dim" x1="1080" y1="642" x2="1080" y2="658"/>
 <line class="dim" x1="1150" y1="642" x2="1150" y2="658"/>
 <!-- labels -->
-<text class="l1" x="443" y="548" text-anchor="middle">57 to 60 in<tspan class="l2" x="443" dy="66">145 to 152 cm</tspan></text>
-<text class="l1" x="975" y="706" text-anchor="middle">equal gaps</text>
+<text class="l1" x="1448" y="500" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
+<line class="lead" x1="1436" y1="526" x2="1436" y2="570"/>
+<text class="l1" x="975" y="730" text-anchor="middle">equal gaps</text>
 <text class="l1" x="1440" y="300" text-anchor="end">somewhere to walk toward</text>
 <text class="l2" x="1446" y="202" text-anchor="end">one larger work, lit</text>
 <text class="l2" x="149" y="250">from reception</text>

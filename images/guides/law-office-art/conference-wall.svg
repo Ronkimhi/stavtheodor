@@ -13,7 +13,7 @@
   .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
   .tp{fill:#9D7663}
   @media (max-width:560px){
-    .l1{font-size:52px}
+    .l1{font-size:64px}
     .l2{display:none}
     .ink,.frame{stroke-width:3.5}
     .soft{stroke-width:3}
@@ -64,11 +64,11 @@
 <line class="soft" x1="1286" y1="685.5" x2="1286" y2="780"/>
 <line class="soft" x1="1132" y1="685.5" x2="1132" y2="780"/>
 <!-- near row at d 27 facing away from the wall; far row at d 103 facing the wall; head top about 52, eye about 47 -->
-<circle class="soft" cx="1345.5" cy="618" r="26"/>
-<line class="soft" x1="1345.5" y1="644" x2="1345.5" y2="717"/>
+<circle class="soft" cx="1345.5" cy="624" r="26"/>
+<line class="soft" x1="1345.5" y1="650" x2="1345.5" y2="717"/>
 <line class="soft" x1="1345.5" y1="717" x2="1282.5" y2="717"/>
 <line class="soft" x1="1282.5" y1="717" x2="1282.5" y2="780"/>
-<line class="soft" x1="1345.5" y1="633" x2="1303.5" y2="671.5"/>
+<line class="soft" x1="1345.5" y1="639" x2="1303.5" y2="671.5"/>
 <line class="soft" x1="1373.5" y1="717" x2="1289.5" y2="717"/>
 <line class="soft" x1="1373.5" y1="717" x2="1373.5" y2="654"/>
 <line class="soft" x1="1373.5" y1="717" x2="1373.5" y2="780"/>
@@ -89,7 +89,7 @@
 <line class="dim" x1="1414.5" y1="575.2" x2="1458.5" y2="575.2" stroke-width="2"/>
 <line class="dim" x1="1436.5" y1="553.2" x2="1436.5" y2="597.2" stroke-width="2"/>
 <line class="eye" x1="1099.5" y1="615.5" x2="1436.5" y2="575.2"/>
-<!-- a lead from the far eye toward the work's bottom edge, stopped at the near head -->
+<!-- a lead from the far eye toward the work's bottom edge, stopped at the near figure -->
 <line class="lead" x1="1099.5" y1="615.5" x2="1345.5" y2="657.7"/>
 <!-- eye band from d 0 to d 60, clear of both heads -->
 <line class="eye" x1="1230" y1="580.5" x2="1440" y2="580.5"/>

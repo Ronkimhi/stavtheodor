@@ -13,7 +13,7 @@
   .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
   .tp{fill:#9D7663}
   @media (max-width:560px){
-    .l1{font-size:52px}
+    .l1{font-size:64px}
     .l2{display:none}
     .ink,.frame{stroke-width:3.5}
     .soft{stroke-width:3}
