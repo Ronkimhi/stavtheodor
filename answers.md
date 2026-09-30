@@ -222,3 +222,7 @@ Financial advisor office decor is the art and finish of the space where clients 
 ## What are some good ways to decorate a restaurant?
 
 Restaurant wall decor is the art and wall treatment that carries a restaurant's concept to every table, chosen to read under evening light and to survive steam, grease and cleaning. The feature wall matters most, because most diners see it and many photograph it. Full guide: https://stavtheodor.com/guide/restaurant-wall-decor/
+
+## What kind of art works for home staging?
+
+Model home decor works when the art does two jobs: it photographs well, and it lets buyers picture their own life in the space. The camera sees the art before any buyer does, so for home staging that means fewer, larger works in a calm palette, one clear focal point per space, each sized to the furniture below, and nothing personal or divisive. Full guide: https://stavtheodor.com/guide/art-for-home-staging/

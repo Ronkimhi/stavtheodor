@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of the same staged living space inside the frame of a wide listing photo: above an 84 inch sofa, one work 56 inches wide, two thirds of the sofa, 9 inches above its back and centered on the 57 to 60 inch band, beside a 24 inch frame over the same sofa that reads as a small rectangle in the shot</title>
+<desc id="d">Two elevations of the same staged living space inside the frame of a wide listing photo: above an 84 inch sofa, one work 56 inches wide, two thirds of the sofa, 9 inches above its back and centered on the 57 to 60 inch band, beside a 24 inch frame over the same sofa that reads as a small rectangle in the shot</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=680; two listing photo frames 162 by 108 in (3:2), 648 by 432 px -->
+<!-- panel 1: the listing photo's frame x 80 to 728, y 272 to 704 (dotted, the camera's); ceiling at 96 in, floor at y 680; sofa 84 in, back 32 in; work 56 by 38 in, bottom 41 in, center 60 in -->
+<rect class="lead" x="80" y="272" width="648" height="432"/>
+<line class="ink" x1="80" y1="296" x2="728" y2="296"/>
+<line class="ink" x1="80" y1="680" x2="728" y2="680"/>
+<line class="eye" x1="80" y1="452" x2="728" y2="452"/>
+<line class="eye" x1="80" y1="440" x2="728" y2="440"/>
+<rect class="soft" x="236" y="552" width="336" height="64"/>
+<rect class="soft" x="236" y="616" width="336" height="24"/>
+<rect class="soft" x="236" y="576" width="24" height="40"/>
+<rect class="soft" x="548" y="576" width="24" height="40"/>
+<line class="soft" x1="252" y1="640" x2="252" y2="680"/>
+<line class="soft" x1="556" y1="640" x2="556" y2="680"/>
+<rect class="frame" x="292" y="364" width="224" height="152"/>
+<rect class="art" x="308" y="380" width="192" height="120"/>
+<line class="dim" x1="382" y1="440" x2="426" y2="440" stroke-width="2"/>
+<line class="dim" x1="404" y1="418" x2="404" y2="462" stroke-width="2"/>
+<line class="dim" x1="292" y1="354" x2="516" y2="354"/>
+<line class="dim" x1="292" y1="346" x2="292" y2="362"/>
+<line class="dim" x1="516" y1="346" x2="516" y2="362"/>
+<!-- panel 2: the listing photo's frame x 872 to 1520, y 272 to 704 (dotted, the camera's); ceiling at 96 in, floor at y 680; sofa 84 in, back 32 in; work 24 by 36 in, bottom 41 in, center 59 in -->
+<rect class="lead" x="872" y="272" width="648" height="432"/>
+<line class="ink" x1="872" y1="296" x2="1520" y2="296"/>
+<line class="ink" x1="872" y1="680" x2="1520" y2="680"/>
+<line class="eye" x1="872" y1="452" x2="1520" y2="452"/>
+<line class="eye" x1="872" y1="440" x2="1520" y2="440"/>
+<rect class="soft" x="1028" y="552" width="336" height="64"/>
+<rect class="soft" x="1028" y="616" width="336" height="24"/>
+<rect class="soft" x="1028" y="576" width="24" height="40"/>
+<rect class="soft" x="1340" y="576" width="24" height="40"/>
+<line class="soft" x1="1044" y1="640" x2="1044" y2="680"/>
+<line class="soft" x1="1348" y1="640" x2="1348" y2="680"/>
+<rect class="frame" x="1148" y="372" width="96" height="144"/>
+<rect class="art" x="1158" y="382" width="76" height="124"/>
+<line class="dim" x1="1174" y1="444" x2="1218" y2="444" stroke-width="2"/>
+<line class="dim" x1="1196" y1="422" x2="1196" y2="466" stroke-width="2"/>
+<line class="dim" x1="1148" y1="362" x2="1244" y2="362"/>
+<line class="dim" x1="1148" y1="354" x2="1148" y2="370"/>
+<line class="dim" x1="1244" y1="354" x2="1244" y2="370"/>
+<text class="l1" x="404" y="244" text-anchor="middle">Sized for the lens</text>
+<text class="l1" x="404" y="342" text-anchor="middle">56 in<tspan class="l2"> · 142 cm · two thirds of 84 in</tspan></text>
+<line class="dim" x1="552" y1="516" x2="552" y2="552"/>
+<line class="dim" x1="544" y1="516" x2="560" y2="516"/>
+<line class="dim" x1="544" y1="552" x2="560" y2="552"/>
+<text class="l2" x="566" y="508">within 8 to 10 in</text>
+<text class="l1" x="566" y="540">9 in<tspan class="l2"> · 23 cm</tspan></text>
+<text class="l2" x="404" y="668" text-anchor="middle">sofa, 84 in</text>
+<text class="l2" x="80" y="736">the listing photo</text>
+<text class="l1" x="1196" y="244" text-anchor="middle">Too small for the shot</text>
+<text class="l1" x="1196" y="342" text-anchor="middle">24 in<tspan class="l2"> · 61 cm · under a third of the sofa</tspan></text>
+<text class="l2" x="1514" y="398" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="1514" y="428" text-anchor="end">57 to 60 in</text>
+</svg>

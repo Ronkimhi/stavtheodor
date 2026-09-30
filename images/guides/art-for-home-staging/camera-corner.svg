@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Floor plan of a staged living space with the camera in the corner diagonally across from the sofa: its wide view takes in the whole sofa wall and part of both side walls, so the work above the sofa is one part of a much larger picture, and the phone check is taken from the same corner</title>
+<desc id="d">Floor plan of a staged living space with the camera in the corner diagonally across from the sofa: its wide view takes in the whole sofa wall and part of both side walls, so the work above the sofa is one part of a much larger picture, and the phone check is taken from the same corner</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; plan, north wall at the top, room 216 by 168 in, inside northwest corner at (240, 114) -->
+<path class="ink" d="M600 786 L240 786 L240 114 L1104 114 L1104 786 L744 786"/>
+<rect class="soft" x="234" y="306" width="12" height="288"/>
+<rect class="soft" x="504" y="114" width="336" height="152"/>
+<rect class="soft" x="504" y="114" width="336" height="32"/>
+<rect class="soft" x="504" y="146" width="24" height="120"/>
+<rect class="soft" x="816" y="146" width="24" height="120"/>
+<rect class="soft" x="576" y="354" width="192" height="96"/>
+<rect class="soft" x="360" y="530" width="128" height="128" rx="6"/>
+<rect class="soft" x="360" y="634" width="128" height="24" rx="4"/>
+<rect class="soft" x="856" y="530" width="128" height="128" rx="6"/>
+<rect class="soft" x="856" y="634" width="128" height="24" rx="4"/>
+<rect class="tp" x="560" y="108" width="224" height="12"/>
+<!-- camera 12 in from the east and south walls; lens edges 40 degrees either side of the line to the work's center, clipped at the walls; one sightline camera to work center, 183 in -->
+<line class="lead" x1="1056" y1="738" x2="1104" y2="412.8"/>
+<line class="lead" x1="1056" y1="738" x2="240" y2="466.8"/>
+<line class="eye" x1="1056" y1="738" x2="672" y2="114"/>
+<circle class="tp" cx="1056" cy="738" r="6"/>
+<text class="l1" x="672" y="88" text-anchor="middle">the work above the sofa</text>
+<line class="lead" x1="1066" y1="738" x2="1116" y2="738"/>
+<text class="l1" x="1128" y="748">check from here</text>
+<text class="l2" x="600" y="560" text-anchor="middle">wide lens</text>
+<text class="l2" x="672" y="214" text-anchor="middle">sofa</text>
+<text class="l2" x="672" y="816" text-anchor="middle">doorway</text>
+<text class="l2" x="222" y="458" text-anchor="end">window</text>
+</svg>

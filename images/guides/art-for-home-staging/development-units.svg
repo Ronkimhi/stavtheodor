@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three model units side by side above the same 84 inch sofa: one work, a pair and a triptych, each group 56 inches wide in the same frames, with every center on one 57 to 60 inch hanging line</title>
+<desc id="d">Three model units side by side above the same 84 inch sofa: one work, a pair and a triptych, each group 56 inches wide in the same frames, with every center on one 57 to 60 inch hanging line</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:2.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.2 px; floor at y=580; three walls 144 in wide (460.8 px), 28.8 px apart -->
+<line class="eye" x1="80" y1="397.6" x2="1520" y2="397.6"/>
+<line class="eye" x1="80" y1="388" x2="1520" y2="388"/>
+<!-- unit 1: wall x 80 to 540.8, sofa 84 in, back 32 in, centered; group 56 in wide, bottom 41 in -->
+<line class="ink" x1="80" y1="580" x2="540.8" y2="580"/>
+<rect class="soft" x="176" y="477.6" width="268.8" height="51.2"/>
+<rect class="soft" x="176" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="176" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="425.6" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="188.8" y1="548" x2="188.8" y2="580"/>
+<line class="soft" x1="432" y1="548" x2="432" y2="580"/>
+<!-- one work 56 by 38, top 79, center 60 -->
+<rect class="frame" x="220.8" y="327.2" width="179.2" height="121.6"/>
+<rect class="art" x="226.8" y="333.2" width="167.2" height="109.6"/>
+<line class="dim" x1="288.4" y1="388" x2="332.4" y2="388" stroke-width="2"/>
+<line class="dim" x1="310.4" y1="366" x2="310.4" y2="410" stroke-width="2"/>
+<line class="dim" x1="220.8" y1="303.2" x2="400" y2="303.2"/>
+<line class="dim" x1="220.8" y1="295.2" x2="220.8" y2="311.2"/>
+<line class="dim" x1="400" y1="295.2" x2="400" y2="311.2"/>
+<text class="l2" x="310.4" y="291.2" text-anchor="middle">56 in</text>
+<text class="l1" x="310.4" y="630" text-anchor="middle">Unit 1</text>
+<text class="l2" x="310.4" y="662" text-anchor="middle">one work</text>
+<!-- unit 2: wall x 569.6 to 1030.4, sofa 84 in, back 32 in, centered; group 56 in wide, bottom 41 in -->
+<line class="ink" x1="569.6" y1="580" x2="1030.4" y2="580"/>
+<rect class="soft" x="665.6" y="477.6" width="268.8" height="51.2"/>
+<rect class="soft" x="665.6" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="665.6" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="915.2" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="678.4" y1="548" x2="678.4" y2="580"/>
+<line class="soft" x1="921.6" y1="548" x2="921.6" y2="580"/>
+<!-- pair 26.25 by 36, 3.5 in apart, top 77, center 59 -->
+<rect class="frame" x="710.4" y="333.6" width="84" height="115.2"/>
+<rect class="art" x="716.4" y="339.6" width="72" height="103.2"/>
+<rect class="frame" x="805.6" y="333.6" width="84" height="115.2"/>
+<rect class="art" x="811.6" y="339.6" width="72" height="103.2"/>
+<line class="dim" x1="778" y1="391.2" x2="822" y2="391.2" stroke-width="2"/>
+<line class="dim" x1="800" y1="369.2" x2="800" y2="413.2" stroke-width="2"/>
+<line class="dim" x1="710.4" y1="309.6" x2="889.6" y2="309.6"/>
+<line class="dim" x1="710.4" y1="301.6" x2="710.4" y2="317.6"/>
+<line class="dim" x1="889.6" y1="301.6" x2="889.6" y2="317.6"/>
+<text class="l2" x="800" y="297.6" text-anchor="middle">56 in</text>
+<text class="l1" x="800" y="630" text-anchor="middle">Unit 2</text>
+<text class="l2" x="800" y="662" text-anchor="middle">a pair</text>
+<!-- unit 3: wall x 1059.2 to 1520, sofa 84 in, back 32 in, centered; group 56 in wide, bottom 41 in -->
+<line class="ink" x1="1059.2" y1="580" x2="1520" y2="580"/>
+<rect class="soft" x="1155.2" y="477.6" width="268.8" height="51.2"/>
+<rect class="soft" x="1155.2" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="1155.2" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="1404.8" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="1168" y1="548" x2="1168" y2="580"/>
+<line class="soft" x1="1411.2" y1="548" x2="1411.2" y2="580"/>
+<!-- triptych 17 by 34, 2.5 in apart, top 75, center 58 -->
+<rect class="frame" x="1200" y="340" width="54.4" height="108.8"/>
+<rect class="art" x="1206" y="346" width="42.4" height="96.8"/>
+<rect class="frame" x="1262.4" y="340" width="54.4" height="108.8"/>
+<rect class="art" x="1268.4" y="346" width="42.4" height="96.8"/>
+<rect class="frame" x="1324.8" y="340" width="54.4" height="108.8"/>
+<rect class="art" x="1330.8" y="346" width="42.4" height="96.8"/>
+<line class="dim" x1="1267.6" y1="394.4" x2="1311.6" y2="394.4" stroke-width="2"/>
+<line class="dim" x1="1289.6" y1="372.4" x2="1289.6" y2="416.4" stroke-width="2"/>
+<line class="dim" x1="1200" y1="316" x2="1379.2" y2="316"/>
+<line class="dim" x1="1200" y1="308" x2="1200" y2="324"/>
+<line class="dim" x1="1379.2" y1="308" x2="1379.2" y2="324"/>
+<text class="l2" x="1289.6" y="304" text-anchor="middle">56 in</text>
+<text class="l1" x="1289.6" y="630" text-anchor="middle">Unit 3</text>
+<text class="l2" x="1289.6" y="662" text-anchor="middle">a triptych</text>
+<text class="l2" x="1520" y="430" text-anchor="end">same frames</text>
+<text class="l2" x="1500" y="256" text-anchor="end">145 to 152 cm · one hanging line in every unit</text>
+<text class="l1" x="1500" y="288" text-anchor="end">57 to 60 in</text>
+<line class="lead" x1="1500" y1="298" x2="1500" y2="388"/>
+</svg>

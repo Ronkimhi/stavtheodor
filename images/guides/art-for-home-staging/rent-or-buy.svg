@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Decision diagram for staging art: for a listing that sells in weeks, rent; for a model home open through the sales season, buy the anchor works buyers stop in front of, originals or signed editions that can move to the next model or sell with the home, and rent the rest</title>
+<desc id="d">Decision diagram for staging art: for a listing that sells in weeks, rent; for a model home open through the sales season, buy the anchor works buyers stop in front of, originals or signed editions that can move to the next model or sell with the home, and rent the rest</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: none, decision diagram -->
+<!-- Q1 box x 80 to 440, y 330 to 470 -->
+<rect class="ink" x="80" y="330" width="360" height="140"/>
+<!-- A box x 560 to 1000, y 110 to 230 -->
+<rect class="ink" x="560" y="110" width="440" height="120"/>
+<!-- Q2 box x 560 to 1000, y 450 to 590 -->
+<rect class="ink" x="560" y="450" width="440" height="140"/>
+<!-- B box x 1120 to 1520, y 330 to 470 -->
+<rect class="ink" x="1120" y="330" width="400" height="140"/>
+<!-- C box x 1120 to 1520, y 590 to 690 -->
+<rect class="ink" x="1120" y="590" width="400" height="100"/>
+<!-- connectors -->
+<path class="dim" d="M440 400 L500 400 L500 170 L560 170"/>
+<path class="dim" d="M500 400 L500 520 L560 520"/>
+<path class="dim" d="M1000 520 L1060 520 L1060 400 L1120 400"/>
+<path class="dim" d="M1060 520 L1060 640 L1120 640"/>
+<circle class="tp" cx="440" cy="400" r="6"/>
+<circle class="tp" cx="500" cy="400" r="6"/>
+<circle class="tp" cx="1000" cy="520" r="6"/>
+<circle class="tp" cx="1060" cy="520" r="6"/>
+<text class="l1" x="260" y="390" text-anchor="middle">Listing or<tspan x="260" dy="1.2em">model home?</tspan></text>
+<text class="l1" x="780" y="160" text-anchor="middle">Rent</text>
+<text class="l2" x="780" y="188" text-anchor="middle">a well made print</text>
+<text class="l2" x="780" y="213" text-anchor="middle">is usually enough</text>
+<text class="l1" x="780" y="510" text-anchor="middle">Will buyers stop<tspan x="780" dy="1.2em">in front of it?</tspan></text>
+<text class="l1" x="1320" y="380" text-anchor="middle">Buy</text>
+<text class="l2" x="1320" y="408" text-anchor="middle">an original or a signed edition</text>
+<text class="l2" x="1320" y="433" text-anchor="middle">later: the next model,</text>
+<text class="l2" x="1320" y="458" text-anchor="middle">or it sells with the home</text>
+<text class="l1" x="1320" y="656" text-anchor="middle">Rent</text>
+<text class="l2" x="512" y="282">a listing that sells in weeks</text>
+<text class="l2" x="488" y="502" text-anchor="end">a model home,</text>
+<text class="l2" x="488" y="530" text-anchor="end">open through the sales season</text>
+<text class="l2" x="1108" y="388" text-anchor="end">yes: an anchor</text>
+<text class="l2" x="1108" y="668" text-anchor="end">no: the rest</text>
+</svg>

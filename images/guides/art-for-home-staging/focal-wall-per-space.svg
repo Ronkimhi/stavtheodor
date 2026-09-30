@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Four floor plans, an entry, a living space, a dining space and a primary bedroom, each with one focal wall marked: facing the front door above a console, facing the doorway above the sofa, above the sideboard facing the opening, and above the headboard, seen from the bedroom door</title>
+<desc id="d">Four floor plans, an entry, a living space, a dining space and a primary bedroom, each with one focal wall marked: facing the front door above a console, facing the doorway above the sofa, above the sideboard facing the opening, and above the headboard, seen from the bedroom door</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2 px; four plans, north walls at the top, every south wall on y 520 -->
+<!-- (a) entry 96 by 120 in; front door 36 in at x 30 to 66, hinge at 30; console 48 by 14; focal work 32 in, x 32 to 64 -->
+<path class="ink" d="M212 520 L272 520 L272 280 L80 280 L80 520 L140 520"/>
+<line class="soft" x1="140" y1="520" x2="140" y2="448"/>
+<path class="soft" d="M140 448 A72 72 0 0 1 212 520"/>
+<rect class="soft" x="128" y="280" width="96" height="28"/>
+<rect class="tp" x="144" y="274" width="64" height="12"/>
+<line class="eye" x1="176" y1="520" x2="176" y2="280"/>
+<circle class="tp" cx="176" cy="520" r="6"/>
+<text class="l1" x="176" y="572" text-anchor="middle">Entry</text>
+<text class="l2" x="176" y="604" text-anchor="middle">facing the front door</text>
+<!-- (b) living 216 by 168 in, HS2's room; focal work 56 in, x 80 to 136; sightline from the doorway's center -->
+<path class="ink" d="M516 520 L336 520 L336 184 L768 184 L768 520 L588 520"/>
+<rect class="soft" x="330" y="280" width="12" height="144"/>
+<rect class="soft" x="468" y="184" width="168" height="76"/>
+<rect class="soft" x="468" y="184" width="168" height="16"/>
+<rect class="soft" x="468" y="200" width="12" height="60"/>
+<rect class="soft" x="624" y="200" width="12" height="60"/>
+<rect class="soft" x="504" y="304" width="96" height="48"/>
+<rect class="soft" x="396" y="392" width="64" height="64" rx="6"/>
+<rect class="soft" x="396" y="444" width="64" height="12" rx="4"/>
+<rect class="soft" x="644" y="392" width="64" height="64" rx="6"/>
+<rect class="soft" x="644" y="444" width="64" height="12" rx="4"/>
+<rect class="tp" x="496" y="178" width="112" height="12"/>
+<line class="eye" x1="552" y1="520" x2="552" y2="184"/>
+<circle class="tp" cx="552" cy="520" r="6"/>
+<text class="l1" x="552" y="572" text-anchor="middle">Living</text>
+<text class="l2" x="552" y="604" text-anchor="middle">facing the doorway, above the sofa</text>
+<!-- (c) dining 144 by 156 in; cased opening 48 in at x 48 to 96; sideboard 72 by 20; table 84 by 42, six chairs 18 by 18; window 60 in on the east wall; focal work 48 in, x 48 to 96 -->
+<path class="ink" d="M928 520 L832 520 L832 208 L1120 208 L1120 520 L1024 520"/>
+<rect class="soft" x="1114" y="304" width="12" height="120"/>
+<rect class="soft" x="904" y="208" width="144" height="40"/>
+<rect class="soft" x="892" y="328" width="168" height="84"/>
+<rect class="soft" x="904" y="292" width="36" height="36" rx="4"/>
+<rect class="soft" x="904" y="412" width="36" height="36" rx="4"/>
+<rect class="soft" x="958" y="292" width="36" height="36" rx="4"/>
+<rect class="soft" x="958" y="412" width="36" height="36" rx="4"/>
+<rect class="soft" x="1012" y="292" width="36" height="36" rx="4"/>
+<rect class="soft" x="1012" y="412" width="36" height="36" rx="4"/>
+<rect class="tp" x="928" y="202" width="96" height="12"/>
+<line class="eye" x1="976" y1="520" x2="976" y2="208"/>
+<circle class="tp" cx="976" cy="520" r="6"/>
+<text class="l1" x="976" y="572" text-anchor="middle">Dining</text>
+<text class="l2" x="976" y="604" text-anchor="middle">above the sideboard</text>
+<!-- (d) primary bedroom 168 by 156 in; queen bed 60 by 80 at x 54 to 114; nightstands 22 by 18; door 36 in at x 120 to 156, hinge at 156; dresser 60 by 20 on the south wall; focal work 40 in, x 64 to 104; sightline from the door's center -->
+<path class="ink" d="M1424 520 L1184 520 L1184 208 L1520 208 L1520 520 L1496 520"/>
+<line class="soft" x1="1496" y1="520" x2="1496" y2="448"/>
+<path class="soft" d="M1424 520 A72 72 0 0 1 1496 448"/>
+<rect class="soft" x="1292" y="208" width="120" height="6"/>
+<rect class="soft" x="1292" y="214" width="120" height="154"/>
+<rect class="soft" x="1298" y="220" width="52" height="28" rx="6"/>
+<rect class="soft" x="1354" y="220" width="52" height="28" rx="6"/>
+<line class="soft" x1="1292" y1="268" x2="1412" y2="268"/>
+<rect class="soft" x="1248" y="208" width="44" height="36"/>
+<rect class="soft" x="1412" y="208" width="44" height="36"/>
+<rect class="soft" x="1244" y="480" width="120" height="40"/>
+<rect class="tp" x="1312" y="202" width="80" height="12"/>
+<line class="eye" x1="1460" y1="520" x2="1352" y2="208"/>
+<circle class="tp" cx="1460" cy="520" r="6"/>
+<text class="l1" x="1352" y="572" text-anchor="middle">Primary bedroom</text>
+<text class="l2" x="1352" y="604" text-anchor="middle">above the headboard,</text>
+<text class="l2" x="1352" y="632" text-anchor="middle">seen from the door</text>
+</svg>
