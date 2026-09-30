@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Chart in relative terms, with no prices: buying an original costs the most at the start and little more over time, while lease rent starts low and keeps rising, so by the end of a long lease the rent has reached much of the price of owning and the company owns nothing</title>
+<desc id="d">Chart in relative terms, with no prices: buying an original costs the most at the start and little more over time, while lease rent starts low and keeps rising, so by the end of a long lease the rent has reached much of the price of owning and the company owns nothing</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: none, a relative chart; origin at (200, 760); buy step 400 px then 40 more, lease step 60 px then a rise to 300 (three quarters of the price) -->
+<!-- axes, no ticks, no grid -->
+<line class="soft" x1="200" y1="760" x2="1160" y2="760"/>
+<line class="soft" x1="200" y1="760" x2="200" y2="200"/>
+<!-- markers: a short stay at x 450, a long lease at x 1100 -->
+<line class="lead" x1="450" y1="760" x2="450" y2="330"/>
+<line class="lead" x1="1100" y1="760" x2="1100" y2="300"/>
+<!-- buy an original: one purchase, then framing, insurance and care -->
+<path class="ink" d="M200 760 V360 L1100 320"/>
+<!-- lease: the first rent, then rent for as long as the lease runs; never above the buy line -->
+<path class="dim" d="M200 760 V700 L1100 460"/>
+<!-- end marks: the work you keep (frame with the art wash) and the work you return (empty outline) -->
+<rect class="frame" x="1124" y="298" width="56" height="44"/>
+<rect class="art" x="1132" y="306" width="40" height="28"/>
+<rect class="soft" x="1124" y="438" width="56" height="44"/>
+<text class="l1" x="230" y="300">Buy<tspan class="l2"> · one purchase, then framing, insurance and care</tspan></text>
+<text class="l1" x="480" y="720">Lease<tspan class="l2"> · rent for as long as the lease runs</tspan></text>
+<text class="l1" x="450" y="806" text-anchor="middle">A short stay</text>
+<text class="l1" x="1100" y="806" text-anchor="middle">A long lease</text>
+<text class="l2" x="1100" y="846" text-anchor="middle">the test: rent against the price of owning</text>
+<text class="l1" x="1204" y="329">Owned</text>
+<text class="l1" x="1204" y="469">Not owned</text>
+<text class="l2" x="200" y="806" text-anchor="middle">Move in</text>
+<text class="l2" x="200" y="182" text-anchor="middle">paid so far</text>
+<text class="l2" x="680" y="846" text-anchor="middle">time in the space</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Diagram comparing four routes to office art, buying prints or editions, buying originals, commissioning and leasing, across upfront cost, cost over the term, ownership and flexibility, in relative terms with no prices</title>
+<desc id="d">Diagram comparing four routes to office art, buying prints or editions, buying originals, commissioning and leasing, across upfront cost, cost over the term, ownership and flexibility, in relative terms with no prices</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: none, a relative chart; 5 by 5 grid x 80 to 1520, y 80 to 880; row label column 80 to 440, four data columns of 270 px; row centers y 285, 455, 625, 795 -->
+<line class="soft" x1="80" y1="200" x2="1520" y2="200"/>
+<line class="soft" x1="80" y1="370" x2="1520" y2="370"/>
+<line class="soft" x1="80" y1="540" x2="1520" y2="540"/>
+<line class="soft" x1="80" y1="710" x2="1520" y2="710"/>
+<line class="soft" x1="80" y1="880" x2="1520" y2="880"/>
+<!-- header row: four column heads, each alone in its 270 px cell -->
+<text class="l1" x="575" y="146" text-anchor="middle">Upfront</text>
+<text class="l2" x="575" y="180" text-anchor="middle">at the start</text>
+<text class="l1" x="845" y="146" text-anchor="middle">Over time</text>
+<text class="l2" x="845" y="180" text-anchor="middle">across the term</text>
+<text class="l1" x="1115" y="146" text-anchor="middle">Owned</text>
+<text class="l2" x="1115" y="180" text-anchor="middle">at the end</text>
+<text class="l1" x="1385" y="146" text-anchor="middle">Flexible</text>
+<text class="l2" x="1385" y="180" text-anchor="middle">to change later</text>
+<!-- row: Prints -->
+<text class="l1" x="104" y="281">Prints</text>
+<text class="l2" x="104" y="315">or editions, bought</text>
+<!-- row: Originals -->
+<text class="l1" x="104" y="451">Originals</text>
+<text class="l2" x="104" y="485">bought</text>
+<!-- row: Commission -->
+<text class="l1" x="104" y="621">Commission</text>
+<text class="l2" x="104" y="655">made for one wall</text>
+<!-- row: Lease -->
+<text class="l1" x="104" y="791">Lease</text>
+<text class="l2" x="104" y="825">rented for a term</text>
+<!-- Upfront cells: wedge from x 475 to 675; dot at 0, 1/3, 2/3 or 1 (0, 67, 133 or 200 px) -->
+<path class="soft" d="M475 285 L675 277 L675 293 Z"/>
+<circle class="tp" cx="475" cy="285" r="10"/>
+<path class="soft" d="M475 455 L675 447 L675 463 Z"/>
+<circle class="tp" cx="675" cy="455" r="10"/>
+<path class="soft" d="M475 625 L675 617 L675 633 Z"/>
+<line class="dim" x1="608" y1="625" x2="675" y2="625"/>
+<circle class="tp" cx="608" cy="625" r="10"/>
+<circle class="tp" cx="675" cy="625" r="10"/>
+<path class="soft" d="M475 795 L675 787 L675 803 Z"/>
+<circle class="tp" cx="542" cy="795" r="10"/>
+<!-- Over time cells: baseline at row center + 45; a step at the left end then a line to the right end (heights in px above the baseline) -->
+<line class="soft" x1="745" y1="330" x2="945" y2="330"/>
+<path class="ink" d="M745 330 V320 L945 316"/>
+<line class="soft" x1="745" y1="500" x2="945" y2="500"/>
+<path class="ink" d="M745 500 V420 L945 412"/>
+<line class="soft" x1="745" y1="670" x2="945" y2="670"/>
+<path class="ink" d="M745 670 V600 L945 595"/>
+<line class="soft" x1="745" y1="840" x2="945" y2="840"/>
+<path class="dim" d="M745 840 V828 L945 780"/>
+<!-- Owned cells: 90 by 70 frame centered at x 1115; the art wash inset 8 marks the work you keep; Lease is an empty outline -->
+<rect class="frame" x="1070" y="250" width="90" height="70"/>
+<rect class="art" x="1078" y="258" width="74" height="54"/>
+<rect class="frame" x="1070" y="420" width="90" height="70"/>
+<rect class="art" x="1078" y="428" width="74" height="54"/>
+<rect class="frame" x="1070" y="590" width="90" height="70"/>
+<rect class="art" x="1078" y="598" width="74" height="54"/>
+<rect class="soft" x="1070" y="760" width="90" height="70"/>
+<text class="l2" x="1115" y="860" text-anchor="middle">some leases let you buy</text>
+<!-- Flexible cells: wedge from x 1285 to 1485 -->
+<path class="soft" d="M1285 285 L1485 277 L1485 293 Z"/>
+<circle class="tp" cx="1418" cy="285" r="10"/>
+<path class="soft" d="M1285 455 L1485 447 L1485 463 Z"/>
+<circle class="tp" cx="1352" cy="455" r="10"/>
+<path class="soft" d="M1285 625 L1485 617 L1485 633 Z"/>
+<circle class="tp" cx="1285" cy="625" r="10"/>
+<path class="soft" d="M1285 795 L1485 787 L1485 803 Z"/>
+<circle class="tp" cx="1485" cy="795" r="10"/>
+</svg>

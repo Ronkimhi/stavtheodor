@@ -198,3 +198,7 @@ Dental office decor is the art and finish a patient sees from the door to the ch
 ## What kind of art should I put in my office?
 
 Office wall art works when each area of the office gets one job: welcome at reception, focus in meeting spaces, rhythm along corridors and something personal in private offices. Choose fewer, larger, better works, sized to the wall they hold, and on a standing wall hang them with their center 57 to 60 inches (145 to 152 cm) from the floor. Full guide: https://stavtheodor.com/guide/office-wall-art/
+
+## Is it better to buy or lease art for an office?
+
+Art leasing for offices means renting artworks for a set term, often with installation and rotation included, instead of buying them. Buying builds an asset the company keeps, commissioning creates a work for one wall, and leasing trades ownership for flexibility. For most offices I recommend a mix: buy or commission the works on the walls that define the firm, and lease the walls you want to change. Full guide: https://stavtheodor.com/guide/buy-lease-or-commission-office-art/
