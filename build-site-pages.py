@@ -252,7 +252,8 @@ FIGURE_RE = re.compile(r'<figure class="(dia|tbl)">(.*?)</figure>', re.S)
 # The /advisory/ hub's guides group, in this order (slugs, like PROJECT_ORDER); guides not listed follow, newest first.
 GUIDE_ORDER = ["how-to-choose-art-for-your-home",  # the home pillar leads the group (2026-09-30 SEO fixes)
                "gallery-wall-ideas", "how-to-hang-pictures", "art-above-couch", "dining-room-art", "living-room-art",
-               "art-above-bed", "entryway-art", "large-wall-art-ideas"]  # the eight home guides, 2026-09-30 (Commit B)
+               "art-above-bed", "entryway-art", "large-wall-art-ideas",  # the eight home guides, 2026-09-30 (Commit B)
+               "art-for-a-small-apartment", "planning-art-in-construction-drawings"]  # answers wave, 2026-09-30
 GUIDES_HUB_H2 = ("Practical guides to choosing and placing art", "מדריכים מעשיים לבחירת אמנות ולמיקומה")
 GUIDES_HUB_SUB = ("Each guide answers one question with drawings to scale and the measurements in inches and centimeters.",
                   "כל מדריך עונה על שאלה אחת, עם שרטוטים בקנה מידה והמידות באינצ'ים ובסנטימטרים.")

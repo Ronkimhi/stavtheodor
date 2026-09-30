@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three elevations under the same low ceiling: a wide work two thirds of the sofa with at least 12 inches of wall above it, a tall work that crowds the ceiling, and one slim vertical work on a narrow wall</title>
+<desc id="d">Three elevations under the same low ceiling: a wide work two thirds of the sofa with at least 12 inches of wall above it, a tall work that crowds the ceiling, and one slim vertical work on a narrow wall</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; elevation, floor at y=580; one low ceiling at 90 in (y 175); panels centered on x 360, 960 and 1350 -->
+<!-- floor, the low ceiling, the eye band at 57 and 60 in (unlabelled here; labelled in Fig. 4) -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="ink" x1="80" y1="175" x2="1520" y2="175"/>
+<line class="eye" x1="110" y1="323.5" x2="1490" y2="323.5"/>
+<line class="eye" x1="110" y1="310" x2="1490" y2="310"/>
+<!-- panel 1, wide format: sofa 72 in centered on 360; work 48 by 34, x 252 to 468, bottom 41, top 75, center 58; 15 in from the top to the ceiling -->
+<rect class="soft" x="198" y="436" width="324" height="63"/>
+<rect class="soft" x="198" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="495" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="198" y="499" width="324" height="63"/>
+<rect class="soft" x="216" y="562" width="9" height="18"/>
+<rect class="soft" x="495" y="562" width="9" height="18"/>
+<rect class="frame" x="252" y="242.5" width="216" height="153"/>
+<rect class="art" x="260" y="250.5" width="200" height="137"/>
+<line class="dim" x1="338" y1="319" x2="382" y2="319" stroke-width="2"/>
+<line class="dim" x1="360" y1="297" x2="360" y2="341" stroke-width="2"/>
+<line class="dim" x1="480" y1="175" x2="480" y2="242.5"/>
+<line class="dim" x1="472" y1="175" x2="488" y2="175"/>
+<line class="dim" x1="472" y1="242.5" x2="488" y2="242.5"/>
+<line class="dim" x1="456" y1="436" x2="456" y2="395.5"/>
+<line class="dim" x1="448" y1="436" x2="464" y2="436"/>
+<line class="dim" x1="448" y1="395.5" x2="464" y2="395.5"/>
+<!-- panel 2, tall format, the wrong case: the same sofa; a ghost outline 30 by 44, bottom 41, top 85, 5 in under the ceiling, center 63 above the band; no wash and no cross (HG D12 convention) -->
+<rect class="soft" x="798" y="436" width="324" height="63"/>
+<rect class="soft" x="798" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="1095" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="798" y="499" width="324" height="63"/>
+<rect class="soft" x="816" y="562" width="9" height="18"/>
+<rect class="soft" x="1095" y="562" width="9" height="18"/>
+<rect class="lead" x="892.5" y="197.5" width="135" height="198"/>
+<!-- panel 3, narrow wall 36 in between two corners, no furniture: work 16 by 36, x 1314 to 1386, bottom 40.5, top 76.5, center 58.5; 13.5 in under the ceiling, 10 in clear each side -->
+<line class="ink" x1="1269" y1="175" x2="1269" y2="580"/>
+<line class="ink" x1="1431" y1="175" x2="1431" y2="580"/>
+<rect class="frame" x="1314" y="235.8" width="72" height="162"/>
+<rect class="art" x="1322" y="243.8" width="56" height="146"/>
+<line class="dim" x1="1328" y1="316.8" x2="1372" y2="316.8" stroke-width="2"/>
+<line class="dim" x1="1350" y1="294.8" x2="1350" y2="338.8" stroke-width="2"/>
+<text class="l1" x="90" y="150">low ceiling</text>
+<text class="l1" x="492" y="226">at least 12 in<tspan class="l2"> · 30 cm</tspan></text>
+<text class="l1" x="360" y="630" text-anchor="middle">wide format<tspan class="l2"> · two thirds of the sofa</tspan></text>
+<text class="l1" x="960" y="630" text-anchor="middle">tall format<tspan class="l2"> · crowds the ceiling</tspan></text>
+<text class="l1" x="1350" y="630" text-anchor="middle">narrow wall<tspan class="l2"> · one slim work</tspan></text>
+<text class="l2" x="492" y="424">8 to 10 in · 20 to 25 cm</text>
+</svg>

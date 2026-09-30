@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Floor plan of a studio apartment: a dashed sightline runs from the front door straight to the wall behind the sofa, marked as the anchor wall, while the sleeping zone beyond an open bookcase gets a quieter work above the bed</title>
+<desc id="d">Floor plan of a studio apartment: a dashed sightline runs from the front door straight to the wall behind the sofa, marked as the anchor wall, while the sleeping zone beyond an open bookcase gets a quieter work above the bed</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; plan, north wall at the top, inner faces 300 by 168 in, northwest corner at (200, 150) -->
+<!-- walls, inner faces 300 by 168 in, with a 36 in door opening in the south wall from x 30 to 66 -->
+<path class="ink" d="M320 822 L200 822 L200 150 L1400 150 L1400 822 L464 822"/>
+<!-- front door: leaf hinged at (66, 168), open to (66, 132); swing arc radius 36 in to (30, 168) -->
+<line class="soft" x1="464" y1="822" x2="464" y2="678"/>
+<path class="soft" d="M320 822 A144 144 0 0 1 464 678"/>
+<!-- window 60 in on the west wall, y 60 to 120, a soft rect 12 px deep across the wall line -->
+<rect class="soft" x="194" y="390" width="12" height="240"/>
+<!-- sofa 72 by 36 in plan, back to the north wall, x 12 to 84; back line at y 10, arm lines at x 18 and 78 -->
+<rect class="soft" x="248" y="158" width="288" height="144" rx="4"/>
+<line class="soft" x1="248" y1="190" x2="536" y2="190"/>
+<line class="soft" x1="272" y1="190" x2="272" y2="302"/>
+<line class="soft" x1="512" y1="190" x2="512" y2="302"/>
+<!-- coffee table 40 by 20, x 28 to 68, y 56 to 76 -->
+<rect class="soft" x="312" y="374" width="160" height="80" rx="4"/>
+<!-- open bookcase 12 by 60, low, free standing, x 144 to 156, y 20 to 80, two cross lines at y 40 and 60 -->
+<rect class="soft" x="776" y="230" width="48" height="240" rx="2"/>
+<line class="soft" x1="776" y1="310" x2="824" y2="310"/>
+<line class="soft" x1="776" y1="390" x2="824" y2="390"/>
+<!-- queen bed 60 by 80, headboard to the north wall, x 198 to 258, y 2 to 82; headboard line at y 6 -->
+<rect class="soft" x="992" y="158" width="240" height="320" rx="4"/>
+<line class="soft" x1="992" y1="174" x2="1232" y2="174"/>
+<!-- two pillows 24 by 12, x 202 to 226 and 230 to 254, y 9 to 21 -->
+<rect class="soft" x="1008" y="186" width="96" height="48" rx="6"/>
+<rect class="soft" x="1120" y="186" width="96" height="48" rx="6"/>
+<!-- anchor wall: tp rect 3 in (12 px) deep on the north wall's inner face over the sofa, x 24 to 72, two thirds of the sofa -->
+<rect class="tp" x="296" y="150" width="192" height="12"/>
+<!-- quieter work wall: tp rect 1.5 in (6 px) deep on the north wall, x 208 to 248, two thirds of the 60 in bed -->
+<rect class="tp" x="1032" y="150" width="160" height="6"/>
+<!-- sightline from a dot just inside the open door (48, 160), clear of the leaf, straight north to the anchor wall's face (48, 3) -->
+<line class="eye" x1="392" y1="790" x2="392" y2="162"/>
+<circle class="tp" cx="392" cy="790" r="6"/>
+<text class="l1" x="392" y="128" text-anchor="middle">anchor wall</text>
+<text class="l1" x="404" y="580">sightline</text>
+<text class="l1" x="392" y="880" text-anchor="middle">door</text>
+<text class="l2" x="464" y="262" text-anchor="middle">sofa</text>
+<text class="l2" x="560" y="700">living zone</text>
+<text class="l2" x="800" y="506" text-anchor="middle">open bookcase</text>
+<text class="l2" x="1112" y="530" text-anchor="middle">sleeping zone</text>
+<text class="l2" x="1112" y="128" text-anchor="middle">quieter work</text>
+<text class="l2" x="180" y="518" text-anchor="end">window</text>
+</svg>

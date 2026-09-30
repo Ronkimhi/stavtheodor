@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Diagram of one work keyed through the drawing set: the same ID on the plan, on the elevation and on its row of the artwork schedule, whose eight fields run from ID and wall reference to lead time or commission stage, with no values filled in</title>
+<desc id="d">Diagram of one work keyed through the drawing set: the same ID on the plan, on the elevation and on its row of the artwork schedule, whose eight fields run from ID and wall reference to lead time or commission stage, with no values filled in</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- schematic: no physical scale, relative positions only -->
+<!-- plan sheet x 80 to 760, y 80 to 480: a space with a door gap in its south wall, the north wall marked, the ID tag under the mark -->
+<rect class="soft" x="80" y="80" width="680" height="400"/>
+<path class="ink" d="M440 430 L660 430 L660 150 L180 150 L180 430 L400 430"/>
+<rect class="tp" x="330" y="150" width="180" height="12"/>
+<path class="tp" d="M420 180 L430 190 L420 200 L410 190 Z"/>
+<!-- elevation sheet x 840 to 1520: floor at y 430, wall outline, the envelope as in D1 with its center cross, the same tag under it -->
+<rect class="soft" x="840" y="80" width="680" height="400"/>
+<line class="ink" x1="900" y1="430" x2="1460" y2="430"/>
+<line class="ink" x1="900" y1="150" x2="900" y2="430"/>
+<line class="ink" x1="1460" y1="150" x2="1460" y2="430"/>
+<line class="ink" x1="900" y1="150" x2="1460" y2="150"/>
+<rect class="lead" x="1060" y="230" width="240" height="120"/>
+<rect class="art" x="1076" y="246" width="208" height="88"/>
+<line class="dim" x1="1158" y1="290" x2="1202" y2="290" stroke-width="2"/>
+<line class="dim" x1="1180" y1="268" x2="1180" y2="312" stroke-width="2"/>
+<path class="tp" d="M1180 370 L1190 380 L1180 390 L1170 380 Z"/>
+<!-- schedule sheet x 80 to 1520, y 560 to 920: header row 580 to 700, three body rows of 46 px, eight columns of 180 px; the tag in the first cell -->
+<rect class="soft" x="80" y="560" width="1440" height="360"/>
+<line class="soft" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="soft" x1="80" y1="700" x2="1520" y2="700"/>
+<line class="soft" x1="80" y1="746" x2="1520" y2="746"/>
+<line class="soft" x1="80" y1="792" x2="1520" y2="792"/>
+<line class="soft" x1="80" y1="838" x2="1520" y2="838"/>
+<line class="soft" x1="80" y1="580" x2="80" y2="838"/>
+<line class="soft" x1="260" y1="580" x2="260" y2="838"/>
+<line class="soft" x1="440" y1="580" x2="440" y2="838"/>
+<line class="soft" x1="620" y1="580" x2="620" y2="838"/>
+<line class="soft" x1="800" y1="580" x2="800" y2="838"/>
+<line class="soft" x1="980" y1="580" x2="980" y2="838"/>
+<line class="soft" x1="1160" y1="580" x2="1160" y2="838"/>
+<line class="soft" x1="1340" y1="580" x2="1340" y2="838"/>
+<line class="soft" x1="1520" y1="580" x2="1520" y2="838"/>
+<path class="tp" d="M170 713 L180 723 L170 733 L160 723 Z"/>
+<!-- column heads, Table 2 word for word, wrapped inside their columns -->
+<text class="l2" x="170" y="632" text-anchor="middle">ID and wall</text>
+<text class="l2" x="170" y="660" text-anchor="middle">reference</text>
+<text class="l2" x="350" y="646" text-anchor="middle">framed size</text>
+<text class="l2" x="530" y="632" text-anchor="middle">framed</text>
+<text class="l2" x="530" y="660" text-anchor="middle">weight</text>
+<text class="l2" x="710" y="632" text-anchor="middle">fixing and</text>
+<text class="l2" x="710" y="660" text-anchor="middle">blocking</text>
+<text class="l2" x="890" y="646" text-anchor="middle">lighting</text>
+<text class="l2" x="1070" y="646" text-anchor="middle">power or data</text>
+<text class="l2" x="1250" y="632" text-anchor="middle">delivery route</text>
+<text class="l2" x="1250" y="660" text-anchor="middle">and access</text>
+<text class="l2" x="1430" y="618" text-anchor="middle">lead time or</text>
+<text class="l2" x="1430" y="646" text-anchor="middle">commission</text>
+<text class="l2" x="1430" y="674" text-anchor="middle">stage</text>
+<!-- labels -->
+<text class="l1" x="100" y="132">plan</text>
+<text class="l1" x="860" y="132">elevation</text>
+<text class="l1" x="880" y="540">artwork schedule<tspan class="l2"> · keyed to the plans and elevations</tspan></text>
+<text class="l1" x="1180" y="210" text-anchor="middle">envelope</text>
+<text class="l1" x="100" y="900">one row per work</text>
+<text class="l2" x="460" y="900">a work not yet chosen: the largest size and weight the wall should carry</text>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Wall elevations comparing a single row of blocking, which catches the fixing point of only one of two possible works, with a blocking band across the art zone that catches both; beside them a sculpture on a built base over a reinforced floor, confirmed by the structural engineer</title>
+<desc id="d">Wall elevations comparing a single row of blocking, which catches the fixing point of only one of two possible works, with a blocking band across the art zone that catches both; beside them a sculpture on a built base over a reinforced floor, confirmed by the structural engineer</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:48px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 5 px per in, three elevations, floor at y 780 -->
+<!-- panel A, a single line: the 88 in wall x 100 to 540, studs every 16 in (drawn, never measured), one row at 65 to 67 in -->
+<line class="ink" x1="100" y1="780" x2="540" y2="780"/>
+<line class="ink" x1="100" y1="780" x2="100" y2="240"/>
+<line class="ink" x1="540" y1="780" x2="540" y2="240"/>
+<line class="ink" x1="100" y1="240" x2="540" y2="240"/>
+<line class="soft" x1="120" y1="240" x2="120" y2="780"/>
+<line class="soft" x1="200" y1="240" x2="200" y2="780"/>
+<line class="soft" x1="280" y1="240" x2="280" y2="780"/>
+<line class="soft" x1="360" y1="240" x2="360" y2="780"/>
+<line class="soft" x1="440" y1="240" x2="440" y2="780"/>
+<line class="soft" x1="520" y1="240" x2="520" y2="780"/>
+<rect class="soft" x="120" y="445" width="400" height="10"/>
+<rect class="lead" x="260" y="430" width="120" height="120"/>
+<rect class="art" x="266" y="436" width="108" height="108"/>
+<rect class="lead" x="200" y="370" width="240" height="240"/>
+<rect class="art" x="206" y="376" width="228" height="228"/>
+<line class="dim" x1="298" y1="490" x2="342" y2="490" stroke-width="2"/>
+<line class="dim" x1="320" y1="468" x2="320" y2="512" stroke-width="2"/>
+<!-- fixing points 4 in below each top edge: the small work's at 66 in finds the row, the large work's at 78 in finds nothing -->
+<circle class="tp" cx="320" cy="450" r="5"/>
+<circle class="dim" cx="320" cy="390" r="7"/>
+<!-- panel B, the blocking band: the same wall x 620 to 1060, band 34 to 82 in with four inner rows, both fixing points inside -->
+<line class="ink" x1="620" y1="780" x2="1060" y2="780"/>
+<line class="ink" x1="620" y1="780" x2="620" y2="240"/>
+<line class="ink" x1="1060" y1="780" x2="1060" y2="240"/>
+<line class="ink" x1="620" y1="240" x2="1060" y2="240"/>
+<line class="soft" x1="640" y1="240" x2="640" y2="780"/>
+<line class="soft" x1="720" y1="240" x2="720" y2="780"/>
+<line class="soft" x1="800" y1="240" x2="800" y2="780"/>
+<line class="soft" x1="880" y1="240" x2="880" y2="780"/>
+<line class="soft" x1="960" y1="240" x2="960" y2="780"/>
+<line class="soft" x1="1040" y1="240" x2="1040" y2="780"/>
+<rect class="soft" x="640" y="370" width="400" height="240"/>
+<line class="soft" x1="640" y1="562" x2="1040" y2="562"/>
+<line class="soft" x1="640" y1="514" x2="1040" y2="514"/>
+<line class="soft" x1="640" y1="466" x2="1040" y2="466"/>
+<line class="soft" x1="640" y1="418" x2="1040" y2="418"/>
+<rect class="lead" x="780" y="430" width="120" height="120"/>
+<rect class="art" x="786" y="436" width="108" height="108"/>
+<rect class="lead" x="720" y="370" width="240" height="240"/>
+<rect class="art" x="726" y="376" width="228" height="228"/>
+<line class="dim" x1="818" y1="490" x2="862" y2="490" stroke-width="2"/>
+<line class="dim" x1="840" y1="468" x2="840" y2="512" stroke-width="2"/>
+<circle class="tp" cx="840" cy="450" r="5"/>
+<circle class="tp" cx="840" cy="390" r="5"/>
+<!-- panel C, sculpture: floor, the structure's underside 8 in below, a reinforced zone inset from both lines, a built base 24 by 18 in, a block 16 by 40 in -->
+<line class="ink" x1="1140" y1="780" x2="1520" y2="780"/>
+<line class="soft" x1="1140" y1="820" x2="1520" y2="820"/>
+<rect class="lead" x="1230" y="786" width="200" height="28"/>
+<rect class="ink" x="1270" y="690" width="120" height="90"/>
+<rect class="frame" x="1290" y="490" width="80" height="200"/>
+<rect class="art" x="1296" y="496" width="68" height="188"/>
+<!-- labels: panel names above the walls; the engineer's line as panel C's name -->
+<text class="l1" x="320" y="216" text-anchor="middle">a single line</text>
+<text class="l1" x="840" y="216" text-anchor="middle">blocking band</text>
+<text class="l2" x="1330" y="182" text-anchor="middle">confirmed by your</text>
+<text class="l1" x="1330" y="216" text-anchor="middle">structural engineer</text>
+<text class="l1" x="1072" y="398">fixing point</text>
+<line class="lead" x1="1064" y1="390" x2="846" y2="390"/>
+<text class="l2" x="1072" y="428">settled after the wall is closed</text>
+<text class="l2" x="1258" y="740" text-anchor="end">built base</text>
+<text class="l2" x="1218" y="808" text-anchor="end">reinforced floor</text>
+</svg>

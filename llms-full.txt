@@ -96,7 +96,7 @@ The client loved to entertain, and the apartment had a custom bar built for exac
 Consulting runs from a single artwork to a complete collection, and in an apartment that starts with what is already there. Some pieces will find a better wall, some will want reframing, and some will tell me what the new works should not be. Looking at your existing art is also the fastest way for me to understand your taste before I propose anything. As for time: a single available work can be selected, framed and installed on a short timeline; a commission follows the artist's schedule and the production time for the piece; a whole apartment moves with the design and construction timeline, which is why I prefer to start while the plans are still open. I set the timeline with you at the discovery stage and keep to it.
 
 ### New York homes, building by building
-Each kind of New York building asks its own questions of art, and each has its own page here. A brownstone or townhouse is read floor by floor, from the parlor wall to the stair hall: art for a Brooklyn brownstone. A prewar apartment brings plaster, moldings and co-op rules: art for a prewar apartment. A loft asks for scale: large scale art for a loft. A new condo has glass, light and few solid walls: art for a new condo. If you have just arrived, start with empty walls after a move. If you want someone to take the search off your hands, read help choosing art for your home in New York; if you would rather look yourself, where to buy original art in New York.
+Each kind of New York building asks its own questions of art, and each has its own page here. A brownstone or townhouse is read floor by floor, from the parlor wall to the stair hall: art for a Brooklyn brownstone. A prewar apartment brings plaster, moldings and co-op rules: art for a prewar apartment. A loft asks for scale: large scale art for a loft. A new condo has glass, light and few solid walls: art for a new condo. A studio or a one bedroom asks for fewer, larger works: art for a small apartment. If you have just arrived, start with empty walls after a move. If you want someone to take the search off your hands, read help choosing art for your home in New York; if you would rather look yourself, where to buy original art in New York. If you are building a collection, start with how to start an art collection.
 
 ### Art for an office or a business in New York
 An office, a clinic or a firm asks a different question than a home: what should a client understand about you in the ten seconds before you speak? One work that says it honestly and holds the wall from the door does more than a corridor of safe prints. I choose art for workspaces the way I choose it for hotels, with the identity of the place first and the wall second, and I manage production and installation around your working hours. More on art for an office, a clinic or a business, and, if you are opening or moving an office in Manhattan, on art for a new office in Manhattan.
@@ -211,7 +211,7 @@ Art sized to the house's proportions rather than matched to its period. Many hou
 - In a Tudor revival house, common in Scarsdale, leaded windows and dark paneling often keep the light low: plan picture lights before you hang, and keep works on paper away from working fireplaces and radiators.
 
 ### New builds and renovations: while the drawings are open
-Plan the art before the glass is drawn: every new window takes a wall. I can start from your architect's plans and define the main wall from the sightlines; that is the wall to keep solid. In Scarsdale and Rye, new windows go before the local Board of Architectural Review, which can change them: confirm the art for the walls they touch once the elevations are approved. For the timing on a house built new, see when art should come into a new build.
+Plan the art before the glass is drawn: every new window takes a wall. I can start from your architect's plans and define the main wall from the sightlines; that is the wall to keep solid. In Scarsdale and Rye, new windows go before the local Board of Architectural Review, which can change them: confirm the art for the walls they touch once the elevations are approved. For the timing on a house built new, see when art should come into a new build. The drawing checklist is in planning art in construction drawings.
 
 ### Big walls and commissions
 When a double height entry or a long stair wall needs a work in a size the market does not have, commission it. For a sea view villa in Caesarea, Israel, I commissioned a 3.5 meter triptych from an Italian artist, three storks at its center. Panels also pass through doors and up a turning stair where one large canvas may not. I work directly with the artist throughout; the steps are in commissioning art for a new home.
@@ -444,7 +444,7 @@ Many brownstones still have original plaster, sometimes over brick, and a pictur
 
 ### Renovating? Plan the art before the plaster
 
-If the house is being renovated, bring the art in while the drawings are still open. Picture lighting, power for a lit work, support in the wall for heavy pieces, and which walls stay solid are all far easier to decide on paper than after the walls are finished. I can work from the architect's and designer's plans, and I work alongside them, not around them. Plan the lighting before hanging. The same thinking is on art for a new build, written for houses in New Jersey.
+If the house is being renovated, bring the art in while the drawings are still open. Picture lighting, power for a lit work, support in the wall for heavy pieces, and which walls stay solid are all far easier to decide on paper than after the walls are finished. I can work from the architect's and designer's plans, and I work alongside them, not around them. Plan the lighting before hanging. The same thinking is on art for a new build, written for houses in New Jersey. Your architect can take the checklist from planning art in construction drawings.
 
 ### Art you already own, and art made for the house
 
@@ -593,7 +593,7 @@ The most common thing I see in Bergen County is a beautiful house, finished to t
 
 ### While the architect is still drawing
 
-This is the moment most people miss, and it is the cheapest one. When walls, ceilings, stairs and the lighting plan are being fixed, a few decisions cost almost nothing: which walls are for art and which are for windows and millwork, where a large work will need support inside the wall, where picture lights or adjustable spots go, whether the stair hall wants one tall piece or a sequence. Made now, these are pencil lines. Made after the drywall, they are an electrician and a patch.
+This is the moment most people miss, and it is the cheapest one. When walls, ceilings, stairs and the lighting plan are being fixed, a few decisions cost almost nothing: which walls are for art and which are for windows and millwork, where a large work will need support inside the wall, where picture lights or adjustable spots go, whether the stair hall wants one tall piece or a sequence. Made now, these are pencil lines. Made after the drywall, they are an electrician and a patch. The checklist by drawing phase is in planning art in construction drawings.
 
 ### When finishes and furniture are chosen
 
@@ -704,7 +704,7 @@ Clients and staff read your walls before anyone speaks. In a new office, the art
 
 ### Moving offices: when should the art be planned?
 
-With the fit-out, not after it. When the architect and designer are still drawing, the art can be planned into the space: which walls stay solid, where the picture lights and the power go, what the reception wall must carry, and where heavy works need blocking in the wall. I can work from the architect's and designer's plans, before the space is built. If the office is already finished, I work with what is there.
+With the fit-out, not after it. When the architect and designer are still drawing, the art can be planned into the space: which walls stay solid, where the picture lights and the power go, what the reception wall must carry, and where heavy works need blocking in the wall. I can work from the architect's and designer's plans, before the space is built. If the office is already finished, I work with what is there. What to mark on the drawings, phase by phase, is in planning art in construction drawings.
 
 ### What should the art say?
 
@@ -1555,7 +1555,7 @@ Q: Does an art advisor replace the interior designer's role in choosing art?
 A: No. The designer keeps the lead on the interior and stays in the room for every art decision. I add what a designer's practice does not include: artist and gallery relationships, market knowledge, negotiation, commissions and installation logistics. In practice I present options through or with the designer, and the client chooses. Two professions, one house.
 
 Q: When in a renovation should the art advisor come in?
-A: When the drawings exist and the finishes are being chosen, ideally before the walls are painted. That is when walls can be sized for the works, lighting can be planned for them, and the art budget sits inside the overall budget. Coming in after the furniture is placed still works, but there are fewer options.
+A: When the drawings exist and the finishes are being chosen, ideally before the walls are painted. That is when walls can be sized for the works, lighting can be planned for them, and the art budget sits inside the overall budget. Coming in after the furniture is placed still works, but there are fewer options. The decisions to make while the drawings are open are listed in planning art in construction drawings.
 
 Q: Will my designer be offended if I bring in an art advisor?
 A: Most designers are relieved. Sourcing art properly takes time they do not have, and many of my projects come from designers who bring me in themselves. I approach every project as the designer's collaborator, respect their concept, and never present around them. If you are unsure, introduce us early and let us speak.
@@ -1944,6 +1944,68 @@ A: Look for an art consultant who tells you plainly whom they represent, can sho
 
 Q: Is it more expensive to buy art through an art consultant?
 A: In most cases, buying art through a private art consultant who represents you is not more expensive than buying at a large auction or through a gallery, and in many cases it is more affordable. Bidders push auction prices up, and a gallery prices in its space, its inventory and its staff; a private consultant carries none of those costs, and the consultation is part of the price. I explain why in what working with an art advisor costs.
+
+### Art for a small apartment: how to make a small space feel larger, and what to keep when you downsize
+
+URL: https://stavtheodor.com/guide/art-for-a-small-apartment/
+
+Art for a small apartment works best as fewer, larger pieces: one anchor work per space, on the wall you see first from the door or the sofa, makes a small space feel calmer and larger than a scatter of small frames. At THEODORA I start a small apartment the way I start any home: I survey the space and its sightlines and define the main wall from them, then put the best original your budget allows on that wall and let editions and prints carry the rest.
+
+Small apartments tempt people to think small: a few modest frames on every wall. That instinct is what makes a small space feel busy. Here is how to plan a studio or a one bedroom wall by wall, and what to bring when you downsize.
+
+### Should art in a small apartment be small?
+No: one larger work usually makes a small apartment feel calmer than several small ones, because the eye settles on one thing instead of hopping between many. Every small frame adds an edge and a gap, and in a compact space those add up to clutter. When the choice is between one large piece and several small ones, one large piece is almost always the stronger answer.
+Larger does not mean as large as the wall allows. Size the work to its wall and to where you first see it from, often only a few steps away, and leave clear wall on every side so the wall still reads as a wall.
+ 
+
+### Which wall comes first: the view from the door
+The first wall is the one your eye meets as you open the front door, or the one you face from the sofa; in a small apartment they are often the same wall. I survey the space and its sightlines and define the main wall from them. To test it, stand in the open doorway and note where your eye lands, then look again from the sofa: the wall that wins both sightlines is your anchor wall.
+ Many New York apartments open straight into the living space, so that first view does most of the work (the art curator in New York page shows how I start there).
+
+### One anchor per space, the rest quiet
+Give each space one anchor and let the other walls stay quiet, or bare: editions, prints, a few small works on a shelf, or nothing. Bare wall is what lets the anchor be seen.
+ In a Manhattan skyline residence, I selected a large format digital collage to anchor the apartment's custom bar; the client's love of entertaining guided the selection (see the project page). Decide what each space is for, and let one work say it.
+ 
+
+### Where does art go in a studio apartment?
+In a studio, art goes where it marks a zone: one anchor for the living zone, a quieter work for the sleeping zone, and open wall between them. With no internal walls, the art shows where one part of the day ends and the next begins, so keep the bed zone softer, with less contrast.
+Tie each zone to its furniture: a work above the sofa, the bed or the table belongs to it, and that pairing draws the zone on an open floor. An open bookcase used as a divider can hold small works on both faces. Where glass takes most of the wall, art for a new condo covers sculpture and objects.
+ 
+
+### Size and height in tight quarters
+Size does not shrink with the apartment: above furniture, a work spans about two thirds of the furniture below it, and large wall art ideas covers how big to go on a bare wall. Height does not change either: the center sits 57 to 60 inches (145 to 152 cm) from the floor, with 8 to 10 inches (20 to 25 cm) between a sofa back and the frame, as how to hang pictures and art above a couch explain.
+ 
+
+### Leaning, ledges and shelves
+Leaning art on a console, a deep shelf or a picture ledge suits a small apartment: few holes, easy changes, and a large work without committing the wall. A large canvas on a console looks deliberate when it rests securely and is the only work on that wall. A ledge with a front lip works above a sofa, 8 to 10 inches above the back, with light frames glazed in acrylic; above a bed I do not use a ledge at all.
+ If you rent, check your lease before any hole goes in; the options that leave no marks are in how to hang art without nails, and I never use adhesive strips for original works. A gallery wall works in a small apartment when it is hung as one piece around one anchor: see gallery wall ideas.
+
+### Downsizing: what to keep, give, sell or store
+When you downsize, keep the works you love that have a wall waiting for them, and decide the rest one work at a time: give, sell or store. Start from the new floor plan, not the old walls: count the walls that can hold a work, mark the one you will see from the door, and choose its work first.
+ Before you give or sell anything of value, have it appraised and gather its paperwork: invoices, certificates, letters from the artist or the gallery. Starting an art collection explains how to keep those records. Store only what you mean to hang again: storage that never ends is a way of deciding not to decide.
+ 
+
+### Reframe and rehang what you keep
+The works you keep deserve to be seen fresh: a new frame, a new wall or a new neighbor. A heavy frame chosen for a large house can crowd a small space, while a slimmer frame or a wider mat makes a familiar work look new. Rehang around the new anchor rather than copying the old layout, and plan the light before you hang: one lamp or picture light often decides whether the anchor still reads at night.
+The first weeks in a new home are in empty walls after a move; working with art you already own is in art advisor for a Manhattan apartment.
+
+### When a curator helps in a small space
+A curator is worth calling when the walls are few and every choice shows: which wall comes first, which of your works earns it, what to add at the right scale. My first question is never about style; it is what you want to feel at home. Then I find the work, negotiate on your behalf and install it with my own team: installation is part of how I work, not a separate service, for the works I place.
+In most cases you can also buy the art for less than at a large auction or through a gallery, because I carry none of the costs that push their prices up (what an art advisor costs explains why). I am based in Tenafly, New Jersey, and work in person across New York City and New Jersey, and online with clients anywhere; see art curator in New York. To hand over the search entirely, start with who to call for help choosing art.
+
+Questions:
+
+Q: What art works in a small NYC apartment without making it feel cramped?
+A: Art that keeps a small NYC apartment from feeling cramped is fewer, larger works: one anchor per space, on the wall you see first from the door or the sofa, with quiet or bare walls around it. Leave clear wall around each work, stand a work on a picture ledge where holes are limited, and group small frames on one shelf instead of scattering them across every wall.
+
+Q: I'm downsizing to a smaller apartment in Manhattan. What do I do with my art?
+A: Downsizing your art starts with the new floor plan: count the walls that can hold a work, choose the work for the wall you will see first from the door, then sort everything else into keep, give, sell or store. Keep what you love and have a wall for. Before you give or sell anything of value, have it appraised and gather its paperwork, and store only what you mean to hang again.
+
+Q: Do mirrors make a small apartment look bigger than art?
+A: Mirrors make a small apartment look bigger only where they reflect light or a view; opposite a blank wall they add nothing, and opposite a cluttered corner they double the clutter. Art does a different job: it gives the eye one place to rest. In a small space, put one mirror where it catches a window, often in the entry, and give the main wall to a work of art.
+
+Q: What art works in an apartment with low ceilings?
+A: Art for an apartment with low ceilings works best when it gets its size from width rather than height: above a sofa or a bed, a wide format fills the wall without crowding the ceiling. Keep the center near 57 to 60 inches (145 to 152 cm) from the floor, and leave at least 12 inches (30 cm) of wall above the frame. On a narrow wall with no furniture, one slim vertical work can lift the eye.
 
 ### Art for home staging and model homes: what sells a home
 
@@ -3039,6 +3101,71 @@ A: Decorate a conference room with one strong work on the wall the chairs face, 
 
 Q: What are some professional office decor ideas?
 A: Professional office decor ideas that work: one anchor work in reception, a series of photographs or works on paper along the corridor, one large work that marks where the meeting area begins, a relief or textile for depth, and a personal piece in each private office. Keep the frames in one family, light every key work, and hang standing walls on one centerline. Deliberate choices read as professional; filler does not.
+
+### Planning art in construction drawings: what to decide before the walls close
+
+URL: https://stavtheodor.com/guide/planning-art-in-construction-drawings/
+
+Planning art in construction drawings means deciding, while the set is still open, which walls stay solid for art, where blocking goes behind heavy works, where picture lights and outlets sit, and how large works reach their walls, because each of those costs least to change on paper. I can start from the plans alone: at THEODORA I work alongside architects and designers, not around them, from their drawings through to installation.
+
+### Why art belongs in the drawing set
+Art belongs in the drawing set because a large work depends on things that are built, not bought: a solid wall, structure behind it, and light and power around it. On paper each is a line; once the wall is closed, each means opening it again. The works can be chosen later, as long as the drawings carry an envelope for each one: where it hangs, how big and heavy it could be, and how it is lit.
+
+### Which walls should stay solid for art?
+The walls that should stay solid for art are the ones the main sightlines land on: the wall you face as you come in, the end of a long hall, and the wall opposite the main seating. When I start on a space, I survey it and its sightlines and define the main wall from them. On a plan, draw the line from each door and each seat, and mark the wall it meets.
+Keep those walls clear of openings, vents, switches and access panels, and label them as art walls on the plan and the elevation. Tall and double height walls need an early choice of one tall work or a sequence, because the light follows from it (see large wall art ideas). In an older house under renovation, the same test applies before the walls are patched (see art for a Brooklyn brownstone).
+ 
+
+### What to decide while the drawings are open
+While the drawings are open, decide the art walls, the structure behind them, the light and power around them, and the way in, each at the phase where it is still a line on a drawing.
+ 
+
+### Blocking and structure for heavy works and sculpture
+A heavy work needs blocking inside the wall, and a large sculpture may need a reinforced floor or a built base; both are the structural engineer's decision. Draw the art zone on the elevation: the band the art will occupy above the finished floor. Its middle is the hanging height: I work at 57 to 60 inches (145 to 152 cm) for the center of a work, lower where people sit (see how to hang pictures).
+Draw the blocking band across the whole art zone, not as a single line, because the final frame size and fixing point are often settled after the wall is closed. Photograph the blocking before it is covered. For sculpture, give the engineer the size of the base and the weight. Loads and fixings are confirmed by your structural engineer, never taken from a rule of thumb.
+ 
+
+### Where should picture lights go in the drawings?
+Picture lights and adjustable spots go into the drawings at design development, placed from the art walls and the sizes of the works, not from the ceiling grid. Plan the lighting before the hanging. Set each spot so the light falls evenly across the work and any reflection in the glazing drops to the floor; the lighting designer confirms positions, beams and fittings. A hardwired picture light needs a recessed box above the art zone.
+Give the art its own light on a separate control, so the work still reads when the rest of the space is dimmed.
+ 
+
+### Power for lit and digital works
+Lit works, light boxes and screens need power, and sometimes data, behind the work: a recessed outlet inside the art zone, with its control on the switch plan, never a cord down the finished wall.
+
+### What should an artwork schedule include?
+An artwork schedule lists every work in the project, one row per work, with what the other consultants need to draw around it: where it hangs, how big and heavy it is, how it is fixed, lit and powered, and how it gets in.
+ Put the schedule in the set as its own sheet, keyed to the plans and elevations. For a work not yet chosen, record the largest size and weight the wall should carry: the drawing needs an envelope, not a title.
+ 
+
+### Commissions and lead times
+A commission usually has to start while the building is going up if it is to arrive with the finishes, so decide at design development which walls need a work made for them. I work directly with artists on commissions from initial concept to final execution, and I manage production, framing and installation within defined timelines and approved budgets.
+For a sea view villa in Caesarea, I commissioned a 3.5 meter triptych from an Italian artist. A work at that scale asks every question here at once: a wall long and solid enough for three panels, structure behind them, light across the full width, a route in for each panel. How long a commission takes depends on the artist, the scale and the technique, so fix the timeline at the start and record its stage in the schedule (see commissioning art for a new home).
+ 
+
+### The delivery route and installation
+Draw the route a large work takes from the street to its wall, and check every door, turn, stair and elevator on the way against the crated size, which is larger than the framed size. Where a work cannot pass, decide now: a wider opening, a section left open until the art is in, or a work made in parts.
+Hold the installation window until floors, paint and furniture are in, so heights suit how the space is used. I have my own installation team, and I carry insurance with a certificate that can name the landlord or managing agent on request. The full chain is in framing and installing large scale art.
+ 
+
+### Working with a curator from the plans
+A curator can join from the plans alone, before anyone visits the site; the earlier, the more of this checklist is settled on paper. While design development is open, ask whoever takes the art scope for the art walls marked from the sightlines, sizes and weights for the schedule, and the walls that need a commission. How I work with studios is on my page for designers and architects.
+Budget planning is one of the seven steps of my art advisory process, so give the art its own line in the budget early, before the finishes spend it. Homeowners can read their side in art for a new build and working with your interior designer on art.
+I am based in Tenafly, New Jersey; I work in person across New Jersey and New York City, and from your plans on projects anywhere. Studios can start on the page for designers and architects.
+
+Questions:
+
+Q: I'm an architect. How do I bring art into a residential project early?
+A: An architect brings art into a residential project early by giving it a place in the drawings from schematic design: mark the art walls from the main sightlines, keep them solid, and add blocking, lighting positions and power at design development. Bring in a curator or art consultant while the set is still open, so sizes, weights and commissions reach the drawings in time. I can start from your plans alone, and I work alongside architects, not around them.
+
+Q: Should art be planned during construction drawings (lighting, blocking, wall space)?
+A: Yes, art should be planned during construction drawings, because lighting, blocking and wall space are built into the walls and ceilings and cost least to change on paper. The final works do not need to be chosen yet: an artwork schedule with the largest size and weight each art wall should carry is enough to draw the blocking band, the picture light positions and the outlets. The works can then be chosen for walls already made for them.
+
+Q: Is art part of the FF&E budget or the construction budget?
+A: Art sits in both budgets, split by who builds or buys each part. The works, their framing and their installation usually belong in the FF&E budget or a separate art budget. What is built into the walls and ceilings for them, blocking, circuits, recessed boxes and outlets, belongs in the construction budget, because the contractor builds it. Give each its own line early; I set the art budget per wall, not per piece, and give most of it to the wall people see first.
+
+Q: Who confirms the blocking for a heavy artwork or sculpture?
+A: The structural engineer confirms the blocking for a heavy artwork or sculpture, and the contractor builds it to that detail. The curator or art consultant supplies what the engineer needs: each work's framed size, framed weight, position on the elevation and fixing method, and for sculpture, the size of the base and the weight on the floor. Where no work is chosen yet, give the engineer the largest size and weight the wall should carry, and photograph the blocking before the wall is closed.
 
 ### Restaurant wall decor ideas: art that works through a full service
 

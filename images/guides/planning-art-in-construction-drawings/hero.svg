@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Diagram of an art wall in elevation: an envelope for the work with its center in the 57 to 60 inch band, the blocking band behind the full height of the art zone, a picture light on a recessed box above it, and a recessed outlet behind the work</title>
+<desc id="d">Diagram of an art wall in elevation: an envelope for the work with its center in the 57 to 60 inch band, the blocking band behind the full height of the art zone, a picture light on a recessed box above it, and a recessed outlet behind the work</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:48px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 7 px per in, elevation, floor at y 880 -->
+<!-- floor; the 152 in wall x 100 to 1164; ceiling 108 in at y 124 (drawn, not printed) -->
+<line class="ink" x1="80" y1="880" x2="1520" y2="880"/>
+<line class="ink" x1="100" y1="880" x2="100" y2="124"/>
+<line class="ink" x1="1164" y1="880" x2="1164" y2="124"/>
+<line class="ink" x1="100" y1="124" x2="1164" y2="124"/>
+<!-- blocking band behind the finish: x 30 to 122 in, 34 to 82 in, four inner rows at 43.6, 53.2, 62.8, 72.4 in -->
+<rect class="soft" x="310" y="306" width="644" height="336"/>
+<line class="soft" x1="310" y1="574.8" x2="954" y2="574.8"/>
+<line class="soft" x1="310" y1="507.6" x2="954" y2="507.6"/>
+<line class="soft" x1="310" y1="440.4" x2="954" y2="440.4"/>
+<line class="soft" x1="310" y1="373.2" x2="954" y2="373.2"/>
+<!-- envelope 72 by 48 in, x 40 to 112, 34 to 82 in: not chosen yet, a .lead outline with the art wash inset 16; center 58 in -->
+<rect class="lead" x="380" y="306" width="504" height="336"/>
+<rect class="art" x="396" y="322" width="472" height="304"/>
+<line class="dim" x1="610" y1="474" x2="654" y2="474" stroke-width="2"/>
+<line class="dim" x1="632" y1="452" x2="632" y2="496" stroke-width="2"/>
+<!-- the 57 to 60 in band, from the wall's left edge to the art zone dimension -->
+<line class="eye" x1="100" y1="481" x2="1204" y2="481"/>
+<line class="eye" x1="100" y1="460" x2="1204" y2="460"/>
+<!-- art zone dimension at x 1204, 34 to 82 in; extension lines from the band's right corners -->
+<line class="lead" x1="954" y1="306" x2="1196" y2="306"/>
+<line class="lead" x1="954" y1="642" x2="1196" y2="642"/>
+<line class="dim" x1="1204" y1="306" x2="1204" y2="642"/>
+<line class="dim" x1="1196" y1="306" x2="1212" y2="306"/>
+<line class="dim" x1="1196" y1="642" x2="1212" y2="642"/>
+<!-- picture light: recessed box 6 by 4 in at 88 to 92 in (hidden), bar 30 by 2 in at 85 to 87 in, stem between -->
+<rect class="lead" x="611" y="236" width="42" height="28"/>
+<rect class="soft" x="527" y="271" width="210" height="14"/>
+<line class="soft" x1="632" y1="271" x2="632" y2="264"/>
+<!-- recessed outlet 2.5 by 4 in at 40 to 44 in, hidden behind the work -->
+<rect class="lead" x="623.2" y="572" width="17.5" height="28"/>
+<!-- labels: six primaries; the right column at x 1224 beside the dimension -->
+<text class="l1" x="396" y="356">envelope</text>
+<text class="l2" x="396" y="400">the largest size</text>
+<text class="l1" x="1224" y="250">picture light</text>
+<text class="l2" x="1224" y="280">recessed box</text>
+<text class="l2" x="1224" y="310">above the art zone</text>
+<line class="lead" x1="1212" y1="242" x2="737" y2="278"/>
+<text class="l1" x="1224" y="370">art zone</text>
+<text class="l1" x="1224" y="478">57 to 60 in</text>
+<text class="l2" x="1224" y="508">145 to 152 cm</text>
+<text class="l2" x="1224" y="538">center of the work</text>
+<text class="l1" x="1224" y="690">blocking band</text>
+<line class="lead" x1="1212" y1="682" x2="954" y2="642"/>
+<text class="l1" x="632" y="706" text-anchor="middle">outlet</text>
+<text class="l2" x="632" y="736" text-anchor="middle">recessed, behind the work</text>
+<line class="lead" x1="632" y1="656" x2="632" y2="600"/>
+<text class="l2" x="116" y="162">art wall</text>
+<text class="l2" x="116" y="916">finished floor</text>
+</svg>

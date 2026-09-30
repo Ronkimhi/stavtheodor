@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Elevation of one long studio wall: a large work centered above the sofa anchors the living zone, open wall and a low bookcase stand between the zones, and a smaller work above the headboard marks the sleeping zone, both centered between 57 and 60 inches</title>
+<desc id="d">Elevation of one long studio wall: a large work centered above the sofa anchors the living zone, open wall and a low bookcase stand between the zones, and a smaller work above the headboard marks the sleeping zone, both centered between 57 and 60 inches</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; elevation, floor at y=580; the studio's 300 in north wall seen from inside, west corner at x 125 -->
+<!-- floor, ceiling at 96 in, the two corners -->
+<line class="ink" x1="125" y1="580" x2="1475" y2="580"/>
+<line class="ink" x1="125" y1="148" x2="1475" y2="148"/>
+<line class="ink" x1="125" y1="148" x2="125" y2="580"/>
+<line class="ink" x1="1475" y1="148" x2="1475" y2="580"/>
+<!-- eye band at 57 and 60 in, x 150 to 1450, drawn under the works -->
+<line class="eye" x1="150" y1="323.5" x2="1450" y2="323.5"/>
+<line class="eye" x1="150" y1="310" x2="1450" y2="310"/>
+<!-- sofa 72 in, x 12 to 84, back 32 in; anchor work 48 by 34, x 24 to 72, bottom 41 (gap 9), top 75, center 58 -->
+<rect class="soft" x="179" y="436" width="324" height="63"/>
+<rect class="soft" x="179" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="476" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="179" y="499" width="324" height="63"/>
+<rect class="soft" x="197" y="562" width="9" height="18"/>
+<rect class="soft" x="476" y="562" width="9" height="18"/>
+<rect class="frame" x="233" y="242.5" width="216" height="153"/>
+<rect class="art" x="241" y="250.5" width="200" height="137"/>
+<line class="dim" x1="319" y1="319" x2="363" y2="319" stroke-width="2"/>
+<line class="dim" x1="341" y1="297" x2="341" y2="341" stroke-width="2"/>
+<!-- gap from the sofa back to the frame's bottom, 12 px inside the work's right edge -->
+<line class="dim" x1="437" y1="436" x2="437" y2="395.5"/>
+<line class="dim" x1="429" y1="436" x2="445" y2="436"/>
+<line class="dim" x1="429" y1="395.5" x2="445" y2="395.5"/>
+<!-- open bookcase, its 12 in end seen in front of the wall, x 144 to 156, 42 in tall, shelf lines at 14 and 28 in -->
+<rect class="soft" x="773" y="391" width="54" height="189"/>
+<line class="soft" x1="773" y1="517" x2="827" y2="517"/>
+<line class="soft" x1="773" y1="454" x2="827" y2="454"/>
+<!-- queen bed 60 in, x 198 to 258, headboard top 40 in, mattress 25, pillows to 36; quieter work 40 by 20, x 208 to 248, bottom 49 (gap 9), top 69, center 59; 40 / 60 = two thirds -->
+<rect class="soft" x="1016" y="400" width="270" height="67.5"/>
+<rect class="soft" x="1020.5" y="467.5" width="261" height="45"/>
+<rect class="soft" x="1025" y="512.5" width="252" height="31.5"/>
+<line class="soft" x1="1029.5" y1="544" x2="1029.5" y2="580"/>
+<line class="soft" x1="1272.5" y1="544" x2="1272.5" y2="580"/>
+<rect class="soft" x="1034" y="418" width="108" height="49.5" rx="12"/>
+<rect class="soft" x="1160" y="418" width="108" height="49.5" rx="12"/>
+<rect class="frame" x="1061" y="269.5" width="180" height="90"/>
+<rect class="art" x="1069" y="277.5" width="164" height="74"/>
+<line class="dim" x1="1129" y1="314.5" x2="1173" y2="314.5" stroke-width="2"/>
+<line class="dim" x1="1151" y1="292.5" x2="1151" y2="336.5" stroke-width="2"/>
+<text class="l1" x="341" y="124" text-anchor="middle">living zone<tspan class="l2"> · one anchor, tied to the sofa</tspan></text>
+<text class="l1" x="800" y="124" text-anchor="middle">open wall</text>
+<text class="l1" x="1151" y="124" text-anchor="middle">sleeping zone<tspan class="l2"> · a quieter work</tspan></text>
+<text class="l2" x="461" y="422">8 to 10 in · 20 to 25 cm</text>
+<text class="l2" x="839" y="298">57 to 60 in</text>
+<text class="l2" x="839" y="352">145 to 152 cm</text>
+<text class="l2" x="341" y="630" text-anchor="middle">sofa</text>
+<text class="l2" x="800" y="630" text-anchor="middle">open bookcase</text>
+<text class="l2" x="1151" y="630" text-anchor="middle">bed</text>
+</svg>

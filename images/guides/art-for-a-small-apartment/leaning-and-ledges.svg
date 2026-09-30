@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three elevations: light frames on a picture ledge with a front lip above a sofa, one large canvas leaning on a console as the only work on that wall, and a work hung above a bed with no ledge</title>
+<desc id="d">Three elevations: light frames on a picture ledge with a front lip above a sofa, one large canvas leaning on a console as the only work on that wall, and a work hung above a bed with no ledge</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; elevation, floor at y=580, no ceiling; panels centered on x 330, 800 and 1270 -->
+<!-- floor and the eye band at 57 and 60 in (unlabelled here; labelled in Fig. 4) -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="110" y1="323.5" x2="1490" y2="323.5"/>
+<line class="eye" x1="110" y1="310" x2="1490" y2="310"/>
+<!-- panel 1, picture ledge: sofa 72 in centered on 330, back 32; shelf 48 in, x 222 to 438, top 42 in (gap 10), 1.5 in thick; three light frames standing on it, each in front of the one behind: A 20 by 30 top 72, B 16 by 20 top 62, C 12 by 16 top 58; one cross on the group's box (42 to 72 in) at 57; the lip 1.5 in high drawn in front -->
+<rect class="soft" x="168" y="436" width="324" height="63"/>
+<rect class="soft" x="168" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="465" y="467.5" width="27" height="31.5"/>
+<rect class="soft" x="168" y="499" width="324" height="63"/>
+<rect class="soft" x="186" y="562" width="9" height="18"/>
+<rect class="soft" x="465" y="562" width="9" height="18"/>
+<rect class="ink" x="222" y="391" width="216" height="6.8"/>
+<rect class="frame" x="233.2" y="256" width="90" height="135"/>
+<rect class="art" x="239.2" y="262" width="78" height="123"/>
+<rect class="frame" x="309.8" y="301" width="72" height="90"/>
+<rect class="art" x="315.8" y="307" width="60" height="78"/>
+<rect class="frame" x="372.8" y="319" width="54" height="72"/>
+<rect class="art" x="378.8" y="325" width="42" height="60"/>
+<rect class="ink" x="222" y="384.2" width="216" height="6.8"/>
+<line class="dim" x1="308" y1="323.5" x2="352" y2="323.5" stroke-width="2"/>
+<line class="dim" x1="330" y1="301.5" x2="330" y2="345.5" stroke-width="2"/>
+<line class="dim" x1="444" y1="436" x2="444" y2="391"/>
+<line class="dim" x1="436" y1="436" x2="452" y2="436"/>
+<line class="dim" x1="436" y1="391" x2="452" y2="391"/>
+<!-- panel 2, leaning: console 48 in wide, 32 in tall, x 692 to 908, a top slab and two end legs; one canvas 32 by 52 standing on it against the wall, x 728 to 872, bottom 32, top 84, center 58; 32 / 48 = two thirds; nothing else on the wall -->
+<rect class="soft" x="692" y="436" width="216" height="9"/>
+<line class="soft" x1="696.5" y1="445" x2="696.5" y2="580"/>
+<line class="soft" x1="903.5" y1="445" x2="903.5" y2="580"/>
+<rect class="frame" x="728" y="202" width="144" height="234"/>
+<rect class="art" x="736" y="210" width="128" height="218"/>
+<line class="dim" x1="778" y1="319" x2="822" y2="319" stroke-width="2"/>
+<line class="dim" x1="800" y1="297" x2="800" y2="341" stroke-width="2"/>
+<!-- panel 3, above a bed: queen 60 in centered on 1270, headboard top 40, pillows to 36; one hung work 40 by 20, x 1180 to 1360, bottom 49 (gap 9), top 69, center 59; no ledge, no shelf, nothing standing -->
+<rect class="soft" x="1135" y="400" width="270" height="67.5"/>
+<rect class="soft" x="1139.5" y="467.5" width="261" height="45"/>
+<rect class="soft" x="1144" y="512.5" width="252" height="31.5"/>
+<line class="soft" x1="1148.5" y1="544" x2="1148.5" y2="580"/>
+<line class="soft" x1="1391.5" y1="544" x2="1391.5" y2="580"/>
+<rect class="soft" x="1153" y="418" width="108" height="49.5" rx="12"/>
+<rect class="soft" x="1279" y="418" width="108" height="49.5" rx="12"/>
+<rect class="frame" x="1180" y="269.5" width="180" height="90"/>
+<rect class="art" x="1188" y="277.5" width="164" height="74"/>
+<line class="dim" x1="1248" y1="314.5" x2="1292" y2="314.5" stroke-width="2"/>
+<line class="dim" x1="1270" y1="292.5" x2="1270" y2="336.5" stroke-width="2"/>
+<text class="l1" x="330" y="630" text-anchor="middle">picture ledge<tspan class="l2"> · light frames, acrylic</tspan></text>
+<text class="l1" x="800" y="630" text-anchor="middle">leaning<tspan class="l2"> · the only work on the wall</tspan></text>
+<text class="l1" x="1270" y="630" text-anchor="middle">above a bed<tspan class="l2"> · hung, no ledge</tspan></text>
+<text class="l2" x="456" y="422">8 to 10 in · 20 to 25 cm</text>
+</svg>

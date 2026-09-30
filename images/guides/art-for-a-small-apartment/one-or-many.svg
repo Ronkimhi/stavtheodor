@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of the same small wall above a sofa: on the left seven small frames scattered at different heights, on the right one larger work two thirds of the sofa's width with clear wall on both sides</title>
+<desc id="d">Two elevations of the same small wall above a sofa: on the left seven small frames scattered at different heights, on the right one larger work two thirds of the sofa's width with clear wall on both sides</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=580; ceiling at 96 in (y 100); two 120 in walls, x 120 to 720 and x 880 to 1480 -->
+<!-- wall x 120 to 720: floor, ceiling, the two corners; the 72 in sofa centered, back 32 in -->
+<line class="ink" x1="120" y1="580" x2="720" y2="580"/>
+<line class="ink" x1="120" y1="100" x2="720" y2="100"/>
+<line class="ink" x1="120" y1="100" x2="120" y2="580"/>
+<line class="ink" x1="720" y1="100" x2="720" y2="580"/>
+<rect class="soft" x="240" y="420" width="360" height="70"/>
+<rect class="soft" x="240" y="455" width="30" height="35"/>
+<rect class="soft" x="570" y="455" width="30" height="35"/>
+<rect class="soft" x="240" y="490" width="360" height="70"/>
+<rect class="soft" x="260" y="560" width="10" height="20"/>
+<rect class="soft" x="570" y="560" width="10" height="20"/>
+<!-- wall x 880 to 1480: floor, ceiling, the two corners; the 72 in sofa centered, back 32 in -->
+<line class="ink" x1="880" y1="580" x2="1480" y2="580"/>
+<line class="ink" x1="880" y1="100" x2="1480" y2="100"/>
+<line class="ink" x1="880" y1="100" x2="880" y2="580"/>
+<line class="ink" x1="1480" y1="100" x2="1480" y2="580"/>
+<rect class="soft" x="1000" y="420" width="360" height="70"/>
+<rect class="soft" x="1000" y="455" width="30" height="35"/>
+<rect class="soft" x="1330" y="455" width="30" height="35"/>
+<rect class="soft" x="1000" y="490" width="360" height="70"/>
+<rect class="soft" x="1020" y="560" width="10" height="20"/>
+<rect class="soft" x="1330" y="560" width="10" height="20"/>
+<!-- panel 1, scattered: seven frames, w by h in, x from the wall's left corner, bottom to top from the floor; no center cross by the spec's stated exception (seven different centers is the lesson) -->
+<rect class="frame" x="170" y="280" width="40" height="50"/>
+<rect class="art" x="174" y="284" width="32" height="42"/>
+<rect class="frame" x="250" y="220" width="55" height="70"/>
+<rect class="art" x="254" y="224" width="47" height="62"/>
+<rect class="frame" x="345" y="300" width="50" height="60"/>
+<rect class="art" x="349" y="304" width="42" height="52"/>
+<rect class="frame" x="420" y="225" width="60" height="80"/>
+<rect class="art" x="424" y="229" width="52" height="72"/>
+<rect class="frame" x="510" y="295" width="40" height="40"/>
+<rect class="art" x="514" y="299" width="32" height="32"/>
+<rect class="frame" x="580" y="210" width="50" height="70"/>
+<rect class="art" x="584" y="214" width="42" height="62"/>
+<rect class="frame" x="650" y="310" width="45" height="60"/>
+<rect class="art" x="654" y="314" width="37" height="52"/>
+<!-- panel 2, one larger work 48 by 34 in, x 1060 to 1300, bottom 41, top 75, center 58; 48 / 72 = two thirds -->
+<rect class="frame" x="1060" y="205" width="240" height="170"/>
+<rect class="art" x="1068" y="213" width="224" height="154"/>
+<line class="dim" x1="1158" y1="290" x2="1202" y2="290" stroke-width="2"/>
+<line class="dim" x1="1180" y1="268" x2="1180" y2="312" stroke-width="2"/>
+<!-- width over the work; clear wall either side at the center height, corner to frame -->
+<line class="dim" x1="1060" y1="185" x2="1300" y2="185"/>
+<line class="dim" x1="1060" y1="177" x2="1060" y2="193"/>
+<line class="dim" x1="1300" y1="177" x2="1300" y2="193"/>
+<line class="dim" x1="880" y1="290" x2="1060" y2="290"/>
+<line class="dim" x1="880" y1="282" x2="880" y2="298"/>
+<line class="dim" x1="1060" y1="282" x2="1060" y2="298"/>
+<line class="dim" x1="1300" y1="290" x2="1480" y2="290"/>
+<line class="dim" x1="1300" y1="282" x2="1300" y2="298"/>
+<line class="dim" x1="1480" y1="282" x2="1480" y2="298"/>
+<text class="l1" x="420" y="630" text-anchor="middle">scattered<tspan class="l2"> · every frame adds an edge and a gap</tspan></text>
+<text class="l1" x="1180" y="630" text-anchor="middle">one larger work<tspan class="l2"> · the eye settles on one thing</tspan></text>
+<text class="l2" x="1180" y="169" text-anchor="middle">two thirds of the sofa</text>
+<text class="l2" x="970" y="278" text-anchor="middle">clear wall</text>
+<text class="l2" x="1390" y="278" text-anchor="middle">clear wall</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">The new floor plan with the first wall seen from the door and the other walls that can hold a work, above four routes for everything else: keep, give, sell or store, each with its question</title>
+<desc id="d">The new floor plan with the first wall seen from the door and the other walls that can hold a work, above four routes for everything else: keep, give, sell or store, each with its question</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.8 px for the plan (the D1 studio, northwest corner at (380, 140), x 380 to 1220, y 140 to 610.4); the four routes below it are not a scale drawing -->
+<!-- walls, inner faces 300 by 168 in, with a 36 in door opening in the south wall from x 30 to 66 -->
+<path class="ink" d="M464 610.4 L380 610.4 L380 140 L1220 140 L1220 610.4 L564.8 610.4"/>
+<!-- front door: leaf hinged at (66, 168), open to (66, 132); swing arc radius 36 in to (30, 168) -->
+<line class="soft" x1="564.8" y1="610.4" x2="564.8" y2="509.6"/>
+<path class="soft" d="M464 610.4 A100.8 100.8 0 0 1 564.8 509.6"/>
+<!-- window 60 in on the west wall, y 60 to 120, a soft rect 12 px deep across the wall line -->
+<rect class="soft" x="374" y="308" width="12" height="168"/>
+<!-- sofa 72 by 36 in plan, back to the north wall, x 12 to 84; back line at y 10, arm lines at x 18 and 78 -->
+<rect class="soft" x="413.6" y="145.6" width="201.6" height="100.8" rx="4"/>
+<line class="soft" x1="413.6" y1="168" x2="615.2" y2="168"/>
+<line class="soft" x1="430.4" y1="168" x2="430.4" y2="246.4"/>
+<line class="soft" x1="598.4" y1="168" x2="598.4" y2="246.4"/>
+<!-- open bookcase 12 by 60, low, free standing, x 144 to 156, y 20 to 80, two cross lines at y 40 and 60 -->
+<rect class="soft" x="783.2" y="196" width="33.6" height="168" rx="2"/>
+<line class="soft" x1="783.2" y1="252" x2="816.8" y2="252"/>
+<line class="soft" x1="783.2" y1="308" x2="816.8" y2="308"/>
+<!-- queen bed 60 by 80, headboard to the north wall, x 198 to 258, y 2 to 82; headboard line at y 6 -->
+<rect class="soft" x="934.4" y="145.6" width="168" height="224" rx="4"/>
+<line class="soft" x1="934.4" y1="156.8" x2="1102.4" y2="156.8"/>
+<!-- first wall: tp rect 3 in deep on the north wall, x 24 to 72; walls that can hold a work: tp rects 1.5 in deep on the north wall x 208 to 248, the east wall y 100 to 150, the south wall x 190 to 280 -->
+<rect class="tp" x="447.2" y="140" width="134.4" height="8.4"/>
+<rect class="tp" x="962.4" y="140" width="112" height="4.2"/>
+<rect class="tp" x="1215.8" y="420" width="4.2" height="140"/>
+<rect class="tp" x="912" y="606.2" width="252" height="4.2"/>
+<!-- sightline from a dot just inside the door (48, 160) north to the first wall's face (48, 3) -->
+<line class="eye" x1="514.4" y1="588" x2="514.4" y2="148.4"/>
+<circle class="tp" cx="514.4" cy="588" r="6"/>
+<!-- four routes: a dot each at y 700; a bracket under give and sell for the appraiser -->
+<circle class="tp" cx="290" cy="700" r="6"/>
+<circle class="tp" cx="650" cy="700" r="6"/>
+<circle class="tp" cx="1010" cy="700" r="6"/>
+<circle class="tp" cx="1370" cy="700" r="6"/>
+<line class="dim" x1="650" y1="890" x2="1010" y2="890"/>
+<line class="dim" x1="650" y1="882" x2="650" y2="898"/>
+<line class="dim" x1="1010" y1="882" x2="1010" y2="898"/>
+<text class="l1" x="514.4" y="124" text-anchor="middle">first wall<tspan class="l2"> · choose its work first</tspan></text>
+<text class="l1" x="290" y="760" text-anchor="middle">keep</text>
+<text class="l1" x="650" y="760" text-anchor="middle">give</text>
+<text class="l1" x="1010" y="760" text-anchor="middle">sell</text>
+<text class="l1" x="1370" y="760" text-anchor="middle">store</text>
+<text class="l2" x="290" y="800" text-anchor="middle">Do I love it,</text>
+<text class="l2" x="290" y="830" text-anchor="middle">and is there a wall for it?</text>
+<text class="l2" x="650" y="800" text-anchor="middle">Does someone in the family</text>
+<text class="l2" x="650" y="830" text-anchor="middle">love it now?</text>
+<text class="l2" x="1010" y="800" text-anchor="middle">Would I buy it again today,</text>
+<text class="l2" x="1010" y="830" text-anchor="middle">and what is it worth?</text>
+<text class="l2" x="1370" y="800" text-anchor="middle">Will it return to a wall</text>
+<text class="l2" x="1370" y="830" text-anchor="middle">within a few years?</text>
+<text class="l2" x="830" y="868" text-anchor="middle">an appraiser first, if it may be valuable</text>
+<text class="l2" x="1232" y="500">walls that can hold a work</text>
+<text class="l2" x="514.4" y="650" text-anchor="middle">door</text>
+</svg>

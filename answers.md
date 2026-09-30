@@ -243,6 +243,10 @@ Start with the wall the space already turns toward and give it the strongest wor
 
 How to choose art for your home comes down to a short sequence of decisions: how you want each space to feel, which wall comes first, how big the work must be, and which budget buys the best version of it. Start with one wall and one feeling, not a shopping list, and buy the work you keep returning to. Full guide: https://stavtheodor.com/guide/how-to-choose-art-for-your-home/
 
+## What art works in a small NYC apartment without making it feel cramped?
+
+Art for a small apartment works best as fewer, larger pieces: one anchor work per space, on the wall you see first from the door or the sofa, makes a small space feel calmer and larger than a scatter of small frames. At THEODORA I start a small apartment the way I start any home: I survey the space and its sightlines and define the main wall from them, then put the best original your budget allows on that wall and let editions and prints carry the rest. Full guide: https://stavtheodor.com/guide/art-for-a-small-apartment/
+
 ---
 
 ## Guides: offices, practices and hospitality
@@ -274,6 +278,10 @@ Medical office wall art is art chosen for a practice's waiting area, exam spaces
 ## Where do interior designers get their art?
 
 Art sourcing for interior designers is how a design studio finds, buys and installs art for a client project: through trade programs and wholesale suppliers, galleries and artists, commissions, or an art curator who runs the whole art scope inside the designer's scheme. Trade programs are fastest for many walls, originals and commissions carry the walls a client lives with, and a curator can run all of them for you while the client stays yours. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/
+
+## I'm an architect. How do I bring art into a residential project early?
+
+Planning art in construction drawings means deciding, while the set is still open, which walls stay solid for art, where blocking goes behind heavy works, where picture lights and outlets sit, and how large works reach their walls, because each of those costs least to change on paper. I can start from the plans alone: at THEODORA I work alongside architects and designers, not around them, from their drawings through to installation. Full guide: https://stavtheodor.com/guide/planning-art-in-construction-drawings/
 
 ## How do hotels choose their artwork?
 

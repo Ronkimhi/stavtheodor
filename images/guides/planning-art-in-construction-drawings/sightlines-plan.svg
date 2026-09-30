@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Floor plan with three sightlines: from the front door to the wall faced on entering, down a long hall to its end wall, and from the main seating to the wall opposite; each of those walls is marked as an art wall, with switches and vents moved off them</title>
+<desc id="d">Floor plan with three sightlines: from the front door to the wall faced on entering, down a long hall to its end wall, and from the main seating to the wall opposite; each of those walls is marked as an art wall, with switches and vents moved off them</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 2 px per in, plan -->
+<!-- outer walls 540 by 300 in, plan origin at px (80, 150); front door 36 in in the south wall, x 270 to 306 -->
+<path class="ink" d="M692 750 L1160 750 L1160 150 L80 150 L80 750 L620 750"/>
+<!-- door leaf hinged at (270, 300), open inward to (270, 264); quarter swing arc radius 36 in -->
+<line class="soft" x1="620" y1="750" x2="620" y2="678"/>
+<path class="soft" d="M620 678 A72 72 0 0 1 692 750"/>
+<!-- foyer x 240 to 336, y 180 to 300: north wall shared with the hall, west wall with a 90 in opening, east wall from y 228 -->
+<line class="ink" x1="560" y1="510" x2="920" y2="510"/>
+<line class="ink" x1="984" y1="510" x2="1160" y2="510"/>
+<line class="ink" x1="560" y1="510" x2="560" y2="550"/>
+<line class="ink" x1="560" y1="730" x2="560" y2="750"/>
+<line class="ink" x1="752" y1="606" x2="752" y2="750"/>
+<!-- living space x 0 to 240: east wall to y 180; sofa 84 by 36 in, back to the south; window on the west wall y 90 to 180 -->
+<line class="ink" x1="560" y1="150" x2="560" y2="510"/>
+<rect class="soft" x="236" y="550" width="168" height="72"/>
+<line class="soft" x1="236" y1="610" x2="404" y2="610"/>
+<line class="soft" x1="248" y1="550" x2="248" y2="610"/>
+<line class="soft" x1="392" y1="550" x2="392" y2="610"/>
+<rect class="soft" x="74" y="330" width="12" height="180"/>
+<!-- long hall x 336 to 540, y 180 to 228: north wall door gap x 420 to 452, south wall door gap x 470 to 502 -->
+<line class="ink" x1="752" y1="606" x2="1020" y2="606"/>
+<line class="ink" x1="1084" y1="606" x2="1160" y2="606"/>
+<!-- art wall marks, 12 px deep on the inner face: foyer north wall, the hall's end wall, the living space's north wall -->
+<rect class="tp" x="584" y="510" width="144" height="12"/>
+<rect class="tp" x="1148" y="522" width="12" height="72"/>
+<rect class="tp" x="224" y="150" width="192" height="12"/>
+<!-- sightlines from the door, the hall's start and the front of the sofa -->
+<circle class="tp" cx="656" cy="750" r="5"/>
+<line class="eye" x1="656" y1="750" x2="656" y2="510"/>
+<circle class="tp" cx="752" cy="558" r="5"/>
+<line class="eye" x1="752" y1="558" x2="1160" y2="558"/>
+<circle class="tp" cx="320" cy="550" r="5"/>
+<line class="eye" x1="320" y1="550" x2="320" y2="150"/>
+<!-- a switch plate and a vent grille on the foyer's east wall, west face: kept off the art wall beside them -->
+<rect class="soft" x="740" y="706" width="12" height="8"/>
+<rect class="soft" x="744" y="638" width="8" height="24"/>
+<!-- labels -->
+<text class="l1" x="644" y="606" text-anchor="end">art wall</text>
+<text class="l2" x="644" y="636" text-anchor="end">the wall you face</text>
+<text class="l2" x="644" y="664" text-anchor="end">as you come in</text>
+<text class="l1" x="1200" y="566">art wall</text>
+<text class="l2" x="1200" y="596">the end of a long hall</text>
+<text class="l1" x="304" y="206" text-anchor="end">art wall</text>
+<text class="l2" x="304" y="236" text-anchor="end">the wall opposite</text>
+<text class="l2" x="304" y="264" text-anchor="end">the main seating</text>
+<text class="l1" x="332" y="320">sightline</text>
+<text class="l2" x="620" y="790" text-anchor="end">door</text>
+<text class="l2" x="720" y="790">switches and vents kept off the art walls</text>
+<line class="lead" x1="736" y1="768" x2="746" y2="718"/>
+</svg>
