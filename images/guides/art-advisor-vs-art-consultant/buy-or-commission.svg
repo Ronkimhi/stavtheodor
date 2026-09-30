@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
-<title id="t">Decision drawing: if the right work for the space exists, it is found, assessed, negotiated and acquired, an advisor's job; if it does not exist yet, an artist makes it for that one space, a consultant's job; both paths end with the work framed, delivered and installed on the wall.</title>
-<desc id="d">Decision drawing: if the right work for the space exists, it is found, assessed, negotiated and acquired, an advisor's job; if it does not exist yet, an artist makes it for that one space, a consultant's job; both paths end with the work framed, delivered and installed on the wall.</desc>
+<title id="t">Decision drawing: if the right work for the space exists, it is found, assessed, negotiated and bought for the client; if it does not exist yet, an artist makes it for that one space, commissioned for the client; either way the curator chooses it, and both paths end with the work framed, delivered and installed on the wall.</title>
+<desc id="d">Decision drawing: if the right work for the space exists, it is found, assessed, negotiated and bought for the client; if it does not exist yet, an artist makes it for that one space, commissioned for the client; either way the curator chooses it, and both paths end with the work framed, delivered and installed on the wall.</desc>
 <style>
   .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
@@ -38,12 +38,12 @@
 <rect class="ink" x="590" y="150" width="520" height="140"/>
 <text class="l1" x="850" y="198" text-anchor="middle">Yes: acquire it</text>
 <text class="l2" x="850" y="234" text-anchor="middle">found, assessed, negotiated</text>
-<text class="l2" x="850" y="266" text-anchor="middle">an advisor's job</text>
+<text class="l2" x="850" y="266" text-anchor="middle">chosen and bought for you</text>
 <!-- lower branch: commission -->
 <rect class="ink" x="590" y="510" width="520" height="140"/>
 <text class="l1" x="850" y="558" text-anchor="middle">No: commission it</text>
 <text class="l2" x="850" y="594" text-anchor="middle">made by an artist for that space</text>
-<text class="l2" x="850" y="626" text-anchor="middle">a consultant's job</text>
+<text class="l2" x="850" y="626" text-anchor="middle">chosen and commissioned for you</text>
 <!-- end, the subject: the work on the wall -->
 <rect class="art" x="1196" y="346" width="308" height="108"/>
 <rect class="ink" x="1180" y="330" width="340" height="140"/>

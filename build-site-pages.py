@@ -41,7 +41,8 @@ GUIDE_CRUMB_HUB = "Art advisory"  # the middle step of a guide's trail, visible 
 # The service area in every Service block (Ron's SEO brief, 2026-09-29): the entity's own areaServed. Tel Aviv
 # stays in the copy and on the project pages but never in an areaServed.
 DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
-                {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "New York City"}]
+                {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "New York City"},
+                {"@type": "State", "name": "California"}]
 # The town and county pages (section "area": /art-consultant-tenafly-nj/ and /art-advisor-bergen-county/, Ron's SEO brief,
 # 2026-09-29, P1.2 and P1.3). Their JSON carries its own schema and path: `breadcrumb` (the visible trail and the
 # BreadcrumbList, [name_en, name_he, path] per step, the page itself last), `service` (the Service node: name,
@@ -605,15 +606,15 @@ CONTACT = {
     "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
     "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. Serving Tenafly, Bergen County, NJ and NYC.",
     "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
-    "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.",
-             "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב."),
+    "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv.",
+             "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב."),
     "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
 }
 
 
 # The service area as a row of place names on /contact/ (2026-09-29), beside the full sentence in CONTACT["area"]
 CONTACT_PLACES = [("Tenafly", "טנפליי"), ("Bergen County", "מחוז ברגן"), ("New Jersey", "ניו ג'רזי"),
-                  ("New York City", "ניו יורק"), ("Tel Aviv", "תל אביב")]
+                  ("New York City", "ניו יורק"), ("California", "קליפורניה"), ("Tel Aviv", "תל אביב")]
 
 
 def render_contact():
@@ -660,7 +661,7 @@ def render_contact():
 ABOUT = {
     "path": "about",
     "title": "About THEODORA | Art Advisor Stav Theodor, Tenafly NJ",
-    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, New Jersey and New York City.",
+    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, New Jersey, New York City and California.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
     # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
     "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
@@ -818,12 +819,12 @@ def render_about(pages):
     tel = f'<a href="{sc.PHONE_TEL}" data-loc="about" dir="ltr">{sc.PHONE}</a>'
     mail = f'<a href="{MAIL}" data-loc="about" dir="ltr">{sc.EMAIL}</a>'
     lead_en = ("THEODORA Art Advisory by Stav Theodor is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
-               "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. "
+               "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. "
                "It works with private homes, interior designers and architects, private collectors, law firms, investment firms, "
                f"wealth managers, medical practices, restaurants and boutique hotels. To reach Stav, call {tel} or email {mail}. "
                + DISAMBIG[0])
     lead_he = ("THEODORA Art Advisory by Stav Theodor היא פרקטיקה של אוצרות וייעוץ אמנות, שייסדה ומנהלת סתיו תאודור, אוצרת ויועצת אמנות. "
-               "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב. "
+               "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב. "
                "היא עובדת עם בתים פרטיים, מעצבי פנים ואדריכלים, אספנים פרטיים, משרדי עורכי דין, חברות השקעה, "
                f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}. "
                + DISAMBIG[1])

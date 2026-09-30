@@ -4,14 +4,28 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 
 ## 1. Who
 
-- Name: Stav Theodor-Kimhi. Professionally: Stav Theodor. Practice: THEODORA (tagline "fine · art · living"). Founder, art curator and art advisor.
-- Base: Tenafly, New Jersey 07670 (Bergen County), home based: never a street address, on a page or in schema. Service area (schema, listings, NAP): Tenafly, Bergen County, New Jersey and New York City. Tel Aviv stays in the copy and on the project pages, never in an areaServed (Ron's SEO brief, 2026-09-29). Projects across Israel (Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan, Hod Hasharon) and hospitality projects abroad (China, Jordan, cruise lines).
-- More than 15 years in the art world, since 2010 (Ron's SEO brief, 2026-09-29; replaces "two decades", which overstated it). Hebrew: "יותר מ-15 שנה" (for example "יותר מ-15 שנות ניסיון"). Founded THEODORA in 2020, so never "founded THEODORA after 15 years". Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv, worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
+- Name: Stav Theodor-Kimhi. Professionally: Stav Theodor. Practice: THEODORA (tagline "fine · art · living"). Founder, art curator, art advisor and art consultant (all three, Stav 2026-09-30).
+- Base: Tenafly, New Jersey 07670 (Bergen County), home based: never a street address, on a page or in schema. Service area (schema, listings, NAP): Tenafly, Bergen County, New Jersey, New York City and California (California added by Stav and Ron, 2026-09-30; the NJ and NY town and local pages keep their own local wording). Tel Aviv stays in the copy and on the project pages, never in an areaServed (Ron's SEO brief, 2026-09-29). Projects across Israel (Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan, Hod Hasharon) and hospitality projects abroad (China, Jordan, cruise lines).
+- More than 15 years in the art world, since 2010 (Ron's SEO brief, 2026-09-29; replaces "two decades", which overstated it). Hebrew: "יותר מ-15 שנה" (for example "יותר מ-15 שנות ניסיון"). Founded THEODORA in 2020, so never "founded THEODORA after 15 years". Curatorial work in established museums, managed a prestigious art gallery in Tel Aviv (earlier in her career, always past tense: she no longer manages a gallery), worked closely with emerging and established artists. Years collaborating with world leaders in luxury hospitality, designing artistic concepts and building tailor made contemporary art collections for premium hotels, exclusive resorts, large cruise ships, private residences and workspaces.
 - Art curator (never "certified" / "מוסמכת": no certificate or issuer exists, 2026-09-29). M.A. in art history, Faculty of Arts, Ben-Gurion University (BGU). Curatorial and museum studies diploma, Faculty of Arts, Tel Aviv University (TAU).
 - Clients: interior designers and architects (on behalf of their clients), private collectors, home owners, business owners, hotels and hospitality groups.
 - Languages: Hebrew and English.
 - Contact: stav@stavtheodor.com, https://stavtheodor.com and the business line (201) 351-8367 (tel:+12013518367, schema +1-201-351-8367; Ron's SEO brief, 2026-09-29). The shared chrome puts the number in every header and footer; page copy does not repeat it, and no other number ever appears.
 - Instagram: @theodorafineart.
+
+## 1a. Stav's fact review (2026-09-30): binding on every writer
+
+Stav answered 123 fact questions on 2026-09-30. What she rejected is never written again, on any page.
+
+- No staging, no styling, no art rentals or leasing. Guides may explain staging or leasing in the third person ("stagers usually", "leasing programs typically"), never as her service, her practice or her recommendation, with no CTA, hub link or Curator's note framing them as something she offers.
+- Buying is also an investment (never a promise that a work rises in value).
+- She does not need to be on site: she can work from the designers' and architects' plans.
+- Main wall: she surveys the space and its sightlines and defines the main wall from them. Never "I rank the walls".
+- Law firms: the partners decide how the firm should feel and what positioning it projects to clients; she makes it look strong and confident. Never "associates each pick from a shortlist".
+- Designers: no written scope at the start. They talk and work out together what is right for the designer's clients; she shows the designer at their most professional and adds value for their clients. (A referral arrangement, if any, is still agreed in writing.)
+- The Caesarea home office: both works were her choice; do not split them into "advisor's job" and "consultant's job".
+- Rules of thumb depend on the space and the client ("not one-dimensional"): no fixed rules for mixed frames, paint colors, which bedroom wall gets the strongest work. Plan the lighting before hanging.
+- Cut and not to return: "most homes are not short of taste, short of an order"; framing old works "for their own period"; "choose depth over impact" in conference rooms; idealized faces in cosmetic practices; "keep the difficult, ambiguous work for your own office"; offering acrylic prints to practices via the Bauhaus project; team choice from her shortlist in advisory offices; "send me a photo of your first wall" on the how to choose guide.
 
 ## 2. Positioning (use this voice)
 
@@ -58,7 +72,7 @@ How to write it:
 
 Residential:
 - Manhattan, Skyline Residence. Large format digital collage selected to anchor the apartment's custom bar; the client's love of entertaining guided the selection; the work draws on the visual language of glamorous social gatherings and references "Un Bar aux Folies-Bergère" by Édouard Manet (1882). No photo on the site.
-- Closter, NJ, new construction. Newly built private residence; commissioned to curate a collection to elevate the architectural character and bring depth to the interior design. Working closely with leading New York City galleries; works by Jewish and Israeli artists alongside other contemporary voices. "The result transforms a well designed house into a space with soul, where art and architecture speak the same language." No photo on the site.
+- Closter, NJ, new construction. Newly built private residence; she came in after the house was built and designed, never "planned the whole house before the first purchase"; commissioned to curate a collection to elevate the architectural character and bring depth to the interior design. Working closely with leading New York City galleries; works by Jewish and Israeli artists alongside other contemporary voices. "The result transforms a well designed house into a space with soul, where art and architecture speak the same language." No photo on the site.
 - Tel Aviv, home of singer and actress Roni Daloomi. Three artworks by two contemporary Israeli artists; joyful, minimalist pieces reflecting her optimistic spirit; "visual candy". Photo: roni.jpg
 - Tel Aviv, private residence. Commissioned from the artist whose paintings appeared in the Israeli series Shtisel, in response to the client's love for the show's intimate imagery: a mother caressing her baby, rendered with quiet warmth. No photo on the site.
 - Hod Hasharon, private villa. Open, light saturated home where concrete and nature meet; a single large scale figurative digital artwork chosen to define the emotional center of the space. Photo: hod-hasharon.jpg

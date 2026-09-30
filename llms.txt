@@ -1,6 +1,6 @@
 # THEODORA Art Advisory by Stav Theodor
 
-> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
+> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
 
 ## About
 
@@ -8,7 +8,7 @@
 - [Art Radar by THEODORA](https://stavtheodor.com/) is the main site. It includes Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv, plus information about THEODORA's advisory services.
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
 - [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
-- Base: Tenafly, New Jersey 07670. Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv.
+- Base: Tenafly, New Jersey 07670. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
 - [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Send one photo of the wall and a line about the space.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.

@@ -368,7 +368,7 @@ def nap(mail=None):
     mail = mail or mail_href()
     return f'''<address class="nap">
   <span data-l="en">THEODORA · Stav Theodor, art advisor and consultant</span><span data-l="he" lang="he" dir="rtl">THEODORA · סתיו תאודור, יועצת אמנות</span><br>
-  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב</span><br>
+  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב</span><br>
   <a href="{PHONE_TEL}" data-loc="footer">{PHONE}</a> · <a href="{mail}" data-loc="footer">{EMAIL}</a>
 </address>'''
 

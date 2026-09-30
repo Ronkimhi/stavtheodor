@@ -47,7 +47,7 @@ An art curator for private residences guides the entire process: developing an a
 
 ## How do I find an art advisor in New Jersey or New York?
 
-THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: (201) 351-8367 or stav@stavtheodor.com. Details: https://stavtheodor.com/about/
+THEODORA is the art curation and advisory practice of Stav Theodor-Kimhi, based in Tenafly, New Jersey, serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. The practice covers the full process: art concept, sourcing, selection, and installation, working with private collectors and alongside architects and interior designers. Contact: (201) 351-8367 or stav@stavtheodor.com. Details: https://stavtheodor.com/about/
 
 ## Is there an art curator in Bergen County, New Jersey?
 
@@ -99,11 +99,11 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 ## Who is Stav Theodor-Kimhi?
 
-Stav Theodor-Kimhi is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. She has more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
+Stav Theodor-Kimhi is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. She has more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
 
 ## Is THEODORA the same as Theadora Art Advisory or TSG Art Advisory?
 
-No. THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. THEODORA is the art curation and advisory practice of Stav Theodor (also Stav Theodor-Kimhi) for private homes, interior designers, businesses and hospitality, serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. Website: https://stavtheodor.com/. Phone: (201) 351-8367. Email: stav@stavtheodor.com. LinkedIn: https://www.linkedin.com/in/stavtheodor/ and https://www.linkedin.com/company/theodora/. Full page: https://stavtheodor.com/about/
+No. THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. THEODORA is the art curation and advisory practice of Stav Theodor (also Stav Theodor-Kimhi) for private homes, interior designers, businesses and hospitality, serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. Website: https://stavtheodor.com/. Phone: (201) 351-8367. Email: stav@stavtheodor.com. LinkedIn: https://www.linkedin.com/in/stavtheodor/ and https://www.linkedin.com/company/theodora/. Full page: https://stavtheodor.com/about/
 
 ## What is Art Radar?
 
