@@ -128,8 +128,8 @@ _entity_cache = None
 
 
 def strip_private(node):
-    """Keys that start with an underscore are editor notes (for example the Google Business
-    Profile placeholder in content/entity.json) and never reach a page."""
+    """Keys that start with an underscore are editor notes (for example a `_todo` key in
+    content/entity.json) and never reach a page."""
     if isinstance(node, dict):
         return {k: strip_private(v) for k, v in node.items() if not k.startswith('_')}
     if isinstance(node, list):
