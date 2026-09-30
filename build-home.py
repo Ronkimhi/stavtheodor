@@ -88,9 +88,10 @@ ADVISORY_HUBS = {
     '/projects/': ('Projects: homes in Manhattan, New Jersey, Tel Aviv and Caesarea, hotels, one exhibition in Geneva', "פרויקטים: בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות, ותערוכה אחת בז'נבה"),
 }
 # The homepage's Advisory rows ("start here") in order: the New Jersey page, the Tenafly and Bergen County pages (Ron's SEO
-# brief, 2026-09-29, P1.5 item 4), the New York page, the two hubs, the partner pages and the guide. A variant may list
+# brief, 2026-09-29, P1.5 item 4), the New York page and the Westchester page (answers wave, 2026-09-30), the two hubs, the
+# partner pages and the guide. A variant may list
 # its own (advisory_rows): content/pages paths and the hubs.
-HOME_ROWS = ['art-curator-new-jersey', 'art-consultant-tenafly-nj', 'art-advisor-bergen-county', 'art-curator-new-york', '/advisory/', '/projects/',
+HOME_ROWS = ['art-curator-new-jersey', 'art-consultant-tenafly-nj', 'art-advisor-bergen-county', 'art-curator-new-york', 'art-advisor-westchester-ny', '/advisory/', '/projects/',
              'for-designers', 'for-brokers', 'for-advisors', 'guide/ten-questions-before-you-buy-your-first-serious-artwork']
 
 # The sixteen regions templates/home.html marks for the buyer variants, and the variant field each one reads

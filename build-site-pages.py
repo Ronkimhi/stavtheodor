@@ -44,7 +44,8 @@ DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "Adm
                 {"@type": "State", "name": "New Jersey"}, {"@type": "City", "name": "New York City"},
                 {"@type": "State", "name": "California"}]
 # The town and county pages (section "area": /art-consultant-tenafly-nj/ and /art-advisor-bergen-county/, Ron's SEO brief,
-# 2026-09-29, P1.2 and P1.3). Their JSON carries its own schema and path: `breadcrumb` (the visible trail and the
+# 2026-09-29, P1.2 and P1.3; /art-advisor-westchester-ny/ since the answers wave, 2026-09-30). Their JSON carries its
+# own schema and path: `breadcrumb` (the visible trail and the
 # BreadcrumbList, [name_en, name_he, path] per step, the page itself last), `service` (the Service node: name,
 # serviceType, areaServed, audience, description) and `og_title`; `cta_sub_en`/`cta_sub_he` add a line under the CTA,
 # which also links /contact/. The FAQPage carries an @id, and its answers are the visible text, tags stripped.
@@ -604,10 +605,10 @@ def who_row(section):
 CONTACT = {
     "path": "contact",
     "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
-    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. Serving Tenafly, Bergen County, NJ and NYC.",
+    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. In person in NJ and NYC, online anywhere.",
     "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
-    "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv.",
-             "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב."),
+    "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.",
+             "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום."),
     "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
 }
 
@@ -661,7 +662,7 @@ def render_contact():
 ABOUT = {
     "path": "about",
     "title": "About THEODORA | Art Advisor Stav Theodor, Tenafly NJ",
-    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, New Jersey, New York City and California.",
+    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, NJ, NYC and California, and clients online anywhere.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
     # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
     "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
@@ -689,6 +690,7 @@ ABOUT_PLACES = [
     ("/art-advisor-bergen-county/", "Art advisor in Bergen County", "יועצת אמנות במחוז ברגן"),
     ("/art-curator-new-jersey/", "Art consultant in New Jersey", "יועצת אמנות בניו ג'רזי"),
     ("/art-curator-new-york/", "Art advisor in New York", "יועצת אמנות בניו יורק"),
+    ("/art-advisor-westchester-ny/", "Art advisor in Westchester", "יועצת אמנות בווסטצ'סטר"),
 ]
 # Who I work with on /about/: the footer's seven client pages plus the two audiences without a page of their own
 # (AGENTS.md: designers, private collectors, home and business owners), in the order of the entity's opening sentence.
@@ -819,12 +821,12 @@ def render_about(pages):
     tel = f'<a href="{sc.PHONE_TEL}" data-loc="about" dir="ltr">{sc.PHONE}</a>'
     mail = f'<a href="{MAIL}" data-loc="about" dir="ltr">{sc.EMAIL}</a>'
     lead_en = ("THEODORA Art Advisory by Stav Theodor is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
-               "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv. "
+               "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and works online with clients anywhere. "
                "It works with private homes, interior designers and architects, private collectors, law firms, investment firms, "
                f"wealth managers, medical practices, restaurants and boutique hotels. To reach Stav, call {tel} or email {mail}. "
                + DISAMBIG[0])
     lead_he = ("THEODORA Art Advisory by Stav Theodor היא פרקטיקה של אוצרות וייעוץ אמנות, שייסדה ומנהלת סתיו תאודור, אוצרת ויועצת אמנות. "
-               "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב. "
+               "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום. "
                "היא עובדת עם בתים פרטיים, מעצבי פנים ואדריכלים, אספנים פרטיים, משרדי עורכי דין, חברות השקעה, "
                f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}. "
                + DISAMBIG[1])

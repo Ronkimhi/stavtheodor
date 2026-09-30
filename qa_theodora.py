@@ -14,7 +14,7 @@ BASE = "https://stavtheodor.com"
 PHONE_HREF = 'href="tel:+12013518367"'
 GA_SRC = 'async src="https://www.googletagmanager.com/gtag/js?id=G-4300MN0Q97"'
 TWO_DECADES_OK = {"/museum/artists/tintoretto/", "/radar/three-tel-aviv-shows/"}  # not about Stav
-NEW_PAGES = ["/art-consultant-tenafly-nj/", "/art-advisor-bergen-county/"]
+NEW_PAGES = ["/art-consultant-tenafly-nj/", "/art-advisor-bergen-county/", "/art-advisor-westchester-ny/"]
 # The museum's walkable 3D gallery (/museum/gallery/, ?artist=...) is an app shell, noindex since it shipped on 2026-07-01,
 # with no canonical, no JSON-LD and in no sitemap, so --live never fetches it. A folder run finds the file: it still gets
 # the dash, accuracy, phone and GA checks, but not the indexable-page checks (tools/check_site.py exempts it the same way).

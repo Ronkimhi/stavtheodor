@@ -12,7 +12,7 @@ Read all of it before writing a word. Everything below is verified from Stav's o
 - Languages: Hebrew and English.
 - Contact: stav@stavtheodor.com, https://stavtheodor.com and the business line (201) 351-8367 (tel:+12013518367, schema +1-201-351-8367; Ron's SEO brief, 2026-09-29). The shared chrome puts the number in every header and footer; page copy does not repeat it, and no other number ever appears.
 - Instagram: @theodorafineart.
-
+- Stav publishes Art Radar (stavtheodor.com/radar/), a free list of exhibitions and museum tips in New Jersey and the New York area.
 ## 1a. Stav's fact review (2026-09-30): binding on every writer
 
 Stav answered 123 fact questions on 2026-09-30. What she rejected is never written again, on any page.

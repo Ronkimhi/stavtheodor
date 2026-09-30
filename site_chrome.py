@@ -372,7 +372,7 @@ def nap(mail=None):
     mail = mail or mail_href()
     return f'''<address class="nap">
   <span data-l="en">THEODORA · Stav Theodor, art advisor and consultant</span><span data-l="he" lang="he" dir="rtl">THEODORA · סתיו תאודור, יועצת אמנות</span><br>
-  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב</span><br>
+  <span data-l="en">Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere</span><span data-l="he" lang="he" dir="rtl">טנפליי, ניו ג'רזי 07670 · משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום</span><br>
   <a href="{PHONE_TEL}" data-loc="footer">{PHONE}</a> · <a href="{mail}" data-loc="footer">{EMAIL}</a>
 </address>'''
 
@@ -451,7 +451,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     </div>
     <div class="cols2">
       <div>
-        <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a>
+        <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/art-advisor-westchester-ny/">{T('Art advisor in Westchester', "יועצת אמנות בווסטצ'סטר")}</a>
       </div>
       <div>
         <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>

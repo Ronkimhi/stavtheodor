@@ -10,7 +10,7 @@ Role: Art Curator and Advisor, Founder of THEODORA
 Contact: stav@stavtheodor.com
 Phone: (201) 351-8367
 Instagram: @theodorafineart
-Location: Tenafly, New Jersey 07670 (serves Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv)
+Location: Tenafly, New Jersey 07670 (serves Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere)
 Languages: Hebrew and English (every post is published in full in both languages)
 
 ## What This Site Is
@@ -80,7 +80,7 @@ Also known as: Stav Theodor
 Role: Art Curator, Art Advisor
 Practice: THEODORA (fine art curation and advisory)
 Based in: Tenafly, New Jersey, USA
-Serves: Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv
+Serves: Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere
 Credentials: More than 15 years (since 2010) of experience across museums, galleries, academia, and international hospitality
 Specialties: Private art collections, hospitality art installations, art advisory, fine art curation, working with architects and interior designers
 LinkedIn: https://www.linkedin.com/in/stavtheodor/
@@ -94,7 +94,7 @@ LinkedIn: https://www.linkedin.com/company/theodora/
 Google Business Profile: https://www.google.com/maps?cid=607964109580327893
 Type: Fine art curation and advisory practice (ProfessionalService)
 Founder: Stav Theodor-Kimhi
-Service areas: Tenafly, Bergen County, New Jersey, New York City and California; projects in Tel Aviv
+Service areas: Tenafly, Bergen County, New Jersey, New York City and California; projects in Tel Aviv; online with clients anywhere
 Services: Art concept, sourcing, selection, installation for private residences and hospitality projects
 Price and value: in most cases, buying art through THEODORA costs less than at a large auction or through a gallery (no venue, inventory or gallery staff to cover); the price includes private consultation until the art is installed; THEODORA represents the client, not a roster of artists. https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/
 Website: https://stavtheodor.com/
@@ -212,11 +212,12 @@ Israel managed from abroad, commissions, collections, offices, hotels) and proje
 (https://stavtheodor.com/projects/). Partner pages: https://stavtheodor.com/for-designers/, https://stavtheodor.com/for-brokers/, https://stavtheodor.com/for-advisors/.
 Guides: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/, https://stavtheodor.com/guide/gallery-wall-ideas/, https://stavtheodor.com/guide/how-to-hang-pictures/, https://stavtheodor.com/guide/art-above-couch/, https://stavtheodor.com/guide/dining-room-art/, https://stavtheodor.com/guide/living-room-art/, https://stavtheodor.com/guide/art-above-bed/, https://stavtheodor.com/guide/entryway-art/, https://stavtheodor.com/guide/large-wall-art-ideas/, https://stavtheodor.com/guide/law-office-art/, https://stavtheodor.com/guide/art-advisor-vs-art-consultant/, https://stavtheodor.com/guide/dental-office-decor/, https://stavtheodor.com/guide/office-wall-art/, https://stavtheodor.com/guide/buy-lease-or-commission-office-art/, https://stavtheodor.com/guide/medical-office-wall-art/, https://stavtheodor.com/guide/art-sourcing-for-interior-designers/, https://stavtheodor.com/guide/hotel-artwork/, https://stavtheodor.com/guide/financial-advisor-office-art/, https://stavtheodor.com/guide/restaurant-wall-decor/, https://stavtheodor.com/guide/art-for-home-staging/, https://stavtheodor.com/guide/how-to-choose-art-for-your-home/. Every one of these pages is
 bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
-Four local pages (added September 2026) answer the "art curator near me" question directly:
+Five local pages (added September 2026) answer the "art curator near me" question directly:
 - Art curator in New Jersey (Tenafly, Bergen County: Closter, Alpine, Englewood, Cresskill, Demarest; the Closter house; local Art Radar tips): https://stavtheodor.com/art-curator-new-jersey/
 - Art consultant in Tenafly (based in Tenafly; homes, designers and offices; the Closter house nearby; the Tenafly library museum passes): https://stavtheodor.com/art-consultant-tenafly-nj/
 - Art advisor in Bergen County (homes, new builds, designers and businesses across the county; the Closter house; Art Radar tips for the county): https://stavtheodor.com/art-advisor-bergen-county/
 - Art curator in New York (private apartments, offices and collections in Manhattan; the skyline residence bar; SoHo and Tribeca gallery routes): https://stavtheodor.com/art-curator-new-york/
+- Art advisor in Westchester (homes in Scarsdale, Rye, Bronxville and the towns around them; double height entries, stair halls, older houses and commissions, worked from the architect's plans): https://stavtheodor.com/art-advisor-westchester-ny/
 Seven pages (added September 2026) are written for one kind of client each: law firms https://stavtheodor.com/law-firms/, investment firms and family offices https://stavtheodor.com/investment-firms/, wealth managers https://stavtheodor.com/wealth-managers/, medical and aesthetic practices https://stavtheodor.com/medical-practices/, boutique hotels https://stavtheodor.com/hotels/, restaurants https://stavtheodor.com/restaurants/ and interior designers https://stavtheodor.com/for-designers/ (the former https://stavtheodor.com/designers/ forwards there).
 Eleven advisory pages (added 2026-09-30) and one section of the cost page answer New York questions directly: Art for a new condo in Manhattan or Brooklyn: bare walls, glass and light https://stavtheodor.com/advisory/art-for-a-new-condo-nyc/, Where to buy original art in New York (and how to avoid buying the wrong thing) https://stavtheodor.com/advisory/where-to-buy-original-art-nyc/, Choosing art for an Upper East Side or Upper West Side prewar apartment https://stavtheodor.com/advisory/art-for-a-prewar-apartment-upper-east-side/, I need someone to help me choose art for my home in New York. Who do I call https://stavtheodor.com/advisory/help-choosing-art-for-my-home-nyc/, Independent art advisor, gallery 'free advisory', decorator or installer: who do I need for my walls https://stavtheodor.com/advisory/art-advisor-vs-consultant-vs-decorator/, We just moved to New York and the walls are empty. Where do we start with art https://stavtheodor.com/advisory/moved-to-nyc-empty-walls-art/, Buying art for a new apartment on a set budget: how to make it go further https://stavtheodor.com/advisory/art-for-a-new-apartment-on-a-budget/, Is an art advisor worth it for one or two pieces (a section of the cost page) https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/#is-an-art-advisor-worth-it-for-one-or-two-pieces, Art for a new office in Manhattan: how companies choose, buy and install it https://stavtheodor.com/advisory/art-for-a-new-office-manhattan/, Who can hang heavy or large art in a NYC apartment? Building rules, COI and after hours installs https://stavtheodor.com/advisory/hanging-heavy-art-nyc-apartment-coi/, Choosing art for a Brooklyn brownstone or townhouse https://stavtheodor.com/advisory/art-for-a-brooklyn-brownstone/, Choosing large scale art for a Tribeca, SoHo or West Village loft https://stavtheodor.com/advisory/art-for-a-tribeca-or-soho-loft/.
 Every page opens in English; the Hebrew twin is one tap away on the same URL.
