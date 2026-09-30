@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan and side section of a conference room: the screen on the end wall, windows along one long wall and one large work on the opposite long wall, seen by the people seated facing it; in the section, the standing line at 57 to 60 inches and a seated viewer's sightline passing just over the heads of the near row</title>
+<desc id="d">Plan and side section of a conference room: the screen on the end wall, windows along one long wall and one large work on the opposite long wall, seen by the people seated facing it; in the section, the standing line at 57 to 60 inches and a seated viewer's sightline passing just over the heads of the near row</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.5 px for the plan and the section; plan room 192 by 132 in at (120, 180); section floor at y=780, ceiling 108 in, art wall at x=1440 -->
+<!-- plan: walls, door in the south wall x 150 to 186 swinging out, windows on the north wall, screen on the east wall -->
+<line class="ink" x1="120" y1="180" x2="792" y2="180"/>
+<line class="ink" x1="120" y1="180" x2="120" y2="642"/>
+<line class="ink" x1="792" y1="180" x2="792" y2="642"/>
+<line class="ink" x1="120" y1="642" x2="645" y2="642"/>
+<line class="ink" x1="771" y1="642" x2="792" y2="642"/>
+<line class="soft" x1="771" y1="642" x2="771" y2="768"/>
+<path class="soft" d="M771 768 A126 126 0 0 1 645 642"/>
+<rect class="soft" x="162" y="174" width="588" height="12"/>
+<rect class="soft" x="784" y="285" width="6" height="252"/>
+<!-- table 120 by 48, two rows of four chairs -->
+<rect class="soft" x="246" y="327" width="420" height="168" rx="16"/>
+<rect class="soft" x="260" y="236" width="77" height="77" rx="6"/>
+<rect class="soft" x="260" y="509" width="77" height="77" rx="6"/>
+<rect class="soft" x="365" y="236" width="77" height="77" rx="6"/>
+<rect class="soft" x="365" y="509" width="77" height="77" rx="6"/>
+<rect class="soft" x="470" y="236" width="77" height="77" rx="6"/>
+<rect class="soft" x="470" y="509" width="77" height="77" rx="6"/>
+<rect class="soft" x="575" y="236" width="77" height="77" rx="6"/>
+<rect class="soft" x="575" y="509" width="77" height="77" rx="6"/>
+<!-- one work 84 in on the south wall, the long wall opposite the windows; sightlines from two north row seats -->
+<rect class="tp" x="309" y="633" width="294" height="8"/>
+<line class="eye" x1="298.5" y1="274.5" x2="456" y2="642"/>
+<circle class="tp" cx="298.5" cy="274.5" r="6"/>
+<line class="eye" x1="613.5" y1="274.5" x2="456" y2="642"/>
+<circle class="tp" cx="613.5" cy="274.5" r="6"/>
+<text class="l1" x="603" y="700" text-anchor="end">art on a long wall</text>
+<text class="l2" x="603" y="730" text-anchor="end">anti-reflective glazing or unglazed</text>
+<text class="l2" x="806" y="419">screen</text>
+<text class="l2" x="456" y="160" text-anchor="middle">windows</text>
+<text class="l2" x="456" y="840" text-anchor="middle">plan</text>
+<!-- section through the table, the art wall at the right; d measured from the wall -->
+<line class="ink" x1="940" y1="780" x2="1440" y2="780"/>
+<line class="ink" x1="1440" y1="780" x2="1440" y2="402"/>
+<line class="ink" x1="940" y1="402" x2="1440" y2="402"/>
+<!-- table top 29 in from d 42 to 90 -->
+<rect class="soft" x="1125" y="678.5" width="168" height="7"/>
+<line class="soft" x1="1286" y1="685.5" x2="1286" y2="780"/>
+<line class="soft" x1="1132" y1="685.5" x2="1132" y2="780"/>
+<!-- near row at d 27 facing away from the wall; far row at d 103 facing the wall; head top about 52, eye about 47 -->
+<circle class="soft" cx="1345.5" cy="618" r="26"/>
+<line class="soft" x1="1345.5" y1="644" x2="1345.5" y2="717"/>
+<line class="soft" x1="1345.5" y1="717" x2="1282.5" y2="717"/>
+<line class="soft" x1="1282.5" y1="717" x2="1282.5" y2="780"/>
+<line class="soft" x1="1345.5" y1="633" x2="1303.5" y2="671.5"/>
+<line class="soft" x1="1373.5" y1="717" x2="1289.5" y2="717"/>
+<line class="soft" x1="1373.5" y1="717" x2="1373.5" y2="654"/>
+<line class="soft" x1="1373.5" y1="717" x2="1373.5" y2="780"/>
+<line class="soft" x1="1289.5" y1="717" x2="1289.5" y2="780"/>
+<circle class="soft" cx="1079.5" cy="618" r="26"/>
+<line class="soft" x1="1079.5" y1="644" x2="1079.5" y2="717"/>
+<line class="soft" x1="1079.5" y1="717" x2="1142.5" y2="717"/>
+<line class="soft" x1="1142.5" y1="717" x2="1142.5" y2="780"/>
+<line class="soft" x1="1079.5" y1="633" x2="1121.5" y2="671.5"/>
+<line class="soft" x1="1051.5" y1="717" x2="1135.5" y2="717"/>
+<line class="soft" x1="1051.5" y1="717" x2="1051.5" y2="654"/>
+<line class="soft" x1="1051.5" y1="717" x2="1051.5" y2="780"/>
+<line class="soft" x1="1135.5" y1="717" x2="1135.5" y2="780"/>
+<circle class="tp" cx="1099.5" cy="615.5" r="6"/>
+<!-- the work in profile, 2 in deep, bottom 30.5, top 86.5, center 58.5 -->
+<rect class="frame" x="1433" y="477.2" width="7" height="196"/>
+<rect class="art" x="1435" y="483.2" width="3" height="184"/>
+<line class="dim" x1="1414.5" y1="575.2" x2="1458.5" y2="575.2" stroke-width="2"/>
+<line class="dim" x1="1436.5" y1="553.2" x2="1436.5" y2="597.2" stroke-width="2"/>
+<line class="eye" x1="1099.5" y1="615.5" x2="1436.5" y2="575.2"/>
+<!-- a lead from the far eye toward the work's bottom edge, stopped at the near head -->
+<line class="lead" x1="1099.5" y1="615.5" x2="1345.5" y2="657.7"/>
+<!-- eye band from d 0 to d 60, clear of both heads -->
+<line class="eye" x1="1230" y1="580.5" x2="1440" y2="580.5"/>
+<line class="eye" x1="1230" y1="570" x2="1440" y2="570"/>
+<text class="l1" x="1218" y="556" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm · standing</tspan></text>
+<text class="l1" x="1079.5" y="840" text-anchor="middle">check from a seat</text>
+<text class="l2" x="1079.5" y="872" text-anchor="middle">the near row sits in the view</text>
+<text class="l2" x="1440" y="840" text-anchor="end">section</text>
+</svg>

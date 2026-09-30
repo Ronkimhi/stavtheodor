@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of a corridor wall: a series of five works framed alike, their centers on one line within 57 to 60 inches, with equal gaps; and, to avoid, three unrelated frames at different heights</title>
+<desc id="d">Two elevations of a corridor wall: a series of five works framed alike, their centers on one line within 57 to 60 inches, with equal gaps; and, to avoid, three unrelated frames at different heights</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.4 px; two elevations on one floor line at y=580; panels 186 in wide at x 124 and x 852, a door opening 36 by 84 in at the left end of each -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="80" y1="386.2" x2="1520" y2="386.2"/>
+<line class="eye" x1="80" y1="376" x2="1520" y2="376"/>
+<path class="ink" d="M124 580 L124 294.4 L246.4 294.4 L246.4 580"/>
+<path class="ink" d="M852 580 L852 294.4 L974.4 294.4 L974.4 580"/>
+<!-- (a) five works 18 by 24, gaps 6 in, bottoms 46.5, tops 70.5, centers 58.5 -->
+<rect class="frame" x="307.6" y="340.3" width="61.2" height="81.6"/>
+<rect class="art" x="315.6" y="348.3" width="45.2" height="65.6"/>
+<line class="dim" x1="316.2" y1="381.1" x2="360.2" y2="381.1" stroke-width="2"/>
+<line class="dim" x1="338.2" y1="359.1" x2="338.2" y2="403.1" stroke-width="2"/>
+<rect class="frame" x="389.2" y="340.3" width="61.2" height="81.6"/>
+<rect class="art" x="397.2" y="348.3" width="45.2" height="65.6"/>
+<line class="dim" x1="397.8" y1="381.1" x2="441.8" y2="381.1" stroke-width="2"/>
+<line class="dim" x1="419.8" y1="359.1" x2="419.8" y2="403.1" stroke-width="2"/>
+<rect class="frame" x="470.8" y="340.3" width="61.2" height="81.6"/>
+<rect class="art" x="478.8" y="348.3" width="45.2" height="65.6"/>
+<line class="dim" x1="479.4" y1="381.1" x2="523.4" y2="381.1" stroke-width="2"/>
+<line class="dim" x1="501.4" y1="359.1" x2="501.4" y2="403.1" stroke-width="2"/>
+<rect class="frame" x="552.4" y="340.3" width="61.2" height="81.6"/>
+<rect class="art" x="560.4" y="348.3" width="45.2" height="65.6"/>
+<line class="dim" x1="561" y1="381.1" x2="605" y2="381.1" stroke-width="2"/>
+<line class="dim" x1="583" y1="359.1" x2="583" y2="403.1" stroke-width="2"/>
+<rect class="frame" x="634" y="340.3" width="61.2" height="81.6"/>
+<rect class="art" x="642" y="348.3" width="45.2" height="65.6"/>
+<line class="dim" x1="642.6" y1="381.1" x2="686.6" y2="381.1" stroke-width="2"/>
+<line class="dim" x1="664.6" y1="359.1" x2="664.6" y2="403.1" stroke-width="2"/>
+<line class="dim" x1="368.8" y1="437.2" x2="389.2" y2="437.2"/>
+<line class="dim" x1="368.8" y1="429.2" x2="368.8" y2="445.2"/>
+<line class="dim" x1="389.2" y1="429.2" x2="389.2" y2="445.2"/>
+<line class="dim" x1="613.6" y1="437.2" x2="634" y2="437.2"/>
+<line class="dim" x1="613.6" y1="429.2" x2="613.6" y2="445.2"/>
+<line class="dim" x1="634" y1="429.2" x2="634" y2="445.2"/>
+<text class="l1" x="501.4" y="512" text-anchor="middle">equal gaps</text>
+<text class="l1" x="749.6" y="322" text-anchor="end">one centerline</text>
+<line class="lead" x1="749.6" y1="332" x2="749.6" y2="381.1"/>
+<!-- (b) three unrelated frames as .dim outlines, no wash, no cross -->
+<rect class="dim" x="1069.6" y="328.4" width="40.8" height="54.4"/>
+<rect class="dim" x="1181.8" y="376" width="102" height="68"/>
+<rect class="dim" x="1368.8" y="338.6" width="54.4" height="54.4"/>
+<text class="l1" x="1520" y="322" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
+<line class="lead" x1="1500" y1="332" x2="1500" y2="376"/>
+<text class="l1" x="440.2" y="628" text-anchor="middle">A series</text>
+<text class="l2" x="440.2" y="660" text-anchor="middle">framed alike</text>
+<text class="l1" x="1168.2" y="628" text-anchor="middle">Avoid</text>
+<text class="l2" x="1168.2" y="660" text-anchor="middle">unrelated frames, no shared line</text>
+<text class="l2" x="185.2" y="450.8" text-anchor="middle">door</text>
+</svg>

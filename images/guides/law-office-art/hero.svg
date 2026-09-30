@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Plan of a law office floor showing where the art goes: one anchor work on the reception wall facing the entry, a large work on a long wall of the conference room, one personal work in each partner office, a small work in each associate office, and a series along the corridor</title>
+<desc id="d">Plan of a law office floor showing where the art goes: one anchor work on the reception wall facing the entry, a large work on a long wall of the conference room, one personal work in each partner office, a small work in each associate office, and a series along the corridor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.5 px; plan, north at the top; floor 480 by 312 in, northwest corner at (200, 110) -->
+<!-- outer walls, entry gap in the south wall x 72 to 108 -->
+<line class="ink" x1="200" y1="110" x2="1400" y2="110"/>
+<line class="ink" x1="200" y1="890" x2="380" y2="890"/>
+<line class="ink" x1="470" y1="890" x2="1400" y2="890"/>
+<line class="ink" x1="200" y1="110" x2="200" y2="890"/>
+<line class="ink" x1="1400" y1="110" x2="1400" y2="890"/>
+<!-- north band y 0 to 132: partner A, partner B, conference; corridor y 132 to 192; south band y 192 to 312 -->
+<line class="ink" x1="200" y1="440" x2="220" y2="440"/>
+<line class="ink" x1="310" y1="440" x2="810" y2="440"/>
+<line class="ink" x1="900" y1="440" x2="1295" y2="440"/>
+<line class="ink" x1="1385" y1="440" x2="1400" y2="440"/>
+<line class="ink" x1="200" y1="590" x2="575" y2="590"/>
+<line class="ink" x1="680" y1="590" x2="820" y2="590"/>
+<line class="ink" x1="910" y1="590" x2="1060" y2="590"/>
+<line class="ink" x1="1150" y1="590" x2="1190" y2="590"/>
+<line class="ink" x1="1310" y1="590" x2="1400" y2="590"/>
+<line class="ink" x1="560" y1="110" x2="560" y2="440"/>
+<line class="ink" x1="920" y1="110" x2="920" y2="440"/>
+<line class="ink" x1="680" y1="590" x2="680" y2="890"/>
+<line class="ink" x1="920" y1="590" x2="920" y2="890"/>
+<line class="ink" x1="1160" y1="590" x2="1160" y2="890"/>
+<!-- windows: north wall three runs, south wall three runs, none in the reception -->
+<rect class="soft" x="230" y="104" width="300" height="12"/>
+<rect class="soft" x="590" y="104" width="300" height="12"/>
+<rect class="soft" x="950" y="104" width="420" height="12"/>
+<rect class="soft" x="710" y="884" width="180" height="12"/>
+<rect class="soft" x="950" y="884" width="180" height="12"/>
+<rect class="soft" x="1190" y="884" width="180" height="12"/>
+<!-- doors: entry swings in (hinge 108); partner offices swing in; conference swings out; associates swing in -->
+<line class="soft" x1="470" y1="890" x2="470" y2="800"/>
+<path class="soft" d="M470 800 A90 90 0 0 0 380 890"/>
+<line class="soft" x1="220" y1="440" x2="220" y2="350"/>
+<path class="soft" d="M220 350 A90 90 0 0 1 310 440"/>
+<line class="soft" x1="900" y1="440" x2="900" y2="350"/>
+<path class="soft" d="M900 350 A90 90 0 0 0 810 440"/>
+<line class="soft" x1="1385" y1="440" x2="1385" y2="530"/>
+<path class="soft" d="M1385 530 A90 90 0 0 1 1295 440"/>
+<line class="soft" x1="820" y1="590" x2="820" y2="680"/>
+<path class="soft" d="M820 680 A90 90 0 0 0 910 590"/>
+<line class="soft" x1="1060" y1="590" x2="1060" y2="680"/>
+<path class="soft" d="M1060 680 A90 90 0 0 0 1150 590"/>
+<!-- reception: desk against the west wall, two chairs against the east wall, the anchor work facing the entry -->
+<rect class="soft" x="230" y="650" width="75" height="180"/>
+<rect class="soft" x="615" y="650" width="65" height="65" rx="6"/>
+<rect class="soft" x="615" y="725" width="65" height="65" rx="6"/>
+<rect class="tp" x="335" y="591" width="180" height="8"/>
+<line class="eye" x1="425" y1="890" x2="425" y2="590"/>
+<circle class="tp" cx="425" cy="890" r="6"/>
+<!-- conference: table 120 by 48, eight chairs, screen 72 in on the east wall, one large work on the south long wall -->
+<rect class="soft" x="1010" y="215" width="300" height="120" rx="16"/>
+<rect class="soft" x="1020" y="150" width="55" height="55" rx="6"/>
+<rect class="soft" x="1020" y="345" width="55" height="55" rx="6"/>
+<rect class="soft" x="1095" y="150" width="55" height="55" rx="6"/>
+<rect class="soft" x="1095" y="345" width="55" height="55" rx="6"/>
+<rect class="soft" x="1170" y="150" width="55" height="55" rx="6"/>
+<rect class="soft" x="1170" y="345" width="55" height="55" rx="6"/>
+<rect class="soft" x="1245" y="150" width="55" height="55" rx="6"/>
+<rect class="soft" x="1245" y="345" width="55" height="55" rx="6"/>
+<rect class="soft" x="1392" y="185" width="6" height="180"/>
+<rect class="tp" x="1055" y="431" width="210" height="8"/>
+<!-- partner A: desk, chair west of it, work on the west wall behind the desk -->
+<rect class="soft" x="320" y="215" width="75" height="165"/>
+<rect class="soft" x="250" y="270" width="55" height="55" rx="6"/>
+<rect class="tp" x="201" y="222.5" width="8" height="150"/>
+<!-- partner B: desk, chair east of it, work on B's west wall facing the desk -->
+<rect class="soft" x="725" y="215" width="75" height="165"/>
+<rect class="soft" x="815" y="270" width="55" height="55" rx="6"/>
+<rect class="tp" x="561" y="222.5" width="8" height="150"/>
+<!-- associate offices: one small work 24 in on the east wall of each -->
+<rect class="tp" x="911" y="680" width="8" height="60"/>
+<rect class="tp" x="1151" y="680" width="8" height="60"/>
+<!-- corridor: a series of five works 24 in, 12 in apart, on the corridor's north wall -->
+<rect class="tp" x="350" y="441" width="60" height="8"/>
+<rect class="tp" x="440" y="441" width="60" height="8"/>
+<rect class="tp" x="530" y="441" width="60" height="8"/>
+<rect class="tp" x="620" y="441" width="60" height="8"/>
+<rect class="tp" x="710" y="441" width="60" height="8"/>
+<!-- library: shelves 12 in deep along the east wall; no work drawn -->
+<rect class="soft" x="1370" y="620" width="30" height="240"/>
+<!-- labels -->
+<text class="l1" x="440" y="950" text-anchor="middle">Reception</text>
+<text class="l1" x="920" y="950" text-anchor="middle">Associate offices</text>
+<text class="l1" x="560" y="66" text-anchor="middle">Partner offices</text>
+<text class="l1" x="1160" y="66" text-anchor="middle">Conference</text>
+<text class="l1" x="1050" y="515" text-anchor="middle">Corridor</text>
+<text class="l2" x="485" y="855">entry</text>
+<text class="l2" x="440" y="634">one anchor work</text>
+<text class="l2" x="560" y="482.5" text-anchor="middle">a series</text>
+<text class="l2" x="1420" y="283">screen</text>
+<text class="l2" x="1300" y="90" text-anchor="middle">windows</text>
+<text class="l2" x="1280" y="950" text-anchor="middle">library</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side section of an office with a window: high sun lands on the floor near the window, while low sun reaches across the space onto the facing wall, over most of a framed work hung at eye level</title>
+<desc id="d">Side section of an office with a window: high sun lands on the floor near the window, while low sun reaches across the space onto the facing wall, over most of a framed work hung at eye level</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; side section, floor at y=780, ceiling 108 in; window wall at x=368, facing wall at x=1232, 144 in apart; sill 30 in, head 90 in -->
+<!-- floor, ceiling, the window wall with its opening, the facing wall -->
+<line class="ink" x1="368" y1="780" x2="1232" y2="780"/>
+<line class="ink" x1="368" y1="132" x2="1232" y2="132"/>
+<line class="ink" x1="368" y1="780" x2="368" y2="600"/>
+<line class="ink" x1="368" y1="240" x2="368" y2="132"/>
+<line class="ink" x1="1232" y1="780" x2="1232" y2="132"/>
+<line class="soft" x1="368" y1="600" x2="368" y2="240"/>
+<!-- low sun at 10 degrees: through the head to the facing wall at 64.6 in, through the sill to 4.6 in -->
+<line class="dim" x1="128" y1="197.4" x2="1232" y2="392.4"/>
+<line class="dim" x1="128" y1="557.4" x2="1232" y2="752.4"/>
+<rect class="tp" x="1234" y="392.4" width="6" height="360"/>
+<!-- high sun at 60 degrees: through the head to the floor at d 52, through the sill to d 17.3 -->
+<line class="dim" x1="316" y1="150" x2="680" y2="780"/>
+<line class="dim" x1="316" y1="510" x2="471.8" y2="780"/>
+<rect class="tp" x="471.8" y="782" width="208.2" height="6"/>
+<!-- the work in profile on the facing wall, 1.5 in deep, bottom 43.5, top 73.5, center 58.5 -->
+<rect class="frame" x="1223" y="339" width="9" height="180"/>
+<rect class="art" x="1226" y="345" width="3" height="168"/>
+<line class="dim" x1="1205.5" y1="429" x2="1249.5" y2="429" stroke-width="2"/>
+<line class="dim" x1="1227.5" y1="407" x2="1227.5" y2="451" stroke-width="2"/>
+<text class="l1" x="1000" y="338">low sun</text>
+<text class="l1" x="584" y="556">high sun</text>
+<text class="l1" x="1188" y="438" text-anchor="end">direct sun reaches the art</text>
+<text class="l2" x="1188" y="468" text-anchor="end">works on paper: out of direct sun, UV filtering glazing</text>
+<text class="l2" x="352" y="420" text-anchor="end">window</text>
+<text class="l2" x="575.9" y="822" text-anchor="middle">stays near the window</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two elevations of a reception wall: on a bare wall facing the door, one work centered 57 to 60 inches from the floor with at least 12 inches of clear wall on each side; above a row of chairs, a work about two thirds of the row's width, its bottom edge 8 to 10 inches above the chair backs</title>
+<desc id="d">Two elevations of a reception wall: on a bare wall facing the door, one work centered 57 to 60 inches from the floor with at least 12 inches of clear wall on each side; above a row of chairs, a work about two thirds of the row's width, its bottom edge 8 to 10 inches above the chair backs</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; two elevations on one floor line at y=680; walls 120 in wide at x 120 and x 880 -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<line class="ink" x1="120" y1="680" x2="120" y2="200"/>
+<line class="ink" x1="720" y1="680" x2="720" y2="200"/>
+<line class="ink" x1="880" y1="680" x2="880" y2="200"/>
+<line class="ink" x1="1480" y1="680" x2="1480" y2="200"/>
+<!-- eye band across both panels -->
+<line class="eye" x1="80" y1="395" x2="1520" y2="395"/>
+<line class="eye" x1="80" y1="380" x2="1520" y2="380"/>
+<!-- (a) bare wall: limit lines 12 in from each end; work 72 by 48, bottom 34.5, top 82.5, center 58.5 -->
+<line class="lead" x1="180" y1="680" x2="180" y2="200"/>
+<line class="lead" x1="660" y1="680" x2="660" y2="200"/>
+<rect class="frame" x="240" y="267.5" width="360" height="240"/>
+<rect class="art" x="256" y="283.5" width="328" height="208"/>
+<line class="dim" x1="398" y1="387.5" x2="442" y2="387.5" stroke-width="2"/>
+<line class="dim" x1="420" y1="365.5" x2="420" y2="409.5" stroke-width="2"/>
+<line class="dim" x1="120" y1="230" x2="180" y2="230"/>
+<line class="dim" x1="120" y1="222" x2="120" y2="238"/>
+<line class="dim" x1="180" y1="222" x2="180" y2="238"/>
+<text class="l1" x="124" y="186">12 in<tspan class="l2"> · 30 cm · at least, each side</tspan></text>
+<line class="lead" x1="150" y1="196" x2="150" y2="230"/>
+<!-- (b) three chairs 26 in wide, 3 in apart, seat 18, back 32; work 56 by 36, bottom 41, top 77, center 59 -->
+<rect class="soft" x="970" y="520" width="130" height="70"/>
+<rect class="soft" x="970" y="590" width="130" height="15"/>
+<line class="soft" x1="980" y1="605" x2="980" y2="680"/>
+<line class="soft" x1="1090" y1="605" x2="1090" y2="680"/>
+<rect class="soft" x="1115" y="520" width="130" height="70"/>
+<rect class="soft" x="1115" y="590" width="130" height="15"/>
+<line class="soft" x1="1125" y1="605" x2="1125" y2="680"/>
+<line class="soft" x1="1235" y1="605" x2="1235" y2="680"/>
+<rect class="soft" x="1260" y="520" width="130" height="70"/>
+<rect class="soft" x="1260" y="590" width="130" height="15"/>
+<line class="soft" x1="1270" y1="605" x2="1270" y2="680"/>
+<line class="soft" x1="1380" y1="605" x2="1380" y2="680"/>
+<rect class="frame" x="1040" y="295" width="280" height="180"/>
+<rect class="art" x="1056" y="311" width="248" height="148"/>
+<line class="dim" x1="1158" y1="385" x2="1202" y2="385" stroke-width="2"/>
+<line class="dim" x1="1180" y1="363" x2="1180" y2="407" stroke-width="2"/>
+<line class="dim" x1="1332" y1="475" x2="1332" y2="520"/>
+<line class="dim" x1="1324" y1="475" x2="1340" y2="475"/>
+<line class="dim" x1="1324" y1="520" x2="1340" y2="520"/>
+<text class="l1" x="1468" y="200" text-anchor="end">8 to 10 in<tspan class="l2"> · 20 to 25 cm</tspan></text>
+<line class="lead" x1="1332" y1="210" x2="1332" y2="475"/>
+<line class="dim" x1="1040" y1="281" x2="1320" y2="281"/>
+<line class="dim" x1="1040" y1="273" x2="1040" y2="289"/>
+<line class="dim" x1="1320" y1="273" x2="1320" y2="289"/>
+<text class="l2" x="1180" y="261" text-anchor="middle">two thirds of the row</text>
+<text class="l2" x="1180" y="760" text-anchor="middle">acrylic or unglazed: heads lean back</text>
+<text class="l1" x="1520" y="130" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm · standing</tspan></text>
+<line class="lead" x1="1500" y1="140" x2="1500" y2="380"/>
+<text class="l1" x="420" y="728" text-anchor="middle">Bare wall facing the door</text>
+<text class="l1" x="1180" y="728" text-anchor="middle">Above a row of chairs</text>
+</svg>

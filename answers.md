@@ -178,3 +178,11 @@ One strong work or a matched pair, sized to the wall and placed facing or beside
 ## How do I choose art for my living room?
 
 Start with the wall the space already turns toward and give it the strongest work you can find, about two thirds the width of the furniture below and centered 57 to 60 inches from the floor; let the other walls support it. Full guide: https://stavtheodor.com/guide/living-room-art/
+
+---
+
+## Guides: offices, practices and hospitality
+
+## What is the best decor for a law office?
+
+Law office decor is the art and finish that tell a client, within the first minute, that a firm is established, calm and discreet. The art carries most of that message: one anchor work at reception, works that reward a long look where meetings run long, the most personal pieces in partners' offices, and no gavels or stock prints anywhere. Full guide: https://stavtheodor.com/guide/law-office-art/

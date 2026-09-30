@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan of a partner's office: a work on the wall behind the desk, seen by the client across the desk, and a work on the wall facing the desk, seen by the partner from the desk chair</title>
+<desc id="d">Plan of a partner's office: a work on the wall behind the desk, seen by the client across the desk, and a work on the wall facing the desk, seen by the partner from the desk chair</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; plan, north at the top; office 168 by 144 in, northwest corner at (422, 126) -->
+<!-- walls, window in the north wall, door in the south wall swinging in, hinge at x 156 -->
+<line class="ink" x1="422" y1="126" x2="1178" y2="126"/>
+<line class="ink" x1="422" y1="126" x2="422" y2="774"/>
+<line class="ink" x1="1178" y1="126" x2="1178" y2="774"/>
+<line class="ink" x1="422" y1="774" x2="962" y2="774"/>
+<line class="ink" x1="1124" y1="774" x2="1178" y2="774"/>
+<rect class="soft" x="530" y="120" width="540" height="12"/>
+<line class="soft" x1="1124" y1="774" x2="1124" y2="612"/>
+<path class="soft" d="M1124 612 A162 162 0 0 0 962 774"/>
+<!-- desk 30 by 66; partner chair west of it facing east; two client chairs east of it facing west -->
+<rect class="soft" x="638" y="315" width="135" height="297"/>
+<rect class="soft" x="512" y="414" width="99" height="99" rx="6"/>
+<rect class="soft" x="836" y="333" width="108" height="108" rx="6"/>
+<rect class="soft" x="836" y="486" width="108" height="108" rx="6"/>
+<!-- work A on the west wall behind the desk; work B on the east wall facing the desk; both y 45 to 105 -->
+<rect class="tp" x="423" y="328.5" width="8" height="270"/>
+<rect class="tp" x="1169" y="328.5" width="8" height="270"/>
+<!-- sightlines: client chair to A, partner chair to B between the client chairs -->
+<line class="eye" x1="890" y1="387" x2="422" y2="463.5"/>
+<line class="eye" x1="561.5" y1="463.5" x2="1178" y2="463.5"/>
+<circle class="tp" cx="890" cy="387" r="6"/>
+<circle class="tp" cx="561.5" cy="463.5" r="6"/>
+<text class="l1" x="410" y="472.5" text-anchor="end">for the client<tspan class="l2"> · behind the desk</tspan></text>
+<text class="l1" x="1190" y="472.5">for the partner<tspan class="l2"> · facing the desk</tspan></text>
+<text class="l2" x="800" y="106" text-anchor="middle">window</text>
+<text class="l2" x="1043" y="814" text-anchor="middle">door</text>
+<text class="l2" x="705.5" y="558" text-anchor="middle">desk</text>
+</svg>
