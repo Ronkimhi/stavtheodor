@@ -568,6 +568,24 @@
 </script>
 <script>
 (function () {
+  /* The frosted header (css/theme.css .nav.is-scrolled, Ron 2026-09-30): transparent at the top of the page,
+     the bar fades in once the page has scrolled past 24px. Checked at once, on load and on pageshow too, so a
+     reload mid-page, a restored scroll position or an anchor link gets the bar without waiting for a scroll. */
+  var nav = document.querySelector('.nav');
+  if (nav) {
+    var navQueued = false;
+    var navUpdate = function () {
+      navQueued = false;
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      nav.classList.toggle('is-scrolled', y > 24);
+    };
+    var navQueue = function () { if (!navQueued) { navQueued = true; requestAnimationFrame(navUpdate); } };
+    navUpdate();
+    window.addEventListener('scroll', navQueue, { passive: true });
+    window.addEventListener('load', navUpdate);
+    window.addEventListener('pageshow', navUpdate);
+    window.addEventListener('hashchange', navQueue);
+  }
   var btn = document.getElementById('menu-btn');
   if (btn) {
     btn.addEventListener('click', function () {

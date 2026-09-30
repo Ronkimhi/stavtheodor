@@ -73,11 +73,15 @@
   @media (prefers-reduced-motion: reduce) { html.js .reveal { opacity: 1; transform: none; transition: none; } }
 
   /* Fixed top bar, readable over any photo */
-  .nav { position: fixed; left: 0; right: 0; top: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: calc(26px + env(safe-area-inset-top, 0px)) clamp(20px, 3.4vw, 48px) 26px; pointer-events: none; text-shadow: 0 1px 2px rgba(0,0,0,0.45), 0 2px 12px rgba(0,0,0,0.28); }
-  /* Frosted header (Ron, 2026-09-30): a half transparent dark bar with a blur, always on, so text scrolling
-     under the nav no longer shows through it. The blur sits on ::before, never on .nav itself, because a
-     backdrop-filter on .nav would trap the fixed mobile menu (.links) inside the bar. */
-  .nav::before { content: ""; position: absolute; inset: 0; background: rgba(15,15,20,0.72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); pointer-events: none; z-index: -1; }
+  .nav { position: fixed; left: 0; right: 0; top: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: calc(21px + env(safe-area-inset-top, 0px)) clamp(20px, 3.4vw, 48px) 21px; pointer-events: none; text-shadow: 0 1px 2px rgba(0,0,0,0.45), 0 2px 12px rgba(0,0,0,0.28); }
+  /* Frosted header (Ron, 2026-09-30): a half transparent dark bar with a blur, shown only once the page has
+     scrolled (PAGE_JS adds .nav.is-scrolled past 24px), so at the very top the nav is fully transparent and never
+     smears the hero headline. It fades in over 200ms. The blur sits on ::before, never on .nav itself, because a
+     backdrop-filter on .nav would trap the fixed mobile menu (.links) inside the bar. The bar is 21px top and
+     bottom padding since 2026-09-30 (was 26px). */
+  .nav::before { content: ""; position: absolute; inset: 0; background: rgba(15,15,20,0.72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); pointer-events: none; z-index: -1; opacity: 0; transition: opacity .2s ease; }
+  .nav.is-scrolled::before { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .nav::before { transition: none; } }
   .nav .wordmark, .nav .links a, .nav .lang-switch, .nav .menu-btn { pointer-events: auto; }
   .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.22em; color: var(--ink); }
   /* A buyer page's line under the wordmark ("for hotels", Ron 2026-09-29): shown by WM_SUB_JS (class on) from the
