@@ -484,6 +484,13 @@ ABOUT = {
     "photos": [("projects/creating-hope-exhibition-un-geneva", "/images/projects/stav-gallery.jpg", 1600, 1153, "hero"),
                ("projects/caesarea-sea-view-villa-triptych", "/images/projects/storks-wall.jpg", 1600, 1200, "body")],
 }
+# The disambiguation line (Ron, 2026-09-29): AI engines mixed THEODORA up with two unrelated advisories with similar
+# names. The same sentence closes the /about/ opening paragraph, sits in content/entity.json (disambiguatingDescription),
+# llms.txt, answers.md and agent.txt.
+DISAMBIG = ("THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with "
+            "Theadora Art Advisory (Los Angeles) or TSG Art Advisory.",
+            "THEODORA Art Advisory by Stav Theodor פועלת מטנפליי, ניו ג'רזי, ואינה קשורה ל-Theadora Art Advisory "
+            "(לוס אנג'לס) או ל-TSG Art Advisory.")
 # The places, in the footer's words and order (site_chrome.footer)
 ABOUT_PLACES = [
     ("/art-consultant-tenafly-nj/", "Art consultant in Tenafly", "יועצת אמנות בטנפליי"),
@@ -619,14 +626,16 @@ def render_about(pages):
     line = home_twins("about_line")
     tel = f'<a href="{sc.PHONE_TEL}" data-loc="about" dir="ltr">{sc.PHONE}</a>'
     mail = f'<a href="{MAIL}" data-loc="about" dir="ltr">{sc.EMAIL}</a>'
-    lead_en = ("THEODORA is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
+    lead_en = ("THEODORA Art Advisory by Stav Theodor is an art curation and advisory practice, founded and run by Stav Theodor, an art curator and advisor. "
                "THEODORA is based in Tenafly, New Jersey, and serves Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv. "
                "It works with private homes, interior designers and architects, private collectors, law firms, investment firms, "
-               f"wealth managers, medical practices, restaurants and boutique hotels. To reach Stav, call {tel} or email {mail}.")
-    lead_he = ("THEODORA היא פרקטיקה של אוצרות וייעוץ אמנות, שייסדה ומנהלת סתיו תאודור, אוצרת ויועצת אמנות. "
+               f"wealth managers, medical practices, restaurants and boutique hotels. To reach Stav, call {tel} or email {mail}. "
+               + DISAMBIG[0])
+    lead_he = ("THEODORA Art Advisory by Stav Theodor היא פרקטיקה של אוצרות וייעוץ אמנות, שייסדה ומנהלת סתיו תאודור, אוצרת ויועצת אמנות. "
                "THEODORA מבוססת בטנפליי, ניו ג'רזי, ומשרתת את טנפליי, מחוז ברגן, ניו ג'רזי וניו יורק, עם פרויקטים בתל אביב. "
                "היא עובדת עם בתים פרטיים, מעצבי פנים ואדריכלים, אספנים פרטיים, משרדי עורכי דין, חברות השקעה, "
-               f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}.")
+               f"מנהלי הון, מרפאות, מסעדות ומלונות בוטיק. ליצירת קשר עם סתיו: התקשרו ל-{tel} או כתבו ל-{mail}. "
+               + DISAMBIG[1])
     who = [sc.WHO_I_WORK_WITH[0]] + ABOUT_WHO_EXTRA + sc.WHO_I_WORK_WITH[1:]
     who_html = "".join(
         (f'<a class="who-item" href="{u}"><span class="nm">{T(en, he)}</span><span class="ln"></span></a>' if u
