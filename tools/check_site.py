@@ -78,7 +78,12 @@ SITE = 'https://stavtheodor.com'
 GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'about',
                   'art-consultant-tenafly-nj', 'art-advisor-bergen-county')  # the town and county pages (Batch 3, 2026-09-29)
 MERGED_DIRS = ('designers', 'our-team', 'our-team-1')  # forwarded to a real page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
-STUB_DIRS = ('2', 'questions') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
+STUB_DIRS = ('2', 'questions', 'services', 'portfolio', 'blog') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
+STUB_FILES = (os.path.join('radar', 'what-to-see-july-2026', 'index.html'),)  # nested redirect stubs (build-home.py OLD_PATHS, 2026-09-30)
+
+
+def stub_path(path):
+    return path.split(os.sep)[0] in STUB_DIRS or path in STUB_FILES
 HOME_ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')
 MUSEUM_LINK = re.compile(r'href="(?:https://stavtheodor\.com)?/museum/|href="#museum"')  # never from a main page (P1.6, 2026-09-29)
 REMOVED = ('images/portfolio/', 'theodora-film-2026-09.mp4')
@@ -332,7 +337,7 @@ home = read('index.html')
 
 for path in pages:
     s = read(path)
-    is_stub = path.split(os.sep)[0] in STUB_DIRS or path in ('404.html',)
+    is_stub = stub_path(path) or path in ('404.html',)
     must_noindex = is_stub and path.split(os.sep)[0] not in MERGED_DIRS  # the buyer variants are indexable since 2026-09-28
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
@@ -475,7 +480,7 @@ for loc, where in listed.items():
     elif 'name="robots" content="noindex"' in read(rel):
         fail('sitemap', f'{loc} is noindex and must not be listed')
 for path in walk(('.html',)):
-    if path == '404.html' or path.split(os.sep)[0] in STUB_DIRS:
+    if path == '404.html' or stub_path(path):
         continue
     s = read(path)
     if 'data-subject="' in s and path not in VARIANTS:
@@ -624,7 +629,7 @@ ALT_HE, ALT_MISSING = alt_sources()
 for where in ALT_MISSING:
     fail('hebrew', f'{where} has alt_en but no alt_he')
 for path in pages:
-    if path.split(os.sep)[0] in STUB_DIRS or (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')):
+    if stub_path(path) or (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')):
         continue
     p = HebrewText()
     p.feed(chrome_only(read(path), path))

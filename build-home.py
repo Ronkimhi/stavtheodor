@@ -439,6 +439,12 @@ def page_problems(out, name, home=None):
 
 OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: one consistent stub each
     'questions': (SITE + '/#faq', 'Questions people ask before they write | THEODORA'),
+    # Dead addresses still requested (Ron, 2026-09-30): the old Squarespace /services, /portfolio and /blog, and a
+    # retired Art Radar slug. Each forwards to its nearest live page, noindex, in no sitemap.
+    'services': (SITE + '/advisory/', 'Art advisory, answered plainly · THEODORA'),
+    'portfolio': (SITE + '/projects/', 'Projects · THEODORA'),
+    'blog': (SITE + '/radar/', 'Art Radar, every post · THEODORA'),
+    'radar/what-to-see-july-2026': (SITE + '/radar/', 'Art Radar, every post · THEODORA'),
 }  # /contact/ left this list on 2026-09-29, and /about/ the same day: both are real pages now (build-site-pages.py)
 # Pages merged into another (Ron's SEO brief, 2026-09-29, P1.5): the same stub without noindex, so the instant refresh
 # reads as a permanent redirect. GitHub Pages sends no server 301; move this to a real 301 if the hosting ever allows one.
