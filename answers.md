@@ -183,6 +183,22 @@ Choose for the house's own architecture: one strong work or a pair for the long 
 
 Go bigger than feels comfortable, choose work that can hold long walls, high ceilings, brick and hard light, and plan the logistics of a very large piece before you buy it. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor I source and commission large scale work for homes in downtown Manhattan, including Tribeca, SoHo and the West Village, and manage the whole installation with my own insured team. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-tribeca-or-soho-loft/
 
+## Art for a new condo in Manhattan or Brooklyn: bare walls, glass and light
+
+In a new condo with floor to ceiling glass, you have fewer walls, so each one matters more: decide which few walls carry the art, choose work and glazing that can live with strong light, and consider sculpture where walls run out. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor I help clients in new development apartments across New York City, from Manhattan to Brooklyn and Queens, choose, source and install art, in step with the designer's furniture schedule. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-new-condo-nyc/
+
+## Where to buy original art in New York (and how to avoid buying the wrong thing)
+
+Original art in New York is bought in four places: galleries in Chelsea, Tribeca and the Lower East Side, the spring and fall art fairs, auction houses, and directly from artists' studios. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor I source from all four for homes in New York City, check what matters before you pay, and negotiate on your side; I represent you, not a roster of artists. Full page, in English and Hebrew: https://stavtheodor.com/advisory/where-to-buy-original-art-nyc/
+
+## Choosing art for an Upper East Side or Upper West Side prewar apartment
+
+Choose work with enough presence for classic proportions, frame it to respect the architecture without copying it, and plan installation around plaster walls and co-op rules. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor I help clients in prewar apartments on the Upper East Side and the Upper West Side of New York City choose, buy and install art, including new works that sit well with the art they already own. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-prewar-apartment-upper-east-side/
+
+## How do I commission a painting in New York for my home?
+
+Define the wall, the size and the idea, choose an artist whose existing work already feels right, and agree the concept, stages and timeline in writing before work starts. As THEODORA Art Advisory by Stav Theodor, I manage commissions for homes in New York City end to end: the brief, the artist, sketches and approvals, framing, delivery and installation with my own insured team. Full page, in English and Hebrew: https://stavtheodor.com/advisory/commissioning-art-for-a-new-home/
+
 ---
 
 ## Guides: hanging and choosing art at home
