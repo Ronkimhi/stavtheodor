@@ -87,16 +87,16 @@
   "law-firms": {
    "w": 1800,
    "h": 1200,
-   "fx": 0.449,
-   "fy": 0.2994,
+   "fx": 0.4514,
+   "fy": 0.3038,
    "art_x": [
-    0.2979,
-    0.6
+    0.3194,
+    0.5833
    ],
-   "cap_en": "A reception high over Manhattan, a wide landscape in bright color above the leather chairs.",
-   "cap_he": "אזור קבלה גבוה מעל מנהטן, נוף רחב בצבעים עזים מעל כורסאות העור.",
-   "alt_en": "A reception over Manhattan: a wide, brightly painted landscape above two cognac leather chairs, books on shelves at right.",
-   "alt_he": "אזור קבלה מעל מנהטן: נוף רחב בצבעים עזים מעל שתי כורסאות עור בגוון קוניאק, ספרים על מדפים מימין."
+   "cap_en": "A reception high over Manhattan, a woven abstract in red, pink and blue above the leather chairs.",
+   "cap_he": "אזור קבלה גבוה מעל מנהטן, עבודה מופשטת ארוגה באדום, ורוד וכחול מעל כורסאות העור.",
+   "alt_en": "A reception over Manhattan: a large unframed woven abstract in red, pink and blue above two cognac leather chairs, books on shelves at right.",
+   "alt_he": "אזור קבלה מעל מנהטן: עבודה מופשטת ארוגה גדולה ללא מסגרת באדום, ורוד וכחול מעל שתי כורסאות עור בגוון קוניאק, ספרים על מדפים מימין."
   },
   "law-firms_s1": {
    "w": 1800,
