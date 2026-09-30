@@ -186,3 +186,7 @@ Start with the wall the space already turns toward and give it the strongest wor
 ## What is the best decor for a law office?
 
 Law office decor is the art and finish that tell a client, within the first minute, that a firm is established, calm and discreet. The art carries most of that message: one anchor work at reception, works that reward a long look where meetings run long, the most personal pieces in partners' offices, and no gavels or stock prints anywhere. Full guide: https://stavtheodor.com/guide/law-office-art/
+
+## What is the difference between an art advisor and an art consultant?
+
+An art advisor works for a buyer, usually a private collector, to find, assess and negotiate artworks for a collection. An art consultant works for a space, such as an office, a hotel, a clinic or a home, choosing and installing art that fits the design, the brand and the budget. I am Stav Theodor, and at THEODORA in Tenafly, New Jersey, I work as both. Full guide: https://stavtheodor.com/guide/art-advisor-vs-art-consultant/

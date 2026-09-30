@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two rows of three steps: an art advisor's job runs from the buyer to the work to a collection that grows, and an art consultant's job runs from the space to one plan for every wall to the art, sourced, framed and installed.</title>
+<desc id="d">Two rows of three steps: an art advisor's job runs from the buyer to the work to a collection that grows, and an art consultant's job runs from the space to one plan for every wall to the art, sourced, framed and installed.</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: none (schematic); two lanes of three stations 400 by 140 at x 100, 600 and 1100; lane 1 y 160 to 300, lane 2 y 400 to 540 -->
+<!-- lane one: art advisor -->
+<rect class="art" x="116" y="176" width="368" height="108"/>
+<rect class="ink" x="100" y="160" width="400" height="140"/>
+<text class="l1" x="300" y="222" text-anchor="middle">The buyer</text>
+<text class="l2" x="300" y="262" text-anchor="middle">art advisor</text>
+<rect class="ink" x="600" y="160" width="400" height="140"/>
+<text class="l1" x="800" y="222" text-anchor="middle">The work</text>
+<text class="l2" x="800" y="262" text-anchor="middle">found, assessed, negotiated</text>
+<rect class="ink" x="1100" y="160" width="400" height="140"/>
+<text class="l1" x="1300" y="222" text-anchor="middle">A collection</text>
+<text class="l2" x="1300" y="262" text-anchor="middle">that grows with its owner</text>
+<line class="ink" x1="500" y1="230" x2="600" y2="230"/>
+<line class="ink" x1="1000" y1="230" x2="1100" y2="230"/>
+<circle class="tp" cx="100" cy="230" r="3"/>
+<!-- lane two: art consultant -->
+<rect class="art" x="116" y="416" width="368" height="108"/>
+<rect class="ink" x="100" y="400" width="400" height="140"/>
+<text class="l1" x="300" y="462" text-anchor="middle">The space</text>
+<text class="l2" x="300" y="502" text-anchor="middle">art consultant</text>
+<rect class="ink" x="600" y="400" width="400" height="140"/>
+<text class="l1" x="800" y="462" text-anchor="middle">Every wall</text>
+<text class="l2" x="800" y="502" text-anchor="middle">one plan for every wall</text>
+<rect class="ink" x="1100" y="400" width="400" height="140"/>
+<text class="l1" x="1300" y="462" text-anchor="middle">The art</text>
+<text class="l2" x="1300" y="502" text-anchor="middle">sourced, framed, installed</text>
+<line class="ink" x1="500" y1="470" x2="600" y2="470"/>
+<line class="ink" x1="1000" y1="470" x2="1100" y2="470"/>
+<circle class="tp" cx="100" cy="470" r="3"/>
+</svg>
