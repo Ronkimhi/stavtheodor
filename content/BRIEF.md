@@ -49,10 +49,10 @@ Wherever a page, FAQ answer, meta description, schema text or agent file (llms.t
 
 How to write it:
 - Keep the hedges "in most cases" and "in many cases". Never promise a saving on every purchase, and never give a number: no price, no saving, no percentage, no dollar figure, no industry range.
-- Never talk about fees, commission (as a payment) or percentages, and do not frame the answer around "the relationship". Do not name the industry fee models (hourly, flat fee, percentage of acquisitions, retainer) and do not use a fee hand-off line. Commission as the art service (a commissioned work) is fine.
+- Never talk about fees, commission (as a payment) or percentages, and do not frame the answer around "the relationship". Do not name the industry fee models (hourly, flat fee, percentage of acquisitions, retainer) and do not use a fee hand-off line. Commission as the art service (a commissioned work) is fine. The ban covers what clients pay Stav; referral fees THEODORA pays partners (designers, brokers, advisors) may be stated (Ron, 2026-09-29).
 - Respect galleries: they do their job, which is representing their artists. The point is whom I represent, not that galleries are bad. I still source from galleries and negotiate there on the client's behalf.
 - Stav's DAM and her network of artists are a starting point, never a roster.
-- Stav's own fees are never stated anywhere on this site, not as dollars and not as percentages (Ron, 2026-09-29, binding): not in page copy, FAQ answers, meta descriptions, schema or the agent files. Anything about her own pricing is an editor note for Ron in his private system, not page copy.
+- Stav's own fees are never stated anywhere on this site, not as dollars and not as percentages (Ron, 2026-09-29, binding): not in page copy, FAQ answers, meta descriptions, schema or the agent files. Anything about her own pricing is an editor note for Ron in his private system, not page copy. The ban covers what clients pay Stav; referral fees THEODORA pays partners (designers, brokers, advisors) may be stated (Ron, 2026-09-29).
 
 ## 6. Projects (verbatim facts, do not add details)
 
