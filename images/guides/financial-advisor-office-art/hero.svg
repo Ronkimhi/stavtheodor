@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Floor plan of a small advisory office showing the path a client takes from the door to reception, along the corridor to the meeting space and the advisor's own office, with one marked wall in each space for a single work</title>
+<desc id="d">Floor plan of a small advisory office showing the path a client takes from the door to reception, along the corridor to the meeting space and the advisor's own office, with one marked wall in each space for a single work</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.25 px; plan, north wall at the top, suite 432 by 180 in, north west corner at (98, 100) -->
+<!-- walls: suite outline with the entry door gap x 96 to 132 in the south wall; partitions at x 156 and x 312 from y 0 to 132; corridor north wall y 132 from x 156 to 432 with door gaps 258 to 294 and 318 to 354 -->
+<path class="ink" d="M410 685 L98 685 L98 100 L1502 100 L1502 685 L527 685"/>
+<line class="ink" x1="605" y1="100" x2="605" y2="529"/>
+<line class="ink" x1="1112" y1="100" x2="1112" y2="529"/>
+<line class="ink" x1="605" y1="529" x2="936.5" y2="529"/>
+<line class="ink" x1="1053.5" y1="529" x2="1131.5" y2="529"/>
+<line class="ink" x1="1248.5" y1="529" x2="1502" y2="529"/>
+<!-- windows: meeting space x 198 to 270, advisor's office x 348 to 408, both on the north wall -->
+<rect class="soft" x="741.5" y="94" width="234" height="12"/>
+<rect class="soft" x="1229" y="94" width="195" height="12"/>
+<!-- doors: entry hinge x 132 swinging into reception; meeting hinge x 258 and office hinge x 318, leaves to y 96 -->
+<line class="soft" x1="527" y1="685" x2="527" y2="568"/>
+<path class="soft" d="M527 568 A117 117 0 0 0 410 685"/>
+<line class="soft" x1="936.5" y1="529" x2="936.5" y2="412"/>
+<path class="soft" d="M936.5 412 A117 117 0 0 1 1053.5 529"/>
+<line class="soft" x1="1131.5" y1="529" x2="1131.5" y2="412"/>
+<path class="soft" d="M1131.5 412 A117 117 0 0 1 1248.5 529"/>
+<!-- reception: desk 30 by 60 at x 12 to 42, y 96 to 156; two chairs 24 by 24 at x 126 to 150 facing west -->
+<rect class="soft" x="137" y="412" width="97.5" height="195"/>
+<rect class="soft" x="507.5" y="295" width="78" height="78" rx="6"/>
+<rect class="soft" x="575.8" y="295" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="507.5" y="392.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="575.8" y="392.5" width="9.8" height="78" rx="4"/>
+<!-- meeting space: table 36 by 60 at x 210 to 246, y 36 to 96; client chairs x 186 to 210 facing east; advisor's chair x 246 to 270, y 54 to 78 facing west; credenza 18 by 72 at x 294 to 312, y 30 to 102 -->
+<rect class="soft" x="780.5" y="217" width="117" height="195"/>
+<rect class="soft" x="702.5" y="236.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="702.5" y="236.5" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="702.5" y="314.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="702.5" y="314.5" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="897.5" y="275.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="965.8" y="275.5" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="1053.5" y="197.5" width="58.5" height="234"/>
+<!-- advisor's office: desk 30 by 60 at x 366 to 396, y 36 to 96; advisor's chair x 396 to 420, y 54 to 78 facing west; two visitor chairs x 336 to 360 facing east -->
+<rect class="soft" x="1287.5" y="217" width="97.5" height="195"/>
+<rect class="soft" x="1385" y="275.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="1453.2" y="275.5" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="1190" y="236.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="1190" y="236.5" width="9.8" height="78" rx="4"/>
+<rect class="soft" x="1190" y="314.5" width="78" height="78" rx="6"/>
+<rect class="soft" x="1190" y="314.5" width="9.8" height="78" rx="4"/>
+<!-- the client's path, dotted: door to the corridor, along it, into the office; a branch into the meeting space -->
+<path class="lead" d="M468.5 672 L468.5 607 L1190 607 L1190 490"/>
+<line class="lead" x1="995" y1="607" x2="995" y2="490"/>
+<!-- sightlines: from the door, from the client pair in the meeting space, from the visitor pair in the office -->
+<line class="eye" x1="468.5" y1="685" x2="468.5" y2="100"/>
+<circle class="tp" cx="468.5" cy="685" r="6"/>
+<line class="eye" x1="741.5" y1="314.5" x2="1112" y2="314.5"/>
+<circle class="tp" cx="741.5" cy="314.5" r="6"/>
+<line class="eye" x1="1229" y1="314.5" x2="1502" y2="314.5"/>
+<circle class="tp" cx="1229" cy="314.5" r="6"/>
+<!-- marked walls, drawn last: reception north wall x 78 to 150; meeting east wall y 42 to 90; office east wall y 42 to 90 -->
+<rect class="tp" x="351.5" y="94" width="234" height="12"/>
+<rect class="tp" x="1106" y="236.5" width="12" height="156"/>
+<rect class="tp" x="1496" y="236.5" width="12" height="156"/>
+<!-- labels: each primary plus its secondary is a block centered on the spec's point -->
+<text class="l1" x="283.2" y="289" text-anchor="middle">Reception</text>
+<text class="l2" x="283.2" y="317" text-anchor="middle">sets the tone</text>
+<text class="l1" x="858.5" y="178.5" text-anchor="middle">Meeting space</text>
+<text class="l2" x="858.5" y="206.5" text-anchor="middle">holds attention</text>
+<text class="l1" x="1307" y="178.5" text-anchor="middle">Your office</text>
+<text class="l2" x="1307" y="206.5" text-anchor="middle">personal</text>
+<text class="l2" x="468.5" y="719" text-anchor="middle">door</text>
+<text class="l2" x="1333" y="659">corridor</text>
+<text class="l2" x="858.5" y="130" text-anchor="middle">window</text>
+<text class="l2" x="1326.5" y="130" text-anchor="middle">window</text>
+<text class="l2" x="748" y="643">the client's path</text>
+</svg>

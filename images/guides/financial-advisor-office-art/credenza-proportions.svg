@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a credenza 72 inches wide with one framed work above it: the work is 48 inches wide, two thirds of the credenza, and hangs 6 to 10 inches above its top</title>
+<desc id="d">Elevation of a credenza 72 inches wide with one framed work above it: the work is 48 inches wide, two thirds of the credenza, and hangs 6 to 10 inches above its top</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=780; centerline x=800 -->
+<line class="ink" x1="80" y1="780" x2="1520" y2="780"/>
+<!-- credenza 72 by 30 in, x 512 to 1088, with its top slab line 2 in below the top -->
+<rect class="soft" x="512" y="540" width="576" height="240"/>
+<line class="soft" x1="512" y1="556" x2="1088" y2="556"/>
+<!-- the work 48 by 40 in, bottom 38 in, top 78 in, drawn at the 8 in gap; center 58 in, drawn and not labelled -->
+<rect class="frame" x="608" y="156" width="384" height="320"/>
+<rect class="art" x="624" y="172" width="352" height="288"/>
+<line class="dim" x1="778" y1="316" x2="822" y2="316" stroke-width="2"/>
+<line class="dim" x1="800" y1="294" x2="800" y2="338" stroke-width="2"/>
+<!-- dimensions: the work's width above it, the gap to its right, the credenza's width under the floor line -->
+<line class="dim" x1="608" y1="120" x2="992" y2="120"/>
+<line class="dim" x1="608" y1="112" x2="608" y2="128"/>
+<line class="dim" x1="992" y1="112" x2="992" y2="128"/>
+<line class="dim" x1="1016" y1="476" x2="1016" y2="540"/>
+<line class="dim" x1="1008" y1="476" x2="1024" y2="476"/>
+<line class="dim" x1="1008" y1="540" x2="1024" y2="540"/>
+<line class="dim" x1="512" y1="812" x2="1088" y2="812"/>
+<line class="dim" x1="512" y1="804" x2="512" y2="820"/>
+<line class="dim" x1="1088" y1="804" x2="1088" y2="820"/>
+<text class="l1" x="800" y="108" text-anchor="middle">48 in<tspan class="l2"> · 122 cm · two thirds of 72 in</tspan></text>
+<text class="l1" x="1028" y="517">6 to 10 in<tspan class="l2"> · 15 to 25 cm</tspan></text>
+<text class="l2" x="800" y="846" text-anchor="middle">credenza, 72 in · 183 cm</text>
+</svg>

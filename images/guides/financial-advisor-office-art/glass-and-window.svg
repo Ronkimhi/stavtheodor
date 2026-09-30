@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two floor plans of a meeting space with a window: a glazed work on the wall opposite the window reflects the window back to the seated client, while the same work on a wall beside the window sends the reflection away from them</title>
+<desc id="d">Two floor plans of a meeting space with a window: a glazed work on the wall opposite the window reflects the window back to the seated client, while the same work on a wall beside the window sends the reflection away from them</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4.5 px; two plans of one meeting space 144 by 120 in, north at the top, window on the south wall x 48 to 96; panel A north west corner at (104, 100), panel B at (848, 100) -->
+<!-- panel A, opposite the window: the glazed work on the north wall x 48 to 96; the client at (72, 72) facing north; rays from both window corners reach the glass at x 63 and x 81 and return to the eye (mirror method) -->
+<rect class="ink" x="104" y="100" width="648" height="540"/>
+<rect class="soft" x="320" y="634" width="216" height="12"/>
+<rect class="soft" x="374" y="397" width="108" height="108" rx="6"/>
+<rect class="soft" x="374" y="491.5" width="108" height="13.5" rx="4"/>
+<path class="dim" d="M320 640 L387.5 100 L428 424"/>
+<path class="dim" d="M536 640 L468.5 100 L428 424"/>
+<line class="eye" x1="428" y1="424" x2="428" y2="100"/>
+<circle class="tp" cx="428" cy="424" r="6"/>
+<rect class="tp" x="320" y="94" width="216" height="12"/>
+<text class="l2" x="428" y="626" text-anchor="middle">window</text>
+<text class="l2" x="428" y="550" text-anchor="middle">client</text>
+<text class="l2" x="500" y="136">the window appears</text>
+<text class="l2" x="500" y="167.5">in the glass</text>
+<text class="l1" x="428" y="696" text-anchor="middle">Opposite the window</text>
+<text class="l2" x="428" y="728" text-anchor="middle">anti-reflective glazing, or another wall</text>
+<!-- panel B, beside the window: the glazed work on the east wall y 24 to 72; the client at (72, 48) facing east; the ray from the window center reflects off the glass at (144, 48) to (96, 0), well clear of the eye -->
+<rect class="ink" x="848" y="100" width="648" height="540"/>
+<rect class="soft" x="1064" y="634" width="216" height="12"/>
+<rect class="soft" x="1091" y="262" width="108" height="108" rx="6"/>
+<rect class="soft" x="1091" y="262" width="13.5" height="108" rx="4"/>
+<path class="dim" d="M1172 640 L1496 316 L1280 100"/>
+<line class="eye" x1="1172" y1="316" x2="1496" y2="316"/>
+<circle class="tp" cx="1172" cy="316" r="6"/>
+<rect class="tp" x="1490" y="208" width="12" height="216"/>
+<text class="l2" x="1163" y="626" text-anchor="end">window</text>
+<text class="l2" x="1145" y="415" text-anchor="middle">client</text>
+<text class="l2" x="1370" y="235" text-anchor="end">the reflection falls away</text>
+<text class="l1" x="1172" y="696" text-anchor="middle">Beside the window</text>
+</svg>

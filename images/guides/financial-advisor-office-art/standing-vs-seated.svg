@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Two side views: in reception a standing visitor's eyes meet a work centered 57 to 60 inches from the floor; in the meeting space a seated client's eyes sit below that line, looking past the advisor to the work above the credenza</title>
+<desc id="d">Two side views: in reception a standing visitor's eyes meet a work centered 57 to 60 inches from the floor; in the meeting space a seated client's eyes sit below that line, looking past the advisor to the work above the credenza</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=780; two side sections, walls at x=740 (panel A) and x=1520 (panel B), distances measured from the wall -->
+<line class="ink" x1="80" y1="780" x2="740" y2="780"/>
+<line class="ink" x1="860" y1="780" x2="1520" y2="780"/>
+<line class="ink" x1="740" y1="780" x2="740" y2="260"/>
+<line class="ink" x1="1520" y1="780" x2="1520" y2="260"/>
+<!-- panel A, reception: the work in profile, bottom 38 in, top 78 in, center 58 in; standing figure 63 in, eye 58.5 in, head center 66 in from the wall, facing it -->
+<rect class="frame" x="730" y="390" width="10" height="200"/>
+<rect class="art" x="733" y="396" width="4" height="188"/>
+<line class="dim" x1="708" y1="490" x2="752" y2="490" stroke-width="2"/>
+<line class="dim" x1="730" y1="468" x2="730" y2="512" stroke-width="2"/>
+<circle class="soft" cx="410" cy="491" r="26"/>
+<line class="soft" x1="410" y1="517" x2="410" y2="610"/>
+<line class="soft" x1="410" y1="610" x2="382" y2="780"/>
+<line class="soft" x1="410" y1="610" x2="438" y2="780"/>
+<line class="soft" x1="410" y1="520" x2="370" y2="615"/>
+<line class="soft" x1="410" y1="520" x2="450" y2="615"/>
+<line class="eye" x1="430" y1="487.5" x2="730" y2="490"/>
+<circle class="tp" cx="430" cy="487.5" r="6"/>
+<!-- panel B, meeting space: credenza 18 deep by 30 tall against the wall, the same work above it; the advisor seated with their back to the credenza, chair 24 to 48 in from the wall; the table top at 30 in, 48 to 84 in from the wall; the client seated facing the wall, chair 90 to 114 in from the wall, eye 47 in at 100 in from the wall -->
+<rect class="soft" x="1430" y="630" width="90" height="150"/>
+<line class="soft" x1="1430" y1="640" x2="1520" y2="640"/>
+<rect class="frame" x="1510" y="390" width="10" height="200"/>
+<rect class="art" x="1513" y="396" width="4" height="188"/>
+<line class="dim" x1="1488" y1="490" x2="1532" y2="490" stroke-width="2"/>
+<line class="dim" x1="1510" y1="468" x2="1510" y2="512" stroke-width="2"/>
+<rect class="soft" x="1100" y="630" width="180" height="10"/>
+<rect class="soft" x="1120" y="640" width="10" height="140"/>
+<rect class="soft" x="1250" y="640" width="10" height="140"/>
+<circle class="soft" cx="1360" cy="546" r="26"/>
+<line class="soft" x1="1360" y1="572" x2="1360" y2="690"/>
+<line class="soft" x1="1360" y1="690" x2="1270" y2="690"/>
+<line class="soft" x1="1270" y1="690" x2="1270" y2="780"/>
+<line class="soft" x1="1360" y1="570" x2="1300" y2="625"/>
+<line class="soft" x1="1400" y1="690" x2="1280" y2="690"/>
+<line class="soft" x1="1400" y1="690" x2="1400" y2="600"/>
+<line class="soft" x1="1400" y1="690" x2="1400" y2="780"/>
+<line class="soft" x1="1280" y1="690" x2="1280" y2="780"/>
+<circle class="soft" cx="1000" cy="546" r="26"/>
+<line class="soft" x1="1000" y1="572" x2="1000" y2="690"/>
+<line class="soft" x1="1000" y1="690" x2="1090" y2="690"/>
+<line class="soft" x1="1090" y1="690" x2="1090" y2="780"/>
+<line class="soft" x1="1000" y1="570" x2="1060" y2="625"/>
+<line class="soft" x1="960" y1="690" x2="1080" y2="690"/>
+<line class="soft" x1="960" y1="690" x2="960" y2="600"/>
+<line class="soft" x1="960" y1="690" x2="960" y2="780"/>
+<line class="soft" x1="1080" y1="690" x2="1080" y2="780"/>
+<line class="eye" x1="1020" y1="545" x2="1510" y2="490"/>
+<circle class="tp" cx="1020" cy="545" r="6"/>
+<!-- eye band at 57 and 60 in: panel A from the label to the standing figure (the D5 precedent; the sightline carries the band's height on to the work), panel B across the whole section to the work's face -->
+<line class="eye" x1="88" y1="495" x2="372" y2="495"/>
+<line class="eye" x1="860" y1="495" x2="1510" y2="495"/>
+<line class="eye" x1="88" y1="480" x2="372" y2="480"/>
+<line class="eye" x1="860" y1="480" x2="1510" y2="480"/>
+<!-- labels -->
+<text class="l1" x="88" y="468">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
+<text class="l1" x="410" y="840" text-anchor="middle">Reception<tspan class="l2"> · standing</tspan></text>
+<text class="l1" x="1190" y="840" text-anchor="middle">Meeting space<tspan class="l2"> · seated</tspan></text>
+<text class="l1" x="868" y="420">test from the chair</text>
+<text class="l2" x="868" y="452">a paper template before any drill</text>
+<text class="l2" x="1512" y="618" text-anchor="end">credenza</text>
+<text class="l2" x="1320" y="554" text-anchor="end">you</text>
+<text class="l2" x="962" y="554" text-anchor="end">client</text>
+</svg>

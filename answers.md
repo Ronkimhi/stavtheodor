@@ -214,3 +214,7 @@ Art sourcing for interior designers is how a design studio finds, buys and insta
 ## How do hotels choose their artwork?
 
 Hotel artwork is a property's art program: the arrival piece in the lobby, the restaurant and bar works, the rhythm of the corridors and the guest room art, planned to one concept and bought within a budget per key. Public spaces usually carry originals and commissions, and guest rooms usually carry editions repeated with variation. Full guide: https://stavtheodor.com/guide/hotel-artwork/
+
+## How should a financial advisor decorate their office?
+
+Financial advisor office decor is the art and finish of the space where clients talk about money, chosen to feel stable, discreet and personal rather than showy. The meeting space matters most: one strong, calm work does more than a wall of market imagery. Full guide: https://stavtheodor.com/guide/financial-advisor-office-art/
