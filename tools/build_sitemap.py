@@ -8,9 +8,12 @@
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
 
-lastmod comes from one `git log --format=%cI --name-only` pass, keyed on each page's source:
+lastmod comes from one `git log --format=%cI --name-only` pass, keyed on each page's source (a source that
+`git status --porcelain` reports as changed or untracked is dated now, since the build runs before its commit;
+2026-09-30):
 content/pages/<slug>.json for a growth page (the homepage and the hubs take the newest of
-their sources), a buyer page's JSON, its images and the homepage template it is rendered from, the post's own dateModified for a post, and the museum file itself. With no
+their sources; /advisory/, /about/ and every page or buyer page with a `guides` list also take the guide JSONs they
+list), a buyer page's JSON, its images and the homepage template it is rendered from, the post's own dateModified for a post, and the museum file itself. With no
 git available lastmod is omitted rather than invented. Run by python3 build.py after the
 pages are written; run it alone from the repo root after editing content.
 """
@@ -20,6 +23,7 @@ import os
 import re
 import subprocess
 import sys
+from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -46,6 +50,18 @@ def git_dates():
             current = line
         elif current:
             dates.setdefault(line.replace('\\', '/'), current)
+    # a source changed in the working tree (or not in git yet) is newer than its last commit: date it now, so a page
+    # built before its own commit still gets a lastmod, and the right one (2026-09-30 SEO fixes)
+    try:
+        status = subprocess.run(['git', 'status', '--porcelain', '--untracked-files=all'], capture_output=True, text=True,
+                                check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        status = ''
+    now = datetime.now().astimezone().replace(microsecond=0).isoformat()
+    for line in status.splitlines():
+        path = line[3:].split(' -> ')[-1].strip().strip('"')
+        if path:
+            dates[path.replace('\\', '/')] = now
     return dates
 
 
@@ -83,13 +99,16 @@ def main():
         if os.path.exists(os.path.join(rel, 'index.html')):
             pages.append((p, f.replace('\\', '/')))
     home_lm = newest(dates, HOME_SOURCES + [src for _, src in pages])
+    guide_src = {p['path'].strip('/'): src for p, src in pages if p['section'] == 'guide'}
+    listed = lambda paths: [guide_src[g.strip('/')] for g in (paths or []) if g.strip('/') in guide_src]
     page_entries = [(entry(SITE + '/', home_lm), home_lm)]
-    for hub, sections in (('advisory', ('local', 'area', 'advisory')), ('projects', ('projects',))):
+    # /advisory/ lists every guide in its #guides group (since 2026-09-30 its lastmod moves with them)
+    for hub, sections in (('advisory', ('local', 'area', 'advisory', 'guide')), ('projects', ('projects',))):
         if os.path.exists(os.path.join(hub, 'index.html')):
             lm = newest(dates, [src for p, src in pages if p['section'] in sections])
             page_entries.append((entry(f'{SITE}/{hub}/', lm), lm))
     for p, src in pages:
-        lm = newest(dates, [src])
+        lm = newest(dates, [src] + listed(p.get('guides')))  # a page's #guides strip shows the guides it lists
         page_entries.append((entry(f"{SITE}/{p['path'].strip('/')}/", lm), lm))
     # /contact/, a real page since 2026-09-29 (Ron's SEO brief, P1.1), written by build-site-pages.py (CONTACT)
     if os.path.exists(os.path.join('contact', 'index.html')):
@@ -99,7 +118,7 @@ def main():
     # from the homepage template and the partner pages' JSON, so it moves with any of them
     if os.path.exists(os.path.join('about', 'index.html')):
         lm = newest(dates, ['build-site-pages.py', 'templates/home.html', 'content/pages/for-designers.json',
-                            'content/pages/for-brokers.json', 'content/pages/for-advisors.json'])
+                            'content/pages/for-brokers.json', 'content/pages/for-advisors.json'] + sorted(guide_src.values()))  # /about/ links every guide
         page_entries.append((entry(f'{SITE}/about/', lm), lm))
     # the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/)
     for f in sorted(glob.glob('content/variants/*.json')):
@@ -108,7 +127,7 @@ def main():
         if not os.path.exists(os.path.join(rel, 'index.html')):
             continue
         images = sorted(g.replace('\\', '/') for g in glob.glob(f"images/home2/variants/{v['id']}/*"))
-        lm = newest(dates, [f.replace('\\', '/'), 'templates/home.html', 'build-home.py'] + images)
+        lm = newest(dates, [f.replace('\\', '/'), 'templates/home.html', 'build-home.py'] + images + listed(v.get('guides')))
         page_entries.append((entry(f'{SITE}/{rel}/', lm), lm))
     pages_lm = write_sitemap('sitemap-pages.xml', page_entries)
 

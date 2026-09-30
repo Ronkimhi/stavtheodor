@@ -953,8 +953,9 @@ def month_labels(post):
     return en, he
 
 
-def timeline(posts, with_months):
-    """The posts as timeline entries (the homepage, /radar/, and the More list on a post)."""
+def timeline(posts, with_months, dims=False):
+    """The posts as timeline entries (the homepage, /radar/, and the More list on a post). dims=True (the guide
+    pages' From Art Radar block, 2026-09-30 SEO fixes) gives each thumbnail its file's width and height."""
     out = []
     last = None
     for p in posts:
@@ -962,7 +963,9 @@ def timeline(posts, with_months):
         if with_months and mon != last:
             out.append(f'<div class="month"><p class="eyebrow">{T(mon[0], mon[1])}</p></div>')
             last = mon
-        th = f'<div class="th"><img src="{p["img"]}" alt="" loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
+        d = raster_dims(p['img']) if (dims and p['img']) else None
+        wh = f' width="{d[0]}" height="{d[1]}"' if d else ''
+        th = f'<div class="th"><img src="{p["img"]}" alt=""{wh} loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
         teaser = f'<p class="teaser">{T(H.escape(p["teaser_en"]), H.escape(p["teaser_he"]))}</p>' if p['teaser_en'] else ''
         out.append(f'''
       <a class="entry reveal" href="/radar/{p['slug']}/">
@@ -1074,6 +1077,33 @@ def svg_dims(src):
     w = m and re.search(r'\swidth="(\d+(?:\.\d+)?)"', m.group(0))
     h = m and re.search(r'\sheight="(\d+(?:\.\d+)?)"', m.group(0))
     return (round(float(w.group(1))), round(float(h.group(1)))) if w and h else None
+
+
+def raster_dims(src):
+    """(width, height) of a JPEG or PNG in the repo, read from its header (no Pillow), or None."""
+    path = rel(src.lstrip('/'))
+    if not os.path.exists(path):
+        return None
+    with open(path, 'rb') as fh:
+        data = fh.read(256 * 1024)
+    if data[:8] == b'\x89PNG\r\n\x1a\n' and len(data) >= 24:
+        return int.from_bytes(data[16:20], 'big'), int.from_bytes(data[20:24], 'big')
+    if data[:2] != b'\xff\xd8':
+        return None
+    i = 2
+    while i + 9 < len(data):
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if marker in (0xD8, 0x01) or 0xD0 <= marker <= 0xD7 or marker == 0xFF:
+            i += 1 if marker == 0xFF else 2
+            continue
+        seg = int.from_bytes(data[i + 2:i + 4], 'big')
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            return int.from_bytes(data[i + 7:i + 9], 'big'), int.from_bytes(data[i + 5:i + 7], 'big')
+        i += 2 + seg
+    return None
 
 
 def image_dims(img):

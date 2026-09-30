@@ -88,7 +88,7 @@ for f in sys.argv[1:]:
     for k in ["path","section","title_en","title_he","meta_description","lead_en","lead_he","body_en","body_he"]:
         if not p.get(k): fails.append(f"missing {k}")
     if p.get("section") not in LIMITS: fails.append("bad section")
-    if len(p.get("meta_description","")) > 165: fails.append("meta_description over 165 chars")
+    if len(p.get("meta_description","")) > 160: fails.append("meta_description over 160 chars (Google cuts the snippet; 2026-09-30 SEO fixes)")
     if p.get("section") == "projects" and not p.get("hero_image") and not (p.get("place_en") and p.get("place_he")):
         fails.append("project page without hero_image: give it place_en and place_he (its card shows the place name), or a photo of this project")
     if p.get("section") == "projects" and p.get("before_after"): fails.append("before_after is for article pages: a project page shows only photos of that project")

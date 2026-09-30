@@ -34,9 +34,10 @@ SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרוי�
 # Breadcrumb parents. The two local landing pages (/art-curator-new-jersey/, /art-curator-new-york/,
 # section "local", added 2026-09-26) sit under /advisory/ in the breadcrumb and open the advisory hub.
 # The guides sit under /advisory/ too since 2026-09-29 (Fable's guide design): the visible trail reads Home, Advisory, the
-# guide, and the BreadcrumbList THEODORA, Advisory, the guide.
+# guide, and the BreadcrumbList Home, Art advisory, the guide (the same names since 2026-09-30).
 CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Advisory"}
 CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects", "guide": "advisory"}
+GUIDE_CRUMB_HUB = "Art advisory"  # the middle step of a guide's trail, visible (guide_crumbs) and in its BreadcrumbList
 # The service area in every Service block (Ron's SEO brief, 2026-09-29): the entity's own areaServed. Tel Aviv
 # stays in the copy and on the project pages but never in an areaServed.
 DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
@@ -144,10 +145,15 @@ def ld_blocks(p, url, og):
         main["author"] = {"@type": "Person", "@id": SITE + "/#stav", "name": "Stav Theodor", "url": SITE + "/about/",
                           "sameAs": [sc.INSTAGRAM]}
     main.update(p.get("schema_extra", {}))
-    crumbs = [{"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"}]
-    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Advisory); partners go straight to the page
-        crumbs.append({"@type": "ListItem", "position": 2, "name": CRUMB_NAME[p["section"]], "item": SITE + "/" + CRUMB_DIR[p["section"]] + "/"})
-    crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": p["title_en"], "item": url})
+    # A guide's BreadcrumbList uses the names of its visible trail (guide_crumbs(): Home, Art advisory, crumb_en or the
+    # title; 2026-09-30 SEO fixes); the other sections keep THEODORA, the hub name and the title.
+    guide = p["section"] == "guide"
+    crumbs = [{"@type": "ListItem", "position": 1, "name": "Home" if guide else "THEODORA", "item": SITE + "/"}]
+    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Art advisory); partners go straight to the page
+        crumbs.append({"@type": "ListItem", "position": 2, "name": GUIDE_CRUMB_HUB if guide else CRUMB_NAME[p["section"]],
+                       "item": SITE + "/" + CRUMB_DIR[p["section"]] + "/"})
+    crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1,
+                   "name": (p.get("crumb_en") or p["title_en"]) if guide else p["title_en"], "item": url})
     ld = [main, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}]
     if p.get("faq"):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en",
@@ -208,7 +214,7 @@ def radar_html(p):
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
-  <div class="timeline">{sc.timeline(chosen, with_months=False)}
+  <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide")}
   </div>
 </section>
 '''
@@ -242,7 +248,8 @@ def cta_html(p):
 FIG_LABEL = {("dia", "en"): "Figure", ("dia", "he"): "תרשים", ("tbl", "en"): "Table", ("tbl", "he"): "טבלה"}
 FIGURE_RE = re.compile(r'<figure class="(dia|tbl)">(.*?)</figure>', re.S)
 # The /advisory/ hub's guides group, in this order (slugs, like PROJECT_ORDER); guides not listed follow, newest first.
-GUIDE_ORDER = ["gallery-wall-ideas", "how-to-hang-pictures", "art-above-couch", "dining-room-art", "living-room-art",
+GUIDE_ORDER = ["how-to-choose-art-for-your-home",  # the home pillar leads the group (2026-09-30 SEO fixes)
+               "gallery-wall-ideas", "how-to-hang-pictures", "art-above-couch", "dining-room-art", "living-room-art",
                "art-above-bed", "entryway-art", "large-wall-art-ideas"]  # the eight home guides, 2026-09-30 (Commit B)
 GUIDES_HUB_H2 = ("Practical guides to choosing and placing art", "מדריכים מעשיים לבחירת אמנות ולמיקומה")
 GUIDES_HUB_SUB = ("Each guide answers one question with drawings to scale and the measurements in inches and centimeters.",
@@ -314,7 +321,7 @@ def guide_crumbs(p):
     sep = '<span class="sep" aria-hidden="true">/</span>'
     cur = T(H.escape(p.get("crumb_en") or p["title_en"]), H.escape(p.get("crumb_he") or p["title_he"]))
     return (f'<nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="/">{T("Home", "דף הבית")}</a> {sep} '
-            f'<a href="/advisory/">{T("Art advisory", "ייעוץ אמנות")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
+            f'<a href="/advisory/">{T(GUIDE_CRUMB_HUB, "ייעוץ אמנות")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
 
 
 BYLINE_DEFAULT = ("By Stav Theodor, art curator and advisor at THEODORA in Tenafly, New Jersey",

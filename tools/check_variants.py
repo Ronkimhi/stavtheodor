@@ -116,7 +116,7 @@ GUIDE_TAGS = ('a', 'em', 'strong', 'p', 'h3', 'ul', 'ol', 'li')
 AREAS = ('New York City', 'New Jersey')  # never Tel Aviv in an areaServed (Ron's SEO brief, 2026-09-29)
 # (field, min, max) in characters; the minimum and maximum read the English, the hero lines both languages
 CHAR_LIMITS = [
-    ('head.title', 30, 70), ('head.description', 70, 165), ('head.og_title', 1, 70), ('head.og_description', 1, 160),
+    ('head.title', 30, 70), ('head.description', 70, 160), ('head.og_title', 1, 70), ('head.og_description', 1, 160),
     ('head.og_image_alt', 1, 160),
     ('hero.l1_en', 1, 18), ('hero.l1_he', 1, 18), ('hero.l2_en', 1, 18), ('hero.l2_he', 1, 18),
     ('intro.h1_en', 40, 110), ('intro.line_en', 1, 60), ('intro.eyebrow_en', 1, 24), ('intro.statement_en', 60, 160),
