@@ -18,7 +18,7 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
   e  every string is trimmed and single spaced, with no en or em dash, no phone number, no
      "contact form", no slot, comment or placeholder; English carries no Hebrew letters, Hebrew
      carries them and differs from its English twin
-  f  no hype word (tools/check_pages.py HYPE); no $ or percent figure at all (Ron 2026-09-29)
+  f  no hype word (tools/check_pages.py HYPE); no $ figure, no percentage in a fee sentence (tools/fee_gate.py, Ron 2026-09-29)
   g  lengths, per field (content/VARIANT-SPEC.md)
   h  HTML only in what_i_do.p1 and p2 (a, em, strong); links go to existing pages or homepage
      anchors, the same set in both languages; no mailto, no link to the variant itself (links to the other
@@ -55,6 +55,9 @@ import re
 import struct
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fee_gate import fee_violation  # the fee rule, 2026-09-29
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VARIANTS_DIR = os.path.join(ROOT, 'content', 'variants')
 
@@ -78,7 +81,6 @@ SLUG = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')
 APPROVED = re.compile(r'^(Ron|Stav) (\d{4}-\d{2}-\d{2})$')
 HEBREW = re.compile('[\\u0590-\\u05ff]')
 DASH = re.compile('[\\u2013\\u2014]')
-MONEY = re.compile(r'\$\s?\d|\d+\s?%|\d+\s?percent|\b(ten|fifteen|twenty|thirty)(\s+(to|and)\s+\w+)?\s+percent\b', re.I)
 TAG = re.compile(r'<(/?)([A-Za-z0-9]+)([^>]*)>')
 ENTITY = re.compile(r'&(#\d+|#x[0-9a-fA-F]+|[A-Za-z]+);')
 WE = re.compile(r'\b(?:[Ww]e|[Oo]ur|us)\b')
@@ -548,8 +550,9 @@ def check(path, v, peers):
             for h in HYPE:
                 if h in low:
                     fails.append(f'{label}: hype word "{h}"')
-            if MONEY.search(s):
-                fails.append(f'{label}: a $ or percent figure; no fee or price figures on the site, industry ranges included (Ron 2026-09-29, content/BRIEF.md section 5)')
+            bad = fee_violation(s)
+            if bad:
+                fails.append(f'{label}: a fee or $ figure ({bad!r}); no dollar figures, and no percentage in a sentence about fees (Ron 2026-09-29, tools/fee_gate.py, content/BRIEF.md section 5)')
         # h: HTML only in the two paragraphs
         if label in HTML_FIELDS | GUIDE_FIELDS:
             problems, found = html_problems(label, s, variant_paths, GUIDE_TAGS if label in GUIDE_FIELDS else ('a', 'em', 'strong'))

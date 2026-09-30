@@ -2,6 +2,8 @@
 """Mechanical gate for content/pages/*.json. Prints OK or the list of failures. Exit 1 on any failure.
 build-site-pages.py runs it over every page before writing anything, so python3 build.py stops on a failure."""
 import json, re, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fee_gate import fee_violation  # the fee rule, 2026-09-29
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
 # partners up to 1000 since 2026-09-29: /designers/ was merged into /for-designers/ (Ron's SEO brief, P1.5)
 # area: the town and county pages (Ron's SEO brief, 2026-09-29, P1.2 and P1.3), 700 to 1,200 English words counted over the
@@ -10,7 +12,6 @@ LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 1000
 FAQ_WORDS = (30, 110)
 FAQ_AREA = (10, 110)
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
-FEE = re.compile(r"\$\s?\d|\d+\s?%|\d+\s?percent|\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|fifteen|twenty|thirty|forty|fifty)(\s+(to|and)\s+\w+)?\s+percent\b|\d+\s?אחוז|(עשר|עשרים|חמש|שלוש|ארבע)\S*\s+אחוז", re.I)
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 def post_slugs():
     """Every Art Radar slug in content/posts.html, for the radar_posts field."""
@@ -85,9 +86,16 @@ for f in sys.argv[1:]:
     low = p.get("body_en","").lower()
     for h in HYPE:
         if h in low: fails.append(f"hype word: {h}")
-    # Stav's fees are never stated, not as dollars and not as percentages, industry ranges included (Ron, 2026-09-29; content/BRIEF.md section 5)
-    fee = FEE.search(json.dumps(p, ensure_ascii=False))
-    if fee: fails.append(f"a $ or percent figure ({fee.group(0)!r}): no fee or price figures on the site (content/BRIEF.md section 5)")
+    # Fee rule (Ron, 2026-09-29; tools/fee_gate.py): Stav's fees are never stated and no page carries a $ figure. A percentage
+    # fails only in a sentence with a fee word (fee, commission, retainer, markup, charge, rate, pricing); research statistics stay.
+    def strings(node):
+        if isinstance(node, str): yield node
+        elif isinstance(node, dict):
+            for v in node.values(): yield from strings(v)
+        elif isinstance(node, list):
+            for v in node: yield from strings(v)
+    fee = next(filter(None, map(fee_violation, strings(p))), None)
+    if fee: fails.append(f"a fee or $ figure ({fee!r}): no dollar figures, and no percentage in a sentence about fees (content/BRIEF.md section 5, tools/fee_gate.py)")
     for q in p.get("faq", []) or []:
         for k in ["q_en","a_en","q_he","a_he"]:
             if not q.get(k): fails.append(f"faq item missing {k}")
