@@ -46,6 +46,12 @@
       "a_en": "Yes. I am based in Tenafly, New Jersey, and work with businesses in New York City, New Jersey and Tel Aviv, with projects across Israel and hospitality work abroad. For a business space I start with photos, plans and a conversation about what you do, and much of the research and selection happens before a site visit.",
       "q_he": "יש יועצת אמנות למשרדים בניו יורק או בניו ג'רזי?",
       "a_he": "כן. אני יושבת בטנפליי, ניו ג'רזי, ועובדת עם עסקים בניו יורק, בניו ג'רזי ובתל אביב, עם פרויקטים ברחבי ישראל ועבודה בתחום האירוח בחו\"ל. בחלל עסקי אני מתחילה מתמונות, מתוכניות ומשיחה על מה שאתם עושים, וחלק גדול מהמחקר והבחירה קורה עוד לפני ביקור בשטח."
+    },
+    {
+      "q_en": "What does a corporate art consultant do?",
+      "a_en": "A corporate art consultant plans, sources and installs art for a company's spaces. The work runs from a short concept drawn from the space and the brand, through works proposed within an approved budget, to framing, delivery, installation and a record of what was bought. I represent the company, not a roster of artists, so I can look for the right work anywhere. In most cases the company also pays less than it would at a gallery or an auction, and my consultation is part of that price. For a small office, the same process starts with the walls clients see.",
+      "q_he": "מה עושה יועצת אמנות לחברות?",
+      "a_he": "יועצת אמנות לחברות מתכננת, מאתרת ומתקינה אמנות לחללים של חברה. העבודה עוברת מקונספט קצר שנשען על החלל ועל המותג, דרך יצירות שמוצעות בתוך תקציב מאושר, ועד מסגור, משלוח, התקנה ותיעוד של מה שנקנה. אני מייצגת את החברה, לא רשימה של אמנים, ולכן אני יכולה לחפש את היצירה הנכונה בכל מקום. ברוב המקרים החברה גם משלמת פחות ממה שהייתה משלמת בגלריה או במכירה פומבית, והייעוץ שלי הוא חלק מהמחיר הזה. במשרד קטן, אותו תהליך מתחיל מהקירות שהלקוחות רואים."
     }
   ],
   "schema_type": "Service",
@@ -54,7 +60,9 @@
     "advisory/working-with-your-interior-designer-on-art",
     "advisory/framing-and-installing-large-scale-art",
     "advisory/how-the-art-advisory-process-works",
-    "advisory/starting-an-art-collection"
+    "advisory/starting-an-art-collection",
+    "guide/large-wall-art-ideas",
+    "guide/how-to-hang-pictures"
   ],
   "og_image": "/images/spaces/law-firms_og.jpg",
   "date": "2026-09-06",

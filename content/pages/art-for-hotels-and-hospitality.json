@@ -34,6 +34,12 @@
       "a_en": "Because a hotel teaches you to work at scale, on a budget, to a date, without lowering the standard. In a home that shows up as commissions that arrive on time, a budget plan you approve before anything is bought, art that in most cases costs less than at a gallery or an auction, and a concept for the home rather than a wall by wall guess. The rule that nothing is finished until it is installed is the same on a ship and in a living room.",
       "q_he": "למה ניסיון בתחום האירוח חשוב לבית פרטי?",
       "a_he": "כי מלון מלמד אותך לעבוד בקנה מידה גדול, בתקציב, לתאריך, בלי להוריד את הרף. בבית זה מתבטא בהזמנות מאמנים שמגיעות בזמן, בתוכנית תקציב שאתם מאשרים לפני שנקנה משהו, באמנות שברוב המקרים עולה פחות מאשר בגלריה או במכירה פומבית, ובקונספט לבית במקום ניחוש קיר אחרי קיר. הכלל ששום דבר לא גמור עד שהוא מותקן זהה על ספינה ובסלון."
+    },
+    {
+      "q_en": "How do I choose an art consultant for a hotel?",
+      "a_en": "Choose an art consultant for a hotel by their hospitality work at a similar scale, and ask who writes the concept and who controls the budget. A good consultant works from the brand and the place, coordinates with the design firm and the procurement agent, and delivers to the opening date without lowering the standard. Ask whom the consultant represents. I have no roster of artists to place, so I work for the owner, can reach any artist, and in most cases buy for less than at a gallery or an auction. For a boutique hotel, choose someone who will walk the site, not only read the drawings.",
+      "q_he": "איך בוחרים יועצת אמנות למלון?",
+      "a_he": "בוחרים יועצת אמנות למלון לפי העבודה שלה בתחום האירוח בהיקף דומה, ושואלים מי כותב את הקונספט ומי שולט בתקציב. יועצת טובה עובדת מתוך המותג והמקום, מתאמת עם משרד העיצוב ועם סוכן הרכש, ומספקת עד תאריך הפתיחה בלי להוריד את הרף. שאלו את מי היועצת מייצגת. אין לי רשימת אמנים שאני צריכה לשבץ, ולכן אני עובדת בשביל הבעלים, יכולה להגיע לכל אמן, וברוב המקרים קונה בפחות מאשר בגלריה או במכירה פומבית. למלון בוטיק, בחרו מישהי שתסייר באתר, ולא רק תקרא את התוכניות."
     }
   ],
   "schema_type": "Service",
@@ -45,7 +51,8 @@
     "advisory/art-for-a-new-build-in-bergen-county",
     "advisory/art-for-a-home-in-israel-from-abroad",
     "projects/hotels-and-hospitality-collections",
-    "for-designers"
+    "for-designers",
+    "guide/large-wall-art-ideas"
   ],
   "og_image": "/images/spaces/hotels_s1_og.jpg",
   "date": "2026-09-06",

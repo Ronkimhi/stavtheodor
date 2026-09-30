@@ -34,6 +34,12 @@
       "a_en": "Yes. I am based in Tenafly, New Jersey, and my projects run across Tel Aviv, Caesarea, Herzliya Pituach, Ramat Gan and Hod Hasharon. The buyer and I can meet here before the move, and I manage sourcing, framing and installation in Israel, in Hebrew, with the buyer approving each step remotely or in person. Brokers and developers on both sides of the move can introduce me.",
       "q_he": "את עובדת עם קונים שעוברים לישראל מניו יורק או מניו ג'רזי?",
       "a_he": "כן. אני יושבת בטנפליי, ניו ג'רזי, והפרויקטים שלי פרוסים בתל אביב, קיסריה, הרצליה פיתוח, רמת גן והוד השרון. הקונה ואני יכולים להיפגש כאן לפני המעבר, ואני מנהלת את האיתור, המסגור וההתקנה בישראל, בעברית, כשהקונה מאשר כל שלב מרחוק או פנים אל פנים. מתווכים ויזמים משני צידי המעבר יכולים לקשר בינינו."
+    },
+    {
+      "q_en": "Should the art in a model home stay with the buyer?",
+      "a_en": "Sometimes, and offering the model home's art to the buyer can help the close. Buyers who fall for a model may ask for the art along with the furniture. A developer can plan for that by choosing works that suit a home rather than a showroom, agreeing on their price in advance, and offering them at closing. Because I can in most cases buy for less than a gallery would ask, that price can stay fair to the buyer. When the buyer would rather build their own collection, the model is a good starting point for a conversation about their walls.",
+      "q_he": "האם האמנות בדירה לדוגמה צריכה להישאר אצל הקונה?",
+      "a_he": "לפעמים, והצעה של האמנות מהדירה לדוגמה לקונה יכולה לעזור לסגור את העסקה. קונים שמתאהבים בדירה לדוגמה עשויים לבקש את האמנות יחד עם הרהיטים. יזם יכול להיערך לזה: לבחור עבודות שמתאימות לבית ולא לאולם תצוגה, להסכים על המחיר שלהן מראש, ולהציע אותן במעמד המסירה. מכיוון שברוב המקרים אני יכולה לקנות בפחות ממה שגלריה הייתה מבקשת, המחיר הזה יכול להישאר הוגן לקונה. כשהקונה מעדיף לבנות אוסף משלו, הדירה לדוגמה היא נקודת פתיחה טובה לשיחה על הקירות שלו."
     }
   ],
   "schema_type": "Service",
@@ -45,7 +51,9 @@
     "for-advisors",
     "advisory/art-for-a-new-build-in-bergen-county",
     "advisory/art-for-a-home-in-israel-from-abroad",
-    "projects/herzliya-pituach-sea-view-apartment"
+    "projects/herzliya-pituach-sea-view-apartment",
+    "guide/entryway-art",
+    "guide/art-above-couch"
   ],
   "og_image": "/images/spaces/investment-firms_og.jpg",
   "date": "2026-09-06",
