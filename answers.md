@@ -142,3 +142,39 @@ You commission a work for a new home by briefing an artist who is right for the 
 ## Can an art advisor in New York handle a home in Caesarea or Tel Aviv?
 
 Yes. I handle the art for homes in Caesarea, Herzliya Pituach, Tel Aviv and Ramat Gan from my base in Tenafly, New Jersey, working in Hebrew and English on both sides, and the homes below show what that work looks like on the ground in Israel. Here is how it works when you are here and the house is there. Full page, in English and Hebrew: https://stavtheodor.com/advisory/art-for-a-home-in-israel-from-abroad/
+
+---
+
+## Guides: hanging and choosing art at home
+
+## How high should I hang a picture?
+
+Hang a picture so its center sits 57 to 60 inches (145 to 152 cm) from the floor, the eye-level line museums use. Above a sofa or bed, leave 8 to 10 inches between the furniture and the frame; above a console or mantel, 6 to 10 inches. A higher ceiling does not change the height; it changes the scale of the work. Full guide by Stav Theodor: https://stavtheodor.com/guide/how-to-hang-pictures/
+
+## What is the 2/3 rule for hanging art?
+
+Art hung above furniture should span about two thirds of the furniture's width: above an 84 inch sofa, a work or group about 56 inches wide. On a bare wall, size the art to the wall and to the distance you see it from. Full guides: https://stavtheodor.com/guide/how-to-hang-pictures/ and https://stavtheodor.com/guide/large-wall-art-ideas/
+
+## How far apart should frames be on a gallery wall?
+
+Keep 2 to 3 inches (5 to 8 cm) between frames on most walls, up to 4 inches for large frames, and keep the gaps identical. Treat the whole group as one work, centered 57 to 60 inches from the floor, and build it around one anchor piece. Full guide: https://stavtheodor.com/guide/gallery-wall-ideas/
+
+## What size art should go above a couch?
+
+About two thirds of the couch's width, with the bottom edge 8 to 10 inches (20 to 25 cm) above the sofa back. Above an 84 inch sofa that is a work or group about 56 inches wide, hung on two points because heads rest below it. Full guide: https://stavtheodor.com/guide/art-above-couch/
+
+## What size art should go above a bed?
+
+About two thirds of the width of the bed or headboard: roughly 36 inches over a full, 40 over a queen and 50 over a king, hung 8 to 10 inches above the headboard on two points, with no heavy glass over the pillows. Full guide: https://stavtheodor.com/guide/art-above-bed/
+
+## How high should art hang in a dining room?
+
+Lower than in a hallway, because people look at it sitting down: one large work, or a pair or row that reads as one, about two thirds the width of the sideboard or table below it, with the frame clear of the chair backs. No study gives a seated height, so test any height from the chairs themselves. Full guide: https://stavtheodor.com/guide/dining-room-art/
+
+## What art should go in an entryway?
+
+One strong work or a matched pair, sized to the wall and placed facing or beside the door, centered 57 to 60 inches from the floor and 6 to 10 inches above a console. Hallways and stairs, seen in motion, want a rhythm of works instead. Full guide: https://stavtheodor.com/guide/entryway-art/
+
+## How do I choose art for my living room?
+
+Start with the wall the space already turns toward and give it the strongest work you can find, about two thirds the width of the furniture below and centered 57 to 60 inches from the floor; let the other walls support it. Full guide: https://stavtheodor.com/guide/living-room-art/

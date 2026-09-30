@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Diagram of the nail height formula: half the frame height is added to the 57 inch center line, and the distance from the top of the frame to the taut wire or D-ring is subtracted, giving a nail at 68 inches for a 30 inch tall frame with a 4 inch drop</title>
+<desc id="d">Diagram of the nail height formula: half the frame height is added to the 57 inch center line, and the distance from the top of the frame to the taut wire or D-ring is subtracted, giving a nail at 68 inches for a 30 inch tall frame with a 4 inch drop</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px for both panels; wall elevation floor at y=780 -->
+<!-- left: back view of the 40 by 30 in frame, wire taut to a peak 4 in below the top edge -->
+<rect class="frame" x="130" y="204" width="320" height="240"/>
+<circle class="ink" cx="146" cy="284" r="6"/>
+<line class="ink" x1="146" y1="278" x2="146" y2="270"/>
+<circle class="ink" cx="434" cy="284" r="6"/>
+<line class="ink" x1="434" y1="278" x2="434" y2="270"/>
+<path class="ink" d="M146 284 L290 236 L434 284"/>
+<circle class="tp" cx="290" cy="236" r="5"/>
+<line class="dim" x1="268" y1="324" x2="312" y2="324" stroke-width="2"/>
+<line class="dim" x1="290" y1="302" x2="290" y2="346" stroke-width="2"/>
+<line class="dim" x1="490" y1="204" x2="490" y2="324"/>
+<line class="dim" x1="482" y1="204" x2="498" y2="204"/>
+<line class="dim" x1="482" y1="324" x2="498" y2="324"/>
+<text class="l1" x="504" y="320">half height 15 in</text>
+<line class="lead" x1="298" y1="236" x2="542" y2="236"/>
+<line class="dim" x1="550" y1="204" x2="550" y2="236"/>
+<line class="dim" x1="542" y1="204" x2="558" y2="204"/>
+<line class="dim" x1="542" y1="236" x2="558" y2="236"/>
+<text class="l1" x="564" y="230">drop 4 in</text>
+<!-- right: the same frame on the wall, center at 57 in, top at 72 in, nail at 68 in -->
+<line class="ink" x1="940" y1="780" x2="1520" y2="780"/>
+<rect class="frame" x="1020" y="204" width="320" height="240"/>
+<rect class="art" x="1036" y="220" width="288" height="208"/>
+<line class="dim" x1="1158" y1="324" x2="1202" y2="324" stroke-width="2"/>
+<line class="dim" x1="1180" y1="302" x2="1180" y2="346" stroke-width="2"/>
+<circle class="tp" cx="1180" cy="236" r="6"/>
+<line class="dim" x1="1400" y1="324" x2="1400" y2="780"/>
+<line class="dim" x1="1392" y1="324" x2="1408" y2="324"/>
+<line class="dim" x1="1392" y1="780" x2="1408" y2="780"/>
+<line class="lead" x1="1204" y1="324" x2="1392" y2="324"/>
+<text class="l1" x="1414" y="556">57 in</text>
+<line class="dim" x1="960" y1="236" x2="960" y2="780"/>
+<line class="dim" x1="952" y1="236" x2="968" y2="236"/>
+<line class="dim" x1="952" y1="780" x2="968" y2="780"/>
+<line class="lead" x1="1172" y1="236" x2="968" y2="236"/>
+<text class="l1" x="974" y="556">nail 68 in</text>
+<text class="l1" x="800" y="832" text-anchor="middle">57 + 15 minus 4 = 68 in</text>
+<text class="l2" x="800" y="868" text-anchor="middle">145 + 38 minus 10 = 173 cm</text>
+</svg>

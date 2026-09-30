@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three steps: tape across the back of a frame with both D-rings marked, the same tape leveled on the wall, and two hooks driven through the marks</title>
+<desc id="d">Three steps: tape across the back of a frame with both D-rings marked, the same tape leveled on the wall, and two hooks driven through the marks</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; the 30 by 40 in frame of D6 and D9; D-rings 4 in in from each side, 8 in below the top -->
+<!-- (1) back of the frame, tape across it, D-rings marked on the tape with taupe crosses -->
+<rect class="frame" x="240" y="210" width="180" height="240"/>
+<rect class="soft" x="254" y="224" width="152" height="212"/>
+<rect class="soft" x="228" y="246" width="204" height="24"/>
+<circle class="ink" cx="264" cy="258" r="6"/>
+<line class="ink" x1="264" y1="252" x2="264" y2="242"/>
+<line class="dim" x1="242" y1="258" x2="286" y2="258" stroke-width="2"/>
+<line class="dim" x1="264" y1="236" x2="264" y2="280" stroke-width="2"/>
+<circle class="ink" cx="396" cy="258" r="6"/>
+<line class="ink" x1="396" y1="252" x2="396" y2="242"/>
+<line class="dim" x1="374" y1="258" x2="418" y2="258" stroke-width="2"/>
+<line class="dim" x1="396" y1="236" x2="396" y2="280" stroke-width="2"/>
+<!-- (2) the strip alone on the wall, a level resting on it -->
+<rect class="soft" x="698" y="246" width="204" height="24"/>
+<line class="dim" x1="712" y1="258" x2="756" y2="258" stroke-width="2"/>
+<line class="dim" x1="734" y1="236" x2="734" y2="280" stroke-width="2"/>
+<line class="dim" x1="844" y1="258" x2="888" y2="258" stroke-width="2"/>
+<line class="dim" x1="866" y1="236" x2="866" y2="280" stroke-width="2"/>
+<rect class="ink" x="730" y="228" width="140" height="18"/>
+<circle class="ink" cx="800" cy="237" r="5"/>
+<line class="ink" x1="788" y1="228" x2="788" y2="246"/>
+<line class="ink" x1="812" y1="228" x2="812" y2="246"/>
+<!-- (3) two hooks through the marks, the bottom of each J on its mark; the right half of the tape peeled up -->
+<rect class="soft" x="1168" y="246" width="102" height="24"/>
+<rect class="soft" x="1270" y="246" width="102" height="24" transform="rotate(-38 1270 270)"/>
+<path class="ink" d="M1204 240 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="1204" cy="240" r="4"/>
+<path class="ink" d="M1336 240 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="1336" cy="240" r="4"/>
+<text class="l1" x="330" y="608" text-anchor="middle">Mark both D-rings on tape</text>
+<text class="l1" x="800" y="668" text-anchor="middle">Move it to the wall and level</text>
+<text class="l1" x="1270" y="608" text-anchor="middle">Hook through the marks</text>
+</svg>

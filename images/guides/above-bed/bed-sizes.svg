@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Three beds drawn to scale with the art above each at about two thirds of the width: a 54 inch full bed with 36 inch art, a 60 inch queen with 40 inch art, and a 76 inch king with 50 inch art</title>
+<desc id="d">Three beds drawn to scale with the art above each at about two thirds of the width: a 54 inch full bed with 36 inch art, a 60 inch queen with 40 inch art, and a 76 inch king with 50 inch art</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; floor at y=680; headboards 44 in, mattress top 25 in, pillow tops 40 in -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<!-- full, 54 in; art 36 by 24 in, bottom at 53 in; two pillows, top 40 in -->
+<rect class="soft" x="80" y="416" width="324" height="114"/><rect class="soft" x="86" y="530" width="312" height="60"/><rect class="soft" x="92" y="590" width="300" height="42"/><line class="soft" x1="98" y1="632" x2="98" y2="680"/><line class="soft" x1="386" y1="632" x2="386" y2="680"/><rect class="soft" x="98" y="440" width="138" height="90" rx="12"/><rect class="soft" x="248" y="440" width="138" height="90" rx="12"/>
+<rect class="frame" x="134" y="218" width="216" height="144"/><rect class="art" x="146" y="230" width="192" height="120"/>
+<line class="dim" x1="220" y1="290" x2="264" y2="290" stroke-width="2"/><line class="dim" x1="242" y1="268" x2="242" y2="312" stroke-width="2"/>
+<line class="dim" x1="134" y1="178" x2="350" y2="178"/><line class="dim" x1="134" y1="170" x2="134" y2="186"/><line class="dim" x1="350" y1="170" x2="350" y2="186"/>
+<text class="l1" x="242" y="166" text-anchor="middle">36 in<tspan class="l2"> · 91 cm</tspan></text>
+<line class="dim" x1="80" y1="730" x2="404" y2="730"/><line class="dim" x1="80" y1="722" x2="80" y2="738"/><line class="dim" x1="404" y1="722" x2="404" y2="738"/>
+<text class="l2" x="242" y="772" text-anchor="middle">full, 54 in (137 cm)</text>
+<!-- queen, 60 in; art 40 by 26 in, bottom at 53 in; two pillows, top 40 in -->
+<rect class="soft" x="554" y="416" width="360" height="114"/><rect class="soft" x="560" y="530" width="348" height="60"/><rect class="soft" x="566" y="590" width="336" height="42"/><line class="soft" x1="572" y1="632" x2="572" y2="680"/><line class="soft" x1="896" y1="632" x2="896" y2="680"/><rect class="soft" x="572" y="440" width="156" height="90" rx="12"/><rect class="soft" x="740" y="440" width="156" height="90" rx="12"/>
+<rect class="frame" x="614" y="206" width="240" height="156"/><rect class="art" x="626" y="218" width="216" height="132"/>
+<line class="dim" x1="712" y1="284" x2="756" y2="284" stroke-width="2"/><line class="dim" x1="734" y1="262" x2="734" y2="306" stroke-width="2"/>
+<line class="dim" x1="614" y1="166" x2="854" y2="166"/><line class="dim" x1="614" y1="158" x2="614" y2="174"/><line class="dim" x1="854" y1="158" x2="854" y2="174"/>
+<text class="l1" x="734" y="154" text-anchor="middle">40 in<tspan class="l2"> · 102 cm</tspan></text>
+<line class="dim" x1="554" y1="730" x2="914" y2="730"/><line class="dim" x1="554" y1="722" x2="554" y2="738"/><line class="dim" x1="914" y1="722" x2="914" y2="738"/>
+<text class="l2" x="734" y="772" text-anchor="middle">queen, 60 in (152 cm)</text>
+<!-- king, 76 in; art 50 by 30 in, bottom at 53 in; two pillows, top 40 in -->
+<rect class="soft" x="1064" y="416" width="456" height="114"/><rect class="soft" x="1070" y="530" width="444" height="60"/><rect class="soft" x="1076" y="590" width="432" height="42"/><line class="soft" x1="1082" y1="632" x2="1082" y2="680"/><line class="soft" x1="1502" y1="632" x2="1502" y2="680"/><rect class="soft" x="1082" y="440" width="204" height="90" rx="12"/><rect class="soft" x="1298" y="440" width="204" height="90" rx="12"/>
+<rect class="frame" x="1142" y="182" width="300" height="180"/><rect class="art" x="1154" y="194" width="276" height="156"/>
+<line class="dim" x1="1270" y1="272" x2="1314" y2="272" stroke-width="2"/><line class="dim" x1="1292" y1="250" x2="1292" y2="294" stroke-width="2"/>
+<line class="dim" x1="1142" y1="142" x2="1442" y2="142"/><line class="dim" x1="1142" y1="134" x2="1142" y2="150"/><line class="dim" x1="1442" y1="134" x2="1442" y2="150"/>
+<text class="l1" x="1292" y="130" text-anchor="middle">50 in<tspan class="l2"> · 127 cm</tspan></text>
+<line class="dim" x1="1064" y1="730" x2="1520" y2="730"/><line class="dim" x1="1064" y1="722" x2="1064" y2="738"/><line class="dim" x1="1520" y1="722" x2="1520" y2="738"/>
+<text class="l2" x="1292" y="772" text-anchor="middle">king, 76 in (193 cm)</text>
+<line class="dim" x1="884" y1="362" x2="884" y2="416"/><line class="dim" x1="876" y1="362" x2="892" y2="362"/><line class="dim" x1="876" y1="416" x2="892" y2="416"/>
+<text class="l2" x="898" y="397">9 in</text>
+</svg>

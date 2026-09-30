@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two triptychs: with equal narrow gaps the three panels read as one image, with uneven gaps they read as three separate pictures</title>
+<desc id="d">Two triptychs: with equal narrow gaps the three panels read as one image, with uneven gaps they read as three separate pictures</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; floor at y=680; panels 30 by 60 in, center 58; left gaps 3 and 3 in, right gaps 2 and 5 in; one horizon height at 50 in -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<line class="eye" x1="80" y1="338" x2="1520" y2="338"/>
+<line class="eye" x1="80" y1="320" x2="1520" y2="320"/>
+<!-- band pair above the panels, in the gap between the groups, a lead down to the 60 in line -->
+<text class="l2" x="798" y="104" text-anchor="middle">57 to 60 in</text>
+<text class="l2" x="798" y="132" text-anchor="middle">145 to 152 cm</text>
+<line class="lead" x1="798" y1="140" x2="798" y2="320"/>
+<rect class="frame" x="152" y="152" width="180" height="360"/>
+<rect class="art" x="164" y="164" width="156" height="336"/>
+<rect class="frame" x="350" y="152" width="180" height="360"/>
+<rect class="art" x="362" y="164" width="156" height="336"/>
+<rect class="frame" x="548" y="152" width="180" height="360"/>
+<rect class="art" x="560" y="164" width="156" height="336"/>
+<line class="dim" x1="418" y1="332" x2="462" y2="332" stroke-width="2"/>
+<line class="dim" x1="440" y1="310" x2="440" y2="354" stroke-width="2"/>
+<!-- horizon: three segments at one height, one per panel, so only the gaps differ -->
+<line class="soft" x1="166" y1="380" x2="318" y2="380"/>
+<line class="soft" x1="364" y1="380" x2="516" y2="380"/>
+<line class="soft" x1="562" y1="380" x2="714" y2="380"/>
+<text class="l1" x="440" y="730" text-anchor="middle">equal gaps: one image</text>
+<text class="l2" x="440" y="764" text-anchor="middle">3 in, 3 in · 8 cm, 8 cm</text>
+<rect class="frame" x="869" y="152" width="180" height="360"/>
+<rect class="art" x="881" y="164" width="156" height="336"/>
+<rect class="frame" x="1061" y="152" width="180" height="360"/>
+<rect class="art" x="1073" y="164" width="156" height="336"/>
+<rect class="frame" x="1271" y="152" width="180" height="360"/>
+<rect class="art" x="1283" y="164" width="156" height="336"/>
+<line class="dim" x1="1138" y1="332" x2="1182" y2="332" stroke-width="2"/>
+<line class="dim" x1="1160" y1="310" x2="1160" y2="354" stroke-width="2"/>
+<!-- horizon: three segments at one height, one per panel, so only the gaps differ -->
+<line class="soft" x1="883" y1="380" x2="1035" y2="380"/>
+<line class="soft" x1="1075" y1="380" x2="1227" y2="380"/>
+<line class="soft" x1="1285" y1="380" x2="1437" y2="380"/>
+<text class="l1" x="1160" y="730" text-anchor="middle">uneven gaps: three pictures</text>
+<text class="l2" x="1160" y="764" text-anchor="middle">2 in, 5 in · 5 cm, 13 cm</text>
+</svg>

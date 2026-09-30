@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan and elevation of an L shaped sectional: the art is sized to the length of the section against the main wall and centered on the seats, not on the corner</title>
+<desc id="d">Plan and elevation of an L shaped sectional: the art is sized to the length of the section against the main wall and centered on the seats, not on the corner</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px for plan and elevation; elevation floor at y=780 -->
+<!-- plan: main wall 168 in along the top, side wall at the left; return 84 by 38 in, main section 96 by 38 in -->
+<line class="ink" x1="80" y1="100" x2="752" y2="100"/>
+<line class="ink" x1="80" y1="100" x2="80" y2="460"/>
+<line class="ink" x1="80" y1="604" x2="80" y2="628"/>
+<line class="soft" x1="80" y1="604" x2="224" y2="604"/>
+<path class="soft" d="M224 604 A144 144 0 0 0 80 460"/>
+<path class="soft" d="M80 100 L616 100 L616 252 L232 252 L232 436 L80 436 Z"/>
+<line class="soft" x1="104" y1="124" x2="616" y2="124"/>
+<line class="soft" x1="104" y1="124" x2="104" y2="436"/>
+<line class="lead" x1="424" y1="100" x2="424" y2="252"/>
+<circle class="tp" cx="424" cy="176" r="4"/>
+<!-- elevation of the main wall: the return end-on at the corner, the main section, the work 64 by 36 in centered on it -->
+<line class="ink" x1="848" y1="780" x2="1520" y2="780"/>
+<line class="ink" x1="848" y1="780" x2="848" y2="420"/>
+<rect class="soft" x="848" y="652" width="152" height="128"/>
+<line class="soft" x1="848" y1="716" x2="1000" y2="716"/>
+<rect class="soft" x="1000" y="652" width="384" height="128"/>
+<line class="soft" x1="1000" y1="716" x2="1384" y2="716"/>
+<rect class="soft" x="1352" y="676" width="32" height="40"/>
+<rect class="lead" x="988" y="472" width="256" height="144"/>
+<rect class="frame" x="1064" y="472" width="256" height="144"/>
+<rect class="art" x="1072" y="480" width="240" height="128"/>
+<line class="dim" x1="1170" y1="544" x2="1214" y2="544" stroke-width="2"/>
+<line class="dim" x1="1192" y1="522" x2="1192" y2="566" stroke-width="2"/>
+<line class="dim" x1="1064" y1="436" x2="1320" y2="436"/>
+<line class="dim" x1="1064" y1="428" x2="1064" y2="444"/>
+<line class="dim" x1="1320" y1="428" x2="1320" y2="444"/>
+<text class="l1" x="1192" y="424" text-anchor="middle">64 in<tspan class="l2"> · two thirds of the section</tspan></text>
+<text class="l1" x="1192" y="372" text-anchor="middle">not centered on the whole L</text>
+<text class="l2" x="856" y="466">dotted: on the whole L</text>
+<line class="dim" x1="1000" y1="830" x2="1384" y2="830"/>
+<line class="dim" x1="1000" y1="822" x2="1000" y2="838"/>
+<line class="dim" x1="1384" y1="822" x2="1384" y2="838"/>
+<text class="l1" x="1192" y="818" text-anchor="middle">96 in section<tspan class="l2"> · centered on its seats</tspan></text>
+</svg>

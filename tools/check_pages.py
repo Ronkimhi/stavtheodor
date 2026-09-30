@@ -23,6 +23,10 @@ FAQ_WORDS = (30, 110)
 FAQ_AREA = (10, 110)
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
+# 2026-09-29 (Ron's decision): diagram and table captions never count toward a body's word limits.
+# A guide carries a figcaption on every diagram and table (and a table may carry a <caption>), so the
+# 900 to 1,400 cap reads the prose only; every other gate still reads the whole body.
+def body_words(s): return words(re.sub(r"<(figcaption|caption)\b[^>]*>.*?</\1>", " ", s, flags=re.S | re.I))
 def post_slugs():
     """Every Art Radar slug in content/posts.html, for the radar_posts field."""
     try: src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts.html"), encoding="utf-8").read()
@@ -105,7 +109,7 @@ for f in sys.argv[1:]:
                 if off: fails.append(f"{blk} class not allowed on a guide: {off} (allowed: {', '.join(sorted(GUIDE_CLASSES))})")
             if re.search(r"class='|class=[^\"']", p.get(blk,"")): fails.append(f"{blk}: write class attributes in double quotes")
     if p.get("section") in LIMITS and p.get("body_en"):
-        lo, hi = LIMITS[p["section"]]; n = words(p["body_en"])
+        lo, hi = LIMITS[p["section"]]; n = body_words(p["body_en"])
         if p["section"] == "area": n = words(p["lead_en"] + " " + p["body_en"] + " " + " ".join(q.get("q_en", "") + " " + q.get("a_en", "") for q in p.get("faq", []) or []))
         if n < lo or n > hi: fails.append(f"body_en {n} words, expected {lo} to {hi}")
     if p.get("body_he") and words(p["body_he"]) < 0.6 * words(p.get("body_en","")): fails.append("body_he much shorter than body_en, translation incomplete")
@@ -154,5 +158,5 @@ for f in sys.argv[1:]:
             if not p.get(k): fails.append(f"{k}: required beside guides (the fallback heading is a safety net, never the copy)")
     if len(p.get("related", [])) < 2 and p.get("section") != "guide": fails.append("fewer than 2 related pages")
     if fails: print(f"{f}: FAIL\n  - " + "\n  - ".join(fails)); fails_total += 1
-    else: print(f"{f}: OK ({words(p['body_en'])} en words)")
+    else: print(f"{f}: OK ({body_words(p['body_en'])} en words, captions excluded)")
 sys.exit(1 if fails_total else 0)

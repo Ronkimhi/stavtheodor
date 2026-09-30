@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Bedroom plan with morning sun falling on one wall: that wall is marked as wrong for photographs and watercolors, and the wall out of the sun is marked for them</title>
+<desc id="d">Bedroom plan with morning sun falling on one wall: that wall is marked as wrong for photographs and watercolors, and the wall out of the sun is marked for them</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; plan, north wall at the top, room 168 by 144 in from (380, 140), the D22 bedroom; window in the east wall -->
+<!-- morning sun from the east window across the floor to the west wall -->
+<path class="art" d="M1220 340 L1220 640 L380 640 L380 340 Z"/>
+<path class="ink" d="M1010 860 L380 860 L380 140 L1220 140 L1220 860 L1190 860"/>
+<line class="soft" x1="1190" y1="860" x2="1190" y2="680"/>
+<path class="soft" d="M1010 860 A180 180 0 0 1 1190 680"/>
+<rect class="soft" x="1214" y="340" width="12" height="300"/>
+<!-- queen bed 60 by 80 centered 84 in from the west, nightstands 22 by 18, dresser 60 by 20 on the south wall -->
+<rect class="soft" x="650" y="140" width="300" height="15"/>
+<rect class="soft" x="650" y="155" width="300" height="385"/>
+<rect class="soft" x="665" y="170" width="130" height="70" rx="10"/>
+<rect class="soft" x="805" y="170" width="130" height="70" rx="10"/>
+<line class="soft" x1="650" y1="290" x2="950" y2="290"/>
+<rect class="soft" x="540" y="140" width="110" height="90"/>
+<rect class="soft" x="950" y="140" width="110" height="90"/>
+<rect class="soft" x="650" y="760" width="300" height="100"/>
+<text class="l2" x="800" y="820" text-anchor="middle">dresser</text>
+<!-- markers: the wall above the bed (north) for photographs and watercolors; the sunlit west segment dotted -->
+<rect class="tp" x="680" y="134" width="240" height="12"/>
+<rect class="lead" x="382" y="340" width="14" height="300" stroke-width="2"/>
+<text class="l1" x="800" y="112" text-anchor="middle">photographs and watercolors here</text>
+<text class="l1" x="1236" y="470">morning sun</text>
+<text class="l2" x="1236" y="530">window</text>
+<text class="l2" x="366" y="495" text-anchor="end">not here</text>
+</svg>

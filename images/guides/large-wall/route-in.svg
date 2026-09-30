@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan of the route into a home with the door, a stair turn and an elevator numbered: a large work fits the door but not the stair turn</title>
+<desc id="d">Plan of the route into a home with the door, a stair turn and an elevator numbered: a large work fits the door but not the stair turn</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3 px; plan; front door 36 in at x=250; hall 36 in wide (y 450 to 558); stair 30 in clear (x 880 to 970) leaving north, landing 30 by 36 in; elevator car 90 by 60 in with a 36 in door; crated work 100 by 4 in; dimensions drawn, never labelled -->
+<!-- building face with the 36 in front door, the 36 in hall running east to the landing, the 30 in stair leaving north, the elevator off the hall's south side -->
+<line class="ink" x1="250" y1="300" x2="250" y2="450"/>
+<line class="ink" x1="250" y1="558" x2="250" y2="700"/>
+<line class="soft" x1="250" y1="450" x2="326.4" y2="526.4"/>
+<path class="soft" d="M250 558 A108 108 0 0 0 326.4 526.4"/>
+<line class="ink" x1="250" y1="450" x2="880" y2="450"/>
+<line class="ink" x1="250" y1="558" x2="641" y2="558"/>
+<line class="ink" x1="749" y1="558" x2="970" y2="558"/>
+<line class="ink" x1="880" y1="450" x2="880" y2="200"/>
+<line class="ink" x1="970" y1="558" x2="970" y2="200"/>
+<line class="soft" x1="880" y1="417" x2="970" y2="417"/>
+<line class="soft" x1="880" y1="384" x2="970" y2="384"/>
+<line class="soft" x1="880" y1="351" x2="970" y2="351"/>
+<line class="soft" x1="880" y1="318" x2="970" y2="318"/>
+<line class="soft" x1="880" y1="285" x2="970" y2="285"/>
+<line class="soft" x1="880" y1="252" x2="970" y2="252"/>
+<line class="soft" x1="880" y1="219" x2="970" y2="219"/>
+<line class="soft" x1="925" y1="440" x2="925" y2="250"/>
+<path class="soft" d="M911 268 L925 250 L939 268"/>
+<!-- elevator car 90 by 60 in (x 560 to 830, y 558 to 738), sliding door 36 in in the hall's south wall (x 641 to 749) -->
+<rect class="soft" x="560" y="558" width="270" height="180"/>
+<line class="soft" x1="641" y1="563" x2="695" y2="563"/>
+<line class="soft" x1="695" y1="567" x2="749" y2="567"/>
+<!-- the crate 100 by 4 in (300 by 12 px): across the door (fits); at the turn, dotted, at 45 degrees against the inner corner (880, 450), running through the hall's south wall and the stair's east wall (jams); in the car at 30 degrees (fits: 88.6 by 53.5 in inside 90 by 60) -->
+<rect class="frame" x="100" y="498" width="300" height="12"/>
+<rect class="art" x="103" y="501" width="294" height="6"/>
+<rect class="lead" x="721.4" y="448.2" width="300" height="12" transform="rotate(-45 884.2 454.2)" stroke-width="2"/>
+<circle class="tp" cx="780.4" cy="558" r="6"/>
+<circle class="tp" cx="970" cy="368.4" r="6"/>
+<rect class="frame" x="545" y="642" width="300" height="12" transform="rotate(30 695 648)"/>
+<rect class="art" x="548" y="645" width="294" height="6" transform="rotate(30 695 648)"/>
+<circle class="frame" cx="130" cy="400" r="34"/>
+<text class="l1" x="130" y="400" text-anchor="middle" dominant-baseline="central">1</text>
+<text class="l1" x="174" y="409">door</text>
+<circle class="frame" cx="1030" cy="400" r="34"/>
+<text class="l1" x="1030" y="400" text-anchor="middle" dominant-baseline="central">2</text>
+<text class="l1" x="1074" y="409">stair turn</text>
+<circle class="frame" cx="870" cy="700" r="34"/>
+<text class="l1" x="870" y="700" text-anchor="middle" dominant-baseline="central">3</text>
+<text class="l1" x="914" y="709">elevator</text>
+<text class="l2" x="800" y="820" text-anchor="middle">the tightest point decides</text>
+</svg>

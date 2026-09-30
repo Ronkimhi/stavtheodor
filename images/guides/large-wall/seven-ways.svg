@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Seven small elevations of the same large wall: one large work, a pair, a triptych, a grid of nine, a salon gallery wall, a single tall vertical work, and a long horizontal work above a sofa</title>
+<desc id="d">Seven small elevations of the same large wall: one large work, a pair, a triptych, a grid of nine, a salon gallery wall, a single tall vertical work, and a long horizontal work above a sofa</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.25 px; seven panels, each the same wall 144 by 108 in; floors at y=400 and y=860 -->
+<!-- (1) One work -->
+<line class="ink" x1="80" y1="400" x2="404" y2="400"/>
+<line class="soft" x1="80" y1="157" x2="404" y2="157"/>
+<line class="soft" x1="80" y1="400" x2="80" y2="157"/>
+<line class="soft" x1="404" y1="400" x2="404" y2="157"/>
+<line class="eye" x1="80" y1="271.75" x2="404" y2="271.75"/><line class="eye" x1="80" y1="265" x2="404" y2="265"/>
+<rect class="frame" x="134" y="197.5" width="216" height="144"/><rect class="art" x="139" y="202.5" width="206" height="134"/>
+<line class="dim" x1="220" y1="269.5" x2="264" y2="269.5" stroke-width="2"/><line class="dim" x1="242" y1="247.5" x2="242" y2="291.5" stroke-width="2"/>
+<text class="l1" x="242" y="440" text-anchor="middle">One work</text>
+<!-- (2) A pair -->
+<line class="ink" x1="452" y1="400" x2="776" y2="400"/>
+<line class="soft" x1="452" y1="157" x2="776" y2="157"/>
+<line class="soft" x1="452" y1="400" x2="452" y2="157"/>
+<line class="soft" x1="776" y1="400" x2="776" y2="157"/>
+<line class="eye" x1="452" y1="271.75" x2="776" y2="271.75"/><line class="eye" x1="452" y1="265" x2="776" y2="265"/>
+<rect class="frame" x="506" y="197.5" width="103.5" height="144"/><rect class="art" x="511" y="202.5" width="93.5" height="134"/>
+<rect class="frame" x="618.5" y="197.5" width="103.5" height="144"/><rect class="art" x="623.5" y="202.5" width="93.5" height="134"/>
+<line class="dim" x1="592" y1="269.5" x2="636" y2="269.5" stroke-width="2"/><line class="dim" x1="614" y1="247.5" x2="614" y2="291.5" stroke-width="2"/>
+<text class="l1" x="614" y="440" text-anchor="middle">A pair</text>
+<!-- (3) A triptych -->
+<line class="ink" x1="824" y1="400" x2="1148" y2="400"/>
+<line class="soft" x1="824" y1="157" x2="1148" y2="157"/>
+<line class="soft" x1="824" y1="400" x2="824" y2="157"/>
+<line class="soft" x1="1148" y1="400" x2="1148" y2="157"/>
+<line class="eye" x1="824" y1="271.75" x2="1148" y2="271.75"/><line class="eye" x1="824" y1="265" x2="1148" y2="265"/>
+<rect class="frame" x="878" y="202" width="67.5" height="135"/><rect class="art" x="883" y="207" width="57.5" height="125"/>
+<rect class="frame" x="952.25" y="202" width="67.5" height="135"/><rect class="art" x="957.25" y="207" width="57.5" height="125"/>
+<rect class="frame" x="1026.5" y="202" width="67.5" height="135"/><rect class="art" x="1031.5" y="207" width="57.5" height="125"/>
+<line class="dim" x1="964" y1="269.5" x2="1008" y2="269.5" stroke-width="2"/><line class="dim" x1="986" y1="247.5" x2="986" y2="291.5" stroke-width="2"/>
+<text class="l1" x="986" y="440" text-anchor="middle">A triptych</text>
+<!-- (4) A grid -->
+<line class="ink" x1="1196" y1="400" x2="1520" y2="400"/>
+<line class="soft" x1="1196" y1="157" x2="1520" y2="157"/>
+<line class="soft" x1="1196" y1="400" x2="1196" y2="157"/>
+<line class="soft" x1="1520" y1="400" x2="1520" y2="157"/>
+<line class="eye" x1="1196" y1="271.75" x2="1520" y2="271.75"/><line class="eye" x1="1196" y1="265" x2="1520" y2="265"/>
+<rect class="frame" x="1250" y="298.75" width="67.5" height="45"/><rect class="art" x="1254" y="302.75" width="59.5" height="37"/>
+<rect class="frame" x="1250" y="247" width="67.5" height="45"/><rect class="art" x="1254" y="251" width="59.5" height="37"/>
+<rect class="frame" x="1250" y="195.25" width="67.5" height="45"/><rect class="art" x="1254" y="199.25" width="59.5" height="37"/>
+<rect class="frame" x="1324.25" y="298.75" width="67.5" height="45"/><rect class="art" x="1328.25" y="302.75" width="59.5" height="37"/>
+<rect class="frame" x="1324.25" y="247" width="67.5" height="45"/><rect class="art" x="1328.25" y="251" width="59.5" height="37"/>
+<rect class="frame" x="1324.25" y="195.25" width="67.5" height="45"/><rect class="art" x="1328.25" y="199.25" width="59.5" height="37"/>
+<rect class="frame" x="1398.5" y="298.75" width="67.5" height="45"/><rect class="art" x="1402.5" y="302.75" width="59.5" height="37"/>
+<rect class="frame" x="1398.5" y="247" width="67.5" height="45"/><rect class="art" x="1402.5" y="251" width="59.5" height="37"/>
+<rect class="frame" x="1398.5" y="195.25" width="67.5" height="45"/><rect class="art" x="1402.5" y="199.25" width="59.5" height="37"/>
+<line class="dim" x1="1336" y1="269.5" x2="1380" y2="269.5" stroke-width="2"/><line class="dim" x1="1358" y1="247.5" x2="1358" y2="291.5" stroke-width="2"/>
+<text class="l1" x="1358" y="440" text-anchor="middle">A grid</text>
+<!-- (5) A salon wall -->
+<line class="ink" x1="266" y1="860" x2="590" y2="860"/>
+<line class="soft" x1="266" y1="617" x2="590" y2="617"/>
+<line class="soft" x1="266" y1="860" x2="266" y2="617"/>
+<line class="soft" x1="590" y1="860" x2="590" y2="617"/>
+<line class="eye" x1="266" y1="731.75" x2="590" y2="731.75"/><line class="eye" x1="266" y1="725" x2="590" y2="725"/>
+<rect class="frame" x="320" y="655.25" width="45" height="40.5"/><rect class="art" x="324" y="659.25" width="37" height="32.5"/>
+<rect class="frame" x="320" y="702.5" width="45" height="45"/><rect class="art" x="324" y="706.5" width="37" height="37"/>
+<rect class="frame" x="320" y="754.25" width="45" height="49.5"/><rect class="art" x="324" y="758.25" width="37" height="41.5"/>
+<rect class="frame" x="371.75" y="655.25" width="63" height="67.5"/><rect class="art" x="375.75" y="659.25" width="55" height="59.5"/>
+<rect class="frame" x="371.75" y="729.5" width="63" height="74.25"/><rect class="art" x="375.75" y="733.5" width="55" height="66.25"/>
+<rect class="frame" x="441.5" y="655.25" width="40.5" height="31.5"/><rect class="art" x="445.5" y="659.25" width="32.5" height="23.5"/>
+<rect class="frame" x="441.5" y="693.5" width="40.5" height="49.5"/><rect class="art" x="445.5" y="697.5" width="32.5" height="41.5"/>
+<rect class="frame" x="441.5" y="749.75" width="40.5" height="54"/><rect class="art" x="445.5" y="753.75" width="32.5" height="46"/>
+<rect class="frame" x="488.75" y="655.25" width="47.25" height="40.5"/><rect class="art" x="492.75" y="659.25" width="39.25" height="32.5"/>
+<rect class="frame" x="488.75" y="702.5" width="47.25" height="22.5"/><rect class="art" x="492.75" y="706.5" width="39.25" height="14.5"/>
+<rect class="frame" x="488.75" y="731.75" width="47.25" height="27"/><rect class="art" x="492.75" y="735.75" width="39.25" height="19"/>
+<rect class="frame" x="488.75" y="765.5" width="47.25" height="38.25"/><rect class="art" x="492.75" y="769.5" width="39.25" height="30.25"/>
+<line class="dim" x1="406" y1="729.5" x2="450" y2="729.5" stroke-width="2"/><line class="dim" x1="428" y1="707.5" x2="428" y2="751.5" stroke-width="2"/>
+<text class="l1" x="428" y="900" text-anchor="middle">A salon wall</text>
+<!-- (6) One tall work -->
+<line class="ink" x1="638" y1="860" x2="962" y2="860"/>
+<line class="soft" x1="638" y1="617" x2="962" y2="617"/>
+<line class="soft" x1="638" y1="860" x2="638" y2="617"/>
+<line class="soft" x1="962" y1="860" x2="962" y2="617"/>
+<line class="eye" x1="638" y1="731.75" x2="962" y2="731.75"/><line class="eye" x1="638" y1="725" x2="962" y2="725"/>
+<rect class="frame" x="759.5" y="644" width="81" height="171"/><rect class="art" x="764.5" y="649" width="71" height="161"/>
+<line class="dim" x1="778" y1="729.5" x2="822" y2="729.5" stroke-width="2"/><line class="dim" x1="800" y1="707.5" x2="800" y2="751.5" stroke-width="2"/>
+<text class="l1" x="800" y="900" text-anchor="middle">One tall work</text>
+<!-- (7) One long work -->
+<line class="ink" x1="1010" y1="860" x2="1334" y2="860"/>
+<line class="soft" x1="1010" y1="617" x2="1334" y2="617"/>
+<line class="soft" x1="1010" y1="860" x2="1010" y2="617"/>
+<line class="soft" x1="1334" y1="860" x2="1334" y2="617"/>
+<line class="eye" x1="1010" y1="731.75" x2="1380" y2="731.75"/><line class="eye" x1="1010" y1="725" x2="1380" y2="725"/>
+<rect class="soft" x="1050.5" y="788" width="243" height="36"/><rect class="soft" x="1050.5" y="824" width="243" height="13.5"/><rect class="soft" x="1050.5" y="801.5" width="13.5" height="22.5"/><rect class="soft" x="1280" y="801.5" width="13.5" height="22.5"/><line class="soft" x1="1059.5" y1="837.5" x2="1059.5" y2="860"/><line class="soft" x1="1284.5" y1="837.5" x2="1284.5" y2="860"/>
+<rect class="frame" x="1091" y="695.75" width="162" height="72"/><rect class="art" x="1096" y="700.75" width="152" height="62"/>
+<line class="dim" x1="1150" y1="731.75" x2="1194" y2="731.75" stroke-width="2"/><line class="dim" x1="1172" y1="709.75" x2="1172" y2="753.75" stroke-width="2"/>
+<text class="l2" x="1520" y="713" text-anchor="end">57 to 60 in</text>
+<text class="l2" x="1520" y="745" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="1172" y="900" text-anchor="middle">One long work</text>
+</svg>

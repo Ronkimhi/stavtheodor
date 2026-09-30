@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Side view of an entry: from the front door a work reads as one shape of color, and from close up the same work shows its layered surface</title>
+<desc id="d">Side view of an entry: from the front door a work reads as one shape of color, and from close up the same work shows its layered surface</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; floor at y=680; front door at x=300, the facing wall 144 in away at x=1020; work 30 by 40 in, center 58 -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<line class="ink" x1="1020" y1="680" x2="1020" y2="200"/>
+<!-- the front door opening: two jambs 12 in apart, header at 84 in -->
+<line class="ink" x1="300" y1="680" x2="300" y2="260"/>
+<line class="ink" x1="240" y1="680" x2="240" y2="260"/>
+<line class="ink" x1="240" y1="260" x2="300" y2="260"/>
+<rect class="frame" x="1008" y="290" width="12" height="200"/>
+<rect class="art" x="1011" y="296" width="6" height="188"/>
+<line class="dim" x1="992" y1="390" x2="1036" y2="390" stroke-width="2"/>
+<line class="dim" x1="1014" y1="368" x2="1014" y2="412" stroke-width="2"/>
+<circle class="soft" cx="340" cy="391" r="26"/>
+<line class="soft" x1="340" y1="417" x2="340" y2="510"/>
+<line class="soft" x1="340" y1="510" x2="312" y2="680"/>
+<line class="soft" x1="340" y1="510" x2="368" y2="680"/>
+<line class="soft" x1="340" y1="420" x2="300" y2="515"/>
+<line class="soft" x1="340" y1="420" x2="380" y2="515"/>
+<circle class="tp" cx="360" cy="387.5" r="3"/>
+<circle class="soft" cx="870" cy="391" r="26"/>
+<line class="soft" x1="870" y1="417" x2="870" y2="510"/>
+<line class="soft" x1="870" y1="510" x2="842" y2="680"/>
+<line class="soft" x1="870" y1="510" x2="898" y2="680"/>
+<line class="soft" x1="870" y1="420" x2="830" y2="515"/>
+<line class="soft" x1="870" y1="420" x2="910" y2="515"/>
+<circle class="tp" cx="890" cy="387.5" r="3"/>
+<!-- call-outs above each viewer, circle bottoms at y 240, clear of the door header at 84 in: the same shape flat from the door, hatched close up -->
+<circle class="ink" cx="340" cy="160" r="80"/>
+<line class="lead" x1="340" y1="240" x2="340" y2="361"/>
+<ellipse class="art" cx="340" cy="160" rx="50" ry="34" transform="rotate(-12 340 160)"/>
+<circle class="ink" cx="870" cy="160" r="80"/>
+<line class="lead" x1="870" y1="240" x2="870" y2="361"/>
+<ellipse class="art" cx="870" cy="160" rx="50" ry="34" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="830" y1="142.6" x2="830" y2="177.4" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="838" y1="136.9" x2="838" y2="183.1" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="846" y1="133.2" x2="846" y2="186.8" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="854" y1="130.8" x2="854" y2="189.2" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="862" y1="129.4" x2="862" y2="190.6" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="870" y1="129" x2="870" y2="191" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="878" y1="129.4" x2="878" y2="190.6" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="886" y1="130.8" x2="886" y2="189.2" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="894" y1="133.2" x2="894" y2="186.8" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="902" y1="136.9" x2="902" y2="183.1" transform="rotate(-12 870 160)"/>
+<line class="soft" x1="910" y1="142.6" x2="910" y2="177.4" transform="rotate(-12 870 160)"/>
+<text class="l1" x="340" y="730" text-anchor="middle">from the door: presence</text>
+<text class="l1" x="870" y="730" text-anchor="middle">close up: surface</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a stair with a landing: one tall work on the landing wall, its center 57 to 60 inches above the landing floor</title>
+<desc id="d">Elevation of a stair with a landing: one tall work on the landing wall, its center 57 to 60 inches above the landing floor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; lower floor at y=880; 7 risers of 7 in to a landing 49 in up (y=684); work 30 by 48 in, center 58 in above the landing -->
+<path class="ink" d="M80 880 L560 880 L560 852 L604 852 L604 824 L648 824 L648 796 L692 796 L692 768 L736 768 L736 740 L780 740 L780 712 L824 712 L824 684 L868 684 L1520 684"/>
+<!-- nosing line and a handrail 36 in above it, turning level at the landing and ending before the work -->
+<line class="soft" x1="530" y1="871.1" x2="824" y2="684"/>
+<line class="soft" x1="546" y1="716.9" x2="824" y2="540"/>
+<line class="soft" x1="824" y1="540" x2="916" y2="540"/>
+<line class="soft" x1="546" y1="716.9" x2="546" y2="860.9"/>
+<line class="eye" x1="868" y1="456" x2="1520" y2="456"/>
+<line class="eye" x1="868" y1="444" x2="1520" y2="444"/>
+<rect class="frame" x="1140" y="356" width="120" height="192"/>
+<rect class="art" x="1154" y="370" width="92" height="164"/>
+<line class="dim" x1="1178" y1="452" x2="1222" y2="452" stroke-width="2"/>
+<line class="dim" x1="1200" y1="430" x2="1200" y2="474" stroke-width="2"/>
+<circle class="soft" cx="1440" cy="458" r="26"/>
+<line class="soft" x1="1440" y1="484" x2="1440" y2="548"/>
+<line class="soft" x1="1440" y1="548" x2="1412" y2="684"/>
+<line class="soft" x1="1440" y1="548" x2="1468" y2="684"/>
+<line class="soft" x1="1440" y1="476" x2="1400" y2="552"/>
+<line class="soft" x1="1440" y1="476" x2="1480" y2="552"/>
+<circle class="tp" cx="1420" cy="450" r="3"/>
+<line class="dim" x1="1100" y1="684" x2="1100" y2="452"/>
+<line class="dim" x1="1092" y1="684" x2="1108" y2="684"/>
+<line class="dim" x1="1092" y1="452" x2="1108" y2="452"/>
+<!-- band pair above the 60 in line, clear of the sloped handrail and, at 360, of the stair -->
+<text class="l1" x="1086" y="400" text-anchor="end">57 to 60 in above the landing</text>
+<text class="l2" x="1086" y="430" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="1200" y="316" text-anchor="middle">one tall work</text>
+</svg>

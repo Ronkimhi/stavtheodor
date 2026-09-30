@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Four small elevations showing picture heights: 8 to 10 inches above a sofa back, 6 to 10 inches above a console, 6 to 10 inches above a mantel, and a center line 57 to 60 inches above each stair tread</title>
+<desc id="d">Four small elevations showing picture heights: 8 to 10 inches above a sofa back, 6 to 10 inches above a console, 6 to 10 inches above a mantel, and a center line 57 to 60 inches above each stair tread</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:2.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.2 px; floor at y=580; four panels of 360 px -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="80" y1="397.6" x2="1520" y2="397.6"/>
+<line class="eye" x1="80" y1="388" x2="1520" y2="388"/>
+<!-- (a) sofa 84 in, back 32 in; work 56 by 38 in, gap 9 in, center 60 in -->
+<rect class="soft" x="125.6" y="477.6" width="268.8" height="51.2"/>
+<rect class="soft" x="125.6" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="125.6" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="375.2" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="138.4" y1="548" x2="138.4" y2="580"/>
+<line class="soft" x1="381.6" y1="548" x2="381.6" y2="580"/>
+<rect class="frame" x="170.4" y="327.2" width="179.2" height="121.6"/>
+<rect class="art" x="176.4" y="333.2" width="167.2" height="109.6"/>
+<line class="dim" x1="238" y1="388" x2="282" y2="388" stroke-width="2"/>
+<line class="dim" x1="260" y1="366" x2="260" y2="410" stroke-width="2"/>
+<line class="dim" x1="363.6" y1="448.8" x2="363.6" y2="477.6"/>
+<line class="dim" x1="355.6" y1="448.8" x2="371.6" y2="448.8"/>
+<line class="dim" x1="355.6" y1="477.6" x2="371.6" y2="477.6"/>
+<line class="dim" x1="170.4" y1="303.2" x2="349.6" y2="303.2"/>
+<line class="dim" x1="170.4" y1="295.2" x2="170.4" y2="311.2"/>
+<line class="dim" x1="349.6" y1="295.2" x2="349.6" y2="311.2"/>
+<text class="l2" x="260" y="291.2" text-anchor="middle">two thirds</text>
+<text class="l1" x="260" y="630" text-anchor="middle">8 to 10 in</text>
+<!-- (b) console 48 by 34 in; work 32 wide by 36 tall, gap 6 in, center 58 in -->
+<rect class="soft" x="543.2" y="471.2" width="153.6" height="108.8"/>
+<line class="soft" x1="543.2" y1="477.6" x2="696.8" y2="477.6"/>
+<rect class="frame" x="568.8" y="336.8" width="102.4" height="115.2"/>
+<rect class="art" x="574.8" y="342.8" width="90.4" height="103.2"/>
+<line class="dim" x1="598" y1="394.4" x2="642" y2="394.4" stroke-width="2"/>
+<line class="dim" x1="620" y1="372.4" x2="620" y2="416.4" stroke-width="2"/>
+<line class="dim" x1="685.2" y1="452" x2="685.2" y2="471.2"/>
+<line class="dim" x1="677.2" y1="452" x2="693.2" y2="452"/>
+<line class="dim" x1="677.2" y1="471.2" x2="693.2" y2="471.2"/>
+<text class="l1" x="620" y="630" text-anchor="middle">6 to 10 in</text>
+<!-- (c) mantel shelf 66 in wide at 52 in; work 36 wide by 18 tall, gap 6 in, center 67 in, above the band -->
+<rect class="soft" x="874.4" y="413.6" width="211.2" height="6.4"/>
+<rect class="soft" x="890.4" y="420" width="179.2" height="160"/>
+<rect class="soft" x="922.4" y="484" width="115.2" height="96"/>
+<rect class="frame" x="922.4" y="336.8" width="115.2" height="57.6"/>
+<rect class="art" x="928.4" y="342.8" width="103.2" height="45.6"/>
+<line class="dim" x1="958" y1="365.6" x2="1002" y2="365.6" stroke-width="2"/>
+<line class="dim" x1="980" y1="343.6" x2="980" y2="387.6" stroke-width="2"/>
+<line class="dim" x1="1051.6" y1="394.4" x2="1051.6" y2="413.6"/>
+<line class="dim" x1="1043.6" y1="394.4" x2="1059.6" y2="394.4"/>
+<line class="dim" x1="1043.6" y1="413.6" x2="1059.6" y2="413.6"/>
+<text class="l1" x="980" y="630" text-anchor="middle">6 to 10 in</text>
+<text class="l2" x="980" y="660" text-anchor="middle">the mantel sets the height</text>
+<!-- (d) stair 7 in risers, 11 in treads; three 16 by 12 in frames, each centered 58 in above the nosing line -->
+<line class="dim" x1="1225.2" y1="535.2" x2="1225.2" y2="349.6"/>
+<line class="dim" x1="1217.2" y1="535.2" x2="1233.2" y2="535.2"/>
+<line class="dim" x1="1217.2" y1="349.6" x2="1233.2" y2="349.6"/>
+<line class="dim" x1="1295.6" y1="490.4" x2="1295.6" y2="304.8"/>
+<line class="dim" x1="1287.6" y1="490.4" x2="1303.6" y2="490.4"/>
+<line class="dim" x1="1287.6" y1="304.8" x2="1303.6" y2="304.8"/>
+<line class="dim" x1="1366" y1="445.6" x2="1366" y2="260"/>
+<line class="dim" x1="1358" y1="445.6" x2="1374" y2="445.6"/>
+<line class="dim" x1="1358" y1="260" x2="1374" y2="260"/>
+<path class="ink" d="M1160 580 L1190 580 L1190 557.6 L1225.2 557.6 L1225.2 535.2 L1260.4 535.2 L1260.4 512.8 L1295.6 512.8 L1295.6 490.4 L1330.8 490.4 L1330.8 468 L1366 468 L1366 445.6 L1520 445.6"/>
+<rect class="frame" x="1199.6" y="330.4" width="51.2" height="38.4"/>
+<rect class="art" x="1205.6" y="336.4" width="39.2" height="26.4"/>
+<line class="dim" x1="1203.2" y1="349.6" x2="1247.2" y2="349.6" stroke-width="2"/>
+<line class="dim" x1="1225.2" y1="327.6" x2="1225.2" y2="371.6" stroke-width="2"/>
+<rect class="frame" x="1270" y="285.6" width="51.2" height="38.4"/>
+<rect class="art" x="1276" y="291.6" width="39.2" height="26.4"/>
+<line class="dim" x1="1273.6" y1="304.8" x2="1317.6" y2="304.8" stroke-width="2"/>
+<line class="dim" x1="1295.6" y1="282.8" x2="1295.6" y2="326.8" stroke-width="2"/>
+<rect class="frame" x="1340.4" y="240.8" width="51.2" height="38.4"/>
+<rect class="art" x="1346.4" y="246.8" width="39.2" height="26.4"/>
+<line class="dim" x1="1344" y1="260" x2="1388" y2="260" stroke-width="2"/>
+<line class="dim" x1="1366" y1="238" x2="1366" y2="282" stroke-width="2"/>
+<text class="l1" x="1340" y="626" text-anchor="middle">57 to 60 in</text>
+<text class="l1" x="1340" y="682" text-anchor="middle">above each nose</text>
+<text class="l1" x="1520" y="200" text-anchor="end">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
+<line class="lead" x1="1500" y1="212" x2="1500" y2="388"/>
+</svg>

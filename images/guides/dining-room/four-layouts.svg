@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Four dining room wall layouts drawn to scale: one large work centered above a sideboard, three small works in a row above a table, a pair of vertical works flanking a doorway, and a gallery wall on a long wall facing the table</title>
+<desc id="d">Four dining room wall layouts drawn to scale: one large work centered above a sideboard, three small works in a row above a table, a pair of vertical works flanking a doorway, and a gallery wall on a long wall facing the table</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:2.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.9 px; floor at y=580; four panels; seated band at 52 and 57 in, unlabelled -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="80" y1="429.2" x2="1520" y2="429.2"/>
+<line class="eye" x1="80" y1="414.7" x2="1520" y2="414.7"/>
+<!-- (a) sideboard 72 by 34 in; work 48 by 30 in, gap 8 in, center 57 in -->
+<rect class="soft" x="135.6" y="481.4" width="208.8" height="98.6"/>
+<line class="soft" x1="135.6" y1="487.2" x2="344.4" y2="487.2"/>
+<rect class="frame" x="170.4" y="371.2" width="139.2" height="87"/>
+<rect class="art" x="175.4" y="376.2" width="129.2" height="77"/>
+<line class="dim" x1="218" y1="414.7" x2="262" y2="414.7" stroke-width="2"/>
+<line class="dim" x1="240" y1="392.7" x2="240" y2="436.7" stroke-width="2"/>
+<!-- (b) table 84 in, top 30 in, chair backs 36 in; three works 16 by 22 in, gaps 2.5 in, bottom 44 in, center 55 in -->
+<rect class="soft" x="500.9" y="475.6" width="52.2" height="52.2"/>
+<rect class="soft" x="500.9" y="527.8" width="52.2" height="5.8"/>
+<line class="soft" x1="503.8" y1="533.6" x2="503.8" y2="580"/>
+<line class="soft" x1="550.2" y1="533.6" x2="550.2" y2="580"/>
+<rect class="soft" x="616.9" y="475.6" width="52.2" height="52.2"/>
+<rect class="soft" x="616.9" y="527.8" width="52.2" height="5.8"/>
+<line class="soft" x1="619.8" y1="533.6" x2="619.8" y2="580"/>
+<line class="soft" x1="666.2" y1="533.6" x2="666.2" y2="580"/>
+<rect class="soft" x="463.2" y="493" width="243.6" height="5.8"/>
+<rect class="soft" x="471.9" y="498.8" width="5.8" height="81.2"/>
+<rect class="soft" x="692.3" y="498.8" width="5.8" height="81.2"/>
+<rect class="frame" x="508.1" y="388.6" width="46.4" height="63.8"/>
+<rect class="art" x="513.1" y="393.6" width="36.4" height="53.8"/>
+<rect class="frame" x="561.8" y="388.6" width="46.4" height="63.8"/>
+<rect class="art" x="566.8" y="393.6" width="36.4" height="53.8"/>
+<rect class="frame" x="615.4" y="388.6" width="46.4" height="63.8"/>
+<rect class="art" x="620.4" y="393.6" width="36.4" height="53.8"/>
+<line class="dim" x1="563" y1="420.5" x2="607" y2="420.5" stroke-width="2"/>
+<line class="dim" x1="585" y1="398.5" x2="585" y2="442.5" stroke-width="2"/>
+<line class="soft" x1="486.4" y1="301.6" x2="486.4" y2="377"/>
+<path class="soft" d="M480.6 377 L492.2 377 L503.8 400.2 L469 400.2 Z"/>
+<line class="soft" x1="683.6" y1="301.6" x2="683.6" y2="377"/>
+<path class="soft" d="M677.8 377 L689.4 377 L701 400.2 L666.2 400.2 Z"/>
+<!-- (c) door opening 36 by 80 in; a vertical pair 20 by 30 in, each centered on its pier, center 55 in -->
+<path class="ink" d="M877.8 580 L877.8 348 L982.2 348 L982.2 580"/>
+<rect class="frame" x="782.3" y="377" width="58" height="87"/>
+<rect class="art" x="787.3" y="382" width="48" height="77"/>
+<line class="dim" x1="789.3" y1="420.5" x2="833.3" y2="420.5" stroke-width="2"/>
+<line class="dim" x1="811.3" y1="398.5" x2="811.3" y2="442.5" stroke-width="2"/>
+<rect class="frame" x="1019.7" y="377" width="58" height="87"/>
+<rect class="art" x="1024.7" y="382" width="48" height="77"/>
+<line class="dim" x1="1026.7" y1="420.5" x2="1070.7" y2="420.5" stroke-width="2"/>
+<line class="dim" x1="1048.7" y1="398.5" x2="1048.7" y2="442.5" stroke-width="2"/>
+<!-- (d) long wall 144 in, table in front; gallery group 72 by 40 in, 9 frames, gaps 2 in, center 56 in -->
+<line class="soft" x1="1096.2" y1="580" x2="1096.2" y2="336.4"/>
+<line class="soft" x1="1513.8" y1="580" x2="1513.8" y2="336.4"/>
+<rect class="frame" x="1200.6" y="359.6" width="63.8" height="52.2"/>
+<rect class="art" x="1205.6" y="364.6" width="53.8" height="42.2"/>
+<rect class="frame" x="1200.6" y="417.6" width="29" height="58"/>
+<rect class="art" x="1205.6" y="422.6" width="19" height="48"/>
+<rect class="frame" x="1235.4" y="417.6" width="29" height="58"/>
+<rect class="art" x="1240.4" y="422.6" width="19" height="48"/>
+<rect class="frame" x="1270.2" y="359.6" width="69.6" height="75.4"/>
+<rect class="art" x="1275.2" y="364.6" width="59.6" height="65.4"/>
+<rect class="frame" x="1270.2" y="440.8" width="31.9" height="34.8"/>
+<rect class="art" x="1275.2" y="445.8" width="21.9" height="24.8"/>
+<rect class="frame" x="1307.9" y="440.8" width="31.9" height="34.8"/>
+<rect class="art" x="1312.9" y="445.8" width="21.9" height="24.8"/>
+<rect class="frame" x="1345.6" y="359.6" width="63.8" height="34.8"/>
+<rect class="art" x="1350.6" y="364.6" width="53.8" height="24.8"/>
+<rect class="frame" x="1345.6" y="400.2" width="63.8" height="34.8"/>
+<rect class="art" x="1350.6" y="405.2" width="53.8" height="24.8"/>
+<rect class="frame" x="1345.6" y="440.8" width="63.8" height="34.8"/>
+<rect class="art" x="1350.6" y="445.8" width="53.8" height="24.8"/>
+<line class="dim" x1="1283" y1="417.6" x2="1327" y2="417.6" stroke-width="2"/>
+<line class="dim" x1="1305" y1="395.6" x2="1305" y2="439.6" stroke-width="2"/>
+<rect class="soft" x="1183.2" y="493" width="243.6" height="5.8"/>
+<rect class="soft" x="1191.9" y="498.8" width="5.8" height="81.2"/>
+<rect class="soft" x="1412.3" y="498.8" width="5.8" height="81.2"/>
+<text class="l1" x="240" y="626" text-anchor="middle">Above a sideboard</text>
+<text class="l1" x="585" y="680" text-anchor="middle">Above the table</text>
+<text class="l1" x="930" y="626" text-anchor="middle">Flanking a doorway</text>
+<text class="l1" x="1305" y="680" text-anchor="middle">Facing the table</text>
+</svg>

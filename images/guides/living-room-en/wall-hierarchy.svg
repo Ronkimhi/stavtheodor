@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three living room walls drawn side by side: a main wall with one large work, a secondary wall with a smaller pair, and a quiet wall with a single small work or nothing</title>
+<desc id="d">Three living room walls drawn side by side: a main wall with one large work, a secondary wall with a smaller pair, and a quiet wall with a single small work or nothing</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.6 px; floor at y=580; three walls 120 in wide unfolded side by side -->
+<line class="ink" x1="80" y1="580" x2="512" y2="580"/>
+<line class="soft" x1="80" y1="580" x2="80" y2="234.4"/>
+<line class="soft" x1="512" y1="580" x2="512" y2="234.4"/>
+<line class="ink" x1="584" y1="580" x2="1016" y2="580"/>
+<line class="soft" x1="584" y1="580" x2="584" y2="234.4"/>
+<line class="soft" x1="1016" y1="580" x2="1016" y2="234.4"/>
+<line class="ink" x1="1088" y1="580" x2="1520" y2="580"/>
+<line class="soft" x1="1088" y1="580" x2="1088" y2="234.4"/>
+<line class="soft" x1="1520" y1="580" x2="1520" y2="234.4"/>
+<line class="eye" x1="80" y1="374.8" x2="1520" y2="374.8"/><line class="eye" x1="80" y1="364" x2="1520" y2="364"/>
+<rect class="frame" x="188" y="299.2" width="216" height="144"/><rect class="art" x="196" y="307.2" width="200" height="128"/>
+<line class="dim" x1="274" y1="371.2" x2="318" y2="371.2" stroke-width="2"/><line class="dim" x1="296" y1="349.2" x2="296" y2="393.2" stroke-width="2"/>
+<text class="l1" x="296" y="628" text-anchor="middle">Main wall</text>
+<text class="l2" x="296" y="660" text-anchor="middle">one large work</text>
+<rect class="soft" x="713.6" y="457.6" width="172.8" height="122.4"/>
+<line class="soft" x1="713.6" y1="468.4" x2="886.4" y2="468.4"/>
+<rect class="frame" x="721.7" y="320.8" width="72" height="100.8"/><rect class="art" x="729.7" y="328.8" width="56" height="84.8"/>
+<rect class="frame" x="806.3" y="320.8" width="72" height="100.8"/><rect class="art" x="814.3" y="328.8" width="56" height="84.8"/>
+<line class="dim" x1="778" y1="371.2" x2="822" y2="371.2" stroke-width="2"/><line class="dim" x1="800" y1="349.2" x2="800" y2="393.2" stroke-width="2"/>
+<text class="l1" x="800" y="628" text-anchor="middle">Supporting wall</text>
+<text class="l2" x="800" y="660" text-anchor="middle">a smaller pair</text>
+<rect class="frame" x="1239.5" y="342.4" width="43.2" height="57.6"/><rect class="art" x="1245.5" y="348.4" width="31.2" height="45.6"/>
+<line class="dim" x1="1239.1" y1="371.2" x2="1283.1" y2="371.2" stroke-width="2"/><line class="dim" x1="1261.1" y1="349.2" x2="1261.1" y2="393.2" stroke-width="2"/>
+<rect class="lead" x="1325.5" y="342.4" width="43.2" height="57.6"/>
+<text class="l1" x="1304" y="628" text-anchor="middle">Quiet wall</text>
+<text class="l2" x="1304" y="660" text-anchor="middle">a small work, or nothing</text>
+<text class="l2" x="1500" y="280" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="1500" y="312" text-anchor="end">57 to 60 in</text>
+<line class="lead" x1="1500" y1="324" x2="1500" y2="364"/>
+</svg>

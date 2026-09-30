@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side view of a dining table: light from a low pendant reflects off a glazed frame into a seated guest's eyes, and a frame with no glass or anti-reflective glazing avoids it</title>
+<desc id="d">Side view of a dining table: light from a low pendant reflects off a glazed frame into a seated guest's eyes, and a frame with no glass or anti-reflective glazing avoids it</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 7 px; floor at y=780; wall at x=1180; table top 30 in, pendant bottom 62 in, work center 55 in, seated eye about 47 in -->
+<line class="ink" x1="80" y1="780" x2="1180" y2="780"/>
+<line class="ink" x1="1180" y1="780" x2="1180" y2="150"/>
+<!-- the work in profile, bottom 44, top 66, center 55 (as D16) -->
+<rect class="frame" x="1168" y="318" width="12" height="154"/>
+<rect class="art" x="1171" y="324" width="6" height="142"/>
+<line class="dim" x1="1152" y1="395" x2="1196" y2="395" stroke-width="2"/>
+<line class="dim" x1="1174" y1="373" x2="1174" y2="417" stroke-width="2"/>
+<rect class="soft" x="760" y="570" width="280" height="14"/>
+<rect class="soft" x="774" y="584" width="14" height="196"/>
+<rect class="soft" x="1012" y="584" width="14" height="196"/>
+<!-- pendant over the table center, 12 in shade, bottom at 62 in -->
+<line class="soft" x1="900" y1="80" x2="900" y2="290"/>
+<path class="soft" d="M886 290 L914 290 L942 346 L858 346 Z"/>
+<circle class="soft" cx="620" cy="436" r="26"/>
+<line class="soft" x1="620" y1="462" x2="620" y2="654"/>
+<line class="soft" x1="620" y1="654" x2="746" y2="654"/>
+<line class="soft" x1="746" y1="654" x2="746" y2="780"/>
+<line class="soft" x1="620" y1="486" x2="704" y2="563"/>
+<line class="soft" x1="564" y1="654" x2="732" y2="654"/>
+<line class="soft" x1="564" y1="654" x2="564" y2="528"/>
+<line class="soft" x1="564" y1="654" x2="564" y2="780"/>
+<line class="soft" x1="732" y1="654" x2="732" y2="780"/>
+<circle class="tp" cx="640" cy="451" r="3"/>
+<!-- ray from the pendant to the glazing at 56.9 in and back to the eye at an equal angle -->
+<line class="dim" x1="900" y1="346" x2="1168" y2="381.4"/>
+<line class="dim" x1="1168" y1="381.4" x2="640" y2="451"/>
+<circle class="tp" cx="640" cy="451" r="5"/>
+<!-- inset, upper left, boxed so it never reads as a wall of the room: the same frame, the incoming ray drawn, the reflected ray faint and short -->
+<rect class="soft" x="140" y="120" width="400" height="330"/>
+<line class="ink" x1="470" y1="160" x2="470" y2="440"/>
+<rect class="frame" x="458" y="220" width="12" height="154"/>
+<rect class="art" x="461" y="226" width="6" height="142"/>
+<line class="dim" x1="240" y1="170" x2="458" y2="297"/>
+<line class="lead" x1="458" y1="297" x2="410" y2="322" stroke-opacity=".35"/>
+<text class="l1" x="340" y="504" text-anchor="middle">no glass, or</text>
+<text class="l1" x="340" y="560" text-anchor="middle">anti-reflective</text>
+<text class="l1" x="800" y="830" text-anchor="middle">the pendant shows in the glass</text>
+</svg>

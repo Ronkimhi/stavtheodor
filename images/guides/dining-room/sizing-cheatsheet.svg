@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-labelledby="t d">
+<title id="t">Sizing chart for dining room art: a 60 inch sideboard takes art about 40 inches wide, 72 inches takes about 48, 84 inches takes about 56, and a 96 inch table takes a work or group about 64 inches wide</title>
+<desc id="d">Sizing chart for dining room art: a 60 inch sideboard takes art about 40 inches wide, 72 inches takes about 48, 84 inches takes about 56, and a 96 inch table takes a work or group about 64 inches wide</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 10 px on width; bar heights are symbolic, the same in every row -->
+<!-- row 1: 60 in sideboard, art 40 in -->
+<line class="dim" x1="600" y1="142" x2="1000" y2="142"/>
+<line class="dim" x1="600" y1="134" x2="600" y2="150"/>
+<line class="dim" x1="1000" y1="134" x2="1000" y2="150"/>
+<text class="l1" x="800" y="130" text-anchor="middle">40 in</text>
+<rect class="frame" x="600" y="154" width="400" height="56"/>
+<rect class="art" x="610" y="164" width="380" height="36"/>
+<rect class="soft" x="500" y="230" width="600" height="40"/>
+<text class="l2" x="800" y="302" text-anchor="middle">60 in sideboard · 152 cm, art 102 cm</text>
+<!-- row 2: 72 in sideboard, art 48 in -->
+<line class="dim" x1="560" y1="342" x2="1040" y2="342"/>
+<line class="dim" x1="560" y1="334" x2="560" y2="350"/>
+<line class="dim" x1="1040" y1="334" x2="1040" y2="350"/>
+<text class="l1" x="800" y="330" text-anchor="middle">48 in</text>
+<rect class="frame" x="560" y="354" width="480" height="56"/>
+<rect class="art" x="570" y="364" width="460" height="36"/>
+<rect class="soft" x="440" y="430" width="720" height="40"/>
+<text class="l2" x="800" y="502" text-anchor="middle">72 in sideboard · 183 cm, art 122 cm</text>
+<!-- row 3: 84 in table, art 56 in -->
+<line class="dim" x1="520" y1="542" x2="1080" y2="542"/>
+<line class="dim" x1="520" y1="534" x2="520" y2="550"/>
+<line class="dim" x1="1080" y1="534" x2="1080" y2="550"/>
+<text class="l1" x="800" y="530" text-anchor="middle">56 in</text>
+<rect class="frame" x="520" y="554" width="560" height="56"/>
+<rect class="art" x="530" y="564" width="540" height="36"/>
+<rect class="soft" x="380" y="630" width="840" height="6"/>
+<rect class="soft" x="400" y="636" width="12" height="34"/>
+<rect class="soft" x="1188" y="636" width="12" height="34"/>
+<text class="l2" x="800" y="702" text-anchor="middle">84 in table · 213 cm, art 142 cm</text>
+<!-- row 4: 96 in table, art 64 in -->
+<line class="dim" x1="480" y1="742" x2="1120" y2="742"/>
+<line class="dim" x1="480" y1="734" x2="480" y2="750"/>
+<line class="dim" x1="1120" y1="734" x2="1120" y2="750"/>
+<text class="l1" x="800" y="730" text-anchor="middle">64 in</text>
+<rect class="frame" x="480" y="754" width="640" height="56"/>
+<rect class="art" x="490" y="764" width="620" height="36"/>
+<rect class="soft" x="320" y="830" width="960" height="6"/>
+<rect class="soft" x="340" y="836" width="12" height="34"/>
+<rect class="soft" x="1248" y="836" width="12" height="34"/>
+<rect class="frame" x="485" y="890" width="190" height="40"/>
+<rect class="art" x="493" y="898" width="174" height="24"/>
+<rect class="frame" x="705" y="890" width="190" height="40"/>
+<rect class="art" x="713" y="898" width="174" height="24"/>
+<rect class="frame" x="925" y="890" width="190" height="40"/>
+<rect class="art" x="933" y="898" width="174" height="24"/>
+<rect class="soft" x="320" y="950" width="960" height="6"/>
+<rect class="soft" x="340" y="956" width="12" height="34"/>
+<rect class="soft" x="1248" y="956" width="12" height="34"/>
+<text class="l2" x="800" y="1022" text-anchor="middle">96 in table · 244 cm, art 163 cm; or three 19 in works, 3 in apart</text>
+</svg>

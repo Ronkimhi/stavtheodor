@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Perspective drawing of a long hallway with a series of small works along the side walls and one larger, lit work on the end wall</title>
+<desc id="d">Perspective drawing of a long hallway with a series of small works along the side walls and one larger, lit work on the end wall</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: none (one-point perspective); hall 60 in wide, 96 in ceiling, 30 ft long; horizon at eye height, 58 in -->
+<!-- hall 60 in wide, 96 in ceiling, 30 ft long; horizon and vanishing point at 58 in -->
+<line class="ink" x1="733.33" y1="458.89" x2="608.62" y2="700"/>
+<line class="ink" x1="866.67" y1="458.89" x2="991.38" y2="700"/>
+<line class="ink" x1="733.33" y1="245.56" x2="539.47" y2="0"/>
+<line class="ink" x1="866.67" y1="245.56" x2="1060.53" y2="0"/>
+<rect class="ink" x="733.33" y="245.56" width="133.33" height="213.33"/>
+<polygon class="soft" points="663.64,230 686.79,246.98 686.79,548.87 663.64,593.64"/>
+<polygon class="soft" points="936.36,230 913.21,246.98 913.21,548.87 936.36,593.64"/>
+<polygon class="frame" points="300,163.33 425,205 425,455 300,496.67"/><polygon class="art" points="315.15,192.63 416,221.2 416,438.8 315.15,467.37"/>
+<polygon class="frame" points="539.13,243.04 577.78,255.93 577.78,404.07 539.13,416.96"/><polygon class="art" points="543.32,257.27 574.65,266.15 574.65,393.85 543.32,402.73"/>
+<polygon class="frame" points="623.53,271.18 642.11,277.37 642.11,382.63 623.53,388.82"/><polygon class="art" points="625.45,280.55 640.53,284.82 640.53,375.18 625.45,379.45"/>
+<polygon class="frame" points="694.74,294.91 701.64,297.21 701.64,362.79 694.74,365.09"/><polygon class="art" points="695.42,300.37 701.03,301.96 701.03,358.04 695.42,359.63"/>
+<polygon class="frame" points="711.76,300.59 716.67,302.22 716.67,357.78 711.76,359.41"/><polygon class="art" points="712.25,305.14 716.23,306.27 716.23,353.73 712.25,354.86"/>
+<polygon class="frame" points="724.05,304.68 727.71,305.9 727.71,354.1 724.05,355.32"/><polygon class="art" points="724.41,308.58 727.38,309.43 727.38,350.57 724.41,351.42"/>
+<polygon class="frame" points="1300,163.33 1175,205 1175,455 1300,496.67"/><polygon class="art" points="1284.85,192.63 1184,221.2 1184,438.8 1284.85,467.37"/>
+<polygon class="frame" points="1060.87,243.04 1022.22,255.93 1022.22,404.07 1060.87,416.96"/><polygon class="art" points="1056.68,257.27 1025.35,266.15 1025.35,393.85 1056.68,402.73"/>
+<polygon class="frame" points="976.47,271.18 957.89,277.37 957.89,382.63 976.47,388.82"/><polygon class="art" points="974.55,280.55 959.47,284.82 959.47,375.18 974.55,379.45"/>
+<polygon class="frame" points="905.26,294.91 898.36,297.21 898.36,362.79 905.26,365.09"/><polygon class="art" points="904.58,300.37 898.97,301.96 898.97,358.04 904.58,359.63"/>
+<polygon class="frame" points="888.24,300.59 883.33,302.22 883.33,357.78 888.24,359.41"/><polygon class="art" points="887.75,305.14 883.77,306.27 883.77,353.73 887.75,354.86"/>
+<polygon class="frame" points="875.95,304.68 872.29,305.9 872.29,354.1 875.95,355.32"/><polygon class="art" points="875.59,308.58 872.62,309.43 872.62,350.57 875.59,351.42"/>
+<rect class="frame" x="755.56" y="274.44" width="88.89" height="111.11"/><rect class="art" x="758.56" y="277.44" width="82.89" height="105.11"/>
+<circle class="tp" cx="800" cy="228.67" r="5"/>
+<line class="lead" x1="800" y1="228.67" x2="758.56" y2="382.56"/>
+<line class="lead" x1="800" y1="228.67" x2="841.44" y2="382.56"/>
+</svg>

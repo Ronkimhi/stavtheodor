@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Front elevations of two beds: the bottom of the frame 8 to 10 inches above the headboard, and, on a bed with no headboard, 8 to 10 inches above the top of the made-up pillows, with acrylic or no glass where a head can touch it</title>
+<desc id="d">Front elevations of two beds: the bottom of the frame 8 to 10 inches above the headboard, and, on a bed with no headboard, 8 to 10 inches above the top of the made-up pillows, with acrylic or no glass where a head can touch it</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; floor at y=680; two queen beds, 60 in -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<!-- left: headboard top 44 in, pillows in front of it (top 40 in); work 40 by 26 in, bottom 53 in -->
+<rect class="soft" x="80" y="416" width="360" height="114"/><rect class="soft" x="86" y="530" width="348" height="60"/><rect class="soft" x="92" y="590" width="336" height="42"/><line class="soft" x1="98" y1="632" x2="98" y2="680"/><line class="soft" x1="422" y1="632" x2="422" y2="680"/><rect class="soft" x="98" y="440" width="156" height="90" rx="14"/><rect class="soft" x="266" y="440" width="156" height="90" rx="14"/>
+<rect class="frame" x="140" y="206" width="240" height="156"/><rect class="art" x="152" y="218" width="216" height="132"/>
+<line class="dim" x1="238" y1="284" x2="282" y2="284" stroke-width="2"/><line class="dim" x1="260" y1="262" x2="260" y2="306" stroke-width="2"/>
+<line class="dim" x1="460" y1="362" x2="460" y2="416"/><line class="dim" x1="452" y1="362" x2="468" y2="362"/><line class="dim" x1="452" y1="416" x2="468" y2="416"/>
+<line class="lead" x1="440" y1="416" x2="460" y2="416"/>
+<text class="l1" x="474" y="398">8 to 10 in<tspan class="l2"> · 20 to 25 cm</tspan></text>
+<text class="l2" x="260" y="724" text-anchor="middle">headboard</text>
+<!-- right: no headboard; pillow line 40 in; work 40 by 22 in, bottom 49 in, center 60 in -->
+<rect class="soft" x="706" y="530" width="348" height="60"/><rect class="soft" x="712" y="590" width="336" height="42"/><line class="soft" x1="718" y1="632" x2="718" y2="680"/><line class="soft" x1="1042" y1="632" x2="1042" y2="680"/>
+<rect class="soft" x="718" y="440" width="156" height="90" rx="14"/>
+<rect class="soft" x="886" y="440" width="156" height="90" rx="14"/>
+<line class="soft" x1="688" y1="440" x2="1072" y2="440"/>
+<rect class="frame" x="760" y="254" width="240" height="132"/><rect class="art" x="772" y="266" width="216" height="108"/>
+<line class="dim" x1="858" y1="320" x2="902" y2="320" stroke-width="2"/><line class="dim" x1="880" y1="298" x2="880" y2="342" stroke-width="2"/>
+<line class="lead" x1="1072" y1="440" x2="1080" y2="440"/>
+<line class="dim" x1="1080" y1="386" x2="1080" y2="440"/><line class="dim" x1="1072" y1="386" x2="1088" y2="386"/><line class="dim" x1="1072" y1="440" x2="1088" y2="440"/>
+<text class="l1" x="1094" y="422">8 to 10 in<tspan class="l2"> · 20 to 25 cm</tspan></text>
+<text class="l1" x="1094" y="486">top of the pillows</text>
+<text class="l2" x="880" y="238" text-anchor="middle">acrylic or unglazed, fixed top and bottom</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Chart of picture hanging hardware from light to heavy: a sawtooth hanger for small light frames, wire on two hooks for medium frames, two D-rings on two hooks for larger frames, and a French cleat for heavy or very large works</title>
+<desc id="d">Chart of picture hanging hardware from light to heavy: a sawtooth hanger for small light frames, wire on two hooks for medium frames, two D-rings on two hooks for larger frames, and a French cleat for heavy or very large works</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; frame backs 10, 18, 30 and 48 in wide, light to heavy -->
+<!-- (1) 10 by 12 in frame, sawtooth hanger, one nail -->
+<rect class="frame" x="225" y="300" width="50" height="60"/>
+<rect class="soft" x="231" y="306" width="38" height="48"/>
+<path class="ink" d="M238 310 L240 315 L242 310 L244 315 L246 310 L248 315 L250 310 L252 315 L254 310 L256 315 L258 310 L260 315 L262 310 L262 310"/>
+<circle class="tp" cx="250" cy="450" r="4"/>
+<line class="ink" x1="250" y1="450" x2="260" y2="436"/>
+<!-- (2) 18 by 24 in frame, wire on two D-rings, its top flat between two hooks 5 in apart (never one peak) -->
+<rect class="frame" x="565" y="240" width="90" height="120"/>
+<rect class="soft" x="575.8" y="250.8" width="68.4" height="98.4"/>
+<circle class="ink" cx="573" cy="280" r="5"/>
+<circle class="ink" cx="647" cy="280" r="5"/>
+<path class="ink" d="M573 280 L597 260 L622 260 L647 280"/>
+<path class="ink" d="M597 438 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="597" cy="438" r="4"/>
+<path class="ink" d="M622 438 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="622" cy="438" r="4"/>
+<!-- (3) 30 by 40 in frame, two D-rings on two hooks -->
+<rect class="frame" x="915" y="160" width="150" height="200"/>
+<rect class="soft" x="929" y="174" width="122" height="172"/>
+<circle class="ink" cx="930" cy="210" r="6"/>
+<line class="ink" x1="930" y1="204" x2="930" y2="194"/>
+<circle class="ink" cx="1050" cy="210" r="6"/>
+<line class="ink" x1="1050" y1="204" x2="1050" y2="194"/>
+<path class="ink" d="M930 438 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="930" cy="438" r="4"/>
+<path class="ink" d="M1050 438 v12 a6 6 0 0 0 12 0"/>
+<circle class="tp" cx="1050" cy="438" r="4"/>
+<!-- (4) 48 by 36 in frame, French cleat: the wall strip screwed into two studs 16 in apart -->
+<rect class="frame" x="1230" y="180" width="240" height="180"/>
+<rect class="soft" x="1244" y="194" width="212" height="152"/>
+<rect class="ink" x="1250" y="200" width="200" height="15"/>
+<line class="soft" x1="1310" y1="410" x2="1310" y2="500" stroke-dasharray="8 6"/>
+<line class="soft" x1="1390" y1="410" x2="1390" y2="500" stroke-dasharray="8 6"/>
+<rect class="ink" x="1250" y="442" width="200" height="16"/>
+<circle class="tp" cx="1310" cy="450" r="4"/>
+<circle class="tp" cx="1390" cy="450" r="4"/>
+<line class="soft" x1="1510" y1="404" x2="1510" y2="476"/>
+<path class="ink" d="M1492 460 L1510 460 L1510 430 L1492 448 Z"/>
+<path class="ink" d="M1474 414 L1508 414 L1508 432 L1492 448 L1474 448 Z"/>
+<line class="dim" x1="120" y1="560" x2="1480" y2="560"/>
+<line class="dim" x1="120" y1="552" x2="120" y2="568"/>
+<line class="dim" x1="1480" y1="552" x2="1480" y2="568"/>
+<text class="l1" x="800" y="548" text-anchor="middle">light to heavy</text>
+<text class="l1" x="250" y="650" text-anchor="middle">Sawtooth</text>
+<text class="l2" x="250" y="686" text-anchor="middle">small, light frames</text>
+<text class="l1" x="610" y="650" text-anchor="middle">Wire on two hooks</text>
+<text class="l2" x="610" y="686" text-anchor="middle">medium frames</text>
+<text class="l1" x="990" y="650" text-anchor="middle">Two D-rings</text>
+<text class="l2" x="990" y="686" text-anchor="middle">larger frames, my default</text>
+<text class="l1" x="1350" y="650" text-anchor="middle">French cleat</text>
+<text class="l2" x="1350" y="686" text-anchor="middle">heavy works and mirrors, into studs</text>
+</svg>

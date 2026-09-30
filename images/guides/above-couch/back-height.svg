@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Three sofas with low, medium and high backs: with the same gap above each, the work over the low back is tallest and the work over the high back is shortest, so every center lands at 57 to 60 inches</title>
+<desc id="d">Three sofas with low, medium and high backs: with the same gap above each, the work over the low back is tallest and the work over the high back is shortest, so every center lands at 57 to 60 inches</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.2 px; floor at y=580; three 84 in sofas, backs 28, 32 and 36 in; works 56 in wide, bottoms 9 in above each back -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<line class="eye" x1="80" y1="397.6" x2="1520" y2="397.6"/>
+<line class="eye" x1="80" y1="388" x2="1520" y2="388"/>
+<!-- sofa back 28 in; work 56 by 42 in, bottom 37 in, center 58 in -->
+<rect class="soft" x="215.6" y="490.4" width="268.8" height="38.4"/>
+<rect class="soft" x="215.6" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="215.6" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="465.2" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="228.4" y1="548" x2="228.4" y2="580"/>
+<line class="soft" x1="471.6" y1="548" x2="471.6" y2="580"/>
+<rect class="frame" x="260.4" y="327.2" width="179.2" height="134.4"/>
+<rect class="art" x="270.4" y="337.2" width="159.2" height="114.4"/>
+<line class="dim" x1="328" y1="394.4" x2="372" y2="394.4" stroke-width="2"/>
+<line class="dim" x1="350" y1="372.4" x2="350" y2="416.4" stroke-width="2"/>
+<!-- sofa back 32 in; work 56 by 34 in, bottom 41 in, center 58 in -->
+<rect class="soft" x="665.6" y="477.6" width="268.8" height="51.2"/>
+<rect class="soft" x="665.6" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="665.6" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="915.2" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="678.4" y1="548" x2="678.4" y2="580"/>
+<line class="soft" x1="921.6" y1="548" x2="921.6" y2="580"/>
+<rect class="frame" x="710.4" y="340" width="179.2" height="108.8"/>
+<rect class="art" x="720.4" y="350" width="159.2" height="88.8"/>
+<line class="dim" x1="778" y1="394.4" x2="822" y2="394.4" stroke-width="2"/>
+<line class="dim" x1="800" y1="372.4" x2="800" y2="416.4" stroke-width="2"/>
+<!-- sofa back 36 in; work 56 by 26 in, bottom 45 in, center 58 in -->
+<rect class="soft" x="1115.6" y="464.8" width="268.8" height="64"/>
+<rect class="soft" x="1115.6" y="528.8" width="268.8" height="19.2"/>
+<rect class="soft" x="1115.6" y="496.8" width="19.2" height="32"/>
+<rect class="soft" x="1365.2" y="496.8" width="19.2" height="32"/>
+<line class="soft" x1="1128.4" y1="548" x2="1128.4" y2="580"/>
+<line class="soft" x1="1371.6" y1="548" x2="1371.6" y2="580"/>
+<rect class="frame" x="1160.4" y="352.8" width="179.2" height="83.2"/>
+<rect class="art" x="1170.4" y="362.8" width="159.2" height="63.2"/>
+<line class="dim" x1="1228" y1="394.4" x2="1272" y2="394.4" stroke-width="2"/>
+<line class="dim" x1="1250" y1="372.4" x2="1250" y2="416.4" stroke-width="2"/>
+<line class="dim" x1="903.6" y1="448.8" x2="903.6" y2="477.6"/>
+<line class="dim" x1="895.6" y1="448.8" x2="911.6" y2="448.8"/>
+<line class="dim" x1="895.6" y1="477.6" x2="911.6" y2="477.6"/>
+<text class="l2" x="917.6" y="471.2">9 in · 23 cm</text>
+<text class="l2" x="1520" y="376" text-anchor="end">57 to 60 in</text>
+<text class="l2" x="1520" y="427.6" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="350" y="630" text-anchor="middle">lower back, taller work</text>
+<text class="l1" x="800" y="680" text-anchor="middle">32 in back, 32 to 38 in tall work</text>
+<text class="l1" x="1250" y="630" text-anchor="middle">higher back, shorter work</text>
+</svg>

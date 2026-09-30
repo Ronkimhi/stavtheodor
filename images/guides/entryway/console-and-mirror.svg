@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two entry walls: a work above a console at about two thirds of its width and 6 to 10 inches above it, and a mirror hung on the adjacent wall rather than beside the work</title>
+<desc id="d">Two entry walls: a work above a console at about two thirds of its width and 6 to 10 inches above it, and a mirror hung on the adjacent wall rather than beside the work</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=680; two walls unfolded, corner at x=900; console 48 by 32 in; work 32 by 36 in, bottom 40, center 58; mirror 24 by 36 in, center 58 -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<line class="ink" x1="900" y1="680" x2="900" y2="296"/>
+<line class="eye" x1="80" y1="452" x2="1520" y2="452"/>
+<line class="eye" x1="80" y1="440" x2="1520" y2="440"/>
+<text class="l2" x="1520" y="428" text-anchor="end">57 to 60 in</text>
+<text class="l2" x="1520" y="482" text-anchor="end">145 to 152 cm</text>
+<rect class="soft" x="324" y="552" width="192" height="128"/>
+<line class="soft" x1="324" y1="560" x2="516" y2="560"/>
+<rect class="frame" x="356" y="376" width="128" height="144"/>
+<rect class="art" x="368" y="388" width="104" height="120"/>
+<line class="dim" x1="398" y1="448" x2="442" y2="448" stroke-width="2"/>
+<line class="dim" x1="420" y1="426" x2="420" y2="470" stroke-width="2"/>
+<line class="dim" x1="356" y1="352" x2="484" y2="352"/>
+<line class="dim" x1="356" y1="344" x2="356" y2="360"/>
+<line class="dim" x1="484" y1="344" x2="484" y2="360"/>
+<text class="l1" x="420" y="340" text-anchor="middle">two thirds of the console</text>
+<line class="dim" x1="300" y1="520" x2="300" y2="552"/>
+<line class="dim" x1="292" y1="520" x2="308" y2="520"/>
+<line class="dim" x1="292" y1="552" x2="308" y2="552"/>
+<line class="lead" x1="308" y1="520" x2="350" y2="520"/>
+<text class="l1" x="286" y="545" text-anchor="end">6 to 10 in</text>
+<text class="l2" x="286" y="573" text-anchor="end">15 to 25 cm</text>
+<!-- ghost: a mirror beside the work on the same wall; its note sits below it, 12 px clear of the console's corner -->
+<rect class="lead" x="600" y="376" width="96" height="144"/>
+<text class="l2" x="660" y="556" text-anchor="middle">dotted: not beside the work</text>
+<!-- wall 2: the mirror on its own, center 58 -->
+<rect class="frame" x="1162" y="376" width="96" height="144"/>
+<line class="soft" x1="1178" y1="504" x2="1242" y2="400"/>
+<line class="soft" x1="1202" y1="504" x2="1242" y2="440"/>
+<line class="dim" x1="1188" y1="448" x2="1232" y2="448" stroke-width="2"/>
+<line class="dim" x1="1210" y1="426" x2="1210" y2="470" stroke-width="2"/>
+<text class="l1" x="1210" y="730" text-anchor="middle">mirror on its own wall</text>
+</svg>

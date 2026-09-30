@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Floor plan of an entry hall showing the view from the front door: the wall facing the door, the wall beside it and the wall at the foot of the stair, with the facing wall marked as the first choice</title>
+<desc id="d">Floor plan of an entry hall showing the view from the front door: the wall facing the door, the wall beside it and the wall at the foot of the stair, with the facing wall marked as the first choice</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 5 px; plan, front door in the south wall at the bottom, hall 120 by 150 in -->
+<polyline class="ink" points="710,915 500,915 500,165 1100,165 1100,915 890,915"/>
+<line class="soft" x1="710" y1="915" x2="710" y2="735"/>
+<path class="soft" d="M890 915 A180 180 0 0 0 710 735"/>
+<text class="l2" x="800" y="955" text-anchor="middle">front door, open</text>
+<rect class="soft" x="500" y="165" width="180" height="495"/>
+<line class="soft" x1="500" y1="220" x2="680" y2="220"/>
+<line class="soft" x1="500" y1="275" x2="680" y2="275"/>
+<line class="soft" x1="500" y1="330" x2="680" y2="330"/>
+<line class="soft" x1="500" y1="385" x2="680" y2="385"/>
+<line class="soft" x1="500" y1="440" x2="680" y2="440"/>
+<line class="soft" x1="500" y1="495" x2="680" y2="495"/>
+<line class="soft" x1="500" y1="550" x2="680" y2="550"/>
+<line class="soft" x1="500" y1="605" x2="680" y2="605"/>
+<line class="soft" x1="590" y1="645" x2="590" y2="195"/>
+<polyline class="soft" points="570,225 590,195 610,225"/>
+<rect class="soft" x="500" y="680" width="80" height="210"/>
+<rect class="soft" x="1030" y="615" width="70" height="240"/>
+<line class="eye" x1="800" y1="915" x2="500" y2="395.38"/>
+<line class="eye" x1="800" y1="915" x2="1100" y2="395.38"/>
+<line class="eye" x1="800" y1="915" x2="800" y2="165"/>
+<circle class="tp" cx="800" cy="915" r="6"/>
+<rect class="tp" x="650" y="159" width="300" height="12"/>
+<rect class="tp" x="1094" y="615" width="12" height="240"/>
+<rect class="tp" x="494" y="680" width="12" height="210"/>
+<circle class="frame" cx="800" cy="165" r="34"/>
+<text class="l1" x="800" y="165" text-anchor="middle" dominant-baseline="central">1</text>
+<circle class="frame" cx="1100" cy="735" r="34"/>
+<text class="l1" x="1100" y="735" text-anchor="middle" dominant-baseline="central">2</text>
+<circle class="frame" cx="500" cy="785" r="34"/>
+<text class="l1" x="500" y="785" text-anchor="middle" dominant-baseline="central">3</text>
+<text class="l2" x="800" y="113" text-anchor="middle">facing the door, first choice</text>
+<text class="l2" x="1150" y="743">beside the door, above a console</text>
+<text class="l2" x="450" y="793" text-anchor="end">foot of the stair</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a double height wall above a fireplace: a very large work rises above the eye band because of its size, while a small work floating high is marked wrong</title>
+<desc id="d">Elevation of a double height wall above a fireplace: a very large work rises above the eye band because of its size, while a small work floating high is marked wrong</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=980; ceiling at 216 in (y=116); surround 84 in wide, mantel shelf 96 in wide at 52 in; work 64 by 96 in (two thirds of the shelf), bottom 62, center 110; ghost 30 by 40 at a center of 130 -->
+<line class="ink" x1="80" y1="980" x2="1520" y2="980"/>
+<line class="ink" x1="80" y1="116" x2="1520" y2="116"/>
+<line class="eye" x1="80" y1="752" x2="1520" y2="752"/>
+<line class="eye" x1="80" y1="740" x2="1520" y2="740"/>
+<!-- fireplace as a double height hall has: surround 84 in wide to 50 in, firebox 42 by 32, mantel shelf 96 in at 52 in -->
+<rect class="soft" x="732" y="780" width="336" height="200"/>
+<rect class="ink" x="816" y="852" width="168" height="128"/>
+<rect class="soft" x="708" y="772" width="384" height="8"/>
+<!-- work 64 by 96 in, x 772 to 1028, bottom 62 (10 in over the shelf), center 110; ghost 30 by 40 centered at x 1290, center 130 -->
+<rect class="frame" x="772" y="348" width="256" height="384"/>
+<rect class="art" x="788" y="364" width="224" height="352"/>
+<line class="dim" x1="878" y1="540" x2="922" y2="540" stroke-width="2"/>
+<line class="dim" x1="900" y1="518" x2="900" y2="562" stroke-width="2"/>
+<rect class="lead" x="1230" y="380" width="120" height="160"/>
+<line class="dim" x1="1268" y1="460" x2="1312" y2="460" stroke-width="2"/>
+<line class="dim" x1="1290" y1="438" x2="1290" y2="482" stroke-width="2"/>
+<circle class="soft" cx="520" cy="754" r="26"/>
+<line class="soft" x1="520" y1="780" x2="520" y2="844"/>
+<line class="soft" x1="520" y1="844" x2="492" y2="980"/>
+<line class="soft" x1="520" y1="844" x2="548" y2="980"/>
+<line class="soft" x1="520" y1="772" x2="480" y2="848"/>
+<line class="soft" x1="520" y1="772" x2="560" y2="848"/>
+<circle class="tp" cx="540" cy="746" r="3"/>
+<text class="l1" x="756" y="548" text-anchor="end">size lifts the center</text>
+<text class="l1" x="1290" y="580" text-anchor="middle">not lifted</text>
+<text class="l1" x="1290" y="636" text-anchor="middle">for the ceiling</text>
+<text class="l1" x="80" y="728">57 to 60 in</text>
+<text class="l2" x="80" y="782">145 to 152 cm</text>
+<text class="l2" x="1044" y="726">lower edge within easy view</text>
+</svg>

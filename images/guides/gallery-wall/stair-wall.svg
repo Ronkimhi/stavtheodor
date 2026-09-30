@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Side elevation of a staircase gallery wall: the centerline of the group rises parallel to the stair, 57 to 60 inches above the nose of each tread</title>
+<desc id="d">Side elevation of a staircase gallery wall: the centerline of the group rises parallel to the stair, 57 to 60 inches above the nose of each tread</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:44px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; lower floor at y=780; 14 risers of 7 in, 13 treads of 11 in -->
+<path class="ink" d="M80 780 L460 780 L460 752 L504 752 L504 724 L548 724 L548 696 L592 696 L592 668 L636 668 L636 640 L680 640 L680 612 L724 612 L724 584 L768 584 L768 556 L812 556 L812 528 L856 528 L856 500 L900 500 L900 472 L944 472 L944 444 L988 444 L988 416 L1032 416 L1032 388 L1520 388"/>
+<!-- nosing line joining the tread noses, and the handrail 36 in above it -->
+<line class="soft" x1="430" y1="771.1" x2="1062" y2="368.9"/>
+<line class="soft" x1="446" y1="616.9" x2="1046" y2="235.1"/>
+<line class="soft" x1="446" y1="616.9" x2="446" y2="760.9"/>
+<line class="soft" x1="1046" y1="235.1" x2="1046" y2="379.1"/>
+<!-- one climbing row: 6 frames 12 by 16 in, 4 in apart (pitch 16 in), centered on the flight; each center 58 in above the nosing line at its own x, bottoms 50 in above it, 10.2 in clear of a 36 in rail at the uphill corner -->
+<line class="dim" x1="586" y1="671.8" x2="586" y2="439.8"/>
+<line class="dim" x1="578" y1="671.8" x2="594" y2="671.8"/>
+<line class="dim" x1="578" y1="439.8" x2="594" y2="439.8"/>
+<line class="dim" x1="778" y1="549.6" x2="778" y2="317.6"/>
+<line class="dim" x1="770" y1="549.6" x2="786" y2="549.6"/>
+<line class="dim" x1="770" y1="317.6" x2="786" y2="317.6"/>
+<line class="dim" x1="906" y1="468.2" x2="906" y2="236.2"/>
+<line class="dim" x1="898" y1="468.2" x2="914" y2="468.2"/>
+<line class="dim" x1="898" y1="236.2" x2="914" y2="236.2"/>
+<line class="eye" x1="586" y1="439.8" x2="1156" y2="77.1"/>
+<rect class="frame" x="562" y="407.8" width="48" height="64"/>
+<rect class="art" x="570" y="415.8" width="32" height="48"/>
+<line class="dim" x1="564" y1="439.8" x2="608" y2="439.8" stroke-width="2"/>
+<line class="dim" x1="586" y1="417.8" x2="586" y2="461.8" stroke-width="2"/>
+<rect class="frame" x="626" y="367.1" width="48" height="64"/>
+<rect class="art" x="634" y="375.1" width="32" height="48"/>
+<line class="dim" x1="628" y1="399.1" x2="672" y2="399.1" stroke-width="2"/>
+<line class="dim" x1="650" y1="377.1" x2="650" y2="421.1" stroke-width="2"/>
+<rect class="frame" x="690" y="326.4" width="48" height="64"/>
+<rect class="art" x="698" y="334.4" width="32" height="48"/>
+<line class="dim" x1="692" y1="358.4" x2="736" y2="358.4" stroke-width="2"/>
+<line class="dim" x1="714" y1="336.4" x2="714" y2="380.4" stroke-width="2"/>
+<rect class="frame" x="754" y="285.6" width="48" height="64"/>
+<rect class="art" x="762" y="293.6" width="32" height="48"/>
+<line class="dim" x1="756" y1="317.6" x2="800" y2="317.6" stroke-width="2"/>
+<line class="dim" x1="778" y1="295.6" x2="778" y2="339.6" stroke-width="2"/>
+<rect class="frame" x="818" y="244.9" width="48" height="64"/>
+<rect class="art" x="826" y="252.9" width="32" height="48"/>
+<line class="dim" x1="820" y1="276.9" x2="864" y2="276.9" stroke-width="2"/>
+<line class="dim" x1="842" y1="254.9" x2="842" y2="298.9" stroke-width="2"/>
+<rect class="frame" x="882" y="204.2" width="48" height="64"/>
+<rect class="art" x="890" y="212.2" width="32" height="48"/>
+<line class="dim" x1="884" y1="236.2" x2="928" y2="236.2" stroke-width="2"/>
+<line class="dim" x1="906" y1="214.2" x2="906" y2="258.2" stroke-width="2"/>
+<text class="l1" x="550" y="447.8" text-anchor="end">57 to 60 in</text>
+<text class="l2" x="550" y="479.8" text-anchor="end">145 to 152 cm</text>
+<text class="l1" x="1120" y="139" text-anchor="middle" transform="rotate(-32.5 1120 139)">parallel to the stair</text>
+<text class="l2" x="1070" y="299.1">handrail, 34 to 38 in above the nosings</text>
+</svg>

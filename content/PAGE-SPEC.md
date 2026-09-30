@@ -55,4 +55,6 @@ A guide page (section `guide`, path `guide/<slug>`) renders to its own template:
 - The `guides` field (optional, on any page but a guide; buyer variants have the same field, `content/VARIANT-SPEC.md`): 1 to 6 `guide/<slug>` paths of guide pages, in display order, rendered as a Guides strip (`#guides`, cards) after the reading column and before the questions. Heading `guides_heading_en`/`guides_heading_he` (at most 90 characters; required when `guides` is set, and it may be stored on a page before the guides exist; the safety-net default is "The answers in more detail" / התשובות, בפירוט). A guide that is not built is skipped.
 - /advisory/ shows every guide with a diagram hero as its own group after the advisory cards (order: `GUIDE_ORDER` in `build-site-pages.py`, then newest first), and names every guide in its CollectionPage.
 
+Word limits read the prose only (2026-09-29, Ron): `tools/check_pages.py` leaves figure and table captions (`figcaption`, `caption`) out of the body count, so a guide's 900 to 1,400 words are its text without the captions.
+
 Validate before you hand off: `python3 tools/check_pages.py content/pages/<slug>.json` must print OK.

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Front elevation of a dining room wall: a 48 inch wide work hangs 8 inches above a 72 inch sideboard, about two thirds of its width, with the table, chairs and two pendants in front</title>
+<desc id="d">Front elevation of a dining room wall: a 48 inch wide work hangs 8 inches above a 72 inch sideboard, about two thirds of its width, with the table, chairs and two pendants in front</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=880 -->
+<line class="ink" x1="80" y1="880" x2="1520" y2="880"/>
+<!-- sideboard 72 by 34 in; work 48 by 30 in, bottom 42 in, center 57 in -->
+<rect class="soft" x="512" y="608" width="576" height="272"/>
+<line class="soft" x1="512" y1="624" x2="1088" y2="624"/>
+<rect class="frame" x="608" y="304" width="384" height="240"/>
+<rect class="art" x="624" y="320" width="352" height="208"/>
+<line class="dim" x1="778" y1="424" x2="822" y2="424" stroke-width="2"/>
+<line class="dim" x1="800" y1="402" x2="800" y2="446" stroke-width="2"/>
+<!-- in front: chairs with 36 in backs, the table at 30 in, two pendants with 12 in shades 34 in either side of center, bottoms at 62 in (4 in clear of the frame, 2 in inside the table ends) -->
+<rect class="soft" x="568" y="592" width="144" height="144"/>
+<rect class="soft" x="568" y="736" width="144" height="16"/>
+<line class="soft" x1="576" y1="752" x2="576" y2="880"/>
+<line class="soft" x1="704" y1="752" x2="704" y2="880"/>
+<rect class="soft" x="888" y="592" width="144" height="144"/>
+<rect class="soft" x="888" y="736" width="144" height="16"/>
+<line class="soft" x1="896" y1="752" x2="896" y2="880"/>
+<line class="soft" x1="1024" y1="752" x2="1024" y2="880"/>
+<rect class="soft" x="464" y="640" width="672" height="16"/>
+<rect class="soft" x="488" y="656" width="16" height="224"/>
+<rect class="soft" x="1096" y="656" width="16" height="224"/>
+<line class="soft" x1="528" y1="80" x2="528" y2="320"/>
+<path class="soft" d="M512 320 L544 320 L576 384 L480 384 Z"/>
+<line class="soft" x1="1072" y1="80" x2="1072" y2="320"/>
+<path class="soft" d="M1056 320 L1088 320 L1120 384 L1024 384 Z"/>
+<line class="dim" x1="512" y1="930" x2="1088" y2="930"/>
+<line class="dim" x1="512" y1="922" x2="512" y2="938"/>
+<line class="dim" x1="1088" y1="922" x2="1088" y2="938"/>
+<text class="l1" x="800" y="918" text-anchor="middle">72 in<tspan class="l2"> · 183 cm, sideboard</tspan></text>
+<line class="dim" x1="608" y1="260" x2="992" y2="260"/>
+<line class="dim" x1="608" y1="252" x2="608" y2="268"/>
+<line class="dim" x1="992" y1="252" x2="992" y2="268"/>
+<text class="l1" x="800" y="248" text-anchor="middle">48 in<tspan class="l2"> · 122 cm · two thirds</tspan></text>
+<line class="dim" x1="1052" y1="544" x2="1052" y2="608"/>
+<line class="dim" x1="1044" y1="544" x2="1060" y2="544"/>
+<line class="dim" x1="1044" y1="608" x2="1060" y2="608"/>
+<text class="l1" x="1066" y="585">8 in<tspan class="l2"> · 20 cm · within 6 to 10 in</tspan></text>
+</svg>

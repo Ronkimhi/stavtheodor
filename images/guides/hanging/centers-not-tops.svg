@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-labelledby="t d">
+<title id="t">Two walls with three works of different sizes: on the left their centers share one line at 57 to 60 inches; on the right their tops are aligned and the smaller works sit too high</title>
+<desc id="d">Two walls with three works of different sizes: on the left their centers share one line at 57 to 60 inches; on the right their tops are aligned and the smaller works sit too high</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=680; two 120 in wall panels; works 16 by 20, 30 by 40 and 12 by 12 in, 10 in apart -->
+<line class="ink" x1="80" y1="680" x2="1520" y2="680"/>
+<line class="soft" x1="240" y1="680" x2="240" y2="296"/>
+<line class="soft" x1="720" y1="680" x2="720" y2="296"/>
+<line class="soft" x1="880" y1="680" x2="880" y2="296"/>
+<line class="soft" x1="1360" y1="680" x2="1360" y2="296"/>
+<line class="eye" x1="80" y1="452" x2="1520" y2="452"/>
+<line class="eye" x1="80" y1="440" x2="1520" y2="440"/>
+<!-- centers: every center at 58 in -->
+<rect class="frame" x="324" y="408" width="64" height="80"/>
+<rect class="art" x="336" y="420" width="40" height="56"/>
+<line class="dim" x1="334" y1="448" x2="378" y2="448" stroke-width="2"/>
+<line class="dim" x1="356" y1="426" x2="356" y2="470" stroke-width="2"/>
+<rect class="frame" x="428" y="368" width="120" height="160"/>
+<rect class="art" x="440" y="380" width="96" height="136"/>
+<line class="dim" x1="466" y1="448" x2="510" y2="448" stroke-width="2"/>
+<line class="dim" x1="488" y1="426" x2="488" y2="470" stroke-width="2"/>
+<rect class="frame" x="588" y="424" width="48" height="48"/>
+<rect class="art" x="600" y="436" width="24" height="24"/>
+<line class="dim" x1="590" y1="448" x2="634" y2="448" stroke-width="2"/>
+<line class="dim" x1="612" y1="426" x2="612" y2="470" stroke-width="2"/>
+<!-- tops: tops at 78 in, centers at 68, 58 and 72 in -->
+<line class="lead" x1="934" y1="368" x2="1306" y2="368" stroke-width="1.5"/>
+<rect class="frame" x="964" y="368" width="64" height="80"/>
+<rect class="art" x="976" y="380" width="40" height="56"/>
+<line class="dim" x1="974" y1="408" x2="1018" y2="408" stroke-width="2"/>
+<line class="dim" x1="996" y1="386" x2="996" y2="430" stroke-width="2"/>
+<rect class="frame" x="1068" y="368" width="120" height="160"/>
+<rect class="art" x="1080" y="380" width="96" height="136"/>
+<line class="dim" x1="1106" y1="448" x2="1150" y2="448" stroke-width="2"/>
+<line class="dim" x1="1128" y1="426" x2="1128" y2="470" stroke-width="2"/>
+<rect class="frame" x="1228" y="368" width="48" height="48"/>
+<rect class="art" x="1240" y="380" width="24" height="24"/>
+<line class="dim" x1="1230" y1="392" x2="1274" y2="392" stroke-width="2"/>
+<line class="dim" x1="1252" y1="370" x2="1252" y2="414" stroke-width="2"/>
+<!-- band pair lifted above the wall tops, left of the wall line at x 240, with a lead down to the 60 in line -->
+<text class="l1" x="80" y="262">57 to 60 in</text>
+<text class="l2" x="80" y="290">145 to 152 cm</text>
+<line class="lead" x1="100" y1="300" x2="100" y2="440"/>
+<text class="l1" x="480" y="730" text-anchor="middle">Centers on one line</text>
+<text class="l1" x="1120" y="730" text-anchor="middle">Tops on one line</text>
+</svg>

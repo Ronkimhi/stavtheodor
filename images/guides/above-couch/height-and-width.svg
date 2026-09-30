@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a single horizontal work above an 84 inch sofa: the work is 56 inches wide, about two thirds of the sofa, its bottom edge is 9 inches above the sofa back, and its center is at 60 inches from the floor</title>
+<desc id="d">Elevation of a single horizontal work above an 84 inch sofa: the work is 56 inches wide, about two thirds of the sofa, its bottom edge is 9 inches above the sofa back, and its center is at 60 inches from the floor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=880 -->
+<line class="ink" x1="80" y1="880" x2="1520" y2="880"/>
+<rect class="soft" x="464" y="624" width="672" height="128"/>
+<rect class="soft" x="464" y="752" width="672" height="48"/>
+<rect class="soft" x="464" y="672" width="48" height="80"/>
+<rect class="soft" x="1088" y="672" width="48" height="80"/>
+<line class="soft" x1="496" y1="800" x2="496" y2="880"/>
+<line class="soft" x1="1104" y1="800" x2="1104" y2="880"/>
+<!-- work 56 by 38 in, bottom 41 in, top 79 in, center 60 in; eye band at 57 and 60 in -->
+<line class="eye" x1="80" y1="424" x2="1520" y2="424"/>
+<line class="eye" x1="80" y1="400" x2="1520" y2="400"/>
+<rect class="frame" x="576" y="248" width="448" height="304"/>
+<rect class="art" x="592" y="264" width="416" height="272"/>
+<line class="dim" x1="778" y1="400" x2="822" y2="400" stroke-width="2"/>
+<line class="dim" x1="800" y1="378" x2="800" y2="422" stroke-width="2"/>
+<line class="dim" x1="576" y1="200" x2="1024" y2="200"/>
+<line class="dim" x1="576" y1="192" x2="576" y2="208"/>
+<line class="dim" x1="1024" y1="192" x2="1024" y2="208"/>
+<text class="l1" x="800" y="188" text-anchor="middle">56 in<tspan class="l2"> · 142 cm · two thirds of 84 in</tspan></text>
+<line class="dim" x1="1060" y1="552" x2="1060" y2="624"/>
+<line class="dim" x1="1052" y1="552" x2="1068" y2="552"/>
+<line class="dim" x1="1052" y1="624" x2="1068" y2="624"/>
+<text class="l1" x="1074" y="601">9 in<tspan class="l2"> · 23 cm · within 8 to 10 in</tspan></text>
+<line class="dim" x1="240" y1="400" x2="240" y2="880"/>
+<line class="dim" x1="232" y1="400" x2="248" y2="400"/>
+<line class="dim" x1="232" y1="880" x2="248" y2="880"/>
+<text class="l1" x="254" y="578">60 in</text>
+<text class="l2" x="254" y="610">152 cm · top of the 57 to 60 in band</text>
+</svg>

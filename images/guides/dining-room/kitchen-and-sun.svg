@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Plan of a dining area next to an open kitchen: the wall away from the sun and the kitchen is marked for works on paper and photographs, the kitchen wall for glazed works, and the sunlit wall for canvas</title>
+<desc id="d">Plan of a dining area next to an open kitchen: the wall away from the sun and the kitchen is marked for works on paper and photographs, the kitchen wall for glazed works, and the sunlit wall for canvas</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; plan, north at the top, room 168 by 144 in from (464, 212); kitchen counter along the east wall -->
+<!-- sun band from the south window across the floor to the north wall -->
+<path class="art" d="M640 788 L880 788 L940 212 L700 212 Z"/>
+<path class="ink" d="M608 788 L464 788 L464 212 L1136 212 L1136 788 L880 788"/>
+<line class="ink" x1="640" y1="788" x2="880" y2="788"/>
+<rect class="soft" x="640" y="782" width="240" height="12"/>
+<line class="soft" x1="608" y1="788" x2="608" y2="644"/>
+<path class="soft" d="M608 644 A144 144 0 0 0 464 788"/>
+<line class="ink" x1="464" y1="788" x2="496" y2="788"/>
+<!-- kitchen: counter 24 in deep along the east wall, cooktop rings -->
+<rect class="soft" x="1040" y="212" width="96" height="576"/>
+<circle class="soft" cx="1064" cy="380" r="12"/>
+<circle class="soft" cx="1112" cy="380" r="12"/>
+<circle class="soft" cx="1064" cy="428" r="12"/>
+<circle class="soft" cx="1112" cy="428" r="12"/>
+<rect class="soft" x="1056" y="580" width="64" height="80" rx="6"/>
+<!-- table 84 by 40 in at the center of the dining floor -->
+<rect class="soft" x="584" y="420" width="336" height="160" rx="6"/>
+<rect class="soft" x="616" y="348" width="64" height="64" rx="4"/>
+<rect class="soft" x="616" y="588" width="64" height="64" rx="4"/>
+<rect class="soft" x="728" y="348" width="64" height="64" rx="4"/>
+<rect class="soft" x="728" y="588" width="64" height="64" rx="4"/>
+<rect class="soft" x="840" y="348" width="64" height="64" rx="4"/>
+<rect class="soft" x="840" y="588" width="64" height="64" rx="4"/>
+<!-- wall coding: west wall marker (works on paper), kitchen wall dashed (glazed), sunlit north segment dotted (canvas) -->
+<rect class="tp" x="460" y="332" width="12" height="336"/>
+<line class="ink" x1="1130" y1="244" x2="1130" y2="756" stroke-dasharray="14 10"/>
+<line class="lead" x1="700" y1="218" x2="940" y2="218" stroke-width="4"/>
+<line class="soft" x1="1440" y1="330" x2="1440" y2="250"/>
+<path class="soft" d="M1428 268 L1440 250 L1452 268"/>
+<text class="l2" x="1440" y="362" text-anchor="middle">N</text>
+<text class="l1" x="80" y="128">works on paper here</text>
+<line class="lead" x1="300" y1="140" x2="456" y2="326"/>
+<text class="l1" x="1520" y="832" text-anchor="end">glazed, near the kitchen</text>
+<line class="lead" x1="1220" y1="818" x2="1144" y2="760"/>
+<text class="l1" x="820" y="172" text-anchor="middle">direct sun: canvas</text>
+<text class="l2" x="760" y="832" text-anchor="middle">sun</text>
+<text class="l2" x="1088" y="832" text-anchor="middle">steam and heat</text>
+</svg>

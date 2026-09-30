@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<title id="t">Two elevations: art above a sofa spanning two thirds of the sofa's width, 8 to 10 inches above its back, and art on a bare wall filling about two thirds of the wall's width, with the viewing distance marked on the floor</title>
+<desc id="d">Two elevations: art above a sofa spanning two thirds of the sofa's width, 8 to 10 inches above its back, and art on a bare wall filling about two thirds of the wall's width, with the viewing distance marked on the floor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 4 px; floor at y=580 -->
+<line class="ink" x1="80" y1="580" x2="1520" y2="580"/>
+<!-- left: sofa 84 in, back 32 in; work 56 by 38 in, bottom 41 in, center 60 in -->
+<rect class="soft" x="160" y="452" width="336" height="64"/><rect class="soft" x="160" y="516" width="336" height="24"/><rect class="soft" x="160" y="476" width="24" height="40"/><rect class="soft" x="472" y="476" width="24" height="40"/><line class="soft" x1="176" y1="540" x2="176" y2="580"/><line class="soft" x1="480" y1="540" x2="480" y2="580"/>
+<rect class="frame" x="216" y="264" width="224" height="152"/><rect class="art" x="226" y="274" width="204" height="132"/>
+<line class="dim" x1="306" y1="340" x2="350" y2="340" stroke-width="2"/><line class="dim" x1="328" y1="318" x2="328" y2="362" stroke-width="2"/>
+<line class="dim" x1="216" y1="224" x2="440" y2="224"/><line class="dim" x1="216" y1="216" x2="216" y2="232"/><line class="dim" x1="440" y1="216" x2="440" y2="232"/>
+<text class="l1" x="328" y="212" text-anchor="middle">two thirds of the sofa</text>
+<line class="dim" x1="460" y1="416" x2="460" y2="452"/><line class="dim" x1="452" y1="416" x2="468" y2="416"/><line class="dim" x1="452" y1="452" x2="468" y2="452"/>
+<text class="l1" x="474" y="443">8 to 10 in<tspan class="l2"> · 6 to 10 in over a sideboard</tspan></text>
+<text class="l2" x="328" y="624" text-anchor="middle">sofa</text>
+<!-- right: bare wall 144 in; work 96 by 64 in, center 58 in; 24 in margins each side -->
+<line class="soft" x1="940" y1="580" x2="940" y2="148"/>
+<line class="soft" x1="1516" y1="580" x2="1516" y2="148"/>
+<rect class="frame" x="1036" y="220" width="384" height="256"/><rect class="art" x="1046" y="230" width="364" height="236"/>
+<line class="dim" x1="1206" y1="348" x2="1250" y2="348" stroke-width="2"/><line class="dim" x1="1228" y1="326" x2="1228" y2="370" stroke-width="2"/>
+<line class="dim" x1="1036" y1="180" x2="1420" y2="180"/><line class="dim" x1="1036" y1="172" x2="1036" y2="188"/><line class="dim" x1="1420" y1="172" x2="1420" y2="188"/>
+<text class="l1" x="1228" y="168" text-anchor="middle">about two thirds of the wall</text>
+<line class="dim" x1="940" y1="516" x2="1036" y2="516"/><line class="dim" x1="940" y1="508" x2="940" y2="524"/><line class="dim" x1="1036" y1="508" x2="1036" y2="524"/>
+<line class="dim" x1="1420" y1="516" x2="1516" y2="516"/><line class="dim" x1="1420" y1="508" x2="1420" y2="524"/><line class="dim" x1="1516" y1="508" x2="1516" y2="524"/>
+<text class="l2" x="1502" y="504" text-anchor="end">at least 12 in each side</text>
+<line class="dim" x1="1228" y1="580" x2="1148" y2="670"/>
+<circle class="tp" cx="1148" cy="670" r="6"/>
+<text class="l1" x="1128" y="678" text-anchor="end">viewing distance</text>
+<text class="l2" x="980" y="624">bare wall</text>
+</svg>

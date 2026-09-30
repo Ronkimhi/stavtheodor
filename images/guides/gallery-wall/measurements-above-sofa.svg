@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Elevation drawing of a gallery wall above an 84 inch sofa: the group is 56 inches wide, its lowest frame sits 9 inches above the sofa back, frames are 2.5 inches apart, and the center of the group is marked at 58 inches from the floor</title>
+<desc id="d">Elevation drawing of a gallery wall above an 84 inch sofa: the group is 56 inches wide, its lowest frame sits 9 inches above the sofa back, frames are 2.5 inches apart, and the center of the group is marked at 58 inches from the floor</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 8 px; floor at y=880 -->
+<line class="ink" x1="80" y1="880" x2="1520" y2="880"/>
+<rect class="soft" x="464" y="624" width="672" height="128"/>
+<rect class="soft" x="464" y="752" width="672" height="48"/>
+<rect class="soft" x="464" y="672" width="48" height="80"/>
+<rect class="soft" x="1088" y="672" width="48" height="80"/>
+<line class="soft" x1="496" y1="800" x2="496" y2="880"/>
+<line class="soft" x1="1104" y1="800" x2="1104" y2="880"/>
+<text class="l2" x="800" y="696" text-anchor="middle">sofa, 84 in</text>
+<!-- group 56 by 34 in, bottom 41 in, top 75 in, gaps 2.5 in -->
+<rect class="frame" x="712" y="280" width="176" height="272"/>
+<rect class="art" x="728" y="296" width="144" height="240"/>
+<rect class="frame" x="576" y="280" width="116" height="160"/>
+<rect class="art" x="592" y="296" width="84" height="128"/>
+<rect class="frame" x="576" y="460" width="48" height="92"/>
+<rect class="art" x="592" y="476" width="16" height="60"/>
+<rect class="frame" x="644" y="460" width="48" height="92"/>
+<rect class="art" x="660" y="476" width="16" height="60"/>
+<rect class="frame" x="908" y="280" width="116" height="77.4"/>
+<rect class="art" x="924" y="296" width="84" height="45.4"/>
+<rect class="frame" x="908" y="377.4" width="116" height="77.4"/>
+<rect class="art" x="924" y="393.4" width="84" height="45.4"/>
+<rect class="frame" x="908" y="474.6" width="116" height="77.4"/>
+<rect class="art" x="924" y="490.6" width="84" height="45.4"/>
+<line class="dim" x1="778" y1="416" x2="822" y2="416" stroke-width="2"/>
+<line class="dim" x1="800" y1="394" x2="800" y2="438" stroke-width="2"/>
+<line class="dim" x1="576" y1="232" x2="1024" y2="232"/>
+<line class="dim" x1="576" y1="224" x2="576" y2="240"/>
+<line class="dim" x1="1024" y1="224" x2="1024" y2="240"/>
+<text class="l1" x="800" y="220" text-anchor="middle">56 in<tspan class="l2"> · 142 cm · two thirds of 84 in</tspan></text>
+<line class="dim" x1="1060" y1="357.4" x2="1060" y2="377.4"/>
+<line class="dim" x1="1052" y1="357.4" x2="1068" y2="357.4"/>
+<line class="dim" x1="1052" y1="377.4" x2="1068" y2="377.4"/>
+<text class="l1" x="1074" y="375.4">2.5 in<tspan class="l2"> · 6 cm · keep 2 to 3 in, all equal</tspan></text>
+<line class="dim" x1="1060" y1="552" x2="1060" y2="624"/>
+<line class="dim" x1="1052" y1="552" x2="1068" y2="552"/>
+<line class="dim" x1="1052" y1="624" x2="1068" y2="624"/>
+<text class="l1" x="1074" y="601">9 in<tspan class="l2"> · 23 cm · within 8 to 10 in</tspan></text>
+<line class="lead" x1="252" y1="416" x2="570" y2="416"/>
+<line class="dim" x1="240" y1="416" x2="240" y2="880"/>
+<line class="dim" x1="232" y1="416" x2="248" y2="416"/>
+<line class="dim" x1="232" y1="880" x2="248" y2="880"/>
+<text class="l1" x="254" y="640">58 in</text>
+<text class="l2" x="254" y="672">147 cm · 57 to 60 in</text>
+</svg>

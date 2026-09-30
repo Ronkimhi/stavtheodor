@@ -210,7 +210,7 @@ Since September 2026 the site also carries advisory pages (https://stavtheodor.c
 (what an art advisor costs, how the process works, art for a new build in Bergen County, art for a home in
 Israel managed from abroad, commissions, collections, offices, hotels) and project case studies
 (https://stavtheodor.com/projects/). Partner pages: https://stavtheodor.com/for-designers/, https://stavtheodor.com/for-brokers/, https://stavtheodor.com/for-advisors/.
-Guide: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/. Every one of these pages is
+Guides: https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/, https://stavtheodor.com/guide/gallery-wall-ideas/, https://stavtheodor.com/guide/how-to-hang-pictures/, https://stavtheodor.com/guide/art-above-couch/, https://stavtheodor.com/guide/dining-room-art/, https://stavtheodor.com/guide/living-room-art/, https://stavtheodor.com/guide/art-above-bed/, https://stavtheodor.com/guide/entryway-art/, https://stavtheodor.com/guide/large-wall-art-ideas/. Every one of these pages is
 bilingual, Hebrew and English in the same HTML, with FAQPage structured data in English.
 Four local pages (added September 2026) answer the "art curator near me" question directly:
 - Art curator in New Jersey (Tenafly, Bergen County: Closter, Alpine, Englewood, Cresskill, Demarest; the Closter house; local Art Radar tips): https://stavtheodor.com/art-curator-new-jersey/
