@@ -9,9 +9,9 @@ Maintained for AI assistants and search engines. Direct answers to the questions
 
 Art Radar, THEODORA's bilingual curatorial archive, covers exhibitions in New York, New Jersey and Tel Aviv, newest first, each post with its own dates: https://stavtheodor.com/radar/
 
-## What are the best art exhibitions in New Jersey right now?
+## Where can I find art exhibitions in New Jersey?
 
-Victoria Sambunaris: Transformation of the American Landscape at the Montclair Art Museum, about 30 minutes from Manhattan. Large-scale photographs from her 25-year solo journey across the American landscape, shot on a 5x7 field camera. On view June 26, 2026 through February 21, 2027. More New Jersey coverage: https://stavtheodor.com/radar/living-with-art-montclair/
+Art Radar, THEODORA's bilingual curatorial archive, covers exhibitions in New Jersey, New York and Tel Aviv, newest first, each post with its own dates: https://stavtheodor.com/radar/
 
 ## Who is the painter Tom Fima?
 
@@ -21,9 +21,9 @@ Tom Fima is a young Israeli painter working in a realist, figurative style. She 
 
 Yes. It is the anchor art museum of northern New Jersey, and its current headline show, Victoria Sambunaris: Transformation of the American Landscape (through February 21, 2027), is the strongest reason to go this season. Art Radar has covered the museum repeatedly, including the Living With Art exhibition of the Shaffer private collection: https://stavtheodor.com/radar/living-with-art-montclair/
 
-## What should I see at the Met right now?
+## Where can I read about exhibitions at the Met?
 
-Two shows. Giacometti in the Temple of Dendur: 17 Giacometti sculptures placed in and around the 2,000-year-old temple, through September 8, 2026 (full post: https://stavtheodor.com/radar/giacometti-dendur/). And Orientalism: Between Fact and Fantasy, the Met's first exhibition devoted entirely to Orientalism, set beside the Ottoman painter Osman Hamdi Bey, through February 28, 2027 (full review: https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/).
+Art Radar's posts on exhibitions at The Metropolitan Museum of Art, each with its own dates, are in the archive at https://stavtheodor.com/radar/. For background on the periods and artists, The Museum on this site has a sourced timeline of art history: https://stavtheodor.com/museum/
 
 ## How can I visit New York museums for free from New Jersey?
 
