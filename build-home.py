@@ -108,7 +108,10 @@ OPTIONAL = {'intro_eyebrow', 'what_i_do_eyebrow', 'advisory_h2', 'advisory_sub'}
 HTML_REGIONS = {'what_i_do_p1', 'what_i_do_p2'}  # a, em and strong allowed (tools/check_variants.py); the rest is escaped
 # Variant-only blocks: the template's marker is empty, so the homepage renders nothing in its place and a
 # variant renders the whole block. value_strip: the three columns right after #intro (2026-09-28).
-BLOCKS = {'value_strip', 'guide'}  # value_strip, then (2026-09-28) the long section after #what-i-do, which opens with the direct "who" answer
+BLOCKS = {'value_strip', 'guide', 'guides'}  # value_strip, then (2026-09-28) the long section after #what-i-do, which opens with the direct "who" answer
+# guides (Fable's design, 2026-09-29): the variant's guide cards (#guides, after #guide and before #about), from its
+# optional `guides` field. Optional blocks render nothing when the variant has no such field.
+OPTIONAL_BLOCKS = {'guides'}
 # Homepage-only sections: the homepage keeps the bytes between the markers, every variant drops them.
 # film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
 DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepage only (Ron, 2026-09-28); the Museum section is gone (P1.6, 2026-09-29)
@@ -282,7 +285,19 @@ def guide(v):
             f'  <div class="prose" data-l="en">{who("en")}{g["body_en"]}</div>\n</section>')
 
 
-BLOCK_RENDER = {'value_strip': None, 'guide': guide}
+def guides(v, pages):
+    """The variant's guides strip (#guides): its `guides` (1 to 6 guide paths, tools/check_variants.py) as cards, the
+    heading guides_heading_en/_he (else "Guides"), an optional sub, and the "All guides" arrow to the /advisory/ hub's
+    guides group when that group exists. Only built guides are shown; none built, no section."""
+    built = lambda g: os.path.exists(sc.rel(g['path'].strip('/'), 'index.html'))
+    h2 = (v.get('guides_heading_en') or 'Guides', v.get('guides_heading_he') or 'מדריכים')
+    sub = (v['guides_sub_en'], v['guides_sub_he']) if v.get('guides_sub_en') else None
+    arrow = any(built(g) for g in sc.hub_guides(pages.values()))
+    return sc.guides_section(sc.pick_guides(v['guides'], pages, built), (H.escape(h2[0]), H.escape(h2[1])),
+                             (H.escape(sub[0]), H.escape(sub[1])) if sub else None, arrow=arrow)
+
+
+BLOCK_RENDER = {'value_strip': lambda v, pages: value_strip(v), 'guide': lambda v, pages: guide(v), 'guides': guides}
 
 
 def value_strip(v):
@@ -294,7 +309,7 @@ def value_strip(v):
     return f'\n\n<section class="value-strip wrap" id="value">{items}</section>'
 
 
-def fill_regions(body, v):
+def fill_regions(body, v, pages=None):
     """The marked regions: the template's own text for the homepage (the markers go, the bytes
     between them stay), the variant's copy otherwise. Every region must appear exactly once, and
     room_fig_N and room_cap_N must hold slot N of PAIRS in js/home-opening.js. A variant-only block
@@ -319,8 +334,10 @@ def fill_regions(body, v):
             if v is None:
                 return ''
             if not v.get(name):
+                if name in OPTIONAL_BLOCKS:
+                    return ''
                 raise SystemExit(f"content/variants/{v['id']}.json: {name} is missing")
-            return (BLOCK_RENDER[name] or value_strip)(v)
+            return BLOCK_RENDER[name](v, pages or {})
         pair = region_copy(v, name) if v is not None and name in REGIONS else None
         if pair is None:
             return inner
@@ -358,7 +375,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
         assert n == (2 if k == 'POST_COUNT' else 1), f'slot {k} appears {n} times in the template'
         body = body.replace('{{' + k + '}}', val)
     assert '{{' not in body, 'unfilled slot'
-    body = fill_regions(body, v)
+    body = fill_regions(body, v, pages)
     meta = v['head'] if v else {'title': TITLE, 'description': DESCRIPTION, 'og_title': OG_TITLE, 'og_description': OG_DESC}
     url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, indexable since 2026-09-28
     # a variant may bring its own preview image (head.og_image, 1200 by 630) and its own first room

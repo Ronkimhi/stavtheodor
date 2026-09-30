@@ -33,8 +33,10 @@ SECTION_KICKER = {"advisory": "Art advisory", "projects": "Project", "partners":
 SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרויקט", "partners": "עבודה משותפת", "guide": "מדריך", "local": "אוצרת אמנות"}
 # Breadcrumb parents. The two local landing pages (/art-curator-new-jersey/, /art-curator-new-york/,
 # section "local", added 2026-09-26) sit under /advisory/ in the breadcrumb and open the advisory hub.
-CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Guides"}
-CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects"}
+# The guides sit under /advisory/ too since 2026-09-29 (Fable's guide design): the visible trail reads Home, Advisory, the
+# guide, and the BreadcrumbList THEODORA, Advisory, the guide.
+CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Advisory"}
+CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects", "guide": "advisory"}
 # The service area in every Service block (Ron's SEO brief, 2026-09-29): the entity's own areaServed. Tel Aviv
 # stays in the copy and on the project pages but never in an areaServed.
 DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
@@ -140,7 +142,7 @@ def ld_blocks(p, url, og):
                      "areaServed": p.get("area_served") or DEFAULT_AREA, "serviceType": p.get("service_type", "Art advisory")})
     main.update(p.get("schema_extra", {}))
     crumbs = [{"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"}]
-    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb; partners and the guide go straight to the page
+    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Advisory); partners go straight to the page
         crumbs.append({"@type": "ListItem", "position": 2, "name": CRUMB_NAME[p["section"]], "item": SITE + "/" + CRUMB_DIR[p["section"]] + "/"})
     crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": p["title_en"], "item": url})
     ld = [main, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}]
@@ -150,7 +152,8 @@ def ld_blocks(p, url, og):
     return ld
 
 
-def faq_html(p):
+def faq_html(p, cls=""):
+    """The questions; cls "guide-faq" on a guide (the question a size smaller, design spec 2.8)."""
     if not p.get("faq"):
         return ""
     qas = "".join(f'''
@@ -159,7 +162,7 @@ def faq_html(p):
         <p class="body">{T(q["a_en"], q["a_he"])}</p>
       </details>''' for q in p["faq"])
     return f'''
-<section class="section wrap">
+<section class="section wrap{(" " + cls) if cls else ""}">
   <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Questions', 'שאלות')}</p><h2 class="serif">{T('Questions people ask', 'שאלות נפוצות')}</h2></div></div>
   <div class="qas reveal">{qas}
   </div>
@@ -225,19 +228,160 @@ def cta_html(p):
   </div>'''
 
 
+# ---------------------------------------------------------------- the guides (Fable's design spec, 2026-09-29)
+# A guide page (section "guide"): breadcrumb Home / Advisory / the guide, a tighter h1, the hero diagram as Fig. 1, the
+# reading column as .prose.guide (text at 720px, figures and tables to 1000px), numbered figures and tables, h2 ids,
+# then Questions, the CTA, Read next as cards and links, and From Art Radar last. Body components (content/PAGE-SPEC.md):
+# figure.dia (a diagram img plus figcaption), figure.tbl (figcaption plus div.tbl-x holding the table), aside.cnote
+# (span.cn-l plus p), div.keynums of div.keynum (span.n, span.l). The build numbers the captions (Fig. N / תרשים N,
+# Table N / טבלה N; the JSON may leave the number out), adds width and height to diagram imgs from the SVG, and ids to
+# every h2 (slug of the English text; the Hebrew twin's h2 takes the same id plus "-he").
+FIG_LABEL = {("dia", "en"): "Fig.", ("dia", "he"): "תרשים", ("tbl", "en"): "Table", ("tbl", "he"): "טבלה"}
+FIGURE_RE = re.compile(r'<figure class="(dia|tbl)">(.*?)</figure>', re.S)
+# The /advisory/ hub's guides group, in this order (slugs, like PROJECT_ORDER); guides not listed follow, newest first.
+GUIDE_ORDER = []
+GUIDES_HUB_H2 = ("Guides to size, hang and place art", "מדריכים לגודל, לתלייה ולמיקום של אמנות")
+GUIDES_HUB_SUB = ("Each guide answers one question with drawings to scale and the measurements in inches and centimeters.",
+                  "כל מדריך עונה על שאלה אחת, עם שרטוטים בקנה מידה והמידות באינצ'ים ובסנטימטרים.")
+
+
+def number_figures(body, lang, fig_start):
+    """Number every diagram figure (from fig_start: the hero diagram is Fig. 1) and every table (from 1) in reading order,
+    in both twins alike, and give each diagram img its width and height from the SVG when the JSON does not."""
+    n = {"dia": fig_start, "tbl": 1}
+
+    def one(m):
+        kind, inner = m.group(1), m.group(2)
+        num = n[kind]
+        n[kind] += 1
+        label = f'<span class="fig-n">{FIG_LABEL[kind, lang]} {num}</span>'
+
+        def cap(c):
+            text = re.sub(r'<span class="fig-n">.*?</span>', '', c.group(1), flags=re.S).strip()
+            if text and not re.fullmatch(r'<span>(?:(?!</?span\b).)*</span>', text, re.S):
+                text = f'<span>{text}</span>'
+            return f'<figcaption>{label}{text}</figcaption>'
+        inner, k = re.subn(r'<figcaption>(.*?)</figcaption>', cap, inner, count=1, flags=re.S)
+        if not k:
+            inner = (inner.rstrip() + f'\n  <figcaption>{label}</figcaption>\n') if kind == "dia" else f'<figcaption>{label}</figcaption>' + inner
+        if kind == "dia":
+            def dims(im):
+                tag = im.group(0)
+                src = re.search(r'\ssrc="([^"]+)"', tag)
+                d = src and not re.search(r'\swidth=', tag) and sc.svg_dims(src.group(1))
+                return re.sub(r'\s*/?>$', f' width="{d[0]}" height="{d[1]}">', tag) if d else tag
+            inner = re.sub(r'<img\b[^>]*>', dims, inner)
+        return f'<figure class="{kind}">{inner}</figure>'
+    return FIGURE_RE.sub(one, body or "")
+
+
+def h2_ids(body_en, body_he):
+    """Every h2 gets an id: the slug of its English text (ASCII, hyphens), kept if the JSON set one; the Hebrew twin's
+    h2 in the same position gets the same id plus "-he", so ids stay unique on the page."""
+    ids, seen = [], set()
+
+    def en(m):
+        attrs, inner = m.group(1), m.group(2)
+        own = re.search(r'\sid="([^"]+)"', attrs)
+        base = own.group(1) if own else (re.sub(r"[^a-z0-9]+", "-", strip_tags(inner).lower()).strip("-") or "section")
+        i, k = base, 2
+        while i in seen:
+            i, k = f"{base}-{k}", k + 1
+        seen.add(i)
+        ids.append(i)
+        rest = re.sub(r'\sid="[^"]*"', "", attrs)
+        return m.group(0) if own and i == base else f'<h2 id="{i}"{rest}>{inner}</h2>'
+    body_en = re.sub(r"<h2\b([^>]*)>(.*?)</h2>", en, body_en, flags=re.S)
+    pos = iter(range(10 ** 6))
+
+    def he(m):
+        attrs, inner = m.group(1), m.group(2)
+        k = next(pos)
+        if re.search(r'\sid="', attrs):
+            return m.group(0)
+        return f'<h2 id="{(ids[k] if k < len(ids) else f"section-{k + 1}")}-he"{attrs}>{inner}</h2>'
+    body_he = re.sub(r"<h2\b([^>]*)>(.*?)</h2>", he, body_he, flags=re.S)
+    return body_en, body_he
+
+
+def guide_crumbs(p):
+    """The visible trail of a guide, in place of the eyebrow: Home / Advisory / the guide (crumb_en or the title,
+    clipped to one line by CSS and hidden on a phone, where the h1 sits right under it)."""
+    sep = '<span class="sep" aria-hidden="true">/</span>'
+    cur = T(H.escape(p.get("crumb_en") or p["title_en"]), H.escape(p.get("crumb_he") or p["title_he"]))
+    return (f'<nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="/">{T("Home", "ראשי")}</a> {sep} '
+            f'<a href="/advisory/">{T("Advisory", "ייעוץ")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
+
+
+def built_pages(all_pages):
+    """{path: page} for every page this build writes (it passes check()), for the guides fields."""
+    return {o["path"].strip("/"): o for o in all_pages if not check(o, "")}
+
+
+def guide_next(p, all_pages):
+    """Read next on a guide: its related guides as cards (at most three, in the order listed) under a head with the
+    "All guides" arrow, then the other related pages as text links under "Also on this site". Without a related guide,
+    only the links, under "Read next", and no head."""
+    built = built_pages(all_pages)
+    rel = [built[r.strip("/")] for r in p.get("related", []) if r.strip("/") in built]
+    guides = [o for o in rel if o["section"] == "guide" and sc.guide_cardable(o)][:3]
+    rest = [o for o in rel if o not in guides]
+    link = lambda o: f'<a href="/{o["path"].strip("/")}/">{T(H.escape(o["title_en"]), H.escape(o.get("title_he") or o["title_en"]))}</a>'
+    if not guides:
+        links = related_html(p, all_pages)
+        return f'\n<section class="section wrap tight guide-next" id="next">\n  {links}\n</section>\n' if links else ""
+    h2 = (H.escape(p.get("readnext_h2_en") or "More guides"), H.escape(p.get("readnext_h2_he") or "עוד מדריכים"))
+    arrow = (f'<a class="arrow" href="/advisory/#guides"><span class="ln"></span>{T(*sc.GUIDES_ALL)}</a>'
+             if sc.hub_guides(built.values()) else "")
+    more = (f'\n  <div class="readnext"><p class="eyebrow soft">{T("Also on this site", "עוד באתר")}</p>{"".join(link(o) for o in rest)}</div>'
+            if rest else "")
+    return f'''
+<section class="section wrap tight guide-next" id="next">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow">{T('Read next', 'להמשך קריאה')}</p><h2 class="serif">{T(*h2)}</h2></div>
+    {arrow}
+  </div>
+  {sc.gcards(guides)}{more}
+</section>
+'''
+
+
+def page_guides(p, all_pages):
+    """A content page's #guides strip (the page's optional `guides`, 1 to 6 guide paths): after the reading column and
+    before the questions. Heading guides_heading_en/_he, else "Go deeper"; no arrow, no sub (design spec 3.2)."""
+    if p["section"] == "guide" or not p.get("guides"):
+        return ""
+    built = built_pages(all_pages)
+    h2 = (H.escape(p.get("guides_heading_en") or "Go deeper"), H.escape(p.get("guides_heading_he") or "להעמיק"))
+    return sc.guides_section(sc.pick_guides(p["guides"], built, lambda o: True), h2, tight=True) + "\n"
+
+
 def render_article_page(p, all_pages):
     """Advisory, partner and guide pages: text header, the hero figure, the reading column.
     The hero figure is a before/after proposal space (before_after, a key of content/spaces.json, 2026-09-28):
     pinned while the after is brushed over the before as the reader scrolls. A page may still carry a plain
-    hero_image instead. English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch."""
+    hero_image instead. English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch.
+    A guide (section "guide") renders to Fable's guide design (2026-09-29, the block above)."""
     url = f"{SITE}/{p['path'].strip('/')}/"
+    guide = p["section"] == "guide"
     ba = p.get("before_after")
-    og = SITE + (p.get("og_image") or (sc.space_og(ba) if ba else None) or (p.get("hero_image") or {}).get("src") or "/og-image.jpg")
+    hi = p.get("hero_image")
+    hero_src = (hi or {}).get("src")
+    if guide and hero_src and hero_src.endswith(".svg"):
+        hero_src = None  # no link preview can show an SVG: a guide's og.jpg goes in og_image (design spec 5.7)
+    og = SITE + (p.get("og_image") or (sc.space_og(ba) if ba else None) or hero_src or "/og-image.jpg")
     kicker, kicker_he = kickers(p)
     hero = ""
-    hi = p.get("hero_image")
     if ba:
         hero = "\n  " + sc.before_after(ba, first=True)
+    elif hi and guide:
+        d = sc.image_dims(hi)
+        dims = f' width="{d[0]}" height="{d[1]}"' if d else ''
+        hero = f'''
+  <figure class="pfig dia">
+    <img src="{hi['src']}" {sc.img_alt(hi.get('alt_en', ''), hi.get('alt_he', ''))}{dims} loading="eager" fetchpriority="high" decoding="async">
+    <figcaption><span class="fig-n">{T('Fig. 1', 'תרשים 1')}</span>{T(H.escape(hi.get("caption_en", "")), H.escape(hi.get("caption_he", "")))}</figcaption>
+  </figure>'''
     elif hi:
         cap = ""
         if hi.get("caption_en") or hi.get("caption_he"):
@@ -248,23 +392,41 @@ def render_article_page(p, all_pages):
   <figure class="pfig{tall} reveal">
     <img src="{hi['src']}" {sc.img_alt(hi.get('alt_en', ''), hi.get('alt_he', ''))}{dims} loading="eager" fetchpriority="high" decoding="async">{cap}
   </figure>'''
-    top = crumbs_html(p) if p["section"] == "area" else f'<p class="eyebrow">{T(H.escape(kicker), H.escape(kicker_he))}</p>'
-    body = f'''
-<header class="phead">
+    if p["section"] == "area":
+        top = crumbs_html(p)
+    elif guide:
+        top = guide_crumbs(p)
+    else:
+        top = f'<p class="eyebrow">{T(H.escape(kicker), H.escape(kicker_he))}</p>'
+    body_en, body_he = lazy_images(p['body_en']), lazy_images(p['body_he'])
+    prose = "prose"
+    if guide:
+        start = 2 if (hi and not ba) else 1  # the hero diagram is Fig. 1
+        body_en, body_he = h2_ids(number_figures(body_en, "en", start), number_figures(body_he, "he", start))
+        prose = "prose guide"
+    head = f'''
+<header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
   <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{hero}
 </header>
 
 <section class="section wrap tight">
-  <div class="prose" data-l="he" dir="rtl">
-{lazy_images(p['body_he'])}
+  <div class="{prose}" data-l="he" dir="rtl">
+{body_he}
   </div>
-  <div class="prose" data-l="en">
-{lazy_images(p['body_en'])}
+  <div class="{prose}" data-l="en">
+{body_en}
   </div>
 </section>
-{faq_html(p)}{radar_html(p)}
+'''
+    if guide:  # the CTA before Read next: the reader who finished a how-to is warm (design spec 2.9)
+        body = head + f'''{faq_html(p, "guide-faq")}
+<section class="section wrap tight">{cta_html(p)}
+</section>
+{guide_next(p, all_pages)}{radar_html(p)}'''
+    else:
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
@@ -350,7 +512,9 @@ def ba_card(p):
       </a>'''
 
 
-def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, hero_alt):
+def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, hero_alt, guides=()):
+    """A hub: the hero, the cards, and on /advisory/ the guides group after them (guides: the guide pages with a hero
+    diagram, as .gcards; Fable's design, 2026-09-29). Every card and every guide is in the CollectionPage's hasPart."""
     url = f"{SITE}/{section}/"
     cards = "".join(sc.project_card(p) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
@@ -359,7 +523,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
       </a>''' for p in pages)
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": title_en, "url": url, "inLanguage": ["en", "he"],
            "isPartOf": {"@id": SITE + "/#site"},
-           "hasPart": [{"@type": "WebPage", "name": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in pages]},
+           "hasPart": [{"@type": "WebPage", "name": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in list(pages) + list(guides)]},
           {"@context": "https://schema.org", "@type": "BreadcrumbList",
            "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
@@ -377,7 +541,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 <section class="section wrap tight">
   <div class="grid3">{cards}
   </div>
-</section>
+</section>{sc.guides_section(list(guides), GUIDES_HUB_H2, GUIDES_HUB_SUB, tight=True)}
 {who_row(section)}
 <section class="section wrap tight">
   <div class="cta reveal">
@@ -730,6 +894,13 @@ def ordered_projects(pages):
     return [by[s] for s in PROJECT_ORDER + extra]
 
 
+def ordered_guides(pages):
+    """The hub's guides group: every built guide with a hero diagram, in GUIDE_ORDER, then the rest newest first."""
+    gs = [p for p in sc.hub_guides(pages) if not check(p, "")]
+    known = [next(p for p in gs if p["slug"] == s) for s in GUIDE_ORDER if any(p["slug"] == s for p in gs)]
+    return known + sorted((p for p in gs if p not in known), key=lambda p: p.get("date", ""), reverse=True)
+
+
 HUBS = {
     "advisory": ("Art advisory, answered plainly", "ייעוץ אמנות, בשפה פשוטה",
                  "What an art advisor does, what it costs, and how the work goes from a first conversation to a piece on the wall. Written for people who are about to buy, build, or move.",
@@ -766,12 +937,16 @@ def main():
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects
-        else:  # the advisory hub: the two local landing pages first, the town and county pages, then the advisory pages
-            sec_pages = [p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == "area"] + [p for p in pages if p["section"] == sec]
+        else:  # the advisory hub: the two local landing pages first, the town and county pages, then the advisory pages,
+            # then the guides whose hero is a before/after (the ten questions guide) as advisory cards; the guides with a
+            # hero diagram get their own group after the cards (Fable's design, 2026-09-29; ordered_guides)
+            sec_pages = ([p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == "area"] + [p for p in pages if p["section"] == sec]
+                         + [p for p in pages if p["section"] == "guide" and not p.get("hero_image")])
         sec_pages = [p for p in sec_pages if not check(p, "")]
+        guides = ordered_guides(pages) if sec == "advisory" else []
         if not sec_pages: continue
-        sc.write(os.path.join(sec, "index.html"), render_hub(sec, te, th, le, lh, sec_pages, hero_src, hero_alt))
-        print(f"  wrote {sec}/index.html ({len(sec_pages)} cards)")
+        sc.write(os.path.join(sec, "index.html"), render_hub(sec, te, th, le, lh, sec_pages, hero_src, hero_alt, guides))
+        print(f"  wrote {sec}/index.html ({len(sec_pages)} cards" + (f", {len(guides)} guides" if guides else "") + ")")
     if "--no-sitemap" not in sys.argv:
         subprocess.run([sys.executable, "build-post-pages.py"], check=True)
     if problems: sys.exit(1)

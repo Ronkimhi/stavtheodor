@@ -666,3 +666,144 @@
     .foot .cols2 { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
     .foot .cols2 > div:nth-child(2) { order: 3; }
   }
+
+/* ===================== Part 5: the guides (design spec 2026-09-29) =====================
+   Append to css/theme.css after Part 4. Every rule is scoped to a new class (.guide, .dia, .cnote,
+   .keynums, .tbl, .gcards, .crumbs .cur) or is a focus state that existing pages lacked, so no page
+   that exists today changes. Colors are the register's tokens only; no new hue. */
+
+  :root { --measure: 720px; --wide: 1000px; --gx: clamp(20px, 3.4vw, 48px); }
+
+  /* 5.1 Header of a guide: breadcrumb, a tighter h1 for long how-to titles, the lead, the hero diagram */
+  .phead.guide h1 { font-size: clamp(34px, 4.6vw, 64px); max-width: 26ch; }
+  .phead.guide .lead { max-width: 720px; }
+  .crumbs a:hover { color: #C9A46B; }
+  .crumbs a:focus-visible { outline: 1px solid var(--taupe); outline-offset: 4px; }
+  /* the current page in the trail: the title, not shouted: sentence case, muted, one line */
+  .crumbs .cur { text-transform: none; letter-spacing: 0.01em; font-size: 13px; font-weight: 500; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 44ch; }
+  .crumbs .cur [data-l="he"] { font-size: 15px; letter-spacing: 0; }
+
+  /* 5.2 A diagram figure: an SVG drawn to scale, served as an <img> with width and height, on the page ground.
+     The hero (.pfig.dia) and the body figures (.prose .dia) share one look. */
+  .pfig.dia { max-width: var(--wide); }
+  .dia img { width: 100%; height: auto; }
+  .dia figcaption { display: flex; gap: 14px; align-items: baseline; margin-top: 14px; font-size: 14px; line-height: 1.55; color: var(--muted); max-width: var(--measure); }
+  .dia .fig-n { flex: none; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
+  .dia .fig-n [data-l="he"] { letter-spacing: 0.04em; font-size: 13px; }
+  .prose .dia { margin: 44px 0; }
+
+  /* 5.3 The reading column of a guide: text at a 68 character measure, figures and tables up to 1000px */
+  .prose.guide { max-width: var(--wide); }
+  .prose.guide > :where(p, h2, h3, ul, ol, blockquote, .cnote, .keynums) { max-width: var(--measure); }
+  .prose.guide h2 { font-size: clamp(28px, 2.6vw, 36px); margin: 64px 0 20px; scroll-margin-top: 120px; }
+  .prose.guide > h2:first-child { margin-top: 0; }
+  .prose.guide h3 { margin: 40px 0 12px; scroll-margin-top: 120px; }
+  .prose.guide h2 + h3 { margin-top: 24px; }
+  .prose.guide p { color: var(--soft); }
+  .prose.guide > p:first-child { font-size: 20px; line-height: 1.65; color: var(--ink); }  /* the opening paragraph */
+  .prose.guide[dir="rtl"] > p:first-child { font-size: 21px; }
+
+  /* 5.4 Curator's note: one taupe hairline on the reading side, a small label, the note in ink. Logical
+     properties, so the Hebrew twin mirrors on its own. */
+  .cnote { margin: 40px 0; padding-block: 4px; padding-inline: 28px 0; border-inline-start: 1px solid var(--taupe); }
+  .cnote .cn-l { display: block; margin-bottom: 10px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
+  .cnote .cn-l [data-l="he"] { letter-spacing: 0.04em; font-size: 14px; }
+  .prose[dir="rtl"] .cnote .cn-l { letter-spacing: 0.04em; font-size: 14px; }
+  .cnote p { font-size: 17px; line-height: 1.7; color: var(--ink); margin: 0 0 12px; }
+  .prose[dir="rtl"] .cnote p { font-size: 18px; line-height: 1.8; }
+  .cnote p:last-child { margin-bottom: 0; }
+
+  /* 5.5 Key numbers: the measurements a reader (or an AI answer) lifts from the page. One to three in a row. */
+  .keynums { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 32px; margin: 44px 0; }
+  .keynum { position: relative; display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .keynum::before { content: ""; position: absolute; top: -1px; inset-inline-start: 0; width: 36px; height: 1px; background: var(--taupe); }
+  .keynum .n { font-family: var(--serif); font-size: clamp(34px, 3.6vw, 48px); line-height: 1; letter-spacing: -0.01em; color: var(--ink); font-variant-numeric: lining-nums; unicode-bidi: isolate; }
+  .keynum .n small { font-size: 0.5em; color: var(--soft); margin-inline-start: 0.15em; letter-spacing: 0; }
+  .prose[dir="rtl"] .keynum .n { font-family: var(--he); }
+  .keynum .l { font-size: 14px; line-height: 1.5; color: var(--muted); }
+  .prose[dir="rtl"] .keynum .l { font-size: 15px; }
+
+  /* 5.6 A comparison table: a figure with its caption on top, the table inside a wrapper that scrolls sideways
+     under 600px (the caption stays put). Hairline rows, a small caps header, the first column in ink. The table
+     keeps a 520px minimum so no column collapses. Four columns at most. */
+  .tbl { margin: 44px 0; }
+  .tbl figcaption { display: flex; gap: 14px; align-items: baseline; padding: 0 0 14px; font-size: 14px; line-height: 1.55; color: var(--muted); max-width: var(--measure); }
+  .tbl .fig-n { flex: none; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
+  .tbl .fig-n [data-l="he"], .prose[dir="rtl"] .tbl .fig-n { letter-spacing: 0.04em; font-size: 13px; }
+  .tbl-x { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--taupe) transparent; }
+  .tbl table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.5; color: var(--soft); font-variant-numeric: tabular-nums; }
+  .prose[dir="rtl"] .tbl table { font-size: 16px; }
+  .tbl th { text-align: start; vertical-align: bottom; padding: 0 16px 12px 0; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--muted); border-bottom: 1px solid rgba(242,240,236,0.3); }
+  .prose[dir="rtl"] .tbl th { padding: 0 0 12px 16px; letter-spacing: 0.04em; font-size: 13px; }
+  .tbl td, .tbl tbody th { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .prose[dir="rtl"] .tbl td, .prose[dir="rtl"] .tbl tbody th { padding: 14px 0 14px 16px; }
+  .tbl tbody th { font-size: 15px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--ink); }
+  .prose[dir="rtl"] .tbl tbody th { font-size: 16px; }
+  .tbl td:last-child, .tbl th:last-child { padding-inline-end: 0; }
+  .tbl td strong { color: var(--ink); font-weight: 600; }
+
+  /* 5.7 The FAQ on a guide: the same details.qa, the question a size smaller, and a focus ring it never had */
+  .guide-faq .qa h3 { font-size: 22px; }
+  .qa summary { -webkit-tap-highlight-color: transparent; }
+  .qa summary:focus-visible { outline: 1px solid var(--taupe); outline-offset: 6px; }
+
+  /* 5.8 Guide cards: the thumbnail is the guide's hero diagram on a surface plate with a faint taupe wash (the
+     same wash as .phero.type). Used three times: the industry pages' "Guides for law firms" strip, the /advisory/
+     hub's guides group, and Read next on a guide. */
+  .gcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; }
+  .gcards.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gcard { display: flex; flex-direction: column; gap: 14px; color: var(--ink); outline: none; }
+  .gcard .th { position: relative; aspect-ratio: 16 / 10; overflow: hidden; padding: 7% 8%; border: 1px solid var(--line); background: radial-gradient(120% 100% at 85% 0%, rgba(157,118,99,0.18), rgba(15,15,20,0) 60%), var(--surface); }
+  .gcard .th img { width: 100%; height: 100%; object-fit: contain; transition: transform 1.2s ease; }
+  .gcard:hover .th img, .gcard:focus-visible .th img { transform: scale(1.03); }
+  .gcard:focus-visible { outline: 1px solid var(--taupe); outline-offset: 6px; }
+  .gcard h3 { font-size: 22px; line-height: 1.2; text-wrap: balance; }
+  .gcard:hover h3 { color: #C9A46B; }
+  .gcard p { font-size: 15px; line-height: 1.6; color: var(--muted); }
+  .gcard p [data-l="he"] { font-size: 16px; }
+  .gcards .gcard .th img { transition: transform 1.2s ease; }
+  body.lang-he .gcards { direction: rtl; }
+
+  /* 5.9 Read next on a guide: the related guides as cards, the rest as the text links every article page has */
+  .guide-next .gcards { margin-top: clamp(28px, 3vw, 40px); }
+  .guide-next .readnext { margin-top: 40px; }
+
+  @media (max-width: 900px) {
+    .gcards, .gcards.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 20px; }
+  }
+  @media (max-width: 600px) {
+    /* the diagram takes the whole width of the phone: 40px more drawing on a 360px screen */
+    .phead.guide .pfig.dia, .prose.guide .dia { margin-inline: calc(-1 * var(--gx)); }
+    .phead.guide .pfig.dia figcaption, .prose.guide .dia figcaption { padding-inline: var(--gx); }
+    .crumbs .cur, .crumbs .sep:last-of-type { display: none; }  /* the h1 is right below */
+    .keynums { gap: 22px; }
+    .prose.guide > p:first-child { font-size: 19px; }
+    .prose.guide[dir="rtl"] > p:first-child { font-size: 20px; }
+    .tbl figcaption { padding-inline: 0; }
+    .keynum .n { font-size: 32px; }
+    /* cards become rows: thumbnail left, title and dek right, one hairline between them */
+    .gcards, .gcards.n4 { grid-template-columns: 1fr; gap: 0; }
+    .gcard { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 4px 18px; align-items: start; padding: 18px 0; border-top: 1px solid var(--line); }
+    .gcard:last-child { border-bottom: 1px solid var(--line); }
+    .gcard .th { grid-row: 1 / span 2; padding: 10%; }
+    .gcard h3 { font-size: 19px; text-wrap: pretty; }
+    .gcard p { font-size: 14px; }
+    .gcard:hover .th img, .gcard:focus-visible .th img { transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .gcard .th img { transition: none; } }
+
+  /* 5.10 Implementation notes (2026-09-29, the build of the spec above). (a) A guide card for a guide whose hero is a
+     before/after proposal (the ten questions guide) shows the after image, a photograph, so it fills its plate instead of
+     sitting inside the drawing's padding; the Proposal chip (.ba-chip) marks it (content rule 10). (b) On a phone the
+     breadcrumb's last separator goes with the current step: the spec's .sep:last-of-type never matches, because the
+     current step is itself the last span. (c) below. */
+  .gcard .th.ph-photo { padding: 0; }
+  .gcard .th.ph-photo img { object-fit: cover; }
+  /* (c) The Hebrew twin's body figures carry a plain Hebrew label (תרשים 2), not a twin: no wide tracking on Hebrew letters */
+  .prose[dir="rtl"] .dia .fig-n { letter-spacing: 0.04em; font-size: 13px; }
+  @media (max-width: 600px) {
+    .gcard .th.ph-photo { padding: 0; }
+    .gcard .th.ph-photo .ba-chip { top: 6px; left: 6px; padding: 5px 6px 4px; font-size: 9px; letter-spacing: 0.16em; }
+    body.lang-he .gcard .th.ph-photo .ba-chip { left: auto; right: 6px; }
+    .crumbs .sep:has(+ .cur) { display: none; }
+  }

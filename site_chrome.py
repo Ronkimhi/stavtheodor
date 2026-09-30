@@ -1051,6 +1051,103 @@ def before_after(key, first=False):
   </figure>'''
 
 
+# ---------------------------------------------------------------- the guides (Fable's design spec, 2026-09-29)
+# One card component, three placements: a buyer variant's #guides strip (build-home.py, the variant's `guides`), a
+# content page's #guides strip (build-site-pages.py, the page's `guides`) and the /advisory/ hub's guides group, plus
+# Read next on a guide. Styles: css/theme.css Part 5 (.gcards, .gcard). A card takes the guide's title, its dek
+# (dek_en/dek_he, else the lead's first sentence) and its hero diagram (hero_image, an SVG) as the thumbnail. A guide
+# whose hero is a before/after proposal (the ten questions guide) shows the after image instead, marked Proposal
+# (content rule 10), in a photo plate (.th.ph-photo).
+GUIDE_PATH = re.compile(r'^guide/[a-z0-9]+(?:-[a-z0-9]+)*$')
+GUIDES_MAX = 6
+GUIDES_ALL = ('All guides', 'כל המדריכים')
+
+
+def svg_dims(src):
+    """(width, height) from an SVG file's own root attributes, or None (not an SVG, missing, or no size)."""
+    path = rel(src.lstrip('/'))
+    if not src.lower().endswith('.svg') or not os.path.exists(path):
+        return None
+    m = re.search(r'<svg\b[^>]*>', open(path, encoding='utf-8').read(8000))
+    w = m and re.search(r'\swidth="(\d+(?:\.\d+)?)"', m.group(0))
+    h = m and re.search(r'\sheight="(\d+(?:\.\d+)?)"', m.group(0))
+    return (round(float(w.group(1))), round(float(h.group(1)))) if w and h else None
+
+
+def image_dims(img):
+    """A hero_image's width and height: its own w and h, else the SVG's (read once at build time), else None."""
+    if img.get('w') and img.get('h'):
+        return img['w'], img['h']
+    return svg_dims(img['src'])
+
+
+def guide_cardable(g):
+    return bool(g.get('hero_image') or g.get('before_after'))
+
+
+def guide_card(g):
+    """One guide as a card: one <a>, a decorative thumbnail (the title says what it is), the title and one line."""
+    hi = g.get('hero_image')
+    if hi:
+        d = image_dims(hi)
+        dims = f' width="{d[0]}" height="{d[1]}"' if d else ''
+        th = f'<span class="th"><img src="{hi["src"]}" alt=""{dims} loading="lazy" decoding="async"></span>'
+    elif g.get('before_after'):
+        k = g['before_after']
+        s = spaces()[k]
+        th = (f'<span class="th ph-photo"><img src="/images/spaces/{k}_after-1000.webp" alt="" width="1000" height="{round(1000 * s["h"] / s["w"])}" '
+              f'loading="lazy" decoding="async"><span class="ba-chip">{T("Proposal", "הצעה")}</span></span>')
+    else:
+        raise SystemExit(f'{g["path"]}: a guide card needs the guide\'s hero_image (its diagram) or a before_after')
+    dek_en = g.get('dek_en') or first_sentence(g['lead_en'])
+    dek_he = g.get('dek_he') or first_sentence(g['lead_he'])
+    return f'''
+    <a class="gcard reveal" href="/{g['path'].strip('/')}/">
+      {th}
+      <h3 class="serif">{T(H.escape(g['title_en']), H.escape(g['title_he']))}</h3>
+      <p>{T(H.escape(dek_en), H.escape(dek_he))}</p>
+    </a>'''
+
+
+def gcards(guides):
+    """The card grid: two columns of two for exactly four cards, three columns otherwise."""
+    return f'<div class="gcards{" n4" if len(guides) == 4 else ""}">{"".join(guide_card(g) for g in guides)}\n  </div>'
+
+
+def guides_section(guides, h2, sub=None, arrow=False, tight=False):
+    """A #guides strip: eyebrow Guides, the h2, an optional one line sub, the "All guides" arrow to the hub's group
+    (only where that group exists: the anchor must resolve), then the cards. '' without a guide."""
+    if not guides:
+        return ''
+    sub_html = f'<p class="muted" style="font-size: 17px; max-width: 760px;">{T(*sub)}</p>' if sub else ''
+    arrow_html = f'\n    <a class="arrow" href="/advisory/#guides"><span class="ln"></span>{T(*GUIDES_ALL)}</a>' if arrow else ''
+    return f'''
+
+<section class="section wrap{' tight' if tight else ''}" id="guides">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow">{T('Guides', 'מדריכים')}</p><h2 class="serif">{T(*h2)}</h2>{sub_html}</div>{arrow_html}
+  </div>
+  {gcards(guides)}
+</section>'''
+
+
+def pick_guides(paths, pages, built):
+    """The guide pages a `guides` field names, in its order: pages {path: page}; a path that is not a guide page, or
+    whose page is not built (built(page) is False), is skipped, like the Read next links skip unbuilt pages."""
+    out = []
+    for x in paths or []:
+        g = pages.get(x.strip('/'))
+        if g and g.get('section') == 'guide' and guide_cardable(g) and built(g):
+            out.append(g)
+    return out[:GUIDES_MAX]
+
+
+def hub_guides(pages):
+    """The guides the /advisory/ hub shows in its guides group: every guide with a hero diagram (hero_image). A guide
+    whose hero is a before/after (the ten questions guide) stays among the advisory cards (design spec, section 4)."""
+    return [p for p in pages if p.get('section') == 'guide' and p.get('hero_image')]
+
+
 # ---------------------------------------------------------------- the dash sanitizer
 # No em dash (U+2014) and no en dash (U+2013) in anything a page says: visible text, titles, meta content, alt and
 # aria-label text, JSON-LD strings, and the entity spellings of both (Ron's SEO brief, 2026-09-29, P0.2). One step

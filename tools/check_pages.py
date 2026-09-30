@@ -5,6 +5,16 @@ import json, re, sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fee_gate import fee_violation  # the fee rule, 2026-09-29
 ALLOWED = {"p","h2","h3","ul","ol","li","strong","em","a","blockquote","figure","img","figcaption","br"}
+# A guide's body may also carry the guide components (Fable's design spec, 2026-09-29, content/PAGE-SPEC.md): figure.dia,
+# figure.tbl with div.tbl-x and the table, aside.cnote with span.cn-l, div.keynums of div.keynum (span.n, span.l, small),
+# and class attributes from GUIDE_CLASSES only. Every other page keeps ALLOWED and no class at all.
+GUIDE_TAGS = {"div","span","small","aside","table","thead","tbody","tr","th","td"}
+GUIDE_CLASSES = {"dia","fig-n","cnote","cn-l","keynums","keynum","n","l","tbl","tbl-x"}
+GUIDE_PATH = re.compile(r"^guide/[a-z0-9]+(?:-[a-z0-9]+)*$")
+GUIDES_COUNT = (1, 6)
+# (field, max characters): the card's line, the breadcrumb's short name, the guides strip's heading, Read next's h2
+FIELD_MAX = {"dek_en": 120, "dek_he": 120, "crumb_en": 40, "crumb_he": 40, "guides_heading_en": 90, "guides_heading_he": 90,
+             "readnext_h2_en": 90, "readnext_h2_he": 90}
 # partners up to 1000 since 2026-09-29: /designers/ was merged into /for-designers/ (Ron's SEO brief, P1.5)
 # area: the town and county pages (Ron's SEO brief, 2026-09-29, P1.2 and P1.3), 700 to 1,200 English words counted over the
 # lead, the body and the questions, with the brief's own short answers (FAQ_AREA)
@@ -24,6 +34,16 @@ def space_keys():
     try: return set(json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "spaces.json"), encoding="utf-8"))["spaces"])
     except (OSError, ValueError, KeyError): return set()
 SPACES = space_keys()
+def guide_pages():
+    """{path: page} for every content/pages JSON of section guide, for the guides field."""
+    out = {}
+    for g in sorted(os.listdir(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "pages"))):
+        if g.endswith(".json"):
+            try: d = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "pages", g), encoding="utf-8"))
+            except (OSError, ValueError): continue
+            if isinstance(d, dict) and d.get("section") == "guide" and isinstance(d.get("path"), str): out[d["path"].strip("/")] = d
+    return out
+GUIDES = guide_pages()
 def internal_keys(node, trail=""):
     """Key paths holding internal notes, at any depth: editor_note, or a key starting with "_" or "note" (any case).
     Every file under content/ is served publicly, so none of them belongs in a page (content/PAGE-SPEC.md, 2026-09-27)."""
@@ -69,15 +89,21 @@ for f in sys.argv[1:]:
         fails.append("project page without hero_image: give it place_en and place_he (its card shows the place name), or a photo of this project")
     if p.get("section") == "projects" and p.get("before_after"): fails.append("before_after is for article pages: a project page shows only photos of that project")
     if p.get("before_after") and p["before_after"] not in SPACES: fails.append(f"before_after {p['before_after']} is not a key of content/spaces.json")
+    guide = p.get("section") == "guide"
     for blk in ["body_en","body_he"]:
         tags = set(t.lower() for t in re.findall(r"<\s*([a-zA-Z0-9]+)", p.get(blk,"")))
-        bad = tags - ALLOWED
+        bad = tags - ALLOWED - (GUIDE_TAGS if guide else set())
         if bad: fails.append(f"{blk} disallowed tags: {sorted(bad)}")
         for m in re.finditer(r"<img[^>]*>", p.get(blk,"")):
             if 'alt="' not in m.group(0) or 'alt=""' in m.group(0): fails.append(f"{blk} img without alt")
             src = re.search(r'src="([^"]+)"', m.group(0))
             if src and not os.path.exists(src.group(1).lstrip("/")): fails.append(f"{blk} missing image {src.group(1)}")
-        if re.search(r'style=|class=|<script', p.get(blk,"")): fails.append(f"{blk} has style/class/script")
+        if re.search(r'style=|<script', p.get(blk,"")) or (not guide and "class=" in p.get(blk,"")): fails.append(f"{blk} has style/class/script")
+        if guide:
+            for cls in re.findall(r'class="([^"]*)"', p.get(blk,"")):
+                off = [c for c in cls.split() if c not in GUIDE_CLASSES]
+                if off: fails.append(f"{blk} class not allowed on a guide: {off} (allowed: {', '.join(sorted(GUIDE_CLASSES))})")
+            if re.search(r"class='|class=[^\"']", p.get(blk,"")): fails.append(f"{blk}: write class attributes in double quotes")
     if p.get("section") in LIMITS and p.get("body_en"):
         lo, hi = LIMITS[p["section"]]; n = words(p["body_en"])
         if p["section"] == "area": n = words(p["lead_en"] + " " + p["body_en"] + " " + " ".join(q.get("q_en", "") + " " + q.get("a_en", "") for q in p.get("faq", []) or []))
@@ -102,6 +128,22 @@ for f in sys.argv[1:]:
         n = words(q.get("a_en","")); lo, hi = FAQ_AREA if p.get("section") == "area" else FAQ_WORDS
         if n and (n < lo or n > hi): fails.append(f"faq answer {n} words, expected {lo} to {hi}")
     if p.get("hero_image") and not os.path.exists(p["hero_image"]["src"].lstrip("/")): fails.append("hero_image file missing")
+    for k, n in FIELD_MAX.items():
+        if p.get(k) is not None and not (isinstance(p[k], str) and 0 < len(p[k]) <= n): fails.append(f"{k}: a string of 1 to {n} characters")
+    for a in ("dek", "crumb", "guides_heading", "readnext_h2"):
+        if bool(p.get(a + "_en")) != bool(p.get(a + "_he")): fails.append(f"{a}_en and {a}_he come together (both languages)")
+    if "guides" in p:  # the #guides strip (Fable's design, 2026-09-29): 1 to 6 guide pages, in display order
+        gs = p["guides"]
+        if p.get("section") == "guide": fails.append("guides: a guide links other guides through related (Read next), not guides")
+        if not isinstance(gs, list) or not all(isinstance(x, str) for x in gs): fails.append('guides: a list of "guide/<slug>" paths')
+        else:
+            if not GUIDES_COUNT[0] <= len(gs) <= GUIDES_COUNT[1]: fails.append(f"guides: {len(gs)} entries, expected {GUIDES_COUNT[0]} to {GUIDES_COUNT[1]}")
+            if len(set(gs)) != len(gs): fails.append("guides: an entry appears twice")
+            for x in gs:
+                if not GUIDE_PATH.match(x): fails.append(f'guides: "{x}" is not a guide path ("guide/<slug>", no slashes around it)')
+                elif x not in GUIDES: fails.append(f'guides: "{x}" is not a guide page in content/pages')
+                elif not (GUIDES[x].get("hero_image") or GUIDES[x].get("before_after")): fails.append(f'guides: "{x}" has neither a hero_image nor a before_after, so it has no card')
+    elif "guides_heading_en" in p: fails.append("guides_heading_en: only beside guides")
     if len(p.get("related", [])) < 2 and p.get("section") != "guide": fails.append("fewer than 2 related pages")
     if fails: print(f"{f}: FAIL\n  - " + "\n  - ".join(fails)); fails_total += 1
     else: print(f"{f}: OK ({words(p['body_en'])} en words)")

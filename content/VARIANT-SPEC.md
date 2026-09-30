@@ -60,7 +60,7 @@ Since 2026-09-28 a variant is indexable and its own canonical, listed once in `s
 }
 ```
 
-The example is shortened (two questions, "..." in the long fields): a real file carries five to seven questions and full paragraphs. Optional objects and fields: `intro.eyebrow_en/_he`, `what_i_do.eyebrow_en/_he`, `advisory` (`h2_en/_he`, `sub_en/_he`), `advisory_rows`, `rooms`, and `head.og_image` with `head.og_image_alt` (the last two in their own sections below); when one is absent the homepage's own text, rows, rooms or preview image stay.
+The example is shortened (two questions, "..." in the long fields): a real file carries five to seven questions and full paragraphs. Optional objects and fields: `intro.eyebrow_en/_he`, `what_i_do.eyebrow_en/_he`, `advisory` (`h2_en/_he`, `sub_en/_he`), `advisory_rows`, `rooms`, `guides` with its heading and line (its own section below), and `head.og_image` with `head.og_image_alt` (the last two in their own sections below); when one is absent the homepage's own text, rows, rooms or preview image stay.
 
 | Field | Where it shows | Limit |
 |---|---|---|
@@ -130,6 +130,10 @@ The text rules above apply to the captions and the alt text. `build-home.py` the
 ## Its own link preview (optional)
 
 `head.og_image` and `head.og_image_alt` come together: a 1200 by 630 JPEG under 300 KB, written as its address from the site root, `/images/home2/variants/<id>/<name>.jpg`, and one English line on what it shows (at most 160 characters). They replace `og-home.jpg` and its description in og:image, og:image:alt and twitter:image, for this variant only. Link previews are cached: after a change, re-scrape the page in the Facebook Sharing Debugger and the LinkedIn Post Inspector.
+
+## Its guides (optional, 2026-09-29)
+
+`guides` lists 1 to 6 guide pages (`"guide/<slug>"`, each a content/pages guide that is built) in display order. The page then shows a Guides strip (`#guides`, variant only, after the long section #guide and before #about; the template's `<!--variant:guides--><!--/variant:guides-->` marker stays empty, so the homepage never has it): the eyebrow Guides, the heading `guides_heading_en`/`guides_heading_he` (optional, at most 90 characters, "Guides" without it; write it for the page, "Guides for law firms"), an optional line `guides_sub_en`/`guides_sub_he` (at most 200), the "All guides" arrow to /advisory/#guides once the hub has a guides group, and one card per guide (its title, `dek_en` or its lead's first sentence, its hero diagram, or its after image marked Proposal). The heading and line fields exist only beside `guides`. `tools/check_variants.py` check p.
 
 ## Paths, deleting, validating
 

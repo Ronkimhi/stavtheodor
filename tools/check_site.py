@@ -632,6 +632,8 @@ for path in pages:
         fail('hebrew', f'{path}: Hebrew element without dir="rtl" {el}')
     for a in p.imgs:
         want = ALT_HE.get(a.get('src', ''))
+        if a.get('alt') == '' and 'data-alt-he' not in a:
+            continue  # a decorative image (alt="", a guide card's thumbnail, 2026-09-29): no alt in either language
         if want is not None and a.get('data-alt-he') != want:
             fail('hebrew', f'{path}: <img src={a.get("src")!r}> lacks data-alt-he (its source has alt_he)')
     for kind, t in p.he_text:

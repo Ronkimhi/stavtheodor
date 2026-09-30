@@ -43,6 +43,10 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      paragraph, 80 to 260 characters, naming Stav Theodor); service {service_type, audience, area_served} for the Service schema, area_served
      from New York City and New Jersey (never Tel Aviv, 2026-09-29); guide {eyebrow, h2, body} with a body of 600 to 900
      English words (p, h3, ul, ol, li, a, em, strong; links as in h, the same set in both languages)
+  p  guides (optional, Fable's design, 2026-09-29): one to six different "guide/<slug>" paths, each a guide page in
+     content/pages with a card (hero_image or before_after) and built (guide/<slug>/index.html); the strip's heading
+     guides_heading_en/_he (optional, at most 90 characters, "Guides" without it) and one line guides_sub_en/_he
+     (optional, at most 200), both only beside guides
 """
 import ast
 import datetime
@@ -89,7 +93,7 @@ BANNED = [('contact form', True), ('{{', False), ('<!--', False), ('PLACEHOLDER'
 # object: (required keys, optional keys); services and faq hold lists of these objects
 SCHEMA = {
     '': ({'id', 'path', 'approved', 'nav_sub_en', 'nav_sub_he', 'head', 'hero', 'intro', 'service', 'services', 'value_strip', 'what_i_do', 'guide', 'faq', 'cta_en', 'cta_he', 'mail_subject'},
-         {'advisory', 'advisory_rows', 'rooms', 'rooms_rest'}),
+         {'advisory', 'advisory_rows', 'rooms', 'rooms_rest', 'guides', 'guides_heading_en', 'guides_heading_he', 'guides_sub_en', 'guides_sub_he'}),
     'head': ({'title', 'description', 'og_title', 'og_description'}, {'og_image', 'og_image_alt'}),
     'hero': ({'l1_en', 'l1_he', 'l2_en', 'l2_he'}, set()),
     'intro': ({'h1_en', 'h1_he', 'line_en', 'line_he', 'statement_en', 'statement_he'}, {'eyebrow_en', 'eyebrow_he'}),
@@ -103,7 +107,7 @@ SCHEMA = {
     'rooms': ({'b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from', 'cap_en', 'cap_he', 'alt_en', 'alt_he'}, {'seed'}),
 }
 OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory', 'service', 'guide'}
-LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms', 'area_served'}
+LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms', 'area_served', 'guides'}
 NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are not strings (checked under l)
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
 GUIDE_FIELDS = {'guide.body_en', 'guide.body_he'}  # the long section: a reading column's tags too
@@ -119,6 +123,7 @@ CHAR_LIMITS = [
     ('cta_en', 40, 140), ('mail_subject', 8, 60), ('nav_sub_en', 1, 32), ('nav_sub_he', 1, 32),
     ('guide.who_en', 80, 260), ('service.service_type', 10, 90), ('service.audience', 5, 90),
     ('guide.eyebrow_en', 1, 24), ('guide.h2_en', 1, 120),
+    ('guides_heading_en', 1, 90), ('guides_heading_he', 1, 90), ('guides_sub_en', 1, 200), ('guides_sub_he', 1, 200),
 ]
 WORD_LIMITS = [('what_i_do.p1_en', 40, 160), ('what_i_do.p2_en', 40, 160), ('guide.body_en', 600, 900)]
 SERVICE_DESC_MAX = 90
@@ -129,6 +134,8 @@ FAQ_ANSWER_WORDS = (40, 90)
 QUESTION_MAX = 110
 HEBREW_SHARE = 0.6
 ROWS_COUNT = (3, 8)
+GUIDES_COUNT = (1, 6)
+GUIDE_PATH = re.compile(r'^guide/[a-z0-9]+(?:-[a-z0-9]+)*$')
 HUBS = ('/advisory/', '/projects/')
 STUBS = ('2', 'our-team', 'our-team-1', 'questions', 'designers')  # /contact/ and /about/ are real pages since 2026-09-29; /designers/ forwards to /for-designers/, /our-team/ and /our-team-1/ to /about/
 RESERVED = {'2', 'about', 'advisory', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'content', 'css', 'designers', 'fonts',
@@ -196,7 +203,7 @@ def strings(v):
         if isinstance(item, dict) and 'home' not in item:
             for k, s in item.items():
                 out.append((f'faq[{i}].{k}', s))
-    for k in ('nav_sub_en', 'nav_sub_he', 'cta_en', 'cta_he', 'mail_subject'):
+    for k in ('nav_sub_en', 'nav_sub_he', 'cta_en', 'cta_he', 'mail_subject', 'guides_heading_en', 'guides_heading_he', 'guides_sub_en', 'guides_sub_he'):
         if k in v:
             out.append((k, v[k]))
     return out
@@ -662,6 +669,31 @@ def check(path, v, peers):
                     fails.append(f'advisory_rows: "{r}" is neither a content/pages path nor /advisory/ or /projects/')
                 elif not os.path.exists(os.path.join(ROOT, r.strip('/'), 'index.html')):
                     fails.append(f'advisory_rows: /{r.strip("/")}/ is not built (run python3 build.py)')
+
+    # p: the guides strip
+    gs = v.get('guides')
+    if gs is not None:
+        if not isinstance(gs, list) or not all(isinstance(g, str) and g for g in gs):
+            fails.append('guides: a list of "guide/<slug>" paths')
+        else:
+            if not GUIDES_COUNT[0] <= len(gs) <= GUIDES_COUNT[1]:
+                fails.append(f'guides: {len(gs)} entries, expected {GUIDES_COUNT[0]} to {GUIDES_COUNT[1]}')
+            if len(set(gs)) != len(gs):
+                fails.append('guides: an entry appears twice')
+            for g in gs:
+                page = PAGES.get(g)
+                if not GUIDE_PATH.match(g):
+                    fails.append(f'guides: "{g}" is not a guide path ("guide/<slug>", no slashes around it)')
+                elif not page or page.get('section') != 'guide':
+                    fails.append(f'guides: "{g}" is not a guide page in content/pages')
+                elif not (page.get('hero_image') or page.get('before_after')):
+                    fails.append(f'guides: "{g}" has neither a hero_image nor a before_after, so it has no card')
+                elif not os.path.exists(os.path.join(ROOT, g, 'index.html')):
+                    fails.append(f'guides: /{g}/ is not built (run python3 build.py)')
+    else:
+        for k in ('guides_heading_en', 'guides_heading_he', 'guides_sub_en', 'guides_sub_he'):
+            if k in v:
+                fails.append(f'{k}: only beside guides')
 
     # l: the opening's rooms; m: the link preview
     if 'rooms' in v:
