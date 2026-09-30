@@ -4,6 +4,7 @@
   "kicker": "Art advisory",
   "title_en": "Art advisor for a Manhattan apartment: what to expect",
   "title_he": "יועצת אמנות לדירה במנהטן: למה לצפות",
+  "head_title": "Art Advisor for a Manhattan Apartment",
   "meta_description": "What an art advisor does for a Manhattan apartment: reads the light, the building and the designer's plan, then finds and installs the art. Stav Theodor.",
   "lead_en": "As an art curator and advisor for a Manhattan apartment, I do three things you do not have time for: I read the rooms, the light and the building, work inside your designer's plan rather than around it, and find the art that belongs there, from the first conversation to the day it is hung. Below is what that looks like in practice, including how a custom bar in a Manhattan skyline residence found the large format digital collage that now anchors it.",
   "lead_he": "כאוצרת ויועצת אמנות לדירה במנהטן, אני עושה שלושה דברים שאין לכם זמן אליהם: קוראת את החדרים, את האור ואת הבניין, עובדת בתוך התוכנית של המעצב שלכם ולא סביבה, ומוצאת את האמנות ששייכת לשם, מהשיחה הראשונה ועד היום שבו היצירה תלויה על הקיר. למטה תמצאו איך זה נראה בפועל, כולל הסיפור של בר בדירת נוף במנהטן שמצא את הקולאז' הדיגיטלי בפורמט גדול שמעגן אותו היום.",
@@ -24,16 +25,16 @@
       "a_he": "תלוי מה אתם מחפשים. יצירה בודדת שזמינה כבר עכשיו אפשר לבחור, למסגר ולהתקין בלוח זמנים קצר. יצירה בהזמנה הולכת לפי לוח הזמנים של האמן וזמן הייצור של העבודה. דירה שלמה מתקדמת יחד עם לוח הזמנים של העיצוב והבנייה, ולכן אני מעדיפה להתחיל בזמן שהתוכניות עדיין פתוחות. את לוח הזמנים אני קובעת איתכם בשלב ההיכרות ועומדת בו."
     },
     {
-      "q_en": "What does an art advisor cost in New York?",
+      "q_en": "What does an art advisor cost for a Manhattan apartment?",
       "a_en": "In most cases, less than the same art would cost at a large auction or through a gallery. Bidding pushes auction prices up, and galleries price with big margins to cover the venue, the inventory and the gallerists; I carry none of those costs. The price includes private consultation for your apartment and my work with you, with your designer, until the art is on the wall. I represent you, not a set of artists, so I can approach any artist in the world.",
-      "q_he": "כמה עולה יועצת אמנות בניו יורק?",
+      "q_he": "כמה עולה יועצת אמנות לדירה במנהטן?",
       "a_he": "ברוב המקרים, פחות ממה שאותה אמנות הייתה עולה במכירה פומבית גדולה או בגלריה. ההצעות במכירה פומבית דוחפות את המחירים למעלה, וגלריות מתמחרות במרווחים גבוהים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; לי אין אף אחת מהעלויות האלה. המחיר כולל ייעוץ פרטי לדירה שלכם ואת העבודה שלי איתכם, יחד עם המעצב שלכם, עד שהאמנות תלויה על הקיר. אני מייצגת אתכם, לא קבוצת אמנים, ולכן אני יכולה לפנות לכל אמן בעולם."
     },
     {
       "q_en": "Do you handle framing and installation in Manhattan buildings?",
-      "a_en": "Yes. Production, framing and installation are part of the service, with printmakers, framers and installers I work with regularly. In Manhattan that includes the building side: certificates of insurance, service elevator bookings and working hours, coordinated with your management office before anything is delivered. The work is not finished until the piece is on the wall, lit correctly, and you are fully satisfied.",
+      "a_en": "Yes. Production, framing and installation are part of the service, with printmakers, framers and installers I work with regularly. In Manhattan that includes the building side: <a href=\"/advisory/hanging-heavy-art-nyc-apartment-coi/\">certificates of insurance, service elevator bookings and working hours</a>, coordinated with your management office before anything is delivered. The work is not finished until the piece is on the wall, lit correctly, and you are fully satisfied.",
       "q_he": "את מטפלת גם במסגור ובהתקנה בבניינים במנהטן?",
-      "a_he": "כן. הפקה, מסגור והתקנה הם חלק מהשירות, עם בתי דפוס, ממסגרים ומתקינים שאני עובדת איתם באופן קבוע. במנהטן זה כולל גם את הצד של הבניין: אישורי ביטוח, הזמנת מעלית שירות ושעות עבודה, בתיאום עם משרד הניהול שלכם לפני שמשהו נשלח. העבודה לא מסתיימת עד שהיצירה על הקיר, מוארת נכון, ואתם מרוצים לגמרי."
+      "a_he": "כן. הפקה, מסגור והתקנה הם חלק מהשירות, עם בתי דפוס, ממסגרים ומתקינים שאני עובדת איתם באופן קבוע. במנהטן זה כולל גם את הצד של הבניין: <a href=\"/advisory/hanging-heavy-art-nyc-apartment-coi/\">אישורי ביטוח, הזמנת מעלית שירות ושעות עבודה</a>, בתיאום עם משרד הניהול שלכם לפני שמשהו נשלח. העבודה לא מסתיימת עד שהיצירה על הקיר, מוארת נכון, ואתם מרוצים לגמרי."
     },
     {
       "q_en": "Can you work with art I already own?",

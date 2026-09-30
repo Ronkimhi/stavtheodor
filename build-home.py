@@ -454,6 +454,10 @@ MERGED_PATHS = {
     'designers': (SITE + '/for-designers/', 'Art Consultant for Interior Designers · THEODORA'),
     'our-team': (SITE + '/about/', 'About THEODORA | Art Advisor Stav Theodor, Tenafly NJ'),
     'our-team-1': (SITE + '/about/', 'About THEODORA | Art Advisor Stav Theodor, Tenafly NJ'),
+    # Merged into the cost page as its H2 "Is an art advisor worth it for one or two pieces?" (answers wave, C-3,
+    # Ron 2026-09-30); its content/pages JSON is gone, so this stub is the only file build.py writes at that address.
+    'advisory/is-an-art-advisor-worth-it-for-one-piece': (SITE + '/advisory/what-does-an-art-advisor-cost/#is-an-art-advisor-worth-it-for-one-or-two-pieces',
+                                                          'What Does an Art Advisor Cost? Usually Less · THEODORA'),
 }
 
 

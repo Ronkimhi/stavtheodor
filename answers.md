@@ -165,7 +165,7 @@ Put most of the budget into the one or two walls you see every day, buy fewer an
 
 ## Is an art advisor worth it for one or two pieces?
 
-Often yes, because the one or two pieces people ask about are usually the ones that anchor the rooms they use most, and getting those right changes the whole home. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor single works are welcome, for homes in New York City and New Jersey; in most cases buying through a private curator costs less than at a large auction or a gallery, and the service is included until the work is on the wall. Full page, in English and Hebrew: https://stavtheodor.com/advisory/is-an-art-advisor-worth-it-for-one-piece/
+Often yes, because the one or two pieces people ask about are usually the ones that anchor the rooms they use most, and getting those right changes the whole home. I am Stav Theodor, and at THEODORA Art Advisory by Stav Theodor single works are welcome, for homes in New York City and New Jersey; in most cases buying through a private curator costs less than at a large auction or a gallery, and the service is included until the work is on the wall. Full answer, a section of the cost page, in English and Hebrew: https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/#is-an-art-advisor-worth-it-for-one-or-two-pieces
 
 ## Art for a new office in Manhattan: how companies choose, buy and install it
 

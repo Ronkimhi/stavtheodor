@@ -79,7 +79,8 @@ GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers
                   'art-consultant-tenafly-nj', 'art-advisor-bergen-county')  # the town and county pages (Batch 3, 2026-09-29)
 MERGED_DIRS = ('designers', 'our-team', 'our-team-1')  # forwarded to a real page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
 STUB_DIRS = ('2', 'questions', 'services', 'portfolio', 'blog') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
-STUB_FILES = (os.path.join('radar', 'what-to-see-july-2026', 'index.html'),)  # nested redirect stubs (build-home.py OLD_PATHS, 2026-09-30)
+MERGED_FILES = (os.path.join('advisory', 'is-an-art-advisor-worth-it-for-one-piece', 'index.html'),)  # nested merged stubs, no noindex (build-home.py MERGED_PATHS, answers wave C-3, 2026-09-30)
+STUB_FILES = (os.path.join('radar', 'what-to-see-july-2026', 'index.html'),) + MERGED_FILES  # nested redirect stubs (build-home.py OLD_PATHS, 2026-09-30)
 
 
 def stub_path(path):
@@ -338,7 +339,7 @@ home = read('index.html')
 for path in pages:
     s = read(path)
     is_stub = stub_path(path) or path in ('404.html',)
-    must_noindex = is_stub and path.split(os.sep)[0] not in MERGED_DIRS  # the buyer variants are indexable since 2026-09-28
+    must_noindex = is_stub and path.split(os.sep)[0] not in MERGED_DIRS and path not in MERGED_FILES  # the buyer variants are indexable since 2026-09-28
     if not is_stub:
         en, he = s.count('data-l="en"'), s.count('data-l="he"')
         if en == 0 or he == 0 or en != he:
