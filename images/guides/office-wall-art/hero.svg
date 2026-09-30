@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Plan of an office floor with four areas marked: reception with one large work facing the entrance, a conference room with one work on the wall the chairs face across the table, a corridor with a series of works evenly spaced along one wall and a larger work at its end, and a private office with one work facing the desk</title>
+<desc id="d">Plan of an office floor with four areas marked: reception with one large work facing the entrance, a conference room with one work on the wall the chairs face across the table, a corridor with a series of works evenly spaced along one wall and a larger work at its end, and a private office with one work facing the desk</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 2.4 px; plan, north at the top, floor 528 by 336 in, north west inside corner at (166, 97) -->
+<!-- walls: outer rectangle with the entrance gap; reception east wall with the corridor opening; corridor walls with door gaps -->
+<line class="ink" x1="166" y1="97" x2="1433.2" y2="97"/>
+<line class="ink" x1="166" y1="97" x2="166" y2="903.4"/>
+<line class="ink" x1="1433.2" y1="97" x2="1433.2" y2="903.4"/>
+<line class="ink" x1="166" y1="903.4" x2="295.6" y2="903.4"/>
+<line class="ink" x1="382" y1="903.4" x2="1433.2" y2="903.4"/>
+<line class="ink" x1="511.6" y1="97" x2="511.6" y2="413.8"/>
+<line class="ink" x1="511.6" y1="557.8" x2="511.6" y2="903.4"/>
+<line class="ink" x1="511.6" y1="413.8" x2="540.4" y2="413.8"/>
+<line class="ink" x1="626.8" y1="413.8" x2="1433.2" y2="413.8"/>
+<line class="ink" x1="511.6" y1="557.8" x2="914.8" y2="557.8"/>
+<line class="ink" x1="1001.2" y1="557.8" x2="1058.8" y2="557.8"/>
+<line class="ink" x1="1145.2" y1="557.8" x2="1433.2" y2="557.8"/>
+<line class="ink" x1="1030" y1="557.8" x2="1030" y2="903.4"/>
+<!-- windows: soft rects 12 px deep across the wall line -->
+<rect class="soft" x="684.4" y="91" width="576" height="12"/>
+<rect class="soft" x="598" y="897.4" width="345.6" height="12"/>
+<rect class="soft" x="1116.4" y="897.4" width="230.4" height="12"/>
+<!-- doors: leaf and swing arc; entrance into reception, conference and private office doors into their rooms -->
+<line class="soft" x1="295.6" y1="903.4" x2="295.6" y2="817"/>
+<path class="soft" d="M295.6 817 A86.4 86.4 0 0 1 382 903.4"/>
+<line class="soft" x1="1001.2" y1="557.8" x2="1001.2" y2="644.2"/>
+<path class="soft" d="M1001.2 644.2 A86.4 86.4 0 0 1 914.8 557.8"/>
+<line class="soft" x1="1058.8" y1="557.8" x2="1058.8" y2="644.2"/>
+<path class="soft" d="M1058.8 644.2 A86.4 86.4 0 0 0 1145.2 557.8"/>
+<!-- reception: anchor work 96 in on the north wall (x 24 to 120), sightline from the entrance, desk off the sightline -->
+<rect class="tp" x="223.6" y="97" width="230.4" height="12"/>
+<rect class="soft" x="406" y="529" width="72" height="172.8"/>
+<line class="eye" x1="338.8" y1="889" x2="338.8" y2="111.4"/>
+<circle class="tp" cx="338.8" cy="889" r="6"/>
+<!-- corridor: five 20 in works on the north wall, 40 in end-wall work, sightline along y 150 -->
+<rect class="tp" x="828.4" y="413.8" width="48" height="12"/>
+<rect class="tp" x="924.4" y="413.8" width="48" height="12"/>
+<rect class="tp" x="1020.4" y="413.8" width="48" height="12"/>
+<rect class="tp" x="1116.4" y="413.8" width="48" height="12"/>
+<rect class="tp" x="1212.4" y="413.8" width="48" height="12"/>
+<rect class="tp" x="1421.2" y="437.8" width="12" height="96"/>
+<line class="eye" x1="526" y1="457" x2="1418.8" y2="457"/>
+<circle class="tp" cx="526" cy="457" r="6"/>
+<!-- conference room: screen on the west wall, window south, table, eight chairs, 80 in work on the north wall, four sightlines -->
+<rect class="soft" x="511.6" y="658.6" width="6" height="144"/>
+<rect class="soft" x="626.8" y="673" width="288" height="115.2" rx="16"/>
+<rect class="soft" x="646" y="615.4" width="48" height="48" rx="6"/>
+<rect class="soft" x="646" y="615.4" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="646" y="797.8" width="48" height="48" rx="6"/>
+<rect class="soft" x="646" y="836.2" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="713.2" y="615.4" width="48" height="48" rx="6"/>
+<rect class="soft" x="713.2" y="615.4" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="713.2" y="797.8" width="48" height="48" rx="6"/>
+<rect class="soft" x="713.2" y="836.2" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="780.4" y="615.4" width="48" height="48" rx="6"/>
+<rect class="soft" x="780.4" y="615.4" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="780.4" y="797.8" width="48" height="48" rx="6"/>
+<rect class="soft" x="780.4" y="836.2" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="847.6" y="615.4" width="48" height="48" rx="6"/>
+<rect class="soft" x="847.6" y="615.4" width="48" height="9.6" rx="4"/>
+<rect class="soft" x="847.6" y="797.8" width="48" height="48" rx="6"/>
+<rect class="soft" x="847.6" y="836.2" width="48" height="9.6" rx="4"/>
+<rect class="tp" x="674.8" y="557.8" width="192" height="12"/>
+<line class="eye" x1="670" y1="821.8" x2="770.8" y2="567.4"/>
+<circle class="tp" cx="670" cy="821.8" r="6"/>
+<line class="eye" x1="737.2" y1="821.8" x2="770.8" y2="567.4"/>
+<circle class="tp" cx="737.2" cy="821.8" r="6"/>
+<line class="eye" x1="804.4" y1="821.8" x2="770.8" y2="567.4"/>
+<circle class="tp" cx="804.4" cy="821.8" r="6"/>
+<line class="eye" x1="871.6" y1="821.8" x2="770.8" y2="567.4"/>
+<circle class="tp" cx="871.6" cy="821.8" r="6"/>
+<!-- private office: window south, desk and chair facing east, 96 in work on the east wall, sightline from the chair -->
+<rect class="soft" x="1222" y="658.6" width="72" height="144"/>
+<rect class="soft" x="1159.6" y="706.6" width="48" height="48" rx="6"/>
+<rect class="soft" x="1159.6" y="706.6" width="9.6" height="48" rx="4"/>
+<rect class="tp" x="1421.2" y="615.4" width="12" height="230.4"/>
+<line class="eye" x1="1183.6" y1="730.6" x2="1418.8" y2="730.6"/>
+<circle class="tp" cx="1183.6" cy="730.6" r="6"/>
+<!-- open work area: window north, six desks 60 by 30 in two rows; no work drawn -->
+<rect class="soft" x="684.4" y="169" width="144" height="72"/>
+<rect class="soft" x="684.4" y="298.6" width="144" height="72"/>
+<rect class="soft" x="914.8" y="169" width="144" height="72"/>
+<rect class="soft" x="914.8" y="298.6" width="144" height="72"/>
+<rect class="soft" x="1145.2" y="169" width="144" height="72"/>
+<rect class="soft" x="1145.2" y="298.6" width="144" height="72"/>
+<!-- labels: four primaries (one job per area), secondaries name the parts -->
+<text class="l1" x="339" y="966" text-anchor="middle">Welcome</text>
+<text class="l1" x="771" y="966" text-anchor="middle">Focus</text>
+<text class="l1" x="1232" y="966" text-anchor="middle">Personal</text>
+<text class="l1" x="1044.4" y="519" text-anchor="middle">Rhythm</text>
+<text class="l2" x="396.4" y="879.4">entrance</text>
+<text class="l2" x="252.4" y="241" text-anchor="middle">reception</text>
+<text class="l2" x="531" y="598.2">conference room</text>
+<text class="l2" x="531" y="738.6">screen</text>
+<text class="l2" x="770.8" y="884" text-anchor="middle">window</text>
+<text class="l2" x="972.4" y="130.6" text-anchor="middle">window</text>
+<text class="l2" x="550" y="514.6">corridor</text>
+<text class="l2" x="1231.6" y="874.6" text-anchor="middle">private office</text>
+<text class="l2" x="972.4" y="279.4" text-anchor="middle">open work area</text>
+</svg>

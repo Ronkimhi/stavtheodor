@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Plan and elevation of a long office corridor: five works along one wall with equal gaps and their centers on one line between 57 and 60 inches, and one larger lit work on the end wall where the corridor's sightline ends</title>
+<desc id="d">Plan and elevation of a long office corridor: five works along one wall with equal gaps and their centers on one line between 57 and 60 inches, and one larger lit work on the end wall where the corridor's sightline ends</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3.5 px; corridor x 0 to 384 in at px 128 to 1472 in both views; plan strip above (north wall y 110, south wall y 320), elevation of the north wall below, floor at y=780 -->
+<!-- plan: north wall with the opening to the open area (x 12 to 48 in), south wall with two door gaps, west end open, end wall at x 384 in -->
+<line class="ink" x1="128" y1="110" x2="170" y2="110"/>
+<line class="ink" x1="296" y1="110" x2="1472" y2="110"/>
+<line class="ink" x1="128" y1="320" x2="716" y2="320"/>
+<line class="ink" x1="842" y1="320" x2="926" y2="320"/>
+<line class="ink" x1="1052" y1="320" x2="1472" y2="320"/>
+<line class="ink" x1="1472" y1="110" x2="1472" y2="320"/>
+<!-- plan: five 20 in works on the north wall's corridor side, 40 in end-wall work centered on the corridor, ceiling spot 30 in from the end wall, sightline along the center -->
+<rect class="tp" x="590" y="110" width="70" height="12"/>
+<rect class="tp" x="730" y="110" width="70" height="12"/>
+<rect class="tp" x="870" y="110" width="70" height="12"/>
+<rect class="tp" x="1010" y="110" width="70" height="12"/>
+<rect class="tp" x="1150" y="110" width="70" height="12"/>
+<rect class="tp" x="1460" y="145" width="12" height="140"/>
+<circle class="soft" cx="1367" cy="152" r="8"/>
+<line class="lead" x1="1375" y1="154" x2="1458" y2="176"/>
+<line class="eye" x1="128" y1="215" x2="1458" y2="215"/>
+<circle class="tp" cx="128" cy="215" r="6"/>
+<!-- elevation of the north wall: ceiling 108 in, opening 84 in tall, five works 20 by 24 in with centers at 58 in, gaps 20 in, end wall at x 1472 -->
+<rect class="ink" x="128" y="402" width="1344" height="378"/>
+<path class="ink" d="M170 780 L170 486 L296 486 L296 780"/>
+<line class="eye" x1="128" y1="580.5" x2="1472" y2="580.5"/>
+<line class="eye" x1="128" y1="570" x2="1472" y2="570"/>
+<rect class="frame" x="590" y="535" width="70" height="84"/>
+<rect class="art" x="596" y="541" width="58" height="72"/>
+<line class="dim" x1="603" y1="577" x2="647" y2="577" stroke-width="2"/>
+<line class="dim" x1="625" y1="555" x2="625" y2="599" stroke-width="2"/>
+<rect class="frame" x="730" y="535" width="70" height="84"/>
+<rect class="art" x="736" y="541" width="58" height="72"/>
+<line class="dim" x1="743" y1="577" x2="787" y2="577" stroke-width="2"/>
+<line class="dim" x1="765" y1="555" x2="765" y2="599" stroke-width="2"/>
+<rect class="frame" x="870" y="535" width="70" height="84"/>
+<rect class="art" x="876" y="541" width="58" height="72"/>
+<line class="dim" x1="883" y1="577" x2="927" y2="577" stroke-width="2"/>
+<line class="dim" x1="905" y1="555" x2="905" y2="599" stroke-width="2"/>
+<rect class="frame" x="1010" y="535" width="70" height="84"/>
+<rect class="art" x="1016" y="541" width="58" height="72"/>
+<line class="dim" x1="1023" y1="577" x2="1067" y2="577" stroke-width="2"/>
+<line class="dim" x1="1045" y1="555" x2="1045" y2="599" stroke-width="2"/>
+<rect class="frame" x="1150" y="535" width="70" height="84"/>
+<rect class="art" x="1156" y="541" width="58" height="72"/>
+<line class="dim" x1="1163" y1="577" x2="1207" y2="577" stroke-width="2"/>
+<line class="dim" x1="1185" y1="555" x2="1185" y2="599" stroke-width="2"/>
+<line class="dim" x1="660" y1="650" x2="730" y2="650"/>
+<line class="dim" x1="660" y1="642" x2="660" y2="658"/>
+<line class="dim" x1="730" y1="642" x2="730" y2="658"/>
+<line class="dim" x1="800" y1="650" x2="870" y2="650"/>
+<line class="dim" x1="800" y1="642" x2="800" y2="658"/>
+<line class="dim" x1="870" y1="642" x2="870" y2="658"/>
+<line class="dim" x1="940" y1="650" x2="1010" y2="650"/>
+<line class="dim" x1="940" y1="642" x2="940" y2="658"/>
+<line class="dim" x1="1010" y1="642" x2="1010" y2="658"/>
+<line class="dim" x1="1080" y1="650" x2="1150" y2="650"/>
+<line class="dim" x1="1080" y1="642" x2="1080" y2="658"/>
+<line class="dim" x1="1150" y1="642" x2="1150" y2="658"/>
+<!-- labels -->
+<text class="l1" x="443" y="548" text-anchor="middle">57 to 60 in<tspan class="l2" x="443" dy="66">145 to 152 cm</tspan></text>
+<text class="l1" x="975" y="706" text-anchor="middle">equal gaps</text>
+<text class="l1" x="1440" y="300" text-anchor="end">somewhere to walk toward</text>
+<text class="l2" x="1446" y="202" text-anchor="end">one larger work, lit</text>
+<text class="l2" x="149" y="250">from reception</text>
+<text class="l2" x="233" y="96" text-anchor="middle">opening</text>
+<text class="l2" x="779" y="348" text-anchor="middle">door</text>
+<text class="l2" x="989" y="348" text-anchor="middle">door</text>
+</svg>

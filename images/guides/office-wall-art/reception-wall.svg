@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Elevation of a reception wall 12 feet wide with one large work about two thirds of the wall's width, its center between the 57 and 60 inch lines and at least 12 inches of clear wall on each side, beside a side section of a ceiling spot aimed at the work at 30 degrees from vertical</title>
+<desc id="d">Elevation of a reception wall 12 feet wide with one large work about two thirds of the wall's width, its center between the 57 and 60 inch lines and at least 12 inches of clear wall on each side, beside a side section of a ceiling spot aimed at the work at 30 degrees from vertical</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 6 px; floor at y=780; left, elevation of a 144 by 108 in wall (x 80 to 944); right, side section (wall at x 1500) -->
+<!-- elevation: wall 144 by 108 in; one work 96 by 64 in, bottom 26 in, top 90 in, center 58 in -->
+<rect class="ink" x="80" y="132" width="864" height="648"/>
+<line class="eye" x1="80" y1="438" x2="944" y2="438"/>
+<line class="eye" x1="80" y1="420" x2="944" y2="420"/>
+<rect class="frame" x="224" y="240" width="576" height="384"/>
+<rect class="art" x="240" y="256" width="544" height="352"/>
+<line class="dim" x1="490" y1="432" x2="534" y2="432" stroke-width="2"/>
+<line class="dim" x1="512" y1="410" x2="512" y2="454" stroke-width="2"/>
+<!-- width bracket above the work; the two 24 in margins drawn true, labelled with the minimum -->
+<line class="dim" x1="224" y1="212" x2="800" y2="212"/>
+<line class="dim" x1="224" y1="204" x2="224" y2="220"/>
+<line class="dim" x1="800" y1="204" x2="800" y2="220"/>
+<line class="dim" x1="80" y1="700" x2="224" y2="700"/>
+<line class="dim" x1="80" y1="692" x2="80" y2="708"/>
+<line class="dim" x1="224" y1="692" x2="224" y2="708"/>
+<line class="dim" x1="800" y1="700" x2="944" y2="700"/>
+<line class="dim" x1="800" y1="692" x2="800" y2="708"/>
+<line class="dim" x1="944" y1="692" x2="944" y2="708"/>
+<!-- section: wall at x 1500, ceiling 108 in, the work 1.5 in deep in profile, a recessed ceiling spot 28.9 in from the face of the work, beam to the center at 30 degrees from vertical -->
+<line class="ink" x1="1500" y1="132" x2="1500" y2="780"/>
+<line class="ink" x1="1160" y1="132" x2="1500" y2="132"/>
+<line class="ink" x1="1160" y1="780" x2="1500" y2="780"/>
+<rect class="frame" x="1491" y="240" width="9" height="384"/>
+<rect class="soft" x="1306" y="118" width="24" height="14"/>
+<line class="dim" x1="1318" y1="132" x2="1491" y2="432"/>
+<line class="lead" x1="1318" y1="132" x2="1318" y2="330"/>
+<path class="dim" d="M1318 252 A120 120 0 0 0 1378 235.9"/>
+<!-- labels -->
+<text class="l1" x="512" y="192" text-anchor="middle">about two thirds of the wall<tspan class="l2"> · 96 of 144 in, 244 of 366 cm</tspan></text>
+<text class="l1" x="956" y="437">57 to 60 in<tspan class="l2"> · 145 to 152 cm</tspan></text>
+<text class="l1" x="1404" y="226">30°</text>
+<text class="l2" x="92" y="740">at least 12 in · 30 cm, each side</text>
+<text class="l2" x="1298" y="166" text-anchor="end">ceiling spot</text>
+<text class="l2" x="1330" y="812" text-anchor="middle">section</text>
+</svg>

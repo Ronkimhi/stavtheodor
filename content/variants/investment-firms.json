@@ -216,6 +216,7 @@
   "cta_he": "שלחו לי תמונה אחת של הקבלה שלכם ואת חודש המעבר.",
   "mail_subject": "Art for our offices",
   "guides": [
+    "guide/office-wall-art",
     "guide/large-wall-art-ideas",
     "guide/how-to-hang-pictures"
   ],

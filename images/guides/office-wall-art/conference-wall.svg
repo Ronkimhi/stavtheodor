@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-labelledby="t d">
+<title id="t">Plan of a conference room with the screen on one end wall, windows on one long wall and one work on the solid long wall the chairs face across the table, and below it an elevation of that wall with the work centered below the 57 to 60 inch standing line and its bottom edge above the chair backs</title>
+<desc id="d">Plan of a conference room with the screen on one end wall, windows on one long wall and one work on the solid long wall the chairs face across the table, and below it an elevation of that wall with the work centered below the 57 to 60 inch standing line and its bottom edge above the chair backs</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- scale: 1 in = 3 px; plan above (room 216 by 144 in, north wall at the top, origin (476, 114)), elevation of the north wall below, floor at y=980, west on the left in both -->
+<!-- plan: room outline with a 36 in door gap in the north wall (x 168 to 204), swing into the room -->
+<path class="ink" d="M980 114 L476 114 L476 546 L1124 546 L1124 114 L1088 114"/>
+<line class="soft" x1="1088" y1="114" x2="1088" y2="222"/>
+<path class="soft" d="M1088 222 A108 108 0 0 1 980 114"/>
+<!-- plan: work 80 in on the north wall (x 68 to 148), screen on the west wall, window across the south wall, table, eight chairs, four sightlines from the south chairs -->
+<rect class="tp" x="680" y="114" width="240" height="12"/>
+<rect class="soft" x="476" y="240" width="6" height="180"/>
+<rect class="soft" x="584" y="540" width="432" height="12"/>
+<rect class="soft" x="620" y="258" width="360" height="144" rx="16"/>
+<rect class="soft" x="644" y="186" width="60" height="60" rx="6"/>
+<rect class="soft" x="644" y="186" width="60" height="12" rx="4"/>
+<rect class="soft" x="644" y="414" width="60" height="60" rx="6"/>
+<rect class="soft" x="644" y="462" width="60" height="12" rx="4"/>
+<rect class="soft" x="728" y="186" width="60" height="60" rx="6"/>
+<rect class="soft" x="728" y="186" width="60" height="12" rx="4"/>
+<rect class="soft" x="728" y="414" width="60" height="60" rx="6"/>
+<rect class="soft" x="728" y="462" width="60" height="12" rx="4"/>
+<rect class="soft" x="812" y="186" width="60" height="60" rx="6"/>
+<rect class="soft" x="812" y="186" width="60" height="12" rx="4"/>
+<rect class="soft" x="812" y="414" width="60" height="60" rx="6"/>
+<rect class="soft" x="812" y="462" width="60" height="12" rx="4"/>
+<rect class="soft" x="896" y="186" width="60" height="60" rx="6"/>
+<rect class="soft" x="896" y="186" width="60" height="12" rx="4"/>
+<rect class="soft" x="896" y="414" width="60" height="60" rx="6"/>
+<rect class="soft" x="896" y="462" width="60" height="12" rx="4"/>
+<line class="eye" x1="674" y1="444" x2="800" y2="120"/>
+<circle class="tp" cx="674" cy="444" r="6"/>
+<line class="eye" x1="758" y1="444" x2="800" y2="120"/>
+<circle class="tp" cx="758" cy="444" r="6"/>
+<line class="eye" x1="842" y1="444" x2="800" y2="120"/>
+<circle class="tp" cx="842" cy="444" r="6"/>
+<line class="eye" x1="926" y1="444" x2="800" y2="120"/>
+<circle class="tp" cx="926" cy="444" r="6"/>
+<!-- elevation of the north wall from the window side: ceiling 108 in, door 84 in tall (x 980 to 1088), work 80 by 24 in, bottom 38 in, top 62 in, center at y 830 -->
+<rect class="ink" x="476" y="656" width="648" height="324"/>
+<path class="ink" d="M980 980 L980 728 L1088 728 L1088 980"/>
+<line class="eye" x1="476" y1="809" x2="1124" y2="809"/>
+<line class="eye" x1="476" y1="800" x2="1124" y2="800"/>
+<rect class="frame" x="680" y="794" width="240" height="72"/>
+<rect class="art" x="696" y="810" width="208" height="40"/>
+<line class="dim" x1="778" y1="830" x2="822" y2="830" stroke-width="2"/>
+<line class="dim" x1="800" y1="808" x2="800" y2="852" stroke-width="2"/>
+<!-- four chairs against the wall (seat 18 in, back top 34 in), table top at 29 in in front of them; drawing positions, never labelled -->
+<rect class="soft" x="644" y="878" width="60" height="48"/>
+<line class="soft" x1="650" y1="926" x2="650" y2="980"/>
+<line class="soft" x1="698" y1="926" x2="698" y2="980"/>
+<rect class="soft" x="728" y="878" width="60" height="48"/>
+<line class="soft" x1="734" y1="926" x2="734" y2="980"/>
+<line class="soft" x1="782" y1="926" x2="782" y2="980"/>
+<rect class="soft" x="812" y="878" width="60" height="48"/>
+<line class="soft" x1="818" y1="926" x2="818" y2="980"/>
+<line class="soft" x1="866" y1="926" x2="866" y2="980"/>
+<rect class="soft" x="896" y="878" width="60" height="48"/>
+<line class="soft" x1="902" y1="926" x2="902" y2="980"/>
+<line class="soft" x1="950" y1="926" x2="950" y2="980"/>
+<rect class="soft" x="620" y="888" width="360" height="5"/>
+<line class="soft" x1="626" y1="893" x2="626" y2="980"/>
+<line class="soft" x1="974" y1="893" x2="974" y2="980"/>
+<!-- labels: the band is the standing reference; the work sits below it with no number of its own -->
+<text class="l1" x="464" y="338" text-anchor="end">screen: no art</text>
+<text class="l1" x="800" y="60" text-anchor="middle">the wall they face</text>
+<text class="l2" x="800" y="96" text-anchor="middle">anti-reflective glazing: it faces the window</text>
+<text class="l2" x="800" y="580" text-anchor="middle">window</text>
+<text class="l2" x="1034" y="770" text-anchor="middle">door</text>
+<text class="l1" x="1136" y="812">57 to 60 in<tspan class="l2"> · 145 to 152 cm, standing</tspan></text>
+<text class="l1" x="452" y="838" text-anchor="end">lower<tspan class="l2"> · test the center from a chair</tspan></text>
+<line class="lead" x1="464" y1="830" x2="678" y2="830"/>
+<text class="l2" x="452" y="880" text-anchor="end">clear of the chair backs</text>
+<line class="lead" x1="464" y1="872" x2="640" y2="872"/>
+</svg>

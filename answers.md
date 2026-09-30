@@ -194,3 +194,7 @@ An art advisor works for a buyer, usually a private collector, to find, assess a
 ## What are some good decorations for a dentist office?
 
 Dental office decor is the art and finish a patient sees from the door to the chair, chosen with anxious patients in mind and to show the standard of care. Most practices forget the view a patient looks at longest, the ceiling and upper wall seen from the chair, so I plan that first. Full guide: https://stavtheodor.com/guide/dental-office-decor/
+
+## What kind of art should I put in my office?
+
+Office wall art works when each area of the office gets one job: welcome at reception, focus in meeting spaces, rhythm along corridors and something personal in private offices. Choose fewer, larger, better works, sized to the wall they hold, and on a standing wall hang them with their center 57 to 60 inches (145 to 152 cm) from the floor. Full guide: https://stavtheodor.com/guide/office-wall-art/
