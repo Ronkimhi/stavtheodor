@@ -377,6 +377,48 @@
    "cap_he": "חלל מגורים מהפתח, הקיר המרכזי מולבש.",
    "alt_en": "A living space seen from its doorway: one landscape painting of colorful hills and a cloudy sky, in a thin black frame, hangs on the wall the eye meets first, beside an olive tree and two armchairs.",
    "alt_he": "חלל מגורים כפי שהוא נראה מהפתח: ציור נוף אחד של גבעות צבעוניות ושמיים מעוננים, במסגרת שחורה דקה, תלוי על הקיר שהעין פוגשת ראשון, ליד עץ זית ושתי כורסאות."
+  },
+  "hotel-artwork_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4891,
+   "fy": 0.3812,
+   "art_x": [
+    0.34,
+    0.6383
+   ],
+   "cap_en": "A hotel lobby at evening, one wide painting on the wall between the elevators.",
+   "cap_he": "לובי של מלון בערב, ציור רחב אחד על הקיר שבין המעליות.",
+   "alt_en": "A hotel lobby at evening with stone floors and walnut walls: a wide painting of shimmering water in blue, lilac and pale gold hangs on the lit plaster wall between two bronze elevator doors, facing the entrance.",
+   "alt_he": "לובי של מלון בערב עם רצפת אבן וקירות אגוז: ציור רחב של מים מנצנצים בכחול, בלילך ובזהב חיוור תלוי על קיר הטיח המואר שבין שתי דלתות מעלית מברונזה, מול הכניסה."
+  },
+  "buy-lease-or-commission-office-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4825,
+   "fy": 0.3638,
+   "art_x": [
+    0.3083,
+    0.6567
+   ],
+   "cap_en": "A meeting lounge, a ceramic wall work sized to its niche.",
+   "cap_he": "טרקלין פגישות, עבודת קיר קרמית בגודל שמתאים לגומחה שלה.",
+   "alt_en": "A meeting lounge on a high floor with walnut paneling and two cognac leather chairs: a wall work of glazed ceramic discs and tiles in rust, teal and gold fills the plaster niche above a low walnut ledge.",
+   "alt_he": "טרקלין פגישות בקומה גבוהה עם חיפוי אגוז ושתי כורסאות עור בגוון קוניאק: עבודת קיר של דיסקיות ואריחים קרמיים מזוגגים בחלודה, בטורקיז ובזהב ממלאת את גומחת הטיח מעל מדף אגוז נמוך."
+  },
+  "financial-advisor-office-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5033,
+   "fy": 0.2475,
+   "art_x": [
+    0.355,
+    0.6517
+   ],
+   "cap_en": "An advisor's meeting space, one quiet abstract above the credenza.",
+   "cap_he": "חלל פגישות של יועץ פיננסי, יצירה מופשטת שקטה אחת מעל השידה הנמוכה.",
+   "alt_en": "A client meeting space with a white marble table and black leather chairs: above a low oak credenza, a matted abstract of layered translucent shapes in olive, violet and ochre hangs in a walnut frame.",
+   "alt_he": "חלל פגישות עם לקוחות, שולחן שיש לבן וכיסאות עור שחורים: מעל שידת אלון נמוכה תלויה במסגרת אגוז, עם פספרטו, יצירה מופשטת של צורות שקופות בשכבות בזית, בסגול ובאוקר."
   }
  }
 }
