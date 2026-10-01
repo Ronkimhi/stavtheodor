@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """sitemap.xml for stavtheodor.com: a sitemap index over three child sitemaps (2026-09-26).
 
-  sitemap-pages.xml    the homepage, the two hubs, every advisory, project, partner, guide and
+  sitemap-pages.xml    the homepage, the hubs (/advisory/, /projects/, /guide/), every advisory, project, partner, guide and
                        local landing page (content/pages/*.json), /contact/ and /about/ (since 2026-09-29), and the
                        buyer pages (content/variants/*.json, indexable since 2026-09-28)
   sitemap-radar.xml    the Art Radar archive and every post (content/posts.html)
@@ -126,7 +126,7 @@ def main():
 
     # ---- pages: the homepage, the hubs, every content/pages entry that was rendered, /contact/, /about/, buyer pages
     page_entries = [dated(SITE + '/', 'index.html')]
-    for hub in ('advisory', 'projects'):
+    for hub in ('advisory', 'projects', 'guide'):
         if os.path.exists(os.path.join(hub, 'index.html')):
             page_entries.append(dated(f'{SITE}/{hub}/', f'{hub}/index.html'))
     for f in sorted(glob.glob('content/pages/*.json')):

@@ -88,10 +88,11 @@ ADVISORY_HUBS = {
     '/projects/': ('Projects: homes in Manhattan, New Jersey, Tel Aviv and Caesarea, hotels, one exhibition in Geneva', "פרויקטים: בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות, ותערוכה אחת בז'נבה"),
 }
 # The homepage's Advisory rows ("start here") in order: the New Jersey page, the Tenafly and Bergen County pages (Ron's SEO
-# brief, 2026-09-29, P1.5 item 4), the New York page and the Westchester page (answers wave, 2026-09-30), the two hubs, the
+# brief, 2026-09-29, P1.5 item 4), the New York page and the Westchester page (answers wave, 2026-09-30), the two hubs with the
+# guides index between them (2026-10-01), the
 # partner pages and the guide. A variant may list
 # its own (advisory_rows): content/pages paths and the hubs.
-HOME_ROWS = ['art-curator-new-jersey', 'art-consultant-tenafly-nj', 'art-advisor-bergen-county', 'art-curator-new-york', 'art-advisor-westchester-ny', '/advisory/', '/projects/',
+HOME_ROWS = ['art-curator-new-jersey', 'art-consultant-tenafly-nj', 'art-advisor-bergen-county', 'art-curator-new-york', 'art-advisor-westchester-ny', '/advisory/', '/guide/', '/projects/',
              'for-designers', 'for-brokers', 'for-advisors', 'guide/ten-questions-before-you-buy-your-first-serious-artwork']
 
 # The sixteen regions templates/home.html marks for the buyer variants, and the variant field each one reads
@@ -177,12 +178,22 @@ def load_variants(home_faq):
     return variants
 
 
+def guides_row(pages):
+    """The /guide/ row's line (2026-10-01): the number of built guides, counted, never typed."""
+    n = sum(1 for d in pages.values() if d.get('section') == 'guide' and os.path.exists(sc.rel(d['path'].strip('/'), 'index.html')))
+    return f'{n} practical guides to choosing and placing art', f'{n} מדריכים מעשיים לבחירת אמנות ולמיקומה'
+
+
 def advisory_rows(pages, paths):
     """The Advisory rows: a content/pages path is a row with that page's title; /advisory/ and
-    /projects/ are the two hubs with their own line."""
+    /projects/ are the two hubs with their own line, and /guide/ the guides index with its count."""
     rows = ''
     for path in paths:
         hub = '/' + path.strip('/') + '/'
+        if hub == sc.GUIDES_INDEX:
+            en, he = guides_row(pages)
+            rows += f'<a class="row" href="{hub}"><h3 class="serif">{T(en, he)}</h3><span class="ln"></span></a>'
+            continue
         if hub in ADVISORY_HUBS:
             en, he = ADVISORY_HUBS[hub]
             rows += f'<a class="row" href="{hub}"><h3 class="serif">{T(en, he)}</h3><span class="ln"></span></a>'
@@ -288,8 +299,8 @@ def guide(v):
 
 def guides(v, pages):
     """The variant's guides strip (#guides): its `guides` (1 to 6 guide paths, tools/check_variants.py) as cards, the
-    heading guides_heading_en/_he (else "The answers in more detail"), an optional sub, and the "All guides" arrow to the /advisory/ hub's
-    guides group when that group exists. Only built guides are shown; none built, no section."""
+    heading guides_heading_en/_he (else "The answers in more detail"), an optional sub, and the "All guides" arrow to the guides index
+    (/guide/) when a guide has a card. Only built guides are shown; none built, no section."""
     built = lambda g: os.path.exists(sc.rel(g['path'].strip('/'), 'index.html'))
     h2 = (v.get('guides_heading_en') or 'The answers in more detail', v.get('guides_heading_he') or 'התשובות, בפירוט')
     sub = (v['guides_sub_en'], v['guides_sub_he']) if v.get('guides_sub_en') else None

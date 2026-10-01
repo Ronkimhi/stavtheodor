@@ -33,11 +33,11 @@ SECTION_KICKER = {"advisory": "Art advisory", "projects": "Project", "partners":
 SECTION_KICKER_HE = {"advisory": "ייעוץ אמנות", "projects": "פרויקט", "partners": "עבודה משותפת", "guide": "מדריך", "local": "אוצרת אמנות"}
 # Breadcrumb parents. The two local landing pages (/art-curator-new-jersey/, /art-curator-new-york/,
 # section "local", added 2026-09-26) sit under /advisory/ in the breadcrumb and open the advisory hub.
-# The guides sit under /advisory/ too since 2026-09-29 (Fable's guide design): the visible trail reads Home, Advisory, the
-# guide, and the BreadcrumbList Home, Art advisory, the guide (the same names since 2026-09-30).
-CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Advisory"}
-CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects", "guide": "advisory"}
-GUIDE_CRUMB_HUB = "Art advisory"  # the middle step of a guide's trail, visible (guide_crumbs) and in its BreadcrumbList
+# The guides sat under /advisory/ from 2026-09-29 (Fable's guide design). Since 2026-10-01 they have their own index,
+# /guide/ (GUIDE_INDEX below): the visible trail reads Home, Guides, the guide, and the BreadcrumbList the same names.
+CRUMB_NAME = {"advisory": "Advisory", "local": "Advisory", "projects": "Projects", "partners": "Working together", "guide": "Guides"}
+CRUMB_DIR = {"advisory": "advisory", "local": "advisory", "projects": "projects", "guide": "guide"}
+GUIDE_CRUMB_HUB = ("Guides", "מדריכים")  # the middle step of a guide's trail, visible (guide_crumbs) and in its BreadcrumbList
 # The service area in every Service block (Ron's SEO brief, 2026-09-29): the entity's own areaServed. Tel Aviv
 # stays in the copy and on the project pages but never in an areaServed.
 DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "AdministrativeArea", "name": "Bergen County, New Jersey"},
@@ -147,12 +147,12 @@ def ld_blocks(p, url, og):
         main["author"] = {"@type": "Person", "@id": SITE + "/#stav", "name": "Stav Theodor", "url": SITE + "/about/",
                           "sameAs": [sc.INSTAGRAM]}
     main.update(p.get("schema_extra", {}))
-    # A guide's BreadcrumbList uses the names of its visible trail (guide_crumbs(): Home, Art advisory, crumb_en or the
+    # A guide's BreadcrumbList uses the names of its visible trail (guide_crumbs(): Home, Guides, crumb_en or the
     # title; 2026-09-30 SEO fixes); the other sections keep THEODORA, the hub name and the title.
     guide = p["section"] == "guide"
     crumbs = [{"@type": "ListItem", "position": 1, "name": "Home" if guide else "THEODORA", "item": SITE + "/"}]
-    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Art advisory); partners go straight to the page
-        crumbs.append({"@type": "ListItem", "position": 2, "name": GUIDE_CRUMB_HUB if guide else CRUMB_NAME[p["section"]],
+    if p["section"] in CRUMB_DIR:  # sections with a hub page get a middle crumb (the guides: Guides, /guide/); partners go straight to the page
+        crumbs.append({"@type": "ListItem", "position": 2, "name": GUIDE_CRUMB_HUB[0] if guide else CRUMB_NAME[p["section"]],
                        "item": SITE + "/" + CRUMB_DIR[p["section"]] + "/"})
     crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1,
                    "name": (p.get("crumb_en") or p["title_en"]) if guide else p["title_en"], "item": url})
@@ -324,12 +324,12 @@ def h2_ids(body_en, body_he):
 
 
 def guide_crumbs(p):
-    """The visible trail of a guide, in place of the eyebrow: Home / Advisory / the guide (crumb_en or the title,
+    """The visible trail of a guide, in place of the eyebrow: Home / Guides / the guide (crumb_en or the title,
     clipped to one line by CSS and hidden on a phone, where the h1 sits right under it)."""
     sep = '<span class="sep" aria-hidden="true">/</span>'
     cur = T(H.escape(p.get("crumb_en") or p["title_en"]), H.escape(p.get("crumb_he") or p["title_he"]))
     return (f'<nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="/">{T("Home", "דף הבית")}</a> {sep} '
-            f'<a href="/advisory/">{T(GUIDE_CRUMB_HUB, "ייעוץ אמנות")}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
+            f'<a href="{sc.GUIDES_INDEX}">{T(*GUIDE_CRUMB_HUB)}</a> {sep} <span class="cur" aria-current="page">{cur}</span></nav>')
 
 
 BYLINE_DEFAULT = ("By Stav Theodor, art curator and advisor at THEODORA in Tenafly, New Jersey",
@@ -366,8 +366,7 @@ def guide_next(p, all_pages):
         links = related_html(p, all_pages)
         return f'\n<section class="section wrap tight guide-next" id="next">\n  {links}\n</section>\n' if links else ""
     h2 = (H.escape(p.get("readnext_h2_en") or "More guides"), H.escape(p.get("readnext_h2_he") or "עוד מדריכים"))
-    arrow = (f'<a class="arrow" href="/advisory/#guides"><span class="ln"></span>{T(*sc.GUIDES_ALL)}</a>'
-             if sc.hub_guides(built.values()) else "")
+    arrow = f'<a class="arrow" href="{sc.GUIDES_INDEX}"><span class="ln"></span>{T(*sc.GUIDES_ALL)}</a>'
     more = (f'\n  <div class="readnext"><p class="eyebrow soft">{T("Also on this site", "עוד באתר")}</p>{"".join(link(o) for o in rest)}</div>'
             if rest else "")
     return f'''
@@ -550,37 +549,22 @@ def ba_card(p):
       </a>'''
 
 
-def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, hero_alt, guides=()):
-    """A hub: the hero, the cards, and on /advisory/ the guides group after them (guides: the guide pages with a hero
-    diagram, as .gcards; Fable's design, 2026-09-29). Every card and every guide is in the CollectionPage's hasPart."""
-    url = f"{SITE}/{section}/"
-    cards = "".join(sc.project_card(p) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
-      <a class="card reveal" href="/{p['path'].strip('/')}/">
-        <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
-        <p class="muted">{T(H.escape(strip_tags(p['meta_description'])), H.escape(snippet(p.get('lead_he') or '')))}</p>
-      </a>''' for p in pages)
-    ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": title_en, "url": url, "inLanguage": ["en", "he"],
-           "isPartOf": {"@id": SITE + "/#site"},
-           "hasPart": [{"@type": "WebPage", "name": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in list(pages) + list(guides)]},
-          {"@context": "https://schema.org", "@type": "BreadcrumbList",
-           "itemListElement": [
-               {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
-               {"@type": "ListItem", "position": 2, "name": title_en, "item": url}]}]
-    body = f'''
+def hub_hero(title_en, title_he, lead_en, lead_he, hero_src, alt_attr):
+    """A hub's hero (.phero.hub): the photo, the name as the h1 and the sentence as the lead. alt_attr: the img's alt
+    attribute(s), already formed."""
+    return f'''
 <header class="phero hub">
-  <img src="{hero_src}" alt="{H.escape(hero_alt, quote=True)}" fetchpriority="high">
+  <img src="{hero_src}" {alt_attr} fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <h1 class="serif">{T(H.escape(title_en), H.escape(title_he))}</h1>
     <p class="lead">{T(lead_en, lead_he)}</p>
   </div>
 </header>
+'''
 
-<section class="section wrap tight">
-  <div class="grid3">{cards}
-  </div>
-</section>{sc.guides_section(list(guides), GUIDES_HUB_H2, GUIDES_HUB_SUB, tight=True, described=section == "advisory")}
-{who_row(section)}
+
+HUB_CTA = f'''
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
@@ -589,9 +573,104 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
   </div>
 </section>
 '''
+
+
+def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, hero_alt, guides=()):
+    """A hub: the hero, the cards, and on /advisory/ the guides group after them (guides: the guide pages with a hero
+    diagram, as .gcards; Fable's design, 2026-09-29). Since 2026-10-01 the group shows the first sc.GUIDES_MAX guides and
+    the "All guides" arrow to /guide/, which lists them all. Every card and every guide shown is in the CollectionPage's hasPart."""
+    url = f"{SITE}/{section}/"
+    guides = list(guides)[:sc.GUIDES_MAX]
+    cards = "".join(sc.project_card(p) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
+      <a class="card reveal" href="/{p['path'].strip('/')}/">
+        <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
+        <p class="muted">{T(H.escape(strip_tags(p['meta_description'])), H.escape(snippet(p.get('lead_he') or '')))}</p>
+      </a>''' for p in pages)
+    ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": title_en, "url": url, "inLanguage": ["en", "he"],
+           "isPartOf": {"@id": SITE + "/#site"},
+           "hasPart": [{"@type": "WebPage", "name": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in list(pages) + guides]},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList",
+           "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
+               {"@type": "ListItem", "position": 2, "name": title_en, "item": url}]}]
+    body = f'''{hub_hero(title_en, title_he, lead_en, lead_he, hero_src, f'alt="{H.escape(hero_alt, quote=True)}"')}
+<section class="section wrap tight">
+  <div class="grid3">{cards}
+  </div>
+</section>{sc.guides_section(guides, GUIDES_HUB_H2, GUIDES_HUB_SUB, arrow=True, tight=True, described=section == "advisory")}
+{who_row(section)}{HUB_CTA}'''
     desc = strip_tags(lead_en)[:158]
     return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail())
+
+
+# /guide/, the guides index (2026-10-01): every built guide, in three headed groups. A guide must sit in
+# exactly one group (GUIDE_GROUPS, by slug, in display order): the build stops on a guide in no group or in two, and on
+# a group naming a slug that is not a guide page, so a new guide cannot go missing from the index.
+GUIDE_INDEX = {
+    "path": "guide",
+    "title": "Guides to Choosing and Placing Art",
+    "h1": ("Guides to choosing and placing art", "מדריכים לבחירת אמנות ולמיקומה"),
+    "lead": ("Plain answers to the questions people ask before they buy or hang a piece: what size, how high, which work, and for which space. Most come with drawings to scale and the measurements in inches and centimeters.",
+             "תשובות פשוטות לשאלות ששואלים לפני שקונים או תולים יצירה: באיזה גודל, באיזה גובה, איזו עבודה, ולאיזה חלל. לרובן מצורפים שרטוטים בקנה מידה והמידות באינצ'ים ובסנטימטרים."),
+    "description": "Practical guides to choosing, sizing and hanging art for homes, offices, clinics, hotels and restaurants, with drawings to scale. By Stav Theodor, THEODORA.",
+    "hero_src": "/images/home2/hod-hasharon.jpg",
+    "hero_alt": ("Open living space in a Hod Hasharon villa, a large figurative artwork of a woman's face dissolving into red roses on a concrete wall, garden and pool beyond the glass",
+                 "חלל מגורים פתוח בווילה בהוד השרון, עבודה פיגורטיבית גדולה של פני אישה שנמסים לוורדים אדומים על קיר בטון, גינה ובריכה מעבר לזכוכית"),
+}
+GUIDE_GROUPS = [
+    ("home", ("For the home", "לבית"),
+     ["how-to-choose-art-for-your-home", "gallery-wall-ideas", "how-to-hang-pictures", "art-above-couch", "dining-room-art",
+      "living-room-art", "art-above-bed", "entryway-art", "large-wall-art-ideas", "art-for-a-small-apartment", "art-for-home-staging"]),
+    ("business", ("For business", "לעסקים"),
+     ["office-wall-art", "buy-lease-or-commission-office-art", "dental-office-decor", "medical-office-wall-art", "law-office-art",
+      "financial-advisor-office-art", "hotel-artwork", "restaurant-wall-decor", "planning-art-in-construction-drawings",
+      "art-sourcing-for-interior-designers"]),
+    ("advisory", ("How advisory works", "איך עובד ייעוץ אמנות"),
+     ["art-advisor-vs-art-consultant", "ten-questions-before-you-buy-your-first-serious-artwork"]),
+]
+
+
+def guide_groups(pages):
+    """[(key, (h2_en, h2_he), [guide page])] for /guide/: GUIDE_GROUPS filled with the built guides that have a card."""
+    gs = {p["slug"]: p for p in pages if p["section"] == "guide" and sc.guide_cardable(p) and not check(p, "")}
+    every = {p["slug"] for p in pages if p["section"] == "guide"}
+    named = [s for _, _, slugs in GUIDE_GROUPS for s in slugs]
+    twice = sorted({s for s in named if named.count(s) > 1})
+    unknown = [s for s in named if s not in every]
+    missing = sorted(s for s in gs if s not in named)
+    if twice or unknown or missing:
+        sys.exit(f"build-site-pages: GUIDE_GROUPS out of step with content/pages: in two groups {twice}, not a guide page "
+                 f"{unknown}, in no group {missing}")
+    return [(k, h2, [gs[s] for s in slugs if s in gs]) for k, h2, slugs in GUIDE_GROUPS]
+
+
+def render_guide_index(pages):
+    """/guide/: the hub hero, then one section per group (an h2 and the guide cards, sc.gcards); the footer's closing block ends it.
+    A CollectionPage whose hasPart is every guide listed, and a BreadcrumbList Home, Guides (the names of a guide's trail)."""
+    g = GUIDE_INDEX
+    url = f"{SITE}/{g['path']}/"
+    groups = [(k, h2, gs) for k, h2, gs in guide_groups(pages) if gs]
+    listed = [p for _, _, gs in groups for p in gs]
+    ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "@id": url + "#page", "name": g["h1"][0], "url": url,
+           "description": g["description"], "inLanguage": ["en", "he"], "isPartOf": {"@id": SITE + "/#site"},
+           "about": {"@id": SITE + "/#org"},
+           "hasPart": [{"@type": "Article", "headline": p["title_en"], "url": f"{SITE}/{p['path'].strip('/')}/"} for p in listed]},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList",
+           "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+               {"@type": "ListItem", "position": 2, "name": GUIDE_CRUMB_HUB[0], "item": url}]}]
+    sections = "".join(f'''
+<section class="section wrap tight guide-group" id="{k}">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow">{T('Guides', 'מדריכים')}</p><h2 class="serif">{T(*h2)}</h2></div>
+  </div>
+  {sc.gcards(gs, described=True)}
+</section>
+''' for k, h2, gs in groups)
+    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"])) + sections  # the footer carries the closing line
+    return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + body + sc.tail()), len(listed)
 
 
 def who_row(section):
@@ -982,10 +1061,13 @@ def main():
             sec_pages = ([p for p in pages if p["section"] == "local"] + [p for p in pages if p["section"] == "area"] + [p for p in pages if p["section"] == sec]
                          + [p for p in pages if p["section"] == "guide" and not p.get("hero_image")])
         sec_pages = [p for p in sec_pages if not check(p, "")]
-        guides = ordered_guides(pages) if sec == "advisory" else []
+        guides = ordered_guides(pages)[:sc.GUIDES_MAX] if sec == "advisory" else []
         if not sec_pages: continue
         sc.write(os.path.join(sec, "index.html"), render_hub(sec, te, th, le, lh, sec_pages, hero_src, hero_alt, guides))
         print(f"  wrote {sec}/index.html ({len(sec_pages)} cards" + (f", {len(guides)} guides" if guides else "") + ")")
+    out, n = render_guide_index(pages)
+    sc.write(os.path.join(GUIDE_INDEX["path"], "index.html"), out)
+    print(f"  wrote {GUIDE_INDEX['path']}/index.html ({n} guides)")
     if "--no-sitemap" not in sys.argv:
         subprocess.run([sys.executable, "build-post-pages.py"], check=True)
     if problems: sys.exit(1)

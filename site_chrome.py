@@ -292,6 +292,7 @@ NAV_ITEMS = [
     ('#about', 'About', 'אודות'),
     ('/projects/', 'Projects', 'פרויקטים'),
     ('#advisory', 'Advisory', 'ייעוץ'),
+    ('/guide/', 'Guides', 'מדריכים'),  # the guides index, a real page on every page, the homepage included (2026-10-01)
     ('#industries', 'For business', 'לעסקים'),
     ('/radar/', 'Art Radar', 'ראדאר אמנות'),
     ('#faq', 'Questions', 'שאלות'),
@@ -454,7 +455,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
         <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/art-advisor-westchester-ny/">{T('Art advisor in Westchester', "יועצת אמנות בווסטצ'סטר")}</a>
       </div>
       <div>
-        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="{GUIDES_INDEX}">{T('Guides', 'מדריכים')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
       </div>
       <div class="who">
         <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
@@ -1094,6 +1095,7 @@ def before_after(key, first=False):
 GUIDE_PATH = re.compile(r'^guide/[a-z0-9]+(?:-[a-z0-9]+)*$')
 GUIDES_MAX = 6
 GUIDES_ALL = ('All guides', 'כל המדריכים')
+GUIDES_INDEX = '/guide/'  # the guides index (build-site-pages.py, GUIDE_INDEX, 2026-10-01): every "All guides" arrow goes there
 
 
 def svg_dims(src):
@@ -1179,12 +1181,12 @@ def gcards(guides, described=False):
 
 
 def guides_section(guides, h2, sub=None, arrow=False, tight=False, described=False):
-    """A #guides strip: eyebrow Guides, the h2, an optional one line sub, the "All guides" arrow to the hub's group
-    (only where that group exists: the anchor must resolve), then the cards. '' without a guide."""
+    """A #guides strip: eyebrow Guides, the h2, an optional one line sub, the "All guides" arrow to the guides index
+    (/guide/, since 2026-10-01), then the cards. '' without a guide."""
     if not guides:
         return ''
     sub_html = f'<p class="muted" style="font-size: 17px; max-width: 760px;">{T(*sub)}</p>' if sub else ''
-    arrow_html = f'\n    <a class="arrow" href="/advisory/#guides"><span class="ln"></span>{T(*GUIDES_ALL)}</a>' if arrow else ''
+    arrow_html = f'\n    <a class="arrow" href="{GUIDES_INDEX}"><span class="ln"></span>{T(*GUIDES_ALL)}</a>' if arrow else ''
     return f'''
 
 <section class="section wrap{' tight' if tight else ''}" id="guides">

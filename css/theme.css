@@ -462,6 +462,11 @@
     .btn { display: block; text-align: center; }
   }
   @media (min-width: 901px) { .nav .right { display: flex; gap: 30px; align-items: center; } }
+  /* Eight nav items since Guides went in (2026-10-01): between the phone menu and a wide screen the links tighten, and
+     up to 1100px the call link shows its label, so the bar stays one line from 901px up */
+  @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
+  @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
+  @media (min-width: 901px) and (max-width: 980px) { .links { gap: 15px; } }
 
 /* ===================== Part 2: inner pages ===================== */
   /* Full-bleed photo header (project pages, hubs, the archive) */
@@ -774,6 +779,7 @@
      same wash as .phero.type). Used three times: the industry pages' "Guides for law firms" strip, the /advisory/
      hub's guides group, and Read next on a guide. */
   .gcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; }
+  body.lang-he .guide-group { direction: rtl; }  /* /guide/ (2026-10-01): in Hebrew the group heads sit right and the cards read right to left */
   .gcards.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gcard { display: flex; flex-direction: column; gap: 14px; color: var(--ink); outline: none; }
   .gcard .th { position: relative; aspect-ratio: 16 / 10; overflow: hidden; padding: 7% 8%; border: 1px solid var(--line); background: radial-gradient(120% 100% at 85% 0%, rgba(157,118,99,0.18), rgba(15,15,20,0) 60%), var(--surface); }
