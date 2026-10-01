@@ -8,16 +8,19 @@
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
 
-lastmod comes from one `git log --format=%cI --name-only` pass, keyed on each page's source (a source that
-`git status --porcelain` reports as changed or untracked is dated now, since the build runs before its commit;
-2026-09-30):
-content/pages/<slug>.json for a growth page (the homepage and the hubs take the newest of
-their sources; /advisory/, /about/ and every page or buyer page with a `guides` list also take the guide JSONs they
-list), a buyer page's JSON, its images and the homepage template it is rendered from, the post's own dateModified for a post, and the museum file itself. With no
-git available lastmod is omitted rather than invented. Run by python3 build.py after the
-pages are written; run it alone from the repo root after editing content.
+lastmod moves only when the page a reader gets actually changes (since 2026-10-01). Each page and museum URL is
+dated by a fingerprint of its built index.html, stored with its date in tools/sitemap-lastmod.json (committed with
+the build output): same fingerprint, same lastmod; a new fingerprint dates the URL now. The fingerprint is the
+page's content only: its text in both languages, the href, src, alt, content and title values, and its JSON-LD,
+with the shared nav and footer, every other script, every style block, HTML comments and ?v= cache busters left
+out, so a change to the site chrome, a code comment or a stylesheet version moves no lastmod. A URL missing from
+the file (a lost file, a merge conflict resolved by deleting its lines) is dated by the newest commit that changed
+its fingerprint, so the file can always be rebuilt from git. A post keeps its own dateModified and the /radar/
+archive the newest of them. Run by python3 build.py after the pages are written; run it alone from the repo root
+after editing content. Rebuilding an unchanged tree changes nothing.
 """
 import glob
+import hashlib
 import json
 import os
 import re
@@ -31,104 +34,112 @@ import site_chrome as sc  # noqa: E402
 from site_chrome import SITE  # noqa: E402
 
 os.chdir(ROOT)
-DATE_LINE = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$')
-HOME_SOURCES = ['templates/home.html', 'content/faq.json', 'content/entity.json', 'content/posts.html', 'build-home.py']
+STORE = 'tools/sitemap-lastmod.json'
+
+COMMENT = re.compile(r'<!--.*?-->', re.S)
+SCRIPT = re.compile(r'<script\b([^>]*)>(.*?)</script>', re.S | re.I)
+STYLE = re.compile(r'<style\b.*?</style>', re.S | re.I)
+CHROME = re.compile(r'<(nav|footer)\b.*?</\1>', re.S | re.I)
+TAG = re.compile(r'<[^>]*>')
+ATTR = re.compile(r'\b(href|src|alt|content|title)\s*=\s*"([^"]*)"', re.I)
+BUSTER = re.compile(r'\?v=[\w.-]+')
 
 
-def git_dates():
-    """{path: committer date of the newest commit touching it}, or None without git."""
+def fingerprint(html):
+    """A short hash of what a reader and a crawler get from the page, without the chrome and the build noise."""
+    html = COMMENT.sub(' ', html)
+    html = SCRIPT.sub(lambda m: ' ' + m.group(2) + ' ' if 'ld+json' in m.group(1) else ' ', html)
+    html = STYLE.sub(' ', html)
+    html = CHROME.sub(' ', html)
+    html = TAG.sub(lambda m: ' ' + ' '.join(v for _, v in ATTR.findall(m.group(0))) + ' ', html)
+    text = ' '.join(BUSTER.sub('', html).split())
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()[:16]
+
+
+def now():
+    return datetime.now().astimezone().replace(microsecond=0).isoformat()
+
+
+def load_store():
     try:
-        out = subprocess.run(['git', 'log', '--format=%cI', '--name-only'], capture_output=True, text=True, check=True).stdout
-    except (OSError, subprocess.CalledProcessError):
-        return None
-    dates, current = {}, None
-    for line in out.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        if DATE_LINE.match(line):
-            current = line
-        elif current:
-            dates.setdefault(line.replace('\\', '/'), current)
-    # a source changed in the working tree (or not in git yet) is newer than its last commit: date it now, so a page
-    # built before its own commit still gets a lastmod, and the right one (2026-09-30 SEO fixes)
-    try:
-        status = subprocess.run(['git', 'status', '--porcelain', '--untracked-files=all'], capture_output=True, text=True,
-                                check=True).stdout
-    except (OSError, subprocess.CalledProcessError):
-        status = ''
-    now = datetime.now().astimezone().replace(microsecond=0).isoformat()
-    for line in status.splitlines():
-        path = line[3:].split(' -> ')[-1].strip().strip('"')
-        if path:
-            dates[path.replace('\\', '/')] = now
-    return dates
+        return json.load(open(STORE, encoding='utf-8'))
+    except (OSError, ValueError):
+        return {}
 
 
-def newest(dates, sources):
-    if dates is None:
-        return None
-    found = [dates[s] for s in sources if s in dates]
-    return max(found) if found else None
+def save_store(store):
+    lines = [f'  {json.dumps(k)}: {json.dumps(store[k], sort_keys=True)}' for k in sorted(store)]
+    open(STORE, 'w', encoding='utf-8', newline='\n').write('{\n' + ',\n'.join(lines) + '\n}\n')
 
 
-def entry(url, lastmod):
-    lm = f'\n    <lastmod>{lastmod}</lastmod>' if lastmod else ''
-    return f'  <url>\n    <loc>{url}</loc>{lm}\n  </url>'
+class History:
+    """Dates a page from git when the store does not know it: the newest commit that changed its fingerprint."""
 
+    def __init__(self):
+        self.cat = None
 
-def write_sitemap(name, entries):
-    text = ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + '\n'.join(e for e, _ in entries) + '\n</urlset>\n')
-    sc.write(name, text)
-    dates = [d for _, d in entries if d]
-    return max(dates) if dates else None
+    def blob(self, sha, path):
+        if self.cat is None:
+            self.cat = subprocess.Popen(['git', 'cat-file', '--batch'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        self.cat.stdin.write(f'{sha}:{path}\n'.encode())
+        self.cat.stdin.flush()
+        header = self.cat.stdout.readline().decode().split()
+        if len(header) < 3 or header[1] == 'missing':
+            return None
+        data = self.cat.stdout.read(int(header[2]))
+        self.cat.stdout.read(1)
+        return data.decode('utf-8', 'replace')
+
+    def date(self, path, fp):
+        try:
+            log = subprocess.run(['git', 'log', '--format=%H %cI', '--', path], capture_output=True, text=True,
+                                 check=True).stdout.split('\n')
+        except (OSError, subprocess.CalledProcessError):
+            return now()
+        since = None
+        for line in filter(None, log):
+            sha, date = line.split(' ', 1)
+            old = self.blob(sha, path)
+            if old is None or fingerprint(old) != fp:
+                break
+            since = date
+        return since or now()  # no commit carries this content yet: it is new in the working tree
 
 
 def main():
-    dates = git_dates()
-    if dates is None:
-        print('build_sitemap: git unavailable, lastmod omitted')
+    store, history, seen = load_store(), History(), set()
 
-    # ---- pages: the homepage, the hubs, every content/pages entry that was rendered
-    pages = []
-    for f in sorted(glob.glob('content/pages/*.json')):
-        p = json.load(open(f, encoding='utf-8'))
-        rel = p['path'].strip('/')
-        if os.path.exists(os.path.join(rel, 'index.html')):
-            pages.append((p, f.replace('\\', '/')))
-    home_lm = newest(dates, HOME_SOURCES + [src for _, src in pages])
-    guide_src = {p['path'].strip('/'): src for p, src in pages if p['section'] == 'guide'}
-    listed = lambda paths: [guide_src[g.strip('/')] for g in (paths or []) if g.strip('/') in guide_src]
-    page_entries = [(entry(SITE + '/', home_lm), home_lm)]
-    # /advisory/ lists every guide in its #guides group (since 2026-09-30 its lastmod moves with them)
-    for hub, sections in (('advisory', ('local', 'area', 'advisory', 'guide')), ('projects', ('projects',))):
+    def dated(url, path):
+        """(sitemap entry, lastmod) for a URL served from a built file."""
+        key = url[len(SITE):]
+        fp = fingerprint(open(path, encoding='utf-8', errors='replace').read())
+        old = store.get(key)
+        if old and old.get('fp') == fp:
+            lm = old['lastmod']
+        elif old:
+            lm = now()  # the store knew the page and its content changed
+        else:
+            lm = history.date(path, fp)
+        store[key] = {'fp': fp, 'lastmod': lm}
+        seen.add(key)
+        return entry(url, lm), lm
+
+    # ---- pages: the homepage, the hubs, every content/pages entry that was rendered, /contact/, /about/, buyer pages
+    page_entries = [dated(SITE + '/', 'index.html')]
+    for hub in ('advisory', 'projects'):
         if os.path.exists(os.path.join(hub, 'index.html')):
-            lm = newest(dates, [src for p, src in pages if p['section'] in sections])
-            page_entries.append((entry(f'{SITE}/{hub}/', lm), lm))
-    for p, src in pages:
-        lm = newest(dates, [src] + listed(p.get('guides')))  # a page's #guides strip shows the guides it lists
-        page_entries.append((entry(f"{SITE}/{p['path'].strip('/')}/", lm), lm))
-    # /contact/, a real page since 2026-09-29 (Ron's SEO brief, P1.1), written by build-site-pages.py (CONTACT)
-    if os.path.exists(os.path.join('contact', 'index.html')):
-        lm = newest(dates, ['build-site-pages.py'])
-        page_entries.append((entry(f'{SITE}/contact/', lm), lm))
-    # /about/, a real page since 2026-09-29 (in place of the redirect stub to /#about), written by build-site-pages.py (ABOUT)
-    # from the homepage template and the partner pages' JSON, so it moves with any of them
-    if os.path.exists(os.path.join('about', 'index.html')):
-        lm = newest(dates, ['build-site-pages.py', 'templates/home.html', 'content/pages/for-designers.json',
-                            'content/pages/for-brokers.json', 'content/pages/for-advisors.json'] + sorted(guide_src.values()))  # /about/ links every guide
-        page_entries.append((entry(f'{SITE}/about/', lm), lm))
-    # the buyer pages (content/variants/<id>.json, rendered by build-home.py at /<path>/)
-    for f in sorted(glob.glob('content/variants/*.json')):
-        v = json.load(open(f, encoding='utf-8'))
-        rel = v['path'].strip('/')
-        if not os.path.exists(os.path.join(rel, 'index.html')):
-            continue
-        images = sorted(g.replace('\\', '/') for g in glob.glob(f"images/home2/variants/{v['id']}/*"))
-        lm = newest(dates, [f.replace('\\', '/'), 'templates/home.html', 'build-home.py'] + images + listed(v.get('guides')))
-        page_entries.append((entry(f'{SITE}/{rel}/', lm), lm))
+            page_entries.append(dated(f'{SITE}/{hub}/', f'{hub}/index.html'))
+    for f in sorted(glob.glob('content/pages/*.json')):
+        rel = json.load(open(f, encoding='utf-8'))['path'].strip('/')
+        if os.path.exists(os.path.join(rel, 'index.html')):
+            page_entries.append(dated(f'{SITE}/{rel}/', f'{rel}/index.html'))
+    for rel in ('contact', 'about'):  # real pages since 2026-09-29, written by build-site-pages.py
+        if os.path.exists(os.path.join(rel, 'index.html')):
+            page_entries.append(dated(f'{SITE}/{rel}/', f'{rel}/index.html'))
+    for f in sorted(glob.glob('content/variants/*.json')):  # rendered by build-home.py at /<path>/
+        rel = json.load(open(f, encoding='utf-8'))['path'].strip('/')
+        if os.path.exists(os.path.join(rel, 'index.html')):
+            page_entries.append(dated(f'{SITE}/{rel}/', f'{rel}/index.html'))
     pages_lm = write_sitemap('sitemap-pages.xml', page_entries)
 
     # ---- radar: the archive, then every post by its own dateModified
@@ -144,14 +155,14 @@ def main():
     museum_entries = []
     for rel, url in [('museum/index.html', f'{SITE}/museum/'), ('museum/artists/index.html', f'{SITE}/museum/artists/')]:
         if os.path.exists(rel):
-            lm = newest(dates, [rel])
-            museum_entries.append((entry(url, lm), lm))
+            museum_entries.append(dated(url, rel))
     for mp in sorted(glob.glob('museum/artists/*/index.html')):
         mp = mp.replace('\\', '/')
-        slug = mp.split('/')[2]
-        lm = newest(dates, [mp])
-        museum_entries.append((entry(f'{SITE}/museum/artists/{slug}/', lm), lm))
+        museum_entries.append(dated(f"{SITE}/museum/artists/{mp.split('/')[2]}/", mp))
     museum_lm = write_sitemap('sitemap-museum.xml', museum_entries)
+
+    # a URL that left the sitemaps leaves the store
+    save_store({k: v for k, v in store.items() if k in seen})
 
     # ---- the index
     def child(name, lm):
@@ -163,6 +174,20 @@ def main():
              + '\n</sitemapindex>\n')
     sc.write('sitemap.xml', index)
     print(f'sitemap.xml: index over sitemap-pages.xml ({len(page_entries)} URLs), sitemap-radar.xml ({len(radar_entries)}), sitemap-museum.xml ({len(museum_entries)})')
+
+
+def entry(url, lastmod):
+    lm = f'\n    <lastmod>{lastmod}</lastmod>' if lastmod else ''
+    return f'  <url>\n    <loc>{url}</loc>{lm}\n  </url>'
+
+
+def write_sitemap(name, entries):
+    text = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + '\n'.join(e for e, _ in entries) + '\n</urlset>\n')
+    sc.write(name, text)
+    dates = [d for _, d in entries if d]
+    return max(dates) if dates else None
 
 
 if __name__ == '__main__':
