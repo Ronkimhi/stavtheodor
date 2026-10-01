@@ -507,6 +507,7 @@
   .prose[data-l="he"] blockquote { border-left: 0; border-right: 1px solid var(--taupe); padding-left: 0; padding-right: 24px; font-family: var(--he); }
   .prose figure { margin: 44px 0; }
   .prose figure img { width: 100%; height: auto; }
+  .prose figure img + img { margin-top: 12px; }  /* a guide's demonstration pair: two photos in one figure (2026-10-01) */
   .prose figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .next { display: flex; flex-direction: column; gap: 18px; padding-top: clamp(88px, 10vw, 150px); }
   .next a.big { font-family: var(--serif); font-size: clamp(34px, 4.4vw, 64px); line-height: 1.05; letter-spacing: -0.01em; text-wrap: balance; }
