@@ -405,6 +405,7 @@ def render_article_page(p, all_pages):
     if guide and hero_src and hero_src.endswith(".svg"):
         hero_src = None  # no link preview can show an SVG: a guide's og.jpg goes in og_image (design spec 5.7)
     og = SITE + (p.get("og_image") or (sc.space_og(ba) if ba else None) or hero_src or "/og-image.jpg")
+    own_og = bool(guide and ba and og == SITE + sc.space_og(ba))
     kicker, kicker_he = kickers(p)
     hero = ""
     if ba:
@@ -468,6 +469,8 @@ def render_article_page(p, all_pages):
 '''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
                     og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
+                    # a guide whose hero is a pair previews that pair's 1200 by 630 crop: give its size and what it shows
+                    og_card_dims=own_og, og_image_alt=sc.spaces()[ba]['alt_en'] if own_og else None,
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
             + sc.body_open() + page_nav(p) + body + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
 

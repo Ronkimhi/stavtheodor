@@ -251,6 +251,132 @@
    "cap_he": "משרד מול גן, תבליט קיר בברונזה ובזהב מאחורי השולחן.",
    "alt_en": "An office with a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows.",
    "alt_he": "משרד עם תבליט של דיסקיות ברונזה וזהב על קיר טיח בכחול כהה מאחורי שולחן אגוז, שתי כורסאות עור בגוון קוניאק וחלונות אל הגן."
+  },
+  "art-above-couch_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5059,
+   "fy": 0.2562,
+   "art_x": [
+    0.3267,
+    0.685
+   ],
+   "cap_en": "A living space, a wide landscape painting above the linen sofa.",
+   "cap_he": "חלל מגורים, ציור נוף רחב מעל ספת הפשתן.",
+   "alt_en": "A warm living space with a long linen sofa, leather cushions and two table lamps: above the sofa, a framed landscape painting of bright rolling hills under a cloudy blue sky, hung a short gap above the sofa back.",
+   "alt_he": "חלל מגורים חמים עם ספת פשתן ארוכה, כריות עור ושתי מנורות שולחן: מעל הספה, ציור נוף ממוסגר של גבעות מתגלגלות בצבעים עזים תחת שמיים כחולים ומעוננים, תלוי במרווח קצר מעל גב הספה."
+  },
+  "art-for-home-staging_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.497,
+   "fy": 0.2915,
+   "art_x": [
+    0.368,
+    0.626
+   ],
+   "cap_en": "A staged living space, one landscape painting centered above the sofa.",
+   "cap_he": "חלל מגורים מבוים, ציור נוף אחד במרכז מעל הספה.",
+   "alt_en": "A bright staged living space with a cream sofa, an oak coffee table and two boucle armchairs: one framed landscape painting of colorful hills and a cloudy sky is centered above the sofa, the only art in the shot.",
+   "alt_he": "חלל מגורים מבוים ומואר עם ספה בגוון שמנת, שולחן קפה מעץ אלון ושתי כורסאות בוקלה: ציור נוף ממוסגר אחד של גבעות צבעוניות ושמיים מעוננים תלוי במרכז מעל הספה, העבודה היחידה בתמונה."
+  },
+  "dental-office-decor_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5165,
+   "fy": 0.347,
+   "art_x": [
+    0.356,
+    0.677
+   ],
+   "cap_en": "A dental treatment space from the chair, a landscape painting high on the facing wall.",
+   "cap_he": "חלל טיפול במרפאת שיניים מנקודת המבט של הכיסא, ציור נוף גבוה על הקיר שממול.",
+   "alt_en": "The view from a dental chair, sitting back: past the foot of the chair and the treatment light swung aside, a landscape painting of colorful hills and a bright sky hangs high on the facing wall, where the patient's eyes rest.",
+   "alt_he": "המבט מכיסא טיפולים במרפאת שיניים, בישיבה נשענת: מעבר לקצה הכיסא ולמנורת הטיפול שהוזזה הצידה, ציור נוף של גבעות צבעוניות ושמיים בהירים תלוי גבוה על הקיר שממול, במקום שבו עיני המטופל נחות."
+  },
+  "dining-room-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5017,
+   "fy": 0.295,
+   "art_x": [
+    0.3633,
+    0.64
+   ],
+   "cap_en": "A dining space at dusk, a red and plum abstract above the sideboard.",
+   "cap_he": "חלל אוכל בשעת בין ערביים, יצירה מופשטת באדום ובשזיף מעל המזנון.",
+   "alt_en": "A dining space at dusk with a walnut table, boucle chairs and two brass pendants: between the pendants, a framed abstract of rippling bands in crimson, magenta and plum hangs above a walnut sideboard.",
+   "alt_he": "חלל אוכל בשעת בין ערביים עם שולחן אגוז, כיסאות בוקלה ושני גופי תאורה תלויים מפליז: בין גופי התאורה, יצירה מופשטת ממוסגרת של רצועות גליות בארגמן, במג'נטה ובשזיף תלויה מעל מזנון אגוז."
+  },
+  "entryway-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5059,
+   "fy": 0.3225,
+   "art_x": [
+    0.3417,
+    0.67
+   ],
+   "cap_en": "An entry through the open door, one bold abstract on the facing wall.",
+   "cap_he": "כניסה דרך הדלת הפתוחה, יצירה מופשטת נועזת אחת על הקיר שממול.",
+   "alt_en": "Through an open front door, the facing wall of an entry hall holds one large unframed abstract of rippling bands in crimson, magenta and coral, with a walnut console and a brass lamp at the right.",
+   "alt_he": "מבעד לדלת כניסה פתוחה, על הקיר שמול הדלת תלויה יצירה מופשטת גדולה אחת ללא מסגרת, של רצועות גליות בארגמן, במג'נטה ובאלמוג, ומימין שידת אגוז ומנורת פליז."
+  },
+  "how-to-choose-art-for-your-home_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.565,
+   "fy": 0.3713,
+   "art_x": [
+    0.4233,
+    0.7067
+   ],
+   "cap_en": "A reading corner, one tall floral painting on the free wall.",
+   "cap_he": "פינת קריאה, ציור פרחים גבוה אחד על הקיר הפנוי.",
+   "alt_en": "A reading corner with a cream armchair, a walnut side table and a brass floor lamp: on the bare wall beside it, one tall painting of flowers in crimson, pink, teal and white drifting over a dark green ground.",
+   "alt_he": "פינת קריאה עם כורסה בגוון שמנת, שולחן צד מעץ אגוז ומנורת עמידה מפליז: על הקיר הריק שלידה, ציור גבוה אחד של פרחים בארגמן, בוורוד, בטורקיז ובלבן, הנישאים על רקע ירוק כהה."
+  },
+  "how-to-hang-pictures_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5267,
+   "fy": 0.3812,
+   "art_x": [
+    0.2867,
+    0.7667
+   ],
+   "cap_en": "A landing wall, one wide painting centered at eye level.",
+   "cap_he": "קיר במישור המדרגות, ציור רחב אחד שמרכזו בגובה העיניים.",
+   "alt_en": "An upstairs landing with a stair rail and an oak door: one wide painting of shimmering water in blue, lilac and pale gold hangs centered at eye level on the bare wall, with nothing below it.",
+   "alt_he": "מישור מדרגות בקומה העליונה עם מעקה ודלת אלון: ציור רחב אחד של מים מנצנצים בכחול, בלילך ובזהב חיוור תלוי כשמרכזו בגובה העיניים על הקיר הריק, ושום דבר מתחתיו."
+  },
+  "large-wall-art-ideas_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4983,
+   "fy": 0.3225,
+   "art_x": [
+    0.2983,
+    0.6983
+   ],
+   "cap_en": "A large living space wall, one big landscape painting.",
+   "cap_he": "קיר גדול בחלל מגורים, ציור נוף גדול אחד.",
+   "alt_en": "A tall wall in an open living space, seen past two boucle armchairs and a round walnut table: one large unframed landscape painting of colorful hills under a cloudy sky fills the middle of the wall.",
+   "alt_he": "קיר גבוה בחלל מגורים פתוח, מבעד לשתי כורסאות בוקלה ושולחן אגוז עגול: ציור נוף גדול אחד ללא מסגרת, של גבעות צבעוניות תחת שמיים מעוננים, ממלא את מרכז הקיר."
+  },
+  "living-room-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.545,
+   "fy": 0.3225,
+   "art_x": [
+    0.3983,
+    0.6917
+   ],
+   "cap_en": "A living space from the doorway, the main wall dressed.",
+   "cap_he": "חלל מגורים מהפתח, הקיר המרכזי מולבש.",
+   "alt_en": "A living space seen from its doorway: one landscape painting of colorful hills and a cloudy sky, in a thin black frame, hangs on the wall the eye meets first, beside an olive tree and two armchairs.",
+   "alt_he": "חלל מגורים כפי שהוא נראה מהפתח: ציור נוף אחד של גבעות צבעוניות ושמיים מעוננים, במסגרת שחורה דקה, תלוי על הקיר שהעין פוגשת ראשון, ליד עץ זית ושתי כורסאות."
   }
  }
 }
