@@ -74,7 +74,7 @@
 
   /* Fixed top bar, readable over any photo */
   .nav { position: fixed; left: 0; right: 0; top: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: calc(21px + env(safe-area-inset-top, 0px)) clamp(20px, 3.4vw, 48px) 21px; pointer-events: none; text-shadow: 0 1px 2px rgba(0,0,0,0.45), 0 2px 12px rgba(0,0,0,0.28); }
-  /* Frosted header (Ron, 2026-09-30): a half transparent dark bar with a blur, shown only once the page has
+  /* Frosted header: a half transparent dark bar with a blur, shown only once the page has
      scrolled (PAGE_JS adds .nav.is-scrolled past 24px), so at the very top the nav is fully transparent and never
      smears the hero headline. It fades in over 200ms. The blur sits on ::before, never on .nav itself, because a
      backdrop-filter on .nav would trap the fixed mobile menu (.links) inside the bar. The bar is 21px top and
@@ -84,7 +84,7 @@
   @media (prefers-reduced-motion: reduce) { .nav::before { transition: none; } }
   .nav .wordmark, .nav .links a, .nav .lang-switch, .nav .menu-btn { pointer-events: auto; }
   .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.22em; color: var(--ink); }
-  /* A buyer page's line under the wordmark ("for hotels", Ron 2026-09-29): shown by WM_SUB_JS (class on) from the
+  /* A buyer page's line under the wordmark ("for hotels"): shown by WM_SUB_JS (class on) from the
      second room of the opening until the black intro block enters; never on the homepage */
   .nav .wordmark { position: relative; }
   .wm-sub { position: absolute; left: 0; top: 100%; margin-top: 1px; font-family: var(--sans); font-size: 12px; font-weight: 400; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.24em; white-space: nowrap; color: #F2F0EC; text-shadow: 0 1px 8px rgba(0,0,0,0.35); pointer-events: none; opacity: 0; transform: translateY(-4px); transition: opacity .35s ease, transform .35s ease; }
@@ -146,7 +146,7 @@
   body.gl .intro .intro-line { opacity: 0.5; transform: translateY(22px); }
   .intro .statement { display: flex; flex-direction: column; align-items: center; gap: 32px; }
   .intro .statement h2 { font-size: clamp(30px, 3.6vw, 52px); max-width: 1040px; }
-  /* a buyer page's big line is its main message (Ron, 2026-09-28), longer than the homepage's: wider and a little smaller,
+  /* a buyer page's big line is its main message, longer than the homepage's: wider and a little smaller,
      so it wraps into two or three balanced lines; the homepage (no #value strip) is unchanged */
   body:has(#value) .intro .intro-line { font-size: clamp(32px, 4.8vw, 76px); max-width: 24ch; }
   /* Lenis smooth wheel (fine-pointer devices only): the library scrolls the window itself */
@@ -338,7 +338,7 @@
   .act-form { grid-area: form; min-width: 0; }
   .act .contact-box { max-width: none; }
 
-  /* /contact/ (Ron's SEO brief, 2026-09-29, P1.1) and the contact form, which appears there and in the homepage's
+  /* /contact/ and the contact form, which appears there and in the homepage's
      #contact only once site_chrome.FORM_ENDPOINT is set */
   /* /contact/ (redesigned 2026-09-29): the h1 and the line, the contact act, then the service area as a row of names */
   .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
