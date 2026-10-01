@@ -140,6 +140,8 @@ Report failures honestly. If a check fails after the cache window, say so; do no
 
 Format: `- YYYY-MM-DD HH:MM (TZ) | who | what changed | notes for the other AI`
 
+- 2026-10-01 (ET) | Claude (SEO audit of the guide images, same branch) | `date_modified` "2026-10-01" on the 14 guides whose body or hero changed on this branch, so the Article's dateModified matches the day the photos went in and the sitemap lastmod. | Only the JSON field changed by hand; the guide HTML and the sitemaps are build output.
+
 - 2026-10-01 (ET) | Claude (guide images, same branch) | `css/theme.css`: 12 px between the two photos of a guide's demonstration pair (`.prose figure img + img`), which otherwise touched. | Only the four two-photo figures on the guides match the rule.
 
 - 2026-10-01 (ET) | Claude (guide images, same branch, second commit) | Three more guides open on a before/after pair, the same way as the line below: hotel-artwork, buy-lease-or-commission-office-art and financial-advisor-office-art; how-to-choose-art-for-your-home gains the view-from-the-door photo after Figure 2. All four reviewed and accepted by the site owner on 2026-10-01. | None.
