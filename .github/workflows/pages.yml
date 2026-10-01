@@ -1,0 +1,54 @@
+# Publishes only the public files of the site to GitHub Pages.
+# tools/build_pages_artifact.py copies them into _site/ by rule and fails the
+# run if a sitemap URL or a referenced asset is missing from it. The committed
+# tree is already the built site, so nothing is rebuilt here.
+# The deploy job runs only while the Pages source is "GitHub Actions"; in
+# branch mode this workflow is a check and deploys nothing.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build_type: ${{ steps.mode.outputs.build_type }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Public files only
+        run: python3 tools/build_pages_artifact.py --out _site
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - name: Pages source
+        id: mode
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          t=$(gh api "repos/${{ github.repository }}/pages" --jq .build_type)
+          echo "Pages build_type: $t"
+          case "$t" in workflow|legacy) ;; *) echo "unexpected build_type '$t'"; exit 1 ;; esac
+          echo "build_type=$t" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.build_type == 'workflow'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
