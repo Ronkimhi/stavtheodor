@@ -473,6 +473,16 @@
   .phero .title { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 clamp(20px, 3.4vw, 48px) clamp(40px, 5vw, 64px); display: flex; flex-direction: column; gap: 18px; max-width: 1100px; }
   .phero h1 { font-size: clamp(38px, 5.2vw, 76px); text-wrap: balance; }
   .phero .cap { font-size: 15px; color: var(--soft); max-width: 720px; }
+  /* The two hubs (/advisory/, /projects/; 2026-10-01): the hub's name is the h1 and its sentence a body-size lead. The
+     header grows with its text instead of a fixed height, and its top padding clears the fixed nav like .phead, so a
+     long lead can never run up under the nav or past the photo. */
+  .phero.hub { height: auto; min-height: max(480px, 62vh); max-height: none; display: flex; align-items: flex-end; padding-top: calc(132px + env(safe-area-inset-top, 0px)); }
+  .phero.hub > img { position: absolute; inset: 0; }
+  .phero.hub .title { position: relative; }
+  .phero.hub .scrim { background: linear-gradient(180deg, rgba(15,15,20,0.55) 0%, rgba(15,15,20,0.12) 28%, rgba(15,15,20,0.62) 58%, rgba(15,15,20,0.94) 100%); }
+  .phero.hub h1 { font-size: clamp(38px, 5.2vw, 72px); }
+  body.lang-he .phero.hub .title { direction: rtl; }
+  .phero.hub .lead { font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--soft); max-width: 720px; }
   /* Text header (advisory, partners, the guide, a post) */
   .phead { padding: calc(132px + env(safe-area-inset-top, 0px)) clamp(20px, 3.4vw, 48px) 0; display: flex; flex-direction: column; gap: 18px; max-width: 1100px; }
   .phead h1 { font-size: clamp(38px, 5.2vw, 72px); text-wrap: balance; }
@@ -553,7 +563,8 @@
   body.lang-he .post-body-en, body.lang-he .post-title-en { display: none; }
   @media (max-width: 900px) {
     .phero { height: 72vh; min-height: 520px; }
-    .phead { padding-top: calc(112px + env(safe-area-inset-top, 0px)); }
+    .phead, .phero.hub { padding-top: calc(112px + env(safe-area-inset-top, 0px)); }
+    .phero.hub { min-height: max(440px, 62vh); }
     .post-gallery { column-count: 1; }
     .pair-bottom, .pair-caps { flex-direction: column; align-items: center; }
     .pair-bottom img, .pair-caps figcaption { width: 100%; max-width: 100%; }

@@ -567,12 +567,12 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
                {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
                {"@type": "ListItem", "position": 2, "name": title_en, "item": url}]}]
     body = f'''
-<header class="phero" style="height: 62vh; min-height: 480px;">
+<header class="phero hub">
   <img src="{hero_src}" alt="{H.escape(hero_alt, quote=True)}" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
-    <p class="eyebrow">{T(H.escape(title_en), H.escape(title_he))}</p>
-    <h1 class="serif">{T(lead_en, lead_he)}</h1>
+    <h1 class="serif">{T(H.escape(title_en), H.escape(title_he))}</h1>
+    <p class="lead">{T(lead_en, lead_he)}</p>
   </div>
 </header>
 
