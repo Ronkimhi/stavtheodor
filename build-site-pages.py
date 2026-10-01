@@ -604,9 +604,9 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
-# /guide/, the guides index (2026-10-01): every built guide, in three headed groups. A guide must sit in
-# exactly one group (GUIDE_GROUPS, by slug, in display order): the build stops on a guide in no group or in two, and on
-# a group naming a slug that is not a guide page, so a new guide cannot go missing from the index.
+# /guide/, the guides index (2026-10-01): every built guide, in the six categories of site_chrome.GUIDE_BUCKETS, under
+# a sticky category bar. A guide must sit in exactly one category (by slug, in display order): the build stops on a
+# guide in none or in two, and on a slug that is not a guide page, so a new guide cannot go missing from the index.
 GUIDE_INDEX = {
     "path": "guide",
     "title": "Guides to Choosing and Placing Art",
@@ -618,31 +618,56 @@ GUIDE_INDEX = {
     "hero_alt": ("Open living space in a Hod Hasharon villa, a large figurative artwork of a woman's face dissolving into red roses on a concrete wall, garden and pool beyond the glass",
                  "חלל מגורים פתוח בווילה בהוד השרון, עבודה פיגורטיבית גדולה של פני אישה שנמסים לוורדים אדומים על קיר בטון, גינה ובריכה מעבר לזכוכית"),
 }
-GUIDE_GROUPS = [
-    ("home", ("For the home", "לבית"),
-     ["how-to-choose-art-for-your-home", "gallery-wall-ideas", "how-to-hang-pictures", "art-above-couch", "dining-room-art",
-      "living-room-art", "art-above-bed", "entryway-art", "large-wall-art-ideas", "art-for-a-small-apartment", "art-for-home-staging"]),
-    ("business", ("For business", "לעסקים"),
-     ["office-wall-art", "buy-lease-or-commission-office-art", "dental-office-decor", "medical-office-wall-art", "law-office-art",
-      "financial-advisor-office-art", "hotel-artwork", "restaurant-wall-decor", "planning-art-in-construction-drawings",
-      "art-sourcing-for-interior-designers"]),
-    ("advisory", ("How advisory works", "איך עובד ייעוץ אמנות"),
-     ["art-advisor-vs-art-consultant", "ten-questions-before-you-buy-your-first-serious-artwork"]),
-]
+# The groups are the six guide categories, site_chrome.GUIDE_BUCKETS (2026-10-01): the same list the nav's Guides panel
+# reads, so the panel, the phone menu and this page cannot disagree.
 
 
 def guide_groups(pages):
-    """[(key, (h2_en, h2_he), [guide page])] for /guide/: GUIDE_GROUPS filled with the built guides that have a card."""
+    """[(key, (h2_en, h2_he), [guide page])] for /guide/: sc.GUIDE_BUCKETS filled with the built guides that have a card."""
     gs = {p["slug"]: p for p in pages if p["section"] == "guide" and sc.guide_cardable(p) and not check(p, "")}
-    every = {p["slug"] for p in pages if p["section"] == "guide"}
-    named = [s for _, _, slugs in GUIDE_GROUPS for s in slugs]
-    twice = sorted({s for s in named if named.count(s) > 1})
-    unknown = [s for s in named if s not in every]
-    missing = sorted(s for s in gs if s not in named)
-    if twice or unknown or missing:
-        sys.exit(f"build-site-pages: GUIDE_GROUPS out of step with content/pages: in two groups {twice}, not a guide page "
-                 f"{unknown}, in no group {missing}")
-    return [(k, h2, [gs[s] for s in slugs if s in gs]) for k, h2, slugs in GUIDE_GROUPS]
+    sc.guide_buckets_check({p["slug"] for p in pages if p["section"] == "guide"})
+    return [(k, h2, [gs[s] for s in slugs if s in gs]) for k, h2, _, slugs in sc.GUIDE_BUCKETS]
+
+
+# The category bar's script: --nav-h follows the nav's real height (the bar sticks right under it), and an
+# IntersectionObserver over the groups underlines the group being read (the last one whose heading has passed 40% of
+# the screen, the last group at the very bottom), scrolling the bar sideways on a phone to keep it in view.
+GUIDE_BAR_JS = '''<script>
+(function () {
+  var bar = document.querySelector('.gbar'), nav = document.querySelector('.nav');
+  if (!bar) { return; }
+  var strip = bar.querySelector('.gbar-in');
+  var links = Array.prototype.slice.call(bar.querySelectorAll('a'));
+  var groups = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  var root = document.documentElement, current = null;
+  function navH() { if (nav) { root.style.setProperty('--nav-h', Math.round(nav.getBoundingClientRect().height) + 'px'); } }
+  function pick() {
+    var line = window.innerHeight * 0.4, on = -1;
+    groups.forEach(function (g, i) { if (g && (g.querySelector('.head') || g).getBoundingClientRect().top <= line) { on = i; } });
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) { on = groups.length - 1; }
+    if (bar.getBoundingClientRect().top > (nav ? nav.getBoundingClientRect().height : 0) + 1) { on = -1; }
+    var a = on >= 0 ? links[on] : null;
+    if (a === current) { return; }
+    links.forEach(function (l) { l.classList.toggle('on', l === a); if (l === a) { l.setAttribute('aria-current', 'true'); } else { l.removeAttribute('aria-current'); } });
+    current = a;
+    if (a && strip.scrollWidth > strip.clientWidth) {
+      var ar = a.getBoundingClientRect(), sr = strip.getBoundingClientRect();
+      strip.scrollBy({ left: (ar.left + ar.width / 2) - (sr.left + sr.width / 2), behavior: 'smooth' });
+    }
+  }
+  navH();
+  window.addEventListener('resize', function () { navH(); pick(); });
+  if ('IntersectionObserver' in window) {
+    var steps = []; for (var i = 0; i <= 20; i++) { steps.push(i / 20); }
+    var io = new IntersectionObserver(pick, { threshold: steps });
+    groups.forEach(function (g) { if (g) { io.observe(g); } });
+    io.observe(bar);
+  }
+  window.addEventListener('scroll', function () { if (!('IntersectionObserver' in window)) { pick(); } }, { passive: true });
+  window.addEventListener('load', function () { navH(); pick(); });
+  pick();
+})();
+</script>'''
 
 
 def render_guide_index(pages):
@@ -668,9 +693,14 @@ def render_guide_index(pages):
   {sc.gcards(gs, described=True)}
 </section>
 ''' for k, h2, gs in groups)
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"])) + sections  # the footer carries the closing line
+    tabs = "".join(f'<a href="#{k}">{T(*h2)}</a>' for k, h2, _ in groups)
+    gbar = f'''<nav class="gbar" aria-labelledby="gbar-l"><span class="vh" id="gbar-l">{T('Guide categories', 'קטגוריות המדריכים')}</span>
+  <div class="gbar-in wrap">{tabs}</div>
+</nav>
+'''
+    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"])) + gbar + sections  # the footer carries the closing line
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail()), len(listed)
+            + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
 
 def who_row(section):

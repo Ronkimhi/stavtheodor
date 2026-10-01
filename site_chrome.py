@@ -342,7 +342,8 @@ def nav(home=False, own=None, sub=None):
     (Ron, 2026-09-29). It sits inside the wordmark so it lines up with it and stacks above the WebGL canvas;
     WM_SUB_JS shows it between the first fold and the black intro block."""
     own = own or {}
-    links = ''.join(f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>' for h, en, he in NAV_ITEMS)
+    links = ''.join(guides_dd(h) if h == GUIDES_INDEX else f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>'
+                    for h, en, he in NAV_ITEMS)
     wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA{wm_sub}</a>
@@ -770,6 +771,55 @@ PAGE_JS = '''<script>
     });
     document.querySelectorAll('#links a').forEach(function (a) { a.addEventListener('click', function () { document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded', 'false'); }); });
   }
+  /* The Guides item (site_chrome.guides_dd): from 901px up the panel opens on hover (with a short grace period, so
+     the pointer can travel from the link to the panel), on keyboard focus of the link and on the toggle; Escape,
+     a click outside or focus leaving it closes it. In the phone menu the toggle shows the six category names. */
+  var dd = document.getElementById('nav-guides');
+  if (dd) {
+    var ddTop = dd.querySelector('.dd-top'), ddBtn = dd.querySelector('.dd-btn');
+    var wide = window.matchMedia('(min-width: 901px)'), canHover = window.matchMedia('(hover: hover)');
+    var ddTimer = null, ddPinned = false, ddHold = false;
+    var ddSet = function (open) {
+      clearTimeout(ddTimer);
+      if (!open) { ddPinned = false; }
+      dd.classList.toggle('open', open);
+      ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (nav) { nav.classList.toggle('dd-open', open && wide.matches); }
+    };
+    var ddIsOpen = function () { return dd.classList.contains('open'); };
+    dd.addEventListener('mouseenter', function () {
+      if (wide.matches && canHover.matches) { clearTimeout(ddTimer); if (!ddIsOpen()) { ddSet(true); } }
+    });
+    dd.addEventListener('mouseleave', function () {
+      if (wide.matches && canHover.matches && !ddPinned) { clearTimeout(ddTimer); ddTimer = setTimeout(function () { ddSet(false); }, 240); }
+    });
+    ddTop.addEventListener('focus', function () { if (wide.matches && !ddHold) { ddSet(true); } });
+    ddBtn.addEventListener('click', function () {
+      if (ddIsOpen() && !ddPinned && wide.matches && canHover.matches) { ddPinned = true; return; }
+      var open = !ddIsOpen();
+      ddSet(open);
+      ddPinned = open;
+    });
+    dd.addEventListener('focusout', function (e) {
+      if (!e.relatedTarget || !dd.contains(e.relatedTarget)) { ddHold = false; if (wide.matches) { ddSet(false); } }
+    });
+    dd.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && ddIsOpen()) {
+        e.stopPropagation();
+        ddSet(false);
+        ddHold = true;
+        if (dd.contains(document.activeElement)) { ddTop.focus(); }
+      } else if (e.key === 'ArrowDown' && wide.matches && (e.target === ddTop || e.target === ddBtn)) {
+        e.preventDefault();
+        ddSet(true);
+        var first = dd.querySelector('.dd-panel a');
+        if (first) { first.focus(); }
+      }
+    });
+    document.addEventListener('click', function (e) { if (ddIsOpen() && !dd.contains(e.target)) { ddSet(false); } });
+    var ddReset = function () { ddSet(false); };
+    if (wide.addEventListener) { wide.addEventListener('change', ddReset); } else if (wide.addListener) { wide.addListener(ddReset); }
+  }
   var cols = document.querySelectorAll('.cols .col');
   cols.forEach(function (c) {
     c.addEventListener('mouseenter', function () { cols.forEach(function (o) { o.classList.toggle('open', o === c); }); });
@@ -1096,6 +1146,86 @@ GUIDE_PATH = re.compile(r'^guide/[a-z0-9]+(?:-[a-z0-9]+)*$')
 GUIDES_MAX = 6
 GUIDES_ALL = ('All guides', 'כל המדריכים')
 GUIDES_INDEX = '/guide/'  # the guides index (build-site-pages.py, GUIDE_INDEX, 2026-10-01): every "All guides" arrow goes there
+
+# The six guide categories (2026-10-01): one list decides which category a guide is in and its place there, for the
+# nav's Guides panel, the phone menu and the groups on /guide/ (build-site-pages.py). Each entry: the anchor on
+# /guide/ (/guide/#<key>), the name twin, the panel column (1 to 3, top to bottom inside it) and the guide slugs in
+# display order. A new guide goes into exactly one tuple: the build stops on a guide in none, in two, or a slug with
+# no guide page. A guide shows as its crumb_en/crumb_he (its short name), else its title.
+GUIDE_BUCKETS = [
+    ('home', ('For the home', 'לבית'), 1,
+     ('how-to-choose-art-for-your-home', 'living-room-art', 'dining-room-art', 'art-above-bed', 'art-above-couch',
+      'entryway-art', 'gallery-wall-ideas', 'large-wall-art-ideas', 'art-for-a-small-apartment', 'art-for-home-staging')),
+    ('offices', ('Offices and practices', 'משרדים ומרפאות'), 2,
+     ('office-wall-art', 'buy-lease-or-commission-office-art', 'law-office-art', 'financial-advisor-office-art',
+      'medical-office-wall-art', 'dental-office-decor')),
+    ('hospitality', ('Hospitality', 'מלונות ומסעדות'), 3,
+     ('hotel-artwork', 'restaurant-wall-decor')),
+    ('designers', ('For designers and builders', 'למעצבים ולקבלנים'), 3,
+     ('art-sourcing-for-interior-designers', 'planning-art-in-construction-drawings')),
+    ('advisory', ('How advisory works', 'איך עובד ייעוץ אמנות'), 2,
+     ('art-advisor-vs-art-consultant', 'ten-questions-before-you-buy-your-first-serious-artwork')),
+    ('hanging', ('Hanging, lighting and care', 'תלייה, תאורה וטיפול'), 3,
+     ('how-to-hang-pictures',)),
+]
+GUIDES_PANEL_LINE = ('Guides to choosing and placing art', 'מדריכים לבחירת אמנות ולמיקומה')  # the /guide/ h1
+_guide_pages = None
+
+
+def guide_pages():
+    """{slug: page JSON} for every content/pages guide (section guide), read once."""
+    global _guide_pages
+    if _guide_pages is None:
+        _guide_pages = {}
+        folder = rel('content', 'pages')
+        for name in sorted(os.listdir(folder)):
+            if name.endswith('.json'):
+                with open(os.path.join(folder, name), encoding='utf-8') as f:
+                    d = json.load(f)
+                if isinstance(d, dict) and d.get('section') == 'guide' and isinstance(d.get('path'), str):
+                    _guide_pages[d['path'].strip('/').split('/')[-1]] = d
+    return _guide_pages
+
+
+def guide_buckets_check(slugs):
+    """Stop the build unless every guide slug sits in exactly one GUIDE_BUCKETS entry and every listed slug is a guide."""
+    named = [s for _, _, _, ss in GUIDE_BUCKETS for s in ss]
+    twice = sorted({s for s in named if named.count(s) > 1})
+    unknown = [s for s in named if s not in slugs]
+    missing = sorted(s for s in slugs if s not in named)
+    if twice or unknown or missing:
+        raise SystemExit(f'GUIDE_BUCKETS (site_chrome.py) out of step with content/pages: in two categories {twice}, '
+                         f'not a guide page {unknown}, in no category {missing}')
+
+
+def guide_menu():
+    """[(key, (name_en, name_he), column, [(href, short_en, short_he)])] for the nav's Guides panel and phone menu."""
+    gp = guide_pages()
+    guide_buckets_check(set(gp))
+    return [(k, names, col, [('/' + gp[s]['path'].strip('/') + '/', gp[s].get('crumb_en') or gp[s]['title_en'],
+                              gp[s].get('crumb_he') or gp[s]['title_he']) for s in ss])
+            for k, names, col, ss in GUIDE_BUCKETS]
+
+
+def guides_dd(href):
+    """The nav's Guides item (2026-10-01): the link to /guide/, a small toggle, the desktop panel (the six categories in
+    three columns, each with its guides' short names, and All guides at the foot) and the phone menu's list of the six
+    category names, each to its group on /guide/. PAGE_JS opens it on hover, on focus of the link and on the toggle,
+    and Escape closes it; css/theme.css shows the panel from 901px up and the list in the phone menu."""
+    cols = {1: [], 2: [], 3: []}
+    subs = ''
+    for key, names, col, guides in guide_menu():
+        items = ''.join(f'<li><a href="{u}">{T(H.escape(en), H.escape(he))}</a></li>' for u, en, he in guides)
+        cols[col].append(f'<div class="dd-group"><a class="dd-h" href="{GUIDES_INDEX}#{key}">{T(*names)}</a><ul>{items}</ul></div>')
+        subs += f'<a href="{GUIDES_INDEX}#{key}">{T(*names)}</a>'
+    panel = ''.join(f'<div class="dd-col">{"".join(v)}</div>' for v in cols.values())
+    return (f'<div class="nav-dd" id="nav-guides"><a class="dd-top" href="{href}">{T("Guides", "מדריכים")}</a>'
+            f'<button type="button" class="dd-btn" aria-expanded="false" aria-controls="guides-panel guides-sub">'
+            f'<span class="vh">{T("Guide categories", "קטגוריות המדריכים")}</span></button>'
+            f'<div class="dd-panel" id="guides-panel"><div class="dd-inner">'
+            f'<p class="dd-line serif">{T(*GUIDES_PANEL_LINE)}</p><div class="dd-cols">{panel}</div>'
+            f'<div class="dd-foot"><a class="arrow" href="{GUIDES_INDEX}"><span class="ln"></span>{T(*GUIDES_ALL)}</a></div>'
+            f'</div></div><div class="dd-sub" id="guides-sub">{subs}</div></div>')
 
 
 def svg_dims(src):
