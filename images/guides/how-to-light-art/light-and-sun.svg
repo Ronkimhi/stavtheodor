@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<!-- scale: 4 px per in, plan -->
+<title id="t">Plan of a space with a window: the patch of direct sun crosses the floor and reaches one wall, which holds no work on paper, photograph or textile; a work on paper hangs on the shaded wall behind UV filtering glazing, and an oil painting on the far wall, out of the sun, is lit by a spot on a dimmer</title>
+<desc id="d">Plan of a space with a window: the patch of direct sun crosses the floor and reaches one wall, which holds no work on paper, photograph or textile; a work on paper hangs on the shaded wall behind UV filtering glazing, and an oil painting on the far wall, out of the sun, is lit by a spot on a dimmer</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- plan, 4 px per in: a space 240 by 156 in, window in the top wall; the sun patch falls on the floor and the right wall -->
+<rect class="ink" x="200" y="180" width="960" height="624"/>
+<line class="soft" x1="500" y1="170" x2="800" y2="170"/>
+<line class="soft" x1="500" y1="190" x2="800" y2="190"/>
+<path class="lead" d="M500 180 L800 180 L1160 510 L1160 700 L920 700 Z"/>
+<line class="lead" x1="550" y1="180" x2="770" y2="510"/>
+<line class="lead" x1="600" y1="180" x2="820" y2="510"/>
+<line class="lead" x1="650" y1="180" x2="870" y2="510"/>
+<line class="lead" x1="700" y1="180" x2="920" y2="510"/>
+<line class="lead" x1="750" y1="180" x2="970" y2="510"/>
+<line class="lead" x1="800" y1="180" x2="1020" y2="510"/>
+<!-- the right wall inside the patch: no sensitive work; works on paper on the shaded left wall; oil on the back wall -->
+<rect class="frame" x="1146" y="540" width="10" height="120"/>
+<line class="dim" x1="1120" y1="530" x2="1190" y2="670"/>
+<line class="dim" x1="1120" y1="670" x2="1190" y2="530"/>
+<rect class="frame" x="204" y="440" width="10" height="140"/>
+<rect class="art" x="206" y="442" width="6" height="136"/>
+<rect class="frame" x="580" y="790" width="220" height="10"/>
+<rect class="art" x="582" y="792" width="216" height="6"/>
+<path class="soft" d="M682 684 L698 684 L695 691 L685 691 Z"/>
+<line class="dim" x1="690" y1="691" x2="690" y2="786"/>
+<text class="l1" x="650" y="146" text-anchor="middle">window</text>
+<text class="l1" x="960" y="560" text-anchor="middle">direct sun</text>
+<text class="l2" x="960" y="594" text-anchor="middle">no paper, photographs or textiles</text>
+<text class="l1" x="240" y="510">works on paper: shaded wall</text>
+<text class="l2" x="240" y="544">UV filtering glazing</text>
+<text class="l1" x="690" y="864" text-anchor="middle">oil or acrylic, out of the sun<tspan class="l2"> spot on a dimmer</tspan></text>
+</svg>

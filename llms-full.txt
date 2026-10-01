@@ -2810,6 +2810,68 @@ A: Three pictures hung vertically are treated as one work. Keep the same gap bet
 Q: What is the toothpaste trick for hanging pictures?
 A: The toothpaste trick marks the nail point: you dab a little toothpaste on the hanger on the back of the frame, press the frame against the wall where you want it, and the dab leaves a mark where the nail goes. It works, but I prefer painter's tape across the back of the frame: it gives the same marks, handles two D-rings, and puts nothing on the wall.
 
+### How to light art at home and in the office
+
+URL: https://stavtheodor.com/guide/how-to-light-art/
+
+How to light art comes down to one angle and one bulb: aim a ceiling spot or track light at the center of the work at about 30 degrees from vertical, and use a warm 2700 to 3000 K LED with a CRI of 90 or more, on a dimmer. Under a 9 foot ceiling that puts the light about 29.5 inches (75 cm) out from the wall, where reflections in the glass fall to the floor instead of into your eyes. Below: the setback for your ceiling, picture lights, how much light each medium can take, glare, and the office ceiling grid.
+
+Light decides whether a work reads as a painting or as a dark shape on the wall. That is why I plan the lighting before the hanging, not after: a spot that lands beside the work is easier to prevent than to fix.
+
+### What is the best way to light art?
+The best way to light art is in two layers: soft ambient light for the space, and an accent light on the work itself, at least three times brighter than its surroundings (Lighting Design Lab), and about five times as a common default. Get that contrast by lowering the light around the work, not by pushing more light onto it.
+30°from vertical, the aim of the light2700 to 3000Kwarm white90CRIor more, so colors read trueThe main work, usually a canvas, needs its own dimmable light. Give the art walls their own control, separate from the general lighting, so the work still reads when the rest of the space is dimmed for the evening.
+
+### Where should a ceiling spot or track light go?
+A ceiling spot or track head goes where its beam meets the center of the work at about 30 degrees from vertical. ERCO, the German lighting maker, judges 30 degrees ideal for pictures: it lights the surface evenly and sends reflections in the glass down to the floor instead of into your eyes.
+To find the spot, subtract the height of the work's center from the ceiling height and multiply by 0.58. With the center at 57 inches (145 cm), the usual hanging height explained in how to hang pictures, the setback from the wall is:
+ Closer to the wall than that, the frame throws a shadow across the top of the work. Farther out, the reflection climbs toward the eyes of anyone standing close. On a track, set the heads at the setback and aim each one at the center of its work.
+Check the beam against the width. Under a 9 foot ceiling the light travels about 59 inches (150 cm) to the work: a 24 degree beam lights a patch about 25 inches (64 cm) wide, a 36 degree beam about 38 inches (97 cm). A work wider than one patch takes two or more heads, overlapping so no seam shows.
+
+### Picture light or ceiling spot?
+A picture light suits one framed work of moderate size on a wall with no ceiling light to aim, or a traditional space where the fixture belongs to the look. A ceiling spot or track suits large works, groups, and walls where the art will change, because a head can be re-aimed and a picture light cannot move.
+Picture light makers size the light at half to two thirds of the frame's width, so a 30 inch (76 cm) frame takes a light of 15 to 20 inches (38 to 51 cm). Choose an arm long enough to send the light down the face of the work, not only across its top, and keep the lamp clear of the frame. On a tall work a picture light leaves the lower part dim, so light it from the ceiling. A hardwired picture light needs a box in the wall, which is easiest while the walls are open (see planning art in construction drawings).
+ 
+
+### Which bulb: color temperature and CRI
+Use a warm white LED between 2700 and 3000 K, with a color rendering index (CRI) of 90 or more, and make sure it dims. Museums surveyed by the US Department of Energy named 2700 and 3000 K as their targets and a CRI above 85; the same study found that damage potential rises as light gets cooler.
+ Keep every light on one wall at the same color temperature, or the white of the wall will look patched. A work reads differently by day and by night, so I check every placement in the space itself, in daylight and under the evening lighting.
+
+### How much light can a work take?
+Light damage adds up and never reverses, so the safe level depends on the medium. The Conservation Center for Art and Historic Artifacts sets 50 lux as the most for works on paper, photographs and textiles, and 150 lux for oil paintings. For scale, a living room at night is about 50 lux, an office about 400, and direct sun about 30,000 (Northeast Document Conservation Center).
+ The Northeast Document Conservation Center gives a sensitive work about 50,000 lux hours a year. Direct sun spends that in under two hours. So keep watercolors, photographs and works on paper off any wall the sun reaches, frame them behind UV filtering glass or acrylic, and rest them now and then. Ultraviolet should stay under 75 microwatts per lumen and ideally under 10: ask for the lamp's UV figure before you buy. For homes with glass walls, see what strong light does to art in a new condo.
+ 
+
+### How do you stop glare on glass?
+Glare on glass comes from the angle of the light and from what faces the work. At about 30 degrees the reflection of the spot falls to the floor; a light set far out from the wall sends it straight into the eyes of a standing viewer. Moving the head back toward the setback fixes that.
+ A window or a lit glass wall opposite the work mirrors in the glazing all day, and no spot fixes that. Frame that work behind anti reflective glass or acrylic, or hang an unglazed work there. In a Bauhaus residence in Tel Aviv, the central work is a hyper collage digital artwork printed on glossy anti reflective acrylic.
+ 
+
+### How do you light art in an office?
+In an office, light the art from the ceiling grid line nearest the 30 degree setback, with adjustable track or spots rather than the fixed fittings in the tiles, and put the art on its own circuit. A suspended ceiling usually runs on a 24 inch (61 cm) grid. Under a 9 foot ceiling the setback is about 29.5 inches, between two lines: the line 24 inches from the wall aims at about 25 degrees, close enough, while the line at 48 inches aims at about 43 degrees, too shallow. Take the line nearer the wall.
+ An office runs at about 400 lux, so an accent three times brighter cannot stay inside a 150 lux limit, let alone 50. On a bright open office wall I would hang oil, acrylic, metal, ceramic or glass, keep works on paper and photographs for spaces with their own dimming, such as a private office or a meeting space, and let a work's own contrast against its wall carry part of the job.
+Tell the electrician or lighting designer which walls are art walls before the ceiling layout is fixed. I have my own installation team and install after hours, so the office keeps working. For choosing the work itself, see office wall art, and for how I work with companies, art for an office or business.
+
+### Light as part of the plan
+Framing, installation and light belong to one plan, and I manage production, framing and installation through to the work on the wall (see framing and installing large scale art). I am based in Tenafly, New Jersey, and I work with clients anywhere, in person or online (see art curator in New Jersey).
+
+Questions:
+
+Q: What color temperature is best for lighting art?
+A: Warm white between 2700 and 3000 K suits most art. Museums surveyed by the US Department of Energy named 2700 and 3000 K as their targets, and warmer light carries less damage potential than cool light. Pair it with a color rendering index of 90 or more so colors read true, and keep every light on the same wall at one color temperature. I check the choice on the wall in daylight and in the evening, because the same work reads differently under each.
+
+Q: How far from the wall should track lighting be for art?
+A: Far enough that the beam meets the center of the work at about 30 degrees from vertical. Subtract the center height from the ceiling height and multiply by 0.58. With the center at 57 inches (145 cm), that is about 22.5 inches (57 cm) from the wall under an 8 foot ceiling, 29.5 inches (75 cm) under 9 feet and 36.5 inches (92 cm) under 10 feet. Closer, the frame casts a shadow; farther, the reflection moves toward the viewer's eyes.
+
+Q: What size picture light do I need?
+A: Picture light makers size the light at half to two thirds of the frame's width, so a 30 inch (76 cm) frame takes a light of about 15 to 20 inches (38 to 51 cm), with wider frames toward the larger end. A picture light lights the upper part of a work best, so for a tall canvas or a large work, a ceiling spot or several track heads give more even light.
+
+Q: Are LED lights safe for paintings?
+A: Museums have been moving their galleries to LED, but safe depends on the level, the hours and the lamp. Keep oil paintings at or under 150 lux and works on paper, photographs and textiles at or under 50, check the lamp's ultraviolet figure against the conservation limit of 75 microwatts per lumen, and put the light on a dimmer. Keep the lamp clear of the frame, and keep sensitive work out of direct sun, which is far stronger than any lamp.
+
+Q: Should art lights be on a dimmer?
+A: Yes. A dimmer is how you hold a sensitive work at its light limit and how you keep the art readable when the rest of the space is low in the evening. The main work, usually a canvas, needs its own dimmable light, and the art walls work best on their own control, separate from the general lighting. Check that the LED lamp and the dimmer are rated to work together, or the light may flicker.
+
 ### Large wall art ideas: how to fill a big wall
 
 URL: https://stavtheodor.com/guide/large-wall-art-ideas/

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<!-- scale: 5 px per in, three side sections, floor at y 780 -->
+<title id="t">Three side sections with the center of a work at 57 inches, 145 centimeters: under an 8 foot ceiling the spot sits 22.5 inches, 57 centimeters, from the wall; under 9 feet, 29.5 inches, 75 centimeters; under 10 feet, 36.5 inches, 92 centimeters</title>
+<desc id="d">Three side sections with the center of a work at 57 inches, 145 centimeters: under an 8 foot ceiling the spot sits 22.5 inches, 57 centimeters, from the wall; under 9 feet, 29.5 inches, 75 centimeters; under 10 feet, 36.5 inches, 92 centimeters</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- three side sections, center 57 in (y 495); ceilings 96, 108, 120 in -->
+<!-- 8 ft ceiling: setback 22.52 in, spot x 367.4 -->
+<line class="ink" x1="80" y1="780" x2="480" y2="780"/>
+<line class="ink" x1="80" y1="300" x2="480" y2="300"/>
+<line class="ink" x1="480" y1="300" x2="480" y2="780"/>
+<rect class="frame" x="472" y="420" width="8" height="150"/>
+<rect class="art" x="474" y="422" width="4" height="146"/>
+<path class="soft" d="M359.4 300 L375.4 300 L372.4 307 L362.4 307 Z"/>
+<line class="dim" x1="367.4" y1="307" x2="472" y2="495"/>
+<line class="eye" x1="367.4" y1="307" x2="367.4" y2="410"/>
+<line class="dim" x1="367.4" y1="330" x2="480" y2="330"/>
+<line class="dim" x1="367.4" y1="322" x2="367.4" y2="338"/>
+<line class="dim" x1="480" y1="322" x2="480" y2="338"/>
+<text class="l1" x="280" y="278" text-anchor="middle">22.5 in<tspan class="l2"> (57 cm)</tspan></text>
+<text class="l2" x="90" y="824">8 ft (244 cm) ceiling</text>
+<line class="eye" x1="80" y1="495" x2="468" y2="495"/>
+<!-- 9 ft ceiling: setback 29.44 in, spot x 852.8 -->
+<line class="ink" x1="600" y1="780" x2="1000" y2="780"/>
+<line class="ink" x1="600" y1="240" x2="1000" y2="240"/>
+<line class="ink" x1="1000" y1="240" x2="1000" y2="780"/>
+<rect class="frame" x="992" y="420" width="8" height="150"/>
+<rect class="art" x="994" y="422" width="4" height="146"/>
+<path class="soft" d="M844.8 240 L860.8 240 L857.8 247 L847.8 247 Z"/>
+<line class="dim" x1="852.8" y1="247" x2="992" y2="495"/>
+<line class="eye" x1="852.8" y1="247" x2="852.8" y2="350"/>
+<line class="dim" x1="852.8" y1="270" x2="1000" y2="270"/>
+<line class="dim" x1="852.8" y1="262" x2="852.8" y2="278"/>
+<line class="dim" x1="1000" y1="262" x2="1000" y2="278"/>
+<text class="l1" x="800" y="218" text-anchor="middle">29.5 in<tspan class="l2"> (75 cm)</tspan></text>
+<text class="l2" x="610" y="824">9 ft (274 cm) ceiling</text>
+<line class="eye" x1="600" y1="495" x2="988" y2="495"/>
+<!-- 10 ft ceiling: setback 36.37 in, spot x 1338.1 -->
+<line class="ink" x1="1120" y1="780" x2="1520" y2="780"/>
+<line class="ink" x1="1120" y1="180" x2="1520" y2="180"/>
+<line class="ink" x1="1520" y1="180" x2="1520" y2="780"/>
+<rect class="frame" x="1512" y="420" width="8" height="150"/>
+<rect class="art" x="1514" y="422" width="4" height="146"/>
+<path class="soft" d="M1330.1 180 L1346.1 180 L1343.1 187 L1333.1 187 Z"/>
+<line class="dim" x1="1338.1" y1="187" x2="1512" y2="495"/>
+<line class="eye" x1="1338.1" y1="187" x2="1338.1" y2="290"/>
+<line class="dim" x1="1338.1" y1="210" x2="1520" y2="210"/>
+<line class="dim" x1="1338.1" y1="202" x2="1338.1" y2="218"/>
+<line class="dim" x1="1520" y1="202" x2="1520" y2="218"/>
+<text class="l1" x="1320" y="158" text-anchor="middle">36.5 in<tspan class="l2"> (92 cm)</tspan></text>
+<text class="l2" x="1130" y="824">10 ft (305 cm) ceiling</text>
+<line class="eye" x1="1120" y1="495" x2="1508" y2="495"/>
+<text class="l2" x="80" y="481">center 57 in (145 cm)</text>
+</svg>

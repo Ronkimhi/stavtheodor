@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-labelledby="t d">
+<!-- scale: not to scale in inches; two linear scales, 2000 to 6500 K and CRI 70 to 100 -->
+<title id="t">Two scales: color temperature from 2700 to 6500 K, with the band from 2700 to 3000 K marked for art and 4000 K and above marked cool white; and color rendering from CRI 70 to 100, with CRI 90 or more marked</title>
+<desc id="d">Two scales: color temperature from 2700 to 6500 K, with the band from 2700 to 3000 K marked for art and 4000 K and above marked cool white; and color rendering from CRI 70 to 100, with CRI 90 or more marked</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- color temperature scale 2000 to 6500 K on x 160 to 1440; CRI scale 70 to 100 on x 160 to 1440 -->
+<line class="ink" x1="160" y1="230" x2="1440" y2="230"/>
+<rect class="dim" x="359.1" y="202" width="85.3" height="56"/>
+<line class="ink" x1="359.1" y1="218" x2="359.1" y2="242"/>
+<text class="l2" x="353.1" y="290" text-anchor="end">2700 K</text>
+<line class="ink" x1="444.4" y1="218" x2="444.4" y2="242"/>
+<text class="l2" x="450.4" y="290">3000 K</text>
+<line class="ink" x1="728.9" y1="218" x2="728.9" y2="242"/>
+<text class="l2" x="728.9" y="290" text-anchor="middle">4000 K</text>
+<line class="ink" x1="1013.3" y1="218" x2="1013.3" y2="242"/>
+<text class="l2" x="1013.3" y="290" text-anchor="middle">5000 K</text>
+<line class="ink" x1="1440" y1="218" x2="1440" y2="242"/>
+<text class="l2" x="1440" y="290" text-anchor="middle">6500 K</text>
+<text class="l1" x="401.8" y="166" text-anchor="middle">art: 2700 to 3000 K</text>
+<text class="l1" x="1084.4" y="200" text-anchor="middle">cool white</text>
+<text class="l2" x="160" y="200">warmer</text>
+<text class="l2" x="1440" y="200" text-anchor="end">cooler</text>
+<line class="ink" x1="160" y1="520" x2="1440" y2="520"/>
+<rect class="dim" x="1013.3" y="492" width="426.7" height="56"/>
+<line class="ink" x1="160" y1="508" x2="160" y2="532"/>
+<text class="l2" x="160" y="580" text-anchor="middle">CRI 70</text>
+<line class="ink" x1="586.7" y1="508" x2="586.7" y2="532"/>
+<text class="l2" x="586.7" y="580" text-anchor="middle">CRI 80</text>
+<line class="ink" x1="800" y1="508" x2="800" y2="532"/>
+<text class="l2" x="800" y="580" text-anchor="middle">CRI 85</text>
+<line class="ink" x1="1013.3" y1="508" x2="1013.3" y2="532"/>
+<text class="l2" x="1013.3" y="580" text-anchor="middle">CRI 90</text>
+<line class="ink" x1="1440" y1="508" x2="1440" y2="532"/>
+<text class="l2" x="1440" y="580" text-anchor="middle">CRI 100</text>
+<text class="l1" x="1226.7" y="456" text-anchor="middle">CRI 90 or more</text>
+<text class="l1" x="160" y="456">color rendering</text>
+<text class="l1" x="160" y="120">color temperature</text>
+</svg>

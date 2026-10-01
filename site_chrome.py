@@ -1166,7 +1166,7 @@ GUIDE_BUCKETS = [
     ('advisory', ('How advisory works', 'איך עובד ייעוץ אמנות'), 2,
      ('art-advisor-vs-art-consultant', 'ten-questions-before-you-buy-your-first-serious-artwork')),
     ('hanging', ('Hanging, lighting and care', 'תלייה, תאורה וטיפול'), 3,
-     ('how-to-hang-pictures',)),
+     ('how-to-hang-pictures', 'how-to-light-art')),
 ]
 GUIDES_PANEL_LINE = ('Guides to choosing and placing art', 'מדריכים לבחירת אמנות ולמיקומה')  # the /guide/ h1
 _guide_pages = None

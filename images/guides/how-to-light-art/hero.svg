@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<!-- scale: 6 px per in, side section, floor at y 880 -->
+<title id="t">Side section of a framed work on a wall under a 9 foot ceiling: a ceiling spot 29.5 inches, 75 centimeters, out from the wall aims at the center of the work at 57 inches, 145 centimeters, at about 30 degrees from vertical, and the reflection in the glass falls to the floor in front of a standing viewer</title>
+<desc id="d">Side section of a framed work on a wall under a 9 foot ceiling: a ceiling spot 29.5 inches, 75 centimeters, out from the wall aims at the center of the work at 57 inches, 145 centimeters, at about 30 degrees from vertical, and the reflection in the glass falls to the floor in front of a standing viewer</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:46px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+    .lead{stroke-width:2.5}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- side section, floor y 880, ceiling 108 in at y 232, wall face x 1000; work 36 in tall, 39 to 75 in, center 57 in -->
+<line class="ink" x1="100" y1="880" x2="1000" y2="880"/>
+<line class="ink" x1="100" y1="232" x2="1000" y2="232"/>
+<line class="ink" x1="1000" y1="232" x2="1000" y2="880"/>
+<rect class="frame" x="991" y="430" width="9" height="216"/>
+<rect class="art" x="993" y="432" width="5" height="212"/>
+<!-- spot at 29.44 in from the wall face, x 823.3; center ray to the glass at 57 in -->
+<path class="soft" d="M815.3 232 L831.3 232 L828.3 239 L818.3 239 Z"/>
+<line class="dim" x1="823.3" y1="239" x2="991" y2="430"/>
+<line class="dim" x1="823.3" y1="239" x2="991" y2="646"/>
+<line class="lead" x1="823.3" y1="239" x2="991" y2="538"/>
+<!-- center ray 29.3 degrees from vertical; its mirror off the glass reaches the floor -->
+<line class="dim" x1="991" y1="538" x2="799.2" y2="880"/>
+<line class="eye" x1="823.3" y1="239" x2="823.3" y2="382"/>
+<path class="dim" d="M823.3 349 A110 110 0 0 0 877.1 334.9"/>
+<circle class="soft" cx="496" cy="529" r="26"/>
+<line class="soft" x1="496" y1="555" x2="496" y2="753.6"/>
+<line class="soft" x1="496" y1="753.6" x2="467.4" y2="880"/>
+<line class="soft" x1="496" y1="753.6" x2="524.6" y2="880"/>
+<line class="soft" x1="496" y1="569.3" x2="457" y2="758.8"/>
+<line class="soft" x1="496" y1="569.3" x2="535" y2="758.8"/>
+<!-- eye band 57 and 60 in -->
+<line class="eye" x1="560" y1="538" x2="990" y2="538"/>
+<line class="eye" x1="560" y1="520" x2="990" y2="520"/>
+<line class="dim" x1="823.3" y1="198" x2="1000" y2="198"/>
+<line class="dim" x1="823.3" y1="190" x2="823.3" y2="206"/>
+<line class="dim" x1="1000" y1="190" x2="1000" y2="206"/>
+<line class="dim" x1="1060" y1="232" x2="1060" y2="880"/>
+<line class="dim" x1="1052" y1="232" x2="1068" y2="232"/>
+<line class="dim" x1="1052" y1="880" x2="1068" y2="880"/>
+<line class="dim" x1="1030" y1="538" x2="1030" y2="880"/>
+<line class="dim" x1="1022" y1="538" x2="1038" y2="538"/>
+<line class="dim" x1="1022" y1="880" x2="1038" y2="880"/>
+<text class="l1" x="799.3" y="266" text-anchor="end">ceiling spot or track</text>
+<text class="l1" x="799.3" y="382" text-anchor="end">about 30°</text>
+<text class="l1" x="911.7" y="176" text-anchor="middle">29.5 in<tspan class="l2"> (75 cm)</tspan></text>
+<text class="l1" x="1080" y="560">9 ft<tspan class="l2"> (274 cm)</tspan></text>
+<text class="l1" x="1080" y="760">center 57 in<tspan class="l2"> (145 cm)</tspan></text>
+<text class="l1" x="779.2" y="930" text-anchor="middle">reflection falls to the floor</text>
+</svg>
