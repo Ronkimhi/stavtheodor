@@ -52,7 +52,7 @@ Every post goes to both channels:
    - Save it to `B-brain/04-published/01-whatsapp/YYYY-MM-DD-[slug].md` (Published Posts Protocol)
    - Add it to `content/posts.html` at the **top**, right under the `POST TEMPLATE` comment. Never to `index.html`: it is generated, and the build refuses to run while a post is in it.
 4. Run `python3 build.py`. This regenerates the post's own page `radar/<slug>/index.html`, the archive `radar/index.html`, the homepage (its timeline shows the six newest posts), and `sitemap.xml`, and points the post's JSON-LD `url` / `mainEntityOfPage` at its real permalink.
-5. **Update `llms.txt`, `agent.txt` and `answers.md` by hand.** The build does not touch them. Use the real `/radar/<slug>/` permalink, never a `#slug` anchor. These are what AI crawlers read to cite the site.
+5. **Update `llms.txt` and `answers.md` by hand.** The build does not touch them, and `agent.txt` (a short fact sheet) has no post list. Use the real `/radar/<slug>/` permalink, never a `#slug` anchor. These are what AI crawlers read to cite the site.
 6. Commit and push (see Hosting above)
 
 ## Adding photos to a post

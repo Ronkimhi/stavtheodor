@@ -855,7 +855,7 @@ def render_about(pages):
     <p class="serif ah-line">{T(*line)}</p>
     <h1 class="ah-h1">{T(*ABOUT["h1"])}</h1>
     <p class="ah-lead">{T(lead_en, lead_he)}</p>
-    <p class="about-sig"><span class="nm">{T('Stav Theodor&#8209;Kimhi', 'סתיו תאודור&#8209;קמחי')}</span><span class="role">{T('Founder, art curator and advisor', 'מייסדת, אוצרת ויועצת אמנות')}</span></p>
+    <p class="about-sig"><span class="nm">{T('Stav Theodor', 'סתיו תאודור')}</span><span class="role">{T('Founder, art curator and advisor', 'מייסדת, אוצרת ויועצת אמנות')}</span></p>
   </div>
 </header>
 

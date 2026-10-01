@@ -45,7 +45,7 @@ DESCRIPTION = 'Stav Theodor, art advisor and consultant in Tenafly, NJ. Art for 
 OG_TITLE = 'THEODORA · Art advisor in New Jersey and NYC'
 OG_DESC = DESCRIPTION
 OG_IMAGE = SITE + '/og-home.jpg'
-OG_IMAGE_ALT = 'Stav Theodor-Kimhi, art curator, beside the THEODORA mark'
+OG_IMAGE_ALT = 'Stav Theodor, art curator, beside the THEODORA mark'
 
 
 def preload(before, after):

@@ -11,7 +11,7 @@ Self-contained instructions for an AI agent adding a new "Art Radar" post to Sta
 - **One file, one source of truth for posts:** `content/posts.html`. Every Art Radar post lives there, newest first. No framework, no npm: three small Python scripts render the site.
 - **`index.html` is GENERATED.** The homepage is rendered by `build-home.py` from `templates/home.html` and the data in `content/`. Never add a post to `index.html`, never edit `index.html` by hand: the build overwrites it, and it refuses to run while a post `<article>` is in it.
 - **Other generated files (do not hand-edit):** `radar/<slug>/index.html` (one standalone permalink page per post), `radar/index.html` (the archive of every post), `sitemap.xml`, and the advisory/projects/partner/guide pages. If you edit them by hand your changes will be silently overwritten next time someone runs the build.
-- **Hand-maintained alongside the posts:** `llms.txt`, `agent.txt` and `answers.md` (curated, human/LLM-readable summaries, the build does NOT touch these, you must update them yourself, see Step 4).
+- **Hand-maintained alongside the posts:** `llms.txt` and `answers.md` (curated, human/LLM-readable summaries, the build does NOT touch these, you must update them yourself, see Step 4). `agent.txt` is a short fact sheet about the business with no post list: a new post does not change it.
 - Live at **https://stavtheodor.com** (`www` redirects to the apex). Hosted free on **GitHub Pages**, auto-deploys on every push to `main`.
 
 ---
@@ -188,7 +188,7 @@ It does NOT add any visible "Permalink" link to the post cards. Those were remov
 
 ---
 
-## 4. Update `llms.txt` and `agent.txt` (the build script does NOT do this)
+## 4. Update `llms.txt` and `answers.md` (the build script does NOT do this)
 
 These two files are curated, hand-maintained summaries that AI crawlers (ChatGPT, Claude, Perplexity, etc.) read to understand and cite the site. They must be updated manually for every new post, using the **real permalink** (not an anchor fragment):
 
@@ -198,13 +198,9 @@ These two files are curated, hand-maintained summaries that AI crawlers (ChatGPT
 - [{{English headline}}](https://stavtheodor.com/radar/{{slug}}/): {{Month D, YYYY}}. {{1-sentence English summary}}
 ```
 
-**In `agent.txt`**, under the matching `## Recent Posts` month heading (add a new month heading if needed), add:
+**In `answers.md`**, under `### Art Radar posts`, add the same line at the top of the list.
 
-```
-- {{English headline}} ({{1-sentence summary}}, {{key dates}}): https://stavtheodor.com/radar/{{slug}}/
-```
-
-Also bump the "Structured Data Available" / archive references if you added a new venue not already listed in `agent.txt`'s "Venues Covered" section.
+`agent.txt` has no post list since 2026-10-01: leave it alone. No line in llms.txt, answers.md or agent.txt addresses AI tools, assistants, agents or crawlers: describe the post, never instruct the reader. Write the name as Stav Theodor.
 
 **Do not use `stavtheodor.com/#slug` (anchor) URLs in these two files**, only the real `/radar/slug/` permalinks. That was a stale pattern from before the permalink system existed; keep it fixed going forward.
 
@@ -267,7 +263,7 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
    - NEVER into index.html (generated; the build stops if a post is there)
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
 3. python3 build.py
-4. Update llms.txt, agent.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
+4. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 5. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
 6. gh auth status  →  confirm active account = Ronkimhi
 7. git add -A && git commit -m "Add post: ..." && git push origin main

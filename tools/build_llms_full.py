@@ -32,7 +32,7 @@ def main():
     pages = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(ROOT, "content/pages/*.json")))]
     out = ["# THEODORA Art Advisory by Stav Theodor: full text of the advisory pages and guides", "",
            "> The English text of every advisory, local, partner, guide and project page on stavtheodor.com, "
-           "for AI assistants. The curated map is https://stavtheodor.com/llms.txt; short answers are in "
+           "in one plain file. The curated map is https://stavtheodor.com/llms.txt; short answers are in "
            "https://stavtheodor.com/answers.md. Each page is bilingual (English and Hebrew) at the URL given. "
            "THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with "
            "Theadora Art Advisory (Los Angeles) or TSG Art Advisory. Contact: stav@stavtheodor.com, (201) 351-8367.", ""]

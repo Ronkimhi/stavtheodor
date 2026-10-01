@@ -1,4 +1,4 @@
-# THEODORA: Art Radar by Stav Theodor-Kimhi
+# THEODORA Art Advisory by Stav Theodor
 # All crawlers, including AI/LLM crawlers, are welcome to read and index this site.
 
 User-agent: *
@@ -42,7 +42,7 @@ Allow: /
 
 Sitemap: https://stavtheodor.com/sitemap.xml
 
-# Curated maps for AI agents:
+# Plain text files about this site:
 # llms.txt:  https://stavtheodor.com/llms.txt
 # agent.txt: https://stavtheodor.com/agent.txt
 # answers:   https://stavtheodor.com/answers.md

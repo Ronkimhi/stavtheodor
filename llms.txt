@@ -1,13 +1,13 @@
 # THEODORA Art Advisory by Stav Theodor
 
-> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor-Kimhi, based in Tenafly, New Jersey, working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
+> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor, based in Tenafly, New Jersey, working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
 
 ## About
 
-- Name and identity: the practice's full name is THEODORA Art Advisory by Stav Theodor (short form THEODORA; founder Stav Theodor, also Stav Theodor-Kimhi). THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. Its profiles: LinkedIn (Stav) https://www.linkedin.com/in/stavtheodor/, LinkedIn (company) https://www.linkedin.com/company/theodora/, Instagram https://www.instagram.com/theodorafineart/, Google Business Profile (Google Maps) https://www.google.com/maps?cid=607964109580327893.
-- [Art Radar by THEODORA](https://stavtheodor.com/) is the main site. It includes Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv, plus information about THEODORA's advisory services.
+- Name and identity: the practice's full name is THEODORA Art Advisory by Stav Theodor (short form THEODORA; founder Stav Theodor, legal name Stav Theodor-Kimhi). THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. Its profiles: LinkedIn (Stav) https://www.linkedin.com/in/stavtheodor/, LinkedIn (company) https://www.linkedin.com/company/theodora/, Instagram https://www.instagram.com/theodorafineart/, Google Business Profile (Google Maps) https://www.google.com/maps?cid=607964109580327893.
+- [THEODORA](https://stavtheodor.com/) is the main site: THEODORA's advisory services, projects and guides, plus [Art Radar](https://stavtheodor.com/radar/), Stav's curatorial writing on current exhibitions in New York, New Jersey, and Tel Aviv.
 - [Frequently asked questions](https://stavtheodor.com/#faq): what an art curator does for a private residence, how the advisory process works, working with interior designers and architects, and where to find art recommendations for New Jersey and New York. Answered on the page in plain text.
-- [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post. Maintained for AI assistants, updated with every post.
+- [Answers file](https://stavtheodor.com/answers.md): direct, sourced answers to the most common questions about art exhibitions, museums, and art advisory in New York and New Jersey, each linking to a full post or page.
 - [Full text file](https://stavtheodor.com/llms-full.txt): the English text of every advisory, local, partner, guide and project page in one plain file, with each page's questions and answers. Regenerated on every build.
 - Base: Tenafly, New Jersey 07670. Working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
@@ -30,7 +30,8 @@ Plain answers for people about to buy, build or move, each in English and Hebrew
 - [Art consultant and advisor in Tenafly, New Jersey](https://stavtheodor.com/art-consultant-tenafly-nj/): Stav Theodor is an art consultant and advisor based in Tenafly, NJ. Art for homes, designers and offices, from concept to installation. (201) 351-8367.
 - [Art advisor and consultant in Bergen County](https://stavtheodor.com/art-advisor-bergen-county/): Art advisor and consultant for Bergen County homes, designers and offices, based in Tenafly. Concept, sourcing, commissions and installation. Stav Theodor.
 - [Art advisor for a home in Westchester: houses, big walls and how I work there](https://stavtheodor.com/art-advisor-westchester-ny/): Art advisor for Westchester homes in Scarsdale, Rye and Bronxville: big walls, stair halls, older houses and commissions, from your plans. Stav Theodor.
-- [Art curator in New York: art for a private apartment, an office or a whole collection](https://stavtheodor.com/art-curator-new-york/): Stav Theodor, art curator and advisor for New York: private apartments in Manhattan, offices and collections, from the first conversation to the installed work.
+- [Art advisor and art consultant in New York City: art for a private apartment, an office or a whole collection](https://stavtheodor.com/art-curator-new-york/): Stav Theodor, art advisor and art consultant in New York City: art for Manhattan apartments, offices and collections, from first conversation to installed work.
+- [Residential art consultant for private homes, from one wall to the whole house](https://stavtheodor.com/advisory/residential-art-consultant/): A residential art consultant chooses, sources and installs art for a private home, from a single wall to a whole house, and works for the homeowner, not for a gallery's artists. Stav Theodor, based in Tenafly, NJ, in person in NJ and NYC and online anywhere; she can start from the designer's or architect's plans.
 - [Art advisor for a Manhattan apartment: what to expect](https://stavtheodor.com/advisory/art-advisor-manhattan-apartment/): What an art advisor does for a Manhattan apartment: reads the light, the building and the designer's plan, then finds and installs the art, with the Manhattan skyline residence as the example.
 - [Art for a home in Israel, managed from New York or New Jersey](https://stavtheodor.com/advisory/art-for-a-home-in-israel-from-abroad/): How an art curator and advisor runs the art for a home in Caesarea, Herzliya, Tel Aviv or Ramat Gan while the owner lives in New York or New Jersey, with the Israeli homes as examples.
 - [Art for a new build in Bergen County: when it should come in](https://stavtheodor.com/advisory/art-for-a-new-build-in-bergen-county/): When art should come into a new house in Alpine, Tenafly, Closter or Englewood: while the drawings are open. Stav Theodor, art curator and advisor, Tenafly.
@@ -88,8 +89,8 @@ One page per kind of client, each with its own questions and answers in English 
 - [Art for investment firms and family offices](https://stavtheodor.com/investment-firms/): Your judgment shows at the entrance. Art for the offices of private equity, venture capital and family offices in New York and New Jersey, chosen for what it says, not what it cost; discretion by default, no investment advice.
 - [Art for wealth management offices](https://stavtheodor.com/wealth-managers/): Trust starts in the space where you talk. Calm, personal art for the rooms where wealth managers meet clients in New York and New Jersey, and a curator to introduce to clients who collect.
 - [Art for medical and aesthetic practices](https://stavtheodor.com/medical-practices/): Your reputation starts at the entrance. Calm, readable art for reception, waiting and consultation rooms of medical and aesthetic practices in New Jersey and New York, specified for daily clinical use.
-- [Boutique hotel art consultant](https://stavtheodor.com/hotels/): An unforgettable arrival for unforgettable hospitality. Collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room, built to a written concept, an artwork schedule and the opening date.
-- [Restaurant art consultant in New York City](https://stavtheodor.com/restaurants/): An unforgettable space for your unforgettable food. Art for restaurants and private dining rooms in New York City, from your story, inside your designer's scheme, planned around light, steam, cleaning and service.
+- [Boutique hotel art consultant](https://stavtheodor.com/hotels/): Collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room, built to a written concept, an artwork schedule and the opening date.
+- [Restaurant art consultant in New York City](https://stavtheodor.com/restaurants/): Art for restaurants and private dining rooms in New York City, from your story, inside your designer's scheme, planned around light, steam, cleaning and service.
 - [Art consultant for interior designers](https://stavtheodor.com/for-designers/): The last wall is the one clients remember. Art sourcing, commissions, framing and installation for interior designers and architects in New York and New Jersey, inside your scheme; the client and the credit stay yours.
 
 ## Project pages
@@ -114,7 +115,7 @@ Case studies of completed work, each with photographs. Hub: https://stavtheodor.
 
 ## Founder
 
-Stav Theodor-Kimhi is an art curator and advisor with more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality. She is known for her design fluency: she works alongside architects and interior designers, not around them.
+Stav Theodor is an art curator and advisor with more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality. She is known for her design fluency: she works alongside architects and interior designers, not around them.
 
 ## Art Radar
 
@@ -126,7 +127,7 @@ Art Radar is THEODORA's curatorial newsletter and public archive. It covers must
 
 [The Museum](https://stavtheodor.com/museum/) is an interactive museum of art history built into the site. It offers a zoomable timeline of 31 art-historical periods spanning 40,000 years, from Prehistoric Art (Lascaux, Chauvet, the Venus of Willendorf), Mesopotamia, Ancient Egypt, the Aegean, Greece (Archaic through Hellenistic), the Etruscans and Rome, through Medieval & Gothic and the Renaissance to Contemporary. 141 artists, monuments, and masterworks are placed at the dates they were made, with museum-placard biographies and first-person walkable 3D galleries hung with real artworks (WASD + mouse on desktop, touch on mobile, full keyboard navigation, light and dark mode). Every biography, image, date, story, and fact is sourced from Wikipedia, Wikidata, and Wikimedia Commons: text under CC BY-SA 4.0, images public domain or Creative Commons with attribution.
 
-Crawlable, citable pages (plain HTML, no JavaScript needed):
+Plain HTML pages (no JavaScript needed):
 - [The Collection directory](https://stavtheodor.com/museum/artists/): all 31 periods with summaries and all 141 entries.
 - Per-artist pages at https://stavtheodor.com/museum/artists/{slug}/ (e.g. [Claude Monet](https://stavtheodor.com/museum/artists/claude-monet/), [Rembrandt](https://stavtheodor.com/museum/artists/rembrandt/), [Vincent van Gogh](https://stavtheodor.com/museum/artists/vincent-van-gogh/)): biography, life dates, and each painting with year, collection, dimensions, the story behind it, and sourced facts.
 
@@ -166,7 +167,7 @@ All posts are published at the URLs below, each in Hebrew and English.
 - [The Pollock Record](https://stavtheodor.com/radar/pollock-record/): May 24, 2026. Jackson Pollock's Number 7A (1948) sells for $181.2 million at Christie's New York.
 - [Brancusi, Christie's, and a $107 Million Campaign](https://stavtheodor.com/radar/brancusi-christies/): May 20, 2026. Danaid (1913) sells for $107.6 million; the cinematic marketing strategy behind the result.
 - [May, the Big Art Month in New York](https://stavtheodor.com/radar/may-big-art-month-nyc/): May 20, 2026. Gallery walk: Frick, Met, Gagosian, Hauser and Wirth, David Zwirner, Nino Mier Gallery.
-- [Welcome to Art Radar](https://stavtheodor.com/radar/welcome-art-radar/): May 19, 2026. Introduction to Art Radar and Stav Theodor-Kimhi's curatorial practice.
+- [Welcome to Art Radar](https://stavtheodor.com/radar/welcome-art-radar/): May 19, 2026. Introduction to Art Radar and Stav Theodor's curatorial practice.
 
 ## Contact
 

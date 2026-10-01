@@ -154,7 +154,7 @@ def render_radar_index(posts):
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": "Art Radar, every post", "url": url, "inLanguage": ["he", "en"],
-        "description": "Every Art Radar post in order: exhibitions, openings and museum events in New York, New Jersey and Tel Aviv, chosen by curator Stav Theodor-Kimhi.",
+        "description": "Every Art Radar post in order: exhibitions, openings and museum events in New York, New Jersey and Tel Aviv, chosen by curator Stav Theodor.",
         "isPartOf": {"@id": SITE + "/#site"},
         "hasPart": [{"@type": "BlogPosting", "headline": p["headline"], "url": f"{SITE}/radar/{p['slug']}/", "datePublished": p["datePublished"]} for p in posts],
     }
