@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 380" width="1600" height="380" role="img" aria-labelledby="t d">
+<!-- scale: none (schematic); four stations 315 by 180 at x 80, 455, 830 and 1205, gaps 60, y 60 to 240; bracket y 300 -->
+<!-- compact .l1 44 px in this file only, not the DS 52 px: "Commission" at 52 px fills its 315 px station edge to edge (CL 14 clear space) -->
+<title id="t">Four parts of the work in one line: consult, from a single work to a whole collection; source, with market value assessed and the price negotiated for you; commission, one of a kind works made for the space; install, framed, delivered and installed. A bracket under all four shows one consultant from the first idea to the work on the wall.</title>
+<desc id="d">Four parts of the work in one line: consult, from a single work to a whole collection; source, with market value assessed and the price negotiated for you; commission, one of a kind works made for the space; install, framed, delivered and installed. A bracket under all four shows one consultant from the first idea to the work on the wall.</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:44px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<rect class="ink" x="80" y="60" width="315" height="180"/>
+<text class="l1" x="237.5" y="128" text-anchor="middle">Consult</text>
+<text class="l2" x="237.5" y="176" text-anchor="middle">a single work</text>
+<text class="l2" x="237.5" y="206" text-anchor="middle">or a whole collection</text>
+<line class="ink" x1="395" y1="150" x2="455" y2="150"/>
+<rect class="ink" x="455" y="60" width="315" height="180"/>
+<text class="l1" x="612.5" y="128" text-anchor="middle">Source</text>
+<text class="l2" x="612.5" y="176" text-anchor="middle">market value assessed,</text>
+<text class="l2" x="612.5" y="206" text-anchor="middle">negotiated for you</text>
+<line class="ink" x1="770" y1="150" x2="830" y2="150"/>
+<rect class="ink" x="830" y="60" width="315" height="180"/>
+<text class="l1" x="987.5" y="128" text-anchor="middle">Commission</text>
+<text class="l2" x="987.5" y="176" text-anchor="middle">one of a kind,</text>
+<text class="l2" x="987.5" y="206" text-anchor="middle">made for the space</text>
+<line class="ink" x1="1145" y1="150" x2="1205" y2="150"/>
+<rect class="art" x="1221" y="76" width="283" height="148"/>
+<rect class="ink" x="1205" y="60" width="315" height="180"/>
+<text class="l1" x="1362.5" y="128" text-anchor="middle">Install</text>
+<text class="l2" x="1362.5" y="176" text-anchor="middle">framed, delivered</text>
+<text class="l2" x="1362.5" y="206" text-anchor="middle">and installed</text>
+<circle class="tp" cx="80" cy="150" r="3"/>
+<line class="dim" x1="80" y1="300" x2="1520" y2="300"/>
+<line class="dim" x1="80" y1="292" x2="80" y2="308"/>
+<line class="dim" x1="1520" y1="292" x2="1520" y2="308"/>
+<text class="l2" x="800" y="346" text-anchor="middle">one consultant, from the first idea to the work on the wall</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" width="1600" height="420" role="img" aria-labelledby="t d">
+<!-- scale: none (schematic); timeline y 290 from x 120 to 1480; four stations at x 290, 630, 970 and 1310; icons y 105 to 215 -->
+<title id="t">A timeline with four points where a residential art consultant can start: from the architect's plans, in a house already built and designed with its walls still bare, after a move with empty walls, or for a single work on the wall everyone sees.</title>
+<desc id="d">A timeline with four points where a residential art consultant can start: from the architect's plans, in a house already built and designed with its walls still bare, after a move with empty walls, or for a single work on the wall everyone sees.</desc>
+<style>
+  .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
+  .frame{fill:#1A1A20;stroke:#F2F0EC;stroke-width:2}
+  .art{fill:#9D7663;fill-opacity:.24}
+  .dim{stroke:#9D7663;fill:none;stroke-width:1.25}
+  .eye{stroke:#9D7663;fill:none;stroke-width:1.25;stroke-dasharray:10 8}
+  .lead{stroke:#9D7663;fill:none;stroke-width:1;stroke-dasharray:3 7;stroke-opacity:.7}
+  .l1,.l2{font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;fill:#F2F0EC;font-size:26px;font-weight:500}
+  .l2{fill:#A5A3AC;font-size:22px;font-weight:400}
+  .tp{fill:#9D7663}
+  @media (max-width:560px){
+    .l1{font-size:52px}
+    .l2{display:none}
+    .ink,.frame{stroke-width:3.5}
+    .soft{stroke-width:3}
+    .dim,.eye{stroke-width:2.75}
+  }
+  @media (max-width:220px){
+    .l1{display:none}
+  }
+</style>
+<!-- plans: a floor plan -->
+<rect class="soft" x="210" y="110" width="160" height="100"/>
+<line class="soft" x1="290" y1="110" x2="290" y2="165"/>
+<line class="soft" x1="210" y1="165" x2="260" y2="165"/>
+<line class="soft" x1="290" y1="165" x2="370" y2="165"/>
+<!-- built: a house -->
+<polyline class="ink" points="550,160 630,105 710,160"/>
+<rect class="ink" x="565" y="160" width="130" height="50"/>
+<!-- moved in: an empty frame on a wall -->
+<line class="soft" x1="880" y1="212" x2="1060" y2="212"/>
+<rect class="soft" x="920" y="120" width="100" height="72"/>
+<!-- one wall: one work -->
+<line class="soft" x1="1220" y1="212" x2="1400" y2="212"/>
+<rect class="frame" x="1250" y="115" width="120" height="80"/>
+<rect class="art" x="1262" y="127" width="96" height="56"/>
+<line class="ink" x1="120" y1="290" x2="1480" y2="290"/>
+<text class="l1" x="290" y="258" text-anchor="middle">Plans</text>
+<circle class="tp" cx="290" cy="290" r="6"/>
+<text class="l2" x="290" y="336" text-anchor="middle">working from the</text>
+<text class="l2" x="290" y="366" text-anchor="middle">architect's drawings</text>
+<text class="l1" x="630" y="258" text-anchor="middle">Built</text>
+<circle class="tp" cx="630" cy="290" r="6"/>
+<text class="l2" x="630" y="336" text-anchor="middle">finished and designed,</text>
+<text class="l2" x="630" y="366" text-anchor="middle">the walls still bare</text>
+<text class="l1" x="970" y="258" text-anchor="middle">Moved in</text>
+<circle class="tp" cx="970" cy="290" r="6"/>
+<text class="l2" x="970" y="336" text-anchor="middle">empty walls,</text>
+<text class="l2" x="970" y="366" text-anchor="middle">before a hurried fill</text>
+<text class="l1" x="1310" y="258" text-anchor="middle">One wall</text>
+<circle class="tp" cx="1310" cy="290" r="6"/>
+<text class="l2" x="1310" y="336" text-anchor="middle">a single work for</text>
+<text class="l2" x="1310" y="366" text-anchor="middle">the wall everyone sees</text>
+</svg>
