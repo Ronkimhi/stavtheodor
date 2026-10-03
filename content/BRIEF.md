@@ -86,6 +86,7 @@ Residential:
 - Tel Aviv, Bauhaus residence. Hyper collage digital artwork printed on glossy anti reflective acrylic as the central focal point. Photo: bauhaus-2.jpg
 
 Hospitality and commercial (concepts and collections built while collaborating with luxury hospitality leaders):
+Naming these hotels in site copy is allowed (Ron, 2026-10-03; the old "no hotel names" rule is retired). Write them as below: Waldorf Astoria Chengdu, St. Regis Amman, Holland America Line. ArtLink is still never named.
 - Waldorf Astoria Chengdu, China (lobby, sculptural works). Photo: waldorf-lobby.jpg
 - St. Regis Amman, Jordan (bar with a horse mosaic; guest rooms; residences). Photos: stregis-bar.jpg, stregis-horses.jpg, stregis-room.jpg
 - Holland America Line (ships, restaurant and stateroom art). Photo: hal-restaurant.jpg
