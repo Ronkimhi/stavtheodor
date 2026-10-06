@@ -738,8 +738,8 @@ CONTACT_PLACES = [("Tenafly", "טנפליי"), ("Bergen County", "מחוז בר�
 
 def render_contact():
     """/contact/ (redesigned 2026-09-29): the h1 and the closing line, then the same contact block as the homepage's
-    #contact (site_chrome.contact_act: the three ways, What happens next, the form), then the service area. The footer
-    under it is the quiet one (no second closing block)."""
+    #contact (site_chrome.contact_act: since 2026-10-06 the contact card, its Contact eyebrow dropped because the header
+    above already says it), then the service area. The footer under it is the quiet one (no second closing block)."""
     url = f"{SITE}/{CONTACT['path']}/"
     intro_en, intro_he = sc.FOOTER_CTA
     ld = [{"@type": "ContactPage", "@id": url + "#page", "url": url, "name": CONTACT["title"],
@@ -756,7 +756,7 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact')}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>

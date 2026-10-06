@@ -379,25 +379,40 @@ def nap(mail=None):
 </address>'''
 
 
-# What happens after a message (2026-09-29): three short steps beside the form, the same on the homepage's #contact
-# and on /contact/. Only what the site already says: Stav replies by email with what she sees, and the work starts
-# with a first conversation (no response time: none is in content/BRIEF.md).
+# What happens after a message (2026-09-29): three short steps. Since 2026-10-06 (mockup A, Ron) they show only in the
+# no-form block (FORM_ENDPOINT empty); beside the form the three check lines (CONTACT_LINES) say the same thing.
+# Only what the site already says: Stav replies by email with what she sees, and the work starts with a first
+# conversation (no response time: none is in content/BRIEF.md).
 NEXT_STEPS = [
     ('You send a photo of the wall and a line about the space.', 'אתם שולחים תמונה של הקיר ושורה על החלל.'),
     ('I reply by email and tell you what I see.', 'אני עונה במייל ומספרת לכם מה אני רואה.'),
     ('If it fits, a first conversation, by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה, בטלפון או בחלל עצמו.'),
 ]
 
+# The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
+CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
+CONTACT_LINES = [
+    ('One photo of the wall and a line about the space is enough.', 'תמונה אחת של הקיר ושורה על החלל מספיקות.'),
+    ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
+    ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
+]
+# The check beside each line: a circle and a tick, stroked in taupe by css/theme.css (.act-lines svg).
+TICK = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">'
+        '<circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg>')
 
-def contact_act(path='/', h='h3', mail=None, loc='cta'):
-    """The contact block (2026-09-29): the three ways to reach Stav as arrow links (write, the address, the phone),
-    the What happens next steps, and the contact form. The homepage's #contact (footer(form=True)) and /contact/ share it,
-    so both change from here. Without FORM_ENDPOINT it is the ways and the steps alone, in one column."""
+
+def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
+    """The contact block. With the form (FORM_ENDPOINT set) it is one card (mockup A, Ron 2026-10-06): on one side the
+    Contact eyebrow (eyebrow=False drops it where the page header already says Contact), the headline, three check
+    lines, and Or reach me directly (the address with the mail fallback panel, the phone); the form on the other side,
+    over a soft taupe glow in the corner. The homepage's #contact (footer(form=True)) and /contact/ share it, so both
+    change from here. Without FORM_ENDPOINT it is the three ways and the What happens next steps, in two columns.
+    h: the thank-you card's heading level (contact_form)."""
     mail = mail or mail_href()
     form = contact_form(path, h=h)
-    steps = ''.join(f'<li><span class="n" aria-hidden="true">{i}</span>{T(en, he)}</li>' for i, (en, he) in enumerate(NEXT_STEPS, 1))
-    form_col = f'\n    <div class="act-form">\n    {form}\n    </div>' if form else ''
-    return f'''<div class="act{'' if form else ' no-form'}">
+    if not form:
+        steps = ''.join(f'<li><span class="n" aria-hidden="true">{i}</span>{T(en, he)}</li>' for i, (en, he) in enumerate(NEXT_STEPS, 1))
+        return f'''<div class="act no-form">
     <div class="act-ways">
       <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
       <a class="arrow way" href="{mail}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
@@ -407,14 +422,33 @@ def contact_act(path='/', h='h3', mail=None, loc='cta'):
     <div class="act-steps">
       <p class="eyebrow">{T('What happens next', 'מה קורה אחר כך')}</p>
       <ol>{steps}</ol>
-    </div>{form_col}
+    </div>
+  </div>'''
+    lines = ''.join(f'<li>{TICK}<span>{T(en, he)}</span></li>' for en, he in CONTACT_LINES)
+    brow = f'\n        <p class="eyebrow">{T("Contact", "יצירת קשר")}</p>' if eyebrow else ''
+    return f'''<div class="act act-card">
+    <div class="act-glow" aria-hidden="true"></div>
+    <div class="act-left">
+      <div class="act-intro">{brow}
+        <h2 class="serif act-head">{T(*CONTACT_HEAD)}</h2>
+        <ul class="act-lines">{lines}</ul>
+      </div>
+      <div class="act-ways">
+        <p class="eyebrow">{T('Or reach me directly', 'או פנו אליי ישירות')}</p>
+        <a class="way addr" href="{mail}" data-loc="{loc}"><bdi dir="ltr">{EMAIL}</bdi></a>
+        <a class="way tel" href="{PHONE_TEL}" data-loc="{loc}"><bdi dir="ltr">{PHONE}</bdi></a>
+      </div>
+    </div>
+    <div class="act-form">
+    {form}
+    </div>
   </div>'''
 
 
 def footer(home=False, cta=None, subject='', form=False, quiet=False):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
-    subject: the mail subject both mailto links carry; form: the homepage's #contact, the closing act (2026-09-29): the
-    line, then contact_act() with the form (only once FORM_ENDPOINT is set); quiet: no closing block at all, only the
+    subject: the mail subject both mailto links carry; form: the homepage's #contact, the closing act (2026-09-29): since
+    2026-10-06 the contact card alone, contact_act() with the form (only once FORM_ENDPOINT is set); quiet: no closing block at all, only the
     base (the /contact/ page, which is that block). The defaults are every page's footer: the line and the three ways.
     The link columns (Ron's SEO brief, 2026-09-29, P1.5 and P1.6): the site's main pages (the Tenafly and Bergen County
     pages first since Batch 3, P1.2 and P1.3), then Who I work with, the
@@ -428,10 +462,9 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     if quiet:
         top = ''
     elif form and FORM_ENDPOINT:
+        # Since 2026-10-06 (mockup A) the card carries its own eyebrow and headline, so the closing line is not repeated.
         top = f'''
   <div class="foot-act">
-    <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
-    <h2 class="serif act-line">{T(cta_en, cta_he)}</h2>
     {contact_act('/', mail=href)}
   </div>'''
     else:
@@ -471,17 +504,20 @@ def contact_form(path='/', h='h3'):
     """The contact form (Ron's SEO brief, 2026-09-29, P1.1), or '' while FORM_ENDPOINT is empty. Formspree takes a plain
     HTML POST: without JavaScript the form posts and Formspree shows its own thank-you page; form_js() sends it with
     fetch instead. _subject names the mail Formspree sends to Stav, _gotcha is Formspree's
-    honeypot, page carries the page's path (path, written here so it survives without JavaScript; form_js() refreshes it). The select's options carry their
-    Hebrew in data-he (an option cannot hold the twin spans); form_js() swaps the visible text with the language, the
-    submitted value stays English. The free plan takes no files, so the note asks for the photo by email.
+    honeypot, page carries the page's path (path, written here so it survives without JavaScript; form_js() refreshes it). I am a
+    (client_type, Homeowner checked) and The project (project_scope, optional, none checked) are chip groups since
+    2026-10-06 (mockup A): real radio inputs, visually hidden but focusable, each label showing its twins; the submitted
+    value stays English. The free plan takes no files, so the note asks for the photo by email.
     The thank-you card (2026-09-29) and the error line are in the markup, hidden, both languages as twins: the box
     (.contact-box, aria-live) stacks the form and the card in one grid cell, so the card replaces the form in place and
     the page does not move. h: the card's heading level (h3 under the footer's h2, h2 on /contact/ under its h1)."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
-    opts = ''.join(f'<option value="{H.escape(en, quote=True)}" data-en="{H.escape(en, quote=True)}" data-he="{he}">{H.escape(en)}</option>'
-                   for en, he in CLIENT_TYPES)
+    def chips(name, items, checked=None):
+        return ''.join(f'<label class="chip"><input type="radio" name="{name}" value="{H.escape(en, quote=True)}"'
+                       f'{" checked" if en == checked else ""}><span class="chip-face">{T(H.escape(en), he)}</span></label>'
+                       for en, he in items)
     mail = mail_href()
     email = f'<bdi class="ty-addr">{EMAIL}</bdi>'
     # The check is drawn by CSS (stroke-dashoffset); the dash lengths are the circle's and the tick's own lengths.
@@ -493,11 +529,11 @@ def contact_form(path='/', h='h3'):
     <form class="contact-form" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="form">
       <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <fieldset class="chip-set"><legend>{L('I am a', 'מי אתם')}</legend><div class="chips">{chips('client_type', CLIENT_TYPES, 'Homeowner')}</div></fieldset>
+      <fieldset class="chip-set"><legend>{L('The project', 'הפרויקט')}</legend><div class="chips">{chips('project_scope', PROJECT_SCOPES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
-      <label class="half">{L('Phone (optional)', 'טלפון (לא חובה)')} <input type="tel" name="phone" autocomplete="tel"></label>
-      <label class="half">{L('I am a', 'מי אתם')} <select name="client_type">{opts}</select></label>
-      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="4" required></textarea></label>
+      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
@@ -527,6 +563,13 @@ CLIENT_TYPES = [
     ('Business or hospitality', 'עסק או אירוח'),
     ('Other', 'אחר'),
 ]
+# The form's "The project" choices (mockup A, Ron 2026-10-06), optional: none is checked.
+PROJECT_SCOPES = [
+    ('One wall', 'קיר אחד'),
+    ('A few rooms', 'כמה חדרים'),
+    ('Whole home', 'הבית כולו'),
+    ('Office or venue', 'משרד או מקום אירוח'),
+]
 
 
 def form_js():
@@ -536,8 +579,8 @@ def form_js():
     its height, so nothing below moves), moves focus to the card's heading (and, only when the heading is out of view, glides
     it into view, through the homepage's Lenis when present) and sends GA4 generate_lead with the form id
     and the page path only (never the name, email, phone or message). On any other answer or a network error the form
-    stays and its error line shows the email and the phone. It also keeps the select's visible text in the page's
-    language (the body's lang-he class)."""
+    stays and its error line shows the email and the phone. The chips (radio inputs, 2026-10-06) carry both languages
+    as twins, so nothing here follows the language switch any more; f.reset() puts I am a back on Homeowner."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
@@ -546,13 +589,6 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
-  var he = function () { return document.body.classList.contains('lang-he'); };
-  var opts = function () {
-    var l = he() ? 'he' : 'en';
-    f.querySelectorAll('option[data-he]').forEach(function (o) { o.textContent = o.getAttribute('data-' + l); });
-  };
-  opts();
-  if (window.MutationObserver) { new MutationObserver(opts).observe(document.body, { attributes: true, attributeFilter: ['class'] }); }
   f.querySelector('[name=page]').value = location.pathname;
   function thanks(first) {
     card.querySelectorAll('.ty-name').forEach(function (s) { s.textContent = first; });
