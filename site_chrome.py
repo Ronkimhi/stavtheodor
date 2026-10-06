@@ -1105,7 +1105,9 @@ def focus_style(hero):
 def project_card(p):
     """One project card, the same markup on the homepage, the hubs and the project pages.
     A project with no clean photograph of its own (2026-09-28: the Gemini-marked photos were removed)
-    gets a quiet typographic panel with its place name, never a photo borrowed from another project."""
+    gets a quiet typographic panel with its place name, never a photo borrowed from another project.
+    The card's line is dek_en/dek_he when the page has one (2026-10-06, so the card can match its photo), else the
+    lead's first sentence."""
     hero = p.get('hero_image')
     if hero:
         ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))}{focus_style(hero)} loading="lazy"></div>'
@@ -1115,7 +1117,7 @@ def project_card(p):
       <a class="card reveal" href="/{p['path'].strip('/')}/">
         {ph}
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
-        <p class="muted">{T(H.escape(first_sentence(p['lead_en'])), H.escape(first_sentence(p['lead_he'])))}</p>
+        <p class="muted">{T(H.escape(p.get('dek_en') or first_sentence(p['lead_en'])), H.escape(p.get('dek_he') or first_sentence(p['lead_he'])))}</p>
       </a>'''
 
 
