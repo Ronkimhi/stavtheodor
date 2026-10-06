@@ -12,7 +12,7 @@ lastmod moves only when the page a reader gets actually changes (since 2026-10-0
 dated by a fingerprint of its built index.html, stored with its date in tools/sitemap-lastmod.json (committed with
 the build output): same fingerprint, same lastmod; a new fingerprint dates the URL now. The fingerprint is the
 page's content only: its text in both languages, the href, src, alt, content and title values, and its JSON-LD,
-with the shared nav and footer, every other script, every style block, HTML comments and ?v= cache busters left
+with the shared nav, footer and Write to Stav pop-up (its <dialog>), every other script, every style block, HTML comments and ?v= cache busters left
 out, so a change to the site chrome, a code comment or a stylesheet version moves no lastmod. A URL missing from
 the file (a lost file, a merge conflict resolved by deleting its lines) is dated by the newest commit that changed
 its fingerprint, so the file can always be rebuilt from git. A post keeps its own dateModified and the /radar/
@@ -39,7 +39,7 @@ STORE = 'tools/sitemap-lastmod.json'
 COMMENT = re.compile(r'<!--.*?-->', re.S)
 SCRIPT = re.compile(r'<script\b([^>]*)>(.*?)</script>', re.S | re.I)
 STYLE = re.compile(r'<style\b.*?</style>', re.S | re.I)
-CHROME = re.compile(r'<(nav|footer)\b.*?</\1>', re.S | re.I)
+CHROME = re.compile(r'<(nav|footer|dialog)\b.*?</\1>', re.S | re.I)  # dialog: the Write to Stav pop-up (2026-10-06)
 TAG = re.compile(r'<[^>]*>')
 ATTR = re.compile(r'\b(href|src|alt|content|title)\s*=\s*"([^"]*)"', re.I)
 BUSTER = re.compile(r'\?v=[\w.-]+')

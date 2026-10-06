@@ -89,7 +89,7 @@ def working_with_stav(p):
     <p class="eyebrow">{T('Working with Stav', 'עבודה עם סתיו')}</p>
     <h2 class="serif">{T('Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv.', "אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב.")}</h2>
     <div class="readnext">{links}</div>
-    <a class="btn" href="mailto:{sc.EMAIL}">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="mailto:{sc.EMAIL}" data-write>{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}
   </div>
 </section>

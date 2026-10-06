@@ -45,6 +45,10 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # form, its progressive enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's
 # #contact; empty it and no form, no form script and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
+# The Write to Stav pop-up (write_ui(), Ron 2026-10-06) posts to FORM_ENDPOINT too. FORM_FILES says whether that endpoint
+# takes the optional photo: the Formspree free plan takes no files, so it is False and the pop-up sends the text and then
+# offers a one tap email for the photo. Set it True once the plan accepts files (or the endpoint is one that does).
+FORM_FILES = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -415,7 +419,7 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
         return f'''<div class="act no-form">
     <div class="act-ways">
       <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
-      <a class="arrow way" href="{mail}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow way" href="{mail}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow way addr" href="{mail}" data-loc="{loc}"><span class="ln"></span>{EMAIL}</a>
       {phone_link(loc).replace('class="arrow tel"', 'class="arrow way tel"')}
     </div>
@@ -473,7 +477,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <div class="foot-ways">
-      <a class="arrow" href="{href}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{href}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow addr" href="{href}"><span class="ln"></span>{EMAIL}</a>
       {phone_link('cta')}
     </div>
@@ -584,7 +588,7 @@ def form_js():
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
-document.querySelectorAll('form.contact-form').forEach(function (f) {
+document.querySelectorAll('form.contact-form:not(.write-form)').forEach(function (f) {
   var box = f.closest('.contact-box');
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
@@ -682,6 +686,225 @@ def mail_ui(subject=''):
 
 MAIL_UI = mail_ui()
 
+
+# The Write to Stav pop-up (Ron, 2026-10-06). Every "Write to Stav" button (data-write) opens it on the page instead of
+# leaving for the mail app: a native modal <dialog> with name, email, a line about the space and one optional photo.
+# The button keeps its mailto (or #contact) href, so without JavaScript, or in a browser with no <dialog>, it works as
+# before, and the mailto fallback panel (content rule 8) is untouched. Delivery follows the two constants above:
+# FORM_ENDPOINT set, the pop-up posts FormData with fetch (the photo only when FORM_FILES is True; otherwise the thank-you
+# step offers a one tap email for it); FORM_ENDPOINT empty, it opens a prefilled mailto and shows the address with Copy,
+# Gmail and Outlook inside the pop-up, asking the visitor to attach the photo in the mail app. Emitted once per page by
+# tail() and by build-home.py beside the fallback panel. subject: a buyer variant's mail subject.
+WRITE_SUBJECT = 'New inquiry from stavtheodor.com'
+WRITE_NOTES = {
+    'files': ('A phone photo is fine.', 'תמונה מהטלפון מספיקה.'),
+    'form': ('A phone photo is fine. After you send, one tap emails it to me.',
+             'תמונה מהטלפון מספיקה. אחרי השליחה, נגיעה אחת שולחת לי אותה במייל.'),
+    'mail': ('A phone photo is fine. Your email app opens with your message; attach the photo there.',
+             'תמונה מהטלפון מספיקה. תוכנת הדואר תיפתח עם ההודעה שלכם, ושם מצרפים את התמונה.'),
+}
+WRITE_X = ('<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">'
+           '<path d="M5 5l14 14M19 5L5 19"/></svg>')
+
+WRITE_JS = '''<script>
+(function () {
+  /* The Write to Stav pop-up (site_chrome.write_ui). The two constants are written by the build from
+     site_chrome.FORM_ENDPOINT and FORM_FILES: change them there and run python3 build.py. */
+  var CONTACT_ENDPOINT = __ENDPOINT__;
+  var CONTACT_FILES = __FILES__;
+  var SUBJECT = __SUBJECT__;
+  var EMAIL = __EMAIL__;
+  var STR = {
+    en: { attach: '[Attach the photo of the wall to this email]', photo: 'Photo of the wall', from: ', from ', copied: 'Copied' },
+    he: { attach: '[צרפו למייל הזה את התמונה של הקיר]', photo: 'תמונה של הקיר', from: ', מאת ', copied: 'הועתק' }
+  };
+  var dlg = document.getElementById('write-modal');
+  if (!dlg || typeof dlg.showModal !== 'function') { return; }
+  var form = dlg.querySelector('form'), err = form.querySelector('.form-error');
+  var btn = form.querySelector('button[type=submit]'), file = form.querySelector('input[type=file]');
+  var pickName = form.querySelector('.wm-pick-name'), pickClear = form.querySelector('.wm-pick-clear');
+  var steps = dlg.querySelectorAll('[data-step]');
+  var opener = null, lenis = null, sent = false, downOnBackdrop = false, mail = { subject: '', body: '' };
+  function lang() { return document.body.classList.contains('lang-he') ? 'he' : 'en'; }
+  function val(n) { return (form.querySelector('[name=' + n + ']').value || '').trim(); }
+  function focusOn(el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } }
+  function step(name) {
+    steps.forEach(function (s) { s.hidden = s.getAttribute('data-step') !== name; s.classList.remove('on'); });
+    var cur = dlg.querySelector('[data-step="' + name + '"]');
+    void cur.offsetWidth;
+    cur.classList.add('on');
+    dlg.scrollTop = 0;
+    return cur;
+  }
+  function showFile() {
+    var f = file.files && file.files[0];
+    pickName.textContent = f ? f.name : '';
+    pickClear.hidden = !f;
+  }
+  function reset() {
+    form.reset();
+    showFile();
+    err.hidden = true;
+    sent = false;
+  }
+  function open(from) {
+    opener = from;
+    if (sent) { reset(); }
+    step('ask');
+    form.querySelector('[name=page]').value = location.pathname;
+    document.documentElement.classList.add('write-open');
+    lenis = window.__theodoraLenis || null;
+    if (lenis) { lenis.stop(); }
+    dlg.showModal();
+    focusOn(form.querySelector('[name=name]'));
+  }
+  function close() { if (dlg.open) { dlg.close(); } }
+  dlg.addEventListener('close', function () {
+    document.documentElement.classList.remove('write-open');
+    if (lenis) { lenis.start(); lenis = null; }
+    if (opener && document.contains(opener)) { focusOn(opener); }
+  });
+  dlg.addEventListener('mousedown', function (e) { downOnBackdrop = e.target === dlg; });
+  dlg.addEventListener('click', function (e) {
+    if ((e.target === dlg && downOnBackdrop) || (e.target.closest && e.target.closest('[data-close]'))) { close(); }
+    downOnBackdrop = false;
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
+    if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) { return; }
+    e.preventDefault();
+    e.stopPropagation();
+    open(a);
+  }, true);
+  file.addEventListener('change', showFile);
+  pickClear.addEventListener('click', function () { file.value = ''; showFile(); focusOn(file); });
+
+  /* The mail route: the prefilled mailto, and the address with Copy, Gmail and Outlook in the pop-up itself
+     (the page's fallback panel would sit under the modal dialog). */
+  function mailOut(subject, body) {
+    mail = { subject: subject, body: body.slice(0, 1600) };
+    var q = '?subject=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body);
+    var cur = step('mail');
+    cur.querySelector('.wm-addr').setAttribute('href', 'mailto:' + EMAIL + q);
+    cur.querySelector('.wm-gmail').setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) + '&su=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body));
+    cur.querySelector('.wm-outlook').setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(EMAIL) + '&subject=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body));
+    focusOn(cur.querySelector('.wm-head'));
+    window.location.href = 'mailto:' + EMAIL + q;
+  }
+  dlg.querySelector('.wm-copy').addEventListener('click', function () {
+    var b = this, spans = b.querySelectorAll('span'), was = [];
+    var done = function () {
+      spans.forEach(function (s, i) { was[i] = s.textContent; s.textContent = STR[s.getAttribute('data-l')].copied; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(EMAIL).then(done, function () {}); }
+  });
+  dlg.querySelector('.wm-photo-btn').addEventListener('click', function () {
+    var s = STR[lang()], name = mail.name || '';
+    mailOut(s.photo + (name ? s.from + name : ''), s.attach + '\\n\\n' + name);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.classList.contains('sending')) { return; }
+    var s = STR[lang()], name = val('name'), photo = file.files && file.files[0];
+    var first = name.split(/\\s+/)[0] || '';
+    if (first) { first = first.charAt(0).toUpperCase() + first.slice(1); }
+    if (!CONTACT_ENDPOINT) {
+      sent = true;
+      mailOut(SUBJECT, val('message') + '\\n\\n' + name + '\\n' + val('email') + (photo ? '\\n\\n' + s.attach : ''));
+      return;
+    }
+    var fd = new FormData(form);
+    if (!CONTACT_FILES || !photo) { fd.delete('photo'); }
+    form.classList.add('sending');
+    btn.setAttribute('aria-disabled', 'true');
+    err.hidden = true;
+    fetch(CONTACT_ENDPOINT, { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error(r.status); }
+        sent = true;
+        mail.name = name;
+        var cur = step('done');
+        cur.querySelectorAll('.ty-name').forEach(function (n) { n.textContent = first; });
+        cur.querySelectorAll('.ty-named').forEach(function (n) { n.hidden = !first; });
+        cur.querySelector('.wm-photo').hidden = !(photo && !CONTACT_FILES);
+        focusOn(cur.querySelector('.wm-head'));
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'write_modal', page_path: location.pathname }); }
+      })
+      .catch(function () { err.hidden = false; })
+      .then(function () { form.classList.remove('sending'); btn.removeAttribute('aria-disabled'); });
+  });
+})();
+</script>'''
+
+
+def write_ui(subject=''):
+    """The Write to Stav pop-up: the <dialog> and its script (see WRITE_SUBJECT above). Once per page."""
+    mode = ('files' if FORM_FILES else 'form') if FORM_ENDPOINT else 'mail'
+    mail = mail_href(subject)
+    sub = subject or WRITE_SUBJECT
+    email = f'<bdi class="ty-addr">{EMAIL}</bdi>'
+    name = '<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>'
+    check = ('<svg class="ty-check" viewBox="0 0 52 52" width="44" height="44" aria-hidden="true" focusable="false">'
+             '<circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>')
+    close_btn = f'<button type="button" class="btn wm-close" data-close>{T("Close", "סגירה")}</button>'
+    action = H.escape(FORM_ENDPOINT or mail, quote=True)
+    js = (WRITE_JS.replace('__ENDPOINT__', json.dumps(FORM_ENDPOINT)).replace('__FILES__', 'true' if FORM_FILES else 'false')
+          .replace('__SUBJECT__', json.dumps(sub, ensure_ascii=False).replace('</', '<\\/')).replace('__EMAIL__', json.dumps(EMAIL)))
+    return f'''<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
+  <div class="wm-panel">
+    <button type="button" class="wm-x" data-close>{WRITE_X}<span class="vh">{T('Close', 'סגירה')}</span></button>
+    <div class="wm-step" data-step="ask">
+      <p class="eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
+      <h2 class="serif wm-head" id="write-modal-title">{T(*CONTACT_HEAD)}</h2>
+      <p class="wm-lead">{T(*CONTACT_LINES[0])} {T(*CONTACT_LINES[1])}</p>
+      <form class="contact-form write-form" action="{action}" method="POST" enctype="multipart/form-data" data-loc="modal">
+        <input type="hidden" name="_subject" value="{H.escape(sub, quote=True)}">
+        <input type="hidden" name="form" value="Write to Stav pop-up">
+        <input type="hidden" name="page" value="/">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label class="half">{T('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
+        <label class="half">{T('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+        <label>{T('A line about the space', 'שורה על החלל')} <textarea name="message" rows="3" required></textarea></label>
+        <div class="wm-file">
+          <p class="wm-file-label">{T('One photo of the wall', 'תמונה אחת של הקיר')} <span class="wm-opt">{T('Optional', 'לא חובה')}</span></p>
+          <div class="wm-pick-row">
+            <label class="wm-pick"><input type="file" name="photo" accept="image/*"><span class="wm-pick-face">{T('Choose a photo', 'בחירת תמונה')}</span></label>
+            <bdi class="wm-pick-name"></bdi>
+            <button type="button" class="wm-pick-clear" hidden>{T('Remove', 'הסרה')}</button>
+          </div>
+          <p class="wm-note">{T(*WRITE_NOTES[mode])}</p>
+        </div>
+        <button type="submit">{T('Send to Stav', 'שליחה לסתיו')}</button>
+        <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="modal" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="modal" dir="ltr">{PHONE}</a>.</span></p>
+      </form>
+    </div>
+    <div class="wm-step wm-done" data-step="done" hidden>
+      {check}
+      <h2 class="serif wm-head" tabindex="-1"><span data-l="en">Thank you{name}.</span><span data-l="he" dir="rtl">תודה{name}.</span></h2>
+      <p class="wm-text"><span data-l="en">Stav reads every message herself and replies personally from {email}.</span><span data-l="he" dir="rtl">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת {email}.</span></p>
+      <div class="wm-photo" hidden>
+        <p class="wm-text">{T('One more step for the photo: tap below and your email app opens, addressed to me. Attach the photo and send.', 'עוד צעד אחד לתמונה: הקישו למטה ותוכנת הדואר תיפתח עם הכתובת שלי. צרפו את התמונה ושלחו.')}</p>
+        <button type="button" class="btn solid wm-photo-btn">{T('Email the photo', 'שליחת התמונה במייל')}</button>
+      </div>
+      {close_btn}
+    </div>
+    <div class="wm-step wm-mail" data-step="mail" hidden>
+      <h2 class="serif wm-head" tabindex="-1">{T('Your email is ready.', 'המייל שלכם מוכן.')}</h2>
+      <p class="wm-text">{T('Your email app should open with your message in it. Attach the photo of the wall there, then send. Nothing opened? Copy the address, or open your webmail with the message filled in.', 'תוכנת הדואר אמורה להיפתח עם ההודעה שלכם. צרפו שם את התמונה של הקיר ושלחו. לא נפתח כלום? העתיקו את הכתובת, או פתחו את הדואר האינטרנטי עם ההודעה מוכנה.')}</p>
+      <a class="wm-addr" href="{mail}">{EMAIL}</a>
+      <div class="wm-row">
+        <button type="button" class="wm-copy">{T('Copy', 'העתקה')}</button>
+        <a class="solid wm-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={EMAIL}" target="_blank" rel="noopener">Gmail</a>
+        <a class="wm-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to={EMAIL}" target="_blank" rel="noopener">Outlook</a>
+      </div>
+      {close_btn}
+    </div>
+  </div>
+</dialog>
+{js}'''
+
 LANG_JS = '''<script>
 (function () {
   var KEY = 'radarLang';
@@ -763,7 +986,7 @@ LANG_JS = '''<script>
 
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
-    if (!a || a === addrEl) { return; }
+    if (!a || a === addrEl || a.closest('#write-modal')) { return; }
     var addr = a.getAttribute('href').slice(7).split('?')[0];
     var handled = false;
     function mark() { handled = true; }
@@ -968,7 +1191,7 @@ def tail(home=False, scripts='', quiet=False):
     """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
     without its closing block (/contact/, whose body is that block)."""
     extra = '\n' + scripts if scripts else ''
-    return '\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
+    return '\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + write_ui() + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
 
 
 def redirect_stub(target, title='THEODORA', noindex=True):

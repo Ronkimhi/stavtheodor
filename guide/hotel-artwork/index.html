@@ -442,7 +442,7 @@
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall, and a line about the space. I will tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
-    <a class="btn" href="mailto:stav@stavtheodor.com"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="btn" href="mailto:stav@stavtheodor.com" data-write><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
   </div>
 </section>
@@ -496,7 +496,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="foot-ways">
-      <a class="arrow" href="mailto:stav@stavtheodor.com"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow addr" href="mailto:stav@stavtheodor.com"><span class="ln"></span>stav@stavtheodor.com</a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
@@ -538,6 +538,188 @@
     <button type="button" class="close"><span data-l="en" lang="en">Close</span><span data-l="he" dir="rtl" lang="he">סגירה</span></button>
   </div>
 </div>
+<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
+  <div class="wm-panel">
+    <button type="button" class="wm-x" data-close><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg><span class="vh"><span data-l="en" lang="en">Close</span><span data-l="he" lang="he" dir="rtl">סגירה</span></span></button>
+    <div class="wm-step" data-step="ask">
+      <p class="eyebrow"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></p>
+      <h2 class="serif wm-head" id="write-modal-title"><span data-l="en" lang="en">Tell me about your space.</span><span data-l="he" lang="he" dir="rtl">ספרו לי על החלל שלכם.</span></h2>
+      <p class="wm-lead"><span data-l="en" lang="en">One photo of the wall and a line about the space is enough.</span><span data-l="he" lang="he" dir="rtl">תמונה אחת של הקיר ושורה על החלל מספיקות.</span> <span data-l="en" lang="en">I read every message myself and reply by email, personally.</span><span data-l="he" lang="he" dir="rtl">אני קוראת כל הודעה בעצמי ועונה במייל, אישית.</span></p>
+      <form class="contact-form write-form" action="https://formspree.io/f/xjyklwyb" method="POST" enctype="multipart/form-data" data-loc="modal">
+        <input type="hidden" name="_subject" value="New inquiry from stavtheodor.com">
+        <input type="hidden" name="form" value="Write to Stav pop-up">
+        <input type="hidden" name="page" value="/">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label class="half"><span data-l="en" lang="en">Your name</span><span data-l="he" lang="he" dir="rtl">השם שלכם</span> <input type="text" name="name" autocomplete="name" required></label>
+        <label class="half"><span data-l="en" lang="en">Email</span><span data-l="he" lang="he" dir="rtl">אימייל</span> <input type="email" name="email" autocomplete="email" required></label>
+        <label><span data-l="en" lang="en">A line about the space</span><span data-l="he" lang="he" dir="rtl">שורה על החלל</span> <textarea name="message" rows="3" required></textarea></label>
+        <div class="wm-file">
+          <p class="wm-file-label"><span data-l="en" lang="en">One photo of the wall</span><span data-l="he" lang="he" dir="rtl">תמונה אחת של הקיר</span> <span class="wm-opt"><span data-l="en" lang="en">Optional</span><span data-l="he" lang="he" dir="rtl">לא חובה</span></span></p>
+          <div class="wm-pick-row">
+            <label class="wm-pick"><input type="file" name="photo" accept="image/*"><span class="wm-pick-face"><span data-l="en" lang="en">Choose a photo</span><span data-l="he" lang="he" dir="rtl">בחירת תמונה</span></span></label>
+            <bdi class="wm-pick-name"></bdi>
+            <button type="button" class="wm-pick-clear" hidden><span data-l="en" lang="en">Remove</span><span data-l="he" lang="he" dir="rtl">הסרה</span></button>
+          </div>
+          <p class="wm-note"><span data-l="en" lang="en">A phone photo is fine. After you send, one tap emails it to me.</span><span data-l="he" lang="he" dir="rtl">תמונה מהטלפון מספיקה. אחרי השליחה, נגיעה אחת שולחת לי אותה במייל.</span></p>
+        </div>
+        <button type="submit"><span data-l="en" lang="en">Send to Stav</span><span data-l="he" lang="he" dir="rtl">שליחה לסתיו</span></button>
+        <p class="form-error" hidden><span data-l="en" lang="en">Your message did not go through. Please write to <a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> or call <a href="tel:+12013518367" data-loc="modal" dir="ltr">(201) 351-8367</a>.</span><span data-l="he" dir="rtl" lang="he">ההודעה לא נשלחה. כתבו ל-<a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> או התקשרו ל-<a href="tel:+12013518367" data-loc="modal" dir="ltr">(201) 351-8367</a>.</span></p>
+      </form>
+    </div>
+    <div class="wm-step wm-done" data-step="done" hidden>
+      <svg class="ty-check" viewBox="0 0 52 52" width="44" height="44" aria-hidden="true" focusable="false"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+      <h2 class="serif wm-head" tabindex="-1"><span data-l="en" lang="en">Thank you<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>.</span><span data-l="he" dir="rtl" lang="he">תודה<span class="ty-named" hidden>, <bdi class="ty-name"></bdi></span>.</span></h2>
+      <p class="wm-text"><span data-l="en" lang="en">Stav reads every message herself and replies personally from <bdi class="ty-addr">stav@stavtheodor.com</bdi>.</span><span data-l="he" dir="rtl" lang="he">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת <bdi class="ty-addr">stav@stavtheodor.com</bdi>.</span></p>
+      <div class="wm-photo" hidden>
+        <p class="wm-text"><span data-l="en" lang="en">One more step for the photo: tap below and your email app opens, addressed to me. Attach the photo and send.</span><span data-l="he" lang="he" dir="rtl">עוד צעד אחד לתמונה: הקישו למטה ותוכנת הדואר תיפתח עם הכתובת שלי. צרפו את התמונה ושלחו.</span></p>
+        <button type="button" class="btn solid wm-photo-btn"><span data-l="en" lang="en">Email the photo</span><span data-l="he" lang="he" dir="rtl">שליחת התמונה במייל</span></button>
+      </div>
+      <button type="button" class="btn wm-close" data-close><span data-l="en" lang="en">Close</span><span data-l="he" lang="he" dir="rtl">סגירה</span></button>
+    </div>
+    <div class="wm-step wm-mail" data-step="mail" hidden>
+      <h2 class="serif wm-head" tabindex="-1"><span data-l="en" lang="en">Your email is ready.</span><span data-l="he" lang="he" dir="rtl">המייל שלכם מוכן.</span></h2>
+      <p class="wm-text"><span data-l="en" lang="en">Your email app should open with your message in it. Attach the photo of the wall there, then send. Nothing opened? Copy the address, or open your webmail with the message filled in.</span><span data-l="he" lang="he" dir="rtl">תוכנת הדואר אמורה להיפתח עם ההודעה שלכם. צרפו שם את התמונה של הקיר ושלחו. לא נפתח כלום? העתיקו את הכתובת, או פתחו את הדואר האינטרנטי עם ההודעה מוכנה.</span></p>
+      <a class="wm-addr" href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>
+      <div class="wm-row">
+        <button type="button" class="wm-copy"><span data-l="en" lang="en">Copy</span><span data-l="he" lang="he" dir="rtl">העתקה</span></button>
+        <a class="solid wm-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=stav@stavtheodor.com" target="_blank" rel="noopener">Gmail</a>
+        <a class="wm-outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=stav@stavtheodor.com" target="_blank" rel="noopener">Outlook</a>
+      </div>
+      <button type="button" class="btn wm-close" data-close><span data-l="en" lang="en">Close</span><span data-l="he" lang="he" dir="rtl">סגירה</span></button>
+    </div>
+  </div>
+</dialog>
+<script>
+(function () {
+  /* The Write to Stav pop-up (site_chrome.write_ui). The two constants are written by the build from
+     site_chrome.FORM_ENDPOINT and FORM_FILES: change them there and run python3 build.py. */
+  var CONTACT_ENDPOINT = "https://formspree.io/f/xjyklwyb";
+  var CONTACT_FILES = false;
+  var SUBJECT = "New inquiry from stavtheodor.com";
+  var EMAIL = "stav@stavtheodor.com";
+  var STR = {
+    en: { attach: '[Attach the photo of the wall to this email]', photo: 'Photo of the wall', from: ', from ', copied: 'Copied' },
+    he: { attach: '[צרפו למייל הזה את התמונה של הקיר]', photo: 'תמונה של הקיר', from: ', מאת ', copied: 'הועתק' }
+  };
+  var dlg = document.getElementById('write-modal');
+  if (!dlg || typeof dlg.showModal !== 'function') { return; }
+  var form = dlg.querySelector('form'), err = form.querySelector('.form-error');
+  var btn = form.querySelector('button[type=submit]'), file = form.querySelector('input[type=file]');
+  var pickName = form.querySelector('.wm-pick-name'), pickClear = form.querySelector('.wm-pick-clear');
+  var steps = dlg.querySelectorAll('[data-step]');
+  var opener = null, lenis = null, sent = false, downOnBackdrop = false, mail = { subject: '', body: '' };
+  function lang() { return document.body.classList.contains('lang-he') ? 'he' : 'en'; }
+  function val(n) { return (form.querySelector('[name=' + n + ']').value || '').trim(); }
+  function focusOn(el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } }
+  function step(name) {
+    steps.forEach(function (s) { s.hidden = s.getAttribute('data-step') !== name; s.classList.remove('on'); });
+    var cur = dlg.querySelector('[data-step="' + name + '"]');
+    void cur.offsetWidth;
+    cur.classList.add('on');
+    dlg.scrollTop = 0;
+    return cur;
+  }
+  function showFile() {
+    var f = file.files && file.files[0];
+    pickName.textContent = f ? f.name : '';
+    pickClear.hidden = !f;
+  }
+  function reset() {
+    form.reset();
+    showFile();
+    err.hidden = true;
+    sent = false;
+  }
+  function open(from) {
+    opener = from;
+    if (sent) { reset(); }
+    step('ask');
+    form.querySelector('[name=page]').value = location.pathname;
+    document.documentElement.classList.add('write-open');
+    lenis = window.__theodoraLenis || null;
+    if (lenis) { lenis.stop(); }
+    dlg.showModal();
+    focusOn(form.querySelector('[name=name]'));
+  }
+  function close() { if (dlg.open) { dlg.close(); } }
+  dlg.addEventListener('close', function () {
+    document.documentElement.classList.remove('write-open');
+    if (lenis) { lenis.start(); lenis = null; }
+    if (opener && document.contains(opener)) { focusOn(opener); }
+  });
+  dlg.addEventListener('mousedown', function (e) { downOnBackdrop = e.target === dlg; });
+  dlg.addEventListener('click', function (e) {
+    if ((e.target === dlg && downOnBackdrop) || (e.target.closest && e.target.closest('[data-close]'))) { close(); }
+    downOnBackdrop = false;
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
+    if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) { return; }
+    e.preventDefault();
+    e.stopPropagation();
+    open(a);
+  }, true);
+  file.addEventListener('change', showFile);
+  pickClear.addEventListener('click', function () { file.value = ''; showFile(); focusOn(file); });
+
+  /* The mail route: the prefilled mailto, and the address with Copy, Gmail and Outlook in the pop-up itself
+     (the page's fallback panel would sit under the modal dialog). */
+  function mailOut(subject, body) {
+    mail = { subject: subject, body: body.slice(0, 1600) };
+    var q = '?subject=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body);
+    var cur = step('mail');
+    cur.querySelector('.wm-addr').setAttribute('href', 'mailto:' + EMAIL + q);
+    cur.querySelector('.wm-gmail').setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) + '&su=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body));
+    cur.querySelector('.wm-outlook').setAttribute('href', 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(EMAIL) + '&subject=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body));
+    focusOn(cur.querySelector('.wm-head'));
+    window.location.href = 'mailto:' + EMAIL + q;
+  }
+  dlg.querySelector('.wm-copy').addEventListener('click', function () {
+    var b = this, spans = b.querySelectorAll('span'), was = [];
+    var done = function () {
+      spans.forEach(function (s, i) { was[i] = s.textContent; s.textContent = STR[s.getAttribute('data-l')].copied; });
+      setTimeout(function () { spans.forEach(function (s, i) { s.textContent = was[i]; }); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(EMAIL).then(done, function () {}); }
+  });
+  dlg.querySelector('.wm-photo-btn').addEventListener('click', function () {
+    var s = STR[lang()], name = mail.name || '';
+    mailOut(s.photo + (name ? s.from + name : ''), s.attach + '\n\n' + name);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.classList.contains('sending')) { return; }
+    var s = STR[lang()], name = val('name'), photo = file.files && file.files[0];
+    var first = name.split(/\s+/)[0] || '';
+    if (first) { first = first.charAt(0).toUpperCase() + first.slice(1); }
+    if (!CONTACT_ENDPOINT) {
+      sent = true;
+      mailOut(SUBJECT, val('message') + '\n\n' + name + '\n' + val('email') + (photo ? '\n\n' + s.attach : ''));
+      return;
+    }
+    var fd = new FormData(form);
+    if (!CONTACT_FILES || !photo) { fd.delete('photo'); }
+    form.classList.add('sending');
+    btn.setAttribute('aria-disabled', 'true');
+    err.hidden = true;
+    fetch(CONTACT_ENDPOINT, { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error(r.status); }
+        sent = true;
+        mail.name = name;
+        var cur = step('done');
+        cur.querySelectorAll('.ty-name').forEach(function (n) { n.textContent = first; });
+        cur.querySelectorAll('.ty-named').forEach(function (n) { n.hidden = !first; });
+        cur.querySelector('.wm-photo').hidden = !(photo && !CONTACT_FILES);
+        focusOn(cur.querySelector('.wm-head'));
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'write_modal', page_path: location.pathname }); }
+      })
+      .catch(function () { err.hidden = false; })
+      .then(function () { form.classList.remove('sending'); btn.removeAttribute('aria-disabled'); });
+  });
+})();
+</script>
 <script>
 (function () {
   var KEY = 'radarLang';
@@ -619,7 +801,7 @@
 
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
-    if (!a || a === addrEl) { return; }
+    if (!a || a === addrEl || a.closest('#write-modal')) { return; }
     var addr = a.getAttribute('href').slice(7).split('?')[0];
     var handled = false;
     function mark() { handled = true; }
