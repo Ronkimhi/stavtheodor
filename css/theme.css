@@ -93,8 +93,7 @@
   .links { display: flex; gap: 30px; align-items: center; }
   .links a { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
   .links a [data-l="he"] { font-size: 16px; }
-  .lang-switch button { background: none; border: 0; color: var(--ink); cursor: pointer; font-family: var(--he); font-size: 16px; padding: 0; text-shadow: inherit; }
-  .lang-switch button[data-lang="en"] { font-family: var(--sans); font-size: 13px; font-weight: 500; }
+  .lang-switch button { background: none; border: 0; color: var(--ink); cursor: pointer; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; padding: 0; text-shadow: inherit; }
   body.lang-en .lang-switch button[data-lang="en"] { display: none; }
   body.lang-he .lang-switch button[data-lang="he"] { display: none; }
   .menu-btn { display: none; background: none; border: 0; color: var(--ink); font-family: var(--sans); font-size: 13px; font-weight: 500; cursor: pointer; text-shadow: inherit; }

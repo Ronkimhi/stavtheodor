@@ -7,7 +7,7 @@
      - the same holds with JavaScript disabled, so the English default is in the markup itself
        (what a crawler that does not run scripts, or a reader with scripts blocked, gets)
    and once, on one inner page:
-     - the switch works: clicking עברית shows Hebrew, and a reload keeps it (localStorage radarLang).
+     - the switch works: clicking HE shows Hebrew, and a reload keeps it (localStorage radarLang).
    and on the homepage and every buyer variant, on a 360 by 780 screen, in English and in Hebrew:
      - both opening lines (#l1, #l2) end inside the screen: the right edge of the visible language's
        span is at most 360 px (2026-09-27; a restaurants line reached 398 px). The lines are measured
@@ -300,7 +300,7 @@ async function main() {
     }
   }
 
-  /* the switch, on one inner page: pick עברית, Hebrew shows, reload, still Hebrew */
+  /* the switch, on one inner page: pick HE, Hebrew shows, reload, still Hebrew */
   const inner = pages.find(p => p !== '/' && !p.startsWith('/radar/')) || pages.find(p => p !== '/') || '/';
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   await context.route(ANALYTICS, quiet);
@@ -310,7 +310,7 @@ async function main() {
     await page.click('.lang-switch button[data-lang="he"]', { timeout: 10000 });
     let r = await readPage(page);
     let w = wordsOf(r.text);
-    if (r.lang !== 'he' || !r.bodyHe) { fails.push(`switch on ${inner}: after clicking עברית lang="${r.lang}", body.lang-he=${r.bodyHe}`); }
+    if (r.lang !== 'he' || !r.bodyHe) { fails.push(`switch on ${inner}: after clicking HE lang="${r.lang}", body.lang-he=${r.bodyHe}`); }
     if (w.hebrew <= w.latin) { fails.push(`switch on ${inner}: Hebrew not showing after the click (${w.hebrew} Hebrew, ${w.latin} Latin)`); }
     await page.reload({ waitUntil: 'load', timeout: 45000 });
     r = await readPage(page);

@@ -351,8 +351,8 @@ def nav(home=False, own=None, sub=None):
     <div class="links" id="links">{links}</div>
     {nav_call()}
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
-      <button type="button" data-lang="he" aria-pressed="false">עברית</button>
-      <button type="button" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" data-lang="he" aria-pressed="false">HE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
     <button type="button" class="menu-btn" id="menu-btn" aria-controls="links" aria-expanded="false">{T('Menu', 'תפריט')}</button>
   </div>
