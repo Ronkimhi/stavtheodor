@@ -492,7 +492,7 @@ def render_project_page(p, all_pages, projects):
     if hero:
         header = f'''
 <header class="phero">
-  <img src="{hero['src']}" {sc.img_alt(hero.get('alt_en', ''), hero.get('alt_he', ''))} fetchpriority="high">
+  <img src="{hero['src']}" {sc.img_alt(hero.get('alt_en', ''), hero.get('alt_he', ''))}{sc.focus_style(hero)} fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <p class="eyebrow">{T('Projects · ' + H.escape(kicker), 'פרויקטים · ' + H.escape(kicker_he))}</p>

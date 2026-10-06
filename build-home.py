@@ -78,7 +78,7 @@ INDUSTRY_PAGES = {
 }
 
 # The six lead projects: each shows a photograph of its own (2026-09-28: Closter and Ramat Gan left this row when
-# their Gemini-marked photos were removed; they come back when Stav sends clean photographs of them).
+# their Gemini-marked photos were removed; since 2026-10-06 both have clean photographs again and may come back here).
 PROJECT_ORDER = [
     'caesarea-garden-villa', 'caesarea-sea-view-villa-triptych', 'herzliya-pituach-sea-view-apartment',
     'hod-hasharon-private-villa', 'tel-aviv-home-of-roni-daloomi', 'caesarea-private-estate',

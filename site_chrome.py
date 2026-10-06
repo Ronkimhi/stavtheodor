@@ -1091,13 +1091,24 @@ def timeline(posts, with_months, dims=False, alts=False):
     return ''.join(out)
 
 
+def focus_style(hero):
+    """The optional `focus` of a project's hero_image ("95% 50%", an object-position, 2026-10-06): the point of the
+    photo the full-bleed hero and the card keep in frame when a tall phone screen crops a wide photo. Absent, centered."""
+    f = (hero or {}).get('focus')
+    if not f:
+        return ''
+    if not re.fullmatch(r'(?:100|\d{1,2})% (?:100|\d{1,2})%', f):
+        raise SystemExit(f'hero_image focus {f!r}: want "X% Y%"')
+    return f' style="object-position: {f}"'
+
+
 def project_card(p):
     """One project card, the same markup on the homepage, the hubs and the project pages.
     A project with no clean photograph of its own (2026-09-28: the Gemini-marked photos were removed)
     gets a quiet typographic panel with its place name, never a photo borrowed from another project."""
     hero = p.get('hero_image')
     if hero:
-        ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))} loading="lazy"></div>'
+        ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))}{focus_style(hero)} loading="lazy"></div>'
     else:
         ph = f'<div class="ph type" aria-hidden="true">{T(H.escape(p["place_en"]), H.escape(p["place_he"]), cls="serif")}</div>'
     return f'''

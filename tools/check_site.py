@@ -96,6 +96,9 @@ BANNED_IMAGES = {
     '8dfb8935fa61135a', 'dfa0d6c9e46035c1', '90ec74ddff1f3de2', '8514f7097561228d', 'c976f3f6ce8144bd', '6e2497d4663bb830',
     '718c475ac20d8e15', 'd2725a41bbd80339', 'dea7bfad1d6585e2', '9f87b708d526a6cf', '4f06600f6a0706f9', '3631076c645d4096',
     '21db47b8abf26e62', 'b78ea3fe28ec1622', 'f6070dab13b23b81',
+    # 2026-10-06: the uncropped portfolio extracts behind the five photos cropped clean of the mark (Closter dining,
+    # living and office, Ramat Gan living, the Bauhaus entry). The cropped files are allowed; these never are.
+    '0a6cd1dccf611cc0', '2f1b55a0da2b1158', '7d2e7c937a09c142', '2743bd38ab88b3ce', 'b88df10922807695',
 }
 AGENT_FILES = ('llms.txt', 'answers.md')  # every buyer page is named in these (2026-09-28)
 # The homepage's #industries tiles that are not buyer variants: the designers tile links /for-designers/ since
