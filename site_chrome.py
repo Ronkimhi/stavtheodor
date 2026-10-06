@@ -1152,8 +1152,15 @@ def space_src(key, side):
     return f'/images/spaces/{key}_{side}.webp'
 
 
+def space_hi(key):
+    """Both images of the pair have a 2400 px twin, images/spaces/<key>_<side>-2400.webp (2026-10-06): only then does
+    the srcset offer 2400w, so the before and the after always come from the same size."""
+    return all(os.path.isfile(rel('images', 'spaces', f'{key}_{s}-2400.webp')) for s in ('before', 'after'))
+
+
 def space_srcset(key, side):
-    return f'/images/spaces/{key}_{side}-1000.webp 1000w, /images/spaces/{key}_{side}.webp 1800w'
+    hi = f', /images/spaces/{key}_{side}-2400.webp 2400w' if space_hi(key) else ''
+    return f'/images/spaces/{key}_{side}-1000.webp 1000w, /images/spaces/{key}_{side}.webp 1800w{hi}'
 
 
 def space_og(key):

@@ -48,10 +48,35 @@ OG_IMAGE = SITE + '/og-home.jpg'
 OG_IMAGE_ALT = 'Stav Theodor, art curator, beside the THEODORA mark'
 
 
+# The 2400 px textures (2026-10-06): js/home-opening.js loads a room's <name>-2400.webp twins only where HI_MQ matches
+# (a fine pointer and a canvas wider than about 2000 device px). The query is read from that file, so the preload
+# links below and the script always pick the same size and the first pair is fetched once.
+HI_MQ = re.search(r"var HI_MQ = '([^']+)';", open(sc.rel('js', 'home-opening.js'), encoding='utf-8').read())
+if not HI_MQ:
+    raise SystemExit('js/home-opening.js: no HI_MQ (the 2400 px texture query) found')
+HI_MQ = HI_MQ.group(1)
+
+
+def hi_name(name):
+    return re.sub(r'\.webp$', '-2400.webp', name)
+
+
+def has_hi(before, after):
+    """Both images of a room have their 2400 px twin in images/home2/ (tools/check_variants.py checks their size)."""
+    return all(os.path.isfile(sc.rel('images', 'home2', hi_name(n))) for n in (before, after))
+
+
 def preload(before, after):
     """The opening's first texture pair, fetched with high priority (speed pass, 2026-09-26): the
-    homepage's p3, or a variant's first room. The paths are under /images/home2/, as in PAIRS."""
-    return ''.join(f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp" fetchpriority="high">\n' for n in (before, after))
+    homepage's p3, or a variant's first room. The paths are under /images/home2/, as in PAIRS. A room
+    with 2400 px twins gets two pairs of links with opposite media queries (HI_MQ), so each screen
+    preloads only the size js/home-opening.js will draw."""
+    link = lambda n, media='': (f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp"'
+                                f'{media} fetchpriority="high">\n')
+    if not has_hi(before, after):
+        return ''.join(link(n) for n in (before, after))
+    big, small = f' media="{H.escape(HI_MQ, quote=True)}"', f' media="{H.escape("not (" + HI_MQ + ")", quote=True)}"'
+    return ''.join(link(n, small) for n in (before, after)) + ''.join(link(hi_name(n), big) for n in (before, after))
 
 
 PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
@@ -69,7 +94,7 @@ INDUSTRIES = [
     ('restaurants', 'Restaurants', 'מסעדות'),
     ('medical-practices', 'Clinics', 'מרפאות'),
 ]
-INDUSTRY_THUMB = (600, 400)
+INDUSTRY_THUMB = (900, 600)  # the tile files (tools/make_industry_thumbs.py), shown at the grid's width
 # A tile for a page that is not a buyer variant: /designers/ was merged into /for-designers/ (Ron's SEO brief, 2026-09-29,
 # P1.5), so the designers tile links the partner page and keeps the line and the image it had as a variant.
 INDUSTRY_PAGES = {
@@ -265,7 +290,8 @@ def room_region(name, inner, rooms, drop=False):
     if name == 'rooms_js':
         if not rooms:
             return inner
-        data = [{'slot': i, **{k: num(r[k]) for k in ROOM_KEYS + ('seed',) if k in r}} for i, r in enumerate(rooms)]
+        data = [{'slot': i, **{k: num(r[k]) for k in ROOM_KEYS + ('seed',) if k in r},
+                 **({'hi': 1} if has_hi(r['b'], r['a']) else {})} for i, r in enumerate(rooms)]
         only = ' window.THEODORA_ROOMS_ONLY = true;' if drop else ''
         return inner + '\n<script>window.THEODORA_ROOMS = ' + json.dumps(data, separators=(',', ':')).replace('</', '<\\/') + ';' + only + '</script>'
     slot = int(name.rsplit('_', 1)[1])

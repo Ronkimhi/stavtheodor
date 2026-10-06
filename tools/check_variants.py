@@ -28,8 +28,10 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
   j  advisory_rows (optional): three to eight different content/pages paths or hubs, all built
   k  warning only: "we", "our" or "us" where Stav speaks for herself (questions and the subject exempt)
   l  rooms (optional): one to four rooms for the opening, entry i in slot i (0 is the first fold);
-     b and a are two .webp files in images/home2/variants/<id>/, in the repo, each under 250 KB,
-     w by h pixels, about 3:2 (portrait phones draw every room whole in a 3:2 frame), and no
+     b and a are two .webp files in images/home2/variants/<id>/, in the repo, each under 600 KB (a sanity
+     ceiling since 2026-10-06; quality is set by the encoder, cwebp q88 down to a q82 floor), w by h pixels,
+     at most 1800 wide (a source narrower than 1800 ships at its own width, never upscaled), optional
+     <name>-2400.webp twins of both (2400 px wide or the source's width, the same shape, under 900 KB), about 3:2 (portrait phones draw every room whole in a 3:2 frame), and no
      image of the homepage's rooms or of another slot; rect [u0, v0, u1, v1] inside 0..1 with
      u0 < u1 and v0 < v1; fx and fy in 0..1; from "left" or "right"; seed a number when given;
      cap_en and cap_he start "Proposal. " and "הצעה. "; the alt and caption twins take e to h;
@@ -150,7 +152,9 @@ HOME_ROOMS = re.findall(r"cap: '\w+',[^\n]*?land: \{ b: '([^']+)', a: '([^']+)'"
 if not HOME_ROOMS:
     raise SystemExit('check_variants: no rooms read from PAIRS in js/home-opening.js (did its format change?)')
 FILE_NAME = r'[a-z0-9]+(?:[_-][a-z0-9]+)*'
-ROOM_MAX_BYTES = 250000
+ROOM_MAX_BYTES = 600000      # a sanity ceiling (2026-10-06, Ron's image-quality fix), not a quality budget
+ROOM_HI_MAX_BYTES = 900000   # the optional <name>-2400.webp twin
+ROOM_MAX_W, ROOM_HI_MAX_W = 1800, 2400
 ROOM_ASPECT = (1.455, 1.545)  # 3:2 within 3 percent: FIT_ASPECT in js/home-opening.js draws portrait rooms at 3:2
 CAP_PREFIX = {'cap_en': 'Proposal. ', 'cap_he': 'הצעה. '}
 CAP_MAX, ALT_MAX = 120, 160  # English characters; the homepage's longest caption is 106
@@ -358,18 +362,33 @@ def room_problems(rooms, vid):
                 continue
             n = os.path.getsize(path)
             if n >= ROOM_MAX_BYTES:
-                fails.append(f'{label}: images/home2/{name} is {n} bytes, keep each image under 250 KB')
+                fails.append(f'{label}: images/home2/{name} is {n} bytes, over the {ROOM_MAX_BYTES // 1000} KB sanity ceiling')
             size = image_size(path)
             if not size or size[0] != 'webp':
                 fails.append(f'{label}: images/home2/{name} is not a WebP image')
             elif size_ok and size[1:] != (w, h):
                 fails.append(f'{label}: images/home2/{name} is {size[1]} by {size[2]} pixels, w and h say {w} by {h}')
+            elif size[1] > ROOM_MAX_W:
+                fails.append(f'{label}: images/home2/{name} is {size[1]} px wide; the room file is at most {ROOM_MAX_W} (a wider source goes in the -2400 twin)')
+            hi = os.path.join(HOME2, name[:-len('.webp')] + '-2400.webp')
+            if os.path.isfile(hi):
+                hs, hn = image_size(hi), os.path.getsize(hi)
+                if not hs or hs[0] != 'webp':
+                    fails.append(f'{label}: its 2400 px twin is not a WebP image')
+                elif size and size[0] == 'webp' and not (size[1] < hs[1] <= ROOM_HI_MAX_W and abs(hs[1] / hs[2] - size[1] / size[2]) < 0.005):
+                    fails.append(f'{label}: its 2400 px twin is {hs[1]} by {hs[2]}; it must be wider than the room file, at most {ROOM_HI_MAX_W}, and the same shape')
+                if hn >= ROOM_HI_MAX_BYTES:
+                    fails.append(f'{label}: its 2400 px twin is {hn} bytes, over the {ROOM_HI_MAX_BYTES // 1000} KB sanity ceiling')
             d = digest(path)
             if d in home:
                 fails.append(f'{label}: images/home2/{name} is an image of the homepage\'s own rooms')
             if d in used:
                 fails.append(f'{label}: images/home2/{name} is the same image as {used[d]}')
             used.setdefault(d, label)
+        twins = [isinstance(r.get(k), str) and r[k].endswith('.webp') and
+                 os.path.isfile(os.path.join(HOME2, r[k][:-len('.webp')] + '-2400.webp')) for k in ('b', 'a')]
+        if any(twins) and not all(twins):
+            fails.append(f'{where}: a 2400 px twin for one image only; give both b and a one (same room, same crop), or neither')
         rect = r.get('rect')
         if 'rect' in r and not (isinstance(rect, list) and len(rect) == 4 and all(number(x, 0, 1) for x in rect)
                                 and rect[0] < rect[2] and rect[1] < rect[3]):

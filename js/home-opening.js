@@ -194,12 +194,13 @@
 
   /* the rooms. rect is the artwork in the after image (u0, v0, u1, v1), from the pairs manifest;
      fx, fy the cover focal points; `from` the side of the artwork with more wall, where the brush lands.
-     A pair may carry a `port` variant for portrait and phone screens; none does at present. */
+     A pair may carry a `port` variant for portrait and phone screens; none does at present. hi: the room has
+     2400 px twins of both images (below). */
   var PAIRS = [
-    { id: 'p3', cap: 'p3',   seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 1800, h: 1200, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' } },
-    { id: 'p4', cap: 'p4',   seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 1800, h: 1180, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left' } },
-    { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 1800, h: 1201, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right' } },
-    { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 1800, h: 1201, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left' } }
+    { id: 'p3', cap: 'p3',   seed: 3.7,  land: { b: 'pairs/p3_before.webp', a: 'pairs/p3_after.webp', w: 1800, h: 1200, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right', hi: 1 } },
+    { id: 'p4', cap: 'p4',   seed: 11.3, land: { b: 'pairs/p4_before.webp', a: 'pairs/p4_after.webp', w: 1800, h: 1180, rect: [0.828, 0.204, 0.987, 0.513], fx: 0.86, fy: 0.38, from: 'left', hi: 1 } },
+    { id: 'p5', cap: 'p5',   seed: 19.9, land: { b: 'pairs/p5_before.webp', a: 'pairs/p5_after.webp', w: 1800, h: 1201, rect: [0.026, 0.000, 0.200, 0.593], fx: 0.15, fy: 0.35, from: 'right', hi: 1 } },
+    { id: 'p1', cap: 'p1',   seed: 27.1, land: { b: 'pairs/p1_before.webp', a: 'pairs/p1_after.webp', w: 1800, h: 1201, rect: [0.842, 0.152, 0.977, 0.528], fx: 0.85, fy: 0.40, from: 'left', hi: 1 } }
   ];
   /* a buyer variant's own rooms (2026-09-27): build-home.py sets window.THEODORA_ROOMS on a variant page whose
      content/variants/<id>.json has "rooms", one { slot, b, a, w, h, rect, fx, fy, from, seed } per room it
@@ -211,7 +212,7 @@
     ROOMS.forEach(function (r) {
       var p = r && PAIRS[r.slot];
       if (!p) { return; }
-      ['b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from'].forEach(function (k) { p.land[k] = r[k]; });
+      ['b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from', 'hi'].forEach(function (k) { p.land[k] = r[k]; });
       if (typeof r.seed === 'number') { p.seed = r.seed; }
       delete p.port;
     });
@@ -221,6 +222,20 @@
       PAIRS.length = Math.min(PAIRS.length, ROOMS.length);
       chain.style.height = (50 + 55 * (PAIRS.length - 1)) + 'vh';
     }
+  }
+  /* 2400 px textures (2026-10-06): a room with hi has a <name>-2400.webp twin of both images (same room, same crop,
+     same shape). They load only where the canvas is wider than about 2000 device px on a fine pointer (HI_MQ; DPR is
+     capped at 2 there, see sizeCanvas). Phones and touch screens stay on the 1800 px files: their DPR is capped at
+     1.5 and texSource draws their textures at 1600 px at most. build-home.py puts this same query (read from this
+     line) on the preload links, so the first pair is fetched once, at the size used here. */
+  var HI_MQ = '(pointer: fine) and (not (any-pointer: coarse)) and ((width > 2000px) or ((width > 1600px) and (resolution >= 1.25dppx)) or ((width > 1333px) and (resolution >= 1.5dppx)) or ((width > 1000px) and (resolution >= 2dppx)))';
+  var hiRes = dbg.hi = !touch && !!(window.matchMedia && matchMedia(HI_MQ).matches);
+  if (hiRes) {
+    PAIRS.forEach(function (p) {
+      [p.land, p.port].forEach(function (v) {
+        if (v && v.hi) { v.b = v.b.replace(/\.webp$/, '-2400.webp'); v.a = v.a.replace(/\.webp$/, '-2400.webp'); }
+      });
+    });
   }
   /* the wall stroke runs across the artwork's vertical centre, lands half a radius outside the rect on the
      wall side and ends 0.6 radius past the far edge; radius 0.62 x rect height, capped for the tall canvases;
