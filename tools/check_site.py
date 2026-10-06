@@ -623,7 +623,9 @@ def alt_sources():
         if v.get('alt_he'):
             want[sc.space_src(k, 'after')] = v['alt_he']
             want[f'/images/spaces/{k}_after-1000.webp'] = v['alt_he']
-        want[sc.space_src(k, 'before')] = sc.BA_BEFORE_ALT[1]
+        want[sc.space_src(k, 'before')] = sc.ba_before_alt(k)[1]
+        if v.get('before_alt_en') and not v.get('before_alt_he'):
+            missing.append(f'content/spaces.json.spaces.{k}.before_alt_en')
     return want, missing
 
 

@@ -12,7 +12,9 @@
    "cap_en": "A hotel lobby at arrival, a large wall relief of bronze and gold discs above the stone desk.",
    "cap_he": "לובי של מלון ברגע ההגעה, תבליט קיר גדול של דיסקיות ברונזה וזהב מעל דלפק האבן.",
    "alt_en": "A hotel lobby in late sun: a large relief of bronze and gold discs above a curved travertine desk, cognac leather club chairs at left.",
-   "alt_he": "לובי של מלון בשמש של אחר הצהריים: תבליט גדול של דיסקיות ברונזה וזהב מעל דלפק טרוורטין מעוגל, כורסאות עור בגוון קוניאק משמאל."
+   "alt_he": "לובי של מלון בשמש של אחר הצהריים: תבליט גדול של דיסקיות ברונזה וזהב מעל דלפק טרוורטין מעוגל, כורסאות עור בגוון קוניאק משמאל.",
+   "before_alt_en": "A hotel lobby with a curved travertine reception desk and cognac leather chairs, the plaster wall behind the desk bare.",
+   "before_alt_he": "לובי של מלון עם דלפק קבלה מעוגל מטרוורטין וכורסאות עור בגוון קוניאק, וקיר הטיח שמאחורי הדלפק ריק."
   },
   "hotels_s1": {
    "w": 1800,
@@ -26,7 +28,9 @@
    "cap_en": "A hotel lounge in olive and burgundy, a wall work of folded red strips above the velvet chairs.",
    "cap_he": "טרקלין מלון בזית ובבורדו, עבודת קיר של רצועות אדומות מקופלות מעל כורסאות הקטיפה.",
    "alt_en": "A dim hotel lounge: a tall wall work of folded strips in reds from coral to burgundy on an olive plaster wall above two velvet chairs.",
-   "alt_he": "טרקלין מלון מעומעם: עבודת קיר גבוהה של רצועות מקופלות באדומים, מאלמוג ועד בורדו, על קיר טיח בזית מעל שתי כורסאות קטיפה."
+   "alt_he": "טרקלין מלון מעומעם: עבודת קיר גבוהה של רצועות מקופלות באדומים, מאלמוג ועד בורדו, על קיר טיח בזית מעל שתי כורסאות קטיפה.",
+   "before_alt_en": "A hotel lounge corner with two burgundy velvet armchairs, a marble side table and a floor lamp before a bare olive green wall.",
+   "before_alt_he": "פינת טרקלין במלון עם שתי כורסאות קטיפה בבורדו, שולחן צד משיש ומנורת עמידה, מול קיר ריק בירוק זית."
   },
   "hotels_s2": {
    "w": 1800,
@@ -40,7 +44,9 @@
    "cap_en": "A primary suite in soft linen tones, a wide blue water painting above the bed.",
    "cap_he": "סוויטת הורים בגווני פשתן רכים, ציור רחב של מים כחולים מעל המיטה.",
    "alt_en": "A primary suite at home, with a linen bed, bench and two lamps, a wide painting of blue water with light flecks, matted in an oak frame above the bed.",
-   "alt_he": "סוויטת הורים בבית, עם מיטה בפשתן, ספסל ושתי מנורות, ציור רחב של מים כחולים עם נקודות אור קטנות, בפספרטו ובמסגרת אלון מעל המיטה."
+   "alt_he": "סוויטת הורים בבית, עם מיטה בפשתן, ספסל ושתי מנורות, ציור רחב של מים כחולים עם נקודות אור קטנות, בפספרטו ובמסגרת אלון מעל המיטה.",
+   "before_alt_en": "A hotel guest room with a linen bed, a boucle bench and two bedside lamps, the wall above the upholstered headboard bare.",
+   "before_alt_he": "חדר אורחים במלון עם מיטה במצעי פשתן, ספסל בוקלה ושתי מנורות לילה, והקיר שמעל ראש המיטה המרופד ריק."
   },
   "investment-firms": {
    "w": 1800,
@@ -54,7 +60,9 @@
    "cap_en": "A lounge high over Manhattan, a wide abstract in crimson and coral above the sofa.",
    "cap_he": "טרקלין גבוה מעל מנהטן, יצירה מופשטת רחבה בארגמן ובאלמוג מעל הספה.",
    "alt_en": "A lounge high over Manhattan: a wide abstract in crimson, magenta and coral above a charcoal sofa and black leather chairs.",
-   "alt_he": "טרקלין גבוה מעל מנהטן: יצירה מופשטת רחבה בארגמן, במג'נטה ובאלמוג מעל ספה באפור פחם וכורסאות עור שחורות."
+   "alt_he": "טרקלין גבוה מעל מנהטן: יצירה מופשטת רחבה בארגמן, במג'נטה ובאלמוג מעל ספה באפור פחם וכורסאות עור שחורות.",
+   "before_alt_en": "A high floor office lounge with a charcoal sofa and two black leather chairs, the plaster wall behind the sofa bare.",
+   "before_alt_he": "טרקלין משרדים בקומה גבוהה עם ספה בצבע פחם ושתי כורסאות עור שחורות, וקיר הטיח שמאחורי הספה ריק."
   },
   "investment-firms_s1": {
    "w": 1800,
@@ -68,7 +76,9 @@
    "cap_en": "A meeting space above the skyline, a wide landscape in bright color over the walnut credenza.",
    "cap_he": "חלל ישיבות מעל קו הרקיע, נוף רחב בצבעים עזים מעל שידת האגוז.",
    "alt_en": "A meeting space with an oval walnut table and a Manhattan skyline window, a wide brightly painted landscape above the credenza.",
-   "alt_he": "חלל ישיבות עם שולחן אגוז סגלגל וחלון אל קו הרקיע של מנהטן, נוף רחב בצבעים עזים מעל השידה."
+   "alt_he": "חלל ישיבות עם שולחן אגוז סגלגל וחלון אל קו הרקיע של מנהטן, נוף רחב בצבעים עזים מעל השידה.",
+   "before_alt_en": "A boardroom above the skyline with an oval walnut table and black leather chairs, the wall above the long credenza bare.",
+   "before_alt_he": "חדר ישיבות מעל קו הרקיע עם שולחן אגוז סגלגל וכיסאות עור שחורים, והקיר שמעל השידה הארוכה ריק."
   },
   "investment-firms_s2": {
    "w": 1800,
@@ -82,7 +92,9 @@
    "cap_en": "A salon facing the Empire State Building, a bronze and gold wall relief above the credenza.",
    "cap_he": "סלון מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.",
    "alt_en": "A salon with a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa and city windows.",
-   "alt_he": "סלון עם תבליט של דיסקיות ברונזה וזהב על קיר בכחול אפרפר מעל שידת אגוז, ספה בזית וחלונות אל העיר."
+   "alt_he": "סלון עם תבליט של דיסקיות ברונזה וזהב על קיר בכחול אפרפר מעל שידת אגוז, ספה בזית וחלונות אל העיר.",
+   "before_alt_en": "A private office lounge with an olive velvet sofa and a black marble table, the blue plaster wall above the walnut sideboard bare.",
+   "before_alt_he": "טרקלין במשרד פרטי עם ספת קטיפה בירוק זית ושולחן שיש שחור, וקיר הטיח הכחול שמעל מזנון האגוז ריק."
   },
   "law-firms": {
    "w": 1800,
@@ -96,7 +108,9 @@
    "cap_en": "A reception high over Manhattan, a woven abstract in red, pink and blue above the leather chairs.",
    "cap_he": "אזור קבלה גבוה מעל מנהטן, עבודה מופשטת ארוגה באדום, ורוד וכחול מעל כורסאות העור.",
    "alt_en": "A reception over Manhattan: a large unframed woven abstract in red, pink and blue above two cognac leather chairs, books on shelves at right.",
-   "alt_he": "אזור קבלה מעל מנהטן: עבודה מופשטת ארוגה גדולה ללא מסגרת באדום, ורוד וכחול מעל שתי כורסאות עור בגוון קוניאק, ספרים על מדפים מימין."
+   "alt_he": "אזור קבלה מעל מנהטן: עבודה מופשטת ארוגה גדולה ללא מסגרת באדום, ורוד וכחול מעל שתי כורסאות עור בגוון קוניאק, ספרים על מדפים מימין.",
+   "before_alt_en": "A law firm reception with two leather armchairs, a travertine table and a wood desk, the wall behind the seating bare.",
+   "before_alt_he": "קבלה במשרד עורכי דין עם שתי כורסאות עור, שולחן טרוורטין ודלפק עץ, והקיר שמאחורי פינת הישיבה ריק."
   },
   "law-firms_s1": {
    "w": 1800,
@@ -110,7 +124,9 @@
    "cap_en": "A paneled space in deep green, a gold leaf portrait above the sideboard.",
    "cap_he": "חלל מחופה בירוק עמוק, דיוקן על עלי זהב מעל המזנון.",
    "alt_en": "A green paneled space with a walnut table and oxblood leather chairs, a portrait on gold leaf above the sideboard.",
-   "alt_he": "חלל מחופה עץ בירוק, עם שולחן אגוז וכיסאות עור בבורדו כהה, דיוקן על עלי זהב מעל המזנון."
+   "alt_he": "חלל מחופה עץ בירוק, עם שולחן אגוז וכיסאות עור בבורדו כהה, דיוקן על עלי זהב מעל המזנון.",
+   "before_alt_en": "A traditional conference room with green paneled walls and burgundy leather chairs, the paneling above the sideboard bare.",
+   "before_alt_he": "חדר ישיבות מסורתי עם קירות מחופים בירוק וכיסאות עור בבורדו, והחיפוי שמעל המזנון ריק."
   },
   "law-firms_s2": {
    "w": 1800,
@@ -124,7 +140,9 @@
    "cap_en": "A lounge with a leather sofa, a tall abstract in gold and cream above it.",
    "cap_he": "טרקלין עם ספת עור, יצירה מופשטת גבוהה בזהב ובשמנת מעליה.",
    "alt_en": "A lounge with a tall abstract in gold and cream with small flecks of color above a cognac leather sofa, lit bookshelves at right.",
-   "alt_he": "טרקלין עם יצירה מופשטת גבוהה בזהב ובשמנת ונקודות צבע קטנות מעל ספת עור בגוון קוניאק, מדפי ספרים מוארים מימין."
+   "alt_he": "טרקלין עם יצירה מופשטת גבוהה בזהב ובשמנת ונקודות צבע קטנות מעל ספת עור בגוון קוניאק, מדפי ספרים מוארים מימין.",
+   "before_alt_en": "A partner's office lounge with a brown leather sofa and a black marble table, the plaster wall above the sofa bare.",
+   "before_alt_he": "פינת ישיבה בחדר של שותף עם ספת עור חומה ושולחן שיש שחור, וקיר הטיח שמעל הספה ריק."
   },
   "law-firms_s3": {
    "w": 1800,
@@ -138,7 +156,9 @@
    "cap_en": "A long table between two skyline windows, a wide painting of a sunlit modern interior on the end wall.",
    "cap_he": "שולחן ארוך בין שני חלונות אל קו הרקיע, ציור רחב של חלל פנים מודרני מוצף שמש על הקיר שבקצה.",
    "alt_en": "A long walnut table with skyline windows on both sides, a wide colorful painting of a modern interior on the end wall.",
-   "alt_he": "שולחן אגוז ארוך וחלונות אל קו הרקיע משני צדיו, ציור רחב וצבעוני של חלל פנים מודרני על הקיר שבקצה."
+   "alt_he": "שולחן אגוז ארוך וחלונות אל קו הרקיע משני צדיו, ציור רחב וצבעוני של חלל פנים מודרני על הקיר שבקצה.",
+   "before_alt_en": "A long boardroom table with leather chairs leading to a bare, lit end wall between two skyline windows and two linear pendants.",
+   "before_alt_he": "שולחן ישיבות ארוך עם כיסאות עור המוביל אל קיר קצה מואר וריק, בין שני חלונות אל קו הרקיע ושני גופי תאורה קוויים."
   },
   "medical-practices": {
    "w": 1800,
@@ -152,7 +172,9 @@
    "cap_en": "A waiting area above the city, three flower paintings in a row above the bench.",
    "cap_he": "אזור המתנה מעל העיר, שלושה ציורי פרחים בשורה מעל הספסל.",
    "alt_en": "A waiting area: three paintings of garden flowers in pinks, reds and greens above a long sage bench, a reception desk at right.",
-   "alt_he": "אזור המתנה: שלושה ציורים של פרחי גן בוורוד, באדום ובירוק מעל ספסל ארוך בירוק מרווה, דלפק קבלה מימין."
+   "alt_he": "אזור המתנה: שלושה ציורים של פרחי גן בוורוד, באדום ובירוק מעל ספסל ארוך בירוק מרווה, דלפק קבלה מימין.",
+   "before_alt_en": "A medical waiting room with a long sage banquette and two walnut side tables below a bare white wall, the front desk at right.",
+   "before_alt_he": "חדר המתנה במרפאה עם ספסל ארוך בירוק מרווה ושני שולחנות צד מאגוז מתחת לקיר לבן וריק, ודלפק הקבלה מימין."
   },
   "medical-practices_s1": {
    "w": 1800,
@@ -166,7 +188,9 @@
    "cap_en": "A space with a garden window, a tall abstract in turquoise above the oak cabinet.",
    "cap_he": "חלל עם חלון אל הירוק, יצירה מופשטת גבוהה בטורקיז מעל ארון האלון.",
    "alt_en": "A space with a garden window: a tall abstract of small turquoise strokes with flecks of pink and red above an oak cabinet.",
-   "alt_he": "חלל עם חלון אל הגן: יצירה מופשטת גבוהה של משיכות מכחול קטנות בטורקיז, עם נגיעות של ורוד ואדום, מעל ארון אלון."
+   "alt_he": "חלל עם חלון אל הגן: יצירה מופשטת גבוהה של משיכות מכחול קטנות בטורקיז, עם נגיעות של ורוד ואדום, מעל ארון אלון.",
+   "before_alt_en": "A bright consultation space with a round travertine table and two boucle chairs, the wall above the low oak cabinets bare.",
+   "before_alt_he": "חלל ייעוץ מואר עם שולחן עגול מטרוורטין ושני כיסאות בוקלה, והקיר שמעל ארונות האלון הנמוכים ריק."
   },
   "medical-practices_s2": {
    "w": 1800,
@@ -180,7 +204,9 @@
    "cap_en": "A lounge in sage green, a turquoise abstract above two boucle chairs.",
    "cap_he": "טרקלין בירוק מרווה, יצירה מופשטת בטורקיז מעל שתי כורסאות בוקלה.",
    "alt_en": "A lounge with a sage plaster wall, a turquoise abstract of small bright strokes above two ivory boucle chairs and a walnut table.",
-   "alt_he": "טרקלין עם קיר טיח בירוק מרווה, יצירה מופשטת בטורקיז של משיכות מכחול קטנות ובהירות מעל שתי כורסאות בוקלה בצבע שנהב ושולחן אגוז."
+   "alt_he": "טרקלין עם קיר טיח בירוק מרווה, יצירה מופשטת בטורקיז של משיכות מכחול קטנות ובהירות מעל שתי כורסאות בוקלה בצבע שנהב ושולחן אגוז.",
+   "before_alt_en": "A calm waiting corner with two boucle swivel chairs and a walnut side table before a bare sage green plaster wall.",
+   "before_alt_he": "פינת המתנה שקטה עם שתי כורסאות בוקלה מסתובבות ושולחן צד מאגוז, מול קיר טיח ריק בירוק מרווה."
   },
   "restaurants": {
    "w": 1800,
@@ -194,7 +220,9 @@
    "cap_en": "A candlelit restaurant before service, a large collage of an old master painting above the velvet banquette.",
    "cap_he": "מסעדה לאור נרות לפני השירות, קולאז' גדול המבוסס על ציור של אחד המאסטרים הישנים מעל ספת הקטיפה.",
    "alt_en": "A restaurant before service: a collage breaking an old master painting of cherubs into pixel blocks, above a green velvet banquette.",
-   "alt_he": "מסעדה לפני השירות: קולאז' שמפרק לגושי פיקסלים ציור של מלאכים קטנים מאת אחד המאסטרים הישנים, מעל ספת קטיפה ירוקה."
+   "alt_he": "מסעדה לפני השירות: קולאז' שמפרק לגושי פיקסלים ציור של מלאכים קטנים מאת אחד המאסטרים הישנים, מעל ספת קטיפה ירוקה.",
+   "before_alt_en": "A dim restaurant with a long green velvet banquette, round marble tables and candles, the plaster wall above the banquette bare.",
+   "before_alt_he": "מסעדה באור עמום עם ספסל קטיפה ירוק וארוך, שולחנות שיש עגולים ונרות, וקיר הטיח שמעל הספסל ריק."
   },
   "restaurants_s1": {
    "w": 1800,
@@ -208,7 +236,9 @@
    "cap_en": "A dining space by the sea, a painting of a pink pool house above the long table.",
    "cap_he": "חלל אירוח מול הים, ציור של בית בריכה ורוד מעל השולחן הארוך.",
    "alt_en": "A dining space with a long wood table and a sea view, a painting of a pink pool house and turquoise water on the white wall.",
-   "alt_he": "חלל אירוח עם שולחן עץ ארוך ונוף לים, ציור של בית בריכה ורוד ומים בטורקיז על הקיר הלבן."
+   "alt_he": "חלל אירוח עם שולחן עץ ארוך ונוף לים, ציור של בית בריכה ורוד ומים בטורקיז על הקיר הלבן.",
+   "before_alt_en": "A sea view dining space with a long oak table set for lunch and wishbone chairs, the white wall beside the windows bare.",
+   "before_alt_he": "חלל אוכל עם נוף לים, שולחן אלון ארוך ערוך לארוחת צהריים וכיסאות עץ, והקיר הלבן שליד החלונות ריק."
   },
   "wealth-managers": {
    "w": 1800,
@@ -222,7 +252,9 @@
    "cap_en": "A lounge with a garden window, a large painted landscape of trees and hills above the sofa.",
    "cap_he": "טרקלין עם חלון אל הגן, נוף מצויר גדול של עצים וגבעות מעל הספה.",
    "alt_en": "A lounge with a large painted landscape of trees and hills in greens, golds and pinks above a sage sofa, an arched garden window.",
-   "alt_he": "טרקלין עם נוף מצויר גדול של עצים וגבעות בירוקים, בזהב ובוורוד מעל ספה בירוק מרווה, חלון מקושת אל הגן."
+   "alt_he": "טרקלין עם נוף מצויר גדול של עצים וגבעות בירוקים, בזהב ובוורוד מעל ספה בירוק מרווה, חלון מקושת אל הגן.",
+   "before_alt_en": "A client lounge with a curved sage sofa, two boucle chairs and a round walnut table before a bare plaster wall, an arched window at right.",
+   "before_alt_he": "טרקלין לקוחות עם ספה מעוגלת בירוק מרווה, שתי כורסאות בוקלה ושולחן אגוז עגול מול קיר טיח ריק, וחלון מקושת מימין."
   },
   "wealth-managers_s1": {
    "w": 1800,
@@ -236,7 +268,9 @@
    "cap_en": "A reception in warm light, a carved relief in teal, blue and cream above the walnut credenza.",
    "cap_he": "אזור קבלה באור חם, תבליט מגולף בטורקיז, כחול ושמנת מעל שידת האגוז.",
    "alt_en": "A reception with a travertine desk and a skyline window, a large carved wave relief in teal, blue and cream on the plaster wall.",
-   "alt_he": "אזור קבלה עם דלפק טרוורטין וחלון אל קו הרקיע, תבליט גלים מגולף גדול בטורקיז, בכחול ובשמנת על קיר הטיח."
+   "alt_he": "אזור קבלה עם דלפק טרוורטין וחלון אל קו הרקיע, תבליט גלים מגולף גדול בטורקיז, בכחול ובשמנת על קיר הטיח.",
+   "before_alt_en": "A wealth office reception with a travertine desk and a long walnut credenza, the plaster wall above the credenza bare.",
+   "before_alt_he": "קבלה במשרד לניהול הון עם דלפק טרוורטין ושידת אגוז ארוכה, וקיר הטיח שמעל השידה ריק."
   },
   "wealth-managers_s2": {
    "w": 1800,
@@ -250,7 +284,9 @@
    "cap_en": "An office over a garden, a bronze and gold wall relief behind the desk.",
    "cap_he": "משרד מול גן, תבליט קיר בברונזה ובזהב מאחורי השולחן.",
    "alt_en": "An office with a bronze and gold disc relief on a navy plaster wall behind a walnut desk, two cognac leather chairs and garden windows.",
-   "alt_he": "משרד עם תבליט של דיסקיות ברונזה וזהב על קיר טיח בכחול כהה מאחורי שולחן אגוז, שתי כורסאות עור בגוון קוניאק וחלונות אל הגן."
+   "alt_he": "משרד עם תבליט של דיסקיות ברונזה וזהב על קיר טיח בכחול כהה מאחורי שולחן אגוז, שתי כורסאות עור בגוון קוניאק וחלונות אל הגן.",
+   "before_alt_en": "A private office with a walnut desk and two cognac leather chairs facing it, the deep blue plaster wall behind the desk bare.",
+   "before_alt_he": "משרד פרטי עם שולחן עבודה מאגוז ושתי כורסאות עור בגוון קוניאק מולו, וקיר הטיח הכחול העמוק שמאחורי השולחן ריק."
   },
   "art-above-couch_hero": {
    "w": 1800,
@@ -263,8 +299,10 @@
    ],
    "cap_en": "A living space, a wide landscape painting above the linen sofa.",
    "cap_he": "חלל מגורים, ציור נוף רחב מעל ספת הפשתן.",
-   "alt_en": "A warm living space with a long linen sofa, leather cushions and two table lamps: above the sofa, a framed landscape painting of bright rolling hills under a cloudy blue sky, hung a short gap above the sofa back.",
-   "alt_he": "חלל מגורים חמים עם ספת פשתן ארוכה, כריות עור ושתי מנורות שולחן: מעל הספה, ציור נוף ממוסגר של גבעות מתגלגלות בצבעים עזים תחת שמיים כחולים ומעוננים, תלוי במרווח קצר מעל גב הספה."
+   "alt_en": "The same living space with a framed landscape of bright rolling hills under a cloudy sky, hung a short gap above the sofa back.",
+   "alt_he": "אותו חלל מגורים עם ציור נוף ממוסגר של גבעות מתגלגלות בצבעים עזים תחת שמיים מעוננים, תלוי במרווח קצר מעל גב הספה.",
+   "before_alt_en": "A warm living space with a bare plaster wall above a long linen sofa, two table lamps and an olive tree by the window.",
+   "before_alt_he": "חלל מגורים חמים עם קיר טיח ריק מעל ספת פשתן ארוכה, שתי מנורות שולחן ועץ זית ליד החלון."
   },
   "art-for-home-staging_hero": {
    "w": 1800,
@@ -277,8 +315,10 @@
    ],
    "cap_en": "A staged living space, one landscape painting centered above the sofa.",
    "cap_he": "חלל מגורים מבוים, ציור נוף אחד במרכז מעל הספה.",
-   "alt_en": "A bright staged living space with a cream sofa, an oak coffee table and two boucle armchairs: one framed landscape painting of colorful hills and a cloudy sky is centered above the sofa, the only art in the shot.",
-   "alt_he": "חלל מגורים מבוים ומואר עם ספה בגוון שמנת, שולחן קפה מעץ אלון ושתי כורסאות בוקלה: ציור נוף ממוסגר אחד של גבעות צבעוניות ושמיים מעוננים תלוי במרכז מעל הספה, העבודה היחידה בתמונה."
+   "alt_en": "The same staged living space with one framed landscape of colorful hills centered above the sofa, the only art in the shot.",
+   "alt_he": "אותו חלל מגורים מבוים עם ציור נוף ממוסגר אחד של גבעות צבעוניות במרכז מעל הספה, העבודה היחידה בתמונה.",
+   "before_alt_en": "A bright staged living space with a bare wall above a cream sofa, two boucle armchairs and an olive tree by the window.",
+   "before_alt_he": "חלל מגורים מבוים ומואר עם קיר ריק מעל ספה בגוון שמנת, שתי כורסאות בוקלה ועץ זית ליד החלון."
   },
   "dental-office-decor_hero": {
    "w": 1800,
@@ -291,8 +331,10 @@
    ],
    "cap_en": "A dental treatment space from the chair, a landscape painting high on the facing wall.",
    "cap_he": "חלל טיפול במרפאת שיניים מנקודת המבט של הכיסא, ציור נוף גבוה על הקיר שממול.",
-   "alt_en": "The view from a dental chair, sitting back: past the foot of the chair and the treatment light swung aside, a landscape painting of colorful hills and a bright sky hangs high on the facing wall, where the patient's eyes rest.",
-   "alt_he": "המבט מכיסא טיפולים במרפאת שיניים, בישיבה נשענת: מעבר לקצה הכיסא ולמנורת הטיפול שהוזזה הצידה, ציור נוף של גבעות צבעוניות ושמיים בהירים תלוי גבוה על הקיר שממול, במקום שבו עיני המטופל נחות."
+   "alt_en": "The same treatment space with a landscape of colorful hills and a bright sky hung high on the wall the reclined patient faces.",
+   "alt_he": "אותו חלל טיפול עם ציור נוף של גבעות צבעוניות ושמיים בהירים, תלוי גבוה על הקיר שהמטופל רואה מולו בישיבה נשענת.",
+   "before_alt_en": "The view from a dental chair, sitting back, to a bare facing wall between a tall window and pale oak cabinets.",
+   "before_alt_he": "המבט מכיסא טיפולים במרפאת שיניים, בישיבה נשענת, אל קיר ריק שממול, בין חלון גבוה לארונות אלון בהירים."
   },
   "dining-room-art_hero": {
    "w": 1800,
@@ -305,8 +347,10 @@
    ],
    "cap_en": "A dining space at dusk, a red and plum abstract above the sideboard.",
    "cap_he": "חלל אוכל בשעת בין ערביים, יצירה מופשטת באדום ובשזיף מעל המזנון.",
-   "alt_en": "A dining space at dusk with a walnut table, boucle chairs and two brass pendants: between the pendants, a framed abstract of rippling bands in crimson, magenta and plum hangs above a walnut sideboard.",
-   "alt_he": "חלל אוכל בשעת בין ערביים עם שולחן אגוז, כיסאות בוקלה ושני גופי תאורה תלויים מפליז: בין גופי התאורה, יצירה מופשטת ממוסגרת של רצועות גליות בארגמן, במג'נטה ובשזיף תלויה מעל מזנון אגוז."
+   "alt_en": "The same dining space with a framed abstract of rippling crimson, magenta and plum bands between the pendants, above the sideboard.",
+   "alt_he": "אותו חלל אוכל עם יצירה מופשטת ממוסגרת של רצועות גליות בארגמן, במג'נטה ובשזיף בין גופי התאורה, מעל המזנון.",
+   "before_alt_en": "A dining space at dusk with a bare plaster wall above a walnut sideboard, between two brass pendants over the table.",
+   "before_alt_he": "חלל אוכל בשעת בין ערביים עם קיר טיח ריק מעל מזנון אגוז, בין שני גופי תאורה תלויים מפליז מעל השולחן."
   },
   "entryway-art_hero": {
    "w": 1800,
@@ -319,8 +363,10 @@
    ],
    "cap_en": "An entry through the open door, one bold abstract on the facing wall.",
    "cap_he": "כניסה דרך הדלת הפתוחה, יצירה מופשטת נועזת אחת על הקיר שממול.",
-   "alt_en": "Through an open front door, the facing wall of an entry hall holds one large unframed abstract of rippling bands in crimson, magenta and coral, with a walnut console and a brass lamp at the right.",
-   "alt_he": "מבעד לדלת כניסה פתוחה, על הקיר שמול הדלת תלויה יצירה מופשטת גדולה אחת ללא מסגרת, של רצועות גליות בארגמן, במג'נטה ובאלמוג, ומימין שידת אגוז ומנורת פליז."
+   "alt_en": "The same entry hall with one large unframed abstract of rippling crimson, magenta and coral bands on the wall facing the door.",
+   "alt_he": "אותו חלל כניסה עם יצירה מופשטת גדולה אחת ללא מסגרת, של רצועות גליות בארגמן, במג'נטה ובאלמוג, על הקיר שמול הדלת.",
+   "before_alt_en": "An entry hall seen through the open front door, its facing wall bare, with a walnut console and a brass lamp at the right.",
+   "before_alt_he": "חלל כניסה מבעד לדלת הכניסה הפתוחה, הקיר שממול ריק, ומימין שידת אגוז ומנורת פליז."
   },
   "how-to-choose-art-for-your-home_hero": {
    "w": 1800,
@@ -333,8 +379,10 @@
    ],
    "cap_en": "A reading corner, one tall floral painting on the free wall.",
    "cap_he": "פינת קריאה, ציור פרחים גבוה אחד על הקיר הפנוי.",
-   "alt_en": "A reading corner with a cream armchair, a walnut side table and a brass floor lamp: on the bare wall beside it, one tall painting of flowers in crimson, pink, teal and white drifting over a dark green ground.",
-   "alt_he": "פינת קריאה עם כורסה בגוון שמנת, שולחן צד מעץ אגוז ומנורת עמידה מפליז: על הקיר הריק שלידה, ציור גבוה אחד של פרחים בארגמן, בוורוד, בטורקיז ובלבן, הנישאים על רקע ירוק כהה."
+   "alt_en": "The same reading corner with one tall painting of crimson, pink and white flowers on a dark green ground hung on the free wall.",
+   "alt_he": "אותה פינת קריאה עם ציור גבוה אחד של פרחים בארגמן, בוורוד ובלבן על רקע ירוק כהה, תלוי על הקיר הפנוי.",
+   "before_alt_en": "A reading corner with a cream armchair, a walnut side table and a brass floor lamp beside a tall, bare plaster wall.",
+   "before_alt_he": "פינת קריאה עם כורסה בגוון שמנת, שולחן צד מעץ אגוז ומנורת עמידה מפליז, ליד קיר טיח גבוה וריק."
   },
   "how-to-hang-pictures_hero": {
    "w": 1800,
@@ -347,8 +395,10 @@
    ],
    "cap_en": "A landing wall, one wide painting centered at eye level.",
    "cap_he": "קיר במישור המדרגות, ציור רחב אחד שמרכזו בגובה העיניים.",
-   "alt_en": "An upstairs landing with a stair rail and an oak door: one wide painting of shimmering water in blue, lilac and pale gold hangs centered at eye level on the bare wall, with nothing below it.",
-   "alt_he": "מישור מדרגות בקומה העליונה עם מעקה ודלת אלון: ציור רחב אחד של מים מנצנצים בכחול, בלילך ובזהב חיוור תלוי כשמרכזו בגובה העיניים על הקיר הריק, ושום דבר מתחתיו."
+   "alt_en": "The same landing with one wide painting of shimmering water in blue, lilac and pale gold hung centered at eye level on the wall.",
+   "alt_he": "אותו מישור מדרגות עם ציור רחב אחד של מים מנצנצים בכחול, בלילך ובזהב חיוור, תלוי כשמרכזו בגובה העיניים על הקיר.",
+   "before_alt_en": "An upstairs landing with a stair rail, an oak door and an olive tree beside a bare wall with nothing below it.",
+   "before_alt_he": "מישור מדרגות בקומה העליונה עם מעקה, דלת אלון ועץ זית, ליד קיר ריק שאין דבר מתחתיו."
   },
   "large-wall-art-ideas_hero": {
    "w": 1800,
@@ -361,8 +411,10 @@
    ],
    "cap_en": "A large living space wall, one big landscape painting.",
    "cap_he": "קיר גדול בחלל מגורים, ציור נוף גדול אחד.",
-   "alt_en": "A tall wall in an open living space, seen past two boucle armchairs and a round walnut table: one large unframed landscape painting of colorful hills under a cloudy sky fills the middle of the wall.",
-   "alt_he": "קיר גבוה בחלל מגורים פתוח, מבעד לשתי כורסאות בוקלה ושולחן אגוז עגול: ציור נוף גדול אחד ללא מסגרת, של גבעות צבעוניות תחת שמיים מעוננים, ממלא את מרכז הקיר."
+   "alt_en": "The same living space with one large unframed landscape of colorful hills under a cloudy sky filling the middle of the tall wall.",
+   "alt_he": "אותו חלל מגורים עם ציור נוף גדול אחד ללא מסגרת, של גבעות צבעוניות תחת שמיים מעוננים, הממלא את מרכז הקיר הגבוה.",
+   "before_alt_en": "A tall, bare wall in an open living space, seen past two boucle armchairs and a round walnut table, an olive tree at the right.",
+   "before_alt_he": "קיר גבוה וריק בחלל מגורים פתוח, מבעד לשתי כורסאות בוקלה ושולחן אגוז עגול, ועץ זית מימין."
   },
   "living-room-art_hero": {
    "w": 1800,
@@ -375,8 +427,10 @@
    ],
    "cap_en": "A living space from the doorway, the main wall dressed.",
    "cap_he": "חלל מגורים מהפתח, הקיר המרכזי מולבש.",
-   "alt_en": "A living space seen from its doorway: one landscape painting of colorful hills and a cloudy sky, in a thin black frame, hangs on the wall the eye meets first, beside an olive tree and two armchairs.",
-   "alt_he": "חלל מגורים כפי שהוא נראה מהפתח: ציור נוף אחד של גבעות צבעוניות ושמיים מעוננים, במסגרת שחורה דקה, תלוי על הקיר שהעין פוגשת ראשון, ליד עץ זית ושתי כורסאות."
+   "alt_en": "The same living space with one landscape of colorful hills in a thin black frame, hung on the wall the eye meets first.",
+   "alt_he": "אותו חלל מגורים עם ציור נוף אחד של גבעות צבעוניות במסגרת שחורה דקה, תלוי על הקיר שהעין פוגשת ראשון.",
+   "before_alt_en": "A living space seen from its doorway, the wall the eye meets first still bare, beside an olive tree and two armchairs.",
+   "before_alt_he": "חלל מגורים כפי שהוא נראה מהפתח, הקיר שהעין פוגשת ראשון עדיין ריק, ליד עץ זית ושתי כורסאות."
   },
   "hotel-artwork_hero": {
    "w": 1800,
@@ -389,8 +443,10 @@
    ],
    "cap_en": "A hotel lobby at evening, one wide painting on the wall between the elevators.",
    "cap_he": "לובי של מלון בערב, ציור רחב אחד על הקיר שבין המעליות.",
-   "alt_en": "A hotel lobby at evening with stone floors and walnut walls: a wide painting of shimmering water in blue, lilac and pale gold hangs on the lit plaster wall between two bronze elevator doors, facing the entrance.",
-   "alt_he": "לובי של מלון בערב עם רצפת אבן וקירות אגוז: ציור רחב של מים מנצנצים בכחול, בלילך ובזהב חיוור תלוי על קיר הטיח המואר שבין שתי דלתות מעלית מברונזה, מול הכניסה."
+   "alt_en": "The same hotel lobby with a wide painting of shimmering water in blue, lilac and pale gold hung between the two elevator doors.",
+   "alt_he": "אותו לובי של מלון עם ציור רחב של מים מנצנצים בכחול, בלילך ובזהב חיוור, תלוי בין שתי דלתות המעלית.",
+   "before_alt_en": "A hotel lobby at evening with stone floors and walnut walls, the lit plaster wall between two bronze elevator doors bare.",
+   "before_alt_he": "לובי של מלון בערב עם רצפת אבן וקירות אגוז, וקיר הטיח המואר שבין שתי דלתות מעלית מברונזה ריק."
   },
   "buy-lease-or-commission-office-art_hero": {
    "w": 1800,
@@ -403,8 +459,10 @@
    ],
    "cap_en": "A meeting lounge, a ceramic wall work sized to its niche.",
    "cap_he": "טרקלין פגישות, עבודת קיר קרמית בגודל שמתאים לגומחה שלה.",
-   "alt_en": "A meeting lounge on a high floor with walnut paneling and two cognac leather chairs: a wall work of glazed ceramic discs and tiles in rust, teal and gold fills the plaster niche above a low walnut ledge.",
-   "alt_he": "טרקלין פגישות בקומה גבוהה עם חיפוי אגוז ושתי כורסאות עור בגוון קוניאק: עבודת קיר של דיסקיות ואריחים קרמיים מזוגגים בחלודה, בטורקיז ובזהב ממלאת את גומחת הטיח מעל מדף אגוז נמוך."
+   "alt_en": "The same meeting lounge with a wall work of glazed ceramic discs and tiles in rust, teal and gold filling the plaster niche.",
+   "alt_he": "אותו טרקלין פגישות עם עבודת קיר של דיסקיות ואריחים קרמיים מזוגגים בחלודה, בטורקיז ובזהב, הממלאת את גומחת הטיח.",
+   "before_alt_en": "A meeting lounge on a high floor with walnut paneling, two cognac leather chairs and an empty plaster niche above a walnut ledge.",
+   "before_alt_he": "טרקלין פגישות בקומה גבוהה עם חיפוי אגוז, שתי כורסאות עור בגוון קוניאק וגומחת טיח ריקה מעל מדף אגוז."
   },
   "financial-advisor-office-art_hero": {
    "w": 1800,
@@ -417,8 +475,90 @@
    ],
    "cap_en": "An advisor's meeting space, one quiet abstract above the credenza.",
    "cap_he": "חלל פגישות של יועץ פיננסי, יצירה מופשטת שקטה אחת מעל השידה הנמוכה.",
-   "alt_en": "A client meeting space with a white marble table and black leather chairs: above a low oak credenza, a matted abstract of layered translucent shapes in olive, violet and ochre hangs in a walnut frame.",
-   "alt_he": "חלל פגישות עם לקוחות, שולחן שיש לבן וכיסאות עור שחורים: מעל שידת אלון נמוכה תלויה במסגרת אגוז, עם פספרטו, יצירה מופשטת של צורות שקופות בשכבות בזית, בסגול ובאוקר."
+   "alt_en": "The same meeting space with a matted abstract of translucent olive, violet and ochre shapes in a walnut frame above the credenza.",
+   "alt_he": "אותו חלל פגישות עם יצירה מופשטת עם פספרטו, של צורות שקופות בזית, בסגול ובאוקר, במסגרת אגוז מעל השידה.",
+   "before_alt_en": "A client meeting space with a white marble table and black leather chairs, the wall above the low oak credenza bare.",
+   "before_alt_he": "חלל פגישות עם לקוחות, שולחן שיש לבן וכיסאות עור שחורים, והקיר שמעל שידת האלון הנמוכה ריק."
+  },
+  "gallery-wall-ideas_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.495,
+   "fy": 0.2675,
+   "art_x": [
+    0.3,
+    0.69
+   ],
+   "cap_en": "A living space, seven framed works hung as one group above the sofa.",
+   "cap_he": "חלל מגורים, שבע עבודות ממוסגרות תלויות כקבוצה אחת מעל הספה.",
+   "alt_en": "The same living space with a gallery wall of seven framed works, a tall portrait at its center, hung as one group above the sofa.",
+   "alt_he": "אותו חלל מגורים עם קיר גלריה של שבע עבודות ממוסגרות, דיוקן גבוה במרכזו, תלויות כקבוצה אחת מעל הספה.",
+   "before_alt_en": "A living space with a bare wall above a long linen sofa, an olive tree by the tall window and a brass lamp on the side table.",
+   "before_alt_he": "חלל מגורים עם קיר ריק מעל ספת פשתן ארוכה, עץ זית ליד החלון הגבוה ומנורת פליז על שולחן הצד."
+  },
+  "law-office-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.4992,
+   "fy": 0.2725,
+   "art_x": [
+    0.3567,
+    0.6417
+   ],
+   "cap_en": "A conference space, one wide abstract centered on the long wall above the chairs.",
+   "cap_he": "חלל ישיבות, יצירה מופשטת רחבה אחת במרכז הקיר הארוך מעל הכיסאות.",
+   "alt_en": "The same conference room with one wide abstract in crimson, rose and plum centered on the long wall above the leather chairs.",
+   "alt_he": "אותו חדר ישיבות עם יצירה מופשטת רחבה אחת בארגמן, בוורוד ובשזיף, במרכז הקיר הארוך מעל כיסאות העור.",
+   "before_alt_en": "A law firm conference room with a bare plaster wall behind a long table and cognac leather chairs, and a glass wall at the right.",
+   "before_alt_he": "חדר ישיבות במשרד עורכי דין עם קיר טיח ריק מאחורי שולחן ארוך וכיסאות עור בגוון קוניאק, וקיר זכוכית מימין."
+  },
+  "medical-office-wall-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.5025,
+   "fy": 0.3387,
+   "art_x": [
+    0.3783,
+    0.6267
+   ],
+   "cap_en": "A waiting room, one wide landscape on the wall the chairs face.",
+   "cap_he": "חדר המתנה, נוף רחב אחד על הקיר שמול הכיסאות.",
+   "alt_en": "The same waiting room with one wide landscape of bright hills under a sky full of clouds, centered on the wall the chairs face.",
+   "alt_he": "אותו חדר המתנה עם נוף רחב אחד של גבעות בהירות תחת שמיים מלאי עננים, במרכז הקיר שמול הכיסאות.",
+   "before_alt_en": "A medical waiting room with a bare wall facing two rows of ivory chairs, a tall window at the left and the front desk at the right.",
+   "before_alt_he": "חדר המתנה במרפאה עם קיר ריק מול שתי שורות של כיסאות בגוון שנהב, חלון גבוה משמאל ודלפק הקבלה מימין."
+  },
+  "office-wall-art_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.492,
+   "fy": 0.438,
+   "art_x": [
+    0.448,
+    0.536
+   ],
+   "cap_en": "An office corridor, one tall work centered on the end wall.",
+   "cap_he": "מסדרון משרדים, עבודה גבוהה אחת במרכז קיר הקצה.",
+   "alt_en": "The same office corridor with one tall textured abstract in teal and pearl white centered on the end wall, closing the view.",
+   "alt_he": "אותו מסדרון משרדים עם יצירה מופשטת גבוהה אחת במרקם בטורקיז ובלבן פנינה, במרכז קיר הקצה, סוגרת את המבט.",
+   "before_alt_en": "A long office corridor with bare plaster walls, two oak doors on the right and an empty end wall under a row of downlights.",
+   "before_alt_he": "מסדרון משרדים ארוך עם קירות טיח ריקים, שתי דלתות אלון מימין וקיר קצה ריק תחת שורה של גופי תאורה שקועים."
+  },
+  "restaurant-wall-decor_hero": {
+   "w": 1800,
+   "h": 1200,
+   "fx": 0.51,
+   "fy": 0.335,
+   "art_x": [
+    0.1733,
+    0.8467
+   ],
+   "cap_en": "A bistro, one long landscape above the leather banquette.",
+   "cap_he": "ביסטרו, נוף ארוך אחד מעל ספסל העור.",
+   "alt_en": "The same bistro with one long panoramic landscape of a lake and hills hung above the banquette, spanning most of the wall.",
+   "alt_he": "אותו ביסטרו עם נוף פנורמי ארוך של אגם וגבעות, תלוי מעל הספסל ופרוש על רוב רוחב הקיר.",
+   "before_alt_en": "A bistro with a bare cream plaster wall above a long oxblood leather banquette and four tables set with white linen.",
+   "before_alt_he": "ביסטרו עם קיר טיח ריק בגוון שמנת מעל ספסל עור ארוך בצבע בורדו וארבעה שולחנות ערוכים במפות לבנות."
   }
  }
 }

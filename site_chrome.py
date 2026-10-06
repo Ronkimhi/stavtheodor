@@ -1080,7 +1080,7 @@ def project_card(p):
 # without either, the same markup is a still pair, side by side on a wide screen and stacked on a phone.
 BA_SCRIPT = '<script src="/js/before-after.js?v=20260928" defer></script>'
 BA_LABEL = ('Proposal · how THEODORA would dress this space', 'הצעה · כך THEODORA הייתה מלבישה את החלל הזה')
-BA_BEFORE_ALT = ('The same space before the proposal, its wall still bare.', 'אותו חלל לפני ההצעה, הקיר עדיין ריק.')
+BA_BEFORE_ALT = ('The same space before the proposal, its wall still bare.', 'אותו חלל לפני ההצעה, הקיר עדיין ריק.')  # fallback only: ba_before_alt()
 BA_SIZES = '(max-width: 767px) 100vw, min(1100px, 92vw)'
 _spaces = None
 
@@ -1090,6 +1090,15 @@ def spaces():
     if _spaces is None:
         _spaces = json.load(open(SPACES_FILE, encoding='utf-8'))['spaces']
     return _spaces
+
+
+def ba_before_alt(key):
+    """The before image's alt twin (en, he): the pair's own before_alt_en and before_alt_he in content/spaces.json
+    (2026-10-06: each before says what space it is and one detail of it), else the shared BA_BEFORE_ALT."""
+    s = spaces()[key]
+    if s.get('before_alt_en') and s.get('before_alt_he'):
+        return s['before_alt_en'], s['before_alt_he']
+    return BA_BEFORE_ALT
 
 
 def space_src(key, side):
@@ -1122,7 +1131,7 @@ def before_after(key, first=False):
     <div class="ba-pin">
       <div class="ba-stage">
         <div class="ba-pane ba-before">
-          <img src="{space_src(key, 'before')}" srcset="{space_srcset(key, 'before')}" sizes="{BA_SIZES}" width="{w}" height="{h}" {img_alt(*BA_BEFORE_ALT)} {eager} decoding="async">
+          <img src="{space_src(key, 'before')}" srcset="{space_srcset(key, 'before')}" sizes="{BA_SIZES}" width="{w}" height="{h}" {img_alt(*ba_before_alt(key))} {eager} decoding="async">
           <span class="ba-chip">{T('Before', 'לפני')}</span>
         </div>
         <div class="ba-pane ba-after">
