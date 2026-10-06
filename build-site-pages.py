@@ -593,7 +593,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
            "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
                {"@type": "ListItem", "position": 2, "name": title_en, "item": url}]}]
-    body = f'''{hub_hero(title_en, title_he, lead_en, lead_he, hero_src, f'alt="{H.escape(hero_alt, quote=True)}"')}
+    body = f'''{hub_hero(title_en, title_he, lead_en, lead_he, hero_src, f'alt="{H.escape(hero_alt, quote=True)}"' + sc.focus_style({"focus": HUB_FOCUS.get(section)}))}
 <section class="section wrap tight">
   <div class="grid3">{cards}
   </div>
@@ -1057,8 +1057,11 @@ HUBS = {
     "projects": ("Projects", "פרויקטים",
                  "Homes in Manhattan, New Jersey, Tel Aviv and Caesarea, hotels from Chengdu to Amman, and one exhibition that reached Geneva. Each page tells what the space asked for and what answered it.",
                  "בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות מצ'נגדו ועד עמאן, ותערוכה אחת שהגיעה לז'נבה. כל עמוד מספר מה החלל ביקש ומה ענה לו.",
-                 "/images/home2/garden-villa.jpg", "Foyer of a Caesarea garden villa, two tall portraits facing the front door"),
+                 "/images/projects/waldorf-lobby-hero.jpg", "Lobby of the Waldorf Astoria Chengdu, onyx panels and painted screens curated by THEODORA"),
 }
+# The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
+# /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
+HUB_FOCUS = {"projects": "50% 55%"}
 
 
 def main():
