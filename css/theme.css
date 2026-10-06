@@ -924,13 +924,17 @@
     .gcard .th.ph-photo .ba-chip { top: 6px; left: 6px; padding: 5px 6px 4px; font-size: 9px; letter-spacing: 0.16em; }
     body.lang-he .gcard .th.ph-photo .ba-chip { left: auto; right: 6px; }
     .crumbs .sep:has(+ .cur) { display: none; }
-    /* (d) Design review 2026-09-30 (Fable, articles): on a phone a comparison table scrolls edge to edge, so the cut
-       column reads as "continues" instead of stopping 20px short of the screen, and the row's label (the first
-       cell) stays put while the other columns scroll under it, so a reader never loses which row they are on.
-       A hard box shadow the width of the gutter paints the gutter beside the label so scrolled cells never show
-       through (a pseudo element on a table cell is positioned against the table, not the cell). */
-    .prose.guide .tbl-x { margin-inline: calc(-1 * var(--gx)); padding-inline: var(--gx); }
-    .tbl table { border-collapse: separate; border-spacing: 0; }  /* collapsed cells drop their box shadow in Chromium */
-    .tbl th:first-child { position: sticky; inset-inline-start: 0; z-index: 1; background: var(--bg); box-shadow: calc(-1 * var(--gx)) 0 0 var(--bg); }
-    .prose[dir="rtl"] .tbl th:first-child { box-shadow: var(--gx) 0 0 var(--bg); }
+    /* (d) Design review 2026-09-30 (Fable, articles), revised 2026-10-06: on a phone a comparison table bleeds
+       to the screen edge on its END side only, so the cut column reads as "continues" and fades out over 24px,
+       and the row's label (the first cell) stays put while the other columns scroll under it. The start side
+       keeps the text gutter, so the scroller itself clips the scrolled cells at the label's edge and nothing
+       has to paint the gutter. (The old gutter-painting box shadow showed as a solid grey bar down the left
+       edge in Samsung Internet's dark mode, which recolours shadows apart from backgrounds.) The fade is a
+       mask, alpha only, so no browser dark mode can recolour it; the native scrollbar is hidden on phones. */
+    .prose.guide .tbl-x { margin-inline-end: calc(-1 * var(--gx)); padding-inline-end: var(--gx); scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(to left, transparent, #000 24px); mask-image: linear-gradient(to left, transparent, #000 24px); }
+    .prose.guide[dir="rtl"] .tbl-x { -webkit-mask-image: linear-gradient(to right, transparent, #000 24px); mask-image: linear-gradient(to right, transparent, #000 24px); }
+    .prose.guide .tbl-x::-webkit-scrollbar { display: none; }
+    .tbl table { border-collapse: separate; border-spacing: 0; }  /* collapsed cells lose their borders when sticky in Chromium */
+    .tbl th:first-child { position: sticky; inset-inline-start: 0; z-index: 1; background: var(--bg); }
   }
