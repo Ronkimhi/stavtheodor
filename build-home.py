@@ -403,9 +403,9 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'POST_COUNT': str(len(posts)),
         'FAQ': sc.faq_details(questions, first_open=True),
         'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject, form=v is None),
-        'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_ui(subject),  # the fallback panel and the Write to Stav pop-up
+        'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_ui(),  # the fallback panel, the Write to Stav pop-up and form_js()
         'LANG_JS': sc.LANG_JS,
-        'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ('\n' + sc.form_js() if sc.form_js() else '')),
+        'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ''),  # form_js() comes with write_ui(), once per page
     }
     body = tmpl
     for k, val in fills.items():

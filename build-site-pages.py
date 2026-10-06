@@ -769,7 +769,7 @@ def render_contact():
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=sc.form_js(), quiet=True))
+            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph

@@ -940,7 +940,7 @@
   }
 
   /* The Write to Stav pop-up (site_chrome.write_ui, Ron 2026-10-06): a native modal <dialog> over a dark scrim, one
-     surface panel with a hairline border, the contact form's underline fields (.contact-form), one filled button. The
+     surface panel with a hairline border around the site's contact form (.contact-box, styled above, unchanged). The
      dialog itself is the scroll box (data-lenis-prevent; the homepage's Lenis is stopped while it is open), the page
      behind does not scroll. Phones: the panel fills the width inside a 16px gutter. */
   html.write-open, html.write-open body { overflow: hidden; }
@@ -948,8 +948,7 @@
   .write-modal { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: clamp(16px, 4vw, 40px) 16px; border: 0; background: transparent; color: var(--ink); overflow-y: auto; overscroll-behavior: contain; }
   .write-modal[open] { display: flex; }
   .write-modal::backdrop { background: rgba(10,10,14,0.82); }
-  .write-modal [hidden] { display: none !important; }
-  .wm-panel { position: relative; margin: auto; width: 100%; max-width: 560px; background: var(--surface); border: 1px solid var(--line); padding: clamp(28px, 5vw, 48px); box-shadow: 0 40px 120px rgba(0,0,0,0.55); }
+  .wm-panel { position: relative; margin: auto; width: 100%; max-width: 600px; background: var(--surface); border: 1px solid var(--line); padding: clamp(28px, 5vw, 48px); box-shadow: 0 40px 120px rgba(0,0,0,0.55); }
   .write-modal[open] .wm-panel { animation: wm-in .38s cubic-bezier(.2,.7,.2,1); }
   .write-modal[open]::backdrop { animation: wm-fade .3s ease; }
   @keyframes wm-in { from { opacity: 0; transform: translateY(16px); } }
@@ -957,53 +956,15 @@
   .wm-x { position: absolute; top: 10px; inset-inline-end: 10px; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: var(--muted); cursor: pointer; transition: color .25s; }
   .wm-x svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
   .wm-x:hover { color: var(--ink); }
-  .wm-x:focus-visible, .wm-close:focus-visible, .wm-photo-btn:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
-  .wm-step { display: flex; flex-direction: column; }
-  .wm-step .eyebrow { margin-bottom: 16px; }
-  .wm-head { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--ink); padding-inline-end: 36px; outline: none; text-wrap: balance; }
-  .wm-head:focus-visible { outline: 2px solid var(--taupe); outline-offset: 6px; }
-  .wm-lead { margin: 14px 0 30px; font-size: 16px; line-height: 1.65; color: var(--muted); max-width: 44ch; }
-  .wm-lead [data-l="he"], .wm-text [data-l="he"], .wm-note [data-l="he"] { font-size: 17px; }
-  .write-modal .contact-form { gap: 26px 24px; }
+  .wm-x:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
+  .wm-panel > .eyebrow { margin-bottom: 16px; }
+  .wm-head { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--ink); padding-inline-end: 36px; margin-bottom: 32px; text-wrap: balance; }
+  .write-modal .contact-box { max-width: none; }
   .write-modal .contact-form input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px var(--surface) inset; }
-  .wm-file { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-  .wm-file-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
-  .wm-file-label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
-  .wm-opt { margin-inline-start: 8px; color: rgba(165,163,172,0.7); font-weight: 500; }
-  .wm-pick-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; min-width: 0; }
-  .write-form label.wm-pick { position: relative; display: inline-flex; flex-direction: row; gap: 0; grid-column: auto; font-size: 14px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--soft); cursor: pointer; }
-  .write-form .wm-pick input { position: absolute; top: 0; left: 0; width: 1px; height: 1px; margin: 0; padding: 0; border: 0; opacity: 0; overflow: hidden; clip-path: inset(50%); }
-  .wm-pick-face { display: inline-flex; align-items: center; min-height: 44px; padding: 11px 18px; border: 1px solid rgba(242,240,236,0.28); line-height: 1.3; color: var(--soft); transition: border-color .25s, color .25s; }
-  .write-form label.wm-pick [data-l="he"] { font-size: 15px; }
-  .wm-pick:hover .wm-pick-face { border-color: rgba(242,240,236,0.6); color: var(--ink); }
-  .wm-pick input:focus-visible + .wm-pick-face { outline: 2px solid var(--taupe); outline-offset: 2px; }
-  .wm-pick-name { min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; color: var(--ink); }
-  .write-form button.wm-pick-clear { width: auto; margin: 0; padding: 6px 0; background: none; border: 0; border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: 0.12em; color: var(--muted); }
-  .write-form button.wm-pick-clear:hover { background: none; border-color: var(--muted); color: var(--ink); }
-  .write-form button.wm-pick-clear [data-l="he"] { font-size: 14px; }
-  .wm-note { font-size: 14px; line-height: 1.6; color: var(--muted); }
-  .write-form button[type="submit"] { margin-top: 2px; }
-  .wm-done, .wm-mail { gap: 18px; }
-  .wm-text { font-size: 16px; line-height: 1.65; color: var(--soft); max-width: 46ch; }
-  .wm-done .ty-addr { color: var(--ink); white-space: nowrap; }
-  .wm-done.on .ty-check circle { animation: ty-draw .4s ease-out .15s forwards; }
-  .wm-done.on .ty-check path { animation: ty-draw .25s ease-out .5s forwards; }
-  .wm-photo { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 20px; border-top: 1px solid var(--line); }
-  .wm-photo .btn.solid { padding: 16px 30px; cursor: pointer; font-family: var(--sans); }
-  .wm-close { align-self: flex-start; margin-top: 8px; background: transparent; cursor: pointer; font-family: var(--sans); }
-  .wm-addr { display: block; font-size: 18px; color: var(--ink); border: 1px solid var(--line); padding: 12px 14px; word-break: break-all; direction: ltr; text-align: center; }
-  .wm-row { display: flex; gap: 10px; flex-wrap: wrap; }
-  .wm-row a, .wm-row button { font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 16px; border: 1px solid var(--taupe); background: transparent; color: var(--ink); cursor: pointer; }
-  .wm-row a.solid { background: var(--taupe); color: var(--taupe-ink); }
-  .wm-row [data-l="he"] { letter-spacing: 0; font-size: 14px; }
+  .write-modal .form-thanks { padding: 0; background: none; border: 0; }  /* the panel is already the card */
   body.lang-he .wm-panel { direction: rtl; text-align: right; }  /* the close button moves to the left with it */
-  body.lang-he .wm-addr { text-align: center; }
-  @media (max-width: 520px) {
-    .write-modal .contact-form label.half { grid-column: 1 / -1; }
-    .wm-panel { padding: 28px 20px 24px; }
-  }
+  @media (max-width: 520px) { .wm-panel { padding: 28px 20px 24px; } }
   @media (prefers-reduced-motion: reduce) {
-    .write-modal[open] .wm-panel, .write-modal[open]::backdrop, .wm-done.on .ty-check circle, .wm-done.on .ty-check path { animation: none; }
-    .wm-done .ty-check circle, .wm-done .ty-check path { stroke-dashoffset: 0; }
-    .wm-x, .wm-pick-face { transition: none; }
+    .write-modal[open] .wm-panel, .write-modal[open]::backdrop { animation: none; }
+    .wm-x { transition: none; }
   }
