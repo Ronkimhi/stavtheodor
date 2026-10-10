@@ -237,6 +237,7 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
         dims = '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'
     if og_image_alt:
         dims += f'\n<meta property="og:image:alt" content="{H.escape(og_image_alt, quote=True)}">'
+    tw_alt = f'\n<meta name="twitter:image:alt" content="{H.escape(og_image_alt, quote=True)}">' if og_image_alt else ''
     robots = '\n<meta name="robots" content="noindex">' if noindex else ''
     ld_html = ('<!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page\'s -->\n'
                + ld_script(page_graph(ld)))
@@ -258,7 +259,7 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{H.escape(og_title, quote=True)}">
 <meta name="twitter:description" content="{H.escape(og_desc, quote=True)}">
-<meta name="twitter:image" content="{og_image}">
+<meta name="twitter:image" content="{og_image}">{tw_alt}
 <link rel="canonical" href="{url}">
 {FAVICONS}
 {FONTS}
@@ -1254,6 +1255,10 @@ def before_after(key, first=False):
     # data-art: the artwork's left and right edges and the focal point, as fractions of the image width, and the
     # image size: the brush crosses only the wall around the artwork, the one place the two images differ
     art = f"{s['art_x'][0]} {s['art_x'][1]} {s['fx']} {w} {h}"
+    # ai_en/ai_he (2026-10-10): a pair whose images were made or edited end to end by AI (the restaurant guide) says
+    # so after its caption, on top of the proposal label every pair carries
+    cap_en = s['cap_en'] + (' ' + s['ai_en'] if s.get('ai_en') else '')
+    cap_he = s['cap_he'] + (' ' + s['ai_he'] if s.get('ai_he') else '')
     return f'''<figure class="ba" data-art="{art}" style="--fx:{s['fx'] * 100:.1f}%;--fy:{s['fy'] * 100:.1f}%;--ar:{w}/{h}">
     <div class="ba-pin">
       <div class="ba-stage">
@@ -1266,7 +1271,7 @@ def before_after(key, first=False):
           <span class="ba-chip">{T('After', 'אחרי')}</span>
         </div>
       </div>
-      <figcaption><span class="ba-label">{T(*BA_LABEL)}</span> {T(H.escape(s['cap_en']), H.escape(s['cap_he']))}</figcaption>
+      <figcaption><span class="ba-label">{T(*BA_LABEL)}</span> {T(H.escape(cap_en), H.escape(cap_he))}</figcaption>
     </div>
   </figure>'''
 

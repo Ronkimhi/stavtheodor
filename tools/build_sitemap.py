@@ -3,7 +3,8 @@
 
   sitemap-pages.xml    the homepage, the hubs (/advisory/, /projects/, /guide/), every advisory, project, partner, guide and
                        local landing page (content/pages/*.json), /contact/ and /about/ (since 2026-09-29), and the
-                       buyer pages (content/variants/*.json, indexable since 2026-09-28)
+                       buyer pages (content/variants/*.json, indexable since 2026-09-28); each guide URL also lists its
+                       proposal photos as image:image entries (2026-10-10)
   sitemap-radar.xml    the Art Radar archive and every post (content/posts.html)
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
@@ -122,7 +123,7 @@ def main():
             lm = history.date(path, fp)
         store[key] = {'fp': fp, 'lastmod': lm}
         seen.add(key)
-        return entry(url, lm), lm
+        return entry(url, lm, page_images(path) if key.startswith('/guide/') else ()), lm
 
     # ---- pages: the homepage, the hubs, every content/pages entry that was rendered, /contact/, /about/, buyer pages
     page_entries = [dated(SITE + '/', 'index.html')]
@@ -176,14 +177,31 @@ def main():
     print(f'sitemap.xml: index over sitemap-pages.xml ({len(page_entries)} URLs), sitemap-radar.xml ({len(radar_entries)}), sitemap-museum.xml ({len(museum_entries)})')
 
 
-def entry(url, lastmod):
+GUIDE_PHOTO = re.compile(r'<img\b[^>]*?\bsrc="(/images/(?:spaces|guides)/[^"]+?)(?:-1000)?\.webp"')
+
+
+def page_images(path):
+    """A guide's proposal photos for the image sitemap (2026-10-10): the after of its before/after pair and every
+    photo in its body, each once, at its full 1800 px size; the bare before and the diagrams are left out."""
+    html = open(path, encoding='utf-8', errors='replace').read()
+    out = []
+    for src in GUIDE_PHOTO.findall(html):
+        if src.endswith('_before') or src in out or not os.path.exists(src.lstrip('/') + '.webp'):
+            continue
+        out.append(src)
+    return [SITE + s + '.webp' for s in out]
+
+
+def entry(url, lastmod, images=()):
     lm = f'\n    <lastmod>{lastmod}</lastmod>' if lastmod else ''
-    return f'  <url>\n    <loc>{url}</loc>{lm}\n  </url>'
+    im = ''.join(f'\n    <image:image>\n      <image:loc>{i}</image:loc>\n    </image:image>' for i in images)
+    return f'  <url>\n    <loc>{url}</loc>{lm}{im}\n  </url>'
 
 
 def write_sitemap(name, entries):
+    ns = ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' if '<image:image>' in ''.join(e for e, _ in entries) else ''
     text = ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"{ns}>\n'
             + '\n'.join(e for e, _ in entries) + '\n</urlset>\n')
     sc.write(name, text)
     dates = [d for _, d in entries if d]

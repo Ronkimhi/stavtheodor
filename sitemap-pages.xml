@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stavtheodor.com/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/</loc>
@@ -15,14 +15,38 @@
   <url>
     <loc>https://stavtheodor.com/guide/</loc>
     <lastmod>2026-10-03T17:53:39-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/law-firms_s1_after.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-above-bed/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-bed/art-above-bed_companion-d21.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-bed/art-above-bed_inline-1.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-above-couch/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/art-above-couch_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-couch/art-above-couch_inline-1a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-couch/art-above-couch_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-couch/art-above-couch_companion-d12.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/above-couch/art-above-couch_companion-d37.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/art-advisor-bergen-county/</loc>
@@ -34,7 +58,16 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-advisor-vs-art-consultant/</loc>
-    <lastmod>2026-10-06T06:12:33+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-advisor-vs-art-consultant/art-advisor-vs-art-consultant_companion-d2a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-advisor-vs-art-consultant/art-advisor-vs-art-consultant_companion-d2b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-advisor-vs-art-consultant/art-advisor-vs-art-consultant_companion-d4.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/art-advisor-vs-consultant-vs-decorator/</loc>
@@ -86,7 +119,7 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-for-a-small-apartment/</loc>
-    <lastmod>2026-10-01T15:58:41-04:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/art-for-a-tribeca-or-soho-loft/</loc>
@@ -98,7 +131,16 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-for-home-staging/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/art-for-home-staging_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-for-home-staging/art-for-home-staging_companion-hs3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-for-home-staging/art-for-home-staging_companion-hs4.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/art-for-hotels-and-hospitality/</loc>
@@ -106,11 +148,26 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/art-sourcing-for-interior-designers/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-sourcing-for-interior-designers/art-sourcing-for-interior-designers_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/art-sourcing-for-interior-designers/art-sourcing-for-interior-designers_companion-d5.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/buy-lease-or-commission-office-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/buy-lease-or-commission-office-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/buy-lease-or-commission-office-art/buy-lease-or-commission-office-art_companion-d3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/buy-lease-or-commission-office-art/buy-lease-or-commission-office-art_companion-d5.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/projects/caesarea-garden-villa/</loc>
@@ -142,19 +199,64 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/dental-office-decor/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:19:38-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/dental-office-decor_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/dental-office-decor/dental-office-decor_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/dental-office-decor/dental-office-decor_companion-d4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/dental-office-decor/dental-office-decor_companion-d5.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/dining-room-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/dining-room-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/dining-room/dining-room-art_inline-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/dining-room/dining-room-art_companion-d38.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/entryway-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/entryway-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/entryway/entryway-art_companion-d48.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/entryway/entryway-art_companion-d49.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/financial-advisor-office-art/</loc>
-    <lastmod>2026-10-06T06:12:33+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/financial-advisor-office-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/financial-advisor-office-art/financial-advisor-office-art_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/financial-advisor-office-art/financial-advisor-office-art_companion-d4a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/financial-advisor-office-art/financial-advisor-office-art_companion-d4b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/financial-advisor-office-art/financial-advisor-office-art_companion-d5.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/for-advisors/</loc>
@@ -174,7 +276,13 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/gallery-wall-ideas/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/gallery-wall-ideas_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/gallery-wall/gallery-wall-ideas_companion-d3.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/hanging-heavy-art-nyc-apartment-coi/</loc>
@@ -194,7 +302,16 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/hotel-artwork/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/hotel-artwork_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hotel-artwork/hotel-artwork_companion-d5.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hotel-artwork/hotel-artwork_companion-d6.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/projects/hotels-and-hospitality-collections/</loc>
@@ -210,27 +327,87 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/how-to-choose-art-for-your-home/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/how-to-choose-art-for-your-home_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/how-to-choose-art-for-your-home/how-to-choose-art-for-your-home_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/how-to-choose-art-for-your-home/how-to-choose-art-for-your-home_companion-d6a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/how-to-choose-art-for-your-home/how-to-choose-art-for-your-home_companion-d6b.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/how-to-hang-pictures/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/how-to-hang-pictures_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hanging/how-to-hang-pictures_companion-d32.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hanging/how-to-hang-pictures_companion-d34.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hanging/how-to-hang-pictures_inline-1a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/hanging/how-to-hang-pictures_inline-1b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/law-firms_s1_after.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/how-to-light-art/</loc>
-    <lastmod>2026-10-03T18:05:14-04:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/large-wall-art-ideas/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/large-wall-art-ideas_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/large-wall/large-wall-art-ideas_companion-d50.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/large-wall/large-wall-art-ideas_inline-1.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/law-office-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/law-office-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/law-office-art/law-office-art_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/law-office-art/law-office-art_companion-d3.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/living-room-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/living-room-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/living-room-en/living-room-art_companion-d43.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/living-room-en/living-room-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/living-room-en/living-room-art_inline-1b.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/projects/manhattan-skyline-residence/</loc>
@@ -238,7 +415,16 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/medical-office-wall-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/medical-office-wall-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/medical-office-wall-art/medical-office-wall-art_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/medical-office-wall-art/medical-office-wall-art_companion-d3.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/moved-to-nyc-empty-walls-art/</loc>
@@ -246,11 +432,20 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/office-wall-art/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/office-wall-art_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/office-wall-art/office-wall-art_companion-d2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/office-wall-art/office-wall-art_companion-d3.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/planning-art-in-construction-drawings/</loc>
-    <lastmod>2026-10-03T18:05:14-04:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/projects/ramat-gan-private-home/</loc>
@@ -262,7 +457,13 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/restaurant-wall-decor/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:49-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/restaurant-wall-decor_hero_after.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/guides/restaurant-wall-decor/restaurant-wall-decor_companion-d2.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/starting-an-art-collection/</loc>
@@ -286,7 +487,10 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/</loc>
-    <lastmod>2026-10-06T05:55:44+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/spaces/law-firms_s1_after.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/advisory/what-does-an-art-advisor-cost/</loc>
@@ -310,26 +514,26 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/hotels/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/investment-firms/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/law-firms/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/medical-practices/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/restaurants/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/wealth-managers/</loc>
-    <lastmod>2026-10-06T09:40:06+03:00</lastmod>
+    <lastmod>2026-10-10T08:18:50-04:00</lastmod>
   </url>
 </urlset>

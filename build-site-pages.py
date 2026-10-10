@@ -122,6 +122,42 @@ def crumbs_html(p):
     return f'<nav class="eyebrow crumbs" aria-label="Breadcrumb">{sep.join(steps)}</nav>'
 
 
+def jpeg_dims(path):
+    """(width, height) of a baseline or progressive JPEG on disk, read from its SOF marker; None if unreadable."""
+    try:
+        data = open(path, "rb").read()
+    except OSError:
+        return None
+    i = 2
+    while i + 9 < len(data) and data[i] == 0xFF:
+        m, n = data[i + 1], int.from_bytes(data[i + 2:i + 4], "big")
+        if m in (0xC0, 0xC1, 0xC2):
+            return int.from_bytes(data[i + 7:i + 9], "big"), int.from_bytes(data[i + 5:i + 7], "big")
+        i += 2 + n
+    return None
+
+
+def guide_image_ld(p, url, og):
+    """A guide's Article images (2026-10-10, SEO and AIO pass on the guide photos): the link preview as an ImageObject
+    with its real size, and for a guide that opens on a before/after proposal the after image too, which is also the
+    page's primaryImageOfPage (mainEntityOfPage becomes the WebPage node it belongs to). Every url is a file in the repo
+    (check_site's schema gate resolves it)."""
+    imgs = []
+    d = jpeg_dims(og[len(SITE) + 1:]) if og.startswith(SITE + "/") and og.endswith(".jpg") else None
+    if d:
+        imgs.append({"@type": "ImageObject", "url": og, "width": d[0], "height": d[1]})
+    ba = p.get("before_after")
+    if not ba:
+        return {"image": imgs or og}
+    s = sc.spaces()[ba]
+    after = {"@type": "ImageObject", "url": SITE + sc.space_src(ba, "after"), "width": s["w"], "height": s["h"],
+             "caption": s["alt_en"]}
+    if imgs:
+        imgs[0]["caption"] = s["alt_en"]
+    return {"image": [after] + imgs,
+            "mainEntityOfPage": {"@type": "WebPage", "@id": url, "url": url, "primaryImageOfPage": after}}
+
+
 def ld_blocks(p, url, og):
     if p["section"] == "area":
         return ld_area(p, url)
@@ -146,6 +182,7 @@ def ld_blocks(p, url, og):
     if p["section"] == "guide":  # the byline's author: the site-wide Person (same @id, so one Stav), with the about page and Instagram
         main["author"] = {"@type": "Person", "@id": SITE + "/#stav", "name": "Stav Theodor", "url": SITE + "/about/",
                           "sameAs": [sc.INSTAGRAM]}
+        main.update(guide_image_ld(p, url, og))
     main.update(p.get("schema_extra", {}))
     # A guide's BreadcrumbList uses the names of its visible trail (guide_crumbs(): Home, Guides, crumb_en or the
     # title; 2026-09-30 SEO fixes); the other sections keep THEODORA, the hub name and the title.
