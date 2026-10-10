@@ -765,6 +765,7 @@ CONTACT = {
     "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.",
              "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום."),
     "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
+    "gbp": ("Find THEODORA on Google Maps", "THEODORA בגוגל מפות"),  # the Google Business Profile, its url from content/entity.json sameAs (sc.profiles())
 }
 
 
@@ -785,6 +786,7 @@ def render_contact():
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "Contact", "item": url}]}]
     places = "".join(f"<li>{T(en, he)}</li>" for en, he in CONTACT_PLACES)
+    gbp = H.escape(next(u for u, en, he in sc.profiles() if en == 'Google Maps'), quote=True)
     body = f'''
 <header class="phead contact-head">
   <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
@@ -801,6 +803,7 @@ def render_contact():
     <div class="more">
       <a class="arrow" href="{sc.WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
       <a class="arrow" href="{sc.YELP}" target="_blank" rel="noopener"><span class="ln"></span>{T(*CONTACT["yelp"])}</a>
+      <a class="arrow" href="{gbp}" target="_blank" rel="noopener"><span class="ln"></span>{T(*CONTACT["gbp"])}</a>
     </div>
   </div>
 </section>
