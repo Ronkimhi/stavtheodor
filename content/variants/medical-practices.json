@@ -182,17 +182,17 @@
         "aspect_en": "Uniqueness",
         "aspect_he": "ייחודיות",
         "usual_en": "Decor prints: the same images any other office can buy",
-        "usual_he": "הדפסים דקורטיביים: אותם דימויים שכל משרד אחר יכול לקנות",
-        "curator_en": "Original works, or a commission made for your space, with a presence that cannot be replicated",
-        "curator_he": "יצירות מקוריות, או יצירה בהזמנה שנעשית עבור החלל שלכם, עם נוכחות שאי אפשר לשכפל"
+        "usual_he": "הדפסים דקורטיביים: אותם דימויים שכל מרפאה אחרת יכולה לקנות",
+        "curator_en": "Original works, or a work commissioned for your space: one of a kind, not an image any other office can buy",
+        "curator_he": "יצירות מקוריות, או יצירה בהזמנה שנעשית עבור החלל שלכם: כל אחת יחידה במינה, ולא דימוי שכל מרפאה אחרת יכולה לקנות"
       },
       {
         "aspect_en": "The price",
         "aspect_he": "המחיר",
-        "usual_en": "At a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
-        "usual_he": "בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
-        "curator_en": "In most cases less than at a large auction or through a gallery, and that price includes private consultation for your practice and my work with you until the art is on the wall",
-        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והמחיר הזה כולל ייעוץ פרטי למרפאה שלכם ואת העבודה שלי איתכם עד שהאמנות על הקיר"
+        "usual_en": "Buying originals on your own: at a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
+        "usual_he": "קנייה עצמאית של יצירות מקור: בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
+        "curator_en": "In most cases less than at a large auction or through a gallery, with the service inside that price: private consultation tailored to your practice, and I stay with you until the art is on the wall",
+        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והשירות כלול במחיר: ייעוץ פרטי שמותאם למרפאה שלכם, ואני איתכם עד שהאמנות על הקיר"
       },
       {
         "aspect_en": "Representation",

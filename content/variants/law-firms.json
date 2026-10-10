@@ -178,8 +178,8 @@
     "eyebrow_he": "לפני שמחליטים",
     "h2_en": "How do law firms usually get art, and what does a curator change?",
     "h2_he": "איך משרדי עורכי דין משיגים בדרך כלל אמנות, ומה אוצרת משנה?",
-    "intro_en": "Law firms usually get their art from the partners' own pieces, the architect's design package, a leasing program or an art consultancy. With a curator, the art starts from how the partners want the firm to feel, and in most cases it costs less than at a large auction or through a gallery.",
-    "intro_he": "משרדי עורכי דין מקבלים בדרך כלל את האמנות שלהם מהיצירות של השותפים עצמם, מחבילת העיצוב של האדריכל, מתוכנית השכרה או מחברת ייעוץ לאמנות. עם אוצרת, האמנות מתחילה מהאופן שבו השותפים רוצים שהמשרד ירגיש, וברוב המקרים היא עולה פחות מאשר במכירה פומבית גדולה או בגלריה.",
+    "intro_en": "Law firms usually get their art from the partners' own pieces, the architect's design package or a leasing program. With a curator, the art starts from how the partners want the firm to feel, and in most cases it costs less than at a large auction or through a gallery.",
+    "intro_he": "משרדי עורכי דין מקבלים בדרך כלל את האמנות שלהם מהיצירות של השותפים עצמם, מחבילת העיצוב של האדריכל או מתוכנית השכרה. עם אוצרת, האמנות מתחילה מהאופן שבו השותפים רוצים שהמשרד ירגיש, וברוב המקרים היא עולה פחות מאשר במכירה פומבית גדולה או בגלריה.",
     "cols": {
       "aspect_en": "Aspect",
       "aspect_he": "היבט",
@@ -195,13 +195,13 @@
         "usual_en": "What the partners already own, or the art in the architect's design package",
         "usual_he": "מה שכבר יש לשותפים, או האמנות שבחבילת העיצוב של האדריכל",
         "curator_en": "How the partners want the firm to feel to clients, turned into one concept for the floor",
-        "curator_he": "האופן שבו השותפים רוצים שהמשרד ירגיש ללקוחות, שהופך לקונספט אחד לכל הקומה"
+        "curator_he": "איך השותפים רוצים שהמשרד ירגיש ומה הוא ישדר ללקוחות, כקונספט אחד לכל הקומה"
       },
       {
         "aspect_en": "Who does the work",
         "aspect_he": "מי עושה את העבודה",
-        "usual_en": "The architect, or an art consultancy hired for the move",
-        "usual_he": "האדריכל, או חברת ייעוץ לאמנות שנשכרה לקראת המעבר",
+        "usual_en": "The architect, as part of the fit-out",
+        "usual_he": "האדריכל, כחלק מעבודות ההתאמה",
         "curator_en": "I do, from the first conversation until the last work is on the wall, alongside your architect, not around them",
         "curator_he": "אני, מהשיחה הראשונה ועד שהיצירה האחרונה תלויה על הקיר, לצד האדריכל שלכם, לא סביבו"
       },
@@ -216,10 +216,10 @@
       {
         "aspect_en": "The price",
         "aspect_he": "המחיר",
-        "usual_en": "At a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
-        "usual_he": "בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
-        "curator_en": "In most cases less than at a large auction or through a gallery, and that price includes private consultation for your offices and my work with you until the art is on the wall",
-        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והמחיר הזה כולל ייעוץ פרטי למשרדים שלכם ואת העבודה שלי איתכם עד שהאמנות על הקיר"
+        "usual_en": "Buying originals on your own: at a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
+        "usual_he": "קנייה עצמאית של יצירות מקור: בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
+        "curator_en": "In most cases less than at a large auction or through a gallery, with the service inside that price: private consultation tailored to your offices, and I stay with you until the art is on the wall",
+        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והשירות כלול במחיר: ייעוץ פרטי שמותאם למשרדים שלכם, ואני איתכם עד שהאמנות על הקיר"
       },
       {
         "aspect_en": "Representation",

@@ -159,8 +159,8 @@
     "eyebrow_he": "לפני שמחליטים",
     "h2_en": "How do boutique hotels usually get art, and what does a curator change?",
     "h2_he": "איך מלונות בוטיק משיגים בדרך כלל אמנות, ומה אוצרת משנה?",
-    "intro_en": "A boutique hotel often gets its art through a hospitality art consultancy, hired by the owner or the design firm. With a curator who represents the hotel, the collection can draw on any artist in the world, and in most cases the art costs less than at a large auction or through a gallery.",
-    "intro_he": "מלון בוטיק מקבל לעיתים קרובות את האמנות שלו דרך חברת ייעוץ לאמנות בתחום האירוח, שהבעלים או משרד העיצוב שוכרים. עם אוצרת שמייצגת את המלון, האוסף יכול לשאוב מכל אמן בעולם, וברוב המקרים האמנות עולה פחות מאשר במכירה פומבית גדולה או בגלריה.",
+    "intro_en": "A boutique hotel often gets its art through a hospitality art company, hired by the owner or the design firm. With a curator who represents the hotel, the collection can draw on any artist in the world, and in most cases the art costs less than at a large auction or through a gallery.",
+    "intro_he": "מלון בוטיק מקבל לעיתים קרובות את האמנות שלו דרך חברה שמתמחה באמנות למלונות, שהבעלים או משרד העיצוב שוכרים. עם אוצרת שמייצגת את המלון, האוסף יכול לכלול עבודות של כל אמן בעולם, וברוב המקרים האמנות עולה פחות מאשר במכירה פומבית גדולה או בגלריה.",
     "cols": {
       "aspect_en": "Aspect",
       "aspect_he": "היבט",
@@ -173,26 +173,18 @@
       {
         "aspect_en": "Who builds the collection",
         "aspect_he": "מי בונה את האוסף",
-        "usual_en": "A hospitality art consultancy, hired by the owner or the design firm",
-        "usual_he": "חברת ייעוץ לאמנות בתחום האירוח, שהבעלים או משרד העיצוב שוכרים",
+        "usual_en": "A hospitality art company, hired by the owner or the design firm",
+        "usual_he": "חברה שמתמחה באמנות למלונות, שהבעלים או משרד העיצוב שוכרים",
         "curator_en": "I do, from the concept until the last work is on the wall, alongside the architects and interior designers",
         "curator_he": "אני, מהקונספט ועד שהיצירה האחרונה תלויה על הקיר, לצד האדריכלים ומעצבי הפנים"
       },
       {
-        "aspect_en": "Owning or renting",
-        "aspect_he": "בעלות או שכירות",
-        "usual_en": "Leasing: rent for as long as the lease runs, and the works usually go back at the end",
-        "usual_he": "השכרה: דמי שכירות כל עוד החוזה בתוקף, ובסופו העבודות בדרך כלל חוזרות",
-        "curator_en": "Works bought or commissioned for the property, which the hotel owns",
-        "curator_he": "יצירות שנקנות או מוזמנות עבור הנכס, ונשארות בבעלות המלון"
-      },
-      {
         "aspect_en": "The price",
         "aspect_he": "המחיר",
-        "usual_en": "At a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
-        "usual_he": "בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
-        "curator_en": "In most cases less than at a large auction or through a gallery, and that price includes private consultation for the property and my work with you until the last piece is on the wall",
-        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והמחיר הזה כולל ייעוץ פרטי לנכס ואת העבודה שלי איתכם עד שהיצירה האחרונה על הקיר"
+        "usual_en": "Buying originals on your own: at a gallery, prices set to cover the venue, inventory and gallerists; at a large auction, bidders push the price up",
+        "usual_he": "קנייה עצמאית של יצירות מקור: בגלריה, מחירים שנקבעים כדי לכסות את חלל התצוגה, המלאי והגלריסטים; במכירה פומבית גדולה, המציעים דוחפים את המחיר למעלה",
+        "curator_en": "In most cases less than at a large auction or through a gallery, with the service inside that price: private consultation tailored to the property, and I stay with you until the last piece is on the wall",
+        "curator_he": "ברוב המקרים פחות מאשר במכירה פומבית גדולה או בגלריה, והשירות כלול במחיר: ייעוץ פרטי שמותאם לנכס, ואני איתכם עד שהיצירה האחרונה על הקיר"
       },
       {
         "aspect_en": "Representation",

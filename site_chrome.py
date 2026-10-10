@@ -147,22 +147,22 @@ def entity_nodes():
     return json.loads(_entity_cache)
 
 
-# Find THEODORA on (Ron's plan, 2026-10-10): the seven profiles /about/ lists, in this order, as (English label, Hebrew
+# Find THEODORA on (Ron's plan, 2026-10-10): the five profiles /about/ lists, in this order, as (English label, Hebrew
 # label, a piece of the profile's address). The addresses are never typed here: profiles() reads them from the sameAs of
-# the ProfessionalService in content/entity.json, and the build stops if one of the seven is not there.
+# the ProfessionalService in content/entity.json, and the build stops if one of the five is not there. Business listings
+# and Instagram only: Instagram is Stav's only social profile, and no other social profile is named or linked (Ron,
+# 2026-09-29), so LinkedIn and YouTube stay in the sameAs (schema) but are not listed here.
 PROFILES = [
     ('Google Maps', 'גוגל מפות', 'google.com/maps?cid='),  # the Google Business Profile (its maps cid link)
     ('Houzz', 'Houzz', 'houzz.com/'),
-    ('LinkedIn', 'LinkedIn', 'linkedin.com/company/'),
     ('Yelp', 'Yelp', 'yelp.com/biz/'),
     ('CODAworx', 'CODAworx', 'codaworx.com/'),
     ('Instagram', 'אינסטגרם', 'instagram.com/'),
-    ('YouTube', 'YouTube', 'youtube.com/'),
 ]
 
 
 def profiles():
-    """[(url, English label, Hebrew label)] for the seven PROFILES, each url from content/entity.json's #org sameAs."""
+    """[(url, English label, Hebrew label)] for the five PROFILES, each url from content/entity.json's #org sameAs."""
     org = next((n for n in entity_nodes() if n.get('@id') == ORG_ID), {})
     same = [u for u in org.get('sameAs') or [] if isinstance(u, str)]
     found, missing = [], []
@@ -173,7 +173,7 @@ def profiles():
         else:
             missing.append(en)
     if missing:
-        raise SystemExit(f'content/entity.json: the #org sameAs has no {", ".join(missing)} profile; /about/ lists all seven '
+        raise SystemExit(f'content/entity.json: the #org sameAs has no {", ".join(missing)} profile; /about/ lists all five '
                          f'(site_chrome.PROFILES). Add the profile URL to sameAs, or remove it from PROFILES.')
     return found
 
@@ -622,7 +622,7 @@ FOUND_VIA = [
     ('Google search', 'חיפוש בגוגל', False),
     ('Instagram', 'אינסטגרם', False),
     ('A designer or architect', 'מעצב או אדריכל', False),
-    ('A friend or client', 'חבר או לקוח', False),
+    ('A friend or client', 'המלצה של חבר או לקוח', False),
     ('Other', 'אחר', False),
 ]
 
