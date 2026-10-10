@@ -50,6 +50,12 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
      guides_heading_en/_he (at most 90 characters; required beside guides, may be stored ahead of the
      guides; the safety-net fallback is "The answers in more detail") and one line guides_sub_en/_he
      (optional, at most 200), only beside guides
+  q  compare, handoff and proof (optional, Ron's plan 2026-10-10): compare is a table aspect | the usual way | with a
+     curator, handoff a table step | what happens | who handles it | order, each {h2, cols, rows} with an optional
+     eyebrow and intro; proof {h2, line, items} with an optional eyebrow, each item {name, line, href} and an optional
+     img. Every h2 ends in "?" (the buyer's question), a table has at most four columns and 2 to 8 rows, every cell
+     and every twin is filled, and each proof href is a built /projects/<slug>/ page whose img, when given, is a photo
+     that page already shows. Their text goes through e, f and k with the rest (strings())
 """
 import ast
 import datetime
@@ -160,6 +166,25 @@ CAP_PREFIX = {'cap_en': 'Proposal. ', 'cap_he': 'הצעה. '}
 CAP_MAX, ALT_MAX = 120, 160  # English characters; the homepage's longest caption is 106
 OG_SIZE = (1200, 630)
 OG_MAX_BYTES = 300000
+# q: the comparison table, the who-handles-what table and the proof (optional, Ron's plan 2026-10-10). The tables' columns
+# are fixed by name (build-home.py TABLE_COLS renders them in this order); a table never has more than four.
+TABLE_BLOCKS = {'compare': ('aspect', 'usual', 'curator'), 'handoff': ('step', 'what', 'who', 'order')}
+TABLE_MAX_COLS = 4
+TABLE_ROWS = (2, 8)
+TABLE_HEAD_MAX, TABLE_CELL_MAX = 40, 240  # English characters: a header cell, a body cell
+PROOF_ITEMS = (1, 6)
+PROOF_NAME_MAX, PROOF_LINE_MAX = 60, 120  # English characters: an item's name and its line
+PROJECT_HREF = re.compile(r'^/(projects/[a-z0-9]+(?:-[a-z0-9]+)*)/$')
+for _name, _cols in TABLE_BLOCKS.items():
+    SCHEMA[_name] = ({'h2_en', 'h2_he', 'cols', 'rows'}, {'eyebrow_en', 'eyebrow_he', 'intro_en', 'intro_he'})
+    SCHEMA[_name + '.cols'] = SCHEMA[_name + '.rows'] = ({f'{c}_{lang}' for c in _cols for lang in ('en', 'he')}, set())
+SCHEMA['proof'] = ({'h2_en', 'h2_he', 'line_en', 'line_he', 'items'}, {'eyebrow_en', 'eyebrow_he'})
+SCHEMA['proof.items'] = ({'name_en', 'name_he', 'line_en', 'line_he', 'href'}, {'img'})
+SCHEMA[''][1].update({'compare', 'handoff', 'proof'})
+OBJECTS |= {'compare', 'handoff', 'proof'}  # checked as objects under a, empty when absent
+LISTS |= {'cols', 'rows', 'items'}  # the blocks' nested parts (cols is an object): never plain strings, checked under q
+CHAR_LIMITS += ([(f'{b}.eyebrow_en', 1, 24) for b in ('compare', 'handoff', 'proof')] + [(f'{b}.h2_en', 1, 120) for b in ('compare', 'handoff', 'proof')]
+                + [('compare.intro_en', 1, 320), ('handoff.intro_en', 1, 320), ('proof.line_en', 1, 200)])
 
 PAGES = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, 'content', 'pages', '*.json'))):
@@ -211,6 +236,16 @@ def strings(v):
     for k in ('nav_sub_en', 'nav_sub_he', 'cta_en', 'cta_he', 'mail_subject', 'guides_heading_en', 'guides_heading_he', 'guides_sub_en', 'guides_sub_he'):
         if k in v:
             out.append((k, v[k]))
+    for name in ('compare', 'handoff', 'proof'):  # q (2026-10-10): every heading, line and cell of the three blocks
+        b = v.get(name)
+        if not isinstance(b, dict):
+            continue
+        out += [(f'{name}.{k}', s) for k, s in b.items() if isinstance(s, str)]
+        out += [(f'{name}.cols.{k}', s) for k, s in (b['cols'] if isinstance(b.get('cols'), dict) else {}).items()]
+        for part in ('rows', 'items'):
+            for i, item in enumerate(b[part] if isinstance(b.get(part), list) else []):
+                out += [(f'{name}.{part}[{i}].{k}', s) for k, s in (item if isinstance(item, dict) else {}).items()
+                        if k not in ('href', 'img')]  # a proof item's link and photo are paths, checked under q
     return out
 
 
@@ -225,6 +260,12 @@ def language(label):
 def twin(v, label):
     """The English twin of a Hebrew field: 'faq[2].a_he' -> the value of faq[2].a_en."""
     m = re.match(r'^(\w+)(?:\[(\d+)\])?(?:\.(\w+))?$', label)
+    if not m:  # a deeper field of the q blocks (2026-10-10): 'handoff.rows[2].who_he' -> handoff.rows[2].who_en
+        node, parts = v, re.findall(r'\w+', label)
+        for part in parts[:-1]:
+            node = (node[int(part)] if part.isdigit() and isinstance(node, list) and int(part) < len(node)
+                    else node.get(part) if isinstance(node, dict) else None)
+        return node.get(parts[-1][:-3] + '_en') if isinstance(node, dict) else None
     obj, idx, key = m.group(1), m.group(2), m.group(3)
     if key is None:
         return v.get(obj[:-3] + '_en')
@@ -429,6 +470,14 @@ def og_problems(head, vid):
     if n >= OG_MAX_BYTES:
         fails.append(f'head.og_image: {img[1:]} is {n} bytes, keep it under 300 KB')
     return fails
+
+
+def project_photos(page):
+    """q: the photographs a content/pages page already shows, its hero_image and every img in its two bodies."""
+    srcs = {(page.get('hero_image') or {}).get('src')}
+    for lang in ('en', 'he'):
+        srcs |= set(re.findall(r'<img\b[^>]*\ssrc="([^"]+)"', page.get('body_' + lang) or ''))
+    return srcs - {None}
 
 
 def check(path, v, peers):
@@ -717,6 +766,73 @@ def check(path, v, peers):
         for k in ('guides_sub_en', 'guides_sub_he'):
             if k in v:
                 fails.append(f'{k}: only beside guides')
+
+    # q: the comparison table, the who-handles-what table and the proof (optional, 2026-10-10); a, d and e to k covered
+    # their top-level keys, twins and text (strings()), this covers their parts, the questions, the columns and the links
+    for name, cols in TABLE_BLOCKS.items():
+        b = v.get(name)
+        if not isinstance(b, dict) or not b:
+            continue
+        twins(b, f'{name}.')
+        head, rows = b.get('cols'), b.get('rows')
+        if isinstance(head, dict):
+            keys(head, f'{name}.cols', f'{name}.cols.')
+            twins(head, f'{name}.cols.')
+            found = {k[:-3] for k in head if k.endswith(('_en', '_he'))} | set(cols)
+            if len(found) > TABLE_MAX_COLS:
+                fails.append(f'{name}.cols: {len(found)} columns, at most {TABLE_MAX_COLS}')
+            for c in cols:
+                s = head.get(f'{c}_en')
+                if isinstance(s, str) and len(s) > TABLE_HEAD_MAX:
+                    fails.append(f'{name}.cols.{c}_en: {len(s)} characters, at most {TABLE_HEAD_MAX}')
+        elif 'cols' in b:
+            fails.append(f'{name}.cols must be an object: the header cell of each column, in both languages')
+        if not isinstance(rows, list) or not TABLE_ROWS[0] <= len(rows) <= TABLE_ROWS[1]:
+            fails.append(f'{name}.rows: a list of {TABLE_ROWS[0]} to {TABLE_ROWS[1]} rows')
+        for i, r in enumerate(rows if isinstance(rows, list) else []):
+            keys(r, f'{name}.rows', f'{name}.rows[{i}].')
+            if not isinstance(r, dict):
+                continue
+            twins(r, f'{name}.rows[{i}].')
+            if len({k[:-3] for k in r if k.endswith(('_en', '_he'))} | set(cols)) > TABLE_MAX_COLS:
+                fails.append(f'{name}.rows[{i}]: more than {TABLE_MAX_COLS} columns')
+            for c in cols:
+                s = r.get(f'{c}_en')
+                if isinstance(s, str) and len(s) > TABLE_CELL_MAX:
+                    fails.append(f'{name}.rows[{i}].{c}_en: {len(s)} characters, at most {TABLE_CELL_MAX}')
+    b = v.get('proof')
+    if isinstance(b, dict) and b:
+        twins(b, 'proof.')
+        items = b.get('items')
+        if not isinstance(items, list) or not PROOF_ITEMS[0] <= len(items) <= PROOF_ITEMS[1]:
+            fails.append(f'proof.items: a list of {PROOF_ITEMS[0]} to {PROOF_ITEMS[1]} projects')
+        for i, it in enumerate(items if isinstance(items, list) else []):
+            keys(it, 'proof.items', f'proof.items[{i}].')
+            if not isinstance(it, dict):
+                continue
+            twins(it, f'proof.items[{i}].')
+            for k, most in (('name_en', PROOF_NAME_MAX), ('line_en', PROOF_LINE_MAX)):
+                if isinstance(it.get(k), str) and len(it[k]) > most:
+                    fails.append(f'proof.items[{i}].{k}: {len(it[k])} characters, at most {most}')
+            href = it.get('href') if isinstance(it.get('href'), str) else ''
+            m = PROJECT_HREF.match(href)
+            page = PAGES.get(m.group(1)) if m else None
+            if not page or page.get('section') != 'projects':
+                fails.append(f'proof.items[{i}].href: {href!r} is not a project page (/projects/<slug>/, a content/pages project)')
+                page = None
+            elif not os.path.exists(os.path.join(ROOT, m.group(1), 'index.html')):
+                fails.append(f'proof.items[{i}].href: /{m.group(1)}/ is not built (run python3 build.py)')
+            img = it.get('img')
+            if img is not None and page is not None:
+                if not isinstance(img, str) or img not in project_photos(page):
+                    fails.append(f'proof.items[{i}].img: {img!r} is not a photograph {href} already shows (a real photo of that project, or none)')
+                elif not os.path.isfile(os.path.join(ROOT, img.lstrip('/'))):
+                    fails.append(f'proof.items[{i}].img: {img} is not in the repo')
+    for name in ('compare', 'handoff', 'proof'):
+        for k in ('h2_en', 'h2_he'):
+            s = get(v, f'{name}.{k}')
+            if isinstance(s, str) and s and not s.endswith('?'):
+                fails.append(f'{name}.{k}: the heading is the buyer\'s question and ends in "?"')
 
     # l: the opening's rooms; m: the link preview
     if 'rooms' in v:

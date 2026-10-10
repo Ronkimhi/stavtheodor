@@ -147,6 +147,37 @@ def entity_nodes():
     return json.loads(_entity_cache)
 
 
+# Find THEODORA on (Ron's plan, 2026-10-10): the seven profiles /about/ lists, in this order, as (English label, Hebrew
+# label, a piece of the profile's address). The addresses are never typed here: profiles() reads them from the sameAs of
+# the ProfessionalService in content/entity.json, and the build stops if one of the seven is not there.
+PROFILES = [
+    ('Google Maps', 'גוגל מפות', 'google.com/maps?cid='),  # the Google Business Profile (its maps cid link)
+    ('Houzz', 'Houzz', 'houzz.com/'),
+    ('LinkedIn', 'LinkedIn', 'linkedin.com/company/'),
+    ('Yelp', 'Yelp', 'yelp.com/biz/'),
+    ('CODAworx', 'CODAworx', 'codaworx.com/'),
+    ('Instagram', 'אינסטגרם', 'instagram.com/'),
+    ('YouTube', 'YouTube', 'youtube.com/'),
+]
+
+
+def profiles():
+    """[(url, English label, Hebrew label)] for the seven PROFILES, each url from content/entity.json's #org sameAs."""
+    org = next((n for n in entity_nodes() if n.get('@id') == ORG_ID), {})
+    same = [u for u in org.get('sameAs') or [] if isinstance(u, str)]
+    found, missing = [], []
+    for en, he, part in PROFILES:
+        url = next((u for u in same if part in u), None)
+        if url:
+            found.append((url, en, he))
+        else:
+            missing.append(en)
+    if missing:
+        raise SystemExit(f'content/entity.json: the #org sameAs has no {", ".join(missing)} profile; /about/ lists all seven '
+                         f'(site_chrome.PROFILES). Add the profile URL to sameAs, or remove it from PROFILES.')
+    return found
+
+
 # Keys whose value names an agent. A copy of THEODORA or of Stav there becomes a bare @id reference, so each page
 # defines the business and the person once (Ron's SEO brief, 2026-09-29, P0.4 rule 2).
 REF_KEYS = ('provider', 'publisher', 'author', 'creator', 'founder', 'worksFor', 'brand', 'seller', 'organizer')
@@ -512,13 +543,19 @@ def contact_form(path='/', h='h3'):
     value stays English. The free plan takes no files, so the note asks for the photo by email.
     The thank-you card (2026-09-29) and the error line are in the markup, hidden, both languages as twins: the box
     (.contact-box, aria-live) stacks the form and the card in one grid cell, so the card replaces the form in place and
-    the page does not move. h: the card's heading level (h3 under the footer's h2, h2 on /contact/ under its h1)."""
+    the page does not move. h: the card's heading level (h3 under the footer's h2, h2 on /contact/ under its h1).
+    Added 2026-10-10 (Ron's plan), after the message and before Send, every field above unchanged: How did you find me?
+    (found_via, radio chips, optional, none checked, FOUND_VIA; each AI assistant its own chip, marked data-ai) and What
+    did you ask it? (ai_query, a text field, hidden and disabled in the markup; form_js() shows and enables it only while
+    an AI chip is checked, so its text is never posted otherwise). Formspree records every field whose name does not
+    start with an underscore (the underscore names, _subject and _gotcha here, are its own settings), so found_via and
+    ai_query reach Stav's mail like name and message."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
-    def chips(name, items, checked=None):
+    def chips(name, items, checked=None, flag=()):
         return ''.join(f'<label class="chip"><input type="radio" name="{name}" value="{H.escape(en, quote=True)}"'
-                       f'{" checked" if en == checked else ""}><span class="chip-face">{T(H.escape(en), he)}</span></label>'
+                       f'{" checked" if en == checked else ""}{" data-ai" if en in flag else ""}><span class="chip-face">{T(H.escape(en), he)}</span></label>'
                        for en, he in items)
     mail = mail_href()
     email = f'<bdi class="ty-addr">{EMAIL}</bdi>'
@@ -536,6 +573,8 @@ def contact_form(path='/', h='h3'):
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
+      <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
+      <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
@@ -572,6 +611,20 @@ PROJECT_SCOPES = [
     ('Whole home', 'הבית כולו'),
     ('Office or venue', 'משרד או מקום אירוח'),
 ]
+# The form's "How did you find me?" choices (found_via, Ron's plan 2026-10-10), optional: none is checked. (value and English
+# label, Hebrew label, an AI assistant): each AI assistant is its own chip, and choosing one asks What did you ask it?
+FOUND_VIA = [
+    ('ChatGPT', 'ChatGPT', True),
+    ('Google AI or Gemini', 'Google AI או Gemini', True),
+    ('Perplexity', 'Perplexity', True),
+    ('Claude', 'Claude', True),
+    ('Copilot', 'Copilot', True),
+    ('Google search', 'חיפוש בגוגל', False),
+    ('Instagram', 'אינסטגרם', False),
+    ('A designer or architect', 'מעצב או אדריכל', False),
+    ('A friend or client', 'חבר או לקוח', False),
+    ('Other', 'אחר', False),
+]
 
 
 def form_js():
@@ -582,7 +635,9 @@ def form_js():
     it into view, through the homepage's Lenis when present) and sends GA4 generate_lead with the form id
     and the page path only (never the name, email, phone or message). On any other answer or a network error the form
     stays and its error line shows the email and the phone. The chips (radio inputs, 2026-10-06) carry both languages
-    as twins, so nothing here follows the language switch any more; f.reset() puts I am a back on Homeowner."""
+    as twins, so nothing here follows the language switch any more; f.reset() puts I am a back on Homeowner.
+    Since 2026-10-10 syncAsk() shows and enables What did you ask it? (ai_query) only while an AI chip of How did you
+    find me? is checked, and hides and disables it again after a reset, so a hidden answer is never posted."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
@@ -592,6 +647,21 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
   f.querySelector('[name=page]').value = location.pathname;
+  /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
+     checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
+     the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
+  var ask = f.querySelector('.ai-ask');
+  var asked = ask && ask.querySelector('[name=ai_query]');
+  function syncAsk() {
+    if (!asked) { return; }
+    var on = !!f.querySelector('input[name=found_via][data-ai]:checked');
+    ask.hidden = !on;
+    asked.disabled = !on;
+  }
+  f.addEventListener('change', function (e) { if (e.target && e.target.name === 'found_via') { syncAsk(); } });
+  f.addEventListener('reset', function () { setTimeout(syncAsk, 0); });
+  window.addEventListener('pageshow', syncAsk);
+  syncAsk();
   function thanks(first) {
     card.querySelectorAll('.ty-name').forEach(function (s) { s.textContent = first; });
     card.querySelectorAll('.ty-named').forEach(function (s) { s.hidden = !first; });

@@ -347,6 +347,94 @@ def value_strip(v):
     return f'\n\n<section class="value-strip wrap" id="value">{items}</section>'
 
 
+# Three more variant-only blocks (Ron's plan, 2026-10-10, added beside the rest, nothing above them changed): the comparison
+# table (compare: aspect, the usual way, with a curator), the who-handles-what table (handoff: step, what happens, who
+# handles it, order) and the proof (proof: named projects, each linking its project page). Each is an optional field of
+# the variant and renders as its own section after the long section (#guide) and before the guides strip (#guides), in
+# the template's empty markers, so the homepage and a variant without the field render exactly as before. The tables use
+# the guides' table markup (figure.tbl inside .prose.guide, css/theme.css 5.6), one table per language, at most
+# TABLE_MAX_COLS columns; tools/check_variants.py (check q) checks the fields before this runs.
+TABLE_COLS = {'compare': ('aspect', 'usual', 'curator'), 'handoff': ('step', 'what', 'who', 'order')}
+TABLE_MAX_COLS = 4
+BLOCKS |= {'compare', 'handoff', 'proof'}
+OPTIONAL_BLOCKS |= {'compare', 'handoff', 'proof'}
+
+
+def block_eyebrow(b):
+    return f'<p class="eyebrow">{T(H.escape(b["eyebrow_en"]), H.escape(b["eyebrow_he"]))}</p>' if b.get('eyebrow_en') else ''
+
+
+def table_html(b, cols, lang):
+    """One language's table: the header row from b['cols'], then b['rows'], each row's first cell its row header."""
+    cell = lambda r, c: H.escape(r[f'{c}_{lang}'])
+    head = ''.join(f'<th scope="col">{cell(b["cols"], c)}</th>' for c in cols)
+    rows = ''.join('<tr>' + ''.join(f'<th scope="row">{cell(r, c)}</th>' if i == 0 else f'<td>{cell(r, c)}</td>' for i, c in enumerate(cols))
+                   + '</tr>' for r in b['rows'])
+    return f'<figure class="tbl"><div class="tbl-x"><table><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div></figure>'
+
+
+def table_block(v, name):
+    """compare or handoff: an optional eyebrow, the h2 (the buyer's question), an optional opening line, then the table,
+    in each language's reading column (the Hebrew first, as in the long section)."""
+    b, cols = v[name], TABLE_COLS[name]
+    ok = (len(cols) <= TABLE_MAX_COLS and isinstance(b, dict) and isinstance(b.get('cols'), dict) and isinstance(b.get('rows'), list)
+          and b['rows'] and all(isinstance(r, dict) and all(isinstance(r.get(f'{c}_{lang}'), str) and r[f'{c}_{lang}']
+                                                            for c in cols for lang in ('en', 'he')) for r in [b['cols']] + b['rows']))
+    if not ok:
+        raise SystemExit(f"content/variants/{v['id']}.json: bad {name} (run python3 tools/check_variants.py content/variants/{v['id']}.json)")
+    intro = lambda lang: f'<p>{H.escape(b["intro_" + lang])}</p>' if b.get('intro_en') else ''
+    return (f'\n\n<section class="section wrap" id="{name}">\n'
+            f'  <div class="head reveal"><div class="lead">{block_eyebrow(b)}<h2 class="serif">{T(H.escape(b["h2_en"]), H.escape(b["h2_he"]))}</h2></div></div>\n'
+            f'  <div class="prose guide" data-l="he" dir="rtl">{intro("he")}{table_html(b, cols, "he")}</div>\n'
+            f'  <div class="prose guide" data-l="en">{intro("en")}{table_html(b, cols, "en")}</div>\n</section>')
+
+
+def page_photo_alt(page, src):
+    """(alt_en, alt_he) of a photograph a content/pages page already shows: its hero_image, or an img in both bodies.
+    None when the page does not show it, so the proof never borrows or re-captions a photo."""
+    hi = page.get('hero_image') or {}
+    if hi.get('src') == src:
+        return hi.get('alt_en', ''), hi.get('alt_he', '')
+    alts = []
+    for lang in ('en', 'he'):
+        tag = next((t for t in re.findall(r'<img\b[^>]*>', page.get('body_' + lang) or '') if f'src="{src}"' in t), None)
+        m = tag and re.search(r'\salt="([^"]*)"', tag)
+        if not m:
+            return None
+        alts.append(H.unescape(m.group(1)))
+    return tuple(alts)
+
+
+def proof(v, pages):
+    """The variant's proof (#proof): an optional eyebrow, the h2, one line, then one card per item (the project named as
+    text, its one line, and optionally a photograph its project page already shows, with that page's alt twins), each
+    linking the project page (href, a /projects/<slug>/ page that is built)."""
+    b, cards = v['proof'], ''
+    for it in b['items']:
+        page = pages.get(it['href'].strip('/'))
+        if page is None or not it['href'].startswith('/projects/') or not os.path.exists(sc.rel(it['href'].strip('/'), 'index.html')):
+            raise SystemExit(f"content/variants/{v['id']}.json: proof link {it['href']} is not a built project page")
+        ph = ''
+        if it.get('img'):
+            alt = page_photo_alt(page, it['img'])
+            if alt is None:
+                raise SystemExit(f"content/variants/{v['id']}.json: {it['img']} is not a photograph on {it['href']}")
+            d = sc.raster_dims(it['img'])
+            dims = f' width="{d[0]}" height="{d[1]}"' if d else ''
+            ph = f'<div class="ph"><img src="{H.escape(it["img"], quote=True)}" {sc.img_alt(*alt)}{dims} loading="lazy" decoding="async"></div>'
+        cards += (f'\n    <a class="card reveal" href="{H.escape(it["href"], quote=True)}">{ph}'
+                  f'<h3 class="serif">{T(H.escape(it["name_en"]), H.escape(it["name_he"]))}</h3>'
+                  f'<p class="muted">{T(H.escape(it["line_en"]), H.escape(it["line_he"]))}</p></a>')
+    line = f'<p class="muted" style="font-size: 17px; max-width: 760px;">{T(H.escape(b["line_en"]), H.escape(b["line_he"]))}</p>'
+    return ('\n\n<section class="section wrap" id="proof">\n'
+            f'  <div class="head reveal"><div class="lead">{block_eyebrow(b)}<h2 class="serif">{T(H.escape(b["h2_en"]), H.escape(b["h2_he"]))}</h2>{line}</div></div>\n'
+            f'  <div class="grid3">{cards}\n  </div>\n</section>')
+
+
+BLOCK_RENDER.update({'compare': lambda v, pages: table_block(v, 'compare'), 'handoff': lambda v, pages: table_block(v, 'handoff'),
+                     'proof': proof})
+
+
 def fill_regions(body, v, pages=None):
     """The marked regions: the template's own text for the homepage (the markers go, the bytes
     between them stay), the variant's copy otherwise. Every region must appear exactly once, and

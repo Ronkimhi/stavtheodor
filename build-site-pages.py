@@ -963,6 +963,13 @@ def about_links(pages):
         a = "".join(f'<a href="{u}">{T(H.escape(en), H.escape(he))}</a>' for u, en, he in links)
         html += f'''
     <div><p class="eyebrow">{T(h_en, h_he)}</p><div class="readnext">{a}</div></div>'''
+    # Find THEODORA on (Ron's plan, 2026-10-10), a fourth column: the seven profiles, their addresses read from the sameAs of
+    # content/entity.json by sc.profiles(), which stops the build if one is missing; each opens in a new tab, like the
+    # footer's Instagram link.
+    a = "".join(f'<a href="{H.escape(u, quote=True)}" target="_blank" rel="noopener">{T(H.escape(en), H.escape(he))}</a>'
+                for u, en, he in sc.profiles())
+    html += f'''
+    <div><p class="eyebrow">{T("Find THEODORA on", "מצאו את THEODORA ברשת")}</p><div class="readnext">{a}</div></div>'''
     return html
 
 

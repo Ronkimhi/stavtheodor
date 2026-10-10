@@ -86,6 +86,9 @@ The example is shortened (two questions, "..." in the long fields): a real file 
 | `faq` | the Questions section and its FAQPage schema | 5 to 7; `{"q_en", "a_en", "q_he", "a_he"}` or `{"home": "<the q_en of a question in content/faq.json>"}`; questions at most 110 characters, ending in "?"; English answers 40 to 90 words, the Hebrew at least 0.6 of that |
 | `cta_en`, `cta_he` | the closing line of the footer | 40 to 140 |
 | `mail_subject` | the subject of every mail link on the page, the fallback panel's Gmail and Outlook links included | 8 to 60 characters, English, no brackets, different in every variant |
+| `compare` | optional: the comparison table (#compare), after the long section and before the guides strip; its own section below | h2 at most 120 and ending in "?", 2 to 8 rows, three columns |
+| `handoff` | optional: the who handles what table (#handoff), after #compare; its own section below | h2 at most 120 and ending in "?", 2 to 8 rows, four columns |
+| `proof` | optional: named projects, each linking its project page (#proof), after #handoff; its own section below | h2 at most 120 and ending in "?", 1 to 6 items |
 
 Character limits read the English, except the two hero lines, which hold in both languages.
 
@@ -134,6 +137,57 @@ The text rules above apply to the captions and the alt text. `build-home.py` the
 ## Its guides (optional, 2026-09-29)
 
 `guides` lists 1 to 6 guide pages (`"guide/<slug>"`, each a content/pages guide that is built) in display order. The page then shows a Guides strip (`#guides`, variant only, after the long section #guide and before #about; the template's `<!--variant:guides--><!--/variant:guides-->` marker stays empty, so the homepage never has it): the eyebrow Guides, the heading `guides_heading_en`/`guides_heading_he` (at most 90 characters; required when `guides` is set, and it may be stored before the guides exist; the safety-net fallback is "The answers in more detail"; write it for the page, "Guides for law firms"), an optional line `guides_sub_en`/`guides_sub_he` (at most 200), the "All guides" arrow to the guides index /guide/, and one card per guide (its title, `dek_en` or its lead's first sentence, its hero diagram, or its after image marked Proposal). The heading and line fields exist only beside `guides`. `tools/check_variants.py` check p.
+
+## Its comparison, who handles what and proof (optional, 2026-10-10)
+
+Three more optional fields (Ron's plan, 2026-10-10: added beside what the page has, nothing in it changed). Each renders as its own variant-only section after the long section (#guide) and before the guides strip (#guides), in this order: `compare` (#compare), `handoff` (#handoff), `proof` (#proof). The template's `<!--variant:compare--><!--/variant:compare-->`, `<!--variant:handoff--><!--/variant:handoff-->` and `<!--variant:proof--><!--/variant:proof-->` markers stay empty, so the homepage never has them and a variant without a field renders exactly as before. Never at the top of the page: the opening stays Ron's agreed message (AGENTS.md Section 3.9). The tables use the guides' table markup (`figure.tbl` in the reading column `.prose.guide`, css/theme.css 5.6: hairline rows, a small caps header, the first column as the row header, a sideways scroll on a phone), one table per language.
+
+```json
+"compare": {
+  "eyebrow_en": "Before you decide", "eyebrow_he": "לפני שמחליטים",
+  "h2_en": "How do law firms usually get art, and what does a curator change?",
+  "h2_he": "איך משרדי עורכי דין משיגים בדרך כלל אמנות, ומה אוצרת משנה?",
+  "intro_en": "One or two sentences that answer the question.", "intro_he": "משפט או שניים שעונים על השאלה.",
+  "cols": {"aspect_en": "Aspect", "aspect_he": "היבט", "usual_en": "The usual way", "usual_he": "הדרך המקובלת",
+           "curator_en": "With a curator", "curator_he": "עם אוצרת"},
+  "rows": [{"aspect_en": "Representation", "aspect_he": "ייצוג",
+            "usual_en": "A gallery represents its artists, and that is its job", "usual_he": "גלריה מייצגת את האמנים שלה, וזה התפקיד שלה",
+            "curator_en": "I represent the firm, with no closed roster, so I can reach out to any artist in the world",
+            "curator_he": "אני מייצגת את המשרד, בלי רשימה סגורה של אמנים, ולכן אני יכולה לפנות לכל אמן בעולם"}]
+},
+"handoff": {
+  "eyebrow_en": "Start to finish", "eyebrow_he": "מההתחלה ועד הסוף",
+  "h2_en": "Who handles what in a law firm's art project, from the first conversation to installation?",
+  "h2_he": "מי אחראי על מה בפרויקט האמנות של משרד עורכי דין, מהשיחה הראשונה ועד ההתקנה?",
+  "cols": {"step_en": "Step", "step_he": "שלב", "what_en": "What happens", "what_he": "מה קורה",
+           "who_en": "Who handles it", "who_he": "מי אחראי", "order_en": "Order", "order_he": "סדר"},
+  "rows": [{"step_en": "Research", "step_he": "מחקר",
+            "what_en": "I look for works and artists through my network, and assess the market value of each work.",
+            "what_he": "אני מחפשת יצירות ואמנים דרך הרשת שלי, ומעריכה את שווי השוק של כל יצירה.",
+            "who_en": "I do", "who_he": "אני", "order_en": "Second", "order_he": "שני"}]
+},
+"proof": {
+  "eyebrow_en": "Hospitality", "eyebrow_he": "אירוח",
+  "h2_en": "Where can you see my hospitality work?", "h2_he": "איפה אפשר לראות את העבודה שלי בתחום האירוח?",
+  "line_en": "Concepts and collections built while collaborating with luxury hospitality leaders.",
+  "line_he": "קונספטים ואוספים שנבנו בשיתוף פעולה עם מובילים בתחום האירוח היוקרתי.",
+  "items": [{"name_en": "Waldorf Astoria Chengdu", "name_he": "וולדורף אסטוריה צ'נגדו",
+             "line_en": "China. Sculptural works for the lobby.", "line_he": "סין. עבודות פיסוליות ללובי.",
+             "href": "/projects/hotels-and-hospitality-collections/", "img": "/images/projects/waldorf-lobby.jpg"}]
+}
+```
+
+| Field | What it is | Limit |
+|---|---|---|
+| `compare.h2`, `handoff.h2`, `proof.h2` | the section's heading, phrased as the buyer's own question | required; at most 120 characters, ending in "?" in both languages |
+| `*.eyebrow` | the small line above the heading | optional; at most 24 |
+| `compare.intro`, `handoff.intro` | one opening paragraph above the table, the direct answer | optional; at most 320 |
+| `compare.cols`, `compare.rows` | the header cells and the rows of the table aspect, the usual way, with a curator (`aspect`, `usual`, `curator`, each `_en` and `_he`) | required beside compare; 2 to 8 rows, every cell filled in both languages, a header cell at most 40 and a body cell at most 240 |
+| `handoff.cols`, `handoff.rows` | the same for step, what happens, who handles it, order (`step`, `what`, `who`, `order`) | required beside handoff; 2 to 8 rows, the same cell limits |
+| `proof.line` | the line under the heading | required beside proof; at most 200 |
+| `proof.items` | one card each: `name` (the project, as text), `line` (what was done, in the project's own published wording), `href` (its project page) and optional `img` | 1 to 6; name at most 60, line at most 120; `href` a built `/projects/<slug>/` page from content/pages; `img` a photograph that page already shows (its hero_image or a figure in its body), whose alt twins the build reads from that page; no image is better than a borrowed one |
+
+A table never has more than four columns (`TABLE_MAX_COLS` in build-home.py and tools/check_variants.py). Text rules as everywhere above, and these: the usual ways come from the buyer research and are described fairly, never by a competitor's name (no ArtLink); the curator column tells the value story (`content/BRIEF.md` section 5: in most cases a better price than at a large auction or through a gallery, the service included, a curator who represents the client and is open to any artist), with no fee, commission, percentage, dollar figure or number about price; leasing appears only as the alternative, never as Stav's service; the handoff rows use only `content/BRIEF.md` facts (its process steps in section 4 and section 4a: her own installation team, the certificate of insurance that can name the landlord or managing agent, installation after hours), with no durations or week counts. `python3 tools/check_variants.py` (check q) fails a heading without "?", a fifth column, a missing cell or twin, a proof link that is not a built project page, and a proof photo the project page does not show; its text gates (dashes, phone, fee, hype, "contact form", Hebrew letters) cover every heading, line and cell of the three blocks.
 
 ## Paths, deleting, validating
 
