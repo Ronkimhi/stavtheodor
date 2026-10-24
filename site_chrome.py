@@ -637,7 +637,9 @@ def form_js():
     stays and its error line shows the email and the phone. The chips (radio inputs, 2026-10-06) carry both languages
     as twins, so nothing here follows the language switch any more; f.reset() puts I am a back on Homeowner.
     Since 2026-10-10 syncAsk() shows and enables What did you ask it? (ai_query) only while an AI chip of How did you
-    find me? is checked, and hides and disables it again after a reset, so a hidden answer is never posted."""
+    find me? is checked, and hides and disables it again after a reset, so a hidden answer is never posted.
+    Since 2026-10-24 setSubject() sets the hidden _subject to "New inquiry from stavtheodor.com: " and the page path,
+    at init and again after a send (the markup's static value stays the fallback without JavaScript)."""
     if not FORM_ENDPOINT:
         return ''
     return '''<script>
@@ -647,6 +649,10 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
   f.querySelector('[name=page]').value = location.pathname;
+  /* The mail Stav gets names the page the inquiry came from (2026-10-24); the markup keeps the plain subject. */
+  var subj = f.querySelector('[name=_subject]');
+  function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
+  setSubject();
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -692,6 +698,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         if (!r.ok) { throw new Error(r.status); }
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
+        setSubject();
         if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
       })
@@ -1050,11 +1057,18 @@ PAGE_JS = '''<script>
 # A GA4 event for every tap on a tel: link (Ron's SEO brief, 2026-09-29, P0.3): click_phone with where the link
 # sits (its data-loc: header, footer, cta) and the page path. It only calls the gtag() the standard snippet in
 # <head> defines; the GA tag itself is untouched. The museum pages carry the same script (museum/tools/build_artist_pages.py).
+# Since 2026-10-24 (wave 1, inbound) the same script sends click_email for every click on a mailto: link, the same
+# shape: where the link sits (data-loc, else page) and the page path, never the address itself.
 CALL_JS = '''<script>
 document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
   if (!a || typeof window.gtag !== 'function') { return; }
   window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+});
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+  if (!a || typeof window.gtag !== 'function') { return; }
+  window.gtag('event', 'click_email', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
 });
 </script>'''
 PAGE_JS = PAGE_JS + '\n' + CALL_JS

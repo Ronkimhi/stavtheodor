@@ -133,6 +133,14 @@
   .cue i { display: block; width: 1px; height: 100%; background: var(--ink); animation: pulse 2s cubic-bezier(.455,.03,.515,.955) infinite alternate; }
   @keyframes pulse { from { opacity: .3; } to { opacity: .7; } }
   body.gl .cue { opacity: 0; }
+  /* The homepage's first-screen Write to Stav (2026-10-24, homepage only, build-home.py HOME_ONLY): under the two opening
+     lines, on the line's left edge. It opens the pop-up (data-write). Positioned absolutely, so it never moves the lines;
+     while the entrance plays it is only faded out, like the nav, so its place is kept and nothing jumps. Shown at once
+     in the static, reduced-motion and no-WebGL states (no body.entering there). */
+  .hero-ui .hero-write { position: absolute; left: clamp(20px, 3.4vw, 48px); bottom: calc(32px + env(safe-area-inset-bottom, 0px)); z-index: 1; pointer-events: auto; color: var(--ink); text-shadow: 0 1px 4px rgba(15,15,20,0.55), 0 4px 18px rgba(15,15,20,0.6); transition: opacity .5s ease; }
+  .hero-ui .hero-write .ln { box-shadow: 0 1px 4px rgba(15,15,20,0.55); }
+  .hero-ui .hero-write:hover .ln, .hero-ui .hero-write:focus-visible .ln { width: 56px; }
+  body.entering .hero-ui .hero-write { opacity: 0; pointer-events: none; }
   /* The opening header after the rooms: one black block on the page ground. It slides over the fixed canvas
      while the canvas fades to the same ground, and the h1 settles in from near-visible, never from 0. */
   .intro { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(40px, 7vh, 72px); padding: clamp(112px, 14vh, 176px) clamp(20px, 8vw, 120px) clamp(96px, 12vh, 150px); text-align: center; background: var(--bg); }
@@ -179,7 +187,10 @@
   @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
     body.gl .line { top: calc(50% + 33.34vw + 22px); bottom: auto; }
     body.gl #cap { bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
+    body.gl .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px); bottom: auto; }
   }
+  /* phones: under the caption that sits at the left foot of the screen, clear of the cue on the right */
+  @media (max-width: 767px) { .hero-ui .hero-write { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
 
 
   .cols { display: flex; height: 720px; }
@@ -366,6 +377,15 @@
   .contact-area .area { color: var(--soft); font-size: 17px; line-height: 1.65; max-width: 760px; }
   .contact-area .more { display: flex; flex-wrap: wrap; gap: 14px 44px; }
   .contact-area .more .arrow { color: var(--ink); }
+  /* /contact/: what happens after the yes (2026-10-24), under the card and before Where I work, in the same register */
+  .after-yes { display: flex; flex-direction: column; gap: 20px; margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
+  .after-yes .yes-lines { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; max-width: 760px; }
+  .after-yes .yes-lines li { color: var(--soft); font-size: 17px; line-height: 1.65; }
+  .after-yes .yes-lines li [data-l="he"] { font-size: 18px; line-height: 1.85; }
+  .after-yes .yes-lines strong { color: var(--ink); font-weight: 500; }
+  body.lang-he .after-yes { direction: rtl; }
+  /* the homepage's whom I represent block (2026-10-24, homepage only, above the #contact card) */
+  body.lang-he .represent { direction: rtl; }
   /* The form: underline fields on the dark ground, a taupe underline on focus, one filled button */
   .contact-form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px 28px; width: 100%; }
   .contact-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; grid-column: 1 / -1; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }

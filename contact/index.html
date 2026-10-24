@@ -354,6 +354,10 @@
     </div>
     </div>
   </div>
+  <div class="after-yes reveal">
+    <h2 class="serif"><span data-l="en" lang="en">What happens after I say yes?</span><span data-l="he" lang="he" dir="rtl">מה קורה אחרי שאומרים כן?</span></h2>
+    <ul class="yes-lines"><li><span data-l="en" lang="en"><strong>Framing and installation.</strong> Expert framers frame the work, and my own team installs it, after hours for an office.</span><span data-l="he" lang="he" dir="rtl"><strong>מסגור והתקנה.</strong> המסגור נעשה אצל ממסגרים מקצועיים, והצוות שלי מתקין את היצירה, ובמשרדים אחרי שעות העבודה.</span></li><li><span data-l="en" lang="en"><strong>Insurance.</strong> I carry insurance, and my certificate of insurance can name your landlord or managing agent.</span><span data-l="he" lang="he" dir="rtl"><strong>ביטוח.</strong> יש לי ביטוח, ובאישור הביטוח שלי יכולים להופיע בעל הנכס או חברת הניהול שלכם.</span></li><li><span data-l="en" lang="en"><strong>Budget and timeline.</strong> I work within the budget and timeline you approved, and the job is finished only when the art is installed and you are fully satisfied.</span><span data-l="he" lang="he" dir="rtl"><strong>תקציב ולוח זמנים.</strong> אני עובדת בתוך התקציב ולוח הזמנים שאישרתם, והעבודה מסתיימת רק כשהאמנות מותקנת ואתם מרוצים לגמרי.</span></li></ul>
+  </div>
   <div class="contact-area reveal">
     <p class="eyebrow"><span data-l="en" lang="en">Where I work</span><span data-l="he" lang="he" dir="rtl">איפה אני עובדת</span></p>
     <ul class="places"><li><span data-l="en" lang="en">Tenafly</span><span data-l="he" lang="he" dir="rtl">טנפליי</span></li><li><span data-l="en" lang="en">Bergen County</span><span data-l="he" lang="he" dir="rtl">מחוז ברגן</span></li><li><span data-l="en" lang="en">New Jersey</span><span data-l="he" lang="he" dir="rtl">ניו ג'רזי</span></li><li><span data-l="en" lang="en">New York City</span><span data-l="he" lang="he" dir="rtl">ניו יורק</span></li><li><span data-l="en" lang="en">California</span><span data-l="he" lang="he" dir="rtl">קליפורניה</span></li><li><span data-l="en" lang="en">Tel Aviv</span><span data-l="he" lang="he" dir="rtl">תל אביב</span></li></ul>
@@ -487,6 +491,10 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
   f.querySelector('[name=page]').value = location.pathname;
+  /* The mail Stav gets names the page the inquiry came from (2026-10-24); the markup keeps the plain subject. */
+  var subj = f.querySelector('[name=_subject]');
+  function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
+  setSubject();
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -532,6 +540,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         if (!r.ok) { throw new Error(r.status); }
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
+        setSubject();
         if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
       })
@@ -771,6 +780,11 @@ document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
   if (!a || typeof window.gtag !== 'function') { return; }
   window.gtag('event', 'click_phone', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+});
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+  if (!a || typeof window.gtag !== 'function') { return; }
+  window.gtag('event', 'click_email', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
 });
 </script>
 

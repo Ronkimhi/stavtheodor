@@ -767,6 +767,24 @@ CONTACT = {
     "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
     "gbp": ("Find THEODORA on Google Maps", "THEODORA בגוגל מפות"),  # the Google Business Profile, its url from content/entity.json sameAs (sc.profiles())
 }
+# The insertion point under the contact card and before Where I work (wave 1, inbound, 2026-10-24), rendered flush
+# after the card: CONTACT_AFTER_CARD below. Order under the card: the reviews (when they ship), then the after the yes lines.
+# C3 (the Curator's wave 1 copy deck, 2026-10-24): what happens after the client says yes, three lines traced to BRIEF
+# (framers and the install team, the certificate of insurance, budget and timeline). /contact/ only.
+CONTACT_AFTER_YES_H2 = ('What happens after I say yes?', 'מה קורה אחרי שאומרים כן?')
+CONTACT_AFTER_YES = [
+    ('<strong>Framing and installation.</strong> Expert framers frame the work, and my own team installs it, after hours for an office.',
+     '<strong>מסגור והתקנה.</strong> המסגור נעשה אצל ממסגרים מקצועיים, והצוות שלי מתקין את היצירה, ובמשרדים אחרי שעות העבודה.'),
+    ('<strong>Insurance.</strong> I carry insurance, and my certificate of insurance can name your landlord or managing agent.',
+     '<strong>ביטוח.</strong> יש לי ביטוח, ובאישור הביטוח שלי יכולים להופיע בעל הנכס או חברת הניהול שלכם.'),
+    ('<strong>Budget and timeline.</strong> I work within the budget and timeline you approved, and the job is finished only when the art is installed and you are fully satisfied.',
+     '<strong>תקציב ולוח זמנים.</strong> אני עובדת בתוך התקציב ולוח הזמנים שאישרתם, והעבודה מסתיימת רק כשהאמנות מותקנת ואתם מרוצים לגמרי.'),
+]
+CONTACT_AFTER_CARD = (f'''
+  <div class="after-yes reveal">
+    <h2 class="serif">{T(*CONTACT_AFTER_YES_H2)}</h2>
+    <ul class="yes-lines">{"".join(f"<li>{T(en, he)}</li>" for en, he in CONTACT_AFTER_YES)}</ul>
+  </div>''')
 
 
 # The service area as a row of place names on /contact/ (2026-09-29), beside the full sentence in CONTACT["area"]
@@ -795,7 +813,7 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}{CONTACT_AFTER_CARD}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>

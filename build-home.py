@@ -143,6 +143,13 @@ OPTIONAL_BLOCKS = {'guides'}
 # film: the 67 second film, aimed at designers and collectors, is off the buyer pages (Ron, 2026-09-28).
 DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepage only (Ron, 2026-09-28); the Museum section is gone (P1.6, 2026-09-29)
 # industries: the homepage's links to the seven buyer pages (2026-09-28), never on a buyer page itself.
+# Homepage-only slots (wave 1, inbound, 2026-10-24): like DROPS, the homepage keeps the bytes between the markers and
+# every variant drops them, and fill_regions() then proves the homepage's bytes are absent from the variant page.
+# hero_write: the Write to Stav button on the first screen, under the two opening lines (opens the pop-up, data-write).
+# home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
+# block (#represent), then the reviews block when it ships. Each marker sits flush against the tag before it, so a
+# variant, which drops the whole region, keeps its bytes.
+HOME_ONLY = {'hero_write', 'home_above_contact'}
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')
 SHARED_SECTIONS = ('about', 'projects')  # byte for byte the homepage's on every variant
@@ -441,6 +448,7 @@ def fill_regions(body, v, pages=None):
     room_fig_N and room_cap_N must hold slot N of PAIRS in js/home-opening.js. A variant-only block
     (BLOCKS) is empty in the template and rendered whole for a variant."""
     seen = collections.Counter()
+    leaked = []  # (name, bytes) of every non-empty homepage-only slot, checked against the variant page below
     rooms = (v or {}).get('rooms') or []
     drop = bool(rooms) and (v or {}).get('rooms_rest', 'drop') == 'drop'
     inside = {m.group(1): m.group(2) for m in MARK.finditer(body)}
@@ -454,6 +462,10 @@ def fill_regions(body, v, pages=None):
         if name in ROOM_REGIONS:
             return room_region(name, inner, rooms, drop)
         if name in DROPS:
+            return inner if v is None else ''
+        if name in HOME_ONLY:
+            if v is not None and inner.strip():
+                leaked.append((name, inner.strip()))
             return inner if v is None else ''
         if name in BLOCKS:
             assert inner == '', f'the {name} marker in the template must be empty (the homepage has no {name})'
@@ -471,8 +483,10 @@ def fill_regions(body, v, pages=None):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS | HOME_ONLY and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
+    for name, inner in leaked:
+        assert inner not in body, f"content/variants/{v['id']}.json: the homepage-only {name} slot leaked into the variant page"
     return body
 
 
@@ -552,6 +566,8 @@ def page_problems(out, name, home=None):
         for sid in VARIANT_ABSENT:
             if f'id="{sid}"' in out or f'href="#{sid}"' in out:
                 problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
+        if 'hero-write' in out:
+            problems.append(f'{name} carries the homepage-only Write to Stav button of the first screen (HOME_ONLY)')
         if 'name="robots"' in out:
             problems.append(f'{name} carries a robots meta tag; buyer variants are indexable (Ron, 2026-09-28)')
         if f'<link rel="canonical" href="{SITE}/' not in out:
