@@ -147,7 +147,7 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # every variant drops them, and fill_regions() then proves the homepage's bytes are absent from the variant page.
 # hero_write: the Write to Stav button on the first screen, under the two opening lines (opens the pop-up, data-write).
 # home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
-# block (#represent), then the reviews block when it ships. Each marker sits flush against the tag before it, so a
+# block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
 HOME_ONLY = {'hero_write', 'home_above_contact'}
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
@@ -508,6 +508,9 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_ui(),  # the fallback panel, the Write to Stav pop-up and form_js()
         'LANG_JS': sc.LANG_JS,
         'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ''),  # form_js() comes with write_ui(), once per page
+        # the reviews (2026-10-24) sit inside the homepage-only home_above_contact slot: filled the same for every page, so
+        # the HOME_ONLY leak check compares the full bytes, and every variant drops them with the slot
+        'REVIEWS': sc.reviews_block(),
     }
     body = tmpl
     for k, val in fills.items():

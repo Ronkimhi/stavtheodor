@@ -434,6 +434,43 @@ TICK = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focu
         '<circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg>')
 
 
+# Google review quotes (Ron, 2026-10-23; the private site rules F8, AGENTS.md content rule 15): each quote an exact span of
+# the review on THEODORA's Google Business Profile, unedited, with the reviewer's first name and the month; the Hebrew a
+# faithful translation, labelled as translated. Only reviewers Ron confirms are real clients. No stars, no rating or count,
+# no Review or AggregateRating schema. The link goes to the profile, its url read from content/entity.json (profiles()).
+# (English quote, Hebrew translation, English attribution, Hebrew attribution), in the Curator's order (wave 1 deck, B).
+REVIEWS_H2 = ("In my clients' words", 'במילים של הלקוחות שלי')
+REVIEWS_LINK = ('Read all reviews on Google', 'לכל הביקורות בגוגל')
+REVIEWS = [
+    ('I really appreciated how thoughtful and personal the entire experience was. Stav understood my taste and found a piece that feels like it was made for my space',
+     'מאוד הערכתי עד כמה כל החוויה הייתה מלאת מחשבה ואישית. סתיו הבינה את הטעם שלי ומצאה יצירה שמרגישה כאילו נוצרה בשביל החלל שלי',
+     'Rotem, October 2026', 'רותם, אוקטובר 2026 (תורגם מאנגלית)'),
+    ('She has a wonderful eye for design and an incredible ability to understand the space, my personal taste, and my budget. She helped me find the perfect piece of art, and it has become a true statement piece that receives endless compliments.',
+     'יש לה עין נפלאה לעיצוב ויכולת מדהימה להבין את החלל, את הטעם האישי שלי ואת התקציב שלי. היא עזרה לי למצוא את יצירת האמנות המושלמת, והיא הפכה ליצירת אמירה של ממש שזוכה למחמאות בלי סוף.',
+     'Hadas, October 2026', 'הדס, אוקטובר 2026 (תורגם מאנגלית)'),
+    ('Working with Stav to select artwork for our office spaces was a positive experience. She took the time to understand our vision, considered our budget, and helped us choose pieces that complemented the spaces and created the atmosphere we were looking for.',
+     'העבודה עם סתיו על בחירת יצירות אמנות לחללי המשרד שלנו הייתה חוויה חיובית. היא הקדישה זמן כדי להבין את החזון שלנו, התחשבה בתקציב שלנו, ועזרה לנו לבחור יצירות שהשלימו את החללים ויצרו את האווירה שחיפשנו.',
+     'Alina, October 2026', 'אלינה, אוקטובר 2026 (תורגם מאנגלית)'),
+    ('She was patient, knowledgeable, and incredibly attentive to every detail. I can’t recommend her enough!',
+     'היא הייתה סבלנית, בקיאה וקשובה להפליא לכל פרט. אי אפשר להמליץ עליה מספיק!',
+     'Gonny, October 2026', 'גוני, אוקטובר 2026 (תורגם מאנגלית)'),
+]
+
+
+def reviews_block():
+    """The reviews (2026-10-24): on the homepage above the #contact card (a homepage-only slot, build-home.py HOME_ONLY)
+    and on /contact/ under the card (build-site-pages.py CONTACT_AFTER_CARD). No quotation marks are added: the
+    blockquote carries them, and each quote keeps its own punctuation."""
+    gbp = H.escape(next(u for u, en, he in profiles() if en == 'Google Maps'), quote=True)
+    items = ''.join(f'<figure class="review"><blockquote><p>{T(q_en, q_he)}</p></blockquote><figcaption>{T(w_en, w_he)}</figcaption></figure>'
+                    for q_en, q_he, w_en, w_he in REVIEWS)
+    return f'''<div class="reviews reveal">
+    <h2 class="serif">{T(*REVIEWS_H2)}</h2>
+    <div class="review-list">{items}</div>
+    <a class="arrow" href="{gbp}" target="_blank" rel="noopener"><span class="ln"></span>{T(*REVIEWS_LINK)}</a>
+  </div>'''
+
+
 def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
     """The contact block. With the form (FORM_ENDPOINT set) it is one card (mockup A, Ron 2026-10-06): on one side the
     Contact eyebrow (eyebrow=False drops it where the page header already says Contact), the headline, three check

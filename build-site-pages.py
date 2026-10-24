@@ -768,7 +768,8 @@ CONTACT = {
     "gbp": ("Find THEODORA on Google Maps", "THEODORA בגוגל מפות"),  # the Google Business Profile, its url from content/entity.json sameAs (sc.profiles())
 }
 # The insertion point under the contact card and before Where I work (wave 1, inbound, 2026-10-24), rendered flush
-# after the card: CONTACT_AFTER_CARD below. Order under the card: the reviews (when they ship), then the after the yes lines.
+# after the card: CONTACT_AFTER_CARD below. Order under the card: the reviews (sc.reviews_block(), 2026-10-24), then the
+# after the yes lines.
 # C3 (the Curator's wave 1 copy deck, 2026-10-24): what happens after the client says yes, three lines traced to BRIEF
 # (framers and the install team, the certificate of insurance, budget and timeline). /contact/ only.
 CONTACT_AFTER_YES_H2 = ('What happens after I say yes?', 'מה קורה אחרי שאומרים כן?')
@@ -781,6 +782,7 @@ CONTACT_AFTER_YES = [
      '<strong>תקציב ולוח זמנים.</strong> אני עובדת בתוך התקציב ולוח הזמנים שאישרתם, והעבודה מסתיימת רק כשהאמנות מותקנת ואתם מרוצים לגמרי.'),
 ]
 CONTACT_AFTER_CARD = (f'''
+  {sc.reviews_block()}
   <div class="after-yes reveal">
     <h2 class="serif">{T(*CONTACT_AFTER_YES_H2)}</h2>
     <ul class="yes-lines">{"".join(f"<li>{T(en, he)}</li>" for en, he in CONTACT_AFTER_YES)}</ul>

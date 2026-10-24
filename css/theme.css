@@ -385,6 +385,19 @@
   .after-yes .yes-lines strong { color: var(--ink); font-weight: 500; }
   body.lang-he .after-yes { direction: rtl; }
   /* the homepage's whom I represent block (2026-10-24, homepage only, above the #contact card) */
+  /* Google review quotes (2026-10-24, F8): text only, no stars, no count; on the homepage above the #contact card and on
+     /contact/ under the card */
+  .reviews { display: flex; flex-direction: column; gap: 28px; }
+  .reviews .review-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px 40px; }
+  .reviews .review { margin: 0; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+  .reviews blockquote { margin: 0; }
+  .reviews blockquote p { font-family: var(--serif); font-size: 21px; line-height: 1.45; color: var(--ink); }
+  .reviews blockquote [data-l="he"] { font-family: var(--he); font-size: 19px; line-height: 1.75; }
+  .reviews figcaption { font-size: 13px; letter-spacing: 0.04em; color: var(--muted); }
+  .reviews figcaption [data-l="he"] { font-size: 14px; letter-spacing: 0; }
+  .reviews > .arrow { align-self: flex-start; color: var(--ink); }
+  .contact-page .reviews { margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
+  body.lang-he .reviews { direction: rtl; }
   body.lang-he .represent { direction: rtl; }
   /* The form: underline fields on the dark ground, a taupe underline on focus, one filled button */
   .contact-form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px 28px; width: 100%; }
