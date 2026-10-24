@@ -4,18 +4,17 @@
 
 **How to use it.** Claude Code picks up tasks T1-T10 in dependency order, one branch and PR per task, never pushes to main, and Ron approves each PR. Record each update in the Status log at the bottom.
 
-The handoff below is kept verbatim.
+The handoff below is the task list. On 2026-10-24 Ron changed the CTA to email only: Write to Stav, no booking tool. Tasks T3, T5, T9 and T10 below match that decision.
 
 ---
 
 # THEODORA site: Claude Code handoff plan (inbound growth, Week 1 and 2)
 
-Prepared by Grok Bot on 2026-10-24 (ET) from a read-only clone of `Ronkimhi/stavtheodor` at `origin/main` **20ed7dd** ("Wave 1 reviews", 2026-10-24 00:59 ET). Source plan: the Page "THEODORA inbound growth plan". Grok Bot did not write to the repo. **Revised 2026-10-24 12:57 ET after Ron's decision: no photo upload, and the "send one photo of the wall" CTA is retired.** Re-checked against `origin/main` (still 20ed7dd) after a fresh fetch.
+Prepared by Grok Bot on 2026-10-24 (ET) from a read-only clone of `Ronkimhi/stavtheodor` at `origin/main` **20ed7dd** ("Wave 1 reviews", 2026-10-24 00:59 ET). Source plan: the Page "THEODORA inbound growth plan". Grok Bot did not write to the repo. **Revised 2026-10-24 12:57 ET after Ron's decision: no photo upload, and the "send one photo of the wall" CTA is retired.** Re-checked against `origin/main` (still 20ed7dd) after a fresh fetch. **Revised again 2026-10-24 (ET): no Calendly or other booking tool. The CTA is email only.**
 
 **The CTA system (use everywhere):**
-- Primary: **Book a 15-minute call** / **קביעת שיחה של 15 דקות**, linking `BOOKING_URL` (placeholder until Ron creates the booking page; while it is empty the button does not render).
-- Secondary: **Write to Stav** / **כתבו לסתיו**, exactly as the live hero button (`templates/home.html` line 52, `data-write`, opens the pop-up).
-- Microline under the buttons: **Tell me about the space: the room, the walls, the timeline.** / **ספרו לי על החלל: החדר, הקירות, לוח הזמנים.** It matches the existing contact card headline `CONTACT_HEAD` ("Tell me about your space." / "ספרו לי על החלל שלכם.") and the form's message label.
+- The only button: **Write to Stav** / **כתבו לסתיו**, exactly as the live hero and footer (`templates/home.html` line 52, `data-write`, opens the contact form; the mailto href stays the no-JavaScript fallback). No "Book a 15-minute call" button, no `BOOKING_URL`, and no booking link.
+- Microline under the button: **Tell me about the space: the room, the walls, the timeline.** / **ספרו לי על החלל: החדר, הקירות, לוח הזמנים.** It matches the existing contact card headline `CONTACT_HEAD` ("Tell me about your space." / "ספרו לי על החלל שלכם.") and the form's message label.
 
 ## Rules for every agent (read first)
 
@@ -31,16 +30,16 @@ Prepared by Grok Bot on 2026-10-24 (ET) from a read-only clone of `Ronkimhi/stav
 |---|---|---|
 | T1 Form fields | Nothing: free Formspree plan, no upload, no cost | T3, T5, T6 (T10 touches the same form note: do T1 first or rebase) |
 | T2 One form per page | Touches the same `site_chrome.py` form code as T1. **Do T1 first or rebase on it** | T5, T6 |
-| T3 CTA system: booking primary + guide CTAs | Owner creates the free booking page. Ships with `BOOKING_URL = ''` (only Write to Stav and the microline render) until then | T1, T5, T6 |
+| T3 Write to Stav in the hero (already live) and on the four guides | Nothing | T1, T5, T6 |
 | T4 Reviews | **Already live on main** (20ed7dd). Only a change when Ron confirms another reviewer | anything |
-| T5 Titles and metas | Ron approves the six pairs. The metas offer the call, so **ship T5 with or after T3 once `BOOKING_URL` is set** | T1, T6 |
+| T5 Titles and metas | Ron approves the six pairs. Each meta ends with Write to Stav. No booking link | T1, T3, T6 |
 | T6 404 stubs | Ron approves the redirect map. The extra stubs wait on the Search Console 404 list | T1, T3, T5 |
 | T7 Museum noindex | **Pending Ron's OK** on consolidation (nothing deleted) | T8 is the same decision |
 | T8 Sitemap tightening | T7 decision | T7 |
-| T9 Referral page | Grok Bot's copy (drafted, /workspace/theodora/referral-page.md), Ron's OK, and T3 for the booking button | anything |
+| T9 Referral page | Grok Bot's copy (`content/REFERRAL-PAGE-COPY.md`) and Ron's OK | anything |
 | T10 Retire the photo CTA strings | Ron's OK on the wording. Same files as T3 in `site_chrome.py` and `build-site-pages.py`: do T3 first or rebase | T5, T6 |
 
-Suggested order: T6 (smallest), then T1, then T10, then T3 (with T5 once the booking link exists), then T2. T7, T8 and T9 wait for their decisions.
+Suggested order: T6 (smallest), then T1, then T10, then T3 and T5 (either order; neither waits on a booking link), then T2. T7, T8 and T9 wait for their decisions.
 
 ---
 
@@ -51,7 +50,7 @@ Suggested order: T6 (smallest), then T1, then T10, then T3 (with T5 once the boo
 **Files.** `site_chrome.py`: `FORM_ENDPOINT` (line ~48), `contact_form()` (~573, including the docstring line "The free plan takes no files, so the note asks for the photo by email" and the `form-note` at line ~617), `FOUND_VIA` (~653), `form_js()` (~667). Also `css/theme.css` (chip and field styles), `tools/check_site.py` (form gates, if any count fields), `content/glossary-he.json` (only if a Latin word needs whitelisting), and `AGENTS.md` (rule 12 describes the form field by field, and line ~81 says "the note asks for the wall photo by email": update both in the same commit).
 
 **Steps.**
-1. **No upload.** Do not add a file input, `enctype`, or any `FORM_UPLOADS` switch. Replace the form note at line ~617, `L('I reply by email. If you have a photo of the wall, reply to my email with it.', ...)`, with `L('I reply by email.', 'אני עונה במייל.')`. (T3 adds "Prefer to talk? Book a 15-minute call." after it once `BOOKING_URL` is set.) Update the docstring to match.
+1. **No upload.** Do not add a file input, `enctype`, or any `FORM_UPLOADS` switch. Replace the form note at line ~617, `L('I reply by email. If you have a photo of the wall, reply to my email with it.', ...)`, with `L('I reply by email.', 'אני עונה במייל.')`. Do not append a booking line. Update the docstring to match.
 2. Add an optional **Timeline** chip set (`timeline`, none checked): This month / In 1 to 3 months / In 3 to 6 months / Just exploring, each with a Hebrew twin (החודש / בעוד 1 עד 3 חודשים / בעוד 3 עד 6 חודשים / רק בודקים). No dashes: write "1 to 3".
 3. Add an optional **Budget** free-text field (`budget`, single line, label "Budget, if you have one in mind" / "תקציב, אם יש לכם אחד בראש"). **No preset ranges, figures, placeholders with numbers or dollar signs in the markup**: the owner rule is no pricing on the site.
 4. Add an optional **Who referred you?** text field (`referred_by`, label "Who referred you?" / "מי הפנה אתכם?"). Show and enable it only when the `found_via` chip "A friend or client" or "A designer or architect" is checked, mirroring the existing `ai_query` show/disable sync (on change, after reset, on pageshow), so hidden text is never posted.
@@ -94,29 +93,27 @@ Suggested order: T6 (smallest), then T1, then T10, then T3 (with T5 once the boo
 
 ---
 
-## T3. CTA system: Book a 15-minute call (primary), Write to Stav (secondary), microline; service buttons on the four guides
+## T3. Write to Stav in the hero (already live), and a Write to Stav button on the four guides
 
-**Goal.** One CTA system across the site: **Book a 15-minute call** as the primary action, **Write to Stav** as the secondary (the live hero button), and the microline **"Tell me about the space: the room, the walls, the timeline."** under them. Also turn the four guides' inline service links into a visible button.
+**Goal.** The CTA is email only (Ron, 2026-10-24: no Calendly or other booking tool). **Write to Stav** / **כתבו לסתיו** is the action everywhere, the existing hero and footer wording. It opens email to Stav or the contact form, whichever that button already uses (the live hero is `data-write`, which opens the pop-up, and the mailto href stays the fallback). No "Book a 15-minute call" button, no `BOOKING_URL`, and no booking link. Keep the microline **"Tell me about the space: the room, the walls, the timeline."** / **"ספרו לי על החלל: החדר, הקירות, לוח הזמנים."** The hero button is already live. This task adds the same Write to Stav button on the four guides.
 
-**Files.** `site_chrome.py`: new `BOOKING_URL = ''` constant beside `FORM_ENDPOINT`; new `CTA_MICRO = ('Tell me about the space: the room, the walls, the timeline.', 'ספרו לי על החלל: החדר, הקירות, לוח הזמנים.')`; the footer CTA block (~529 to 546, the `Write to Stav` arrow at ~546); `contact_act()` ("Or reach me directly"); the form note (~617, after T1); `CALL_JS` for a `click_booking` GA4 event in the `click_phone` shape. `templates/home.html` line 52 (the `hero-write` link inside the homepage-only `hero_write` region) and line 135. `build-site-pages.py`: `cta_html()` (~267 to 279), the hub CTA (~607), the about CTA (~1066 to 1069) and `CONTACT`. `build-post-pages.py` line 92 (radar post button). `build-home.py` (`HOME_ONLY` stays as is). `content/PAGE-SPEC.md` (document `service_cta` and the CTA system). `content/pages/{restaurant-wall-decor,hotel-artwork,art-sourcing-for-interior-designers,dental-office-decor}.json`.
+**Files.** `templates/home.html` line 52 (the `hero-write` link inside the homepage-only `hero_write` region: confirm it, do not turn it into a booking button). `site_chrome.py`: `CTA_MICRO = ('Tell me about the space: the room, the walls, the timeline.', 'ספרו לי על החלל: החדר, הקירות, לוח הזמנים.')` under the button where this task places one. Do not add `BOOKING_URL` or a `click_booking` event. `build-site-pages.py` `cta_html()` only as needed to place the guide button. `content/pages/{restaurant-wall-decor,hotel-artwork,art-sourcing-for-interior-designers,dental-office-decor}.json`. `build-home.py` (`HOME_ONLY` stays as is).
 
 **Steps.**
-1. `BOOKING_URL = ''`. When it is empty, the booking button does not render anywhere: no placeholder link, no dead `#`. Write to Stav and the microline still render, so the site works today.
-2. When it is set, render **"Book a 15-minute call" / "קביעת שיחה של 15 דקות"** as the **primary** button (`.btn`) and keep **"Write to Stav" / "כתבו לסתיו"** beside it as the secondary (the existing `arrow` link with `data-write`, wording unchanged). Places: the homepage hero (beside `hero-write`, homepage only), the homepage CTA at line 135, the footer CTA, `cta_html()`, the hub and about CTAs, `contact_act()`, `/contact/`, and the radar post button. Booking links use `target="_blank" rel="noopener"` and fire GA4 `click_booking` with `link_location` and `page_path`, never personal data.
-3. Render `CTA_MICRO` as a `<p class="muted">` under each CTA pair. In `cta_html()`, a page's own `cta_sub_en`/`cta_sub_he` still wins over `CTA_MICRO` when present (T10 rewrites the ones that ask for a photo).
-4. After T1, append `L('Prefer to talk? Book a 15-minute call.', 'מעדיפים לדבר? קבעו שיחה של 15 דקות.')`, linked to `BOOKING_URL`, to the form note only when `BOOKING_URL` is set.
-5. Add an optional page JSON field `service_cta`: `{"href": "/restaurants/", "label_en": "...", "label_he": "..."}`. Render it as a `.btn` after the guide's lead and again before the FAQ. Fill it on the four guides with `/restaurants/`, `/hotels/`, `/for-designers/` and `/medical-practices/`. Example labels: "See how I work with restaurants", "Art for boutique hotels", "Work with me as your art partner", "Art for medical and dental practices". All need twins and no dashes.
+1. Do not add a booking URL, a booking button, Calendly, Cal.com, or any "Book a 15-minute call" / "קביעת שיחה" string.
+2. Confirm the homepage hero **Write to Stav** / **כתבו לסתיו** button is present, with the live wording, `data-write`, and `data-loc="hero"`. Leave that control as the site already ships it.
+3. If the hero button has no microline yet, add `CTA_MICRO` under it (homepage only).
+4. On each of the four guides, add a **Write to Stav** / **כתבו לסתיו** button after the lead and again before the FAQ, the same `data-write` control as the hero. Put the microline under each of those buttons. In `cta_html()`, a page's own `cta_sub_en`/`cta_sub_he` still wins over `CTA_MICRO` when present (T10 rewrites the ones that ask for a photo).
 
 **Acceptance criteria.**
-- With `BOOKING_URL = ''`, no built page contains "Book a 15-minute call" or "קביעת שיחה", and every CTA still shows Write to Stav plus the microline.
-- With a test value on the branch only, every CTA block shows the booking button first and Write to Stav second, and `click_booking` fires once per click.
+- No built page contains "Book a 15-minute call", "קביעת שיחה", `BOOKING_URL`, or a booking host (Calendly, Cal.com).
 - The hero Write to Stav wording and `data-loc="hero"` are unchanged.
-- Each of the 4 guides links its service page from a `.btn` element.
+- Each of the 4 guides has a Write to Stav button with `data-write`, and the microline in both languages.
 - `check_site: OK`, and `check_pages.py` passes.
 
-**Depends on.** Ron creates the booking page, free: Cal.com free, Calendly free, or a Google Calendar appointment schedule. No paid tools.
+**Depends on.** Nothing.
 
-**Ship.** Open a PR. Don't deploy without Ron's OK. Ron pastes the booking URL into `BOOKING_URL` (or tells the agent) when it exists.
+**Ship.** Open a PR. Don't deploy without Ron's OK.
 
 ---
 
@@ -137,22 +134,22 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 | Source | Field | New value |
 |---|---|---|
 | `content/pages/restaurant-wall-decor.json` | `head_title` | `Restaurant Wall Decor Ideas That Last` |
-| same | `meta_description` | `Restaurant wall decor ideas that survive steam, light and a full service, from a curator with 15+ years in art and hospitality. Book a 15-minute call.` (150 characters) |
+| same | `meta_description` | `Restaurant wall decor ideas that survive steam, light and a full service, from a curator with 15+ years in art and hospitality. Write to Stav about the space.` (158 characters) |
 | `content/pages/hotel-artwork.json` | `head_title` | `Hotel Artwork Guidelines, Lobby to Room` |
-| same | `meta_description` | `Hotel artwork guidelines, zone by zone: lobby, corridors, rooms, budget per key, by a curator whose work includes Waldorf Astoria. Book a 15-minute call.` (153 characters) |
+| same | `meta_description` | `Hotel artwork guidelines, zone by zone: lobby, corridors, rooms, budget per key, by a curator whose work includes Waldorf Astoria. Write to Stav about rooms.` (157 characters) |
 | `content/pages/art-sourcing-for-interior-designers.json` | `head_title` | `Art Sourcing for Interior Designers` |
-| same | `meta_description` | `Art sourcing for designers: trade, galleries, commissions or a curator, and the client stays yours. 15+ years in the art world. Book a 15-minute call.` (150 characters) |
+| same | `meta_description` | `Art sourcing for designers: trade, galleries, commissions or a curator, and the client stays yours. 15+ years in the art world. Write to Stav about the space.` (158 characters) |
 | `content/pages/dental-office-decor.json` | `head_title` | `Dental Office Decor Ideas: Waiting Room to Chair` (59 with the suffix) |
-| same | `meta_description` | `Dental office decor for the waiting room, chair view and kids' rooms, in art you can clean. By a curator with an M.A. in art history. Book a 15-minute call.` (156 characters) |
+| same | `meta_description` | `Dental office decor for the waiting room, chair view and kids' rooms, in art you can clean. By a curator with an M.A. in art history. Write to Stav by email.` (157 characters) |
 | `build-site-pages.py` `HUBS["advisory"]` / `render_hub()` | new title | `<title>` becomes `Art Advisor in NYC & NJ: Cost and Process · THEODORA`. **Keep the h1 "Art advisory, answered plainly"**: add an optional head-title element to the HUBS tuple, or a `HUB_HEAD_TITLE` dict, used only in `sc.head()` |
-| same | meta | `What an art advisor in NYC and New Jersey does, what it costs and how a piece gets to your wall, from curator Stav Theodor (15+ years). Book a 15-minute call.` (158 characters) Replace the `strip_tags(lead_en)[:158]` truncation (today it cuts mid-word at "buil") with an explicit `HUB_DESC` |
+| same | meta | `What an art advisor in NYC and New Jersey does, what it costs and how a piece gets to your wall, from curator Stav Theodor (15+ years). Write to Stav.` (150 characters) Replace the `strip_tags(lead_en)[:158]` truncation (today it cuts mid-word at "buil") with an explicit `HUB_DESC` |
 | `build-home.py` line 43 | `TITLE` | `Stav Theodor · THEODORA Art Advisor, New Jersey & NYC` (keeps "art advisor New Jersey" per Ron's 2026-09-29 brief P1.4, and leads with the brand name for the "theodora" query) |
-| `build-home.py` line 44 | `DESCRIPTION` | `Stav Theodor, art advisor in Tenafly, NJ: art for new homes in Bergen County and Manhattan, chosen, framed and hung. 15+ years in art. Book a 15-minute call.` (157 characters) |
+| `build-home.py` line 44 | `DESCRIPTION` | `Stav Theodor, art advisor in Tenafly, NJ: art for new homes in Bergen County and Manhattan, chosen, framed and hung. 15+ years in art. Write to Stav by email.` (158 characters) |
 
 **Steps.**
 1. Edit the values. Bump `date_modified` on the four guide JSONs only if the PAGE-SPEC requires it for head-only edits (otherwise leave it).
 2. "Dental Office Decor Ideas: Waiting Room to Chair" is 48 characters, or 59 with the suffix, so it passes. If any gate complains, shorten it rather than dropping the suffix.
-3. The six metas end with the call offer, not a photo ask (Ron, 2026-10-24). Ship them with or after T3 once `BOOKING_URL` is set, so the offer exists on the page.
+3. The six metas end with an email offer (Write to Stav), not a photo ask and not a call (Ron, 2026-10-24). T5 does not wait on T3 or on a booking link.
 4. Rebuild. Credentials trace to BRIEF.md and the live site: 15+ years, M.A. in art history, and the Waldorf Astoria Chengdu project.
 
 **Acceptance criteria.**
@@ -245,11 +242,11 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 
 ## T9. Referral page a client can forward (after Grok Bot's copy)
 
-**Goal.** A short indexable page, for example `/refer/`, that a past client or designer forwards to a friend. It explains the first step (book a 15-minute call, or write to Stav about the space) and carries the T3 CTA system: the booking button, Write to Stav and the microline. No photo ask.
+**Goal.** A short indexable page, for example `/refer/`, that a past client or designer forwards to a friend. It explains the first step (write to Stav about the space) and carries the T3 CTA: the Write to Stav button and the microline. No booking button. No photo ask.
 
 **Files.** A new `content/pages/refer.json` following `content/PAGE-SPEC.md` (English and Hebrew), rendered by `build-site-pages.py` like the partner pages. Add it to `sitemap-pages.xml` (automatic). Link it from no main nav, only from the referral messages.
 
-**Depends on.** Grok Bot's referral-page copy (drafted: /workspace/theodora/referral-page.md) and Ron's OK. **No referral-fee figures on the page**: `for-designers.json` already says referral terms are agreed studio by studio. The designer referral fee goes only in the private partner sheet, never in the repo.
+**Depends on.** Grok Bot's referral-page copy (`content/REFERRAL-PAGE-COPY.md`) and Ron's OK. **No referral-fee figures on the page**: `for-designers.json` already says referral terms are agreed studio by studio. The designer referral fee goes only in the private partner sheet, never in the repo.
 
 **Acceptance criteria.** `check_pages.py` and `check_site: OK` pass, twins are complete, and there are no dashes and no prices.
 
@@ -259,7 +256,7 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 
 ## T10. Retire every "send one photo / one wall photo" CTA string
 
-**Goal.** Ron dropped photo upload and the photo CTA (2026-10-24). Every visitor-facing ask to send a photo becomes an ask to tell Stav about the space (or, through T3, to book a call). Found in a fresh clone at `origin/main` 20ed7dd by searching English and Hebrew phrasings ("one photo", "a photo of the wall", "photos of the walls", "תמונה אחת של", "תמונה של הקיר", "תצלומים של", "צרפו תמונה"). Every "Find" below was verified to exist in that commit.
+**Goal.** Ron dropped photo upload and the photo CTA (2026-10-24). Every visitor-facing ask to send a photo becomes an ask to tell Stav about the space (or, through T3, to write to Stav). Found in a fresh clone at `origin/main` 20ed7dd by searching English and Hebrew phrasings ("one photo", "a photo of the wall", "photos of the walls", "תמונה אחת של", "תמונה של הקיר", "תצלומים של", "צרפו תמונה"). Every "Find" below was verified to exist in that commit.
 
 **Files (34).** `site_chrome.py`, `build-site-pages.py`, `llms.txt`, 25 files in `content/pages/`, 6 in `content/variants/`. Plus docs in the same commit: `AGENTS.md` line ~81 (form note described as asking for the wall photo) and `content/BRIEF.md` line 28 (quotes "send me a photo of your first wall" as a site CTA). `llms-full.txt` is generated by `tools/build_llms_full.py` from the pages: never edit it by hand; the rebuild clears its 29 matches.
 
@@ -278,7 +275,7 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 | `site_chrome.py` | `FOOTER_CTA[1]` | שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה. | ספרו לי על החלל: החדר, הקירות, לוח הזמנים. אספר לכם מה אני רואה. |
 | `site_chrome.py` | `NEXT_STEPS[0]` | ('You send a photo of the wall and a line about the space.', 'אתם שולחים תמונה של הקיר ושורה על החלל.') | ('You tell me about the space: the room, the walls, the timeline.', 'אתם מספרים לי על החלל: החדר, הקירות, לוח הזמנים.') |
 | `site_chrome.py` | `CONTACT_LINES[0]` | ('One photo of the wall and a line about the space is enough.', 'תמונה אחת של הקיר ושורה על החלל מספיקות.') | ('A few lines about the room, the walls and the timeline are enough.', 'כמה שורות על החדר, הקירות ולוח הזמנים מספיקות.') |
-| `site_chrome.py` | `contact_form() form-note` | L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.') | L('I reply by email.', 'אני עונה במייל.'), plus, only when BOOKING_URL is set, L('Prefer to talk? Book a 15-minute call.', 'מעדיפים לדבר? קבעו שיחה של 15 דקות.') linking BOOKING_URL |
+| `site_chrome.py` | `contact_form() form-note` | L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.') | L('I reply by email.', 'אני עונה במייל.') |
 | `build-site-pages.py` | `CTA_EN` | Send me one photo of the wall, and a line about the space. I will tell you what I see. | Tell me about the space: the room, the walls, the timeline. I will tell you what I see. |
 | `build-site-pages.py` | `CTA_HE` | שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה. | ספרו לי על החלל: החדר, הקירות, לוח הזמנים. אספר לכם מה אני רואה. |
 | `build-site-pages.py` | `CONTACT description (line ~763)` | Send one photo of the wall and a line about the space. | Tell me about the space: the room, the walls, the timeline. |
@@ -374,5 +371,6 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 
 Each agent appends a dated line (ET): task, status (picked up / PR open / merged / blocked), PR link, and notes or questions for Grok Bot or Ron.
 
-2026-10-24 (ET) | Grok Bot | Plan added. T4 reviews strip already live. T7/T8 wait for Ron's OK. T3 and T5 wait for Ron's booking link. T9 copy is in content/REFERRAL-PAGE-COPY.md.
+2026-10-24 (ET) | Grok Bot | Plan added. T4 reviews strip already live. T7/T8 wait for Ron's OK. T9 copy is in content/REFERRAL-PAGE-COPY.md.
 2026-10-24 (ET) | Grok Bot | Plan file | PR open | https://github.com/Ronkimhi/stavtheodor/pull/1 | Docs only. Not merged.
+2026-10-24 (ET) | Grok Bot | CTA changed to email only (Write to Stav); no booking tool. T3 and T5 unblocked.

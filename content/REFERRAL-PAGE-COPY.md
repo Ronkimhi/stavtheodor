@@ -6,12 +6,12 @@ For Claude Code to build later as `content/pages/refer.json` (task T9 in claude-
 - English and Hebrew twins for every heading and paragraph.
 - No em or en dashes. No fees, prices, percentages, discounts or rewards. Designer terms stay in the private partner sheet.
 - Audience order: past clients first (who will mostly refer new homeowners), then friends forwarding a link.
-- CTA system (task T3): primary **Book a 15-minute call** (`BOOKING_URL`, not rendered until Ron creates the booking page), secondary **Write to Stav** (the live hero button, `data-write`), and the microline "Tell me about the space: the room, the walls, the timeline." No photo ask and no upload anywhere on the page. The form is the existing free Formspree form after T1, with `referred_by`. Never send a test submission.
+- CTA system (task T3, Ron 2026-10-24: email only, no booking tool): **Write to Stav** / **כתבו לסתיו** (the live hero button, `data-write`, opens the contact form; mailto is the fallback) and the microline "Tell me about the space: the room, the walls, the timeline." No booking button, no `BOOKING_URL`, no photo ask and no upload anywhere on the page. The form is the existing free Formspree form after T1, with `referred_by`. Never send a test submission.
 - Fact trace: every claim below is already on stavtheodor.com or in `content/BRIEF.md`.
 
 **Suggested head**
 - head_title: `Refer a Friend to an Art Advisor` (32 characters, 44 with " · THEODORA")
-- meta_description: `Know someone finishing a new home or moving in New Jersey or New York? Send them here. Art curator Stav Theodor starts with a 15-minute call. No pressure.` (154)
+- meta_description: `Know someone finishing a new home or moving in New Jersey or New York? Send them here. Write to Stav about the bare walls. No pressure.` (135)
 - title_en: Know someone with bare walls?
 - title_he: מכירים מישהו עם קירות ריקים?
 
@@ -29,12 +29,12 @@ For Claude Code to build later as `content/pages/refer.json` (task T9 in claude-
 
 ## How it starts
 **EN:**
-1. Book a 15-minute call, or write to me about the space: the room, the walls, the timeline.
+1. Write to Stav about the space: the room, the walls, the timeline.
 2. I tell you what I see and how I would approach it.
 3. If it feels right, we take it from there: sourcing, budget, framing and installation by my own insured team.
 
 **HE:**
-1. קבעו שיחה של 15 דקות, או כתבו לי על החלל: החדר, הקירות, לוח הזמנים.
+1. כתבו לסתיו על החלל: החדר, הקירות, לוח הזמנים.
 2. אספר לכם מה אני רואה ואיך הייתי ניגשת לזה.
 3. אם זה מרגיש נכון, ממשיכים משם: איתור, תקציב, מסגור והתקנה עם צוות מבוטח משלי.
 
@@ -56,12 +56,11 @@ For Claude Code to build later as `content/pages/refer.json` (task T9 in claude-
 Claude Code: link only to project pages that exist in the build; check_site must pass.
 
 ## CTA block
-**Primary button (EN / HE):** Book a 15-minute call / קביעת שיחה של 15 דקות (links `BOOKING_URL`; hidden until it exists)
-**Secondary button (EN / HE):** Write to Stav / כתבו לסתיו (same as the live hero button)
+**Button (EN / HE):** Write to Stav / כתבו לסתיו (the live hero button: `data-write`, opens the contact form; mailto is the fallback)
 **Microline EN:** Tell me about the space: the room, the walls, the timeline.
 **Microline HE:** ספרו לי על החלל: החדר, הקירות, לוח הזמנים.
-**Under it EN:** Or write to stav@stavtheodor.com or call (201) 351-8367.
-**Under it HE:** או כתבו ל stav@stavtheodor.com או התקשרו ל (201) 351-8367.
+**Under it EN:** Or write to stav@stavtheodor.com.
+**Under it HE:** או כתבו ל stav@stavtheodor.com.
 
 ## Form (reuse the existing form after task T1)
 - Required: name and email only. Optional: message ("Tell me about your space"), timeline chips, "Who sent you?" (maps to `referred_by`).
