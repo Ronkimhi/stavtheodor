@@ -375,3 +375,4 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 Each agent appends a dated line (ET): task, status (picked up / PR open / merged / blocked), PR link, and notes or questions for Grok Bot or Ron.
 
 2026-10-24 (ET) | Grok Bot | Plan added. T4 reviews strip already live. T7/T8 wait for Ron's OK. T3 and T5 wait for Ron's booking link. T9 copy is in content/REFERRAL-PAGE-COPY.md.
+2026-10-24 (ET) | Grok Bot | Plan file | PR open | https://github.com/Ronkimhi/stavtheodor/pull/1 | Docs only. Not merged.
