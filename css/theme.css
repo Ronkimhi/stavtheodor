@@ -1,6 +1,6 @@
 /* stavtheodor.com: the one theme every page shares.
    Generated pages link this file; edit it here, then run python3 build.py.
-   Part 1 is the approved homepage stylesheet (the ArtLink register, 2026-09-26), unchanged
+   Part 1 is the approved homepage stylesheet (the v3 register, 2026-09-26), unchanged
    except that the opening's caption rule is scoped to #cap so the film and project captions
    render. Part 2 styles the inner pages: Art Radar posts, the archive, advisory, projects,
    partners and the guide. Tokens live in :root. */

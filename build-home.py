@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the homepage, index.html, from templates/home.html and the site's data.
 
-  templates/home.html   the approved design (the ArtLink register, v3, 2026-09-26) with slots
+  templates/home.html   the approved design (the v3 register, 2026-09-26) with slots
   content/posts.html    the six newest posts fill the Art Radar timeline
   content/pages/*.json  the six lead projects and the advisory rows
   content/faq.json      the seven questions: visible FAQ and FAQPage schema, the same text

@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """The Hebrew segment table: every translatable English and Hebrew pair in the site's sources, one JSON line each.
 
-    python3 tools/extract_he.py                 writes the default path below
-    python3 tools/extract_he.py <out.jsonl>     writes there instead
+    python3 tools/extract_he.py --out <out.jsonl>     writes there
+    python3 tools/extract_he.py <out.jsonl>           the same
+    EXTRACT_HE_OUT=<out.jsonl> python3 tools/extract_he.py
+
+There is no default path (2026-10-25: the repo is public, so no private path lives in it): the argument wins over
+EXTRACT_HE_OUT, and with neither the script stops with an error (exit 2) before reading anything.
 
 Read only: it never touches the site. Prints the rows per source file, the total Hebrew characters, and the
-strings that have no twin (Hebrew without English, English without Hebrew). Exit 0 always.
+strings that have no twin (Hebrew without English, English without Hebrew). Exit 0 once it has written the table.
 
 A row: {id, file, field_or_locator, en, he, source_side, is_html, page_url}. source_side is "en" (the English
 is the source the Hebrew is checked against). page_url is where the pair shows: a path, several paths joined by
@@ -35,7 +39,6 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-DEFAULT_OUT = '/Users/ronki/Documents/ron-brain/the-system-v8-ron/B-brain/09-knowledge/hebrew-qa/_audit/segments.jsonl'
 HEB = re.compile('[֐-׿]')
 LATIN = re.compile('[A-Za-z]')
 TAG = re.compile(r'<[a-zA-Z/!]')
@@ -410,8 +413,21 @@ def py_source(f, url):
 
 # ---------------------------------------------------------------- main
 
+def out_path():
+    """The output path: --out PATH (or a bare PATH), else the EXTRACT_HE_OUT environment variable; no default."""
+    import argparse
+    ap = argparse.ArgumentParser(prog='tools/extract_he.py', description='Write the Hebrew segment table (JSON lines).')
+    ap.add_argument('--out', help='where to write the .jsonl (else EXTRACT_HE_OUT)')
+    ap.add_argument('path', nargs='?', help='the same as --out')
+    a = ap.parse_args()
+    out = a.out or a.path or os.environ.get('EXTRACT_HE_OUT')
+    if not out:
+        ap.error('no output path: pass --out <file.jsonl> or set EXTRACT_HE_OUT')
+    return out
+
+
 def main():
-    out = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_OUT
+    out = out_path()
     pages()
     variants()
     faq()
