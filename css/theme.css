@@ -1001,3 +1001,17 @@
     .write-modal[open] .wm-panel, .write-modal[open]::backdrop { animation: none; }
     .wm-x { transition: none; }
   }
+
+  /* Tap targets (QA review 2026-10-25): at 768px and under, each small header control and every
+     arrow link gets a hit area of at least 44 by 44 CSS px from a transparent ::after laid over it.
+     The control's own box, its pixels and its position do not change; the ::after paints nothing.
+     The call link's area grows to its left (toward the empty space before it) so it does not
+     overlap the HE/EN button; the others grow evenly around their centre. */
+  @media (max-width: 768px) {
+    .nav .nav-call, .lang-switch button, .menu-btn, a.arrow { position: relative; }
+    .nav .nav-call::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
+    .nav .nav-call::after { left: auto; right: -4px; transform: translateY(-50%); }
+    a.arrow::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: max(100%, 44px); transform: translateY(-50%); background: transparent; }
+    /* Where arrow links stack closer than 44px apart (the foot-ways list), Write to Stav keeps its full area */
+    a.arrow[data-write] { z-index: 1; }
+  }

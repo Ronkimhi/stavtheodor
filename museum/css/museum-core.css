@@ -231,3 +231,11 @@ a { color: var(--bronze); }
   .placard-name { font-size: 21px; }
   .placard-cta { bottom: -26px; margin: 22px -24px -26px; }
 }
+
+/* Tap target (QA review 2026-10-25): at 768px and under the header call link gets a hit area of at
+   least 44 by 44 CSS px from a transparent ::after, growing toward the left; its own box, pixels and
+   position do not change. */
+@media (max-width: 768px) {
+  .m-nav-call { position: relative; }
+  .m-nav-call::after { content: ""; position: absolute; top: 50%; right: -4px; width: max(100%, 44px); height: max(100%, 44px); transform: translateY(-50%); background: transparent; }
+}

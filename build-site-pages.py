@@ -586,12 +586,14 @@ def ba_card(p):
       </a>'''
 
 
-def hub_hero(title_en, title_he, lead_en, lead_he, hero_src, alt_attr):
+def hub_hero(title_en, title_he, lead_en, lead_he, hero_src, alt_attr, srcset=None):
     """A hub's hero (.phero.hub): the photo, the name as the h1 and the sentence as the lead. alt_attr: the img's alt
-    attribute(s), already formed."""
+    attribute(s), already formed. srcset (optional, 2026-10-25): [(path, width)] candidates, the hero_src among them;
+    hero_src stays the src, so a browser without srcset gets the same file as before."""
+    ss = (f' srcset="{", ".join(f"{u} {w}w" for u, w in srcset)}" sizes="100vw"') if srcset else ''
     return f'''
 <header class="phero hub">
-  <img src="{hero_src}" {alt_attr} fetchpriority="high">
+  <img src="{hero_src}"{ss} {alt_attr} fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <h1 class="serif">{T(H.escape(title_en), H.escape(title_he))}</h1>
@@ -652,6 +654,9 @@ GUIDE_INDEX = {
              "תשובות פשוטות לשאלות ששואלים לפני שקונים או תולים יצירה: באיזה גודל, באיזה גובה, איזו עבודה, ולאיזה חלל. לרובן מצורפים שרטוטים בקנה מידה והמידות באינצ'ים ובסנטימטרים."),
     "description": "Practical guides to choosing, sizing and hanging art for homes, offices, clinics, hotels and restaurants, with drawings to scale. By Stav Theodor, THEODORA.",
     "hero_src": "/images/home2/hod-hasharon.jpg",
+    # QA review 2026-10-25: the hero showed the 810 px file at 1280 px wide; the same photo exists at 976 px (the
+    # project page's own file), so it is the larger candidate. Neither file is resized or re-encoded.
+    "hero_srcset": [("/images/home2/hod-hasharon.jpg", 810), ("/images/projects/hod-hasharon.jpg", 976)],
     "hero_alt": ("Open living space in a Hod Hasharon villa, a large figurative artwork of a woman's face dissolving into red roses on a concrete wall, garden and pool beyond the glass",
                  "חלל מגורים פתוח בווילה בהוד השרון, עבודה פיגורטיבית גדולה של פני אישה שנמסים לוורדים אדומים על קיר בטון, גינה ובריכה מעבר לזכוכית"),
 }
@@ -735,7 +740,7 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"])) + gbar + sections  # the footer carries the closing line
+    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections  # the footer carries the closing line
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
