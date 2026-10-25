@@ -427,6 +427,21 @@ def page_guides(p, all_pages):
     return sc.guides_section(sc.pick_guides(p["guides"], built, lambda o: True), h2, tight=True, described=described(p)) + "\n"
 
 
+# The reviews on a content page (Ron, 2026-10-23, site rules F8: "near the form and on home, contact and /for-designers/"):
+# the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
+# directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
+REVIEWS_PAGES = {"for-designers"}
+
+
+def reviews_html(p):
+    if p["slug"] not in REVIEWS_PAGES:
+        return ""
+    return f'''
+<section class="section wrap tight">
+  {sc.reviews_block()}
+</section>'''
+
+
 def render_article_page(p, all_pages):
     """Advisory, partner and guide pages: text header, the hero figure, the reading column.
     The hero figure is a before/after proposal space (before_after, a key of content/spaces.json, 2026-09-28):
@@ -498,7 +513,7 @@ def render_article_page(p, all_pages):
 </section>
 {guide_next(p, all_pages)}{radar_html(p)}'''
     else:
-        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
