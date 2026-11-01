@@ -1,0 +1,295 @@
+group,path,note,views_d90,users_d90,views_d28,views_m12,landing_sessions_d90,landing_sessions_d28,landing_organic_d90,landing_ai_d90,landing_direct_d90,eng_time_per_user_d90,landing_eng_time_per_session_d90,landing_key_event_rate_d90,key_events_d90,key_events_m12,form_start_d90,generate_lead_d90,click_phone_d90,click_email_d90,gsc_clicks_35d,gsc_impr_35d,gsc_ctr_35d,gsc_pos_35d,gsc_clicks_d28,gsc_impr_d28,top_queries_35d,index_status
+Homepage,/,,778,464,231,1008,605,191,155,17,367,31.3,36.5,0.83,6,6,3,3,3,0,24,482,4.98%,6.6,17,257,"theodora (117 impr, pos 11.9); theodora art (5 impr, pos 2.6); theodora home (4 impr, pos 7.2)",Indexed
+Money pages,/advisory/,,44,25,6,44,6,0,2,0,4,56.1,269.0,0.0,0,0,0,0,0,0,0,149,0.00%,8.5,0,43,"theodor (15 impr, pos 22.9); compare art advisory services for choosing artwork by budget and style (2 impr, pos 57.0); art advisory (1 impr, pos 4.0)",Indexed
+Money pages,/art-curator-new-jersey/,,36,23,6,36,21,2,7,0,14,14.5,22.4,0.0,0,0,0,0,0,0,4,90,4.44%,4.8,1,52,,Indexed
+Money pages,/law-firms/,,31,17,11,31,7,2,3,0,3,43.2,29.1,0.0,0,0,0,0,0,0,1,39,2.56%,5.3,0,22,,Indexed
+Money pages,/hotels/,,24,19,13,24,16,8,1,7,8,22.5,45.9,6.25,0,0,1,0,0,0,0,94,0.00%,5.8,0,38,,Indexed
+Money pages,/investment-firms/,,17,5,4,17,2,2,0,0,2,73.8,3.0,0.0,0,0,0,0,0,0,0,58,0.00%,7.5,0,33,,Indexed
+Money pages,/for-designers/,,14,8,4,14,5,2,0,0,4,23.9,14.2,0.0,0,0,0,0,0,0,0,90,0.00%,8.0,0,41,,Indexed
+Money pages,/art-curator-new-york/,,12,11,10,12,7,6,7,0,0,107.7,230.3,0.0,0,0,0,0,0,0,6,149,4.03%,6.4,5,110,"art advisor nyc (5 impr, pos 12.0); art consultant new york (2 impr, pos 6.5); art consultant nyc (2 impr, pos 8.5)",Indexed
+Money pages,/for-brokers/,,10,5,3,10,1,0,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,32,0.00%,11.4,0,18,,Indexed
+Money pages,/art-consultant-tenafly-nj/,,9,8,7,9,6,5,5,0,1,9.8,35.2,0.0,0,0,0,0,0,0,4,108,3.70%,5.4,4,107,,Indexed
+Money pages,/restaurants/,,7,6,1,7,2,0,1,0,1,17.2,15.0,0.0,0,0,0,0,0,0,1,97,1.03%,8.0,0,27,,Indexed
+Money pages,/medical-practices/,,5,3,1,5,0,0,0,0,0,47.3,,,0,0,0,0,0,0,0,39,0.00%,11.0,0,12,,Indexed
+Money pages,/wealth-managers/,,4,2,0,4,1,0,1,0,0,32.0,76.0,0.0,0,0,0,0,0,0,1,81,1.23%,8.1,0,20,,Indexed
+Money pages,/for-advisors/,,4,4,1,4,0,0,0,0,0,27.0,,,0,0,0,0,0,0,0,28,0.00%,6.7,0,21,,Indexed
+Money pages,/art-advisor-bergen-county/,,1,1,1,1,0,0,0,0,0,70.0,,,0,0,0,0,0,0,0,46,0.00%,7.0,0,46,,Indexed
+Money pages,/art-advisor-westchester-ny/,,1,1,1,1,0,0,0,0,0,18.0,,,0,0,0,0,0,0,1,20,5.00%,6.2,1,20,,Indexed
+Contact and about,/contact/,,47,26,34,47,6,4,1,0,4,28.6,29.0,16.67,2,2,4,3,2,1,0,76,0.00%,54.6,0,73,,Indexed
+Contact and about,/about/,,37,26,29,37,15,15,7,3,5,19.9,21.5,0.0,0,0,0,0,0,0,2,121,1.65%,3.6,2,104,"theodora art (2 impr, pos 7.5)","Indexed, Redirect"
+Guides,/guide/art-sourcing-for-interior-designers/,,39,36,36,39,34,34,5,0,29,15.1,8.9,0.0,0,0,0,0,0,0,5,469,1.07%,8.0,5,469,"art procurement (5 impr, pos 19.0); art sourcing (42 impr, pos 10.7); art sourcing for designers (21 impr, pos 10.1)",Indexed
+Guides,/guide/,,18,13,9,18,3,2,0,0,3,15.6,33.3,0.0,0,0,0,0,0,0,0,16,0.00%,13.1,0,13,,Indexed
+Guides,/guide/dental-office-decor/,,13,11,12,13,11,11,10,1,0,45.2,43.6,0.0,0,0,0,0,0,0,9,406,2.22%,9.3,9,406,"dental office decor (55 impr, pos 11.6); dental office decor ideas (26 impr, pos 9.5); dental office decore (14 impr, pos 11.9)",Indexed
+Guides,/guide/hotel-artwork/,,8,8,8,8,8,8,6,0,2,32.0,33.2,0.0,0,0,0,0,0,0,3,283,1.06%,9.0,3,283,"guidelines for art in hotels (16 impr, pos 29.2); how to choose art for hotels (13 impr, pos 19.5); hotel artwork (9 impr, pos 14.9)",Indexed
+Guides,/guide/how-to-hang-pictures/,,8,6,4,8,3,3,2,1,0,41.8,43.7,0.0,0,0,0,0,0,0,1,231,0.43%,16.3,1,231,"hvor højt skal et billede hænge (10 impr, pos 66.7); what is the 60 inch rule for hanging pictures (3 impr, pos 10.3); how high do i hang pictures (3 impr, pos 63.7)",Indexed
+Guides,/guide/office-wall-art/,,8,6,4,8,3,3,1,0,2,29.0,15.3,0.0,0,0,0,0,0,0,1,137,0.73%,8.7,1,137,"art office (8 impr, pos 9.6); offices art (2 impr, pos 9.0); art for professional spaces (2 impr, pos 43.5)",Indexed
+Guides,/guide/planning-art-in-construction-drawings/,,7,6,5,7,3,3,1,0,2,1.5,0.3,0.0,0,0,0,0,0,0,1,113,0.88%,8.0,1,111,"תכנון ובניית גלריה (3 impr, pos 41.0); artwork construction (2 impr, pos 8.5); what is construction in art (2 impr, pos 10.0)",Indexed
+Guides,/guide/buy-lease-or-commission-office-art/,,6,4,5,6,2,2,0,0,2,20.5,0.0,0.0,0,0,1,0,0,0,0,43,0.00%,10.6,0,43,,Indexed
+Guides,/guide/living-room-art/,,6,3,2,6,1,1,0,0,1,7.7,0.0,0.0,0,0,0,0,0,0,0,1,0.00%,10.0,0,1,,Indexed
+Guides,/guide/large-wall-art-ideas/,,5,4,3,5,0,0,0,0,0,49.0,,,0,0,0,0,0,0,0,40,0.00%,8.1,0,40,,Indexed
+Guides,/guide/art-above-couch/,,5,3,2,5,3,2,2,0,1,23.7,1.3,0.0,0,0,0,0,0,0,0,11,0.00%,9.0,0,11,,Indexed
+Guides,/guide/restaurant-wall-decor/,,4,4,4,4,4,4,2,0,2,3.0,10.8,0.0,0,0,0,0,0,0,2,326,0.61%,8.2,2,324,"restaurant art and decor vendor (18 impr, pos 8.9); restaurant wall decor ideas (14 impr, pos 6.6); restaurant wall decor (14 impr, pos 8.6)",Indexed
+Guides,/guide/how-to-light-art/,,4,4,1,4,3,1,1,2,0,11.2,6.0,0.0,0,0,0,0,0,0,1,78,1.28%,11.7,1,75,,Indexed
+Guides,/guide/medical-office-wall-art/,,4,2,2,4,2,2,0,2,0,152.5,141.5,0.0,0,0,0,0,0,0,0,2,0.00%,5.5,0,2,,Indexed
+Guides,/guide/dining-room-art/,,4,2,3,4,1,1,1,0,0,7.0,0.0,0.0,0,0,0,0,0,0,0,1,0.00%,4.0,0,1,,Indexed
+Guides,/guide/law-office-art/,,3,3,2,3,1,1,1,0,0,14.0,4.0,0.0,0,0,0,0,0,0,1,64,1.56%,6.4,1,64,,Indexed
+Guides,/guide/ten-questions-before-you-buy-your-first-serious-artwork/,,2,2,1,2,0,0,0,0,0,6.5,,,0,0,0,0,0,0,0,27,0.00%,8.4,0,27,,Indexed
+Guides,/guide/entryway-art/,,2,2,1,2,1,1,0,0,1,66.5,133.0,0.0,0,0,0,0,0,0,0,16,0.00%,8.2,0,16,,Indexed
+Guides,/guide/gallery-wall-ideas/,,2,2,0,2,0,0,0,0,0,27.5,,,0,0,0,0,0,0,0,8,0.00%,11.9,0,8,,Indexed
+Guides,/guide/how-to-choose-art-for-your-home/,,2,2,1,2,0,0,0,0,0,57.0,,,0,0,0,0,0,0,0,8,0.00%,14.5,0,8,,Indexed
+Guides,/guide/art-advisor-vs-art-consultant/,,2,1,0,2,1,0,1,0,0,56.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Guides,/guide/art-above-bed/,,1,1,1,1,0,0,0,0,0,18.0,,,0,0,0,0,0,0,0,21,0.00%,8.1,0,21,,Indexed
+Guides,/guide/art-for-a-small-apartment/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,20,0.00%,9.9,0,18,,Indexed
+Guides,/guide/art-for-home-staging/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,9,0.00%,8.1,0,9,,Indexed
+Guides,/guide/financial-advisor-office-art/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,7.7,0,3,,Indexed
+Advisory articles,/advisory/what-does-an-art-advisor-cost/,,8,5,1,8,2,0,0,0,2,77.0,0.0,0.0,0,0,0,0,0,0,0,3,0.00%,15.3,0,3,,Indexed
+Advisory articles,/advisory/art-advisor-manhattan-apartment/,,3,2,0,3,0,0,0,0,0,41.0,,,0,0,0,0,0,0,0,2,0.00%,5.5,0,2,,Indexed
+Advisory articles,/advisory/starting-an-art-collection/,,3,2,0,3,1,0,1,0,0,1.0,2.0,0.0,0,0,0,0,0,0,0,1,0.00%,10.0,0,1,,Indexed
+Advisory articles,/advisory/art-for-an-office-or-business/,,2,2,0,2,1,0,0,0,1,6.0,43.0,0.0,0,0,0,0,0,0,0,18,0.00%,8.6,0,18,,Indexed
+Advisory articles,/advisory/commissioning-art-for-a-new-home/,,2,2,1,2,1,1,1,0,0,39.0,3.0,0.0,0,0,0,0,0,0,1,12,8.33%,13.1,1,12,,Indexed
+Advisory articles,/advisory/help-choosing-art-for-my-home-nyc/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,40,0.00%,5.6,0,27,,Indexed
+Advisory articles,/advisory/framing-and-installing-large-scale-art/,,1,1,1,1,1,1,1,0,0,0.0,0.0,0.0,0,0,0,0,0,0,1,11,9.09%,9.7,1,11,,Indexed
+Advisory articles,/advisory/art-for-a-new-condo-nyc/,,1,1,0,1,0,0,0,0,0,5.0,,,0,0,0,0,0,0,0,7,0.00%,5.7,0,6,,Indexed
+Advisory articles,/advisory/art-for-a-new-build-in-bergen-county/,,1,1,1,1,1,1,1,0,0,41.0,41.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Advisory articles,/advisory/residential-art-consultant/,,1,1,0,1,1,0,1,0,0,28.0,62.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Advisory articles,/advisory/working-with-your-interior-designer-on-art/,,1,1,0,1,0,0,0,0,0,10.0,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Advisory articles,/advisory/art-advisor-vs-consultant-vs-decorator/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,64,0.00%,8.1,0,42,,Indexed
+Advisory articles,/advisory/art-for-a-prewar-apartment-upper-east-side/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,21,0.00%,5.4,0,20,,Indexed
+Advisory articles,/advisory/art-for-a-home-in-israel-from-abroad/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,11,0.00%,14.2,0,11,,Indexed
+Advisory articles,/advisory/art-for-a-new-office-manhattan/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,11,0.00%,5.4,0,11,,Indexed
+Advisory articles,/advisory/hanging-heavy-art-nyc-apartment-coi/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,11,0.00%,18.6,0,11,,Indexed
+Advisory articles,/advisory/how-the-art-advisory-process-works/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,4,0.00%,5.0,0,4,,Indexed
+Advisory articles,/advisory/how-to-buy-from-a-gallery-without-overpaying/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,8.0,0,3,,Indexed
+Advisory articles,/advisory/art-for-a-brooklyn-brownstone/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,2.0,0,1,,Indexed
+Advisory articles,/advisory/art-for-a-tribeca-or-soho-loft/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,5.0,0,1,,Indexed
+Advisory articles,/advisory/art-for-a-new-apartment-on-a-budget/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Advisory articles,/advisory/art-for-hotels-and-hospitality/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Advisory articles,/advisory/moved-to-nyc-empty-walls-art/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Advisory articles,/advisory/where-to-buy-original-art-nyc/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Projects,/projects/,,66,38,37,66,10,4,1,0,9,25.6,26.0,0.0,0,0,0,0,0,0,0,75,0.00%,5.2,0,15,,Indexed
+Projects,/projects/closter-new-jersey-new-construction/,,6,6,5,6,0,0,0,0,0,40.8,,,0,0,0,0,0,0,0,5,0.00%,12.6,0,5,,Indexed
+Projects,/projects/ramat-gan-private-home/,,5,3,4,5,2,2,0,0,2,1.7,0.0,0.0,0,0,0,0,0,0,0,3,0.00%,14.0,0,3,,Indexed
+Projects,/projects/hotels-and-hospitality-collections/,,5,3,4,5,1,1,0,0,1,30.7,79.0,0.0,0,0,0,0,0,0,0,1,0.00%,3.0,0,1,,Indexed
+Projects,/projects/tel-aviv-home-of-roni-daloomi/,,3,2,3,3,0,0,0,0,0,33.0,,,0,0,0,0,0,0,0,28,0.00%,10.7,0,28,,Indexed
+Projects,/projects/hod-hasharon-private-villa/,,3,3,0,3,2,0,0,0,2,3.7,3.5,0.0,0,0,0,0,0,0,0,24,0.00%,10.0,0,22,,Indexed
+Projects,/projects/caesarea-luxury-residence-home-office/,,3,2,2,3,0,0,0,0,0,5.0,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Projects,/projects/herzliya-pituach-sea-view-apartment/,,2,1,1,2,0,0,0,0,0,16.0,,,0,0,0,0,0,0,0,14,0.00%,8.9,0,14,,Indexed
+Projects,/projects/tel-aviv-renovated-bauhaus-home/,,2,2,2,2,0,0,0,0,0,39.0,,,0,0,0,0,0,0,0,10,0.00%,8.2,0,10,,Indexed
+Projects,/projects/caesarea-garden-villa/,,2,2,1,2,1,1,1,0,0,16.0,24.0,0.0,0,0,0,0,0,0,1,5,20.00%,7.8,1,5,,Indexed
+Projects,/projects/caesarea-private-estate/,,2,2,0,2,0,0,0,0,0,171.5,,,0,0,0,0,0,0,0,1,0.00%,2.0,0,1,,Indexed
+Projects,/projects/manhattan-skyline-residence/,,2,1,1,2,0,0,0,0,0,8.0,,,0,0,0,0,0,0,0,1,0.00%,7.0,0,1,,Indexed
+Projects,/projects/creating-hope-exhibition-un-geneva/,,1,1,1,1,0,0,0,0,0,10.0,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Projects,/projects/caesarea-sea-view-villa-triptych/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,5,0.00%,6.0,0,3,,Indexed
+Projects,/projects/tel-aviv-private-residence-shtisel-commission/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,7.7,0,3,,Indexed
+Projects,/projects/tel-aviv-bauhaus-residence/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,9.0,0,1,,Indexed
+Art Radar,/radar/,,46,28,35,46,5,3,1,0,3,23.4,17.6,20.0,0,0,0,0,0,0,1,128,0.78%,6.2,1,70,"artradar (23 impr, pos 8.1); art radar (14 impr, pos 8.6); doron langberg (2 impr, pos 6.5)",Indexed
+Art Radar,/radar/soho-lerma-ackermann/,,30,28,5,30,24,5,3,0,21,3.8,6.6,0.0,0,0,0,0,0,0,1,16,6.25%,11.6,1,16,,Indexed
+Art Radar,/radar/oren-fischer-hallel/,,15,12,1,15,13,1,7,0,6,51.7,46.9,0.0,0,0,0,0,0,0,0,9,0.00%,6.6,0,7,,Indexed
+Art Radar,/radar/fresh-paint-2026/,,8,1,8,9,8,8,8,0,0,0.0,0.0,0.0,0,0,0,0,0,0,1,87,1.15%,7.1,1,81,,Indexed
+Art Radar,/radar/chelsea-emily-mae-smith-sugimoto-rondinone/,,7,6,7,7,3,3,0,0,3,4.0,4.7,0.0,0,0,0,0,0,0,0,11,0.00%,9.2,0,11,,Indexed
+Art Radar,/radar/four-tribeca-galleries-september-2026/,,7,6,1,7,2,0,0,2,0,16.8,22.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Art Radar,/radar/ruth-patir-jewish-museum/,,6,6,4,6,3,2,3,0,0,18.3,21.7,0.0,0,0,0,0,0,0,3,56,5.36%,9.6,2,50,,Indexed
+Art Radar,/radar/pool-in-israeli-art/,,6,4,3,6,3,2,2,0,1,6.0,7.3,0.0,0,0,0,0,0,0,1,41,2.44%,7.2,1,28,,Indexed
+Art Radar,/radar/noa-wiegenfeld/,,6,5,0,6,4,0,3,0,1,6.6,6.5,0.0,0,0,0,0,0,0,0,9,0.00%,5.8,0,4,,Indexed
+Art Radar,/radar/zoya-cherkassky-american-cooking/,,5,3,2,5,3,1,1,1,1,55.0,53.3,0.0,0,0,0,0,0,0,1,34,2.94%,10.1,1,34,,Indexed
+Art Radar,/radar/seven-israeli-works-nathan-zach/,,5,5,5,5,3,3,0,0,3,105.6,143.7,0.0,0,0,0,0,0,0,0,15,0.00%,13.1,0,15,,Indexed
+Art Radar,/radar/botero-in-new-york/,,4,4,1,4,4,1,4,0,0,8.2,8.2,0.0,0,0,0,0,0,0,1,20,5.00%,15.8,1,18,,Indexed
+Art Radar,/radar/welcome-art-radar/,,4,4,2,4,1,1,1,0,0,31.2,70.0,0.0,0,0,0,0,0,0,1,2,50.00%,1.5,1,1,,Indexed
+Art Radar,/radar/tom-fima/,,3,3,1,3,2,1,2,0,0,19.0,28.5,0.0,0,0,0,0,0,0,2,64,3.12%,9.3,1,43,,Indexed
+Art Radar,/radar/october-in-new-york-museums/,,3,2,3,3,1,1,0,0,1,2.0,4.0,0.0,0,0,0,0,0,0,0,2,0.00%,8.0,0,2,,Indexed
+Art Radar,/radar/three-tel-aviv-shows/,,3,3,0,3,3,0,0,1,2,3.7,3.7,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Art Radar,/radar/giacometti-dendur/,,2,1,0,5,2,0,2,0,0,312.0,156.0,0.0,0,0,0,0,0,0,0,31,0.00%,7.3,0,21,,Indexed
+Art Radar,/radar/living-with-art-montclair/,,2,2,1,2,2,1,2,0,0,30.5,35.5,0.0,0,0,0,0,0,0,1,10,10.00%,5.8,1,5,,Indexed
+Art Radar,/radar/in-a-free-state-luhring-augustine/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,20,0.00%,7.6,0,14,,Indexed
+Art Radar,/radar/may-big-art-month-nyc/,,1,1,1,1,0,0,0,0,0,11.0,,,0,0,0,0,0,0,0,3,0.00%,3.7,0,3,,Indexed
+Art Radar,/radar/clinamen-park-avenue-armory/,,1,1,0,1,1,0,0,1,0,3.0,3.0,0.0,0,0,0,0,0,0,0,2,0.00%,10.0,0,1,,Indexed
+Art Radar,/radar/three-exhibitions-three-mediums/,,0,0,0,2,0,0,0,0,0,,,,0,0,0,0,0,0,0,10,0.00%,9.7,0,7,,Indexed
+Art Radar,/radar/fifth-avenue-jewelry-art/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,8,0.00%,6.9,0,6,,Indexed
+Art Radar,/radar/orientalism-between-fact-and-fantasy/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,5,0.00%,10.4,0,3,,Indexed
+Art Radar,/radar/brancusi-christies/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,8.7,0,3,,Indexed
+Art Radar,/radar/museums-on-us-bofa/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,8.7,0,2,,Indexed
+Art Radar,/radar/guggenheim-pop/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,2,0.00%,4.0,0,0,,Indexed
+Art Radar,/radar/david-hockney-1937-2026/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,6.0,0,1,,Indexed
+Art Radar,/radar/pollock-record/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,6.0,0,0,,Indexed
+Art Radar,/radar/carol-bove-guggenheim/,,0,0,0,1,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Art Radar,/radar/duchamp-moma/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Art Radar,/radar/library-museum-passes/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Art Radar,/radar/three-exhibitions-nyc-june-2026/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Indexed
+Art Radar,/radar/what-to-see-july-2026/,not in inventory,0,0,0,5,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Museum,/museum/,,21,17,2,235,5,2,1,0,4,7.9,2.0,0.0,0,0,0,0,0,0,0,70,0.00%,6.3,0,23,,Indexed
+Museum,/museum/artists/tomb-of-the-leopards/,,11,7,11,11,8,8,8,0,0,72.4,63.4,0.0,0,0,0,0,0,0,7,282,2.48%,7.0,7,282,"tomb of the leopards (24 impr, pos 9.2); tomb of the leopards etruscan (9 impr, pos 8.0); tomb of leopards (8 impr, pos 7.6)",Indexed
+Museum,/museum/artists/polykleitos/,,11,11,4,11,11,4,1,0,10,0.9,0.9,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/masaccio/,,9,9,4,10,9,4,0,0,9,0.0,0.0,0.0,0,0,0,0,0,0,0,24,0.00%,6.9,0,24,,Indexed
+Museum,/museum/artists/khafre-enthroned/,,9,9,2,9,9,2,0,0,9,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/aphrodite-of-knidos/,,7,7,2,7,7,2,0,0,7,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/duccio/,,7,7,4,7,7,4,0,0,7,5.0,5.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/apoxyomenos/,,6,2,6,6,6,6,6,0,0,41.5,13.8,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/bull-leaping-fresco/,,6,6,1,6,6,1,0,0,6,0.5,0.5,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/chimera-of-arezzo/,,6,2,6,6,6,6,4,0,2,45.0,15.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/doryphoros/,,5,4,3,5,5,3,2,0,3,16.2,13.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/gallery/,not in inventory,5,5,3,81,5,3,0,0,5,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Museum,/museum/artists/giovanni-battista-tiepolo/,,4,4,3,4,4,3,0,0,4,0.5,0.5,0.0,0,0,0,0,0,0,0,13,0.00%,16.3,0,13,,Indexed
+Museum,/museum/artists/gerhard-richter/,,4,4,2,4,4,2,0,0,4,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/mask-of-agamemnon/,,4,4,1,4,4,1,0,0,4,0.2,0.2,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/willem-de-kooning/,,4,4,1,4,4,1,0,0,4,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/abu-simbel/,,3,3,2,3,3,2,0,0,3,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/fernand-leger/,,3,3,1,3,3,1,0,0,3,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/mycenaean-greece/,,3,3,1,3,3,1,0,0,3,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/myron/,,3,3,3,3,3,3,1,0,2,8.3,14.7,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/discobolus/,,2,2,2,2,2,2,0,0,2,0.0,0.0,0.0,0,0,0,0,0,0,0,58,0.00%,7.2,0,58,,Indexed
+Museum,/museum/artists/bronzino/,,2,2,2,2,2,2,1,0,1,285.5,287.5,0.0,0,0,0,0,0,0,1,23,4.35%,13.3,1,23,,Indexed
+Museum,/museum/artists/capitoline-brutus/,,2,2,1,2,2,1,0,0,2,1.5,1.5,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/edgar-degas/,,2,2,0,2,2,0,0,0,2,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/francisco-goya/,,2,2,1,2,2,1,0,0,2,55.5,55.5,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/laocoon-and-his-sons/,,2,2,1,2,2,1,0,0,2,1.5,1.5,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/lysippos/,,2,2,0,2,2,0,0,0,2,1.5,1.5,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/parmigianino/,,1,1,1,1,1,1,1,0,0,79.0,79.0,0.0,0,0,0,0,0,0,0,91,0.00%,10.0,0,91,,Indexed
+Museum,/museum/artists/ernst-ludwig-kirchner/,,1,1,1,1,1,1,0,0,1,2.0,2.0,0.0,0,0,0,0,0,0,0,82,0.00%,21.7,0,82,,Indexed
+Museum,/museum/artists/,,1,1,1,2,1,1,1,0,0,0.0,0.0,0.0,0,0,0,0,0,0,1,27,3.70%,9.5,1,27,,Indexed
+Museum,/museum/artists/camille-pissarro/,,1,1,1,1,1,1,0,0,1,1.0,1.0,0.0,0,0,0,0,0,0,0,25,0.00%,17.6,0,25,,Indexed
+Museum,/museum/artists/pierre-auguste-renoir/,,1,1,1,1,1,1,0,0,1,2.0,2.0,0.0,0,0,0,0,0,0,0,18,0.00%,5.4,0,18,,Indexed
+Museum,/museum/artists/henri-rousseau/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,3,0.00%,25.0,0,3,,Indexed
+Museum,/museum/artists/angelica-kauffman/,,1,1,0,1,1,0,0,0,1,1.0,1.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/dying-gaul/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/eugene-delacroix/,,1,1,0,1,1,0,0,0,1,2.0,2.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/fra-angelico/,,1,1,0,1,1,0,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/gustave-courbet/,,1,1,0,1,1,0,0,0,1,3.0,3.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/hans-holbein/,,1,1,1,2,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/nefertiti-bust/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/paul-gauguin/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/phidias/,,1,1,1,1,1,1,0,0,1,837.0,837.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/piero-della-francesca/,,1,1,1,1,1,1,1,0,0,504.0,504.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/praxiteles/,,1,1,0,1,1,0,0,0,1,10.0,10.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/sandro-botticelli/,,1,1,0,1,1,0,1,0,0,11.0,11.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/tintoretto/,,1,1,0,1,0,0,0,0,0,0.0,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/trajans-column/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/venus-de-milo/,,1,1,1,1,1,1,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/venus-of-willendorf/,,1,1,1,1,1,1,1,0,0,3.0,3.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/wassily-kandinsky/,,1,1,0,1,1,0,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/johannes-vermeer/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,41,0.00%,30.2,0,41,,Indexed
+Museum,/museum/artists/jean-honore-fragonard/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,38,0.00%,26.6,0,38,,Indexed
+Museum,/museum/artists/david-hockney/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,14,0.00%,14.4,0,14,,Indexed
+Museum,/museum/artists/leonardo-da-vinci/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,14,0.00%,5.9,0,14,,Indexed
+Museum,/museum/artists/jackson-pollock/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,6,0.00%,33.5,0,6,,Indexed
+Museum,/museum/artists/akkadian-empire/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/albrecht-durer/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/alphonse-mucha/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/amedeo-modigliani/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/andy-warhol/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/antoine-watteau/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/apollo-of-veii/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/ara-pacis/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/artemisia-gentileschi/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/assyria/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/augustus-of-prima-porta/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/babylon/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/berthe-morisot/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/black-figure-pottery/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/book-of-the-dead/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/caravaggio/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/caspar-david-friedrich/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/cave-of-altamira/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/chauvet-cave/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/cimabue/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/claude-monet/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/colosseum/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/diego-velazquez/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/edouard-manet/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/edvard-munch/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/egon-schiele/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/el-greco/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/francois-boucher/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/franz-marc/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/frida-kahlo/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/georges-braque/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/georges-seurat/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/giotto/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/giza-pyramids/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/gustav-klimt/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/henri-de-toulouse-lautrec/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/hieronymus-bosch/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jacques-louis-david/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jan-van-eyck/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jean-auguste-dominique-ingres/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jean-francois-millet/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jean-michel-basquiat/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/jmw-turner/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/joan-miro/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/juan-gris/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/karnak/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/kazimir-malevich/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/knossos/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/kore/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/kouros/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/lascaux/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/lee-krasner/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/lion-gate/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/mark-rothko/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/mary-cassatt/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/max-ernst/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/michelangelo/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/minoan-civilization/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/odilon-redon/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/pablo-picasso/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/pantheon-rome/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/parthenon/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/paul-cezanne/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/paul-klee/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/pergamon-altar/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/peter-paul-rubens/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/piet-mondrian/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/pieter-bruegel/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/raphael/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/red-figure-pottery/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/rembrandt/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/rene-magritte/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/rosa-bonheur/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/roy-lichtenstein/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/salvador-dali/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/sarcophagus-of-the-spouses/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/scopas/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/simone-martini/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/statue-of-ramesses-ii/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/stonehenge/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/sumer/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/the-seated-scribe/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/theodore-gericault/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/titian/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/togatus-barberini/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/verism/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/vincent-van-gogh/,,0,0,0,1,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/winged-victory-of-samothrace/,,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Museum,/museum/artists/yayoi-kusama/,,0,0,0,1,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Discovered, not indexed"
+Other (not in inventory),/2/,not in inventory,14,5,0,14,5,0,3,0,2,612.8,89.4,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/radar/,not in inventory,4,3,0,4,0,0,0,0,0,1.3,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/projects/caesarea-garden-villa/,not in inventory,2,1,0,2,1,0,1,0,0,6.0,5.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/projects/herzliya-pituach-sea-view-apartment/,not in inventory,2,2,0,2,2,0,0,0,2,0.0,7.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/advisory/sample-test/,not in inventory,2,1,0,2,1,0,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/guide/tmp-art-for-a-law-office-reception/,not in inventory,2,1,0,2,1,0,0,0,1,0.0,13.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/index.html/,not in inventory,2,2,0,2,1,0,0,0,1,0.0,0.0,0.0,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/projects/,not in inventory,1,1,0,1,0,0,0,0,0,0.0,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/projects/closter-new-jersey-new-construction/,not in inventory,1,1,0,1,0,0,0,0,0,5.0,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/2/projects/hod-hasharon-private-villa/,not in inventory,1,1,0,1,0,0,0,0,0,3.0,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/museum/index.html/,not in inventory,1,1,0,1,0,0,0,0,0,0.0,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/designers/,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,1,110,0.91%,4.5,0,30,"וילה ברגע האחרון (2 impr, pos 33.5)",Indexed
+Other (not in inventory),/?utm_source=google&utm_medium=listing&utm_campaign=profiles#contact,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,102,0.00%,15.0,0,20,,
+Other (not in inventory),www.stavtheodor.com/about,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,29,0.00%,9.2,0,1,,Redirect
+Other (not in inventory),www.stavtheodor.com/our-team-1,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,8,0.00%,5.0,0,0,,Redirect
+Other (not in inventory),/#about,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,5,0.00%,1.0,0,0,,
+Other (not in inventory),/#advisory,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,5,0.00%,1.0,0,0,,
+Other (not in inventory),/our-team-1/,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,4,0.00%,3.0,0,3,,Redirect
+Other (not in inventory),/#museum,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,3,0.00%,1.0,0,0,,
+Other (not in inventory),http://www.stavtheodor.com/,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,1.0,0,0,,Redirect
+Other (not in inventory),www.stavtheodor.com/,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,1,0.00%,2.0,0,1,,Redirect
+Other (not in inventory),(not set),not in inventory,0,0,0,0,63,32,42,2,17,,4.3,0.0,0,0,0,0,0,0,0,0,,,0,0,,
+Other (not in inventory),/radar/three-exhibitions-three-mediums/index.html/,not in inventory,0,0,0,1,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),/stavtheodor/,not in inventory,0,0,0,8,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Not in GSC index report
+Other (not in inventory),http://stavtheodor.com/,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Redirect
+Other (not in inventory),www.stavtheodor.com/blog,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404
+Other (not in inventory),www.stavtheodor.com/cart,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,Noindex
+Other (not in inventory),www.stavtheodor.com/contact,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404
+Other (not in inventory),www.stavtheodor.com/press,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404
+Other (not in inventory),www.stavtheodor.com/work-1/luxury-home-in-hertzliya-pituch,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404
+Other (not in inventory),www.stavtheodor.com/work-1/project-one-zt4dt,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,"Crawled, not indexed"
+Other (not in inventory),www.stavtheodor.com/work-1/st-regis-amman-jordan,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404
+Other (not in inventory),www.stavtheodor.com/work-1/tel-aviv-apartment,not in inventory,0,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,0,0,0,,,0,0,,404

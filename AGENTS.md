@@ -91,6 +91,8 @@ Full templates and step-by-step detail: `ADD-BLOG-POST-GUIDE.md` (same directory
 
 Inbound growth work plan and Grok Bot coordination: content/INBOUND-PLAN.md (read before inbound/SEO/CTA work; log status there).
 
+November 1 page-by-page report and R tasks: content/reports/2026-11-01/CLAUDE-TASKS.md (R1 to R8, after the open T tasks).
+
 Short version:
 
 ```
@@ -144,6 +146,7 @@ Report failures honestly. If a check fails after the cache window, say so; do no
 
 ## 7. Work Log (append-only, newest first, one line per change)
 
+- 2026-11-01 (ET) | Grok Bot | Docs only. Added content/reports/2026-11-01/ (REPORT.md, pages.csv, CLAUDE-TASKS.md, data/*.csv) unchanged. content/INBOUND-PLAN.md gains a November 1 section and a status log line; AGENTS.md Section 4 and CLAUDE.md point at CLAUDE-TASKS.md (R1 to R8 after the open T tasks, one branch and PR per task, never pushing to main). R1 and R2 reuse T5 values where they overlap; R5 replaces the open part of T6; R6 is held with T7/T8 until Ron OKs it. The Pages artifact still skips content/. | Not pushed to main. Ron approves the PR.
 - 2026-10-25 (ET) | Claude (Theo QA review, branch qa-review-2026-10-25, local commit) | (a) museum/css/museum-core.css: the dash in its first comment is a colon now (site rules W3), nothing else in the file. (b) caesarea-sea-view-villa-triptych: one answer sentence under the lead, en and he, the Curator's shortened line of 2026-10-25, as the new first <p> of body_en and body_he (439 en words); lead and everything else unchanged. Closter and Manhattan skyline stay as they were, without an addition. | not pushed, Ron pushes
 - 2026-10-25 (ET) | Claude (Theo QA review, branch qa-review-2026-10-25, local commit) | Three project pages: one answer sentence under the lead, en and he, Curator 2026-10-25 (Theo's gate wording on the Caesarea estate): a new first <p> of body_en and body_he on tel-aviv-renovated-bauhaus-home (448 en words), caesarea-private-estate (443) and hotels-and-hospitality-collections (414); lead and everything else unchanged. Held back, not on the site: closter-new-jersey-new-construction (484), manhattan-skyline-residence (478) and caesarea-sea-view-villa-triptych (456), whose addition tips body_en over the 450 word project limit in tools/check_pages.py, which stops the build; they wait for a decision (a trim or a new limit). | not pushed, Ron pushes
 - 2026-10-25 (ET) | Claude (Theo QA review, branch qa-review-2026-10-25, local commit) | Hub to spoke links, structure only, no new sentence: appended to related (after every existing entry) on art-curator-new-jersey.json /advisory/commissioning-art-for-a-new-home/, /advisory/how-the-art-advisory-process-works/, /guide/art-advisor-vs-art-consultant/, /guide/how-to-choose-art-for-your-home/, and on art-curator-new-york.json the two advisory pages. Read next names them by their own titles; no link removed. | not pushed, Ron pushes

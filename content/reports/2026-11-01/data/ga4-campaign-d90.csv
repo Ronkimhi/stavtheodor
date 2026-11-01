@@ -1,0 +1,17 @@
+# ----------------------------------------
+# Traffic acquisition: Session campaign
+# Account: Theodora
+# Property: Theodora
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260803
+# End date: 20261031
+Session campaign,Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+(direct),661,194,0.2934947049924357,23.311649016641454,4.0832072617246595,2699,6,0.009077155824508321,0
+(organic),317,166,0.5236593059936908,43.52996845425867,5.044164037854889,1599,1,0.0031545741324921135,0
+(referral),50,19,0.38,19.68,4.36,218,0,0,0
+profiles,44,14,0.3181818181818182,21.068181818181817,4.7272727272727275,208,0,0,0
+(ai-assistant),40,23,0.575,43.425,4.825,193,1,0.025,0
+(not set),5,1,0.2,599.8,3.8,19,0,0,0
+business-profile,1,1,1,3,10,10,0,0,0
