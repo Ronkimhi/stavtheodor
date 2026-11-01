@@ -485,7 +485,7 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
         return f'''<div class="act no-form">
     <div class="act-ways">
       <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
-      <a class="arrow way" href="{mail}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow way" href="{mail}" data-write data-loc="{loc}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow way addr" href="{mail}" data-loc="{loc}"><span class="ln"></span>{EMAIL}</a>
       {phone_link(loc).replace('class="arrow tel"', 'class="arrow way tel"')}
     </div>
@@ -543,7 +543,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <div class="foot-ways">
-      <a class="arrow" href="{href}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{href}" data-write data-loc="footer"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow addr" href="{href}"><span class="ln"></span>{EMAIL}</a>
       {phone_link('cta')}
     </div>
@@ -737,7 +737,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');
@@ -843,6 +843,11 @@ WRITE_JS = '''<script>
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>'''

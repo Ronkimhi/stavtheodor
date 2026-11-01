@@ -387,7 +387,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Working with Stav</span><span data-l="he" lang="he" dir="rtl">עבודה עם סתיו</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv.</span><span data-l="he" lang="he" dir="rtl">אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב.</span></h2>
     <div class="readnext"><a href="/art-curator-new-york/"><span data-l="en" lang="en">Art curator in New York</span><span data-l="he" lang="he" dir="rtl">אוצרת אמנות בניו יורק</span></a><a href="/art-curator-new-jersey/"><span data-l="en" lang="en">Art curator in New Jersey</span><span data-l="he" lang="he" dir="rtl">אוצרת אמנות בניו ג'רזי</span></a></div>
-    <a class="btn" href="mailto:stav@stavtheodor.com" data-write><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="btn" href="mailto:stav@stavtheodor.com" data-write data-loc="page-end"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
   </div>
 </section>
@@ -436,7 +436,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="foot-ways">
-      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write data-loc="footer"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow addr" href="mailto:stav@stavtheodor.com"><span class="ln"></span>stav@stavtheodor.com</a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
@@ -551,6 +551,11 @@
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>
@@ -612,7 +617,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');

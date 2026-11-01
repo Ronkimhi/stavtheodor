@@ -546,7 +546,7 @@
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif"><span data-l="en" lang="en">Tell me about the property and the opening date. I will tell you how I would approach the art.</span><span data-l="he" lang="he" dir="rtl">ספרו לי על הנכס ועל תאריך הפתיחה. אספר לכם איך הייתי ניגשת לאמנות.</span></h2>
-    <a class="btn" href="mailto:stav@stavtheodor.com" data-write><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="btn" href="mailto:stav@stavtheodor.com" data-write data-loc="page-end"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
   </div>
   <div class="readnext"><p class="eyebrow soft" style="margin-top: 24px;"><span data-l="en" lang="en">Read next</span><span data-l="he" lang="he" dir="rtl">להמשך קריאה</span></p><a href="/advisory/art-advisor-manhattan-apartment/"><span data-l="en" lang="en">Art advisor for a Manhattan apartment: what to expect</span><span data-l="he" lang="he" dir="rtl">יועצת אמנות לדירה במנהטן: למה לצפות</span></a><a href="/advisory/art-for-a-new-build-in-bergen-county/"><span data-l="en" lang="en">Art for a new build in Bergen County: when it should come in</span><span data-l="he" lang="he" dir="rtl">אמנות לבית חדש במחוז ברגן: מתי היא צריכה להיכנס</span></a><a href="/advisory/art-for-a-home-in-israel-from-abroad/"><span data-l="en" lang="en">Art for a home in Israel, managed from New York or New Jersey</span><span data-l="he" lang="he" dir="rtl">אמנות לבית בישראל, בניהול מניו יורק או מניו ג&#x27;רזי</span></a><a href="/projects/hotels-and-hospitality-collections/"><span data-l="en" lang="en">Hotels and hospitality collections: Waldorf Astoria, St. Regis, cruise lines</span><span data-l="he" lang="he" dir="rtl">אוספי מלונאות ואירוח: וולדורף אסטוריה, סנט רג&#x27;יס, קווי שיט</span></a><a href="/for-designers/"><span data-l="en" lang="en">Art consultant for interior designers and architects</span><span data-l="he" lang="he" dir="rtl">יועצת אמנות למעצבי פנים ולאדריכלים</span></a><a href="/guide/large-wall-art-ideas/"><span data-l="en" lang="en">Large wall art ideas: how to fill a big wall</span><span data-l="he" lang="he" dir="rtl">רעיונות לאמנות לקיר גדול: איך ממלאים קיר גדול</span></a></div>
@@ -557,7 +557,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="foot-ways">
-      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write data-loc="footer"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow addr" href="mailto:stav@stavtheodor.com"><span class="ln"></span>stav@stavtheodor.com</a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
@@ -672,6 +672,11 @@
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>
@@ -733,7 +738,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');
