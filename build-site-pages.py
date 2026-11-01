@@ -264,6 +264,22 @@ def radar_html(p):
 '''
 
 
+# The Write to Stav block under a guide's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
+# JSON (the dental, restaurant and hotel guides). The same data-write button as the closing CTA, which stays as it is,
+# with data-loc="guide-lead" and one line under it.
+LEAD_WRITE_LINE = ("Tell me about the space: the walls, the light, the timeline.", "ספרו לי על החלל: הקירות, האור, לוח הזמנים.")
+
+
+def lead_write_html(p):
+    if not p.get("lead_write"):
+        return ""
+    return f'''
+  <div class="lead-write">
+    <a class="btn" href="{MAIL}" data-write data-loc="guide-lead">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <p class="muted">{T(*LEAD_WRITE_LINE)}</p>
+  </div>'''
+
+
 def cta_html(p):
     cta_en = p.get("cta_en") or CTA_EN
     cta_he = p.get("cta_he") or CTA_HE
@@ -495,7 +511,7 @@ def render_article_page(p, all_pages):
 <header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
-  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{hero}
+  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p) if guide else ''}{hero}
 </header>
 
 <section class="section wrap tight">

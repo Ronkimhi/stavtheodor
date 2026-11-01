@@ -809,6 +809,8 @@
   .phead .byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
   .phead .byline a:hover { color: #C9A46B; }
   .phead .byline a:focus-visible { outline: 1px solid var(--taupe); outline-offset: 4px; }
+  .phead .lead-write { align-self: flex-start; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 4px; }  /* T3, 2026-11-01: Write to Stav under a guide's opening */
+  .phead .lead-write .muted { font-size: 15px; line-height: 1.6; max-width: 720px; }
   .crumbs a:hover { color: #C9A46B; }
   .crumbs a:focus-visible { outline: 1px solid var(--taupe); outline-offset: 4px; }
   /* the current page in the trail: the title, not shouted: sentence case, muted, one line */
