@@ -913,6 +913,9 @@ ABOUT = {
                  "Stav Theodor seated on a pale linen sofa beneath a framed painting of a woman playing the piano, hung on a walnut panelled wall",
                  "סתיו תאודור יושבת על ספה מפשתן בהיר, מתחת לציור ממוסגר של אישה מנגנת בפסנתר, התלוי על קיר מחופה עץ אגוז"),
     "og_image": "/images/stav-portrait.jpg",
+    # "Who is Stav Theodor?" (AIO play 4, 2026-11-01): the entity answer, answer first, every fact traced to BRIEF.md
+    "who_is": ("I am Stav Theodor, an art curator, art advisor and art consultant with more than 15 years in the art world, since 2010. I founded THEODORA Art Advisory by Stav Theodor in 2020; before THEODORA I did curatorial work in established museums and managed an art gallery in Tel Aviv. I am based in Tenafly, New Jersey, and I work with clients anywhere, online and in person. My clients are interior designers and architects, private collectors, home owners, business owners, and hotels and hospitality groups.",
+               "אני סתיו תאודור, אוצרת אמנות ויועצת אמנות, עם יותר מ-15 שנה בעולם האמנות, מאז 2010. את THEODORA Art Advisory by Stav Theodor ייסדתי ב-2020. לפני THEODORA עסקתי באוצרות במוזיאונים מבוססים וניהלתי גלריה לאמנות בתל אביב. הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת עם לקוחות בכל מקום, אונליין ופנים אל פנים. הלקוחות שלי הם מעצבי פנים ואדריכלים, אספנים פרטיים, בעלי בתים, בעלי עסקים, ומלונות וקבוצות אירוח."),
     # The credentials sentence the homepage's #about carried until 2026-09-29 (its facts are now the credentials strip there)
     "credentials": ("I am an art curator with an M.A. in art history from the Faculty of Arts at Ben-Gurion University and a diploma in curatorial and museum studies from the Faculty of Arts at Tel Aviv University. Today I am based in Tenafly, New Jersey, and work in New York, across Bergen County and in Tel Aviv.",
                     "אני אוצרת אמנות, בעלת תואר שני בתולדות האמנות מהפקולטה למדעי הרוח והחברה באוניברסיטת בן-גוריון ותעודה בלימודי אוצרות ומוזיאולוגיה מהפקולטה לאמנויות באוניברסיטת תל אביב. היום הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת בניו יורק, ברחבי מחוז ברגן ובתל אביב."),
@@ -983,6 +986,7 @@ def about_rows(pages):
     link = lambda p, lang: f'<a href="/{p["path"].strip("/")}/">{H.escape(p["title_" + lang])}</a>'
     both = lambda f: tuple(f(i, lang) for i, lang in enumerate(("en", "he")))
     return [
+        (("Who is Stav Theodor?", "מי היא סתיו תאודור?"), [ABOUT["who_is"]]),
         (bg_h2, [bg[0], bg[1], ABOUT["credentials"]]),
         (("What I do", "מה אני עושה"), [statement, how,
                                        ("ul", [both(lambda i, _: f"<strong>{h[i]}.</strong> {d[i]}.") for h, d in services])]),
