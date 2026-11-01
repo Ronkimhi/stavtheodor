@@ -397,8 +397,8 @@ def mail_href(subject=''):
     return f'mailto:{EMAIL}' + (f'?subject={quote(subject, safe="")}' if subject else '')
 
 
-FOOTER_CTA = ('Send me one photo of the wall and a line about the space. I’ll tell you what I see.',
-              'שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.')
+FOOTER_CTA = ('Tell me about the space: the walls, the light, the timeline. I’ll tell you what I see.',
+              'ספרו לי על החלל: הקירות, האור, לוח הזמנים. אספר לכם מה אני רואה.')
 
 
 def nap(mail=None):
@@ -417,7 +417,7 @@ def nap(mail=None):
 # Only what the site already says: Stav replies by email with what she sees, and the work starts with a first
 # conversation (no response time: none is in content/BRIEF.md).
 NEXT_STEPS = [
-    ('You send a photo of the wall and a line about the space.', 'אתם שולחים תמונה של הקיר ושורה על החלל.'),
+    ('You tell me about the space: the walls, the light, the timeline.', 'אתם מספרים לי על החלל: הקירות, האור, לוח הזמנים.'),
     ('I reply by email and tell you what I see.', 'אני עונה במייל ומספרת לכם מה אני רואה.'),
     ('If it fits, a first conversation, by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה, בטלפון או בחלל עצמו.'),
 ]
@@ -425,7 +425,7 @@ NEXT_STEPS = [
 # The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
 CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
 CONTACT_LINES = [
-    ('One photo of the wall and a line about the space is enough.', 'תמונה אחת של הקיר ושורה על החלל מספיקות.'),
+    ('A line about the walls, the light and the timeline is enough.', 'שורה על הקירות, האור ולוח הזמנים מספיקה.'),
     ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
     ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
 ]
