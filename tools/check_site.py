@@ -79,8 +79,10 @@ GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers
                   'art-consultant-tenafly-nj', 'art-advisor-bergen-county',  # the town and county pages (Batch 3, 2026-09-29)
                   'art-advisor-westchester-ny')  # the Westchester area page (answers wave, 2026-09-30)
 MERGED_DIRS = ('designers', 'our-team', 'our-team-1')  # forwarded to a real page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
-STUB_DIRS = ('2', 'questions', 'services', 'portfolio', 'blog') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
-MERGED_FILES = (os.path.join('advisory', 'is-an-art-advisor-worth-it-for-one-piece', 'index.html'),)  # nested merged stubs, no noindex (build-home.py MERGED_PATHS, answers wave C-3, 2026-09-30)
+STUB_DIRS = ('2', 'questions', 'services', 'portfolio', 'blog', 'press', 'work-1') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
+MERGED_FILES = (os.path.join('advisory', 'is-an-art-advisor-worth-it-for-one-piece', 'index.html'),
+                os.path.join('work-1', 'luxury-home-in-hertzliya-pituch', 'index.html'),
+                os.path.join('work-1', 'st-regis-amman-jordan', 'index.html'))  # nested merged stubs, no noindex (build-home.py MERGED_PATHS, answers wave C-3, 2026-09-30)
 STUB_FILES = (os.path.join('radar', 'what-to-see-july-2026', 'index.html'),) + MERGED_FILES  # nested redirect stubs (build-home.py OLD_PATHS, 2026-09-30)
 
 
