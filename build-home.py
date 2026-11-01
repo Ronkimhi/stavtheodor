@@ -590,6 +590,10 @@ OLD_PATHS = {  # Squarespace-era addresses that still rank or sit in old links: 
     'portfolio': (SITE + '/projects/', 'Projects · THEODORA'),
     'blog': (SITE + '/radar/', 'Art Radar, every post · THEODORA'),
     'radar/what-to-see-july-2026': (SITE + '/radar/', 'Art Radar, every post · THEODORA'),
+    # Old Wix addresses on Google's 404 list (Nov 1 2026 report, R5): noindex, each to its nearest live page. There are
+    # four Tel Aviv projects and nothing says which one the old page was, so it goes to the projects hub.
+    'press': (SITE + '/about/', 'About THEODORA | Art Advisor Stav Theodor, Tenafly NJ'),
+    'work-1/tel-aviv-apartment': (SITE + '/projects/', 'Projects · THEODORA'),
 }  # /contact/ left this list on 2026-09-29, and /about/ the same day: both are real pages now (build-site-pages.py)
 # Pages merged into another (Ron's SEO brief, 2026-09-29, P1.5): the same stub without noindex, so the instant refresh
 # reads as a permanent redirect. GitHub Pages sends no server 301; move this to a real 301 if the hosting ever allows one.
@@ -603,6 +607,10 @@ MERGED_PATHS = {
     # Ron 2026-09-30); its content/pages JSON is gone, so this stub is the only file build.py writes at that address.
     'advisory/is-an-art-advisor-worth-it-for-one-piece': (SITE + '/advisory/what-does-an-art-advisor-cost/#is-an-art-advisor-worth-it-for-one-or-two-pieces',
                                                           'What Does an Art Advisor Cost? Usually Less · THEODORA'),
+    # Old Wix project addresses on Google's 404 list (Nov 1 2026 report, R5) whose project has its own page now: canonical
+    # and instant refresh, no noindex, so old signals consolidate. The brief lists one Herzliya Pituach project.
+    'work-1/luxury-home-in-hertzliya-pituch': (SITE + '/projects/herzliya-pituach-sea-view-apartment/', 'Herzliya Pituach, Sea View Apartment · THEODORA'),
+    'work-1/st-regis-amman-jordan': (SITE + '/projects/hotels-and-hospitality-collections/', 'Hotels and Hospitality Collections · THEODORA'),
 }
 
 
