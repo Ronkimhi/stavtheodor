@@ -379,3 +379,11 @@ Each agent appends a dated line (ET): task, status (picked up / PR open / merged
 2026-10-24 (ET) | Grok Bot | Plan file | PR open | https://github.com/Ronkimhi/stavtheodor/pull/1 | Docs only. Not merged.
 2026-10-24 (ET) | Grok Bot | CTA changed to email only (Write to Stav); no booking tool. T3 and T5 unblocked.
 2026-11-01 (ET) | Grok Bot | November 1 report added | docs in content/reports/2026-11-01/ | R1 to R8 in CLAUDE-TASKS.md, after the open T tasks, one branch and PR per task, never pushing to main. R1 and R2 reuse T5 values where they overlap; R5 replaces the open part of T6; R6 is held with T7/T8 until Ron OKs it.
+2026-11-01 (ET) | Claude Code (Theo) | T and R tasks | picked up | none | Plan reviewed against the site rules and the live code; one branch and PR per task; Ron merges.
+2026-11-01 (ET) | Claude Code (Theo) | T2 | not doing | none | Removing the pop-up on form pages would stop generate_lead, because the inline form's script loads only with the pop-up.
+2026-11-01 (ET) | Claude Code (Theo) | T5 | folded into R1 and R2 | none | Its values were never approved; the usable parts become title PRs Ron picks.
+2026-11-01 (ET) | Claude Code (Theo) | T6 | folded into R5 | none | None of the extra candidate URLs is on Google's 404 list.
+2026-11-01 (ET) | Claude Code (Theo) | R7 | already live | none | All guide to money page links exist in the body and by the closing button.
+2026-11-01 (ET) | Claude Code (Theo) | R8 | already live | none | The homepage already carries the business, person and site JSON-LD with its profile links.
+2026-11-01 (ET) | Claude Code (Theo) | R6, T7, T8 | held for Ron | none | As Ron asked.
+2026-11-01 (ET) | Claude Code (Theo) | T9 | waiting | none | Needs the designer referral terms first.
