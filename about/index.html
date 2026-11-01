@@ -392,7 +392,7 @@
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall, and a line about the space. I will tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="acts">
       <a class="btn solid" href="/contact/"><span data-l="en" lang="en">Contact Stav</span><span data-l="he" lang="he" dir="rtl">יצירת קשר עם סתיו</span></a>
-      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write data-loc="page-end"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
   </div>
@@ -509,6 +509,11 @@
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>
@@ -570,7 +575,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');

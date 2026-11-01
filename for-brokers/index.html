@@ -478,7 +478,7 @@
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif"><span data-l="en" lang="en">Send me the listing or the floor plan and a line about the buyer. I will tell you what I would propose for the home.</span><span data-l="he" lang="he" dir="rtl">שלחו לי את פרטי הנכס או את תוכנית הדירה ושורה על הקונה. אספר לכם מה הייתי מציעה לבית.</span></h2>
-    <a class="btn" href="mailto:stav@stavtheodor.com" data-write><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="btn" href="mailto:stav@stavtheodor.com" data-write data-loc="page-end"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
   </div>
   <div class="readnext"><p class="eyebrow soft" style="margin-top: 24px;"><span data-l="en" lang="en">Read next</span><span data-l="he" lang="he" dir="rtl">להמשך קריאה</span></p><a href="/for-designers/"><span data-l="en" lang="en">Art consultant for interior designers and architects</span><span data-l="he" lang="he" dir="rtl">יועצת אמנות למעצבי פנים ולאדריכלים</span></a><a href="/for-advisors/"><span data-l="en" lang="en">For wealth managers, family offices and private bankers</span><span data-l="he" lang="he" dir="rtl">למנהלי הון, לפמילי אופיס ולבנקאים פרטיים</span></a><a href="/advisory/art-for-a-new-build-in-bergen-county/"><span data-l="en" lang="en">Art for a new build in Bergen County: when it should come in</span><span data-l="he" lang="he" dir="rtl">אמנות לבית חדש במחוז ברגן: מתי היא צריכה להיכנס</span></a><a href="/advisory/art-for-a-home-in-israel-from-abroad/"><span data-l="en" lang="en">Art for a home in Israel, managed from New York or New Jersey</span><span data-l="he" lang="he" dir="rtl">אמנות לבית בישראל, בניהול מניו יורק או מניו ג&#x27;רזי</span></a><a href="/projects/herzliya-pituach-sea-view-apartment/"><span data-l="en" lang="en">Herzliya Pituach, Sea View Apartment</span><span data-l="he" lang="he" dir="rtl">הרצליה פיתוח, דירה עם נוף לים</span></a><a href="/guide/entryway-art/"><span data-l="en" lang="en">Entryway and hallway art: what to hang where people pass</span><span data-l="he" lang="he" dir="rtl">אמנות למבואה ולמסדרון: מה לתלות במקום שבו עוברים</span></a><a href="/guide/art-above-couch/"><span data-l="en" lang="en">Art above a couch: what size, how high, and which layout</span><span data-l="he" lang="he" dir="rtl">אמנות מעל ספה: באיזה גודל, באיזה גובה ובאיזה סידור</span></a></div>
@@ -489,7 +489,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="foot-ways">
-      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write data-loc="footer"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow addr" href="mailto:stav@stavtheodor.com"><span class="ln"></span>stav@stavtheodor.com</a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
@@ -604,6 +604,11 @@
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>
@@ -665,7 +670,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');

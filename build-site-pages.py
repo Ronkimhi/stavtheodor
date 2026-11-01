@@ -276,7 +276,7 @@ def cta_html(p):
     return f'''
   <div class="cta reveal">
     <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}
-    <a class="btn" href="{MAIL}" data-write>{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}{contact}
   </div>'''
 
@@ -622,7 +622,7 @@ HUB_CTA = f'''
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
-    <a class="btn" href="{MAIL}" data-write>{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}
   </div>
 </section>
@@ -1086,7 +1086,7 @@ def render_about(pages):
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
     <div class="acts">
       <a class="btn solid" href="/contact/">{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
-      <a class="arrow" href="{MAIL}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{MAIL}" data-write data-loc="page-end"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       {sc.phone_link('cta')}
     </div>
   </div>

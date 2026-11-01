@@ -519,7 +519,7 @@
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall, and a line about the space. I will tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
-    <a class="btn" href="mailto:stav@stavtheodor.com" data-write><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+    <a class="btn" href="mailto:stav@stavtheodor.com" data-write data-loc="page-end"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
     <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
   </div>
   <div class="readnext"><p class="eyebrow soft" style="margin-top: 24px;"><span data-l="en" lang="en">Read next</span><span data-l="he" lang="he" dir="rtl">להמשך קריאה</span></p><a href="/advisory/framing-and-installing-large-scale-art/"><span data-l="en" lang="en">Framing, shipping and installing large scale art: how it works and who manages it</span><span data-l="he" lang="he" dir="rtl">מסגור, שילוח והתקנה של אמנות בקנה מידה גדול: איך זה עובד ומי מנהל את זה</span></a><a href="/advisory/art-advisor-manhattan-apartment/"><span data-l="en" lang="en">Art advisor for a Manhattan apartment: what to expect</span><span data-l="he" lang="he" dir="rtl">יועצת אמנות לדירה במנהטן: למה לצפות</span></a><a href="/advisory/art-advisor-vs-consultant-vs-decorator/"><span data-l="en" lang="en">Independent art advisor, gallery &#x27;free advisory&#x27;, decorator or installer: who do I need for my walls?</span><span data-l="he" lang="he" dir="rtl">יועצת אמנות עצמאית, ייעוץ חינם של גלריה, מעצב או מתקין: את מי אני צריך לקירות שלי?</span></a><a href="/advisory/moved-to-nyc-empty-walls-art/"><span data-l="en" lang="en">We just moved to New York and the walls are empty. Where do we start with art?</span><span data-l="he" lang="he" dir="rtl">הרגע עברנו לניו יורק והקירות ריקים. מאיפה מתחילים עם אמנות?</span></a><a href="/advisory/art-for-a-tribeca-or-soho-loft/"><span data-l="en" lang="en">Choosing large scale art for a Tribeca, SoHo or West Village loft</span><span data-l="he" lang="he" dir="rtl">בחירת אמנות בקנה מידה גדול ללופט בטרייבקה, בסוהו או בווסט וילג&#x27;</span></a></div>
@@ -530,7 +530,7 @@
     <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Send me one photo of the wall and a line about the space. I’ll tell you what I see.</span><span data-l="he" lang="he" dir="rtl">שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.</span></h2>
     <div class="foot-ways">
-      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
+      <a class="arrow" href="mailto:stav@stavtheodor.com" data-write data-loc="footer"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
       <a class="arrow addr" href="mailto:stav@stavtheodor.com"><span class="ln"></span>stav@stavtheodor.com</a>
       <a class="arrow tel" href="tel:+12013518367" data-loc="cta"><span class="ln"></span><bdi dir="ltr">(201) 351-8367</bdi></a>
     </div>
@@ -645,6 +645,11 @@
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>
@@ -706,7 +711,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');
