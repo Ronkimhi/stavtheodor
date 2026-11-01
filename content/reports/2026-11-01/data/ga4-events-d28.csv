@@ -1,0 +1,20 @@
+# ----------------------------------------
+# Events: Event name
+# Account: Theodora
+# Property: Theodora
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20261004
+# End date: 20261031
+Event name,Event count,Total users,Event count per active user,Total revenue
+page_view,700,376,1.8617021276595744,0
+session_start,476,377,1.2659574468085106,0
+user_engagement,406,188,2.1945945945945944,0
+first_visit,369,368,1.002717391304348,0
+scroll,90,65,1.4285714285714286,0
+form_start,7,6,1.1666666666666667,0
+generate_lead,4,4,1,0
+click,3,2,1.5,0
+click_phone,3,3,1,0
+click_email,1,1,1,0

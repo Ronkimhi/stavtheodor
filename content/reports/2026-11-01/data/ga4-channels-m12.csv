@@ -1,0 +1,17 @@
+# ----------------------------------------
+# Traffic acquisition: Session primary channel group (Default Channel Group)
+# Account: Theodora
+# Property: Theodora
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20251101
+# End date: 20261031
+Session primary channel group (Default Channel Group),Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+Direct,885,277,0.3129943502824859,22.93672316384181,4.622598870056497,4091,6,0.006779661016949152,0
+Organic Search,379,185,0.48812664907651715,40.07651715039578,4.786279683377309,1814,1,0.002638522427440633,0
+Organic Social,57,21,0.3684210526315789,23.350877192982455,4.368421052631579,249,0,0,0
+AI Assistant,41,23,0.5609756097560976,42.36585365853659,4.780487804878049,196,1,0.024390243902439025,0
+Unassigned,13,9,0.6923076923076923,262.38461538461536,7.076923076923077,92,0,0,0
+Referral,9,5,0.5555555555555556,19,5.666666666666667,51,0,0,0
+Paid Search,2,0,0,0,3,6,0,0,0
