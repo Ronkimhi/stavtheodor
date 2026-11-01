@@ -653,8 +653,8 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
   </div>
 </section>{sc.guides_section(guides, GUIDES_HUB_H2, GUIDES_HUB_SUB, arrow=True, tight=True, described=section == "advisory")}
 {who_row(section)}{HUB_CTA}'''
-    desc = strip_tags(lead_en)[:158]
-    return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
+    desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
+    return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
@@ -1146,6 +1146,11 @@ HUBS = {
                  "בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות מצ'נגדו ועד עמאן, ותערוכה אחת שהגיעה לז'נבה. כל עמוד מספר מה החלל ביקש ומה ענה לו.",
                  "/images/projects/waldorf-lobby-hero.jpg", "Lobby of the Waldorf Astoria Chengdu, onyx panels and painted screens curated by THEODORA"),
 }
+# A hub's <title> and meta description where they differ from its H1 and its lead (Nov 1 2026 report, R2; Ron delegated
+# the call on 2026-11-01). Read only in render_hub's sc.head(): the H1, the hero and the CollectionPage name keep HUBS[0].
+# A hub not listed keeps its H1 as the title and the first 158 characters of its lead as the meta (/projects/).
+HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ"}
+HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
 HUB_FOCUS = {"projects": "50% 55%"}
