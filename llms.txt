@@ -11,7 +11,7 @@
 - [Full text file](https://stavtheodor.com/llms-full.txt): the English text of every advisory, local, partner, guide and project page in one plain file, with each page's questions and answers. Regenerated on every build.
 - Base: Tenafly, New Jersey 07670. Working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
-- [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Send one photo of the wall and a line about the space.
+- [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Tell me about the space: the walls, the light, the timeline.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services

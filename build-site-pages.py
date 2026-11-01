@@ -49,8 +49,8 @@ DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "Adm
 # BreadcrumbList, [name_en, name_he, path] per step, the page itself last), `service` (the Service node: name,
 # serviceType, areaServed, audience, description) and `og_title`; `cta_sub_en`/`cta_sub_he` add a line under the CTA,
 # which also links /contact/. The FAQPage carries an @id, and its answers are the visible text, tags stripped.
-CTA_EN = "Send me one photo of the wall, and a line about the space. I will tell you what I see."
-CTA_HE = "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
+CTA_EN = "Tell me about the space: the walls, the light, the timeline. I will tell you what I see."
+CTA_HE = "ספרו לי על החלל: הקירות, האור, לוח הזמנים. אספר לכם מה אני רואה."
 MAIL = f"mailto:{sc.EMAIL}"
 
 
@@ -780,7 +780,7 @@ def who_row(section):
 CONTACT = {
     "path": "contact",
     "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
-    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. In person in NJ and NYC, online anywhere.",
+    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Tell me about the space: the walls, the light, the timeline. In person in NJ and NYC, online anywhere.",
     "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
     "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.",
              "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום."),
