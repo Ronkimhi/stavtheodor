@@ -397,8 +397,8 @@ def mail_href(subject=''):
     return f'mailto:{EMAIL}' + (f'?subject={quote(subject, safe="")}' if subject else '')
 
 
-FOOTER_CTA = ('Send me one photo of the wall and a line about the space. I’ll tell you what I see.',
-              'שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה.')
+FOOTER_CTA = ('Tell me about the space: the walls, the light, the timeline. I’ll tell you what I see.',
+              'ספרו לי על החלל: הקירות, האור, לוח הזמנים. אספר לכם מה אני רואה.')
 
 
 def nap(mail=None):
@@ -417,7 +417,7 @@ def nap(mail=None):
 # Only what the site already says: Stav replies by email with what she sees, and the work starts with a first
 # conversation (no response time: none is in content/BRIEF.md).
 NEXT_STEPS = [
-    ('You send a photo of the wall and a line about the space.', 'אתם שולחים תמונה של הקיר ושורה על החלל.'),
+    ('You tell me about the space: the walls, the light, the timeline.', 'אתם מספרים לי על החלל: הקירות, האור, לוח הזמנים.'),
     ('I reply by email and tell you what I see.', 'אני עונה במייל ומספרת לכם מה אני רואה.'),
     ('If it fits, a first conversation, by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה, בטלפון או בחלל עצמו.'),
 ]
@@ -425,7 +425,7 @@ NEXT_STEPS = [
 # The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
 CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
 CONTACT_LINES = [
-    ('One photo of the wall and a line about the space is enough.', 'תמונה אחת של הקיר ושורה על החלל מספיקות.'),
+    ('A line about the walls, the light and the timeline is enough.', 'שורה על הקירות, האור ולוח הזמנים מספיקה.'),
     ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
     ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
 ]
@@ -485,7 +485,7 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
         return f'''<div class="act no-form">
     <div class="act-ways">
       <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
-      <a class="arrow way" href="{mail}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow way" href="{mail}" data-write data-loc="{loc}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow way addr" href="{mail}" data-loc="{loc}"><span class="ln"></span>{EMAIL}</a>
       {phone_link(loc).replace('class="arrow tel"', 'class="arrow way tel"')}
     </div>
@@ -543,7 +543,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <div class="foot-ways">
-      <a class="arrow" href="{href}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{href}" data-write data-loc="footer"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow addr" href="{href}"><span class="ln"></span>{EMAIL}</a>
       {phone_link('cta')}
     </div>
@@ -586,7 +586,11 @@ def contact_form(path='/', h='h3'):
     did you ask it? (ai_query, a text field, hidden and disabled in the markup; form_js() shows and enables it only while
     an AI chip is checked, so its text is never posted otherwise). Formspree records every field whose name does not
     start with an underscore (the underscore names, _subject and _gotcha here, are its own settings), so found_via and
-    ai_query reach Stav's mail like name and message."""
+    ai_query reach Stav's mail like name and message.
+    Added 2026-11-01 (Nov 1 report, T1), every field above unchanged: When (timeline, radio chips, optional, none
+    checked, TIMELINES) directly after The project, and Who referred you? (referred_by, a text field, hidden and disabled
+    in the markup) after What did you ask it?; form_js() shows and enables it only while A friend or client or A designer
+    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -607,11 +611,13 @@ def contact_form(path='/', h='h3'):
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <fieldset class="chip-set"><legend>{L('I am a', 'מי אתם')}</legend><div class="chips">{chips('client_type', CLIENT_TYPES, 'Homeowner')}</div></fieldset>
       <fieldset class="chip-set"><legend>{L('The project', 'הפרויקט')}</legend><div class="chips">{chips('project_scope', PROJECT_SCOPES)}</div></fieldset>
+      <fieldset class="chip-set"><legend>{L('When', 'מתי')}</legend><div class="chips">{chips('timeline', TIMELINES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
+      <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
@@ -662,6 +668,16 @@ FOUND_VIA = [
     ('A friend or client', 'המלצה של חבר או לקוח', False),
     ('Other', 'אחר', False),
 ]
+# The form's "When" choices (timeline, Nov 1 report T1, 2026-11-01), optional: none is checked. Value and English label, Hebrew label.
+TIMELINES = [
+    ('This month', 'החודש'),
+    ('In 1 to 3 months', 'בעוד חודש עד שלושה'),
+    ('In 3 to 6 months', 'בעוד שלושה עד שישה חודשים'),
+    ('No date yet', 'עדיין אין תאריך'),
+]
+# The How did you find me? values (FOUND_VIA) that ask Who referred you? (referred_by, 2026-11-01). The chips themselves
+# are unchanged: form_js() matches these values.
+REFERRAL_VIA = ('A friend or client', 'A designer or architect')
 
 
 def form_js():
@@ -676,9 +692,12 @@ def form_js():
     Since 2026-10-10 syncAsk() shows and enables What did you ask it? (ai_query) only while an AI chip of How did you
     find me? is checked, and hides and disables it again after a reset, so a hidden answer is never posted.
     Since 2026-10-24 setSubject() sets the hidden _subject to "New inquiry from stavtheodor.com: " and the page path,
-    at init and again after a send (the markup's static value stays the fallback without JavaScript)."""
+    at init and again after a send (the markup's static value stays the fallback without JavaScript).
+    Since 2026-11-01 syncRef() does the same for Who referred you? (referred_by): shown and enabled only while a
+    REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow."""
     if not FORM_ENDPOINT:
         return ''
+    refs = ', '.join(f"'{v}'" for v in REFERRAL_VIA)
     return '''<script>
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var box = f.closest('.contact-box');
@@ -705,6 +724,22 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   f.addEventListener('reset', function () { setTimeout(syncAsk, 0); });
   window.addEventListener('pageshow', syncAsk);
   syncAsk();
+  /* Who referred you? (2026-11-01): the same pattern, shown and sent only while A friend or client or A designer or
+     architect is checked under How did you find me?; hidden, it is disabled, so its text never reaches Formspree. */
+  var ref = f.querySelector('.ref-ask');
+  var referred = ref && ref.querySelector('[name=referred_by]');
+  var refVia = [REFS];
+  function syncRef() {
+    if (!referred) { return; }
+    var c = f.querySelector('input[name=found_via]:checked');
+    var on = !!c && refVia.indexOf(c.value) !== -1;
+    ref.hidden = !on;
+    referred.disabled = !on;
+  }
+  f.addEventListener('change', function (e) { if (e.target && e.target.name === 'found_via') { syncRef(); } });
+  f.addEventListener('reset', function () { setTimeout(syncRef, 0); });
+  window.addEventListener('pageshow', syncRef);
+  syncRef();
   function thanks(first) {
     card.querySelectorAll('.ty-name').forEach(function (s) { s.textContent = first; });
     card.querySelectorAll('.ty-named').forEach(function (s) { s.hidden = !first; });
@@ -737,7 +772,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
       .catch(function () {
         f.classList.remove('sending');
@@ -746,7 +781,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
       });
   });
 });
-</script>'''
+</script>'''.replace('[REFS]', '[' + refs + ']')
 
 
 # A buyer variant's mail subject survives the fallback panel. LANG_JS (inlined in index.html, left
@@ -843,6 +878,11 @@ WRITE_JS = '''<script>
     e.preventDefault();
     e.stopPropagation();
     open(a);
+    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
+       with where the button sits (data-loc, else page) and the page path only. */
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    }
   }, true);
 })();
 </script>'''

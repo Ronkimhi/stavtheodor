@@ -49,8 +49,8 @@ DEFAULT_AREA = [{"@type": "City", "name": "Tenafly, New Jersey"}, {"@type": "Adm
 # BreadcrumbList, [name_en, name_he, path] per step, the page itself last), `service` (the Service node: name,
 # serviceType, areaServed, audience, description) and `og_title`; `cta_sub_en`/`cta_sub_he` add a line under the CTA,
 # which also links /contact/. The FAQPage carries an @id, and its answers are the visible text, tags stripped.
-CTA_EN = "Send me one photo of the wall, and a line about the space. I will tell you what I see."
-CTA_HE = "שלחו לי תמונה אחת של הקיר ושורה על החלל. אספר לכם מה אני רואה."
+CTA_EN = "Tell me about the space: the walls, the light, the timeline. I will tell you what I see."
+CTA_HE = "ספרו לי על החלל: הקירות, האור, לוח הזמנים. אספר לכם מה אני רואה."
 MAIL = f"mailto:{sc.EMAIL}"
 
 
@@ -264,6 +264,22 @@ def radar_html(p):
 '''
 
 
+# The Write to Stav block under a guide's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
+# JSON (the dental, restaurant and hotel guides). The same data-write button as the closing CTA, which stays as it is,
+# with data-loc="guide-lead" and one line under it.
+LEAD_WRITE_LINE = ("Tell me about the space: the walls, the light, the timeline.", "ספרו לי על החלל: הקירות, האור, לוח הזמנים.")
+
+
+def lead_write_html(p):
+    if not p.get("lead_write"):
+        return ""
+    return f'''
+  <div class="lead-write">
+    <a class="btn" href="{MAIL}" data-write data-loc="guide-lead">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <p class="muted">{T(*LEAD_WRITE_LINE)}</p>
+  </div>'''
+
+
 def cta_html(p):
     cta_en = p.get("cta_en") or CTA_EN
     cta_he = p.get("cta_he") or CTA_HE
@@ -276,7 +292,7 @@ def cta_html(p):
     return f'''
   <div class="cta reveal">
     <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}
-    <a class="btn" href="{MAIL}" data-write>{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}{contact}
   </div>'''
 
@@ -495,7 +511,7 @@ def render_article_page(p, all_pages):
 <header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
-  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{hero}
+  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p) if guide else ''}{hero}
 </header>
 
 <section class="section wrap tight">
@@ -622,7 +638,7 @@ HUB_CTA = f'''
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
-    <a class="btn" href="{MAIL}" data-write>{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}
   </div>
 </section>
@@ -653,8 +669,8 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
   </div>
 </section>{sc.guides_section(guides, GUIDES_HUB_H2, GUIDES_HUB_SUB, arrow=True, tight=True, described=section == "advisory")}
 {who_row(section)}{HUB_CTA}'''
-    desc = strip_tags(lead_en)[:158]
-    return (sc.head(f"{title_en} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
+    desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
+    return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
@@ -677,6 +693,36 @@ GUIDE_INDEX = {
 }
 # The groups are the six guide categories, site_chrome.GUIDE_BUCKETS (2026-10-01): the same list the nav's Guides panel
 # reads, so the panel, the phone menu and this page cannot disagree.
+
+# The Where I work block (2026-11-01): after the last guide group and before the footer's closing block, one link to
+# each local page and each released segment page, the anchor text being that page's own primary term. Never
+# /wealth-managers/.
+GUIDE_WHERE = {
+    "heading": ("Where I work, and for whom", "איפה אני עובדת, ועבור מי"),
+    "links": [
+        ("/art-curator-new-jersey/", "art consultant in New Jersey", "יועצת אמנות בניו ג'רזי"),
+        ("/art-curator-new-york/", "art advisor in New York City", "יועצת אמנות בניו יורק"),
+        ("/art-consultant-tenafly-nj/", "art consultant in Tenafly", "יועצת אמנות בטנפליי"),
+        ("/art-advisor-bergen-county/", "art advisor in Bergen County", "יועצת אמנות במחוז ברגן"),
+        ("/art-advisor-westchester-ny/", "art advisor in Westchester", "יועצת אמנות בווסטצ'סטר"),
+        ("/restaurants/", "art for restaurants", "אמנות למסעדות"),
+        ("/hotels/", "art for hotels", "אמנות למלונות"),
+        ("/law-firms/", "art for law firms", "אמנות למשרדי עורכי דין"),
+        ("/medical-practices/", "art for medical practices", "אמנות למרפאות"),
+        ("/investment-firms/", "art for investment firms", "אמנות לחברות השקעות"),
+    ],
+}
+
+
+def guide_where():
+    """/guide/'s Where I work block: the heading, then the ten links in GUIDE_WHERE's order."""
+    links = "".join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in GUIDE_WHERE["links"])
+    return f'''
+<section class="section wrap tight" id="where-i-work">
+  <div class="head reveal"><div class="lead"><h2 class="serif">{T(*GUIDE_WHERE["heading"])}</h2></div></div>
+  <div class="readnext who-row reveal">{links}</div>
+</section>
+'''
 
 
 def guide_groups(pages):
@@ -755,7 +801,7 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections  # the footer carries the closing line
+    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections + guide_where()  # the footer carries the closing line
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
@@ -780,7 +826,7 @@ def who_row(section):
 CONTACT = {
     "path": "contact",
     "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
-    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Send one photo of the wall and a line about the space. In person in NJ and NYC, online anywhere.",
+    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Tell me about the space: the walls, the light, the timeline. In person in NJ and NYC, online anywhere.",
     "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
     "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.",
              "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום."),
@@ -867,6 +913,9 @@ ABOUT = {
                  "Stav Theodor seated on a pale linen sofa beneath a framed painting of a woman playing the piano, hung on a walnut panelled wall",
                  "סתיו תאודור יושבת על ספה מפשתן בהיר, מתחת לציור ממוסגר של אישה מנגנת בפסנתר, התלוי על קיר מחופה עץ אגוז"),
     "og_image": "/images/stav-portrait.jpg",
+    # "Who is Stav Theodor?" (AIO play 4, 2026-11-01): the entity answer, answer first, every fact traced to BRIEF.md
+    "who_is": ("I am Stav Theodor, an art curator, art advisor and art consultant with more than 15 years in the art world, since 2010. I founded THEODORA Art Advisory by Stav Theodor in 2020; before THEODORA I did curatorial work in established museums and managed an art gallery in Tel Aviv. I am based in Tenafly, New Jersey, and I work with clients anywhere, online and in person. My clients are interior designers and architects, private collectors, home owners, business owners, and hotels and hospitality groups.",
+               "אני סתיו תאודור, אוצרת אמנות ויועצת אמנות, עם יותר מ-15 שנה בעולם האמנות, מאז 2010. את THEODORA Art Advisory by Stav Theodor ייסדתי ב-2020. לפני THEODORA עסקתי באוצרות במוזיאונים מבוססים וניהלתי גלריה לאמנות בתל אביב. הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת עם לקוחות בכל מקום, אונליין ופנים אל פנים. הלקוחות שלי הם מעצבי פנים ואדריכלים, אספנים פרטיים, בעלי בתים, בעלי עסקים, ומלונות וקבוצות אירוח."),
     # The credentials sentence the homepage's #about carried until 2026-09-29 (its facts are now the credentials strip there)
     "credentials": ("I am an art curator with an M.A. in art history from the Faculty of Arts at Ben-Gurion University and a diploma in curatorial and museum studies from the Faculty of Arts at Tel Aviv University. Today I am based in Tenafly, New Jersey, and work in New York, across Bergen County and in Tel Aviv.",
                     "אני אוצרת אמנות, בעלת תואר שני בתולדות האמנות מהפקולטה למדעי הרוח והחברה באוניברסיטת בן-גוריון ותעודה בלימודי אוצרות ומוזיאולוגיה מהפקולטה לאמנויות באוניברסיטת תל אביב. היום הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת בניו יורק, ברחבי מחוז ברגן ובתל אביב."),
@@ -937,6 +986,7 @@ def about_rows(pages):
     link = lambda p, lang: f'<a href="/{p["path"].strip("/")}/">{H.escape(p["title_" + lang])}</a>'
     both = lambda f: tuple(f(i, lang) for i, lang in enumerate(("en", "he")))
     return [
+        (("Who is Stav Theodor?", "מי היא סתיו תאודור?"), [ABOUT["who_is"]]),
         (bg_h2, [bg[0], bg[1], ABOUT["credentials"]]),
         (("What I do", "מה אני עושה"), [statement, how,
                                        ("ul", [both(lambda i, _: f"<strong>{h[i]}.</strong> {d[i]}.") for h, d in services])]),
@@ -1086,7 +1136,7 @@ def render_about(pages):
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
     <div class="acts">
       <a class="btn solid" href="/contact/">{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
-      <a class="arrow" href="{MAIL}" data-write><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{MAIL}" data-write data-loc="page-end"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       {sc.phone_link('cta')}
     </div>
   </div>
@@ -1146,6 +1196,11 @@ HUBS = {
                  "בתים במנהטן, בניו ג'רזי, בתל אביב ובקיסריה, מלונות מצ'נגדו ועד עמאן, ותערוכה אחת שהגיעה לז'נבה. כל עמוד מספר מה החלל ביקש ומה ענה לו.",
                  "/images/projects/waldorf-lobby-hero.jpg", "Lobby of the Waldorf Astoria Chengdu, onyx panels and painted screens curated by THEODORA"),
 }
+# A hub's <title> and meta description where they differ from its H1 and its lead (Nov 1 2026 report, R2; Ron delegated
+# the call on 2026-11-01). Read only in render_hub's sc.head(): the H1, the hero and the CollectionPage name keep HUBS[0].
+# A hub not listed keeps its H1 as the title and the first 158 characters of its lead as the meta (/projects/).
+HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ"}
+HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
 HUB_FOCUS = {"projects": "50% 55%"}
