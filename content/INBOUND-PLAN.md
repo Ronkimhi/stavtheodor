@@ -388,3 +388,4 @@ Each agent appends a dated line (ET): task, status (picked up / PR open / merged
 2026-11-01 (ET) | Claude Code (Theo) | R6, T7, T8 | held for Ron | none | As Ron asked.
 2026-11-01 (ET) | Claude Code (Theo) | T9 | waiting | none | Needs the designer referral terms first.
 2026-11-01 (ET) | Claude Code (Theo) | Write to Stav tracking | PR open (draft) | https://github.com/Ronkimhi/stavtheodor/pull/4 | write_open on every pop-up open, data-loc on all 214 buttons, form_loc on generate_lead; checked in headless Chromium with GA and Formspree intercepted; JS change, waits for Ron's review.
+2026-11-01 (ET) | Claude Code (Theo) | Decisions | taken | none | Ron delegated the open calls on 2026-11-01. Buyer-page test ended; copy PRs approved in principle, each waits for Ron's merge; museum unchanged.
