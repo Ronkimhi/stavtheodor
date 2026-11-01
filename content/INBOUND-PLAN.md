@@ -406,3 +406,21 @@ Each agent appends a dated line (ET): task, status (picked up / PR open / merged
 2026-11-01 (ET) | Claude Code (Theo) | Bundle A | PR open | https://github.com/Ronkimhi/stavtheodor/pull/19 | Links and proof on the local pages.
 2026-11-01 (ET) | Claude Code (Theo) | Release 2 | PR open (draft) | https://github.com/Ronkimhi/stavtheodor/pull/20 | Contains Release 1 (#14) plus #7, #10, #12, #13, #15, #16, #17 and #9 (squashed, so #9 stays open) for one merge.
 2026-11-01 (ET) | Claude Code (Theo) | Release 3 | PR open (draft) | https://github.com/Ronkimhi/stavtheodor/pull/21 | The whole week in one merge: contains Release 1 (#14) and Release 2 (#20) plus Bundle A (#19) and Bundle B (#18).
+2026-11-01 (ET) | Claude Code (Theo) | Write to Stav tracking | merged | https://github.com/Ronkimhi/stavtheodor/pull/4 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | R5 | merged | https://github.com/Ronkimhi/stavtheodor/pull/5 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | R3 | merged | https://github.com/Ronkimhi/stavtheodor/pull/6 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | T1 | merged | https://github.com/Ronkimhi/stavtheodor/pull/7 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | R4 | merged | https://github.com/Ronkimhi/stavtheodor/pull/8 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | Law firms guides link | closed, live | https://github.com/Ronkimhi/stavtheodor/pull/9 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99. Came in squashed inside Release 2 (#20), so the PR was closed by hand, not merged.
+2026-11-01 (ET) | Claude Code (Theo) | T10 | merged | https://github.com/Ronkimhi/stavtheodor/pull/10 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | R2 | merged | https://github.com/Ronkimhi/stavtheodor/pull/11 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99. Check CTR 28 days after the merge.
+2026-11-01 (ET) | Claude Code (Theo) | T3 | merged | https://github.com/Ronkimhi/stavtheodor/pull/12 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | R1 | merged | https://github.com/Ronkimhi/stavtheodor/pull/13 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99. Check CTR 28 days after the merge.
+2026-11-01 (ET) | Claude Code (Theo) | Release 1 | merged | https://github.com/Ronkimhi/stavtheodor/pull/14 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99. Carried inside Release 2 (#20).
+2026-11-01 (ET) | Claude Code (Theo) | Art Radar closing lines | merged | https://github.com/Ronkimhi/stavtheodor/pull/15 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | About page, Who is Stav Theodor? | merged | https://github.com/Ronkimhi/stavtheodor/pull/16 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | Homepage photo ask | merged | https://github.com/Ronkimhi/stavtheodor/pull/17 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | Bundle B | merged | https://github.com/Ronkimhi/stavtheodor/pull/18 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | Bundle A | merged | https://github.com/Ronkimhi/stavtheodor/pull/19 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99.
+2026-11-01 (ET) | Claude Code (Theo) | Release 2 | merged | https://github.com/Ronkimhi/stavtheodor/pull/20 | Merged in Release 3 (#21) and verified live 2026-11-01; merge 6afa4e99. Carried inside Release 3 (#21).
+2026-11-01 (ET) | Claude Code (Theo) | Release 3 | merged | https://github.com/Ronkimhi/stavtheodor/pull/21 | Merged as #21 and verified live 2026-11-01; merge 6afa4e99; the deploy succeeded and every live page matches the build.
