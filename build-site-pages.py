@@ -694,6 +694,36 @@ GUIDE_INDEX = {
 # The groups are the six guide categories, site_chrome.GUIDE_BUCKETS (2026-10-01): the same list the nav's Guides panel
 # reads, so the panel, the phone menu and this page cannot disagree.
 
+# The Where I work block (2026-11-01): after the last guide group and before the footer's closing block, one link to
+# each local page and each released segment page, the anchor text being that page's own primary term. Never
+# /wealth-managers/.
+GUIDE_WHERE = {
+    "heading": ("Where I work, and for whom", "איפה אני עובדת, ועבור מי"),
+    "links": [
+        ("/art-curator-new-jersey/", "art consultant in New Jersey", "יועצת אמנות בניו ג'רזי"),
+        ("/art-curator-new-york/", "art advisor in New York City", "יועצת אמנות בניו יורק"),
+        ("/art-consultant-tenafly-nj/", "art consultant in Tenafly", "יועצת אמנות בטנפליי"),
+        ("/art-advisor-bergen-county/", "art advisor in Bergen County", "יועצת אמנות במחוז ברגן"),
+        ("/art-advisor-westchester-ny/", "art advisor in Westchester", "יועצת אמנות בווסטצ'סטר"),
+        ("/restaurants/", "art for restaurants", "אמנות למסעדות"),
+        ("/hotels/", "art for hotels", "אמנות למלונות"),
+        ("/law-firms/", "art for law firms", "אמנות למשרדי עורכי דין"),
+        ("/medical-practices/", "art for medical practices", "אמנות למרפאות"),
+        ("/investment-firms/", "art for investment firms", "אמנות לחברות השקעות"),
+    ],
+}
+
+
+def guide_where():
+    """/guide/'s Where I work block: the heading, then the ten links in GUIDE_WHERE's order."""
+    links = "".join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in GUIDE_WHERE["links"])
+    return f'''
+<section class="section wrap tight" id="where-i-work">
+  <div class="head reveal"><div class="lead"><h2 class="serif">{T(*GUIDE_WHERE["heading"])}</h2></div></div>
+  <div class="readnext who-row reveal">{links}</div>
+</section>
+'''
+
 
 def guide_groups(pages):
     """[(key, (h2_en, h2_he), [guide page])] for /guide/: sc.GUIDE_BUCKETS filled with the built guides that have a card."""
@@ -771,7 +801,7 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections  # the footer carries the closing line
+    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections + guide_where()  # the footer carries the closing line
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
             + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
