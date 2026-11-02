@@ -1,0 +1,70 @@
+# Merges a PR labelled auto-ship once its gate run finishes green, then deploys it.
+# Runs from main's copy of this file with write access, so it runs nothing from the PR: PR files are read as data only.
+# A merge made with the default token does not fire the push trigger of pages.yml, so this dispatches pages.yml itself.
+# No personal token is needed.
+name: ship
+
+on:
+  workflow_run:
+    workflows: [gate]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ship  # one merge at a time: the next one must see that main moved
+  cancel-in-progress: false
+
+jobs:
+  ship:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: write        # dispatch pages.yml
+      contents: write       # merge
+      pull-requests: write  # merge, and say why when it will not
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+      GATE_CREATED: ${{ github.event.workflow_run.created_at }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0  # the lane and frozen checks read the PR's diff against main
+      - name: Decide
+        id: decide
+        run: |
+          gh api "repos/$REPO/commits/$HEAD_SHA/pulls" > "$RUNNER_TEMP/pulls.json"
+          gh api "repos/$REPO/commits/$HEAD_SHA/check-runs?check_name=gate&filter=latest" > "$RUNNER_TEMP/checks.json"
+          gh api "repos/$REPO/commits/main" > "$RUNNER_TEMP/main.json"
+          python3 tools/ship_check.py --repo "$REPO" --sha "$HEAD_SHA" --gate-created "$GATE_CREATED" \
+            --pulls "$RUNNER_TEMP/pulls.json" --checks "$RUNNER_TEMP/checks.json" --main "$RUNNER_TEMP/main.json"
+      - name: Say main moved
+        if: steps.decide.outputs.decision == 'stale'
+        env:
+          NUMBER: ${{ steps.decide.outputs.number }}
+        run: gh pr comment "$NUMBER" --repo "$REPO" --body "Not shipped. main moved after this gate run started, so the gate never tested this merge. Update the branch (gh pr update-branch), rebuild if gate asks, and it ships when gate is green."
+      - name: Lane and frozen, main's copy
+        if: steps.decide.outputs.decision == 'ship'
+        env:
+          NUMBER: ${{ steps.decide.outputs.number }}
+        run: |
+          git fetch --quiet origin "pull/$NUMBER/head"
+          gh api "repos/$REPO/pulls/$NUMBER" | jq '{pull_request: .}' > "$RUNNER_TEMP/event.json"
+          python3 tools/check_frozen.py --event "$RUNNER_TEMP/event.json"
+          python3 tools/check_lane.py --event "$RUNNER_TEMP/event.json"
+      - name: Merge
+        if: steps.decide.outputs.decision == 'ship'
+        env:
+          NUMBER: ${{ steps.decide.outputs.number }}
+        run: gh pr merge "$NUMBER" --repo "$REPO" --squash --match-head-commit "$HEAD_SHA"
+      - name: Deploy
+        if: steps.decide.outputs.decision == 'ship'
+        run: gh workflow run pages.yml --repo "$REPO" --ref main

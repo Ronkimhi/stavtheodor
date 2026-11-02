@@ -1,0 +1,49 @@
+# The one check every pull request into main must pass (AGENTS.md, section 1).
+# It runs on the merge of the PR with main. labeled and unlabeled are here because the lane check reads the label, and
+# because a label added after a green run must re-run it: ship.yml acts when a run of this workflow finishes.
+name: gate
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # the sitemap dates and the PR diff both read history
+      - name: Self tests
+        run: python3 tools/test_gate_checks.py
+      - name: Frozen pages
+        run: python3 tools/check_frozen.py
+      - name: Lane
+        run: python3 tools/check_lane.py
+      - name: Built output matches source
+        run: |
+          python3 build.py
+          git add --intent-to-add .
+          git diff --exit-code --stat || { echo "::error::The committed pages do not match the source. Run python3 build.py and commit the result."; exit 1; }
+      - name: Content pages
+        run: python3 tools/check_pages.py content/pages/*.json
+      - name: Buyer variants
+        run: python3 tools/check_variants.py
+      - name: Fee gate self test
+        run: python3 tools/fee_gate.py
+      - name: Install the browser
+        run: |
+          npm install -g playwright@1.61.1
+          playwright install --with-deps chromium
+      - name: Rendered pages
+        timeout-minutes: 15
+        run: node tools/check_render.js
