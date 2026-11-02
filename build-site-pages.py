@@ -458,6 +458,15 @@ def reviews_html(p):
 </section>'''
 
 
+# The inline form on a content page (2026-11-02): sc.inline_form_section(), only on the slugs in INLINE_FORM_PAGES, directly
+# above the page's closing Write to Stav block. The buyer variant that carries it is in build-home.py (INLINE_FORM_VARIANTS).
+INLINE_FORM_PAGES = {"art-curator-new-york", "art-curator-new-jersey"}
+
+
+def inline_form_html(p):
+    return sc.inline_form_section("/" + p["path"].strip("/") + "/", mail=MAIL) if p["slug"] in INLINE_FORM_PAGES else ""
+
+
 def render_article_page(p, all_pages):
     """Advisory, partner and guide pages: text header, the hero figure, the reading column.
     The hero figure is a before/after proposal space (before_after, a key of content/spaces.json, 2026-09-28):
@@ -529,7 +538,7 @@ def render_article_page(p, all_pages):
 </section>
 {guide_next(p, all_pages)}{radar_html(p)}'''
     else:
-        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>

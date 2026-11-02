@@ -150,6 +150,10 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
 HOME_ONLY = {'hero_write', 'home_above_contact'}
+# The buyer variants that carry the contact card as a section of its own, after #faq and above the footer's closing block
+# (sc.inline_form_section(), 2026-11-02). The homepage has its card in the footer, so the slot is empty there and on every
+# other variant. The content pages that carry it are in build-site-pages.py (INLINE_FORM_PAGES).
+INLINE_FORM_VARIANTS = {'hotels'}
 MARK = re.compile(r'<!--variant:([a-z0-9_]+)-->(.*?)<!--/variant:\1-->', re.S)
 ANCHORS = ('about', 'what-i-do', 'portfolio', 'film', 'projects', 'advisory', 'radar', 'posts', 'faq', 'contact')
 SHARED_SECTIONS = ('about', 'projects')  # byte for byte the homepage's on every variant
@@ -504,6 +508,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'TIMELINE': sc.timeline(posts[:6], with_months=False),
         'POST_COUNT': str(len(posts)),
         'FAQ': sc.faq_details(questions, first_open=True),
+        'INLINE_FORM': sc.inline_form_section(f"/{v['path']}/", mail=sc.mail_href(subject)) if v and v['id'] in INLINE_FORM_VARIANTS else '',
         'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject, form=v is None),
         'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_ui(),  # the fallback panel, the Write to Stav pop-up and form_js()
         'LANG_JS': sc.LANG_JS,
