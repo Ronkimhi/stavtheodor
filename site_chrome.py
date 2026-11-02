@@ -515,6 +515,19 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
   </div>'''
 
 
+def inline_form_section(path, mail=None):
+    """The contact card as its own section on a money page (2026-11-02), directly above the page's closing block: the same
+    contact_act() the homepage's #contact and /contact/ carry, its existing heading and no new copy, '' while FORM_ENDPOINT
+    is empty. The Write to Stav pop-up stays. form_js() binds it like any other form: its _subject names the page, and
+    generate_lead reads form_loc inline because the form sits outside #write-modal. path: the page's own path."""
+    if not FORM_ENDPOINT:
+        return ''
+    return f'''
+<section class="section wrap tight">
+  {contact_act(path, h='h3', mail=mail, loc='inline-form')}
+</section>'''
+
+
 def footer(home=False, cta=None, subject='', form=False, quiet=False):
     """cta: a plain-text (en, he) pair that replaces the closing line (a buyer variant's);
     subject: the mail subject both mailto links carry; form: the homepage's #contact, the closing act (2026-09-29): since
