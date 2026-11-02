@@ -289,10 +289,12 @@ def cta_html(p):
     contact = ""
     if p["section"] == "area":
         contact = f'\n    <a class="arrow" href="/contact/"><span class="ln"></span>{T("All the ways to reach me", "כל הדרכים ליצור איתי קשר")}</a>'
+    # the inline form sits directly above this block on these pages, so the button would ask twice (2026-11-02)
+    write = "" if p["slug"] in INLINE_FORM_PAGES else f'''
+    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>'''
     return f'''
   <div class="cta reveal">
-    <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}
-    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}{write}
     {sc.phone_link('cta')}{contact}
   </div>'''
 
@@ -459,7 +461,7 @@ def reviews_html(p):
 
 
 # The inline form on a content page (2026-11-02): sc.inline_form_section(), only on the slugs in INLINE_FORM_PAGES, directly
-# above the page's closing Write to Stav block. The buyer variant that carries it is in build-home.py (INLINE_FORM_VARIANTS).
+# above the page's closing block, which then drops its Write to Stav button (cta_html). The buyer variant that carries it is in build-home.py (INLINE_FORM_VARIANTS).
 INLINE_FORM_PAGES = {"art-curator-new-york", "art-curator-new-jersey"}
 
 
