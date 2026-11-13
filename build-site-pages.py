@@ -448,7 +448,7 @@ def page_guides(p, all_pages):
 # The reviews on a content page (Ron, 2026-10-23, site rules F8: "near the form and on home, contact and /for-designers/"):
 # the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
 # directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
-REVIEWS_PAGES = {"for-designers"}
+REVIEWS_PAGES = {"for-designers", "art-consultant-tenafly-nj", "art-advisor-bergen-county"}
 
 
 def reviews_html(p):
