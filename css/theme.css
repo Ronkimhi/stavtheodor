@@ -744,6 +744,9 @@
   .ah-lead { font-size: 17px; line-height: 1.75; color: var(--soft); }
   .ah-lead [data-l="he"] { font-size: 18px; line-height: 1.85; }
   .ah-lead a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); white-space: nowrap; }
+  .ah-proof { font-size: 15px; line-height: 1.7; color: var(--muted); }
+  .ah-proof [data-l="he"] { font-size: 16px; line-height: 1.8; }
+  .ah-proof a { color: var(--soft); border-bottom: 1px solid rgba(242,240,236,0.35); }
   .about-hero + .section .creds { margin-top: 0; }
   .story { display: flex; flex-direction: column; }
   .story-row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(40px, 6vw, 112px); padding: clamp(40px, 5vw, 64px) 0; border-top: 1px solid var(--line); }
