@@ -166,7 +166,7 @@ def render_radar_index(posts):
         ],
     }
     body = f'''
-<header class="phero" style="height: 62vh; min-height: 480px;">
+<header class="phero">
   <img src="{latest_img}" alt="" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">

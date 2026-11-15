@@ -1241,7 +1241,7 @@ HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ
 HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
-HUB_FOCUS = {"projects": "50% 55%"}
+HUB_FOCUS = {"projects": "50% 55%", "advisory": "50% 18%"}  # advisory: her head in frame in the clean 16:9 hero (art director, IRIS-2, 2026-11-15)
 
 
 def main():

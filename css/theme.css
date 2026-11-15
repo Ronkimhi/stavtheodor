@@ -1030,3 +1030,19 @@
     /* Where arrow links stack closer than 44px apart (the foot-ways list), Write to Stav keeps its full area */
     a.arrow[data-write] { z-index: 1; }
   }
+
+/* ===================== Site audit, 2026-11-15: the art director's IRIS-2 and IRIS-6 (CSS values only) ===================== */
+  /* IRIS-2: the hub and project heroes show the photograph clean, under the nav and with nothing over it: no scrim, no
+     drift zoom, the image at the container width (16:9, at most 62vh, cover, the page's own object-position), and the
+     eyebrow, h1 and lead in a block under it on the page ground, 40px below. The typographic hero (.phero.type) keeps
+     its own look. */
+  .phero:not(.type) { height: auto; min-height: 0; max-height: none; overflow: visible; display: block; padding: calc(100px + env(safe-area-inset-top, 0px)) var(--gx) 0; }
+  .phero:not(.type) > img { position: static; display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 62vh; object-fit: cover; animation: none; }
+  .phero:not(.type) > .scrim { display: none; }
+  .phero:not(.type) .title { position: static; padding: 40px 0 0; }
+  @media (max-width: 900px) { .phero:not(.type) { padding-top: calc(88px + env(safe-area-inset-top, 0px)); } }
+  /* IRIS-6: one reading measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
+     every article, project, guide, radar post and /about/ row; figures, diagrams and tables keep their width. */
+  :root { --measure: 680px; }
+  .prose:not(.guide) > :where(p, h2, h3, ul, ol, blockquote), .post-body > :where(p, h2, h3, ul, ol, blockquote) { max-width: var(--measure); }
+  .story-row .prose { max-width: var(--measure); }
