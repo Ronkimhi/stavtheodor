@@ -103,7 +103,7 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 ## Who is Stav Theodor?
 
-Stav Theodor (legal name Stav Theodor-Kimhi) is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. She has more than 15 years of experience (since 2010) across museums, galleries, academia, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
+Stav Theodor (legal name Stav Theodor-Kimhi) is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. She has more than 15 years of experience (since 2010) across museums, galleries, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
 
 ## Is THEODORA the same as Theadora Art Advisory or TSG Art Advisory?
 
