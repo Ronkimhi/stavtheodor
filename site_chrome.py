@@ -636,6 +636,8 @@ def contact_form(path='/', h='h3'):
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <input type="hidden" name="landing_page" value="">
+      <input type="hidden" name="referrer" value="">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
       <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span></p>
@@ -711,13 +713,39 @@ def form_js():
     Since 2026-10-24 setSubject() sets the hidden _subject to "New inquiry from stavtheodor.com: " and the page path,
     at init and again after a send (the markup's static value stays the fallback without JavaScript).
     Since 2026-11-01 syncRef() does the same for Who referred you? (referred_by): shown and enabled only while a
-    REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow."""
+    REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow.
+    Since 2026-11-15 (site audit, play 7) two hidden fields say where the visit began: landing_page, the path of the
+    first page of this visit in this tab (sessionStorage, path only), and referrer, the host and path of
+    document.referrer when that first page was reached from another site (never its query string or fragment; empty
+    otherwise). Both are read on the visit's first page and kept for the visit; nothing else is stored."""
     if not FORM_ENDPOINT:
         return ''
     refs = ', '.join(f"'{v}'" for v in REFERRAL_VIA)
     return '''<script>
+/* Where the visit began (2026-11-15): the first page's path and, when it was reached from another site, that site's
+   host and path (no query string, no fragment). Kept in sessionStorage for this tab's visit only. */
+var theodoraVisit = (function () {
+  var v = { landing: '', referrer: '' };
+  try {
+    var s = window.sessionStorage, k = 'theodoraVisit', seen = s.getItem(k);
+    if (seen) { return JSON.parse(seen); }
+    v.landing = location.pathname;
+    if (document.referrer) {
+      var r = new URL(document.referrer);
+      if (r.host && r.host !== location.host) { v.referrer = r.host + r.pathname; }
+    }
+    s.setItem(k, JSON.stringify(v));
+  } catch (e) { v.landing = v.landing || location.pathname; }
+  return v;
+})();
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var box = f.closest('.contact-box');
+  function setVisit() {
+    var lp = f.querySelector('[name=landing_page]'), rf = f.querySelector('[name=referrer]');
+    if (lp) { lp.value = theodoraVisit.landing || ''; }
+    if (rf) { rf.value = theodoraVisit.referrer || ''; }
+  }
+  setVisit();
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
@@ -788,6 +816,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
+        setVisit();
         if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })

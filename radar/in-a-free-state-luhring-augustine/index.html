@@ -521,6 +521,8 @@
       <label class="ai-ask" hidden><span data-l="en" lang="en">What did you ask it?</span><span data-l="he" lang="he" dir="rtl">מה שאלתם אותו?</span> <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden><span data-l="en" lang="en">Who referred you?</span><span data-l="he" lang="he" dir="rtl">מי הפנה אתכם?</span> <input type="text" name="referred_by" autocomplete="off" disabled></label>
       <input type="hidden" name="page" value="/">
+      <input type="hidden" name="landing_page" value="">
+      <input type="hidden" name="referrer" value="">
       <button type="submit"><span data-l="en" lang="en">Send</span><span data-l="he" lang="he" dir="rtl">שליחה</span></button>
       <p class="form-note"><span data-l="en" lang="en">I reply by email. If you have a photo of the wall, reply to my email with it.</span><span data-l="he" lang="he" dir="rtl">אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.</span></p>
       <p class="form-error" hidden><span data-l="en" lang="en">Your message did not go through. Please write to <a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> or call <a href="tel:+12013518367" data-loc="form" dir="ltr">(201) 351-8367</a>.</span><span data-l="he" dir="rtl" lang="he">ההודעה לא נשלחה. כתבו ל-<a href="mailto:stav@stavtheodor.com" dir="ltr">stav@stavtheodor.com</a> או התקשרו ל-<a href="tel:+12013518367" data-loc="form" dir="ltr">(201) 351-8367</a>.</span></p>
@@ -593,8 +595,30 @@
 })();
 </script>
 <script>
+/* Where the visit began (2026-11-15): the first page's path and, when it was reached from another site, that site's
+   host and path (no query string, no fragment). Kept in sessionStorage for this tab's visit only. */
+var theodoraVisit = (function () {
+  var v = { landing: '', referrer: '' };
+  try {
+    var s = window.sessionStorage, k = 'theodoraVisit', seen = s.getItem(k);
+    if (seen) { return JSON.parse(seen); }
+    v.landing = location.pathname;
+    if (document.referrer) {
+      var r = new URL(document.referrer);
+      if (r.host && r.host !== location.host) { v.referrer = r.host + r.pathname; }
+    }
+    s.setItem(k, JSON.stringify(v));
+  } catch (e) { v.landing = v.landing || location.pathname; }
+  return v;
+})();
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var box = f.closest('.contact-box');
+  function setVisit() {
+    var lp = f.querySelector('[name=landing_page]'), rf = f.querySelector('[name=referrer]');
+    if (lp) { lp.value = theodoraVisit.landing || ''; }
+    if (rf) { rf.value = theodoraVisit.referrer || ''; }
+  }
+  setVisit();
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
@@ -665,6 +689,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
         f.reset();
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
+        setVisit();
         if (card) { thanks(first); }
         if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
       })
