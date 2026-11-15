@@ -527,6 +527,7 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
+  @media (min-width: 901px) and (max-width: 1039px) { .nav .nav-write { display: none; } }  /* the header's Write to Stav fits the one-line bar from 1040px (measured in English and Hebrew); the phone menu carries it up to 900px */
 
   /* The Guides item (2026-10-01, site_chrome.guides_dd, opened by PAGE_JS): the link to /guide/ and a small chevron
      toggle; from 901px a panel under the bar with the six categories in three columns; in the phone menu the toggle
@@ -563,6 +564,7 @@
   @media (max-width: 900px) {
     .links { justify-content: safe center; overflow-y: auto; padding: 80px 20px 32px; gap: 22px; }
     .links a { line-height: 1.2; }
+    .links .nav-write { order: -1; }  /* the header's Write to Stav: last in the bar, first in the opened phone menu */
     .nav-dd { flex-wrap: wrap; justify-content: center; gap: 2px; }
     .nav .dd-btn { width: 40px; height: 40px; }
     .dd-btn::before { width: 9px; height: 9px; border-width: 0 1.5px 1.5px 0; }

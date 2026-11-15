@@ -377,6 +377,10 @@ def nav(home=False, own=None, sub=None):
     own = own or {}
     links = ''.join(guides_dd(h) if h == GUIDES_INDEX else f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>'
                     for h, en, he in NAV_ITEMS)
+    # Write to Stav in the header (site audit, 2026-11-15): the last item of the bar from 901px, the first of the opened
+    # phone menu (css/theme.css .nav-write, order -1). It opens the pop-up on the same page (WRITE_JS) and sends write_open
+    # with link_location "nav"; the mailto href stays the fallback without JavaScript.
+    links += f'<a class="nav-write" href="{mail_href()}" data-write data-loc="nav">{T("Write to Stav", "כתבו לסתיו")}</a>'
     wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA{wm_sub}</a>
@@ -866,6 +870,13 @@ WRITE_JS = '''<script>
   function focusOn(el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } }
   function open(from) {
     opener = from;
+    /* Opened from the phone menu (the header's Write to Stav): close the menu first, and give focus back to the Menu
+       button afterwards, since the link itself is hidden with the menu. */
+    var mb = document.getElementById('menu-btn');
+    if (from.closest && from.closest('#links') && document.body.classList.contains('menu-open')) {
+      document.body.classList.remove('menu-open');
+      if (mb) { mb.setAttribute('aria-expanded', 'false'); opener = mb; }
+    }
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
