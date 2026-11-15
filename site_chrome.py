@@ -1221,6 +1221,12 @@ def body_open():
     return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
 
 
+def main(body):
+    """The page's own content between the nav and the footer as the main landmark (site audit, 2026-11-15: Lighthouse
+    found none on 18 of 21 pages). A plain <main>, display block, no class: the layout does not change."""
+    return '\n<main>' + body + '</main>\n'
+
+
 def tail(home=False, scripts='', quiet=False):
     """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
     without its closing block (/contact/, whose body is that block)."""

@@ -553,7 +553,7 @@ def render_article_page(p, all_pages):
                     # a guide whose hero is a pair previews that pair's 1200 by 630 crop: give its size and what it shows
                     og_card_dims=own_og, og_image_alt=sc.spaces()[ba]['alt_en'] if own_og else None,
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
-            + sc.body_open() + page_nav(p) + body + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
+            + sc.body_open() + page_nav(p) + sc.main(body) + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
 
 
 def page_nav(p):
@@ -617,7 +617,7 @@ def render_project_page(p, all_pages, projects):
 '''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og))
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 def ba_card(p):
@@ -685,7 +685,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 {who_row(section)}{HUB_CTA}'''
     desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
     return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 # /guide/, the guides index (2026-10-01): every built guide, in the six categories of site_chrome.GUIDE_BUCKETS, under
@@ -815,9 +815,12 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections + guide_where()  # the footer carries the closing line
+    top = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar
+    body = sections + guide_where()  # the footer carries the closing line
+    # The main landmark starts after the category bar here (2026-11-15): the bar is sticky, and inside <main> it would
+    # let go of the screen where main ends, above the footer; as a child of <body> it keeps pinning to the end as before.
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
+            + sc.body_open() + sc.nav() + top + sc.main(body) + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
 
 def who_row(section):
@@ -909,7 +912,7 @@ def render_contact():
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
@@ -1173,7 +1176,7 @@ def render_about(pages):
 
 '''
     return (sc.head(f'{ABOUT["title"]} · THEODORA', ABOUT["description"], url, og_image=SITE + ABOUT["og_image"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))
 
 
 def check(p, out):

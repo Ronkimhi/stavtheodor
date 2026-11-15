@@ -187,7 +187,7 @@ def render_radar_index(posts):
 '''
     return (sc.head('Art Radar, every post · THEODORA', collection['description'], url,
                     og_image=SITE + latest_img, lang='en', ld=[collection, breadcrumb])
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 sc.write(os.path.join(OUT_DIR, 'index.html'), render_radar_index(posts))
