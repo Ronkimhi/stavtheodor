@@ -928,7 +928,7 @@ def render_contact():
 ABOUT = {
     "path": "about",
     "title": "Stav Theodor, Art Curator and Art Advisor",
-    "description": "Stav Theodor is an art curator and advisor with more than 15 years in the art world, since 2010. She founded THEODORA in Tenafly, NJ, and works anywhere.",
+    "description": "Stav Theodor is an art curator with more than 15 years in the art world, since 2010. She founded THEODORA in 2020. Based in Tenafly, NJ, she works anywhere.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
     # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
     "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
