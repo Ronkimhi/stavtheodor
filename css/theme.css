@@ -532,7 +532,21 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
-  @media (min-width: 901px) and (max-width: 1039px) { .nav .nav-write { display: none; } }  /* the header's Write to Stav fits the one-line bar from 1040px (measured in English and Hebrew); the phone menu carries it up to 900px */
+  /* The header's Write to Stav: the full label from 1040px; from 901 to 1039px the compact label (Write / כתבו, the full one
+     kept as the accessible name), where it fits the one-line bar; the phone menu carries the full label up to 900px. */
+  .nav-write .wshort { display: none; }
+  .nav .nav-write-bar { display: none; pointer-events: auto; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; white-space: nowrap; }
+  .nav-write-bar .wshort { display: inline; }
+  .nav-write-bar .wshort [data-l="he"], .nav-write .wshort [data-l="he"] { font-size: 16px; }
+  @media (min-width: 901px) and (max-width: 1039px) {
+    .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+    .nav .nav-write .wshort { display: inline; }
+  }
+  @media (min-width: 901px) and (max-width: 919px) { body.lang-en .nav .nav-write { display: none; } }  /* English needs 920px for the compact label; Hebrew fits from 901px */
+  /* In the phone bar beside Call only where it leaves at least 8px between every two controls, with each 44px hit area
+     whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
+  @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
+  @media (min-width: 400px) and (max-width: 900px) { body.lang-he .nav .nav-write-bar { display: inline; } }
 
   /* The Guides item (2026-10-01, site_chrome.guides_dd, opened by PAGE_JS): the link to /guide/ and a small chevron
      toggle; from 901px a panel under the bar with the six categories in three columns; in the phone menu the toggle
@@ -1023,9 +1037,10 @@
      The call link's area grows to its left (toward the empty space before it) so it does not
      overlap the HE/EN button; the others grow evenly around their centre. */
   @media (max-width: 768px) {
-    .nav .nav-call, .lang-switch button, .menu-btn, a.arrow { position: relative; }
-    .nav .nav-call::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
+    .nav .nav-call, .nav .nav-write-bar, .lang-switch button, .menu-btn, a.arrow { position: relative; }
+    .nav .nav-call::after, .nav .nav-write-bar::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
     .nav .nav-call::after { left: auto; right: -4px; transform: translateY(-50%); }
+    .nav .nav-write-bar::after { left: auto; right: -2px; transform: translateY(-50%); }  /* grows mostly to its left, toward Call, so it never meets the HE/EN button's area */
     a.arrow::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: max(100%, 44px); transform: translateY(-50%); background: transparent; }
     /* Where arrow links stack closer than 44px apart (the foot-ways list), Write to Stav keeps its full area */
     a.arrow[data-write] { z-index: 1; }

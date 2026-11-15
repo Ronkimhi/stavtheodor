@@ -369,6 +369,20 @@ def nav_call():
             f'<span class="num">{PHONE}</span><span class="short">{T("Call", "התקשרו")}</span></a>')
 
 
+# The header's Write to Stav (site audit, 2026-11-15): the full label, and the compact one ("Write", the Curator's S-g)
+# where the bar is short of room. The compact label is aria-hidden; the full one stays the accessible name (visually
+# hidden there), the same split nav_call() makes between the number and Call.
+WRITE_FULL = ('Write to Stav', 'כתבו לסתיו')
+WRITE_SHORT = ('Write', 'כתבו')
+
+
+def nav_write_bar():
+    """Write to Stav in the phone header bar, beside Call (css/theme.css .nav-write-bar shows it only where the bar has
+    room). Opens the pop-up like every data-write control; write_open's link_location is nav, as for the menu item."""
+    return (f'<a class="nav-write-bar" href="{mail_href()}" data-write data-loc="nav"><span class="vh">{T(*WRITE_FULL)}</span>'
+            f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
+
+
 def phone_link(loc='cta'):
     """The number as a contact line under an email link or a Write to Stav button."""
     return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span><bdi dir="ltr">{PHONE}</bdi></a>'
@@ -386,13 +400,14 @@ def nav(home=False, own=None, sub=None):
     # Write to Stav in the header (site audit, 2026-11-15): the last item of the bar from 901px, the first of the opened
     # phone menu (css/theme.css .nav-write, order -1). It opens the pop-up on the same page (WRITE_JS) and sends write_open
     # with link_location "nav"; the mailto href stays the fallback without JavaScript.
-    links += f'<a class="nav-write" href="{mail_href()}" data-write data-loc="nav">{T("Write to Stav", "כתבו לסתיו")}</a>'
+    links += (f'<a class="nav-write" href="{mail_href()}" data-write data-loc="nav"><span class="wfull">{T(*WRITE_FULL)}</span>'
+              f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
     wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA{wm_sub}</a>
   <div class="right">
     <div class="links" id="links">{links}</div>
-    {nav_call()}
+    {nav_call()}{nav_write_bar()}
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
       <button type="button" data-lang="he" aria-pressed="false">HE</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
