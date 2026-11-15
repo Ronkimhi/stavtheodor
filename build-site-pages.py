@@ -452,6 +452,7 @@ def page_guides(p, all_pages):
 # the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
 # directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
 REVIEWS_PAGES = {"for-designers"}
+RADAR_BEFORE_ASK = {"for-designers"}  # the one article page whose From Art Radar strip stays above the closing ask
 
 
 def reviews_html(p):
@@ -543,11 +544,15 @@ def render_article_page(p, all_pages):
 </section>
 {guide_next(p, all_pages)}{radar_html(p)}'''
     else:
-        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
+        # From Art Radar after the closing ask (site audit, 2026-11-15), as on the guides: the ask, and on the New Jersey and
+        # New York pages the inline form above it, come first. /for-designers/ keeps the strip above its reviews, which
+        # sit directly above its ask (RADAR_BEFORE_ASK).
+        late = p["slug"] not in RADAR_BEFORE_ASK
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{'' if late else radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
-'''
+{radar_html(p) if late else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
                     og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
                     # a guide whose hero is a pair previews that pair's 1200 by 630 crop: give its size and what it shows

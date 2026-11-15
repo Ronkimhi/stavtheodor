@@ -370,6 +370,11 @@
   .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
   .contact-head .lead [data-l="he"] { font-family: var(--he); }
   .contact-page .act { margin-top: 0; }
+  @media (max-width: 860px) {  /* /contact/ on a phone: the form before Or reach me directly (CSS order only; the card stacks here) */
+    .contact-page .act-card .act-left { display: contents; }
+    .contact-page .act-card .act-form { order: 1; }
+    .contact-page .act-card .act-ways { order: 2; }
+  }
   .contact-area { display: flex; flex-direction: column; gap: 20px; margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
   .places { list-style: none; display: flex; flex-wrap: wrap; row-gap: 4px; font-family: var(--serif); font-size: clamp(26px, 3vw, 44px); line-height: 1.2; color: var(--ink); }
   .places [data-l="he"] { font-family: var(--he); }
