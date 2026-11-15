@@ -166,7 +166,7 @@ def render_radar_index(posts):
         ],
     }
     body = f'''
-<header class="phero">
+<header class="phero archive">
   <img src="{latest_img}" alt="" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">

@@ -532,17 +532,24 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
-  /* The header's Write to Stav: the full label from 1040px; from 901 to 1039px the compact label (Write / כתבו, the full one
+  /* The header's Write to Stav: the full label from 1100px; from 901 to 1099px the compact label (Write / כתבו, the full one
      kept as the accessible name), where it fits the one-line bar; the phone menu carries the full label up to 900px. */
   .nav-write .wshort { display: none; }
   .nav .nav-write-bar { display: none; pointer-events: auto; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; white-space: nowrap; }
   .nav-write-bar .wshort { display: inline; }
   .nav-write-bar .wshort [data-l="he"], .nav-write .wshort [data-l="he"] { font-size: 16px; }
-  @media (min-width: 901px) and (max-width: 1039px) {
+  @media (min-width: 901px) and (max-width: 1099px) {
     .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
     .nav .nav-write .wshort { display: inline; }
   }
-  @media (min-width: 901px) and (max-width: 919px) { body.lang-en .nav .nav-write { display: none; } }  /* English needs 920px for the compact label; Hebrew fits from 901px */
+  @media (min-width: 901px) and (max-width: 919px) { body.lang-en .nav .nav-write { display: none; } }
+  /* Drawn as the bar's one outlined control (the art director's gate, 2026-11-15): a hairline box, brighter on hover, from
+     1040px, where the boxed label still leaves the bar one line in both languages (below that the compact label stays
+     plain). line-height 1 keeps the box inside the bar's height. */
+  @media (min-width: 1040px) {
+    .nav .nav-write { border: 1px solid rgba(242,240,236,0.36); padding: 8px 14px; margin-inline-start: 6px; line-height: 1; transition: border-color .25s; }
+    .nav .nav-write:hover, .nav .nav-write:focus-visible { border-color: #F2F0EC; }
+  }  /* English needs 920px for the compact label; Hebrew fits from 901px */
   /* In the phone bar beside Call only where it leaves at least 8px between every two controls, with each 44px hit area
      whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
   @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
@@ -584,6 +591,10 @@
     .links { justify-content: safe center; overflow-y: auto; padding: 80px 20px 32px; gap: 22px; }
     .links a { line-height: 1.2; }
     .links .nav-write { order: -1; }  /* the header's Write to Stav: last in the bar, first in the opened phone menu */
+    /* In the opened menu it is the page's ghost button, not one more serif line (the art director's gate, 2026-11-15):
+       the .btn type, a 1px ink border, and 28px to About (the menu's 22px gap plus 6). */
+    .links .nav-write { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; border: 1px solid #F2F0EC; padding: 18px 30px; margin-bottom: 6px; }
+    .links .nav-write [data-l="he"] { font-size: 16px; letter-spacing: 0; text-transform: none; }
     .nav-dd { flex-wrap: wrap; justify-content: center; gap: 2px; }
     .nav .dd-btn { width: 40px; height: 40px; }
     .dd-btn::before { width: 9px; height: 9px; border-width: 0 1.5px 1.5px 0; }
@@ -1056,6 +1067,11 @@
   .phero:not(.type) > .scrim { display: none; }
   .phero:not(.type) .title { position: static; padding: 40px 0 0; }
   @media (max-width: 900px) { .phero:not(.type) { padding-top: calc(88px + env(safe-area-inset-top, 0px)); } }
+  /* Project heroes stop at 56vh, so the h1 starts on the first screen at 1440x900; the hubs and the Art Radar archive
+     (.archive) keep 62vh (the art director's gate, 2026-11-15). */
+  .phero:not(.type):not(.hub):not(.archive) > img { max-height: 56vh; }
+  /* The storks triptych is a panorama of three panels: on a phone it is shown whole, not cut to 16:9 (same gate). */
+  @media (max-width: 900px) { .phero:not(.type) > img[src$="/storks-triptych.jpg"] { aspect-ratio: auto; height: auto; max-height: none; object-fit: contain; } }
   /* IRIS-6: one reading measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
      every article, project, guide, radar post and /about/ row; figures, diagrams and tables keep their width. */
   :root { --measure: 680px; }
