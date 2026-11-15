@@ -342,6 +342,12 @@ WHO_I_WORK_WITH = [
     ('/restaurants/', 'Restaurants', 'מסעדות'),
     ('/hotels/', 'Boutique hotels', 'מלונות בוטיק'),
 ]
+# The two other partner pages, in the footer's Who I work with column right after /for-designers/ (site audit, 2026-11-15;
+# anchors set by the SEO Lead, Hebrew twins by the Curator). Footer only: /about/ and the projects hub keep the seven.
+FOOTER_PARTNERS = [
+    ('/for-brokers/', 'Brokers and developers', 'מתווכים ויזמים'),
+    ('/for-advisors/', 'Family offices', 'פמילי אופיס'),
+]
 # Section links that have a page of their own: on the homepage they stay in-page, on every
 # other page they go to that page instead of scrolling the homepage (2026-09-26).
 SUBPAGE_FOR = {'#advisory': '/advisory/', '#about': '/about/'}  # /about/: a real page since 2026-09-29
@@ -545,7 +551,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     L = lambda h: _link(h, home)
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
     href = mail_href(subject)
-    who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH)
+    who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH[:1] + FOOTER_PARTNERS + WHO_I_WORK_WITH[1:])
     if quiet:
         top = ''
     elif form and FORM_ENDPOINT:
