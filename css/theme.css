@@ -542,7 +542,7 @@
     .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
     .nav .nav-write .wshort { display: inline; }
   }
-  @media (min-width: 901px) and (max-width: 919px) { body.lang-en .nav .nav-write { display: none; } }
+  @media (min-width: 901px) and (max-width: 979px) { body.lang-en .nav .nav-write { display: none; } }  /* English shows the compact label from 980px, clear of the wordmark; Hebrew from 901px */
   /* Drawn as the bar's one outlined control (the art director's gate, 2026-11-15): a hairline box, brighter on hover, from
      1040px, where the boxed label still leaves the bar one line in both languages (below that the compact label stays
      plain). line-height 1 keeps the box inside the bar's height. */
@@ -1067,11 +1067,10 @@
   .phero:not(.type) > .scrim { display: none; }
   .phero:not(.type) .title { position: static; padding: 40px 0 0; }
   @media (max-width: 900px) { .phero:not(.type) { padding-top: calc(88px + env(safe-area-inset-top, 0px)); } }
-  /* Project heroes stop at 56vh, so the h1 starts on the first screen at 1440x900; the hubs and the Art Radar archive
-     (.archive) keep 62vh (the art director's gate, 2026-11-15). */
-  .phero:not(.type):not(.hub):not(.archive) > img { max-height: 56vh; }
-  /* The storks triptych is a panorama of three panels: on a phone it is shown whole, not cut to 16:9 (same gate). */
-  @media (max-width: 900px) { .phero:not(.type) > img[src$="/storks-triptych.jpg"] { aspect-ratio: auto; height: auto; max-height: none; object-fit: contain; } }
+  /* Project heroes show the photograph whole at its own shape, at most 70vh tall, from the left edge of the column (the art
+     director's second look, 2026-11-15: a fixed 16:9 slot cut people and works). The hubs and the Art Radar archive
+     (.archive) keep the 16:9, 62vh cover above. */
+  .phero:not(.type):not(.hub):not(.archive) > img { aspect-ratio: auto; width: auto; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
   /* IRIS-6: one reading measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
      every article, project, guide, radar post and /about/ row; figures, diagrams and tables keep their width. */
   :root { --measure: 680px; }
