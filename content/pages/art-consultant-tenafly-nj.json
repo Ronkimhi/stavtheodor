@@ -44,6 +44,7 @@
   },
   "lead_en": "I am Stav Theodor, and THEODORA is my art advisory practice. I live and work in Tenafly, so when a Tenafly home needs art, I am not someone who drives in for a single meeting. I choose, source, commission, frame and install art for private homes, home offices and businesses here, and I work alongside the architects and interior designers who shape them.",
   "lead_he": "אני סתיו תאודור, ו-THEODORA היא פרקטיקת ייעוץ האמנות שלי. אני גרה ועובדת בטנפליי, כך שכשבית בטנפליי צריך אמנות, אני לא מישהי שמגיעה מרחוק לפגישה אחת. אני בוחרת, מאתרת, מזמינה, ממסגרת ומתקינה אמנות לבתים פרטיים, למשרדים ביתיים ולעסקים כאן, ועובדת לצד האדריכלים ומעצבי הפנים שמעצבים אותם.",
+  "lead_write": true,
   "hero_image": {
     "src": "/images/projects/stav-couch.webp",
     "w": 1000,
