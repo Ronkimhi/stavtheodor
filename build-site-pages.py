@@ -266,7 +266,7 @@ def radar_html(p):
 
 # The Write to Stav block under a page's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
 # JSON. The same data-write button as the closing CTA, which stays as it is, and one line under it. On guides (since
-# 2026-11-01) it sits under the lead and byline with data-loc="guide-lead"; since 2026-11-15 (site audit, play 1) the
+# 2026-11-01) it sits under the lead and byline with data-loc="guide-lead"; since 2026-11-15 (site audit) the
 # advisory, area, local, partner and project pages may carry it too, under their opening paragraph, with
 # data-loc="page-lead", so GA4's write_open tells it from the closing button (page-end) and the header (nav).
 LEAD_WRITE_LINE = ("Tell me about the space: the walls, the light, the timeline.", "ספרו לי על החלל: הקירות, האור, לוח הזמנים.")
@@ -903,7 +903,7 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}{CONTACT_AFTER_CARD}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False, form_first=True)}{CONTACT_AFTER_CARD}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>
@@ -1241,7 +1241,7 @@ HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ
 HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
-HUB_FOCUS = {"projects": "50% 55%", "advisory": "50% 18%"}  # advisory: her head in frame in the clean 16:9 hero (art director, IRIS-2, 2026-11-15)
+HUB_FOCUS = {"projects": "50% 55%", "advisory": "50% 18%"}  # advisory: her head in frame in the clean 16:9 hero (art director, 2026-11-15)
 
 
 def main():

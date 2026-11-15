@@ -369,7 +369,7 @@ def nav_call():
             f'<span class="num">{PHONE}</span><span class="short">{T("Call", "התקשרו")}</span></a>')
 
 
-# The header's Write to Stav (site audit, 2026-11-15): the full label, and the compact one ("Write", the Curator's S-g)
+# The header's Write to Stav (site audit, 2026-11-15): the full label, and the compact one ("Write")
 # where the bar is short of room. The compact label is aria-hidden; the full one stays the accessible name (visually
 # hidden there), the same split nav_call() makes between the number and Call.
 WRITE_FULL = ('Write to Stav', 'כתבו לסתיו')
@@ -496,13 +496,15 @@ def reviews_block():
   </div>'''
 
 
-def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
+def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first=False):
     """The contact block. With the form (FORM_ENDPOINT set) it is one card (mockup A, Ron 2026-10-06): on one side the
     Contact eyebrow (eyebrow=False drops it where the page header already says Contact), the headline, three check
     lines, and Or reach me directly (the address with the mail fallback panel, the phone); the form on the other side,
     over a soft taupe glow in the corner. The homepage's #contact (footer(form=True)) and /contact/ share it, so both
     change from here. Without FORM_ENDPOINT it is the three ways and the What happens next steps, in two columns.
-    h: the thank-you card's heading level (contact_form)."""
+    h: the thank-you card's heading level (contact_form). form_first (the /contact/ page, 2026-11-15): the markup runs
+    headline, form, then Or reach me directly, so a phone, the keyboard and a screen reader all meet the form first;
+    css/theme.css (.act-form-first) puts the card back in its two columns from 861px, where it looks as before."""
     mail = mail or mail_href()
     form = contact_form(path, h=h)
     if not form:
@@ -521,6 +523,22 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
   </div>'''
     lines = ''.join(f'<li>{TICK}<span>{T(en, he)}</span></li>' for en, he in CONTACT_LINES)
     brow = f'\n        <p class="eyebrow">{T("Contact", "יצירת קשר")}</p>' if eyebrow else ''
+    if form_first:
+        return f'''<div class="act act-card act-form-first">
+    <div class="act-glow" aria-hidden="true"></div>
+      <div class="act-intro">{brow}
+        <h2 class="serif act-head">{T(*CONTACT_HEAD)}</h2>
+        <ul class="act-lines">{lines}</ul>
+      </div>
+    <div class="act-form">
+    {form}
+    </div>
+      <div class="act-ways">
+        <p class="eyebrow">{T('Or reach me directly', 'או פנו אליי ישירות')}</p>
+        <a class="way addr" href="{mail}" data-loc="{loc}"><bdi dir="ltr">{EMAIL}</bdi></a>
+        <a class="way tel" href="{PHONE_TEL}" data-loc="{loc}"><bdi dir="ltr">{PHONE}</bdi></a>
+      </div>
+  </div>'''
     return f'''<div class="act act-card">
     <div class="act-glow" aria-hidden="true"></div>
     <div class="act-left">
@@ -735,7 +753,7 @@ def form_js():
     at init and again after a send (the markup's static value stays the fallback without JavaScript).
     Since 2026-11-01 syncRef() does the same for Who referred you? (referred_by): shown and enabled only while a
     REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow.
-    Since 2026-11-15 (site audit, play 7) two hidden fields say where the visit began: landing_page, the path of the
+    Since 2026-11-15 (site audit) two hidden fields say where the visit began: landing_page, the path of the
     first page of this visit in this tab (sessionStorage, path only), and referrer, the host and path of
     document.referrer when that first page was reached from another site (never its query string or fragment; empty
     otherwise). Both are read on the visit's first page and kept for the visit; nothing else is stored."""

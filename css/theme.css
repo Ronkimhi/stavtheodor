@@ -370,10 +370,14 @@
   .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
   .contact-head .lead [data-l="he"] { font-family: var(--he); }
   .contact-page .act { margin-top: 0; }
-  @media (max-width: 860px) {  /* /contact/ on a phone: the form before Or reach me directly (CSS order only; the card stacks here) */
-    .contact-page .act-card .act-left { display: contents; }
-    .contact-page .act-card .act-form { order: 1; }
-    .contact-page .act-card .act-ways { order: 2; }
+  /* /contact/ (contact_act form_first): the markup runs headline, form, Or reach me directly, the order a phone shows and
+     the keyboard follows; from 861px the card is put back in its two columns: headline at the top left, the direct ways
+     at the bottom left, the form on the right, as the homepage card. */
+  @media (min-width: 861px) {
+    .act-form-first { grid-template-rows: auto 1fr; }
+    .act-form-first > .act-intro { grid-column: 1; grid-row: 1; min-width: 0; }
+    .act-form-first > .act-form { grid-column: 2; grid-row: 1 / span 2; }
+    .act-form-first > .act-ways { grid-column: 1; grid-row: 2; align-self: end; min-width: 0; }
   }
   .contact-area { display: flex; flex-direction: column; gap: 20px; margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
   .places { list-style: none; display: flex; flex-wrap: wrap; row-gap: 4px; font-family: var(--serif); font-size: clamp(26px, 3vw, 44px); line-height: 1.2; color: var(--ink); }
@@ -1057,8 +1061,8 @@
     a.arrow[data-write] { z-index: 1; }
   }
 
-/* ===================== Site audit, 2026-11-15: the art director's IRIS-2 and IRIS-6 (CSS values only) ===================== */
-  /* IRIS-2: the hub and project heroes show the photograph clean, under the nav and with nothing over it: no scrim, no
+/* ===================== Site audit, 2026-11-15: the art director's hero and reading measure fixes (CSS values only) ===================== */
+  /* Heroes: the hub and project heroes show the photograph clean, under the nav and with nothing over it: no scrim, no
      drift zoom, the image at the container width (16:9, at most 62vh, cover, the page's own object-position), and the
      eyebrow, h1 and lead in a block under it on the page ground, 40px below. The typographic hero (.phero.type) keeps
      its own look. */
@@ -1071,7 +1075,7 @@
      director's second look, 2026-11-15: a fixed 16:9 slot cut people and works). The hubs and the Art Radar archive
      (.archive) keep the 16:9, 62vh cover above. */
   .phero:not(.type):not(.hub):not(.archive) > img { aspect-ratio: auto; width: auto; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
-  /* IRIS-6: one reading measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
+  /* Reading measure: one measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
      every article, project, guide, radar post and /about/ row; figures, diagrams and tables keep their width. */
   :root { --measure: 680px; }
   .prose:not(.guide) > :where(p, h2, h3, ul, ol, blockquote), .post-body > :where(p, h2, h3, ul, ol, blockquote) { max-width: var(--measure); }
