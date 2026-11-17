@@ -1,7 +1,7 @@
 # Answers: Art in New York and New Jersey
 # https://stavtheodor.com/answers.md
 
-Direct answers to common questions about art in New York and New Jersey, written by Stav Theodor, art curator and advisor (THEODORA Art Advisory by Stav Theodor, Tenafly, NJ). THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. Every answer links to a full source page on this site. Updated: October 1, 2026.
+Direct answers to common questions about art in New York and New Jersey, written by Stav Theodor, art curator and advisor (THEODORA Art Advisory by Stav Theodor, Tenafly, NJ). THEODORA Art Advisory by Stav Theodor is based in Tenafly, New Jersey, and is not affiliated with Theadora Art Advisory (Los Angeles) or TSG Art Advisory. Every answer links to a full source page on this site. Updated: November 17, 2026.
 
 ---
 
@@ -35,7 +35,7 @@ Two landmark results at Christie's New York, both covered with curatorial analys
 
 ## Is Ruth Patir's Venice Biennale exhibition coming to New York?
 
-Yes. Ruth Patir's (M)otherland, the work created for the Israeli Pavilion at the 2024 Venice Biennale, has been acquired by The Jewish Museum in New York and is on view there from December 18, 2026 to June 7, 2027. The pavilion never opened in Venice because Patir and curators Mira Lapidot and Tamar Margalit kept it closed in protest until a ceasefire and the release of the hostages; the work premiered instead at the Tel Aviv Museum of Art in March 2025. It is a video installation that animates ancient fertility figurines from the Kingdom of Judah and draws on the artist's own BRCA2 diagnosis to explore motherhood, the personal, and the national. Full post: https://stavtheodor.com/radar/ruth-patir-jewish-museum/
+Yes. Ruth Patir's (M)otherland, the work created for the Israeli Pavilion at the 2024 Venice Biennale, has been acquired by The Jewish Museum in New York. The pavilion never opened in Venice because Patir and curators Mira Lapidot and Tamar Margalit kept it closed in protest until a ceasefire and the release of the hostages; the work premiered instead at the Tel Aviv Museum of Art in March 2025. It is a video installation that animates ancient fertility figurines from the Kingdom of Judah and draws on the artist's own BRCA2 diagnosis to explore motherhood, the personal, and the national. Dates are on the post: https://stavtheodor.com/radar/ruth-patir-jewish-museum/
 
 ## What does an art curator do for a private residence?
 
@@ -243,6 +243,10 @@ How to choose art for your home comes down to a short sequence of decisions: how
 
 Art for a small apartment works best as fewer, larger pieces: one anchor work per space, on the wall you see first from the door or the sofa, makes a small space feel calmer and larger than a scatter of small frames. At THEODORA I start a small apartment the way I start any home: I survey the space and its sightlines and define the main wall from them, then put the best original your budget allows on that wall and let editions and prints carry the rest. Full guide: https://stavtheodor.com/guide/art-for-a-small-apartment/
 
+## How should I light art at home?
+
+Aim a ceiling spot or track light at the center of the work at about 30 degrees from vertical, and use a warm 2700 to 3000 K LED with a CRI of 90 or more, on a dimmer. Under a 9 foot ceiling that puts the light about 29.5 inches (75 cm) out from the wall, so reflections in the glass fall to the floor. Works on paper, photographs and textiles stay near 50 lux, and oil paintings near 150 lux. Full guide: https://stavtheodor.com/guide/how-to-light-art/
+
 ---
 
 ## Guides: offices, practices and hospitality
@@ -313,7 +317,7 @@ Every other live page, with its canonical URL and a one line summary of what it 
 - [How to start an art collection, seriously](https://stavtheodor.com/advisory/starting-an-art-collection/): How to start an art collection: the first work, the questions to ask about an artist and a price, the mistakes new collectors make, and who can help you build it.
 - [Ten questions to answer before you buy your first serious artwork](https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/): Ten questions to answer before a first serious art purchase: wall, light, life in the room, provenance, condition, framing, budget, resale, designer, advisor.
 - [Your interior designer is finishing the house. Why bring in an art advisor?](https://stavtheodor.com/advisory/working-with-your-interior-designer-on-art/): Why an art advisor belongs on the project alongside your interior designer: the designer keeps the lead on the interior, the advisor brings the art, and how the two work together without friction.
-- [Contact](https://stavtheodor.com/contact/): The phone, (201) 351-8367, the email, stav@stavtheodor.com, the service area, Art Radar on WhatsApp and a contact form.
+- [Contact](https://stavtheodor.com/contact/): Write to Stav at stav@stavtheodor.com, or call (201) 351-8367. The page also lists the service area and Art Radar on WhatsApp.
 
 ### Project case studies
 
@@ -347,13 +351,17 @@ Every other live page, with its canonical URL and a one line summary of what it 
 - [Oren Fischer: Hallel at 81 Leonard Gallery, New York](https://stavtheodor.com/radar/oren-fischer-hallel/): August 9, 2026. Israeli artist Oren Fischer opens his first New York solo exhibition, Hallel, at 81 Leonard Gallery in Tribeca, presented with the young Jewish collective Havurah.
 - [Noa Wiegenfeld at the Bezalel Graduate Exhibition](https://stavtheodor.com/radar/noa-wiegenfeld/): August 6, 2026. At the Bezalel graduate exhibition, painter Noa Wiegenfeld makes photorealistic oil paintings with a synthetic, staged quality, where an intense orange spotlight reads like the lighting of a film set, and a curtain that conceals nothing becomes the image itself.
 - [Botero in New York at Sotheby's](https://stavtheodor.com/radar/botero-in-new-york/): July 29, 2026. A selling exhibition of rarely seen Fernando Botero works from his formative New York years, 1960 to 1973, when he crystallized the style later called Boterismo, created in partnership with The Botero Foundation and drawing many works from the artist's family collection.
-- [Three Exhibitions, Three Mediums, One Subject: Light](https://stavtheodor.com/radar/three-exhibitions-three-mediums/): July 21, 2026. Three shows closing soon in New York, in three different mediums, all of them about light: Sabine Marcelis's first United States solo Phases at Salon 94 Design (through July 29), Guimi You's first major New York solo When the Sun Shines Again at Lehmann Maupin (through August 14), and Lillian Bassman: Bazaar and Beyond at The Metropolitan Museum of Art (through July 26).
+- [Three Exhibitions, Three Mediums, One Subject: Light](https://stavtheodor.com/radar/three-exhibitions-three-mediums/): July 21, 2026. Three New York shows, in three mediums, all of them about light: Sabine Marcelis at Salon 94 Design, Guimi You at Lehmann Maupin, and Lillian Bassman at The Metropolitan Museum of Art.
+- [Carol Bove: A Retrospective at the Guggenheim](https://stavtheodor.com/radar/carol-bove-guggenheim/): July 19, 2026. Carol Bove's first museum survey fills the Guggenheim rotunda with more than 25 years of work, from monumental crumpled steel sculptures to early assemblages of driftwood, peacock feathers and books, arranged in reverse chronology up the spiral.
 - [In a Free State, curated by Doron Langberg and Salman Toor, at Luhring Augustine](https://stavtheodor.com/radar/in-a-free-state-luhring-augustine/): July 9, 2026. A group show of 34 works by 22 artists at Luhring Augustine, Tribeca, with a personal reflection on what the exhibition's framing of war and trauma leaves outside the frame, and notes on works by Oren Pinhassi and Jordan Nassar.
+- [Orientalism: Between Fact and Fantasy, at the Met](https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/): June 30, 2026. The Met's exhibition of Orientalism, set beside the Ottoman painter Osman Hamdi Bey, who used the same visual language to paint his own world from within.
+- [Giacometti at the Temple of Dendur, the Met](https://stavtheodor.com/radar/giacometti-dendur/): June 26, 2026. Seventeen Giacometti sculptures installed inside and around the Temple of Dendur at the Met.
 - [Fresh Paint Art Fair, Tel Aviv](https://stavtheodor.com/radar/fresh-paint-2026/): June 24, 2026. Fresh Paint's 14th edition, Israel's leading contemporary art and design fair, June 24 to 29, 2026.
 - [Three Exhibitions in New York](https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/): June 17, 2026. Fred Tomaselli at James Cohan Gallery, Whitney Bedford at Miles McEnery Gallery, and Arghavan Khosravi at Uffner and Liu Gallery.
 - [David Hockney, 1937 to 2026](https://stavtheodor.com/radar/david-hockney-1937-2026/): June 12, 2026. Tribute to David Hockney, who died June 11, 2026.
 - [Fifth Avenue, Where Jewelry Meets Art](https://stavtheodor.com/radar/fifth-avenue-jewelry-art/): June 12, 2026. Tiffany, Bulgari, and Chanel as unexpected contemporary art venues on Fifth Avenue.
 - [Clinamen at Park Avenue Armory](https://stavtheodor.com/radar/clinamen-park-avenue-armory/): June 9, 2026. Celeste Boursier-Mougenot's immersive sound installation on water, June 10 to August 26, 2026.
-- [Marcel Duchamp at MoMA](https://stavtheodor.com/radar/duchamp-moma/): May 28, 2026. Major Duchamp retrospective at the Museum of Modern Art, through August 22, 2026.
+- [Marcel Duchamp at MoMA](https://stavtheodor.com/radar/duchamp-moma/): May 28, 2026. Major Duchamp retrospective at the Museum of Modern Art.
+- [Pop: 1960s to Today, at the Guggenheim](https://stavtheodor.com/radar/guggenheim-pop/): May 28, 2026. Warhol, Lichtenstein, Kusama and contemporary artists in Pop: 1960s to Today at the Guggenheim.
 - [May, the Big Art Month in New York](https://stavtheodor.com/radar/may-big-art-month-nyc/): May 20, 2026. Gallery walk: Frick, Met, Gagosian, Hauser and Wirth, David Zwirner, Nino Mier Gallery.
 - [Welcome to Art Radar](https://stavtheodor.com/radar/welcome-art-radar/): May 19, 2026. Introduction to Art Radar and Stav Theodor's curatorial practice.
