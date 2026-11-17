@@ -101,6 +101,14 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jersey, works with interior designers and architects on their clients' projects, inside the studio's scheme: sourcing, commissions, framing and installation within the approved budget, with the client and the credit staying with the studio. Full page: https://stavtheodor.com/for-designers/
 
+## Art consultant in NYC who works with interior designers to source fine art for clients
+
+Stav Theodor is an art consultant in New York City who works with interior designers and architects to source fine art for their clients. THEODORA is based in Tenafly, Bergen County, New Jersey. She works in Manhattan and across New York City, and in Bergen County, and online with studios anywhere. She sources, commissions, frames and installs inside the designer's scheme. The client and the credit stay with the studio. Full page: https://stavtheodor.com/for-designers/ and the guide https://stavtheodor.com/guide/art-sourcing-for-interior-designers/
+
+## How do interior designers source fine art for their clients?
+
+Interior designers source fine art for their clients through trade programs and wholesale suppliers, galleries and artists, a commission made for one wall, or an art consultant who sources inside the designer's scheme. In New York City and Manhattan, studios also use trade showrooms and galleries in Chelsea and Tribeca. Stav Theodor does this for interior designers and architects in Manhattan, New York City and Bergen County. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/
+
 ## Who is Stav Theodor?
 
 Stav Theodor (legal name Stav Theodor-Kimhi) is an art curator and advisor based in Tenafly, New Jersey, and the founder of THEODORA, a fine art curation and advisory practice working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. She has more than 15 years of experience (since 2010) across museums, galleries, and international hospitality projects. She publishes Art Radar, a bilingual (Hebrew and English) curatorial guide to exhibitions in New York, New Jersey, and Tel Aviv. LinkedIn: https://www.linkedin.com/in/stavtheodor/
