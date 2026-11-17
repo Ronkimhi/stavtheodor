@@ -31,9 +31,9 @@
     },
     {
       "q_en": "Should a financial advisor display art they own?",
-      "a_en": "Yes, a financial advisor can display art they own, usually in their own office, where a personal work tells clients something true about them. Choose a work you can talk about for its story rather than its value, and do not hang a famous name as a trophy in the meeting space. Check that your insurance covers the work at the office, keep works on paper out of direct sun, and hang anything heavy on two hooks, into studs wherever the wall allows.",
+      "a_en": "Yes, a financial advisor can display art they own, usually in their own office, where a personal work tells clients something true about them. Choose a work you can talk about for its story rather than its value, and do not hang a famous name as a trophy in the meeting space. Check that your insurance covers the work at the office, keep works on paper out of direct sun, and hang anything heavy on two hooks, into studs wherever the wall allows. See also <a href=\"/guide/office-wall-art/\">Office wall art</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "האם יועץ פיננסי צריך להציג אמנות שבבעלותו?",
-      "a_he": "כן, יועץ פיננסי יכול להציג אמנות שבבעלותו, בדרך כלל במשרד שלו, שם עבודה אישית אומרת ללקוחות משהו אמיתי עליו. בחרו עבודה שאפשר לדבר עליה בזכות הסיפור שלה ולא בזכות השווי שלה, ואל תתלו שם מפורסם כמו גביע בחלל הפגישות. ודאו שהביטוח שלכם מכסה את העבודה במשרד, הרחיקו עבודות על נייר מאור שמש ישיר, ותלו כל דבר כבד על שני ווים, לתוך הניצבים שבקיר בכל מקום שהקיר מאפשר."
+      "a_he": "כן, יועץ פיננסי יכול להציג אמנות שבבעלותו, בדרך כלל במשרד שלו, שם עבודה אישית אומרת ללקוחות משהו אמיתי עליו. בחרו עבודה שאפשר לדבר עליה בזכות הסיפור שלה ולא בזכות השווי שלה, ואל תתלו שם מפורסם כמו גביע בחלל הפגישות. ודאו שהביטוח שלכם מכסה את העבודה במשרד, הרחיקו עבודות על נייר מאור שמש ישיר, ותלו כל דבר כבד על שני ווים, לתוך הניצבים שבקיר בכל מקום שהקיר מאפשר. ראו גם <a href=\"/guide/office-wall-art/\">אמנות לקירות המשרד</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     }
   ],
   "schema_type": "Article",
@@ -57,6 +57,6 @@
   ],
   "og_image": "/images/spaces/financial-advisor-office-art_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-06",
+  "date_modified": "2026-11-17",
   "before_after": "financial-advisor-office-art_hero"
 }

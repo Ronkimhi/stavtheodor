@@ -25,9 +25,9 @@
     },
     {
       "q_en": "How does art leasing work?",
-      "a_en": "Art leasing works like renting: a leasing company places artworks in your office for a set term in return for regular rent. Many programs include delivery, installation and a rotation of the works at agreed intervals, and some let rental payments count toward buying a work. Terms, insurance and early exit rules vary from company to company, so read the contract for the minimum term, who insures the works and what happens if you move.",
+      "a_en": "Art leasing works like renting: a leasing company places artworks in your office for a set term in return for regular rent. Many programs include delivery, installation and a rotation of the works at agreed intervals, and some let rental payments count toward buying a work. Terms, insurance and early exit rules vary from company to company, so read the contract for the minimum term, who insures the works and what happens if you move. See also <a href=\"/guide/office-wall-art/\">Office wall art</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "איך עובדת השכרת אמנות?",
-      "a_he": "השכרת אמנות עובדת כמו כל שכירות: חברת השכרה מציבה יצירות במשרד שלכם לתקופה קבועה, תמורת דמי שכירות שוטפים. תוכניות רבות כוללות משלוח, התקנה והחלפה של העבודות במועדים מוסכמים, וחלקן מאפשרות לזקוף את דמי השכירות לטובת קנייה של עבודה. התנאים, הביטוח וכללי היציאה המוקדמת משתנים מחברה לחברה, אז קראו בחוזה מהי תקופת ההתקשרות המינימלית, מי מבטח את העבודות ומה קורה אם אתם עוברים משרד."
+      "a_he": "השכרת אמנות עובדת כמו כל שכירות: חברת השכרה מציבה יצירות במשרד שלכם לתקופה קבועה, תמורת דמי שכירות שוטפים. תוכניות רבות כוללות משלוח, התקנה והחלפה של העבודות במועדים מוסכמים, וחלקן מאפשרות לזקוף את דמי השכירות לטובת קנייה של עבודה. התנאים, הביטוח וכללי היציאה המוקדמת משתנים מחברה לחברה, אז קראו בחוזה מהי תקופת ההתקשרות המינימלית, מי מבטח את העבודות ומה קורה אם אתם עוברים משרד. ראו גם <a href=\"/guide/office-wall-art/\">אמנות לקירות המשרד</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     },
     {
       "q_en": "How much does corporate art cost?",
@@ -62,6 +62,6 @@
   ],
   "og_image": "/images/spaces/buy-lease-or-commission-office-art_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-10",
+  "date_modified": "2026-11-17",
   "before_after": "buy-lease-or-commission-office-art_hero"
 }
