@@ -52,3 +52,26 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  # After the Pages deploy, tell IndexNow (Bing, and through it ChatGPT search and
+  # Perplexity) which HTML pages changed. The key file at the repo root is public
+  # by design. tools/indexnow.py waits until each URL answers 200, then POSTs one
+  # batch to https://api.indexnow.org/indexnow. A manual run with no previous SHA
+  # submits the sitemap URLs.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Submit changed URLs to IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            python3 tools/indexnow.py --all --wait 600
+          else
+            python3 tools/indexnow.py --since "$BEFORE" --wait 600
+          fi
