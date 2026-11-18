@@ -646,7 +646,10 @@ def contact_form(path='/', h='h3'):
     Added 2026-11-01 (Nov 1 report, T1), every field above unchanged: When (timeline, radio chips, optional, none
     checked, TIMELINES) directly after The project, and Who referred you? (referred_by, a text field, hidden and disabled
     in the markup) after What did you ask it?; form_js() shows and enables it only while A friend or client or A designer
-    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise."""
+    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise.
+    Added 2026-11-18 (Ron), every field above unchanged: Phone (phone, type tel, optional) after Email, a half-width
+    field like Your name and Email on the row below them; Formspree records it in Stav's mail like name and email.
+    It is the visitor's own number, collected only; generate_lead never carries it."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -670,6 +673,7 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('When', 'מתי')}</legend><div class="chips">{chips('timeline', TIMELINES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
