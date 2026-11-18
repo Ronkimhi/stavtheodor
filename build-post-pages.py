@@ -210,12 +210,132 @@ def post_ld(p):
     return out
 
 
+HE_BODY = '<div class="post-body" lang="he"'
+EN_BODY = '<div class="post-body post-body-en"'
+
+
+def english_first(inner):
+    """The English body before the Hebrew one in the page source (2026-11-18): the page opens in English, so the text
+    a crawler reads first is the one a reader sees first. content/posts.html keeps Hebrew first (read_posts relies on
+    it); the switch still shows one language at a time. Left as it is when either block is missing."""
+    i, j = inner.find(HE_BODY), inner.find(EN_BODY)
+    if i < 0 or j < i:
+        return inner
+    en = inner[j:]
+    en_block = en.rstrip()
+    return inner[:i] + en_block + '\n    ' + inner[i:j].rstrip() + en[len(en_block):]
+
+
+BYLINE = ('By <a href="/about/">Stav Theodor</a>, art curator. Written in Hebrew, with a full English translation.',
+          'מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.')
+DATE_HE = re.compile(r'<div class="post-date" data-l="he"[^>]*>.*?</div>', re.S)
+
+
+def with_byline(inner):
+    """Who wrote the post, under its date and outside the post body (2026-11-18): the name links to /about/."""
+    m = DATE_HE.search(inner)
+    if not m:
+        return inner
+    return inner[:m.end()] + f'\n    {T(*BYLINE, tag="p", cls="post-byline")}' + inner[m.end():]
+
+
+def page_titles():
+    """Every site page's (title_en, title_he) by its address, for the link-only notes: content/pages/*.json, and
+    /about/ from its built h1."""
+    out = {}
+    for f in glob.glob('content/pages/*.json'):
+        d = json.load(open(f, encoding='utf-8'))
+        out['/' + d['path'].strip('/') + '/'] = (d['title_en'], d.get('title_he') or d['title_en'])
+    if os.path.exists('about/index.html'):
+        h1 = re.search(r'<h1[^>]*>(.*?)</h1>', open('about/index.html', encoding='utf-8').read(), re.S)
+        if h1:
+            en = re.search(r'data-l="en"[^>]*>(.*?)</span>', h1.group(1), re.S)
+            he = re.search(r'data-l="he"[^>]*>(.*?)</span>', h1.group(1), re.S)
+            if en and he:
+                out['/about/'] = (H.unescape(en.group(1)), H.unescape(he.group(1)))
+    return out
+
+
+PAGE_TITLES = page_titles()
+
+
+def bridge_check():
+    """Every bridge target is a built page; a line links no site page but its own target (links to other posts are
+    allowed), and a line that does not link its target gets the target's titled link beside it."""
+    bad = []
+    for s, meta in RADAR["posts"].items():
+        b = meta.get("bridge")
+        if not b:
+            continue
+        t = b["target"]
+        if not os.path.exists(os.path.join(t.strip("/"), "index.html")):
+            bad.append(f"{s}: target {t} is not a built page")
+        for k in ("line_en", "line_he"):
+            if b.get(k) and not {h for h in sc.INTERNAL_HREF.findall(b[k]) if not h.startswith(sc.POST_OWN_PATHS)} <= {t}:
+                bad.append(f"{s}: {k} may link no site page but {t}")
+        if bool(b.get("line_en")) != bool(b.get("line_he")):
+            bad.append(f"{s}: line_en and line_he come as a pair")
+        if t not in sc.INTERNAL_HREF.findall(b.get("line_en", "")) and t not in PAGE_TITLES:
+            bad.append(f"{s}: no title known for {t}")
+    if bad:
+        raise SystemExit("content/radar.json bridges: " + "; ".join(bad))
+
+
+bridge_check()
+
+
+def body_links_check():
+    """Post bodies hold Stav's text only (2026-11-18): inside a post body an internal link may point to /radar/,
+    /images/ or /videos/; a link to any other page of the site belongs in content/radar.json (a bridge)."""
+    bad = []
+    for p in posts:
+        for lang in ("he", "en"):
+            bad += [f"{p['slug']} ({lang}): {h}" for h in sc.INTERNAL_HREF.findall(sc.post_body(p["article_inner"], lang))
+                    if not h.startswith(sc.POST_OWN_PATHS)]
+    if bad:
+        raise SystemExit("post bodies hold Stav's text only; put the link in content/radar.json: " + "; ".join(bad))
+
+
+body_links_check()
+
+
+def note_html(p):
+    """For your space (2026-11-18): under the post, outside Stav's text. The post's bridge line, then one link titled
+    as the target page is unless the line already links it, then a link to the hub of each of its topics that has one.
+    Nothing when there is neither."""
+    b = RADAR["posts"].get(p["slug"], {}).get("bridge")
+    parts = []
+    if b and b.get("line_en"):
+        parts.append(f'<div class="note-line">{T(b["line_en"], b["line_he"], tag="p")}</div>')
+    links = []
+    if b and b["target"] not in sc.INTERNAL_HREF.findall(b.get("line_en", "")):
+        te, th = PAGE_TITLES[b["target"]]
+        links.append(f'<a href="{b["target"]}">{T(H.escape(te), H.escape(th))}</a>')
+    for t in sc.post_topics(p["slug"]):
+        if t.get("hub"):
+            links.append(f'<a href="/radar/{t["slug"]}/">'
+                         f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " בראדאר אמנות")}</a>')
+    if links:  # the house "read next" links, as under Working with Stav: quiet, in the reader's case
+        parts.append('<div class="note-links readnext">' + ''.join(links) + '</div>')
+    if not parts:
+        return ''
+    return f'''
+<section class="section wrap tight">
+  <div class="radar-note reveal" id="for-your-space">
+    <p class="eyebrow">{T('For your space', 'לחלל שלכם')}</p>
+    {''.join(parts)}
+  </div>
+</section>
+'''
+
+
 def render_post_page(p, all_posts):
     permalink = f"{SITE}/radar/{p['slug']}/"
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
     article_inner = h1_title(article_inner, p)
+    article_inner = english_first(with_byline(article_inner))
     breadcrumb = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -234,7 +354,7 @@ def render_post_page(p, all_posts):
 <main class="wrap">
   <article class="{p['article_class']} article" id="{p['slug']}">{article_inner}</article>
 </main>
-{working_with_stav(p)}
+{note_html(p)}{working_with_stav(p)}
 <section class="section wrap">
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
@@ -262,7 +382,10 @@ def render_post_page(p, all_posts):
 
 for p in posts:
     out_path = os.path.join(OUT_DIR, p["slug"], "index.html")
-    sc.write(out_path, render_post_page(p, posts))
+    page = render_post_page(p, posts)
+    if EN_BODY in page and HE_BODY in page and page.find(EN_BODY) > page.find(HE_BODY):
+        raise SystemExit(f"build-post-pages: {out_path}: the English body must come before the Hebrew one")
+    sc.write(out_path, page)
     print(f"  wrote {out_path}")
 
 
