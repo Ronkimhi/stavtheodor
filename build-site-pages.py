@@ -257,6 +257,8 @@ def radar_html(p):
         here = "/" + p["path"].strip("/") + "/"
         chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
         chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+    order = {q["slug"]: i for i, q in enumerate(posts())}
+    chosen = sorted(chosen, key=lambda q: order[q["slug"]])  # a dated timeline reads newest first
     return f'''
 <section class="section wrap tight">
   <div class="head reveal">
