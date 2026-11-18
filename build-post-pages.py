@@ -260,7 +260,8 @@ PAGE_TITLES = page_titles()
 
 
 def bridge_check():
-    """Every bridge target is a built page, and a line's link points to its own target."""
+    """Every bridge target is a built page; a line links no site page but its own target (links to other posts are
+    allowed), and a line that does not link its target gets the target's titled link beside it."""
     bad = []
     for s, meta in RADAR["posts"].items():
         b = meta.get("bridge")
@@ -270,11 +271,11 @@ def bridge_check():
         if not os.path.exists(os.path.join(t.strip("/"), "index.html")):
             bad.append(f"{s}: target {t} is not a built page")
         for k in ("line_en", "line_he"):
-            if b.get(k) and {h for h in sc.INTERNAL_HREF.findall(b[k]) if not h.startswith(sc.POST_OWN_PATHS)} != {t}:
-                bad.append(f"{s}: {k} must link {t} and no other site page")
+            if b.get(k) and not {h for h in sc.INTERNAL_HREF.findall(b[k]) if not h.startswith(sc.POST_OWN_PATHS)} <= {t}:
+                bad.append(f"{s}: {k} may link no site page but {t}")
         if bool(b.get("line_en")) != bool(b.get("line_he")):
             bad.append(f"{s}: line_en and line_he come as a pair")
-        if not b.get("line_en") and t not in PAGE_TITLES:
+        if t not in sc.INTERNAL_HREF.findall(b.get("line_en", "")) and t not in PAGE_TITLES:
             bad.append(f"{s}: no title known for {t}")
     if bad:
         raise SystemExit("content/radar.json bridges: " + "; ".join(bad))
@@ -299,23 +300,23 @@ body_links_check()
 
 
 def note_html(p):
-    """For your space (2026-11-18): under the post, outside Stav's text. The post's bridge line (it carries its own
-    link) or one arrow link titled as the target page is, then a link to the hub of each of its topics that has one.
+    """For your space (2026-11-18): under the post, outside Stav's text. The post's bridge line, then one link titled
+    as the target page is unless the line already links it, then a link to the hub of each of its topics that has one.
     Nothing when there is neither."""
     b = RADAR["posts"].get(p["slug"], {}).get("bridge")
     parts = []
     if b and b.get("line_en"):
         parts.append(f'<div class="note-line">{T(b["line_en"], b["line_he"], tag="p")}</div>')
     links = []
-    if b and not b.get("line_en"):
+    if b and b["target"] not in sc.INTERNAL_HREF.findall(b.get("line_en", "")):
         te, th = PAGE_TITLES[b["target"]]
-        links.append(f'<a class="arrow" href="{b["target"]}"><span class="ln"></span>{T(H.escape(te), H.escape(th))}</a>')
+        links.append(f'<a href="{b["target"]}">{T(H.escape(te), H.escape(th))}</a>')
     for t in sc.post_topics(p["slug"]):
         if t.get("hub"):
-            links.append(f'<a class="arrow" href="/radar/{t["slug"]}/"><span class="ln"></span>'
+            links.append(f'<a href="/radar/{t["slug"]}/">'
                          f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " בראדאר אמנות")}</a>')
-    if links:
-        parts.append('<div class="note-links">' + ''.join(links) + '</div>')
+    if links:  # the house "read next" links, as under Working with Stav: quiet, in the reader's case
+        parts.append('<div class="note-links readnext">' + ''.join(links) + '</div>')
     if not parts:
         return ''
     return f'''
