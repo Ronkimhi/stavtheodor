@@ -270,8 +270,8 @@ def bridge_check():
         if not os.path.exists(os.path.join(t.strip("/"), "index.html")):
             bad.append(f"{s}: target {t} is not a built page")
         for k in ("line_en", "line_he"):
-            if b.get(k) and set(sc.INTERNAL_HREF.findall(b[k])) != {t}:
-                bad.append(f"{s}: {k} must link {t} and nothing else")
+            if b.get(k) and {h for h in sc.INTERNAL_HREF.findall(b[k]) if not h.startswith(sc.POST_OWN_PATHS)} != {t}:
+                bad.append(f"{s}: {k} must link {t} and no other site page")
         if bool(b.get("line_en")) != bool(b.get("line_he")):
             bad.append(f"{s}: line_en and line_he come as a pair")
         if not b.get("line_en") and t not in PAGE_TITLES:
@@ -281,6 +281,21 @@ def bridge_check():
 
 
 bridge_check()
+
+
+def body_links_check():
+    """Post bodies hold Stav's text only (2026-11-18): inside a post body an internal link may point to /radar/,
+    /images/ or /videos/; a link to any other page of the site belongs in content/radar.json (a bridge)."""
+    bad = []
+    for p in posts:
+        for lang in ("he", "en"):
+            bad += [f"{p['slug']} ({lang}): {h}" for h in sc.INTERNAL_HREF.findall(sc.post_body(p["article_inner"], lang))
+                    if not h.startswith(sc.POST_OWN_PATHS)]
+    if bad:
+        raise SystemExit("post bodies hold Stav's text only; put the link in content/radar.json: " + "; ".join(bad))
+
+
+body_links_check()
 
 
 def note_html(p):
