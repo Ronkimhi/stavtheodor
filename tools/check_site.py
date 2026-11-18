@@ -320,9 +320,10 @@ SPLIT_ENTITY = re.compile(r'&#?<|&<span')
 for path in walk(('.html',)):
     if path.split(os.sep)[0] in ('templates', 'content'):
         continue
-    m = SPLIT_ENTITY.search(re.sub(r'<script.*?</script>', '', read(path), flags=re.S))
+    text = re.sub(r'<script.*?</script>', '', read(path), flags=re.S)
+    m = SPLIT_ENTITY.search(text)
     if m:
-        fail('entities', f'{path}: split entity near {read(path)[max(0, m.start() - 30):m.end() + 30]!r}')
+        fail('entities', f'{path}: split entity near {text[max(0, m.start() - 30):m.end() + 30]!r}')
 
 
 # ---- dashes and phones, over every text file the site ships or builds from
