@@ -248,15 +248,26 @@ def described(p):
 
 
 def radar_html(p):
-    """From Art Radar, on every article page: the posts named in radar_posts (in that order),
-    or the three newest. Same timeline markup as the homepage and the post pages."""
+    """From Art Radar, on every article page: the posts named in radar_posts (in that order), else (2026-11-18) up to
+    two posts that point to this page (site_chrome.bridge_target), newest first, then the newest posts, three in all.
+    Same timeline markup as the homepage and the post pages."""
     by = {q["slug"]: q for q in posts()}
-    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by] or posts()[:3]
+    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by]
+    if not chosen:
+        here = "/" + p["path"].strip("/") + "/"
+        chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
+        chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+    order = {q["slug"]: i for i, q in enumerate(posts())}
+    chosen = sorted(chosen, key=lambda q: order[q["slug"]])  # a dated timeline reads newest first
+    # radar_topic (2026-11-18): the arrow goes to that topic's hub in place of All posts, while the topic has one
+    topic = next((t for t in sc.read_radar_meta()["topics"] if t["slug"] == p.get("radar_topic") and t.get("hub")), None)
+    arrow = (f'<a class="arrow" href="/radar/{topic["slug"]}/"><span class="ln"></span>{T(H.escape(topic["label_en"]), H.escape(topic["label_he"]))}</a>'
+             if topic else f'<a class="arrow" href="/radar/"><span class="ln"></span>{T("All posts", "כל הפוסטים")}</a>')
     return f'''
 <section class="section wrap tight">
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
-    <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
+    {arrow}
   </div>
   <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide", alts=described(p))}
   </div>
@@ -620,7 +631,7 @@ def render_project_page(p, all_pages, projects):
     {related_html(p, all_pages, exclude_projects=True)}
   </div>
 </section>
-'''
+{radar_html(p) if p.get("radar_posts") else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og))
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())

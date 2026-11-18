@@ -262,10 +262,11 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
    - Hebrew body block AND full English translation block (post-body-en). Both. Always.
    - NEVER into index.html (generated; the build stops if a post is there)
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
-3. python3 build.py
-4. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
-5. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
-6. gh auth status  →  confirm active account = Ronkimhi
-7. git add -A && git commit -m "Add post: ..." && git push origin main
-8. curl stavtheodor.com/radar/slug/  →  200, correct title (allow ~10 min CDN cache)
+3. Add the post's slug to its topics in content/radar.json (or to no_topic); the build stops on a post in neither
+4. python3 build.py
+5. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
+6. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
+7. gh auth status  →  confirm active account = Ronkimhi
+8. git add -A && git commit -m "Add post: ..." && git push origin main
+9. curl stavtheodor.com/radar/slug/  →  200, correct title (allow ~10 min CDN cache)
 ```

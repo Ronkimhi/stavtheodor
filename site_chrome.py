@@ -46,6 +46,9 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
 # script, no pop-up and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
+# Signup form switch: Art Radar by email (2026-11-18), radar_subscribe(). While False (or FORM_ENDPOINT is empty) no page
+# carries the form or its script.
+RADAR_SUBSCRIBE = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -646,7 +649,13 @@ def contact_form(path='/', h='h3'):
     Added 2026-11-01 (Nov 1 report, T1), every field above unchanged: When (timeline, radio chips, optional, none
     checked, TIMELINES) directly after The project, and Who referred you? (referred_by, a text field, hidden and disabled
     in the markup) after What did you ask it?; form_js() shows and enables it only while A friend or client or A designer
-    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise."""
+    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise.
+    Added 2026-11-18 (Ron), every field above unchanged: Phone (phone, type tel, optional) after Email, a half-width
+    field like Your name and Email on the row below them; Formspree records it in Stav's mail like name and email.
+    It is the visitor's own number, collected only; generate_lead never carries it.
+    Added 2026-11-18 (Art Radar inquiry link): artist and source_post, hidden and disabled in the markup, so an ordinary
+    inquiry never posts them; form_js() enables and fills them only when the form was opened from an Art Radar inquiry link
+    (data-ask) on an Art Radar post or hub, and clears and disables them again for any other opening and after a send."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -670,10 +679,13 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('When', 'מתי')}</legend><div class="chips">{chips('timeline', TIMELINES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
+      <input type="hidden" name="artist" value="" disabled>
+      <input type="hidden" name="source_post" value="" disabled>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="referrer" value="">
@@ -696,6 +708,67 @@ def contact_form(path='/', h='h3'):
       </div>
     </div>
     </div>'''
+
+
+SUBSCRIBE_JS = '''<script>
+(function () {
+  /* Art Radar by email (2026-11-18): the signup form posts with fetch and Accept: application/json, as the contact
+     form does. lang says which language was on screen. On success the thanks line takes the form's place and GA4
+     gets radar_subscribe with where the form sits and the page path, never the address; on any other answer the
+     error line shows. Without JavaScript the plain POST works and Formspree shows its own page. */
+  document.querySelectorAll('form.radar-sub').forEach(function (f) {
+    var box = f.closest('.radar-sub-box');
+    var err = box.querySelector('.sub-error'), done = box.querySelector('.sub-thanks');
+    f.querySelector('[name=page]').value = location.pathname;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (f.classList.contains('sending')) { return; }
+      f.classList.add('sending');
+      err.hidden = true;
+      f.querySelector('[name=lang]').value = document.body.classList.contains('lang-he') ? 'he' : 'en';
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) { throw new Error(r.status); }
+          f.hidden = true;
+          done.hidden = false;
+          if (window.gtag) { gtag('event', 'radar_subscribe', { link_location: f.getAttribute('data-loc') || 'page', page_path: location.pathname }); }
+        })
+        .catch(function () { f.classList.remove('sending'); err.hidden = false; });
+    });
+  });
+})();
+</script>'''
+
+
+def radar_subscribe(loc, path, whatsapp=False):
+    """Art Radar by email (2026-11-18): one email field and Subscribe, posted to the Formspree endpoint with its own
+    _subject and form_type, so the mail Stav gets says it is a signup. Its own class (form.radar-sub), so form_js()
+    never binds it and generate_lead never fires for it. '' while RADAR_SUBSCRIBE is False or FORM_ENDPOINT is empty.
+    loc: where it sits (radar-post, radar-archive, radar-hub). whatsapp: a quiet link to the group after it."""
+    if not (RADAR_SUBSCRIBE and FORM_ENDPOINT):
+        return ''
+    mail = mail_href()
+    wa = (f'<div class="readnext"><a href="{WHATSAPP}" target="_blank" rel="noopener">'
+          f'{T("Or join the WhatsApp group", "או הצטרפו לקבוצת הוואטסאפ")}</a></div>') if whatsapp else ''
+    return f'''
+  <div class="radar-sub-box reveal" aria-live="polite">
+    <p class="eyebrow">{T('Art Radar by email', 'ראדאר אמנות במייל')}</p>
+    {T('I send one email a month with the new posts.', 'פעם בחודש אני שולחת מייל אחד עם הפוסטים החדשים.', tag='p', cls='sub-line')}
+    <form class="radar-sub" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="{loc}">
+      <input type="hidden" name="_subject" value="Art Radar by email: new subscriber">
+      <input type="hidden" name="form_type" value="art-radar-monthly">
+      <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <input type="hidden" name="lang" value="en">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>{T('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" dir="ltr" required></label>
+      <button type="submit">{T('Subscribe', 'הרשמה')}</button>
+      {T('You will get Art Radar from me by email, once a month. To stop, reply to any of the emails.', 'תקבלו ממני את ראדאר אמנות במייל, פעם בחודש. כדי להפסיק, השיבו לאחד המיילים.', tag='p', cls='sub-consent')}
+      <p class="sub-error" hidden><span data-l="en">Your signup did not go through. Please write to me at <a href="{mail}" dir="ltr">{EMAIL}</a>.</span><span data-l="he" dir="rtl">ההרשמה לא הצליחה. כתבו לי בכתובת <a href="{mail}" dir="ltr">{EMAIL}</a>.</span></p>
+    </form>
+    <div class="sub-thanks" hidden>{T('Thank you. You are on the list.', 'תודה. נרשמתם.', tag='p')}</div>
+    {wa}
+  </div>
+  {SUBSCRIBE_JS}'''
 
 
 # The form's "I am a" choices (value and English label, Hebrew label), in Ron's order.
@@ -793,6 +866,23 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var subj = f.querySelector('[name=_subject]');
   function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
   setSubject();
+  /* The Art Radar inquiry link (2026-11-18): WRITE_JS sends theodora:ask to the pop-up's form on every opening, with
+     {artist, post, slug, msg} for an Art Radar inquiry link (data-ask) and null for any other Write to Stav button. With a
+     context, artist and source_post are enabled and filled, the subject names the artist and the post, and the
+     message is prefilled only while the box is empty or still holds the last prefill. Without one, both are emptied
+     and disabled again and an untouched prefill is removed, so an ordinary opening never carries an artist. */
+  var artistIn = f.querySelector('[name=artist]'), postIn = f.querySelector('[name=source_post]');
+  var msgIn = f.querySelector('[name=message]');
+  var askCtx = null, lastFill = '';
+  function setAsk(d) {
+    askCtx = d || null;
+    if (artistIn) { artistIn.value = d ? (d.artist || '') : ''; artistIn.disabled = !(d && d.artist); }
+    if (postIn) { postIn.value = d ? (d.post || '') : ''; postIn.disabled = !d; }
+    if (msgIn && (msgIn.value === '' || msgIn.value === lastFill)) { msgIn.value = d ? (d.msg || '') : ''; lastFill = msgIn.value; }
+    if (d) { if (subj) { subj.value = 'Art Radar inquiry: ' + (d.artist || 'a post') + ' (' + d.post + ')'; } }
+    else { setSubject(); }
+  }
+  f.addEventListener('theodora:ask', function (e) { setAsk(e.detail); });
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -852,12 +942,16 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
+        var lead = { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname };
+        if (askCtx) { lead.lead_context = 'radar_ask'; lead.post_slug = askCtx.slug || ''; }
         f.reset();
+        lastFill = '';
+        setAsk(null);
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         setVisit();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', lead); }
       })
       .catch(function () {
         f.classList.remove('sending');
@@ -945,6 +1039,24 @@ WRITE_JS = '''<script>
       document.body.classList.remove('menu-open');
       if (mb) { mb.setAttribute('aria-expanded', 'false'); opener = mb; }
     }
+    /* The Art Radar inquiry link (2026-11-18): tell the form which artist and post this opening is about, or null. */
+    var cf = box.querySelector('form.contact-form');
+    if (cf) {
+      var d = null;
+      if (from.hasAttribute && from.hasAttribute('data-ask')) {
+        var he = document.body.classList.contains('lang-he');
+        d = { artist: from.getAttribute('data-artist') || '', post: from.getAttribute('data-post') || '',
+              slug: from.getAttribute('data-post-slug') || '', msg: from.getAttribute(he ? 'data-msg-he' : 'data-msg-en') || '' };
+      }
+      cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
+    }
+    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
+       the default Write to Stav twins, kept from the markup on the first opening. */
+    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
+      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
+      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
+      s.textContent = own || s.getAttribute('data-default');
+    });
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
@@ -974,6 +1086,9 @@ WRITE_JS = '''<script>
        with where the button sits (data-loc, else page) and the page path only. */
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      if (a.hasAttribute('data-ask')) {
+        window.gtag('event', 'radar_inquiry', { post_slug: a.getAttribute('data-post-slug') || '', link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      }
     }
   }, true);
 })();
@@ -989,7 +1104,7 @@ def write_ui():
     return f'''<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
   <div class="wm-panel">
     <button type="button" class="wm-x" data-close>{WRITE_X}<span class="vh">{T('Close', 'סגירה')}</span></button>
-    <p class="eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
+    <p class="eyebrow wm-eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
     <h2 class="serif wm-head" id="write-modal-title">{T(*CONTACT_HEAD)}</h2>
     {form}
   </div>
@@ -1386,6 +1501,53 @@ def read_posts(path=POSTS_FILE):
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
     return src, posts
+
+
+RADAR_FILE = os.path.join(ROOT, 'content', 'radar.json')
+_radar_meta = None
+
+
+def read_radar_meta():
+    """content/radar.json, the Art Radar sidecar (2026-11-18): topics (each a list of post slugs), no_topic (posts that
+    belong to none), posts.<slug> (optional seo_title, the <title> before " · THEODORA") and hubs. Read once per build
+    by build-post-pages.py and build-site-pages.py."""
+    global _radar_meta
+    if _radar_meta is None:
+        d = json.load(open(RADAR_FILE, encoding='utf-8'))
+        for k, v in (('topics', []), ('no_topic', []), ('posts', {}), ('hubs', {})):
+            d.setdefault(k, v)
+        _radar_meta = d
+    return _radar_meta
+
+
+def post_topics(slug):
+    """The topics (dicts from content/radar.json) a post belongs to, in file order."""
+    return [t for t in read_radar_meta()['topics'] if slug in t['posts']]
+
+
+def post_body(inner, lang):
+    """The inner HTML of a post's English ('en') or Hebrew ('he') body block, or ''."""
+    rx = (r'<div class="post-body post-body-en"[^>]*>(.*)$' if lang == 'en'
+          else r'<div class="post-body" lang="he"[^>]*>(.*?)<div class="post-body post-body-en"')
+    m = re.search(rx, inner, flags=re.S)
+    return m.group(1) if m else ''
+
+
+INTERNAL_HREF = re.compile(r'<a\b[^>]*\bhref="(/[^"#?]*)')
+POST_OWN_PATHS = ('/radar/', '/images/', '/videos/')
+
+
+def bridge_target(post):
+    """The site page a post points readers to: posts.<slug>.bridge.target in content/radar.json when the key is there
+    (None when it is null), else the first internal link in the English body that is not to /radar/, /images/ or
+    /videos/ (the closing lines added on 2026-11-01), else None."""
+    meta = read_radar_meta()['posts'].get(post['slug'], {})
+    if 'bridge' in meta:
+        return (meta['bridge'] or {}).get('target')
+    for href in INTERNAL_HREF.findall(post_body(post['article_inner'], 'en')):
+        if not href.startswith(POST_OWN_PATHS):
+            return href
+    return None
 
 
 def month_labels(post):

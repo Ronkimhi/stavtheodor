@@ -1,96 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stavtheodor.com/radar/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/israeli-artists/</loc>
+    <lastmod>2026-11-18T20:19:10+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/november-new-york-grace-carney-hannah-levy/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-02-november-new-york-grace-carney-hannah-levy-grace-carney.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-02-november-new-york-grace-carney-hannah-levy-hannah-levy.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/basquiat-blue-ribbon-princeton/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-21-basquiat-blue-ribbon-princeton.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/chelsea-emily-mae-smith-sugimoto-rondinone/</loc>
     <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-smith-foot-match.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-smith-still-life.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-smith-grapes.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-sugimoto-lions.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-sugimoto-byobu.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-rondinone-waterfall.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/october-in-new-york-museums/</loc>
     <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-krasner-studio.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-pollock-studio.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-krasner-painting.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-pollock-painting.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-donatello-tomb.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-siena-bronze.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-bellmer-poupee.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-05-october-in-new-york-museums-surrealist-glass-book.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/seven-israeli-works-nathan-zach/</loc>
     <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-cohen.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-armoni.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-landau.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-farfuri.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-hefetz.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-noy.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-30-seven-israeli-works-nathan-zach-dolinger.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/soho-lerma-ackermann/</loc>
     <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-23-soho-lerma-ackermann-installation.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-23-soho-lerma-ackermann.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/zoya-cherkassky-american-cooking/</loc>
     <lastmod>2026-09-17</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-17-zoya-cherkassky-american-cooking.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/</loc>
     <lastmod>2026-09-08</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-08-ruth-patir-jewish-museum.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/four-tribeca-galleries-september-2026/</loc>
     <lastmod>2026-09-02</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-cragg.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-cragg-vanderbilt.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-locke-bust.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-locke-certificate.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-joseph.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-02-four-tribeca-galleries-september-2026-savdie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/pool-in-israeli-art/</loc>
     <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-18-pool-in-israeli-art-lezhetic.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-18-pool-in-israeli-art-levy.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-18-pool-in-israeli-art-shochat.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-18-pool-in-israeli-art-fainaru.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-18-pool-in-israeli-art-koketit.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/three-tel-aviv-shows/</loc>
     <lastmod>2026-08-13</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-siegel-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-siegel-2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-nir-hod.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-sledsens.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-darvish-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-13-three-tel-aviv-shows-darvish-2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/oren-fischer-hallel/</loc>
     <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-09-oren-fischer-hallel-storefront.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-09-oren-fischer-hallel-crowd.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/noa-wiegenfeld/</loc>
     <lastmod>2026-08-06</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-06-noa-wiegenfeld-figure.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-08-06-noa-wiegenfeld-curtain.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/tom-fima/</loc>
     <lastmod>2026-07-30</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-30-tom-fima-group.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-30-tom-fima-sheet.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-30-tom-fima-gallery.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/botero-in-new-york/</loc>
     <lastmod>2026-07-29</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-29-botero-in-new-york-sculpture.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-29-botero-in-new-york-still-life.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-29-botero-in-new-york-figure.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/three-exhibitions-three-mediums/</loc>
     <lastmod>2026-07-21</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-21-three-exhibitions-three-mediums-marcelis.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-21-three-exhibitions-three-mediums-guimi-you.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-21-three-exhibitions-three-mediums-bassman.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/carol-bove-guggenheim/</loc>
     <lastmod>2026-07-19</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-19-carol-bove-guggenheim-steel.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-19-carol-bove-guggenheim-assemblage.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/in-a-free-state-luhring-augustine/</loc>
     <lastmod>2026-07-09</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-09-in-a-free-state-luhring-augustine-installation.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-09-in-a-free-state-luhring-augustine-pinhassi.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-07-09-in-a-free-state-luhring-augustine-nassar.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/orientalism-between-fact-and-fantasy/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-30-orientalism-between-fact-and-fantasy-ingres.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-30-orientalism-between-fact-and-fantasy-osman-hamdi-bey.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/giacometti-dendur/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-26-giacometti-walking-woman-dendur.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/fresh-paint-2026/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-26-fresh-paint-2026.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/three-exhibitions-nyc-june-2026/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-17-tomaselli-collage.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-17-tomaselli-garden.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-17-getty-irwin-garden.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-17-bedford-landscape.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-17-khosravi-what-remains.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/david-hockney-1937-2026/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-hockney-pool.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/fifth-avenue-jewelry-art/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-fifth-avenue-basquiat-campaign.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-fifth-avenue-tiffany-flagship.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-fifth-avenue-tiffany-lamp.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-fifth-avenue-warhol-venus.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-12-fifth-avenue-chanel.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/clinamen-park-avenue-armory/</loc>
@@ -99,14 +345,32 @@
   <url>
     <loc>https://stavtheodor.com/radar/living-with-art-montclair/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-04-montclair-shaffer.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-04-montclair-sherman.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-06-04-montclair-goldin.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/duchamp-moma/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-28-duchamp-fountain.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-28-duchamp-nude.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/guggenheim-pop/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-28-guggenheim-pop.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/library-museum-passes/</loc>
@@ -119,6 +383,9 @@
   <url>
     <loc>https://stavtheodor.com/radar/pollock-record/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-24-pollock.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/brancusi-christies/</loc>
@@ -127,9 +394,30 @@
   <url>
     <loc>https://stavtheodor.com/radar/may-big-art-month-nyc/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-frick-gainsborough.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-met-costume-art.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-gagosian-frankenthaler.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-hauser-wirth-baez.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-zwirner-richter.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-nino-mier-allen.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/welcome-art-radar/</loc>
     <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-05-20-galleries-1.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>

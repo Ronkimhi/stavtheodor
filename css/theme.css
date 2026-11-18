@@ -677,6 +677,42 @@
   .article { max-width: 900px; padding-top: clamp(28px, 3vw, 40px); }
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .post-date[data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .post-byline { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); }  /* who wrote the post, under its date (2026-11-18) */
+  .post-byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+  .post-byline a:hover { color: #C9A46B; }
+  .radar-note { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 860px; border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }  /* For your space, under a post (2026-11-18) */
+  .radar-note .note-line p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--soft); max-width: 680px; }
+  .radar-note .note-line a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-note .note-line a:hover { color: #C9A46B; }
+  .radar-note .note-links { display: flex; flex-direction: column; gap: 12px; }
+  body.lang-he .radar-note, body.lang-he .radar-note .note-links { align-items: flex-end; }  /* Hebrew: eyebrow, line and link share the right edge */
+  body.lang-he .radar-note .note-links a { align-self: flex-end; text-align: right; }
+  .hub-artists .hub-artist { margin: 0 0 40px; }  /* a topic hub's artist index (2026-11-18): name, Stav's sentence, the post */
+  .hub-artists .hub-artist h3 { font-size: clamp(22px, 2.2vw, 28px); margin: 0 0 6px; }
+  .hub-artists .prose .hub-artist blockquote { font-size: 20px; line-height: 1.45; margin: 10px 0 12px; }
+  .hub-artists .hub-post { font-size: 15px; margin: 0; }
+  @media (min-width: 1100px) { .hub-artists .prose { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; } }  /* the artist index in two columns on a wide screen */
+  .hub-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 12px; padding-top: 40px; }  /* the topic hubs, above the archive's timeline */
+  /* Art Radar by email (2026-11-18, site_chrome.radar_subscribe): one email field and Subscribe, the contact form's underline input and button */
+  .radar-sub-box { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; max-width: 680px; margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }
+  .radar-sub-box .sub-line { margin: 0; font-size: 18px; line-height: 1.6; color: var(--soft); }
+  .radar-sub { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; width: 100%; }
+  .radar-sub[hidden] { display: none; }  /* after a signup the thanks line takes its place */
+  .radar-sub-box ~ .hub-links { padding-top: 72px; }  /* the archive's topic links start clear of the signup */
+  .radar-sub label { flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .radar-sub label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
+  .radar-sub input[type=email] { display: block; width: 100%; font-family: var(--sans); font-size: 17px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.36); border-radius: 0; padding: 10px 0 12px; }
+  .radar-sub input[type=email]:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
+  .radar-sub button { font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--bg); background: var(--ink); border: 1px solid var(--ink); border-radius: 0; padding: 16px 32px; cursor: pointer; }
+  .radar-sub button [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 16px; }
+  .radar-sub button:hover { background: transparent; color: var(--ink); }
+  .radar-sub .sub-consent, .radar-sub .sub-error { flex: 1 1 100%; margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
+  .radar-sub .sub-error a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-sub-box .sub-thanks p { margin: 0; font-size: 18px; color: var(--ink); }
+  body.lang-he .radar-sub-box { align-items: flex-end; }
+  body.lang-he .radar-sub { direction: rtl; }  /* Hebrew: the field, the button and the lines start on the right */
+  .radar-sub input[type=email] { text-align: left; }
+  body.lang-he .radar-sub-box .readnext a { align-self: flex-end; }
   .post-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 14px 0 36px; text-wrap: balance; }
   .post-title[data-l="he"], .post-title-he, .post-title [data-l="he"] { font-family: var(--he); letter-spacing: 0; }
   .post-title-he { direction: rtl; }
@@ -1033,6 +1069,7 @@
   .wm-x { position: absolute; top: 10px; inset-inline-end: 10px; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: var(--muted); cursor: pointer; transition: color .25s; }
   .wm-x svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
   .wm-x:hover { color: var(--ink); }
+  .wm-panel .wm-eyebrow { padding-inline-end: 44px; }  /* an inquiry link's longer eyebrow (2026-11-18) stays clear of the close button */
   .wm-x:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
   .wm-panel > .eyebrow { margin-bottom: 16px; }
   .wm-head { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--ink); padding-inline-end: 36px; margin-bottom: 32px; text-wrap: balance; }
