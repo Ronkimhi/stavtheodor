@@ -8,6 +8,7 @@
   "meta_description": "For the Tel Aviv home of singer and actress Roni Daloomi, three joyful, minimalist works by two contemporary Israeli artists. Visual candy, by Stav Theodor.",
   "lead_en": "For the Tel Aviv home of singer and actress Roni Daloomi, I selected three artworks by two contemporary Israeli artists: joyful, minimalist pieces that reflect her optimistic spirit. Visual candy, in two words.",
   "lead_he": "לביתה בתל אביב של הזמרת והשחקנית רוני דלומי בחרתי שלוש עבודות של שני אמנים ישראלים עכשוויים: יצירות שמחות ומינימליסטיות שמשקפות את הרוח האופטימית שלה. ממתק חזותי, בשתי מילים.",
+  "lead_write": true,
   "hero_image": {
     "src": "/images/projects/roni.jpg",
     "alt_en": "The Tel Aviv home of Roni Daloomi: a stool by the keyboard beside a minimalist painting of small figures, the kitchen with its pink banquette, and two of the artworks",
@@ -26,5 +27,11 @@
     "advisory/starting-an-art-collection"
   ],
   "og_image": "/images/projects/roni.jpg",
+  "radar_posts": [
+    "tom-fima",
+    "pool-in-israeli-art",
+    "zoya-cherkassky-american-cooking"
+  ],
+  "radar_topic": "israeli-artists",
   "date": "2026-09-06"
 }

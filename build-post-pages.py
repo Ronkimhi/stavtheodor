@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+from html.parser import HTMLParser
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import site_chrome as sc
@@ -29,6 +30,26 @@ OUT_DIR = 'radar'
 sc.guard_index()
 html, posts = sc.read_posts()
 print(f"Found {len(posts)} posts")
+RADAR = sc.read_radar_meta()
+BY_SLUG = {p["slug"]: p for p in posts}
+
+
+def radar_meta_check():
+    """content/radar.json names only real posts, and every post sits in a topic or in no_topic (2026-11-18)."""
+    bad = []
+    named = [s for t in RADAR["topics"] for s in t["posts"]] + RADAR["no_topic"] + list(RADAR["posts"])
+    bad += [f"unknown post slug {s!r}" for s in named if s not in BY_SLUG]
+    homed = {s for t in RADAR["topics"] for s in t["posts"]} | set(RADAR["no_topic"])
+    bad += [f"post {s!r} is in no topic and not in no_topic" for s in BY_SLUG if s not in homed]
+    for s, meta in RADAR["posts"].items():
+        st = meta.get("seo_title")
+        if st and len(f"{st} · THEODORA") > 60:
+            bad.append(f"seo_title of {s!r} is over 60 characters with the suffix")
+    if bad:
+        raise SystemExit("content/radar.json: " + "; ".join(bad))
+
+
+radar_meta_check()
 
 # ---- 1. Rewrite JSON-LD url/mainEntityOfPage in content/posts.html to real permalinks ----
 # Safe to re-run: posts already using the real permalink are left untouched.
@@ -96,12 +117,299 @@ def working_with_stav(p):
 '''
 
 
+POS = {p["slug"]: i for i, p in enumerate(posts)}  # file order, newest first
+MORE_N = 6
+MIN_INBOUND = 4
+
+
+def topic_slugs(slug):
+    return {t["slug"] for t in sc.post_topics(slug)}
+
+
+def related_posts(all_posts):
+    """The "More from Art Radar" list of every post (2026-11-18, replacing "the six newest" on every page): up to
+    three posts that share a topic with it, nearest in date first; the post published just before it and the one just
+    after; then, to six, the posts with the fewest links so far, those sharing a topic first. Shown newest first."""
+    picks = {}
+    for p in all_posts:
+        mine = topic_slugs(p["slug"])
+        same = sorted((o for o in all_posts if o is not p and mine & topic_slugs(o["slug"])),
+                      key=lambda o: (abs(POS[o["slug"]] - POS[p["slug"]]), POS[o["slug"]]))
+        out = same[:3]
+        i = POS[p["slug"]]
+        for j in (i + 1, i - 1):
+            if 0 <= j < len(all_posts) and all_posts[j] not in out:
+                out.append(all_posts[j])
+        picks[p["slug"]] = out
+    links = {p["slug"]: 0 for p in all_posts}
+    for out in picks.values():
+        for o in out:
+            links[o["slug"]] += 1
+    for p in all_posts:
+        out, mine = picks[p["slug"]], topic_slugs(p["slug"])
+        while len(out) < MORE_N:
+            nxt = min((o for o in all_posts if o is not p and o not in out),
+                      key=lambda o: (not (mine & topic_slugs(o["slug"])), links[o["slug"]], POS[o["slug"]]))
+            out.append(nxt)
+            links[nxt["slug"]] += 1
+        picks[p["slug"]] = sorted(out, key=lambda o: POS[o["slug"]])
+    return picks
+
+
+RELATED = related_posts(posts)
+
+
+def inbound_check():
+    """Every post is linked from at least MIN_INBOUND other post pages (the More list and the post bodies)."""
+    linked = {p["slug"]: set() for p in posts}
+    for p in posts:
+        targets = {o["slug"] for o in RELATED[p["slug"]]}
+        targets |= set(re.findall(r'href="/radar/([a-z0-9-]+)/', p["article_inner"]))
+        for t in targets:
+            if t in linked and t != p["slug"]:
+                linked[t].add(p["slug"])
+    thin = sorted(s for s, v in linked.items() if len(v) < MIN_INBOUND)
+    if thin:
+        raise SystemExit(f"build-post-pages: posts linked from fewer than {MIN_INBOUND} other post pages: {thin}")
+
+
+inbound_check()
+
+FIGURE_RE = re.compile(r'<figure\b.*?</figure>', re.S)
+CAPTION_RE = re.compile(r'<figcaption[^>]*>(.*?)</figcaption>', re.S)
+
+
+def post_ld(p):
+    """The post's own JSON-LD from content/posts.html, with what the page shows added at render time (2026-11-18):
+    @id, the first image (its file's size and Stav's caption under it), the English word count and the post's topics.
+    The stored block in content/posts.html is never edited."""
+    d = json.loads(p["json_text"])
+    out = {}
+    for k, v in d.items():
+        out[k] = v
+        if k == "@type":
+            out["@id"] = f"{SITE}/radar/{p['slug']}/#post"
+    if p["img"]:
+        img = {"@type": "ImageObject", "url": SITE + p["img"]}
+        dims = sc.raster_dims(p["img"])
+        if dims:
+            img["width"], img["height"] = dims
+        en = sc.post_body(p["article_inner"], "en")
+        for fig in FIGURE_RE.findall(en):
+            if p["img"].lstrip("/") in fig:
+                cap = CAPTION_RE.search(fig)
+                if cap and sc.strip_tags(cap.group(1)):
+                    img["caption"] = sc.strip_tags(cap.group(1))
+                break
+        out["image"] = img
+    words = sc.strip_tags(FIGURE_RE.sub(" ", sc.post_body(p["article_inner"], "en"))).split()
+    if words:
+        out["wordCount"] = len(words)
+    sections = [t["label_en"] for t in sc.post_topics(p["slug"])]
+    if sections:
+        out["articleSection"] = sections
+    return out
+
+
+HE_BODY = '<div class="post-body" lang="he"'
+EN_BODY = '<div class="post-body post-body-en"'
+
+
+def english_first(inner):
+    """The English body before the Hebrew one in the page source (2026-11-18): the page opens in English, so the text
+    a crawler reads first is the one a reader sees first. content/posts.html keeps Hebrew first (read_posts relies on
+    it); the switch still shows one language at a time. Left as it is when either block is missing."""
+    i, j = inner.find(HE_BODY), inner.find(EN_BODY)
+    if i < 0 or j < i:
+        return inner
+    en = inner[j:]
+    en_block = en.rstrip()
+    return inner[:i] + en_block + '\n    ' + inner[i:j].rstrip() + en[len(en_block):]
+
+
+BYLINE = ('By <a href="/about/">Stav Theodor</a>, art curator. Written in Hebrew, with a full English translation.',
+          'מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.')
+DATE_HE = re.compile(r'<div class="post-date" data-l="he"[^>]*>.*?</div>', re.S)
+
+
+def with_byline(inner):
+    """Who wrote the post, under its date and outside the post body (2026-11-18): the name links to /about/."""
+    m = DATE_HE.search(inner)
+    if not m:
+        return inner
+    return inner[:m.end()] + f'\n    {T(*BYLINE, tag="p", cls="post-byline")}' + inner[m.end():]
+
+
+def page_titles():
+    """Every site page's (title_en, title_he) by its address, for the link-only notes: content/pages/*.json, and
+    /about/ from its built h1."""
+    out = {}
+    for f in glob.glob('content/pages/*.json'):
+        d = json.load(open(f, encoding='utf-8'))
+        out['/' + d['path'].strip('/') + '/'] = (d['title_en'], d.get('title_he') or d['title_en'])
+    if os.path.exists('about/index.html'):
+        h1 = re.search(r'<h1[^>]*>(.*?)</h1>', open('about/index.html', encoding='utf-8').read(), re.S)
+        if h1:
+            en = re.search(r'data-l="en"[^>]*>(.*?)</span>', h1.group(1), re.S)
+            he = re.search(r'data-l="he"[^>]*>(.*?)</span>', h1.group(1), re.S)
+            if en and he:
+                out['/about/'] = (H.unescape(en.group(1)), H.unescape(he.group(1)))
+    return out
+
+
+PAGE_TITLES = page_titles()
+
+
+def bridge_check():
+    """Every bridge target is a built page; a line links no site page but its own target (links to other posts are
+    allowed), and a line that does not link its target gets the target's titled link beside it."""
+    bad = []
+    for s, meta in RADAR["posts"].items():
+        b = meta.get("bridge")
+        if not b:
+            continue
+        t = b["target"]
+        if not os.path.exists(os.path.join(t.strip("/"), "index.html")):
+            bad.append(f"{s}: target {t} is not a built page")
+        for k in ("line_en", "line_he"):
+            if b.get(k) and not {h for h in sc.INTERNAL_HREF.findall(b[k]) if not h.startswith(sc.POST_OWN_PATHS)} <= {t}:
+                bad.append(f"{s}: {k} may link no site page but {t}")
+        if bool(b.get("line_en")) != bool(b.get("line_he")):
+            bad.append(f"{s}: line_en and line_he come as a pair")
+        if t not in sc.INTERNAL_HREF.findall(b.get("line_en", "")) and t not in PAGE_TITLES:
+            bad.append(f"{s}: no title known for {t}")
+    if bad:
+        raise SystemExit("content/radar.json bridges: " + "; ".join(bad))
+
+
+bridge_check()
+
+
+def body_links_check():
+    """Post bodies hold Stav's text only (2026-11-18): inside a post body an internal link may point to /radar/,
+    /images/ or /videos/; a link to any other page of the site belongs in content/radar.json (a bridge)."""
+    bad = []
+    for p in posts:
+        for lang in ("he", "en"):
+            bad += [f"{p['slug']} ({lang}): {h}" for h in sc.INTERNAL_HREF.findall(sc.post_body(p["article_inner"], lang))
+                    if not h.startswith(sc.POST_OWN_PATHS)]
+    if bad:
+        raise SystemExit("post bodies hold Stav's text only; put the link in content/radar.json: " + "; ".join(bad))
+
+
+body_links_check()
+
+
+# The Art Radar inquiry link (2026-11-18): link text and the message it puts in the Write to Stav form, both languages.
+ASK_COPY = {
+    "named": ("Write to Stav about work by {name_en}", "כתבו לסתיו על עבודות של {name_he}"),
+    "generic": ("Write to Stav about an artist in this post", "כתבו לסתיו על אחד האמנים בפוסט"),
+    "msg_named": ('I would like to ask about work by {name_en}. I read your post "{title_en}".',
+                  'אשמח לשאול על עבודות של {name_he}. קראתי את הפוסט שלך "{title_he}".'),
+    "msg_generic": ('I would like to ask about an artist from "{title_en}".',
+                    'אשמח לשאול על אחד האמנים מהפוסט "{title_he}".'),
+}
+
+
+def ask_link(name_en, name_he, p, loc, lang=None):
+    """One quiet Write to Stav link that opens the Write to Stav form about an artist (or about an artist in the post when no name is
+    given) with the post filled in. A normal data-write link: without JavaScript it is a mailto whose subject names
+    the artist and the post. lang: None gives the two text twins, "en" or "he" one language (the hub's per-language
+    lists)."""
+    post = f"/radar/{p['slug']}/"
+    v = {"name_en": name_en, "name_he": name_he, "title_en": p["title_en"], "title_he": p["title_he"]}
+    if name_en:
+        en, he = (x.format(**v) for x in ASK_COPY["named"])
+        msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_named"])
+        subject = f"Art Radar: work by {name_en} ({post})"
+    else:
+        en, he = ASK_COPY["generic"]
+        msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_generic"])
+        subject = f"Art Radar: an artist in {post}"
+    text = T(H.escape(en), H.escape(he)) if lang is None else H.escape(en if lang == "en" else he)
+    a = lambda x: H.escape(x, quote=True)
+    return (f'<a href="{a(sc.mail_href(subject))}" data-write data-ask data-loc="{loc}" data-artist="{a(name_en)}" '
+            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}" data-label-en="{a(en)}" data-label-he="{a(he)}">{text}</a>')
+
+
+def ask_check():
+    """An inquiry link never invents a name: ask.name_en is in the post's English title or body and ask.name_he in its
+    Hebrew title or body, exactly. A hub artist with "ask": true points to a post that has an ask key, and a name that
+    is spelled two ways is allowed only when both spellings are Stav's own in that post."""
+    bad = []
+    for s, meta in RADAR["posts"].items():
+        if "ask" not in meta:
+            continue
+        ask, p = meta["ask"] or {}, BY_SLUG[s]
+        if bool(ask.get("name_en")) != bool(ask.get("name_he")):
+            bad.append(f"{s}: ask has name_en and name_he together or neither")
+        en = p["title_en"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "en"))
+        he = p["title_he"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "he"))
+        if ask.get("name_en") and ask["name_en"] not in en:
+            bad.append(f"{s}: ask.name_en {ask['name_en']!r} is not in the post's English title or body")
+        if ask.get("name_he") and ask["name_he"] not in he:
+            bad.append(f"{s}: ask.name_he {ask['name_he']!r} is not in the post's Hebrew title or body")
+    for slug, hub in RADAR["hubs"].items():
+        for a in hub.get("artists", []):
+            if not a.get("ask"):
+                continue
+            meta = RADAR["posts"].get(a["post"], {})
+            if a["post"] not in BY_SLUG or "ask" not in meta:
+                bad.append(f"hubs.{slug}: {a['name_en']} has ask but post {a['post']!r} has no ask key")
+                continue
+            own = meta["ask"] or {}
+            if own.get("name_en") == a["name_en"] and own.get("name_he") != a["name_he"]:
+                p = BY_SLUG[a["post"]]
+                he = p["title_he"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "he"))
+                if a["name_he"] not in he or own["name_he"] not in he:
+                    bad.append(f"hubs.{slug}: {a['name_en']} is spelled {a['name_he']!r} here and {own['name_he']!r} on the post")
+    if bad:
+        raise SystemExit("content/radar.json ask: " + "; ".join(bad))
+
+
+ask_check()
+
+
+def note_html(p):
+    """For your space (2026-11-18): under the post, outside Stav's text. The post's bridge line, then one link titled
+    as the target page is unless the line already links it, then a link to the hub of each of its topics that has one,
+    then the inquiry link when the post has an ask key. Nothing when there is none of these."""
+    b = RADAR["posts"].get(p["slug"], {}).get("bridge")
+    parts = []
+    if b and b.get("line_en"):
+        parts.append(f'<div class="note-line">{T(b["line_en"], b["line_he"], tag="p")}</div>')
+    links = []
+    if b and b["target"] not in sc.INTERNAL_HREF.findall(b.get("line_en", "")):
+        te, th = PAGE_TITLES[b["target"]]
+        links.append(f'<a href="{b["target"]}">{T(H.escape(te), H.escape(th))}</a>')
+    for t in sc.post_topics(p["slug"]):
+        if t.get("hub"):
+            links.append(f'<a href="/radar/{t["slug"]}/">'
+                         f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " בראדאר אמנות")}</a>')
+    if "ask" in RADAR["posts"].get(p["slug"], {}):  # the inquiry link, last (2026-11-18)
+        ask = RADAR["posts"][p["slug"]]["ask"] or {}
+        links.append(ask_link(ask.get("name_en", ""), ask.get("name_he", ""), p, "radar-note"))
+    if links:  # the house "read next" links, as under Working with Stav: quiet, in the reader's case
+        parts.append('<div class="note-links readnext">' + ''.join(links) + '</div>')
+    if not parts:
+        return ''
+    return f'''
+<section class="section wrap tight">
+  <div class="radar-note reveal" id="for-your-space">
+    <p class="eyebrow">{T('For your space', 'לחלל שלכם')}</p>
+    {''.join(parts)}
+  </div>
+</section>
+'''
+
+
 def render_post_page(p, all_posts):
     permalink = f"{SITE}/radar/{p['slug']}/"
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
     article_inner = h1_title(article_inner, p)
+    article_inner = english_first(with_byline(article_inner))
     breadcrumb = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -111,7 +419,7 @@ def render_post_page(p, all_posts):
             {"@type": "ListItem", "position": 3, "name": p["headline"], "item": permalink},
         ],
     }
-    others = [o for o in all_posts if o["slug"] != p["slug"]][:6]
+    others = RELATED[p["slug"]]
     body = f'''
 <header class="phead">
   <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a></p>
@@ -120,37 +428,236 @@ def render_post_page(p, all_posts):
 <main class="wrap">
   <article class="{p['article_class']} article" id="{p['slug']}">{article_inner}</article>
 </main>
-{working_with_stav(p)}
+{note_html(p)}{working_with_stav(p)}
 <section class="section wrap">
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
   <div class="timeline">{sc.timeline(others, with_months=False)}
-  </div>
+  </div>{sc.radar_subscribe("radar-post", f"/radar/{p['slug']}/", whatsapp=True)}
 </section>
 '''
     # the <title> at most 60 characters (Ron, 2026-09-30): " · Art Radar" drops when the headline is too long for it
     title = f"{p['headline']} · Art Radar · THEODORA"
     if len(title) > 60:
         title = f"{p['headline']} · THEODORA"
+    # a search title (content/radar.json posts.<slug>.seo_title, 2026-11-18) changes the <title> only: Stav's headline
+    # stays the h1 and the title a shared link shows
+    seo = RADAR["posts"].get(p["slug"], {}).get("seo_title")
+    og_title = None
+    if seo:
+        og_title, title = title, f"{seo} · THEODORA"
     return (sc.head(title, p['description'], permalink,
-                    og_image=p['og_image'], og_type='article', lang='en',
-                    ld=[p['json_text'], breadcrumb])
+                    og_image=p['og_image'], og_type='article', lang='en', og_title=og_title,
+                    ld=[post_ld(p), breadcrumb])
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
 for p in posts:
     out_path = os.path.join(OUT_DIR, p["slug"], "index.html")
-    sc.write(out_path, render_post_page(p, posts))
+    page = render_post_page(p, posts)
+    if EN_BODY in page and HE_BODY in page and page.find(EN_BODY) > page.find(HE_BODY):
+        raise SystemExit(f"build-post-pages: {out_path}: the English body must come before the Hebrew one")
+    sc.write(out_path, page)
     print(f"  wrote {out_path}")
 
 
+# ---- 2b. a topic hub, radar/<topic>/index.html, for each topic with "hub": true (content/radar.json, 2026-11-18) ----
+def hub_check(t, hub):
+    """The hub stands on Stav's own words: every quote is an exact span of that post's body in its language, and the
+    Hebrew name is spelled as the Hebrew post spells it. A topic slug is never a post slug."""
+    bad = []
+    if t["slug"] in BY_SLUG:
+        bad.append(f"topic slug {t['slug']!r} is also a post slug")
+    for k in ("head_title", "h1_en", "h1_he", "meta_description", "intro_en", "intro_he", "artists", "doors"):
+        if not hub.get(k):
+            bad.append(f"missing {k}")
+    if len(f"{hub.get('head_title', '')} · THEODORA") > 60 or len(hub.get("meta_description", "")) > 155:
+        bad.append("head_title over 60 characters with the suffix, or meta_description over 155")
+    for a in hub.get("artists", []):
+        p = BY_SLUG.get(a["post"])
+        if not p:
+            bad.append(f"{a['name_en']}: unknown post {a['post']!r}")
+            continue
+        en = sc.strip_tags(sc.post_body(p["article_inner"], "en"))
+        he = sc.strip_tags(sc.post_body(p["article_inner"], "he"))
+        if a["quote_en"] not in en:
+            bad.append(f"{a['name_en']}: quote_en is not in the English body of {a['post']}")
+        if a["quote_he"] not in he:
+            bad.append(f"{a['name_en']}: quote_he is not in the Hebrew body of {a['post']}")
+        if a["name_he"] not in he:
+            bad.append(f"{a['name_en']}: name_he is not spelled as in the Hebrew body of {a['post']}")
+    for d in hub.get("doors", []):
+        if d.strip("/") not in DOOR_PAGES:
+            bad.append(f"door {d} is not a page with a content/pages JSON")
+    if bad:
+        raise SystemExit(f"content/radar.json hubs.{t['slug']}: " + "; ".join(bad))
+
+
+DOOR_PAGES = {json.load(open(f, encoding="utf-8"))["path"].strip("/"): json.load(open(f, encoding="utf-8"))
+              for f in glob.glob("content/pages/*.json")}
+
+
+LATIN_RUN = re.compile(r"[A-Za-z][A-Za-z0-9'.&]*(?: [A-Za-z0-9][A-Za-z0-9'.&]*)*")
+
+
+def mark_latin(text):
+    """Stav's Hebrew titles and sentences keep their English names (Luhring Augustine, Ben Sledsens): each Latin run
+    is marked lang="en", the way the post pages read, so the Hebrew view stays one language per element. Works on the
+    raw text and escapes each piece after, so an entity is never split."""
+    out, last = [], 0
+    for m in LATIN_RUN.finditer(text):
+        out.append(H.escape(text[last:m.start()], quote=False))
+        out.append(f'<span lang="en" dir="ltr">{H.escape(m.group(0), quote=False)}</span>')
+        last = m.end()
+    return ''.join(out) + H.escape(text[last:], quote=False)
+
+
+class _Text(HTMLParser):
+    """The text of an HTML fragment as a reader gets it: every text node, entities decoded."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+
+def rendered_text(fragment):
+    t = _Text()
+    t.feed(fragment)
+    t.close()
+    return ''.join(t.parts)
+
+
+def hub_quotes_check(t, hub, page):
+    """Every quote on the built hub reads, node by node, exactly as Stav wrote it: the Hebrew list first, then the
+    English one, each in the page's alphabetical order. A split entity (&#<...) or a tag inside one stops the build."""
+    bad = []
+    if re.search(r'&#?<|&<span', page):
+        bad.append("an HTML entity is split by a tag")
+    artists = sorted(hub["artists"], key=lambda a: a["name_en"])
+    want = [a["quote_he"] for a in artists] + [a["quote_en"] for a in artists]
+    got = [rendered_text(q) for q in re.findall(r'<blockquote>(.*?)</blockquote>', page, re.S)]
+    if len(got) != len(want):
+        bad.append(f"{len(got)} quotes on the page, {len(want)} in content/radar.json")
+    for w, g in zip(want, got):
+        if w != g:
+            bad.append(f"quote renders as {g[:60]!r}, not as written")
+    if bad:
+        raise SystemExit(f"radar/{t['slug']}/: " + "; ".join(bad))
+
+
+def render_hub(t, hub):
+    url = f"{SITE}/radar/{t['slug']}/"
+    in_topic = [p for p in posts if p["slug"] in t["posts"]]
+    artists = sorted(hub["artists"], key=lambda a: a["name_en"])
+
+    def ask(a, p, lang):
+        if not a.get("ask"):
+            return ""
+        return f'\n      <p class="hub-post hub-ask">{ask_link(a["name_en"], a["name_he"], p, "radar-hub", lang)}</p>'
+
+    def index(lang):
+        out = []
+        mark = mark_latin if lang == "he" else (lambda x: H.escape(x, quote=False))
+        for a in artists:
+            p = BY_SLUG[a["post"]]
+            title = p["title_en"] if lang == "en" else p["title_he"]
+            out.append(f'''
+    <div class="hub-artist">
+      <h3 class="serif">{H.escape(a["name_" + lang])}</h3>
+      <blockquote><p>{mark(a["quote_" + lang])}</p></blockquote>
+      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(title)}</a></p>{ask(a, p, lang)}
+    </div>''')
+        return "".join(out)
+    doors = "".join(f'<a href="/{d.strip("/")}/">{T(H.escape(DOOR_PAGES[d.strip("/")]["title_en"]), H.escape(DOOR_PAGES[d.strip("/")].get("title_he") or DOOR_PAGES[d.strip("/")]["title_en"]))}</a>'
+                    for d in hub["doors"])
+    page = {
+        "@type": "CollectionPage", "@id": url + "#page", "name": hub["head_title"], "url": url,
+        "description": hub["meta_description"], "inLanguage": ["en", "he"],
+        "isPartOf": {"@id": SITE + "/#site"}, "author": {"@id": sc.STAV_ID},
+        "about": {"@type": "Thing", "name": "Israeli art"},
+        "mainEntity": {"@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/radar/{p['slug']}/", "name": p["headline"]}
+            for i, p in enumerate(in_topic)]},
+    }
+    breadcrumb = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Art Radar", "item": SITE + "/radar/"},
+            {"@type": "ListItem", "position": 3, "name": t["label_en"], "item": url},
+        ],
+    }
+    body = f'''
+<header class="phead">
+  <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a></p>
+  <h1 class="serif">{T(H.escape(hub['h1_en']), H.escape(hub['h1_he']))}</h1>
+  <p class="lead">{T(H.escape(hub['intro_en']), H.escape(hub['intro_he']))}</p>
+</header>
+
+<section class="section wrap tight hub-artists">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('The artists', 'האמנים והאמניות')}</p></div></div>
+  <div class="prose" data-l="he" dir="rtl">{index('he')}
+  </div>
+  <div class="prose" data-l="en">{index('en')}
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="head reveal">
+    <div class="lead"><p class="eyebrow">{T('The posts', 'הפוסטים')}</p></div>
+    <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
+  </div>
+  <div class="timeline">{sc.timeline(in_topic, with_months=False)}
+  </div>{sc.radar_subscribe("radar-hub", url[len(SITE):], whatsapp=True)}
+</section>
+
+<section class="section wrap tight">
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('Israeli art in my work', 'אמנות ישראלית בעבודה שלי')}</p></div></div>
+  <div class="readnext">{doors}</div>
+</section>
+{working_with_stav({"headline": hub["h1_en"], "article_inner": ""})}'''
+    og = SITE + (in_topic[0]["img"] if in_topic and in_topic[0]["img"] else "/og-image.jpg")
+    return (sc.head(f"{hub['head_title']} · THEODORA", hub["meta_description"], url, og_image=og, lang="en",
+                    og_title=hub["head_title"], ld=[page, breadcrumb])
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
+
+
+HUB_TOPICS = [t for t in RADAR["topics"] if t.get("hub")]
+for t in HUB_TOPICS:
+    hub = RADAR["hubs"].get(t["slug"])
+    if not hub:
+        raise SystemExit(f"content/radar.json: topic {t['slug']!r} has hub true but no hubs.{t['slug']}")
+    hub_check(t, hub)
+    out_path = os.path.join(OUT_DIR, t["slug"], "index.html")
+    sc.write(out_path, render_hub(t, hub))
+    hub_quotes_check(t, hub, open(out_path, encoding="utf-8").read())  # the page as written, after the sanitizer
+    print(f"  wrote {out_path} (topic hub)")
+
+
 # ---- 3. radar/index.html: every post, in order ----
+def hub_links():
+    """One arrow per topic hub, above the archive's timeline (2026-11-18)."""
+    if not HUB_TOPICS:
+        return ''
+    links = ''.join(f'<a class="arrow" href="/radar/{t["slug"]}/"><span class="ln"></span>{T(H.escape(t["label_en"]), H.escape(t["label_he"]))}</a>'
+                    for t in HUB_TOPICS)
+    return f'<div class="hub-links reveal">{links}</div>\n  '
+
+
 def render_radar_index(posts):
     n = len(posts)
     url = f"{SITE}/radar/"
-    latest_img = posts[0]['img'] or '/images/home2/garden-villa.jpg'
+    # the hero is a wide crop: the newest post whose first image is landscape (width at least 1.4 times its height)
+    def landscape(img):
+        d = sc.raster_dims(img) if img else None
+        return bool(d) and d[0] >= 1.4 * d[1]
+    wide = next((p['img'] for p in posts if landscape(p['img'])), None)
+    latest_img = wide or '/images/home2/garden-villa.jpg'
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": "Art Radar, every post", "url": url, "inLanguage": ["he", "en"],
@@ -166,7 +673,7 @@ def render_radar_index(posts):
         ],
     }
     body = f'''
-<header class="phero" style="height: 62vh; min-height: 480px;">
+<header class="phero archive">
   <img src="{latest_img}" alt="" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
@@ -180,14 +687,14 @@ def render_radar_index(posts):
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('Get it first', 'קבלו את זה ראשונים')}</p><h2 class="serif">{T('The posts go to the WhatsApp group first.', 'הפוסטים מגיעים קודם לקבוצת הוואטסאפ.')}</h2></div>
     <a class="btn" href="{sc.WHATSAPP}" target="_blank" rel="noopener">{T('Join the WhatsApp Group', 'הצטרפו לקבוצת הוואטסאפ')}</a>
-  </div>
-  <div class="timeline" id="posts">{sc.timeline(posts, with_months=True)}
+  </div>{sc.radar_subscribe("radar-archive", "/radar/")}
+  {hub_links()}<div class="timeline" id="posts">{sc.timeline(posts, with_months=True)}
   </div>
 </section>
 '''
     return (sc.head('Art Radar, every post · THEODORA', collection['description'], url,
                     og_image=SITE + latest_img, lang='en', ld=[collection, breadcrumb])
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 sc.write(os.path.join(OUT_DIR, 'index.html'), render_radar_index(posts))

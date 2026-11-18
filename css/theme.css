@@ -370,6 +370,15 @@
   .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
   .contact-head .lead [data-l="he"] { font-family: var(--he); }
   .contact-page .act { margin-top: 0; }
+  /* /contact/ (contact_act form_first): the markup runs headline, form, Or reach me directly, the order a phone shows and
+     the keyboard follows; from 861px the card is put back in its two columns: headline at the top left, the direct ways
+     at the bottom left, the form on the right, as the homepage card. */
+  @media (min-width: 861px) {
+    .act-form-first { grid-template-rows: auto 1fr; }
+    .act-form-first > .act-intro { grid-column: 1; grid-row: 1; min-width: 0; }
+    .act-form-first > .act-form { grid-column: 2; grid-row: 1 / span 2; }
+    .act-form-first > .act-ways { grid-column: 1; grid-row: 2; align-self: end; min-width: 0; }
+  }
   .contact-area { display: flex; flex-direction: column; gap: 20px; margin-top: clamp(72px, 8vw, 120px); padding-top: 36px; border-top: 1px solid var(--line); }
   .places { list-style: none; display: flex; flex-wrap: wrap; row-gap: 4px; font-family: var(--serif); font-size: clamp(26px, 3vw, 44px); line-height: 1.2; color: var(--ink); }
   .places [data-l="he"] { font-family: var(--he); }
@@ -405,7 +414,7 @@
   .contact-form label.half { grid-column: auto; }
   .contact-form label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
   .contact-form button, .contact-form .form-note, .contact-form .form-error { grid-column: 1 / -1; }
-  .contact-form input, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 17px; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.28); border-radius: 0; padding: 10px 0 12px; transition: border-color .25s ease, box-shadow .25s ease; }
+  .contact-form input, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 17px; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.36); border-radius: 0; padding: 10px 0 12px; transition: border-color .25s ease, box-shadow .25s ease; }
   .contact-form input:hover, .contact-form textarea:hover { border-bottom-color: rgba(242,240,236,0.5); }
   .contact-form input:focus, .contact-form textarea:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
   .contact-form input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px var(--bg) inset; -webkit-text-fill-color: var(--ink); caret-color: var(--ink); }
@@ -418,7 +427,7 @@
   .contact-form .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .contact-form label.chip { position: relative; display: inline-flex; flex-direction: row; gap: 0; grid-column: auto; font-size: 14px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--soft); cursor: pointer; }
   .contact-form .chip input { position: absolute; top: 0; left: 0; width: 1px; height: 1px; margin: 0; padding: 0; border: 0; opacity: 0; overflow: hidden; clip-path: inset(50%); pointer-events: none; }
-  .contact-form .chip-face { display: inline-flex; align-items: center; min-height: 44px; padding: 11px 18px; border: 1px solid rgba(242,240,236,0.28); border-radius: 0; line-height: 1.3; color: var(--soft); background: transparent; transition: border-color .25s, background .3s, color .3s; }
+  .contact-form .chip-face { display: inline-flex; align-items: center; min-height: 44px; padding: 11px 18px; border: 1px solid rgba(242,240,236,0.36); border-radius: 0; line-height: 1.3; color: var(--soft); background: transparent; transition: border-color .25s, background .3s, color .3s; }
   .contact-form label.chip [data-l="he"] { font-size: 15px; letter-spacing: 0; font-weight: 500; }
   .contact-form .chip:hover .chip-face { border-color: rgba(242,240,236,0.6); }
   .contact-form .chip input:checked + .chip-face { background: var(--ink); color: var(--bg); border-color: var(--ink); }
@@ -527,6 +536,28 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
+  /* The header's Write to Stav: the full label from 1100px; from 901 to 1099px the compact label (Write / כתבו, the full one
+     kept as the accessible name), where it fits the one-line bar; the phone menu carries the full label up to 900px. */
+  .nav-write .wshort { display: none; }
+  .nav .nav-write-bar { display: none; pointer-events: auto; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; white-space: nowrap; }
+  .nav-write-bar .wshort { display: inline; }
+  .nav-write-bar .wshort [data-l="he"], .nav-write .wshort [data-l="he"] { font-size: 16px; }
+  @media (min-width: 901px) and (max-width: 1099px) {
+    .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+    .nav .nav-write .wshort { display: inline; }
+  }
+  @media (min-width: 901px) and (max-width: 979px) { body.lang-en .nav .nav-write { display: none; } }  /* English shows the compact label from 980px, clear of the wordmark; Hebrew from 901px */
+  /* Drawn as the bar's one outlined control (the art director's gate, 2026-11-15): a hairline box, brighter on hover, from
+     1040px, where the boxed label still leaves the bar one line in both languages (below that the compact label stays
+     plain). line-height 1 keeps the box inside the bar's height. */
+  @media (min-width: 1040px) {
+    .nav .nav-write { border: 1px solid rgba(242,240,236,0.36); padding: 8px 14px; margin-inline-start: 6px; line-height: 1; transition: border-color .25s; }
+    .nav .nav-write:hover, .nav .nav-write:focus-visible { border-color: #F2F0EC; }
+  }  /* English needs 920px for the compact label; Hebrew fits from 901px */
+  /* In the phone bar beside Call only where it leaves at least 8px between every two controls, with each 44px hit area
+     whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
+  @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
+  @media (min-width: 400px) and (max-width: 900px) { body.lang-he .nav .nav-write-bar { display: inline; } }
 
   /* The Guides item (2026-10-01, site_chrome.guides_dd, opened by PAGE_JS): the link to /guide/ and a small chevron
      toggle; from 901px a panel under the bar with the six categories in three columns; in the phone menu the toggle
@@ -563,6 +594,11 @@
   @media (max-width: 900px) {
     .links { justify-content: safe center; overflow-y: auto; padding: 80px 20px 32px; gap: 22px; }
     .links a { line-height: 1.2; }
+    .links .nav-write { order: -1; }  /* the header's Write to Stav: last in the bar, first in the opened phone menu */
+    /* In the opened menu it is the page's ghost button, not one more serif line (the art director's gate, 2026-11-15):
+       the .btn type, a 1px ink border, and 28px to About (the menu's 22px gap plus 6). */
+    .links .nav-write { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; border: 1px solid #F2F0EC; padding: 18px 30px; margin-bottom: 6px; }
+    .links .nav-write [data-l="he"] { font-size: 16px; letter-spacing: 0; text-transform: none; }
     .nav-dd { flex-wrap: wrap; justify-content: center; gap: 2px; }
     .nav .dd-btn { width: 40px; height: 40px; }
     .dd-btn::before { width: 9px; height: 9px; border-width: 0 1.5px 1.5px 0; }
@@ -641,6 +677,42 @@
   .article { max-width: 900px; padding-top: clamp(28px, 3vw, 40px); }
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .post-date[data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .post-byline { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); }  /* who wrote the post, under its date (2026-11-18) */
+  .post-byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+  .post-byline a:hover { color: #C9A46B; }
+  .radar-note { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 860px; border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }  /* For your space, under a post (2026-11-18) */
+  .radar-note .note-line p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--soft); max-width: 680px; }
+  .radar-note .note-line a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-note .note-line a:hover { color: #C9A46B; }
+  .radar-note .note-links { display: flex; flex-direction: column; gap: 12px; }
+  body.lang-he .radar-note, body.lang-he .radar-note .note-links { align-items: flex-end; }  /* Hebrew: eyebrow, line and link share the right edge */
+  body.lang-he .radar-note .note-links a { align-self: flex-end; text-align: right; }
+  .hub-artists .hub-artist { margin: 0 0 40px; }  /* a topic hub's artist index (2026-11-18): name, Stav's sentence, the post */
+  .hub-artists .hub-artist h3 { font-size: clamp(22px, 2.2vw, 28px); margin: 0 0 6px; }
+  .hub-artists .prose .hub-artist blockquote { font-size: 20px; line-height: 1.45; margin: 10px 0 12px; }
+  .hub-artists .hub-post { font-size: 15px; margin: 0; }
+  @media (min-width: 1100px) { .hub-artists .prose { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; } }  /* the artist index in two columns on a wide screen */
+  .hub-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 12px; padding-top: 40px; }  /* the topic hubs, above the archive's timeline */
+  /* Art Radar by email (2026-11-18, site_chrome.radar_subscribe): one email field and Subscribe, the contact form's underline input and button */
+  .radar-sub-box { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; max-width: 680px; margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }
+  .radar-sub-box .sub-line { margin: 0; font-size: 18px; line-height: 1.6; color: var(--soft); }
+  .radar-sub { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; width: 100%; }
+  .radar-sub[hidden] { display: none; }  /* after a signup the thanks line takes its place */
+  .radar-sub-box ~ .hub-links { padding-top: 72px; }  /* the archive's topic links start clear of the signup */
+  .radar-sub label { flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .radar-sub label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
+  .radar-sub input[type=email] { display: block; width: 100%; font-family: var(--sans); font-size: 17px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.36); border-radius: 0; padding: 10px 0 12px; }
+  .radar-sub input[type=email]:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
+  .radar-sub button { font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--bg); background: var(--ink); border: 1px solid var(--ink); border-radius: 0; padding: 16px 32px; cursor: pointer; }
+  .radar-sub button [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 16px; }
+  .radar-sub button:hover { background: transparent; color: var(--ink); }
+  .radar-sub .sub-consent, .radar-sub .sub-error { flex: 1 1 100%; margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
+  .radar-sub .sub-error a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-sub-box .sub-thanks p { margin: 0; font-size: 18px; color: var(--ink); }
+  body.lang-he .radar-sub-box { align-items: flex-end; }
+  body.lang-he .radar-sub { direction: rtl; }  /* Hebrew: the field, the button and the lines start on the right */
+  .radar-sub input[type=email] { text-align: left; }
+  body.lang-he .radar-sub-box .readnext a { align-self: flex-end; }
   .post-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 14px 0 36px; text-wrap: balance; }
   .post-title[data-l="he"], .post-title-he, .post-title [data-l="he"] { font-family: var(--he); letter-spacing: 0; }
   .post-title-he { direction: rtl; }
@@ -744,6 +816,9 @@
   .ah-lead { font-size: 17px; line-height: 1.75; color: var(--soft); }
   .ah-lead [data-l="he"] { font-size: 18px; line-height: 1.85; }
   .ah-lead a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); white-space: nowrap; }
+  .ah-proof { font-size: 15px; line-height: 1.7; color: var(--muted); }
+  .ah-proof [data-l="he"] { font-size: 16px; line-height: 1.8; }
+  .ah-proof a { color: var(--soft); border-bottom: 1px solid rgba(242,240,236,0.35); }
   .about-hero + .section .creds { margin-top: 0; }
   .story { display: flex; flex-direction: column; }
   .story-row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(40px, 6vw, 112px); padding: clamp(40px, 5vw, 64px) 0; border-top: 1px solid var(--line); }
@@ -811,6 +886,9 @@
   .phead .byline a:focus-visible { outline: 1px solid var(--taupe); outline-offset: 4px; }
   .phead .lead-write { align-self: flex-start; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 4px; }  /* T3, 2026-11-01: Write to Stav under a guide's opening */
   .phead .lead-write .muted { font-size: 15px; line-height: 1.6; max-width: 720px; }
+  .plead .lead-write { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 28px; }  /* the same block under a project's opening paragraph */
+  .plead .lead-write .muted { font-family: var(--sans); font-size: 15px; line-height: 1.6; max-width: 720px; }
+  .plead .lead-write .muted [data-l="he"] { font-family: var(--he); }
   .crumbs a:hover { color: #C9A46B; }
   .crumbs a:focus-visible { outline: 1px solid var(--taupe); outline-offset: 4px; }
   /* the current page in the trail: the title, not shouted: sentence case, muted, one line */
@@ -991,6 +1069,7 @@
   .wm-x { position: absolute; top: 10px; inset-inline-end: 10px; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: var(--muted); cursor: pointer; transition: color .25s; }
   .wm-x svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
   .wm-x:hover { color: var(--ink); }
+  .wm-panel .wm-eyebrow { padding-inline-end: 44px; }  /* an inquiry link's longer eyebrow (2026-11-18) stays clear of the close button */
   .wm-x:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
   .wm-panel > .eyebrow { margin-bottom: 16px; }
   .wm-head { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--ink); padding-inline-end: 36px; margin-bottom: 32px; text-wrap: balance; }
@@ -1010,10 +1089,31 @@
      The call link's area grows to its left (toward the empty space before it) so it does not
      overlap the HE/EN button; the others grow evenly around their centre. */
   @media (max-width: 768px) {
-    .nav .nav-call, .lang-switch button, .menu-btn, a.arrow { position: relative; }
-    .nav .nav-call::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
+    .nav .nav-call, .nav .nav-write-bar, .lang-switch button, .menu-btn, a.arrow { position: relative; }
+    .nav .nav-call::after, .nav .nav-write-bar::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
     .nav .nav-call::after { left: auto; right: -4px; transform: translateY(-50%); }
+    .nav .nav-write-bar::after { left: auto; right: -2px; transform: translateY(-50%); }  /* grows mostly to its left, toward Call, so it never meets the HE/EN button's area */
     a.arrow::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: max(100%, 44px); transform: translateY(-50%); background: transparent; }
     /* Where arrow links stack closer than 44px apart (the foot-ways list), Write to Stav keeps its full area */
     a.arrow[data-write] { z-index: 1; }
   }
+
+/* ===================== Site audit, 2026-11-15: the art director's hero and reading measure fixes (CSS values only) ===================== */
+  /* Heroes: the hub and project heroes show the photograph clean, under the nav and with nothing over it: no scrim, no
+     drift zoom, the image at the container width (16:9, at most 62vh, cover, the page's own object-position), and the
+     eyebrow, h1 and lead in a block under it on the page ground, 40px below. The typographic hero (.phero.type) keeps
+     its own look. */
+  .phero:not(.type) { height: auto; min-height: 0; max-height: none; overflow: visible; display: block; padding: calc(100px + env(safe-area-inset-top, 0px)) var(--gx) 0; }
+  .phero:not(.type) > img { position: static; display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 62vh; object-fit: cover; animation: none; }
+  .phero:not(.type) > .scrim { display: none; }
+  .phero:not(.type) .title { position: static; padding: 40px 0 0; }
+  @media (max-width: 900px) { .phero:not(.type) { padding-top: calc(88px + env(safe-area-inset-top, 0px)); } }
+  /* Project heroes show the photograph whole at its own shape, at most 70vh tall, from the left edge of the column (the art
+     director's second look, 2026-11-15: a fixed 16:9 slot cut people and works). The hubs and the Art Radar archive
+     (.archive) keep the 16:9, 62vh cover above. */
+  .phero:not(.type):not(.hub):not(.archive) > img { aspect-ratio: auto; width: auto; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+  /* Reading measure: one measure, 680px (about 70 characters of the 18px body), for the text of the reading column on
+     every article, project, guide, radar post and /about/ row; figures, diagrams and tables keep their width. */
+  :root { --measure: 680px; }
+  .prose:not(.guide) > :where(p, h2, h3, ul, ol, blockquote), .post-body > :where(p, h2, h3, ul, ol, blockquote) { max-width: var(--measure); }
+  .story-row .prose { max-width: var(--measure); }

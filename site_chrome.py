@@ -46,6 +46,9 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
 # script, no pop-up and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
+# Signup form switch: Art Radar by email (2026-11-18), radar_subscribe(). While False (or FORM_ENDPOINT is empty) no page
+# carries the form or its script.
+RADAR_SUBSCRIBE = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -342,6 +345,12 @@ WHO_I_WORK_WITH = [
     ('/restaurants/', 'Restaurants', 'מסעדות'),
     ('/hotels/', 'Boutique hotels', 'מלונות בוטיק'),
 ]
+# The two other partner pages, in the footer's Who I work with column right after /for-designers/ (site audit, 2026-11-15;
+# anchors set by the SEO Lead, Hebrew twins by the Curator). Footer only: /about/ and the projects hub keep the seven.
+FOOTER_PARTNERS = [
+    ('/for-brokers/', 'Brokers and developers', 'מתווכים ויזמים'),
+    ('/for-advisors/', 'Family offices', 'פמילי אופיס'),
+]
 # Section links that have a page of their own: on the homepage they stay in-page, on every
 # other page they go to that page instead of scrolling the homepage (2026-09-26).
 SUBPAGE_FOR = {'#advisory': '/advisory/', '#about': '/about/'}  # /about/: a real page since 2026-09-29
@@ -363,6 +372,20 @@ def nav_call():
             f'<span class="num">{PHONE}</span><span class="short">{T("Call", "התקשרו")}</span></a>')
 
 
+# The header's Write to Stav (site audit, 2026-11-15): the full label, and the compact one ("Write")
+# where the bar is short of room. The compact label is aria-hidden; the full one stays the accessible name (visually
+# hidden there), the same split nav_call() makes between the number and Call.
+WRITE_FULL = ('Write to Stav', 'כתבו לסתיו')
+WRITE_SHORT = ('Write', 'כתבו')
+
+
+def nav_write_bar():
+    """Write to Stav in the phone header bar, beside Call (css/theme.css .nav-write-bar shows it only where the bar has
+    room). Opens the pop-up like every data-write control; write_open's link_location is nav, as for the menu item."""
+    return (f'<a class="nav-write-bar" href="{mail_href()}" data-write data-loc="nav"><span class="vh">{T(*WRITE_FULL)}</span>'
+            f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
+
+
 def phone_link(loc='cta'):
     """The number as a contact line under an email link or a Write to Stav button."""
     return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span><bdi dir="ltr">{PHONE}</bdi></a>'
@@ -377,12 +400,17 @@ def nav(home=False, own=None, sub=None):
     own = own or {}
     links = ''.join(guides_dd(h) if h == GUIDES_INDEX else f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>'
                     for h, en, he in NAV_ITEMS)
+    # Write to Stav in the header (site audit, 2026-11-15): the last item of the bar from 901px, the first of the opened
+    # phone menu (css/theme.css .nav-write, order -1). It opens the pop-up on the same page (WRITE_JS) and sends write_open
+    # with link_location "nav"; the mailto href stays the fallback without JavaScript.
+    links += (f'<a class="nav-write" href="{mail_href()}" data-write data-loc="nav"><span class="wfull">{T(*WRITE_FULL)}</span>'
+              f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
     wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
   <a class="wordmark" href="{'#hero' if home else '/'}">THEODORA{wm_sub}</a>
   <div class="right">
     <div class="links" id="links">{links}</div>
-    {nav_call()}
+    {nav_call()}{nav_write_bar()}
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
       <button type="button" data-lang="he" aria-pressed="false">HE</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -471,13 +499,15 @@ def reviews_block():
   </div>'''
 
 
-def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
+def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first=False):
     """The contact block. With the form (FORM_ENDPOINT set) it is one card (mockup A, Ron 2026-10-06): on one side the
     Contact eyebrow (eyebrow=False drops it where the page header already says Contact), the headline, three check
     lines, and Or reach me directly (the address with the mail fallback panel, the phone); the form on the other side,
     over a soft taupe glow in the corner. The homepage's #contact (footer(form=True)) and /contact/ share it, so both
     change from here. Without FORM_ENDPOINT it is the three ways and the What happens next steps, in two columns.
-    h: the thank-you card's heading level (contact_form)."""
+    h: the thank-you card's heading level (contact_form). form_first (the /contact/ page, 2026-11-15): the markup runs
+    headline, form, then Or reach me directly, so a phone, the keyboard and a screen reader all meet the form first;
+    css/theme.css (.act-form-first) puts the card back in its two columns from 861px, where it looks as before."""
     mail = mail or mail_href()
     form = contact_form(path, h=h)
     if not form:
@@ -496,6 +526,22 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True):
   </div>'''
     lines = ''.join(f'<li>{TICK}<span>{T(en, he)}</span></li>' for en, he in CONTACT_LINES)
     brow = f'\n        <p class="eyebrow">{T("Contact", "יצירת קשר")}</p>' if eyebrow else ''
+    if form_first:
+        return f'''<div class="act act-card act-form-first">
+    <div class="act-glow" aria-hidden="true"></div>
+      <div class="act-intro">{brow}
+        <h2 class="serif act-head">{T(*CONTACT_HEAD)}</h2>
+        <ul class="act-lines">{lines}</ul>
+      </div>
+    <div class="act-form">
+    {form}
+    </div>
+      <div class="act-ways">
+        <p class="eyebrow">{T('Or reach me directly', 'או פנו אליי ישירות')}</p>
+        <a class="way addr" href="{mail}" data-loc="{loc}"><bdi dir="ltr">{EMAIL}</bdi></a>
+        <a class="way tel" href="{PHONE_TEL}" data-loc="{loc}"><bdi dir="ltr">{PHONE}</bdi></a>
+      </div>
+  </div>'''
     return f'''<div class="act act-card">
     <div class="act-glow" aria-hidden="true"></div>
     <div class="act-left">
@@ -541,7 +587,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     L = lambda h: _link(h, home)
     cta_en, cta_he = (H.escape(cta[0]), H.escape(cta[1])) if cta else FOOTER_CTA
     href = mail_href(subject)
-    who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH)
+    who = ''.join(f'<a href="{u}">{T(en, he)}</a>' for u, en, he in WHO_I_WORK_WITH[:1] + FOOTER_PARTNERS + WHO_I_WORK_WITH[1:])
     if quiet:
         top = ''
     elif form and FORM_ENDPOINT:
@@ -603,7 +649,13 @@ def contact_form(path='/', h='h3'):
     Added 2026-11-01 (Nov 1 report, T1), every field above unchanged: When (timeline, radio chips, optional, none
     checked, TIMELINES) directly after The project, and Who referred you? (referred_by, a text field, hidden and disabled
     in the markup) after What did you ask it?; form_js() shows and enables it only while A friend or client or A designer
-    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise."""
+    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise.
+    Added 2026-11-18 (Ron), every field above unchanged: Phone (phone, type tel, optional) after Email, a half-width
+    field like Your name and Email on the row below them; Formspree records it in Stav's mail like name and email.
+    It is the visitor's own number, collected only; generate_lead never carries it.
+    Added 2026-11-18 (Art Radar inquiry link): artist and source_post, hidden and disabled in the markup, so an ordinary
+    inquiry never posts them; form_js() enables and fills them only when the form was opened from an Art Radar inquiry link
+    (data-ask) on an Art Radar post or hub, and clears and disables them again for any other opening and after a send."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -627,11 +679,16 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('When', 'מתי')}</legend><div class="chips">{chips('timeline', TIMELINES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
+      <input type="hidden" name="artist" value="" disabled>
+      <input type="hidden" name="source_post" value="" disabled>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <input type="hidden" name="landing_page" value="">
+      <input type="hidden" name="referrer" value="">
       <button type="submit">{L('Send', 'שליחה')}</button>
       <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
       <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span></p>
@@ -651,6 +708,67 @@ def contact_form(path='/', h='h3'):
       </div>
     </div>
     </div>'''
+
+
+SUBSCRIBE_JS = '''<script>
+(function () {
+  /* Art Radar by email (2026-11-18): the signup form posts with fetch and Accept: application/json, as the contact
+     form does. lang says which language was on screen. On success the thanks line takes the form's place and GA4
+     gets radar_subscribe with where the form sits and the page path, never the address; on any other answer the
+     error line shows. Without JavaScript the plain POST works and Formspree shows its own page. */
+  document.querySelectorAll('form.radar-sub').forEach(function (f) {
+    var box = f.closest('.radar-sub-box');
+    var err = box.querySelector('.sub-error'), done = box.querySelector('.sub-thanks');
+    f.querySelector('[name=page]').value = location.pathname;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (f.classList.contains('sending')) { return; }
+      f.classList.add('sending');
+      err.hidden = true;
+      f.querySelector('[name=lang]').value = document.body.classList.contains('lang-he') ? 'he' : 'en';
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) { throw new Error(r.status); }
+          f.hidden = true;
+          done.hidden = false;
+          if (window.gtag) { gtag('event', 'radar_subscribe', { link_location: f.getAttribute('data-loc') || 'page', page_path: location.pathname }); }
+        })
+        .catch(function () { f.classList.remove('sending'); err.hidden = false; });
+    });
+  });
+})();
+</script>'''
+
+
+def radar_subscribe(loc, path, whatsapp=False):
+    """Art Radar by email (2026-11-18): one email field and Subscribe, posted to the Formspree endpoint with its own
+    _subject and form_type, so the mail Stav gets says it is a signup. Its own class (form.radar-sub), so form_js()
+    never binds it and generate_lead never fires for it. '' while RADAR_SUBSCRIBE is False or FORM_ENDPOINT is empty.
+    loc: where it sits (radar-post, radar-archive, radar-hub). whatsapp: a quiet link to the group after it."""
+    if not (RADAR_SUBSCRIBE and FORM_ENDPOINT):
+        return ''
+    mail = mail_href()
+    wa = (f'<div class="readnext"><a href="{WHATSAPP}" target="_blank" rel="noopener">'
+          f'{T("Or join the WhatsApp group", "או הצטרפו לקבוצת הוואטסאפ")}</a></div>') if whatsapp else ''
+    return f'''
+  <div class="radar-sub-box reveal" aria-live="polite">
+    <p class="eyebrow">{T('Art Radar by email', 'ראדאר אמנות במייל')}</p>
+    {T('I send one email a month with the new posts.', 'פעם בחודש אני שולחת מייל אחד עם הפוסטים החדשים.', tag='p', cls='sub-line')}
+    <form class="radar-sub" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="{loc}">
+      <input type="hidden" name="_subject" value="Art Radar by email: new subscriber">
+      <input type="hidden" name="form_type" value="art-radar-monthly">
+      <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <input type="hidden" name="lang" value="en">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>{T('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" dir="ltr" required></label>
+      <button type="submit">{T('Subscribe', 'הרשמה')}</button>
+      {T('You will get Art Radar from me by email, once a month. To stop, reply to any of the emails.', 'תקבלו ממני את ראדאר אמנות במייל, פעם בחודש. כדי להפסיק, השיבו לאחד המיילים.', tag='p', cls='sub-consent')}
+      <p class="sub-error" hidden><span data-l="en">Your signup did not go through. Please write to me at <a href="{mail}" dir="ltr">{EMAIL}</a>.</span><span data-l="he" dir="rtl">ההרשמה לא הצליחה. כתבו לי בכתובת <a href="{mail}" dir="ltr">{EMAIL}</a>.</span></p>
+    </form>
+    <div class="sub-thanks" hidden>{T('Thank you. You are on the list.', 'תודה. נרשמתם.', tag='p')}</div>
+    {wa}
+  </div>
+  {SUBSCRIBE_JS}'''
 
 
 # The form's "I am a" choices (value and English label, Hebrew label), in Ron's order.
@@ -707,13 +825,39 @@ def form_js():
     Since 2026-10-24 setSubject() sets the hidden _subject to "New inquiry from stavtheodor.com: " and the page path,
     at init and again after a send (the markup's static value stays the fallback without JavaScript).
     Since 2026-11-01 syncRef() does the same for Who referred you? (referred_by): shown and enabled only while a
-    REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow."""
+    REFERRAL_VIA chip of How did you find me? is checked, hidden and disabled again after a reset and on pageshow.
+    Since 2026-11-15 (site audit) two hidden fields say where the visit began: landing_page, the path of the
+    first page of this visit in this tab (sessionStorage, path only), and referrer, the host and path of
+    document.referrer when that first page was reached from another site (never its query string or fragment; empty
+    otherwise). Both are read on the visit's first page and kept for the visit; nothing else is stored."""
     if not FORM_ENDPOINT:
         return ''
     refs = ', '.join(f"'{v}'" for v in REFERRAL_VIA)
     return '''<script>
+/* Where the visit began (2026-11-15): the first page's path and, when it was reached from another site, that site's
+   host and path (no query string, no fragment). Kept in sessionStorage for this tab's visit only. */
+var theodoraVisit = (function () {
+  var v = { landing: '', referrer: '' };
+  try {
+    var s = window.sessionStorage, k = 'theodoraVisit', seen = s.getItem(k);
+    if (seen) { return JSON.parse(seen); }
+    v.landing = location.pathname;
+    if (document.referrer) {
+      var r = new URL(document.referrer);
+      if (r.host && r.host !== location.host) { v.referrer = r.host + r.pathname; }
+    }
+    s.setItem(k, JSON.stringify(v));
+  } catch (e) { v.landing = v.landing || location.pathname; }
+  return v;
+})();
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var box = f.closest('.contact-box');
+  function setVisit() {
+    var lp = f.querySelector('[name=landing_page]'), rf = f.querySelector('[name=referrer]');
+    if (lp) { lp.value = theodoraVisit.landing || ''; }
+    if (rf) { rf.value = theodoraVisit.referrer || ''; }
+  }
+  setVisit();
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
@@ -722,6 +866,23 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var subj = f.querySelector('[name=_subject]');
   function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
   setSubject();
+  /* The Art Radar inquiry link (2026-11-18): WRITE_JS sends theodora:ask to the pop-up's form on every opening, with
+     {artist, post, slug, msg} for an Art Radar inquiry link (data-ask) and null for any other Write to Stav button. With a
+     context, artist and source_post are enabled and filled, the subject names the artist and the post, and the
+     message is prefilled only while the box is empty or still holds the last prefill. Without one, both are emptied
+     and disabled again and an untouched prefill is removed, so an ordinary opening never carries an artist. */
+  var artistIn = f.querySelector('[name=artist]'), postIn = f.querySelector('[name=source_post]');
+  var msgIn = f.querySelector('[name=message]');
+  var askCtx = null, lastFill = '';
+  function setAsk(d) {
+    askCtx = d || null;
+    if (artistIn) { artistIn.value = d ? (d.artist || '') : ''; artistIn.disabled = !(d && d.artist); }
+    if (postIn) { postIn.value = d ? (d.post || '') : ''; postIn.disabled = !d; }
+    if (msgIn && (msgIn.value === '' || msgIn.value === lastFill)) { msgIn.value = d ? (d.msg || '') : ''; lastFill = msgIn.value; }
+    if (d) { if (subj) { subj.value = 'Art Radar inquiry: ' + (d.artist || 'a post') + ' (' + d.post + ')'; } }
+    else { setSubject(); }
+  }
+  f.addEventListener('theodora:ask', function (e) { setAsk(e.detail); });
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -781,11 +942,16 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
+        var lead = { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname };
+        if (askCtx) { lead.lead_context = 'radar_ask'; lead.post_slug = askCtx.slug || ''; }
         f.reset();
+        lastFill = '';
+        setAsk(null);
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
+        setVisit();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', lead); }
       })
       .catch(function () {
         f.classList.remove('sending');
@@ -866,6 +1032,31 @@ WRITE_JS = '''<script>
   function focusOn(el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } }
   function open(from) {
     opener = from;
+    /* Opened from the phone menu (the header's Write to Stav): close the menu first, and give focus back to the Menu
+       button afterwards, since the link itself is hidden with the menu. */
+    var mb = document.getElementById('menu-btn');
+    if (from.closest && from.closest('#links') && document.body.classList.contains('menu-open')) {
+      document.body.classList.remove('menu-open');
+      if (mb) { mb.setAttribute('aria-expanded', 'false'); opener = mb; }
+    }
+    /* The Art Radar inquiry link (2026-11-18): tell the form which artist and post this opening is about, or null. */
+    var cf = box.querySelector('form.contact-form');
+    if (cf) {
+      var d = null;
+      if (from.hasAttribute && from.hasAttribute('data-ask')) {
+        var he = document.body.classList.contains('lang-he');
+        d = { artist: from.getAttribute('data-artist') || '', post: from.getAttribute('data-post') || '',
+              slug: from.getAttribute('data-post-slug') || '', msg: from.getAttribute(he ? 'data-msg-he' : 'data-msg-en') || '' };
+      }
+      cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
+    }
+    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
+       the default Write to Stav twins, kept from the markup on the first opening. */
+    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
+      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
+      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
+      s.textContent = own || s.getAttribute('data-default');
+    });
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
@@ -895,6 +1086,9 @@ WRITE_JS = '''<script>
        with where the button sits (data-loc, else page) and the page path only. */
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      if (a.hasAttribute('data-ask')) {
+        window.gtag('event', 'radar_inquiry', { post_slug: a.getAttribute('data-post-slug') || '', link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      }
     }
   }, true);
 })();
@@ -910,7 +1104,7 @@ def write_ui():
     return f'''<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
   <div class="wm-panel">
     <button type="button" class="wm-x" data-close>{WRITE_X}<span class="vh">{T('Close', 'סגירה')}</span></button>
-    <p class="eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
+    <p class="eyebrow wm-eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
     <h2 class="serif wm-head" id="write-modal-title">{T(*CONTACT_HEAD)}</h2>
     {form}
   </div>
@@ -1210,6 +1404,12 @@ def body_open():
     return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
 
 
+def main(body):
+    """The page's own content between the nav and the footer as the main landmark (site audit, 2026-11-15: Lighthouse
+    found none on 18 of 21 pages). A plain <main>, display block, no class: the layout does not change."""
+    return '\n<main>' + body + '</main>\n'
+
+
 def tail(home=False, scripts='', quiet=False):
     """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
     without its closing block (/contact/, whose body is that block)."""
@@ -1301,6 +1501,53 @@ def read_posts(path=POSTS_FILE):
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
     return src, posts
+
+
+RADAR_FILE = os.path.join(ROOT, 'content', 'radar.json')
+_radar_meta = None
+
+
+def read_radar_meta():
+    """content/radar.json, the Art Radar sidecar (2026-11-18): topics (each a list of post slugs), no_topic (posts that
+    belong to none), posts.<slug> (optional seo_title, the <title> before " · THEODORA") and hubs. Read once per build
+    by build-post-pages.py and build-site-pages.py."""
+    global _radar_meta
+    if _radar_meta is None:
+        d = json.load(open(RADAR_FILE, encoding='utf-8'))
+        for k, v in (('topics', []), ('no_topic', []), ('posts', {}), ('hubs', {})):
+            d.setdefault(k, v)
+        _radar_meta = d
+    return _radar_meta
+
+
+def post_topics(slug):
+    """The topics (dicts from content/radar.json) a post belongs to, in file order."""
+    return [t for t in read_radar_meta()['topics'] if slug in t['posts']]
+
+
+def post_body(inner, lang):
+    """The inner HTML of a post's English ('en') or Hebrew ('he') body block, or ''."""
+    rx = (r'<div class="post-body post-body-en"[^>]*>(.*)$' if lang == 'en'
+          else r'<div class="post-body" lang="he"[^>]*>(.*?)<div class="post-body post-body-en"')
+    m = re.search(rx, inner, flags=re.S)
+    return m.group(1) if m else ''
+
+
+INTERNAL_HREF = re.compile(r'<a\b[^>]*\bhref="(/[^"#?]*)')
+POST_OWN_PATHS = ('/radar/', '/images/', '/videos/')
+
+
+def bridge_target(post):
+    """The site page a post points readers to: posts.<slug>.bridge.target in content/radar.json when the key is there
+    (None when it is null), else the first internal link in the English body that is not to /radar/, /images/ or
+    /videos/ (the closing lines added on 2026-11-01), else None."""
+    meta = read_radar_meta()['posts'].get(post['slug'], {})
+    if 'bridge' in meta:
+        return (meta['bridge'] or {}).get('target')
+    for href in INTERNAL_HREF.findall(post_body(post['article_inner'], 'en')):
+        if not href.startswith(POST_OWN_PATHS):
+            return href
+    return None
 
 
 def month_labels(post):

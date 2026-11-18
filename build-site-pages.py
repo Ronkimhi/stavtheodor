@@ -248,15 +248,26 @@ def described(p):
 
 
 def radar_html(p):
-    """From Art Radar, on every article page: the posts named in radar_posts (in that order),
-    or the three newest. Same timeline markup as the homepage and the post pages."""
+    """From Art Radar, on every article page: the posts named in radar_posts (in that order), else (2026-11-18) up to
+    two posts that point to this page (site_chrome.bridge_target), newest first, then the newest posts, three in all.
+    Same timeline markup as the homepage and the post pages."""
     by = {q["slug"]: q for q in posts()}
-    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by] or posts()[:3]
+    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by]
+    if not chosen:
+        here = "/" + p["path"].strip("/") + "/"
+        chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
+        chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+    order = {q["slug"]: i for i, q in enumerate(posts())}
+    chosen = sorted(chosen, key=lambda q: order[q["slug"]])  # a dated timeline reads newest first
+    # radar_topic (2026-11-18): the arrow goes to that topic's hub in place of All posts, while the topic has one
+    topic = next((t for t in sc.read_radar_meta()["topics"] if t["slug"] == p.get("radar_topic") and t.get("hub")), None)
+    arrow = (f'<a class="arrow" href="/radar/{topic["slug"]}/"><span class="ln"></span>{T(H.escape(topic["label_en"]), H.escape(topic["label_he"]))}</a>'
+             if topic else f'<a class="arrow" href="/radar/"><span class="ln"></span>{T("All posts", "כל הפוסטים")}</a>')
     return f'''
 <section class="section wrap tight">
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
-    <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
+    {arrow}
   </div>
   <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide", alts=described(p))}
   </div>
@@ -264,18 +275,21 @@ def radar_html(p):
 '''
 
 
-# The Write to Stav block under a guide's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
-# JSON (the dental, restaurant and hotel guides). The same data-write button as the closing CTA, which stays as it is,
-# with data-loc="guide-lead" and one line under it.
+# The Write to Stav block under a page's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
+# JSON. The same data-write button as the closing CTA, which stays as it is, and one line under it. On guides (since
+# 2026-11-01) it sits under the lead and byline with data-loc="guide-lead"; since 2026-11-15 (site audit) the
+# advisory, area, local, partner and project pages may carry it too, under their opening paragraph, with
+# data-loc="page-lead", so GA4's write_open tells it from the closing button (page-end) and the header (nav).
 LEAD_WRITE_LINE = ("Tell me about the space: the walls, the light, the timeline.", "ספרו לי על החלל: הקירות, האור, לוח הזמנים.")
 
 
-def lead_write_html(p):
+def lead_write_html(p, reveal=False):
     if not p.get("lead_write"):
         return ""
+    loc = "guide-lead" if p["section"] == "guide" else "page-lead"
     return f'''
-  <div class="lead-write">
-    <a class="btn" href="{MAIL}" data-write data-loc="guide-lead">{T('Write to Stav', 'כתבו לסתיו')}</a>
+  <div class="lead-write{' reveal' if reveal else ''}">
+    <a class="btn" href="{MAIL}" data-write data-loc="{loc}">{T('Write to Stav', 'כתבו לסתיו')}</a>
     <p class="muted">{T(*LEAD_WRITE_LINE)}</p>
   </div>'''
 
@@ -448,7 +462,8 @@ def page_guides(p, all_pages):
 # The reviews on a content page (Ron, 2026-10-23, site rules F8: "near the form and on home, contact and /for-designers/"):
 # the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
 # directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
-REVIEWS_PAGES = {"for-designers"}
+REVIEWS_PAGES = {"for-designers", "art-consultant-tenafly-nj", "art-advisor-bergen-county"}
+RADAR_BEFORE_ASK = {"for-designers"}  # the one article page whose From Art Radar strip stays above the closing ask
 
 
 def reviews_html(p):
@@ -522,7 +537,7 @@ def render_article_page(p, all_pages):
 <header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
-  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p) if guide else ''}{hero}
+  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p)}{hero}
 </header>
 
 <section class="section wrap tight">
@@ -540,17 +555,21 @@ def render_article_page(p, all_pages):
 </section>
 {guide_next(p, all_pages)}{radar_html(p)}'''
     else:
-        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
+        # From Art Radar after the closing ask (site audit, 2026-11-15), as on the guides: the ask, and on the New Jersey and
+        # New York pages the inline form above it, come first. /for-designers/ keeps the strip above its reviews, which
+        # sit directly above its ask (RADAR_BEFORE_ASK).
+        late = p["slug"] not in RADAR_BEFORE_ASK
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{'' if late else radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
-'''
+{radar_html(p) if late else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
                     og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
                     # a guide whose hero is a pair previews that pair's 1200 by 630 crop: give its size and what it shows
                     og_card_dims=own_og, og_image_alt=sc.spaces()[ba]['alt_en'] if own_og else None,
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
-            + sc.body_open() + page_nav(p) + body + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
+            + sc.body_open() + page_nav(p) + sc.main(body) + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
 
 
 def page_nav(p):
@@ -590,7 +609,7 @@ def render_project_page(p, all_pages, projects):
 </header>
 '''
     body = header + f'''
-<section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p></section>
+<section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p>{lead_write_html(p, reveal=True)}</section>
 
 <section class="section wrap">
   <div class="prose" data-l="he" dir="rtl">
@@ -611,10 +630,10 @@ def render_project_page(p, all_pages, projects):
     {related_html(p, all_pages, exclude_projects=True)}
   </div>
 </section>
-'''
+{radar_html(p) if p.get("radar_posts") else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og))
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 def ba_card(p):
@@ -682,7 +701,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 {who_row(section)}{HUB_CTA}'''
     desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
     return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 # /guide/, the guides index (2026-10-01): every built guide, in the six categories of site_chrome.GUIDE_BUCKETS, under
@@ -812,9 +831,12 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections + guide_where()  # the footer carries the closing line
+    top = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar
+    body = sections + guide_where()  # the footer carries the closing line
+    # The main landmark starts after the category bar here (2026-11-15): the bar is sticky, and inside <main> it would
+    # let go of the screen where main ends, above the footer; as a child of <body> it keeps pinning to the end as before.
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
+            + sc.body_open() + sc.nav() + top + sc.main(body) + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
 
 def who_row(section):
@@ -892,7 +914,7 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}{CONTACT_AFTER_CARD}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False, form_first=True)}{CONTACT_AFTER_CARD}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>
@@ -906,7 +928,7 @@ def render_contact():
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
@@ -916,8 +938,8 @@ def render_contact():
 # (content/pages/for-designers.json, for-brokers.json) and the page titles of the pages it links. No new claim.
 ABOUT = {
     "path": "about",
-    "title": "About THEODORA | Art Advisor Stav Theodor, Tenafly NJ",
-    "description": "THEODORA is the art curation and advisory practice of Stav Theodor in Tenafly, NJ, serving Bergen County, NJ, NYC and California, and clients online anywhere.",
+    "title": "Stav Theodor, Art Curator and Art Advisor",
+    "description": "Stav Theodor is an art curator with more than 15 years in the art world, since 2010. She founded THEODORA in 2020. Based in Tenafly, NJ, she works anywhere.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
     # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
     "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
@@ -927,9 +949,18 @@ ABOUT = {
     # "Who is Stav Theodor?" (AIO play 4, 2026-11-01): the entity answer, answer first, every fact traced to BRIEF.md
     "who_is": ("I am Stav Theodor, an art curator, art advisor and art consultant with more than 15 years in the art world, since 2010. I founded THEODORA Art Advisory by Stav Theodor in 2020; before THEODORA I did curatorial work in established museums and managed an art gallery in Tel Aviv. I am based in Tenafly, New Jersey, and I work with clients anywhere, online and in person. My clients are interior designers and architects, private collectors, home owners, business owners, and hotels and hospitality groups.",
                "אני סתיו תאודור, אוצרת אמנות ויועצת אמנות, עם יותר מ-15 שנה בעולם האמנות, מאז 2010. את THEODORA Art Advisory by Stav Theodor ייסדתי ב-2020. לפני THEODORA עסקתי באוצרות במוזיאונים מבוססים וניהלתי גלריה לאמנות בתל אביב. הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת עם לקוחות בכל מקום, אונליין ופנים אל פנים. הלקוחות שלי הם מעצבי פנים ואדריכלים, אספנים פרטיים, בעלי בתים, בעלי עסקים, ומלונות וקבוצות אירוח."),
+    # The hero's proof line (Theo, 2026-11-14), under the opening paragraph: the hospitality work and the UN exhibition,
+    # BRIEF.md lines 88 to 92 and 97, each linked to its project page
+    "proof": ("Alongside private homes, I have spent years building art concepts and collections while collaborating with <a href=\"/projects/hotels-and-hospitality-collections/\">luxury hospitality leaders</a>, among them the Waldorf Astoria Chengdu, the St. Regis Amman and Holland America Line. "
+              "I also curated <a href=\"/projects/creating-hope-exhibition-un-geneva/\">Creating Hope</a>, an exhibition of works by 27 Israeli artists, presented at the United Nations Offices in Geneva, Switzerland, in June 2024.",
+              "לצד בתים פרטיים, עבדתי שנים על קונספטים ואוספים של אמנות בשיתוף פעולה עם <a href=\"/projects/hotels-and-hospitality-collections/\">מובילים בתחום האירוח היוקרתי</a>, ובהם וולדורף אסטוריה צ'נגדו, סנט רג'יס עמאן והולנד אמריקה ליין. "
+              "אצרתי גם את <a href=\"/projects/creating-hope-exhibition-un-geneva/\">Creating Hope</a>, תערוכה ובה עבודות של 27 אמנים ישראלים, שהוצגה במשרדי האומות המאוחדות בז'נבה, שווייץ, ביוני 2024."),
+    # Who I represent, second paragraph (Theo, 2026-11-14): the installation promise, BRIEF.md lines 52 and 54
+    "install": ("I work with you until the art is on the wall: I have <a href=\"/advisory/framing-and-installing-large-scale-art/\">my own installation team</a>, and I install after hours, so offices, practices, restaurants and hotels can keep working.",
+                "אני עובדת איתכם עד שהאמנות תלויה על הקיר: יש לי <a href=\"/advisory/framing-and-installing-large-scale-art/\">צוות התקנה משלי</a>, ואני מתקינה אחרי שעות העבודה, כך שמשרדים, קליניקות, מסעדות ומלונות יכולים להמשיך לעבוד."),
     # The credentials sentence the homepage's #about carried until 2026-09-29 (its facts are now the credentials strip there)
-    "credentials": ("I am an art curator with an M.A. in art history from the Faculty of Arts at Ben-Gurion University and a diploma in curatorial and museum studies from the Faculty of Arts at Tel Aviv University. Today I am based in Tenafly, New Jersey, and work in New York, across Bergen County and in Tel Aviv.",
-                    "אני אוצרת אמנות, בעלת תואר שני בתולדות האמנות מהפקולטה למדעי הרוח והחברה באוניברסיטת בן-גוריון ותעודה בלימודי אוצרות ומוזיאולוגיה מהפקולטה לאמנויות באוניברסיטת תל אביב. היום הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת בניו יורק, ברחבי מחוז ברגן ובתל אביב."),
+    "credentials": ("I am an art curator with an M.A. in art history from the Faculty of Arts at Ben-Gurion University and a diploma in curatorial and museum studies from the Faculty of Arts at Tel Aviv University. Today I am based in Tenafly, New Jersey, and work in New York, across Bergen County and in Tel Aviv, and online with clients anywhere.",
+                    "אני אוצרת אמנות, בעלת תואר שני בתולדות האמנות מהפקולטה למדעי הרוח והחברה באוניברסיטת בן-גוריון ותעודה בלימודי אוצרות ומוזיאולוגיה מהפקולטה לאמנויות באוניברסיטת תל אביב. היום הבסיס שלי בטנפליי, ניו ג'רזי, ואני עובדת בניו יורק, ברחבי מחוז ברגן ובתל אביב, ואונליין עם לקוחות בכל מקום."),
     # Two real project photographs, each with a caption already published on its project page (read at build time):
     # (page path, image src, width, height, where the caption comes from: "hero" or the body figure)
     "photos": [("projects/creating-hope-exhibition-un-geneva", "/images/projects/stav-gallery.jpg", 1600, 1153, "hero"),
@@ -958,7 +989,8 @@ ABOUT_WHO_EXTRA = [(None, "Private collectors", "אספנים פרטיים"), (N
 def home_twins(region):
     """Twins read from templates/home.html: a variant region's (en, he) by its name; 'about' for the (en, he) of each
     body paragraph of the #about section; 'about_line' for its serif statement; 'creds' for the credentials strip's
-    markup, whole; 'services' for the ((en, he) heading, (en, he) line) of each service column."""
+    markup, whole; 'services' for the ((en, he) heading, (en, he) line) of each service column; 'represent' for the
+    (en, he) of the homepage's #represent paragraph."""
     tpl = open("templates/home.html", encoding="utf-8").read()
     pair = re.compile(r'<span data-l="en">(.*?)</span><span data-l="he" dir="rtl">(.*?)</span>', re.S)
     about = re.search(r'<section class="section wrap" id="about">(.*?)</section>', tpl, re.S).group(1)
@@ -966,6 +998,9 @@ def home_twins(region):
         return [pair.match(m).groups() for m in re.findall(r'<p class="body">(.*?)</p>', about, re.S)]
     if region == "about_line":
         return pair.search(re.search(r'<h2 class="serif about-line">(.*?)</h2>', about, re.S).group(1)).groups()
+    if region == "represent":
+        sec = re.search(r'<section class="section wrap represent" id="represent">(.*?)</section>', tpl, re.S).group(1)
+        return pair.match(re.search(r'<p class="body">(.*?)</p>', sec, re.S).group(1)).groups()
     if region == "creds":
         return re.search(r'<dl class="creds[^"]*">.*?</dl>', about, re.S).group(0)
     if region == "services":
@@ -1001,6 +1036,7 @@ def about_rows(pages):
         (bg_h2, [bg[0], bg[1], ABOUT["credentials"]]),
         (("What I do", "מה אני עושה"), [statement, how,
                                        ("ul", [both(lambda i, _: f"<strong>{h[i]}.</strong> {d[i]}.") for h, d in services])]),
+        (("Who I represent", "את מי אני מייצגת"), [home_twins("represent"), ABOUT["install"]]),
         (("Where I work", "איפה אני עובדת"), [where]),
         (("For partners", "לשותפים"), [both(lambda i, l: f'{des["lead_" + l]} {link(des, l)}.'),
                                        both(lambda i, l: f"{credit[i]} {link(bro, l)}."),
@@ -1080,7 +1116,7 @@ def about_links(pages):
 def render_about(pages):
     """/about/ (redesigned 2026-09-29): a portrait-led opening (the homepage's serif statement, the h1 as a quiet line,
     the entity paragraph), the homepage's credentials strip, the practice story in short rows, Who I work with, two
-    real project photographs, the links, and a closing call to /contact/."""
+    real project photographs, the closing ask (Write to Stav first, 2026-11-14), and the links."""
     url = f"{SITE}/{ABOUT['path']}/"
     src, w, h, alt_en, alt_he = ABOUT["portrait"]
     line = home_twins("about_line")
@@ -1115,6 +1151,7 @@ def render_about(pages):
     <p class="serif ah-line">{T(*line)}</p>
     <h1 class="ah-h1">{T(*ABOUT["h1"])}</h1>
     <p class="ah-lead">{T(lead_en, lead_he)}</p>
+    <p class="ah-proof">{T(*ABOUT["proof"])}</p>
     <p class="about-sig"><span class="nm">{T('Stav Theodor', 'סתיו תאודור')}</span><span class="role">{T('Founder, art curator and advisor', 'מייסדת, אוצרת ויועצת אמנות')}</span></p>
   </div>
 </header>
@@ -1137,24 +1174,25 @@ def render_about(pages):
   </div>
 </section>
 
+<section class="section wrap">
+  <div class="about-cta reveal">
+    <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
+    <div class="acts">
+      <a class="btn solid" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="/contact/"><span class="ln"></span>{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
+      {sc.phone_link('cta')}
+    </div>
+  </div>
+</section>
+
 <section class="section wrap tight">
   <div class="about-more reveal">{about_links(pages)}
   </div>
 </section>
 
-<section class="section wrap">
-  <div class="about-cta reveal">
-    <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
-    <div class="acts">
-      <a class="btn solid" href="/contact/">{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
-      <a class="arrow" href="{MAIL}" data-write data-loc="page-end"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
-      {sc.phone_link('cta')}
-    </div>
-  </div>
-</section>
 '''
-    return (sc.head(ABOUT["title"], ABOUT["description"], url, og_image=SITE + ABOUT["og_image"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))
+    return (sc.head(f'{ABOUT["title"]} · THEODORA', ABOUT["description"], url, og_image=SITE + ABOUT["og_image"], lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))
 
 
 def check(p, out):
@@ -1214,7 +1252,7 @@ HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ
 HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
-HUB_FOCUS = {"projects": "50% 55%"}
+HUB_FOCUS = {"projects": "50% 55%", "advisory": "50% 18%"}  # advisory: her head in frame in the clean 16:9 hero (art director, 2026-11-15)
 
 
 def main():
