@@ -29,6 +29,26 @@ OUT_DIR = 'radar'
 sc.guard_index()
 html, posts = sc.read_posts()
 print(f"Found {len(posts)} posts")
+RADAR = sc.read_radar_meta()
+BY_SLUG = {p["slug"]: p for p in posts}
+
+
+def radar_meta_check():
+    """content/radar.json names only real posts, and every post sits in a topic or in no_topic (2026-11-18)."""
+    bad = []
+    named = [s for t in RADAR["topics"] for s in t["posts"]] + RADAR["no_topic"] + list(RADAR["posts"])
+    bad += [f"unknown post slug {s!r}" for s in named if s not in BY_SLUG]
+    homed = {s for t in RADAR["topics"] for s in t["posts"]} | set(RADAR["no_topic"])
+    bad += [f"post {s!r} is in no topic and not in no_topic" for s in BY_SLUG if s not in homed]
+    for s, meta in RADAR["posts"].items():
+        st = meta.get("seo_title")
+        if st and len(f"{st} · THEODORA") > 60:
+            bad.append(f"seo_title of {s!r} is over 60 characters with the suffix")
+    if bad:
+        raise SystemExit("content/radar.json: " + "; ".join(bad))
+
+
+radar_meta_check()
 
 # ---- 1. Rewrite JSON-LD url/mainEntityOfPage in content/posts.html to real permalinks ----
 # Safe to re-run: posts already using the real permalink are left untouched.
@@ -96,6 +116,100 @@ def working_with_stav(p):
 '''
 
 
+POS = {p["slug"]: i for i, p in enumerate(posts)}  # file order, newest first
+MORE_N = 6
+MIN_INBOUND = 4
+
+
+def topic_slugs(slug):
+    return {t["slug"] for t in sc.post_topics(slug)}
+
+
+def related_posts(all_posts):
+    """The "More from Art Radar" list of every post (2026-11-18, replacing "the six newest" on every page): up to
+    three posts that share a topic with it, nearest in date first; the post published just before it and the one just
+    after; then, to six, the posts with the fewest links so far, those sharing a topic first. Shown newest first."""
+    picks = {}
+    for p in all_posts:
+        mine = topic_slugs(p["slug"])
+        same = sorted((o for o in all_posts if o is not p and mine & topic_slugs(o["slug"])),
+                      key=lambda o: (abs(POS[o["slug"]] - POS[p["slug"]]), POS[o["slug"]]))
+        out = same[:3]
+        i = POS[p["slug"]]
+        for j in (i + 1, i - 1):
+            if 0 <= j < len(all_posts) and all_posts[j] not in out:
+                out.append(all_posts[j])
+        picks[p["slug"]] = out
+    links = {p["slug"]: 0 for p in all_posts}
+    for out in picks.values():
+        for o in out:
+            links[o["slug"]] += 1
+    for p in all_posts:
+        out, mine = picks[p["slug"]], topic_slugs(p["slug"])
+        while len(out) < MORE_N:
+            nxt = min((o for o in all_posts if o is not p and o not in out),
+                      key=lambda o: (not (mine & topic_slugs(o["slug"])), links[o["slug"]], POS[o["slug"]]))
+            out.append(nxt)
+            links[nxt["slug"]] += 1
+        picks[p["slug"]] = sorted(out, key=lambda o: POS[o["slug"]])
+    return picks
+
+
+RELATED = related_posts(posts)
+
+
+def inbound_check():
+    """Every post is linked from at least MIN_INBOUND other post pages (the More list and the post bodies)."""
+    linked = {p["slug"]: set() for p in posts}
+    for p in posts:
+        targets = {o["slug"] for o in RELATED[p["slug"]]}
+        targets |= set(re.findall(r'href="/radar/([a-z0-9-]+)/', p["article_inner"]))
+        for t in targets:
+            if t in linked and t != p["slug"]:
+                linked[t].add(p["slug"])
+    thin = sorted(s for s, v in linked.items() if len(v) < MIN_INBOUND)
+    if thin:
+        raise SystemExit(f"build-post-pages: posts linked from fewer than {MIN_INBOUND} other post pages: {thin}")
+
+
+inbound_check()
+
+FIGURE_RE = re.compile(r'<figure\b.*?</figure>', re.S)
+CAPTION_RE = re.compile(r'<figcaption[^>]*>(.*?)</figcaption>', re.S)
+
+
+def post_ld(p):
+    """The post's own JSON-LD from content/posts.html, with what the page shows added at render time (2026-11-18):
+    @id, the first image (its file's size and Stav's caption under it), the English word count and the post's topics.
+    The stored block in content/posts.html is never edited."""
+    d = json.loads(p["json_text"])
+    out = {}
+    for k, v in d.items():
+        out[k] = v
+        if k == "@type":
+            out["@id"] = f"{SITE}/radar/{p['slug']}/#post"
+    if p["img"]:
+        img = {"@type": "ImageObject", "url": SITE + p["img"]}
+        dims = sc.raster_dims(p["img"])
+        if dims:
+            img["width"], img["height"] = dims
+        en = sc.post_body(p["article_inner"], "en")
+        for fig in FIGURE_RE.findall(en):
+            if p["img"].lstrip("/") in fig:
+                cap = CAPTION_RE.search(fig)
+                if cap and sc.strip_tags(cap.group(1)):
+                    img["caption"] = sc.strip_tags(cap.group(1))
+                break
+        out["image"] = img
+    words = sc.strip_tags(FIGURE_RE.sub(" ", sc.post_body(p["article_inner"], "en"))).split()
+    if words:
+        out["wordCount"] = len(words)
+    sections = [t["label_en"] for t in sc.post_topics(p["slug"])]
+    if sections:
+        out["articleSection"] = sections
+    return out
+
+
 def render_post_page(p, all_posts):
     permalink = f"{SITE}/radar/{p['slug']}/"
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
@@ -111,7 +225,7 @@ def render_post_page(p, all_posts):
             {"@type": "ListItem", "position": 3, "name": p["headline"], "item": permalink},
         ],
     }
-    others = [o for o in all_posts if o["slug"] != p["slug"]][:6]
+    others = RELATED[p["slug"]]
     body = f'''
 <header class="phead">
   <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a></p>
@@ -134,9 +248,15 @@ def render_post_page(p, all_posts):
     title = f"{p['headline']} · Art Radar · THEODORA"
     if len(title) > 60:
         title = f"{p['headline']} · THEODORA"
+    # a search title (content/radar.json posts.<slug>.seo_title, 2026-11-18) changes the <title> only: Stav's headline
+    # stays the h1 and the title a shared link shows
+    seo = RADAR["posts"].get(p["slug"], {}).get("seo_title")
+    og_title = None
+    if seo:
+        og_title, title = title, f"{seo} · THEODORA"
     return (sc.head(title, p['description'], permalink,
-                    og_image=p['og_image'], og_type='article', lang='en',
-                    ld=[p['json_text'], breadcrumb])
+                    og_image=p['og_image'], og_type='article', lang='en', og_title=og_title,
+                    ld=[post_ld(p), breadcrumb])
             + sc.body_open() + sc.nav() + body + sc.tail())
 
 
