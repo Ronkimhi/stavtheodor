@@ -124,6 +124,7 @@ Stav Theodor is an art curator and advisor with more than 15 years of experience
 Art Radar is THEODORA's curatorial newsletter and public archive. It covers must-see exhibitions, gallery openings, and the stories behind the art, in New York, New Jersey, and Tel Aviv. Every post is published in full in both Hebrew and English on the same page, so all content below is fully readable in English at the post URL.
 
 - [Every post, in order](https://stavtheodor.com/radar/): the full Art Radar archive on one page, newest first, grouped by month, each entry linking to its own bilingual post page.
+- [Israeli Artists Worth Knowing](https://stavtheodor.com/radar/israeli-artists/): the Israeli artists Stav has written about in Art Radar, each with one sentence quoted from her post and a link to it, the posts themselves, and her own work with Israeli art (Creating Hope, 27 Israeli artists, United Nations Offices in Geneva, June 2024; a collection in Closter, New Jersey; art for a home in Israel).
 
 ## The Museum
 

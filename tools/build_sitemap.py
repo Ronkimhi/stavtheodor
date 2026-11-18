@@ -5,8 +5,8 @@
                        local landing page (content/pages/*.json), /contact/ and /about/ (since 2026-09-29), and the
                        buyer pages (content/variants/*.json, indexable since 2026-09-28); each guide URL also lists its
                        proposal photos as image:image entries (2026-10-10)
-  sitemap-radar.xml    the Art Radar archive and every post (content/posts.html), each post with its images as
-                       image:image entries (2026-11-18)
+  sitemap-radar.xml    the Art Radar archive, its topic hubs (content/radar.json) and every post (content/posts.html),
+                       each post with its images as image:image entries (2026-11-18)
   sitemap-museum.xml   the Museum's static pages (museum/index.html, museum/artists/, one
                        page per artist), which used to dilute one flat sitemap
 
@@ -149,6 +149,10 @@ def main():
     posts = sorted(posts, key=lambda x: x['datePublished'], reverse=True)
     latest = max(p['dateModified'] for p in posts)
     radar_entries = [(entry(f'{SITE}/radar/', latest), latest)]
+    for t in sc.read_radar_meta()['topics']:  # a topic hub (content/radar.json, 2026-11-18) is dated like a page
+        hub = f"radar/{t['slug']}/index.html"
+        if t.get('hub') and os.path.exists(hub):
+            radar_entries.append(dated(f"{SITE}/radar/{t['slug']}/", hub))
     for p in posts:
         radar_entries.append((entry(f"{SITE}/radar/{p['slug']}/", p['dateModified'], post_images(p)), p['dateModified']))
     radar_lm = write_sitemap('sitemap-radar.xml', radar_entries)
