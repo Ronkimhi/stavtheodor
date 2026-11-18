@@ -315,6 +315,16 @@ def radar_post_page(path):
             and path not in RADAR_HUBS)
 
 
+# ---- entities: an HTML entity split by a tag (&#<span...>x27</span>;) shows as code on the page (2026-11-18)
+SPLIT_ENTITY = re.compile(r'&#?<|&<span')
+for path in walk(('.html',)):
+    if path.split(os.sep)[0] in ('templates', 'content'):
+        continue
+    m = SPLIT_ENTITY.search(re.sub(r'<script.*?</script>', '', read(path), flags=re.S))
+    if m:
+        fail('entities', f'{path}: split entity near {read(path)[max(0, m.start() - 30):m.end() + 30]!r}')
+
+
 # ---- dashes and phones, over every text file the site ships or builds from
 for path in walk(('.html', '.txt', '.md', '.json', '.py', '.css', '.js', '.xml')):
     if path in GATE_FILES:
@@ -674,7 +684,7 @@ for path in pages:
         if m:
             fail('hebrew', f'{path}: Latin {m.group(0)!r} inside Hebrew {kind} {t.strip()[:60]!r}')
 
-gates = ['dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'museum', 'posts', 'removed', 'lang', 'sitemap', 'variants', 'hebrew']
+gates = ['entities', 'dashes', 'phones', 'nap', 'twins', 'anchors', 'links', 'jsonld', 'schema', 'faq', 'noindex', 'museum', 'posts', 'removed', 'lang', 'sitemap', 'variants', 'hebrew']
 if fails:
     print('\n'.join(sorted(set(fails))))
     print(f'\ncheck_site: {len(set(fails))} failure(s) across', ', '.join(sorted({f.split(":")[0] for f in fails})))

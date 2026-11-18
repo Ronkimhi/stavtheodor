@@ -31,12 +31,12 @@
   },
   "hubs": {
     "israeli-artists": {
-      "head_title": "Israeli Artists to Know: A Curator's List",
-      "h1_en": "Israeli Artists to Know: A Curator's List",
-      "h1_he": "אמנים ישראלים שכדאי להכיר: הרשימה של אוצרת",
-      "meta_description": "The Israeli artists I have written about in Art Radar, among them Zoya Cherkassky, Ruth Patir and Tom Fima, with the shows in New York and Tel Aviv.",
-      "intro_en": "These are the Israeli artists I have written about in Art Radar, from a graduate show at Bezalel and galleries in Tel Aviv to museums and galleries in New York. I curated Creating Hope, an exhibition of works by 27 Israeli artists that was presented at the United Nations Offices in Geneva in June 2024. Each name below leads to the post where I wrote about the work.",
-      "intro_he": "אלה האמנים הישראלים שכתבתי עליהם בראדאר אמנות, מתערוכת הבוגרים של בצלאל ומגלריות בתל אביב ועד מוזיאונים וגלריות בניו יורק. אצרתי את Creating Hope, תערוכה של עבודות של 27 אמנים ישראלים שהוצגה במשרדי האומות המאוחדות בז'נבה ביוני 2024. כל שם כאן מוביל לפוסט שבו כתבתי על העבודה.",
+      "head_title": "Israeli Artists to Know, From My Art Radar",
+      "h1_en": "Israeli Artists Worth Knowing",
+      "h1_he": "אמנים ואמניות ישראלים ששווה להכיר",
+      "meta_description": "Israeli artists I have written about in Art Radar, from Zoya Cherkassky and Ruth Patir to a Bezalel graduate show, each with a line from my post.",
+      "intro_en": "These are the Israeli artists I have written about in Art Radar, from galleries in Tel Aviv and a Bezalel graduate show to the Jewish Museum and galleries in New York. Some are among the most prominent names in Israeli art and some are at the start of their path, and under each name you will find a sentence from my post and a link to the full post. Israeli art is part of my own work too: I curated Creating Hope, an exhibition of works by 27 Israeli artists that was presented at the United Nations Offices in Geneva in June 2024.",
+      "intro_he": "אלה האמנים והאמניות הישראלים שכתבתי עליהם בראדאר אמנות, מגלריות בתל אביב ומתערוכת הבוגרים של בצלאל ועד המוזיאון היהודי וגלריות בניו יורק. חלקם מהשמות הבולטים באמנות הישראלית וחלקם בראשית דרכם, ומתחת לכל שם תמצאו משפט מהפוסט שלי וקישור לפוסט המלא. אמנות ישראלית היא גם חלק מהעבודה שלי: אצרתי את Creating Hope, תערוכת עבודות של 27 אמנים ישראלים שהוצגה במשרדי האומות המאוחדות בז'נבה ביוני 2024.",
       "artists": [
         {"name_en": "Alex Farfuri", "name_he": "אלכס פרפורי", "post": "seven-israeli-works-nathan-zach", "quote_en": "Alex Farfuri goes out into Tel Aviv with an analog camera and photographs the promenade, the beach and the people who live the city without a filter: bellies, wrinkles, tans, laughter.", "quote_he": "אלכס פרפורי יוצאת לתל אביב עם מצלמה אנלוגית ומצלמת את הטיילת, את החוף ואת האנשים שחיים את העיר בלי פילטר: כרסים, קמטים, שיזוף, צחוק."},
         {"name_en": "Belu-Simion Fainaru", "name_he": "בלו סימיון פיינרו", "post": "pool-in-israeli-art", "quote_en": "In the installation chosen to represent Israel at the 61st Venice Biennale, a black pool collects drops that fall from a system of drippers suspended above it.", "quote_he": "במיצב שנבחר לייצג את ישראל בביאנלה ה־61 בוונציה, בריכה שחורה אוספת לתוכה טיפות הנושרות ממערכת טפטפות התלויה מעליה."},
@@ -58,7 +58,7 @@
         {"name_en": "Yehuda Armoni", "name_he": "יהודה ארמוני", "post": "seven-israeli-works-nathan-zach", "quote_en": "Armoni paints facing the landscape, with the patience of someone willing to wait for the light.", "quote_he": "ארמוני מצייר מול הנוף, בסבלנות של מי שמוכן לחכות לאור."},
         {"name_en": "Zoya Cherkassky", "name_he": "זויה צ׳רקסקי", "post": "zoya-cherkassky-american-cooking", "quote_en": "Zoya is one of the most prominent artists in contemporary Israeli art, and she paints mainly what is right around her: people, family, food, class, culture and identity.", "quote_he": "זויה היא אחת האמניות הבולטות באמנות הישראלית העכשווית, והיא מציירת בעיקר את מה שנמצא ממש סביבה: אנשים, משפחה, אוכל, מעמד, תרבות וזהות."}
       ],
-      "doors": ["/projects/creating-hope-exhibition-un-geneva/", "/projects/closter-new-jersey-new-construction/", "/advisory/art-for-a-home-in-israel-from-abroad/", "/advisory/starting-an-art-collection/"]
+      "doors": ["/projects/creating-hope-exhibition-un-geneva/", "/projects/closter-new-jersey-new-construction/", "/advisory/art-for-a-home-in-israel-from-abroad/"]
     }
   }
 }

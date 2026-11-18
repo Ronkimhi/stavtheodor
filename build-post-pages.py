@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+from html.parser import HTMLParser
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import site_chrome as sc
@@ -305,10 +306,52 @@ DOOR_PAGES = {json.load(open(f, encoding="utf-8"))["path"].strip("/"): json.load
 LATIN_RUN = re.compile(r"[A-Za-z][A-Za-z0-9'.&]*(?: [A-Za-z0-9][A-Za-z0-9'.&]*)*")
 
 
-def mark_latin(he_html):
+def mark_latin(text):
     """Stav's Hebrew titles and sentences keep their English names (Luhring Augustine, Ben Sledsens): each Latin run
-    is marked lang="en", the way the post pages read, so the Hebrew view stays one language per element."""
-    return LATIN_RUN.sub(lambda m: f'<span lang="en" dir="ltr">{m.group(0)}</span>', he_html)
+    is marked lang="en", the way the post pages read, so the Hebrew view stays one language per element. Works on the
+    raw text and escapes each piece after, so an entity is never split."""
+    out, last = [], 0
+    for m in LATIN_RUN.finditer(text):
+        out.append(H.escape(text[last:m.start()], quote=False))
+        out.append(f'<span lang="en" dir="ltr">{H.escape(m.group(0), quote=False)}</span>')
+        last = m.end()
+    return ''.join(out) + H.escape(text[last:], quote=False)
+
+
+class _Text(HTMLParser):
+    """The text of an HTML fragment as a reader gets it: every text node, entities decoded."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+
+def rendered_text(fragment):
+    t = _Text()
+    t.feed(fragment)
+    t.close()
+    return ''.join(t.parts)
+
+
+def hub_quotes_check(t, hub, page):
+    """Every quote on the built hub reads, node by node, exactly as Stav wrote it: the Hebrew list first, then the
+    English one, each in the page's alphabetical order. A split entity (&#<...) or a tag inside one stops the build."""
+    bad = []
+    if re.search(r'&#?<|&<span', page):
+        bad.append("an HTML entity is split by a tag")
+    artists = sorted(hub["artists"], key=lambda a: a["name_en"])
+    want = [a["quote_he"] for a in artists] + [a["quote_en"] for a in artists]
+    got = [rendered_text(q) for q in re.findall(r'<blockquote>(.*?)</blockquote>', page, re.S)]
+    if len(got) != len(want):
+        bad.append(f"{len(got)} quotes on the page, {len(want)} in content/radar.json")
+    for w, g in zip(want, got):
+        if w != g:
+            bad.append(f"quote renders as {g[:60]!r}, not as written")
+    if bad:
+        raise SystemExit(f"radar/{t['slug']}/: " + "; ".join(bad))
 
 
 def render_hub(t, hub):
@@ -318,15 +361,15 @@ def render_hub(t, hub):
 
     def index(lang):
         out = []
-        mark = mark_latin if lang == "he" else (lambda x: x)
+        mark = mark_latin if lang == "he" else (lambda x: H.escape(x, quote=False))
         for a in artists:
             p = BY_SLUG[a["post"]]
             title = p["title_en"] if lang == "en" else p["title_he"]
             out.append(f'''
     <div class="hub-artist">
       <h3 class="serif">{H.escape(a["name_" + lang])}</h3>
-      <blockquote><p>{mark(H.escape(a["quote_" + lang]))}</p></blockquote>
-      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(H.escape(title))}</a></p>
+      <blockquote><p>{mark(a["quote_" + lang])}</p></blockquote>
+      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(title)}</a></p>
     </div>''')
         return "".join(out)
     doors = "".join(f'<a href="/{d.strip("/")}/">{T(H.escape(DOOR_PAGES[d.strip("/")]["title_en"]), H.escape(DOOR_PAGES[d.strip("/")].get("title_he") or DOOR_PAGES[d.strip("/")]["title_en"]))}</a>'
@@ -356,7 +399,7 @@ def render_hub(t, hub):
 </header>
 
 <section class="section wrap tight hub-artists">
-  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('The artists', 'האמנים')}</p></div></div>
+  <div class="head reveal"><div class="lead"><p class="eyebrow">{T('The artists', 'האמנים והאמניות')}</p></div></div>
   <div class="prose" data-l="he" dir="rtl">{index('he')}
   </div>
   <div class="prose" data-l="en">{index('en')}
@@ -379,7 +422,7 @@ def render_hub(t, hub):
 {working_with_stav({"headline": hub["h1_en"], "article_inner": ""})}'''
     og = SITE + (in_topic[0]["img"] if in_topic and in_topic[0]["img"] else "/og-image.jpg")
     return (sc.head(f"{hub['head_title']} · THEODORA", hub["meta_description"], url, og_image=og, lang="en",
-                    ld=[page, breadcrumb])
+                    og_title=hub["head_title"], ld=[page, breadcrumb])
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
@@ -391,6 +434,7 @@ for t in HUB_TOPICS:
     hub_check(t, hub)
     out_path = os.path.join(OUT_DIR, t["slug"], "index.html")
     sc.write(out_path, render_hub(t, hub))
+    hub_quotes_check(t, hub, open(out_path, encoding="utf-8").read())  # the page as written, after the sanitizer
     print(f"  wrote {out_path} (topic hub)")
 
 

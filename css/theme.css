@@ -681,7 +681,8 @@
   .hub-artists .hub-artist h3 { font-size: clamp(22px, 2.2vw, 28px); margin: 0 0 6px; }
   .hub-artists .prose .hub-artist blockquote { font-size: 20px; line-height: 1.45; margin: 10px 0 12px; }
   .hub-artists .hub-post { font-size: 15px; margin: 0; }
-  .hub-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 32px; }  /* the topic hubs, above the archive's timeline */
+  @media (min-width: 1100px) { .hub-artists .prose { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; } }  /* the artist index in two columns on a wide screen */
+  .hub-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 32px 0 32px; }  /* the topic hubs, above the archive's timeline */
   .post-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 14px 0 36px; text-wrap: balance; }
   .post-title[data-l="he"], .post-title-he, .post-title [data-l="he"] { font-family: var(--he); letter-spacing: 0; }
   .post-title-he { direction: rtl; }
