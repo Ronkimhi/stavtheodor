@@ -375,6 +375,7 @@ When Ron confirms another reviewer is a real client (the quote/photo question to
 
 Each agent appends a dated line (ET): task, status (picked up / PR open / merged / blocked), PR link, and notes or questions for Grok Bot or Ron.
 
+2026-11-18 (ET) | Grok Bot | CTR titles and designer-sourcing copy | PR open | content-only branch cursor/ctr-designer-sourcing-6afa | Titles and metas on the Bergen, designer, NYC help-choosing, new-build, sourcing and construction-drawings pages. Links between that cluster. CTA stays Write to Stav. No fees.
 2026-11-17 (ET) | Grok Bot | AI search content (robots.txt, llms.txt, answers.md, guide FAQ links) | PR open | content-only branch cursor/ai-search-content-8d41 | Schema and IndexNow are a separate PR for Ron. No new form, no Calendly, CTA stays Write to Stav.
 2026-10-24 (ET) | Grok Bot | Plan added. T4 reviews strip already live. T7/T8 wait for Ron's OK. T9 copy is in content/REFERRAL-PAGE-COPY.md.
 2026-10-24 (ET) | Grok Bot | Plan file | PR open | https://github.com/Ronkimhi/stavtheodor/pull/1 | Docs only. Not merged.
