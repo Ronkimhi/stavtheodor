@@ -677,6 +677,16 @@
   .article { max-width: 900px; padding-top: clamp(28px, 3vw, 40px); }
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .post-date[data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .post-byline { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); }  /* who wrote the post, under its date (2026-11-18) */
+  .post-byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+  .post-byline a:hover { color: #C9A46B; }
+  .radar-note { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 860px; border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }  /* For your space, under a post (2026-11-18) */
+  .radar-note .note-line p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--soft); max-width: 680px; }
+  .radar-note .note-line a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-note .note-line a:hover { color: #C9A46B; }
+  .radar-note .note-links { display: flex; flex-direction: column; gap: 12px; }
+  body.lang-he .radar-note, body.lang-he .radar-note .note-links { align-items: flex-end; }  /* Hebrew: eyebrow, line and link share the right edge */
+  body.lang-he .radar-note .note-links a { align-self: flex-end; text-align: right; }
   .hub-artists .hub-artist { margin: 0 0 40px; }  /* a topic hub's artist index (2026-11-18): name, Stav's sentence, the post */
   .hub-artists .hub-artist h3 { font-size: clamp(22px, 2.2vw, 28px); margin: 0 0 6px; }
   .hub-artists .prose .hub-artist blockquote { font-size: 20px; line-height: 1.45; margin: 10px 0 12px; }
