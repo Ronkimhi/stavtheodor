@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
-<title id="t">Diagram of who holds the client: the client works with the designer's studio, which is credited on the project; the curator works inside the studio's scheme, presents with or through the designer, and sources from any gallery or artist until the art is on the wall</title>
-<desc id="d">Diagram of who holds the client: the client works with the designer's studio, which is credited on the project; the curator works inside the studio's scheme, presents with or through the designer, and sources from any gallery or artist until the art is on the wall</desc>
+<title id="t">Diagram of who holds the client: the client works with the designer's studio; the curator works inside the studio's scheme, works out with the designer what is right for the client, adds value for the client, and sources from any gallery or artist until the art is on the wall</title>
+<desc id="d">Diagram of who holds the client: the client works with the designer's studio; the curator works inside the studio's scheme, works out with the designer what is right for the client, adds value for the client, and sources from any gallery or artist until the art is on the wall</desc>
 <style>
   .ink{stroke:#F2F0EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .soft{stroke:#F2F0EC;stroke-opacity:.55;fill:none;stroke-width:1.5;stroke-linejoin:round}
@@ -35,12 +35,12 @@
 <!-- the scheme encloses the studio and the curator -->
 <rect class="lead" x="460" y="320" width="680" height="320"/>
 <text class="l2" x="476" y="350">inside your scheme</text>
-<text class="l2" x="800" y="412" text-anchor="middle">credited on the project</text>
-<line class="dim" x1="800" y1="424" x2="800" y2="528"/>
-<!-- presentation: joins the studio's link, never the client node -->
+<text class="l2" x="824" y="480">worked out together</text>
+<line class="dim" x1="800" y1="402" x2="800" y2="528"/>
+<!-- value for the client: joins the studio's link, never the client node -->
 <path class="lead" d="M676 572 L400 572 L400 260 L800 260"/>
-<text class="l2" x="388" y="410" text-anchor="end">presents with you</text>
-<text class="l2" x="388" y="440" text-anchor="end">or through you</text>
+<text class="l2" x="388" y="410" text-anchor="end">adds value</text>
+<text class="l2" x="388" y="440" text-anchor="end">for your clients</text>
 <!-- curator to sources, then a fan of three for the three routes, and the work -->
 <line class="dim" x1="800" y1="602" x2="800" y2="700"/>
 <line class="dim" x1="800" y1="776" x2="640" y2="808"/>
