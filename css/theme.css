@@ -1067,6 +1067,7 @@
   .wm-x { position: absolute; top: 10px; inset-inline-end: 10px; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: var(--muted); cursor: pointer; transition: color .25s; }
   .wm-x svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
   .wm-x:hover { color: var(--ink); }
+  .wm-panel .wm-eyebrow { padding-inline-end: 44px; }  /* an inquiry link's longer eyebrow (2026-11-18) stays clear of the close button */
   .wm-x:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
   .wm-panel > .eyebrow { margin-bottom: 16px; }
   .wm-head { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--ink); padding-inline-end: 36px; margin-bottom: 32px; text-wrap: balance; }
