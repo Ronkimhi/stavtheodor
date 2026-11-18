@@ -28,7 +28,7 @@
     "three-exhibitions-three-mediums": {"seo_title": "Sabine Marcelis, Guimi You, Lillian Bassman", "bridge": {"target": "/guide/how-to-light-art/"}},
     "three-exhibitions-nyc-june-2026": {"seo_title": "Tomaselli, Bedford, Khosravi: New York Shows", "bridge": {"target": "/advisory/how-to-buy-from-a-gallery-without-overpaying/"}},
     "may-big-art-month-nyc": {"seo_title": "Frankenthaler, Baez, Richter: New York in May", "bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}},
-    "chelsea-emily-mae-smith-sugimoto-rondinone": {"bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}},
+    "chelsea-emily-mae-smith-sugimoto-rondinone": {"bridge": {"target": "/advisory/where-to-buy-original-art-nyc/", "line_en": "The same kind of walk, a few stops north, is <a href=\"/radar/four-tribeca-galleries-september-2026/\">a September gallery walk in Tribeca</a>.", "line_he": "אותו סוג של סיור, כמה תחנות צפונה, הוא <a href=\"/radar/four-tribeca-galleries-september-2026/\">סיור גלריות בספטמבר בטרייבקה</a>."}},
     "brancusi-christies": {"bridge": {"target": "/advisory/how-to-buy-from-a-gallery-without-overpaying/"}},
     "oren-fischer-hallel": {"bridge": {"target": "/advisory/starting-an-art-collection/"}},
     "noa-wiegenfeld": {"bridge": {"target": "/advisory/starting-an-art-collection/"}},
