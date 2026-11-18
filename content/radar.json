@@ -1,0 +1,33 @@
+{
+  "topics": [
+    {"slug": "israeli-artists", "hub": false, "label_en": "Israeli artists", "label_he": "אמנים ישראלים",
+     "posts": ["zoya-cherkassky-american-cooking", "ruth-patir-jewish-museum", "seven-israeli-works-nathan-zach",
+               "pool-in-israeli-art", "three-tel-aviv-shows", "oren-fischer-hallel", "noa-wiegenfeld",
+               "tom-fima", "fresh-paint-2026", "in-a-free-state-luhring-augustine"]},
+    {"slug": "new-york-galleries", "hub": false, "label_en": "New York galleries", "label_he": "גלריות בניו יורק",
+     "posts": ["november-new-york-grace-carney-hannah-levy", "chelsea-emily-mae-smith-sugimoto-rondinone", "soho-lerma-ackermann",
+               "four-tribeca-galleries-september-2026", "oren-fischer-hallel", "in-a-free-state-luhring-augustine",
+               "three-exhibitions-nyc-june-2026", "three-exhibitions-three-mediums", "may-big-art-month-nyc",
+               "zoya-cherkassky-american-cooking", "botero-in-new-york"]},
+    {"slug": "new-york-museums", "hub": false, "label_en": "New York museums", "label_he": "מוזיאונים בניו יורק",
+     "posts": ["october-in-new-york-museums", "ruth-patir-jewish-museum", "carol-bove-guggenheim",
+               "orientalism-between-fact-and-fantasy", "giacometti-dendur", "duchamp-moma", "guggenheim-pop",
+               "clinamen-park-avenue-armory", "three-exhibitions-three-mediums", "may-big-art-month-nyc", "museums-on-us-bofa"]},
+    {"slug": "new-jersey", "hub": false, "label_en": "New Jersey", "label_he": "ניו ג'רזי",
+     "posts": ["basquiat-blue-ribbon-princeton", "living-with-art-montclair", "library-museum-passes"]},
+    {"slug": "art-market", "hub": false, "label_en": "The art market", "label_he": "שוק האמנות",
+     "posts": ["pollock-record", "brancusi-christies", "botero-in-new-york", "fifth-avenue-jewelry-art", "david-hockney-1937-2026"]}
+  ],
+  "no_topic": ["welcome-art-radar"],
+  "posts": {
+    "november-new-york-grace-carney-hannah-levy": {"seo_title": "Grace Carney and Hannah Levy in New York"},
+    "basquiat-blue-ribbon-princeton": {"seo_title": "Basquiat's Blue Ribbon Paintings at Princeton"},
+    "october-in-new-york-museums": {"seo_title": "Krasner and Pollock at the Met, Frick, MoMA"},
+    "four-tribeca-galleries-september-2026": {"seo_title": "Tribeca Galleries: Cragg, Locke, Joseph, Soutine"},
+    "three-tel-aviv-shows": {"seo_title": "Tel Aviv Galleries: Braverman, Nassima Landau"},
+    "three-exhibitions-three-mediums": {"seo_title": "Sabine Marcelis, Guimi You, Lillian Bassman"},
+    "three-exhibitions-nyc-june-2026": {"seo_title": "Tomaselli, Bedford, Khosravi: New York Shows"},
+    "may-big-art-month-nyc": {"seo_title": "Frankenthaler, Baez, Richter: New York in May"}
+  },
+  "hubs": {}
+}

@@ -1392,6 +1392,53 @@ def read_posts(path=POSTS_FILE):
     return src, posts
 
 
+RADAR_FILE = os.path.join(ROOT, 'content', 'radar.json')
+_radar_meta = None
+
+
+def read_radar_meta():
+    """content/radar.json, the Art Radar sidecar (2026-11-18): topics (each a list of post slugs), no_topic (posts that
+    belong to none), posts.<slug> (optional seo_title, the <title> before " · THEODORA") and hubs. Read once per build
+    by build-post-pages.py and build-site-pages.py."""
+    global _radar_meta
+    if _radar_meta is None:
+        d = json.load(open(RADAR_FILE, encoding='utf-8'))
+        for k, v in (('topics', []), ('no_topic', []), ('posts', {}), ('hubs', {})):
+            d.setdefault(k, v)
+        _radar_meta = d
+    return _radar_meta
+
+
+def post_topics(slug):
+    """The topics (dicts from content/radar.json) a post belongs to, in file order."""
+    return [t for t in read_radar_meta()['topics'] if slug in t['posts']]
+
+
+def post_body(inner, lang):
+    """The inner HTML of a post's English ('en') or Hebrew ('he') body block, or ''."""
+    rx = (r'<div class="post-body post-body-en"[^>]*>(.*)$' if lang == 'en'
+          else r'<div class="post-body" lang="he"[^>]*>(.*?)<div class="post-body post-body-en"')
+    m = re.search(rx, inner, flags=re.S)
+    return m.group(1) if m else ''
+
+
+INTERNAL_HREF = re.compile(r'<a\b[^>]*\bhref="(/[^"#?]*)')
+POST_OWN_PATHS = ('/radar/', '/images/', '/videos/')
+
+
+def bridge_target(post):
+    """The site page a post points readers to: posts.<slug>.bridge.target in content/radar.json when the key is there
+    (None when it is null), else the first internal link in the English body that is not to /radar/, /images/ or
+    /videos/ (the closing lines added on 2026-11-01), else None."""
+    meta = read_radar_meta()['posts'].get(post['slug'], {})
+    if 'bridge' in meta:
+        return (meta['bridge'] or {}).get('target')
+    for href in INTERNAL_HREF.findall(post_body(post['article_inner'], 'en')):
+        if not href.startswith(POST_OWN_PATHS):
+            return href
+    return None
+
+
 def month_labels(post):
     m = re.match(r'([A-Za-z]+) \d+, (\d{4})', post['date_en'])
     en = f'{m.group(1)} {m.group(2)}' if m else post['date_en']
