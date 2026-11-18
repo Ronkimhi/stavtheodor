@@ -305,6 +305,16 @@ def chrome_only(text, path):
     return text
 
 
+# ---- Art Radar: a post page is the post's own text; a topic hub (content/radar.json, "hub": true, 2026-11-18) is a
+# page like any other and gets every gate
+RADAR_HUBS = {os.path.join('radar', t['slug'], 'index.html') for t in sc.read_radar_meta()['topics'] if t.get('hub')}
+
+
+def radar_post_page(path):
+    return (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')
+            and path not in RADAR_HUBS)
+
+
 # ---- dashes and phones, over every text file the site ships or builds from
 for path in walk(('.html', '.txt', '.md', '.json', '.py', '.css', '.js', '.xml')):
     if path in GATE_FILES:
@@ -313,7 +323,7 @@ for path in walk(('.html', '.txt', '.md', '.json', '.py', '.css', '.js', '.xml')
     body = chrome_only(s, path)
     if path == 'AGENTS.md':  # rule 3.2 spells the two characters it bans; the Work Log is other sessions' history
         body = body.split('## 7. Work Log')[0].replace('No em dashes (\u2014) and no en dashes (\u2013)', '')
-    if path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html'):
+    if radar_post_page(path):
         body = re.sub(r'<head>.*?</head>', '', body, flags=re.S)  # title and meta carry the post's own headline
     if path.endswith('.html') and path.split(os.sep)[0] not in ('templates', 'content'):
         left = sc.dash_leftovers(s)  # a page: everything outside href, src and srcset, scripts and JSON-LD included
@@ -638,7 +648,7 @@ ALT_HE, ALT_MISSING = alt_sources()
 for where in ALT_MISSING:
     fail('hebrew', f'{where} has alt_en but no alt_he')
 for path in pages:
-    if stub_path(path) or (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')):
+    if stub_path(path) or radar_post_page(path):
         continue
     p = HebrewText()
     p.feed(chrome_only(read(path), path))

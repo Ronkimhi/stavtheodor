@@ -257,11 +257,15 @@ def radar_html(p):
         here = "/" + p["path"].strip("/") + "/"
         chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
         chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+    # radar_topic (2026-11-18): the arrow goes to that topic's hub in place of All posts, while the topic has one
+    topic = next((t for t in sc.read_radar_meta()["topics"] if t["slug"] == p.get("radar_topic") and t.get("hub")), None)
+    arrow = (f'<a class="arrow" href="/radar/{topic["slug"]}/"><span class="ln"></span>{T(H.escape(topic["label_en"]), H.escape(topic["label_he"]))}</a>'
+             if topic else f'<a class="arrow" href="/radar/"><span class="ln"></span>{T("All posts", "כל הפוסטים")}</a>')
     return f'''
 <section class="section wrap tight">
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
-    <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
+    {arrow}
   </div>
   <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide", alts=described(p))}
   </div>
