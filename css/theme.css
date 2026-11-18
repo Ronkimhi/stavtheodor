@@ -676,7 +676,7 @@
   /* An Art Radar post: the article block is authored in content/posts.html */
   .article { max-width: 900px; padding-top: clamp(28px, 3vw, 40px); }
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-  .post-date[data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .post-date[data-l="he"], .post-date[lang="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .post-byline { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); }  /* who wrote the post, under its date (2026-11-18) */
   .post-byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
   .post-byline a:hover { color: #C9A46B; }

@@ -76,13 +76,15 @@ TITLE_RE = re.compile(r'\s*<h2 class="post-title[^"]*"[^>]*>.*?</h2>', re.S)
 NJ_WORDS = re.compile(r'Montclair|Bergen|librar|New Jersey|Tenafly|Closter|Demarest|Cresskill|Alpine|Englewood', re.I)
 
 
-def h1_title(inner, p):
+def h1_title(inner, p, he=False):
     """The post page is the post's own page, so its title is the page's one h1: the two
-    <h2 class="post-title"> twins of the source become one <h1> holding both twins."""
+    <h2 class="post-title"> twins of the source become one <h1> holding both twins (he=True, a Hebrew address: the
+    Hebrew title alone)."""
     matches = list(TITLE_RE.finditer(inner))
     if not matches:
         return inner
-    h1 = f'\n    <h1 class="post-title">{T(H.escape(p["title_en"]), H.escape(p["title_he"]))}</h1>'
+    h1 = (f'\n    <h1 class="post-title" lang="he" dir="rtl">{H.escape(p["title_he"])}</h1>' if he else
+          f'\n    <h1 class="post-title">{T(H.escape(p["title_en"]), H.escape(p["title_he"]))}</h1>')
     out = inner[:matches[0].start()] + h1
     prev_end = matches[0].end()
     for m in matches[1:]:
@@ -232,12 +234,23 @@ BYLINE = ('By <a href="/about/">Stav Theodor</a>, art curator. Written in Hebrew
 DATE_HE = re.compile(r'<div class="post-date" data-l="he"[^>]*>.*?</div>', re.S)
 
 
-def with_byline(inner):
-    """Who wrote the post, under its date and outside the post body (2026-11-18): the name links to /about/."""
+def with_byline(inner, he=False):
+    """Who wrote the post, under its date and outside the post body (2026-11-18): the name links to /about/.
+    he=True (a Hebrew address): the Hebrew line alone."""
     m = DATE_HE.search(inner)
     if not m:
         return inner
-    return inner[:m.end()] + f'\n    {T(*BYLINE, tag="p", cls="post-byline")}' + inner[m.end():]
+    line = (f'<p class="post-byline" lang="he" dir="rtl">{BYLINE[1]}</p>' if he else T(*BYLINE, tag="p", cls="post-byline"))
+    return inner[:m.end()] + f'\n    {line}' + inner[m.end():]
+
+
+DATE_EN = re.compile(r'\s*<div class="post-date" data-l="en"[^>]*>.*?</div>', re.S)
+
+
+def hebrew_date(inner):
+    """A Hebrew address shows the Hebrew date alone: the English twin goes, the Hebrew one keeps lang and dir."""
+    inner = DATE_EN.sub('', inner, count=1)
+    return re.sub(r'<div class="post-date" data-l="he"([^>]*)>', lambda m: f'<div class="post-date" lang="he"{m.group(1).replace(' lang="he"', '')}>', inner, count=1)
 
 
 def page_titles():
@@ -477,8 +490,9 @@ def render_post_page(p, all_posts, he=False):
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
-    article_inner = h1_title(article_inner, p)
-    article_inner = hebrew_only(with_byline(article_inner)) if he else english_first(with_byline(article_inner))
+    article_inner = h1_title(article_inner, p, he=he)
+    article_inner = (hebrew_only(hebrew_date(with_byline(article_inner, he=True))) if he
+                     else english_first(with_byline(article_inner)))
     breadcrumb = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
