@@ -37,9 +37,9 @@
     },
     {
       "q_en": "Are gallery walls out of style in 2026?",
-      "a_en": "Gallery walls built from matching print sets feel dated. Walls built from works you chose do not follow trends: salon walls have been hung for centuries. If your wall has a thread, an anchor and room to grow, it will not look like a trend in five years.",
+      "a_en": "Gallery walls built from matching print sets feel dated. Walls built from works you chose do not follow trends: salon walls have been hung for centuries. If your wall has a thread, an anchor and room to grow, it will not look like a trend in five years. See also <a href=\"/guide/how-to-hang-pictures/\">How to hang pictures</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "האם קירות גלריה יצאו מהאופנה ב-2026?",
-      "a_he": "קירות גלריה שבנויים מסטים תואמים של הדפסים מרגישים מיושנים. קירות שבנויים מעבודות שבחרתם לא הולכים אחרי טרנדים: קירות בסגנון סלון נתלים כבר מאות שנים. אם לקיר שלכם יש חוט מקשר, עוגן ומקום לגדול, הוא לא ייראה כמו טרנד גם בעוד חמש שנים."
+      "a_he": "קירות גלריה שבנויים מסטים תואמים של הדפסים מרגישים מיושנים. קירות שבנויים מעבודות שבחרתם לא הולכים אחרי טרנדים: קירות בסגנון סלון נתלים כבר מאות שנים. אם לקיר שלכם יש חוט מקשר, עוגן ומקום לגדול, הוא לא ייראה כמו טרנד גם בעוד חמש שנים. ראו גם <a href=\"/guide/how-to-hang-pictures/\">איך לתלות תמונות</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     },
     {
       "q_en": "What are common gallery wall mistakes?",
@@ -68,6 +68,6 @@
   ],
   "og_image": "/images/spaces/gallery-wall-ideas_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-06",
+  "date_modified": "2026-11-17",
   "before_after": "gallery-wall-ideas_hero"
 }
