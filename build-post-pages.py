@@ -392,7 +392,12 @@ for p in posts:
 def render_radar_index(posts):
     n = len(posts)
     url = f"{SITE}/radar/"
-    latest_img = posts[0]['img'] or '/images/home2/garden-villa.jpg'
+    # the hero is a wide crop: the newest post whose first image is landscape (width at least 1.4 times its height)
+    def landscape(img):
+        d = sc.raster_dims(img) if img else None
+        return bool(d) and d[0] >= 1.4 * d[1]
+    wide = next((p['img'] for p in posts if landscape(p['img'])), None)
+    latest_img = wide or '/images/home2/garden-villa.jpg'
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": "Art Radar, every post", "url": url, "inLanguage": ["he", "en"],
