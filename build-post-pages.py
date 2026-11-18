@@ -435,7 +435,7 @@ def render_post_page(p, all_posts):
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
   <div class="timeline">{sc.timeline(others, with_months=False)}
-  </div>
+  </div>{sc.radar_subscribe("radar-post", f"/radar/{p['slug']}/", whatsapp=True)}
 </section>
 '''
     # the <title> at most 60 characters (Ron, 2026-09-30): " · Art Radar" drops when the headline is too long for it
@@ -613,7 +613,7 @@ def render_hub(t, hub):
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
   <div class="timeline">{sc.timeline(in_topic, with_months=False)}
-  </div>
+  </div>{sc.radar_subscribe("radar-hub", url[len(SITE):], whatsapp=True)}
 </section>
 
 <section class="section wrap tight">
@@ -687,7 +687,7 @@ def render_radar_index(posts):
   <div class="head reveal">
     <div class="lead"><p class="eyebrow">{T('Get it first', 'קבלו את זה ראשונים')}</p><h2 class="serif">{T('The posts go to the WhatsApp group first.', 'הפוסטים מגיעים קודם לקבוצת הוואטסאפ.')}</h2></div>
     <a class="btn" href="{sc.WHATSAPP}" target="_blank" rel="noopener">{T('Join the WhatsApp Group', 'הצטרפו לקבוצת הוואטסאפ')}</a>
-  </div>
+  </div>{sc.radar_subscribe("radar-archive", "/radar/")}
   {hub_links()}<div class="timeline" id="posts">{sc.timeline(posts, with_months=True)}
   </div>
 </section>
