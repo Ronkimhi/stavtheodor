@@ -1,6 +1,6 @@
 # THEODORA Art Advisory by Stav Theodor
 
-> THEODORA Art Advisory by Stav Theodor (THEODORA) is a fine art curation and advisory practice founded by Stav Theodor, based in Tenafly, New Jersey, working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. Stav guides private clients, architects, and interior designers through the full art process, from concept to installation, finding the right work for the right space.
+> THEODORA Art Advisory by Stav Theodor (THEODORA) is the fine art advisory practice of Stav Theodor, based in Tenafly, Bergen County, New Jersey. She advises, sources and curates art for private homes, new builds, interior designers and architects, and hospitality, from the first conversation through installation. For interior designers and architects, she sources fine art for their clients in New York City and Manhattan, and in Bergen County. She works in person across Bergen County, New Jersey and New York City, including Manhattan, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel. Write to Stav at stav@stavtheodor.com.
 
 ## About
 
@@ -11,7 +11,7 @@
 - [Full text file](https://stavtheodor.com/llms-full.txt): the English text of every advisory, local, partner, guide and project page in one plain file, with each page's questions and answers. Regenerated on every build.
 - Base: Tenafly, New Jersey 07670. Working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
-- [Contact](https://stavtheodor.com/contact/): (201) 351-8367, stav@stavtheodor.com. Tell me about the space: the walls, the light, the timeline.
+- [Contact](https://stavtheodor.com/contact/): Write to Stav at stav@stavtheodor.com, or call (201) 351-8367. Tell me about the space: the walls, the light, the timeline.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
@@ -21,6 +21,7 @@ THEODORA offers end-to-end fine art curation and advisory for:
 - Hospitality and large-scale commercial projects
 - Art collection development and sourcing
 - Art concept, sourcing, selection, and installation
+- Art sourcing for interior designers and architects in New York City and Manhattan, and in Bergen County, New Jersey: she sources fine art for their clients, and the client and the credit stay with the studio
 
 ## Advisory pages
 
@@ -57,7 +58,7 @@ Plain answers for people about to buy, build or move, each in English and Hebrew
 - [Choosing art for an Upper East Side or Upper West Side prewar apartment](https://stavtheodor.com/advisory/art-for-a-prewar-apartment-upper-east-side/): Prewar rooms are generous to art and demanding to hang in. How THEODORA Art Advisory by Stav Theodor chooses and installs art on the Upper East and West Sides.
 - [For wealth managers, family offices and private bankers](https://stavtheodor.com/for-advisors/): A forwardable note from art advisor Stav Theodor for wealth managers and family offices: a client's art collection built with intent, by introduction.
 - [For real estate brokers and developers: art for the new home](https://stavtheodor.com/for-brokers/): Art for the new home: art curator and advisor Stav Theodor offers brokers and developers in Bergen County, Manhattan and Israel a service for their buyers.
-- [Art consultant for interior designers and architects](https://stavtheodor.com/for-designers/): Art consultant for interior designers and architects in New Jersey and New York. Stav sources, commissions and installs; the client and the credit stay yours. (The former page https://stavtheodor.com/designers/ now forwards here.)
+- [Art consultant for interior designers and architects](https://stavtheodor.com/for-designers/): Stav Theodor, an art consultant in New York City, sources fine art for interior designers and architects in Manhattan and across New York City, and in Bergen County, New Jersey. The client and the credit stay with the studio. (The former page https://stavtheodor.com/designers/ now forwards here.)
 - [Ten questions to answer before you buy your first serious artwork](https://stavtheodor.com/guide/ten-questions-before-you-buy-your-first-serious-artwork/): Ten questions to answer before a first serious art purchase: wall, light, life in the room, provenance, condition, framing, budget, resale, designer, advisor.
 - [Gallery wall ideas, and how to hang one like a curator](https://stavtheodor.com/guide/gallery-wall-ideas/): Five layouts; treat the group as one work, centered 57 to 60 inches from the floor, 2 to 3 inches between frames, built around one anchor; the paper template method.
 - [How to hang pictures, and how high to hang art](https://stavtheodor.com/guide/how-to-hang-pictures/): Center a work 57 to 60 inches (145 to 152 cm) from the floor; leave 8 to 10 inches above a sofa or bed and 6 to 10 inches above a console or mantel. The nail height formula, stairs, hardware by weight.
@@ -73,7 +74,7 @@ Plain answers for people about to buy, build or move, each in English and Hebrew
 - [Office art ideas: how to find, choose and hang wall art for an office](https://stavtheodor.com/guide/office-wall-art/): Where to find office art, what to hang in reception, conference rooms, corridors and private offices, sizes, hanging heights, lighting and the relative cost of prints, editions, originals, commissions and leasing.
 - [Buy, lease or commission: how companies get art for the office](https://stavtheodor.com/guide/buy-lease-or-commission-office-art/): A side by side comparison of buying, leasing and commissioning office art: cost over the term, ownership, flexibility, lead time, when each wins.
 - [Medical office wall art: calm, clean and right for patients](https://stavtheodor.com/guide/medical-office-wall-art/): Art that calms patients in waiting areas, exam spaces and corridors; images to avoid; glazing and cleaning; specialties.
-- [Art sourcing for interior designers: trade programs, commissions or a curator](https://stavtheodor.com/guide/art-sourcing-for-interior-designers/): Trade programs, galleries, artists, commissions or a curator partnership: lead times, who frames and installs, how the money works, keeping the client.
+- [Art sourcing for interior designers: trade programs, commissions or a curator](https://stavtheodor.com/guide/art-sourcing-for-interior-designers/): How interior designers source fine art for their clients in New York City, Manhattan and Bergen County: trade programs, galleries, commissions, or Stav Theodor sourcing inside the designer's scheme.
 - [Hotel artwork: how hotels choose art, from the lobby to the guest room](https://stavtheodor.com/guide/hotel-artwork/): How a hotel art program is planned, zone by zone from the lobby to the guest room, budget per key, originals and editions, and whether guests can buy the art.
 - [Financial advisor office decor: art for the space where clients talk about money](https://stavtheodor.com/guide/financial-advisor-office-art/): Art for the space where clients talk about money: the meeting space, reception, what to avoid, and art as a conversation with clients who collect.
 - [Restaurant wall decor ideas: art that works through a full service](https://stavtheodor.com/guide/restaurant-wall-decor/): Ideas by restaurant type, the feature wall, art that survives light, steam and cleaning, sourcing and opening timelines.
@@ -92,7 +93,7 @@ One page per kind of client, each with its own questions and answers in English 
 - [Art for medical and aesthetic practices](https://stavtheodor.com/medical-practices/): Your reputation starts at the entrance. Calm, readable art for reception, waiting and consultation rooms of medical and aesthetic practices in New Jersey and New York, specified for daily clinical use.
 - [Boutique hotel art consultant](https://stavtheodor.com/hotels/): Collections for boutique hotels in New York, New Jersey and Tel Aviv, from the arrival piece to the guest room, built to a written concept, an artwork schedule and the opening date.
 - [Restaurant art consultant in New York City](https://stavtheodor.com/restaurants/): Art for restaurants and private dining rooms in New York City, from your story, inside your designer's scheme, planned around light, steam, cleaning and service.
-- [Art consultant for interior designers](https://stavtheodor.com/for-designers/): The last wall is the one clients remember. Art sourcing, commissions, framing and installation for interior designers and architects in New York and New Jersey, inside your scheme; the client and the credit stay yours.
+- [Art consultant for interior designers](https://stavtheodor.com/for-designers/): Art sourcing for interior designers and architects in New York City and Manhattan, and in Bergen County, New Jersey. Stav sources, commissions, frames and installs inside the studio's scheme; the client and the credit stay yours.
 
 ## Project pages
 
