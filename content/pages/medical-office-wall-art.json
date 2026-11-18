@@ -19,9 +19,9 @@
   "faq": [
     {
       "q_en": "What art is appropriate for a doctor's office?",
-      "a_en": "Art for a doctor's office is chosen for the patient, not for the doctor's taste. Where patients sit or lie still, choose images that read at a glance and hold a second look: a landscape, a garden, water, a botanical. On the wall facing the exam table, one work is enough. Leave out anatomy, puzzles and slogans, and have every frame and glazing specified for your cleaning routine before anything is bought.",
+      "a_en": "Art for a doctor's office is chosen for the patient, not for the doctor's taste. Where patients sit or lie still, choose images that read at a glance and hold a second look: a landscape, a garden, water or a botanical, and on the wall facing the exam table, one work is enough. Leave out anatomy, puzzles and slogans, and have every frame and glazing specified for your cleaning routine before anything is bought.",
       "q_he": "איזו אמנות מתאימה למרפאת רופא?",
-      "a_he": "אמנות למרפאת רופא נבחרת בשביל המטופל, לא לפי הטעם של הרופא. במקומות שבהם מטופלים יושבים או שוכבים בלי לזוז, בחרו דימויים שנקראים במבט אחד ומחזיקים גם מבט שני: נוף, גן, מים, בוטניקה. על הקיר שמול מיטת הבדיקה מספיקה עבודה אחת. השאירו בחוץ אנטומיה, חידות וסיסמאות, ודאגו שכל מסגרת וכל זיגוג יוגדרו לפי שגרת הניקוי שלכם לפני שקונים משהו."
+      "a_he": "אמנות למרפאת רופא נבחרת בשביל המטופל, לא לפי הטעם של הרופא. במקומות שבהם מטופלים יושבים או שוכבים בלי לזוז, בחרו דימויים שנקראים במבט אחד ומחזיקים גם מבט שני: נוף, גן, מים או בוטניקה, ועל הקיר שמול מיטת הבדיקה מספיקה עבודה אחת. השאירו בחוץ אנטומיה, חידות וסיסמאות, ודאגו שכל מסגרת וכל זיגוג יוגדרו לפי שגרת הניקוי שלכם לפני שקונים משהו."
     },
     {
       "q_en": "What is the best paint color for a medical office?",
@@ -31,9 +31,9 @@
     },
     {
       "q_en": "What are some creative ideas for a waiting room?",
-      "a_en": "Creative waiting room ideas that still keep the space calm: a series of works by one artist along the longest wall, one large landscape that anchors the space, local views patients recognize, a commission made for the wall by the front desk, or a small wall of works on paper that changes from time to time. Creative should never mean confrontational. Keep the work readable at a glance, size it to about two thirds of the seating below, and glaze it for cleaning.",
+      "a_en": "Creative waiting room ideas that still keep the space calm: a series of works by one artist along the longest wall, one large landscape that anchors the space, local views patients recognize, a commission made for the wall by the front desk, or a small wall of works on paper that changes from time to time. Creative should never mean confrontational. Keep the work readable at a glance, size it to about two thirds of the seating below, and glaze it for cleaning. See also <a href=\"/guide/dental-office-decor/\">Dental office decor</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "אילו רעיונות יצירתיים יש לחדר המתנה?",
-      "a_he": "רעיונות יצירתיים לחדר המתנה שעדיין שומרים על חלל רגוע: סדרת עבודות של אמן אחד לאורך הקיר הארוך ביותר, נוף גדול אחד שמעגן את החלל, מראות מקומיים שהמטופלים מזהים, יצירה בהזמנה שנעשתה במיוחד לקיר שליד דלפק הקבלה, או קיר קטן של עבודות על נייר שמתחלף מדי פעם. יצירתי אף פעם לא אמור להיות מתריס. בחרו עבודות שנקראות במבט אחד, ברוחב של כשני שלישים ממקומות הישיבה שמתחתן, ומזוגגות כך שאפשר לנקות אותן."
+      "a_he": "רעיונות יצירתיים לחדר המתנה שעדיין שומרים על חלל רגוע: סדרת עבודות של אמן אחד לאורך הקיר הארוך ביותר, נוף גדול אחד שמעגן את החלל, מראות מקומיים שהמטופלים מזהים, יצירה בהזמנה שנעשתה במיוחד לקיר שליד דלפק הקבלה, או קיר קטן של עבודות על נייר שמתחלף מדי פעם. יצירתי אף פעם לא אמור להיות מתריס. בחרו עבודות שנקראות במבט אחד, ברוחב של כשני שלישים ממקומות הישיבה שמתחתן, ומזוגגות כך שאפשר לנקות אותן. ראו גם <a href=\"/guide/dental-office-decor/\">עיצוב מרפאת שיניים</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     },
     {
       "q_en": "What images should a medical office avoid?",
@@ -61,6 +61,6 @@
   ],
   "og_image": "/images/spaces/medical-office-wall-art_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-10",
+  "date_modified": "2026-11-17",
   "before_after": "medical-office-wall-art_hero"
 }

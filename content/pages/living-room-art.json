@@ -19,9 +19,9 @@
   "faq": [
     {
       "q_en": "What artwork should I put in my living room?",
-      "a_en": "The artwork for a living room should start with the work you love most, on the wall the space already faces, the one you see from the doorway and from your usual seat. Size it to the wall, then support it with smaller works on one or two other walls. Paintings, large photographs, works on paper and sculpture all belong in a living room.",
+      "a_en": "The artwork for a living room should start with the work you love most, on the wall the space already faces, the one you see from the doorway and from your usual seat. Size it to the wall, then support it with smaller works on one or two other walls. Paintings, large photographs, works on paper and sculpture all belong in a living room. See also <a href=\"/guide/art-above-couch/\">Art above a couch</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "איזו יצירת אמנות לשים בסלון?",
-      "a_he": "יצירת האמנות לסלון צריכה להתחיל בעבודה שאתם הכי אוהבים, על הקיר שהחלל כבר פונה אליו, זה שרואים מהפתח וממקום הישיבה הרגיל שלכם. התאימו את הגודל לקיר, ואז תמכו בה בעבודות קטנות יותר על קיר אחד או שניים אחרים. ציורים, צילומים גדולים, עבודות על נייר ופיסול שייכים כולם לסלון."
+      "a_he": "יצירת האמנות לסלון צריכה להתחיל בעבודה שאתם הכי אוהבים, על הקיר שהחלל כבר פונה אליו, זה שרואים מהפתח וממקום הישיבה הרגיל שלכם. התאימו את הגודל לקיר, ואז תמכו בה בעבודות קטנות יותר על קיר אחד או שניים אחרים. ציורים, צילומים גדולים, עבודות על נייר ופיסול שייכים כולם לסלון. ראו גם <a href=\"/guide/art-above-couch/\">אמנות מעל ספה</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     },
     {
       "q_en": "What size art should go in a living room?",
@@ -67,6 +67,6 @@
   ],
   "og_image": "/images/spaces/living-room-art_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-06",
+  "date_modified": "2026-11-17",
   "before_after": "living-room-art_hero"
 }

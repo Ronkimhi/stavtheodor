@@ -49,9 +49,9 @@
     },
     {
       "q_en": "Can you hang a vertical painting above a couch?",
-      "a_en": "A single vertical painting usually looks too narrow above a sofa and forces the center too high. Two vertical works side by side, 3 to 4 inches apart, solve both problems and read as one wide piece. A single vertical work suits a narrow loveseat or an armchair better.",
+      "a_en": "A single vertical painting usually looks too narrow above a sofa and forces the center too high. Two vertical works side by side, 3 to 4 inches apart, solve both problems and read as one wide piece. A single vertical work suits a narrow loveseat or an armchair better. See also <a href=\"/guide/how-to-hang-pictures/\">How to hang pictures</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "אפשר לתלות ציור אנכי מעל ספה?",
-      "a_he": "ציור אנכי יחיד נראה בדרך כלל צר מדי מעל ספה ומאלץ את המרכז לעלות גבוה מדי. שתי עבודות אנכיות זו לצד זו, במרחק 3 עד 4 אינץ', פותרות את שתי הבעיות ונקראות כיצירה רחבה אחת. עבודה אנכית יחידה מתאימה יותר לספה דו מושבית צרה או לכורסה."
+      "a_he": "ציור אנכי יחיד נראה בדרך כלל צר מדי מעל ספה ומאלץ את המרכז לעלות גבוה מדי. שתי עבודות אנכיות זו לצד זו, במרחק 3 עד 4 אינץ', פותרות את שתי הבעיות ונקראות כיצירה רחבה אחת. עבודה אנכית יחידה מתאימה יותר לספה דו מושבית צרה או לכורסה. ראו גם <a href=\"/guide/how-to-hang-pictures/\">איך לתלות תמונות</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     }
   ],
   "schema_type": "Article",
@@ -73,6 +73,6 @@
   ],
   "og_image": "/images/spaces/art-above-couch_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-06",
+  "date_modified": "2026-11-17",
   "before_after": "art-above-couch_hero"
 }
