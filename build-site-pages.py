@@ -264,18 +264,21 @@ def radar_html(p):
 '''
 
 
-# The Write to Stav block under a guide's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
-# JSON (the dental, restaurant and hotel guides). The same data-write button as the closing CTA, which stays as it is,
-# with data-loc="guide-lead" and one line under it.
+# The Write to Stav block under a page's opening (Nov 1 report, T3, 2026-11-01): opt in with "lead_write": true in the page
+# JSON. The same data-write button as the closing CTA, which stays as it is, and one line under it. On guides (since
+# 2026-11-01) it sits under the lead and byline with data-loc="guide-lead"; since 2026-11-15 (site audit) the
+# advisory, area, local, partner and project pages may carry it too, under their opening paragraph, with
+# data-loc="page-lead", so GA4's write_open tells it from the closing button (page-end) and the header (nav).
 LEAD_WRITE_LINE = ("Tell me about the space: the walls, the light, the timeline.", "ספרו לי על החלל: הקירות, האור, לוח הזמנים.")
 
 
-def lead_write_html(p):
+def lead_write_html(p, reveal=False):
     if not p.get("lead_write"):
         return ""
+    loc = "guide-lead" if p["section"] == "guide" else "page-lead"
     return f'''
-  <div class="lead-write">
-    <a class="btn" href="{MAIL}" data-write data-loc="guide-lead">{T('Write to Stav', 'כתבו לסתיו')}</a>
+  <div class="lead-write{' reveal' if reveal else ''}">
+    <a class="btn" href="{MAIL}" data-write data-loc="{loc}">{T('Write to Stav', 'כתבו לסתיו')}</a>
     <p class="muted">{T(*LEAD_WRITE_LINE)}</p>
   </div>'''
 
@@ -449,6 +452,7 @@ def page_guides(p, all_pages):
 # the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
 # directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
 REVIEWS_PAGES = {"for-designers"}
+RADAR_BEFORE_ASK = {"for-designers"}  # the one article page whose From Art Radar strip stays above the closing ask
 
 
 def reviews_html(p):
@@ -522,7 +526,7 @@ def render_article_page(p, all_pages):
 <header class="phead{' guide' if guide else ''}">
   {top}
   <h1 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h1>
-  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p) if guide else ''}{hero}
+  <p class="lead">{T(p['lead_en'], p['lead_he'])}</p>{guide_byline(p) if guide else ''}{lead_write_html(p)}{hero}
 </header>
 
 <section class="section wrap tight">
@@ -540,17 +544,21 @@ def render_article_page(p, all_pages):
 </section>
 {guide_next(p, all_pages)}{radar_html(p)}'''
     else:
-        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
+        # From Art Radar after the closing ask (site audit, 2026-11-15), as on the guides: the ask, and on the New Jersey and
+        # New York pages the inline form above it, come first. /for-designers/ keeps the strip above its reviews, which
+        # sit directly above its ask (RADAR_BEFORE_ASK).
+        late = p["slug"] not in RADAR_BEFORE_ASK
+        body = head + f'''{page_guides(p, all_pages)}{faq_html(p)}{'' if late else radar_html(p)}{reviews_html(p)}{inline_form_html(p)}
 <section class="section wrap tight">{cta_html(p)}
   {related_html(p, all_pages)}
 </section>
-'''
+{radar_html(p) if late else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og,
                     og_type="website" if p["section"] == "area" else "article", og_title=p.get("og_title"),
                     # a guide whose hero is a pair previews that pair's 1200 by 630 crop: give its size and what it shows
                     og_card_dims=own_og, og_image_alt=sc.spaces()[ba]['alt_en'] if own_og else None,
                     lang="en", ld=ld_blocks(p, url, og), extra=sc.ba_preload(ba) if ba else '')
-            + sc.body_open() + page_nav(p) + body + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
+            + sc.body_open() + page_nav(p) + sc.main(body) + sc.tail(scripts='\n'.join(filter(None, [sc.BA_SCRIPT if ba else '', sc.WM_SUB_H1_JS if p.get('nav_sub_en') else '']))))
 
 
 def page_nav(p):
@@ -590,7 +598,7 @@ def render_project_page(p, all_pages, projects):
 </header>
 '''
     body = header + f'''
-<section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p></section>
+<section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p>{lead_write_html(p, reveal=True)}</section>
 
 <section class="section wrap">
   <div class="prose" data-l="he" dir="rtl">
@@ -614,7 +622,7 @@ def render_project_page(p, all_pages, projects):
 '''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
                     lang="en", ld=ld_blocks(p, url, og))
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 def ba_card(p):
@@ -682,7 +690,7 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 {who_row(section)}{HUB_CTA}'''
     desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
     return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 # /guide/, the guides index (2026-10-01): every built guide, in the six categories of site_chrome.GUIDE_BUCKETS, under
@@ -812,9 +820,12 @@ def render_guide_index(pages):
   <div class="gbar-in wrap">{tabs}</div>
 </nav>
 '''
-    body = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar + sections + guide_where()  # the footer carries the closing line
+    top = hub_hero(*g["h1"], *g["lead"], g["hero_src"], sc.img_alt(*g["hero_alt"]), g.get("hero_srcset")) + gbar
+    body = sections + guide_where()  # the footer carries the closing line
+    # The main landmark starts after the category bar here (2026-11-15): the bar is sticky, and inside <main> it would
+    # let go of the screen where main ends, above the footer; as a child of <body> it keeps pinning to the end as before.
     return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
+            + sc.body_open() + sc.nav() + top + sc.main(body) + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
 
 def who_row(section):
@@ -892,7 +903,7 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False)}{CONTACT_AFTER_CARD}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False, form_first=True)}{CONTACT_AFTER_CARD}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>
@@ -906,7 +917,7 @@ def render_contact():
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
@@ -917,7 +928,7 @@ def render_contact():
 ABOUT = {
     "path": "about",
     "title": "Stav Theodor, Art Curator and Art Advisor",
-    "description": "Stav Theodor is an art curator and advisor with more than 15 years in the art world, since 2010. She founded THEODORA in Tenafly, NJ, and works anywhere.",
+    "description": "Stav Theodor is an art curator with more than 15 years in the art world, since 2010. She founded THEODORA in 2020. Based in Tenafly, NJ, she works anywhere.",
     "h1": ("About THEODORA and Stav Theodor", "אודות THEODORA וסתיו תאודור"),
     # The opening portrait (the Tenafly page's hero, a real photograph); stav-portrait.jpg stays the og:image
     "portrait": ("/images/projects/stav-couch.webp", 1000, 1250,
@@ -1170,7 +1181,7 @@ def render_about(pages):
 
 '''
     return (sc.head(f'{ABOUT["title"]} · THEODORA', ABOUT["description"], url, og_image=SITE + ABOUT["og_image"], lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + body + sc.tail(quiet=True))
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))
 
 
 def check(p, out):
@@ -1230,7 +1241,7 @@ HUB_HEAD_TITLE = {"advisory": "Art Advisory, Answered Plainly by a Curator in NJ
 HUB_DESC = {"advisory": "What an art advisor does, how the work goes from a first conversation to a piece on the wall, and how to start. Stav Theodor, Tenafly, NJ. Write to Stav."}
 # The point of a hub's hero photo that stays in frame when the hero crops it (an object-position, through sc.focus_style).
 # /projects/: the Waldorf Chengdu lobby, held a little below center so the sculptures and screens stay in (Ron, 2026-10-06).
-HUB_FOCUS = {"projects": "50% 55%"}
+HUB_FOCUS = {"projects": "50% 55%", "advisory": "50% 18%"}  # advisory: her head in frame in the clean 16:9 hero (art director, 2026-11-15)
 
 
 def main():

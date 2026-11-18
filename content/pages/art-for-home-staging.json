@@ -37,9 +37,9 @@
     },
     {
       "q_en": "What kind of art works for home staging?",
-      "a_en": "The art that works for home staging photographs well and lets buyers picture their own life in the space: fewer, larger works, a calm palette taken from the finishes, one focal point per space, and nothing personal or divisive, such as family photos, religious or political imagery or nudes. Scale matters most, because a small frame over a long sofa disappears in a wide listing photo. Abstracts, landscapes with a horizon and quiet still lifes are the safest subjects.",
+      "a_en": "The art that works for home staging photographs well and lets buyers picture their own life in the space: fewer, larger works, a calm palette taken from the finishes, one focal point per space, and nothing personal or divisive, such as family photos, religious or political imagery or nudes. Scale matters most, because a small frame over a long sofa disappears in a wide listing photo. Abstracts, landscapes with a horizon and quiet still lifes are the safest subjects. See also <a href=\"/guide/art-above-couch/\">Art above a couch</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "איזו אמנות מתאימה להום סטיילינג?",
-      "a_he": "האמנות שמתאימה להום סטיילינג מצטלמת טוב ונותנת לקונים לדמיין את החיים שלהם בחלל: פחות עבודות וגדולות יותר, פלטה רגועה שנלקחת מהגימורים, מוקד אחד בכל חלל, ושום דבר אישי או שנוי במחלוקת, כמו תמונות משפחתיות, דימויים דתיים או פוליטיים, או עירום. קנה המידה חשוב יותר מכול, כי מסגרת קטנה מעל ספה ארוכה נעלמת בצילום מודעה רחב. מופשטים, נופים עם קו אופק וטבע דומם שקט הם הנושאים הבטוחים ביותר."
+      "a_he": "האמנות שמתאימה להום סטיילינג מצטלמת טוב ונותנת לקונים לדמיין את החיים שלהם בחלל: פחות עבודות וגדולות יותר, פלטה רגועה שנלקחת מהגימורים, מוקד אחד בכל חלל, ושום דבר אישי או שנוי במחלוקת, כמו תמונות משפחתיות, דימויים דתיים או פוליטיים, או עירום. קנה המידה חשוב יותר מכול, כי מסגרת קטנה מעל ספה ארוכה נעלמת בצילום מודעה רחב. מופשטים, נופים עם קו אופק וטבע דומם שקט הם הנושאים הבטוחים ביותר. ראו גם <a href=\"/guide/art-above-couch/\">אמנות מעל ספה</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     }
   ],
   "schema_type": "Article",
@@ -63,6 +63,6 @@
   ],
   "og_image": "/images/spaces/art-for-home-staging_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-06",
+  "date_modified": "2026-11-17",
   "before_after": "art-for-home-staging_hero"
 }
