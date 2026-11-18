@@ -461,8 +461,9 @@ def page_guides(p, all_pages):
 
 # The reviews on a content page (Ron, 2026-10-23, site rules F8: "near the form and on home, contact and /for-designers/"):
 # the same sc.reviews_block() the homepage and /contact/ show, only on the slugs in REVIEWS_PAGES, as its own section
-# directly above the page's closing Write to Stav block (after the FAQ, which comes first on these pages).
-REVIEWS_PAGES = {"for-designers", "art-consultant-tenafly-nj", "art-advisor-bergen-county"}
+# after the FAQ (which comes first on these pages) and directly above the next section: the closing Write to Stav block, or
+# on the INLINE_FORM_PAGES (New Jersey, New York) the inline form, which sits above that closing block.
+REVIEWS_PAGES = {"for-designers", "art-consultant-tenafly-nj", "art-advisor-bergen-county", "art-curator-new-jersey", "art-curator-new-york"}
 RADAR_BEFORE_ASK = {"for-designers"}  # the one article page whose From Art Radar strip stays above the closing ask
 
 
