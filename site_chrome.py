@@ -646,7 +646,10 @@ def contact_form(path='/', h='h3'):
     Added 2026-11-01 (Nov 1 report, T1), every field above unchanged: When (timeline, radio chips, optional, none
     checked, TIMELINES) directly after The project, and Who referred you? (referred_by, a text field, hidden and disabled
     in the markup) after What did you ask it?; form_js() shows and enables it only while A friend or client or A designer
-    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise."""
+    or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise.
+    Added 2026-11-18 (Ron), every field above unchanged: Phone (phone, type tel, optional) after Email, a half-width
+    field like Your name and Email on the row below them; Formspree records it in Stav's mail like name and email.
+    It is the visitor's own number, collected only; generate_lead never carries it."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -670,6 +673,7 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('When', 'מתי')}</legend><div class="chips">{chips('timeline', TIMELINES)}</div></fieldset>
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
+      <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
       <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
@@ -1386,6 +1390,53 @@ def read_posts(path=POSTS_FILE):
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
     return src, posts
+
+
+RADAR_FILE = os.path.join(ROOT, 'content', 'radar.json')
+_radar_meta = None
+
+
+def read_radar_meta():
+    """content/radar.json, the Art Radar sidecar (2026-11-18): topics (each a list of post slugs), no_topic (posts that
+    belong to none), posts.<slug> (optional seo_title, the <title> before " · THEODORA") and hubs. Read once per build
+    by build-post-pages.py and build-site-pages.py."""
+    global _radar_meta
+    if _radar_meta is None:
+        d = json.load(open(RADAR_FILE, encoding='utf-8'))
+        for k, v in (('topics', []), ('no_topic', []), ('posts', {}), ('hubs', {})):
+            d.setdefault(k, v)
+        _radar_meta = d
+    return _radar_meta
+
+
+def post_topics(slug):
+    """The topics (dicts from content/radar.json) a post belongs to, in file order."""
+    return [t for t in read_radar_meta()['topics'] if slug in t['posts']]
+
+
+def post_body(inner, lang):
+    """The inner HTML of a post's English ('en') or Hebrew ('he') body block, or ''."""
+    rx = (r'<div class="post-body post-body-en"[^>]*>(.*)$' if lang == 'en'
+          else r'<div class="post-body" lang="he"[^>]*>(.*?)<div class="post-body post-body-en"')
+    m = re.search(rx, inner, flags=re.S)
+    return m.group(1) if m else ''
+
+
+INTERNAL_HREF = re.compile(r'<a\b[^>]*\bhref="(/[^"#?]*)')
+POST_OWN_PATHS = ('/radar/', '/images/', '/videos/')
+
+
+def bridge_target(post):
+    """The site page a post points readers to: posts.<slug>.bridge.target in content/radar.json when the key is there
+    (None when it is null), else the first internal link in the English body that is not to /radar/, /images/ or
+    /videos/ (the closing lines added on 2026-11-01), else None."""
+    meta = read_radar_meta()['posts'].get(post['slug'], {})
+    if 'bridge' in meta:
+        return (meta['bridge'] or {}).get('target')
+    for href in INTERNAL_HREF.findall(post_body(post['article_inner'], 'en')):
+        if not href.startswith(POST_OWN_PATHS):
+            return href
+    return None
 
 
 def month_labels(post):
