@@ -20,15 +20,15 @@
   "faq": [
     {
       "q_en": "What is trending in restaurant wall design?",
-      "a_en": "The restaurant wall design trends worth following are the ones with a local reason: originals by artists from the restaurant's own city, one commission made for the feature wall, and murals on walls no frame can fill. The ideas that date fastest are neon slogans built for phone pictures and mass-produced canvases bought to fill a wall. My test for any trend is whether you will still want it on the wall at the next refit.",
+      "a_en": "The restaurant wall design trends worth following are the ones with a local reason: originals by artists from the restaurant's own city, one commission made for the feature wall, and murals on walls no frame can fill. The ideas that date fastest are neon slogans built for phone pictures and mass-produced canvases bought to fill a wall. My test for any trend is whether you will still want it on the wall at the next refit. See also <a href=\"/guide/dining-room-art/\">Dining room art</a> and <a href=\"/contact/\">Write to Stav</a>.",
       "q_he": "מה הטרנדים בעיצוב קירות למסעדות?",
-      "a_he": "הטרנדים בעיצוב קירות למסעדות ששווה ללכת אחריהם הם אלה שיש להם סיבה מקומית: עבודות מקור של אמנים מהעיר של המסעדה עצמה, יצירה אחת בהזמנה בשביל קיר המוקד, וציורי קיר על קירות שאף מסגרת לא יכולה למלא. הרעיונות שמתיישנים הכי מהר הם סלוגנים בניאון שנבנו בשביל צילומי טלפון וקנבסים מייצור המוני שנקנו כדי למלא קיר. המבחן שלי לכל טרנד הוא אם עוד תרצו אותו על הקיר בשיפוץ הבא."
+      "a_he": "הטרנדים בעיצוב קירות למסעדות ששווה ללכת אחריהם הם אלה שיש להם סיבה מקומית: עבודות מקור של אמנים מהעיר של המסעדה עצמה, יצירה אחת בהזמנה בשביל קיר המוקד, וציורי קיר על קירות שאף מסגרת לא יכולה למלא. הרעיונות שמתיישנים הכי מהר הם סלוגנים בניאון שנבנו בשביל צילומי טלפון וקנבסים מייצור המוני שנקנו כדי למלא קיר. המבחן שלי לכל טרנד הוא אם עוד תרצו אותו על הקיר בשיפוץ הבא. ראו גם <a href=\"/guide/dining-room-art/\">אמנות לפינת האוכל</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
     },
     {
       "q_en": "What are some good ways to decorate a restaurant?",
-      "a_en": "A good way to decorate a restaurant is to start from the concept and work in the order guests see the walls. Give the one wall most tables face the strongest work, ideally an original or a commission. Give the long walls a quieter rhythm, such as a series of photographs. Choose materials for service: glazing staff can wipe, nothing near steam or direct sun, secure fixings. Then light the main work so it still reads at night.",
+      "a_en": "A good way to decorate a restaurant is to start from the concept and work in the order guests see the walls. Give the one wall most tables face the strongest work, ideally an original or a commission, and give the long walls a quieter rhythm, such as a series of photographs. Choose materials for service: glazing staff can wipe, nothing near steam or direct sun, secure fixings. Then light the main work so it still reads at night.",
       "q_he": "מהן דרכים טובות לעצב מסעדה?",
-      "a_he": "דרך טובה לעצב מסעדה היא להתחיל מהקונספט ולעבוד לפי הסדר שבו האורחים רואים את הקירות. תנו לקיר האחד שרוב השולחנות פונים אליו את העבודה החזקה ביותר, רצוי עבודת מקור או יצירה בהזמנה. תנו לקירות הארוכים קצב שקט יותר, למשל סדרה של צילומים. בחרו חומרים שמתאימים לשירות: זיגוג שהצוות יכול לנגב, שום דבר ליד אדים או שמש ישירה, קיבוע בטוח. ואז האירו את העבודה המרכזית כדי שתיקרא גם בלילה."
+      "a_he": "דרך טובה לעצב מסעדה היא להתחיל מהקונספט ולעבוד לפי הסדר שבו האורחים רואים את הקירות. תנו לקיר האחד שרוב השולחנות פונים אליו את העבודה החזקה ביותר, רצוי עבודת מקור או יצירה בהזמנה, ותנו לקירות הארוכים קצב שקט יותר, למשל סדרה של צילומים. בחרו חומרים שמתאימים לשירות: זיגוג שהצוות יכול לנגב, שום דבר ליד אדים או שמש ישירה, קיבוע בטוח. ואז האירו את העבודה המרכזית כדי שתיקרא גם בלילה."
     },
     {
       "q_en": "What color should restaurant walls be?",
@@ -69,6 +69,6 @@
   ],
   "og_image": "/images/spaces/restaurant-wall-decor_hero_og.jpg",
   "date": "2026-09-30",
-  "date_modified": "2026-10-10",
+  "date_modified": "2026-11-17",
   "before_after": "restaurant-wall-decor_hero"
 }
