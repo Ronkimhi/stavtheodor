@@ -46,8 +46,8 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
 # script, no pop-up and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
-# Art Radar by email (2026-11-18): the signup form, radar_subscribe(). Off until the first monthly email has a date;
-# while False (or FORM_ENDPOINT is empty) no page carries the form or its script.
+# Signup form switch: Art Radar by email (2026-11-18), radar_subscribe(). While False (or FORM_ENDPOINT is empty) no page
+# carries the form or its script.
 RADAR_SUBSCRIBE = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
