@@ -46,6 +46,9 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
 # script, no pop-up and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
+# Art Radar by email (2026-11-18): the signup form, radar_subscribe(). Off until the first monthly email has a date;
+# while False (or FORM_ENDPOINT is empty) no page carries the form or its script.
+RADAR_SUBSCRIBE = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
 POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
@@ -705,6 +708,67 @@ def contact_form(path='/', h='h3'):
       </div>
     </div>
     </div>'''
+
+
+SUBSCRIBE_JS = '''<script>
+(function () {
+  /* Art Radar by email (2026-11-18): the signup form posts with fetch and Accept: application/json, as the contact
+     form does. lang says which language was on screen. On success the thanks line takes the form's place and GA4
+     gets radar_subscribe with where the form sits and the page path, never the address; on any other answer the
+     error line shows. Without JavaScript the plain POST works and Formspree shows its own page. */
+  document.querySelectorAll('form.radar-sub').forEach(function (f) {
+    var box = f.closest('.radar-sub-box');
+    var err = box.querySelector('.sub-error'), done = box.querySelector('.sub-thanks');
+    f.querySelector('[name=page]').value = location.pathname;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (f.classList.contains('sending')) { return; }
+      f.classList.add('sending');
+      err.hidden = true;
+      f.querySelector('[name=lang]').value = document.body.classList.contains('lang-he') ? 'he' : 'en';
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) { throw new Error(r.status); }
+          f.hidden = true;
+          done.hidden = false;
+          if (window.gtag) { gtag('event', 'radar_subscribe', { link_location: f.getAttribute('data-loc') || 'page', page_path: location.pathname }); }
+        })
+        .catch(function () { f.classList.remove('sending'); err.hidden = false; });
+    });
+  });
+})();
+</script>'''
+
+
+def radar_subscribe(loc, path, whatsapp=False):
+    """Art Radar by email (2026-11-18): one email field and Subscribe, posted to the Formspree endpoint with its own
+    _subject and form_type, so the mail Stav gets says it is a signup. Its own class (form.radar-sub), so form_js()
+    never binds it and generate_lead never fires for it. '' while RADAR_SUBSCRIBE is False or FORM_ENDPOINT is empty.
+    loc: where it sits (radar-post, radar-archive, radar-hub). whatsapp: a quiet link to the group after it."""
+    if not (RADAR_SUBSCRIBE and FORM_ENDPOINT):
+        return ''
+    mail = mail_href()
+    wa = (f'<div class="readnext"><a href="{WHATSAPP}" target="_blank" rel="noopener">'
+          f'{T("Or join the WhatsApp group", "או הצטרפו לקבוצת הוואטסאפ")}</a></div>') if whatsapp else ''
+    return f'''
+  <div class="radar-sub-box reveal" aria-live="polite">
+    <p class="eyebrow">{T('Art Radar by email', 'ראדאר אמנות במייל')}</p>
+    {T('I send one email a month with the new posts.', 'פעם בחודש אני שולחת מייל אחד עם הפוסטים החדשים.', tag='p', cls='sub-line')}
+    <form class="radar-sub" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="{loc}">
+      <input type="hidden" name="_subject" value="Art Radar by email: new subscriber">
+      <input type="hidden" name="form_type" value="art-radar-monthly">
+      <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
+      <input type="hidden" name="lang" value="en">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>{T('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" dir="ltr" required></label>
+      <button type="submit">{T('Subscribe', 'הרשמה')}</button>
+      {T('You will get Art Radar from me by email, once a month. To stop, reply to any of the emails.', 'תקבלו ממני את ראדאר אמנות במייל, פעם בחודש. כדי להפסיק, השיבו לאחד המיילים.', tag='p', cls='sub-consent')}
+      <p class="sub-error" hidden><span data-l="en">Your signup did not go through. Please write to me at <a href="{mail}" dir="ltr">{EMAIL}</a>.</span><span data-l="he" dir="rtl">ההרשמה לא הצליחה. כתבו לי בכתובת <a href="{mail}" dir="ltr">{EMAIL}</a>.</span></p>
+    </form>
+    <div class="sub-thanks" hidden>{T('Thank you. You are on the list.', 'תודה. נרשמתם.', tag='p')}</div>
+    {wa}
+  </div>
+  {SUBSCRIBE_JS}'''
 
 
 # The form's "I am a" choices (value and English label, Hebrew label), in Ron's order.

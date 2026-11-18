@@ -693,6 +693,24 @@
   .hub-artists .hub-post { font-size: 15px; margin: 0; }
   @media (min-width: 1100px) { .hub-artists .prose { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; } }  /* the artist index in two columns on a wide screen */
   .hub-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 12px; padding-top: 40px; }  /* the topic hubs, above the archive's timeline */
+  /* Art Radar by email (2026-11-18, site_chrome.radar_subscribe): one email field and Subscribe, the contact form's underline input and button */
+  .radar-sub-box { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; max-width: 680px; margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--line); padding-top: clamp(32px, 4vw, 48px); }
+  .radar-sub-box .sub-line { margin: 0; font-size: 18px; line-height: 1.6; color: var(--soft); }
+  .radar-sub { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; width: 100%; }
+  .radar-sub label { flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .radar-sub label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
+  .radar-sub input[type=email] { display: block; width: 100%; font-family: var(--sans); font-size: 17px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.36); border-radius: 0; padding: 10px 0 12px; }
+  .radar-sub input[type=email]:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
+  .radar-sub button { font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--bg); background: var(--ink); border: 1px solid var(--ink); border-radius: 0; padding: 16px 32px; cursor: pointer; }
+  .radar-sub button [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 16px; }
+  .radar-sub button:hover { background: transparent; color: var(--ink); }
+  .radar-sub .sub-consent, .radar-sub .sub-error { flex: 1 1 100%; margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
+  .radar-sub .sub-error a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .radar-sub-box .sub-thanks p { margin: 0; font-size: 18px; color: var(--ink); }
+  body.lang-he .radar-sub-box { align-items: flex-end; }
+  body.lang-he .radar-sub { direction: rtl; }  /* Hebrew: the field, the button and the lines start on the right */
+  .radar-sub input[type=email] { text-align: left; }
+  body.lang-he .radar-sub-box .readnext a { align-self: flex-end; }
   .post-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 14px 0 36px; text-wrap: balance; }
   .post-title[data-l="he"], .post-title-he, .post-title [data-l="he"] { font-family: var(--he); letter-spacing: 0; }
   .post-title-he { direction: rtl; }
