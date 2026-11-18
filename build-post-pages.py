@@ -329,7 +329,7 @@ def ask_link(name_en, name_he, p, loc, lang=None):
     text = T(H.escape(en), H.escape(he)) if lang is None else H.escape(en if lang == "en" else he)
     a = lambda x: H.escape(x, quote=True)
     return (f'<a href="{a(sc.mail_href(subject))}" data-write data-ask data-loc="{loc}" data-artist="{a(name_en)}" '
-            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}">{text}</a>')
+            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}" data-label-en="{a(en)}" data-label-he="{a(he)}">{text}</a>')
 
 
 def ask_check():

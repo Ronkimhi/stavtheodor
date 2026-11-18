@@ -443,7 +443,7 @@
 <section class="section wrap tight">
   <div class="radar-note reveal" id="for-your-space">
     <p class="eyebrow"><span data-l="en" lang="en">For your space</span><span data-l="he" lang="he" dir="rtl">לחלל שלכם</span></p>
-    <div class="note-line"><p data-l="en" lang="en">And once the work is found, the question is which wall, what size and how high. I wrote about that in my guide, <a href="/guide/how-to-hang-pictures/">how to hang pictures, and how high to hang art</a>, and if there is already an Israeli work at your home waiting for the right wall, write to me.</p><p data-l="he" lang="he" dir="rtl">ואחרי שהעבודה נמצאה, השאלה היא איזה קיר, באיזה גודל ובאיזה גובה. על זה כתבתי במדריך <a href="/guide/how-to-hang-pictures/">איך לתלות תמונות, ובאיזה גובה לתלות אמנות</a>, ואם יש כבר אצלכם עבודה ישראלית שמחכה לקיר הנכון, כתבו לי.</p></div><div class="note-links readnext"><a href="/radar/israeli-artists/"><span data-l="en" lang="en">More Israeli artists in Art Radar</span><span data-l="he" lang="he" dir="rtl">עוד אמנים ישראלים בראדאר אמנות</span></a><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20an%20artist%20in%20%2Fradar%2Fseven-israeli-works-nathan-zach%2F" data-write data-ask data-loc="radar-note" data-artist="" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about an artist from &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על אחד האמנים מהפוסט &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;."><span data-l="en" lang="en">Write to Stav about an artist in this post</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו על אחד האמנים בפוסט</span></a></div>
+    <div class="note-line"><p data-l="en" lang="en">And once the work is found, the question is which wall, what size and how high. I wrote about that in my guide, <a href="/guide/how-to-hang-pictures/">how to hang pictures, and how high to hang art</a>, and if there is already an Israeli work at your home waiting for the right wall, write to me.</p><p data-l="he" lang="he" dir="rtl">ואחרי שהעבודה נמצאה, השאלה היא איזה קיר, באיזה גודל ובאיזה גובה. על זה כתבתי במדריך <a href="/guide/how-to-hang-pictures/">איך לתלות תמונות, ובאיזה גובה לתלות אמנות</a>, ואם יש כבר אצלכם עבודה ישראלית שמחכה לקיר הנכון, כתבו לי.</p></div><div class="note-links readnext"><a href="/radar/israeli-artists/"><span data-l="en" lang="en">More Israeli artists in Art Radar</span><span data-l="he" lang="he" dir="rtl">עוד אמנים ישראלים בראדאר אמנות</span></a><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20an%20artist%20in%20%2Fradar%2Fseven-israeli-works-nathan-zach%2F" data-write data-ask data-loc="radar-note" data-artist="" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about an artist from &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על אחד האמנים מהפוסט &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about an artist in this post" data-label-he="כתבו לסתיו על אחד האמנים בפוסט"><span data-l="en" lang="en">Write to Stav about an artist in this post</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו על אחד האמנים בפוסט</span></a></div>
   </div>
 </section>
 
@@ -546,7 +546,7 @@
 <dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
   <div class="wm-panel">
     <button type="button" class="wm-x" data-close><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg><span class="vh"><span data-l="en" lang="en">Close</span><span data-l="he" lang="he" dir="rtl">סגירה</span></span></button>
-    <p class="eyebrow"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></p>
+    <p class="eyebrow wm-eyebrow"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></p>
     <h2 class="serif wm-head" id="write-modal-title"><span data-l="en" lang="en">Tell me about your space.</span><span data-l="he" lang="he" dir="rtl">ספרו לי על החלל שלכם.</span></h2>
     <div class="contact-box" aria-live="polite">
     <form class="contact-form" action="https://formspree.io/f/xjyklwyb" method="POST" data-loc="form">
@@ -616,6 +616,13 @@
       }
       cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
     }
+    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
+       the default Write to Stav twins, kept from the markup on the first opening. */
+    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
+      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
+      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
+      s.textContent = own || s.getAttribute('data-default');
+    });
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
