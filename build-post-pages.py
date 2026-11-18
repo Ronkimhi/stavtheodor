@@ -300,10 +300,80 @@ def body_links_check():
 body_links_check()
 
 
+# The Art Radar inquiry link (2026-11-18): link text and the message it puts in the Write to Stav form, both languages.
+ASK_COPY = {
+    "named": ("Write to Stav about work by {name_en}", "כתבו לסתיו על עבודות של {name_he}"),
+    "generic": ("Write to Stav about an artist in this post", "כתבו לסתיו על אחד האמנים בפוסט"),
+    "msg_named": ('I would like to ask about work by {name_en}. I read your post "{title_en}".',
+                  'אשמח לשאול על עבודות של {name_he}. קראתי את הפוסט שלך "{title_he}".'),
+    "msg_generic": ('I would like to ask about an artist from "{title_en}".',
+                    'אשמח לשאול על אחד האמנים מהפוסט "{title_he}".'),
+}
+
+
+def ask_link(name_en, name_he, p, loc, lang=None):
+    """One quiet Write to Stav link that opens the Write to Stav form about an artist (or about an artist in the post when no name is
+    given) with the post filled in. A normal data-write link: without JavaScript it is a mailto whose subject names
+    the artist and the post. lang: None gives the two text twins, "en" or "he" one language (the hub's per-language
+    lists)."""
+    post = f"/radar/{p['slug']}/"
+    v = {"name_en": name_en, "name_he": name_he, "title_en": p["title_en"], "title_he": p["title_he"]}
+    if name_en:
+        en, he = (x.format(**v) for x in ASK_COPY["named"])
+        msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_named"])
+        subject = f"Art Radar: work by {name_en} ({post})"
+    else:
+        en, he = ASK_COPY["generic"]
+        msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_generic"])
+        subject = f"Art Radar: an artist in {post}"
+    text = T(H.escape(en), H.escape(he)) if lang is None else H.escape(en if lang == "en" else he)
+    a = lambda x: H.escape(x, quote=True)
+    return (f'<a href="{a(sc.mail_href(subject))}" data-write data-ask data-loc="{loc}" data-artist="{a(name_en)}" '
+            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}">{text}</a>')
+
+
+def ask_check():
+    """An inquiry link never invents a name: ask.name_en is in the post's English title or body and ask.name_he in its
+    Hebrew title or body, exactly. A hub artist with "ask": true points to a post that has an ask key, and a name that
+    is spelled two ways is allowed only when both spellings are Stav's own in that post."""
+    bad = []
+    for s, meta in RADAR["posts"].items():
+        if "ask" not in meta:
+            continue
+        ask, p = meta["ask"] or {}, BY_SLUG[s]
+        if bool(ask.get("name_en")) != bool(ask.get("name_he")):
+            bad.append(f"{s}: ask has name_en and name_he together or neither")
+        en = p["title_en"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "en"))
+        he = p["title_he"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "he"))
+        if ask.get("name_en") and ask["name_en"] not in en:
+            bad.append(f"{s}: ask.name_en {ask['name_en']!r} is not in the post's English title or body")
+        if ask.get("name_he") and ask["name_he"] not in he:
+            bad.append(f"{s}: ask.name_he {ask['name_he']!r} is not in the post's Hebrew title or body")
+    for slug, hub in RADAR["hubs"].items():
+        for a in hub.get("artists", []):
+            if not a.get("ask"):
+                continue
+            meta = RADAR["posts"].get(a["post"], {})
+            if a["post"] not in BY_SLUG or "ask" not in meta:
+                bad.append(f"hubs.{slug}: {a['name_en']} has ask but post {a['post']!r} has no ask key")
+                continue
+            own = meta["ask"] or {}
+            if own.get("name_en") == a["name_en"] and own.get("name_he") != a["name_he"]:
+                p = BY_SLUG[a["post"]]
+                he = p["title_he"] + " " + sc.strip_tags(sc.post_body(p["article_inner"], "he"))
+                if a["name_he"] not in he or own["name_he"] not in he:
+                    bad.append(f"hubs.{slug}: {a['name_en']} is spelled {a['name_he']!r} here and {own['name_he']!r} on the post")
+    if bad:
+        raise SystemExit("content/radar.json ask: " + "; ".join(bad))
+
+
+ask_check()
+
+
 def note_html(p):
     """For your space (2026-11-18): under the post, outside Stav's text. The post's bridge line, then one link titled
-    as the target page is unless the line already links it, then a link to the hub of each of its topics that has one.
-    Nothing when there is neither."""
+    as the target page is unless the line already links it, then a link to the hub of each of its topics that has one,
+    then the inquiry link when the post has an ask key. Nothing when there is none of these."""
     b = RADAR["posts"].get(p["slug"], {}).get("bridge")
     parts = []
     if b and b.get("line_en"):
@@ -316,6 +386,9 @@ def note_html(p):
         if t.get("hub"):
             links.append(f'<a href="/radar/{t["slug"]}/">'
                          f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " בראדאר אמנות")}</a>')
+    if "ask" in RADAR["posts"].get(p["slug"], {}):  # the inquiry link, last (2026-11-18)
+        ask = RADAR["posts"][p["slug"]]["ask"] or {}
+        links.append(ask_link(ask.get("name_en", ""), ask.get("name_he", ""), p, "radar-note"))
     if links:  # the house "read next" links, as under Working with Stav: quiet, in the reader's case
         parts.append('<div class="note-links readnext">' + ''.join(links) + '</div>')
     if not parts:
@@ -482,6 +555,11 @@ def render_hub(t, hub):
     in_topic = [p for p in posts if p["slug"] in t["posts"]]
     artists = sorted(hub["artists"], key=lambda a: a["name_en"])
 
+    def ask(a, p, lang):
+        if not a.get("ask"):
+            return ""
+        return f'\n      <p class="hub-post hub-ask">{ask_link(a["name_en"], a["name_he"], p, "radar-hub", lang)}</p>'
+
     def index(lang):
         out = []
         mark = mark_latin if lang == "he" else (lambda x: H.escape(x, quote=False))
@@ -492,7 +570,7 @@ def render_hub(t, hub):
     <div class="hub-artist">
       <h3 class="serif">{H.escape(a["name_" + lang])}</h3>
       <blockquote><p>{mark(a["quote_" + lang])}</p></blockquote>
-      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(title)}</a></p>
+      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(title)}</a></p>{ask(a, p, lang)}
     </div>''')
         return "".join(out)
     doors = "".join(f'<a href="/{d.strip("/")}/">{T(H.escape(DOOR_PAGES[d.strip("/")]["title_en"]), H.escape(DOOR_PAGES[d.strip("/")].get("title_he") or DOOR_PAGES[d.strip("/")]["title_en"]))}</a>'

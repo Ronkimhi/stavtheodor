@@ -649,7 +649,10 @@ def contact_form(path='/', h='h3'):
     or architect (REFERRAL_VIA) is checked under How did you find me?, so its text is never posted otherwise.
     Added 2026-11-18 (Ron), every field above unchanged: Phone (phone, type tel, optional) after Email, a half-width
     field like Your name and Email on the row below them; Formspree records it in Stav's mail like name and email.
-    It is the visitor's own number, collected only; generate_lead never carries it."""
+    It is the visitor's own number, collected only; generate_lead never carries it.
+    Added 2026-11-18 (Art Radar inquiry link): artist and source_post, hidden and disabled in the markup, so an ordinary
+    inquiry never posts them; form_js() enables and fills them only when the form was opened from an Art Radar inquiry link
+    (data-ask) on an Art Radar post or hub, and clears and disables them again for any other opening and after a send."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -678,6 +681,8 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
+      <input type="hidden" name="artist" value="" disabled>
+      <input type="hidden" name="source_post" value="" disabled>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="referrer" value="">
@@ -797,6 +802,23 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var subj = f.querySelector('[name=_subject]');
   function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
   setSubject();
+  /* The Art Radar inquiry link (2026-11-18): WRITE_JS sends theodora:ask to the pop-up's form on every opening, with
+     {artist, post, slug, msg} for an Art Radar inquiry link (data-ask) and null for any other Write to Stav button. With a
+     context, artist and source_post are enabled and filled, the subject names the artist and the post, and the
+     message is prefilled only while the box is empty or still holds the last prefill. Without one, both are emptied
+     and disabled again and an untouched prefill is removed, so an ordinary opening never carries an artist. */
+  var artistIn = f.querySelector('[name=artist]'), postIn = f.querySelector('[name=source_post]');
+  var msgIn = f.querySelector('[name=message]');
+  var askCtx = null, lastFill = '';
+  function setAsk(d) {
+    askCtx = d || null;
+    if (artistIn) { artistIn.value = d ? (d.artist || '') : ''; artistIn.disabled = !(d && d.artist); }
+    if (postIn) { postIn.value = d ? (d.post || '') : ''; postIn.disabled = !d; }
+    if (msgIn && (msgIn.value === '' || msgIn.value === lastFill)) { msgIn.value = d ? (d.msg || '') : ''; lastFill = msgIn.value; }
+    if (d) { if (subj) { subj.value = 'Art Radar inquiry: ' + (d.artist || 'a post') + ' (' + d.post + ')'; } }
+    else { setSubject(); }
+  }
+  f.addEventListener('theodora:ask', function (e) { setAsk(e.detail); });
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -856,12 +878,16 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
+        var lead = { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname };
+        if (askCtx) { lead.lead_context = 'radar_ask'; lead.post_slug = askCtx.slug || ''; }
         f.reset();
+        lastFill = '';
+        setAsk(null);
         f.querySelector('[name=page]').value = location.pathname;
         setSubject();
         setVisit();
         if (card) { thanks(first); }
-        if (window.gtag) { gtag('event', 'generate_lead', { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname }); }
+        if (window.gtag) { gtag('event', 'generate_lead', lead); }
       })
       .catch(function () {
         f.classList.remove('sending');
@@ -949,6 +975,17 @@ WRITE_JS = '''<script>
       document.body.classList.remove('menu-open');
       if (mb) { mb.setAttribute('aria-expanded', 'false'); opener = mb; }
     }
+    /* The Art Radar inquiry link (2026-11-18): tell the form which artist and post this opening is about, or null. */
+    var cf = box.querySelector('form.contact-form');
+    if (cf) {
+      var d = null;
+      if (from.hasAttribute && from.hasAttribute('data-ask')) {
+        var he = document.body.classList.contains('lang-he');
+        d = { artist: from.getAttribute('data-artist') || '', post: from.getAttribute('data-post') || '',
+              slug: from.getAttribute('data-post-slug') || '', msg: from.getAttribute(he ? 'data-msg-he' : 'data-msg-en') || '' };
+      }
+      cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
+    }
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
@@ -978,6 +1015,9 @@ WRITE_JS = '''<script>
        with where the button sits (data-loc, else page) and the page path only. */
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      if (a.hasAttribute('data-ask')) {
+        window.gtag('event', 'radar_inquiry', { post_slug: a.getAttribute('data-post-slug') || '', link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+      }
     }
   }, true);
 })();
