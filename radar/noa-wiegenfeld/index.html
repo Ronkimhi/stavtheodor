@@ -400,7 +400,7 @@
 <section class="section wrap tight">
   <div class="radar-note reveal" id="for-your-space">
     <p class="eyebrow"><span data-l="en" lang="en">For your space</span><span data-l="he" lang="he" dir="rtl">לחלל שלכם</span></p>
-    <div class="note-links readnext"><a href="/advisory/starting-an-art-collection/"><span data-l="en" lang="en">How to start an art collection, seriously</span><span data-l="he" lang="he" dir="rtl">איך מתחילים אוסף אמנות, ברצינות</span></a><a href="/radar/israeli-artists/"><span data-l="en" lang="en">More Israeli artists in Art Radar</span><span data-l="he" lang="he" dir="rtl">עוד אמנים ישראלים בראדאר אמנות</span></a><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Noa%20Wiegenfeld%20%28%2Fradar%2Fnoa-wiegenfeld%2F%29" data-write data-ask data-loc="radar-note" data-artist="Noa Wiegenfeld" data-post="/radar/noa-wiegenfeld/" data-post-slug="noa-wiegenfeld" data-msg-en="I would like to ask about work by Noa Wiegenfeld. I read your post &quot;Noa Wiegenfeld at the Bezalel Graduate Exhibition&quot;." data-msg-he="אשמח לשאול על עבודות של נועה ויגנפלד. קראתי את הפוסט שלך &quot;נועה ויגנפלד בתערוכת הבוגרים של בצלאל&quot;."><span data-l="en" lang="en">Write to Stav about work by Noa Wiegenfeld</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו על עבודות של נועה ויגנפלד</span></a></div>
+    <div class="note-links readnext"><a href="/advisory/starting-an-art-collection/"><span data-l="en" lang="en">How to start an art collection, seriously</span><span data-l="he" lang="he" dir="rtl">איך מתחילים אוסף אמנות, ברצינות</span></a><a href="/radar/israeli-artists/"><span data-l="en" lang="en">More Israeli artists in Art Radar</span><span data-l="he" lang="he" dir="rtl">עוד אמנים ישראלים בראדאר אמנות</span></a><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Noa%20Wiegenfeld%20%28%2Fradar%2Fnoa-wiegenfeld%2F%29" data-write data-ask data-loc="radar-note" data-artist="Noa Wiegenfeld" data-post="/radar/noa-wiegenfeld/" data-post-slug="noa-wiegenfeld" data-msg-en="I would like to ask about work by Noa Wiegenfeld. I read your post &quot;Noa Wiegenfeld at the Bezalel Graduate Exhibition&quot;." data-msg-he="אשמח לשאול על עבודות של נועה ויגנפלד. קראתי את הפוסט שלך &quot;נועה ויגנפלד בתערוכת הבוגרים של בצלאל&quot;." data-label-en="Write to Stav about work by Noa Wiegenfeld" data-label-he="כתבו לסתיו על עבודות של נועה ויגנפלד"><span data-l="en" lang="en">Write to Stav about work by Noa Wiegenfeld</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו על עבודות של נועה ויגנפלד</span></a></div>
   </div>
 </section>
 
@@ -503,7 +503,7 @@
 <dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
   <div class="wm-panel">
     <button type="button" class="wm-x" data-close><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg><span class="vh"><span data-l="en" lang="en">Close</span><span data-l="he" lang="he" dir="rtl">סגירה</span></span></button>
-    <p class="eyebrow"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></p>
+    <p class="eyebrow wm-eyebrow"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></p>
     <h2 class="serif wm-head" id="write-modal-title"><span data-l="en" lang="en">Tell me about your space.</span><span data-l="he" lang="he" dir="rtl">ספרו לי על החלל שלכם.</span></h2>
     <div class="contact-box" aria-live="polite">
     <form class="contact-form" action="https://formspree.io/f/xjyklwyb" method="POST" data-loc="form">
@@ -573,6 +573,13 @@
       }
       cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
     }
+    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
+       the default Write to Stav twins, kept from the markup on the first opening. */
+    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
+      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
+      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
+      s.textContent = own || s.getAttribute('data-default');
+    });
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }

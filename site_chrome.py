@@ -46,8 +46,8 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
 # script, no pop-up and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
-# Art Radar by email (2026-11-18): the signup form, radar_subscribe(). Off until the first monthly email has a date;
-# while False (or FORM_ENDPOINT is empty) no page carries the form or its script.
+# Signup form switch: Art Radar by email (2026-11-18), radar_subscribe(). While False (or FORM_ENDPOINT is empty) no page
+# carries the form or its script.
 RADAR_SUBSCRIBE = False
 ORG_ID = SITE + '/#org'
 STAV_ID = SITE + '/#stav'
@@ -1068,6 +1068,13 @@ WRITE_JS = '''<script>
       }
       cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
     }
+    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
+       the default Write to Stav twins, kept from the markup on the first opening. */
+    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
+      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
+      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
+      s.textContent = own || s.getAttribute('data-default');
+    });
     document.documentElement.classList.add('write-open');
     lenis = window.__theodoraLenis || null;
     if (lenis) { lenis.stop(); }
@@ -1115,7 +1122,7 @@ def write_ui():
     return f'''<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
   <div class="wm-panel">
     <button type="button" class="wm-x" data-close>{WRITE_X}<span class="vh">{T('Close', 'סגירה')}</span></button>
-    <p class="eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
+    <p class="eyebrow wm-eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
     <h2 class="serif wm-head" id="write-modal-title">{T(*CONTACT_HEAD)}</h2>
     {form}
   </div>
