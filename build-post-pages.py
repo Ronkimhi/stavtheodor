@@ -403,22 +403,92 @@ def note_html(p):
 '''
 
 
-def render_post_page(p, all_posts):
-    permalink = f"{SITE}/radar/{p['slug']}/"
+HE_PAGES = list(RADAR.get("he_pages", []))
+
+
+def he_pages_check():
+    """The Hebrew addresses (2026-11-18): an explicit list of posts, each with its own Hebrew search title (60 characters
+    or fewer with the suffix) and description (70 to 155)."""
+    bad = []
+    for s in HE_PAGES:
+        if s not in BY_SLUG:
+            bad.append(f"he_pages names {s!r}, which is not a post")
+            continue
+        he = RADAR["posts"].get(s, {}).get("he") or {}
+        if not he.get("title") or len(he["title"] + " · THEODORA") > 60:
+            bad.append(f"{s}: he.title missing or over 60 characters with the suffix")
+        if not 70 <= len(he.get("description", "")) <= 155:
+            bad.append(f"{s}: he.description must be 70 to 155 characters")
+    if len(set(HE_PAGES)) != len(HE_PAGES):
+        bad.append("he_pages lists a post twice")
+    if bad:
+        raise SystemExit("content/radar.json he_pages: " + "; ".join(bad))
+
+
+he_pages_check()
+
+
+def hreflang_links(slug):
+    """The pair's three alternate links, the same in the head of both addresses."""
+    en, he = f"{SITE}/radar/{slug}/", f"{SITE}/radar/{slug}/he/"
+    return (f'<link rel="alternate" hreflang="en" href="{en}">\n<link rel="alternate" hreflang="he" href="{he}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{en}">\n')
+
+
+def hebrew_only(inner):
+    """A post's Hebrew address carries the head part (date, byline, h1) and the Hebrew body only."""
+    i, j = inner.find(HE_BODY), inner.find(EN_BODY)
+    if i < 0 or j < i:
+        return inner
+    return inner[:i] + inner[i:j].rstrip() + "\n  "
+
+
+def he_post_ld(p):
+    """The Hebrew address's BlogPosting: the main node's facts (author, publisher, dates, image, exhibitions) with its
+    own @id, Hebrew headline and description, url, word count and sections, and workTranslation to the main node."""
+    d = post_ld(p)
+    he = RADAR["posts"][p["slug"]]["he"]
+    url = f"{SITE}/radar/{p['slug']}/he/"
+    out = {}
+    for k, v in d.items():
+        if k == "@id":
+            continue
+        out[k] = v
+        if k == "@type":
+            out["@id"] = url + "#post"
+    out.update({"headline": p["title_he"], "description": he["description"], "inLanguage": "he", "url": url,
+                "mainEntityOfPage": url, "workTranslation": {"@id": f"{SITE}/radar/{p['slug']}/#post"}})
+    words = sc.strip_tags(FIGURE_RE.sub(" ", sc.post_body(p["article_inner"], "he"))).split()
+    if words:
+        out["wordCount"] = len(words)
+    sections = [t["label_he"] for t in sc.post_topics(p["slug"])]
+    if sections:
+        out["articleSection"] = sections
+    else:
+        out.pop("articleSection", None)
+    return out
+
+
+def render_post_page(p, all_posts, he=False):
+    """A post's page at its main address, or (he=True) at its Hebrew address /radar/<slug>/he/ (content/radar.json
+    he_pages, 2026-11-18): Hebrew in the markup, the Hebrew body only, its own Hebrew title and description, canonical
+    to itself, paired with the main address by hreflang. One source in content/posts.html, two renders."""
+    permalink = f"{SITE}/radar/{p['slug']}/" + ("he/" if he else "")
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
     article_inner = h1_title(article_inner, p)
-    article_inner = english_first(with_byline(article_inner))
+    article_inner = hebrew_only(with_byline(article_inner)) if he else english_first(with_byline(article_inner))
     breadcrumb = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Art Radar", "item": SITE + "/radar/"},
-            {"@type": "ListItem", "position": 3, "name": p["headline"], "item": permalink},
+            {"@type": "ListItem", "position": 2, "name": "ראדאר אמנות" if he else "Art Radar", "item": SITE + "/radar/"},
+            {"@type": "ListItem", "position": 3, "name": p["title_he"] if he else p["headline"], "item": permalink},
         ],
     }
+    paired = p["slug"] in HE_PAGES
     others = RELATED[p["slug"]]
     body = f'''
 <header class="phead">
@@ -434,8 +504,8 @@ def render_post_page(p, all_posts):
     <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
-  <div class="timeline">{sc.timeline(others, with_months=False)}
-  </div>{sc.radar_subscribe("radar-post", f"/radar/{p['slug']}/", whatsapp=True)}
+  <div class="timeline">{sc.timeline(others, with_months=False, he_slugs=HE_PAGES if he else ())}
+  </div>{sc.radar_subscribe("radar-post", permalink[len(SITE):], whatsapp=True)}
 </section>
 '''
     # the <title> at most 60 characters (Ron, 2026-09-30): " · Art Radar" drops when the headline is too long for it
@@ -448,10 +518,16 @@ def render_post_page(p, all_posts):
     og_title = None
     if seo:
         og_title, title = title, f"{seo} · THEODORA"
+    extra = hreflang_links(p["slug"]) if paired else ''
+    if he:
+        h = RADAR["posts"][p["slug"]]["he"]
+        return (sc.head(f"{h['title']} · THEODORA", h["description"], permalink, og_image=p['og_image'], og_type='article',
+                        lang='he', pin='he', locale='he_IL', og_title=p["title_he"], ld=[he_post_ld(p), breadcrumb], extra=extra)
+                + sc.body_open('he') + sc.nav(lang_links={'en': f"/radar/{p['slug']}/"}) + body + sc.tail())
     return (sc.head(title, p['description'], permalink,
                     og_image=p['og_image'], og_type='article', lang='en', og_title=og_title,
-                    ld=[post_ld(p), breadcrumb])
-            + sc.body_open() + sc.nav() + body + sc.tail())
+                    ld=[post_ld(p), breadcrumb], extra=extra)
+            + sc.body_open() + sc.nav(lang_links={'he': f"/radar/{p['slug']}/he/"} if paired else None) + body + sc.tail())
 
 
 for p in posts:
@@ -461,6 +537,13 @@ for p in posts:
         raise SystemExit(f"build-post-pages: {out_path}: the English body must come before the Hebrew one")
     sc.write(out_path, page)
     print(f"  wrote {out_path}")
+    if p["slug"] in HE_PAGES:
+        he_path = os.path.join(OUT_DIR, p["slug"], "he", "index.html")
+        he_page = render_post_page(p, posts, he=True)
+        if EN_BODY in he_page:
+            raise SystemExit(f"build-post-pages: {he_path}: a Hebrew address carries the Hebrew body only")
+        sc.write(he_path, he_page)
+        print(f"  wrote {he_path}")
 
 
 # ---- 2b. a topic hub, radar/<topic>/index.html, for each topic with "hub": true (content/radar.json, 2026-11-18) ----
@@ -570,7 +653,7 @@ def render_hub(t, hub):
     <div class="hub-artist">
       <h3 class="serif">{H.escape(a["name_" + lang])}</h3>
       <blockquote><p>{mark(a["quote_" + lang])}</p></blockquote>
-      <p class="hub-post"><a href="/radar/{p["slug"]}/">{mark(title)}</a></p>{ask(a, p, lang)}
+      <p class="hub-post"><a href="/radar/{p["slug"]}/{'he/' if lang == 'he' and p["slug"] in HE_PAGES else ''}">{mark(title)}</a></p>{ask(a, p, lang)}
     </div>''')
         return "".join(out)
     doors = "".join(f'<a href="/{d.strip("/")}/">{T(H.escape(DOOR_PAGES[d.strip("/")]["title_en"]), H.escape(DOOR_PAGES[d.strip("/")].get("title_he") or DOOR_PAGES[d.strip("/")]["title_en"]))}</a>'

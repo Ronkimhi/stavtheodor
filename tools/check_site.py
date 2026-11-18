@@ -144,17 +144,22 @@ class VisibleText(HTMLParser):
     VOID = {'img', 'br', 'hr', 'meta', 'link', 'input', 'source', 'wbr', 'area', 'base', 'col', 'embed', 'param', 'track'}
     SKIP = {'script', 'style', 'noscript', 'template', 'head', 'title'}
 
-    def __init__(self):
+    def __init__(self, view='en'):
         super().__init__(convert_charrefs=True)
         self.stack, self.hidden, self.skipped, self.parts = [], 0, 0, []
+        self.view = view
 
     def handle_starttag(self, tag, attrs):
         if tag in self.VOID:
             return
         a = dict(attrs)
         classes = (a.get('class') or '').split()
-        hide = (a.get('data-l') == 'he' or (a.get('lang') == 'he' and tag != 'html') or 'post-title-he' in classes
-                or (tag == 'button' and a.get('data-lang') == 'en'))
+        if self.view == 'he':  # the Hebrew view (a Hebrew address, 2026-11-18): the mirror of the rules below
+            hide = (a.get('data-l') == 'en' or (a.get('lang') == 'en' and tag != 'html') or 'post-title-en' in classes
+                    or 'post-body-en' in classes or a.get('data-lang') == 'he')
+        else:
+            hide = (a.get('data-l') == 'he' or (a.get('lang') == 'he' and tag != 'html') or 'post-title-he' in classes
+                    or (tag == 'button' and a.get('data-lang') == 'en'))
         skip = tag in self.SKIP
         self.stack.append((tag, hide, skip))
         self.hidden += hide
@@ -179,9 +184,9 @@ LATIN_WORD = re.compile(r"[A-Za-z][A-Za-z'’\-]*")
 HEBREW_WORD = re.compile(r'[֐-׿][֐-׿\'"׳״\-]*')
 
 
-def visible_language(text):
-    """(latin words, hebrew words) in what the English reader sees."""
-    v = VisibleText()
+def visible_language(text, view='en'):
+    """(latin words, hebrew words) in what the English reader sees (view='he': the Hebrew reader)."""
+    v = VisibleText(view)
     v.feed(text)
     seen = ' '.join(v.parts)
     return len(LATIN_WORD.findall(seen)), len(HEBREW_WORD.findall(seen))
@@ -310,6 +315,21 @@ def chrome_only(text, path):
 RADAR_HUBS = {os.path.join('radar', t['slug'], 'index.html') for t in sc.read_radar_meta()['topics'] if t.get('hub')}
 
 
+# The Hebrew addresses of the Art Radar test (content/radar.json he_pages, Ron 2026-11-18): radar/<slug>/he/index.html
+# opens in Hebrew and pairs with radar/<slug>/index.html by hreflang. Only these 20 pages may carry hreflang.
+HE_PAGES = list(sc.read_radar_meta().get('he_pages', []))
+HE_PATHS = {os.path.join('radar', s, 'he', 'index.html'): s for s in HE_PAGES}
+PAIRED_PATHS = {os.path.join('radar', s, 'index.html'): s for s in HE_PAGES}
+HREFLANG = re.compile(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">')
+
+
+def hreflang_ok(s, slug):
+    """Exactly the pair's three links: en and x-default to the main address, he to the Hebrew one."""
+    want = {('en', f'{SITE}/radar/{slug}/'), ('he', f'{SITE}/radar/{slug}/he/'), ('x-default', f'{SITE}/radar/{slug}/')}
+    got = HREFLANG.findall(s)
+    return len(got) == 3 and set(got) == want and s.count('hreflang=') == 3 + s.count('<a data-lang=')
+
+
 def radar_post_page(path):
     return (path.startswith('radar' + os.sep) and path != os.path.join('radar', 'index.html')
             and path not in RADAR_HUBS)
@@ -390,13 +410,32 @@ for path in pages:
         fail('noindex', f'{path} should be noindex')
     if not must_noindex and has_noindex:
         fail('noindex', f'{path} must be indexable')
-    if not is_stub:
+    if not is_stub and path in HE_PATHS:
+        slug = HE_PATHS[path]
+        if not re.search(r'<html lang="he" data-default-lang="he" data-lang-pin="he"', s):
+            fail('lang', f'{path}: <html lang="he" ... data-lang-pin="he"> missing (a Hebrew address opens in Hebrew)')
+        if not re.search(r'<body class="lang-he"', s):
+            fail('lang', f'{path}: <body class="lang-he"> missing')
+        if not hreflang_ok(s, slug):
+            fail('lang', f'{path}: hreflang must be exactly en, he and x-default for /radar/{slug}/')
+        if f'rel="canonical" href="{SITE}/radar/{slug}/he/"' not in s:
+            fail('lang', f'{path}: canonical is not itself')
+        if 'post-body-en' in s:
+            fail('lang', f'{path}: a Hebrew address carries the Hebrew body only')
+        latin, hebrew = visible_language(s, view='he')
+        share = hebrew / max(1, latin + hebrew)
+        if share < 0.8:
+            fail('lang', f'{path}: only {share:.0%} of visible words are Hebrew ({hebrew} Hebrew, {latin} Latin)')
+    elif not is_stub:
         if not re.search(r'<html lang="en"', s):
             fail('lang', f'{path}: <html lang="en"> missing')
         if not re.search(r'<body class="lang-en"', s):
             fail('lang', f'{path}: <body class="lang-en"> missing (English must be the default without JS)')
-        if 'hreflang=' in s:
-            fail('lang', f'{path}: hreflang tags were dropped on 2026-09-26, do not emit them')
+        if path in PAIRED_PATHS:
+            if not hreflang_ok(s, PAIRED_PATHS[path]):
+                fail('lang', f'{path}: hreflang must be exactly en, he and x-default for its own pair')
+        elif 'hreflang=' in s:
+            fail('lang', f'{path}: hreflang tags were dropped on 2026-09-26, do not emit them (only the he_pages pairs carry them)')
         latin, hebrew = visible_language(s)
         share = latin / max(1, latin + hebrew)
         if share < 0.9:

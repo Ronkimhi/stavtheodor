@@ -258,11 +258,13 @@ def ld_script(block):
 
 
 def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), noindex=False,
-         og_title=None, og_desc=None, og_card_dims=False, og_image_alt=None, extra=''):
+         og_title=None, og_desc=None, og_card_dims=False, og_image_alt=None, extra='', pin=None, locale='en_US'):
     """Everything from <!DOCTYPE> to </head>. Canonical, Open Graph, Twitter, favicons,
     fonts, the theme, one JSON-LD graph (the site-wide nodes, then the page's ld blocks) and GA. No hreflang:
     both languages live at the same URL and English is the default, so the tags would
-    only point every language at itself (dropped 2026-09-26)."""
+    only point every language at itself (dropped 2026-09-26). One exception (2026-11-18): an Art Radar post's Hebrew
+    address (content/radar.json he_pages) passes lang="he", pin="he" (data-lang-pin: LANG_BOOT shows that language
+    whatever is stored), locale="he_IL" and its hreflang links in extra; its main address passes the same links."""
     og_image = og_image or SITE + '/og-image.jpg'
     og_title = og_title or title
     og_desc = og_desc or desc
@@ -276,7 +278,7 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
     ld_html = ('<!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page\'s -->\n'
                + ld_script(page_graph(ld)))
     return f'''<!DOCTYPE html>
-<html lang="{lang}" data-default-lang="{lang}">
+<html lang="{lang}" data-default-lang="{lang}"{f' data-lang-pin="{pin}"' if pin else ''}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -288,8 +290,8 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{og_image}">{dims}
 <meta property="og:site_name" content="THEODORA">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="he_IL">
+<meta property="og:locale" content="{locale}">
+<meta property="og:locale:alternate" content="{'en_US' if locale == 'he_IL' else 'he_IL'}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{H.escape(og_title, quote=True)}">
 <meta name="twitter:description" content="{H.escape(og_desc, quote=True)}">
@@ -315,6 +317,13 @@ LANG_BOOT = '''<script>
   document.documentElement.classList.add('js');
   var lang = 'en';
   try { var s = localStorage.getItem('radarLang'); if (s === 'he' || s === 'en') { lang = s; } } catch (e) {}
+  /* A page pinned to a language (data-lang-pin, an Art Radar post's Hebrew address, 2026-11-18) shows it whatever is
+     stored; with nothing stored yet it stores it, so the rest of the visit follows. A stored choice is left alone. */
+  var pin = document.documentElement.getAttribute('data-lang-pin');
+  if (pin === 'he' || pin === 'en') {
+    try { if (!localStorage.getItem('radarLang')) { localStorage.setItem('radarLang', pin); } } catch (e) {}
+    lang = pin;
+  }
   document.body.classList.toggle('lang-en', lang === 'en');
   document.body.classList.toggle('lang-he', lang === 'he');
   document.documentElement.lang = lang;
@@ -391,12 +400,21 @@ def phone_link(loc='cta'):
     return f'<a class="arrow tel" href="{PHONE_TEL}" data-loc="{loc}"><span class="ln"></span><bdi dir="ltr">{PHONE}</bdi></a>'
 
 
-def nav(home=False, own=None, sub=None):
+def lang_control(lang, label, links):
+    if links and links.get(lang):
+        return f'<a data-lang="{lang}" hreflang="{lang}" href="{links[lang]}">{label}</a>'
+    return f'<button type="button" data-lang="{lang}" aria-pressed="false">{label}</button>'
+
+
+def nav(home=False, own=None, sub=None, lang_links=None):
     """own: section links a homepage-shaped page sends to their own page because it lacks the section
     (a buyer variant has no #museum: {'#museum': '/museum/'}, 2026-09-28).
     sub: an (en, he) pair, the small orientation line under the wordmark ("for hotels"), buyer variants only
     (Ron, 2026-09-29). It sits inside the wordmark so it lines up with it and stacks above the WebGL canvas;
-    WM_SUB_JS shows it between the first fold and the black intro block."""
+    WM_SUB_JS shows it between the first fold and the black intro block.
+    lang_links: {'he': url} or {'en': url} (2026-11-18, the Art Radar posts with a Hebrew address): that language's
+    control is a real link to the other address, styled as the button; its click stores the language and follows it.
+    Every other page passes nothing and its switch is unchanged."""
     own = own or {}
     links = ''.join(guides_dd(h) if h == GUIDES_INDEX else f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>'
                     for h, en, he in NAV_ITEMS)
@@ -412,8 +430,8 @@ def nav(home=False, own=None, sub=None):
     <div class="links" id="links">{links}</div>
     {nav_call()}{nav_write_bar()}
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
-      <button type="button" data-lang="he" aria-pressed="false">HE</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      {lang_control('he', 'HE', lang_links)}
+      {lang_control('en', 'EN', lang_links)}
     </div>
     <button type="button" class="menu-btn" id="menu-btn" aria-controls="links" aria-expanded="false">{T('Menu', 'תפריט')}</button>
   </div>
@@ -1119,7 +1137,7 @@ LANG_JS = '''<script>
       if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
       im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -1128,10 +1146,11 @@ LANG_JS = '''<script>
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}
+      if (b.tagName === 'A') { return; }  /* a link to the other address (2026-11-18): store the choice and follow it */
       apply(lang);
     });
   });
@@ -1392,9 +1411,10 @@ WM_SUB_H1_JS = '''<script>
 </script>'''
 
 
-def body_open():
-    """English is set in the markup itself; LANG_BOOT only switches to a stored choice."""
-    return '<body class="lang-en">\n\n' + LANG_BOOT + '\n\n'
+def body_open(lang='en'):
+    """English is set in the markup itself; LANG_BOOT only switches to a stored choice. lang="he" only on an Art Radar
+    post's Hebrew address (2026-11-18)."""
+    return f'<body class="lang-{lang}">\n\n' + LANG_BOOT + '\n\n'
 
 
 def main(body):
@@ -1551,7 +1571,7 @@ def month_labels(post):
     return en, he
 
 
-def timeline(posts, with_months, dims=False, alts=False):
+def timeline(posts, with_months, dims=False, alts=False, he_slugs=()):
     """The posts as timeline entries (the homepage, /radar/, and the More list on a post). dims=True (the guide
     pages' From Art Radar block, 2026-09-30 SEO fixes) gives each thumbnail its file's width and height. alts=True
     (the From Art Radar block on /guide/ and /advisory/ pages, Ron 2026-09-30) gives each thumbnail the alt text of
@@ -1569,7 +1589,7 @@ def timeline(posts, with_months, dims=False, alts=False):
         th = f'<div class="th"><img src="{p["img"]}" {alt}{wh} loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
         teaser = f'<p class="teaser">{T(H.escape(p["teaser_en"]), H.escape(p["teaser_he"]))}</p>' if p['teaser_en'] else ''
         out.append(f'''
-      <a class="entry reveal" href="/radar/{p['slug']}/">
+      <a class="entry reveal" href="/radar/{p['slug']}/{'he/' if p['slug'] in he_slugs else ''}">
         <div class="date">{T(p['date_en'], p['date_he'])}</div>
         <div><h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>{teaser}</div>
         {th}

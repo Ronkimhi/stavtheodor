@@ -93,9 +93,9 @@
   .links { display: flex; gap: 30px; align-items: center; }
   .links a { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
   .links a [data-l="he"] { font-size: 16px; }
-  .lang-switch button { background: none; border: 0; color: var(--ink); cursor: pointer; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; padding: 0; text-shadow: inherit; }
-  body.lang-en .lang-switch button[data-lang="en"] { display: none; }
-  body.lang-he .lang-switch button[data-lang="he"] { display: none; }
+  .lang-switch button, .lang-switch a { background: none; border: 0; color: var(--ink); cursor: pointer; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; padding: 0; text-shadow: inherit; }
+  body.lang-en .lang-switch [data-lang="en"] { display: none; }
+  body.lang-he .lang-switch [data-lang="he"] { display: none; }
   .menu-btn { display: none; background: none; border: 0; color: var(--ink); font-family: var(--sans); font-size: 13px; font-weight: 500; cursor: pointer; text-shadow: inherit; }
   .menu-btn [data-l="he"] { font-size: 16px; }
   /* Click to call (2026-09-29): the number at the right of the nav; under 480px the label Call instead */
@@ -1086,8 +1086,8 @@
      The call link's area grows to its left (toward the empty space before it) so it does not
      overlap the HE/EN button; the others grow evenly around their centre. */
   @media (max-width: 768px) {
-    .nav .nav-call, .nav .nav-write-bar, .lang-switch button, .menu-btn, a.arrow { position: relative; }
-    .nav .nav-call::after, .nav .nav-write-bar::after, .lang-switch button::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
+    .nav .nav-call, .nav .nav-write-bar, .lang-switch button, .lang-switch a, .menu-btn, a.arrow { position: relative; }
+    .nav .nav-call::after, .nav .nav-write-bar::after, .lang-switch button::after, .lang-switch a::after, .menu-btn::after { content: ""; position: absolute; top: 50%; left: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); background: transparent; }
     .nav .nav-call::after { left: auto; right: -4px; transform: translateY(-50%); }
     .nav .nav-write-bar::after { left: auto; right: -2px; transform: translateY(-50%); }  /* grows mostly to its left, toward Call, so it never meets the HE/EN button's area */
     a.arrow::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: max(100%, 44px); transform: translateY(-50%); background: transparent; }

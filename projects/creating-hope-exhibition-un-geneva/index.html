@@ -293,6 +293,13 @@
   document.documentElement.classList.add('js');
   var lang = 'en';
   try { var s = localStorage.getItem('radarLang'); if (s === 'he' || s === 'en') { lang = s; } } catch (e) {}
+  /* A page pinned to a language (data-lang-pin, an Art Radar post's Hebrew address, 2026-11-18) shows it whatever is
+     stored; with nothing stored yet it stores it, so the rest of the visit follows. A stored choice is left alone. */
+  var pin = document.documentElement.getAttribute('data-lang-pin');
+  if (pin === 'he' || pin === 'en') {
+    try { if (!localStorage.getItem('radarLang')) { localStorage.setItem('radarLang', pin); } } catch (e) {}
+    lang = pin;
+  }
   document.body.classList.toggle('lang-en', lang === 'en');
   document.body.classList.toggle('lang-he', lang === 'he');
   document.documentElement.lang = lang;
@@ -686,7 +693,7 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
       if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
       im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -695,10 +702,11 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}
+      if (b.tagName === 'A') { return; }  /* a link to the other address (2026-11-18): store the choice and follow it */
       apply(lang);
     });
   });
