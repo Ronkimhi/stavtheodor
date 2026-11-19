@@ -43,7 +43,7 @@ const SITE = 'https://stavtheodor.com';
 const MIN_LATIN = 0.9;
 const KEY_PAGES = ['/', '/advisory/', '/projects/', '/radar/', '/art-curator-new-jersey/', '/art-curator-new-york/'];
 const NARROW = { width: 360, height: 780 };  /* the smallest common phone: the opening lines must fit it */
-const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis/;  /* blocked in every context */
+const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis|clarity\.ms/;  /* blocked in every context */
 
 function loadPlaywright() {
   try { return require('playwright'); } catch (e) { /* not on the local path */ }

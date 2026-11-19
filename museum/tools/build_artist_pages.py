@@ -176,7 +176,8 @@ def head(title, desc, canonical, og_image):
 {THEME_SNIPPET}
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 {PAGE_CSS}
-{GA_SNIPPET}"""
+{GA_SNIPPET}
+{sc.CLARITY_SNIPPET}"""
 
 
 def artist_jsonld(a):
