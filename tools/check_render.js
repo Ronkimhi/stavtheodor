@@ -6,6 +6,10 @@
        and document.documentElement.lang is "en" (site owner's decision, 2026-09-26)
      - the same holds with JavaScript disabled, so the English default is in the markup itself
        (what a crawler that does not run scripts, or a reader with scripts blocked, gets)
+   An Art Radar post's Hebrew address (/radar/<slug>/he/, content/radar.json he_pages, 2026-11-18) is the one exception:
+   it opens in Hebrew (lang "he", body.lang-he, at least 80% Hebrew words) with and without JavaScript, and on one pair
+   the EN link of the Hebrew address lands on the main address in English and the HE link of the main address lands
+   on the Hebrew address in Hebrew.
    and once, on one inner page:
      - the switch works: clicking HE shows Hebrew, and a reload keeps it (localStorage radarLang).
    and on the homepage and every buyer variant, on a 360 by 780 screen, in English and in Hebrew:
@@ -41,6 +45,8 @@ const { execSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://stavtheodor.com';
 const MIN_LATIN = 0.9;
+const MIN_HEBREW = 0.8;  /* an Art Radar post's Hebrew address (2026-11-18): Stav's English captions and names make the rest */
+const HE_ADDRESS = /^\/radar\/[a-z0-9-]+\/he\/$/;
 const KEY_PAGES = ['/', '/advisory/', '/projects/', '/radar/', '/art-curator-new-jersey/', '/art-curator-new-york/'];
 const NARROW = { width: 360, height: 780 };  /* the smallest common phone: the opening lines must fit it */
 const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis|clarity\.ms/;  /* blocked in every context */
@@ -273,7 +279,7 @@ async function main() {
   pages = pages.concat(variantPaths().filter(p => !pages.includes(p)));  /* after the sitemap paths, in both modes, once each */
   const browser = await chromium.launch();
   const fails = [];
-  let checked = 0;
+  let checked = 0, heChecked = 0;
   const quiet = r => r.abort();
   for (const p of pages) {
     for (const js of [true, false]) {
@@ -287,6 +293,15 @@ async function main() {
         if (!resp || resp.status() !== 200) { fails.push(`${p}${mode}: HTTP ${resp ? resp.status() : 'no response'}`); continue; }
         const r = await readPage(page);
         const w = wordsOf(r.text);
+        if (HE_ADDRESS.test(p)) {
+          /* an Art Radar post's Hebrew address (content/radar.json he_pages, 2026-11-18) opens in Hebrew */
+          const heShare = w.hebrew / Math.max(1, w.latin + w.hebrew);
+          if (r.lang !== 'he') { fails.push(`${p}${mode}: documentElement.lang is "${r.lang}", expected "he"`); }
+          if (!r.bodyHe || r.bodyEn) { fails.push(`${p}${mode}: body classes are not lang-he (en=${r.bodyEn}, he=${r.bodyHe})`); }
+          if (heShare < MIN_HEBREW) { fails.push(`${p}${mode}: ${Math.round(heShare * 100)}% Hebrew words visible (${w.hebrew} Hebrew, ${w.latin} Latin)`); }
+          if (js) { checked++; heChecked++; }
+          continue;
+        }
         const share = w.latin / Math.max(1, w.latin + w.hebrew);
         if (r.lang !== 'en') { fails.push(`${p}${mode}: documentElement.lang is "${r.lang}", expected "en"`); }
         if (!r.bodyEn || r.bodyHe) { fails.push(`${p}${mode}: body classes are not lang-en (en=${r.bodyEn}, he=${r.bodyHe})`); }
@@ -296,6 +311,29 @@ async function main() {
         fails.push(`${p}${mode}: ${e.message.split('\n')[0]}`);
       } finally {
         await context.close();
+      }
+    }
+  }
+
+  /* the two addresses of a paired post (2026-11-18): the EN link on the Hebrew address lands on the main address in
+     English, and the HE link on the main address lands on the Hebrew address in Hebrew, each with fresh storage */
+  const heAddr = pages.find(p => HE_ADDRESS.test(p));
+  if (heAddr) {
+    const mainAddr = heAddr.replace(/he\/$/, '');
+    for (const [from, pick, to, want] of [[heAddr, 'en', mainAddr, 'en'], [mainAddr, 'he', heAddr, 'he']]) {
+      const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+      await ctx.route(ANALYTICS, quiet);
+      const pg = await ctx.newPage();
+      try {
+        await pg.goto(base + from, { waitUntil: 'load', timeout: 45000 });
+        await Promise.all([pg.waitForURL(base + to, { timeout: 15000 }), pg.click(`.lang-switch a[data-lang="${pick}"]`, { timeout: 10000 })]);
+        await pg.waitForLoadState('load');
+        const r = await readPage(pg);
+        if (r.lang !== want || (want === 'he' ? !r.bodyHe : !r.bodyEn)) { fails.push(`switch link on ${from}: landed on ${to} with lang="${r.lang}"`); }
+      } catch (e) {
+        fails.push(`switch link on ${from}: ${e.message.split('\n')[0]}`);
+      } finally {
+        await ctx.close();
       }
     }
   }
@@ -339,7 +377,7 @@ async function main() {
     process.exit(1);
   }
   const w = hero.widest;
-  console.log(`check_render: OK, ${checked} page(s) open in English with and without JavaScript (>= ${MIN_LATIN * 100}% Latin, lang="en") at ${base}; the switch shows Hebrew and remembers it (${inner}); `
+  console.log(`check_render: OK, ${checked - heChecked} page(s) open in English and ${heChecked} Hebrew address(es) in Hebrew, with and without JavaScript; ${heAddr ? 'the switch links cross between the two addresses' : 'no Hebrew address in this tree'}; English pages (>= ${MIN_LATIN * 100}% Latin, lang="en") at ${base}; the switch shows Hebrew and remembers it (${inner}); `
     + `the opening lines fit a ${NARROW.width}px screen on ${heroPages.length} page(s) in English and Hebrew (widest: ${w ? `${w.right.toFixed(1)}px, #${w.id} on ${w.p} in ${w.lang === 'he' ? 'Hebrew' : 'English'}` : 'none measured'}); `
     + (rooms.pages ? `${rooms.pages} variant(s) load their own opening rooms, desktop and phone, with no console error` : 'no variant brings its own opening rooms'));
 }
