@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Boutique Hotel Art Consultant · New York City, NJ | THEODORA</title>
-<meta name="description" content="Boutique hotel art consultant in New York City and New Jersey: collections from the arrival piece guests remember to the guest room. Write to Stav.">
+<title>Boutique Hotel Art Consultant · NY and NJ | THEODORA</title>
+<meta name="description" content="Boutique hotel art consultant in New York and New Jersey: collections from the arrival piece guests remember to the guest room. Write to Stav.">
 <meta property="og:title" content="The arrival piece guests remember · THEODORA">
 <meta property="og:description" content="The arrival piece guests remember, and one collection from the lobby to the room. Hotel art by curator Stav Theodor.">
 <meta property="og:type" content="website">
@@ -295,7 +295,7 @@
       "@id": "https://stavtheodor.com/hotels/#service",
       "name": "Boutique hotel art curator and advisor: collections built while collaborating with luxury hospitality leaders",
       "serviceType": "Art consulting and curation for boutique hotels",
-      "description": "Boutique hotel art consultant in New York City and New Jersey: collections from the arrival piece guests remember to the guest room. Write to Stav.",
+      "description": "Boutique hotel art consultant in New York and New Jersey: collections from the arrival piece guests remember to the guest room. Write to Stav.",
       "url": "https://stavtheodor.com/hotels/",
       "provider": {
         "@id": "https://stavtheodor.com/#org"
@@ -1029,19 +1029,22 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
       if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
       im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}
+      if (b.tagName === 'A') { return; }  /* a link to the other address (2026-11-18): store the choice and follow it */
       apply(lang);
     });
   });

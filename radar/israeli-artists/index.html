@@ -368,6 +368,13 @@
   document.documentElement.classList.add('js');
   var lang = 'en';
   try { var s = localStorage.getItem('radarLang'); if (s === 'he' || s === 'en') { lang = s; } } catch (e) {}
+  /* A page pinned to a language (data-lang-pin, an Art Radar post's Hebrew address, 2026-11-18) shows it whatever is
+     stored; with nothing stored yet it stores it, so the rest of the visit follows. A stored choice is left alone. */
+  var pin = document.documentElement.getAttribute('data-lang-pin');
+  if (pin === 'he' || pin === 'en') {
+    try { if (!localStorage.getItem('radarLang')) { localStorage.setItem('radarLang', pin); } } catch (e) {}
+    lang = pin;
+  }
   document.body.classList.toggle('lang-en', lang === 'en');
   document.body.classList.toggle('lang-he', lang === 'he');
   document.documentElement.lang = lang;
@@ -399,108 +406,108 @@
     <div class="hub-artist">
       <h3 class="serif">אלכס פרפורי</h3>
       <blockquote><p>אלכס פרפורי יוצאת לתל אביב עם מצלמה אנלוגית ומצלמת את הטיילת, את החוף ואת האנשים שחיים את העיר בלי פילטר: כרסים, קמטים, שיזוף, צחוק.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Alex%20Farfuri%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Alex Farfuri" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Alex Farfuri. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של אלכס פרפורי. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Alex Farfuri" data-label-he="כתבו לסתיו על עבודות של אלכס פרפורי">כתבו לסתיו על עבודות של אלכס פרפורי</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">בלו סימיון פיינרו</h3>
       <blockquote><p>במיצב שנבחר לייצג את ישראל בביאנלה ה־61 בוונציה, בריכה שחורה אוספת לתוכה טיפות הנושרות ממערכת טפטפות התלויה מעליה.</p></blockquote>
-      <p class="hub-post"><a href="/radar/pool-in-israeli-art/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
+      <p class="hub-post"><a href="/radar/pool-in-israeli-art/he/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">בועז נוי</h3>
       <blockquote><p>בועז נוי מצייר את חיפה ואת הכרמל מתוך קרבה של מי שמכיר את העיר מבפנים.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Boaz%20Noy%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Boaz Noy" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Boaz Noy. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של בועז נוי. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Boaz Noy" data-label-he="כתבו לסתיו על עבודות של בועז נוי">כתבו לסתיו על עבודות של בועז נוי</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">חן חפץ</h3>
       <blockquote><p>חן חפץ מצייר סעודה משפחתית על גבי מפת שולחן.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Chen%20Hefetz%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Chen Hefetz" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Chen Hefetz. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של חן חפץ. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Chen Hefetz" data-label-he="כתבו לסתיו על עבודות של חן חפץ">כתבו לסתיו על עבודות של חן חפץ</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">דנה דרויש</h3>
       <blockquote><p>מתוכם יצרה שרשור קולאז'י: יצירה, תצלום של יצירה, תצלום שנפגש עם תצלום אחר או עם טקסט, ולבסוף פוטומונטאז' שמכפיל את משמעותו.</p></blockquote>
-      <p class="hub-post"><a href="/radar/three-tel-aviv-shows/">שלוש תערוכות ששווה לראות בתל אביב</a></p>
+      <p class="hub-post"><a href="/radar/three-tel-aviv-shows/he/">שלוש תערוכות ששווה לראות בתל אביב</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">אסתר כהן</h3>
       <blockquote><p>על גבי מפות טופוגרפיות ישנות של ארץ ישראל, אסתר כהן מציירת פרחי בר: נרקיסים, כלניות, תלתן.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Esther%20Cohen%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Esther Cohen" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Esther Cohen. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של אסתר כהן. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Esther Cohen" data-label-he="כתבו לסתיו על עבודות של אסתר כהן">כתבו לסתיו על עבודות של אסתר כהן</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">מיה דולינגר</h3>
       <blockquote><p>מיה דולינגר משחזרת בחימר קליפות אקליפטוס, השכבה שהעץ משיל מעליו ומחזיר לאדמה.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Maya%20Dolinger%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Maya Dolinger" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Maya Dolinger. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של מיה דולינגר. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Maya Dolinger" data-label-he="כתבו לסתיו על עבודות של מיה דולינגר">כתבו לסתיו על עבודות של מיה דולינגר</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">ניר הוד</h3>
       <blockquote><p>בין העבודות אפשר לפגוש את חבצלות המים הזהובות והנוצצות של ניר הוד, אמן ישראלי הפועל בניו יורק, לצד היערות הבדיוניים והשופעים של הצייר הבלגי <span lang="en" dir="ltr">Ben Sledsens.</span></p></blockquote>
-      <p class="hub-post"><a href="/radar/three-tel-aviv-shows/">שלוש תערוכות ששווה לראות בתל אביב</a></p>
+      <p class="hub-post"><a href="/radar/three-tel-aviv-shows/he/">שלוש תערוכות ששווה לראות בתל אביב</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Nir%20Hod%20%28%2Fradar%2Fthree-tel-aviv-shows%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Nir Hod" data-post="/radar/three-tel-aviv-shows/" data-post-slug="three-tel-aviv-shows" data-msg-en="I would like to ask about work by Nir Hod. I read your post &quot;Three Exhibitions Worth Seeing in Tel Aviv&quot;." data-msg-he="אשמח לשאול על עבודות של ניר הוד. קראתי את הפוסט שלך &quot;שלוש תערוכות ששווה לראות בתל אביב&quot;." data-label-en="Write to Stav about work by Nir Hod" data-label-he="כתבו לסתיו על עבודות של ניר הוד">כתבו לסתיו על עבודות של ניר הוד</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">נעה ויגנפלד</h3>
       <blockquote><p>בציוריה של נעה ויגנפלד ניכרת איכות סינתטית ובימתית.</p></blockquote>
-      <p class="hub-post"><a href="/radar/noa-wiegenfeld/">נועה ויגנפלד בתערוכת הבוגרים של בצלאל</a></p>
+      <p class="hub-post"><a href="/radar/noa-wiegenfeld/he/">נועה ויגנפלד בתערוכת הבוגרים של בצלאל</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Noa%20Wiegenfeld%20%28%2Fradar%2Fnoa-wiegenfeld%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Noa Wiegenfeld" data-post="/radar/noa-wiegenfeld/" data-post-slug="noa-wiegenfeld" data-msg-en="I would like to ask about work by Noa Wiegenfeld. I read your post &quot;Noa Wiegenfeld at the Bezalel Graduate Exhibition&quot;." data-msg-he="אשמח לשאול על עבודות של נעה ויגנפלד. קראתי את הפוסט שלך &quot;נועה ויגנפלד בתערוכת הבוגרים של בצלאל&quot;." data-label-en="Write to Stav about work by Noa Wiegenfeld" data-label-he="כתבו לסתיו על עבודות של נעה ויגנפלד">כתבו לסתיו על עבודות של נעה ויגנפלד</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">אורן פישר</h3>
       <blockquote><p>פישר נע בין הפיגורטיבי למופשט ובין האישי לקולקטיבי, ומחבר בין סיפורים מקראיים למציאות הישראלית העכשווית.</p></blockquote>
-      <p class="hub-post"><a href="/radar/oren-fischer-hallel/">אורן פישר: הלל בגלריה 81 <span lang="en" dir="ltr">Leonard</span>, ניו יורק</a></p>
+      <p class="hub-post"><a href="/radar/oren-fischer-hallel/he/">אורן פישר: הלל בגלריה 81 <span lang="en" dir="ltr">Leonard</span>, ניו יורק</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Oren%20Fischer%20%28%2Fradar%2Foren-fischer-hallel%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Oren Fischer" data-post="/radar/oren-fischer-hallel/" data-post-slug="oren-fischer-hallel" data-msg-en="I would like to ask about work by Oren Fischer. I read your post &quot;Oren Fischer: Hallel at 81 Leonard Gallery, New York&quot;." data-msg-he="אשמח לשאול על עבודות של אורן פישר. קראתי את הפוסט שלך &quot;אורן פישר: הלל בגלריה 81 Leonard, ניו יורק&quot;." data-label-en="Write to Stav about work by Oren Fischer" data-label-he="כתבו לסתיו על עבודות של אורן פישר">כתבו לסתיו על עבודות של אורן פישר</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">אורן פינחסי</h3>
       <blockquote><p>אורן פינחסי הוא פסל ישראלי שחי ופועל בניו יורק.</p></blockquote>
-      <p class="hub-post"><a href="/radar/in-a-free-state-luhring-augustine/"><span lang="en" dir="ltr">In a Free State</span>, באוצרות דורון לנגברג וסלמאן טור, בגלריה <span lang="en" dir="ltr">Luhring Augustine</span></a></p>
+      <p class="hub-post"><a href="/radar/in-a-free-state-luhring-augustine/he/"><span lang="en" dir="ltr">In a Free State</span>, באוצרות דורון לנגברג וסלמאן טור, בגלריה <span lang="en" dir="ltr">Luhring Augustine</span></a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">פמלה לוי</h3>
       <blockquote><p>לוי (1949-2004), ילידת ארצות הברית, היתה ממבשרות האמנות הפמיניסטית בישראל.</p></blockquote>
-      <p class="hub-post"><a href="/radar/pool-in-israeli-art/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
+      <p class="hub-post"><a href="/radar/pool-in-israeli-art/he/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">רות פתיר</h3>
       <blockquote><p>רות פתיר היא אמנית ניו-מדיה שכבר שנים עובדת עם צלמיות פריון עתיקות מממלכת יהודה, ומחברת ביניהן לבין טכנולוגיה דיגיטלית עכשווית.</p></blockquote>
-      <p class="hub-post"><a href="/radar/ruth-patir-jewish-museum/">רות פתיר מגיעה לניו יורק</a></p>
+      <p class="hub-post"><a href="/radar/ruth-patir-jewish-museum/he/">רות פתיר מגיעה לניו יורק</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">שירה ברזילי</h3>
       <blockquote><p>אצל ברזילי הבריכה היא לא ביקורת ולא געגוע.</p></blockquote>
-      <p class="hub-post"><a href="/radar/pool-in-israeli-art/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
+      <p class="hub-post"><a href="/radar/pool-in-israeli-art/he/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">סיגלית לנדאו</h3>
       <blockquote><p>אצל סיגלית לנדאו ים המלח אינו נוף, הוא שותף ליצירה.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Sigalit%20Landau%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Sigalit Landau" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Sigalit Landau. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של סיגלית לנדאו. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Sigalit Landau" data-label-he="כתבו לסתיו על עבודות של סיגלית לנדאו">כתבו לסתיו על עבודות של סיגלית לנדאו</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">טל שוחט</h3>
       <blockquote><p>הצילומים של שוחט מבוימים עד הפרט האחרון.</p></blockquote>
-      <p class="hub-post"><a href="/radar/pool-in-israeli-art/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
+      <p class="hub-post"><a href="/radar/pool-in-israeli-art/he/">חמישה אמנים, נושא אחד: הבריכה באמנות הישראלית</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">תום פימה</h3>
       <blockquote><p>הצבע הלבן שולט בקנבסים של תום פימה.</p></blockquote>
-      <p class="hub-post"><a href="/radar/tom-fima/">תום פימה: נשים בלבן</a></p>
+      <p class="hub-post"><a href="/radar/tom-fima/he/">תום פימה: נשים בלבן</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Tom%20Fima%20%28%2Fradar%2Ftom-fima%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Tom Fima" data-post="/radar/tom-fima/" data-post-slug="tom-fima" data-msg-en="I would like to ask about work by Tom Fima. I read your post &quot;Tom Fima: Women in White&quot;." data-msg-he="אשמח לשאול על עבודות של תום פימה. קראתי את הפוסט שלך &quot;תום פימה: נשים בלבן&quot;." data-label-en="Write to Stav about work by Tom Fima" data-label-he="כתבו לסתיו על עבודות של תום פימה">כתבו לסתיו על עבודות של תום פימה</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">יהודה ארמוני</h3>
       <blockquote><p>ארמוני מצייר מול הנוף, בסבלנות של מי שמוכן לחכות לאור.</p></blockquote>
-      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
+      <p class="hub-post"><a href="/radar/seven-israeli-works-nathan-zach/he/">תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך</a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Yehuda%20Armoni%20%28%2Fradar%2Fseven-israeli-works-nathan-zach%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Yehuda Armoni" data-post="/radar/seven-israeli-works-nathan-zach/" data-post-slug="seven-israeli-works-nathan-zach" data-msg-en="I would like to ask about work by Yehuda Armoni. I read your post &quot;Seven Israeli Works and a Poem by Nathan Zach&quot;." data-msg-he="אשמח לשאול על עבודות של יהודה ארמוני. קראתי את הפוסט שלך &quot;תערוכה קטנה משלי: שבע עבודות ישראליות ושיר של נתן זך&quot;." data-label-en="Write to Stav about work by Yehuda Armoni" data-label-he="כתבו לסתיו על עבודות של יהודה ארמוני">כתבו לסתיו על עבודות של יהודה ארמוני</a></p>
     </div>
     <div class="hub-artist">
       <h3 class="serif">זויה צ׳רקסקי</h3>
       <blockquote><p>זויה היא אחת האמניות הבולטות באמנות הישראלית העכשווית, והיא מציירת בעיקר את מה שנמצא ממש סביבה: אנשים, משפחה, אוכל, מעמד, תרבות וזהות.</p></blockquote>
-      <p class="hub-post"><a href="/radar/zoya-cherkassky-american-cooking/">זויה צ׳רקסקי: <span lang="en" dir="ltr">American Cooking</span></a></p>
+      <p class="hub-post"><a href="/radar/zoya-cherkassky-american-cooking/he/">זויה צ׳רקסקי: <span lang="en" dir="ltr">American Cooking</span></a></p>
       <p class="hub-post hub-ask"><a href="mailto:stav@stavtheodor.com?subject=Art%20Radar%3A%20work%20by%20Zoya%20Cherkassky%20%28%2Fradar%2Fzoya-cherkassky-american-cooking%2F%29" data-write data-ask data-loc="radar-hub" data-artist="Zoya Cherkassky" data-post="/radar/zoya-cherkassky-american-cooking/" data-post-slug="zoya-cherkassky-american-cooking" data-msg-en="I would like to ask about work by Zoya Cherkassky. I read your post &quot;Zoya Cherkassky: American Cooking, at Fort Gansevoort&quot;." data-msg-he="אשמח לשאול על עבודות של זויה צ׳רקסקי. קראתי את הפוסט שלך &quot;זויה צ׳רקסקי: American Cooking&quot;." data-label-en="Write to Stav about work by Zoya Cherkassky" data-label-he="כתבו לסתיו על עבודות של זויה צ׳רקסקי">כתבו לסתיו על עבודות של זויה צ׳רקסקי</a></p>
     </div>
   </div>
@@ -995,19 +1002,22 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
       if (!im.hasAttribute('data-alt-en')) { im.setAttribute('data-alt-en', im.getAttribute('alt') || ''); }
       im.setAttribute('alt', im.getAttribute(lang === 'he' ? 'data-alt-he' : 'data-alt-en'));
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}
+      if (b.tagName === 'A') { return; }  /* a link to the other address (2026-11-18): store the choice and follow it */
       apply(lang);
     });
   });
