@@ -12,6 +12,7 @@
 - Base: Tenafly, New Jersey 07670. Working in person across New Jersey and New York City, and online with clients anywhere. Past projects include homes in Tel Aviv and elsewhere in Israel.
 - [About THEODORA and Stav Theodor](https://stavtheodor.com/about/): what THEODORA is, who runs it, where it works and for whom, Stav's background, how she works, and how to reach her. English and Hebrew on the same page.
 - [Contact](https://stavtheodor.com/contact/): Write to Stav at stav@stavtheodor.com, or call (201) 351-8367. Tell me about the space: the walls, the light, the timeline.
+- [Privacy](https://stavtheodor.com/privacy/): How stavtheodor.com uses Google Analytics and Microsoft Clarity to understand visits, and how to reach me with a question about your data.
 - [Introduction film](https://stavtheodor.com/#film): a 67 second video on the homepage explaining what THEODORA does for interior designers, architects, private collectors, home and business owners, from consulting and sourcing to commissions, framing, and installation.
 
 ## Services
