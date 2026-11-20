@@ -960,7 +960,8 @@ def render_privacy():
           {"@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "Privacy", "item": url}]}]
-    paras = "\n  ".join(f'<p class="body">{T(en, he)}</p>' for en, he in PRIVACY["paras"])
+    paras_he = "\n".join(f"<p>{he}</p>" for en, he in PRIVACY["paras"])
+    paras_en = "\n".join(f"<p>{en}</p>" for en, he in PRIVACY["paras"])
     body = f'''
 <header class="phead">
   <p class="eyebrow">{T(*PRIVACY["eyebrow"])}</p>
@@ -968,7 +969,12 @@ def render_privacy():
 </header>
 
 <section class="section wrap tight">
-  {paras}
+  <div class="prose" data-l="he" dir="rtl">
+{paras_he}
+  </div>
+  <div class="prose" data-l="en">
+{paras_en}
+  </div>
 </section>
 '''
     return (sc.head(PRIVACY["title"], PRIVACY["description"], url, lang="en", ld=ld)
