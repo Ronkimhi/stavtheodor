@@ -932,6 +932,49 @@ def render_contact():
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
+# /privacy/ (loop Q-053, 2026-11-19): the disclosure Microsoft Clarity's terms ask for, covering Google Analytics too.
+# Strings by the Curator, Hebrew twins included. Indexable and in sitemap-pages.xml like /contact/ and /about/; every
+# footer links it (site_chrome.footer(), the museum's page_foot() and the hand-made museum pages).
+PRIVACY = {
+    "path": "privacy",
+    "title": "Privacy | THEODORA",
+    "description": "How stavtheodor.com uses Google Analytics and Microsoft Clarity to understand visits, and how to reach me with a question about your data.",
+    "eyebrow": ("Privacy", "פרטיות"),
+    "h1": ("Privacy on this site", "פרטיות באתר הזה"),
+    "paras": [
+        ("I use Google Analytics and Microsoft Clarity on this site to understand how visitors use it: the pages viewed, clicks and scrolling. Both services use cookies to do this.",
+         "אני משתמשת באתר הזה בגוגל אנליטיקס ובמיקרוסופט קלריטי כדי להבין איך מבקרים משתמשים בו: העמודים שנצפים, הלחיצות והגלילה. שני השירותים משתמשים בעוגיות לשם כך."),
+        ('I do not sell any data. Google and Microsoft explain how they handle data in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.',
+         'אני לא מוכרת שום מידע. גוגל ומיקרוסופט מסבירות איך הן מטפלות במידע ב<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">מדיניות הפרטיות של גוגל</a> וב<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">הצהרת הפרטיות של מיקרוסופט</a>.'),
+        ('If you have a question about your data, write to me at <a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>.',
+         'אם יש לכם שאלה על המידע שלכם, כתבו לי ל-<a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>.'),
+    ],
+}
+
+
+def render_privacy():
+    """/privacy/: the header, then three short paragraphs. The quiet footer, as on /contact/."""
+    url = f"{SITE}/{PRIVACY['path']}/"
+    ld = [{"@type": "WebPage", "@id": url + "#page", "url": url, "name": PRIVACY["title"],
+           "description": PRIVACY["description"], "about": {"@id": SITE + "/#org"}, "inLanguage": ["en", "he"]},
+          {"@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+              {"@type": "ListItem", "position": 2, "name": "Privacy", "item": url}]}]
+    paras = "\n  ".join(f'<p class="body">{T(en, he)}</p>' for en, he in PRIVACY["paras"])
+    body = f'''
+<header class="phead">
+  <p class="eyebrow">{T(*PRIVACY["eyebrow"])}</p>
+  <h1 class="serif">{T(*PRIVACY["h1"])}</h1>
+</header>
+
+<section class="section wrap tight">
+  {paras}
+</section>
+'''
+    return (sc.head(PRIVACY["title"], PRIVACY["description"], url, lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))
+
+
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
 # states the entity facts in plain sentences (what THEODORA is, who runs it, where, for whom, how to reach her); everything
 # after it is copy already published on the site, read from its source at build time so the two never drift: the
@@ -1277,6 +1320,8 @@ def main():
     print(f"  wrote {CONTACT['path']}/index.html" + (" (with the contact form)" if sc.FORM_ENDPOINT else " (no form: site_chrome.FORM_ENDPOINT is empty)"))
     sc.write(os.path.join(ABOUT["path"], "index.html"), render_about(pages))
     print(f"  wrote {ABOUT['path']}/index.html")
+    sc.write(os.path.join(PRIVACY["path"], "index.html"), render_privacy())
+    print(f"  wrote {PRIVACY['path']}/index.html")
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects

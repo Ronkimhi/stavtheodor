@@ -228,7 +228,7 @@ def page_foot():
     return (f'<footer class="nap-foot"><address class="nap">THEODORA · Stav Theodor, art advisor and consultant<br>'
             f'Tenafly, New Jersey 07670 · Serving Tenafly, Bergen County, New Jersey and New York City, with projects in Tel Aviv, and online with clients anywhere<br>'
             f'<a href="{sc.PHONE_TEL}" data-loc="footer">{sc.PHONE}</a> · '
-            f'<a href="mailto:{sc.EMAIL}" data-loc="footer">{sc.EMAIL}</a></address></footer>\n{sc.CALL_JS}')
+            f'<a href="mailto:{sc.EMAIL}" data-loc="footer">{sc.EMAIL}</a> · <a href="/privacy/">Privacy</a></address></footer>\n{sc.CALL_JS}')
 
 
 def crumb(extra=""):
