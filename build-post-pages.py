@@ -45,6 +45,8 @@ def radar_meta_check():
         st = meta.get("seo_title")
         if st and len(f"{st} · THEODORA") > 60:
             bad.append(f"seo_title of {s!r} is over 60 characters with the suffix")
+        if "card" in meta and not isinstance(meta["card"], bool):
+            bad.append(f"card of {s!r} is not true or false")
         md = meta.get("meta_description")
         if md is not None and not 70 <= len(md) <= 155:
             bad.append(f"meta_description of {s!r} is not 70 to 155 characters")
