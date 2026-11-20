@@ -277,7 +277,7 @@ Office wall art works when each area of the office gets one job: welcome at rece
 
 ## Is it better to buy or lease art for an office?
 
-Art leasing for offices means renting artworks for a set term, often with installation and rotation included, instead of buying them. Buying builds an asset the company keeps, commissioning creates a work for one wall, and leasing trades ownership for flexibility. For most offices a mix works: buy or commission the works on the walls that define the firm, and consider leasing only for walls you expect to change. Buying is also an investment: the work stays with the company, while rent pays only for time on the wall. Full guide: https://stavtheodor.com/guide/buy-lease-or-commission-office-art/
+For most offices, buy or commission the works on the walls that define the firm, and consider leasing only for walls you expect to change. Stav Theodor helps companies buy and commission art; she does not lease or rent art. Leasing is offered by art leasing companies: it means renting artworks for a set term, often with installation and rotation included, instead of buying them. Buying builds an asset the company keeps, commissioning creates a work for one wall, and leasing trades ownership for flexibility. Buying is also an investment: the work stays with the company, while rent pays only for time on the wall. Full guide: https://stavtheodor.com/guide/buy-lease-or-commission-office-art/
 
 ## What art is appropriate for a doctor's office?
 
