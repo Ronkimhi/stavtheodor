@@ -105,6 +105,9 @@ Short version:
    the POST TEMPLATE comment, with BOTH language blocks (Hebrew + full English).
    NEVER put a post in index.html: it is generated, and the build stops if it finds one there.
 3. Add image(s) to images/; add the slug to its topics in content/radar.json (or to no_topic)
+   Every event in the JSON-LD "about" with no startDate: its opening date from the VENUE'S OWN page under
+   posts.<slug>.events in content/radar.json (start_date, start_date_source; null if the page states none),
+   never in Stav's text, never a guess (Ron, 2026-11-20, ron-decisions row 22; ADD-BLOG-POST-GUIDE.md Step 2.2)
 4. python3 build.py                      # regenerates radar/<slug>/, radar/, index.html (its
                                          # timeline shows the six newest posts), sitemap.xml,
                                          # then runs the gates (dashes, phones, twins, links, lang...)
