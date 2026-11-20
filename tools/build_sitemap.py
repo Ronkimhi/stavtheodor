@@ -136,7 +136,7 @@ def main():
         rel = json.load(open(f, encoding='utf-8'))['path'].strip('/')
         if os.path.exists(os.path.join(rel, 'index.html')):
             page_entries.append(dated(f'{SITE}/{rel}/', f'{rel}/index.html'))
-    for rel in ('contact', 'about'):  # real pages since 2026-09-29, written by build-site-pages.py
+    for rel in ('contact', 'about', 'privacy'):  # real pages since 2026-09-29 (/privacy/ since 2026-11-19), written by build-site-pages.py
         if os.path.exists(os.path.join(rel, 'index.html')):
             page_entries.append(dated(f'{SITE}/{rel}/', f'{rel}/index.html'))
     for f in sorted(glob.glob('content/variants/*.json')):  # rendered by build-home.py at /<path>/

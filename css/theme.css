@@ -640,6 +640,8 @@
   .phead .crumbs a { color: inherit; }
   .phead .crumbs .sep { color: var(--muted); }
   body.lang-he .phead .crumbs { direction: rtl; }
+  body.lang-he .phead { direction: rtl; }  /* Hebrew: the header's h1, lead, byline and Write to Stav button start on the right; the h1 and lead hold inline twins, so the twins' own dir never reached the block (2026-11-18) */
+  body.lang-he .phead .ba-stage { direction: ltr; }  /* the before and after panes keep their order */
   .pfig figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .plead { padding: clamp(72px, 8vw, 120px) clamp(20px, 3.4vw, 48px) 0; max-width: 1000px; }
   .plead p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }

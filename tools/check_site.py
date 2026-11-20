@@ -77,7 +77,8 @@ OLD_SAME_AS = ('facebook.com/stavtheodor/', 'stav-theodor-5542a476')
 SITE = 'https://stavtheodor.com'
 GENERATED_DIRS = ('radar', 'advisory', 'projects', 'for-designers', 'for-brokers', 'for-advisors', 'guide', 'art-curator-new-jersey', 'art-curator-new-york', 'contact', 'about',
                   'art-consultant-tenafly-nj', 'art-advisor-bergen-county',  # the town and county pages (Batch 3, 2026-09-29)
-                  'art-advisor-westchester-ny')  # the Westchester area page (answers wave, 2026-09-30)
+                  'art-advisor-westchester-ny',  # the Westchester area page (answers wave, 2026-09-30)
+                  'privacy')  # the privacy page, linked from every footer (2026-11-19)
 MERGED_DIRS = ('designers', 'our-team', 'our-team-1')  # forwarded to a real page (build-home.py MERGED_PATHS): a redirect stub without noindex (2026-09-29)
 STUB_DIRS = ('2', 'questions', 'services', 'portfolio', 'blog', 'press', 'work-1') + MERGED_DIRS  # redirect stubs written by build-home.py, never indexable pages
 MERGED_FILES = (os.path.join('advisory', 'is-an-art-advisor-worth-it-for-one-piece', 'index.html'),

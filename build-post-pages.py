@@ -45,8 +45,75 @@ def radar_meta_check():
         st = meta.get("seo_title")
         if st and len(f"{st} · THEODORA") > 60:
             bad.append(f"seo_title of {s!r} is over 60 characters with the suffix")
+        if "card" in meta and not isinstance(meta["card"], bool):
+            bad.append(f"card of {s!r} is not true or false")
+        md = meta.get("meta_description")
+        if md is not None and not 70 <= len(md) <= 155:
+            bad.append(f"meta_description of {s!r} is not 70 to 155 characters")
+        if s in BY_SLUG:
+            bad += event_dates_check(s, meta.get("events"))
     if bad:
         raise SystemExit("content/radar.json: " + "; ".join(bad))
+
+
+ISO_DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# Listings sites, press and aggregators: a start date comes from the venue's own page, never from one of these.
+NOT_A_VENUE = re.compile(r"(?:^|\.)(?:artrabbit|ocula|artforum|artsy|galleriesnow|dailyartfair|nyartbeat|timeout|"
+                         r"artdaily|artnet|culturalee|artssummary|airmail|whichmuseum|meer|outgoing|brooklynrail|"
+                         r"hyperallergic|wikipedia|eventbrite|google|instagram|facebook)\.[a-z.]+$")
+
+
+def post_events(slug):
+    """The Event nodes (Event, ExhibitionEvent, SaleEvent: any type ending in Event) in a post's stored JSON-LD
+    (content/posts.html), by name."""
+    about = json.loads(BY_SLUG[slug]["json_text"]).get("about") or []
+    about = about if isinstance(about, list) else [about]
+    out = {}
+    for e in about:
+        types = e.get("@type") if isinstance(e, dict) else None
+        if any(str(t).endswith("Event") for t in (types if isinstance(types, list) else [types])):
+            out[e.get("name")] = e
+    return out
+
+
+def event_dates_check(slug, events):
+    """posts.<slug>.events in content/radar.json (Ron, 2026-11-20, ron-decisions row 22): an exhibition's start date that
+    Stav's text does not give (she writes "through <date>"), read on the venue's own page. Each key is the name of an
+    Event in the post's JSON-LD; its value holds start_date (YYYY-MM-DD) and start_date_source (the venue page's https
+    URL). The build adds it to the page's JSON-LD as startDate (post_ld); Stav's text and the stored block in
+    content/posts.html stay as they are. Never a guess: when the venue page does not state a start date clearly,
+    start_date is null and start_date_source is the venue page that was read (no startDate is emitted, and
+    radar_check.py reports a warning in place of a failure)."""
+    if events is None:
+        return []
+    if not isinstance(events, dict):
+        return [f"events of {slug!r} is not an object"]
+    bad, have = [], post_events(slug)
+    for name, ev in events.items():
+        where = f"events[{name!r}] of {slug!r}"
+        if name not in have:
+            bad.append(f"{where}: no Event of that name in the post's JSON-LD")
+            continue
+        if not isinstance(ev, dict) or set(ev) != {"start_date", "start_date_source"}:
+            bad.append(f"{where}: needs exactly start_date and start_date_source")
+            continue
+        sd, src = ev["start_date"], ev["start_date_source"]
+        if not (sd is None or (isinstance(sd, str) and ISO_DAY.match(sd))):
+            bad.append(f"{where}: start_date is not YYYY-MM-DD (or null: the venue page was read and states none)")
+            continue
+        host = re.match(r"^https://([^/?#]+)", src if isinstance(src, str) else "")
+        if not host:
+            bad.append(f"{where}: start_date_source must be the venue page's https URL")
+        elif NOT_A_VENUE.search(host.group(1).lower()):
+            bad.append(f"{where}: start_date_source {host.group(1)} is a listings site; use the venue's own page")
+        stored = have[name]
+        if sd is None:
+            continue
+        if stored.get("startDate") and str(stored["startDate"])[:10] != sd:
+            bad.append(f"{where}: start_date {sd} differs from the startDate already in the post's JSON-LD")
+        if stored.get("endDate") and sd > str(stored["endDate"])[:10]:
+            bad.append(f"{where}: start_date {sd} is after the endDate {stored['endDate']}")
+    return bad
 
 
 radar_meta_check()
@@ -183,7 +250,8 @@ CAPTION_RE = re.compile(r'<figcaption[^>]*>(.*?)</figcaption>', re.S)
 
 def post_ld(p):
     """The post's own JSON-LD from content/posts.html, with what the page shows added at render time (2026-11-18):
-    @id, the first image (its file's size and Stav's caption under it), the English word count and the post's topics.
+    @id, the first image (its file's size and Stav's caption under it), the English word count and the post's topics,
+    and (2026-11-20) each Event's venue-sourced startDate from content/radar.json posts.<slug>.events.
     The stored block in content/posts.html is never edited."""
     d = json.loads(p["json_text"])
     out = {}
@@ -191,6 +259,22 @@ def post_ld(p):
         out[k] = v
         if k == "@type":
             out["@id"] = f"{SITE}/radar/{p['slug']}/#post"
+    dates = RADAR["posts"].get(p["slug"], {}).get("events") or {}
+    if dates and out.get("about"):  # venue-sourced start dates (event_dates_check), placed before endDate
+        about = out["about"] if isinstance(out["about"], list) else [out["about"]]
+        for i, e in enumerate(about):
+            types = e.get("@type") if isinstance(e, dict) else None
+            is_event = any(str(t).endswith("Event") for t in (types if isinstance(types, list) else [types]))
+            sd = is_event and not e.get("startDate") and (dates.get(e.get("name")) or {}).get("start_date")
+            if sd:
+                ne = {}
+                for k, v in e.items():
+                    if k == "endDate":
+                        ne["startDate"] = sd
+                    ne[k] = v
+                ne.setdefault("startDate", sd)
+                about[i] = ne
+        out["about"] = about if isinstance(out["about"], list) else about[0]
     if p["img"]:
         img = {"@type": "ImageObject", "url": SITE + p["img"]}
         dims = sc.raster_dims(p["img"])
@@ -538,7 +622,10 @@ def render_post_page(p, all_posts, he=False):
         return (sc.head(f"{h['title']} · THEODORA", h["description"], permalink, og_image=p['og_image'], og_type='article',
                         lang='he', pin='he', locale='he_IL', og_title=p["title_he"], ld=[he_post_ld(p), breadcrumb], extra=extra)
                 + sc.body_open('he') + sc.nav(lang_links={'en': f"/radar/{p['slug']}/"}) + body + sc.tail())
-    return (sc.head(title, p['description'], permalink,
+    # a search snippet (posts.<slug>.meta_description, 2026-11-19) for a post whose JSON-LD description runs past what
+    # a result shows: the meta and the link preview only; the description in the post's JSON-LD is unchanged
+    desc = RADAR["posts"].get(p["slug"], {}).get("meta_description") or p['description']
+    return (sc.head(title, desc, permalink,
                     og_image=p['og_image'], og_type='article', lang='en', og_title=og_title,
                     ld=[post_ld(p), breadcrumb], extra=extra)
             + sc.body_open() + sc.nav(lang_links={'he': f"/radar/{p['slug']}/he/"} if paired else None) + body + sc.tail())

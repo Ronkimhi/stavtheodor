@@ -49,7 +49,7 @@ const MIN_HEBREW = 0.8;  /* an Art Radar post's Hebrew address (2026-11-18): Sta
 const HE_ADDRESS = /^\/radar\/[a-z0-9-]+\/he\/$/;
 const KEY_PAGES = ['/', '/advisory/', '/projects/', '/radar/', '/art-curator-new-jersey/', '/art-curator-new-york/'];
 const NARROW = { width: 360, height: 780 };  /* the smallest common phone: the opening lines must fit it */
-const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis/;  /* blocked in every context */
+const ANALYTICS = /googletagmanager|google-analytics|gstatic|googleapis|clarity\.ms/;  /* blocked in every context */
 
 function loadPlaywright() {
   try { return require('playwright'); } catch (e) { /* not on the local path */ }

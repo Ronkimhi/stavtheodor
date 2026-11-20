@@ -247,16 +247,73 @@ def described(p):
     return p["path"].strip("/").split("/")[0] in ("guide", "advisory")
 
 
-def radar_html(p):
-    """From Art Radar, on every article page: the posts named in radar_posts (in that order), else (2026-11-18) up to
-    two posts that point to this page (site_chrome.bridge_target), newest first, then the newest posts, three in all.
-    Same timeline markup as the homepage and the post pages."""
-    by = {q["slug"]: q for q in posts()}
-    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by]
-    if not chosen:
+_rotation_cache = None
+NEWEST = 2  # the newest posts every default block shows, so a new post is linked from the whole site on day one
+
+
+def card_posts():
+    """The posts that may fill a From Art Radar slot outside /radar/ (site_chrome.card_ok, 2026-11-19): a card image of
+    their own, and not set "card": false in content/radar.json. Newest first."""
+    return [q for q in posts() if sc.card_ok(q)]
+
+
+def radar_rotation():
+    """The posts of the From Art Radar block on each article page, by page address (2026-11-19). A page that names
+    posts in radar_posts shows those that may fill a card (card_posts()); a named post that may not leaves its slot to
+    the rotation's next post. A page that names none shows up to two posts that point to it (site_chrome.bridge_target),
+    newest first, then the two newest (NEWEST), then, to three, the posts with the fewest links so far from pages
+    outside Art Radar (the pages that name them in radar_posts, the homepage's six newest, a topic hub, the blocks
+    already filled), newer first on a tie. Only card_posts() fill a slot, so no block shows an empty thumbnail or a
+    flyer. Every post keeps links from the site's pages as it ages, not only from the archive. Pages are filled in
+    address order, so the build is stable for a given set of posts and pages."""
+    global _rotation_cache
+    if _rotation_cache is not None:
+        return _rotation_cache
+    ps = card_posts()
+    order = {q["slug"]: i for i, q in enumerate(ps)}
+    by = {q["slug"]: q for q in ps}
+    all_pages = load_pages()
+    filled = sorted((p for p in all_pages if p["section"] != "projects" or p.get("radar_posts")),
+                    key=lambda p: p["path"].strip("/"))
+    links = {q["slug"]: 0 for q in ps}
+    for p in all_pages:
+        for s in p.get("radar_posts") or []:
+            if s in links:
+                links[s] += 1
+    for q in ps[:6]:  # the homepage's Art Radar timeline
+        links[q["slug"]] += 1
+    for t in sc.read_radar_meta()["topics"]:
+        if t.get("hub"):
+            for s in t["posts"]:
+                if s in links:
+                    links[s] += 1
+    out = {}
+    for p in filled:
         here = "/" + p["path"].strip("/") + "/"
-        chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
-        chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+        named = p.get("radar_posts") or []
+        if named:
+            chosen, want, counted = [by[s] for s in named if s in by], len(named), True
+        else:
+            chosen, want, counted = [q for q in ps if sc.bridge_target(q) == here][:2], 3, False
+            for q in ps[:NEWEST]:
+                if len(chosen) < want and q not in chosen:
+                    chosen.append(q)
+        start = len(chosen) if counted else 0
+        while len(chosen) < want and len(chosen) < len(ps):
+            chosen.append(min((q for q in ps if q not in chosen), key=lambda q: (links[q["slug"]], order[q["slug"]])))
+        for q in chosen[start:]:
+            links[q["slug"]] += 1
+        out[here] = chosen
+    _rotation_cache = out
+    return out
+
+
+def radar_html(p):
+    """From Art Radar, on every article page: the page's share of radar_rotation(), the posts named in radar_posts or,
+    without them, the posts that point to it, the newest posts, and the posts with the fewest links, three in all; only
+    posts that may fill a card (card_posts()). Same timeline markup as the homepage and the post pages."""
+    here = "/" + p["path"].strip("/") + "/"
+    chosen = radar_rotation().get(here) or card_posts()[:3]
     order = {q["slug"]: i for i, q in enumerate(posts())}
     chosen = sorted(chosen, key=lambda q: order[q["slug"]])  # a dated timeline reads newest first
     # radar_topic (2026-11-18): the arrow goes to that topic's hub in place of All posts, while the topic has one
@@ -932,6 +989,55 @@ def render_contact():
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
 
 
+# /privacy/ (loop Q-053, 2026-11-19): the disclosure Microsoft Clarity's terms ask for, covering Google Analytics too.
+# Strings by the Curator, Hebrew twins included. Indexable and in sitemap-pages.xml like /contact/ and /about/; every
+# footer links it (site_chrome.footer(), the museum's page_foot() and the hand-made museum pages).
+PRIVACY = {
+    "path": "privacy",
+    "title": "Privacy | THEODORA",
+    "description": "How stavtheodor.com uses Google Analytics and Microsoft Clarity to understand visits, and how to reach me with a question about your data.",
+    "eyebrow": ("Privacy", "פרטיות"),
+    "h1": ("Privacy on this site", "פרטיות באתר הזה"),
+    "paras": [
+        ("I use Google Analytics and Microsoft Clarity on this site to understand how visitors use it: the pages viewed, clicks and scrolling. Both services use cookies to do this.",
+         "אני משתמשת באתר הזה בגוגל אנליטיקס ובמיקרוסופט קלריטי כדי להבין איך מבקרים משתמשים בו: העמודים שנצפים, הלחיצות והגלילה. שני השירותים משתמשים בעוגיות לשם כך."),
+        ('I do not sell any data. Google and Microsoft explain how they handle data in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.',
+         'אני לא מוכרת שום מידע. גוגל ומיקרוסופט מסבירות איך הן מטפלות במידע ב<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">מדיניות הפרטיות של גוגל</a> וב<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">הצהרת הפרטיות של מיקרוסופט</a>.'),
+        ('If you have a question about your data, write to me at <a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>.',
+         'אם יש לכם שאלה על המידע שלכם, כתבו לי ל-<a href="mailto:stav@stavtheodor.com">stav@stavtheodor.com</a>.'),
+    ],
+}
+
+
+def render_privacy():
+    """/privacy/: the header, then three short paragraphs. The quiet footer, as on /contact/."""
+    url = f"{SITE}/{PRIVACY['path']}/"
+    ld = [{"@type": "WebPage", "@id": url + "#page", "url": url, "name": PRIVACY["title"],
+           "description": PRIVACY["description"], "about": {"@id": SITE + "/#org"}, "inLanguage": ["en", "he"]},
+          {"@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+              {"@type": "ListItem", "position": 2, "name": "Privacy", "item": url}]}]
+    paras_he = "\n".join(f"<p>{he}</p>" for en, he in PRIVACY["paras"])
+    paras_en = "\n".join(f"<p>{en}</p>" for en, he in PRIVACY["paras"])
+    body = f'''
+<header class="phead">
+  <p class="eyebrow">{T(*PRIVACY["eyebrow"])}</p>
+  <h1 class="serif">{T(*PRIVACY["h1"])}</h1>
+</header>
+
+<section class="section wrap tight">
+  <div class="prose" data-l="he" dir="rtl">
+{paras_he}
+  </div>
+  <div class="prose" data-l="en">
+{paras_en}
+  </div>
+</section>
+'''
+    return (sc.head(PRIVACY["title"], PRIVACY["description"], url, lang="en", ld=ld)
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))
+
+
 # /about/ (2026-09-29): a real, indexable About page in place of the old redirect stub to /#about. The opening paragraph
 # states the entity facts in plain sentences (what THEODORA is, who runs it, where, for whom, how to reach her); everything
 # after it is copy already published on the site, read from its source at build time so the two never drift: the
@@ -1277,6 +1383,8 @@ def main():
     print(f"  wrote {CONTACT['path']}/index.html" + (" (with the contact form)" if sc.FORM_ENDPOINT else " (no form: site_chrome.FORM_ENDPOINT is empty)"))
     sc.write(os.path.join(ABOUT["path"], "index.html"), render_about(pages))
     print(f"  wrote {ABOUT['path']}/index.html")
+    sc.write(os.path.join(PRIVACY["path"], "index.html"), render_privacy())
+    print(f"  wrote {PRIVACY['path']}/index.html")
     for sec, (te, th, le, lh, hero_src, hero_alt) in HUBS.items():
         if sec == "projects":
             sec_pages = projects
