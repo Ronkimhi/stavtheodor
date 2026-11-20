@@ -1502,6 +1502,7 @@ def read_posts(path=POSTS_FILE):
         p_en = re.search(r'<p[^>]*>(.*?)</p>', en_body.group(1), flags=re.S) if en_body else None
         p_he = re.search(r'<p[^>]*>(.*?)</p>', he_body.group(1), flags=re.S) if he_body else None
         he_paras = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', he_body.group(1), flags=re.S) if he_body else []
+        en_paras = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', en_body.group(1), flags=re.S) if en_body else []
         img = re.search(r'<img[^>]+src="([^"]+)"', inner)
         img_src = img.group(1) if img else ''
         img_tag = re.search(r'<img[^>]*>', inner)
@@ -1517,7 +1518,7 @@ def read_posts(path=POSTS_FILE):
             date_en=date_en, date_he=date_he, title_en=title_en, title_he=title_he,
             teaser_en=first_sentence(p_en.group(1)) if p_en else '',
             teaser_he=first_sentence(p_he.group(1)) if p_he else '',
-            he_paras=he_paras,
+            he_paras=he_paras, en_paras=en_paras,
             img=img_src, img_alt=img_alt_en,
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
@@ -1532,9 +1533,12 @@ def read_posts(path=POSTS_FILE):
 # content/radar.json when set, else the JSON-LD description the page already uses as its meta), and Hebrew the first
 # sentence of the first Hebrew paragraph that passes. Both are Stav's own words or the post's existing snippet; her post
 # text is never changed, only which of her lines the card quotes. Every card on the site, the homepage included.
+# A line that names Stav's full name (Kimhi, קמחי) also fails (Theo on site rule W8, 2026-11-19): the next passing
+# line is used, in English the snippet and then the first sentence of each English paragraph in turn.
 TEASER_MIN = 40
 GREETING_EN = re.compile(r'^(?:hi|hello|hey|welcome)\b|^from a post by\b', re.I)
 GREETING_HE = re.compile(r'^(?:היי|הי|שלום)(?![֐-׿])|^מתוך פוסט')
+FULL_NAME = re.compile(r'kimhi|קמחי', re.I)
 
 
 def strip_emoji(s):
@@ -1545,14 +1549,16 @@ def strip_emoji(s):
 def teaser_ok(s, lang):
     """Does s pass the card teaser rule above, in 'en' or 'he'?"""
     t = strip_emoji(s)
-    return len(t) >= TEASER_MIN and not (GREETING_EN if lang == 'en' else GREETING_HE).match(t)
+    return (len(t) >= TEASER_MIN and not (GREETING_EN if lang == 'en' else GREETING_HE).match(t)
+            and not FULL_NAME.search(t))
 
 
 def card_teasers(p):
     """(English, Hebrew) card teaser for a post under the rule above."""
     en, he = p['teaser_en'], p['teaser_he']
     if not teaser_ok(en, 'en'):
-        en = read_radar_meta()['posts'].get(p['slug'], {}).get('meta_description') or p['description']
+        snippet = read_radar_meta()['posts'].get(p['slug'], {}).get('meta_description') or p['description']
+        en = next((c for c in [snippet] + [first_sentence(x) for x in p['en_paras']] if teaser_ok(c, 'en')), snippet)
     if not teaser_ok(he, 'he'):
         he = next((c for c in (first_sentence(x) for x in p['he_paras']) if teaser_ok(c, 'he')), he)
     return en, he
