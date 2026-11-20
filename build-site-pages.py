@@ -247,16 +247,73 @@ def described(p):
     return p["path"].strip("/").split("/")[0] in ("guide", "advisory")
 
 
-def radar_html(p):
-    """From Art Radar, on every article page: the posts named in radar_posts (in that order), else (2026-11-18) up to
-    two posts that point to this page (site_chrome.bridge_target), newest first, then the newest posts, three in all.
-    Same timeline markup as the homepage and the post pages."""
-    by = {q["slug"]: q for q in posts()}
-    chosen = [by[s] for s in p.get("radar_posts") or [] if s in by]
-    if not chosen:
+_rotation_cache = None
+NEWEST = 2  # the newest posts every default block shows, so a new post is linked from the whole site on day one
+
+
+def card_posts():
+    """The posts that may fill a From Art Radar slot outside /radar/ (site_chrome.card_ok, 2026-11-19): a card image of
+    their own, and not set "card": false in content/radar.json. Newest first."""
+    return [q for q in posts() if sc.card_ok(q)]
+
+
+def radar_rotation():
+    """The posts of the From Art Radar block on each article page, by page address (2026-11-19). A page that names
+    posts in radar_posts shows those that may fill a card (card_posts()); a named post that may not leaves its slot to
+    the rotation's next post. A page that names none shows up to two posts that point to it (site_chrome.bridge_target),
+    newest first, then the two newest (NEWEST), then, to three, the posts with the fewest links so far from pages
+    outside Art Radar (the pages that name them in radar_posts, the homepage's six newest, a topic hub, the blocks
+    already filled), newer first on a tie. Only card_posts() fill a slot, so no block shows an empty thumbnail or a
+    flyer. Every post keeps links from the site's pages as it ages, not only from the archive. Pages are filled in
+    address order, so the build is stable for a given set of posts and pages."""
+    global _rotation_cache
+    if _rotation_cache is not None:
+        return _rotation_cache
+    ps = card_posts()
+    order = {q["slug"]: i for i, q in enumerate(ps)}
+    by = {q["slug"]: q for q in ps}
+    all_pages = load_pages()
+    filled = sorted((p for p in all_pages if p["section"] != "projects" or p.get("radar_posts")),
+                    key=lambda p: p["path"].strip("/"))
+    links = {q["slug"]: 0 for q in ps}
+    for p in all_pages:
+        for s in p.get("radar_posts") or []:
+            if s in links:
+                links[s] += 1
+    for q in ps[:6]:  # the homepage's Art Radar timeline
+        links[q["slug"]] += 1
+    for t in sc.read_radar_meta()["topics"]:
+        if t.get("hub"):
+            for s in t["posts"]:
+                if s in links:
+                    links[s] += 1
+    out = {}
+    for p in filled:
         here = "/" + p["path"].strip("/") + "/"
-        chosen = [q for q in posts() if sc.bridge_target(q) == here][:2]
-        chosen += [q for q in posts() if q not in chosen][:3 - len(chosen)]
+        named = p.get("radar_posts") or []
+        if named:
+            chosen, want, counted = [by[s] for s in named if s in by], len(named), True
+        else:
+            chosen, want, counted = [q for q in ps if sc.bridge_target(q) == here][:2], 3, False
+            for q in ps[:NEWEST]:
+                if len(chosen) < want and q not in chosen:
+                    chosen.append(q)
+        start = len(chosen) if counted else 0
+        while len(chosen) < want and len(chosen) < len(ps):
+            chosen.append(min((q for q in ps if q not in chosen), key=lambda q: (links[q["slug"]], order[q["slug"]])))
+        for q in chosen[start:]:
+            links[q["slug"]] += 1
+        out[here] = chosen
+    _rotation_cache = out
+    return out
+
+
+def radar_html(p):
+    """From Art Radar, on every article page: the page's share of radar_rotation(), the posts named in radar_posts or,
+    without them, the posts that point to it, the newest posts, and the posts with the fewest links, three in all; only
+    posts that may fill a card (card_posts()). Same timeline markup as the homepage and the post pages."""
+    here = "/" + p["path"].strip("/") + "/"
+    chosen = radar_rotation().get(here) or card_posts()[:3]
     order = {q["slug"]: i for i, q in enumerate(posts())}
     chosen = sorted(chosen, key=lambda q: order[q["slug"]])  # a dated timeline reads newest first
     # radar_topic (2026-11-18): the arrow goes to that topic's hub in place of All posts, while the topic has one

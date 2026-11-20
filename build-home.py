@@ -2,7 +2,7 @@
 """Build the homepage, index.html, from templates/home.html and the site's data.
 
   templates/home.html   the approved design (the v3 register, 2026-09-26) with slots
-  content/posts.html    the six newest posts fill the Art Radar timeline
+  content/posts.html    the six newest posts that may fill a card (site_chrome.card_ok) fill the Art Radar timeline
   content/pages/*.json  the six lead projects and the advisory rows
   content/faq.json      the seven questions: visible FAQ and FAQPage schema, the same text
   content/entity.json   the Person + ProfessionalService + WebSite graph
@@ -505,7 +505,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'INDUSTRIES': '' if v else industries(variants),
         'PROJECT_CARDS': ''.join(sc.project_card(p) for p in projects),
         'ADVISORY_ROWS': advisory_rows(pages, (v.get('advisory_rows') if v else None) or HOME_ROWS),
-        'TIMELINE': sc.timeline(posts[:6], with_months=False),
+        'TIMELINE': sc.timeline([q for q in posts if sc.card_ok(q)][:6], with_months=False),  # only posts that may fill a card (2026-11-19)
         'POST_COUNT': str(len(posts)),
         'FAQ': sc.faq_details(questions, first_open=True),
         'INLINE_FORM': sc.inline_form_section(f"/{v['path']}/", mail=sc.mail_href(subject)) if v and v['id'] in INLINE_FORM_VARIANTS else '',

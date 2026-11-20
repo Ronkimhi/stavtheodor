@@ -54,7 +54,7 @@ Posts are written primarily in **Hebrew** (the site's main audience), with **Eng
 
 ### Step 2.2: Add the post block to `content/posts.html`
 
-Open `content/posts.html`. Every post is **newest-first**, add your new block immediately after the `<!-- POST TEMPLATE -->` comment at the top of the file and before the first existing `<script type="application/ld+json">` / `<article>` pair. Do NOT touch `index.html` (it is generated; the homepage timeline picks up the six newest posts from this file when you build).
+Open `content/posts.html`. Every post is **newest-first**, add your new block immediately after the `<!-- POST TEMPLATE -->` comment at the top of the file and before the first existing `<script type="application/ld+json">` / `<article>` pair. Do NOT touch `index.html` (it is generated; the homepage timeline picks up the six newest posts with a card image from this file when you build).
 
 A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<article>` tag. Do not separate them or add anything between them.
 
@@ -101,6 +101,8 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
     </div>
   </article>
 ```
+
+**The `description` is also the page's meta description** (the snippet a search result shows), so keep it at 155 characters or fewer. When the JSON-LD needs a longer one, add `"meta_description"` (70 to 155 characters) under `posts.<slug>` in `content/radar.json`: it replaces the meta and the link preview only. Neither field is part of the post's text.
 
 **Rules for `{{slug}}`:** lowercase, hyphen-separated, no spaces, must be a valid URL path segment and a valid HTML `id` attribute (e.g. `giacometti-dendur`, `fresh-paint-2026`). It becomes both the on-page anchor (`#slug`) and the real permalink path (`/radar/slug/`) once you run the build script in Step 3. **Never reuse an existing slug.**
 
@@ -161,6 +163,10 @@ Use `"@type": "Museum"` for museums, `"@type": "Place"` for galleries/other venu
 
 Drop the image file into `images/`, named `YYYY-MM-DD-{{slug}}.jpg` (or `.png`), matching the date and slug of the post. Keep file size reasonable for the web (existing images are optimized to roughly 900px wide, JPEG quality ~72), resize/compress before adding if the source image is large. Reference it in the `<img src="images/...">` tag exactly as named.
 
+**The card image (2026-11-19).** The post's first `<img>` is also its thumbnail on the "From Art Radar" cards outside `/radar/` (the homepage timeline, every article page). Only a post with a card image fills a card slot there; a post with no image is still in `/radar/` and its topic hubs, with no empty thumbnail box, and its slot outside `/radar/` goes to the next post in the rotation. When the first image is not right for a card (an event flyer with baked-in type, dates or sponsor logos, which reads as a reposted flyer at card size), add `"card": false` under `posts.<slug>` in `content/radar.json`: the post then fills no card slot outside `/radar/`, and nothing in the post changes. `radar_check.py` reports such a post as "exempt: no card image" from its two-inbound-links floor. To bring it back, give the post a card-worthy first image (an artwork or an installation shot) and drop the flag.
+
+**The card teaser (2026-11-19).** A card's line under the title is the first sentence of the post's first paragraph, unless that line is thin: under 40 characters once emoji are stripped, or it opens with a greeting (Hi, Hello, Hey, Welcome; היי, הי, שלום) or with the credit line ("From a post by", "מתוך פוסט"), or names Stav's full name ("Kimhi", "קמחי"; site rule W8). Then the English card shows the post's search snippet (`meta_description` under `posts.<slug>` when set, else the JSON-LD `description`), and the Hebrew card the first sentence of the first Hebrew paragraph that passes; if the snippet fails too, English takes the first sentence of the first English paragraph that passes. The rule only chooses which of Stav's own lines (or the existing snippet) a card quotes; it never changes a word of her post. It applies to every card on the site, the homepage included (`card_teasers()` in `site_chrome.py`).
+
 ---
 
 ## 3. Run the build script (do not skip this)
@@ -173,7 +179,7 @@ python3 build.py
 This regenerates, **for every post including the new one**:
 - `radar/<slug>/index.html`, a standalone, indexable page for that post (title, meta tags, OpenGraph, JSON-LD, breadcrumb, the post content, and a "More from Art Radar" list)
 - `radar/index.html`, the archive of every post
-- `index.html`, the homepage: its Art Radar timeline shows the six newest posts and the post count
+- `index.html`, the homepage: its Art Radar timeline shows the six newest posts that have a card image (Step 2.3) and the post count
 - `sitemap.xml`, completely rewritten from scratch with every page of the site
 - the advisory, projects, partner and guide pages (unchanged unless their JSON changed)
 
@@ -263,6 +269,10 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
    - NEVER into index.html (generated; the build stops if a post is there)
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
 3. Add the post's slug to its topics in content/radar.json (or to no_topic); the build stops on a post in neither
+   - The JSON-LD description is the page's search snippet: keep it at 155 characters or fewer, or give the post a
+     shorter "meta_description" under posts.<slug> in content/radar.json (70 to 155 characters, the build checks it)
+   - First image is a flyer, not an artwork? Add "card": false under posts.<slug>: it fills no card outside /radar/
+   - A thin opening line (under 40 characters, a greeting, a credit) is never the card teaser: the build picks one
 4. python3 build.py
 5. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 6. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git

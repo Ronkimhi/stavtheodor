@@ -25,6 +25,7 @@ import html as H
 import json
 import os
 import re
+import unicodedata
 from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -1500,6 +1501,8 @@ def read_posts(path=POSTS_FILE):
         he_body = re.search(r'<div class="post-body" lang="he"[^>]*>(.*?)<div class="post-body post-body-en"', inner, flags=re.S)
         p_en = re.search(r'<p[^>]*>(.*?)</p>', en_body.group(1), flags=re.S) if en_body else None
         p_he = re.search(r'<p[^>]*>(.*?)</p>', he_body.group(1), flags=re.S) if he_body else None
+        he_paras = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', he_body.group(1), flags=re.S) if he_body else []
+        en_paras = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', en_body.group(1), flags=re.S) if en_body else []
         img = re.search(r'<img[^>]+src="([^"]+)"', inner)
         img_src = img.group(1) if img else ''
         img_tag = re.search(r'<img[^>]*>', inner)
@@ -1515,10 +1518,56 @@ def read_posts(path=POSTS_FILE):
             date_en=date_en, date_he=date_he, title_en=title_en, title_he=title_he,
             teaser_en=first_sentence(p_en.group(1)) if p_en else '',
             teaser_he=first_sentence(p_he.group(1)) if p_he else '',
+            he_paras=he_paras, en_paras=en_paras,
             img=img_src, img_alt=img_alt_en,
             og_image=(SITE + img_src) if img_src else (SITE + '/og-image.jpg'),
         ))
+    for p in posts:
+        p['teaser_en'], p['teaser_he'] = card_teasers(p)
     return src, posts
+
+
+# The card teaser rule (2026-11-19, Iris on PR #56): a card's line under the title is the first sentence of the post's
+# first paragraph, unless that line is thin: under TEASER_MIN characters once emoji are stripped, a greeting, or the
+# credit line ("From a post by ..."). Then English shows the post's search snippet (posts.<slug>.meta_description in
+# content/radar.json when set, else the JSON-LD description the page already uses as its meta), and Hebrew the first
+# sentence of the first Hebrew paragraph that passes. Both are Stav's own words or the post's existing snippet; her post
+# text is never changed, only which of her lines the card quotes. Every card on the site, the homepage included.
+# A line that names Stav's full name (Kimhi, קמחי) also fails (Theo on site rule W8, 2026-11-19): the next passing
+# line is used, in English the snippet and then the first sentence of each English paragraph in turn.
+TEASER_MIN = 40
+GREETING_EN = re.compile(r'^(?:hi|hello|hey|welcome)\b|^from a post by\b', re.I)
+GREETING_HE = re.compile(r'^(?:היי|הי|שלום)(?![֐-׿])|^מתוך פוסט')
+FULL_NAME = re.compile(r'kimhi|קמחי', re.I)
+
+
+def strip_emoji(s):
+    """s without emoji, variation selectors or joiners, trimmed."""
+    return ''.join(c for c in s if unicodedata.category(c) != 'So' and c not in '️︎‍').strip()
+
+
+def teaser_ok(s, lang):
+    """Does s pass the card teaser rule above, in 'en' or 'he'?"""
+    t = strip_emoji(s)
+    return (len(t) >= TEASER_MIN and not (GREETING_EN if lang == 'en' else GREETING_HE).match(t)
+            and not FULL_NAME.search(t))
+
+
+def card_teasers(p):
+    """(English, Hebrew) card teaser for a post under the rule above."""
+    en, he = p['teaser_en'], p['teaser_he']
+    if not teaser_ok(en, 'en'):
+        snippet = read_radar_meta()['posts'].get(p['slug'], {}).get('meta_description') or p['description']
+        en = next((c for c in [snippet] + [first_sentence(x) for x in p['en_paras']] if teaser_ok(c, 'en')), snippet)
+    if not teaser_ok(he, 'he'):
+        he = next((c for c in (first_sentence(x) for x in p['he_paras']) if teaser_ok(c, 'he')), he)
+    return en, he
+
+
+def card_ok(post):
+    """May a post fill a card slot outside /radar/ (2026-11-19)? Only with a card image of its own, and not when
+    content/radar.json sets posts.<slug>.card to false (a flyer, not an artwork). /radar/ itself lists every post."""
+    return bool(post['img']) and read_radar_meta()['posts'].get(post['slug'], {}).get('card', True) is not False
 
 
 RADAR_FILE = os.path.join(ROOT, 'content', 'radar.json')
@@ -1591,7 +1640,8 @@ def timeline(posts, with_months, dims=False, alts=False):
         d = raster_dims(p['img']) if (dims and p['img']) else None
         wh = f' width="{d[0]}" height="{d[1]}"' if d else ''
         alt = img_alt(p.get('img_alt', '')) if alts else 'alt=""'
-        th = f'<div class="th"><img src="{p["img"]}" {alt}{wh} loading="lazy"></div>' if p['img'] else '<div class="th"></div>'
+        # a post with no image of its own gets no thumbnail box at all (2026-11-19): an empty box reads as a failed image
+        th = f'<div class="th"><img src="{p["img"]}" {alt}{wh} loading="lazy"></div>' if p['img'] else ''
         teaser = f'<p class="teaser">{T(H.escape(p["teaser_en"]), H.escape(p["teaser_he"]))}</p>' if p['teaser_en'] else ''
         out.append(f'''
       <a class="entry reveal" href="/radar/{p['slug']}/">
