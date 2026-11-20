@@ -959,13 +959,15 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}

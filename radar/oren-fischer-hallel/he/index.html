@@ -376,7 +376,7 @@
 <main class="wrap">
   <article class="post article" id="oren-fischer-hallel">
     <div class="post-date" lang="he" dir="rtl">9 באוגוסט 2026</div>
-    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.</p>
+    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית. <a data-lang="en" hreflang="en" href="/radar/oren-fischer-hallel/">לתרגום המלא לאנגלית</a>.</p>
     <h1 class="post-title" lang="he" dir="rtl">אורן פישר: הלל בגלריה 81 Leonard, ניו יורק</h1>
     <div class="post-body" lang="he" dir="rtl">
       <p>בשבועיים האחרונים של אוגוסט נדמה שעולם האמנות בניו יורק עוצר. רבות מהגלריות בצ׳לסי סגורות או פועלות בשעות מצומצמות, ואחרות מציגות תערוכות קבוצתיות במקום תערוכות יחיד. ההפוגה הזו מאפשרת להן לחשוף את הטון והכיוון האמנותי שלהן, להציג אמנים צעירים לצד שמות מוכרים ולהתכונן לפתיחת עונת הסתיו.</p>
@@ -766,13 +766,15 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}

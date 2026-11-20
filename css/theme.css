@@ -679,6 +679,7 @@
   .article { max-width: 900px; padding-top: clamp(28px, 3vw, 40px); }
   .post-date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .post-date[data-l="he"], .post-date[lang="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .post-date[lang="he"], .post-byline[lang="he"], .post-title[lang="he"] { font-family: var(--he); letter-spacing: 0; }  /* a Hebrew address's head, no data-l twins (2026-11-20, Iris on PR #47) */
   .post-byline { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); }  /* who wrote the post, under its date (2026-11-18) */
   .post-byline a { color: var(--soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
   .post-byline a:hover { color: #C9A46B; }

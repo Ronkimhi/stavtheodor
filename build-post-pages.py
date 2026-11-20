@@ -315,16 +315,26 @@ def english_first(inner):
 
 BYLINE = ('By <a href="/about/">Stav Theodor</a>, art curator. Written in Hebrew, with a full English translation.',
           'מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.')
+# The byline on a Hebrew address (2026-11-20, Validator on PR #47): that page has no English body, so the line does not
+# promise a translation on the page; it links the main address, where the full English translation is. Only the Hebrew
+# line is shown there; the English twin is kept here per site rule W9. data-lang="en" makes a click store English
+# (LANG_JS), so the main address opens in English, and lets check_site's hreflang count allow this one link.
+BYLINE_HE_ADDRESS = (
+    'By <a href="/about/">Stav Theodor</a>, art curator. Written in Hebrew. '
+    '<a data-lang="en" hreflang="en" href="/radar/{slug}/">The full English translation</a>.',
+    'מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית. '
+    '<a data-lang="en" hreflang="en" href="/radar/{slug}/">לתרגום המלא לאנגלית</a>.')
 DATE_HE = re.compile(r'<div class="post-date" data-l="he"[^>]*>.*?</div>', re.S)
 
 
-def with_byline(inner, he=False):
+def with_byline(inner, he=False, slug=None):
     """Who wrote the post, under its date and outside the post body (2026-11-18): the name links to /about/.
-    he=True (a Hebrew address): the Hebrew line alone."""
+    he=True (a Hebrew address, slug given): the Hebrew line alone, BYLINE_HE_ADDRESS."""
     m = DATE_HE.search(inner)
     if not m:
         return inner
-    line = (f'<p class="post-byline" lang="he" dir="rtl">{BYLINE[1]}</p>' if he else T(*BYLINE, tag="p", cls="post-byline"))
+    line = (f'<p class="post-byline" lang="he" dir="rtl">{BYLINE_HE_ADDRESS[1].format(slug=slug)}</p>' if he
+            else T(*BYLINE, tag="p", cls="post-byline"))
     return inner[:m.end()] + f'\n    {line}' + inner[m.end():]
 
 
@@ -575,7 +585,7 @@ def render_post_page(p, all_posts, he=False):
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
     article_inner = h1_title(article_inner, p, he=he)
-    article_inner = (hebrew_only(hebrew_date(with_byline(article_inner, he=True))) if he
+    article_inner = (hebrew_only(hebrew_date(with_byline(article_inner, he=True, slug=p["slug"]))) if he
                      else english_first(with_byline(article_inner)))
     breadcrumb = {
         "@context": "https://schema.org",

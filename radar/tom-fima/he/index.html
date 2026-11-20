@@ -372,7 +372,7 @@
 <main class="wrap">
   <article class="post article" id="tom-fima">
     <div class="post-date" lang="he" dir="rtl">30 ביולי 2026</div>
-    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.</p>
+    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית. <a data-lang="en" hreflang="en" href="/radar/tom-fima/">לתרגום המלא לאנגלית</a>.</p>
     <h1 class="post-title" lang="he" dir="rtl">תום פימה: נשים בלבן</h1>
     <div class="post-body" lang="he" dir="rtl">
       <p>הצבע הלבן שולט בקנבסים של תום פימה. כותונות לילה, סדינים, תחרה, בדים שנשמטים אל הרצפה. המיטה היא הבמה, והחדר הביתי הוא הזירה כולה, מואר באור מלאכותי הבוקע ממנורת החדר. הדמויות הן נשים צעירות, חברותיה, שאותן היא מצלמת ומציירת מן הצילום. פנים רבות מכוסות בבד, מעין משחק בין הסתרה לחשיפה.</p>
@@ -760,13 +760,15 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}

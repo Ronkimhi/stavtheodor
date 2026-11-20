@@ -373,7 +373,7 @@
 <main class="wrap">
   <article class="post article" id="noa-wiegenfeld">
     <div class="post-date" lang="he" dir="rtl">6 באוגוסט 2026</div>
-    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית, עם תרגום מלא לאנגלית.</p>
+    <p class="post-byline" lang="he" dir="rtl">מאת <a href="/about/">סתיו תאודור</a>, אוצרת אמנות. נכתב בעברית. <a data-lang="en" hreflang="en" href="/radar/noa-wiegenfeld/">לתרגום המלא לאנגלית</a>.</p>
     <h1 class="post-title" lang="he" dir="rtl">נועה ויגנפלד בתערוכת הבוגרים של בצלאל</h1>
     <div class="post-body" lang="he" dir="rtl">
       <p>כאוצרת, אני מאמינה שאם רוצים לגלות את האמנים של המחר, צריך להתחיל בתערוכות הבוגרים. דווקא שם, הרבה לפני שהשמות הופכים למוכרים, אפשר לפגוש את האמנים שעתידים לעצב את השיח האמנותי בשנים הקרובות. השנה, בתערוכת הבוגרים של בצלאל, הייתה אמנית אחת שמשכה את תשומת ליבי במיוחד.</p>
@@ -756,13 +756,15 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (b.tagName === 'BUTTON') { b.setAttribute('aria-pressed', on ? 'true' : 'false'); }  /* not valid on a link */
     });
   }
 
   apply(document.body.classList.contains('lang-he') ? 'he' : 'en');
 
-  document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
+  /* the switch, plus a language link outside it (a Hebrew address's byline links the full English translation,
+     2026-11-20): a click stores the language, and a link then follows its href */
+  document.querySelectorAll('.lang-switch [data-lang], a[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
       try { localStorage.setItem(KEY, lang); } catch (e) {}
