@@ -132,7 +132,7 @@ GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
 # analytics setup). Emitted right after GA_SNIPPET in head() and in the museum pages
 # (museum/tools/build_artist_pages.py imports it; museum/index.html carries a hand copy). clarity.js loads
 # async; automated browsers (navigator.webdriver) never load it, the same guard as the GA hit above.
-# Clarity's terms ask for a privacy disclosure: the site has no privacy page yet.
+# Clarity's terms ask for a privacy disclosure: /privacy/ (build-site-pages.py render_privacy()), linked from every footer.
 CLARITY_ID = 'zgafbftl66'
 CLARITY_SNIPPET = f'''<!-- Microsoft Clarity -->
 <script>
@@ -642,7 +642,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
         <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
       </div>
     </div>
-    <p class="eyebrow copy">{T('Tenafly, New Jersey · © 2026 THEODORA', "טנפליי, ניו ג'רזי · © 2026 THEODORA")}</p>
+    <p class="eyebrow copy">{T('Tenafly, New Jersey · © 2026 THEODORA', "טנפליי, ניו ג'רזי · © 2026 THEODORA")} · <a href="/privacy/">{T('Privacy', 'פרטיות')}</a></p>
   </div>
 </footer>'''
 
