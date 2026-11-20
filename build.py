@@ -13,6 +13,7 @@ Runs, in order:
                            museum/artists/ (the collection and one page per artist, from museum/data/),
                            through the same dash sanitizer, phone and entity graph (2026-09-29)
   tools/build_llms_full.py llms-full.txt, the English text of every content/pages/*.json page, for LLMs (2026-09-30)
+                           and, since 2026-11-20, of every Art Radar post in content/posts.html, verbatim
   tools/build_sitemap.py   sitemap.xml (an index) over sitemap-pages.xml, sitemap-radar.xml, sitemap-museum.xml
   tools/check_site.py      the gates: dashes, phone numbers, language twins, anchors, links, JSON-LD,
                            FAQ mirror, noindex, removed assets, language default, sitemap, variants,
