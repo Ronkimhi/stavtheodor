@@ -45,6 +45,9 @@ def radar_meta_check():
         st = meta.get("seo_title")
         if st and len(f"{st} · THEODORA") > 60:
             bad.append(f"seo_title of {s!r} is over 60 characters with the suffix")
+        md = meta.get("meta_description")
+        if md is not None and not 70 <= len(md) <= 155:
+            bad.append(f"meta_description of {s!r} is not 70 to 155 characters")
     if bad:
         raise SystemExit("content/radar.json: " + "; ".join(bad))
 
@@ -448,7 +451,10 @@ def render_post_page(p, all_posts):
     og_title = None
     if seo:
         og_title, title = title, f"{seo} · THEODORA"
-    return (sc.head(title, p['description'], permalink,
+    # a search snippet (posts.<slug>.meta_description, 2026-11-19) for a post whose JSON-LD description runs past what
+    # a result shows: the meta and the link preview only; the description in the post's JSON-LD is unchanged
+    desc = RADAR["posts"].get(p["slug"], {}).get("meta_description") or p['description']
+    return (sc.head(title, desc, permalink,
                     og_image=p['og_image'], og_type='article', lang='en', og_title=og_title,
                     ld=[post_ld(p), breadcrumb])
             + sc.body_open() + sc.nav() + body + sc.tail())

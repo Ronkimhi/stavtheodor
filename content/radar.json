@@ -20,8 +20,8 @@
   ],
   "no_topic": ["welcome-art-radar"],
   "posts": {
-    "november-new-york-grace-carney-hannah-levy": {"seo_title": "Grace Carney and Hannah Levy in New York", "bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}, "ask": {}},
-    "basquiat-blue-ribbon-princeton": {"seo_title": "Basquiat's Blue Ribbon Paintings at Princeton", "bridge": {"target": "/art-curator-new-jersey/"}},
+    "november-new-york-grace-carney-hannah-levy": {"seo_title": "Grace Carney and Hannah Levy in New York", "meta_description": "Two young artists on view in New York this November: Grace Carney's To the Bone at P·P·O·W in Tribeca and Hannah Levy's Boiled at Casey Kaplan in Chelsea.", "bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}, "ask": {}},
+    "basquiat-blue-ribbon-princeton": {"seo_title": "Basquiat's Blue Ribbon Paintings at Princeton", "meta_description": "Basquiat's Blue Ribbon Paintings, eleven works from 1984, shown together for the first time in over thirty years at the Princeton University Art Museum.", "bridge": {"target": "/art-curator-new-jersey/"}},
     "october-in-new-york-museums": {"seo_title": "Krasner and Pollock at the Met, Frick, MoMA", "bridge": {"target": "/guide/how-to-choose-art-for-your-home/"}},
     "four-tribeca-galleries-september-2026": {"seo_title": "Tribeca Galleries: Cragg, Locke, Joseph, Soutine", "bridge": {"target": "/advisory/art-for-a-tribeca-or-soho-loft/"}, "ask": {}},
     "three-tel-aviv-shows": {"seo_title": "Tel Aviv Galleries: Braverman, Nassima Landau", "bridge": {"target": "/advisory/art-for-a-home-in-israel-from-abroad/"}, "ask": {}},

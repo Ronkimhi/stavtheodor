@@ -102,6 +102,8 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
   </article>
 ```
 
+**The `description` is also the page's meta description** (the snippet a search result shows), so keep it at 155 characters or fewer. When the JSON-LD needs a longer one, add `"meta_description"` (70 to 155 characters) under `posts.<slug>` in `content/radar.json`: it replaces the meta and the link preview only. Neither field is part of the post's text.
+
 **Rules for `{{slug}}`:** lowercase, hyphen-separated, no spaces, must be a valid URL path segment and a valid HTML `id` attribute (e.g. `giacometti-dendur`, `fresh-paint-2026`). It becomes both the on-page anchor (`#slug`) and the real permalink path (`/radar/slug/`) once you run the build script in Step 3. **Never reuse an existing slug.**
 
 **If the post has an exhibition/event** (dates, venue), add an `"about"` array to the JSON-LD, right after `"keywords"`:
@@ -263,6 +265,8 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
    - NEVER into index.html (generated; the build stops if a post is there)
 2. Add image to images/ (if any), named YYYY-MM-DD-slug.jpg
 3. Add the post's slug to its topics in content/radar.json (or to no_topic); the build stops on a post in neither
+   - The JSON-LD description is the page's search snippet: keep it at 155 characters or fewer, or give the post a
+     shorter "meta_description" under posts.<slug> in content/radar.json (70 to 155 characters, the build checks it)
 4. python3 build.py
 5. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 6. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
