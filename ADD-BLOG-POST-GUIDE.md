@@ -113,7 +113,7 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
       {
         "@type": ["Event", "ExhibitionEvent"],
         "name": "{{exhibition name}}",
-        "startDate": "{{YYYY-MM-DD, omit if unknown}}",
+        "startDate": "{{YYYY-MM-DD, only when the post's own text gives it; else omit it here and see below}}",
         "endDate": "{{YYYY-MM-DD}}",
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
@@ -126,6 +126,14 @@ A post is always **two adjacent blocks**: a JSON-LD `<script>` tag, then the `<a
 ```
 
 Use `"@type": "Museum"` for museums, `"@type": "Place"` for galleries/other venues (see existing posts for both patterns).
+
+**Every event gets a start date from the venue (Ron, 2026-11-20, ron-decisions row 22).** Stav usually writes "through <date>", so her text gives only the end date. Google's Event results need a `startDate`, so for each event in `"about"` that has none, find the opening date on the **venue's own page** (the gallery's, museum's or auction house's site; its press release page counts) and add it under `posts.<slug>.events` in `content/radar.json`, keyed by the event's exact `"name"`:
+
+```json
+"{{slug}}": {"events": {"{{exhibition name, exactly as in about}}": {"start_date": "{{YYYY-MM-DD}}", "start_date_source": "{{https URL of the venue page that states it}}"}}}
+```
+
+The build adds it to the page's JSON-LD as `startDate`, right before `endDate`. It never goes into Stav's text or into the stored JSON-LD block in `content/posts.html`. Rules: a listings site or aggregator (Artrabbit, Ocula, Artforum, Time Out, ArtDaily and the like) is never the source, and the build stops on one; the date must not be after the event's `endDate`; never guess or infer a date. When the venue page does not state a start date clearly, write `"start_date": null` with the venue page you read as `start_date_source`: no `startDate` is emitted and `radar_check.py` reports a warning. Any event with no `startDate` and no such entry fails `radar_check.py`, which the Monday and Wednesday loop runs, so a new post without its start dates is caught there.
 
 **Short/note-style post (no image, one-off tip, e.g. a museum-pass tip)**, use `class="post note"` instead of `class="post"`, drop the `"about"` array and the `<figure>` block:
 
@@ -273,6 +281,8 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
      shorter "meta_description" under posts.<slug> in content/radar.json (70 to 155 characters, the build checks it)
    - First image is a flyer, not an artwork? Add "card": false under posts.<slug>: it fills no card outside /radar/
    - A thin opening line (under 40 characters, a greeting, a credit) is never the card teaser: the build picks one
+   - Each event in "about" with no startDate: its opening date from the venue's own page under posts.<slug>.events
+     (start_date, start_date_source); null when the venue page states none. Never in Stav's text, never a guess
 4. python3 build.py
 5. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 6. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
