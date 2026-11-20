@@ -128,6 +128,23 @@ GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
   }}
 </script>'''
 
+# Microsoft Clarity (heatmaps, scroll depth), project CLARITY_ID, the standard snippet (2026-11-19, Ron's
+# analytics setup). Emitted right after GA_SNIPPET in head() and in the museum pages
+# (museum/tools/build_artist_pages.py imports it; museum/index.html carries a hand copy). clarity.js loads
+# async; automated browsers (navigator.webdriver) never load it, the same guard as the GA hit above.
+# Clarity's terms ask for a privacy disclosure: the site has no privacy page yet.
+CLARITY_ID = 'zgafbftl66'
+CLARITY_SNIPPET = f'''<!-- Microsoft Clarity -->
+<script>
+  if (!navigator.webdriver) {{
+    (function(c,l,a,r,i,t,y){{
+      c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    }})(window, document, "clarity", "script", "{CLARITY_ID}");
+  }}
+</script>'''
+
 _entity_cache = None
 
 
@@ -301,6 +318,7 @@ def head(title, desc, url, og_image=None, og_type='website', lang='en', ld=(), n
 {extra}{ld_html}
 
 {GA_SNIPPET}
+{CLARITY_SNIPPET}
 </head>
 '''
 
