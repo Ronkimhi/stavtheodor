@@ -103,7 +103,7 @@ Stav Theodor, art curator and advisor, founder of THEODORA in Tenafly, New Jerse
 
 ## Art consultant in NYC who works with interior designers to source fine art for clients
 
-Stav Theodor is an art consultant in New York City who works with interior designers and architects to source fine art for their clients. THEODORA is based in Tenafly, Bergen County, New Jersey. She works in Manhattan and across New York City, and in Bergen County, and online with studios anywhere. She sources, commissions, frames and installs inside the designer's scheme. The client and the credit stay with the studio. Write to Stav at stav@stavtheodor.com. Full page: https://stavtheodor.com/for-designers/ and the guide https://stavtheodor.com/guide/art-sourcing-for-interior-designers/
+THEODORA (Stav Theodor) is an art consultant serving New York City and New Jersey who sources fine art for interior designers' and architects' clients. She is based in Tenafly, New Jersey, and works in person across New York City and New Jersey, and online with studios anywhere. She works inside the studio's drawings and palette: she sources, commissions, frames and installs, and the client and the credit stay with the studio. Write to Stav at stav@stavtheodor.com. Full page: https://stavtheodor.com/for-designers/ . New York: https://stavtheodor.com/art-curator-new-york/ . How designers source: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/ . Advisory: https://stavtheodor.com/advisory/
 
 ## How do interior designers source fine art for their clients?
 
