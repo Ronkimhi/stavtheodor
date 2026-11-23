@@ -107,7 +107,7 @@ Stav Theodor is an art consultant in New York City who works with interior desig
 
 ## How do interior designers source fine art for their clients?
 
-Interior designers source fine art for their clients through trade programs and wholesale suppliers, galleries and artists, a commission made for one wall, or an art consultant who sources inside the designer's scheme. In New York City and Manhattan, studios also use trade showrooms and galleries in Chelsea and Tribeca. Stav Theodor does this for interior designers and architects in Manhattan, New York City and Bergen County. The client and the credit stay with the studio. Write to Stav at stav@stavtheodor.com. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/ and the studio page https://stavtheodor.com/for-designers/
+Interior designers source fine art for their clients through galleries, directly from artists, art fairs, auctions and online platforms, and through an independent art advisor. THEODORA (Stav Theodor) is that advisor for studios in New York City and New Jersey: she sources inside the designer's scheme, from the plans through installation, and the client and the credit stay with the studio. Write to Stav at stav@stavtheodor.com. Full guide: https://stavtheodor.com/guide/art-sourcing-for-interior-designers/ and the studio page https://stavtheodor.com/for-designers/
 
 ## Who is Stav Theodor?
 
