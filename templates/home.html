@@ -43,9 +43,15 @@
 
 <section class="hero" id="hero" aria-label="Opening">
   <!--variant:room_fig_0--><figure class="sfig static-only" style="--fx:63%;--fy:40%">
-    <img src="/images/home2/pairs/p3_after.webp" alt="A living room with city windows, a blue-grey wall and a large gold canvas above the sofa." loading="lazy" decoding="async">
+    <img src="/images/home2/pairs/p3_after.webp" alt="A living room with city windows, a blue-grey wall and a large gold canvas above the sofa." loading="lazy" fetchpriority="high" decoding="async">
     <figcaption><span data-l="en">Proposal. A living room with city windows, a large gold canvas above the sofa.</span><span data-l="he" dir="rtl">הצעה. סלון עם חלונות אל העיר, קנבס זהוב גדול מעל הספה.</span></figcaption>
   </figure><!--/variant:room_fig_0-->
+  <script>
+  /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
+     high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. */
+  (function () { if (document.body.classList.contains('gl')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+  </script>
   <div class="hero-ui">
     <p class="line" id="l1"><!--variant:hero_l1--><span data-l="en">A beautiful room.</span><span data-l="he" dir="rtl">חדר יפה.</span><!--/variant:hero_l1--></p>
     <p class="line" id="l2"><!--variant:hero_l2--><span data-l="en">The right art.</span><span data-l="he" dir="rtl">האמנות הנכונה.</span><!--/variant:hero_l2--></p><!--variant:hero_write-->
@@ -151,10 +157,17 @@
     <source src="/videos/theodora-film-2026-09-26.mp4" type="video/mp4">
   </video>
   <script>
-  /* The film sits five screens down: its poster and metadata are fetched once the page has loaded, so they
-     never compete with the opening's first textures for bandwidth (2026-09-26). */
+  /* The film sits five screens down: its poster and metadata are fetched once the visitor is within one and a half
+     screens of it (2026-11-26; until then on window load, 2026-09-26), so they never compete with the opening for
+     bandwidth. Without IntersectionObserver it arms on window load, as before. */
   (function () { var v = document.querySelector('video[data-poster]'); if (!v) { return; }
-    function arm() { v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
+    function arm() { if (v.poster) { return; } v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        for (var i = 0; i < es.length; i++) { if (es[i].isIntersecting) { io.disconnect(); arm(); return; } }
+      }, { rootMargin: '150% 0px 150% 0px' });
+      io.observe(v); return;
+    }
     if (document.readyState === 'complete') { arm(); } else { window.addEventListener('load', arm); } })();
   </script>
   <p class="cap"><span data-l="en">Sixty seven seconds on what I do, for designers, private collectors, home and business owners.</span><span data-l="he" dir="rtl">שישים ושבע שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</span></p>
@@ -221,7 +234,7 @@
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261006" defer></script>
+<script src="/js/home-opening.js?v=20261126" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

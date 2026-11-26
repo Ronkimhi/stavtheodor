@@ -28,6 +28,10 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
+<link rel="preload" as="script" href="/js/vendor/gsap.min.js">
+<link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js">
+<link rel="preload" as="script" href="/js/vendor/SplitText.min.js">
+<link rel="preload" as="script" href="/js/home-opening.js?v=20261126">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" media="not ((pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx))))" fetchpriority="high">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp" media="not ((pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx))))" fetchpriority="high">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_before-2400.webp" type="image/webp" media="(pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx)))" fetchpriority="high">
@@ -389,9 +393,15 @@
 
 <section class="hero" id="hero" aria-label="Opening">
   <figure class="sfig static-only" style="--fx:63%;--fy:40%">
-    <img src="/images/home2/pairs/p3_after.webp" alt="A living room with city windows, a blue-grey wall and a large gold canvas above the sofa." loading="lazy" decoding="async">
+    <img src="/images/home2/pairs/p3_after.webp" alt="A living room with city windows, a blue-grey wall and a large gold canvas above the sofa." loading="lazy" fetchpriority="high" decoding="async">
     <figcaption><span data-l="en" lang="en">Proposal. A living room with city windows, a large gold canvas above the sofa.</span><span data-l="he" dir="rtl" lang="he">הצעה. סלון עם חלונות אל העיר, קנבס זהוב גדול מעל הספה.</span></figcaption>
   </figure>
+  <script>
+  /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
+     high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. */
+  (function () { if (document.body.classList.contains('gl')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+  </script>
   <div class="hero-ui">
     <p class="line" id="l1"><span data-l="en" lang="en">A beautiful room.</span><span data-l="he" dir="rtl" lang="he">חדר יפה.</span></p>
     <p class="line" id="l2"><span data-l="en" lang="en">The right art.</span><span data-l="he" dir="rtl" lang="he">האמנות הנכונה.</span></p>
@@ -502,10 +512,17 @@
     <source src="/videos/theodora-film-2026-09-26.mp4" type="video/mp4">
   </video>
   <script>
-  /* The film sits five screens down: its poster and metadata are fetched once the page has loaded, so they
-     never compete with the opening's first textures for bandwidth (2026-09-26). */
+  /* The film sits five screens down: its poster and metadata are fetched once the visitor is within one and a half
+     screens of it (2026-11-26; until then on window load, 2026-09-26), so they never compete with the opening for
+     bandwidth. Without IntersectionObserver it arms on window load, as before. */
   (function () { var v = document.querySelector('video[data-poster]'); if (!v) { return; }
-    function arm() { v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
+    function arm() { if (v.poster) { return; } v.poster = v.getAttribute('data-poster'); v.preload = 'metadata'; }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        for (var i = 0; i < es.length; i++) { if (es[i].isIntersecting) { io.disconnect(); arm(); return; } }
+      }, { rootMargin: '150% 0px 150% 0px' });
+      io.observe(v); return;
+    }
     if (document.readyState === 'complete') { arm(); } else { window.addEventListener('load', arm); } })();
   </script>
   <p class="cap"><span data-l="en" lang="en">Sixty seven seconds on what I do, for designers, private collectors, home and business owners.</span><span data-l="he" dir="rtl" lang="he">שישים ושבע שניות על מה שאני עושה, למעצבים, לאספנים פרטיים, לבעלי בתים ולבעלי עסקים.</span></p>
@@ -1244,7 +1261,7 @@ document.addEventListener('click', function (e) {
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261006" defer></script>
+<script src="/js/home-opening.js?v=20261126" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

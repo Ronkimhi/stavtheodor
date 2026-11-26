@@ -81,6 +81,19 @@ def preload(before, after):
 
 PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 
+# The opening's four scripts (2026-11-26): GSAP, ScrollTrigger, SplitText and js/home-opening.js are preloaded from
+# <head>, so they download beside the stylesheet instead of when the parser reaches the end of the body. The tags
+# stay at the end of the body with defer, in order. Each href, its ?v= included, is read from the template's own tag,
+# so the preload and the tag always name the same URL and the file is fetched once.
+OPENING_JS = ('/js/vendor/gsap.min.js', '/js/vendor/ScrollTrigger.min.js', '/js/vendor/SplitText.min.js', '/js/home-opening.js')
+_TAGS = re.findall(r'<script src="(/js/[^"]+)" defer></script>', open(TEMPLATE, encoding='utf-8').read())
+SCRIPT_PRELOAD = ''
+for _js in OPENING_JS:
+    _src = [t for t in _TAGS if t.split('?', 1)[0] == _js]
+    if len(_src) != 1:
+        raise SystemExit(f'templates/home.html: expected one deferred <script> for {_js}, found {len(_src)}')
+    SCRIPT_PRELOAD += f'<link rel="preload" as="script" href="{H.escape(_src[0], quote=True)}">\n'
+
 # "Who I work with" on the homepage (Ron, 2026-09-28): one tile per buyer page, in this order, each linking to it.
 # The tile's line is the page's main message, its intro.line (Ron's locked messaging; until 2026-09-28 the first
 # sentence of the intro statement, which carried the message before it moved into the big line),
@@ -531,7 +544,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
-                   noindex=False, extra=preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD)
+                   noindex=False, extra=SCRIPT_PRELOAD + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD))
     return sc.undash_html(head + body)  # the shared dash sanitizer (site_chrome), before the checks in page_problems
 
 

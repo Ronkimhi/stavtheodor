@@ -28,6 +28,10 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/theme.css">
+<link rel="preload" as="script" href="/js/vendor/gsap.min.js">
+<link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js">
+<link rel="preload" as="script" href="/js/vendor/SplitText.min.js">
+<link rel="preload" as="script" href="/js/home-opening.js?v=20261126">
 <link rel="preload" as="image" href="/images/home2/variants/law-firms/law-firms_before.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="image" href="/images/home2/variants/law-firms/law-firms_after.webp" type="image/webp" fetchpriority="high">
 <!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page's -->
@@ -419,9 +423,15 @@
 
 <section class="hero" id="hero" aria-label="Opening">
   <figure class="sfig static-only" style="--fx:45.14%;--fy:30.38%">
-    <img src="/images/home2/variants/law-firms/law-firms_after.webp" alt="A law firm reception over Manhattan: a large unframed woven abstract in red, pink and blue above two cognac leather chairs, law books on shelves at right." data-alt-he="קבלה של משרד עורכי דין מעל מנהטן: עבודה מופשטת ארוגה גדולה ללא מסגרת באדום, ורוד וכחול מעל שתי כורסאות עור בגוון קוניאק, ספרי משפט על המדפים מימין." loading="lazy" decoding="async">
+    <img src="/images/home2/variants/law-firms/law-firms_after.webp" alt="A law firm reception over Manhattan: a large unframed woven abstract in red, pink and blue above two cognac leather chairs, law books on shelves at right." data-alt-he="קבלה של משרד עורכי דין מעל מנהטן: עבודה מופשטת ארוגה גדולה ללא מסגרת באדום, ורוד וכחול מעל שתי כורסאות עור בגוון קוניאק, ספרי משפט על המדפים מימין." loading="lazy" fetchpriority="high" decoding="async">
     <figcaption><span data-l="en" lang="en">Proposal. A law firm reception high over Manhattan, a woven abstract in red, pink and blue above the leather chairs.</span><span data-l="he" lang="he" dir="rtl">הצעה. קבלה של משרד עורכי דין גבוה מעל מנהטן, עבודה מופשטת ארוגה באדום, ורוד וכחול מעל כורסאות העור.</span></figcaption>
   </figure>
+  <script>
+  /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
+     high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. */
+  (function () { if (document.body.classList.contains('gl')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+  </script>
   <div class="hero-ui">
     <p class="line" id="l1"><span data-l="en" lang="en">Strong entrance.</span><span data-l="he" lang="he" dir="rtl">כניסה חזקה.</span></p>
     <p class="line" id="l2"><span data-l="en" lang="en">The right art.</span><span data-l="he" lang="he" dir="rtl">האמנות הנכונה.</span></p>
@@ -1223,7 +1233,7 @@ document.addEventListener('click', function (e) {
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261006" defer></script>
+<script src="/js/home-opening.js?v=20261126" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

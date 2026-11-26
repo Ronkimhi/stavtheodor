@@ -54,6 +54,7 @@
   'uniform vec2 uBloomO; uniform float uBloomR; uniform vec2 uBloomBias; uniform float uBloomSeed;',
   'uniform float uScrim; uniform float uXfade;',
   'uniform float uFit; uniform vec4 uRect; uniform float uRectAspect;',
+  'uniform float uSettled;',
   'float hash(vec2 p){ vec3 p3 = fract(vec3(p.xyx) * 0.1031); p3 += dot(p3, p3.yzx + 33.33); return fract((p3.x + p3.y) * p3.z); }',
   'float noise(vec2 p){ vec2 i = floor(p); vec2 f = fract(p); f = f*f*(3.0-2.0*f);',
   '  return mix(mix(hash(i), hash(i+vec2(1.0,0.0)), f.x), mix(hash(i+vec2(0.0,1.0)), hash(i+vec2(1.0,1.0)), f.x), f.y); }',
@@ -100,6 +101,12 @@
   '  if (uFit > 0.5){ td = (td - uRect.xy) / uRect.zw; aspect = uRectAspect;',
   '    if (td.x < 0.0 || td.x > 1.0 || td.y < 0.0 || td.y > 1.0){ gl_FragColor = vec4(uBg, 1.0); return; } }',
   '  vec2 uv = coverUV(td, aspect, uImgAspect, uFocal);',
+  /* settled (2026-11-26): the house brush is off, the bloom covers every pixel (uBloomR 1.6; d is at most about 1.28
+     for uv and the bloom origin inside the unit square) and the wall stroke is dry, so the two mixes below take
+     weight 1 everywhere and the brushes' noise can be skipped. The mixes stay, weighted by the uniform (1 when
+     settled), so the result is bit for bit what the full path draws */
+  '  vec3 col;',
+  '  if (uSettled > 0.5){ col = mix(mix(uBg, texture2D(tBefore, uv).rgb, uSettled), texture2D(tAfter, uv).rgb, uSettled); } else {',
   '  vec3 before = texture2D(tBefore, uv).rgb; vec3 after = texture2D(tAfter, uv).rgb;',
   '  float wet = 0.0; float wetU = 0.0; float wetB = 0.17; float maskA = 1.0;',
   '  if (uLayerA > 0){',
@@ -112,11 +119,11 @@
   '  float bloom = 0.0;',
   '  if (uBloomR > 0.0){ vec2 dv = uv - uBloomO; float d = length(dv*vec2(1.0, 0.6)) + max(0.0, dot(dv, uBloomBias));',
   '    d += (fbm3(uv*6.0 + uBloomSeed) - 0.44)*0.25; bloom = 1.0 - smoothstep(uBloomR - 0.02, uBloomR + 0.02, d); }',
-  '  vec3 col = mix(uBg, before, maskA);',
+  '  col = mix(uBg, before, maskA);',
   '  col = mix(col, after, max(maskB, bloom));',
   '  wet *= (0.85 + 0.15*noise(vec2(wetU*40.0, uTime*0.4)));',
   '  col += wet*0.08*vec3(1.0, 0.97, 0.92);',
-  '  col *= 1.0 + (wetB - 0.17)*0.16*wet;',
+  '  col *= 1.0 + (wetB - 0.17)*0.16*wet; }',
   '  if (uXfade > 0.0) col = mix(col, texture2D(tNext, coverUV(td, aspect, uNextAspect, uNextFocal)).rgb, uXfade);',
   '  col = mix(col, uBg, (1.0 - smoothstep(0.0, 0.42, fragN.y))*0.85*uScrim);',
   '  col = mix(col, uBg, uFade);',
@@ -138,7 +145,7 @@
   var pLoc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(pLoc); gl.vertexAttribPointer(pLoc, 2, gl.FLOAT, false, 0, 0);
   var L = {};
   ['uRes', 'uTime', 'tBefore', 'tAfter', 'tNext', 'uFocal', 'uImgAspect', 'uNextFocal', 'uNextAspect', 'uBg', 'uFade', 'uLayerA', 'uA0', 'uAD', 'uAL', 'uAH', 'uAW', 'uARad', 'uASeed', 'uASpread',
-   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade', 'uFit', 'uRect', 'uRectAspect'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
+   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade', 'uFit', 'uRect', 'uRectAspect', 'uSettled'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
   gl.uniform1i(L.tBefore, 0); gl.uniform1i(L.tAfter, 1); gl.uniform1i(L.tNext, 2);
   gl.uniform3f(L.uBg, 15 / 255, 15 / 255, 20 / 255);
 
@@ -185,6 +192,18 @@
     if (imgs[name]) { texCache[name] = makeTex(imgs[name]); return texCache[name]; }
     loadImg(name);
     return placeholder;
+  }
+  /* the later rooms (2026-11-26): their six textures load one after another once the entrance ends, is skipped
+     (Escape, or a page that opens scrolled) or the page is scrolled into a chapter, never while the first room is
+     being painted. A texture a chapter needs before its turn in the chain still loads on demand (getTex), and the
+     placeholder (the ground colour) stands in until it arrives, as before. */
+  var restStarted = false;
+  function loadRest() {
+    if (restStarted || glDead) { return; }
+    restStarted = dbg.rest = true;
+    var rest = [];
+    PAIRS.slice(1).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
+    (function next() { var nm = rest.shift(); if (nm) { loadImg(nm).then(next); } })();
   }
   function pruneTex(keep) {
     Object.keys(texCache).forEach(function (n) {
@@ -319,10 +338,14 @@
     gl.uniform2f(L.uBloomO, v.bo[0], v.bo[1]); gl.uniform1f(L.uBloomR, U.bloom); gl.uniform2f(L.uBloomBias, 0, 0); gl.uniform1f(L.uBloomSeed, p.seed * 1.7);
     gl.uniform1f(L.uScrim, U.scrim); gl.uniform1f(L.uXfade, U.xfade);
     gl.uniform1f(L.uFit, fit.on ? 1 : 0); gl.uniform4f(L.uRect, fit.x, fit.y, fit.w, fit.h); gl.uniform1f(L.uRectAspect, fit.aspect);
+    /* settled: the house brush is off, the bloom is fully open and the wall stroke has dried (see the shader) */
+    gl.uniform1f(L.uSettled, (U.layerA === 0 && U.bloom >= 1.6 && U.bw <= 0) ? 1 : 0);
     var n = texNames();
     gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, getTex(n.b));
     gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, getTex(n.a));
-    gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, getTex(n.n));
+    /* the next room is sampled only while uXfade > 0: until the later rooms are due (loadRest), an unsampled
+       slot gets the placeholder, so drawing the entrance does not fetch the next room early */
+    gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, (restStarted || U.xfade > 0) ? getTex(n.n) : placeholder);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
   function sizeCanvas() {
@@ -370,6 +393,7 @@
     var chainDist = Math.max(1, chain.offsetHeight - heroDist), blockDist = Math.max(1, total - heroDist - chainDist);
     var y = P * total, q = clamp(y / heroDist, 0, 1), cp = clamp((y - heroDist) / chainDist, 0, 1), a = clamp((y - heroDist - chainDist) / blockDist, 0, 1);
     dbg.progress = P; dbg.y = y;
+    if (P > 0) { loadRest(); } /* the page is moving toward the chapters: their rooms are due now */
     markIn.style.opacity = 1 - ss(0, 0.4, q);
     canvasOpacity(1);
     if (cp <= 0) {
@@ -426,6 +450,7 @@
       onComplete: function () { skipping = false; entranceDone = true; dbg.done = true; U.layerA = 0; dirty(); applyScroll(prox.p); } }));
     finishDom(0.3);
     capSet(PAIRS[0].cap);
+    loadRest();
   }
   /* touch, wheel, pointer and scroll no longer skip the entrance (2026-09-27): it runs to its end and the boot script in
      templates/home.html holds the page still meanwhile. Escape is the one deliberate skip. */
@@ -467,7 +492,7 @@
     tl.to(s2.chars, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.03 }, 4.30);
     tl.to(line2, { opacity: 0, duration: 0.35, ease: 'power2.in' }, 5.40);
     tl.to(U, { scrim: 0, duration: 0.35, ease: 'power2.in', onUpdate: dirty }, 5.40);
-    tl.call(function () { body.classList.remove('entering'); }, null, 5.78);
+    tl.call(function () { body.classList.remove('entering'); loadRest(); }, null, 5.78);
     tl.to(cue, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 5.86);
     tl.timeScale(1 / SLOW);
     dbg.t0 = performance.now();
@@ -478,9 +503,6 @@
   var first = vr(PAIRS[0]);
   Promise.all([loadImg(first.b), loadImg(first.a), fontsReady]).then(function () {
     if (glDead) { return; }
-    startEntrance();
-    var rest = [];
-    PAIRS.slice(1).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
-    (function next() { var nm = rest.shift(); if (nm) { loadImg(nm).then(next); } })();
+    startEntrance(); /* the later rooms follow when the entrance ends (loadRest) */
   });
 })();
