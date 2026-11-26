@@ -56,9 +56,10 @@ POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
 SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
-# ?v= changes with every edit to css/theme.css (2026-11-26, the phone opening's block), so a returning visitor's cached copy
-# (max-age 600 on GitHub Pages) never pairs an old stylesheet with new markup.
-THEME_CSS = '/css/theme.css?v=20261126'
+# ?v= changes with every edit to css/theme.css, so a returning visitor's cached copy (max-age 600 on GitHub Pages) never
+# pairs an old stylesheet with new markup: bump it with the scripts that depend on it (before-after.js, 2026-11-26) and with
+# the phone opening's block (2026-11-26, a distinct value from main's 20261126, which names the stylesheet without that block).
+THEME_CSS = '/css/theme.css?v=20261126p'
 
 
 def rel(*parts):
@@ -1714,10 +1715,12 @@ def project_card(p):
 # ---------------------------------------------------------------- before and after
 # The proposal spaces (2026-09-28): AI-rendered spaces with real catalog artworks composited onto the wall,
 # pixel-aligned pairs in images/spaces/<key>_{before,after}.webp (1800 px, plus a 1000 px twin) described in
-# content/spaces.json. Every one is labeled a proposal. With JavaScript and motion allowed, the figure pins
-# while the reader scrolls and js/before-after.js brushes the after over the before (css/theme.css, .ba);
-# without either, the same markup is a still pair, side by side on a wide screen and stacked on a phone.
-BA_SCRIPT = '<script src="/js/before-after.js?v=20260928" defer></script>'
+# content/spaces.json. Every one is labeled a proposal. With JavaScript, js/before-after.js brushes the after over
+# the before by itself once a quarter of the figure is on screen (about 2.2 seconds, once; no pin and no scroll
+# length since 2026-11-26), then adds a handle for comparing by hand (made by the script, so the page's text and lastmod do not change; css/theme.css, .ba); with reduced motion the
+# after shows at once with the handle. Without JavaScript the same markup is a still pair, side by side on a wide
+# screen and stacked on a phone.
+BA_SCRIPT = '<script src="/js/before-after.js?v=20261126" defer></script>'
 BA_LABEL = ('Proposal · how THEODORA would dress this space', 'הצעה · כך THEODORA הייתה מלבישה את החלל הזה')
 BA_BEFORE_ALT = ('The same space before the proposal, its wall still bare.', 'אותו חלל לפני ההצעה, הקיר עדיין ריק.')  # fallback only: ba_before_alt()
 BA_SIZES = '(max-width: 767px) 100vw, min(1100px, 92vw)'
