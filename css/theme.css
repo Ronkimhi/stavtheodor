@@ -553,7 +553,7 @@
   @media (min-width: 901px) {
     .nav .nav-write { border: 1px solid rgba(242,240,236,0.36); padding: 8px 14px; margin-inline-start: 6px; line-height: 1; transition: border-color .25s; }
     .nav .nav-write:hover, .nav .nav-write:focus-visible { border-color: #F2F0EC; }
-  }  /* English needs 920px for the compact label; Hebrew fits from 901px */
+  }
   /* In the phone bar beside Call only where it leaves at least 8px between every two controls, with each 44px hit area
      whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
   @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
