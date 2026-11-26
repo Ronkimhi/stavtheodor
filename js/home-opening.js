@@ -1,7 +1,9 @@
 /* The opening. Ported from the approved "Same Room" concept: a house brush paints the room out of the
    dark, a wall stroke brushes the art onto the wall, a bloom finishes it, the wet band dries. Then four
    scroll chapters, each the same gesture on another room. Falls back to static figures without WebGL. */
-(function () {
+(function boot() {
+  var PHONE = window.THEODORA_PHONE; /* phone opening v2 (js/home-opening-phone.js): it calls boot() once its own entrance is over */
+  if (PHONE && PHONE.hold) { PHONE.boot = boot; return; }
   var $ = function (s) { return document.querySelector(s); };
   var clamp = function (x, a, b) { return Math.min(b, Math.max(a, x)); };
   var ss = function (a, b, x) { var t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
@@ -16,13 +18,32 @@
   var dbg = window.__theodoraBrush = { mode: 'boot', t0: 0, done: false, touch: touch };
 
   var tl = null, st = null, glDead = false;
-  function goStatic() {
+  /* the phone opening's stage (js/home-opening-phone.js): its real photos of the first room, over this canvas */
+  var stage = (PHONE && document.documentElement.classList.contains('open2')) ? $('#ph-stage') : null, stageOp = 1;
+  function goStatic(why) {
     if (body.classList.contains('static')) { return; }
     glDead = true; dbg.mode = 'static';
+    /* the phone stage becomes the hero's picture (css/theme.css): its caption (room p3, the stage's room) only with its after photo on screen, and
+       line 1 stays faded once the phone opening has ended (as the static figures, which carry no line) */
+    if (stage) {
+      stage.style.opacity = ''; stage.style.visibility = '';
+      var sa = stage.querySelector('.ph-a'), art = !!(sa && sa.naturalWidth && (sa.style.opacity === '1' || document.documentElement.classList.contains('ph-end')) && !afterFailed && !PHONE.noAfter);
+      if (cap) { if (art) { cap.setAttribute('data-show', 'p3'); } else { cap.removeAttribute('data-show'); } cap.style.opacity = art ? 1 : 0; }
+    }
+    /* a static figure's caption names the art in its photo: never shown over a photo that failed, nor, after a stall
+       (the watchdog, a lost context), over one that has not arrived (2026-11-26) */
+    Array.prototype.forEach.call(document.querySelectorAll('.sfig'), function (f) {
+      var im = f.querySelector('img'), fc = f.querySelector('figcaption');
+      if (!im || !fc || (im.complete && im.naturalWidth)) { return; }
+      var off = function () { fc.style.visibility = 'hidden'; }, on = function () { fc.style.visibility = ''; };
+      if (im.complete || why) { off(); }
+      im.addEventListener('error', off); im.addEventListener('load', on);
+    });
     if (tl) { tl.kill(); tl = null; }
     if (st) { st.kill(); st = null; }
     if (window.gsap) { gsap.killTweensOf([markIn, cue, line1, line2, cap]); }
     [markIn, cue, line1, line2, introH1, band].forEach(function (el) { if (el) { el.style.opacity = ''; el.style.transform = ''; } });
+    if (stage && PHONE.done && line1) { line1.style.opacity = 0; }
     body.classList.remove('gl', 'entering');
     if (chain) { chain.style.height = ''; }
     body.classList.add('static');
@@ -177,6 +198,16 @@
   function loadImg(name) {
     if (imgs[name]) { return Promise.resolve(imgs[name]); }
     if (loading[name]) { return loading[name]; }
+    /* the phone opening has loaded (or is loading) this photo already: its decoded <img>, or null if it failed */
+    var pw = PHONE && PHONE.wait && PHONE.wait[name];
+    if (pw) {
+      loading[name] = pw.then(function (im) {
+        if (im === undefined) { delete loading[name]; return loadImg(name); }
+        if (im) { imgs[name] = im; dirty(); }
+        return im;
+      });
+      return loading[name];
+    }
     loading[name] = new Promise(function (res) {
       var im = new Image();
       im.onload = function () { var done = function () { imgs[name] = im; dirty(); res(im); };
@@ -203,6 +234,9 @@
   /* the first room's after image: ready once decoded, failed or given up on (the watchdog, below); whenAfter runs f
      then, or now */
   var afterReady = false, afterWait = [];
+  /* the first room's after image failed or was given up on (2026-11-26): the first room then ends on its painted before
+     image, with no caption, and never on the placeholder (the ground colour) in the after image's place */
+  var afterFailed = false;
   function whenAfter(f) { if (afterReady) { f(); } else { afterWait.push(f); } }
   function afterIn() {
     if (afterReady) { return; }
@@ -376,7 +410,7 @@
   sizeCanvas(); computeFit(); buildPasses();
   window.addEventListener('resize', function () { sizeCanvas(); computeFit(); buildPasses(); dirty(); });
   gsap.ticker.add(function () { if (glDead || covered) { return; } if (dirtyFlag || wetAlive()) { draw(); } });
-  canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic(); });
+  canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic('lost'); });
 
   /* caption for the proposal: one line per room (data-cap = the pair id), visible whenever any after pixel is on screen, bilingual twins follow the switch */
   var capKey = '', capOn = false;
@@ -384,6 +418,10 @@
     if (key === null) { if (capOn) { capOn = false; gsap.to(cap, { opacity: 0, duration: 0.2, overwrite: true }); } return; }
     if (key !== capKey) { capKey = key; cap.setAttribute('data-show', key); }
     if (!capOn) { capOn = true; gsap.to(cap, { opacity: 1, duration: 0.2, overwrite: true }); }
+  }
+  function stageOpacity(op) {
+    if (op === stageOp) { return; } stageOp = op;
+    stage.style.opacity = op; stage.style.visibility = op > 0 ? 'visible' : 'hidden';
   }
   var canvasOp = 1;
   function canvasOpacity(op) {
@@ -417,9 +455,11 @@
     canvasOpacity(1);
     if (cp <= 0) {
       U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
-      if (entranceDone && !skipping) { U.layerA = 0; U.bh = 1; U.bloom = 1.6; U.scrim = 0; U.bw = 0; killDry(); }
+      if (entranceDone && !skipping) { U.layerA = 0; U.bh = afterFailed ? 0 : 1; U.bloom = afterFailed ? 0 : 1.6; U.scrim = 0; U.bw = 0; killDry(); }
+      /* the phone stage shows the first room until this boot has finished: under it the room is its before image */
+      else if (stage && !skipping) { U.layerA = 0; U.bh = 0; U.bloom = 0; U.scrim = 0; U.bw = 0; }
       U.xfade = PAIRS[1] ? ss(0.4, 1, q) : 0; U.fade = 0;
-      if (entranceDone) { capSet(U.xfade < 1 ? PAIRS[0].cap : null); }
+      if (entranceDone) { capSet(U.xfade < 1 && !afterFailed ? PAIRS[0].cap : null); }
     } else {
       var idx = CH > 0 ? Math.min(CH - 1, Math.floor(cp * CH)) : -1, local = CH > 0 ? cp * CH - idx : 1;
       var pr = PAIRS[idx + 1], nx = PAIRS[idx + 2] || null;
@@ -433,6 +473,9 @@
       if (P !== lastP && local < 0.9 && a <= 0) { wetTouch(); }
     }
     band.style.opacity = 1 - U.fade;
+    /* the phone stage's sharp photo stays over this canvas while the first room is still, and gives way inside the hero's
+       cross-fade to the next room, over its first quarter (xfade 0 to 0.25), never while the room is at rest */
+    if (stage) { stageOpacity(cp <= 0 ? 1 - ss(0, 0.25, U.xfade) : 0); }
     var r = ss(0.35, 0.95, a);
     introH1.style.opacity = 0.5 + 0.5 * r;
     introH1.style.transform = 'translateY(' + (22 * (1 - r)).toFixed(2) + 'px)';
@@ -467,14 +510,18 @@
     }
     skipping = true;
     if (tl) { tl.kill(); }
-    var fin = { spread: spreadMax, bh: 1, bloom: 1.6, scrim: 0, bw: 0 };
+    /* no after image: the house brush finishes and the room stays on its before image (bh and bloom 0), no caption */
+    var fin = { spread: spreadMax, bh: afterFailed ? 0 : 1, bloom: afterFailed ? 0 : 1.6, scrim: 0, bw: 0 };
     for (var i = 0; i < 5; i++) { fin['h' + i] = 1; fin['w' + i] = 0; }
     gsap.killTweensOf(U);
-    gsap.to(U, Object.assign(fin, { duration: 0.3, ease: 'power2.out', onUpdate: dirty,
-      onComplete: function () { skipping = false; entranceDone = true; dbg.done = true; U.layerA = 0; dirty(); applyScroll(prox.p); } }));
+    var done = function () { skipping = false; entranceDone = true; dbg.done = true; U.layerA = 0; dirty(); applyScroll(prox.p); };
+    /* after the phone opening (PHONE.skip) the stage covers the room: the end state is set at once, nothing to animate */
+    var now = !!(PHONE && PHONE.skip);
+    if (!now) { gsap.to(U, Object.assign(fin, { duration: 0.3, ease: 'power2.out', onUpdate: dirty, onComplete: done })); }
     finishDom(0.3);
-    capSet(PAIRS[0].cap);
+    capSet(afterFailed ? null : PAIRS[0].cap);
     loadRest();
+    if (now) { Object.assign(U, fin); done(); }
   }
   /* touch, wheel, pointer and scroll no longer skip the entrance (2026-09-27): it runs to its end and the boot script in
      templates/home.html holds the page still meanwhile. Escape is the one deliberate skip. */
@@ -489,7 +536,7 @@
     U.spread = spreadMin;
     U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
     /* a page that opens already scrolled (restored position, a #hash link) skips straight to the end */
-    if (wantSkip || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
+    if (wantSkip || (PHONE && PHONE.skip) || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
     var lang = body.classList.contains('lang-he') ? 'he' : 'en';
     var e1 = line1.querySelector('[data-l="' + lang + '"]') || line1, e2 = line2.querySelector('[data-l="' + lang + '"]') || line2;
     var n = passes.length, durA = (2.0 + (n - 1) * 0.08) / n;
@@ -534,12 +581,19 @@
      at the playhead if it is holding. The placeholder is never drawn in its place. */
   var HOLD_T = 3.30, HOLD_GAP = 1e4;
   function holdForAfter() {
-    if (afterReady || !tl) { return; }
+    if (!tl || (afterReady && !afterFailed)) { return; }
     var tl0 = tl, held = tl0.getChildren(false, true, true).filter(function (c) { return c.startTime() >= HOLD_T - 1e-6; });
     held.forEach(function (c) { c.__t0 = c.startTime(); c.startTime(c.__t0 + HOLD_GAP); });
     dbg.hold = { armed: true, held: false };
     whenAfter(function () {
       if (tl0 !== tl || glDead) { return; }
+      /* the after image failed: the held part never plays (its wall stroke would paint the placeholder); at 3.30, or now
+         if the playhead is already there, the entrance closes the way Escape does, on the painted before room */
+      if (afterFailed) {
+        dbg.hold = { armed: false, failed: true };
+        if (tl0.time() >= HOLD_T) { skipEntrance(); } else { tl0.call(function () { if (tl0 === tl) { skipEntrance(); } }, null, HOLD_T); }
+        return;
+      }
       /* 2 ms ahead of the playhead, so the next tick starts the held part with its callbacks, never inside this one */
       var late = tl0.time() >= HOLD_T ? tl0.time() + 0.002 - HOLD_T : 0;
       held.forEach(function (c) { c.startTime(c.__t0 + late); });
@@ -554,8 +608,10 @@
      arrived, as before (the placeholder stands in). Once both are in, the next room loads (loadNext); the rooms after
      it follow when the entrance ends (loadRest). */
   var first = vr(PAIRS[0]);
-  var gotBefore = loadImg(first.b), gotAfter = loadImg(first.a);
-  gotAfter.then(afterIn);
+  /* the phone opening gave up on the after image (PHONE.noAfter): it is not waited for here either */
+  if (PHONE && PHONE.noAfter) { afterFailed = dbg.afterFailed = true; afterIn(); }
+  var gotBefore = loadImg(first.b), gotAfter = afterFailed ? Promise.resolve(null) : loadImg(first.a);
+  gotAfter.then(function (im) { if (!im && !afterReady) { afterFailed = dbg.afterFailed = true; } afterIn(); });
   gotBefore.then(function () {
     if (glDead) { return; }
     startEntrance();
@@ -570,9 +626,10 @@
   var WATCHDOG = 8000;
   setTimeout(function () {
     if (glDead) { return; }
-    if (!started) { dbg.watchdog = 'before'; goStatic(); return; }
+    if (!started) { dbg.watchdog = 'before'; goStatic('watchdog'); return; }
     if (afterReady) { return; }
     dbg.watchdog = 'after';
+    afterFailed = dbg.afterFailed = true;
     afterIn();
     if (tl && !entranceDone && !skipping && tl.time() >= HOLD_T) { skipEntrance(); }
     loadNext();

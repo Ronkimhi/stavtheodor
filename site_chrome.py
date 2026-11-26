@@ -56,7 +56,9 @@ POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
 SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
-THEME_CSS = '/css/theme.css'
+# ?v= changes with every edit to css/theme.css (2026-11-26, the phone opening's block), so a returning visitor's cached copy
+# (max-age 600 on GitHub Pages) never pairs an old stylesheet with new markup.
+THEME_CSS = '/css/theme.css?v=20261126'
 
 
 def rel(*parts):

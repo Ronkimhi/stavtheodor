@@ -27,11 +27,11 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
-<link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/css/theme.css?v=20261126">
 <link rel="preload" as="script" href="/js/vendor/gsap.min.js">
 <link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js">
 <link rel="preload" as="script" href="/js/vendor/SplitText.min.js">
-<link rel="preload" as="script" href="/js/home-opening.js?v=20261126c">
+<link rel="preload" as="script" href="/js/home-opening.js?v=20261126d">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_before.webp" type="image/webp" media="not ((pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx))))" fetchpriority="high">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_after.webp" type="image/webp" media="not ((pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx))))" fetchpriority="low">
 <link rel="preload" as="image" href="/images/home2/pairs/p3_before-2400.webp" type="image/webp" media="(pointer: fine) and (not (any-pointer: coarse)) and ((width &gt; 2000px) or ((width &gt; 1600px) and (resolution &gt;= 1.25dppx)) or ((width &gt; 1333px) and (resolution &gt;= 1.5dppx)) or ((width &gt; 1000px) and (resolution &gt;= 2dppx)))" fetchpriority="high">
@@ -393,6 +393,46 @@
 </nav>
 
 <canvas id="gl" class="gl-only" role="img" aria-label="A living room painted into view, then a proposal for the art on its wall."></canvas>
+<script>
+/* Phone opening v2 (2026-11-26, js/home-opening-phone.js, css/theme.css "Phone opening v2"). Homepage only (HOME_ONLY).
+   The phone default since 2026-11-26 (Ron: "yes, make it the phone opening"). PHONE_MQ is the phone test and, the same
+   string, the media of both <source> elements in #ph-stage below (build-home.py checks the three agree), so the stage
+   fetches its photos exactly where it is shown and nowhere else. ?open=1 or #open1: the old opening on a phone;
+   ?open=2 or #open2: this one on any portrait screen with a coarse pointer, wider than 820 px included (both for testing). */
+(function () {
+  var PHONE_V2_DEFAULT = true; /* true: every phone gets v2; false: only with ?open=2 or #open2 */
+  var PHONE_MQ = '(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)';
+  var FORCE_MQ = '(pointer: coarse) and (max-aspect-ratio: 9/10)';
+  try {
+    var R = document.documentElement, b = document.body, mq = window.matchMedia, q = location.search, h = location.hash;
+    if (!mq || !b) { return; }
+    var force = /[?&]open=2(&|$)/.test(q) || h === '#open2', old = /[?&]open=1(&|$)/.test(q) || h === '#open1';
+    if (!(force ? mq(FORCE_MQ).matches : PHONE_V2_DEFAULT && !old && mq(PHONE_MQ).matches)) { return; }
+    R.classList.add('open2');
+    /* src: the <source> media does not match (a wider screen under ?open=2), so the script after #ph-stage sets the photos */
+    var P = window.THEODORA_PHONE = { hold: b.classList.contains('gl'), src: !mq(PHONE_MQ).matches, imgs: {} };
+    if (P.hold) { b.classList.remove('entering'); b.classList.add('ph-hold'); }
+    /* js/home-opening-phone.js did not load: the after photo cross-fades in once it is in (never a caption over a photo
+       that failed), and js/home-opening.js boots in its finished state */
+    P.fail = function () {
+      if (P.failed) { return; } P.failed = true; P.hold = false; P.skip = true; b.classList.remove('ph-hold');
+      var a = document.querySelector('#ph-stage .ph-a'), end = function () { R.classList.add('ph-end'); };
+      if (a && a.complete && a.naturalWidth) { end(); } else if (a && a.complete && a.currentSrc) { P.noAfter = true; }
+      else if (a) { a.addEventListener('load', end, { once: true }); }
+      if (P.boot) { var f = P.boot; P.boot = null; f(); }
+    };
+    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126d'; s.async = true;
+    s.onerror = function () { if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', P.fail); } else { P.fail(); } };
+    document.head.appendChild(s);
+  } catch (e) {}
+})();
+</script>
+<div class="ph-stage" id="ph-stage" aria-hidden="true"><div class="ph-room" style="--fx:63%;--fy:40%">
+  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" srcset="/images/home2/pairs/p3_before.webp" type="image/webp"><img class="ph-b" width="1800" height="1200" alt="" fetchpriority="high" decoding="async" elementtiming="ph-before" data-src="/images/home2/pairs/p3_before.webp"></picture>
+  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" srcset="/images/home2/pairs/p3_after.webp" type="image/webp"><img class="ph-a" width="1800" height="1200" alt="" fetchpriority="low" decoding="async" data-src="/images/home2/pairs/p3_after.webp"></picture>
+</div><div class="ph-scrim"></div></div>
+<script>(function () { var P = window.THEODORA_PHONE, im = P && P.src ? document.querySelectorAll('#ph-stage img[data-src]') : [];
+  for (var i = 0; i < im.length; i++) { im[i].src = im[i].getAttribute('data-src'); } })();</script>
 
 <section class="hero" id="hero" aria-label="Opening">
   <figure class="sfig static-only" style="--fx:63%;--fy:40%">
@@ -1264,7 +1304,7 @@ document.addEventListener('click', function (e) {
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261126c" defer></script>
+<script src="/js/home-opening.js?v=20261126d" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

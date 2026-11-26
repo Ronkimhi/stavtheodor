@@ -176,7 +176,16 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
 # block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
-HOME_ONLY = {'hero_write', 'home_above_contact'}
+# phone_open: the phone opening v2 prototype (2026-11-26, js/home-opening-phone.js): homepage only, its rooms are the homepage's.
+HOME_ONLY = {'hero_write', 'home_above_contact', 'phone_open'}
+# The phone test and the stage's photos must agree (2026-11-26): the inline boot in the phone_open region tests PHONE_MQ,
+# and both <source> elements in #ph-stage carry that same string as their media, so the stage fetches its two photos on
+# exactly the screens that show it (the same URLs as the opening's own preload links, so nothing is fetched twice).
+_PH = open(TEMPLATE, encoding='utf-8').read()
+_PH_MQ = re.findall(r"var PHONE_MQ = '([^']+)';", _PH)
+_PH_SRC = re.findall(r'<source media="([^"]+)" srcset="/images/home2/pairs/p3_(?:before|after)\.webp"', _PH)
+if len(_PH_MQ) != 1 or len(_PH_SRC) != 2 or any(m != _PH_MQ[0] for m in _PH_SRC):
+    raise SystemExit(f'templates/home.html: PHONE_MQ {_PH_MQ} and the #ph-stage <source> media {_PH_SRC} must be one string')
 # The buyer variants that carry the contact card as a section of its own, after #faq and above the footer's closing block
 # (sc.inline_form_section(), 2026-11-02). The homepage has its card in the footer, so the slot is empty there and on every
 # other variant. The content pages that carry it are in build-site-pages.py (INLINE_FORM_PAGES).
