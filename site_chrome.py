@@ -56,7 +56,7 @@ POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
 SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
-THEME_CSS = '/css/theme.css'
+THEME_CSS = '/css/theme.css?v=20261126'  # bump with the scripts that depend on it (before-after.js, 2026-11-26)
 
 
 def rel(*parts):

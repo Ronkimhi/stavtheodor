@@ -802,6 +802,8 @@
   .ba-grip::after { right: 10px; transform: rotate(-135deg); }
   html.js .ba-handle:focus-visible .ba-grip { outline: 2px solid var(--taupe); outline-offset: 3px; }
   html.js .ba-ready .ba-stage { cursor: ew-resize; }
+  html.js .ba-tight .ba-handle::before { opacity: 0; }  /* at rest on the artwork: no line across it, the grip on the floor */
+  html.js .ba-tight .ba-grip { top: auto; bottom: 16px; margin-top: 0; }
   @media (prefers-reduced-motion: reduce) {
     html.js .ba { --e: 1; --er: 1; --p: 1; --pr: 1; } /* the after, before the script has run (it then sets the same) */
     html.js .ba-handle, html.js .ba-ready .ba-handle { transition: none; }

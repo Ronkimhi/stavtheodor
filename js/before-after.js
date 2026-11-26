@@ -54,6 +54,7 @@
     var sw = it.stage.offsetWidth, sh = it.stage.offsetHeight || 1;
     var vf = Math.min(1, (sw / sh) / it.ar), crop = it.fx * (1 - vf);
     var l = (it.x0 - crop) / vf, r = (it.x1 - crop) / vf;
+    it.al = l; it.arr = r; it.sw = sw;                  /* the artwork's edges on the stage, for the resting handle */
     it.span = [Math.max(l - M - Z, -Z), Math.min(r + M, 1)];
     it.spanR = [Math.max((1 - r) - M - Z, -Z), Math.min((1 - l) + M, 1)];
     paint(it);
@@ -83,6 +84,12 @@
     st.setProperty('--hxr', hxr.toFixed(4));
     it.hxNow = rtl() ? hxr : hx;
     if (it.handle) { it.handle.setAttribute('aria-valuenow', String(Math.round(it.hxNow * 100))); }
+    /* at rest (after the play, before the reader takes it) a handle that would sit on the artwork drops its
+       hairline and moves its grip down to the floor, so the art reads clean (on a phone the stage is narrow) */
+    if (it.x === null && it.sw) {
+      var px = Math.min(Math.max(it.hxNow * it.sw, 22), it.sw - 22);
+      it.el.classList.toggle('ba-tight', px + 22 > it.al * it.sw && px - 22 < it.arr * it.sw);
+    }
   }
 
   function ready(it) {
@@ -122,7 +129,7 @@
   function bind(it) {
     var drag = null;
     function at(cx) { var r = it.stage.getBoundingClientRect(); return clamp((cx - r.left) / Math.max(1, r.width)); }
-    function take(x) { it.playing = false; if (!it.played) { ready(it); } it.x = x; paint(it); }
+    function take(x) { it.playing = false; if (!it.played) { ready(it); } it.x = x; it.el.classList.remove('ba-tight'); paint(it); }
     it.stage.addEventListener('pointerdown', function (ev) {
       if (ev.button !== undefined && ev.button !== 0) { return; }
       var onHandle = !!(ev.target.closest && ev.target.closest('.ba-grip'));   /* the grip: a finger drags at once */
