@@ -545,7 +545,7 @@ def inline_form_html(p):
 def render_article_page(p, all_pages):
     """Advisory, partner and guide pages: text header, the hero figure, the reading column.
     The hero figure is a before/after proposal space (before_after, a key of content/spaces.json, 2026-09-28):
-    pinned while the after is brushed over the before as the reader scrolls. A page may still carry a plain
+    the after is brushed over the before by itself once the figure is in view. A page may still carry a plain
     hero_image instead. English opens by default (site owner, 2026-09-26); the Hebrew twin sits behind the switch.
     A guide (section "guide") renders to Fable's guide design (2026-09-29, the block above)."""
     url = f"{SITE}/{p['path'].strip('/')}/"
