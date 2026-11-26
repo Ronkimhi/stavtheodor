@@ -193,20 +193,36 @@
     loadImg(name);
     return placeholder;
   }
-  /* the later rooms (2026-11-26): their six textures load one after another once the entrance ends, is skipped
-     (Escape, or a page that opens scrolled) or the page is scrolled into a chapter, never while the first room is
-     being painted. A texture a chapter needs before its turn in the chain still loads on demand (getTex), and the
-     placeholder (the ground colour) stands in until it arrives, as before. */
-  var restStarted = false;
-  /* the first room's after image: ready once decoded (or failed); whenAfter runs f then, or now */
+  /* the later rooms (2026-11-26). The next room (PAIRS[1], before then after) loads as soon as both images of the
+     first room are in (loadNext), so it arrives during the entrance without competing with the first room and the
+     hero's cross-fade has it on the first scroll. The rooms after it (PAIRS[2] on) load one after another, chained
+     after the next room, once the entrance ends, is skipped (Escape, or a page that opens scrolled) or the page is
+     scrolled into a chapter (loadRest). A texture a chapter needs before its turn in the chain still loads on demand
+     (getTex), and the placeholder (the ground colour) stands in until it arrives, as before. */
+  var nextIn = null, restStarted = false;
+  /* the first room's after image: ready once decoded, failed or given up on (the watchdog, below); whenAfter runs f
+     then, or now */
   var afterReady = false, afterWait = [];
   function whenAfter(f) { if (afterReady) { f(); } else { afterWait.push(f); } }
+  function afterIn() {
+    if (afterReady) { return; }
+    afterReady = dbg.after = true; dbg.afterAt = performance.now();
+    afterWait.splice(0).forEach(function (f) { f(); });
+  }
+  function loadNext() {
+    if (!nextIn) {
+      var v = (PAIRS[1] && !glDead) ? vr(PAIRS[1]) : null;
+      dbg.next = !!v;
+      nextIn = v ? loadImg(v.b).then(function () { return loadImg(v.a); }) : Promise.resolve();
+    }
+    return nextIn;
+  }
   function loadRest() {
     if (restStarted || glDead) { return; }
     restStarted = dbg.rest = true;
     var rest = [];
-    PAIRS.slice(1).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
-    (function next() { var nm = rest.shift(); if (nm) { loadImg(nm).then(next); } })();
+    PAIRS.slice(2).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
+    loadNext().then(function next() { var nm = !glDead && rest.shift(); if (nm) { loadImg(nm).then(next); } });
   }
   function pruneTex(keep) {
     Object.keys(texCache).forEach(function (n) {
@@ -535,15 +551,30 @@
      has low priority, the before image's high) and is waited for only where it is drawn (holdForAfter, skipEntrance).
      No wait for the fonts any more: they are preloaded with font-display swap, line 1 first shows 1.6 s into the
      timeline (about 2.1 s), and SplitText splits by characters only, which measures nothing. A failed image counts as
-     arrived, as before (the placeholder stands in). */
+     arrived, as before (the placeholder stands in). Once both are in, the next room loads (loadNext); the rooms after
+     it follow when the entrance ends (loadRest). */
   var first = vr(PAIRS[0]);
   var gotBefore = loadImg(first.b), gotAfter = loadImg(first.a);
-  gotAfter.then(function () {
-    afterReady = dbg.after = true; dbg.afterAt = performance.now();
-    afterWait.splice(0).forEach(function (f) { f(); });
-  });
+  gotAfter.then(afterIn);
   gotBefore.then(function () {
     if (glDead) { return; }
-    startEntrance(); /* the later rooms follow when the entrance ends (loadRest) */
+    startEntrance();
   });
+  Promise.all([gotBefore, gotAfter]).then(function () { if (!glDead) { loadNext(); } });
+  /* the watchdog (2026-11-26): a first-room request that never answers and never fails would leave body.entering on
+     for good (the page held still, the nav hidden, Escape queued). WATCHDOG ms after this script runs: if the before
+     image is still not in, nothing has been painted, so the page falls back to the static figures (goStatic). If the
+     before image is in but the after image is not, the after image counts as failed, the same path as an image error
+     (every waiter is released, the placeholder stands in), and an entrance already holding at 3.30 closes the way
+     Escape does, in 0.3 s. Either image arriving later only fills its texture (loadImg); nothing else waits on it. */
+  var WATCHDOG = 8000;
+  setTimeout(function () {
+    if (glDead) { return; }
+    if (!started) { dbg.watchdog = 'before'; goStatic(); return; }
+    if (afterReady) { return; }
+    dbg.watchdog = 'after';
+    afterIn();
+    if (tl && !entranceDone && !skipping && tl.time() >= HOLD_T) { skipEntrance(); }
+    loadNext();
+  }, WATCHDOG);
 })();
