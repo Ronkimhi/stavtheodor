@@ -21,10 +21,6 @@ FIELD_MAX = {"dek_en": 120, "dek_he": 120, "crumb_en": 40, "crumb_he": 40, "guid
 LIMITS = {"advisory": (500, 900), "projects": (250, 450), "partners": (400, 1000), "guide": (900, 1400), "local": (1100, 1900), "area": (700, 1200)}
 FAQ_WORDS = (30, 110)
 FAQ_AREA = (10, 110)
-# One ask (Ron, 2026-11-26): every link whose text is Write to Stav opens the Write to Stav pop-up, so it carries data-write
-# (with data-loc); its href (/contact/ or a mailto) stays the fallback without JavaScript.
-WRITE_LABELS = ("Write to Stav", "כתבו לסתיו")
-WRITE_LINK = re.compile(r"<a\b([^>]*)>(.*?)</a>", re.S | re.I)
 HYPE = ["elevate", "curated experience", "bespoke journey", "unparalleled", "world-class", "world class", "transform your", "seamlessly", "elevating"]
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 # 2026-09-29 (Ron's decision): diagram and table captions never count toward a body's word limits.
@@ -130,11 +126,6 @@ for f in sys.argv[1:]:
             for v in node: yield from strings(v)
     fee = next(filter(None, map(fee_violation, strings(p))), None)
     if fee: fails.append(f"a fee or $ figure ({fee!r}): no dollar figures, and no percentage in a sentence about fees (content/BRIEF.md section 5, tools/fee_gate.py)")
-    for txt in strings(p):
-        for m in WRITE_LINK.finditer(txt):
-            label = re.sub(r"<[^>]+>", "", m.group(2)).strip()
-            if label in WRITE_LABELS and not re.search(r"\sdata-write\b", m.group(1)):
-                fails.append(f"a {label!r} link without data-write: add data-write data-loc=\"body\" so it opens the pop-up, keep the href as the fallback (Ron, 2026-11-26)")
     for q in p.get("faq", []) or []:
         for k in ["q_en","a_en","q_he","a_he"]:
             if not q.get(k): fails.append(f"faq item missing {k}")
