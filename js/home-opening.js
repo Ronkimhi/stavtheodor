@@ -198,6 +198,9 @@
      being painted. A texture a chapter needs before its turn in the chain still loads on demand (getTex), and the
      placeholder (the ground colour) stands in until it arrives, as before. */
   var restStarted = false;
+  /* the first room's after image: ready once decoded (or failed); whenAfter runs f then, or now */
+  var afterReady = false, afterWait = [];
+  function whenAfter(f) { if (afterReady) { f(); } else { afterWait.push(f); } }
   function loadRest() {
     if (restStarted || glDead) { return; }
     restStarted = dbg.rest = true;
@@ -432,7 +435,7 @@
     onLeaveBack: function () { covered = false; dbg.covered = false; canvasOpacity(1); dirty(); } });
 
   /* the entrance */
-  var wantSkip = false, started = false;
+  var wantSkip = false, started = false, skipQueued = false;
   function finishDom(d) {
     gsap.to([line1, line2], { opacity: 0, duration: d, ease: 'power2.out', overwrite: true });
     gsap.to(cue, { opacity: 1, duration: d, ease: 'power2.out', overwrite: true });
@@ -441,6 +444,11 @@
   function skipEntrance() {
     if (entranceDone || skipping) { return; }
     if (!started) { wantSkip = true; return; }
+    /* the end state shows the after image: a skip (Escape, or a page that opens scrolled) waits for it */
+    if (!afterReady) {
+      if (!skipQueued) { skipQueued = true; whenAfter(function () { if (!glDead) { skipEntrance(); } }); }
+      return;
+    }
     skipping = true;
     if (tl) { tl.kill(); }
     var fin = { spread: spreadMax, bh: 1, bloom: 1.6, scrim: 0, bw: 0 };
@@ -495,13 +503,46 @@
     tl.call(function () { body.classList.remove('entering'); loadRest(); }, null, 5.78);
     tl.to(cue, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 5.86);
     tl.timeScale(1 / SLOW);
+    holdForAfter();
     dbg.t0 = performance.now();
     tl.play();
   }
 
-  var fontsReady = Promise.race([(document.fonts && document.fonts.ready) || Promise.resolve(), new Promise(function (r) { setTimeout(r, 900); })]);
+  /* the after image (2026-11-26). The entrance starts once the before image is in. Nothing it draws before the wall
+     stroke samples the after image: the house brush paints the before image only, the wall stroke head (uBH) and the
+     bloom (uBloomR) are 0 until 3.30 on the timeline (about 4.3 s in), so the after mix weighs exactly 0, and uSettled
+     is off while the house brush layer is on. If the after image is still on its way when the entrance starts,
+     everything from 3.30 on (the caption, the wall stroke, the bloom, line 2, the end) is moved far down the timeline:
+     the house brush, line 1 and the drying run as usual, and the room then holds, painted, dry and quiet. The moment
+     the after image is decoded, that part goes back to 3.30 exactly if the playhead has not reached it yet, or starts
+     at the playhead if it is holding. The placeholder is never drawn in its place. */
+  var HOLD_T = 3.30, HOLD_GAP = 1e4;
+  function holdForAfter() {
+    if (afterReady || !tl) { return; }
+    var tl0 = tl, held = tl0.getChildren(false, true, true).filter(function (c) { return c.startTime() >= HOLD_T - 1e-6; });
+    held.forEach(function (c) { c.__t0 = c.startTime(); c.startTime(c.__t0 + HOLD_GAP); });
+    dbg.hold = { armed: true, held: false };
+    whenAfter(function () {
+      if (tl0 !== tl || glDead) { return; }
+      /* 2 ms ahead of the playhead, so the next tick starts the held part with its callbacks, never inside this one */
+      var late = tl0.time() >= HOLD_T ? tl0.time() + 0.002 - HOLD_T : 0;
+      held.forEach(function (c) { c.startTime(c.__t0 + late); });
+      dbg.hold = { armed: false, held: late > 0, heldFor: late * SLOW };
+    });
+  }
+
+  /* the start gate (2026-11-26): the before image of the first room only. The after image loads beside it (its preload
+     has low priority, the before image's high) and is waited for only where it is drawn (holdForAfter, skipEntrance).
+     No wait for the fonts any more: they are preloaded with font-display swap, line 1 first shows 1.6 s into the
+     timeline (about 2.1 s), and SplitText splits by characters only, which measures nothing. A failed image counts as
+     arrived, as before (the placeholder stands in). */
   var first = vr(PAIRS[0]);
-  Promise.all([loadImg(first.b), loadImg(first.a), fontsReady]).then(function () {
+  var gotBefore = loadImg(first.b), gotAfter = loadImg(first.a);
+  gotAfter.then(function () {
+    afterReady = dbg.after = true; dbg.afterAt = performance.now();
+    afterWait.splice(0).forEach(function (f) { f(); });
+  });
+  gotBefore.then(function () {
     if (glDead) { return; }
     startEntrance(); /* the later rooms follow when the entrance ends (loadRest) */
   });

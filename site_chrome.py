@@ -132,7 +132,10 @@ GA_SNIPPET = f'''<!-- Google tag (gtag.js) -->
 # Microsoft Clarity (heatmaps, scroll depth), project CLARITY_ID, the standard snippet (2026-11-19, Ron's
 # analytics setup). Emitted right after GA_SNIPPET in head() and in the museum pages
 # (museum/tools/build_artist_pages.py imports it; museum/index.html carries a hand copy). clarity.js loads
-# async; automated browsers (navigator.webdriver) never load it, the same guard as the GA hit above.
+# async; automated browsers (navigator.webdriver) never load it, the same guard as the GA hit above. Since 2026-11-26
+# the clarity() queue is defined at once but clarity.js is injected only after the window load event, at the first
+# idle moment (requestIdleCallback, at most 3 s later; a plain timeout where the browser has none), so it never
+# competes with the page's own first load. The GA tag is unchanged.
 # Clarity's terms ask for a privacy disclosure: /privacy/ (build-site-pages.py render_privacy()), linked from every footer.
 CLARITY_ID = 'zgafbftl66'
 CLARITY_SNIPPET = f'''<!-- Microsoft Clarity -->
@@ -140,8 +143,10 @@ CLARITY_SNIPPET = f'''<!-- Microsoft Clarity -->
   if (!navigator.webdriver) {{
     (function(c,l,a,r,i,t,y){{
       c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      function go(){{t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}}
+      function idle(){{if(c.requestIdleCallback){{c.requestIdleCallback(go,{{timeout:3000}});}}else{{setTimeout(go,1);}}}}
+      if(l.readyState==="complete"){{idle();}}else{{c.addEventListener("load",idle);}}
     }})(window, document, "clarity", "script", "{CLARITY_ID}");
   }}
 </script>'''

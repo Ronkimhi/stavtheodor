@@ -31,9 +31,9 @@
 <link rel="preload" as="script" href="/js/vendor/gsap.min.js">
 <link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js">
 <link rel="preload" as="script" href="/js/vendor/SplitText.min.js">
-<link rel="preload" as="script" href="/js/home-opening.js?v=20261126">
+<link rel="preload" as="script" href="/js/home-opening.js?v=20261126b">
 <link rel="preload" as="image" href="/images/home2/variants/restaurants/restaurants_before.webp" type="image/webp" fetchpriority="high">
-<link rel="preload" as="image" href="/images/home2/variants/restaurants/restaurants_after.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/images/home2/variants/restaurants/restaurants_after.webp" type="image/webp" fetchpriority="low">
 <!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page's -->
 <script type="application/ld+json">
 {
@@ -357,8 +357,10 @@
   if (!navigator.webdriver) {
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      function go(){t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}
+      function idle(){if(c.requestIdleCallback){c.requestIdleCallback(go,{timeout:3000});}else{setTimeout(go,1);}}
+      if(l.readyState==="complete"){idle();}else{c.addEventListener("load",idle);}
     })(window, document, "clarity", "script", "zgafbftl66");
   }
 </script>
@@ -1209,7 +1211,7 @@ document.addEventListener('click', function (e) {
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261126" defer></script>
+<script src="/js/home-opening.js?v=20261126b" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

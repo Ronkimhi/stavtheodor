@@ -70,13 +70,16 @@ def preload(before, after):
     """The opening's first texture pair, fetched with high priority (speed pass, 2026-09-26): the
     homepage's p3, or a variant's first room. The paths are under /images/home2/, as in PAIRS. A room
     with 2400 px twins gets two pairs of links with opposite media queries (HI_MQ), so each screen
-    preloads only the size js/home-opening.js will draw."""
-    link = lambda n, media='': (f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp"'
-                                f'{media} fetchpriority="high">\n')
+    preloads only the size js/home-opening.js will draw. The before image is fetched with high priority and the after
+    image with low (2026-11-26): the entrance starts painting once the before image is in, and the after image is
+    first drawn at the wall stroke, about four seconds later, so the before image gets the bandwidth first."""
+    link = lambda n, pr, media='': (f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp"'
+                                    f'{media} fetchpriority="{pr}">\n')
     if not has_hi(before, after):
-        return ''.join(link(n) for n in (before, after))
+        return link(before, 'high') + link(after, 'low')
     big, small = f' media="{H.escape(HI_MQ, quote=True)}"', f' media="{H.escape("not (" + HI_MQ + ")", quote=True)}"'
-    return ''.join(link(n, small) for n in (before, after)) + ''.join(link(hi_name(n), big) for n in (before, after))
+    return (link(before, 'high', small) + link(after, 'low', small)
+            + link(hi_name(before), 'high', big) + link(hi_name(after), 'low', big))
 
 
 PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
@@ -93,6 +96,17 @@ for _js in OPENING_JS:
     if len(_src) != 1:
         raise SystemExit(f'templates/home.html: expected one deferred <script> for {_js}, found {len(_src)}')
     SCRIPT_PRELOAD += f'<link rel="preload" as="script" href="{H.escape(_src[0], quote=True)}">\n'
+
+# Speculation rules, the homepage only (2026-11-26): a same-origin page link is prefetched (the document only, never
+# prerendered, so none of its scripts run and no analytics hit is sent) once the visitor hovers it for a moment or
+# starts to press it (eagerness moderate), so the next page opens at once. Left out: the homepage itself and its
+# #anchors, anything with a file extension (images, the film, PDFs, llms.txt), /cdn-cgi/, and every mailto, tel or
+# external link, which "/*" never matches. Browsers without speculation rules ignore the tag.
+SPECULATION_RULES = ('<script type="speculationrules">'
+                     '{"prefetch":[{"source":"document","eagerness":"moderate","where":{"and":['
+                     '{"href_matches":"/*"},{"not":{"href_matches":"/"}},{"not":{"href_matches":"/*.:ext"}},'
+                     '{"not":{"href_matches":"/cdn-cgi/*"}},{"not":{"selector_matches":"[download]"}}]}}]}'
+                     '</script>\n')
 
 # "Who I work with" on the homepage (Ron, 2026-09-28): one tile per buyer page, in this order, each linking to it.
 # The tile's line is the page's main message, its intro.line (Ron's locked messaging; until 2026-09-28 the first
@@ -544,7 +558,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
-                   noindex=False, extra=SCRIPT_PRELOAD + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD))
+                   noindex=False, extra=SCRIPT_PRELOAD + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD) + ('' if v else SPECULATION_RULES))
     return sc.undash_html(head + body)  # the shared dash sanitizer (site_chrome), before the checks in page_problems
 
 
