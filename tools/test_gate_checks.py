@@ -129,6 +129,12 @@ OLD_MAIN = {'commit': {'committer': {'date': '2026-11-02T10:00:00Z'}}}
 GATE_AT = '2026-11-02T11:00:00Z'
 
 
+def runs(*conclusions):
+    """Gate check runs on one commit, oldest first, one minute apart, listed newest first as the API may return them."""
+    return {'check_runs': [{'id': 100 + i, 'started_at': f'2026-11-02T10:{50 + i}:00Z', 'conclusion': c,
+                            'status': 'completed' if c else 'in_progress'} for i, c in enumerate(conclusions)][::-1]}
+
+
 def pr(**over):
     base = {'number': 7, 'state': 'open', 'draft': False, 'labels': [{'name': 'auto-ship'}],
             'head': {'sha': SHA, 'repo': {'full_name': REPO}}, 'base': {'ref': 'main'}}
@@ -151,6 +157,16 @@ SHIP = [
     ('gate running', [pr()], {'check_runs': [{'conclusion': None}]}, OLD_MAIN, 'skip'),
     ('gate missing', [pr()], {'check_runs': []}, OLD_MAIN, 'skip'),
     ('main moved', [pr()], GREEN, {'commit': {'committer': {'date': '2026-11-02T12:00:00Z'}}}, 'stale'),
+    ('cancelled duplicate, newer run green', [pr()], runs('cancelled', 'success'), OLD_MAIN, 'ship'),
+    ('older run green, newest red', [pr()], runs('success', 'failure'), OLD_MAIN, 'skip'),
+    ('only cancelled runs', [pr()], runs('cancelled', 'cancelled'), OLD_MAIN, 'skip'),
+    ('older run green, newest cancelled', [pr()], runs('success', 'cancelled'), OLD_MAIN, 'skip'),
+    ('older run green, newest running', [pr()], runs('success', None), OLD_MAIN, 'skip'),
+    ('older run red, newest green (a rerun)', [pr()], runs('failure', 'success'), OLD_MAIN, 'ship'),
+    ('older run green, newer run queued', [pr()], {'check_runs': [{'id': 9, 'started_at': None, 'status': 'queued', 'conclusion': None},
+                                                                  {'id': 8, 'started_at': '2026-11-02T10:58:00Z', 'conclusion': 'success'}]}, OLD_MAIN, 'skip'),
+    ('same start, the higher id decides', [pr()], {'check_runs': [{'id': 9, 'started_at': '2026-11-02T10:58:00Z', 'conclusion': 'success'},
+                                                                   {'id': 8, 'started_at': '2026-11-02T10:58:00Z', 'conclusion': 'cancelled'}]}, OLD_MAIN, 'ship'),
 ]
 
 

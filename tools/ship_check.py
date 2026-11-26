@@ -5,10 +5,13 @@
         --pulls commits_sha_pulls.json --checks gate_check_runs.json --main main_commit.json
 
 Prints the reason, and writes decision=ship|stale|skip and number=N to $GITHUB_OUTPUT when that is set.
-  ship   an open, ready PR from this repo into main, labelled auto-ship, whose head is this commit, with gate green
-         on it and main unchanged since the gate started
+  ship   an open, ready PR from this repo into main, labelled auto-ship, whose head is this commit, whose newest
+         gate run on it is green, and main unchanged since the gate started
   stale  all of that, but main moved after the gate started, so the gate never tested this merge
   skip   anything else
+Only the newest gate run on the commit counts. Two PR events can fire together (ready_for_review and labeled), and
+gate's concurrency group cancels the older run; that cancelled run must not block the commit once a later run passed.
+A newest run that is cancelled, red or still running is a skip.
 Self test: tools/test_gate_checks.py
 """
 import argparse
@@ -22,6 +25,12 @@ BASE = 'main'
 
 def when(iso):
     return datetime.fromisoformat(iso.replace('Z', '+00:00'))
+
+
+def newest(runs):
+    """The gate run that decides: the one that started last (the check run id breaks a tie), or None.
+    A run with no start time yet counts as the newest, so a queued run is waited for, never passed over."""
+    return max(runs, key=lambda r: (r.get('started_at') or '~', r.get('id') or 0), default=None)
 
 
 def decide(repo, sha, pulls, checks, main_commit, gate_created):
@@ -39,9 +48,11 @@ def decide(repo, sha, pulls, checks, main_commit, gate_created):
         return 'skip', number, 'from a fork'
     if pr['base']['ref'] != BASE:
         return 'skip', number, f'base is {pr["base"]["ref"]}, not {BASE}'
-    runs = checks.get('check_runs', [])
-    if not runs or any(r.get('conclusion') != 'success' for r in runs):
-        return 'skip', number, 'gate is not green on this commit'
+    last = newest(checks.get('check_runs', []))
+    if last is None:
+        return 'skip', number, 'no gate run on this commit'
+    if last.get('conclusion') != 'success':
+        return 'skip', number, f'the newest gate run on this commit is {last.get("conclusion") or last.get("status") or "not finished"}, not success'
     if when(main_commit['commit']['committer']['date']) > when(gate_created):
         return 'stale', number, f'{BASE} moved after this gate run started'
     return 'ship', number, 'gate is green and every rule holds'
