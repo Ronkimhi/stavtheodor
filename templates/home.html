@@ -57,7 +57,7 @@
     if (!(force ? mq(FORCE_MQ).matches : PHONE_V2_DEFAULT && !old && mq(PHONE_MQ).matches)) { return; }
     R.classList.add('open2');
     /* src: the <source> media does not match (a wider screen under ?open=2), so the script after #ph-stage sets the photos */
-    var P = window.THEODORA_PHONE = { hold: b.classList.contains('gl'), src: !mq(PHONE_MQ).matches, imgs: {} };
+    var P = window.THEODORA_PHONE = { hold: b.classList.contains('gl'), src: !mq(PHONE_MQ).matches };
     if (P.hold) { b.classList.remove('entering'); b.classList.add('ph-hold'); }
     /* js/home-opening-phone.js did not load: the after photo cross-fades in once it is in (never a caption over a photo
        that failed), and js/home-opening.js boots in its finished state */

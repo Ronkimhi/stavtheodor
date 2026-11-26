@@ -26,7 +26,7 @@
     /* the phone stage becomes the hero's picture (css/theme.css): its caption (room p3, the stage's room) only with its after photo on screen, and
        line 1 stays faded once the phone opening has ended (as the static figures, which carry no line) */
     if (stage) {
-      stage.style.opacity = ''; stage.style.visibility = '';
+      stage.style.opacity = ''; stage.style.visibility = ''; stage.style.transition = '';
       var sa = stage.querySelector('.ph-a'), art = !!(sa && sa.naturalWidth && (sa.style.opacity === '1' || document.documentElement.classList.contains('ph-end')) && !afterFailed && !PHONE.noAfter);
       if (cap) { if (art) { cap.setAttribute('data-show', 'p3'); } else { cap.removeAttribute('data-show'); } cap.style.opacity = art ? 1 : 0; }
     }
@@ -198,7 +198,8 @@
   function loadImg(name) {
     if (imgs[name]) { return Promise.resolve(imgs[name]); }
     if (loading[name]) { return loading[name]; }
-    /* the phone opening has loaded (or is loading) this photo already: its decoded <img>, or null if it failed */
+    /* the phone opening has loaded (or is loading) this photo already: a decoded copy (from the memory cache, no second
+       request), null if it failed, or undefined if the phone opening never loaded it (then it loads here) */
     var pw = PHONE && PHONE.wait && PHONE.wait[name];
     if (pw) {
       loading[name] = pw.then(function (im) {
@@ -419,8 +420,14 @@
     if (key !== capKey) { capKey = key; cap.setAttribute('data-show', key); }
     if (!capOn) { capOn = true; gsap.to(cap, { opacity: 1, duration: 0.2, overwrite: true }); }
   }
+  /* a page already scrolled when this boots (the visitor swiped the moment the stroke let go): the stage eases to its
+     first value over 0.4 s instead of jumping (ScrollTrigger sets the scrubbed progress at once on creation) */
+  var stageEaseUntil = -1;
   function stageOpacity(op) {
+    if (stageEaseUntil < 0) { stageEaseUntil = op === stageOp ? 0 : performance.now() + 400; }
     if (op === stageOp) { return; } stageOp = op;
+    var ease = performance.now() < stageEaseUntil;
+    stage.style.transition = ease ? 'opacity .4s ease, visibility 0s linear ' + (op > 0 ? '0s' : '.4s') : '';
     stage.style.opacity = op; stage.style.visibility = op > 0 ? 'visible' : 'hidden';
   }
   var canvasOp = 1;

@@ -99,7 +99,16 @@
     function release(quick) {
       if (booted) { return; } booted = true;
       P.hold = false; P.skip = true;
-      var go = function () { window.removeEventListener('scroll', go); if (dbg.boot) { return; } dbg.boot = now(); if (P.boot) { var b = P.boot; P.boot = null; b(); } };
+      var settleT = 0;
+      var go = function () {
+        window.removeEventListener('scroll', go); window.removeEventListener('scroll', settle); clearTimeout(settleT);
+        if (dbg.boot) { return; } dbg.boot = now(); if (P.boot) { var b = P.boot; P.boot = null; b(); }
+      };
+      var settle = function () { clearTimeout(settleT); settleT = setTimeout(go, 250); };
+      /* opened at an anchor (/#faq): the browser may still be scrolling there, smoothly, and the full opening's
+         ScrollTrigger set-up would stop that scroll short; it boots once the page has been still for 250 ms */
+      var id = location.hash.length > 1 ? location.hash.slice(1) : '';
+      if (quick && id && document.getElementById(id)) { dbg.settle = true; window.addEventListener('scroll', settle, { passive: true }); settle(); setTimeout(go, 3000); return; }
       if (quick || !window.requestIdleCallback) { setTimeout(go, quick ? 0 : 200); } else { requestIdleCallback(go, { timeout: 1200 }); }
       /* a visitor who scrolls before that moment gets the full opening at once, so the rooms follow the scroll */
       window.addEventListener('scroll', go, { passive: true });
@@ -361,7 +370,11 @@
       call(2.60, function () { fade(imgA, 1, 0); dropGl(); dbg.handoff = now(); });
       tw(2.40, 0.35, E.p2in, 1, 0, styleOp(line2));
       tw(2.40, 0.35, E.p2in, 1, 0, function (v) { scrim(v); });
-      call(2.78, function () { body.classList.remove('ph-hold'); lock(false); dbg.free = now(); });
+      call(2.78, function () {
+        body.classList.remove('ph-hold'); lock(false); dbg.free = now();
+        /* the page is free: a scroll from here on ends the segment (the cue's fade) and boots the full opening at once */
+        window.addEventListener('scroll', function onFree() { window.removeEventListener('scroll', onFree); if (state === 'run') { dbg.freeScroll = true; finish(0, true); } }, { passive: true });
+      });
       if (cue) { tw(2.86, 0.50, E.p2out, 0, 1, styleOp(cue)); }
       call(3.36, function () { finish(0); });
       tStart = now(); dbg.t0 = tStart;
