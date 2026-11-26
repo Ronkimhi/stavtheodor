@@ -350,8 +350,10 @@ LANG_BOOT = '''<script>
 </script>'''
 
 # Ron's SEO brief, 2026-09-29: For business (P1.5) replaces the Museum item (P1.6: no main page links the museum; its
-# pages stay live and indexed), and Contact goes to the real /contact/ page (P1.1). For business points at the
-# homepage's "Who I work with" section until the commercial hub /corporate-art-consulting/ ships (P2.1).
+# pages stay live and indexed). For business points at the homepage's "Who I work with" section until the commercial
+# hub /corporate-art-consulting/ ships (P2.1). One contact action in the header (Ron, 2026-11-26): the nav's Contact
+# item is gone and Write to Stav (nav() below, the pop-up) is the header's only contact control. /contact/ stays a
+# live, indexed page in the sitemap, linked from every footer.
 NAV_ITEMS = [
     ('#about', 'About', 'אודות'),
     ('/projects/', 'Projects', 'פרויקטים'),
@@ -360,7 +362,6 @@ NAV_ITEMS = [
     ('#industries', 'For business', 'לעסקים'),
     ('/radar/', 'Art Radar', 'ראדאר אמנות'),
     ('#faq', 'Questions', 'שאלות'),
-    ('/contact/', 'Contact', 'יצירת קשר'),
 ]
 # Who I work with (Ron's SEO brief, 2026-09-29, P1.5): the seven pages for one kind of client each, in every footer and
 # on the projects hub. Interior designers is /for-designers/ since /designers/ was merged into it (it redirects there).
