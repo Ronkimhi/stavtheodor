@@ -53,6 +53,21 @@ THEME_SNIPPET = """<script>
 })();
 </script>"""
 
+# A work's width and height attributes only reserve its space while the file loads. Once the file answers
+# (loaded or failed) they come off, so the box is sized exactly as it was before they existed: Chrome rounds
+# an attribute width capped by the column a fraction of a pixel apart from the file's own (a whole pixel on a
+# long thin work), and a file that fails shows as a small broken image again, not an empty reserved frame.
+WORK_SIZE_JS = """<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
+</script>"""
+
 PAGE_CSS = """<style>
   body { max-width: 760px; margin: 0 auto; padding: 92px 24px 80px; }
   .crumb { font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -71,7 +86,10 @@ PAGE_CSS = """<style>
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -153,7 +171,12 @@ def meta_desc(text, limit=155):
     return " ".join(words).rstrip(" ,;:") + "…"
 
 
-def head(title, desc, canonical, og_image):
+def head(title, desc, canonical, og_image, images=True):
+    # Cormorant Garamond is self-hosted (museum/css/cormorant-garamond.css, the files Google served, 2026-11-26):
+    # the latin roman file is preloaded (crossorigin, as every font fetch is CORS), and pages that show works
+    # warm up the Wikimedia host. The <img> tags carry no crossorigin, so neither does the preconnect.
+    wm = '\n<link rel="preconnect" href="https://upload.wikimedia.org">' if images else ""
+    js = "\n" + WORK_SIZE_JS if images else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -170,10 +193,9 @@ def head(title, desc, canonical, og_image):
 <meta property="og:url" content="{esc(canonical)}">
 <meta property="og:image" content="{esc(og_image)}">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-{THEME_SNIPPET}
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>{wm}
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
+{THEME_SNIPPET}{js}
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 {PAGE_CSS}
 {GA_SNIPPET}
@@ -238,7 +260,27 @@ def crumb(extra=""):
             f'<a href="/museum/artists/">The Collection</a>{extra}</nav>')
 
 
-def painting_block(p):
+def served_size(img):
+    """The pixel size of the file the page shows, from the data: a Commons thumbnail (NNNpx- in the file name,
+    lossy-page1-NNNpx- for a TIFF) is NNN wide with the original's proportions, its height rounded half down
+    (as Commons does for most files), unless the original is narrower (Commons never upscales); anything else
+    is the original. As width and height, it reserves the work's space before it loads; where the data is off
+    (a re-uploaded original, a 3D model's preview) only that reservation is, since the attributes come off
+    once the file answers (WORK_SIZE_JS)."""
+    import math
+    import re
+    w, h = img.get("pxW"), img.get("pxH")
+    if not (w and h):
+        return None
+    url = img.get("thumb640") or ""
+    m = re.search(r"/(?:[a-z0-9]+-)*?(\d+)px-[^/]*$", url) if "/thumb/" in url else None
+    if m and int(m.group(1)) < w:
+        tw = int(m.group(1))
+        return tw, math.ceil(h * tw / w - 0.5)
+    return w, h
+
+
+def painting_block(p, first=False):
     img = p["image"]
     dims = f"{p['cm']['h']} × {p['cm']['w']} cm" if p.get("cm") else ""
     meta = "".join(f"<span>{esc(x)}</span>" for x in
@@ -256,8 +298,13 @@ def painting_block(p):
                    + urllib.parse.quote(img.get("file") or "", safe=":"))
     attr = (f'<p class="work-attr">{esc(credit_bits)}{" · " if credit_bits else ""}'
             f'<a href="{esc(commons_url)}" target="_blank" rel="noopener">Wikimedia Commons</a></p>')
+    # The first work can be the largest thing on a short page's first screen: fetch it at once, first in
+    # line; every later work waits until the reader scrolls near it.
+    load = ' fetchpriority="high"' if first else ' loading="lazy"'
+    wh = served_size(img)
+    size = f' width="{wh[0]}" height="{wh[1]}"' if wh else ""
     return f"""<section class="work">
-<img loading="lazy" src="{esc(img.get('thumb640'))}" alt="{esc(p['title'])}">
+<img{load} src="{esc(img.get('thumb640'))}"{size} alt="{esc(p['title'])}">
 <h2>{esc(p['title'])}</h2>
 <div class="meta">{meta}</div>
 {story}{facts}
@@ -282,7 +329,7 @@ def build_artist(a):
         ctas = (f'<a class="cta" href="/museum/gallery/?artist={a["slug"]}">'
                 f'Walk the 3D gallery · {len(a["paintings"])} works →</a>'
                 f'<a class="cta" href="/museum/#artist={a["slug"]}">See on the timeline</a>')
-        works = "".join(painting_block(p) for p in a["paintings"])
+        works = "".join(painting_block(p, i == 0) for i, p in enumerate(a["paintings"]))
     else:
         ctas = f'<a class="cta" href="/museum/#artist={a["slug"]}">See on the timeline</a>'
         works = (f'<p class="copyright-note">The paintings are still under copyright '
@@ -355,7 +402,7 @@ def build_directory(index, artists_full):
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
     })
 
-    return f"""{head("The Collection · The Museum · THEODORA", desc, f"{SITE}/museum/artists/", f"{SITE}/og-image.jpg")}
+    return f"""{head("The Collection · The Museum · THEODORA", desc, f"{SITE}/museum/artists/", f"{SITE}/og-image.jpg", images=False)}
 {jsonld}
 </head>
 <body>

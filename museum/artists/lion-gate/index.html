@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/lion-gate/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/1920px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=lion-gate">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=lion-gate">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/960px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg" alt="Facade of Philip II tomb Vergina Greece">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Facade_of_Philip_II_tomb_Vergina_Greece.jpg/960px-Facade_of_Philip_II_tomb_Vergina_Greece.jpg" width="960" height="643" alt="Facade of Philip II tomb Vergina Greece">
 <h2>Facade of Philip II tomb Vergina Greece</h2>
 <div class="meta"></div>
 <p>Facade of Philip II of Macedon tomb in Vergina, Greece. The door is made of marble and the order is doric. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Panegyrics of Granovetter (Sarah Murray) · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Facade%20of%20Philip%20II%20tomb%20Vergina%20Greece.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/960px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg" alt="Lion Gate - Mycenae by Joy of Museums">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/960px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg" width="960" height="640" alt="Lion Gate - Mycenae by Joy of Museums">
 <h2>Lion Gate - Mycenae by Joy of Museums</h2>
 <div class="meta"></div>
 <p>Lion Gate - Mycenae by Joy of Museums, for information, see www.joyofmuseums.com. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Joyofmuseums · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Lion%20Gate%20-%20Mycenae%20by%20Joy%20of%20Museums.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Lions_Gate_detail.JPG/960px-Lions_Gate_detail.JPG" alt="Lions Gate detail">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Lions_Gate_detail.JPG/960px-Lions_Gate_detail.JPG" width="960" height="754" alt="Lions Gate detail">
 <h2>Lions Gate detail</h2>
 <div class="meta"></div>
 <p>The confronting lionesses posing on both sides of a pillar above the lintel. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Orlovic · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Lions%20Gate%20detail.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mycenae_x05.jpg/960px-Mycenae_x05.jpg" alt="Mycenae x05">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mycenae_x05.jpg/960px-Mycenae_x05.jpg" width="960" height="479" alt="Mycenae x05">
 <h2>Mycenae x05</h2>
 <div class="meta"></div>
 <p>The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Ploync · CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Mycenae%20x05.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Mykene.jpg" alt="Mykene">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Mykene.jpg" width="500" height="402" alt="Mykene">
 <h2>Mykene</h2>
 <div class="meta"></div>
 <p>Reconstruction of how the citadel and its gate might have appeared in 1250 BC. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Public domain · <a href="https://commons.wikimedia.org/wiki/File:Mykene.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mystras_palace.JPG/960px-Mystras_palace.JPG" alt="Mystras palace">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mystras_palace.JPG/960px-Mystras_palace.JPG" width="960" height="720" alt="Mystras palace">
 <h2>Mystras palace</h2>
 <div class="meta"></div>
 <p>General view of the Palace of Mystras. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Aeleftherios · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Mystras%20palace.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Parthenon_%2830276156187%29.jpg/960px-Parthenon_%2830276156187%29.jpg" alt="Parthenon">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Parthenon_%2830276156187%29.jpg/960px-Parthenon_%2830276156187%29.jpg" width="960" height="640" alt="Parthenon">
 <h2>Parthenon</h2>
 <div class="meta"></div>
 <p>The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Phanatic · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Parthenon%20%2830276156187%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Pithos_102972x.jpg/960px-Pithos_102972x.jpg" alt="Goddess flanked by two lionesses on a pithos from Knossos">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Pithos_102972x.jpg/960px-Pithos_102972x.jpg" width="960" height="640" alt="Goddess flanked by two lionesses on a pithos from Knossos">
 <h2>Goddess flanked by two lionesses on a pithos from Knossos</h2>
 <div class="meta"></div>
 <p>Goddess flanked by two lionesses on a pithos from Knossos. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">Zde · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Pithos%20102972x.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/RhodesInt%C3%A9rieurDuPalais.JPG/960px-RhodesInt%C3%A9rieurDuPalais.JPG" alt="RhodesIntérieurDuPalais">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/RhodesInt%C3%A9rieurDuPalais.JPG/960px-RhodesInt%C3%A9rieurDuPalais.JPG" width="960" height="640" alt="RhodesIntérieurDuPalais">
 <h2>RhodesIntérieurDuPalais</h2>
 <div class="meta"></div>
 <p>The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>
 <p class="work-attr">CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:RhodesInt%C3%A9rieurDuPalais.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg/960px-Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg" alt="Underwood &amp; Underwood - The Lion Gate at Mycenae - Google Art Project">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg/960px-Underwood_%26_Underwood_-_The_Lion_Gate_at_Mycenae_-_Google_Art_Project.jpg" width="960" height="474" alt="Underwood &amp; Underwood - The Lion Gate at Mycenae - Google Art Project">
 <h2>Underwood &amp; Underwood - The Lion Gate at Mycenae - Google Art Project</h2>
 <div class="meta"></div>
 <p>Stereoscopic image of the gate, photographed in 1897, showing portions of the wall that had collapsed and now have been replaced on the right side of the sculpture. The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis.</p><p class="fact">The greater part of the cyclopean wall in Mycenae, including the gate, was built during the second extension of the citadel that occurred in the Late Helladic period IIIB (thirteenth century BC). <a href="https://en.wikipedia.org/wiki/Lion_Gate#Entrance" target="_blank" rel="noopener">Entrance →</a></p><p class="fact">The gate is a massive and imposing construction, standing 3.10 m (10 ft) wide and 2.95 m (10 ft) high at the threshold. It narrows as it rises, measuring 2.78 m (9 ft) below the lintel. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Construction" target="_blank" rel="noopener">Construction →</a></p><p class="fact">The gate stood in full view of visitors to Mycenae for centuries. It was mentioned by the ancient geographer Pausanias in the second century AD. <a href="https://en.wikipedia.org/wiki/Lion_Gate#Excavations" target="_blank" rel="noopener">Excavations →</a></p>

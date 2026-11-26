@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/max-ernst/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2a/Plaque_Le_Grand_Assistant_Paris.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,32 +113,32 @@
 <div class="bio">Max Ernst was a German-born painter, sculptor, printmaker, graphic artist, and poet. A prolific artist, Ernst was a primary pioneer of the Dada movement and surrealism in Europe. He had no formal artistic training, but his experimental attitude toward the making of art resulted in his invention of frottage, a technique that uses pencil rubbings of textured objects and relief surfaces to create images, and grattage, an analogous technique in which paint is scraped across canvas to reveal the imprints of the objects placed beneath. Ernst is noted for his unconventional drawing methods as well as for creating novels and pamphlets using the method of collages.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=max-ernst">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=max-ernst">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Plaque_Le_Grand_Assistant_Paris.jpg/960px-Plaque_Le_Grand_Assistant_Paris.jpg" alt="Le Grand Assistant">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Plaque_Le_Grand_Assistant_Paris.jpg/960px-Plaque_Le_Grand_Assistant_Paris.jpg" width="960" height="996" alt="Le Grand Assistant">
 <h2>Le Grand Assistant</h2>
 <div class="meta"><span>1967</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Benoît Prieur · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Plaque%20Le%20Grand%20Assistant%20Paris.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg/960px-Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg" alt="Der Assistent, Der Frosch, Die Schildkröte">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg/960px-Max_Ernst_Der_Assistent-Der_Frosch-Die_Schildkroete_1967.jpg" width="960" height="755" alt="Der Assistent, Der Frosch, Die Schildkröte">
 <h2>Der Assistent, Der Frosch, Die Schildkröte</h2>
 <div class="meta"><span>1967</span></div>
 
 <p class="work-attr">Photo: Rufus46
 Sculpture: Max Ernst · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Max%20Ernst%20Der%20Assistent-Der%20Frosch-Die%20Schildkroete%201967.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg/960px-D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg" alt="Habakuk, Kunsthalle Düsseldorf">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg/960px-D%C3%BCsseldorf_-_Grabbeplatz%2BKunsthalle_-_Habakuk_01_ies.jpg" width="960" height="640" alt="Habakuk, Kunsthalle Düsseldorf">
 <h2>Habakuk, Kunsthalle Düsseldorf</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Frank Vincentz · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:D%C3%BCsseldorf%20-%20Grabbeplatz%2BKunsthalle%20-%20Habakuk%2001%20ies.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg/960px-Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg" alt="Max Ernst Fountain, Brühl">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg/960px-Br%C3%BChl_Uhlstr._Max-Ernst-Brunnen.jpg" width="960" height="640" alt="Max Ernst Fountain, Brühl">
 <h2>Max Ernst Fountain, Brühl</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Erik Frohne · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Br%C3%BChl%20Uhlstr.%20Max-Ernst-Brunnen.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenbachhaus_-_M%C3%BCnchen_007.jpg/960px-Lenbachhaus_-_M%C3%BCnchen_007.jpg" alt="Sculpture by Max Ernst, Lenbachhaus, Munich">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenbachhaus_-_M%C3%BCnchen_007.jpg/960px-Lenbachhaus_-_M%C3%BCnchen_007.jpg" width="960" height="1440" alt="Sculpture by Max Ernst, Lenbachhaus, Munich">
 <h2>Sculpture by Max Ernst, Lenbachhaus, Munich</h2>
 <div class="meta"></div>
 

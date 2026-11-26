@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/salvador-dali/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Madrid_%2849191190833%29.jpg/1920px-Madrid_%2849191190833%29.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Salvador Domingo Felipe Jacinto Dalí i Domènech, Marquess of Dalí de Púbol, known as Salvador Dalí, was a Spanish surrealist artist renowned for his technical skill, precise draftsmanship, and the striking and bizarre images in his work.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=salvador-dali">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=salvador-dali">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Madrid_%2849191190833%29.jpg/960px-Madrid_%2849191190833%29.jpg" alt="Portrait of Luis Buñuel">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Madrid_%2849191190833%29.jpg/960px-Madrid_%2849191190833%29.jpg" width="960" height="640" alt="Portrait of Luis Buñuel">
 <h2>Portrait of Luis Buñuel</h2>
 <div class="meta"><span>1924</span><span>70 × 60 cm</span><span>Museo Nacional Centro de Arte Reina Sofía</span></div>
 
 <p class="work-attr">Jeremy Thompson from Los Angeles, California · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Madrid%20%2849191190833%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/El_gran_masturbador.jpg/960px-El_gran_masturbador.jpg" alt="The Great Masturbator">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/El_gran_masturbador.jpg/960px-El_gran_masturbador.jpg" width="960" height="720" alt="The Great Masturbator">
 <h2>The Great Masturbator</h2>
 <div class="meta"><span>1929</span><span>110 × 150 cm</span><span>Museo Nacional Centro de Arte Reina Sofía</span></div>
 <p>The Great Masturbator (1929) is a painting by Salvador Dalí, painted during the surrealist movement. It is currently displayed at the Museo Nacional Centro de Arte Reina Sofía, Madrid.</p><p class="fact">Dalí kept the painting in his personal collection, and displayed at the Dalí Theatre and Museum in Figueres. He bequeathed it to the national collection of Spain upon his death, when it was removed to the Madrid museum. <a href="https://en.wikipedia.org/wiki/The_Great_Masturbator#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The painting may represent Dalí&#x27;s severely conflicted attitudes towards sexual intercourse. In Dalí&#x27;s youth, his father had left out a book with explicit photos of people suffering advanced untreated venereal diseases to &quot;educate&quot; the boy. <a href="https://en.wikipedia.org/wiki/The_Great_Masturbator#Interpretation" target="_blank" rel="noopener">Interpretation →</a></p><p class="fact">In the centre of the painting there is a distorted human face in profile looking downwards, based on the shape of a natural rock formation at Cap de Creus along the sea-shore of Catalonia. A similar profile is seen in Dalí&#x27;s more famous painting from two years later, The Persistence of Memory. <a href="https://en.wikipedia.org/wiki/The_Great_Masturbator#Description" target="_blank" rel="noopener">Description →</a></p>
 <p class="work-attr">Wolf Gang · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:El%20gran%20masturbador.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg/960px-Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg" alt="The Spectre of Sex-Appeal">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg/960px-Salvador_Dali_-_Le_spectre_du_sex-appeal.jpg" width="960" height="1219" alt="The Spectre of Sex-Appeal">
 <h2>The Spectre of Sex-Appeal</h2>
 <div class="meta"><span>1934</span><span>18 × 14 cm</span><span>Gala-Salvador Dalí Foundation</span></div>
 
 <p class="work-attr">Salvador Dali · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Salvador%20Dali%20-%20Le%20spectre%20du%20sex-appeal.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lobster_Telephone_Photo.jpg/960px-Lobster_Telephone_Photo.jpg" alt="Lobster Telephone">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lobster_Telephone_Photo.jpg/960px-Lobster_Telephone_Photo.jpg" width="960" height="697" alt="Lobster Telephone">
 <h2>Lobster Telephone</h2>
 <div class="meta"><span>1936</span><span>Minneapolis Institute of Art</span></div>
 <p>Lobster Telephone is a Surrealist object, created by Salvador Dalí in 1936 for the English poet Edward James (1907 to 1984), a leading collector of surrealist art. In his 1942 book The Secret Life of Salvador Dalí, Dalí wrote teasingly of his demand to know why, when he asked for a grilled lobster in a restaurant, he was never presented with a boiled telephone.</p><p class="fact">The work is a composite of an ordinary working telephone and a lobster made of plaster. It is approximately 15 × 30 × 17 cm (6 × 12 × 6.6 inches) in size. <a href="https://en.wikipedia.org/wiki/Lobster_Telephone#Description" target="_blank" rel="noopener">Description →</a></p><p class="fact">Dalí produced four examples of the color version of his lobster telephone, currently displayed as part of the four following collections: Museum für Kommunikation Frankfurt, Germany National Gallery of Australia Tate Modern, London West Dean College, UK <a href="https://en.wikipedia.org/wiki/Lobster_Telephone#Present_locations" target="_blank" rel="noopener">Present locations →</a></p><p class="fact">Dalí also produced an off-white version of his telephone. The six examples are displayed as following: Salvador Dalí Museum in St. <a href="https://en.wikipedia.org/wiki/Lobster_Telephone#Off-white_versions" target="_blank" rel="noopener">Off-white versions →</a></p>
 <p class="work-attr">Nacaru · CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Lobster%20Telephone%20Photo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg/960px-Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg" alt="Mae West Lips Sofa">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg/960px-Salvador_dal%C3%AC%2C_divano_labbra_di_mae_west%2C_1938.jpg" width="960" height="614" alt="Mae West Lips Sofa">
 <h2>Mae West Lips Sofa</h2>
 <div class="meta"><span>1938</span><span>Museum Boijmans Van Beuningen</span></div>
 <p>The Mae West Lips Sofa is a surrealist sculpture in the form of a sofa by Salvador Dalí. The light red, 110 cm × 183 cm × 81.5 cm sized seating furniture made of polyurethane foam coated with a red polidur coating was shaped after the lips of actress Mae West, whom Dalí apparently found fascinating. Dalí never intended for the sofa to serve a functional use.</p>
 <p class="work-attr">Sailko · CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Salvador%20dal%C3%AC%2C%20divano%20labbra%20di%20mae%20west%2C%201938.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dal%C3%AD_en_el_palacio_de_BA_02.jpg/960px-Dal%C3%AD_en_el_palacio_de_BA_02.jpg" alt="The Face of War">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dal%C3%AD_en_el_palacio_de_BA_02.jpg/960px-Dal%C3%AD_en_el_palacio_de_BA_02.jpg" width="960" height="1280" alt="The Face of War">
 <h2>The Face of War</h2>
 <div class="meta"><span>1940</span><span>64 × 79 cm</span><span>Museum Boijmans Van Beuningen</span></div>
 <p>The Face of War is an oil painting by the Spanish surrealist Salvador Dalí, from 1940. It was painted during a brief period when the artist lived in California. The painting is owned by the Museum Boijmans Van Beuningen, in Rotterdam</p><p class="fact">The trauma and the view of war had often served as inspiration for Dalí&#x27;s work. He sometimes believed his artistic vision to be premonitions of war. <a href="https://en.wikipedia.org/wiki/The_Face_of_War#History_and_description" target="_blank" rel="noopener">History and description →</a></p>
 <p class="work-attr">Ferfive · CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Dal%C3%AD%20en%20el%20palacio%20de%20BA%2002.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pommard2.jpg/960px-Pommard2.jpg" alt="Saint-Georges et le Dragon de Salvador Dalí">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pommard2.jpg/960px-Pommard2.jpg" width="960" height="660" alt="Saint-Georges et le Dragon de Salvador Dalí">
 <h2>Saint-Georges et le Dragon de Salvador Dalí</h2>
 <div class="meta"><span>1984</span><span>Château de Pommard</span></div>
 
 <p class="work-attr">Jebulon · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Pommard2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Plaza_de_Dal%C3%AD.jpg/960px-Plaza_de_Dal%C3%AD.jpg" alt="Dolmen de Dalí">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Plaza_de_Dal%C3%AD.jpg/960px-Plaza_de_Dal%C3%AD.jpg" width="960" height="1440" alt="Dolmen de Dalí">
 <h2>Dolmen de Dalí</h2>
 <div class="meta"><span>1986</span></div>
 
 <p class="work-attr">Felipe Gabaldón · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Plaza%20de%20Dal%C3%AD.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Estacion_de_Oviedo._Acceso_superior.jpg/960px-Estacion_de_Oviedo._Acceso_superior.jpg" alt="Hombre sobre delfín">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Estacion_de_Oviedo._Acceso_superior.jpg/960px-Estacion_de_Oviedo._Acceso_superior.jpg" width="960" height="720" alt="Hombre sobre delfín">
 <h2>Hombre sobre delfín</h2>
 <div class="meta"></div>
 
 <p class="work-attr">AdelosRM · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Estacion%20de%20Oviedo.%20Acceso%20superior.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Dali_Sundial_in_Paris.jpg/960px-Dali_Sundial_in_Paris.jpg" alt="Sundial by Salvador Dalí, Paris">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Dali_Sundial_in_Paris.jpg/960px-Dali_Sundial_in_Paris.jpg" width="960" height="715" alt="Sundial by Salvador Dalí, Paris">
 <h2>Sundial by Salvador Dalí, Paris</h2>
 <div class="meta"></div>
 
