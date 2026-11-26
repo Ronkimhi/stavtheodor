@@ -140,7 +140,17 @@
     function crossfade() { if (state !== 'wait') { return; } finish(0.6); }
 
     /* ---- the gate: after photo decoded, WebGL ready, line 1 read ---- */
-    var decoded = (imgA.decode ? imgA.decode() : new Promise(function (res, rej) { whenLoaded(imgA, res); imgA.addEventListener('error', rej, { once: true }); }))
+    /* the after photo is requested only once the before photo is in (the inline script after #ph-stage, P.after):
+       nothing about it is read before then (an <img> with no source yet decodes to an error at once) */
+    var asked = new Promise(function (res) { if (P.aWhy || !P.after) { res(); } else { (P.aGo = P.aGo || []).push(res); } });
+    var decoded = asked.then(function () {
+      return new Promise(function (res, rej) {
+        if (ok(imgA)) { res(); return; }
+        if (imgA.complete && imgA.currentSrc) { rej(new Error('after photo')); return; }
+        imgA.addEventListener('load', function () { res(); }, { once: true });
+        imgA.addEventListener('error', function () { rej(new Error('after photo')); }, { once: true });
+      });
+    }).then(function () { return imgA.decode ? imgA.decode() : null; })
       .catch(function () { return ok(imgA) ? null : Promise.reject(new Error('after photo')); })
       .then(function () { afterOk = dbg.after = afterDone = true; dbg.afterAt = now(); return imgA; },
             function (e) { afterDone = true; throw e; });

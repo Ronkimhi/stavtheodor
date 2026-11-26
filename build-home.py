@@ -66,23 +66,26 @@ def has_hi(before, after):
     return all(os.path.isfile(sc.rel('images', 'home2', hi_name(n))) for n in (before, after))
 
 
-def preload(before, after):
+def preload(before, after, phone=False):
     """The opening's first texture pair, fetched with high priority (speed pass, 2026-09-26): the
     homepage's p3, or a variant's first room. The paths are under /images/home2/, as in PAIRS. A room
     with 2400 px twins gets two pairs of links with opposite media queries (HI_MQ), so each screen
     preloads only the size js/home-opening.js will draw. The before image is fetched with high priority and the after
     image with low (2026-11-26): the entrance starts painting once the before image is in, and the after image is
-    first drawn at the wall stroke, about four seconds later, so the before image gets the bandwidth first."""
+    first drawn at the wall stroke, about four seconds later, so the before image gets the bandwidth first.
+    phone (a page with the phone opening, wave 3, 2026-11-26): the after link also leaves out the phone (PHONE_MQ),
+    where the stage's inline script requests the after photo only once the before photo is in, so the before photo
+    is the only image in flight there; every other screen keeps the link it had (the media query only adds the
+    phone exclusion, Media Queries 4 grammar as HI_MQ itself)."""
     link = lambda n, pr, media='': (f'<link rel="preload" as="image" href="/images/home2/{n}" type="image/webp"'
                                     f'{media} fetchpriority="{pr}">\n')
+    no_phone = f'not ({PHONE_MQ})'
     if not has_hi(before, after):
-        return link(before, 'high') + link(after, 'low')
+        return link(before, 'high') + link(after, 'low', f' media="{H.escape(no_phone, quote=True)}"' if phone else '')
     big, small = f' media="{H.escape(HI_MQ, quote=True)}"', f' media="{H.escape("not (" + HI_MQ + ")", quote=True)}"'
-    return (link(before, 'high', small) + link(after, 'low', small)
+    small_after = f' media="{H.escape(f"(not ({HI_MQ})) and ({no_phone})", quote=True)}"' if phone else small
+    return (link(before, 'high', small) + link(after, 'low', small_after)
             + link(hi_name(before), 'high', big) + link(hi_name(after), 'low', big))
-
-
-PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 
 # The opening's four scripts (2026-11-26): GSAP, ScrollTrigger, SplitText and js/home-opening.js are preloaded from
 # <head>, so they download beside the stylesheet instead of when the parser reaches the end of the body. The tags
@@ -90,12 +93,21 @@ PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp')
 # so the preload and the tag always name the same URL and the file is fetched once.
 OPENING_JS = ('/js/vendor/gsap.min.js', '/js/vendor/ScrollTrigger.min.js', '/js/vendor/SplitText.min.js', '/js/home-opening.js')
 _TAGS = re.findall(r'<script src="(/js/[^"]+)" defer></script>', open(TEMPLATE, encoding='utf-8').read())
-SCRIPT_PRELOAD = ''
+# On a page with the phone opening (wave 3, 2026-11-26) the four links leave out the phone (PHONE_MQ, below): there the
+# deferred tags fetch them when the parser reaches them, at the low priority of a deferred script, so the before photo
+# (the first paint's picture, high priority) is not sharing the line with about 170 KB of script it does not need
+# until the stroke is over. Every other screen keeps the links exactly as they were.
+SCRIPT_SRCS = []
 for _js in OPENING_JS:
     _src = [t for t in _TAGS if t.split('?', 1)[0] == _js]
     if len(_src) != 1:
         raise SystemExit(f'templates/home.html: expected one deferred <script> for {_js}, found {len(_src)}')
-    SCRIPT_PRELOAD += f'<link rel="preload" as="script" href="{H.escape(_src[0], quote=True)}">\n'
+    SCRIPT_SRCS.append(_src[0])
+
+
+def script_preload(phone=False):
+    media = f' media="{H.escape(f"not ({PHONE_MQ})", quote=True)}"' if phone else ''
+    return ''.join(f'<link rel="preload" as="script" href="{H.escape(src, quote=True)}"{media}>\n' for src in SCRIPT_SRCS)
 
 # Speculation rules, the homepage only (2026-11-26): a same-origin page link is prefetched (the document only, never
 # prerendered, so none of its scripts run and no analytics hit is sent) once the visitor hovers it for a moment or
@@ -183,9 +195,14 @@ HOME_ONLY = {'hero_write', 'home_above_contact', 'phone_open'}
 # exactly the screens that show it (the same URLs as the opening's own preload links, so nothing is fetched twice).
 _PH = open(TEMPLATE, encoding='utf-8').read()
 _PH_MQ = re.findall(r"var PHONE_MQ = '([^']+)';", _PH)
-_PH_SRC = re.findall(r'<source media="([^"]+)" srcset="/images/home2/pairs/p3_(?:before|after)\.webp"', _PH)
-if len(_PH_MQ) != 1 or len(_PH_SRC) != 2 or any(m != _PH_MQ[0] for m in _PH_SRC):
-    raise SystemExit(f'templates/home.html: PHONE_MQ {_PH_MQ} and the #ph-stage <source> media {_PH_SRC} must be one string')
+# The after photo's <source> carries data-srcset (wave 3): the inline script after the stage sets it once the before photo is in.
+_PH_SRC = re.findall(r'<source media="([^"]+)" (srcset|data-srcset)="/images/home2/pairs/p3_(before|after)\.webp"', _PH)
+if (len(_PH_MQ) != 1 or [(k, w) for _, k, w in _PH_SRC] != [('srcset', 'before'), ('data-srcset', 'after')]
+        or any(m != _PH_MQ[0] for m, _, _ in _PH_SRC)):
+    raise SystemExit(f'templates/home.html: PHONE_MQ {_PH_MQ} and the #ph-stage <source> media {_PH_SRC} must be one string '
+                     '(the before photo with srcset, the after photo with data-srcset)')
+PHONE_MQ = _PH_MQ[0]
+PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp', phone=True)
 # The buyer variants that carry the contact card as a section of its own, after #faq and above the footer's closing block
 # (sc.inline_form_section(), 2026-11-02). The homepage has its card in the footer, so the slot is empty there and on every
 # other variant. The content pages that carry it are in build-site-pages.py (INLINE_FORM_PAGES).
@@ -567,7 +584,7 @@ def render_home(pages, posts, faq, v=None, variants=()):
     rooms = (v or {}).get('rooms')
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
-                   noindex=False, extra=SCRIPT_PRELOAD + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD) + ('' if v else SPECULATION_RULES))
+                   noindex=False, extra=script_preload(phone=v is None) + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD if v is None else preload('pairs/p3_before.webp', 'pairs/p3_after.webp')) + ('' if v else SPECULATION_RULES))
     return sc.undash_html(head + body)  # the shared dash sanitizer (site_chrome), before the checks in page_problems
 
 

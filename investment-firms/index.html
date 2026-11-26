@@ -431,8 +431,10 @@
   <script>
   /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
      high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
-     fetches this 1800 px copy as well. The boot script above has already set body.gl. */
-  (function () { if (document.body.classList.contains('gl')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. Under html.open2 (the phone
+     opening) the stage is the first view and this figure is hidden, so it stays lazy there too: the after photo
+     waits for the before photo (wave 3). */
+  (function () { if (document.body.classList.contains('gl') || document.documentElement.classList.contains('open2')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
   </script>
   <div class="hero-ui">
     <p class="line" id="l1"><span data-l="en" lang="en">A decisive space.</span><span data-l="he" lang="he" dir="rtl">חלל החלטי.</span></p>

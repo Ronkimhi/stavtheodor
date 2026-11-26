@@ -68,7 +68,7 @@
       else if (a) { a.addEventListener('load', end, { once: true }); }
       if (P.boot) { var f = P.boot; P.boot = null; f(); }
     };
-    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126d'; s.async = true;
+    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126e'; s.async = true;
     s.onerror = function () { if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', P.fail); } else { P.fail(); } };
     document.head.appendChild(s);
   } catch (e) {}
@@ -76,10 +76,37 @@
 </script>
 <div class="ph-stage" id="ph-stage" aria-hidden="true"><div class="ph-room" style="--fx:63%;--fy:40%">
   <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" srcset="/images/home2/pairs/p3_before.webp" type="image/webp"><img class="ph-b" width="1800" height="1200" alt="" fetchpriority="high" decoding="async" elementtiming="ph-before" data-src="/images/home2/pairs/p3_before.webp"></picture>
-  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" srcset="/images/home2/pairs/p3_after.webp" type="image/webp"><img class="ph-a" width="1800" height="1200" alt="" fetchpriority="low" decoding="async" data-src="/images/home2/pairs/p3_after.webp"></picture>
+  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" data-srcset="/images/home2/pairs/p3_after.webp" type="image/webp"><img class="ph-a" width="1800" height="1200" alt="" fetchpriority="low" decoding="async" data-src="/images/home2/pairs/p3_after.webp"></picture>
 </div><div class="ph-scrim"></div></div>
-<script>(function () { var P = window.THEODORA_PHONE, im = P && P.src ? document.querySelectorAll('#ph-stage img[data-src]') : [];
-  for (var i = 0; i < im.length; i++) { im[i].src = im[i].getAttribute('data-src'); } })();</script><!--/variant:phone_open-->
+<script>
+/* The before photo first (2026-11-26, wave 3): on a phone it is the first paint's picture and the LCP, so it is the
+   only image in flight until it is in. The after photo's <source> carries data-srcset, so nothing fetches it from the
+   markup; it is requested here once the before photo has loaded (or failed, or was in already), or AFTER_WAIT ms
+   after this point if the before photo is still not in (a stalled request never holds the after photo back for
+   good; the 8 s watchdogs in js/home-opening-phone.js and js/home-opening.js still apply). P.aWhy says which,
+   P.aGo runs the waiters (js/home-opening-phone.js decodes the after photo only once it was asked for).
+   src: the <source> media does not match (?open=2 on a wider screen), so the photos are set from data-src. */
+(function () {
+  var P = window.THEODORA_PHONE, st = document.getElementById('ph-stage');
+  if (!P || !st) { return; }
+  var AFTER_WAIT = 4000;
+  P.aT0 = performance.now();
+  var b = st.querySelector('.ph-b'), a = st.querySelector('.ph-a'), s = a && a.parentNode.querySelector('source[data-srcset]'), t = 0;
+  if (P.src && b) { b.src = b.getAttribute('data-src'); }
+  function go(why) {
+    if (P.aWhy || !a) { return; }
+    P.aWhy = why; P.aAt = performance.now(); clearTimeout(t);
+    if (s) { s.srcset = s.getAttribute('data-srcset'); }
+    if (P.src) { a.src = a.getAttribute('data-src'); }
+    var w = P.aGo || []; P.aGo = null; for (var i = 0; i < w.length; i++) { w[i](); }
+  }
+  P.after = go;
+  if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
+  b.addEventListener('load', function () { go('load'); }, { once: true });
+  b.addEventListener('error', function () { go('error'); }, { once: true });
+  t = setTimeout(function () { go('timer'); }, AFTER_WAIT);
+})();
+</script><!--/variant:phone_open-->
 
 <section class="hero" id="hero" aria-label="Opening">
   <!--variant:room_fig_0--><figure class="sfig static-only" style="--fx:63%;--fy:40%">
@@ -89,8 +116,10 @@
   <script>
   /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
      high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
-     fetches this 1800 px copy as well. The boot script above has already set body.gl. */
-  (function () { if (document.body.classList.contains('gl')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. Under html.open2 (the phone
+     opening) the stage is the first view and this figure is hidden, so it stays lazy there too: the after photo
+     waits for the before photo (wave 3). */
+  (function () { if (document.body.classList.contains('gl') || document.documentElement.classList.contains('open2')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
   </script>
   <div class="hero-ui">
     <p class="line" id="l1"><!--variant:hero_l1--><span data-l="en">A beautiful room.</span><span data-l="he" dir="rtl">חדר יפה.</span><!--/variant:hero_l1--></p>
