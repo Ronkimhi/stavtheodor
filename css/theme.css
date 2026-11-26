@@ -536,21 +536,21 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
-  /* The header's Write to Stav: the full label from 1100px; from 901 to 1099px the compact label (Write / כתבו, the full one
-     kept as the accessible name), where it fits the one-line bar; the phone menu carries the full label up to 900px. */
+  /* The header's Write to Stav: the full label from 1024px; from 901 to 1023px the compact label (Write / כתבו, the full one
+     kept as the accessible name), shown in both languages, where it fits the one-line bar; the phone menu carries the full
+     label up to 900px. */
   .nav-write .wshort { display: none; }
   .nav .nav-write-bar { display: none; pointer-events: auto; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; white-space: nowrap; }
   .nav-write-bar .wshort { display: inline; }
   .nav-write-bar .wshort [data-l="he"], .nav-write .wshort [data-l="he"] { font-size: 16px; }
-  @media (min-width: 901px) and (max-width: 1099px) {
+  @media (min-width: 901px) and (max-width: 1023px) {
     .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
     .nav .nav-write .wshort { display: inline; }
   }
-  @media (min-width: 901px) and (max-width: 979px) { body.lang-en .nav .nav-write { display: none; } }  /* English shows the compact label from 980px, clear of the wordmark; Hebrew from 901px */
   /* Drawn as the bar's one outlined control (the art director's gate, 2026-11-15): a hairline box, brighter on hover, from
-     1040px, where the boxed label still leaves the bar one line in both languages (below that the compact label stays
-     plain). line-height 1 keeps the box inside the bar's height. */
-  @media (min-width: 1040px) {
+     901px, around the compact label up to 1023px and the full label from 1024px, so it stands out from the nav links at
+     every bar width and the bar stays one line in both languages. line-height 1 keeps the box inside the bar's height. */
+  @media (min-width: 901px) {
     .nav .nav-write { border: 1px solid rgba(242,240,236,0.36); padding: 8px 14px; margin-inline-start: 6px; line-height: 1; transition: border-color .25s; }
     .nav .nav-write:hover, .nav .nav-write:focus-visible { border-color: #F2F0EC; }
   }  /* English needs 920px for the compact label; Hebrew fits from 901px */
