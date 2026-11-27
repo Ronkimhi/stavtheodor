@@ -283,6 +283,9 @@ curl -sk --resolve stavtheodor.com:443:185.199.108.153 https://stavtheodor.com/r
    - A thin opening line (under 40 characters, a greeting, a credit) is never the card teaser: the build picks one
    - Each event in "about" with no startDate: its opening date from the venue's own page under posts.<slug>.events
      (start_date, start_date_source); null when the venue page states none. Never in Stav's text, never a guess
+   - Every new post gets a topic and a bridge (posts.<slug>.bridge: a target page picked for search fit, and line_en
+     and line_he written in Stav's first person, outside her post text) in the same PR or the next one. A late post
+     (dated 14 or more days before it goes up) gets a bridge to a page no other post bridges to
 4. python3 build.py
 5. Update llms.txt and answers.md (real /radar/slug/ URL, not #slug anchor)
 6. git remote -v  →  confirm origin = Ronkimhi/stavtheodor.git
