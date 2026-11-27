@@ -33,10 +33,15 @@
   var RATE = 1.1;          /* the segment plays at 1.1x the unslowed timeline (2.53 s to unlock); the desktop runs at 1/1.3 */
   var WATCHDOG = 8000;     /* as in js/home-opening.js: an after photo not in by then counts as failed */
   var LOCK_MAX = 4000;     /* the stroke holds the page about 2.5 s; whatever happens, never longer than this */
-  var SEED = 3.7;          /* PAIRS[0].seed in js/home-opening.js (room p3) */
-  var LAND = { w: 1800, h: 1200, rect: [0.554, 0.139, 0.709, 0.515], fx: 0.63, fy: 0.40, from: 'right' }; /* PAIRS[0].land */
-  var FIRST = ['pairs/p3_before.webp', 'pairs/p3_after.webp'];  /* PAIRS[0]: the 1800 px files (a coarse pointer never takes HI_MQ) */
-  var NEXT = ['pairs/p4_before.webp', 'pairs/p4_after.webp'];   /* PAIRS[1], loaded as loadNext does */
+  /* the page's own rooms (wave 3): P.room is the slot 0 room js/home-opening.js will draw (the homepage's p3, or a buyer
+     page's own first room: its files, w, h, rect, fx, fy, from, seed and caption key), P.next its slot 1 (null for a page
+     with one room). build-home.py renders both from the same rooms as window.THEODORA_ROOMS and checks the built page. */
+  var ROOM = P.room, NX = P.next;
+  if (!ROOM || !ROOM.b || !ROOM.a || !ROOM.rect) { if (P.fail) { P.fail(); } return; }
+  var SEED = ROOM.seed;    /* PAIRS[0].seed */
+  var LAND = ROOM;         /* PAIRS[0].land: w, h, rect, fx, fy, from */
+  var FIRST = [ROOM.b, ROOM.a];        /* PAIRS[0]: the 1800 px files (a coarse pointer never takes HI_MQ) */
+  var NEXT = NX ? [NX.b, NX.a] : [];   /* PAIRS[1], loaded as loadNext does */
   var R = document.documentElement, dbg = P.dbg = { state: 'boot' };
   var clamp = function (x, a, b) { return Math.min(b, Math.max(a, x)); };
   var now = function () { return performance.now(); };
@@ -82,7 +87,7 @@
       el.style.opacity = op;
     }
     /* the caption names the art: only ever with the after photo on screen */
-    function capOn() { if (!cap || !ok(imgA) || P.noAfter) { return; } cap.setAttribute('data-show', 'p3'); fade(cap, 1, 0.2); }
+    function capOn() { if (!cap || !ok(imgA) || P.noAfter) { return; } cap.setAttribute('data-show', ROOM.cap || 'p3'); fade(cap, 1, 0.2); }
     function scrim(v) { if (scrimEl) { scrimEl.style.transition = 'none'; scrimEl.style.opacity = v; } }
     function finish(d, quick, missing) {
       if (state === 'end') { return; }

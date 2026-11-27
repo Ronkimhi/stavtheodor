@@ -188,21 +188,20 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
 # block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
-# phone_open: the phone opening v2 prototype (2026-11-26, js/home-opening-phone.js): homepage only, its rooms are the homepage's.
-HOME_ONLY = {'hero_write', 'home_above_contact', 'phone_open'}
+HOME_ONLY = {'hero_write', 'home_above_contact'}
+# phone_open (wave 3, 2026-11-26): on every page with the opening, the buyer pages included, each with its own first room
+# (PH_DATA and PH_STAGE, rendered by ph_data() and ph_stage() from the same rooms as window.THEODORA_ROOMS; stage_problems()
+# reads both back from the built page and stops the build if they disagree).
+PAGE_REGIONS = {'phone_open'}
 # The phone test and the stage's photos must agree (2026-11-26): the inline boot in the phone_open region tests PHONE_MQ,
 # and both <source> elements in #ph-stage carry that same string as their media, so the stage fetches its two photos on
 # exactly the screens that show it (the same URLs as the opening's own preload links, so nothing is fetched twice).
 _PH = open(TEMPLATE, encoding='utf-8').read()
 _PH_MQ = re.findall(r"var PHONE_MQ = '([^']+)';", _PH)
-# The after photo's <source> carries data-srcset (wave 3): the inline script after the stage sets it once the before photo is in.
-_PH_SRC = re.findall(r'<source media="([^"]+)" (srcset|data-srcset)="/images/home2/pairs/p3_(before|after)\.webp"', _PH)
-if (len(_PH_MQ) != 1 or [(k, w) for _, k, w in _PH_SRC] != [('srcset', 'before'), ('data-srcset', 'after')]
-        or any(m != _PH_MQ[0] for m, _, _ in _PH_SRC)):
-    raise SystemExit(f'templates/home.html: PHONE_MQ {_PH_MQ} and the #ph-stage <source> media {_PH_SRC} must be one string '
-                     '(the before photo with srcset, the after photo with data-srcset)')
+# The stage itself is rendered by ph_stage() with PHONE_MQ as both media (wave 3), and stage_problems() checks the page.
+if len(_PH_MQ) != 1 or '{{PH_STAGE}}' not in _PH or '{{PH_DATA}}' not in _PH:
+    raise SystemExit(f'templates/home.html: one PHONE_MQ ({_PH_MQ}), one {{{{PH_DATA}}}} and one {{{{PH_STAGE}}}} in the phone_open region')
 PHONE_MQ = _PH_MQ[0]
-PRELOAD = preload('pairs/p3_before.webp', 'pairs/p3_after.webp', phone=True)
 # The buyer variants that carry the contact card as a section of its own, after #faq and above the footer's closing block
 # (sc.inline_form_section(), 2026-11-02). The homepage has its card in the footer, so the slot is empty there and on every
 # other variant. The content pages that carry it are in build-site-pages.py (INLINE_FORM_PAGES).
@@ -223,6 +222,13 @@ if not HOME_ROOMS:
     raise SystemExit('js/home-opening.js: no rooms read from PAIRS (did its format change?)')
 ROOM_REGIONS = {f'room_{kind}_{i}' for kind in ('fig', 'cap') for i in range(len(HOME_ROOMS))} | {'rooms_js'}
 ROOM_KEYS = ('b', 'a', 'w', 'h', 'rect', 'fx', 'fy', 'from')  # what js/home-opening.js takes from a room, plus seed
+# PAIRS whole (wave 3, 2026-11-26): every room's cap key, seed and land fields, read from js/home-opening.js itself, so the
+# phone stage below and the WebGL opening draw from one source (each PAIRS line is a JS object literal, read as JSON).
+_PAIRS = re.search(r'\n  var PAIRS = \[\n(.*?)\n  \];', open(sc.rel('js', 'home-opening.js'), encoding='utf-8').read(), re.S)
+HOME_PAIRS = [json.loads(re.sub(r"([{,]\s*)([A-Za-z_]\w*)\s*:", r'\1"\2":', ln.strip().rstrip(',')).replace("'", '"'))
+              for ln in (_PAIRS.group(1).split('\n') if _PAIRS else []) if ln.strip()]
+if [(p['cap'], p['land']['b'], p['land']['a']) for p in HOME_PAIRS] != HOME_ROOMS:
+    raise SystemExit('js/home-opening.js: PAIRS could not be read whole (did its format change?)')
 
 
 def load_pages():
@@ -372,6 +378,89 @@ def room_region(name, inner, rooms, drop=False):
         if n != 1:
             raise SystemExit(f'templates/home.html: the static figure in {name} no longer matches {pattern}')
     return inner
+
+
+def opening_rooms(rooms, only):
+    """The rooms js/home-opening.js draws on a page, in slot order: PAIRS, each slot a variant replaces taking that room's
+    land fields and, when it has one, its seed (THEODORA_ROOMS), cut after the variant's last room with rooms_rest "drop"
+    (THEODORA_ROOMS_ONLY). The same merge as the script's; rooms are as the page writes them (num())."""
+    out = [dict({k: p['land'][k] for k in ROOM_KEYS}, seed=p['seed'], cap=p['cap']) for p in HOME_PAIRS]
+    for i, r in enumerate(rooms or []):
+        out[r.get('slot', i)].update({k: r[k] for k in ROOM_KEYS})
+        if isinstance(r.get('seed'), (int, float)) and not isinstance(r.get('seed'), bool):
+            out[r.get('slot', i)]['seed'] = r['seed']
+    if only and rooms:
+        del out[len(rooms):]
+    return out
+
+
+def page_rooms(v):
+    rooms = (v or {}).get('rooms') or []
+    data = [{'slot': i, **{k: num(r[k]) for k in ROOM_KEYS + ('seed',) if k in r}} for i, r in enumerate(rooms)]
+    return opening_rooms(data, bool(rooms) and (v or {}).get('rooms_rest', 'drop') == 'drop')
+
+
+def ph_pos(room):
+    """The stage's object-position for the room's photo in the phone's 3:2 room box, the same crop as coverUV in the shaders
+    (the focal point centred, clamped to the photo): a 3:2 photo is never cropped, and keeps its own fx and fy."""
+    ia, box = room['w'] / room['h'], 1.5
+    fx, fy = room['fx'], room['fy']
+    if abs(ia - box) > 1e-6:
+        if ia > box:
+            ur = box / ia
+            fx = min(max(fx - ur / 2, 0), 1 - ur) / (1 - ur)
+        else:
+            vr = ia / box
+            fy = min(max(fy - vr / 2, 0), 1 - vr) / (1 - vr)
+    return pct(fx), pct(fy)
+
+
+def ph_stage(room):
+    """#ph-stage for the page's first room (wave 3: every page with the opening, the buyer pages included). Both <source>
+    media are PHONE_MQ, so the photos load only where the stage is shown; the after photo's source carries data-srcset
+    (the inline script after the stage sets it once the before photo is in)."""
+    mq = H.escape(PHONE_MQ, quote=True)
+    b, a = (H.escape('/images/home2/' + room[k], quote=True) for k in ('b', 'a'))
+    fx, fy = ph_pos(room)
+    wh = f'width="{room["w"]}" height="{room["h"]}"'
+    return (f'<div class="ph-stage" id="ph-stage" aria-hidden="true"><div class="ph-room" style="--fx:{fx};--fy:{fy}">\n'
+            f'  <picture><source media="{mq}" srcset="{b}" type="image/webp"><img class="ph-b" {wh} alt="" fetchpriority="high" decoding="async" elementtiming="ph-before" data-src="{b}"></picture>\n'
+            f'  <picture><source media="{mq}" data-srcset="{a}" type="image/webp"><img class="ph-a" {wh} alt="" fetchpriority="low" decoding="async" data-src="{a}"></picture>\n'
+            '</div><div class="ph-scrim"></div></div>')
+
+
+def ph_data(v):
+    """THEODORA_PHONE.room and .next for js/home-opening-phone.js: the page's slot 0 (the stroke's room, seed and caption key)
+    and slot 1 (the next room, loaded as loadNext does), or null for a page with one room."""
+    rooms = page_rooms(v)
+    nxt = {k: rooms[1][k] for k in ('b', 'a')} if len(rooms) > 1 else None
+    return json.dumps({'room': rooms[0], 'next': nxt}, separators=(',', ':')).replace('</', '<\\/')
+
+
+def stage_problems(out, name):
+    """One source of truth (wave 3): the phone stage of a built page must name exactly the room its WebGL opening starts
+    with. Read back from the page itself: THEODORA_PHONE's room and next, the #ph-stage markup, and window.THEODORA_ROOMS
+    merged into PAIRS as js/home-opening.js merges them."""
+    problems = []
+    m = re.search(r'var PH = (\{.*?\}); /\* ph_data \*/', out)
+    if not m:
+        return [f'{name}: no phone stage data (var PH ... /* ph_data */)']
+    ph = json.loads(m.group(1))
+    tr = re.search(r'<script>window\.THEODORA_ROOMS = (\[.*?\]);( window\.THEODORA_ROOMS_ONLY = true;)?</script>', out)
+    want = opening_rooms(json.loads(tr.group(1)) if tr else [], bool(tr and tr.group(2)))
+    if ph['room'] != want[0]:
+        problems.append(f'{name}: the phone stage room {ph["room"]} is not the WebGL slot 0 room {want[0]}')
+    if ph['next'] != ({k: want[1][k] for k in ('b', 'a')} if len(want) > 1 else None):
+        problems.append(f'{name}: the phone stage next room {ph["next"]} is not the WebGL slot 1 room')
+    st = re.search(r'<div class="ph-stage" id="ph-stage".*?<div class="ph-scrim"></div></div>', out, re.S)
+    if not st or st.group(0) != ph_stage(ph['room']):
+        problems.append(f'{name}: #ph-stage does not show the phone stage room {ph["room"]["b"]}')
+    elif out.count('id="ph-stage"') != 1:
+        problems.append(f'{name}: more than one #ph-stage')
+    for src in re.findall(r'<source media="([^"]+)" (?:data-)?srcset=', st.group(0) if st else ''):
+        if H.unescape(src) != PHONE_MQ:
+            problems.append(f'{name}: a #ph-stage <source> media is not PHONE_MQ')
+    return problems
 
 
 def guide(v):
@@ -540,7 +629,7 @@ def fill_regions(body, v, pages=None):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS | HOME_ONLY and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS | HOME_ONLY | PAGE_REGIONS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
     for name, inner in leaked:
         assert inner not in body, f"content/variants/{v['id']}.json: the homepage-only {name} slot leaked into the variant page"
@@ -569,6 +658,8 @@ def render_home(pages, posts, faq, v=None, variants=()):
         # the reviews (2026-10-24) sit inside the homepage-only home_above_contact slot: filled the same for every page, so
         # the HOME_ONLY leak check compares the full bytes, and every variant drops them with the slot
         'REVIEWS': sc.reviews_block(),
+        'PH_DATA': ph_data(v),
+        'PH_STAGE': ph_stage(page_rooms(v)[0]),
     }
     body = tmpl
     for k, val in fills.items():
@@ -581,10 +672,10 @@ def render_home(pages, posts, faq, v=None, variants=()):
     url = f"{SITE}/{v['path']}/" if v else SITE + '/'  # a variant is its own canonical, indexable since 2026-09-28
     # a variant may bring its own preview image (head.og_image, 1200 by 630) and its own first room
     og_image, og_alt = (SITE + meta['og_image'], meta['og_image_alt']) if meta.get('og_image') else (OG_IMAGE, OG_IMAGE_ALT)
-    rooms = (v or {}).get('rooms')
+    rooms = page_rooms(v)  # slot 0 is the first pair either way: the variant's own first room, or the homepage's p3
     head = sc.head(meta['title'], meta['description'], url, og_title=meta['og_title'], og_desc=meta['og_description'],
                    og_image=og_image, og_card_dims=True, og_image_alt=og_alt, lang='en', ld=[sc.faq_schema(questions)] + (variant_schema(v, url, meta) if v else []),
-                   noindex=False, extra=script_preload(phone=v is None) + (preload(rooms[0]['b'], rooms[0]['a']) if rooms else PRELOAD if v is None else preload('pairs/p3_before.webp', 'pairs/p3_after.webp')) + ('' if v else SPECULATION_RULES))
+                   noindex=False, extra=script_preload(phone=True) + preload(rooms[0]['b'], rooms[0]['a'], phone=True) + ('' if v else SPECULATION_RULES))
     return sc.undash_html(head + body)  # the shared dash sanitizer (site_chrome), before the checks in page_problems
 
 
@@ -614,7 +705,7 @@ def section(page, sid):
 def page_problems(out, name, home=None):
     """What stops a page from being written. With home (the rendered homepage), out is a variant:
     it must also be indexable (since 2026-09-28) and carry the shared sections exactly as the homepage does."""
-    problems = []
+    problems = stage_problems(out, name)
     if sc.dash_leftovers(out):
         problems.append(f'em or en dash in {name}: {sc.dash_leftovers(out)[:2]!r}')
     en, he = out.count('data-l="en"'), out.count('data-l="he"')
