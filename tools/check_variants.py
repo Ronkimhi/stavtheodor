@@ -22,7 +22,9 @@ The fields and limits are documented in content/VARIANT-SPEC.md. The checks:
   g  lengths, per field (content/VARIANT-SPEC.md)
   h  HTML only in what_i_do.p1 and p2 (a, em, strong); links go to existing pages or homepage
      anchors, the same set in both languages; no mailto, no link to the variant itself (links to the other
-     buyer pages are welcome since 2026-09-29, Ron's SEO brief P1.5)
+     buyer pages are welcome since 2026-09-29, Ron's SEO brief P1.5). A FAQ answer (faq[i].a_en, a_he) may
+     carry <a href="/..."> and nothing else: site-relative links to existing pages only (no other tag, no
+     attribute but href, no external, protocol-relative, #anchor or mailto href), the same set in both languages
   i  five to seven questions after resolving {"home": "<q_en>"}; each under 110 characters and
      ending in "?", English answers of 40 to 90 words, Hebrew ones at least 0.6 of that, no repeats
   j  advisory_rows (optional): three to eight different content/pages paths or hubs, all built
@@ -119,6 +121,7 @@ OBJECTS = {'head', 'hero', 'intro', 'what_i_do', 'advisory', 'service', 'guide'}
 LISTS = {'services', 'value_strip', 'faq', 'advisory_rows', 'rooms', 'area_served', 'guides'}
 NUMBERS = {'w', 'h', 'rect', 'fx', 'fy', 'seed'}  # the rooms' fields that are not strings (checked under l)
 HTML_FIELDS = {'what_i_do.p1_en', 'what_i_do.p1_he', 'what_i_do.p2_en', 'what_i_do.p2_he'}
+FAQ_ANSWER = re.compile(r'^faq\[(\d+)\]\.a_(en|he)$')  # a variant's own FAQ answers: <a href="/..."> only (h)
 GUIDE_FIELDS = {'guide.body_en', 'guide.body_he'}  # the long section: a reading column's tags too
 GUIDE_TAGS = ('a', 'em', 'strong', 'p', 'h3', 'ul', 'ol', 'li')
 AREAS = ('New York City', 'New Jersey')  # never Tel Aviv in an areaServed (Ron's SEO brief, 2026-09-29)
@@ -300,8 +303,9 @@ def link_problems(label, href, variant_paths):
     return []
 
 
-def html_problems(label, s, variant_paths, allowed=('a', 'em', 'strong')):
-    """what_i_do.p1 and p2: a, em and strong only (guide.body: GUIDE_TAGS), balanced, links checked. Returns (problems, hrefs)."""
+def html_problems(label, s, variant_paths, allowed=('a', 'em', 'strong'), relative_only=False):
+    """what_i_do.p1 and p2: a, em and strong only (guide.body: GUIDE_TAGS; a FAQ answer: a only, relative_only), balanced,
+    links checked. relative_only: every href is a site path ("/..."), never "//", "#", mailto or another site. Returns (problems, hrefs)."""
     problems, hrefs, depth = [], [], {}
     for close, name, attrs in TAG.findall(s):
         name = name.lower()
@@ -318,6 +322,9 @@ def html_problems(label, s, variant_paths, allowed=('a', 'em', 'strong')):
             problems.append(f'{label}: <a{attrs}> must carry exactly one href="..." and nothing else')
             continue
         hrefs.append(m.group(1))
+        if relative_only and (not m.group(1).startswith('/') or m.group(1).startswith('//')):
+            problems.append(f'{label}: {m.group(1) or "an empty href"} is not a site-relative link; a FAQ answer links only to a page on this site, like /advisory/')
+            continue
         problems += link_problems(label, m.group(1), variant_paths)
     if any(depth.values()):
         problems.append(f'{label}: unbalanced tags {sorted(k for k, n in depth.items() if n)}')
@@ -629,13 +636,19 @@ def check(path, v, peers):
             bad = fee_violation(s)
             if bad:
                 fails.append(f'{label}: a fee or $ figure ({bad!r}); no dollar figures, and no percentage in a sentence about fees (Ron 2026-09-29, tools/fee_gate.py, content/BRIEF.md section 5)')
-        # h: HTML only in the two paragraphs
+        # h: HTML only in the two paragraphs and the long section; links only in FAQ answers
         if label in HTML_FIELDS | GUIDE_FIELDS:
             problems, found = html_problems(label, s, variant_paths, GUIDE_TAGS if label in GUIDE_FIELDS else ('a', 'em', 'strong'))
             fails.extend(problems)
             hrefs[label] = set(found)
+        elif FAQ_ANSWER.match(label):
+            problems, found = html_problems(label, s, variant_paths, ('a',), relative_only=True)
+            fails.extend(problems)
+            if ENTITY.search(s):
+                fails.append(f'{label}: an HTML entity; write & and quotes as they are')
+            hrefs[label] = set(found)
         elif TAG.search(s) or re.search(r'<[A-Za-z!/]', s) or ENTITY.search(s):
-            fails.append(f'{label}: HTML or an HTML entity; plain text here (HTML only in what_i_do.p1 and p2), write & and quotes as they are')
+            fails.append(f'{label}: HTML or an HTML entity; plain text here (HTML only in what_i_do.p1 and p2, and <a href="/..."> in FAQ answers), write & and quotes as they are')
         # k: Stav speaks as "I"
         if lang == 'en' and label != 'mail_subject' and not re.search(r'\.q_en$', label):
             found = sorted(set(WE.findall(re.sub(r'<[^>]+>', ' ', s))))
@@ -645,6 +658,10 @@ def check(path, v, peers):
         en, he = hrefs.get(f'{obj}.{p}_en'), hrefs.get(f'{obj}.{p}_he')
         if en is not None and he is not None and en != he:
             fails.append(f'{obj}.{p}: the English and Hebrew link to different pages ({sorted(en)} and {sorted(he)})')
+    for i in sorted({int(FAQ_ANSWER.match(k).group(1)) for k in hrefs if FAQ_ANSWER.match(k)}):
+        en, he = hrefs.get(f'faq[{i}].a_en'), hrefs.get(f'faq[{i}].a_he')
+        if en is not None and he is not None and en != he:
+            fails.append(f'faq[{i}].a: the English and Hebrew link to different pages ({sorted(en)} and {sorted(he)})')
     # o: the who answer names her; the service areas
     who = get(v, 'guide.who_en')
     if isinstance(who, str) and who and 'Stav Theodor' not in who:
