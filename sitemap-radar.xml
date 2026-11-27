@@ -2,11 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stavtheodor.com/radar/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/israeli-artists/</loc>
     <lastmod>2026-11-20T10:01:24-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/november-new-york-part-2-bacon-de-kooning-baselitz-mosley/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-bacon-de-kooning.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-bacon-pope.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-de-kooning.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-baselitz.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-baselitz-portrait.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-mosley-radial-forms.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-16-november-new-york-part-2-bacon-de-kooning-baselitz-mosley-mosley-sculptures.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/november-new-york-part-1-turrell-curtiss-yu-hong/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-09-november-new-york-part-1-turrell-curtiss-yu-hong-turrell-space-that-sees.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-09-november-new-york-part-1-turrell-curtiss-yu-hong-turrell-light-work.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-09-november-new-york-part-1-turrell-curtiss-yu-hong-julie-curtiss.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-09-november-new-york-part-1-turrell-curtiss-yu-hong-yu-hong.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/november-new-york-grace-carney-hannah-levy/</loc>
@@ -422,7 +463,7 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/zoya-cherkassky-american-cooking/he/</loc>
-    <lastmod>2026-11-20T10:22:58-05:00</lastmod>
+    <lastmod>2026-11-27T15:35:57-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/he/</loc>
@@ -442,15 +483,15 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/oren-fischer-hallel/he/</loc>
-    <lastmod>2026-11-20T10:22:58-05:00</lastmod>
+    <lastmod>2026-11-27T15:36:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/noa-wiegenfeld/he/</loc>
-    <lastmod>2026-11-20T10:22:58-05:00</lastmod>
+    <lastmod>2026-11-27T15:36:01-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/tom-fima/he/</loc>
-    <lastmod>2026-11-20T10:22:58-05:00</lastmod>
+    <lastmod>2026-11-27T15:36:01-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/fresh-paint-2026/he/</loc>
@@ -458,6 +499,6 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/in-a-free-state-luhring-augustine/he/</loc>
-    <lastmod>2026-11-20T10:22:58-05:00</lastmod>
+    <lastmod>2026-11-27T15:36:03-05:00</lastmod>
   </url>
 </urlset>
