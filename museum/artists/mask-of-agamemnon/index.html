@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/mask-of-agamemnon/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Agamemnon_mask_NAMA_Athens_Greece.jpg/1920px-Agamemnon_mask_NAMA_Athens_Greece.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,37 +113,37 @@
 <div class="bio">The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=mask-of-agamemnon">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=mask-of-agamemnon">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Agamemnon_mask_NAMA_Athens_Greece.jpg/960px-Agamemnon_mask_NAMA_Athens_Greece.jpg" alt="Mask of Agamemnon">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Agamemnon_mask_NAMA_Athens_Greece.jpg/960px-Agamemnon_mask_NAMA_Athens_Greece.jpg" width="960" height="960" alt="Mask of Agamemnon">
 <h2>Mask of Agamemnon</h2>
 <div class="meta"><span>National Archaeological Museum, Athens</span></div>
 <p>Funeral mask also known as “Agamemnon Mask”. Gold, found in Tomb V in Mycenae by Heinrich Schliemann (1876), XVIth century BC. The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>
 <p class="work-attr">Jebulon · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Agamemnon%20mask%20NAMA%20Athens%20Greece.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg/960px-Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg" alt="Funeral mask known as the Mask of Agamemnon">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg/960px-Funeral_mask_Mycenae_%22Agamemnon%22%2C_NAMA_624%2C_225545.jpg" width="960" height="1280" alt="Funeral mask known as the Mask of Agamemnon">
 <h2>Funeral mask known as the Mask of Agamemnon</h2>
 <div class="meta"><span>National Archaeological Museum, Athens</span></div>
 <p>The mask in the museum. The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>
 <p class="work-attr">Zde · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Funeral%20mask%20Mycenae%20%22Agamemnon%22%2C%20NAMA%20624%2C%20225545.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg/960px-Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg" alt="Gold death mask from Grave Circle A, Mycenae">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg/960px-Gold_death-mask_known_as_%E2%80%98Mask_of_Agamemnon%2C%E2%80%99_Mycenae%2C_Grave_Circle_A%2C_Grave_V%2C_16th_cent._BC._%2828423089016%29.jpg" width="960" height="640" alt="Gold death mask from Grave Circle A, Mycenae">
 <h2>Gold death mask from Grave Circle A, Mycenae</h2>
 <div class="meta"></div>
 <p>Greek Prehistory Gallery, National Museum of Archaeology, Athens, Greece. Complete indexed photo collection at WorldHistoryPics.com. The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>
 <p class="work-attr">Gary Todd from Xinzheng, China · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Gold%20death-mask%20known%20as%20%E2%80%98Mask%20of%20Agamemnon%2C%E2%80%99%20Mycenae%2C%20Grave%20Circle%20A%2C%20Grave%20V%2C%2016th%20cent.%20BC.%20%2828423089016%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/The_mask_of_agamemnon.jpg/960px-The_mask_of_agamemnon.jpg" alt="The Mask of Agamemnon in its display case">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/The_mask_of_agamemnon.jpg/960px-The_mask_of_agamemnon.jpg" width="960" height="640" alt="The Mask of Agamemnon in its display case">
 <h2>The Mask of Agamemnon in its display case</h2>
 <div class="meta"></div>
 <p>Shaft Grave V, Grave Circle A, Mycenae. 1600-1500 BC. National Archaeological Museum, Athens. The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>
 <p class="work-attr">Xuan Che · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:The%20mask%20of%20agamemnon.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Athens_%E2%80%94_Mask_of_Agamemnon.jpg/960px-Athens_%E2%80%94_Mask_of_Agamemnon.jpg" alt="Athens, Mask of Agamemnon">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Athens_%E2%80%94_Mask_of_Agamemnon.jpg/960px-Athens_%E2%80%94_Mask_of_Agamemnon.jpg" width="960" height="908" alt="Athens, Mask of Agamemnon">
 <h2>Athens, Mask of Agamemnon</h2>
 <div class="meta"></div>
 <p>The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>
 <p class="work-attr">Gleb Simonov · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Athens%20%E2%80%94%20Mask%20of%20Agamemnon.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Heinrich_Schliemann.jpg" alt="Heinrich Schliemann">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Heinrich_Schliemann.jpg" width="500" height="712" alt="Heinrich Schliemann">
 <h2>Heinrich Schliemann</h2>
 <div class="meta"></div>
 <p>Portrait of Heinrich Schliemann. The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece. The mask, displayed in the National Archaeological Museum of Athens, has been described by the historian Cathy Gere as the &quot;Mona Lisa of prehistory&quot;.</p><p class="fact">Schliemann found the gold funeral mask in 1876, in a shaft tomb designated Grave V, at the site Grave Circle A, Mycenae. A total of eight men were discovered in Grave Circle A, all of whom had weapons in their graves, but only five had masks; those were in Grave IV and Grave V. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Discovery" target="_blank" rel="noopener">Discovery →</a></p><p class="fact">In the latter half of the 20th century and the beginning of the 21st century, the authenticity of the mask has been formally questioned, primarily by William Calder III and David Traill. Archaeology magazine has run a series of articles presenting both sides of the debate. <a href="https://en.wikipedia.org/wiki/Mask_of_Agamemnon#Authenticity" target="_blank" rel="noopener">Authenticity →</a></p>

@@ -399,11 +399,37 @@ async function boot() {
   start();
 
   // ---------- loop ----------
+  // Render on demand (2026-11-26): the loop still runs every frame and steps the controls, the light rig and
+  // the hover exactly as before; only renderer.render is skipped while nothing it draws has changed since the
+  // last frame drawn. What it draws changes only through the camera (walk, look, glide, the damping tail,
+  // orbit, compared exactly), the projection, a spot's intensity (hover glow) or shadow casting (the rig's
+  // re-pick, which can land after the camera stops), a resize (setSize clears the canvas) or a restored
+  // context. Nothing in the room moves on its own, so an idle room keeps the last frame, pixel for pixel.
+  let mustDraw = true;
   addEventListener('resize', () => {
     camera.aspect = innerWidth / innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(innerWidth, innerHeight);
+    mustDraw = true;
   });
+  renderer.domElement.addEventListener('webglcontextrestored', () => { mustDraw = true; });
+
+  const drawn = new Float64Array(7 + 16 + rig.spots.length * 2);
+  const cur = new Float64Array(drawn.length);
+  function sceneChanged() {
+    const p = camera.position, q = camera.quaternion, m = camera.projectionMatrix.elements;
+    let i = 0;
+    cur[i++] = p.x; cur[i++] = p.y; cur[i++] = p.z;
+    cur[i++] = q.x; cur[i++] = q.y; cur[i++] = q.z; cur[i++] = q.w;
+    for (let k = 0; k < 16; k++) cur[i++] = m[k];
+    for (const s of rig.spots) { cur[i++] = s.spot.intensity; cur[i++] = s.spot.castShadow ? 1 : 0; }
+    let same = !mustDraw;
+    for (let k = 0; same && k < cur.length; k++) same = cur[k] === drawn[k];
+    if (same) return false;
+    drawn.set(cur);
+    mustDraw = false;
+    return true;
+  }
 
   const timer = new THREE.Timer();
   const fps = { frames: 0, t0: performance.now(), value: 0 };
@@ -422,7 +448,7 @@ async function boot() {
     }
     rig.update(camera.position, performance.now());
     updateHover();
-    renderer.render(scene, camera);
+    if (sceneChanged()) renderer.render(scene, camera);
     fps.frames++;
     const now = performance.now();
     if (now - fps.t0 > 1000) {

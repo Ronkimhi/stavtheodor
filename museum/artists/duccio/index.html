@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/duccio/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/a/a1/Madone_Gualino.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Duccio di Buoninsegna, commonly known as just Duccio, was an Italian painter active in Siena, Tuscany, in the late 13th and early 14th century. He was hired throughout his life to complete many important works in government and religious buildings around Italy. Duccio is considered one of the greatest Italian painters of the Middle Ages, and is credited with creating the painting styles of Trecento Gothic style and the Sienese school.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=duccio">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=duccio">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Madone_Gualino.jpg/960px-Madone_Gualino.jpg" alt="Gualino Madonna">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Madone_Gualino.jpg/960px-Madone_Gualino.jpg" width="960" height="1700" alt="Gualino Madonna">
 <h2>Gualino Madonna</h2>
 <div class="meta"><span>1280</span><span>157 × 86 cm</span><span>Riccardo Gualino Collection (1910-1930)</span></div>
 <p>The Gualino Madonna is a painting attributed to Cimabue, precursor to the Italian primitives, after having been attributed for some time to one of his contemporaries, Duccio di Buoninsegna. It is housed in the Galleria Sabauda of Turin, northern Italy.</p><p class="fact">The provenance of the panel is unknown. In 1910 it was sold on the Florence antiquary market covered by a 16th-century repainting, which was removed in 1920. <a href="https://en.wikipedia.org/wiki/Gualino_Madonna#History" target="_blank" rel="noopener">History →</a></p>
 <p class="work-attr">Ismoon (talk) 12:30, 8 February 2025 (UTC) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Madone%20Gualino.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Duccio_%E2%80%94_Crevole_Madonna.jpg/960px-Duccio_%E2%80%94_Crevole_Madonna.jpg" alt="Madonna di Crevole">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Duccio_%E2%80%94_Crevole_Madonna.jpg/960px-Duccio_%E2%80%94_Crevole_Madonna.jpg" width="960" height="1452" alt="Madonna di Crevole">
 <h2>Madonna di Crevole</h2>
 <div class="meta"><span>1283</span><span>89 × 60 cm</span><span>Museo dell&#x27;Opera Metropolitana del Duomo</span></div>
 <p>The Crevole Madonna is a tempera and gold on wood panel painting by the Tuscan painter Duccio di Buoninsegna, created c. 1283 to 1284. Originally located in the Pieve di Santa Cecilia in Crevole, it is now held in the Museo dell&#x27;Opera metropolitana del Duomo in Siena. It was one of the artist&#x27;s first works.</p><p class="fact">Based on his investigation, Vittorio Lusini believes that the panel was probably made for the Church of Santi Pietro e Paolo of Montepescini and then moved to the Augustinian hermitage of Montespecchio. <a href="https://en.wikipedia.org/wiki/Crevole_Madonna#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The table depicts the Madonna with her head reclined in three quarters and a Child who stretches his right arm to tenderly touch his mother&#x27;s veil. Two small angels appear in the upper corners of the table. <a href="https://en.wikipedia.org/wiki/Crevole_Madonna#Description_and_style" target="_blank" rel="noopener">Description and style →</a></p>
 <p class="work-attr">Gleb Simonov · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20%E2%80%94%20Crevole%20Madonna.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Duccio_-_Maest%C3%A0_-_Google_Art_Project.jpg/960px-Duccio_-_Maest%C3%A0_-_Google_Art_Project.jpg" alt="Rucellai Madonna">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Duccio_-_Maest%C3%A0_-_Google_Art_Project.jpg/960px-Duccio_-_Maest%C3%A0_-_Google_Art_Project.jpg" width="960" height="1568" alt="Rucellai Madonna">
 <h2>Rucellai Madonna</h2>
 <div class="meta"><span>1285</span><span>450 × 290 cm</span><span>Uffizi Gallery</span></div>
 <p>The Rucellai Madonna is a panel painting by the Sienese painter Duccio di Buoninsegna showing the Virgin and Child enthroned with Angels. The contract for the work is dated 1285. The painting was probably completed in 1286, and was commissioned by the Laudesi confraternity of Florence to decorate the chapel they maintained in the Dominican church of Santa Maria Novella.</p><p class="fact">The Rucellai Madonna is the earlier of the two works by Duccio for which there is written documentation (the other is the Maestà of 1308 to 11). <a href="https://en.wikipedia.org/wiki/Rucellai_Madonna#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Rucellai Madonna is currently displayed in the first gallery of the Galleria degli Uffizi, along with Cimabue&#x27;s Santa Trinità Maestà (c. 1285) and Giotto&#x27;s Ognissanti Madonna (1306). This choice follows Vasari&#x27;s example by locating the originary moment (“i primi lumi”) of Italian Renaissance painting in the works of those artists. <a href="https://en.wikipedia.org/wiki/Rucellai_Madonna#Legacy" target="_blank" rel="noopener">Legacy →</a></p><p class="fact">The work, measuring 4.5 by 2.9 meters, was painted in egg tempera on a five-pieced poplar panel. The panel and frame would have been constructed by a master carpenter and then handed over to Duccio for painting. <a href="https://en.wikipedia.org/wiki/Rucellai_Madonna#Description" target="_blank" rel="noopener">Description →</a></p>
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20-%20Maest%C3%A0%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg/960px-Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg" alt="Original rose window">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg/960px-Original_rose_window_of_the_Duomo_by_Duccio_-_Museo_dell%27Opera_del_Duomo_-_Siena_2016_%282%29.jpg" width="960" height="960" alt="Original rose window">
 <h2>Original rose window</h2>
 <div class="meta"><span>1287</span><span>560 × 560 cm</span><span>Museo dell&#x27;Opera Metropolitana del Duomo</span></div>
 
 <p class="work-attr">José Luiz · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Original%20rose%20window%20of%20the%20Duomo%20by%20Duccio%20-%20Museo%20dell%27Opera%20del%20Duomo%20-%20Siena%202016%20%282%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Duccio_di_Buoninsegna_008.jpg/960px-Duccio_di_Buoninsegna_008.jpg" alt="Madonna with Child and six Angels">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Duccio_di_Buoninsegna_008.jpg/960px-Duccio_di_Buoninsegna_008.jpg" width="960" height="1469" alt="Madonna with Child and six Angels">
 <h2>Madonna with Child and six Angels</h2>
 <div class="meta"><span>1300</span><span>97 × 63 cm</span><span>National Gallery of Umbria</span></div>
 <p>Madonna with Child and Six Angels, or The Perugia Madonna, is a Madonna painting by Gothic artist Duccio di Buoninsegna.</p>
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20di%20Buoninsegna%20008.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Duccio_The-Madonna-and-Child-with-Saints-138.jpg/960px-Duccio_The-Madonna-and-Child-with-Saints-138.jpg" alt="Madonna and Child with Saints">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Duccio_The-Madonna-and-Child-with-Saints-138.jpg/960px-Duccio_The-Madonna-and-Child-with-Saints-138.jpg" width="960" height="560" alt="Madonna and Child with Saints">
 <h2>Madonna and Child with Saints</h2>
 <div class="meta"><span>1300</span><span>128 × 234 cm</span><span>Pinacoteca Nazionale, Siena</span></div>
 
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20The-Madonna-and-Child-with-Saints-138.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Duccio_di_Buoninsegna_-_The_Nativity_with_the_Prophets_Isaiah_and_Ezekiel_-_Google_Art_Project.jpg/960px-Duccio_di_Buoninsegna_-_The_Nativity_with_the_Prophets_Isaiah_and_Ezekiel_-_Google_Art_Project.jpg" alt="The Nativity with the Prophets Isaiah and Ezekiel">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Duccio_di_Buoninsegna_-_The_Nativity_with_the_Prophets_Isaiah_and_Ezekiel_-_Google_Art_Project.jpg/960px-Duccio_di_Buoninsegna_-_The_Nativity_with_the_Prophets_Isaiah_and_Ezekiel_-_Google_Art_Project.jpg" width="960" height="534" alt="The Nativity with the Prophets Isaiah and Ezekiel">
 <h2>The Nativity with the Prophets Isaiah and Ezekiel</h2>
 <div class="meta"><span>1308</span><span>48 × 87 cm</span><span>Andrew W. Mellon collection</span></div>
 
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20di%20Buoninsegna%20-%20The%20Nativity%20with%20the%20Prophets%20Isaiah%20and%20Ezekiel%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Duccio_di_Buoninsegna_-_Christ_and_the_Samaritan_Woman_-_Google_Art_Project.jpg/960px-Duccio_di_Buoninsegna_-_Christ_and_the_Samaritan_Woman_-_Google_Art_Project.jpg" alt="Christ and the Samaritan Woman">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Duccio_di_Buoninsegna_-_Christ_and_the_Samaritan_Woman_-_Google_Art_Project.jpg/960px-Duccio_di_Buoninsegna_-_Christ_and_the_Samaritan_Woman_-_Google_Art_Project.jpg" width="960" height="897" alt="Christ and the Samaritan Woman">
 <h2>Christ and the Samaritan Woman</h2>
 <div class="meta"><span>1310</span><span>44 × 46 cm</span><span>Thyssen-Bornemisza Museum</span></div>
 
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio%20di%20Buoninsegna%20-%20Christ%20and%20the%20Samaritan%20Woman%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Duccio.The-Madonna-and-Child-with-Saints-149.jpg/960px-Duccio.The-Madonna-and-Child-with-Saints-149.jpg" alt="Madonna and Child with Saints Polyptych">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Duccio.The-Madonna-and-Child-with-Saints-149.jpg/960px-Duccio.The-Madonna-and-Child-with-Saints-149.jpg" width="960" height="678" alt="Madonna and Child with Saints Polyptych">
 <h2>Madonna and Child with Saints Polyptych</h2>
 <div class="meta"><span>1311</span><span>80 × 60 cm</span><span>Pinacoteca Nazionale, Siena</span></div>
 <p>The Madonna and Child with Saints Polyptych is a five-piece Madonna polyptych by Italian Renaissance artist Duccio di Buoninsegna, also referred to as Polyptych no. 47 by Duccio.</p>
 <p class="work-attr">Duccio di Buoninsegna · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Duccio.The-Madonna-and-Child-with-Saints-149.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Duccio_Di_Buoninsegna_-_Madonna_col_Bambino.jpg/960px-Duccio_Di_Buoninsegna_-_Madonna_col_Bambino.jpg" alt="Madonna and Child">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Duccio_Di_Buoninsegna_-_Madonna_col_Bambino.jpg/960px-Duccio_Di_Buoninsegna_-_Madonna_col_Bambino.jpg" width="960" height="1273" alt="Madonna and Child">
 <h2>Madonna and Child</h2>
 <div class="meta"><span>2000</span><span>24 × 16 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Madonna and Child is a depiction of the Virgin and Child painted by Duccio di Buoninsegna, one of the most influential artists of the late 13th and early 14th centuries. The work is celebrated for stylistic innovations that introduced realism into Italian depictions of this subject.</p><p class="fact">Compared to frescoes and to larger, grander altarpieces, the Madonna and Child, a compact work measuring 11×81⁄8 inches, is understood to be an tranquil devotional image. Intimations of this reading appear in the burnt edges at the bottom of the original engaged frame, likely caused by lit candles positioned directly underneath. <a href="https://en.wikipedia.org/wiki/Madonna_and_Child_%28Duccio%2C_Metropolitan%29#Description_and_influences" target="_blank" rel="noopener">Description and influences →</a></p><p class="fact">The emergent spirit of humanism enlivens this painting in several places, the luminous colors applied to the garments, the gentle folds of the fabric, the fine details showing on the underside of the Virgin&#x27;s veil, and the childish reach of the hand of Christ to the Virgin&#x27;s face, whose sorrowful gaze anticipates His grim future. <a href="https://en.wikipedia.org/wiki/Madonna_and_Child_%28Duccio%2C_Metropolitan%29#Aesthetic_influences" target="_blank" rel="noopener">Aesthetic influences →</a></p><p class="fact">As is common for duecento and trecento paintings, the ownership and location of the Madonna and Child before the mid 19th century is unknown. The earliest known owner of the painting was the Russian Count Gregori Stroganoff (1829 to 1910), who reported having found it, unattributed, in a dealer&#x27;s shop. <a href="https://en.wikipedia.org/wiki/Madonna_and_Child_%28Duccio%2C_Metropolitan%29#History_of_ownership" target="_blank" rel="noopener">History of ownership →</a></p>

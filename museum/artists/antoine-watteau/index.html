@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/antoine-watteau/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/34/Antoine_Watteau_062.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Jean-Antoine Watteau was a French painter and draughtsman whose brief career spurred the revival of interest in colour and movement, as seen in the tradition of Correggio and Rubens. He revitalized the waning Baroque style, shifting it to the less severe, more naturalistic, less formally classical, Rococo. Watteau is credited with inventing the genre of fêtes galantes, scenes of bucolic and idyllic charm, suffused with a theatrical air. Some of his best known subjects were drawn from the world of Italian comedy and ballet.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=antoine-watteau">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=antoine-watteau">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Antoine_Watteau_062.jpg/960px-Antoine_Watteau_062.jpg" alt="Actors of the Comedie-Francaise">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Antoine_Watteau_062.jpg/960px-Antoine_Watteau_062.jpg" width="960" height="753" alt="Actors of the Comedie-Francaise">
 <h2>Actors of the Comedie-Francaise</h2>
 <div class="meta"><span>1710</span><span>20 × 25 cm</span><span>Hermitage Museum</span></div>
 <p>Actors of the Comédie-Française, also traditionally known as The Coquettes, is an oil on panel painting in the Hermitage Museum, Saint Petersburg, by the French Rococo artist Antoine Watteau (1684 to 1721).</p><p class="fact">In an article on the Hermitage&#x27;s 1922 to 1925 exhibition of French paintings, published in the March 1928 issue of Gazette des Beaux-Arts, the Russian scholar Sergei Ersnt reported that according to an inscription found on the panel&#x27;s verso, The Coquettes belonged to the painter Nicolas Bailly (1659 to 1736), a curator of the royal collections who authored a 1709 to 1710 inventory of the paintings in possession of King Louis XIV; in 1984, Rosenberg said that he wasn&#x27;t surprised about Ernst&#x27;s report, given Bailly&#x27;s relations within artistic circles. <a href="https://en.wikipedia.org/wiki/Actors_of_the_Com%C3%A9die-Fran%C3%A7aise#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">Actors of the Comédie-Française is an oil painting on a pearwood panel that measures approximately 20 by 25 cm. <a href="https://en.wikipedia.org/wiki/Actors_of_the_Com%C3%A9die-Fran%C3%A7aise#Description" target="_blank" rel="noopener">Description →</a></p><p class="fact">Until the middle of the 20th century, sources and studies on Watteau variously defined the work&#x27;s subject. In notes to Pellegrino Antonio Orlandi&#x27;s Abecedario pittorico, Pierre-Jean Mariette referred to the work as Coquettes qui pour voir galans au rendez vous (transl. <a href="https://en.wikipedia.org/wiki/Actors_of_the_Com%C3%A9die-Fran%C3%A7aise#Identity_of_the_subject" target="_blank" rel="noopener">Identity of the subject →</a></p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Antoine%20Watteau%20062.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jean-Antoine_Watteau_-_Le_donneur_de_s%C3%A9r%C3%A9nades_%28Mezetin%29_-_Google_Art_Project.jpg/960px-Jean-Antoine_Watteau_-_Le_donneur_de_s%C3%A9r%C3%A9nades_%28Mezetin%29_-_Google_Art_Project.jpg" alt="The Chord">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jean-Antoine_Watteau_-_Le_donneur_de_s%C3%A9r%C3%A9nades_%28Mezetin%29_-_Google_Art_Project.jpg/960px-Jean-Antoine_Watteau_-_Le_donneur_de_s%C3%A9r%C3%A9nades_%28Mezetin%29_-_Google_Art_Project.jpg" width="960" height="1301" alt="The Chord">
 <h2>The Chord</h2>
 <div class="meta"><span>1715</span><span>24 × 18 cm</span><span>Condé Museum</span></div>
 <p>The Chord, also known as The Serenader and Mezzetino, is an oil on panel painting in the Musée Condé, Chantilly, by the French Rococo painter Antoine Watteau, variously dated c. 1714 to 1717. Throughout the 18th and 19th centuries, The Chord passed through numerous private collections, until it came into possession of Henri d&#x27;Orléans, Duke of Aumale, son of King Louis Philippe I; as part of the Duke of Aumale&#x27;s collection at the Château de Chantilly, The Chord was bequeathed to the Institut de France in 1884.</p><p class="fact">The recorded provenance of The Chord begins in the mid-18th century, when it was in possession of the fermier géneral Marin Delahaye (1684 to 1753); at the sale after his death, held in Paris on January 1, 1754, the painting was lot 47, described as &quot;un tableau peint sur bois, représentant Mezetin par Vatteau, de 10 pouces de haut sur 7 pouces de large, dans sa bordure dorée,&quot; and sold for 300 livres to the certain Beauchamp. <a href="https://en.wikipedia.org/wiki/The_Chord_%28painting%29#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Chord is an oil on panel painting, shaped as a vertical rectangle that measures 24 by 17 cm. It shows a full-length single figure of a male guitarist in a theatrical costume, seated tuning a guitar amid a landscape; the man&#x27;s head, turned to the left, is barren. <a href="https://en.wikipedia.org/wiki/The_Chord_%28painting%29#Analysis" target="_blank" rel="noopener">Analysis →</a></p><p class="fact">The painting has often been confused with Mezzetin, a painting by Watteau held at the Metropolitan Museum of Art in New York, which also depicts the same character from the Italian theatre. However, the two characters do not have the same physique at all. <a href="https://en.wikipedia.org/wiki/The_Chord_%28painting%29#Related_works" target="_blank" rel="noopener">Related works →</a></p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Jean-Antoine%20Watteau%20-%20Le%20donneur%20de%20s%C3%A9r%C3%A9nades%20%28Mezetin%29%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nymphe_et_satyre_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1129.jpg/960px-Nymphe_et_satyre_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1129.jpg" alt="Nymph and Satyr">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nymphe_et_satyre_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1129.jpg/960px-Nymphe_et_satyre_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1129.jpg" width="960" height="638" alt="Nymph and Satyr">
 <h2>Nymph and Satyr</h2>
 <div class="meta"><span>1716</span><span>74 × 108 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>Jupiter and Antiope is an oil painting by the French artist Antoine Watteau. It is also known as the Satyr and the Sleeping Nymph and was probably painted between 1714 and 1719. Intended to be placed over a doorway, today it hangs in the Musée du Louvre in Paris.</p><p class="fact">The history of the painting after its creation is not yet completely clear and in particular its location before 1857 remains an open question. Probably Watteau painted the image as a commission for the merchant Pierre Crozat, for whom he also produced the series of Seasons painted at the same time. <a href="https://en.wikipedia.org/wiki/Jupiter_and_Antiope_%28Watteau%29#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The painting is oval shaped, with a width of 107.5 cm and a height of 73 cm. In the foreground it depicts the naked, sleeping Antiope. <a href="https://en.wikipedia.org/wiki/Jupiter_and_Antiope_%28Watteau%29#Description" target="_blank" rel="noopener">Description →</a></p><p class="fact">The painting comes out of the story of the seduction of Antiope by the god Zeus in Greek mythology, later imported into Roman mythology and told of the god Jupiter. According to this myth, Antiope, the beautiful daughter of King Nycteus of Thebes, was surprised and seduced by Zeus in the form of a satyr. <a href="https://en.wikipedia.org/wiki/Jupiter_and_Antiope_%28Watteau%29#Mythological_background_and_reception_in_art" target="_blank" rel="noopener">Mythological background and reception in art →</a></p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Nymphe%20et%20satyre%20-%20Jean-Antoine%20Watteau%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20MI%201129.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Les_deux_Cousines_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1990_8.jpg/960px-Les_deux_Cousines_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1990_8.jpg" alt="The two cousins">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Les_deux_Cousines_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1990_8.jpg/960px-Les_deux_Cousines_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1990_8.jpg" width="960" height="796" alt="The two cousins">
 <h2>The two cousins</h2>
 <div class="meta"><span>1716</span><span>30 × 36 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>The Two Cousins is a 1716 oil-on-canvas painting by Antoine Watteau, now in the Louvre Museum, in Paris, which acquired it in 1990.</p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Les%20deux%20Cousines%20-%20Jean-Antoine%20Watteau%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20RF%201990%208.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg/960px-L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg" alt="The Embarkation for Cythera">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg/960px-L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg" width="960" height="630" alt="The Embarkation for Cythera">
 <h2>The Embarkation for Cythera</h2>
 <div class="meta"><span>1717</span><span>129 × 194 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>The Embarkation for Cythera is a painting by the French painter Jean-Antoine Watteau.</p><p class="fact">It was around 1710 that Watteau painted his first, more literal version of the subject, which nonetheless bears a compositional similarity to the Louvre painting. This work is now in the Städtische Galerie im Städelschen Kunstinstitut, Frankfurt-am-Main. <a href="https://en.wikipedia.org/wiki/The_Embarkation_for_Cythera#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The painting portrays a &quot;fête galante&quot;; an amorous celebration or party enjoyed by the aristocracy of France after the death of Louis XIV, which is generally seen as a period of dissipation and pleasure, and peace, after the sombre last years of the previous reign. <a href="https://en.wikipedia.org/wiki/The_Embarkation_for_Cythera#Subject" target="_blank" rel="noopener">Subject →</a></p><p class="fact">In years after Watteau&#x27;s death, his art fell out of fashion. During the French Revolution, some eighty years after the work was painted, his depictions of lavishly set pastoral escapades were associated with the old days of the monarchy and a frivolous aristocracy. <a href="https://en.wikipedia.org/wiki/The_Embarkation_for_Cythera#Popularity" target="_blank" rel="noopener">Popularity →</a></p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:L%27Embarquement%20pour%20Cyth%C3%A8re%2C%20by%20Antoine%20Watteau%2C%20from%20C2RMF%20retouched.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/L%27Indiff%C3%A9rent_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1122.jpg/960px-L%27Indiff%C3%A9rent_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1122.jpg" alt="L&#x27;Indifférent">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/L%27Indiff%C3%A9rent_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1122.jpg/960px-L%27Indiff%C3%A9rent_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1122.jpg" width="960" height="1314" alt="L&#x27;Indifférent">
 <h2>L&#x27;Indifférent</h2>
 <div class="meta"><span>1717</span><span>26 × 19 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>L&#x27;Indifférent is a 1717 oil on panel painting by Antoine Watteau, which entered the Louvre in the collection of Louis La Caze in 1869.</p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:L%27Indiff%C3%A9rent%20-%20Antoine%20Watteau%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20MI%201122.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Faux-Pas_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1127.jpg/960px-Le_Faux-Pas_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1127.jpg" alt="The Faux Pas">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Faux-Pas_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1127.jpg/960px-Le_Faux-Pas_-_Jean-Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1127.jpg" width="960" height="1201" alt="The Faux Pas">
 <h2>The Faux Pas</h2>
 <div class="meta"><span>1717</span><span>40 × 32 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>The Faux Pas is a 1716-1718 oil on canvas painting by Antoine Watteau, now in the Louvre, which was left by Dr La Trujillo in 1869. It draws on north European works such as The Village Fête by Rubens, now also in the Louvre.</p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Le%20Faux-Pas%20-%20Jean-Antoine%20Watteau%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20MI%201127.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Jean-Antoine_Watteau_-_Mezzetin.JPG/960px-Jean-Antoine_Watteau_-_Mezzetin.JPG" alt="Mezzetin">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Jean-Antoine_Watteau_-_Mezzetin.JPG/960px-Jean-Antoine_Watteau_-_Mezzetin.JPG" width="960" height="1233" alt="Mezzetin">
 <h2>Mezzetin</h2>
 <div class="meta"><span>1717</span><span>55 × 45 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Mezzetino is an oil-on-canvas painting in the Metropolitan Museum of Art, New York, by the French Rococo painter Jean-Antoine Watteau. Dated within 1717 to 1720, Mezzetino forms a full-length single-figure composition, depicting the eponymous character in commedia dell&#x27;arte.</p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Jean-Antoine%20Watteau%20-%20Mezzetin.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pierrot_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1121_-_apr%C3%A8s_restauration_2024.jpg/960px-Pierrot_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1121_-_apr%C3%A8s_restauration_2024.jpg" alt="Pierrot">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pierrot_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1121_-_apr%C3%A8s_restauration_2024.jpg/960px-Pierrot_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1121_-_apr%C3%A8s_restauration_2024.jpg" width="960" height="1142" alt="Pierrot">
 <h2>Pierrot</h2>
 <div class="meta"><span>1718</span><span>184 × 150 cm</span><span>Department of Paintings of the Louvre</span></div>
 <p>Pierrot, formerly known as Gilles, is a life-size oil-on-canvas painting by the French artist Antoine Watteau, created between 1718 and 1719. Noted for its scale, the piece measures 184.5 x 149.5 cm and is the only life-size figure Watteau has represented. Th painting depicts a variety of actors with the traditional commedia dell&#x27;arte character Pierrot in a still, frontal pose.</p><p class="fact">Pierrot&#x27;s expression is the most highly debated part of the work. Some scholars read it as stupidity, while others see melancholy, poignancy, or even revery. <a href="https://en.wikipedia.org/wiki/Pierrot_%28Watteau%29#Analysis" target="_blank" rel="noopener">Analysis →</a></p><p class="fact">Little is certain about the origin of the work. Generally dated to the 1710s, the painting was not included in the 18th century Recueil Jullienne, a major catalog of Watteau&#x27;s work reproduced in prints. <a href="https://en.wikipedia.org/wiki/Pierrot_%28Watteau%29#Background" target="_blank" rel="noopener">Background →</a></p><p class="fact">Pierrot, who was often confused with the similarly comic buffoon known as &quot;Gilles&quot; in the 19th century, is the main figure. He is placed in white theatrical clothing, disengaged from the rest of his companions. <a href="https://en.wikipedia.org/wiki/Pierrot_%28Watteau%29#Subject_and_description" target="_blank" rel="noopener">Subject and description →</a></p>
 <p class="work-attr">Jean-Antoine Watteau · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Pierrot%20-%20Antoine%20Watteau%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20MI%201121%20-%20apr%C3%A8s%20restauration%202024.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gersaint.jpg/960px-Gersaint.jpg" alt="The Shop Sign of Gersaint">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gersaint.jpg/960px-Gersaint.jpg" width="960" height="514" alt="The Shop Sign of Gersaint">
 <h2>The Shop Sign of Gersaint</h2>
 <div class="meta"><span>1720</span><span>163 × 306 cm</span><span>Charlottenburg Palace</span></div>
 <p>L&#x27;Enseigne de Gersaint is an oil on canvas painting in the Charlottenburg Palace in Berlin, by French painter Jean-Antoine Watteau. Completed during 1720 to 21, it is considered to be the last prominent work of Watteau, who died some time after. It was painted as a shop sign for the marchand-mercier, or art dealer, Edme François Gersaint.</p><p class="fact">The painting never actually functioned as an external shop sign, spending only fifteen days at the shop. Watteau himself asked Gersaint to allow him to paint it, complaining of &quot;cold fingers&quot; that needed some exercise. <a href="https://en.wikipedia.org/wiki/L%27Enseigne_de_Gersaint#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The picture was originally painted on one canvas, depicting clients and staff at the shop. As a worker packs away a portrait of Louis XIV at the left, in the centre a young man offers his hand to a woman who is stepping over the threshold of the shop. <a href="https://en.wikipedia.org/wiki/L%27Enseigne_de_Gersaint#Content" target="_blank" rel="noopener">Content →</a></p>

@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/dying-gaul/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/c/cb/Dying_Gaul%2C_Perrier_Engraving.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,37 +113,37 @@
 <div class="bio">The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze. The original may have been commissioned at some time between 230 and 220 BC by Attalus I of Pergamon to celebrate his victory over the Galatians, the Celtic or Gaulish people of parts of Anatolia. The original sculptor is believed to have been Epigonus, a court sculptor of the Attalid dynasty of Pergamon.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=dying-gaul">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=dying-gaul">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Dying_Gaul%2C_Perrier_Engraving.jpg" alt="Dying Gaul, Perrier Engraving">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Dying_Gaul%2C_Perrier_Engraving.jpg" width="720" height="437" alt="Dying Gaul, Perrier Engraving">
 <h2>Dying Gaul, Perrier Engraving</h2>
 <div class="meta"></div>
 <p>Engraving by François Perrier of the Dying Gladiator statue in the Capitoline Museums of Rome. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>
 <p class="work-attr">François Perrier · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Dying%20Gaul%2C%20Perrier%20Engraving.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dying_Gaul-Musei_CapitoliniI-2.jpg/960px-Dying_Gaul-Musei_CapitoliniI-2.jpg" alt="Dying Gaul-Musei CapitoliniI-2">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dying_Gaul-Musei_CapitoliniI-2.jpg/960px-Dying_Gaul-Musei_CapitoliniI-2.jpg" width="960" height="720" alt="Dying Gaul-Musei CapitoliniI-2">
 <h2>Dying Gaul-Musei CapitoliniI-2</h2>
 <div class="meta"></div>
 <p>Back of the sculpture. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>
 <p class="work-attr">Yair Haklai · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Dying%20Gaul-Musei%20CapitoliniI-2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dying_GaulDSCF6738.jpg/960px-Dying_GaulDSCF6738.jpg" alt="Detail showing the face, hairstyle and torc of the sculpture">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dying_GaulDSCF6738.jpg/960px-Dying_GaulDSCF6738.jpg" width="960" height="1280" alt="Detail showing the face, hairstyle and torc of the sculpture">
 <h2>Detail showing the face, hairstyle and torc of the sculpture</h2>
 <div class="meta"></div>
 <p>Detail showing the face, hairstyle and torc of the sculpture. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>
 <p class="work-attr">Johnbod · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Dying%20GaulDSCF6738.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dying_Gaul_Musei_Capitolini_MC747.jpg/960px-Dying_Gaul_Musei_Capitolini_MC747.jpg" alt="Detail showing his neck torc">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dying_Gaul_Musei_Capitolini_MC747.jpg/960px-Dying_Gaul_Musei_Capitolini_MC747.jpg" width="960" height="638" alt="Detail showing his neck torc">
 <h2>Detail showing his neck torc</h2>
 <div class="meta"></div>
 <p>Detail showing his neck torc. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>
 <p class="work-attr">Jastrow · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Dying%20Gaul%20Musei%20Capitolini%20MC747.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Dying_gaul.jpg/960px-Dying_gaul.jpg" alt="Dying gaul">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Dying_gaul.jpg/960px-Dying_gaul.jpg" width="960" height="781" alt="Dying gaul">
 <h2>Dying gaul</h2>
 <div class="meta"></div>
 <p>The Dying Gaul, or The Capitoline Gaul, a Roman marble copy of a Hellenistic work of the late 3rd century BCE Capitoline Museums, Rome. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>
 <p class="work-attr">antmoose · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Dying%20gaul.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG/960px-Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG" alt="Galata capitolino, replica da donario di attalo I, da horti sallustiani, coll. ludovisi 08">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG/960px-Galata_capitolino%2C_replica_da_donario_di_attalo_I%2C_da_horti_sallustiani%2C_coll._ludovisi_08.JPG" width="960" height="1194" alt="Galata capitolino, replica da donario di attalo I, da horti sallustiani, coll. ludovisi 08">
 <h2>Galata capitolino, replica da donario di attalo I, da horti sallustiani, coll. ludovisi 08</h2>
 <div class="meta"></div>
 <p>Sideview of the dying trumpeter. The Dying Gaul, also called The Dying Galatian or The Dying Gladiator, is an ancient Roman marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period thought to have been made in bronze.</p><p class="fact">According to Attanasio et al, their provenance analysis proves that the marble used in the Dying Gaul is white Docimian marble. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Provenance" target="_blank" rel="noopener">Provenance →</a></p><p class="fact">The Dying Gaul was first recorded in a 1623 inventory of the collections of the Ludovisi family. <a href="https://en.wikipedia.org/wiki/Dying_Gaul#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The Dying Galatian became one of the most celebrated works to have survived from antiquity and was first engraved by François Perrier in his work Segmenta nobilium signorum et statuarum que temporis dentem invidium evase (Rome and Paris 1638, plate 91). <a href="https://en.wikipedia.org/wiki/Dying_Gaul#Influence" target="_blank" rel="noopener">Influence →</a></p>

@@ -49,9 +49,9 @@
     },
     {
       "q_en": "Should dining room art have glass?",
-      "a_en": "Dining room works on paper and photographs need glazing, especially near an open kitchen, where steam and grease reach the walls. If the work faces a chandelier or a window, choose anti-reflective glazing so the fixture does not appear in the picture, or choose a canvas or panel that needs no glass. See also <a href=\"/guide/gallery-wall-ideas/\">Gallery wall ideas</a> and <a href=\"/contact/\">Write to Stav</a>.",
+      "a_en": "Dining room works on paper and photographs need glazing, especially near an open kitchen, where steam and grease reach the walls. If the work faces a chandelier or a window, choose anti-reflective glazing so the fixture does not appear in the picture, or choose a canvas or panel that needs no glass. See also <a href=\"/guide/gallery-wall-ideas/\">Gallery wall ideas</a> and <a href=\"/contact/\" data-write data-loc=\"body\">Write to Stav</a>.",
       "q_he": "האם אמנות בפינת האוכל צריכה זכוכית?",
-      "a_he": "עבודות על נייר ותצלומים בפינת האוכל צריכים זיגוג, במיוחד ליד מטבח פתוח, שבו אדים ושומן מגיעים לקירות. אם העבודה פונה לנברשת או לחלון, בחרו זיגוג נגד השתקפות כדי שגוף התאורה לא יופיע בתמונה, או בחרו קנבס או לוח שלא צריכים זכוכית. ראו גם <a href=\"/guide/gallery-wall-ideas/\">רעיונות לקיר גלריה</a>, או <a href=\"/contact/\">כתבו לסתיו</a>."
+      "a_he": "עבודות על נייר ותצלומים בפינת האוכל צריכים זיגוג, במיוחד ליד מטבח פתוח, שבו אדים ושומן מגיעים לקירות. אם העבודה פונה לנברשת או לחלון, בחרו זיגוג נגד השתקפות כדי שגוף התאורה לא יופיע בתמונה, או בחרו קנבס או לוח שלא צריכים זכוכית. ראו גם <a href=\"/guide/gallery-wall-ideas/\">רעיונות לקיר גלריה</a>, או <a href=\"/contact/\" data-write data-loc=\"body\">כתבו לסתיו</a>."
     }
   ],
   "schema_type": "Article",

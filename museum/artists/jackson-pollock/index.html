@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/jackson-pollock/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/63/Circle_by_Jackson_Pollock.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,37 +113,37 @@
 <div class="bio">Paul Jackson Pollock was an American painter. A major figure in the abstract expressionist movement, he was widely noticed for his &quot;drip technique&quot; of pouring or splashing liquid household paint onto a horizontal surface, enabling him to view and paint his canvases from all angles. It was called all-over painting and action painting, because Pollock covered the entire canvas and used the force of his whole body to paint, often in a frenetic dancing style. This extreme form of abstraction divided critics: some praised the immediacy of the creation, while others derided the random effects.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=jackson-pollock">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=jackson-pollock">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Circle_by_Jackson_Pollock.jpg" alt="Circle">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Circle_by_Jackson_Pollock.jpg" width="451" height="420" alt="Circle">
 <h2>Circle</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Jackson Pollock · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Circle%20by%20Jackson%20Pollock.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Peddler_by_Jackson_Pollock.jpg" alt="The Peddler">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Peddler_by_Jackson_Pollock.jpg" width="506" height="600" alt="The Peddler">
 <h2>The Peddler</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Jackson Pollock · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Peddler%20by%20Jackson%20Pollock.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pollock-Krasner_House_studio_floor.jpg/960px-Pollock-Krasner_House_studio_floor.jpg" alt="Paint-covered studio floor, Pollock-Krasner House, Springs, New York">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pollock-Krasner_House_studio_floor.jpg/960px-Pollock-Krasner_House_studio_floor.jpg" width="960" height="720" alt="Paint-covered studio floor, Pollock-Krasner House, Springs, New York">
 <h2>Paint-covered studio floor, Pollock-Krasner House, Springs, New York</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Rhododendrites · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Pollock-Krasner%20House%20studio%20floor.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Pollock-Krasner_House_studio_floor_2.jpg/960px-Pollock-Krasner_House_studio_floor_2.jpg" alt="Studio floor detail, Pollock-Krasner House">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Pollock-Krasner_House_studio_floor_2.jpg/960px-Pollock-Krasner_House_studio_floor_2.jpg" width="960" height="720" alt="Studio floor detail, Pollock-Krasner House">
 <h2>Studio floor detail, Pollock-Krasner House</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Rhododendrites · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Pollock-Krasner%20House%20studio%20floor%202.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pollock-house.jpg/960px-Pollock-house.jpg" alt="Pollock-Krasner House and Study Center, Springs, New York">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pollock-house.jpg/960px-Pollock-house.jpg" width="960" height="720" alt="Pollock-Krasner House and Study Center, Springs, New York">
 <h2>Pollock-Krasner House and Study Center, Springs, New York</h2>
 <div class="meta"></div>
 
 <p class="work-attr">The original uploader was Americasroof at English Wikipedia. · CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:Pollock-house.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Utst%C3%A4llning_med_Jackson_Pollocks_m%C3%A5leri_p%C3%A5_Moderna_Museet._Bes%C3%B6kare_p%C3%A5_utst%C3%A4llningen.jpg" alt="Pollock exhibition at Moderna Museet, Stockholm">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Utst%C3%A4llning_med_Jackson_Pollocks_m%C3%A5leri_p%C3%A5_Moderna_Museet._Bes%C3%B6kare_p%C3%A5_utst%C3%A4llningen.jpg" width="800" height="800" alt="Pollock exhibition at Moderna Museet, Stockholm">
 <h2>Pollock exhibition at Moderna Museet, Stockholm</h2>
 <div class="meta"></div>
 

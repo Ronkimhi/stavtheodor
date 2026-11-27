@@ -536,24 +536,24 @@
   @media (min-width: 901px) and (max-width: 1240px) { .links { gap: 20px; } .nav .right { gap: 20px; } }
   @media (min-width: 901px) and (max-width: 1100px) { .nav-call .num { display: none; } .nav-call .short { display: inline; } }
   @media (min-width: 901px) and (max-width: 980px) { .links { gap: 13px; } }
-  /* The header's Write to Stav: the full label from 1100px; from 901 to 1099px the compact label (Write / כתבו, the full one
-     kept as the accessible name), where it fits the one-line bar; the phone menu carries the full label up to 900px. */
+  /* The header's Write to Stav: the full label from 1024px; from 901 to 1023px the compact label (Write / כתבו, the full one
+     kept as the accessible name), shown in both languages, where it fits the one-line bar; the phone menu carries the full
+     label up to 900px. */
   .nav-write .wshort { display: none; }
   .nav .nav-write-bar { display: none; pointer-events: auto; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; white-space: nowrap; }
   .nav-write-bar .wshort { display: inline; }
   .nav-write-bar .wshort [data-l="he"], .nav-write .wshort [data-l="he"] { font-size: 16px; }
-  @media (min-width: 901px) and (max-width: 1099px) {
+  @media (min-width: 901px) and (max-width: 1023px) {
     .nav .nav-write .wfull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
     .nav .nav-write .wshort { display: inline; }
   }
-  @media (min-width: 901px) and (max-width: 979px) { body.lang-en .nav .nav-write { display: none; } }  /* English shows the compact label from 980px, clear of the wordmark; Hebrew from 901px */
   /* Drawn as the bar's one outlined control (the art director's gate, 2026-11-15): a hairline box, brighter on hover, from
-     1040px, where the boxed label still leaves the bar one line in both languages (below that the compact label stays
-     plain). line-height 1 keeps the box inside the bar's height. */
-  @media (min-width: 1040px) {
+     901px, around the compact label up to 1023px and the full label from 1024px, so it stands out from the nav links at
+     every bar width and the bar stays one line in both languages. line-height 1 keeps the box inside the bar's height. */
+  @media (min-width: 901px) {
     .nav .nav-write { border: 1px solid rgba(242,240,236,0.36); padding: 8px 14px; margin-inline-start: 6px; line-height: 1; transition: border-color .25s; }
     .nav .nav-write:hover, .nav .nav-write:focus-visible { border-color: #F2F0EC; }
-  }  /* English needs 920px for the compact label; Hebrew fits from 901px */
+  }
   /* In the phone bar beside Call only where it leaves at least 8px between every two controls, with each 44px hit area
      whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
   @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
@@ -755,14 +755,17 @@
   }
   @media (max-width: 600px) { .ind-grid { grid-template-columns: 1fr; gap: 32px; } }
 
-/* ===================== Part 3: before and after (2026-09-28) ===================== */
-  /* A proposal space, before and after (site_chrome.before_after, js/before-after.js). Without JavaScript or with
-     reduced motion: a still pair, side by side on a wide screen, stacked on a phone, each marked. With both: the
-     figure pins for 120vh (110vh on a phone) and the after is brushed over the before as the reader scrolls. The brush is an alpha
-     mask with a torn, feathered edge (images/spaces/brush-l.webp, mirrored for Hebrew) that travels with the wipe
-     layer while the after image is held still inside it: both moves are transforms, so nothing repaints. The pairs
-     are pixel-aligned and differ only where the artwork hangs, so the brush's edge (--e, from the left; --er, from
-     the right in Hebrew; in stage widths, the wipe layer's opaque part ending at the edge) crosses just that wall. */
+/* ===================== Part 3: before and after (2026-09-28; plays by itself since 2026-11-26) ===================== */
+  /* A proposal space, before and after (site_chrome.before_after, js/before-after.js). Without JavaScript: a still
+     pair, side by side on a wide screen, stacked on a phone, each marked. With it: one stage, and once a quarter of it
+     is on screen the after is brushed over the before by itself, once, in about 2.2 seconds; no pin, no scroll length
+     (until 2026-11-26 the figure pinned for 120vh and the brush followed the scroll, which on a phone took many careful
+     scrolls). Then a handle (.ba-handle) sits on the brush's edge for comparing by hand. With reduced motion nothing
+     plays: the after shows at once, the handle works. The brush is an alpha mask with a torn, feathered edge
+     (images/spaces/brush-l.webp, mirrored for Hebrew) that travels with the wipe layer while the after image is held
+     still inside it: both moves are transforms, so nothing repaints. The pairs are pixel-aligned and differ only where
+     the artwork hangs, so the brush's edge (--e, from the left; --er, from the right in Hebrew; in stage widths, the
+     wipe layer's opaque part ending at the edge) crosses just that wall. */
   .ba { margin: clamp(40px, 5vw, 64px) 0 0; max-width: 1100px; }
   .ba-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .ba-pane { position: relative; aspect-ratio: var(--ar, 3/2); overflow: hidden; background: var(--surface); }
@@ -774,23 +777,38 @@
   .ba figcaption { margin-top: 14px; font-size: 14px; line-height: 1.55; color: var(--muted); max-width: 820px; }
   .ba-label { display: block; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
   .ba-label [data-l="he"] { letter-spacing: 0.02em; font-size: 13px; }
+  .ba-handle { display: none; }
   @media (max-width: 767px) { .ba-stage { grid-template-columns: 1fr; } }
-  @media (prefers-reduced-motion: no-preference) {
-    html.js .ba::after { content: ""; display: block; height: 120vh; } /* the pinned distance (a sticky box never enters its parent's padding) */
-    html.js .ba-pin { position: sticky; top: var(--pin-top, 88px); }
-    html.js .ba-stage { display: block; position: relative; aspect-ratio: var(--ar, 3/2); width: min(100%, calc((100vh - 230px) * 1.5)); width: min(100%, calc((100svh - 230px) * 1.5)); background: var(--surface); }
-    html.js .ba-pane { position: absolute; inset: 0; aspect-ratio: auto; background: none; }
-    html.js .ba-wipe { right: auto; width: 130%; -webkit-mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; transform: translate3d(calc((var(--e, -0.3) - 1) / 1.3 * 100%), 0, 0); will-change: transform; }
-    html.js .ba-wipe img { position: absolute; top: 0; left: 0; width: calc(100% / 1.3); transform: translate3d(calc((1 - var(--e, -0.3)) * 100%), 0, 0); will-change: transform; }
-    body.lang-he .ba-wipe { left: auto; right: 0; -webkit-mask-image: url(/images/spaces/brush-r.webp); mask-image: url(/images/spaces/brush-r.webp); transform: translate3d(calc((1 - var(--er, -0.3)) / 1.3 * 100%), 0, 0); }
-    body.lang-he .ba-wipe img { left: auto; right: 0; transform: translate3d(calc((var(--er, -0.3) - 1) * 100%), 0, 0); }
-    /* the chips sit on the side each image holds while the brush crosses: After where it starts, Before where it ends */
-    html.js .ba-before .ba-chip { left: auto; right: 14px; opacity: clamp(0, calc((0.72 - var(--p, 0)) * 5), 1); }
-    html.js .ba-after .ba-chip { opacity: clamp(0, calc((var(--p, 0) - 0.28) * 5), 1); }
-    body.lang-he .ba-before .ba-chip { left: 14px; right: auto; }
+  html.js .ba-stage { display: block; position: relative; aspect-ratio: var(--ar, 3/2); width: min(100%, calc((100vh - 230px) * 1.5)); width: min(100%, calc((100svh - 230px) * 1.5)); background: var(--surface); touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+  html.js .ba-pane { position: absolute; inset: 0; aspect-ratio: auto; background: none; }
+  html.js .ba-pane img { pointer-events: none; -webkit-user-drag: none; }
+  html.js .ba-wipe { right: auto; width: 130%; -webkit-mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; mask: url(/images/spaces/brush-l.webp) 0 0 / 100% 100% no-repeat; transform: translate3d(calc((var(--e, -0.3) - 1) / 1.3 * 100%), 0, 0); will-change: transform; }
+  html.js .ba-wipe img { position: absolute; top: 0; left: 0; width: calc(100% / 1.3); transform: translate3d(calc((1 - var(--e, -0.3)) * 100%), 0, 0); will-change: transform; }
+  body.lang-he .ba-wipe { left: auto; right: 0; -webkit-mask-image: url(/images/spaces/brush-r.webp); mask-image: url(/images/spaces/brush-r.webp); transform: translate3d(calc((1 - var(--er, -0.3)) / 1.3 * 100%), 0, 0); }
+  body.lang-he .ba-wipe img { left: auto; right: 0; transform: translate3d(calc((var(--er, -0.3) - 1) * 100%), 0, 0); }
+  /* the chips sit on the side each image holds while the brush crosses: After where it starts, Before where it ends */
+  html.js .ba-before .ba-chip { left: auto; right: 14px; opacity: clamp(0, calc((0.72 - var(--p, 0)) * 5), 1); }
+  html.js .ba-after .ba-chip { opacity: clamp(0, calc((var(--p, 0) - 0.28) * 5), 1); }
+  body.lang-he .ba-before .ba-chip { left: 14px; right: auto; opacity: clamp(0, calc((0.72 - var(--pr, 0)) * 5), 1); }
+  body.lang-he .ba-after .ba-chip { opacity: clamp(0, calc((var(--pr, 0) - 0.28) * 5), 1); }
+  /* the handle: a hairline on the brush's edge and a round grip, shown once the play has ended (.ba-ready) */
+  html.js .ba-handle { display: block; position: absolute; top: 0; bottom: 0; left: clamp(22px, calc(var(--hx, 1) * 100%), calc(100% - 22px)); z-index: 3; width: 44px; margin-left: -22px; cursor: ew-resize; touch-action: pan-y; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0s linear 0.4s; outline: none; }
+  body.lang-he .ba-handle { left: clamp(22px, calc(var(--hxr, 0) * 100%), calc(100% - 22px)); }
+  html.js .ba-ready .ba-handle { opacity: 1; visibility: visible; transition: opacity 0.4s ease; }
+  .ba-handle::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; margin-left: -0.5px; background: rgba(242,240,236,0.7); box-shadow: 0 0 6px rgba(15,15,20,0.35); }
+  .ba-grip { touch-action: none; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: rgba(15,15,20,0.5); border: 1px solid rgba(242,240,236,0.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .ba-grip::before, .ba-grip::after { content: ""; position: absolute; top: 50%; width: 7px; height: 7px; margin-top: -4px; border: solid var(--ink); border-width: 0 0 1.5px 1.5px; }
+  .ba-grip::before { left: 10px; transform: rotate(45deg); }
+  .ba-grip::after { right: 10px; transform: rotate(-135deg); }
+  html.js .ba-handle:focus-visible .ba-grip { outline: 2px solid var(--taupe); outline-offset: 3px; }
+  html.js .ba-ready .ba-stage { cursor: ew-resize; }
+  html.js .ba-tight .ba-handle::before { opacity: 0; }  /* at rest on the artwork: no line across it, the grip on the floor */
+  html.js .ba-tight .ba-grip { top: auto; bottom: 16px; margin-top: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    html.js .ba { --e: 1; --er: 1; --p: 1; --pr: 1; } /* the after, before the script has run (it then sets the same) */
+    html.js .ba-handle, html.js .ba-ready .ba-handle { transition: none; }
   }
-  @media (prefers-reduced-motion: no-preference) and (max-width: 767px) {
-    html.js .ba::after { height: 110vh; }
+  @media (max-width: 767px) {
     html.js .ba-stage { aspect-ratio: 1 / 1; width: min(100%, calc(100vh - 250px)); width: min(100%, calc(100svh - 250px)); }
     html.js .ba-pane img, html.js .ba-wipe img { object-position: var(--fx, 50%) 50%; }
   }
@@ -1120,3 +1138,67 @@
   :root { --measure: 680px; }
   .prose:not(.guide) > :where(p, h2, h3, ul, ol, blockquote), .post-body > :where(p, h2, h3, ul, ol, blockquote) { max-width: var(--measure); }
   .story-row .prose { max-width: var(--measure); }
+
+/* ===================== Phone opening v2 (2026-11-26, the phone default): the room is already there, the brush paints the art =====================
+   js/home-opening-phone.js and the phone_open region of templates/home.html. Every rule below is keyed on html.open2, which that
+   region's inline boot sets only where its phone test (PHONE_MQ: a coarse pointer, max-aspect-ratio 9/10 as FIT_BELOW in
+   js/home-opening.js, at most 820 px wide) matches, unless ?open=1 asks for the old opening (?open=2 forces it on any coarse
+   portrait screen). Without html.open2 #ph-stage is never shown, and its <source> media keep it from fetching anything.
+   #ph-stage draws the room exactly where the WebGL canvas draws it on a phone (FIT_W 1, FIT_ASPECT 3:2, centred in the same
+   fixed full-screen box as #gl), under the hero lines, the band and the caption. .ph-scrim is the shader's uScrim as a CSS
+   gradient: 0.85 x (1 - smoothstep(0, 0.42, y from the bottom)) of the ground colour. After the opening js/home-opening.js
+   sets the stage's opacity from its own scroll progress (gone by a quarter of the hero cross-fade), so the sharp photo stays on top of the
+   canvas until the cross-fade to the next room begins and leaves inside that motion. */
+  .ph-stage { display: none; }
+  html.open2 .ph-stage { display: block; position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+  @media not all and (max-aspect-ratio: 9/10) { html.open2 .ph-stage { display: none; } }
+  .ph-room { position: absolute; left: 0; top: 50%; width: 100%; aspect-ratio: 3 / 2; margin-top: -33.3333%; overflow: hidden; }
+  .ph-room picture, .ph-room img, .ph-room canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .ph-room img { object-fit: cover; object-position: var(--fx, 50%) var(--fy, 50%); }
+  .ph-room .ph-a { opacity: 0; }
+  .ph-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,15,20,0.85) 0%, rgba(15,15,20,0.826) 4.2%, rgba(15,15,20,0.762) 8.4%, rgba(15,15,20,0.666) 12.6%, rgba(15,15,20,0.551) 16.8%, rgba(15,15,20,0.425) 21%, rgba(15,15,20,0.299) 25.2%, rgba(15,15,20,0.184) 29.4%, rgba(15,15,20,0.088) 33.6%, rgba(15,15,20,0.024) 37.8%, rgba(15,15,20,0) 42%); }
+  /* line 1 is real text from the first paint; the nav and the first screen's Write to Stav wait for the end of the stroke */
+  html.open2 #l1 { opacity: 1; }
+  html.open2 body.ph-hold .nav { opacity: 0; }
+  html.open2 body.ph-hold .nav * { pointer-events: none !important; }
+  html.open2 body.ph-hold .hero-ui .hero-write { opacity: 0; pointer-events: none; }
+  /* the room is centred in the fixed full-screen box (the dynamic viewport: it grows when the URL bar collapses), the hero is
+     100svh: the lines and the Write link are measured from the same box as the room (50dvh, where dvh is known; else the
+     hero's 50%, as before), and js/home-opening-phone.js pins them to the room's measured bottom (--ph-rb) on every resize */
+  @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
+    html.open2 body.gl .line { top: calc(50dvh + 33.34vw + 22px); }
+    html.open2 body.gl .hero-ui .hero-write { top: calc(50dvh + 33.34vw + 82px - var(--hw-lift, 0px)); }
+    html.open2.ph-rb body.gl .line { top: calc(var(--ph-rb) + 22px); }
+    html.open2.ph-rb body.gl .hero-ui .hero-write { top: calc(var(--ph-rb) + 82px - var(--hw-lift, 0px)); }
+  }
+  /* no WebGL or reduced motion (no body.gl), portrait: the stage is the hero's picture and scrolls away with it */
+  @media (max-aspect-ratio: 9/10) {
+    html.open2 body:not(.gl) .ph-stage { position: absolute; top: 0; bottom: auto; height: 100vh; height: 100svh; }
+    html.open2 body:not(.gl) .hero { background: transparent; }
+    html.open2 body:not(.gl) .hero > .sfig { display: none; }
+    html.open2 body:not(.gl) #l1 { display: block; }
+    html.open2 body:not(.gl) #cap { display: block; position: absolute; top: calc(100vh - 28px); top: calc(100svh - 28px - env(safe-area-inset-bottom, 0px)); bottom: auto; transform: translateY(-100%); }
+  }
+  @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
+    html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 22px); bottom: auto; }
+    html.open2 body:not(.gl) .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px - var(--hw-lift, 0px)); bottom: auto; }
+  }
+  /* iPad-size portrait (768 to 820 px wide) with the phone opening: the opening lines sit 32 px under the room, as on a
+     phone, instead of above the bottom inset, so a two-line caption never crowds the second headline (Iris gate 3c, F1) */
+  @media (min-width: 768px) and (max-width: 820px) and (max-aspect-ratio: 9/10) {
+    html.open2 body.gl .line { top: calc(50dvh + 33.34vw + 32px); bottom: auto; }
+    html.open2.ph-rb body.gl .line { top: calc(var(--ph-rb) + 32px); }
+    html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 32px); bottom: auto; }
+  }
+  /* the buyer pages carry the homepage's first-screen Write to Stav link with data-phone-only (Ron, 2026-11-26): shown only
+     with the phone opening, where every rule above and below places it exactly as on the homepage; elsewhere it is not there */
+  html:not(.open2) .hero-ui .hero-write[data-phone-only] { display: none; }
+  /* the static phone stage (no WebGL, reduced motion, a fallback): the Write link sits on the flat ground, where its shadow
+     only drew a smudge darker than the ground (Iris, wave 3) */
+  html.open2 body:not(.gl) .hero-ui .hero-write { text-shadow: none; }
+  html.open2 body:not(.gl) .hero-ui .hero-write .ln { box-shadow: none; }
+  /* js/home-opening-phone.js failed to load: the plain cross-fade once the after photo is in, then js/home-opening.js takes over */
+  html.ph-end .ph-room .ph-a { opacity: 1; transition: opacity .6s ease; }
+  html.ph-end #l1, html.ph-end .ph-scrim { opacity: 0; transition: opacity .35s ease; }
+  html.ph-end body:not(.gl) #cap { opacity: 1; }
+  html.ph-end body:not(.gl) #cap .cap-t[data-cap="p3"] { display: inline; }

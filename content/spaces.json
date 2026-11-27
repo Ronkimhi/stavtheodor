@@ -499,16 +499,16 @@
   "law-office-art_hero": {
    "w": 1800,
    "h": 1200,
-   "fx": 0.4992,
-   "fy": 0.2725,
+   "fx": 0.5,
+   "fy": 0.3006,
    "art_x": [
-    0.3567,
-    0.6417
+    0.3471,
+    0.6529
    ],
-   "cap_en": "A conference space, one wide abstract centered on the long wall above the chairs.",
-   "cap_he": "חלל ישיבות, יצירה מופשטת רחבה אחת במרכז הקיר הארוך מעל הכיסאות.",
-   "alt_en": "The same conference room with one wide abstract in crimson, rose and plum centered on the long wall above the leather chairs.",
-   "alt_he": "אותו חדר ישיבות עם יצירה מופשטת רחבה אחת בארגמן, בוורוד ובשזיף, במרכז הקיר הארוך מעל כיסאות העור.",
+   "cap_en": "A conference space, one wide felt relief centered on the long wall above the chairs.",
+   "cap_he": "חלל ישיבות, תבליט לבד רחב אחד במרכז הקיר הארוך מעל הכיסאות.",
+   "alt_en": "The same conference room with one wide relief in deep teal felt centered on the long wall above the leather chairs.",
+   "alt_he": "אותו חדר ישיבות עם יצירה רחבה אחת, תבליט לבד בגוון טורקיז כהה, במרכז הקיר הארוך מעל כיסאות העור.",
    "before_alt_en": "A law firm conference room with a bare plaster wall behind a long table and cognac leather chairs, and a glass wall at the right.",
    "before_alt_he": "חדר ישיבות במשרד עורכי דין עם קיר טיח ריק מאחורי שולחן ארוך וכיסאות עור בגוון קוניאק, וקיר זכוכית מימין."
   },
