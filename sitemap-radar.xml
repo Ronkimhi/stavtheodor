@@ -58,6 +58,12 @@
     <image:image>
       <image:loc>https://stavtheodor.com/images/2026-11-02-november-new-york-grace-carney-hannah-levy-hannah-levy.jpg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-02-november-new-york-grace-carney-hannah-levy-yoshitomo-nara.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-11-02-november-new-york-grace-carney-hannah-levy-zeng-fanzhi.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/basquiat-blue-ribbon-princeton/</loc>
@@ -87,6 +93,10 @@
     <image:image>
       <image:loc>https://stavtheodor.com/images/2026-10-17-chelsea-emily-mae-smith-sugimoto-rondinone-rondinone-waterfall.jpg</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/jcc-gallery-tours-tobi-kahn/</loc>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/october-in-new-york-museums/</loc>
@@ -157,6 +167,10 @@
     <image:image>
       <image:loc>https://stavtheodor.com/images/2026-09-17-zoya-cherkassky-american-cooking.jpg</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>https://stavtheodor.com/radar/september-art-fairs-armory-independent-affordable/</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/</loc>
@@ -463,11 +477,11 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/zoya-cherkassky-american-cooking/he/</loc>
-    <lastmod>2026-11-27T16:03:11-05:00</lastmod>
+    <lastmod>2026-11-27T16:16:21-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/he/</loc>
-    <lastmod>2026-11-27T16:03:11-05:00</lastmod>
+    <lastmod>2026-11-27T16:16:22-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/seven-israeli-works-nathan-zach/he/</loc>
@@ -483,15 +497,15 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/oren-fischer-hallel/he/</loc>
-    <lastmod>2026-11-27T16:03:11-05:00</lastmod>
+    <lastmod>2026-11-27T16:16:23-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/noa-wiegenfeld/he/</loc>
-    <lastmod>2026-11-27T16:03:11-05:00</lastmod>
+    <lastmod>2026-11-27T16:16:24-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/tom-fima/he/</loc>
-    <lastmod>2026-11-27T16:03:11-05:00</lastmod>
+    <lastmod>2026-11-27T16:16:24-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/fresh-paint-2026/he/</loc>
