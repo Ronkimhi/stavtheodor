@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/khafre-enthroned/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Khafre_Enthroned%2C_side_view.JPG/1920px-Khafre_Enthroned%2C_side_view.JPG">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,37 +113,37 @@
 <div class="bio">Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo. Made of anorthosite gneiss, a valuable, extremely hard, and dark stone, it was brought 1,000 km (620 mi) down the Nile River from the &quot;Khafre quarries&quot; west of Gebel el-Asr. The statue was carved for the Pharaoh&#x27;s valley temple near the Great Sphinx, a part of the necropolis used in funeral rituals.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=khafre-enthroned">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=khafre-enthroned">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Khafre_Enthroned%2C_side_view.JPG/960px-Khafre_Enthroned%2C_side_view.JPG" alt="Khafre Enthroned, side view">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Khafre_Enthroned%2C_side_view.JPG/960px-Khafre_Enthroned%2C_side_view.JPG" width="960" height="1530" alt="Khafre Enthroned, side view">
 <h2>Khafre Enthroned, side view</h2>
 <div class="meta"><span>Egyptian Museum, Cairo</span></div>
 <p>The statue of Khafre from his valley temple at Giza, now in the Egyptian Museum of Antiquities in Cairo. A figure of a falcon, the god Horus, extends his wings around the king&#x27;s head. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>
 <p class="work-attr">A. Parrot · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Khafre%20Enthroned%2C%20side%20view.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Khafre_Enthroned%2C_near-front_view.JPG/960px-Khafre_Enthroned%2C_near-front_view.JPG" alt="Khafre Enthroned, near-front view">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Khafre_Enthroned%2C_near-front_view.JPG/960px-Khafre_Enthroned%2C_near-front_view.JPG" width="960" height="1708" alt="Khafre Enthroned, near-front view">
 <h2>Khafre Enthroned, near-front view</h2>
 <div class="meta"><span>Egyptian Museum, Cairo</span></div>
 <p>The statue of Khafre from his valley temple at Giza, now in the Egyptian Museum of Antiquities in Cairo. Fourth Dynasty, 26th century BC. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>
 <p class="work-attr">A. Parrot · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Khafre%20Enthroned%2C%20near-front%20view.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Khafre_Enthroned%2C_three-quarter_view.JPG/960px-Khafre_Enthroned%2C_three-quarter_view.JPG" alt="Khafre Enthroned, three-quarter view">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Khafre_Enthroned%2C_three-quarter_view.JPG/960px-Khafre_Enthroned%2C_three-quarter_view.JPG" width="960" height="1513" alt="Khafre Enthroned, three-quarter view">
 <h2>Khafre Enthroned, three-quarter view</h2>
 <div class="meta"><span>Egyptian Museum, Cairo</span></div>
 <p>The same statue, currently located at the Egyptian Museum in Cairo, as photographed from a similar angle in 2015. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>
 <p class="work-attr">A. Parrot · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Khafre%20Enthroned%2C%20three-quarter%20view.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg/960px-%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg" alt="Statue of Khafre in the Egyptian Museum, Cairo">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg/960px-%C3%84gyptisches_Museum_Kairo_2016-03-29_Chephren_04.jpg" width="960" height="640" alt="Statue of Khafre in the Egyptian Museum, Cairo">
 <h2>Statue of Khafre in the Egyptian Museum, Cairo</h2>
 <div class="meta"></div>
 <p>en:Egyptian Museum, Cairo: statue of king Khafre Enthroned, 4th Dynasty, en:Old Kingdom of Egypt. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>
 <p class="work-attr">Djehouty · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:%C3%84gyptisches%20Museum%20Kairo%202016-03-29%20Chephren%2004.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Chephren_CG_14.jpg" alt="Chephren CG 14">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Chephren_CG_14.jpg" width="423" height="593" alt="Chephren CG 14">
 <h2>Chephren CG 14</h2>
 <div class="meta"></div>
 <p>Khafre Enthroned, as photographed in 1911. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>
 <p class="work-attr">Ludwig Borchardt (1863-1938) · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Chephren%20CG%2014.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kairo_Museum_Sitzstatue_Chephren_06.jpg/960px-Kairo_Museum_Sitzstatue_Chephren_06.jpg" alt="Kairo Museum Sitzstatue Chephren 06">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kairo_Museum_Sitzstatue_Chephren_06.jpg/960px-Kairo_Museum_Sitzstatue_Chephren_06.jpg" width="960" height="1279" alt="Kairo Museum Sitzstatue Chephren 06">
 <h2>Kairo Museum Sitzstatue Chephren 06</h2>
 <div class="meta"></div>
 <p>Sitzstatue des Königs Chephren der 4. altägyptischen Dynastie, ausgestellt im Ägyptischen Museum in Kairo, Ägypten. Khafre Enthroned is a Ka statue of the pharaoh Khafre, who reigned during the Fourth Dynasty of ancient Egypt. It is now located in the Egyptian Museum in Cairo.</p>

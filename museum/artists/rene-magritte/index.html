@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/rene-magritte/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Magritte_treachery.jpg/1920px-Magritte_treachery.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,31 +113,31 @@
 <div class="bio">René François Ghislain Magritte was a Belgian surrealist artist known for his depictions of familiar objects in unfamiliar, unexpected contexts, which often provoked questions about the nature and boundaries of reality and representation. His imagery has influenced pop art, minimalist art, and conceptual art.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=rene-magritte">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=rene-magritte">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Magritte_treachery.jpg/960px-Magritte_treachery.jpg" alt="The Treachery of Images">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Magritte_treachery.jpg/960px-Magritte_treachery.jpg" width="960" height="720" alt="The Treachery of Images">
 <h2>The Treachery of Images</h2>
 <div class="meta"><span>1929</span><span>60 × 81 cm</span><span>Los Angeles County Museum of Art</span></div>
 <p>The Treachery of Images is a 1929 painting by Belgian surrealist painter René Magritte. It is also known as This Is Not a Pipe, Ceci n&#x27;est pas une pipe and The Wind and the Song. It is on display at the Los Angeles County Museum of Art.</p>
 <p class="work-attr">Caterpillar84 · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Magritte%20treachery.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg/960px-Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg" alt="Le Thérapeute (The Healer)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg/960px-Le_Th%C3%A9rapeute_%281976%29_Ren%C3%A9_Magritte_-_TMoCA%2C_Tehran.jpg" width="960" height="1280" alt="Le Thérapeute (The Healer)">
 <h2>Le Thérapeute (The Healer)</h2>
 <div class="meta"><span>1976</span><span>Tehran Museum of Contemporary Art</span></div>
 
 <p class="work-attr">Farhad sh · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Le%20Th%C3%A9rapeute%20%281976%29%20Ren%C3%A9%20Magritte%20-%20TMoCA%2C%20Tehran.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Maastricht%2C_TEFAF2014-09.jpg/960px-Maastricht%2C_TEFAF2014-09.jpg" alt="Magritte painting at TEFAF, Maastricht">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Maastricht%2C_TEFAF2014-09.jpg/960px-Maastricht%2C_TEFAF2014-09.jpg" width="960" height="662" alt="Magritte painting at TEFAF, Maastricht">
 <h2>Magritte painting at TEFAF, Maastricht</h2>
 <div class="meta"><span>2014</span></div>
 
 <p class="work-attr">Kleon3 · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Maastricht%2C%20TEFAF2014-09.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Magritte_Exposition_Mexico_City.JPG/960px-Magritte_Exposition_Mexico_City.JPG" alt="Magritte exhibition, Mexico City">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Magritte_Exposition_Mexico_City.JPG/960px-Magritte_Exposition_Mexico_City.JPG" width="960" height="640" alt="Magritte exhibition, Mexico City">
 <h2>Magritte exhibition, Mexico City</h2>
 <div class="meta"></div>
 
 <p class="work-attr">ProtoplasmaKid · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Magritte%20Exposition%20Mexico%20City.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg/960px-Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg" alt="Magritte work at the Museu Brasileiro da Escultura, São Paulo">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg/960px-Obra_da_exposi%C3%A7%C3%A3o_no_Museu_Brasileiro_da_Escultura_02.jpg" width="960" height="1280" alt="Magritte work at the Museu Brasileiro da Escultura, São Paulo">
 <h2>Magritte work at the Museu Brasileiro da Escultura, São Paulo</h2>
 <div class="meta"></div>
 

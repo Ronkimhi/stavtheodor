@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/alphonse-mucha/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Alfons Maria Mucha, known in English as Alphonse Mucha, was a Czech painter, illustrator, and graphic artist. Living in Paris during the Art Nouveau period, he was widely known for his distinctly stylised and decorative theatrical posters, particularly those of Sarah Bernhardt. He produced illustrations, advertisements, decorative panels, as well as designs, which became among the best-known images of the period.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=alphonse-mucha">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=alphonse-mucha">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg" alt="Gismonda">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg" width="800" height="2343" alt="Gismonda">
 <h2>Gismonda</h2>
 <div class="meta"><span>1894</span><span>198 × 67 cm</span><span>National Gallery Prague</span></div>
 <p>Gismonda is a Greek-set melodrama in four acts by Victorien Sardou that premiered on October 31, 1894 at the Théâtre de la Renaissance. In 1918, the play was adapted for the now lost film Love&#x27;s Conquest. In 1918/1919, it was adapted into the opera Gismonda by Henry Février.</p><p class="fact">Act I starts in 1451 in Athens at the foot of the Acropolis. In the opening act, we find Gismonda, the widow of the Duke of Athens, and the mother of his child, a five-year-old boy named Francesco. <a href="https://en.wikipedia.org/wiki/Gismonda#Act_I" target="_blank" rel="noopener">Act I →</a></p><p class="fact">The second act begins in the Convent of Daphne, where Gismonda has gone into a retreat with her son, Francesco. The boy is ill with a strange fever that comes on every evening and breaks every morning. <a href="https://en.wikipedia.org/wiki/Gismonda#Act_II" target="_blank" rel="noopener">Act II →</a></p><p class="fact">This act takes place in Gismonda&#x27;s private apartment in her palace. The Athenian populace is not pleased that their Duchess does not keep her vow. <a href="https://en.wikipedia.org/wiki/Gismonda#Act_III" target="_blank" rel="noopener">Act III →</a></p>
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Alfons%20Mucha%20-%201894%20-%20Gismonda.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alphonse_Mucha_-_Zodiac%2C_1869.jpg/960px-Alphonse_Mucha_-_Zodiac%2C_1869.jpg" alt="Zodiac">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alphonse_Mucha_-_Zodiac%2C_1869.jpg/960px-Alphonse_Mucha_-_Zodiac%2C_1869.jpg" width="960" height="1275" alt="Zodiac">
 <h2>Zodiac</h2>
 <div class="meta"><span>1897</span><span>66 × 48 cm</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Alphonse%20Mucha%20-%20Zodiac%2C%201869.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg/960px-Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg" alt="Rêveur">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg/960px-Alfons_Mucha_-_F._Champenois_Imprimeur-%C3%89diteur.jpg" width="960" height="1304" alt="Rêveur">
 <h2>Rêveur</h2>
 <div class="meta"><span>1897</span><span>73 × 55 cm</span><span>http://www.wikidata.org/.well-known/genid/efba7392fa1d13b18bf6b82f9712db26</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Alfons%20Mucha%20-%20F.%20Champenois%20Imprimeur-%C3%89diteur.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg/960px-Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg" alt="Madonna of the Lilies">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg/960px-Alfons_Mucha_-_Madonna_of_the_Lilies_%281905%29.jpg" width="960" height="1357" alt="Madonna of the Lilies">
 <h2>Madonna of the Lilies</h2>
 <div class="meta"><span>1905</span><span>247 × 182 cm</span><span>Mucha Foundation</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Alfons%20Mucha%20-%20Madonna%20of%20the%20Lilies%20%281905%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SlaviaMucha.jpg/960px-SlaviaMucha.jpg" alt="Portrait of Josephine Crane-Bradley as Slavia">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SlaviaMucha.jpg/960px-SlaviaMucha.jpg" width="960" height="1535" alt="Portrait of Josephine Crane-Bradley as Slavia">
 <h2>Portrait of Josephine Crane-Bradley as Slavia</h2>
 <div class="meta"><span>1908</span><span>154 × 92 cm</span><span>National Gallery Prague</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:SlaviaMucha.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg/960px-Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg" alt="Maude Adams (1872 to 1953) as Joan of Arc">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg/960px-Mucha-Maud_Adams_as_Joan_of_Arc-1909.jpg" width="960" height="2707" alt="Maude Adams (1872 to 1953) as Joan of Arc">
 <h2>Maude Adams (1872 to 1953) as Joan of Arc</h2>
 <div class="meta"><span>1909</span><span>209 × 76 cm</span><span>Metropolitan Museum of Art</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Mucha-Maud%20Adams%20as%20Joan%20of%20Arc-1909.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Slovane_v_pravlasti_81x61m.jpg/960px-Slovane_v_pravlasti_81x61m.jpg" alt="Slavs in their Original Homeland">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Slovane_v_pravlasti_81x61m.jpg/960px-Slovane_v_pravlasti_81x61m.jpg" width="960" height="703" alt="Slavs in their Original Homeland">
 <h2>Slavs in their Original Homeland</h2>
 <div class="meta"><span>1912</span><span>610 × 810 cm</span><span>museum collection of the Prague City Gallery</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Slovane%20v%20pravlasti%2081x61m.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Slavnost_svatovitova_na_rujane.jpg/960px-Slavnost_svatovitova_na_rujane.jpg" alt="The Celebration of Svantovit in Rujana">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Slavnost_svatovitova_na_rujane.jpg/960px-Slavnost_svatovitova_na_rujane.jpg" width="960" height="727" alt="The Celebration of Svantovit in Rujana">
 <h2>The Celebration of Svantovit in Rujana</h2>
 <div class="meta"><span>1912</span><span>610 × 810 cm</span><span>museum collection of the Prague City Gallery</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Slavnost%20svatovitova%20na%20rujane.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Zavedeni_slovanske_liturgie_na_velke_morave.jpg/960px-Zavedeni_slovanske_liturgie_na_velke_morave.jpg" alt="The Introduction of Slavonic Liturgy">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Zavedeni_slovanske_liturgie_na_velke_morave.jpg/960px-Zavedeni_slovanske_liturgie_na_velke_morave.jpg" width="960" height="673" alt="The Introduction of Slavonic Liturgy">
 <h2>The Introduction of Slavonic Liturgy</h2>
 <div class="meta"><span>1912</span><span>610 × 810 cm</span><span>museum collection of the Prague City Gallery</span></div>
 
 <p class="work-attr">Alphonse Mucha · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Zavedeni%20slovanske%20liturgie%20na%20velke%20morave.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg/960px-Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg" alt="Song of Bohemia">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg/960px-Alfons_Mucha_-_Chant_de_Boh%C3%A8me_02.jpg" width="960" height="684" alt="Song of Bohemia">
 <h2>Song of Bohemia</h2>
 <div class="meta"><span>1918</span><span>100 × 138 cm</span><span>Mucha Museum</span></div>
 

@@ -102,7 +102,11 @@ for path, html in sorted(pages.items()):
         fail(path, f"GA async snippet count = {html.count(GA_SRC)} (want 1)")
     if len(re.findall(r"gtag\('config',\s*'G-4300MN0Q97'\)", html)) != 1:
         fail(path, "gtag config count != 1")
-    if "document.head.appendChild(s)" in html:
+    # the 2026-09-26 load-event deferral of gtag.js (a script element built in JS with the gtag src and appended to the
+    # head), retired 2026-09-28 for Google's standard async tag. Only an inline script that builds the GA loader counts:
+    # the phone opening's own loader (2026-11-26) also appends a script to the head, and it is not GA.
+    if any("googletagmanager.com/gtag/js" in js and "appendChild" in js
+           for js in re.findall(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S)):
         fail(path, "deferred GA loader is back")
     if path in APP_SHELLS:
         continue

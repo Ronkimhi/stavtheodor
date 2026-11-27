@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/lee-krasner/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg/1920px-Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,25 +113,25 @@
 <div class="bio">Lenore &quot;Lee&quot; Krasner was an American painter and visual artist active primarily in New York whose work has been associated with the Abstract Expressionist movement.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=lee-krasner">Walk the 3D gallery · 4 works →</a><a class="cta" href="/museum/#artist=lee-krasner">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg/960px-Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg" alt="Polar Stampede">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg/960px-Polar_Stampede%2C_Lee_Krasner%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_10.jpg" width="960" height="1280" alt="Polar Stampede">
 <h2>Polar Stampede</h2>
 <div class="meta"><span>1960</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Polar%20Stampede%2C%20Lee%20Krasner%2C%20Paintings%20in%20the%20San%20Francisco%20Museum%20of%20Modern%20Art%2C%20SFMOMA%2010.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Lee_Krasner_Works_on_Paper_Exhibition_at_the_Brooklyn_Museum_Dec_1984-_Feb_1985.jpg" alt="Works on Paper exhibition, Brooklyn Museum, 1984 to 1985">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Lee_Krasner_Works_on_Paper_Exhibition_at_the_Brooklyn_Museum_Dec_1984-_Feb_1985.jpg" width="768" height="507" alt="Works on Paper exhibition, Brooklyn Museum, 1984 to 1985">
 <h2>Works on Paper exhibition, Brooklyn Museum, 1984 to 1985</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Brooklyn Museum · No restrictions · <a href="https://commons.wikimedia.org/wiki/File:Lee%20Krasner%20Works%20on%20Paper%20Exhibition%20at%20the%20Brooklyn%20Museum%20Dec%201984-%20Feb%201985.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Pollock-green.jpg/960px-Pollock-green.jpg" alt="The studio at the Pollock-Krasner House, Springs, New York">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Pollock-green.jpg/960px-Pollock-green.jpg" width="960" height="720" alt="The studio at the Pollock-Krasner House, Springs, New York">
 <h2>The studio at the Pollock-Krasner House, Springs, New York</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Americasroof · CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:Pollock-green.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lee_Krasner%2C_artist.jpg/960px-Lee_Krasner%2C_artist.jpg" alt="Lee Krasner, photographed by Bernard Gotfryd">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lee_Krasner%2C_artist.jpg/960px-Lee_Krasner%2C_artist.jpg" width="960" height="1414" alt="Lee Krasner, photographed by Bernard Gotfryd">
 <h2>Lee Krasner, photographed by Bernard Gotfryd</h2>
 <div class="meta"></div>
 

@@ -1,7 +1,9 @@
 /* The opening. Ported from the approved "Same Room" concept: a house brush paints the room out of the
    dark, a wall stroke brushes the art onto the wall, a bloom finishes it, the wet band dries. Then four
    scroll chapters, each the same gesture on another room. Falls back to static figures without WebGL. */
-(function () {
+(function boot() {
+  var PHONE = window.THEODORA_PHONE; /* phone opening v2 (js/home-opening-phone.js): it calls boot() once its own entrance is over */
+  if (PHONE && PHONE.hold) { PHONE.boot = boot; return; }
   var $ = function (s) { return document.querySelector(s); };
   var clamp = function (x, a, b) { return Math.min(b, Math.max(a, x)); };
   var ss = function (a, b, x) { var t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
@@ -16,13 +18,32 @@
   var dbg = window.__theodoraBrush = { mode: 'boot', t0: 0, done: false, touch: touch };
 
   var tl = null, st = null, glDead = false;
-  function goStatic() {
+  /* the phone opening's stage (js/home-opening-phone.js): its real photos of the first room, over this canvas */
+  var stage = (PHONE && document.documentElement.classList.contains('open2')) ? $('#ph-stage') : null, stageOp = 1;
+  function goStatic(why) {
     if (body.classList.contains('static')) { return; }
     glDead = true; dbg.mode = 'static';
+    /* the phone stage becomes the hero's picture (css/theme.css): its caption (room p3, the stage's room) only with its after photo on screen, and
+       line 1 stays faded once the phone opening has ended (as the static figures, which carry no line) */
+    if (stage) {
+      stage.style.opacity = ''; stage.style.visibility = ''; stage.style.transition = '';
+      var sa = stage.querySelector('.ph-a'), art = !!(sa && sa.naturalWidth && (sa.style.opacity === '1' || document.documentElement.classList.contains('ph-end')) && !afterFailed && !PHONE.noAfter);
+      if (cap) { if (art) { cap.setAttribute('data-show', 'p3'); } else { cap.removeAttribute('data-show'); } cap.style.opacity = art ? 1 : 0; }
+    }
+    /* a static figure's caption names the art in its photo: never shown over a photo that failed, nor, after a stall
+       (the watchdog, a lost context), over one that has not arrived (2026-11-26) */
+    Array.prototype.forEach.call(document.querySelectorAll('.sfig'), function (f) {
+      var im = f.querySelector('img'), fc = f.querySelector('figcaption');
+      if (!im || !fc || (im.complete && im.naturalWidth)) { return; }
+      var off = function () { fc.style.visibility = 'hidden'; }, on = function () { fc.style.visibility = ''; };
+      if (im.complete || why) { off(); }
+      im.addEventListener('error', off); im.addEventListener('load', on);
+    });
     if (tl) { tl.kill(); tl = null; }
     if (st) { st.kill(); st = null; }
     if (window.gsap) { gsap.killTweensOf([markIn, cue, line1, line2, cap]); }
     [markIn, cue, line1, line2, introH1, band].forEach(function (el) { if (el) { el.style.opacity = ''; el.style.transform = ''; } });
+    if (stage && PHONE.done && line1) { line1.style.opacity = 0; }
     body.classList.remove('gl', 'entering');
     if (chain) { chain.style.height = ''; }
     body.classList.add('static');
@@ -32,6 +53,18 @@
   if (!window.gsap || !window.ScrollTrigger || !window.SplitText || reduce || forceNoGl || !body.classList.contains('gl')) { goStatic(); return; }
   gsap.registerPlugin(ScrollTrigger, SplitText);
   ScrollTrigger.config({ ignoreMobileResize: true });
+  /* a refresh measures every trigger by scrolling to 0 and back. css/theme.css sets html { scroll-behavior: smooth } (no
+     Lenis on touch screens), and Chromium then runs that scroll to 0 as a smooth scroll that has not moved yet when the
+     trigger is measured: a refresh while the page is scrolled (a reload or a return that restores the position) gave
+     the opening a start of minus the scroll offset, so back at the top its progress never reached 0 and the first room
+     stayed blended with the next one, or showed the wrong room (2026-11-27, Iris gate 3c). The refresh now runs with
+     scroll-behavior auto, as GSAP expects, read back at once (Chromium's scrollTo uses the style it last computed, so
+     the scroll to 0 that follows in the same task would still be smooth); anchor links keep their smooth scroll. */
+  var rootEl = document.documentElement;
+  /* the computed value is read back at once: Chromium's scrollTo uses the style it last computed, so without it the
+     scroll to 0 that follows in the same task would still be smooth */
+  ScrollTrigger.addEventListener('refreshInit', function () { rootEl.style.scrollBehavior = 'auto'; void getComputedStyle(rootEl).scrollBehavior; });
+  ScrollTrigger.addEventListener('refresh', function () { rootEl.style.scrollBehavior = ''; });
 
   var gl = null;
   try {
@@ -54,6 +87,7 @@
   'uniform vec2 uBloomO; uniform float uBloomR; uniform vec2 uBloomBias; uniform float uBloomSeed;',
   'uniform float uScrim; uniform float uXfade;',
   'uniform float uFit; uniform vec4 uRect; uniform float uRectAspect;',
+  'uniform float uSettled;',
   'float hash(vec2 p){ vec3 p3 = fract(vec3(p.xyx) * 0.1031); p3 += dot(p3, p3.yzx + 33.33); return fract((p3.x + p3.y) * p3.z); }',
   'float noise(vec2 p){ vec2 i = floor(p); vec2 f = fract(p); f = f*f*(3.0-2.0*f);',
   '  return mix(mix(hash(i), hash(i+vec2(1.0,0.0)), f.x), mix(hash(i+vec2(0.0,1.0)), hash(i+vec2(1.0,1.0)), f.x), f.y); }',
@@ -100,6 +134,12 @@
   '  if (uFit > 0.5){ td = (td - uRect.xy) / uRect.zw; aspect = uRectAspect;',
   '    if (td.x < 0.0 || td.x > 1.0 || td.y < 0.0 || td.y > 1.0){ gl_FragColor = vec4(uBg, 1.0); return; } }',
   '  vec2 uv = coverUV(td, aspect, uImgAspect, uFocal);',
+  /* settled (2026-11-26): the house brush is off, the bloom covers every pixel (uBloomR 1.6; d is at most about 1.28
+     for uv and the bloom origin inside the unit square) and the wall stroke is dry, so the two mixes below take
+     weight 1 everywhere and the brushes' noise can be skipped. The mixes stay, weighted by the uniform (1 when
+     settled), so the result is bit for bit what the full path draws */
+  '  vec3 col;',
+  '  if (uSettled > 0.5){ col = mix(mix(uBg, texture2D(tBefore, uv).rgb, uSettled), texture2D(tAfter, uv).rgb, uSettled); } else {',
   '  vec3 before = texture2D(tBefore, uv).rgb; vec3 after = texture2D(tAfter, uv).rgb;',
   '  float wet = 0.0; float wetU = 0.0; float wetB = 0.17; float maskA = 1.0;',
   '  if (uLayerA > 0){',
@@ -112,11 +152,11 @@
   '  float bloom = 0.0;',
   '  if (uBloomR > 0.0){ vec2 dv = uv - uBloomO; float d = length(dv*vec2(1.0, 0.6)) + max(0.0, dot(dv, uBloomBias));',
   '    d += (fbm3(uv*6.0 + uBloomSeed) - 0.44)*0.25; bloom = 1.0 - smoothstep(uBloomR - 0.02, uBloomR + 0.02, d); }',
-  '  vec3 col = mix(uBg, before, maskA);',
+  '  col = mix(uBg, before, maskA);',
   '  col = mix(col, after, max(maskB, bloom));',
   '  wet *= (0.85 + 0.15*noise(vec2(wetU*40.0, uTime*0.4)));',
   '  col += wet*0.08*vec3(1.0, 0.97, 0.92);',
-  '  col *= 1.0 + (wetB - 0.17)*0.16*wet;',
+  '  col *= 1.0 + (wetB - 0.17)*0.16*wet; }',
   '  if (uXfade > 0.0) col = mix(col, texture2D(tNext, coverUV(td, aspect, uNextAspect, uNextFocal)).rgb, uXfade);',
   '  col = mix(col, uBg, (1.0 - smoothstep(0.0, 0.42, fragN.y))*0.85*uScrim);',
   '  col = mix(col, uBg, uFade);',
@@ -138,7 +178,7 @@
   var pLoc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(pLoc); gl.vertexAttribPointer(pLoc, 2, gl.FLOAT, false, 0, 0);
   var L = {};
   ['uRes', 'uTime', 'tBefore', 'tAfter', 'tNext', 'uFocal', 'uImgAspect', 'uNextFocal', 'uNextAspect', 'uBg', 'uFade', 'uLayerA', 'uA0', 'uAD', 'uAL', 'uAH', 'uAW', 'uARad', 'uASeed', 'uASpread',
-   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade', 'uFit', 'uRect', 'uRectAspect'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
+   'uB0', 'uBD', 'uBL', 'uBH', 'uBW', 'uBRad', 'uBSeed', 'uBloomO', 'uBloomR', 'uBloomBias', 'uBloomSeed', 'uScrim', 'uXfade', 'uFit', 'uRect', 'uRectAspect', 'uSettled'].forEach(function (n) { L[n] = gl.getUniformLocation(prog, n); });
   gl.uniform1i(L.tBefore, 0); gl.uniform1i(L.tAfter, 1); gl.uniform1i(L.tNext, 2);
   gl.uniform3f(L.uBg, 15 / 255, 15 / 255, 20 / 255);
 
@@ -170,6 +210,19 @@
   function loadImg(name) {
     if (imgs[name]) { return Promise.resolve(imgs[name]); }
     if (loading[name]) { return loading[name]; }
+    /* the phone opening has loaded (or is loading) this photo already: a decoded copy (from the memory cache, no second
+       request), null if it failed, or undefined if the phone opening never loaded it (then it loads here) */
+    var pw = PHONE && PHONE.wait && PHONE.wait[name];
+    if (pw) {
+      loading[name] = pw.then(function (im) {
+        /* undefined: the phone opening never loaded it, so it loads here. Its entry goes too, or loadImg would find the same
+           resolved promise again and loop for good (wave 3: a first-room photo that failed fast froze the page) */
+        if (im === undefined) { delete loading[name]; if (PHONE && PHONE.wait) { delete PHONE.wait[name]; } return loadImg(name); }
+        if (im) { imgs[name] = im; dirty(); }
+        return im;
+      });
+      return loading[name];
+    }
     loading[name] = new Promise(function (res) {
       var im = new Image();
       im.onload = function () { var done = function () { imgs[name] = im; dirty(); res(im); };
@@ -185,6 +238,40 @@
     if (imgs[name]) { texCache[name] = makeTex(imgs[name]); return texCache[name]; }
     loadImg(name);
     return placeholder;
+  }
+  /* the later rooms (2026-11-26). The next room (PAIRS[1], before then after) loads as soon as both images of the
+     first room are in (loadNext), so it arrives during the entrance without competing with the first room and the
+     hero's cross-fade has it on the first scroll. The rooms after it (PAIRS[2] on) load one after another, chained
+     after the next room, once the entrance ends, is skipped (Escape, or a page that opens scrolled) or the page is
+     scrolled into a chapter (loadRest). A texture a chapter needs before its turn in the chain still loads on demand
+     (getTex), and the placeholder (the ground colour) stands in until it arrives, as before. */
+  var nextIn = null, restStarted = false;
+  /* the first room's after image: ready once decoded, failed or given up on (the watchdog, below); whenAfter runs f
+     then, or now */
+  var afterReady = false, afterWait = [];
+  /* the first room's after image failed or was given up on (2026-11-26): the first room then ends on its painted before
+     image, with no caption, and never on the placeholder (the ground colour) in the after image's place */
+  var afterFailed = false;
+  function whenAfter(f) { if (afterReady) { f(); } else { afterWait.push(f); } }
+  function afterIn() {
+    if (afterReady) { return; }
+    afterReady = dbg.after = true; dbg.afterAt = performance.now();
+    afterWait.splice(0).forEach(function (f) { f(); });
+  }
+  function loadNext() {
+    if (!nextIn) {
+      var v = (PAIRS[1] && !glDead) ? vr(PAIRS[1]) : null;
+      dbg.next = !!v;
+      nextIn = v ? loadImg(v.b).then(function () { return loadImg(v.a); }) : Promise.resolve();
+    }
+    return nextIn;
+  }
+  function loadRest() {
+    if (restStarted || glDead) { return; }
+    restStarted = dbg.rest = true;
+    var rest = [];
+    PAIRS.slice(2).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
+    loadNext().then(function next() { var nm = !glDead && rest.shift(); if (nm) { loadImg(nm).then(next); } });
   }
   function pruneTex(keep) {
     Object.keys(texCache).forEach(function (n) {
@@ -319,10 +406,14 @@
     gl.uniform2f(L.uBloomO, v.bo[0], v.bo[1]); gl.uniform1f(L.uBloomR, U.bloom); gl.uniform2f(L.uBloomBias, 0, 0); gl.uniform1f(L.uBloomSeed, p.seed * 1.7);
     gl.uniform1f(L.uScrim, U.scrim); gl.uniform1f(L.uXfade, U.xfade);
     gl.uniform1f(L.uFit, fit.on ? 1 : 0); gl.uniform4f(L.uRect, fit.x, fit.y, fit.w, fit.h); gl.uniform1f(L.uRectAspect, fit.aspect);
+    /* settled: the house brush is off, the bloom is fully open and the wall stroke has dried (see the shader) */
+    gl.uniform1f(L.uSettled, (U.layerA === 0 && U.bloom >= 1.6 && U.bw <= 0) ? 1 : 0);
     var n = texNames();
     gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, getTex(n.b));
     gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, getTex(n.a));
-    gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, getTex(n.n));
+    /* the next room is sampled only while uXfade > 0: until the later rooms are due (loadRest), an unsampled
+       slot gets the placeholder, so drawing the entrance does not fetch the next room early */
+    gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, (restStarted || U.xfade > 0) ? getTex(n.n) : placeholder);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
   function sizeCanvas() {
@@ -334,7 +425,7 @@
   sizeCanvas(); computeFit(); buildPasses();
   window.addEventListener('resize', function () { sizeCanvas(); computeFit(); buildPasses(); dirty(); });
   gsap.ticker.add(function () { if (glDead || covered) { return; } if (dirtyFlag || wetAlive()) { draw(); } });
-  canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic(); });
+  canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); goStatic('lost'); });
 
   /* caption for the proposal: one line per room (data-cap = the pair id), visible whenever any after pixel is on screen, bilingual twins follow the switch */
   var capKey = '', capOn = false;
@@ -342,6 +433,16 @@
     if (key === null) { if (capOn) { capOn = false; gsap.to(cap, { opacity: 0, duration: 0.2, overwrite: true }); } return; }
     if (key !== capKey) { capKey = key; cap.setAttribute('data-show', key); }
     if (!capOn) { capOn = true; gsap.to(cap, { opacity: 1, duration: 0.2, overwrite: true }); }
+  }
+  /* a page already scrolled when this boots (the visitor swiped the moment the stroke let go): the stage eases to its
+     first value over 0.4 s instead of jumping (ScrollTrigger sets the scrubbed progress at once on creation) */
+  var stageEaseUntil = -1;
+  function stageOpacity(op) {
+    if (stageEaseUntil < 0) { stageEaseUntil = op === stageOp ? 0 : performance.now() + 400; }
+    if (op === stageOp) { return; } stageOp = op;
+    var ease = performance.now() < stageEaseUntil;
+    stage.style.transition = ease ? 'opacity .4s ease, visibility 0s linear ' + (op > 0 ? '0s' : '.4s') : '';
+    stage.style.opacity = op; stage.style.visibility = op > 0 ? 'visible' : 'hidden';
   }
   var canvasOp = 1;
   function canvasOpacity(op) {
@@ -370,13 +471,16 @@
     var chainDist = Math.max(1, chain.offsetHeight - heroDist), blockDist = Math.max(1, total - heroDist - chainDist);
     var y = P * total, q = clamp(y / heroDist, 0, 1), cp = clamp((y - heroDist) / chainDist, 0, 1), a = clamp((y - heroDist - chainDist) / blockDist, 0, 1);
     dbg.progress = P; dbg.y = y;
+    if (P > 0) { loadRest(); } /* the page is moving toward the chapters: their rooms are due now */
     markIn.style.opacity = 1 - ss(0, 0.4, q);
     canvasOpacity(1);
     if (cp <= 0) {
       U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
-      if (entranceDone && !skipping) { U.layerA = 0; U.bh = 1; U.bloom = 1.6; U.scrim = 0; U.bw = 0; killDry(); }
+      if (entranceDone && !skipping) { U.layerA = 0; U.bh = afterFailed ? 0 : 1; U.bloom = afterFailed ? 0 : 1.6; U.scrim = 0; U.bw = 0; killDry(); }
+      /* the phone stage shows the first room until this boot has finished: under it the room is its before image */
+      else if (stage && !skipping) { U.layerA = 0; U.bh = 0; U.bloom = 0; U.scrim = 0; U.bw = 0; }
       U.xfade = PAIRS[1] ? ss(0.4, 1, q) : 0; U.fade = 0;
-      if (entranceDone) { capSet(U.xfade < 1 ? PAIRS[0].cap : null); }
+      if (entranceDone) { capSet(U.xfade < 1 && !afterFailed ? PAIRS[0].cap : null); }
     } else {
       var idx = CH > 0 ? Math.min(CH - 1, Math.floor(cp * CH)) : -1, local = CH > 0 ? cp * CH - idx : 1;
       var pr = PAIRS[idx + 1], nx = PAIRS[idx + 2] || null;
@@ -390,6 +494,9 @@
       if (P !== lastP && local < 0.9 && a <= 0) { wetTouch(); }
     }
     band.style.opacity = 1 - U.fade;
+    /* the phone stage's sharp photo stays over this canvas while the first room is still, and gives way inside the hero's
+       cross-fade to the next room, over its first quarter (xfade 0 to 0.25), never while the room is at rest */
+    if (stage) { stageOpacity(cp <= 0 ? 1 - ss(0, 0.25, U.xfade) : 0); }
     var r = ss(0.35, 0.95, a);
     introH1.style.opacity = 0.5 + 0.5 * r;
     introH1.style.transform = 'translateY(' + (22 * (1 - r)).toFixed(2) + 'px)';
@@ -408,7 +515,7 @@
     onLeaveBack: function () { covered = false; dbg.covered = false; canvasOpacity(1); dirty(); } });
 
   /* the entrance */
-  var wantSkip = false, started = false;
+  var wantSkip = false, started = false, skipQueued = false;
   function finishDom(d) {
     gsap.to([line1, line2], { opacity: 0, duration: d, ease: 'power2.out', overwrite: true });
     gsap.to(cue, { opacity: 1, duration: d, ease: 'power2.out', overwrite: true });
@@ -417,15 +524,25 @@
   function skipEntrance() {
     if (entranceDone || skipping) { return; }
     if (!started) { wantSkip = true; return; }
+    /* the end state shows the after image: a skip (Escape, or a page that opens scrolled) waits for it */
+    if (!afterReady) {
+      if (!skipQueued) { skipQueued = true; whenAfter(function () { if (!glDead) { skipEntrance(); } }); }
+      return;
+    }
     skipping = true;
     if (tl) { tl.kill(); }
-    var fin = { spread: spreadMax, bh: 1, bloom: 1.6, scrim: 0, bw: 0 };
+    /* no after image: the house brush finishes and the room stays on its before image (bh and bloom 0), no caption */
+    var fin = { spread: spreadMax, bh: afterFailed ? 0 : 1, bloom: afterFailed ? 0 : 1.6, scrim: 0, bw: 0 };
     for (var i = 0; i < 5; i++) { fin['h' + i] = 1; fin['w' + i] = 0; }
     gsap.killTweensOf(U);
-    gsap.to(U, Object.assign(fin, { duration: 0.3, ease: 'power2.out', onUpdate: dirty,
-      onComplete: function () { skipping = false; entranceDone = true; dbg.done = true; U.layerA = 0; dirty(); applyScroll(prox.p); } }));
+    var done = function () { skipping = false; entranceDone = true; dbg.done = true; U.layerA = 0; dirty(); applyScroll(prox.p); };
+    /* after the phone opening (PHONE.skip) the stage covers the room: the end state is set at once, nothing to animate */
+    var now = !!(PHONE && PHONE.skip);
+    if (!now) { gsap.to(U, Object.assign(fin, { duration: 0.3, ease: 'power2.out', onUpdate: dirty, onComplete: done })); }
     finishDom(0.3);
-    capSet(PAIRS[0].cap);
+    capSet(afterFailed ? null : PAIRS[0].cap);
+    loadRest();
+    if (now) { Object.assign(U, fin); done(); }
   }
   /* touch, wheel, pointer and scroll no longer skip the entrance (2026-09-27): it runs to its end and the boot script in
      templates/home.html holds the page still meanwhile. Escape is the one deliberate skip. */
@@ -440,7 +557,7 @@
     U.spread = spreadMin;
     U.pair = PAIRS[0]; U.next = PAIRS[1] || null;
     /* a page that opens already scrolled (restored position, a #hash link) skips straight to the end */
-    if (wantSkip || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
+    if (wantSkip || (PHONE && PHONE.skip) || (window.pageYOffset || document.documentElement.scrollTop) > 2) { skipEntrance(); return; }
     var lang = body.classList.contains('lang-he') ? 'he' : 'en';
     var e1 = line1.querySelector('[data-l="' + lang + '"]') || line1, e2 = line2.querySelector('[data-l="' + lang + '"]') || line2;
     var n = passes.length, durA = (2.0 + (n - 1) * 0.08) / n;
@@ -467,20 +584,75 @@
     tl.to(s2.chars, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.03 }, 4.30);
     tl.to(line2, { opacity: 0, duration: 0.35, ease: 'power2.in' }, 5.40);
     tl.to(U, { scrim: 0, duration: 0.35, ease: 'power2.in', onUpdate: dirty }, 5.40);
-    tl.call(function () { body.classList.remove('entering'); }, null, 5.78);
+    tl.call(function () { body.classList.remove('entering'); loadRest(); }, null, 5.78);
     tl.to(cue, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 5.86);
     tl.timeScale(1 / SLOW);
+    holdForAfter();
     dbg.t0 = performance.now();
     tl.play();
   }
 
-  var fontsReady = Promise.race([(document.fonts && document.fonts.ready) || Promise.resolve(), new Promise(function (r) { setTimeout(r, 900); })]);
+  /* the after image (2026-11-26). The entrance starts once the before image is in. Nothing it draws before the wall
+     stroke samples the after image: the house brush paints the before image only, the wall stroke head (uBH) and the
+     bloom (uBloomR) are 0 until 3.30 on the timeline (about 4.3 s in), so the after mix weighs exactly 0, and uSettled
+     is off while the house brush layer is on. If the after image is still on its way when the entrance starts,
+     everything from 3.30 on (the caption, the wall stroke, the bloom, line 2, the end) is moved far down the timeline:
+     the house brush, line 1 and the drying run as usual, and the room then holds, painted, dry and quiet. The moment
+     the after image is decoded, that part goes back to 3.30 exactly if the playhead has not reached it yet, or starts
+     at the playhead if it is holding. The placeholder is never drawn in its place. */
+  var HOLD_T = 3.30, HOLD_GAP = 1e4;
+  function holdForAfter() {
+    if (!tl || (afterReady && !afterFailed)) { return; }
+    var tl0 = tl, held = tl0.getChildren(false, true, true).filter(function (c) { return c.startTime() >= HOLD_T - 1e-6; });
+    held.forEach(function (c) { c.__t0 = c.startTime(); c.startTime(c.__t0 + HOLD_GAP); });
+    dbg.hold = { armed: true, held: false };
+    whenAfter(function () {
+      if (tl0 !== tl || glDead) { return; }
+      /* the after image failed: the held part never plays (its wall stroke would paint the placeholder); at 3.30, or now
+         if the playhead is already there, the entrance closes the way Escape does, on the painted before room */
+      if (afterFailed) {
+        dbg.hold = { armed: false, failed: true };
+        if (tl0.time() >= HOLD_T) { skipEntrance(); } else { tl0.call(function () { if (tl0 === tl) { skipEntrance(); } }, null, HOLD_T); }
+        return;
+      }
+      /* 2 ms ahead of the playhead, so the next tick starts the held part with its callbacks, never inside this one */
+      var late = tl0.time() >= HOLD_T ? tl0.time() + 0.002 - HOLD_T : 0;
+      held.forEach(function (c) { c.startTime(c.__t0 + late); });
+      dbg.hold = { armed: false, held: late > 0, heldFor: late * SLOW };
+    });
+  }
+
+  /* the start gate (2026-11-26): the before image of the first room only. The after image loads beside it (its preload
+     has low priority, the before image's high) and is waited for only where it is drawn (holdForAfter, skipEntrance).
+     No wait for the fonts any more: they are preloaded with font-display swap, line 1 first shows 1.6 s into the
+     timeline (about 2.1 s), and SplitText splits by characters only, which measures nothing. A failed image counts as
+     arrived, as before (the placeholder stands in). Once both are in, the next room loads (loadNext); the rooms after
+     it follow when the entrance ends (loadRest). */
   var first = vr(PAIRS[0]);
-  Promise.all([loadImg(first.b), loadImg(first.a), fontsReady]).then(function () {
+  /* the phone opening gave up on the after image (PHONE.noAfter): it is not waited for here either */
+  if (PHONE && PHONE.noAfter) { afterFailed = dbg.afterFailed = true; afterIn(); }
+  var gotBefore = loadImg(first.b), gotAfter = afterFailed ? Promise.resolve(null) : loadImg(first.a);
+  gotAfter.then(function (im) { if (!im && !afterReady) { afterFailed = dbg.afterFailed = true; } afterIn(); });
+  gotBefore.then(function () {
     if (glDead) { return; }
     startEntrance();
-    var rest = [];
-    PAIRS.slice(1).forEach(function (p) { var v = vr(p); rest.push(v.b, v.a); });
-    (function next() { var nm = rest.shift(); if (nm) { loadImg(nm).then(next); } })();
   });
+  Promise.all([gotBefore, gotAfter]).then(function () { if (!glDead) { loadNext(); } });
+  /* the watchdog (2026-11-26): a first-room request that never answers and never fails would leave body.entering on
+     for good (the page held still, the nav hidden, Escape queued). WATCHDOG ms after this script runs: if the before
+     image is still not in, nothing has been painted, so the page falls back to the static figures (goStatic). If the
+     before image is in but the after image is not, the after image counts as failed, the same path as an image error
+     (every waiter is released, the placeholder stands in), and an entrance already holding at 3.30 closes the way
+     Escape does, in 0.3 s. Either image arriving later only fills its texture (loadImg); nothing else waits on it. */
+  var WATCHDOG = 8000;
+  setTimeout(function () {
+    if (glDead) { return; }
+    if (!started) { dbg.watchdog = 'before'; goStatic('watchdog'); return; }
+    if (afterReady) { return; }
+    dbg.watchdog = 'after';
+    afterFailed = dbg.afterFailed = true;
+    afterIn();
+    if (tl && !entranceDone && !skipping && tl.time() >= HOLD_T) { skipEntrance(); }
+    loadNext();
+  }, WATCHDOG);
 })();

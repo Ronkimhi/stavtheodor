@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/apoxyomenos/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,25 +113,25 @@
 <div class="bio">Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=apoxyomenos">Walk the 3D gallery · 4 works →</a><a class="cta" href="/museum/#artist=apoxyomenos">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185.jpg" alt="The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in…">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Apoxyomenos_Pio-Clementino_Inv1185.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185.jpg" width="960" height="2240" alt="The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in…">
 <h2>The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in…</h2>
 <div class="meta"></div>
 <p>The Vatican Apoxyomenos by Lysippos, in the Museo Pio-Clementino, found in Trastevere, 1849. Height: 2.05 metres (6 feet 9 inches). Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.</p><p class="fact">A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life. <a href="https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos" target="_blank" rel="noopener">Croatian Apoxyomenos →</a></p>
 <p class="work-attr">Copy after Lysippos · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Apoxyomenos%20Pio-Clementino%20Inv1185.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg" alt="Apoxyomenos Pio-Clementino Inv1185 n2">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg/960px-Apoxyomenos_Pio-Clementino_Inv1185_n2.jpg" width="960" height="640" alt="Apoxyomenos Pio-Clementino Inv1185 n2">
 <h2>Apoxyomenos Pio-Clementino Inv1185 n2</h2>
 <div class="meta"></div>
 <p>So-called “Apoxyomenos” (“the Scraper”). Marble, Roman copy of the 1st century AD after a Greek bronze original ca. 320 BC. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.</p><p class="fact">A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life. <a href="https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos" target="_blank" rel="noopener">Croatian Apoxyomenos →</a></p>
 <p class="work-attr">Copy after Lysippos · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Apoxyomenos%20Pio-Clementino%20Inv1185%20n2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Zagreb_Apoxyomenos_-_head.JPG" alt="Zagreb Apoxyomenos - head">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Zagreb_Apoxyomenos_-_head.JPG" width="720" height="576" alt="Zagreb Apoxyomenos - head">
 <h2>Zagreb Apoxyomenos - head</h2>
 <div class="meta"></div>
 <p>Head of a statue displayed at the Mimara Museum in Zagreb. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.</p><p class="fact">A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life. <a href="https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos" target="_blank" rel="noopener">Croatian Apoxyomenos →</a></p>
 <p class="work-attr">User:Zmaj · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Zagreb%20Apoxyomenos%20-%20head.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Zagreb_Apoxyomenos_-_lips.JPG" alt="Zagreb Apoxyomenos - lips">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Zagreb_Apoxyomenos_-_lips.JPG" width="720" height="576" alt="Zagreb Apoxyomenos - lips">
 <h2>Zagreb Apoxyomenos - lips</h2>
 <div class="meta"></div>
 <p>Closeup on the lips. Apoxyomenos is one of the conventional subjects of ancient Greek votive sculpture; it represents an athlete, caught in the familiar act of scraping sweat and dust from his body with the small curved instrument that the Greeks called a stlengis and the Romans a strigil.</p><p class="fact">A substantially complete bronze Apoxyomenos of this model, who scrapes his left hand with a strigil, held close to his thigh, was discovered by René Wouten from the northern Adriatic Sea between two islets, Vele Orjule and Kozjak, near Lošinj in Croatia, in 1996. René Wouten found the bronze statue fully covered in sponges and sea life. <a href="https://en.wikipedia.org/wiki/Apoxyomenos#Croatian_Apoxyomenos" target="_blank" rel="noopener">Croatian Apoxyomenos →</a></p>

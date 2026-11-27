@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/jean-michel-basquiat/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg/1920px-%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,31 +113,31 @@
 <div class="bio">Jean-Michel Basquiat was an American artist who rose to success during the 1980s as part of the Neo-expressionism movement.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=jean-michel-basquiat">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=jean-michel-basquiat">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg/960px-%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg" alt="Basquiat exhibition, Tokyo">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg/960px-%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95_%2848920391627%29.jpg" width="960" height="1280" alt="Basquiat exhibition, Tokyo">
 <h2>Basquiat exhibition, Tokyo</h2>
 <div class="meta"><span>2019</span></div>
 
 <p class="work-attr">Yuya Tamai from Chiba, Japan · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:%E3%83%90%E3%82%B9%E3%82%AD%E3%82%A2%E5%B1%95%20%2848920391627%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg/960px-%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg" alt="Works from private collections, Basquiat exhibition, Tokyo">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg/960px-%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85_%2848919644923%29.jpg" width="960" height="1280" alt="Works from private collections, Basquiat exhibition, Tokyo">
 <h2>Works from private collections, Basquiat exhibition, Tokyo</h2>
 <div class="meta"><span>2019</span></div>
 
 <p class="work-attr">Yuya Tamai from Chiba, Japan · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:%E5%80%8B%E4%BA%BA%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E3%80%85%20%2848919644923%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg/960px-HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg" alt="Basquiat work at a Christie&#x27;s auction preview, Hong Kong">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg/960px-HK_WCN_%E7%81%A3%E4%BB%94%E5%8C%97_Wan_Chai_North_%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95_HKCEC_%E4%BD%B3%E5%A3%AB%E5%BE%97_Christie%27s_%E6%8B%8D%E8%B3%A3%E5%89%8D_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_November_2021_SS2_286.jpg" width="960" height="1280" alt="Basquiat work at a Christie&#x27;s auction preview, Hong Kong">
 <h2>Basquiat work at a Christie&#x27;s auction preview, Hong Kong</h2>
 <div class="meta"><span>2021</span></div>
 
 <p class="work-attr">DTAICHWOM SIMLOOA · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:HK%20WCN%20%E7%81%A3%E4%BB%94%E5%8C%97%20Wan%20Chai%20North%20%E9%A6%99%E6%B8%AF%E6%9C%83%E5%B1%95%20HKCEC%20%E4%BD%B3%E5%A3%AB%E5%BE%97%20Christie%27s%20%E6%8B%8D%E8%B3%A3%E5%89%8D%20Auction%20%E9%A0%90%E5%B1%95%20preview%20exhibition%20November%202021%20SS2%20286.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg/960px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg" alt="Basquiat work at a Christie&#x27;s auction preview, Hong Kong">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg/960px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_%E4%BD%B3%E5%A3%AB%E5%BE%97_%E6%8B%8D%E8%B3%A3_Christie%27s_Auction_%E9%A0%90%E5%B1%95_preview_exhibition_October_2022_Px3_018.jpg" width="960" height="720" alt="Basquiat work at a Christie&#x27;s auction preview, Hong Kong">
 <h2>Basquiat work at a Christie&#x27;s auction preview, Hong Kong</h2>
 <div class="meta"><span>2022</span></div>
 
 <p class="work-attr">Fadchwizo Rodawomt · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:HK%20%E4%B8%AD%E7%92%B0%20Central%20%E7%95%A2%E6%89%93%E8%A1%8C%20Pedder%20Building%20%E4%BD%B3%E5%A3%AB%E5%BE%97%20%E6%8B%8D%E8%B3%A3%20Christie%27s%20Auction%20%E9%A0%90%E5%B1%95%20preview%20exhibition%20October%202022%20Px3%20018.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg/960px-Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg" alt="57 Great Jones Street, New York, Basquiat&#x27;s studio from 1983 to 1988">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg/960px-Jean-Michel_Basquiat_%281960-1988%29_home_on_57_Great_Jones_Street.jpg" width="960" height="640" alt="57 Great Jones Street, New York, Basquiat&#x27;s studio from 1983 to 1988">
 <h2>57 Great Jones Street, New York, Basquiat&#x27;s studio from 1983 to 1988</h2>
 <div class="meta"></div>
 

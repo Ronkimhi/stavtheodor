@@ -27,9 +27,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
-<link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/css/theme.css?v=20261126u">
+<link rel="preload" as="script" href="/js/vendor/gsap.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
+<link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
+<link rel="preload" as="script" href="/js/vendor/SplitText.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
+<link rel="preload" as="script" href="/js/home-opening.js?v=20261126f" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
 <link rel="preload" as="image" href="/images/home2/variants/investment-firms/investment-firms_before.webp" type="image/webp" fetchpriority="high">
-<link rel="preload" as="image" href="/images/home2/variants/investment-firms/investment-firms_after.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/images/home2/variants/investment-firms/investment-firms_after.webp" type="image/webp" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))" fetchpriority="low">
 <!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page's -->
 <script type="application/ld+json">
 {
@@ -405,7 +409,7 @@
 <nav class="nav" aria-label="Main">
   <a class="wordmark" href="#hero">THEODORA<span class="wm-sub" aria-hidden="true"><span data-l="en" lang="en">for investment firms</span><span data-l="he" lang="he" dir="rtl">לקרנות השקעה</span></span></a>
   <div class="right">
-    <div class="links" id="links"><a href="#about"><span data-l="en" lang="en">About</span><span data-l="he" lang="he" dir="rtl">אודות</span></a><a href="/projects/"><span data-l="en" lang="en">Projects</span><span data-l="he" lang="he" dir="rtl">פרויקטים</span></a><a href="#advisory"><span data-l="en" lang="en">Advisory</span><span data-l="he" lang="he" dir="rtl">ייעוץ</span></a><div class="nav-dd" id="nav-guides"><a class="dd-top" href="/guide/"><span data-l="en" lang="en">Guides</span><span data-l="he" lang="he" dir="rtl">מדריכים</span></a><button type="button" class="dd-btn" aria-expanded="false" aria-controls="guides-panel guides-sub"><span class="vh"><span data-l="en" lang="en">Guide categories</span><span data-l="he" lang="he" dir="rtl">קטגוריות המדריכים</span></span></button><div class="dd-panel" id="guides-panel"><div class="dd-inner"><p class="dd-line serif"><span data-l="en" lang="en">Guides to choosing and placing art</span><span data-l="he" lang="he" dir="rtl">מדריכים לבחירת אמנות ולמיקומה</span></p><div class="dd-cols"><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#home"><span data-l="en" lang="en">For the home</span><span data-l="he" lang="he" dir="rtl">לבית</span></a><ul><li><a href="/guide/how-to-choose-art-for-your-home/"><span data-l="en" lang="en">How to choose art for your home</span><span data-l="he" lang="he" dir="rtl">איך לבחור אמנות לבית</span></a></li><li><a href="/guide/living-room-art/"><span data-l="en" lang="en">Art for the living room</span><span data-l="he" lang="he" dir="rtl">אמנות לסלון</span></a></li><li><a href="/guide/dining-room-art/"><span data-l="en" lang="en">Dining room art</span><span data-l="he" lang="he" dir="rtl">אמנות לפינת האוכל</span></a></li><li><a href="/guide/art-above-bed/"><span data-l="en" lang="en">Art above a bed</span><span data-l="he" lang="he" dir="rtl">אמנות מעל המיטה</span></a></li><li><a href="/guide/art-above-couch/"><span data-l="en" lang="en">Art above a couch</span><span data-l="he" lang="he" dir="rtl">אמנות מעל ספה</span></a></li><li><a href="/guide/entryway-art/"><span data-l="en" lang="en">Entryway and hallway art</span><span data-l="he" lang="he" dir="rtl">אמנות למבואה ולמסדרון</span></a></li><li><a href="/guide/gallery-wall-ideas/"><span data-l="en" lang="en">Gallery wall ideas</span><span data-l="he" lang="he" dir="rtl">רעיונות לקיר גלריה</span></a></li><li><a href="/guide/large-wall-art-ideas/"><span data-l="en" lang="en">Large wall art ideas</span><span data-l="he" lang="he" dir="rtl">רעיונות לאמנות לקיר גדול</span></a></li><li><a href="/guide/art-for-a-small-apartment/"><span data-l="en" lang="en">Art for a small apartment</span><span data-l="he" lang="he" dir="rtl">אמנות לדירה קטנה</span></a></li><li><a href="/guide/art-for-home-staging/"><span data-l="en" lang="en">Art for home staging</span><span data-l="he" lang="he" dir="rtl">אמנות להום סטיילינג</span></a></li></ul></div></div><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#offices"><span data-l="en" lang="en">Offices and practices</span><span data-l="he" lang="he" dir="rtl">משרדים ומרפאות</span></a><ul><li><a href="/guide/office-wall-art/"><span data-l="en" lang="en">Office wall art</span><span data-l="he" lang="he" dir="rtl">אמנות לקירות המשרד</span></a></li><li><a href="/guide/buy-lease-or-commission-office-art/"><span data-l="en" lang="en">Buy or commission</span><span data-l="he" lang="he" dir="rtl">לקנות או להזמין</span></a></li><li><a href="/guide/law-office-art/"><span data-l="en" lang="en">Law office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב משרד עורכי דין</span></a></li><li><a href="/guide/financial-advisor-office-art/"><span data-l="en" lang="en">Financial advisor office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב משרד ליועץ פיננסי</span></a></li><li><a href="/guide/medical-office-wall-art/"><span data-l="en" lang="en">Medical office wall art</span><span data-l="he" lang="he" dir="rtl">אמנות לקירות מרפאה</span></a></li><li><a href="/guide/dental-office-decor/"><span data-l="en" lang="en">Dental office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב מרפאת שיניים</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#advisory"><span data-l="en" lang="en">How advisory works</span><span data-l="he" lang="he" dir="rtl">איך עובד ייעוץ אמנות</span></a><ul><li><a href="/guide/art-advisor-vs-art-consultant/"><span data-l="en" lang="en">Art advisor vs art consultant</span><span data-l="he" lang="he" dir="rtl">יועץ אמנות לאספנים או לחללים</span></a></li><li><a href="/guide/ten-questions-before-you-buy-your-first-serious-artwork/"><span data-l="en" lang="en">Ten questions before you buy</span><span data-l="he" lang="he" dir="rtl">עשר שאלות לפני שקונים</span></a></li></ul></div></div><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#hospitality"><span data-l="en" lang="en">Hospitality</span><span data-l="he" lang="he" dir="rtl">מלונות ומסעדות</span></a><ul><li><a href="/guide/hotel-artwork/"><span data-l="en" lang="en">Hotel artwork</span><span data-l="he" lang="he" dir="rtl">אמנות למלונות</span></a></li><li><a href="/guide/restaurant-wall-decor/"><span data-l="en" lang="en">Restaurant wall decor</span><span data-l="he" lang="he" dir="rtl">עיצוב קירות למסעדה</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#designers"><span data-l="en" lang="en">For designers and builders</span><span data-l="he" lang="he" dir="rtl">למעצבים ולקבלנים</span></a><ul><li><a href="/guide/art-sourcing-for-interior-designers/"><span data-l="en" lang="en">Art sourcing for interior designers</span><span data-l="he" lang="he" dir="rtl">איתור אמנות למעצבי פנים</span></a></li><li><a href="/guide/planning-art-in-construction-drawings/"><span data-l="en" lang="en">Planning art in construction drawings</span><span data-l="he" lang="he" dir="rtl">תכנון אמנות בתוכניות הביצוע</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#hanging"><span data-l="en" lang="en">Hanging, lighting and care</span><span data-l="he" lang="he" dir="rtl">תלייה, תאורה וטיפול</span></a><ul><li><a href="/guide/how-to-hang-pictures/"><span data-l="en" lang="en">How to hang pictures</span><span data-l="he" lang="he" dir="rtl">איך לתלות תמונות</span></a></li><li><a href="/guide/how-to-light-art/"><span data-l="en" lang="en">How to light art</span><span data-l="he" lang="he" dir="rtl">איך להאיר אמנות</span></a></li></ul></div></div></div><div class="dd-foot"><a class="arrow" href="/guide/"><span class="ln"></span><span data-l="en" lang="en">All guides</span><span data-l="he" lang="he" dir="rtl">כל המדריכים</span></a></div></div></div><div class="dd-sub" id="guides-sub"><a href="/guide/#home"><span data-l="en" lang="en">For the home</span><span data-l="he" lang="he" dir="rtl">לבית</span></a><a href="/guide/#offices"><span data-l="en" lang="en">Offices and practices</span><span data-l="he" lang="he" dir="rtl">משרדים ומרפאות</span></a><a href="/guide/#hospitality"><span data-l="en" lang="en">Hospitality</span><span data-l="he" lang="he" dir="rtl">מלונות ומסעדות</span></a><a href="/guide/#designers"><span data-l="en" lang="en">For designers and builders</span><span data-l="he" lang="he" dir="rtl">למעצבים ולקבלנים</span></a><a href="/guide/#advisory"><span data-l="en" lang="en">How advisory works</span><span data-l="he" lang="he" dir="rtl">איך עובד ייעוץ אמנות</span></a><a href="/guide/#hanging"><span data-l="en" lang="en">Hanging, lighting and care</span><span data-l="he" lang="he" dir="rtl">תלייה, תאורה וטיפול</span></a></div></div><a href="/#industries"><span data-l="en" lang="en">For business</span><span data-l="he" lang="he" dir="rtl">לעסקים</span></a><a href="/radar/"><span data-l="en" lang="en">Art Radar</span><span data-l="he" lang="he" dir="rtl">ראדאר אמנות</span></a><a href="#faq"><span data-l="en" lang="en">Questions</span><span data-l="he" lang="he" dir="rtl">שאלות</span></a><a href="/contact/"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></a><a class="nav-write" href="mailto:stav@stavtheodor.com" data-write data-loc="nav"><span class="wfull"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></span><span class="wshort" aria-hidden="true"><span data-l="en" lang="en">Write</span><span data-l="he" lang="he" dir="rtl">כתבו</span></span></a></div>
+    <div class="links" id="links"><a href="#about"><span data-l="en" lang="en">About</span><span data-l="he" lang="he" dir="rtl">אודות</span></a><a href="/projects/"><span data-l="en" lang="en">Projects</span><span data-l="he" lang="he" dir="rtl">פרויקטים</span></a><a href="#advisory"><span data-l="en" lang="en">Advisory</span><span data-l="he" lang="he" dir="rtl">ייעוץ</span></a><div class="nav-dd" id="nav-guides"><a class="dd-top" href="/guide/"><span data-l="en" lang="en">Guides</span><span data-l="he" lang="he" dir="rtl">מדריכים</span></a><button type="button" class="dd-btn" aria-expanded="false" aria-controls="guides-panel guides-sub"><span class="vh"><span data-l="en" lang="en">Guide categories</span><span data-l="he" lang="he" dir="rtl">קטגוריות המדריכים</span></span></button><div class="dd-panel" id="guides-panel"><div class="dd-inner"><p class="dd-line serif"><span data-l="en" lang="en">Guides to choosing and placing art</span><span data-l="he" lang="he" dir="rtl">מדריכים לבחירת אמנות ולמיקומה</span></p><div class="dd-cols"><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#home"><span data-l="en" lang="en">For the home</span><span data-l="he" lang="he" dir="rtl">לבית</span></a><ul><li><a href="/guide/how-to-choose-art-for-your-home/"><span data-l="en" lang="en">How to choose art for your home</span><span data-l="he" lang="he" dir="rtl">איך לבחור אמנות לבית</span></a></li><li><a href="/guide/living-room-art/"><span data-l="en" lang="en">Art for the living room</span><span data-l="he" lang="he" dir="rtl">אמנות לסלון</span></a></li><li><a href="/guide/dining-room-art/"><span data-l="en" lang="en">Dining room art</span><span data-l="he" lang="he" dir="rtl">אמנות לפינת האוכל</span></a></li><li><a href="/guide/art-above-bed/"><span data-l="en" lang="en">Art above a bed</span><span data-l="he" lang="he" dir="rtl">אמנות מעל המיטה</span></a></li><li><a href="/guide/art-above-couch/"><span data-l="en" lang="en">Art above a couch</span><span data-l="he" lang="he" dir="rtl">אמנות מעל ספה</span></a></li><li><a href="/guide/entryway-art/"><span data-l="en" lang="en">Entryway and hallway art</span><span data-l="he" lang="he" dir="rtl">אמנות למבואה ולמסדרון</span></a></li><li><a href="/guide/gallery-wall-ideas/"><span data-l="en" lang="en">Gallery wall ideas</span><span data-l="he" lang="he" dir="rtl">רעיונות לקיר גלריה</span></a></li><li><a href="/guide/large-wall-art-ideas/"><span data-l="en" lang="en">Large wall art ideas</span><span data-l="he" lang="he" dir="rtl">רעיונות לאמנות לקיר גדול</span></a></li><li><a href="/guide/art-for-a-small-apartment/"><span data-l="en" lang="en">Art for a small apartment</span><span data-l="he" lang="he" dir="rtl">אמנות לדירה קטנה</span></a></li><li><a href="/guide/art-for-home-staging/"><span data-l="en" lang="en">Art for home staging</span><span data-l="he" lang="he" dir="rtl">אמנות להום סטיילינג</span></a></li></ul></div></div><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#offices"><span data-l="en" lang="en">Offices and practices</span><span data-l="he" lang="he" dir="rtl">משרדים ומרפאות</span></a><ul><li><a href="/guide/office-wall-art/"><span data-l="en" lang="en">Office wall art</span><span data-l="he" lang="he" dir="rtl">אמנות לקירות המשרד</span></a></li><li><a href="/guide/buy-lease-or-commission-office-art/"><span data-l="en" lang="en">Buy or commission</span><span data-l="he" lang="he" dir="rtl">לקנות או להזמין</span></a></li><li><a href="/guide/law-office-art/"><span data-l="en" lang="en">Law office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב משרד עורכי דין</span></a></li><li><a href="/guide/financial-advisor-office-art/"><span data-l="en" lang="en">Financial advisor office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב משרד ליועץ פיננסי</span></a></li><li><a href="/guide/medical-office-wall-art/"><span data-l="en" lang="en">Medical office wall art</span><span data-l="he" lang="he" dir="rtl">אמנות לקירות מרפאה</span></a></li><li><a href="/guide/dental-office-decor/"><span data-l="en" lang="en">Dental office decor</span><span data-l="he" lang="he" dir="rtl">עיצוב מרפאת שיניים</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#advisory"><span data-l="en" lang="en">How advisory works</span><span data-l="he" lang="he" dir="rtl">איך עובד ייעוץ אמנות</span></a><ul><li><a href="/guide/art-advisor-vs-art-consultant/"><span data-l="en" lang="en">Art advisor vs art consultant</span><span data-l="he" lang="he" dir="rtl">יועץ אמנות לאספנים או לחללים</span></a></li><li><a href="/guide/ten-questions-before-you-buy-your-first-serious-artwork/"><span data-l="en" lang="en">Ten questions before you buy</span><span data-l="he" lang="he" dir="rtl">עשר שאלות לפני שקונים</span></a></li></ul></div></div><div class="dd-col"><div class="dd-group"><a class="dd-h" href="/guide/#hospitality"><span data-l="en" lang="en">Hospitality</span><span data-l="he" lang="he" dir="rtl">מלונות ומסעדות</span></a><ul><li><a href="/guide/hotel-artwork/"><span data-l="en" lang="en">Hotel artwork</span><span data-l="he" lang="he" dir="rtl">אמנות למלונות</span></a></li><li><a href="/guide/restaurant-wall-decor/"><span data-l="en" lang="en">Restaurant wall decor</span><span data-l="he" lang="he" dir="rtl">עיצוב קירות למסעדה</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#designers"><span data-l="en" lang="en">For designers and builders</span><span data-l="he" lang="he" dir="rtl">למעצבים ולקבלנים</span></a><ul><li><a href="/guide/art-sourcing-for-interior-designers/"><span data-l="en" lang="en">Art sourcing for interior designers</span><span data-l="he" lang="he" dir="rtl">איתור אמנות למעצבי פנים</span></a></li><li><a href="/guide/planning-art-in-construction-drawings/"><span data-l="en" lang="en">Planning art in construction drawings</span><span data-l="he" lang="he" dir="rtl">תכנון אמנות בתוכניות הביצוע</span></a></li></ul></div><div class="dd-group"><a class="dd-h" href="/guide/#hanging"><span data-l="en" lang="en">Hanging, lighting and care</span><span data-l="he" lang="he" dir="rtl">תלייה, תאורה וטיפול</span></a><ul><li><a href="/guide/how-to-hang-pictures/"><span data-l="en" lang="en">How to hang pictures</span><span data-l="he" lang="he" dir="rtl">איך לתלות תמונות</span></a></li><li><a href="/guide/how-to-light-art/"><span data-l="en" lang="en">How to light art</span><span data-l="he" lang="he" dir="rtl">איך להאיר אמנות</span></a></li></ul></div></div></div><div class="dd-foot"><a class="arrow" href="/guide/"><span class="ln"></span><span data-l="en" lang="en">All guides</span><span data-l="he" lang="he" dir="rtl">כל המדריכים</span></a></div></div></div><div class="dd-sub" id="guides-sub"><a href="/guide/#home"><span data-l="en" lang="en">For the home</span><span data-l="he" lang="he" dir="rtl">לבית</span></a><a href="/guide/#offices"><span data-l="en" lang="en">Offices and practices</span><span data-l="he" lang="he" dir="rtl">משרדים ומרפאות</span></a><a href="/guide/#hospitality"><span data-l="en" lang="en">Hospitality</span><span data-l="he" lang="he" dir="rtl">מלונות ומסעדות</span></a><a href="/guide/#designers"><span data-l="en" lang="en">For designers and builders</span><span data-l="he" lang="he" dir="rtl">למעצבים ולקבלנים</span></a><a href="/guide/#advisory"><span data-l="en" lang="en">How advisory works</span><span data-l="he" lang="he" dir="rtl">איך עובד ייעוץ אמנות</span></a><a href="/guide/#hanging"><span data-l="en" lang="en">Hanging, lighting and care</span><span data-l="he" lang="he" dir="rtl">תלייה, תאורה וטיפול</span></a></div></div><a href="/#industries"><span data-l="en" lang="en">For business</span><span data-l="he" lang="he" dir="rtl">לעסקים</span></a><a href="/radar/"><span data-l="en" lang="en">Art Radar</span><span data-l="he" lang="he" dir="rtl">ראדאר אמנות</span></a><a href="#faq"><span data-l="en" lang="en">Questions</span><span data-l="he" lang="he" dir="rtl">שאלות</span></a><a class="nav-write" href="mailto:stav@stavtheodor.com" data-write data-loc="nav"><span class="wfull"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></span><span class="wshort" aria-hidden="true"><span data-l="en" lang="en">Write</span><span data-l="he" lang="he" dir="rtl">כתבו</span></span></a></div>
     <a class="nav-call" href="tel:+12013518367" data-loc="header" aria-label="Call THEODORA at (201) 351-8367"><span class="num">(201) 351-8367</span><span class="short"><span data-l="en" lang="en">Call</span><span data-l="he" lang="he" dir="rtl">התקשרו</span></span></a><a class="nav-write-bar" href="mailto:stav@stavtheodor.com" data-write data-loc="nav"><span class="vh"><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></span><span class="wshort" aria-hidden="true"><span data-l="en" lang="en">Write</span><span data-l="he" lang="he" dir="rtl">כתבו</span></span></a>
     <div class="lang-switch" role="group" aria-label="Choose language / בחירת שפה">
       <button type="button" data-lang="he" aria-pressed="false">HE</button>
@@ -416,15 +420,207 @@
 </nav>
 
 <canvas id="gl" class="gl-only" role="img" aria-label="A living room painted into view, then a proposal for the art on its wall."></canvas>
+<script>
+/* Phone opening v2 (2026-11-26, js/home-opening-phone.js, css/theme.css "Phone opening v2"). The phone default since
+   2026-11-26 (Ron: "yes, make it the phone opening"), on the homepage and, since wave 3, on every buyer page, each with its
+   own first room: PH (THEODORA_PHONE.room and .next) and #ph-stage below are rendered by build-home.py (ph_data(),
+   ph_stage()) from the rooms the page's WebGL opening draws (PAIRS in js/home-opening.js with window.THEODORA_ROOMS), and
+   the build stops if the built page's stage and its slot 0 room disagree (stage_problems()). PHONE_MQ is the phone test
+   and, the same string, the media of both <source> elements in #ph-stage, so the stage fetches its photos exactly where
+   it is shown and nowhere else. ?open=1 or #open1: the old opening on a phone;
+   ?open=2 or #open2: this one on any portrait screen with a coarse pointer, wider than 820 px included (both for testing). */
+(function () {
+  var PH = {"room":{"b":"variants/investment-firms/investment-firms_before.webp","a":"variants/investment-firms/investment-firms_after.webp","w":1800,"h":1200,"rect":[0.6517,0.1325,0.9004,0.3775],"fx":0.776,"fy":0.255,"from":"right","seed":3.7,"cap":"p3"},"next":{"b":"variants/investment-firms/investment-firms_s1_before.webp","a":"variants/investment-firms/investment-firms_s1_after.webp"}}; /* ph_data */
+  var PHONE_V2_DEFAULT = true; /* true: every phone gets v2; false: only with ?open=2 or #open2 */
+  var PHONE_MQ = '(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)';
+  var FORCE_MQ = '(pointer: coarse) and (max-aspect-ratio: 9/10)';
+  try {
+    var R = document.documentElement, b = document.body, mq = window.matchMedia, q = location.search, h = location.hash;
+    if (!mq || !b) { return; }
+    var force = /[?&]open=2(&|$)/.test(q) || h === '#open2', old = /[?&]open=1(&|$)/.test(q) || h === '#open1';
+    if (!(force ? mq(FORCE_MQ).matches : PHONE_V2_DEFAULT && !old && mq(PHONE_MQ).matches)) { return; }
+    R.classList.add('open2');
+    /* src: the <source> media does not match (a wider screen under ?open=2), so the script after #ph-stage sets the photos */
+    var P = window.THEODORA_PHONE = { hold: b.classList.contains('gl'), src: !mq(PHONE_MQ).matches, room: PH.room, next: PH.next };
+    if (P.hold) { b.classList.remove('entering'); b.classList.add('ph-hold'); }
+    /* js/home-opening-phone.js did not load: the after photo cross-fades in once it is in (never a caption over a photo
+       that failed), and js/home-opening.js boots in its finished state */
+    P.fail = function () {
+      if (P.failed) { return; } P.failed = true; P.hold = false; P.skip = true; b.classList.remove('ph-hold');
+      var a = document.querySelector('#ph-stage .ph-a'), end = function () { R.classList.add('ph-end'); if (P.shown) { P.shown(); } };
+      if (a && a.complete && a.naturalWidth) { end(); } else if (a && a.complete && a.currentSrc) { P.noAfter = true; }
+      else if (a) { a.addEventListener('load', end, { once: true }); }
+      if (P.boot) { var f = P.boot; P.boot = null; f(); }
+    };
+    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126g'; s.async = true;
+    s.onerror = function () { if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', P.fail); } else { P.fail(); } };
+    document.head.appendChild(s);
+  } catch (e) {}
+})();
+</script>
+<div class="ph-stage" id="ph-stage" aria-hidden="true"><div class="ph-room" style="--fx:77.6%;--fy:25.5%">
+  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" srcset="/images/home2/variants/investment-firms/investment-firms_before.webp" type="image/webp"><img class="ph-b" width="1800" height="1200" alt="" fetchpriority="high" decoding="async" elementtiming="ph-before" data-src="/images/home2/variants/investment-firms/investment-firms_before.webp"></picture>
+  <picture><source media="(pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px)" data-srcset="/images/home2/variants/investment-firms/investment-firms_after.webp" type="image/webp"><img class="ph-a" width="1800" height="1200" alt="" fetchpriority="low" decoding="async" data-src="/images/home2/variants/investment-firms/investment-firms_after.webp"></picture>
+</div><div class="ph-scrim"></div></div>
+<script>
+/* The before photo first (2026-11-26, wave 3): on a phone it is the first paint's picture and the LCP, so it is the
+   only image in flight until it is in. The after photo's <source> carries data-srcset, so nothing fetches it from the
+   markup; it is requested here once the before photo has loaded (or failed, or was in already), or AFTER_WAIT ms
+   after this point if the before photo is still not in (a stalled request never holds the after photo back for
+   good; the 8 s watchdogs in js/home-opening-phone.js and js/home-opening.js still apply). P.aWhy says which,
+   P.aGo runs the waiters (js/home-opening-phone.js decodes the after photo only once it was asked for).
+   src: the <source> media does not match (?open=2 on a wider screen), so the photos are set from data-src. */
+(function () {
+  var P = window.THEODORA_PHONE, st = document.getElementById('ph-stage');
+  if (!P || !st) { return; }
+  var AFTER_WAIT = 4000;
+  P.aT0 = performance.now();
+  var b = st.querySelector('.ph-b'), a = st.querySelector('.ph-a'), s = a && a.parentNode.querySelector('source[data-srcset]'), t = 0;
+  if (P.src && b) { b.src = b.getAttribute('data-src'); }
+  function go(why) {
+    if (P.aWhy || !a) { return; }
+    P.aWhy = why; P.aAt = performance.now(); clearTimeout(t);
+    if (s) { s.srcset = s.getAttribute('data-srcset'); }
+    if (P.src) { a.src = a.getAttribute('data-src'); }
+    var w = P.aGo || []; P.aGo = null; for (var i = 0; i < w.length; i++) { w[i](); }
+  }
+  P.after = go;
+  /* a stage photo that fails is hidden at once, so the browser's broken-image glyph and outline are never painted (Iris,
+     wave 3); one that had failed already is hidden now. The after photo has no source until go() runs, so it counts as
+     failed only with a currentSrc. */
+  [b, a].forEach(function (im) {
+    if (!im) { return; }
+    im.addEventListener('error', function () { im.style.visibility = 'hidden'; });
+    im.addEventListener('load', function () { im.style.visibility = ''; });
+    if (im.complete && im.currentSrc && !im.naturalWidth) { im.style.visibility = 'hidden'; }
+    /* once a stage photo is in, the <img> keeps its URL as its own src (wave 3, job 7): if the <source> media stops
+       matching while the stage is still shown (an iPad split view widened past 820 px in portrait, a tablet whose
+       primary pointer turns fine when a mouse or keyboard is attached), the <picture> falls back to the same photo from
+       the memory cache instead of an empty <img> drawing the broken-image glyph. Nothing is fetched again. */
+    var keep = function () { if (im.naturalWidth && im.currentSrc && !im.getAttribute('src')) { im.setAttribute('src', im.currentSrc); } };
+    if (im.complete) { keep(); }
+    im.addEventListener('load', keep);
+  });
+  /* once the after photo is the one on screen (the stroke has handed over, or the end state shows it), the before <img>
+     under it keeps the after photo as its fallback too: when the <source> media stops matching, both fall back to the
+     dressed room on screen, never to the empty room (job 7, 2026-11-27). js/home-opening-phone.js calls it. */
+  P.shown = function () { if (a && b && a.naturalWidth && a.currentSrc && !P.noAfter) { b.setAttribute('src', a.currentSrc); } };
+  if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
+  b.addEventListener('load', function () { go('load'); }, { once: true });
+  b.addEventListener('error', function () { go('error'); }, { once: true });
+  t = setTimeout(function () { go('timer'); }, AFTER_WAIT);
+})();
+/* The buyer pages' Write link (data-phone-only, wave 3, Iris gate 3): it sits a fixed 82 px under the room, while the caption
+   is anchored to the screen's bottom and grows upward, so a long caption on a small phone met it. liftWrite() lifts that link
+   (--hw-lift, css/theme.css) just enough that its letters stay HW_GAP px above the caption's letters, the homepage's own
+   tightest gap, and never closer than HW_ROOM px to the room. Letters are measured from the font's own metrics (canvas
+   measureText), so a page already at HW_GAP or more does not move; a page under it is lifted to HW_GAP + HW_PAD, the pad
+   covering what the metrics miss of the painted letters (measured: up to 4 px for the Hebrew link). Only at the top of the page, on the caption shown there;
+   again when the fonts arrive, on resize, on a turn, when the caption or the language changes. The homepage's link has no
+   data-phone-only, so nothing here touches it. P.hwLift: the last measurement. */
+(function () {
+  var P = window.THEODORA_PHONE, R = document.documentElement;
+  if (!P || !window.getComputedStyle) { return; }
+  var HW_GAP = 21, HW_PAD = 5, HW_ROOM = 48, raf = 0, ctx = null, owed = false, late = 0;
+  function ink(el) {
+    var rs = el.getClientRects();
+    if (!rs.length) { return null; }
+    var cs = getComputedStyle(el), m = null;
+    try {
+      ctx = ctx || document.createElement('canvas').getContext('2d');
+      ctx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      var tx = el.textContent; m = ctx.measureText(cs.textTransform === 'uppercase' ? tx.toUpperCase() : tx);
+    } catch (e) { m = null; }
+    var first = rs[0], last = rs[rs.length - 1];
+    if (!m || typeof m.fontBoundingBoxAscent !== 'number' || typeof m.actualBoundingBoxAscent !== 'number') { return { top: first.top, bottom: last.bottom }; }
+    return { top: first.top + m.fontBoundingBoxAscent - m.actualBoundingBoxAscent, bottom: last.top + m.fontBoundingBoxAscent + m.actualBoundingBoxDescent };
+  }
+  function liftWrite() {
+    raf = 0;
+    var a = document.querySelector('.hero-ui .hero-write[data-phone-only]');
+    if (!a || !R.classList.contains('open2')) { return; }
+    /* scrolled: the measurement is owed, and made at the next return to the top (the scroll listener in arm) */
+    if ((window.pageYOffset || 0) > 1) { owed = true; return; }
+    owed = false;
+    /* the lift only exists where the phone rules place the link under the room (css/theme.css, max-width 767px); on an
+       iPad-size portrait screen the link sits at the bottom beside the caption, as on the homepage, and takes no lift */
+    if (window.matchMedia && !matchMedia('(max-width: 767px)').matches) { a.style.setProperty('--hw-lift', '0px'); P.hwLift = { v: 0, wide: true }; return; }
+    a.style.setProperty('--hw-lift', '0px');
+    var lang = document.body.classList.contains('lang-he') ? 'he' : 'en', cap = document.getElementById('cap'), key = cap && cap.getAttribute('data-show');
+    var cs = key && cap.querySelector('.cap-t[data-cap="' + key + '"] [data-l="' + lang + '"]'), ls = a.querySelector('[data-l="' + lang + '"]');
+    var room = document.querySelector('#ph-stage .ph-room');
+    if (!cs || !ls || !room || getComputedStyle(cap).display === 'none' || getComputedStyle(a).display === 'none') { P.hwLift = { v: 0 }; return; }
+    var ci = ink(cs), li = ink(ls);
+    if (!ci || !li) { return; }
+    var need = ci.top - li.bottom < HW_GAP ? Math.max(0, Math.ceil(li.bottom + HW_GAP + HW_PAD - ci.top)) : 0;
+    var max = Math.max(0, Math.floor(a.getBoundingClientRect().top - room.getBoundingClientRect().bottom - HW_ROOM));
+    var v = Math.min(need, max);
+    P.hwLift = { gap: Math.round((ci.top - li.bottom) * 10) / 10, need: need, max: max, v: v, short: need > max, li: Math.round(li.bottom * 10) / 10, ci: Math.round(ci.top * 10) / 10 };
+    if (v) { a.style.setProperty('--hw-lift', v + 'px'); }
+  }
+  function soon() { if (!raf) { raf = requestAnimationFrame(liftWrite); } }
+  /* a change of language or caption: now, and again once it has settled (the caption fades and reflows) */
+  function twice() { soon(); clearTimeout(late); late = setTimeout(soon, 700); }
+  P.liftWrite = soon;
+  function arm() {
+    soon();
+    window.addEventListener('load', soon);
+    window.addEventListener('pageshow', soon);
+    window.addEventListener('resize', soon);
+    window.addEventListener('orientationchange', soon);
+    /* back at the top: every measurement skipped while the page was scrolled is made up here (reads layout only at the top) */
+    window.addEventListener('scroll', function () { if (owed && (window.pageYOffset || 0) <= 1) { soon(); } }, { passive: true });
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(soon); }
+    var cap = document.getElementById('cap');
+    if (cap) { cap.addEventListener('transitionend', soon); }
+    if (window.MutationObserver) {
+      var mo = new MutationObserver(twice);
+      mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      if (cap) { mo.observe(cap, { attributes: true, attributeFilter: ['data-show'] }); }
+    }
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); } else { arm(); }
+})();
+/* The Write link leaves before it reaches the art (Ron, 2026-11-26, "Yes, fade it"; Iris gate 3, finding 5): on a phone
+   with this opening it fades from its rest opacity to 0 over the first HW_FADE px of scroll, in proportion, and is back
+   in full at the top; under half opacity it takes no taps. One passive scroll listener, coalesced to one write per frame,
+   that reads only the scroll offset (no layout read) and writes two style properties; at the top the inline styles go,
+   so the rest state is the stylesheet's own. While the stroke holds the page (body.ph-hold) it does nothing. */
+(function () {
+  if (!window.THEODORA_PHONE) { return; }
+  var HW_FADE = 80, raf = 0, a = null, on = false;
+  function fade() {
+    raf = 0;
+    a = a || document.querySelector('.hero-ui .hero-write');
+    if (!a || document.body.classList.contains('ph-hold')) { return; }
+    var y = window.pageYOffset || 0;
+    if (y <= 0) { if (on) { on = false; a.style.opacity = ''; a.style.pointerEvents = ''; a.style.transition = ''; } return; }
+    /* a lifted link (--hw-lift, the buyer pages) starts that much nearer the room: it fades over that much less, so it is
+       gone at the homepage's own distance from the room */
+    var k = Math.max(0, 1 - y / Math.max(1, HW_FADE - (parseFloat(a.style.getPropertyValue('--hw-lift')) || 0)));
+    on = true; a.style.transition = 'none'; a.style.opacity = k.toFixed(3); a.style.pointerEvents = k < 0.5 ? 'none' : '';
+  }
+  window.addEventListener('scroll', function () { if (!raf) { raf = requestAnimationFrame(fade); } }, { passive: true });
+})();
+</script>
 
 <section class="hero" id="hero" aria-label="Opening">
   <figure class="sfig static-only" style="--fx:77.6%;--fy:25.5%">
-    <img src="/images/home2/variants/investment-firms/investment-firms_after.webp" alt="A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows." data-alt-he="סלון לקוחות בחברת השקעות: תבליט קיר של דיסקיות ברונזה וזהב על קיר אפור כחלחל מעל שידת אגוז, ספה בירוק זית וחלונות אל העיר." loading="lazy" decoding="async">
+    <img src="/images/home2/variants/investment-firms/investment-firms_after.webp" alt="A client salon at an investment firm: a relief of bronze and gold discs on a blue grey wall above a walnut credenza, an olive sofa, city windows." data-alt-he="סלון לקוחות בחברת השקעות: תבליט קיר של דיסקיות ברונזה וזהב על קיר אפור כחלחל מעל שידת אגוז, ספה בירוק זית וחלונות אל העיר." loading="lazy" fetchpriority="high" decoding="async">
     <figcaption><span data-l="en" lang="en">Proposal. A client salon facing the Empire State Building, a bronze and gold wall relief above the credenza.</span><span data-l="he" lang="he" dir="rtl">הצעה. סלון לקוחות מול האמפייר סטייט, תבליט קיר בברונזה ובזהב מעל השידה.</span></figcaption>
   </figure>
+  <script>
+  /* The static opening (reduced motion, no WebGL): the figure above is the first view, so it loads at once, with
+     high priority (2026-11-26). With WebGL it stays hidden and lazy, so a screen that draws the 2400 px room never
+     fetches this 1800 px copy as well. The boot script above has already set body.gl. Under html.open2 (the phone
+     opening) the stage is the first view and this figure is hidden, so it stays lazy there too: the after photo
+     waits for the before photo (wave 3). */
+  (function () { if (document.body.classList.contains('gl') || document.documentElement.classList.contains('open2')) { return; } var im = document.querySelector('#hero .sfig img'); if (im) { im.loading = 'eager'; } })();
+  </script>
   <div class="hero-ui">
     <p class="line" id="l1"><span data-l="en" lang="en">A decisive space.</span><span data-l="he" lang="he" dir="rtl">חלל החלטי.</span></p>
     <p class="line" id="l2"><span data-l="en" lang="en">The right art.</span><span data-l="he" lang="he" dir="rtl">האמנות הנכונה.</span></p>
+    <a class="arrow hero-write" data-phone-only href="#contact" data-write data-loc="hero"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" dir="rtl" lang="he">כתבו לסתיו</span></a>
     <div class="mark-wrap"><div class="mark-in">
       <div class="cue" aria-hidden="true"><i></i></div>
     </div></div>
@@ -635,7 +831,7 @@
 </main>
 <footer class="foot" id="contact">
   <div class="foot-cta">
-    <p class="eyebrow"><span data-l="en" lang="en">Contact</span><span data-l="he" lang="he" dir="rtl">יצירת קשר</span></p>
+    <p class="eyebrow"><span data-l="en" lang="en">Three ways to reach me</span><span data-l="he" lang="he" dir="rtl">שלוש דרכים ליצור איתי קשר</span></p>
     <h2 class="serif"><span data-l="en" lang="en">Tell me about your reception and your move month.</span><span data-l="he" lang="he" dir="rtl">ספרו לי על אזור הקבלה שלכם ועל חודש המעבר.</span></h2>
     <div class="foot-ways">
       <a class="arrow" href="mailto:stav@stavtheodor.com?subject=Art%20for%20our%20offices" data-write data-loc="footer"><span class="ln"></span><span data-l="en" lang="en">Write to Stav</span><span data-l="he" lang="he" dir="rtl">כתבו לסתיו</span></a>
@@ -1203,7 +1399,7 @@ document.addEventListener('click', function (e) {
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261006" defer></script>
+<script src="/js/home-opening.js?v=20261126f" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

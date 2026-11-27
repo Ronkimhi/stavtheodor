@@ -576,6 +576,20 @@ def he_post_ld(p):
     return out
 
 
+def body_img_dims(inner):
+    """Every image in a post's body gets its file's own width and height (2026-11-26, hubs speed). The post CSS sets
+    width 100% and height auto, so the photo looks the same; its box is the photo's shape before the bytes arrive, so
+    nothing below it moves while it loads, and the lazy images further down stay where they will be (with no size,
+    each unloaded photo was 0 px tall and pulled the whole page up into the browser's lazy-loading distance)."""
+    def one(m):
+        tag = m.group(0)
+        src = re.search(r'\ssrc="(/[^"]+)"', tag)
+        if not src or re.search(r'\swidth=', tag):
+            return tag
+        return re.sub(r'\s*/?>$', sc.dims_attr(src.group(1)) + '>', tag)
+    return re.sub(r'<img\b[^>]*>', one, inner)
+
+
 def render_post_page(p, all_posts, he=False):
     """A post's page at its main address, or (he=True) at its Hebrew address /radar/<slug>/he/ (content/radar.json
     he_pages, 2026-11-18): Hebrew in the markup, the Hebrew body only, its own Hebrew title and description, canonical
@@ -584,6 +598,7 @@ def render_post_page(p, all_posts, he=False):
     # Post pages live at /radar/<slug>/, so relative image paths copied from the
     # source would resolve to /radar/<slug>/images/... and 404. Make them root-relative.
     article_inner = p["article_inner"].replace('src="images/', 'src="/images/').replace('src="videos/', 'src="/videos/')
+    article_inner = body_img_dims(article_inner)
     article_inner = h1_title(article_inner, p, he=he)
     article_inner = (hebrew_only(hebrew_date(with_byline(article_inner, he=True, slug=p["slug"]))) if he
                      else english_first(with_byline(article_inner)))
@@ -612,7 +627,7 @@ def render_post_page(p, all_posts, he=False):
     <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
-  <div class="timeline">{sc.timeline(others, with_months=False, he_slugs=HE_PAGES if he else ())}
+  <div class="timeline">{sc.timeline(others, with_months=False, dims=True, he_slugs=HE_PAGES if he else ())}
   </div>{sc.radar_subscribe("radar-post", permalink[len(SITE):], whatsapp=True)}
 </section>
 '''
@@ -646,14 +661,14 @@ for p in posts:
     page = render_post_page(p, posts)
     if EN_BODY in page and HE_BODY in page and page.find(EN_BODY) > page.find(HE_BODY):
         raise SystemExit(f"build-post-pages: {out_path}: the English body must come before the Hebrew one")
-    sc.write(out_path, page)
+    sc.write(out_path, page, defer=True)
     print(f"  wrote {out_path}")
     if p["slug"] in HE_PAGES:
         he_path = os.path.join(OUT_DIR, p["slug"], "he", "index.html")
         he_page = render_post_page(p, posts, he=True)
         if EN_BODY in he_page:
             raise SystemExit(f"build-post-pages: {he_path}: a Hebrew address carries the Hebrew body only")
-        sc.write(he_path, he_page)
+        sc.write(he_path, he_page, defer=True)
         print(f"  wrote {he_path}")
 
 
@@ -806,7 +821,7 @@ def render_hub(t, hub):
     <div class="lead"><p class="eyebrow">{T('The posts', 'הפוסטים')}</p></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
-  <div class="timeline">{sc.timeline(in_topic, with_months=False)}
+  <div class="timeline">{sc.timeline(in_topic, with_months=False, dims=True)}
   </div>{sc.radar_subscribe("radar-hub", url[len(SITE):], whatsapp=True)}
 </section>
 
@@ -828,7 +843,7 @@ for t in HUB_TOPICS:
         raise SystemExit(f"content/radar.json: topic {t['slug']!r} has hub true but no hubs.{t['slug']}")
     hub_check(t, hub)
     out_path = os.path.join(OUT_DIR, t["slug"], "index.html")
-    sc.write(out_path, render_hub(t, hub))
+    sc.write(out_path, render_hub(t, hub), defer=True)
     hub_quotes_check(t, hub, open(out_path, encoding="utf-8").read())  # the page as written, after the sanitizer
     print(f"  wrote {out_path} (topic hub)")
 
@@ -868,7 +883,7 @@ def render_radar_index(posts):
     }
     body = f'''
 <header class="phero archive">
-  <img src="{latest_img}" alt="" fetchpriority="high">
+  <img src="{latest_img}" alt=""{sc.dims_attr(latest_img)} loading="eager" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <p class="eyebrow">{T('Art Radar', 'ראדאר אמנות')}</p>
@@ -882,14 +897,14 @@ def render_radar_index(posts):
     <div class="lead"><p class="eyebrow">{T('Get it first', 'קבלו את זה ראשונים')}</p><h2 class="serif">{T('The posts go to the WhatsApp group first.', 'הפוסטים מגיעים קודם לקבוצת הוואטסאפ.')}</h2></div>
     <a class="btn" href="{sc.WHATSAPP}" target="_blank" rel="noopener">{T('Join the WhatsApp Group', 'הצטרפו לקבוצת הוואטסאפ')}</a>
   </div>{sc.radar_subscribe("radar-archive", "/radar/")}
-  {hub_links()}<div class="timeline" id="posts">{sc.timeline(posts, with_months=True)}
+  {hub_links()}<div class="timeline" id="posts">{sc.timeline(posts, with_months=True, dims=True)}
   </div>
 </section>
 '''
     return (sc.head('Art Radar, every post · THEODORA', collection['description'], url,
-                    og_image=SITE + latest_img, lang='en', ld=[collection, breadcrumb])
+                    og_image=SITE + latest_img, lang='en', ld=[collection, breadcrumb], extra=sc.img_preload(latest_img))
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
-sc.write(os.path.join(OUT_DIR, 'index.html'), render_radar_index(posts))
+sc.write(os.path.join(OUT_DIR, 'index.html'), render_radar_index(posts), defer=True)
 print("  wrote radar/index.html")

@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/fernand-leger/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/fd/Fernand_L%C3%A9ger%2C_1910%2C_Nudes_in_the_forest_%28Nus_dans_la_for%C3%AAt%29%2C_oil_on_canvas%2C_120_x_170_cm%2C_Kr%C3%B6ller-M%C3%BCller_Museum.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Joseph Fernand Henri Léger was a French painter, sculptor, and filmmaker. In his early works he created a personal form of cubism which he gradually modified into a more figurative, populist style. His boldly simplified treatment of modern subject matter has caused him to be regarded as a forerunner of pop art.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=fernand-leger">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=fernand-leger">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Fernand_L%C3%A9ger%2C_1910%2C_Nudes_in_the_forest_%28Nus_dans_la_for%C3%AAt%29%2C_oil_on_canvas%2C_120_x_170_cm%2C_Kr%C3%B6ller-M%C3%BCller_Museum.jpg/960px-Fernand_L%C3%A9ger%2C_1910%2C_Nudes_in_the_forest_%28Nus_dans_la_for%C3%AAt%29%2C_oil_on_canvas%2C_120_x_170_cm%2C_Kr%C3%B6ller-M%C3%BCller_Museum.jpg" alt="Nudes in the forest">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Fernand_L%C3%A9ger%2C_1910%2C_Nudes_in_the_forest_%28Nus_dans_la_for%C3%AAt%29%2C_oil_on_canvas%2C_120_x_170_cm%2C_Kr%C3%B6ller-M%C3%BCller_Museum.jpg/960px-Fernand_L%C3%A9ger%2C_1910%2C_Nudes_in_the_forest_%28Nus_dans_la_for%C3%AAt%29%2C_oil_on_canvas%2C_120_x_170_cm%2C_Kr%C3%B6ller-M%C3%BCller_Museum.jpg" width="960" height="661" alt="Nudes in the forest">
 <h2>Nudes in the forest</h2>
 <div class="meta"><span>1910</span><span>120 × 170 cm</span><span>Kröller-Müller Museum</span></div>
 
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Fernand%20L%C3%A9ger%2C%201910%2C%20Nudes%20in%20the%20forest%20%28Nus%20dans%20la%20for%C3%AAt%29%2C%20oil%20on%20canvas%2C%20120%20x%20170%20cm%2C%20Kr%C3%B6ller-M%C3%BCller%20Museum.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/La_Noce_-_Fernand_L%C3%A9ger.jpg/960px-La_Noce_-_Fernand_L%C3%A9ger.jpg" alt="The Wedding">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/La_Noce_-_Fernand_L%C3%A9ger.jpg/960px-La_Noce_-_Fernand_L%C3%A9ger.jpg" width="960" height="1192" alt="The Wedding">
 <h2>The Wedding</h2>
 <div class="meta"><span>1910</span><span>257 × 206 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:La%20Noce%20-%20Fernand%20L%C3%A9ger.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Fernand_L%C3%A9ger%2C_1911-1912%2C_Les_Fumeurs_%28The_Smokers%29%2C_oil_on_canvas%2C_129.2_x_96.5_cm%2C_Solomon_R._Guggenheim_Museum%2C_New_York..jpg/960px-Fernand_L%C3%A9ger%2C_1911-1912%2C_Les_Fumeurs_%28The_Smokers%29%2C_oil_on_canvas%2C_129.2_x_96.5_cm%2C_Solomon_R._Guggenheim_Museum%2C_New_York..jpg" alt="Les Fumeurs">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Fernand_L%C3%A9ger%2C_1911-1912%2C_Les_Fumeurs_%28The_Smokers%29%2C_oil_on_canvas%2C_129.2_x_96.5_cm%2C_Solomon_R._Guggenheim_Museum%2C_New_York..jpg/960px-Fernand_L%C3%A9ger%2C_1911-1912%2C_Les_Fumeurs_%28The_Smokers%29%2C_oil_on_canvas%2C_129.2_x_96.5_cm%2C_Solomon_R._Guggenheim_Museum%2C_New_York..jpg" width="960" height="1296" alt="Les Fumeurs">
 <h2>Les Fumeurs</h2>
 <div class="meta"><span>1911</span><span>129 × 96 cm</span><span>Solomon R. Guggenheim Museum</span></div>
 
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Fernand%20L%C3%A9ger%2C%201911-1912%2C%20Les%20Fumeurs%20%28The%20Smokers%29%2C%20oil%20on%20canvas%2C%20129.2%20x%2096.5%20cm%2C%20Solomon%20R.%20Guggenheim%20Museum%2C%20New%20York..jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aerrapc_Guggenheim_art_photo_%28134%29.png/960px-Aerrapc_Guggenheim_art_photo_%28134%29.png" alt="The Woman in Blue">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aerrapc_Guggenheim_art_photo_%28134%29.png/960px-Aerrapc_Guggenheim_art_photo_%28134%29.png" width="960" height="1443" alt="The Woman in Blue">
 <h2>The Woman in Blue</h2>
 <div class="meta"><span>1912</span><span>193 × 129 cm</span><span>Kunstmuseum Basel</span></div>
 
 <p class="work-attr">Aerra Carnicom · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Aerrapc%20Guggenheim%20art%20photo%20%28134%29.png" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg/960px-Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg" alt="Contrast of Forms">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg/960px-Fernand_l%C3%A9ger%2C_contrasto_di_forme%2C_1913.jpg" width="960" height="1143" alt="Contrast of Forms">
 <h2>Contrast of Forms</h2>
 <div class="meta"><span>1913</span><span>100 × 81 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Francesco Bini · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Fernand%20l%C3%A9ger%2C%20contrasto%20di%20forme%2C%201913.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Le_R%C3%A9veille-matin_-_Fernand_L%C3%A9ger.jpg/960px-Le_R%C3%A9veille-matin_-_Fernand_L%C3%A9ger.jpg" alt="The Alarm Clock">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Le_R%C3%A9veille-matin_-_Fernand_L%C3%A9ger.jpg/960px-Le_R%C3%A9veille-matin_-_Fernand_L%C3%A9ger.jpg" width="960" height="1183" alt="The Alarm Clock">
 <h2>The Alarm Clock</h2>
 <div class="meta"><span>1914</span><span>100 × 81 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Le%20R%C3%A9veille-matin%20-%20Fernand%20L%C3%A9ger.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fernand_L%C3%A9ger%2C_1919%2C_The_City_%28La_Ville%29%2C_oil_on_canvas%2C_231.1_x_298.4_cm%2C_Philadelphia_Museum_of_Art.jpg/960px-Fernand_L%C3%A9ger%2C_1919%2C_The_City_%28La_Ville%29%2C_oil_on_canvas%2C_231.1_x_298.4_cm%2C_Philadelphia_Museum_of_Art.jpg" alt="The City">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fernand_L%C3%A9ger%2C_1919%2C_The_City_%28La_Ville%29%2C_oil_on_canvas%2C_231.1_x_298.4_cm%2C_Philadelphia_Museum_of_Art.jpg/960px-Fernand_L%C3%A9ger%2C_1919%2C_The_City_%28La_Ville%29%2C_oil_on_canvas%2C_231.1_x_298.4_cm%2C_Philadelphia_Museum_of_Art.jpg" width="960" height="741" alt="The City">
 <h2>The City</h2>
 <div class="meta"><span>1919</span><span>231 × 298 cm</span><span>Philadelphia Museum of Art</span></div>
 <p>The City is an oil on canvas painting by French painter and sculptor Fernand Léger, from 1919.</p>
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Fernand%20L%C3%A9ger%2C%201919%2C%20The%20City%20%28La%20Ville%29%2C%20oil%20on%20canvas%2C%20231.1%20x%20298.4%20cm%2C%20Philadelphia%20Museum%20of%20Art.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Fernand_L%C3%A9ger_-_Le_Remorqueur.jpg/960px-Fernand_L%C3%A9ger_-_Le_Remorqueur.jpg" alt="The Tug">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Fernand_L%C3%A9ger_-_Le_Remorqueur.jpg/960px-Fernand_L%C3%A9ger_-_Le_Remorqueur.jpg" width="960" height="739" alt="The Tug">
 <h2>The Tug</h2>
 <div class="meta"><span>1920</span><span>114 × 145 cm</span><span>Museum of Grenoble</span></div>
 <p>The Tugboat is an oil on canvas painting by French painter Fernand Léger, from 1920. It is held at the Museum of Grenoble, which purchased it from the artist, in 1928.</p><p class="fact">Léger was impressed by the universal exhibitions of the early 20th century. Like Marcel Duchamp, he was inspired by the machines that he saw at the fourth exhibition of aerial locomotion, which took place in Paris just before the First World War. <a href="https://en.wikipedia.org/wiki/The_Tugboat_%28L%C3%A9ger%29#History_and_description" target="_blank" rel="noopener">History and description →</a></p>
 <p class="work-attr">Jérôme Villafruela · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Fernand%20L%C3%A9ger%20-%20Le%20Remorqueur.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Man_and_Woman_by_Fernand_Leger.jpg/960px-Man_and_Woman_by_Fernand_Leger.jpg" alt="Man and Woman">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Man_and_Woman_by_Fernand_Leger.jpg/960px-Man_and_Woman_by_Fernand_Leger.jpg" width="960" height="1358" alt="Man and Woman">
 <h2>Man and Woman</h2>
 <div class="meta"><span>1921</span><span>Q1117704</span></div>
 <p>Man and Woman is an oil-on-canvas painting executed in 1921 by the French artist Fernand Léger. The painting is a cubist portrait of a man and a woman locked in a passionate embrace at odds with their depersonalized, industrialized setting. The painting is held by the Indianapolis Museum of Art, United States.</p><p class="fact">Léger rejected many aspects of cubism, such as multiple simultaneous vantage points, but retained the trait of reducing figures to their most basic, geometric components. To that end, the woman in this painting consists of curves and the color orange, while the man is depicted in columns and blue. <a href="https://en.wikipedia.org/wiki/Man_and_Woman_%28L%C3%A9ger%29#Description" target="_blank" rel="noopener">Description →</a></p><p class="fact">Léger&#x27;s battlefront experiences during World War I instilled in him the conviction that art should reflect the new, mechanized world, and be accessible to the average person. He identified strongly with the working class. <a href="https://en.wikipedia.org/wiki/Man_and_Woman_%28L%C3%A9ger%29#Historical_information" target="_blank" rel="noopener">Historical information →</a></p><p class="fact">Man and Woman was acquired by the IMA in 1952, courtesy of the Martha Delzell Memorial Fund. It has the acquisition number 52.28. <a href="https://en.wikipedia.org/wiki/Man_and_Woman_%28L%C3%A9ger%29#Acquisition" target="_blank" rel="noopener">Acquisition →</a></p>
 <p class="work-attr">Fernand Léger · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Man%20and%20Woman%20by%20Fernand%20Leger.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Fernand_L%C3%A9ger_Still_Life_with_Candlestick_1922.jpg/960px-Fernand_L%C3%A9ger_Still_Life_with_Candlestick_1922.jpg" alt="Still Life with Candlestick">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Fernand_L%C3%A9ger_Still_Life_with_Candlestick_1922.jpg/960px-Fernand_L%C3%A9ger_Still_Life_with_Candlestick_1922.jpg" width="960" height="1386" alt="Still Life with Candlestick">
 <h2>Still Life with Candlestick</h2>
 <div class="meta"><span>1922</span><span>116 × 80 cm</span><span>Musée d&#x27;art moderne de Paris</span></div>
 <p>Still Life with Candlestick is an oil on canvas painting created in 1922 by the French artist Fernand Léger.</p>
