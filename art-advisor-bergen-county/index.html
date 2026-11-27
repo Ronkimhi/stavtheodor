@@ -475,17 +475,17 @@
       <a class="entry reveal" href="/radar/orientalism-between-fact-and-fantasy/">
         <div class="date"><span data-l="en" lang="en">June 30, 2026</span><span data-l="he" lang="he" dir="rtl">30 ביוני 2026</span></div>
         <div><h3 class="serif"><span data-l="en" lang="en">Orientalism: Between Fact and Fantasy, at the Met</span><span data-l="he" lang="he" dir="rtl">אוריינטליזם: בין עובדה לפנטזיה, במטרופוליטן</span></h3><p class="teaser"><span data-l="en" lang="en">There are exhibitions you leave with a list of works you loved.</span><span data-l="he" lang="he" dir="rtl">יש תערוכות שאתה יוצא מהן עם רשימת יצירות שאהבת.</span></p></div>
-        <div class="th"><img src="/images/2026-06-30-orientalism-between-fact-and-fantasy-ingres.jpg" alt="" loading="lazy"></div>
+        <div class="th"><img src="/images/2026-06-30-orientalism-between-fact-and-fantasy-ingres.jpg" alt="" width="900" height="509" loading="lazy"></div>
       </a>
       <a class="entry reveal" href="/radar/giacometti-dendur/">
         <div class="date"><span data-l="en" lang="en">June 26, 2026</span><span data-l="he" lang="he" dir="rtl">26 ביוני 2026</span></div>
         <div><h3 class="serif"><span data-l="en" lang="en">Giacometti at the Temple of Dendur, the Met</span><span data-l="he" lang="he" dir="rtl">ג&#x27;קומטי במקדש דנדור, במטרופוליטן</span></h3><p class="teaser"><span data-l="en" lang="en">Exactly 60 years ago, the Swiss sculptor Alberto Giacometti passed away.</span><span data-l="he" lang="he" dir="rtl">לפני 60 שנה בדיוק הלך לעולמו הפסל השווייצרי אלברטו ג&#x27;קומטי.</span></p></div>
-        <div class="th"><img src="/images/2026-06-26-giacometti-walking-woman-dendur.png" alt="" loading="lazy"></div>
+        <div class="th"><picture class="defer" style="display:contents"><source media="(scripting: enabled)" srcset="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%201215%201267%27/%3E"><img src="/images/2026-06-26-giacometti-walking-woman-dendur.png" alt="" width="1215" height="1267" loading="lazy"></picture></div>
       </a>
       <a class="entry reveal" href="/radar/living-with-art-montclair/">
         <div class="date"><span data-l="en" lang="en">June 4, 2026</span><span data-l="he" lang="he" dir="rtl">4 ביוני 2026</span></div>
         <div><h3 class="serif"><span data-l="en" lang="en">Living With Art, at the Montclair Art Museum</span><span data-l="he" lang="he" dir="rtl">לחיות עם אמנות, במוזיאון האמנות של מונטקלייר</span></h3><p class="teaser"><span data-l="en" lang="en">This time I am taking us a little closer to home, to the town of Montclair, half an hour from us.</span><span data-l="he" lang="he" dir="rtl">הפעם אני לוקחת אותנו קצת יותר קרוב לבית, אל העיירה מונטקלייר, חצי שעה מאיתנו.</span></p></div>
-        <div class="th"><img src="/images/2026-06-04-montclair-shaffer.jpg" alt="" loading="lazy"></div>
+        <div class="th"><img src="/images/2026-06-04-montclair-shaffer.jpg" alt="" width="900" height="602" loading="lazy"></div>
       </a>
   </div>
 </section>
@@ -1021,6 +1021,25 @@ document.addEventListener('click', function (e) {
 });
 </script>
 <script src="/js/before-after.js?v=20261126" defer></script>
+<script type="speculationrules">{"prefetch":[{"source":"document","eagerness":"moderate","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?(.+)"}},{"not":{"href_matches":"/contact/*"}},{"not":{"href_matches":"/*.:ext"}},{"not":{"href_matches":"/cdn-cgi/*"}},{"not":{"selector_matches":"[download]"}}]}}]}</script>
 
+<script>
+(function () {
+  var ps = [].slice.call(document.querySelectorAll('picture.defer'));
+  if (!ps.length) { return; }
+  var io = null;
+  function go(p) { var s = p.querySelector('source'); if (s) { p.removeChild(s); } }
+  function all() { ps.forEach(go); ps = []; if (io) { io.disconnect(); } }
+  if ('IntersectionObserver' in window) {
+    io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { go(e.target.parentNode); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px 50% 0px' });
+    ps.forEach(function (p) { var im = p.querySelector('img'); if (im) { io.observe(im); } });
+  }
+  function later() { setTimeout(all, 0); }
+  if (document.readyState === 'complete') { later(); } else { window.addEventListener('load', later); }
+  setTimeout(all, 6000);
+})();
+</script>
 </body>
 </html>
