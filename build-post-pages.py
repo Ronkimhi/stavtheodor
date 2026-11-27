@@ -179,7 +179,7 @@ def working_with_stav(p):
     <p class="eyebrow">{T('Working with Stav', 'עבודה עם סתיו')}</p>
     <h2 class="serif">{T('Art curator and advisor in Tenafly, New Jersey, for New York, Bergen County and Tel Aviv.', "אוצרת ויועצת אמנות בטנפליי, ניו ג'רזי, לניו יורק, למחוז ברגן ולתל אביב.")}</h2>
     <div class="readnext">{links}</div>
-    <a class="btn" href="mailto:{sc.EMAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{sc.WRITE_PATH}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}
   </div>
 </section>
@@ -419,24 +419,21 @@ ASK_COPY = {
 
 
 def ask_link(name_en, name_he, p, loc, lang=None):
-    """One quiet Write to Stav link that opens the Write to Stav form about an artist (or about an artist in the post when no name is
-    given) with the post filled in. A normal data-write link: without JavaScript it is a mailto whose subject names
-    the artist and the post. lang: None gives the two text twins, "en" or "he" one language (the hub's per-language
-    lists)."""
+    """One quiet Write to Stav link to /contact/ about an artist (or about an artist in the post when no name is given):
+    a data-write link whose data-ask context WRITE_JS hands to the /contact/ form (since 2026-11-27), which fills in the
+    artist and the post. lang: None gives the two text twins, "en" or "he" one language (the hub's per-language lists)."""
     post = f"/radar/{p['slug']}/"
     v = {"name_en": name_en, "name_he": name_he, "title_en": p["title_en"], "title_he": p["title_he"]}
     if name_en:
         en, he = (x.format(**v) for x in ASK_COPY["named"])
         msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_named"])
-        subject = f"Art Radar: work by {name_en} ({post})"
     else:
         en, he = ASK_COPY["generic"]
         msg_en, msg_he = (x.format(**v) for x in ASK_COPY["msg_generic"])
-        subject = f"Art Radar: an artist in {post}"
     text = T(H.escape(en), H.escape(he)) if lang is None else H.escape(en if lang == "en" else he)
     a = lambda x: H.escape(x, quote=True)
-    return (f'<a href="{a(sc.mail_href(subject))}" data-write data-ask data-loc="{loc}" data-artist="{a(name_en)}" '
-            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}" data-label-en="{a(en)}" data-label-he="{a(he)}">{text}</a>')
+    return (f'<a href="{sc.WRITE_PATH}" data-write data-ask data-loc="{loc}" data-artist="{a(name_en)}" '
+            f'data-post="{post}" data-post-slug="{p["slug"]}" data-msg-en="{a(msg_en)}" data-msg-he="{a(msg_he)}">{text}</a>')
 
 
 def ask_check():
