@@ -112,11 +112,14 @@ def script_preload(phone=False):
 # Speculation rules, the homepage only (2026-11-26): a same-origin page link is prefetched (the document only, never
 # prerendered, so none of its scripts run and no analytics hit is sent) once the visitor hovers it for a moment or
 # starts to press it (eagerness moderate), so the next page opens at once. Left out: the homepage itself and its
-# #anchors, anything with a file extension (images, the film, PDFs, llms.txt), /cdn-cgi/, and every mailto, tel or
-# external link, which "/*" never matches. Browsers without speculation rules ignore the tag.
+# #anchors, plus the same exclusions as the shared rule (site_chrome.SPECULATION_RULES, since 2026-11-27): any address
+# with a query string, /contact/ (the form's page), anything with a file extension (images, the film, PDFs, llms.txt),
+# /cdn-cgi/, links with a download attribute, and every mailto, tel or external link, which "/*" never matches.
+# Browsers without speculation rules ignore the tag.
 SPECULATION_RULES = ('<script type="speculationrules">'
                      '{"prefetch":[{"source":"document","eagerness":"moderate","where":{"and":['
-                     '{"href_matches":"/*"},{"not":{"href_matches":"/"}},{"not":{"href_matches":"/*.:ext"}},'
+                     '{"href_matches":"/*"},{"not":{"href_matches":"/"}},{"not":{"href_matches":"/*\\\\?(.+)"}},'
+                     '{"not":{"href_matches":"/contact/*"}},{"not":{"href_matches":"/*.:ext"}},'
                      '{"not":{"href_matches":"/cdn-cgi/*"}},{"not":{"selector_matches":"[download]"}}]}}]}'
                      '</script>\n')
 
