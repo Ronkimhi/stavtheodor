@@ -466,6 +466,13 @@
     im.addEventListener('error', function () { im.style.visibility = 'hidden'; });
     im.addEventListener('load', function () { im.style.visibility = ''; });
     if (im.complete && im.currentSrc && !im.naturalWidth) { im.style.visibility = 'hidden'; }
+    /* once a stage photo is in, the <img> keeps its URL as its own src (wave 3, job 7): if the <source> media stops
+       matching while the stage is still shown (an iPad split view widened past 820 px in portrait, a tablet whose
+       primary pointer turns fine when a mouse or keyboard is attached), the <picture> falls back to the same photo from
+       the memory cache instead of an empty <img> drawing the broken-image glyph. Nothing is fetched again. */
+    var keep = function () { if (im.naturalWidth && im.currentSrc && !im.getAttribute('src')) { im.setAttribute('src', im.currentSrc); } };
+    if (im.complete) { keep(); }
+    im.addEventListener('load', keep);
   });
   if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
   b.addEventListener('load', function () { go('load'); }, { once: true });
@@ -483,7 +490,7 @@
 (function () {
   var P = window.THEODORA_PHONE, R = document.documentElement;
   if (!P || !window.getComputedStyle) { return; }
-  var HW_GAP = 21, HW_PAD = 5, HW_ROOM = 48, raf = 0, ctx = null;
+  var HW_GAP = 21, HW_PAD = 5, HW_ROOM = 48, raf = 0, ctx = null, owed = false, late = 0;
   function ink(el) {
     var rs = el.getClientRects();
     if (!rs.length) { return null; }
@@ -500,7 +507,13 @@
   function liftWrite() {
     raf = 0;
     var a = document.querySelector('.hero-ui .hero-write[data-phone-only]');
-    if (!a || !R.classList.contains('open2') || (window.pageYOffset || 0) > 1) { return; }
+    if (!a || !R.classList.contains('open2')) { return; }
+    /* scrolled: the measurement is owed, and made at the next return to the top (the scroll listener in arm) */
+    if ((window.pageYOffset || 0) > 1) { owed = true; return; }
+    owed = false;
+    /* the lift only exists where the phone rules place the link under the room (css/theme.css, max-width 767px); on an
+       iPad-size portrait screen the link sits at the bottom beside the caption, as on the homepage, and takes no lift */
+    if (window.matchMedia && !matchMedia('(max-width: 767px)').matches) { a.style.setProperty('--hw-lift', '0px'); P.hwLift = { v: 0, wide: true }; return; }
     a.style.setProperty('--hw-lift', '0px');
     var lang = document.body.classList.contains('lang-he') ? 'he' : 'en', cap = document.getElementById('cap'), key = cap && cap.getAttribute('data-show');
     var cs = key && cap.querySelector('.cap-t[data-cap="' + key + '"] [data-l="' + lang + '"]'), ls = a.querySelector('[data-l="' + lang + '"]');
@@ -515,15 +528,22 @@
     if (v) { a.style.setProperty('--hw-lift', v + 'px'); }
   }
   function soon() { if (!raf) { raf = requestAnimationFrame(liftWrite); } }
+  /* a change of language or caption: now, and again once it has settled (the caption fades and reflows) */
+  function twice() { soon(); clearTimeout(late); late = setTimeout(soon, 700); }
   P.liftWrite = soon;
   function arm() {
     soon();
     window.addEventListener('load', soon);
+    window.addEventListener('pageshow', soon);
     window.addEventListener('resize', soon);
     window.addEventListener('orientationchange', soon);
+    /* back at the top: every measurement skipped while the page was scrolled is made up here (reads layout only at the top) */
+    window.addEventListener('scroll', function () { if (owed && (window.pageYOffset || 0) <= 1) { soon(); } }, { passive: true });
     if (document.fonts && document.fonts.ready) { document.fonts.ready.then(soon); }
+    var cap = document.getElementById('cap');
+    if (cap) { cap.addEventListener('transitionend', soon); }
     if (window.MutationObserver) {
-      var mo = new MutationObserver(soon), cap = document.getElementById('cap');
+      var mo = new MutationObserver(twice);
       mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
       if (cap) { mo.observe(cap, { attributes: true, attributeFilter: ['data-show'] }); }
     }
@@ -543,8 +563,10 @@
     a = a || document.querySelector('.hero-ui .hero-write');
     if (!a || document.body.classList.contains('ph-hold')) { return; }
     var y = window.pageYOffset || 0;
-    if (y <= 0) { if (on) { on = false; a.style.opacity = ''; a.style.pointerEvents = ''; } return; }
-    var k = Math.max(0, 1 - y / HW_FADE);
+    if (y <= 0) { if (on) { on = false; a.style.opacity = ''; a.style.pointerEvents = ''; a.style.transition = ''; } return; }
+    /* a lifted link (--hw-lift, the buyer pages) starts that much nearer the room: it fades over that much less, so it is
+       gone at the homepage's own distance from the room */
+    var k = Math.max(0, 1 - y / Math.max(1, HW_FADE - (parseFloat(a.style.getPropertyValue('--hw-lift')) || 0)));
     on = true; a.style.transition = 'none'; a.style.opacity = k.toFixed(3); a.style.pointerEvents = k < 0.5 ? 'none' : '';
   }
   window.addEventListener('scroll', function () { if (!raf) { raf = requestAnimationFrame(fade); } }, { passive: true });
