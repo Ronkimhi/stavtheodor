@@ -371,6 +371,10 @@
   /* /contact/ (redesigned 2026-09-29): the h1 and the line, the contact act, then the service area as a row of names */
   .contact-head .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; color: var(--ink); max-width: 30ch; }
   .contact-head .lead [data-l="he"] { font-family: var(--he); }
+  /* Hebrew /contact/ at wide widths: the header box keeps its 1100px cap but sits at the right edge, so the eyebrow, h1 and
+     lede end where the card below ends. A physical margin: main is ltr, and in the rtl header margin-inline-start is the
+     right margin. Scoped to /contact/, the one text header that sits over a full width card. */
+  body.lang-he .contact-head { margin-left: auto; }
   .contact-page .act { margin-top: 0; }
   /* /contact/ (contact_act form_first): the markup runs headline, form, Or reach me directly, the order a phone shows and
      the keyboard follows; from 861px the card is put back in its two columns: headline at the top left, the direct ways
@@ -1194,4 +1198,8 @@
   html.ph-end body:not(.gl) #cap .cap-t[data-cap="p3"] { display: inline; }
   /* /contact/ copy, 2026-11-27: no one-word last line in the check lines or the form note, and a wider /contact/ lede */
   .act-lines li > span, .form-note { text-wrap: pretty; }
+  /* The thank-you card in Stav's voice: no lone last word under the spam line, and the reply line balanced so the address
+     (one unbreakable run) does not sit alone under a full line */
+  .form-thanks .ty-spam { text-wrap: pretty; }
+  .form-thanks .ty-next { text-wrap: balance; }
   .contact-head .lead { max-width: 36em; }

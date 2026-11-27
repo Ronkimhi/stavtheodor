@@ -943,7 +943,7 @@ CONTACT = {
     # The card heading and the three check lines, /contact/ only (2026-11-27); every other card keeps sc.CONTACT_HEAD and sc.CONTACT_LINES.
     "card_head": ("Here is how it starts.", "כך זה מתחיל."),
     "card_lines": [
-        ("I read every message myself and reply by email, personally.", "אני קוראת כל הודעה בעצמי ועונה במייל, אישית."),
+        ("I read every message myself and reply by email,&nbsp;personally.", "אני קוראת כל הודעה בעצמי ועונה במייל, אישית."),
         ("If it fits, a first conversation by phone or in the space itself.", "אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו."),
         ("I can also work from your designer's or architect's plans, without a site visit.", "אני יכולה לעבוד גם מהתוכניות של המעצב או האדריכל שלכם, בלי להגיע לחלל."),
     ],
