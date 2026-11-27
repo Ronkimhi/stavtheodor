@@ -6,6 +6,7 @@ into a temp folder, changes one FAQ answer, and runs the checker on that draft a
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -13,7 +14,7 @@ import tempfile
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 SOURCE = os.path.join(ROOT, 'content', 'variants', 'medical-practices.json')
-FAQ = 5  # its own question about who installs, which names a certificate of insurance in both languages
+FAQ = 5  # its own question about who installs, which names a certificate of insurance in both languages (the live answer links it)
 EN, HE = 'certificate of insurance', 'אישור ביטוח'
 PAGE = '/advisory/hanging-heavy-art-nyc-apartment-coi/'
 
@@ -42,6 +43,8 @@ CASES = [
 def main():
     base = json.load(open(SOURCE, encoding='utf-8'))
     item = base['faq'][FAQ]
+    for k in ('a_en', 'a_he'):  # every case starts from the plain words, whether or not the live answer links them
+        item[k] = re.sub(r'<a href="[^"]*">(.*?)</a>', r'\1', item[k])
     assert EN in item['a_en'] and HE in item['a_he'], 'the chosen FAQ answer no longer carries the words this test wraps'
     bad = 0
     with tempfile.TemporaryDirectory() as d:

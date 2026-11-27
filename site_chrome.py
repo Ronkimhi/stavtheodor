@@ -267,12 +267,22 @@ def faq_schema(faq):
     }
 
 
+FAQ_LINK = re.compile(r'(<a href="/[^"<>]*">|</a>)')  # the one tag a variant's FAQ answer may carry (tools/check_variants.py h)
+
+
+def faq_answer_html(s):
+    """A FAQ answer as HTML: the text escaped, a site-relative <a href="/..."> and its </a> kept as written.
+    An answer without a link comes out exactly as H.escape(s) did before (2026-11-27)."""
+    return ''.join(part if i % 2 else H.escape(part) for i, part in enumerate(FAQ_LINK.split(s)))
+
+
 def faq_details(faq, first_open=True):
-    """The visible questions, the same text as the FAQPage schema, word for word."""
+    """The visible questions, the same text as the FAQPage schema, word for word: a link in an answer is in both,
+    as <a href="/..."> (schema.org Answer.text may carry it; tools/check_site.py faq compares them)."""
     return ''.join(f'''
       <details class="qa"{' open' if (i == 0 and first_open) else ''}>
         <summary><h3 class="serif">{T(H.escape(q["q_en"]), H.escape(q["q_he"]))}</h3><span class="plus" aria-hidden="true"></span></summary>
-        <p class="body">{T(H.escape(q["a_en"]), H.escape(q["a_he"]))}</p>
+        <p class="body">{T(faq_answer_html(q["a_en"]), faq_answer_html(q["a_he"]))}</p>
       </details>''' for i, q in enumerate(faq))
 
 
