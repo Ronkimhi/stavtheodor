@@ -62,7 +62,10 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261126u (ship-speed-2026-11-26): the phone opening's block, first-load's lift and iPad portrait rules (jobs 4 and 8,
 # which named their stylesheets 20261126s and 20261126t) and main's one-ask header rules (#65) in one file, a value no
 # side has used.
-THEME_CSS = '/css/theme.css?v=20261127b'  # 20261127b: the pop-up's rules removed (Write to Stav goes to /contact/)
+# 20261127p (ipad-scroll-cue-2026-11-27): the scroll cue on every touch iPad held upright, 768 to 1024 px wide, stands
+# clear of the caption (Iris gate 3c, F2), on top of main's 20261127a.
+# 20261127c (contact-page-no-popup-2026-11-27): main's 20261127p with the pop-up's rules removed, a value no side has used.
+THEME_CSS = '/css/theme.css?v=20261127c'
 
 
 def rel(*parts):

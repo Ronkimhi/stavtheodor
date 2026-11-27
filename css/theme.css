@@ -1161,6 +1161,17 @@
     html.open2.ph-rb body.gl .line { top: calc(var(--ph-rb) + 32px); }
     html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 32px); bottom: auto; }
   }
+  /* iPad portrait (a touch screen 768 to 1024 px wide held upright: iPad, Air, Pro 11 and 12.9): the scroll cue, centred
+     and 32 px tall, stands in the dark band under the room, never closer than 140 px to the foot, so about 35 px clear
+     of a two-line caption (72 px above the foot); on the bottom inset it crossed the caption's letters (Iris gate 3c, F2).
+     Without the phone opening it stands midway between the room's bottom and that caption; with it (html.open2, 768 to
+     820 px) midway between the opening lines' row (the room's bottom + 94 px) and that caption. Phones keep the cue at
+     the right, clear of their caption at the left, and a desktop window of the same size keeps it as before. */
+  @media (pointer: coarse) and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+    .cue { height: 32px; bottom: auto; top: min(calc(75% + 16.67vw - 52px - env(safe-area-inset-bottom, 0px) / 2), calc(100% - 140px - env(safe-area-inset-bottom, 0px))); }
+    html.open2 .cue { top: min(calc(75% + 16.67vw - 5px - env(safe-area-inset-bottom, 0px) / 2), calc(100% - 140px - env(safe-area-inset-bottom, 0px))); }
+    html.open2.ph-rb body.gl .cue { top: min(calc(var(--ph-rb) / 2 + 50% - 5px - env(safe-area-inset-bottom, 0px) / 2), calc(100% - 140px - env(safe-area-inset-bottom, 0px))); }
+  }
   /* the buyer pages carry the homepage's first-screen Write to Stav link with data-phone-only (Ron, 2026-11-26): shown only
      with the phone opening, where every rule above and below places it exactly as on the homepage; elsewhere it is not there */
   html:not(.open2) .hero-ui .hero-write[data-phone-only] { display: none; }
