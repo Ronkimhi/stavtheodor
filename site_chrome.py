@@ -534,7 +534,7 @@ NEXT_STEPS = [
 # The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
 CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
 CONTACT_LINES = [
-    ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
+    ('I read every message myself and reply by email,&nbsp;personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
     ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
     ('I stay with you until the art is on the wall.', 'אני מלווה אתכם עד שהאמנות תלויה על הקיר.'),
 ]
@@ -764,7 +764,7 @@ def contact_form(path='/', h='h3'):
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
       <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
-      <label>{L('Your message', 'ההודעה שלכם')} <textarea name="message" rows="2" required></textarea></label>
+      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
