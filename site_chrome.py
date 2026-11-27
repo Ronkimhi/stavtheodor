@@ -69,7 +69,8 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261127r (same branch): the same rule without the cue move (Iris FIX), the resting cue stays as in 20261127p.
 # 20261127s (contact-page-one-commit-2026-11-27): main's 20261127r with the pop-up's rules removed and the contact
 # form's scroll margin added, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261127cw'
+# 20261127he (fix/he-phead-and-thanks-card): the Hebrew /contact/ header sits at the right edge, over the card.
+THEME_CSS = '/css/theme.css?v=20261127he'
 
 
 def rel(*parts):
