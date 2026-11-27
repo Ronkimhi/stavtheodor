@@ -59,7 +59,8 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # ?v= changes with every edit to css/theme.css, so a returning visitor's cached copy (max-age 600 on GitHub Pages) never
 # pairs an old stylesheet with new markup: bump it with the scripts that depend on it (before-after.js, 2026-11-26) and with
 # the phone opening's block (2026-11-26, a distinct value from main's 20261126, which names the stylesheet without that block).
-THEME_CSS = '/css/theme.css?v=20261126r'
+# 20261126s (ship-speed-2026-11-26): the phone opening's block merged with main's one-ask header rules (#65), newer than both.
+THEME_CSS = '/css/theme.css?v=20261126s'
 
 
 def rel(*parts):
@@ -358,7 +359,7 @@ LANG_BOOT = '''<script>
 </script>'''
 
 # Ron's SEO brief, 2026-09-29: For business (P1.5) replaces the Museum item (P1.6: no main page links the museum; its
-# pages stay live and indexed), and Contact goes to the real /contact/ page (P1.1). For business points at the
+# pages stay live and indexed), and Contact went to the real /contact/ page (P1.1). For business points at the
 # homepage's "Who I work with" section until the commercial hub /corporate-art-consulting/ ships (P2.1).
 NAV_ITEMS = [
     ('#about', 'About', 'אודות'),
@@ -368,8 +369,9 @@ NAV_ITEMS = [
     ('#industries', 'For business', 'לעסקים'),
     ('/radar/', 'Art Radar', 'ראדאר אמנות'),
     ('#faq', 'Questions', 'שאלות'),
-    ('/contact/', 'Contact', 'יצירת קשר'),
 ]
+# Ron, 2026-11-26: the header's one ask is Write to Stav (the pop-up: the .nav-write item in nav() and nav_write_bar()), so Contact left
+# the menu, desktop and phone. The footer base keeps its Contact link to /contact/.
 # Who I work with (Ron's SEO brief, 2026-09-29, P1.5): the seven pages for one kind of client each, in every footer and
 # on the projects hub. Interior designers is /for-designers/ since /designers/ was merged into it (it redirects there).
 WHO_I_WORK_WITH = [
@@ -644,7 +646,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     else:
         top = f'''
   <div class="foot-cta">
-    <p class="eyebrow">{T('Contact', 'יצירת קשר')}</p>
+    <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור איתי קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <div class="foot-ways">
       <a class="arrow" href="{href}" data-write data-loc="footer"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>

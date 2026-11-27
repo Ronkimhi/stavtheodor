@@ -1304,7 +1304,6 @@ def render_about(pages):
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
     <div class="acts">
       <a class="btn solid" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
-      <a class="arrow" href="/contact/"><span class="ln"></span>{T('Contact Stav', 'יצירת קשר עם סתיו')}</a>
       {sc.phone_link('cta')}
     </div>
   </div>
