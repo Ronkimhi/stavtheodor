@@ -1173,6 +1173,13 @@
     html.open2 .cue { top: min(calc(75% + 16.67vw - 5px - env(safe-area-inset-bottom, 0px) / 2), calc(100% - 140px - env(safe-area-inset-bottom, 0px))); }
     html.open2.ph-rb body.gl .cue { top: min(calc(var(--ph-rb) / 2 + 50% - 5px - env(safe-area-inset-bottom, 0px) / 2), calc(100% - 140px - env(safe-area-inset-bottom, 0px))); }
   }
+  /* bigger iPads held upright (a touch screen 821 to 1024 px wide: Air and Pro 11 at 834, Pro 12.9 at 1024), which keep the
+     desktop opening with the room drawn whole across the width: the opening lines sit 32 px under the room, as in F1,
+     instead of 76 px above the foot, where their descenders came within 8 px of a two-line caption. A desktop window
+     of the same size keeps them as before (Iris, F1 for 821 to 1024). */
+  @media (pointer: coarse) and (orientation: portrait) and (min-width: 821px) and (max-width: 1024px) and (max-aspect-ratio: 9/10) {
+    html:not(.open2) body.gl .line { top: calc(50% + 33.34vw + 32px); top: calc(50dvh + 33.34vw + 32px); bottom: auto; }
+  }
   /* the buyer pages carry the homepage's first-screen Write to Stav link with data-phone-only (Ron, 2026-11-26): shown only
      with the phone opening, where every rule above and below places it exactly as on the homepage; elsewhere it is not there */
   html:not(.open2) .hero-ui .hero-write[data-phone-only] { display: none; }
