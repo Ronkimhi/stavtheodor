@@ -203,7 +203,9 @@
     var pw = PHONE && PHONE.wait && PHONE.wait[name];
     if (pw) {
       loading[name] = pw.then(function (im) {
-        if (im === undefined) { delete loading[name]; return loadImg(name); }
+        /* undefined: the phone opening never loaded it, so it loads here. Its entry goes too, or loadImg would find the same
+           resolved promise again and loop for good (wave 3: a first-room photo that failed fast froze the page) */
+        if (im === undefined) { delete loading[name]; if (PHONE && PHONE.wait) { delete PHONE.wait[name]; } return loadImg(name); }
         if (im) { imgs[name] = im; dirty(); }
         return im;
       });

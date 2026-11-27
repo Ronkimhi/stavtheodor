@@ -101,6 +101,15 @@
     var w = P.aGo || []; P.aGo = null; for (var i = 0; i < w.length; i++) { w[i](); }
   }
   P.after = go;
+  /* a stage photo that fails is hidden at once, so the browser's broken-image glyph and outline are never painted (Iris,
+     wave 3); one that had failed already is hidden now. The after photo has no source until go() runs, so it counts as
+     failed only with a currentSrc. */
+  [b, a].forEach(function (im) {
+    if (!im) { return; }
+    im.addEventListener('error', function () { im.style.visibility = 'hidden'; });
+    im.addEventListener('load', function () { im.style.visibility = ''; });
+    if (im.complete && im.currentSrc && !im.naturalWidth) { im.style.visibility = 'hidden'; }
+  });
   if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
   b.addEventListener('load', function () { go('load'); }, { once: true });
   b.addEventListener('error', function () { go('error'); }, { once: true });
@@ -303,7 +312,7 @@
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261126d" defer></script>
+<script src="/js/home-opening.js?v=20261126e" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 

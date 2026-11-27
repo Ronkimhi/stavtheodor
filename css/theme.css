@@ -1183,6 +1183,10 @@
     html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 22px); bottom: auto; }
     html.open2 body:not(.gl) .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px); bottom: auto; }
   }
+  /* the static phone stage (no WebGL, reduced motion, a fallback): the Write link sits on the flat ground, where its shadow
+     only drew a smudge darker than the ground (Iris, wave 3) */
+  html.open2 body:not(.gl) .hero-ui .hero-write { text-shadow: none; }
+  html.open2 body:not(.gl) .hero-ui .hero-write .ln { box-shadow: none; }
   /* js/home-opening-phone.js failed to load: the plain cross-fade once the after photo is in, then js/home-opening.js takes over */
   html.ph-end .ph-room .ph-a { opacity: 1; transition: opacity .6s ease; }
   html.ph-end #l1, html.ph-end .ph-scrim { opacity: 0; transition: opacity .35s ease; }
