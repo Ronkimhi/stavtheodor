@@ -1167,9 +1167,9 @@
      hero's 50%, as before), and js/home-opening-phone.js pins them to the room's measured bottom (--ph-rb) on every resize */
   @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
     html.open2 body.gl .line { top: calc(50dvh + 33.34vw + 22px); }
-    html.open2 body.gl .hero-ui .hero-write { top: calc(50dvh + 33.34vw + 82px); }
+    html.open2 body.gl .hero-ui .hero-write { top: calc(50dvh + 33.34vw + 82px - var(--hw-lift, 0px)); }
     html.open2.ph-rb body.gl .line { top: calc(var(--ph-rb) + 22px); }
-    html.open2.ph-rb body.gl .hero-ui .hero-write { top: calc(var(--ph-rb) + 82px); }
+    html.open2.ph-rb body.gl .hero-ui .hero-write { top: calc(var(--ph-rb) + 82px - var(--hw-lift, 0px)); }
   }
   /* no WebGL or reduced motion (no body.gl), portrait: the stage is the hero's picture and scrolls away with it */
   @media (max-aspect-ratio: 9/10) {
@@ -1181,7 +1181,7 @@
   }
   @media (max-width: 767px) and (max-aspect-ratio: 9/10) {
     html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 22px); bottom: auto; }
-    html.open2 body:not(.gl) .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px); bottom: auto; }
+    html.open2 body:not(.gl) .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px - var(--hw-lift, 0px)); bottom: auto; }
   }
   /* the buyer pages carry the homepage's first-screen Write to Stav link with data-phone-only (Ron, 2026-11-26): shown only
      with the phone opening, where every rule above and below places it exactly as on the homepage; elsewhere it is not there */

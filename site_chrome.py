@@ -59,8 +59,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # ?v= changes with every edit to css/theme.css, so a returning visitor's cached copy (max-age 600 on GitHub Pages) never
 # pairs an old stylesheet with new markup: bump it with the scripts that depend on it (before-after.js, 2026-11-26) and with
 # the phone opening's block (2026-11-26, a distinct value from main's 20261126, which names the stylesheet without that block).
-# 20261126s (ship-speed-2026-11-26): the phone opening's block merged with main's one-ask header rules (#65), newer than both.
-THEME_CSS = '/css/theme.css?v=20261126s'
+# 20261126t (ship-speed-2026-11-26): the phone opening's block, first-load's lift rules (job 4, which named its own stylesheet
+# 20261126s) and main's one-ask header rules (#65) in one file, newer than every side's value.
+THEME_CSS = '/css/theme.css?v=20261126t'
 
 
 def rel(*parts):

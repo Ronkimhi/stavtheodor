@@ -727,7 +727,7 @@ def page_problems(out, name, home=None):
     for anchor in ANCHORS:
         if f'id="{anchor}"' not in out and not (home is not None and anchor in VARIANT_ABSENT):
             problems.append(f'anchor #{anchor} missing')
-    if home is None and PHONE_ONLY_ATTR.strip() in out:
+    if home is None and HERO_WRITE_TAG + PHONE_ONLY_ATTR in out:
         problems.append(f'{name}: the homepage shows its Write to Stav link on every screen, never with{PHONE_ONLY_ATTR}')
     if home is not None:
         for sid in VARIANT_ABSENT:
@@ -735,7 +735,7 @@ def page_problems(out, name, home=None):
                 problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
         hw = re.search(r'<!--variant:hero_write-->(.*?)<!--/variant:hero_write-->', open(TEMPLATE, encoding='utf-8').read(), re.S)
         mine = hw.group(1).replace(HERO_WRITE_TAG, HERO_WRITE_TAG + PHONE_ONLY_ATTR) if hw else None
-        if not mine or out.count(sc.undash_html(mine)) != 1 or out.count('hero-write') != 1:
+        if not mine or out.count(sc.undash_html(mine)) != 1 or out.count(HERO_WRITE_TAG) != 1:
             problems.append(f"{name} must carry the homepage's first-screen Write to Stav link once, phone only (data-phone-only)")
         if 'name="robots"' in out:
             problems.append(f'{name} carries a robots meta tag; buyer variants are indexable (Ron, 2026-09-28)')

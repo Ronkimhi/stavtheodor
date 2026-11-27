@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
-<link rel="stylesheet" href="/css/theme.css?v=20261126s">
+<link rel="stylesheet" href="/css/theme.css?v=20261126t">
 <link rel="preload" as="script" href="/js/vendor/gsap.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
 <link rel="preload" as="script" href="/js/vendor/ScrollTrigger.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
 <link rel="preload" as="script" href="/js/vendor/SplitText.min.js" media="not ((pointer: coarse) and (max-aspect-ratio: 9/10) and (max-width: 820px))">
@@ -500,6 +500,64 @@
   b.addEventListener('load', function () { go('load'); }, { once: true });
   b.addEventListener('error', function () { go('error'); }, { once: true });
   t = setTimeout(function () { go('timer'); }, AFTER_WAIT);
+})();
+/* The buyer pages' Write link (data-phone-only, wave 3, Iris gate 3): it sits a fixed 82 px under the room, while the caption
+   is anchored to the screen's bottom and grows upward, so a long caption on a small phone met it. liftWrite() lifts that link
+   (--hw-lift, css/theme.css) just enough that its letters stay HW_GAP px above the caption's letters, the homepage's own
+   tightest gap, and never closer than HW_ROOM px to the room. Letters are measured from the font's own metrics (canvas
+   measureText), so a page already at HW_GAP or more does not move; a page under it is lifted to HW_GAP + HW_PAD, the pad
+   covering what the metrics miss of the painted letters (measured: up to 4 px for the Hebrew link). Only at the top of the page, on the caption shown there;
+   again when the fonts arrive, on resize, on a turn, when the caption or the language changes. The homepage's link has no
+   data-phone-only, so nothing here touches it. P.hwLift: the last measurement. */
+(function () {
+  var P = window.THEODORA_PHONE, R = document.documentElement;
+  if (!P || !window.getComputedStyle) { return; }
+  var HW_GAP = 21, HW_PAD = 5, HW_ROOM = 48, raf = 0, ctx = null;
+  function ink(el) {
+    var rs = el.getClientRects();
+    if (!rs.length) { return null; }
+    var cs = getComputedStyle(el), m = null;
+    try {
+      ctx = ctx || document.createElement('canvas').getContext('2d');
+      ctx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      var tx = el.textContent; m = ctx.measureText(cs.textTransform === 'uppercase' ? tx.toUpperCase() : tx);
+    } catch (e) { m = null; }
+    var first = rs[0], last = rs[rs.length - 1];
+    if (!m || typeof m.fontBoundingBoxAscent !== 'number' || typeof m.actualBoundingBoxAscent !== 'number') { return { top: first.top, bottom: last.bottom }; }
+    return { top: first.top + m.fontBoundingBoxAscent - m.actualBoundingBoxAscent, bottom: last.top + m.fontBoundingBoxAscent + m.actualBoundingBoxDescent };
+  }
+  function liftWrite() {
+    raf = 0;
+    var a = document.querySelector('.hero-ui .hero-write[data-phone-only]');
+    if (!a || !R.classList.contains('open2') || (window.pageYOffset || 0) > 1) { return; }
+    a.style.setProperty('--hw-lift', '0px');
+    var lang = document.body.classList.contains('lang-he') ? 'he' : 'en', cap = document.getElementById('cap'), key = cap && cap.getAttribute('data-show');
+    var cs = key && cap.querySelector('.cap-t[data-cap="' + key + '"] [data-l="' + lang + '"]'), ls = a.querySelector('[data-l="' + lang + '"]');
+    var room = document.querySelector('#ph-stage .ph-room');
+    if (!cs || !ls || !room || getComputedStyle(cap).display === 'none' || getComputedStyle(a).display === 'none') { P.hwLift = { v: 0 }; return; }
+    var ci = ink(cs), li = ink(ls);
+    if (!ci || !li) { return; }
+    var need = ci.top - li.bottom < HW_GAP ? Math.max(0, Math.ceil(li.bottom + HW_GAP + HW_PAD - ci.top)) : 0;
+    var max = Math.max(0, Math.floor(a.getBoundingClientRect().top - room.getBoundingClientRect().bottom - HW_ROOM));
+    var v = Math.min(need, max);
+    P.hwLift = { gap: Math.round((ci.top - li.bottom) * 10) / 10, need: need, max: max, v: v, short: need > max, li: Math.round(li.bottom * 10) / 10, ci: Math.round(ci.top * 10) / 10 };
+    if (v) { a.style.setProperty('--hw-lift', v + 'px'); }
+  }
+  function soon() { if (!raf) { raf = requestAnimationFrame(liftWrite); } }
+  P.liftWrite = soon;
+  function arm() {
+    soon();
+    window.addEventListener('load', soon);
+    window.addEventListener('resize', soon);
+    window.addEventListener('orientationchange', soon);
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(soon); }
+    if (window.MutationObserver) {
+      var mo = new MutationObserver(soon), cap = document.getElementById('cap');
+      mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      if (cap) { mo.observe(cap, { attributes: true, attributeFilter: ['data-show'] }); }
+    }
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); } else { arm(); }
 })();
 </script>
 
