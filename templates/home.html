@@ -67,12 +67,12 @@
        that failed), and js/home-opening.js boots in its finished state */
     P.fail = function () {
       if (P.failed) { return; } P.failed = true; P.hold = false; P.skip = true; b.classList.remove('ph-hold');
-      var a = document.querySelector('#ph-stage .ph-a'), end = function () { R.classList.add('ph-end'); };
+      var a = document.querySelector('#ph-stage .ph-a'), end = function () { R.classList.add('ph-end'); if (P.shown) { P.shown(); } };
       if (a && a.complete && a.naturalWidth) { end(); } else if (a && a.complete && a.currentSrc) { P.noAfter = true; }
       else if (a) { a.addEventListener('load', end, { once: true }); }
       if (P.boot) { var f = P.boot; P.boot = null; f(); }
     };
-    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126f'; s.async = true;
+    var s = document.createElement('script'); s.src = '/js/home-opening-phone.js?v=20261126g'; s.async = true;
     s.onerror = function () { if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', P.fail); } else { P.fail(); } };
     document.head.appendChild(s);
   } catch (e) {}
@@ -118,6 +118,10 @@
     if (im.complete) { keep(); }
     im.addEventListener('load', keep);
   });
+  /* once the after photo is the one on screen (the stroke has handed over, or the end state shows it), the before <img>
+     under it keeps the after photo as its fallback too: when the <source> media stops matching, both fall back to the
+     dressed room on screen, never to the empty room (job 7, 2026-11-27). js/home-opening-phone.js calls it. */
+  P.shown = function () { if (a && b && a.naturalWidth && a.currentSrc && !P.noAfter) { b.setAttribute('src', a.currentSrc); } };
   if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
   b.addEventListener('load', function () { go('load'); }, { once: true });
   b.addEventListener('error', function () { go('error'); }, { once: true });
@@ -412,7 +416,7 @@
 <script src="/js/vendor/gsap.min.js" defer></script>
 <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/js/vendor/SplitText.min.js" defer></script>
-<script src="/js/home-opening.js?v=20261126e" defer></script>
+<script src="/js/home-opening.js?v=20261126f" defer></script>
 <script src="/js/vendor/lenis.min.js" defer></script>
 <script src="/js/home-scroll.js?v=20260927b" defer></script>
 
