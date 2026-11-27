@@ -346,7 +346,7 @@ def lead_write_html(p, reveal=False):
     loc = "guide-lead" if p["section"] == "guide" else "page-lead"
     return f'''
   <div class="lead-write{' reveal' if reveal else ''}">
-    <a class="btn" href="{MAIL}" data-write data-loc="{loc}">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{sc.WRITE_PATH}" data-write data-loc="{loc}">{T('Write to Stav', 'כתבו לסתיו')}</a>
     <p class="muted">{T(*LEAD_WRITE_LINE)}</p>
   </div>'''
 
@@ -362,7 +362,7 @@ def cta_html(p):
         contact = f'\n    <a class="arrow" href="/contact/"><span class="ln"></span>{T("All the ways to reach me", "כל הדרכים ליצור איתי קשר")}</a>'
     # the inline form sits directly above this block on these pages, so the button would ask twice (2026-11-02)
     write = "" if p["slug"] in INLINE_FORM_PAGES else f'''
-    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>'''
+    <a class="btn" href="{sc.WRITE_PATH}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>'''
     return f'''
   <div class="cta reveal">
     <h2 class="serif">{T(cta_en, cta_he)}</h2>{sub}{write}
@@ -739,7 +739,7 @@ HUB_CTA = f'''
 <section class="section wrap tight">
   <div class="cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
-    <a class="btn" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
+    <a class="btn" href="{sc.WRITE_PATH}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
     {sc.phone_link('cta')}
   </div>
 </section>
@@ -1004,7 +1004,7 @@ def render_contact():
 </section>
 '''
     return (sc.head(CONTACT["title"], CONTACT["description"], url, lang="en", ld=ld)
-            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True))  # form_js() comes with the pop-up (sc.write_ui())
+            + sc.body_open() + sc.nav() + sc.main(body) + sc.tail(quiet=True, scripts=sc.CONTACT_WRITE_JS))  # Write to Stav here moves to the form, no reload
 
 
 # /privacy/ (loop Q-053, 2026-11-19): the disclosure Microsoft Clarity's terms ask for, covering Google Analytics too.
@@ -1303,7 +1303,7 @@ def render_about(pages):
   <div class="about-cta reveal">
     <h2 class="serif">{T(CTA_EN, CTA_HE)}</h2>
     <div class="acts">
-      <a class="btn solid" href="{MAIL}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="btn solid" href="{sc.WRITE_PATH}" data-write data-loc="page-end">{T('Write to Stav', 'כתבו לסתיו')}</a>
       {sc.phone_link('cta')}
     </div>
   </div>
