@@ -666,8 +666,10 @@ def render_project_page(p, all_pages, projects):
   </div>
 </header>
 '''
+    # The opening paragraph paints at its final look on first paint: no .reveal fade (Ron, 2026-11-26, audit item 7:
+    # it was the LCP element on three project pages and waited for the fade). The Write to Stav block under it keeps its fade.
     body = header + f'''
-<section class="plead"><p class="reveal">{T(p['lead_en'], p['lead_he'])}</p>{lead_write_html(p, reveal=True)}</section>
+<section class="plead"><p>{T(p['lead_en'], p['lead_he'])}</p>{lead_write_html(p, reveal=True)}</section>
 
 <section class="section wrap">
   <div class="prose" data-l="he" dir="rtl">
