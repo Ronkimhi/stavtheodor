@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
-<link rel="stylesheet" href="/css/theme.css?v=20261127c">
+<link rel="stylesheet" href="/css/theme.css?v=20261127d">
 <link rel="preload" as="image" href="/images/spaces/dental-office-decor_hero_before.webp" imagesrcset="/images/spaces/dental-office-decor_hero_before-1000.webp 1000w, /images/spaces/dental-office-decor_hero_before.webp 1800w" imagesizes="(max-width: 767px) 100vw, min(1100px, 92vw)" type="image/webp" fetchpriority="high">
 <!-- Structured data: one graph, the site-wide nodes first (content/entity.json), then this page's -->
 <script type="application/ld+json">
@@ -584,7 +584,9 @@
     var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
     if (!a) { return; }
     var ask = a.hasAttribute('data-ask');
-    try {
+    /* a modified click (a new tab or window) leaves this tab's state alone; write_open still records it */
+    var plain = !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0);
+    if (plain) { try {
       /* the page this Write to Stav sits on, for the /contact/ form's page field and subject (form_js(), tw_from) */
       if (location.pathname !== '/contact/') {
         window.sessionStorage.setItem('tw_from', JSON.stringify({ path: location.pathname, t: Date.now() }));
@@ -594,7 +596,7 @@
           post: a.getAttribute('data-post') || '', slug: a.getAttribute('data-post-slug') || '',
           msg_en: a.getAttribute('data-msg-en') || '', msg_he: a.getAttribute('data-msg-he') || '' }));
       } else { window.sessionStorage.removeItem('theodoraAsk'); }
-    } catch (err) {}
+    } catch (err) {} }
     if (typeof window.gtag !== 'function') { return; }
     var loc = a.getAttribute('data-loc') || 'page';
     window.gtag('event', 'write_open', { link_location: loc, page_path: location.pathname, transport_type: 'beacon' });

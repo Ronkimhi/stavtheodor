@@ -64,8 +64,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # side has used.
 # 20261127p (ipad-scroll-cue-2026-11-27): the scroll cue on every touch iPad held upright, 768 to 1024 px wide, stands
 # clear of the caption (Iris gate 3c, F2), on top of main's 20261127a.
-# 20261127c (contact-page-no-popup-2026-11-27): main's 20261127p with the pop-up's rules removed, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261127c'
+# 20261127d (contact-page-no-popup-2026-11-27): main's 20261127p with the pop-up's rules removed and the contact form's
+# scroll margin added, a value no side has used.
+THEME_CSS = '/css/theme.css?v=20261127d'
 
 
 def rel(*parts):
@@ -1134,7 +1135,9 @@ WRITE_JS = '''<script>
     var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
     if (!a) { return; }
     var ask = a.hasAttribute('data-ask');
-    try {
+    /* a modified click (a new tab or window) leaves this tab's state alone; write_open still records it */
+    var plain = !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0);
+    if (plain) { try {
       /* the page this Write to Stav sits on, for the /contact/ form's page field and subject (form_js(), tw_from) */
       if (location.pathname !== '/contact/') {
         window.sessionStorage.setItem('tw_from', JSON.stringify({ path: location.pathname, t: Date.now() }));
@@ -1144,7 +1147,7 @@ WRITE_JS = '''<script>
           post: a.getAttribute('data-post') || '', slug: a.getAttribute('data-post-slug') || '',
           msg_en: a.getAttribute('data-msg-en') || '', msg_he: a.getAttribute('data-msg-he') || '' }));
       } else { window.sessionStorage.removeItem('theodoraAsk'); }
-    } catch (err) {}
+    } catch (err) {} }
     if (typeof window.gtag !== 'function') { return; }
     var loc = a.getAttribute('data-loc') || 'page';
     window.gtag('event', 'write_open', { link_location: loc, page_path: location.pathname, transport_type: 'beacon' });
@@ -1170,8 +1173,10 @@ CONTACT_WRITE_JS = '''<script>
     if (document.body.classList.contains('menu-open')) { document.body.classList.remove('menu-open'); if (mb) { mb.setAttribute('aria-expanded', 'false'); } }
     var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var box = f.closest('.contact-box');
-    (box && box.classList.contains('sent') ? box : f).scrollIntoView({ block: 'center', behavior: still ? 'auto' : 'smooth' });
-    var first = box && box.classList.contains('sent') ? box.querySelector('.ty-head') : f.querySelector('input:checked, input[name=name]');
+    var sent = box && box.classList.contains('sent');
+    /* the form's top (its first question) lands under the fixed header: css/theme.css form.contact-form scroll-margin-top */
+    (sent ? box : f).scrollIntoView({ block: sent ? 'center' : 'start', behavior: still ? 'auto' : 'smooth' });
+    var first = sent ? box.querySelector('.ty-head') : f.querySelector('input:checked, input[name=name]');
     if (first) { try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); } }
   });
 })();
