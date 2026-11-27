@@ -69,7 +69,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261127r (same branch): the same rule without the cue move (Iris FIX), the resting cue stays as in 20261127p.
 # 20261127s (contact-page-one-commit-2026-11-27): main's 20261127r with the pop-up's rules removed and the contact
 # form's scroll margin added, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261127cw'
+# 20261127he (fix/he-phead-and-thanks-card): the Hebrew /contact/ header sits at the right edge, over the card.
+# 20261127hf (same branch): the thank-you card's two lines wrap without a lone last word.
+THEME_CSS = '/css/theme.css?v=20261127hf'
 
 
 def rel(*parts):
@@ -532,9 +534,9 @@ NEXT_STEPS = [
 # The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
 CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
 CONTACT_LINES = [
-    ('A line about the walls, the light and the timeline is enough.', 'שורה על הקירות, האור ולוח הזמנים מספיקה.'),
-    ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
+    ('I read every message myself and reply by email,&nbsp;personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
     ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
+    ('I stay with you until the art is on the wall.', 'אני מלווה אתכם עד שהאמנות תלויה על הקיר.'),
 ]
 # The check beside each line: a circle and a tick, stroked in taupe by css/theme.css (.act-lines svg).
 TICK = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">'
@@ -778,8 +780,8 @@ def contact_form(path='/', h='h3'):
     <div class="form-thanks" hidden>
       {check}
       <{h} class="serif ty-head" tabindex="-1"><span data-l="en">Thank you{name}.</span><span data-l="he" dir="rtl">תודה{name}.</span></{h}>
-      <p class="ty-next"><span data-l="en">Stav reads every message herself and replies personally from {email}.</span><span data-l="he" dir="rtl">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת {email}.</span></p>
-      <p class="ty-spam"><span data-l="en">If you do not hear back, check your spam folder or <a class="ty-link" href="{mail}">write directly</a>.</span><span data-l="he" dir="rtl">אם לא קיבלתם תשובה, בדקו את תיקיית הספאם או <a class="ty-link" href="{mail}">כתבו לה ישירות</a>.</span></p>
+      <p class="ty-next"><span data-l="en">I will read your message myself and reply from {email}.</span><span data-l="he" dir="rtl">אקרא את ההודעה שלכם בעצמי ואענה מהכתובת {email}.</span></p>
+      <p class="ty-spam"><span data-l="en">No reply from me? Check your spam folder or <a class="ty-link" href="{mail}">write to me directly</a>.</span><span data-l="he" dir="rtl">לא קיבלתם ממני תשובה? בדקו את תיקיית הספאם או <a class="ty-link" href="{mail}">כתבו לי ישירות</a>.</span></p>
       <div class="ty-wait">
         <p class="eyebrow">{L('While you wait', 'בינתיים')}</p>
         <div class="ty-links">
