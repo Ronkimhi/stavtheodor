@@ -174,6 +174,25 @@
   }
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); } else { arm(); }
 })();
+/* The Write link leaves before it reaches the art (Ron, 2026-11-26, "Yes, fade it"; Iris gate 3, finding 5): on a phone
+   with this opening it fades from its rest opacity to 0 over the first HW_FADE px of scroll, in proportion, and is back
+   in full at the top; under half opacity it takes no taps. One passive scroll listener, coalesced to one write per frame,
+   that reads only the scroll offset (no layout read) and writes two style properties; at the top the inline styles go,
+   so the rest state is the stylesheet's own. While the stroke holds the page (body.ph-hold) it does nothing. */
+(function () {
+  if (!window.THEODORA_PHONE) { return; }
+  var HW_FADE = 80, raf = 0, a = null, on = false;
+  function fade() {
+    raf = 0;
+    a = a || document.querySelector('.hero-ui .hero-write');
+    if (!a || document.body.classList.contains('ph-hold')) { return; }
+    var y = window.pageYOffset || 0;
+    if (y <= 0) { if (on) { on = false; a.style.opacity = ''; a.style.pointerEvents = ''; } return; }
+    var k = Math.max(0, 1 - y / HW_FADE);
+    on = true; a.style.transition = 'none'; a.style.opacity = k.toFixed(3); a.style.pointerEvents = k < 0.5 ? 'none' : '';
+  }
+  window.addEventListener('scroll', function () { if (!raf) { raf = requestAnimationFrame(fade); } }, { passive: true });
+})();
 </script><!--/variant:phone_open-->
 
 <section class="hero" id="hero" aria-label="Opening">
