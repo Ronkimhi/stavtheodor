@@ -62,7 +62,7 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261126u (ship-speed-2026-11-26): the phone opening's block, first-load's lift and iPad portrait rules (jobs 4 and 8,
 # which named their stylesheets 20261126s and 20261126t) and main's one-ask header rules (#65) in one file, a value no
 # side has used.
-THEME_CSS = '/css/theme.css?v=20261126u'
+THEME_CSS = '/css/theme.css?v=20261127a'
 
 
 def rel(*parts):
@@ -267,13 +267,28 @@ def faq_schema(faq):
     }
 
 
-FAQ_LINK = re.compile(r'(<a href="/[^"<>]*">|</a>)')  # the one tag a variant's FAQ answer may carry (tools/check_variants.py h)
+# The one tag a FAQ answer may carry (tools/check_variants.py h): a site path only. Never "//host", "/\\host", an
+# entity, a backslash or a space in the href, so nothing can point off the site; anything else is escaped as text.
+FAQ_LINK = re.compile(r'(<a href="/(?![/\\])[^"<>\\&\s]*">|</a>)')
 
 
 def faq_answer_html(s):
-    """A FAQ answer as HTML: the text escaped, a site-relative <a href="/..."> and its </a> kept as written.
-    An answer without a link comes out exactly as H.escape(s) did before (2026-11-27)."""
-    return ''.join(part if i % 2 else H.escape(part) for i, part in enumerate(FAQ_LINK.split(s)))
+    """A FAQ answer as HTML: the text escaped, a site-relative <a href="/..."> and the </a> that closes it kept as
+    written (a </a> with no kept link open, and a link never closed, are escaped too). An answer without a link
+    comes out exactly as H.escape(s) did before (2026-11-27). Self test: tools/test_check_variants.py."""
+    out, opened = [], None  # opened: where in out the kept link that is still open sits
+    for i, part in enumerate(FAQ_LINK.split(s)):
+        if i % 2 and part != '</a>' and opened is None:
+            opened = len(out)
+            out.append(part)
+        elif i % 2 and part == '</a>' and opened is not None:
+            out.append(part)
+            opened = None
+        else:
+            out.append(H.escape(part))
+    if opened is not None:
+        out[opened] = H.escape(out[opened])
+    return ''.join(out)
 
 
 def faq_details(faq, first_open=True):

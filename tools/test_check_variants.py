@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Self test for the FAQ answer links in tools/check_variants.py. Touches nothing here: it copies one buyer variant
 into a temp folder, changes one FAQ answer, and runs the checker on that draft as `check_variants.py <file>` does.
+It also tests the renderer, site_chrome.faq_answer_html (the visible FAQ of every buyer page and of the homepage,
+whose content/faq.json no checker reads): only a site-path <a href="/..."> and its </a> pass, all else is escaped.
 
     python3 tools/test_check_variants.py
 """
@@ -40,6 +42,31 @@ CASES = [
 ]
 
 
+# (name, answer text, the HTML faq_answer_html must return)
+RENDER = [
+    ('site link', f'a <a href="{PAGE}">{EN}</a> & b', f'a <a href="{PAGE}">{EN}</a> &amp; b'),
+    ('protocol-relative', '<a href="//evil.com/">x</a>', '&lt;a href=&quot;//evil.com/&quot;&gt;x&lt;/a&gt;'),
+    ('backslash', '<a href="/\\evil.com/">x</a>', '&lt;a href=&quot;/\\evil.com/&quot;&gt;x&lt;/a&gt;'),
+    ('entity slash', '<a href="/&#47;evil.com/">x</a>', '&lt;a href=&quot;/&amp;#47;evil.com/&quot;&gt;x&lt;/a&gt;'),
+    ('never closed', f'<a href="{PAGE}">x', f'&lt;a href=&quot;{PAGE}&quot;&gt;x'),
+    ('stray close', 'x</a>', 'x&lt;/a&gt;'),
+    ('plain text', 'Tom & "Jerry"', 'Tom &amp; &quot;Jerry&quot;'),
+]
+
+
+def render_cases():
+    """faq_answer_html on each RENDER case; returns the number that failed."""
+    sys.path.insert(0, ROOT)
+    import site_chrome
+    bad = 0
+    for name, s, want in RENDER:
+        got = site_chrome.faq_answer_html(s)
+        if got != want:
+            bad += 1
+            print(f'FAIL render {name}: {got!r}, want {want!r}')
+    return bad
+
+
 def main():
     base = json.load(open(SOURCE, encoding='utf-8'))
     item = base['faq'][FAQ]
@@ -62,7 +89,9 @@ def main():
             if (r.returncode == 0) != passes or text not in out:
                 bad += 1
                 print(f'FAIL {name}\n{out}')
-    print(f'test_check_variants: {"OK" if not bad else "FAILED"}, {len(CASES) - bad} of {len(CASES)} cases')
+    bad += render_cases()
+    total = len(CASES) + len(RENDER)
+    print(f'test_check_variants: {"OK" if not bad else "FAILED"}, {total - bad} of {total} cases')
     return 1 if bad else 0
 
 
