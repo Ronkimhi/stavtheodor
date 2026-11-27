@@ -64,7 +64,10 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # side has used.
 # 20261127p (ipad-scroll-cue-2026-11-27): the scroll cue on every touch iPad held upright, 768 to 1024 px wide, stands
 # clear of the caption (Iris gate 3c, F2), on top of main's 20261127a.
-THEME_CSS = '/css/theme.css?v=20261127p'
+# 20261127q (ipad-headline-2026-11-27): on touch iPads held upright 821 to 1024 px wide the opening lines sit 32 px
+# under the room (Iris, F1 for 821 to 1024), on top of 20261127p.
+# 20261127r (same branch): the same rule without the cue move (Iris FIX), the resting cue stays as in 20261127p.
+THEME_CSS = '/css/theme.css?v=20261127r'
 
 
 def rel(*parts):
