@@ -935,8 +935,18 @@ def who_row(section):
 CONTACT = {
     "path": "contact",
     "title": "Contact THEODORA, Art Advisor in Tenafly, NJ",
-    "description": "Call (201) 351-8367 or email stav@stavtheodor.com. Tell me about the space: the walls, the light, the timeline. In person in NJ and NYC, online anywhere.",
-    "h1": ("Contact Stav", "יצירת קשר עם סתיו"),
+    "description": "Write to Stav Theodor, art curator and advisor in Tenafly, NJ, about one wall, a whole home, an office or a client's project. Or call (201) 351-8367.",
+    "h1": ("Write to Stav", "כתבו לסתיו"),
+    # The lede under the h1 (the Curator's /contact/ copy, 2026-11-27): /contact/ only; sc.FOOTER_CTA stays for the footers.
+    "lead": ("One wall or a whole home, an office or a hotel, a client's project or an artist you read about on Art Radar: write to me here. A few lines are enough to start.",
+             "קיר אחד או בית שלם, משרד או מלון, פרויקט של לקוח או אמן שקראתם עליו בראדאר אמנות: כתבו לי כאן. כמה שורות מספיקות כדי להתחיל."),
+    # The card heading and the three check lines, /contact/ only (2026-11-27); every other card keeps sc.CONTACT_HEAD and sc.CONTACT_LINES.
+    "card_head": ("Here is how it starts.", "כך זה מתחיל."),
+    "card_lines": [
+        ("I read every message myself and reply by email, personally.", "אני קוראת כל הודעה בעצמי ועונה במייל, אישית."),
+        ("If it fits, a first conversation by phone or in the space itself.", "אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו."),
+        ("I can also work from your designer's or architect's plans, without a site visit.", "אני יכולה לעבוד גם מהתוכניות של המעצב או האדריכל שלכם, בלי להגיע לחלל."),
+    ],
     "area": ("Based in Tenafly, New Jersey. Serving Tenafly, Bergen County, New Jersey, New York City and California, with projects in Tel Aviv, and online with clients anywhere.",
              "מבוססת בטנפליי, ניו ג'רזי. משרתת את טנפליי, מחוז ברגן, ניו ג'רזי, ניו יורק וקליפורניה, עם פרויקטים בתל אביב, ועובדת אונליין עם לקוחות בכל מקום."),
     "yelp": ("Find THEODORA on Yelp", "THEODORA ב-Yelp"),
@@ -947,7 +957,7 @@ CONTACT = {
 # after the yes lines.
 # C3 (the Curator's wave 1 copy deck, 2026-10-24): what happens after the client says yes, three lines traced to BRIEF
 # (framers and the install team, the certificate of insurance, budget and timeline). /contact/ only.
-CONTACT_AFTER_YES_H2 = ('What happens after I say yes?', 'מה קורה אחרי שאומרים כן?')
+CONTACT_AFTER_YES_H2 = ('What happens once you say yes?', 'מה קורה אחרי שאומרים כן?')
 CONTACT_AFTER_YES = [
     ('<strong>Framing and installation.</strong> Expert framers frame the work, and my own team installs it, after hours for an office.',
      '<strong>מסגור והתקנה.</strong> המסגור נעשה אצל ממסגרים מקצועיים, והצוות שלי מתקין את היצירה, ובמשרדים אחרי שעות העבודה.'),
@@ -974,7 +984,7 @@ def render_contact():
     #contact (site_chrome.contact_act: since 2026-10-06 the contact card, its Contact eyebrow dropped because the header
     above already says it), then the service area. The footer under it is the quiet one (no second closing block)."""
     url = f"{SITE}/{CONTACT['path']}/"
-    intro_en, intro_he = sc.FOOTER_CTA
+    intro_en, intro_he = CONTACT["lead"]
     ld = [{"@type": "ContactPage", "@id": url + "#page", "url": url, "name": CONTACT["title"],
            "about": {"@id": SITE + "/#org"}, "inLanguage": ["en", "he"]},
           {"@type": "BreadcrumbList", "itemListElement": [
@@ -990,7 +1000,8 @@ def render_contact():
 </header>
 
 <section class="section wrap tight contact-page">
-  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False, form_first=True)}{CONTACT_AFTER_CARD}
+  {sc.contact_act(f"/{CONTACT['path']}/", h='h2', loc='contact', eyebrow=False, form_first=True,
+                  head=CONTACT["card_head"], lines=CONTACT["card_lines"])}{CONTACT_AFTER_CARD}
   <div class="contact-area reveal">
     <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p>
     <ul class="places">{places}</ul>
