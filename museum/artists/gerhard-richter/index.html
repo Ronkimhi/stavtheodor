@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/gerhard-richter/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg/1920px-Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,37 +115,37 @@
 <div class="bio">Gerhard Richter is a German visual artist. Richter has produced abstract as well as photorealistic paintings, photographs and glass pieces. He is widely regarded as one of the most important contemporary German artists and several of his works have set record prices at auction, with him being the most expensive living painter at one time.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=gerhard-richter">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=gerhard-richter">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg/960px-Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg" alt="Stadtbild Madrid">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg/960px-Gerhard_Richter%2C_Stadtbild_Madrid%2C_1968%2C_SFMOMA_01.jpg" width="960" height="1280" alt="Stadtbild Madrid">
 <h2>Stadtbild Madrid</h2>
 <div class="meta"><span>1968</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Gerhard%20Richter%2C%20Stadtbild%20Madrid%2C%201968%2C%20SFMOMA%2001.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg/960px-Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg" alt="Abstraktes Bild">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg/960px-Gerhard_Richter%2C_Abstract_Bild%2C_1984%2C_SFMOMA_07.jpg" width="960" height="1280" alt="Abstraktes Bild">
 <h2>Abstraktes Bild</h2>
 <div class="meta"><span>1984</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Gerhard%20Richter%2C%20Abstract%20Bild%2C%201984%2C%20SFMOMA%2007.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg/960px-Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg" alt="Lesende (Reader)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg/960px-Gerhard_Richter%2C_Lesende_%28Reader%29%2C_1994%2C_SFMOMA_09.jpg" width="960" height="1280" alt="Lesende (Reader)">
 <h2>Lesende (Reader)</h2>
 <div class="meta"><span>1994</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Gerhard%20Richter%2C%20Lesende%20%28Reader%29%2C%201994%2C%20SFMOMA%2009.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg/960px-Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg" alt="Seestück (Seascape)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg/960px-Gerhard_Richter%2C_Seest%C3%BCck_%28Seascape%29%2C_1998%2C_SFMOMA_04.jpg" width="960" height="1280" alt="Seestück (Seascape)">
 <h2>Seestück (Seascape)</h2>
 <div class="meta"><span>1998</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Gerhard%20Richter%2C%20Seest%C3%BCck%20%28Seascape%29%2C%201998%2C%20SFMOMA%2004.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg/960px-Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg" alt="Fenster (Window)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg/960px-Gerhard_Richter%2C_Fenster_%28Window%29%2C_2002%2C_SFMOMA_03.jpg" width="960" height="1280" alt="Fenster (Window)">
 <h2>Fenster (Window)</h2>
 <div class="meta"><span>2002</span><span>on view at SFMOMA, San Francisco</span></div>
 
 <p class="work-attr">GualdimG · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Gerhard%20Richter%2C%20Fenster%20%28Window%29%2C%202002%2C%20SFMOMA%2003.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg/960px-K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg" alt="Cathedral Window">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg/960px-K%C3%B6lner_Dom_-_Richterfenster_an_der_S%C3%BCdseite_bei_Nacht_%287264-66%29.jpg" width="960" height="1571" alt="Cathedral Window">
 <h2>Cathedral Window</h2>
 <div class="meta"><span>2007</span></div>
 <p>The Cologne Cathedral Window is the stained glass window in the south transept of the Cologne Cathedral designed by Cologne artist Gerhard Richter. On a surface of 106 square metres, 11,263 glass squares in 72 colours of 9.6 cm × 9.6 cm were principally arranged randomly, with others selected in response to architectural context. The window was inaugurated on 25 August 2007 as part of a Eucharistic celebration; the abstract execution was both celebrated and strongly criticized.</p><p class="fact">Georg Imdahl wrote in the Kölner Stadt-Anzeiger: &quot;In the 60s Richter painted his first colour grids as an attack against the falsehood and piety, how abstraction was celebrated, with phoney reverence; downright fulminating against &quot;devotional art&quot; and &quot;religious applied arts&quot;, as which the grids were celebrated&quot;. <a href="https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Reception" target="_blank" rel="noopener">Reception →</a></p><p class="fact">Originally, in 1863, windows with the depiction of secular and Christian rulers made by the Royal Stained Glass Institute in Berlin-Charlottenburg had been installed, donated by the Kingdom of Prussia. The windows were destroyed in World War II and replaced in 1948 by a simple ornamental glazing by Wilhelm Teuwen, that was in need of restoration. <a href="https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Predecessors" target="_blank" rel="noopener">Predecessors →</a></p><p class="fact">In 2003 the cathedral chapter for the Cologne cathedral decided to have the window renewed. The original designs from the 19th century were, like the stained glass windows themselves, destroyed in World War II and no longer available. <a href="https://en.wikipedia.org/wiki/Cologne_Cathedral_Window#Prehistory_and_implementation" target="_blank" rel="noopener">Prehistory and implementation →</a></p>

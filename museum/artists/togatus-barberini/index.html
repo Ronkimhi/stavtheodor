@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/togatus-barberini/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_so-called_Togatus_Barberini_group%2C_a_funerary_statue_depicting_a_Roman_senator_holding_the_imagines_%28effigies%29_of_deceased_ancestors%2C_late_1st_century_BC%2C_head_%28not_belonging%29_middle_1st_century_BC%2C_Centrale_Montemartini%2C_Rome.jpg/1920px-thumbnail.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,13 +115,13 @@
 <div class="bio">Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=togatus-barberini">Walk the 3D gallery · 2 works →</a><a class="cta" href="/museum/#artist=togatus-barberini">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_so-called_Togatus_Barberini_group%2C_a_funerary_statue_depicting_a_Roman_senator_holding_the_imagines_%28effigies%29_of_deceased_ancestors%2C_late_1st_century_BC%2C_head_%28not_belonging%29_middle_1st_century_BC%2C_Centrale_Montemartini%2C_Rome.jpg/960px-thumbnail.jpg" alt="Togatus Barberini, a Roman senator holding busts of his ancestors">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_so-called_Togatus_Barberini_group%2C_a_funerary_statue_depicting_a_Roman_senator_holding_the_imagines_%28effigies%29_of_deceased_ancestors%2C_late_1st_century_BC%2C_head_%28not_belonging%29_middle_1st_century_BC%2C_Centrale_Montemartini%2C_Rome.jpg/960px-thumbnail.jpg" width="960" height="1665" alt="Togatus Barberini, a Roman senator holding busts of his ancestors">
 <h2>Togatus Barberini, a Roman senator holding busts of his ancestors</h2>
 <div class="meta"><span>Centrale Montemartini, Rome</span></div>
 <p>Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.</p><p class="fact">Little is known about the identity of those depicted in the sculpture, but it is known that the type of shoes the middle figure is depicted to wear distinguishes him as a member of the Roman noble class. <a href="https://en.wikipedia.org/wiki/Togatus_Barberini#Speculation_of_identity" target="_blank" rel="noopener">Speculation of identity →</a></p>
 <p class="work-attr">Carole Raddato · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:The%20so-called%20Togatus%20Barberini%20group%2C%20a%20funerary%20statue%20depicting%20a%20Roman%20senator%20holding%20the%20imagines%20%28effigies%29%20of%20deceased%20ancestors%2C%20late%201st%20century%20BC%2C%20head%20%28not%20belonging%29%20middle%201st%20century%20BC%2C%20Centrale%20Montemartini%2C%20Rome.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Togato_Barberini.jpg/960px-Togato_Barberini.jpg" alt="Togato Barberini">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Togato_Barberini.jpg/960px-Togato_Barberini.jpg" width="960" height="1707" alt="Togato Barberini">
 <h2>Togato Barberini</h2>
 <div class="meta"></div>
 <p>Togatus Barberini is a Roman marble sculpture from around the first-century AD that depicts a full-body figure, referred to as a togatus, holding the heads of deceased ancestors in either hand. It is housed in the Centrale Montemartini in Rome, Italy. Little is known about this sculpture and who it depicts, but it is speculated to be a representation of the Roman funerary practice of creating death masks.</p><p class="fact">Little is known about the identity of those depicted in the sculpture, but it is known that the type of shoes the middle figure is depicted to wear distinguishes him as a member of the Roman noble class. <a href="https://en.wikipedia.org/wiki/Togatus_Barberini#Speculation_of_identity" target="_blank" rel="noopener">Speculation of identity →</a></p>

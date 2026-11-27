@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/augustus-of-prima-porta/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG/1920px-Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,31 +115,31 @@
 <div class="bio">The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=augustus-of-prima-porta">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=augustus-of-prima-porta">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG/960px-Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG" alt="Augusto di pirma porta, inv. 2290, 02">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG/960px-Augusto_di_pirma_porta%2C_inv._2290%2C_02.JPG" width="960" height="1280" alt="Augusto di pirma porta, inv. 2290, 02">
 <h2>Augusto di pirma porta, inv. 2290, 02</h2>
 <div class="meta"></div>
 <p>Detail of the breastplate. The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</p><p class="fact">The intricate imagery on the lorica musculata (typical of legates) refers to the Parthian Empire’s restitution of Roman eagle insignia, which had previously been captured from Marcus Licinius Crassus, to Augustus in 20 BC, one of his most significant diplomatic accomplishments. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Original" target="_blank" rel="noopener">Original →</a></p><p class="fact">Augustus is shown in his role of imperator, the commander of the army, as thoracatus, or commander-in-chief of the Roman army (literally, thorax-wearer), meaning the statue should form part of a commemorative monument to his latest victories; he is in military clothing, carrying what may have been a spear or a consular baton, and raising his right hand in a rhetorical adlocutio pose, addressing the troops. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Style" target="_blank" rel="noopener">Style →</a></p><p class="fact">It is almost certain that the Augustus was originally painted, but so few traces remain today (having been lost in the ground and having faded since discovery) that historians have had to fall back on old watercolors and new scientific investigations for evidence. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Polychromy" target="_blank" rel="noopener">Polychromy →</a></p>
 <p class="work-attr">sailko · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Augusto%20di%20pirma%20porta%2C%20inv.%202290%2C%2002.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Augustus_of_Prima_Porta.jpg/960px-Augustus_of_Prima_Porta.jpg" alt="Augustus of Prima Porta">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Augustus_of_Prima_Porta.jpg/960px-Augustus_of_Prima_Porta.jpg" width="960" height="1440" alt="Augustus of Prima Porta">
 <h2>Augustus of Prima Porta</h2>
 <div class="meta"></div>
 <p>The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</p><p class="fact">The intricate imagery on the lorica musculata (typical of legates) refers to the Parthian Empire’s restitution of Roman eagle insignia, which had previously been captured from Marcus Licinius Crassus, to Augustus in 20 BC, one of his most significant diplomatic accomplishments. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Original" target="_blank" rel="noopener">Original →</a></p><p class="fact">Augustus is shown in his role of imperator, the commander of the army, as thoracatus, or commander-in-chief of the Roman army (literally, thorax-wearer), meaning the statue should form part of a commemorative monument to his latest victories; he is in military clothing, carrying what may have been a spear or a consular baton, and raising his right hand in a rhetorical adlocutio pose, addressing the troops. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Style" target="_blank" rel="noopener">Style →</a></p><p class="fact">It is almost certain that the Augustus was originally painted, but so few traces remain today (having been lost in the ground and having faded since discovery) that historians have had to fall back on old watercolors and new scientific investigations for evidence. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Polychromy" target="_blank" rel="noopener">Polychromy →</a></p>
 <p class="work-attr">Justin Benttinen · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Augustus%20of%20Prima%20Porta.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Brogi%2C_Giacomo_%281822-1881%29_-_n._4123_-_Roma_-_Vaticano_-_Cesare_Augusto_-_Statua_in_marmo.jpg" alt="Brogi, Giacomo (1822-1881) - n. 4123 - Roma - Vaticano - Cesare Augusto - Statua in marmo">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Brogi%2C_Giacomo_%281822-1881%29_-_n._4123_-_Roma_-_Vaticano_-_Cesare_Augusto_-_Statua_in_marmo.jpg" width="570" height="730" alt="Brogi, Giacomo (1822-1881) - n. 4123 - Roma - Vaticano - Cesare Augusto - Statua in marmo">
 <h2>Brogi, Giacomo (1822-1881) - n. 4123 - Roma - Vaticano - Cesare Augusto - Statua in marmo</h2>
 <div class="meta"></div>
 <p>Version of the statue in 1870 with a staff in his left hand. The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</p><p class="fact">The intricate imagery on the lorica musculata (typical of legates) refers to the Parthian Empire’s restitution of Roman eagle insignia, which had previously been captured from Marcus Licinius Crassus, to Augustus in 20 BC, one of his most significant diplomatic accomplishments. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Original" target="_blank" rel="noopener">Original →</a></p><p class="fact">Augustus is shown in his role of imperator, the commander of the army, as thoracatus, or commander-in-chief of the Roman army (literally, thorax-wearer), meaning the statue should form part of a commemorative monument to his latest victories; he is in military clothing, carrying what may have been a spear or a consular baton, and raising his right hand in a rhetorical adlocutio pose, addressing the troops. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Style" target="_blank" rel="noopener">Style →</a></p><p class="fact">It is almost certain that the Augustus was originally painted, but so few traces remain today (having been lost in the ground and having faded since discovery) that historians have had to fall back on old watercolors and new scientific investigations for evidence. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Polychromy" target="_blank" rel="noopener">Polychromy →</a></p>
 <p class="work-attr">Giacomo Brogi · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Brogi%2C%20Giacomo%20%281822-1881%29%20-%20n.%204123%20-%20Roma%20-%20Vaticano%20-%20Cesare%20Augusto%20-%20Statua%20in%20marmo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg/960px-Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg" alt="Oxford. Ashmolean Museum. Gods in Colour. Augustus of Prima Porta 1">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg/960px-Oxford._Ashmolean_Museum._Gods_in_Colour._Augustus_of_Prima_Porta_1.jpg" width="960" height="1280" alt="Oxford. Ashmolean Museum. Gods in Colour. Augustus of Prima Porta 1">
 <h2>Oxford. Ashmolean Museum. Gods in Colour. Augustus of Prima Porta 1</h2>
 <div class="meta"></div>
 <p>Unpainted and painted replica of the statue (part of the Gods in Colour exhibition). The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</p><p class="fact">The intricate imagery on the lorica musculata (typical of legates) refers to the Parthian Empire’s restitution of Roman eagle insignia, which had previously been captured from Marcus Licinius Crassus, to Augustus in 20 BC, one of his most significant diplomatic accomplishments. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Original" target="_blank" rel="noopener">Original →</a></p><p class="fact">Augustus is shown in his role of imperator, the commander of the army, as thoracatus, or commander-in-chief of the Roman army (literally, thorax-wearer), meaning the statue should form part of a commemorative monument to his latest victories; he is in military clothing, carrying what may have been a spear or a consular baton, and raising his right hand in a rhetorical adlocutio pose, addressing the troops. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Style" target="_blank" rel="noopener">Style →</a></p><p class="fact">It is almost certain that the Augustus was originally painted, but so few traces remain today (having been lost in the ground and having faded since discovery) that historians have had to fall back on old watercolors and new scientific investigations for evidence. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Polychromy" target="_blank" rel="noopener">Polychromy →</a></p>
 <p class="work-attr">Enrique Íñiguez Rodríguez (Qoan) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Oxford.%20Ashmolean%20Museum.%20Gods%20in%20Colour.%20Augustus%20of%20Prima%20Porta%201.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg/960px-Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg" alt="Lithograph depicting the discovery of the statue, published in 1865">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg/960px-Ritrovamento_della_statue_di_cesare_augusto_a_prima_porta_-_Le_scienze_e_le_arti_sotto_il_pontificato_di_Pio_IX_bw.jpg" width="960" height="709" alt="Lithograph depicting the discovery of the statue, published in 1865">
 <h2>Lithograph depicting the discovery of the statue, published in 1865</h2>
 <div class="meta"></div>
 <p>Lithograph depicting the discovery of the statue, published in 1865. The Augustus of Prima Porta is a full-length portrait statue of Augustus, the first Roman emperor.</p><p class="fact">The intricate imagery on the lorica musculata (typical of legates) refers to the Parthian Empire’s restitution of Roman eagle insignia, which had previously been captured from Marcus Licinius Crassus, to Augustus in 20 BC, one of his most significant diplomatic accomplishments. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Original" target="_blank" rel="noopener">Original →</a></p><p class="fact">Augustus is shown in his role of imperator, the commander of the army, as thoracatus, or commander-in-chief of the Roman army (literally, thorax-wearer), meaning the statue should form part of a commemorative monument to his latest victories; he is in military clothing, carrying what may have been a spear or a consular baton, and raising his right hand in a rhetorical adlocutio pose, addressing the troops. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Style" target="_blank" rel="noopener">Style →</a></p><p class="fact">It is almost certain that the Augustus was originally painted, but so few traces remain today (having been lost in the ground and having faded since discovery) that historians have had to fall back on old watercolors and new scientific investigations for evidence. <a href="https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta#Polychromy" target="_blank" rel="noopener">Polychromy →</a></p>

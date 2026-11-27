@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/willem-de-kooning/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/6e/Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,43 +115,43 @@
 <div class="bio">Willem de Kooning was a Dutch-American abstract expressionist artist. Born in Rotterdam, in the Netherlands, he moved to the United States in 1926, becoming a U.S. citizen in 1962. In 1943, he married painter Elaine Fried.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=willem-de-kooning">Walk the 3D gallery · 7 works →</a><a class="cta" href="/museum/#artist=willem-de-kooning">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG" alt="Litho #1 (Waves #1)">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-1_%28Waves_-1%29_by_Willem_de_Kooning%2C_1960.JPG" width="960" height="1380" alt="Litho #1 (Waves #1)">
 <h2>Litho #1 (Waves #1)</h2>
 <div class="meta"><span>1960</span></div>
 
 <p class="work-attr">Willem de Kooning · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Litho%20-1%20%28Waves%20-1%29%20by%20Willem%20de%20Kooning%2C%201960.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG" alt="Litho #2 (Waves #2)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG/960px-Litho_-2_%28Waves_-2%29_by_Willem_de_Kooning%2C_1960.JPG" width="960" height="1422" alt="Litho #2 (Waves #2)">
 <h2>Litho #2 (Waves #2)</h2>
 <div class="meta"><span>1960</span></div>
 
 <p class="work-attr">Willem de Kooning · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Litho%20-2%20%28Waves%20-2%29%20by%20Willem%20de%20Kooning%2C%201960.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rotterdam_RecliningFigure04.jpg/960px-Rotterdam_RecliningFigure04.jpg" alt="Reclining Figure">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rotterdam_RecliningFigure04.jpg/960px-Rotterdam_RecliningFigure04.jpg" width="960" height="720" alt="Reclining Figure">
 <h2>Reclining Figure</h2>
 <div class="meta"><span>1969</span><span>International Sculpture Collection</span></div>
 
 <p class="work-attr">Gerardus · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Rotterdam%20RecliningFigure04.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg/960px-Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg" alt="Seated Woman">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg/960px-Seated_woman_by_Willem_de_Kooning_in_Rotterdam.jpg" width="960" height="731" alt="Seated Woman">
 <h2>Seated Woman</h2>
 <div class="meta"><span>1969</span><span>International Sculpture Collection</span></div>
 
 <p class="work-attr">F. Eveleens · CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Seated%20woman%20by%20Willem%20de%20Kooning%20in%20Rotterdam.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rotterdam_StandingFigure03.jpg/960px-Rotterdam_StandingFigure03.jpg" alt="Standing Figure">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rotterdam_StandingFigure03.jpg/960px-Rotterdam_StandingFigure03.jpg" width="960" height="720" alt="Standing Figure">
 <h2>Standing Figure</h2>
 <div class="meta"><span>1969</span><span>International Sculpture Collection</span></div>
 
 <p class="work-attr">Gerardus · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Rotterdam%20StandingFigure03.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg/960px-Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg" alt="Untitled">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg/960px-Untitled_%28c._1976%29_-_Willem_de_Kooning_%281904_-1997%29_%2844566834812%29.jpg" width="960" height="730" alt="Untitled">
 <h2>Untitled</h2>
 <div class="meta"><span>1976</span></div>
 
 <p class="work-attr">Pedro Ribeiro Simões from Lisboa, Portugal · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Untitled%20%28c.%201976%29%20-%20Willem%20de%20Kooning%20%281904%20-1997%29%20%2844566834812%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg/960px-Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg" alt="Untitled XIV">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg/960px-Untitled_XIV%2C_Willem_de_Kooning%2C_Paintings_in_the_San_Francisco_Museum_of_Modern_Art%2C_SFMOMA_11.jpg" width="960" height="1280" alt="Untitled XIV">
 <h2>Untitled XIV</h2>
 <div class="meta"><span>on view at SFMOMA, San Francisco</span></div>
 

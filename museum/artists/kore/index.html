@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/kore/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/e1/ACMA_679_Kore_1.JPG">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,31 +115,31 @@
 <div class="bio">Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=kore">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=kore">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ACMA_679_Kore_1.JPG/960px-ACMA_679_Kore_1.JPG" alt="ACMA 679 Kore 1">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ACMA_679_Kore_1.JPG/960px-ACMA_679_Kore_1.JPG" width="960" height="2582" alt="ACMA 679 Kore 1">
 <h2>ACMA 679 Kore 1</h2>
 <div class="meta"></div>
 <p>The Peplos Kore, created circa 530 BCE. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</p><p class="fact">The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function" target="_blank" rel="noopener">Function →</a></p><p class="fact">Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity" target="_blank" rel="noopener">Theories on identity →</a></p>
 <p class="work-attr">CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:ACMA%20679%20Kore%201.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ACMA_681_Kore_Antenor_1.JPG" alt="ACMA 681 Kore Antenor 1">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ACMA_681_Kore_Antenor_1.JPG" width="900" height="2102" alt="ACMA 681 Kore Antenor 1">
 <h2>ACMA 681 Kore Antenor 1</h2>
 <div class="meta"></div>
 <p>Antenor Kore, circa 530 BCE. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</p><p class="fact">The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function" target="_blank" rel="noopener">Function →</a></p><p class="fact">Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity" target="_blank" rel="noopener">Theories on identity →</a></p>
 <p class="work-attr">Antenor · CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:ACMA%20681%20Kore%20Antenor%201.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kore_081088.jpg/960px-Kore_081088.jpg" alt="Kore 081088">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kore_081088.jpg/960px-Kore_081088.jpg" width="960" height="1406" alt="Kore 081088">
 <h2>Kore 081088</h2>
 <div class="meta"></div>
 <p>Nikandre Kore, circa 650 BC. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</p><p class="fact">The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function" target="_blank" rel="noopener">Function →</a></p><p class="fact">Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity" target="_blank" rel="noopener">Theories on identity →</a></p>
 <p class="work-attr">Zde · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Kore%20081088.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/NAMABG-Peplos_Kore_as_Artemis.JPG/960px-NAMABG-Peplos_Kore_as_Artemis.JPG" alt="NAMABG-Peplos Kore as Artemis">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/NAMABG-Peplos_Kore_as_Artemis.JPG/960px-NAMABG-Peplos_Kore_as_Artemis.JPG" width="960" height="2220" alt="NAMABG-Peplos Kore as Artemis">
 <h2>NAMABG-Peplos Kore as Artemis</h2>
 <div class="meta"></div>
 <p>Reconstruction of the Peplos Kore as Artemis. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</p><p class="fact">The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function" target="_blank" rel="noopener">Function →</a></p><p class="fact">Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity" target="_blank" rel="noopener">Theories on identity →</a></p>
 <p class="work-attr">Etude : Vinzenz Brinkmann. Restauration des cassures : Alfons Neubauer, Christoph Bergmann. Dorure : Sylvia Kellner. Peinture : Ulrike Koch-Brinkmann · CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:NAMABG-Peplos%20Kore%20as%20Artemis.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Phrasikleia_Kore_Painted.jpg" alt="Phrasikleia Kore Painted">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Phrasikleia_Kore_Painted.jpg" width="684" height="2117" alt="Phrasikleia Kore Painted">
 <h2>Phrasikleia Kore Painted</h2>
 <div class="meta"></div>
 <p>Phrasikleia Kore painted. Kore is the modern term given to a type of free-standing ancient Greek sculpture of the Archaic period depicting female figures, always of a young age. Kouroi are the youthful male equivalent of kore statues.</p><p class="fact">The duration of the Archaic korai lasted between about sixth to fifth century BCE. Similar to the kouroi, historians believe that the korai was influenced by Egyptian convention. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#History" target="_blank" rel="noopener">History →</a></p><p class="fact">The kore statue had two main purposes. Korai were used as votive offerings to deities, mainly goddesses such as Athena and Artemis. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Function" target="_blank" rel="noopener">Function →</a></p><p class="fact">Identification has not been an easy task because of time or the lack of context for many korai. It has been difficult for historians and scholars to determine the identities of the korai statues, but they have theories of whom they might be. <a href="https://en.wikipedia.org/wiki/Kore_%28sculpture%29#Theories_on_identity" target="_blank" rel="noopener">Theories on identity →</a></p>

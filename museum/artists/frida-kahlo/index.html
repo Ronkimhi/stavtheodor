@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/frida-kahlo/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg/1920px-Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,49 +115,49 @@
 <div class="bio">Magdalena Carmen Frida Kahlo y Calderón was a Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico. Inspired by the country&#x27;s popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class, and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=frida-kahlo">Walk the 3D gallery · 8 works →</a><a class="cta" href="/museum/#artist=frida-kahlo">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg/960px-Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg" alt="Urban Landscape (Paisaje urbano)">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg/960px-Frida_Kahlo%2C_Paisaje_urbano%2C_1925.jpg" width="960" height="712" alt="Urban Landscape (Paisaje urbano)">
 <h2>Urban Landscape (Paisaje urbano)</h2>
 <div class="meta"><span>1925</span></div>
 
 <p class="work-attr">Artotem · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Frida%20Kahlo%2C%20Paisaje%20urbano%2C%201925.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp/960px-Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp.png" alt="A Few Small Nips (Unos cuantos piquetitos)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp/960px-Unos_cuantos_piquetitos%2C_Frida%2C_Museo_Dolores_Olmedo.webp.png" width="960" height="736" alt="A Few Small Nips (Unos cuantos piquetitos)">
 <h2>A Few Small Nips (Unos cuantos piquetitos)</h2>
 <div class="meta"><span>1935</span><span>Museo Dolores Olmedo, Mexico City</span></div>
 
 <p class="work-attr">Frida Kahlo · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Unos%20cuantos%20piquetitos%2C%20Frida%2C%20Museo%20Dolores%20Olmedo.webp" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Autorretrato_con_Changuito%2C_Frida%2C_Museo_Dolores_Olmedo.jpg" alt="Self-Portrait with Small Monkey (Autorretrato con changuito)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Autorretrato_con_Changuito%2C_Frida%2C_Museo_Dolores_Olmedo.jpg" width="580" height="800" alt="Self-Portrait with Small Monkey (Autorretrato con changuito)">
 <h2>Self-Portrait with Small Monkey (Autorretrato con changuito)</h2>
 <div class="meta"><span>1945</span><span>Museo Dolores Olmedo, Mexico City</span></div>
 
 <p class="work-attr">Frida Kahlo · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Autorretrato%20con%20Changuito%2C%20Frida%2C%20Museo%20Dolores%20Olmedo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Arbol_de_la_Esperanza%2C_Mantente_Firme_%28Tree_of_Hope%2C_Remain_Strong%29_by_Frida_Kahlo%2C_created_in_1946.jpg" alt="Tree of Hope, Remain Strong (Arbol de la Esperanza, Mantente Firme)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Arbol_de_la_Esperanza%2C_Mantente_Firme_%28Tree_of_Hope%2C_Remain_Strong%29_by_Frida_Kahlo%2C_created_in_1946.jpg" width="960" height="1280" alt="Tree of Hope, Remain Strong (Arbol de la Esperanza, Mantente Firme)">
 <h2>Tree of Hope, Remain Strong (Arbol de la Esperanza, Mantente Firme)</h2>
 <div class="meta"><span>1946</span></div>
 
 <p class="work-attr">Rebeccananonof · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Arbol%20de%20la%20Esperanza%2C%20Mantente%20Firme%20%28Tree%20of%20Hope%2C%20Remain%20Strong%29%20by%20Frida%20Kahlo%2C%20created%20in%201946.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bordado_de_Frida_Kahlo.jpg/960px-Bordado_de_Frida_Kahlo.jpg" alt="Embroidery by Frida Kahlo">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bordado_de_Frida_Kahlo.jpg/960px-Bordado_de_Frida_Kahlo.jpg" width="960" height="783" alt="Embroidery by Frida Kahlo">
 <h2>Embroidery by Frida Kahlo</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Juan Carlos Fonseca Mata · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Bordado%20de%20Frida%20Kahlo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Frida_Kahlo_corset_peint_expo_Galliera.jpg/960px-Frida_Kahlo_corset_peint_expo_Galliera.jpg" alt="Painted plaster corset, exhibited at the Palais Galliera, Paris">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Frida_Kahlo_corset_peint_expo_Galliera.jpg/960px-Frida_Kahlo_corset_peint_expo_Galliera.jpg" width="960" height="2131" alt="Painted plaster corset, exhibited at the Palais Galliera, Paris">
 <h2>Painted plaster corset, exhibited at the Palais Galliera, Paris</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Guallendra · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Frida%20Kahlo%20corset%20peint%20expo%20Galliera.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kahlo_Frida_corset_avec_dessin_militant.jpg/960px-Kahlo_Frida_corset_avec_dessin_militant.jpg" alt="Painted orthopedic corset">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kahlo_Frida_corset_avec_dessin_militant.jpg/960px-Kahlo_Frida_corset_avec_dessin_militant.jpg" width="960" height="1717" alt="Painted orthopedic corset">
 <h2>Painted orthopedic corset</h2>
 <div class="meta"></div>
 
 <p class="work-attr">Guallendra · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Kahlo%20Frida%20corset%20avec%20dessin%20militant.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg/960px-Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg" alt="Frida Kahlo painting on view at the Museum of Modern Art, New York">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg/960px-Frida_Kahlo_in_The_Museum_of_Modern_Art.jpg" width="960" height="720" alt="Frida Kahlo painting on view at the Museum of Modern Art, New York">
 <h2>Frida Kahlo painting on view at the Museum of Modern Art, New York</h2>
 <div class="meta"></div>
 

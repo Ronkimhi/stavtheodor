@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/chauvet-cave/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/5/59/Deer_Chauvet_Cave.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -102,31 +115,31 @@
 <div class="bio">The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life. It is located near the commune of Vallon-Pont-d&#x27;Arc on a limestone cliff above the former bed of the river Ardèche, in the Gorges de l&#x27;Ardèche.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=chauvet-cave">Walk the 3D gallery · 5 works →</a><a class="cta" href="/museum/#artist=chauvet-cave">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Deer_Chauvet_Cave.jpg/960px-Deer_Chauvet_Cave.jpg" alt="Deer Chauvet Cave">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Deer_Chauvet_Cave.jpg/960px-Deer_Chauvet_Cave.jpg" width="960" height="540" alt="Deer Chauvet Cave">
 <h2>Deer Chauvet Cave</h2>
 <div class="meta"></div>
 <p>Painting of deer. The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.</p><p class="fact">The cave is situated above the previous course of the Ardèche before the Pont d&#x27;Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Features" target="_blank" rel="noopener">Features →</a></p><p class="fact">Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings" target="_blank" rel="noopener">Paintings →</a></p><p class="fact">The cave contains some of the oldest known cave paintings, based on radiocarbon dating of &quot;black from drawings, from torch marks and from the floors&quot;, according to Jean Clottes. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Dating" target="_blank" rel="noopener">Dating →</a></p>
 <p class="work-attr">Public domain · <a href="https://commons.wikimedia.org/wiki/File:Deer%20Chauvet%20Cave.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg/960px-Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg" alt="Lions painting, Chauvet Cave">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg/960px-Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg" width="960" height="820" alt="Lions painting, Chauvet Cave">
 <h2>Lions painting, Chauvet Cave</h2>
 <div class="meta"></div>
 <p>Replica of painting of lions. The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.</p><p class="fact">The cave is situated above the previous course of the Ardèche before the Pont d&#x27;Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Features" target="_blank" rel="noopener">Features →</a></p><p class="fact">Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings" target="_blank" rel="noopener">Paintings →</a></p><p class="fact">The cave contains some of the oldest known cave paintings, based on radiocarbon dating of &quot;black from drawings, from torch marks and from the floors&quot;, according to Jean Clottes. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Dating" target="_blank" rel="noopener">Dating →</a></p>
 <p class="work-attr">HTO · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Lions%20painting%2C%20Chauvet%20Cave%20%28museum%20replica%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg/960px-Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg" alt="Paintings from the Chauvet cave">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg/960px-Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg" width="960" height="968" alt="Paintings from the Chauvet cave">
 <h2>Paintings from the Chauvet cave</h2>
 <div class="meta"></div>
 <p>Replica of the painting from the Chauvet cave, in the Anthropos museum, Brno. The original art is approximately 31,000 years old, probably Aurignacien. The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.</p><p class="fact">The cave is situated above the previous course of the Ardèche before the Pont d&#x27;Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Features" target="_blank" rel="noopener">Features →</a></p><p class="fact">Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings" target="_blank" rel="noopener">Paintings →</a></p><p class="fact">The cave contains some of the oldest known cave paintings, based on radiocarbon dating of &quot;black from drawings, from torch marks and from the floors&quot;, according to Jean Clottes. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Dating" target="_blank" rel="noopener">Dating →</a></p>
 <p class="work-attr">HTO · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Paintings%20from%20the%20Chauvet%20cave%20%28museum%20replica%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rhinos_Chauvet_Cave.jpg/960px-Rhinos_Chauvet_Cave.jpg" alt="Rhinos Chauvet Cave">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rhinos_Chauvet_Cave.jpg/960px-Rhinos_Chauvet_Cave.jpg" width="960" height="540" alt="Rhinos Chauvet Cave">
 <h2>Rhinos Chauvet Cave</h2>
 <div class="meta"></div>
 <p>A group of rhinos. The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.</p><p class="fact">The cave is situated above the previous course of the Ardèche before the Pont d&#x27;Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Features" target="_blank" rel="noopener">Features →</a></p><p class="fact">Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings" target="_blank" rel="noopener">Paintings →</a></p><p class="fact">The cave contains some of the oldest known cave paintings, based on radiocarbon dating of &quot;black from drawings, from torch marks and from the floors&quot;, according to Jean Clottes. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Dating" target="_blank" rel="noopener">Dating →</a></p>
 <p class="work-attr">Public domain · <a href="https://commons.wikimedia.org/wiki/File:Rhinos%20Chauvet%20Cave.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Romania_stamp_2001_2400L_Steppe_Wisent_Chauvet_Cave.jpg" alt="Image of steppe wisent (Bison priscus)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Romania_stamp_2001_2400L_Steppe_Wisent_Chauvet_Cave.jpg" width="777" height="535" alt="Image of steppe wisent (Bison priscus)">
 <h2>Image of steppe wisent (Bison priscus)</h2>
 <div class="meta"></div>
 <p>Image of steppe wisent (Bison priscus). Paintings in the Chauvet Cave on postage stamp of Romania 2001. The Chauvet-Pont-d&#x27;Arc Cave in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.</p><p class="fact">The cave is situated above the previous course of the Ardèche before the Pont d&#x27;Arc opened up. The gorges of the Ardèche region are the site of numerous caves, many of them having some geological or archaeological importance. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Features" target="_blank" rel="noopener">Features →</a></p><p class="fact">Hundreds of animal paintings have been catalogued, depicting at least 13 different species, including some rarely or never found in other ice age paintings. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Paintings" target="_blank" rel="noopener">Paintings →</a></p><p class="fact">The cave contains some of the oldest known cave paintings, based on radiocarbon dating of &quot;black from drawings, from torch marks and from the floors&quot;, according to Jean Clottes. <a href="https://en.wikipedia.org/wiki/Chauvet_Cave#Dating" target="_blank" rel="noopener">Dating →</a></p>
