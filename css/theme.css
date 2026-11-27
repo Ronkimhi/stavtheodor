@@ -303,6 +303,8 @@
   .qa .plus::after { width: 1px; height: 14px; transition: transform .3s; }
   .qa[open] .plus::after { transform: translate(-50%, -50%) scaleY(0); }
   .qa .body { max-width: 820px; padding: 0 0 30px; }
+  .qa .body a { color: var(--ink); border-bottom: 1px solid rgba(242,240,236,0.35); }
+  .qa .body a:hover { color: #C9A46B; }
 
   /* Footer: same near-black ground as the page, one hairline above it */
   /* Footer (2026-09-29): the closing block (the line and the three ways; on the homepage the whole contact act with the
