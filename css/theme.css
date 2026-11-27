@@ -1198,4 +1198,8 @@
   html.ph-end body:not(.gl) #cap .cap-t[data-cap="p3"] { display: inline; }
   /* /contact/ copy, 2026-11-27: no one-word last line in the check lines or the form note, and a wider /contact/ lede */
   .act-lines li > span, .form-note { text-wrap: pretty; }
+  /* The thank-you card in Stav's voice: no lone last word under the spam line, and the reply line balanced so the address
+     (one unbreakable run) does not sit alone under a full line */
+  .form-thanks .ty-spam { text-wrap: pretty; }
+  .form-thanks .ty-next { text-wrap: balance; }
   .contact-head .lead { max-width: 36em; }

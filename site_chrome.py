@@ -70,7 +70,8 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261127s (contact-page-one-commit-2026-11-27): main's 20261127r with the pop-up's rules removed and the contact
 # form's scroll margin added, a value no side has used.
 # 20261127he (fix/he-phead-and-thanks-card): the Hebrew /contact/ header sits at the right edge, over the card.
-THEME_CSS = '/css/theme.css?v=20261127he'
+# 20261127hf (same branch): the thank-you card's two lines wrap without a lone last word.
+THEME_CSS = '/css/theme.css?v=20261127hf'
 
 
 def rel(*parts):
@@ -533,9 +534,9 @@ NEXT_STEPS = [
 # The contact card (mockup A, approved by Ron 2026-10-06): the headline and the three check lines beside the form.
 CONTACT_HEAD = ('Tell me about your space.', 'ספרו לי על החלל שלכם.')
 CONTACT_LINES = [
-    ('A line about the walls, the light and the timeline is enough.', 'שורה על הקירות, האור ולוח הזמנים מספיקה.'),
     ('I read every message myself and reply by email, personally.', 'אני קוראת כל הודעה בעצמי ועונה במייל, אישית.'),
     ('If it fits, a first conversation by phone or in the space itself.', 'אם זה מתאים, שיחה ראשונה בטלפון או בחלל עצמו.'),
+    ('I stay with you until the art is on the wall.', 'אני מלווה אתכם עד שהאמנות תלויה על הקיר.'),
 ]
 # The check beside each line: a circle and a tick, stroked in taupe by css/theme.css (.act-lines svg).
 TICK = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">'
@@ -763,7 +764,7 @@ def contact_form(path='/', h='h3'):
       <label class="half">{L('Your name', 'השם שלכם')} <input type="text" name="name" autocomplete="name" required></label>
       <label class="half">{L('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" required></label>
       <label class="half">{L('Phone', 'טלפון')} <input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
-      <label>{L('Tell me about your space', 'ספרו לי על החלל שלכם')} <textarea name="message" rows="2" required></textarea></label>
+      <label>{L('Your message', 'ההודעה שלכם')} <textarea name="message" rows="2" required></textarea></label>
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
@@ -779,8 +780,8 @@ def contact_form(path='/', h='h3'):
     <div class="form-thanks" hidden>
       {check}
       <{h} class="serif ty-head" tabindex="-1"><span data-l="en">Thank you{name}.</span><span data-l="he" dir="rtl">תודה{name}.</span></{h}>
-      <p class="ty-next"><span data-l="en">Stav reads every message herself and replies personally from {email}.</span><span data-l="he" dir="rtl">סתיו קוראת כל הודעה בעצמה ועונה לכם אישית מהכתובת {email}.</span></p>
-      <p class="ty-spam"><span data-l="en">If you do not hear back, check your spam folder or <a class="ty-link" href="{mail}">write directly</a>.</span><span data-l="he" dir="rtl">אם לא קיבלתם תשובה, בדקו את תיקיית הספאם או <a class="ty-link" href="{mail}">כתבו לה ישירות</a>.</span></p>
+      <p class="ty-next"><span data-l="en">I will read your message myself and reply from {email}.</span><span data-l="he" dir="rtl">אקרא את ההודעה שלכם בעצמי ואענה מהכתובת {email}.</span></p>
+      <p class="ty-spam"><span data-l="en">No reply from me? Check your spam folder or <a class="ty-link" href="{mail}">write to me directly</a>.</span><span data-l="he" dir="rtl">לא קיבלתם ממני תשובה? בדקו את תיקיית הספאם או <a class="ty-link" href="{mail}">כתבו לי ישירות</a>.</span></p>
       <div class="ty-wait">
         <p class="eyebrow">{L('While you wait', 'בינתיים')}</p>
         <div class="ty-links">
