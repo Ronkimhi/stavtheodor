@@ -16,14 +16,16 @@
     {"slug": "new-jersey", "hub": false, "label_en": "New Jersey", "label_he": "ניו ג'רזי",
      "posts": ["basquiat-blue-ribbon-princeton", "living-with-art-montclair", "library-museum-passes"]},
     {"slug": "art-market", "hub": false, "label_en": "The art market", "label_he": "שוק האמנות",
-     "posts": ["pollock-record", "brancusi-christies", "botero-in-new-york", "fifth-avenue-jewelry-art", "david-hockney-1937-2026"]}
+     "posts": ["september-art-fairs-armory-independent-affordable", "pollock-record", "brancusi-christies", "botero-in-new-york", "fifth-avenue-jewelry-art", "david-hockney-1937-2026"]}
   ],
-  "no_topic": ["welcome-art-radar"],
+  "no_topic": ["jcc-gallery-tours-tobi-kahn", "welcome-art-radar"],
   "he_pages": ["zoya-cherkassky-american-cooking", "ruth-patir-jewish-museum", "seven-israeli-works-nathan-zach", "pool-in-israeli-art", "three-tel-aviv-shows", "oren-fischer-hallel", "noa-wiegenfeld", "tom-fima", "fresh-paint-2026", "in-a-free-state-luhring-augustine"],
   "posts": {
+    "september-art-fairs-armory-independent-affordable": {"seo_title": "New York Art Fairs, September 2026", "meta_description": "The Armory Show and Independent 20th Century in New York, September 24 to 27, 2026, plus the Affordable Art Fair in Chelsea."},
+    "jcc-gallery-tours-tobi-kahn": {"seo_title": "JCC Gallery Tours with Tobi Kahn", "meta_description": "A new JCC series of New York gallery tours led by the artist Tobi Kahn, October 15, 22 and 29 and November 19, 2026."},
     "november-new-york-part-2-bacon-de-kooning-baselitz-mosley": {"seo_title": "Bacon, de Kooning, Baselitz, Mosley in NYC", "meta_description": "November gallery picks in New York, part 2: Bacon and de Kooning at Lévy Gorvy Dayan, Georg Baselitz at Gagosian and Thaddeus Mosley at Karma."},
     "november-new-york-part-1-turrell-curtiss-yu-hong": {"seo_title": "Turrell, Curtiss and Yu Hong in New York", "meta_description": "November gallery picks in New York, part 1: James Turrell at Almine Rech, Julie Curtiss at Gagosian and Yu Hong at Lisson Gallery."},
-    "november-new-york-grace-carney-hannah-levy": {"seo_title": "Grace Carney and Hannah Levy in New York", "meta_description": "Two young artists on view in New York this November: Grace Carney's To the Bone at P·P·O·W in Tribeca and Hannah Levy's Boiled at Casey Kaplan in Chelsea.", "bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}, "ask": {}},
+    "november-new-york-grace-carney-hannah-levy": {"seo_title": "Carney, Levy, Nara and Zeng Fanzhi in New York", "meta_description": "November in New York: Grace Carney and Hannah Levy, two young artists to know, and Yoshitomo Nara and Zeng Fanzhi back in Chelsea.", "bridge": {"target": "/advisory/where-to-buy-original-art-nyc/"}, "ask": {}},
     "basquiat-blue-ribbon-princeton": {"seo_title": "Basquiat's Blue Ribbon Paintings at Princeton", "meta_description": "Basquiat's Blue Ribbon Paintings, eleven works from 1984, shown together for the first time in over thirty years at the Princeton University Art Museum.", "bridge": {"target": "/art-curator-new-jersey/"}},
     "october-in-new-york-museums": {"seo_title": "Krasner and Pollock at the Met, Frick, MoMA", "bridge": {"target": "/guide/how-to-choose-art-for-your-home/"}, "events": {"Krasner and Pollock: Past Continuous": {"start_date": "2026-10-04", "start_date_source": "https://www.metmuseum.org/press-releases/krasner-pollock-past-continuous"}, "The Surrealist Book: Tomorrow Lives in Mirrors": {"start_date": "2026-10-04", "start_date_source": "https://press.moma.org/exhibition/the-surrealist-book/"}}},
     "four-tribeca-galleries-september-2026": {"seo_title": "Tribeca Galleries: Cragg, Locke, Joseph, Soutine", "bridge": {"target": "/advisory/art-for-a-tribeca-or-soho-loft/"}, "ask": {}},
