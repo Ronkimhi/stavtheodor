@@ -110,6 +110,13 @@
     im.addEventListener('error', function () { im.style.visibility = 'hidden'; });
     im.addEventListener('load', function () { im.style.visibility = ''; });
     if (im.complete && im.currentSrc && !im.naturalWidth) { im.style.visibility = 'hidden'; }
+    /* once a stage photo is in, the <img> keeps its URL as its own src (wave 3, job 7): if the <source> media stops
+       matching while the stage is still shown (an iPad split view widened past 820 px in portrait, a tablet whose
+       primary pointer turns fine when a mouse or keyboard is attached), the <picture> falls back to the same photo from
+       the memory cache instead of an empty <img> drawing the broken-image glyph. Nothing is fetched again. */
+    var keep = function () { if (im.naturalWidth && im.currentSrc && !im.getAttribute('src')) { im.setAttribute('src', im.currentSrc); } };
+    if (im.complete) { keep(); }
+    im.addEventListener('load', keep);
   });
   if (!b || (b.complete && (b.naturalWidth || b.currentSrc))) { go('in'); return; }
   b.addEventListener('load', function () { go('load'); }, { once: true });
@@ -148,6 +155,9 @@
     /* scrolled: the measurement is owed, and made at the next return to the top (the scroll listener in arm) */
     if ((window.pageYOffset || 0) > 1) { owed = true; return; }
     owed = false;
+    /* the lift only exists where the phone rules place the link under the room (css/theme.css, max-width 767px); on an
+       iPad-size portrait screen the link sits at the bottom beside the caption, as on the homepage, and takes no lift */
+    if (window.matchMedia && !matchMedia('(max-width: 767px)').matches) { a.style.setProperty('--hw-lift', '0px'); P.hwLift = { v: 0, wide: true }; return; }
     a.style.setProperty('--hw-lift', '0px');
     var lang = document.body.classList.contains('lang-he') ? 'he' : 'en', cap = document.getElementById('cap'), key = cap && cap.getAttribute('data-show');
     var cs = key && cap.querySelector('.cap-t[data-cap="' + key + '"] [data-l="' + lang + '"]'), ls = a.querySelector('[data-l="' + lang + '"]');
