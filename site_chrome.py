@@ -69,7 +69,7 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261127r (same branch): the same rule without the cue move (Iris FIX), the resting cue stays as in 20261127p.
 # 20261127s (contact-page-one-commit-2026-11-27): main's 20261127r with the pop-up's rules removed and the contact
 # form's scroll margin added, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261127s'
+THEME_CSS = '/css/theme.css?v=20261127cw'
 
 
 def rel(*parts):
@@ -578,7 +578,7 @@ def reviews_block():
   </div>'''
 
 
-def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first=False):
+def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first=False, head=None, lines=None):
     """The contact block. With the form (FORM_ENDPOINT set) it is one card (mockup A, Ron 2026-10-06): on one side the
     Contact eyebrow (eyebrow=False drops it where the page header already says Contact), the headline, three check
     lines, and Or reach me directly (the address with the mail fallback panel, the phone); the form on the other side,
@@ -586,7 +586,10 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first
     change from here. Without FORM_ENDPOINT it is the three ways and the What happens next steps, in two columns.
     h: the thank-you card's heading level (contact_form). form_first (the /contact/ page, 2026-11-15): the markup runs
     headline, form, then Or reach me directly, so a phone, the keyboard and a screen reader all meet the form first;
-    css/theme.css (.act-form-first) puts the card back in its two columns from 861px, where it looks as before."""
+    css/theme.css (.act-form-first) puts the card back in its two columns from 861px, where it looks as before.
+    head, lines (2026-11-27): an (en, he) heading and a list of (en, he) check lines; only /contact/ passes them, every
+    other card keeps CONTACT_HEAD and CONTACT_LINES."""
+    head = head or CONTACT_HEAD
     mail = mail or mail_href()
     form = contact_form(path, h=h)
     if not form:
@@ -603,13 +606,13 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first
       <ol>{steps}</ol>
     </div>
   </div>'''
-    lines = ''.join(f'<li>{TICK}<span>{T(en, he)}</span></li>' for en, he in CONTACT_LINES)
+    lines = ''.join(f'<li>{TICK}<span>{T(en, he)}</span></li>' for en, he in (lines or CONTACT_LINES))
     brow = f'\n        <p class="eyebrow">{T("Contact", "יצירת קשר")}</p>' if eyebrow else ''
     if form_first:
         return f'''<div class="act act-card act-form-first">
     <div class="act-glow" aria-hidden="true"></div>
       <div class="act-intro">{brow}
-        <h2 class="serif act-head">{T(*CONTACT_HEAD)}</h2>
+        <h2 class="serif act-head">{T(*head)}</h2>
         <ul class="act-lines">{lines}</ul>
       </div>
     <div class="act-form">
@@ -625,7 +628,7 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first
     <div class="act-glow" aria-hidden="true"></div>
     <div class="act-left">
       <div class="act-intro">{brow}
-        <h2 class="serif act-head">{T(*CONTACT_HEAD)}</h2>
+        <h2 class="serif act-head">{T(*head)}</h2>
         <ul class="act-lines">{lines}</ul>
       </div>
       <div class="act-ways">
@@ -769,7 +772,7 @@ def contact_form(path='/', h='h3'):
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="referrer" value="">
       <button type="submit">{L('Send', 'שליחה')}</button>
-      <p class="form-note">{L('I reply by email. If you have a photo of the wall, reply to my email with it.', 'אני עונה במייל. אם יש לכם תמונה של הקיר, שלחו אותה בתשובה למייל שלי.')}</p>
+      <p class="form-note">{L('Have a photo of the wall or a plan? Send it in reply to my email.', 'יש לכם תמונה של הקיר או תוכנית? שלחו אותה בתשובה למייל שלי.')}</p>
       <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span></p>
     </form>
     <div class="form-thanks" hidden>
