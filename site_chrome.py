@@ -59,7 +59,7 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # ?v= changes with every edit to css/theme.css, so a returning visitor's cached copy (max-age 600 on GitHub Pages) never
 # pairs an old stylesheet with new markup: bump it with the scripts that depend on it (before-after.js, 2026-11-26) and with
 # the phone opening's block (2026-11-26, a distinct value from main's 20261126, which names the stylesheet without that block).
-THEME_CSS = '/css/theme.css?v=20261126q'
+THEME_CSS = '/css/theme.css?v=20261126r'
 
 
 def rel(*parts):

@@ -188,7 +188,14 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
 # block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
-HOME_ONLY = {'hero_write', 'home_above_contact'}
+HOME_ONLY = {'home_above_contact'}
+# hero_write on the buyer pages (Ron, 2026-11-26: "yes, add the Write to Stav button too"): a buyer page carries the
+# homepage's own bytes for the first screen's Write to Stav link, with one attribute added (PHONE_ONLY_ATTR), and
+# css/theme.css shows it only under html.open2 (the phone opening), so the band under the room is filled on a phone as on
+# the homepage and every other screen keeps the buyer page exactly as it was. page_problems() fails a buyer page without it.
+PHONE_ONLY_ATTR = ' data-phone-only'
+HERO_WRITE_TAG = '<a class="arrow hero-write"'
+PAGE_REGIONS_PHONE = {'hero_write'}
 # phone_open (wave 3, 2026-11-26): on every page with the opening, the buyer pages included, each with its own first room
 # (PH_DATA and PH_STAGE, rendered by ph_data() and ph_stage() from the same rooms as window.THEODORA_ROOMS; stage_problems()
 # reads both back from the built page and stops the build if they disagree).
@@ -609,6 +616,12 @@ def fill_regions(body, v, pages=None):
             return room_region(name, inner, rooms, drop)
         if name in DROPS:
             return inner if v is None else ''
+        if name in PAGE_REGIONS_PHONE:
+            if v is None:
+                return inner
+            if inner.count(HERO_WRITE_TAG) != 1:
+                raise SystemExit(f'templates/home.html: {name} must hold one {HERO_WRITE_TAG}')
+            return inner.replace(HERO_WRITE_TAG, HERO_WRITE_TAG + PHONE_ONLY_ATTR)
         if name in HOME_ONLY:
             if v is not None and inner.strip():
                 leaked.append((name, inner.strip()))
@@ -629,7 +642,7 @@ def fill_regions(body, v, pages=None):
         return T(en, he) if name in HTML_REGIONS else T(H.escape(en), H.escape(he))
 
     body = MARK.sub(fill, body)
-    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS | HOME_ONLY | PAGE_REGIONS and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
+    assert set(seen) == set(REGIONS) | ROOM_REGIONS | BLOCKS | DROPS | HOME_ONLY | PAGE_REGIONS | PAGE_REGIONS_PHONE and all(n == 1 for n in seen.values()), f'variant regions in the template: {dict(seen)}'
     assert '<!--variant:' not in body and '<!--/variant:' not in body, 'a variant marker was left in the page'
     for name, inner in leaked:
         assert inner not in body, f"content/variants/{v['id']}.json: the homepage-only {name} slot leaked into the variant page"
@@ -714,12 +727,16 @@ def page_problems(out, name, home=None):
     for anchor in ANCHORS:
         if f'id="{anchor}"' not in out and not (home is not None and anchor in VARIANT_ABSENT):
             problems.append(f'anchor #{anchor} missing')
+    if home is None and PHONE_ONLY_ATTR.strip() in out:
+        problems.append(f'{name}: the homepage shows its Write to Stav link on every screen, never with{PHONE_ONLY_ATTR}')
     if home is not None:
         for sid in VARIANT_ABSENT:
             if f'id="{sid}"' in out or f'href="#{sid}"' in out:
                 problems.append(f'{name} still carries #{sid} or a link to it (a homepage-only section)')
-        if 'hero-write' in out:
-            problems.append(f'{name} carries the homepage-only Write to Stav button of the first screen (HOME_ONLY)')
+        hw = re.search(r'<!--variant:hero_write-->(.*?)<!--/variant:hero_write-->', open(TEMPLATE, encoding='utf-8').read(), re.S)
+        mine = hw.group(1).replace(HERO_WRITE_TAG, HERO_WRITE_TAG + PHONE_ONLY_ATTR) if hw else None
+        if not mine or out.count(sc.undash_html(mine)) != 1 or out.count('hero-write') != 1:
+            problems.append(f"{name} must carry the homepage's first-screen Write to Stav link once, phone only (data-phone-only)")
         if 'name="robots"' in out:
             problems.append(f'{name} carries a robots meta tag; buyer variants are indexable (Ron, 2026-09-28)')
         if f'<link rel="canonical" href="{SITE}/' not in out:
