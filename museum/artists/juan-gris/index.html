@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/juan-gris/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg/1920px-Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">José Victoriano González-Pérez , better known as Juan Gris, was a Spanish painter born in Madrid who lived and worked in France for most of his active period. Closely connected to the innovative artistic genre Cubism, his works are among the movement&#x27;s most distinctive.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=juan-gris">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=juan-gris">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg/960px-Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg" alt="Juan Legua">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg/960px-Juan_Legua%2C_1911_-_Juan_Gris%2C_MET_DT4462.jpg" width="960" height="1141" alt="Juan Legua">
 <h2>Juan Legua</h2>
 <div class="meta"><span>1911</span><span>55 × 46 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Juan Legua is an oil-on-canvas painting by Spanish cubist Juan Gris, created in 1911. It depicts a male sitter smoking a pipe and is one of Gris&#x27; earliest works in the cubist style. The work is in the collection of the Metropolitan Museum of Art, in New York.</p>
 <p class="work-attr">Juan Gris · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Legua%2C%201911%20-%20Juan%20Gris%2C%20MET%20DT4462.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg" alt="Portrait of Pablo Picasso">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg" width="960" height="1221" alt="Portrait of Pablo Picasso">
 <h2>Portrait of Pablo Picasso</h2>
 <div class="meta"><span>1912</span><span>93 × 74 cm</span><span>Art Institute of Chicago</span></div>
 
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20Portrait%20of%20Pablo%20Picasso%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg/960px-Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg" alt="Violin and Playing Cards on a Table">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg/960px-Juan_Gris_-_Violin_and_Playing_Cards_on_a_Table.jpg" width="960" height="1472" alt="Violin and Playing Cards on a Table">
 <h2>Violin and Playing Cards on a Table</h2>
 <div class="meta"><span>1913</span><span>100 × 65 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Violin and Playing Cards on a Table is an oil on canvas painting by Spanish cubist Juan Gris, from 1913. The work is a still life, a typical motif for the cubists. It is in the collection of the Metropolitan Museum of Art, in New York.</p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20Violin%20and%20Playing%20Cards%20on%20a%20Table.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Juan_Gris_-_Still_Life_with_a_Guitar.jpg/960px-Juan_Gris_-_Still_Life_with_a_Guitar.jpg" alt="Still Life with a Guitar">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Juan_Gris_-_Still_Life_with_a_Guitar.jpg/960px-Juan_Gris_-_Still_Life_with_a_Guitar.jpg" width="960" height="626" alt="Still Life with a Guitar">
 <h2>Still Life with a Guitar</h2>
 <div class="meta"><span>1913</span><span>66 × 100 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Still Life with a Guitar is an oil on canvas painting by Spanish cubist Juan Gris, from 1913. The work is in the collection of the Metropolitan Museum of Art, in New York, Gallery 905.</p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20Still%20Life%20with%20a%20Guitar.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg/960px-Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg" alt="The Bottle of Anís del Mono">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg/960px-Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg" width="960" height="1685" alt="The Bottle of Anís del Mono">
 <h2>The Bottle of Anís del Mono</h2>
 <div class="meta"><span>1914</span><span>42 × 24 cm</span><span>Museo Nacional Centro de Arte Reina Sofía</span></div>
 <p>The Anisette Bottle is a 1914 painting by Juan Gris, now in the Museo Nacional Centro de Arte Reina Sofía in Madrid. It shows a bottle of anisette, specifically the Spanish brand Anís del Mono, with the names of Badalona, Madrid and Paris, all linked with the leaders of the Cubist movement, namely Gris himself, Pablo Picasso and Georges Braque.</p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20La%20bouteille%20d%27anis%20-%20Google%20Art%20Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg/960px-Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg" alt="Still Life with Checked Tablecloth">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg/960px-Juan_Gris_-_Nature_morte_%C3%A0_la_nappe_%C3%A0_carreaux.jpg" width="960" height="1265" alt="Still Life with Checked Tablecloth">
 <h2>Still Life with Checked Tablecloth</h2>
 <div class="meta"><span>1915</span><span>116 × 89 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Still Life with Checked Tablecloth is an early 20th century painting by Spanish Cubist artist Juan Gris. Done in oil and graphite on canvas, the painting depicts a table set with grapes, a bottle of red wine, beer, a newspaper and guitar. In addition, the composite image formed from these various objects can be seen as Gris&#x27; take on a bull&#x27;s head.</p><p class="fact">Formerly in the collection of Léonce Rosenberg, Paris (no. 5114), the work was reproduced in Bulletin de &quot;L&#x27;Effort Moderne&quot; no. 16, in June 1925, titled Le compotier. The painting later formed part of the collection of Gottlieb Reber. <a href="https://en.wikipedia.org/wiki/Still_Life_with_Checked_Tablecloth#Background" target="_blank" rel="noopener">Background →</a></p><p class="fact">In 2014, Still Life with Checked Tablecloth was sold at Christie&#x27;s London for £34.8 million ($57.1 million), attaining a world record price for a work by Juan Gris at a public auction. These surpassed previous records of $20.8 million for his 1915 work, Livre, pipe et verres, and $28.6 million for the 1913 painting, Violon et guitare. <a href="https://en.wikipedia.org/wiki/Still_Life_with_Checked_Tablecloth#Art_market" target="_blank" rel="noopener">Art market →</a></p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20Nature%20morte%20%C3%A0%20la%20nappe%20%C3%A0%20carreaux.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg/960px-Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg" alt="The Breakfast">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg/960px-Juan_Gris_-_The_Breakfast_%28Le_Petit_D%C3%A9jeuner%29_%281915%29.jpg" width="960" height="1203" alt="The Breakfast">
 <h2>The Breakfast</h2>
 <div class="meta"><span>1915</span><span>92 × 73 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 <p>The Bekfast is a painting by Juan Gris, painted in October 1915. It is in the collection of the Musée National d&#x27;Art Moderne, in Paris, purchased in 1947.</p><p class="fact">From 2018 to 2019, it was in the exhibition, Le Cubisme, at the Centre Pompidou, Paris. == References == <a href="https://en.wikipedia.org/wiki/The_Breakfast#History" target="_blank" rel="noopener">History →</a></p><p class="fact">This cubist canvas is executed in oil and charcoal. It is a still life depicting a coffee grinder, a coffee pot and a fruit bowl . <a href="https://en.wikipedia.org/wiki/The_Breakfast#Description" target="_blank" rel="noopener">Description →</a></p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20The%20Breakfast%20%28Le%20Petit%20D%C3%A9jeuner%29%20%281915%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Juan_Gris_-_Harlequin_with_a_Guitar.jpg/960px-Juan_Gris_-_Harlequin_with_a_Guitar.jpg" alt="Harlequin with a Guitar">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Juan_Gris_-_Harlequin_with_a_Guitar.jpg/960px-Juan_Gris_-_Harlequin_with_a_Guitar.jpg" width="960" height="1474" alt="Harlequin with a Guitar">
 <h2>Harlequin with a Guitar</h2>
 <div class="meta"><span>1917</span><span>101 × 65 cm</span><span>Metropolitan Museum of Art</span></div>
 <p>Harlequin with a Guitar is an oil on canvas painting by Spanish cubist Juan Gris, from 1917. The work is in the collection of the Metropolitan Museum of Art, in New York.</p>
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Juan%20Gris%20-%20Harlequin%20with%20a%20Guitar.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Le_Canigou_Juan_Gris.jpeg/960px-Le_Canigou_Juan_Gris.jpeg" alt="Le Canigou">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Le_Canigou_Juan_Gris.jpeg/960px-Le_Canigou_Juan_Gris.jpeg" width="960" height="623" alt="Le Canigou">
 <h2>Le Canigou</h2>
 <div class="meta"><span>1921</span><span>88 × 124 cm</span><span>Buffalo AKG Art Museum</span></div>
 
 <p class="work-attr">Juan Gris · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Le%20Canigou%20Juan%20Gris.jpeg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg" alt="Guitar and Newspaper">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg/960px-Juan_Gris_-_Guitare_et_journal_-_Google_Art_Project.jpg" width="960" height="766" alt="Guitar and Newspaper">
 <h2>Guitar and Newspaper</h2>
 <div class="meta"><span>1925</span><span>65 × 81 cm</span><span>Museo Nacional Centro de Arte Reina Sofía</span></div>
 

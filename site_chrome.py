@@ -56,7 +56,13 @@ POSTS_FILE = os.path.join(ROOT, 'content', 'posts.html')
 FAQ_FILE = os.path.join(ROOT, 'content', 'faq.json')
 ENTITY_FILE = os.path.join(ROOT, 'content', 'entity.json')
 SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
-THEME_CSS = '/css/theme.css?v=20261126'  # bump with the scripts that depend on it (before-after.js, 2026-11-26)
+# ?v= changes with every edit to css/theme.css, so a returning visitor's cached copy (max-age 600 on GitHub Pages) never
+# pairs an old stylesheet with new markup: bump it with the scripts that depend on it (before-after.js, 2026-11-26) and with
+# the phone opening's block (2026-11-26, a distinct value from main's 20261126, which names the stylesheet without that block).
+# 20261126u (ship-speed-2026-11-26): the phone opening's block, first-load's lift and iPad portrait rules (jobs 4 and 8,
+# which named their stylesheets 20261126s and 20261126t) and main's one-ask header rules (#65) in one file, a value no
+# side has used.
+THEME_CSS = '/css/theme.css?v=20261126u'
 
 
 def rel(*parts):
@@ -1452,11 +1458,28 @@ def main(body):
     return '\n<main>' + body + '</main>\n'
 
 
+# Speculation rules on every page that ends with tail() (2026-11-26, hubs speed; the homepage has had its own since the
+# same day, build-home.py SPECULATION_RULES): a same-origin page link is PREFETCHED (the document only, never
+# prerendered, so none of its scripts run and no analytics hit is sent) once the visitor hovers it for a moment or
+# starts to press it (eagerness moderate), so the next page opens at once. Left out: any address with a query string
+# ("/*\\?(.+)": a non-empty search; "/*\\?*" would also match an empty one, so every link, measured in Chromium),
+# /contact/ (the form's page), anything with a file extension (images, the film, PDFs, llms.txt), /cdn-cgi/, links
+# with a download attribute, and every mailto, tel or external link, which "/*" never matches. Browsers without
+# speculation rules ignore the tag; nothing on the page changes.
+SPECULATION_RULES = ('<script type="speculationrules">'
+                     '{"prefetch":[{"source":"document","eagerness":"moderate","where":{"and":['
+                     '{"href_matches":"/*"},{"not":{"href_matches":"/*\\\\?(.+)"}},{"not":{"href_matches":"/contact/*"}},'
+                     '{"not":{"href_matches":"/*.:ext"}},{"not":{"href_matches":"/cdn-cgi/*"}},'
+                     '{"not":{"selector_matches":"[download]"}}]}}]}'
+                     '</script>')
+
+
 def tail(home=False, scripts='', quiet=False):
     """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
     without its closing block (/contact/, whose body is that block)."""
     extra = '\n' + scripts if scripts else ''
-    return '\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + write_ui() + '\n' + LANG_JS + '\n' + PAGE_JS + extra + '\n\n</body>\n</html>\n'
+    return ('\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + write_ui() + '\n' + LANG_JS + '\n' + PAGE_JS + extra
+            + '\n' + SPECULATION_RULES + '\n\n</body>\n</html>\n')
 
 
 def redirect_stub(target, title='THEODORA', noindex=True):
@@ -1650,7 +1673,9 @@ def month_labels(post):
 
 def timeline(posts, with_months, dims=False, alts=False, he_slugs=()):
     """The posts as timeline entries (the homepage, /radar/, and the More list on a post). dims=True (the guide
-    pages' From Art Radar block, 2026-09-30 SEO fixes) gives each thumbnail its file's width and height. alts=True
+    pages' From Art Radar block, 2026-09-30 SEO fixes; since 2026-11-26 every caller but the homepage: /radar/, the
+    topic hub, the More list on a post and every article page's From Art Radar) gives each thumbnail its file's
+    width and height. alts=True
     (the From Art Radar block on /guide/ and /advisory/ pages, Ron 2026-09-30) gives each thumbnail the alt text of
     the post's own image in content/posts.html instead of alt=""."""
     out = []
@@ -1660,7 +1685,7 @@ def timeline(posts, with_months, dims=False, alts=False, he_slugs=()):
         if with_months and mon != last:
             out.append(f'<div class="month"><p class="eyebrow">{T(mon[0], mon[1])}</p></div>')
             last = mon
-        d = raster_dims(p['img']) if (dims and p['img']) else None
+        d = file_dims(p['img']) if (dims and p['img']) else None
         wh = f' width="{d[0]}" height="{d[1]}"' if d else ''
         alt = img_alt(p.get('img_alt', '')) if alts else 'alt=""'
         # a post with no image of its own gets no thumbnail box at all (2026-11-19): an empty box reads as a failed image
@@ -1686,15 +1711,17 @@ def focus_style(hero):
     return f' style="object-position: {f}"'
 
 
-def project_card(p):
+def project_card(p, dims=False):
     """One project card, the same markup on the homepage, the hubs and the project pages.
     A project with no clean photograph of its own (2026-09-28: the Gemini-marked photos were removed)
     gets a quiet typographic panel with its place name, never a photo borrowed from another project.
     The card's line is dek_en/dek_he when the page has one (2026-10-06, so the card can match its photo), else the
-    lead's first sentence."""
+    lead's first sentence. dims (the hubs and the project pages, 2026-11-26): the photo's own width and height; the
+    homepage does not pass it, so its markup is unchanged."""
     hero = p.get('hero_image')
     if hero:
-        ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))}{focus_style(hero)} loading="lazy"></div>'
+        wh = dims_attr(hero['src']) if dims else ''
+        ph = f'<div class="ph"><img src="{hero["src"]}" {img_alt(hero.get("alt_en", ""), hero.get("alt_he", ""))}{wh}{focus_style(hero)} loading="lazy"></div>'
     else:
         ph = f'<div class="ph type" aria-hidden="true">{T(H.escape(p["place_en"]), H.escape(p["place_he"]), cls="serif")}</div>'
     return f'''
@@ -1921,6 +1948,52 @@ def raster_dims(src):
     return None
 
 
+def webp_dims(src):
+    """(width, height) of a WebP in the repo, read from its RIFF header (VP8, VP8L or VP8X; no Pillow), or None."""
+    path = rel(src.lstrip('/'))
+    if not src.lower().endswith('.webp') or not os.path.exists(path):
+        return None
+    with open(path, 'rb') as fh:
+        d = fh.read(40)
+    if d[:4] != b'RIFF' or d[8:12] != b'WEBP':
+        return None
+    kind = d[12:16]
+    if kind == b'VP8X':
+        return 1 + int.from_bytes(d[24:27], 'little'), 1 + int.from_bytes(d[27:30], 'little')
+    if kind == b'VP8L' and d[20] == 0x2F:
+        b = int.from_bytes(d[21:25], 'little')
+        return 1 + (b & 0x3FFF), 1 + ((b >> 14) & 0x3FFF)
+    if kind == b'VP8 ' and d[23:26] == b'\x9d\x01\x2a':
+        return int.from_bytes(d[26:28], 'little') & 0x3FFF, int.from_bytes(d[28:30], 'little') & 0x3FFF
+    return None
+
+
+def file_dims(src):
+    """(width, height) of an image file in the repo (JPEG, PNG, WebP or SVG), read from its header, or None."""
+    return raster_dims(src) or webp_dims(src) or svg_dims(src)
+
+
+def need_dims(src):
+    """file_dims(src), and the build stops when the size cannot be read (2026-11-26, hubs speed: every hero and card
+    image carries its file's own width and height, so the box is reserved before the bytes arrive)."""
+    d = file_dims(src)
+    if not d:
+        raise SystemExit(f'{src}: cannot read the image size (missing file or unknown format)')
+    return d
+
+
+def dims_attr(src):
+    w, h = need_dims(src)
+    return f' width="{w}" height="{h}"'
+
+
+def img_preload(src, srcset=None, sizes=None):
+    """The page's first image, fetched from <head> at high priority (2026-11-26, hubs speed): the same URL, and with
+    a srcset the same candidates and sizes as the <img>, so the browser picks the same file and fetches it once."""
+    ss = f' imagesrcset="{H.escape(srcset, quote=True)}" imagesizes="{H.escape(sizes, quote=True)}"' if srcset else ''
+    return f'<link rel="preload" as="image" href="{H.escape(src, quote=True)}"{ss} fetchpriority="high">\n'
+
+
 def image_dims(img):
     """A hero_image's width and height: its own w and h, else the SVG's (read once at build time), else None."""
     if img.get('w') and img.get('h'):
@@ -2114,11 +2187,69 @@ def tag_twins(page):
     return _H1.sub(lambda m: m.group(1) + _HE_AFTER_CLOSE.sub(r'\1\2 \3', m.group(2)) + m.group(3), page)
 
 
-def write(path, text):
+# A heavy photo held back until the page has loaded (2026-11-26, hubs speed). Chromium fetches a loading="lazy" image
+# as soon as it is within about 1250 to 3000 px of the screen, so the one file over HEAVY_IMG_BYTES (the 2.3 MB
+# Giacometti PNG, on its post at 950 px under a desktop fold and on twelve pages as a thumbnail) downloaded during the
+# first view of every page that carries it. defer_heavy() wraps such an <img> in a <picture> with no box of its own
+# (display: contents) whose one <source>, for media (scripting: enabled), is a transparent SVG of the photo's own
+# shape: with JavaScript the box is reserved and nothing is fetched; HEAVY_JS removes the <source> once the page has
+# loaded (or when the photo comes within half a screen of the view, or after 6 s at the latest), and the <img> then
+# loads its own src under its own loading="lazy", the same file at the same size. Without JavaScript, and in a browser
+# that does not know the scripting media feature, the <source> never matches and the <img> loads as before. The <img>
+# itself is unchanged, so its src, alt, crawlers and the sitemap see the same image.
+HEAVY_IMG_BYTES = 1_000_000
+HEAVY_JS = '''<script>
+(function () {
+  var ps = [].slice.call(document.querySelectorAll('picture.defer'));
+  if (!ps.length) { return; }
+  var io = null;
+  function go(p) { var s = p.querySelector('source'); if (s) { p.removeChild(s); } }
+  function all() { ps.forEach(go); ps = []; if (io) { io.disconnect(); } }
+  if ('IntersectionObserver' in window) {
+    io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { go(e.target.parentNode); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px 50% 0px' });
+    ps.forEach(function (p) { var im = p.querySelector('img'); if (im) { io.observe(im); } });
+  }
+  function later() { setTimeout(all, 0); }
+  if (document.readyState === 'complete') { later(); } else { window.addEventListener('load', later); }
+  setTimeout(all, 6000);
+})();
+</script>'''
+
+
+def defer_heavy(text):
+    """Every loading="lazy" <img> whose file is at least HEAVY_IMG_BYTES goes into the picture.defer wrapper above,
+    and HEAVY_JS goes in once, before </body>. Pages without such an image come back unchanged."""
+    def one(m):
+        tag = m.group(0)
+        src = re.search(r'\ssrc="(/[^"]+)"', tag)
+        if 'loading="lazy"' not in tag or not src:
+            return tag
+        path = rel(src.group(1).lstrip('/'))
+        if not os.path.isfile(path) or os.path.getsize(path) < HEAVY_IMG_BYTES:
+            return tag
+        if not re.search(r'\swidth="\d+"', tag):
+            raise SystemExit(f'{src.group(1)}: a deferred heavy image needs its width and height')
+        w, h = need_dims(src.group(1))
+        ph = f"data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20{w}%20{h}%27/%3E"
+        return f'<picture class="defer" style="display:contents"><source media="(scripting: enabled)" srcset="{ph}">{tag}</picture>'
+    out = re.sub(r'<img\b[^>]*>', one, text)
+    if out == text:
+        return text
+    if out.count('</body>') != 1:
+        raise SystemExit('defer_heavy: expected one </body>')
+    return out.replace('</body>', HEAVY_JS + '\n</body>')
+
+
+def write(path, text, defer=False):
     """Every generated page goes out through here: CRLF normalized, dashes sanitized, and the build stops
     if a dash is still left (hard rule, Ron's SEO brief of 2026-09-29); every language twin tagged with its
-    language (tag_twins, 2026-09-29)."""
+    language (tag_twins, 2026-09-29). defer (the content pages, the posts and the Art Radar archive and hub, not the
+    homepage or the buyer pages): heavy lazy photos are held back until the page has loaded (defer_heavy)."""
     text = tag_twins(undash_html(text.replace('\r\n', '\n')))
+    if defer:
+        text = defer_heavy(text)
     left = dash_leftovers(text)
     if left:
         raise SystemExit(f'{path} NOT written: {len(left)} em or en dash(es) the sanitizer could not place, '

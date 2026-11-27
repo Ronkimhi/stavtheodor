@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/wassily-kandinsky/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg/1920px-Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,61 +113,61 @@
 <div class="bio">Wassily Wassilyevich Kandinsky was a Russian painter and art theorist active in Germany during the late Belle Époque and Interwar eras. Kandinsky is generally credited as one of the pioneers of abstraction in Western art. Born in Moscow, he began painting studies at the age of 30.</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=wassily-kandinsky">Walk the 3D gallery · 10 works →</a><a class="cta" href="/museum/#artist=wassily-kandinsky">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg/960px-Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg" alt="Composition VII">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg/960px-Composition_VII_-_Wassily_Kandinsky%2C_GAC.jpg" width="960" height="638" alt="Composition VII">
 <h2>Composition VII</h2>
 <div class="meta"><span>1913</span><span>200 × 300 cm</span><span>Tretyakov Gallery</span></div>
 <p>Composition VII is a 1913 abstract oil painting by Russian-born painter Wassily Kandinsky. It is in the collection of the Tretyakov Gallery, in Moscow. Art historians have concluded that the work is a combination of the themes of Resurrection, Judgment Day, the Flood and the Garden of Eden.</p><p class="fact">Kandinsky&#x27;s preliminary study was his first abstract watercolor. Untitled (Study for Composition VII, Première abstraction) was painted in 1913, and is the first of Kandinsky&#x27;s &quot;Compositions&quot; and &quot;Improvisations&quot; series that began to emerge during his Blue Rider Period. <a href="https://en.wikipedia.org/wiki/Composition_VII#Preliminary_watercolor" target="_blank" rel="noopener">Preliminary watercolor →</a></p><p class="fact">The work demonstrates characteristics of Cubism and Futurism and is similar to the abstract work of Robert Delaunay, Francis Picabia, František Kupka, Léopold Survage, Piet Mondrian, and Hilma af Klint. <a href="https://en.wikipedia.org/wiki/Composition_VII#Context" target="_blank" rel="noopener">Context →</a></p>
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Composition%20VII%20-%20Wassily%20Kandinsky%2C%20GAC.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Vassily_Kandinsky%2C_1913_-_Composition_6.jpg/960px-Vassily_Kandinsky%2C_1913_-_Composition_6.jpg" alt="Composition VI">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Vassily_Kandinsky%2C_1913_-_Composition_6.jpg/960px-Vassily_Kandinsky%2C_1913_-_Composition_6.jpg" width="960" height="632" alt="Composition VI">
 <h2>Composition VI</h2>
 <div class="meta"><span>1913</span><span>195 × 300 cm</span><span>Hermitage Museum</span></div>
 <p>Composition VI is a 1913 oil painting on canvas by the Russian artist Wassily Kandinsky, now in the Hermitage Museum, in Saint Petersburg.</p><p class="fact">Composition VI was the artist&#x27;s main entry for the Erster Deutscher Herbstsalon (First German Autumn Salon), organized in 1913 in Berlin by Herwarth Walden, alongside painters such as August Macke and Franz Marc. <a href="https://en.wikipedia.org/wiki/Composition_VI#Exposition" target="_blank" rel="noopener">Exposition →</a></p>
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Vassily%20Kandinsky%2C%201913%20-%20Composition%206.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg/960px-Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg" alt="In Grey">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg/960px-Kandinsky_-_Im_Grau%2C_1919%2C_GAC.jpg" width="960" height="697" alt="In Grey">
 <h2>In Grey</h2>
 <div class="meta"><span>1919</span><span>129 × 176 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Kandinsky%20-%20Im%20Grau%2C%201919%2C%20GAC.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vassily_Kandinsky%2C_1923_-_On_White_II.jpg/960px-Vassily_Kandinsky%2C_1923_-_On_White_II.jpg" alt="On White II">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vassily_Kandinsky%2C_1923_-_On_White_II.jpg/960px-Vassily_Kandinsky%2C_1923_-_On_White_II.jpg" width="960" height="1029" alt="On White II">
 <h2>On White II</h2>
 <div class="meta"><span>1923</span><span>105 × 98 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 <p>Auf Weiss II (Sur blanc II), in English: On White II, is a 1923 oil-on-canvas painting by Russian painter Wassily Kandinsky. It was created when the artist was a teacher at the Bauhaus in Weimar. The painting initially hung in the dining room of Wassily and Nina Kandinsky&#x27;s apartment at Bauhaus Dessau.</p><p class="fact">In this image, art historian Vanessa Morisset sees a whirlpool of centripetal forces emanating from its surface. The white, understood as clarity and simplicity, creates the feeling that the &quot;struggle with the canvas&quot; of Kandinsky had succeeded. <a href="https://en.wikipedia.org/wiki/Auf_Weiss_II_%28Sur_blanc_II%29#Reception" target="_blank" rel="noopener">Reception →</a></p><p class="fact">The composition of the painting consists mainly of diagonals. <a href="https://en.wikipedia.org/wiki/Auf_Weiss_II_%28Sur_blanc_II%29#Description_and_analysis" target="_blank" rel="noopener">Description and analysis →</a></p>
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Vassily%20Kandinsky%2C%201923%20-%20On%20White%20II.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kandinsky_-_Composition_8%2C_July_1923.jpg/960px-Kandinsky_-_Composition_8%2C_July_1923.jpg" alt="Composition VIII">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kandinsky_-_Composition_8%2C_July_1923.jpg/960px-Kandinsky_-_Composition_8%2C_July_1923.jpg" width="960" height="699" alt="Composition VIII">
 <h2>Composition VIII</h2>
 <div class="meta"><span>1923</span><span>140 × 201 cm</span><span>Solomon R. Guggenheim Museum</span></div>
 
 <p class="work-attr">Xyxyzyz · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Kandinsky%20-%20Composition%208%2C%20July%201923.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kandinsky_-_Jaune_Rouge_Bleu.jpg/960px-Kandinsky_-_Jaune_Rouge_Bleu.jpg" alt="Yellow-Red-Blue">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kandinsky_-_Jaune_Rouge_Bleu.jpg/960px-Kandinsky_-_Jaune_Rouge_Bleu.jpg" width="960" height="617" alt="Yellow-Red-Blue">
 <h2>Yellow-Red-Blue</h2>
 <div class="meta"><span>1925</span><span>128 × 202 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Kandinsky%20-%20Jaune%20Rouge%20Bleu.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg/960px-Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg" alt="Several Circles">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg/960px-Vassily_Kandinsky%2C_1926_-_Several_Circles%2C_Gugg_0910_25.jpg" width="960" height="978" alt="Several Circles">
 <h2>Several Circles</h2>
 <div class="meta"><span>1926</span><span>141 × 140 cm</span><span>Solomon R. Guggenheim Museum</span></div>
 
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Vassily%20Kandinsky%2C%201926%20-%20Several%20Circles%2C%20Gugg%200910%2025.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Vassily_Kandinsky%2C_1939_-_Composition_10.jpg/960px-Vassily_Kandinsky%2C_1939_-_Composition_10.jpg" alt="Composition X">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Vassily_Kandinsky%2C_1939_-_Composition_10.jpg/960px-Vassily_Kandinsky%2C_1939_-_Composition_10.jpg" width="960" height="629" alt="Composition X">
 <h2>Composition X</h2>
 <div class="meta"><span>1939</span><span>130 × 195 cm</span><span>Kunstsammlung Nordrhein-Westfalen</span></div>
 <p>Composition X is an abstract oil painting created in 1939 by the Russian émigré artist Wassily Kandinsky, then living near Paris. It is part of the collection of the Kunstsammlung Nordrhein-Westfalen in Düsseldorf, Germany.</p><p class="fact">Kandinsky compared abstract painting to the process of musical composition, and called his major conceptual works &quot;compositions&quot;, as opposed to his lesser &quot;improvisations&quot;. Composition X is the last of the ten compositions he painted during his lifetime (he was 73 at the time). <a href="https://en.wikipedia.org/wiki/Composition_X#Compositions" target="_blank" rel="noopener">Compositions →</a></p>
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Vassily%20Kandinsky%2C%201939%20-%20Composition%2010.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg/960px-Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg" alt="Sky Blue">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg/960px-Wassily_Kandinsky_-_Sky_Blue%2C_1940.jpg" width="960" height="1306" alt="Sky Blue">
 <h2>Sky Blue</h2>
 <div class="meta"><span>1940</span><span>100 × 73 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 
 <p class="work-attr">Wassily Kandinsky · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Wassily%20Kandinsky%20-%20Sky%20Blue%2C%201940.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg/960px-L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg" alt="Tempered Elan">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg/960px-L%27%C3%89lan_temp%C3%A9r%C3%A9%2C_Kandinsky_%281944%29.jpg" width="960" height="691" alt="Tempered Elan">
 <h2>Tempered Elan</h2>
 <div class="meta"><span>1944</span><span>42 × 58 cm</span><span>Musée National d&#x27;Art Moderne</span></div>
 

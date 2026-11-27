@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://stavtheodor.com/museum/artists/verism/">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Face_of_a_child-MGR_Lyon-IMG_9850.jpg/1920px-Face_of_a_child-MGR_Lyon-IMG_9850.jpg">
 <meta property="og:site_name" content="THEODORA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="/museum/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="stylesheet" href="/museum/css/cormorant-garamond.css">
 <script>
 (function () {
   try {
@@ -24,6 +24,16 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();
+</script>
+<script>
+function workSized(e) {
+  var t = e.target;
+  if (t.tagName === 'IMG' && t.parentNode && t.parentNode.className === 'work') {
+    t.removeAttribute('width'); t.removeAttribute('height');
+  }
+}
+document.addEventListener('load', workSized, true);
+document.addEventListener('error', workSized, true);
 </script>
 <link rel="stylesheet" href="/museum/css/museum-core.css">
 <style>
@@ -44,7 +54,10 @@
   .cta:hover { background: var(--bronze); color: var(--ivory); }
   .copyright-note { margin-top: 24px; font-style: italic; color: var(--ink-soft); }
   .work { margin-top: 54px; border-top: 1px solid var(--hairline); padding-top: 34px; }
-  .work img { max-width: 100%; border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
+  /* width and height are the served file's own (they reserve the space before it loads); content-box with
+     100% less the 2px border keeps every work exactly the size it had without them */
+  .work img { max-width: calc(100% - 2px); height: auto; box-sizing: content-box;
+              border: 1px solid var(--hairline); background: rgba(var(--paper), 1); }
   .work h2 { font-size: 25px; font-weight: 500; font-style: italic; margin-top: 16px; }
   .meta { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
   .meta span { display: inline-block; margin-right: 16px; }
@@ -100,37 +113,37 @@
 <div class="bio">Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas. The word comes from Latin verus (true).</div>
 <div class="ctas"><a class="cta" href="/museum/gallery/?artist=verism">Walk the 3D gallery · 6 works →</a><a class="cta" href="/museum/#artist=verism">See on the timeline</a></div>
 <section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Face_of_a_child-MGR_Lyon-IMG_9850.jpg/960px-Face_of_a_child-MGR_Lyon-IMG_9850.jpg" alt="Roman funerary mask of a child">
+<img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Face_of_a_child-MGR_Lyon-IMG_9850.jpg/960px-Face_of_a_child-MGR_Lyon-IMG_9850.jpg" width="960" height="960" alt="Roman funerary mask of a child">
 <h2>Roman funerary mask of a child</h2>
 <div class="meta"></div>
 <p>Roman funerary mask of a child. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
 <p class="work-attr">Rama · CC BY-SA 2.0 fr · <a href="https://commons.wikimedia.org/wiki/File:Face%20of%20a%20child-MGR%20Lyon-IMG%209850.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Galba.jpg" alt="Galba">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Galba.jpg" width="800" height="411" alt="Galba">
 <h2>Galba</h2>
 <div class="meta"></div>
 <p>Obverse portrait of Galba, AD 68-69, Roman Mint. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
 <p class="work-attr">CNG · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Galba.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/960px-General_de_Tivoli_%28Massimo%29_01.JPG" alt="General de Tivoli (Massimo) 01">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/General_de_Tivoli_%28Massimo%29_01.JPG/960px-General_de_Tivoli_%28Massimo%29_01.JPG" width="960" height="1799" alt="General de Tivoli (Massimo) 01">
 <h2>General de Tivoli (Massimo) 01</h2>
 <div class="meta"></div>
 <p>General de Tivoli, pseudo-athlete with veristic head, ca. 90-70 BC, Tivoli. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
 <p class="work-attr">Miguel Hermoso Cuesta · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:General%20de%20Tivoli%20%28Massimo%29%2001.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Head_old_Roman_Glyptothek_Munich_320.jpg/960px-Head_old_Roman_Glyptothek_Munich_320.jpg" alt="Head old Roman Glyptothek Munich 320">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Head_old_Roman_Glyptothek_Munich_320.jpg/960px-Head_old_Roman_Glyptothek_Munich_320.jpg" width="960" height="1422" alt="Head old Roman Glyptothek Munich 320">
 <h2>Head old Roman Glyptothek Munich 320</h2>
 <div class="meta"></div>
 <p>Portrait bust of a man, Ancient Rome, 60 BC. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
 <p class="work-attr">Public domain · <a href="https://commons.wikimedia.org/wiki/File:Head%20old%20Roman%20Glyptothek%20Munich%20320.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg/960px-IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg" alt="Etruscan cinerary urn, c. 150-100 BC">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg/960px-IMG_1075_-_Perugia_-_Museo_archeologico_-_Urna_etrusca_-_7_ago_2006_-_Foto_G._Dall%27Orto2.jpg" width="960" height="935" alt="Etruscan cinerary urn, c. 150-100 BC">
 <h2>Etruscan cinerary urn, c. 150-100 BC</h2>
 <div class="meta"></div>
 <p>Etruscan cinerary urn, c. 150-100 BC. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
 <p class="work-attr">G.dallorto · Attribution · <a href="https://commons.wikimedia.org/wiki/File:IMG%201075%20-%20Perugia%20-%20Museo%20archeologico%20-%20Urna%20etrusca%20-%207%20ago%202006%20-%20Foto%20G.%20Dall%27Orto2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
 </section><section class="work">
-<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Vespasianus01_pushkin.jpg" alt="Vespasianus01 pushkin">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Vespasianus01_pushkin.jpg" width="760" height="966" alt="Vespasianus01 pushkin">
 <h2>Vespasianus01 pushkin</h2>
 <div class="meta"></div>
 <p>Bust of Vespasian, ca. 75-79. Verism was a highly realistic artistic style of Roman art. It was principally used in portraits of politicians, whose facial imperfections were rendered in detail or, according to some scholars, even exaggerated to highlight their maturity, experience, and gravitas.</p><p class="fact">Verism emerged as an artistic style in the late Roman Republic (147 to 30 BC) and was often used for Republican portraits or on heads of “pseudo-athlete” sculptures. <a href="https://en.wikipedia.org/wiki/Verism#Roman_art" target="_blank" rel="noopener">Roman art →</a></p><p class="fact">Verism first appeared during the Late Republic. The subjects of veristic portraiture were almost exclusively men, and these men were usually of advanced age, for generally it was elders who held power in the Republic. <a href="https://en.wikipedia.org/wiki/Verism#Verism_throughout_the_Roman_Empire" target="_blank" rel="noopener">Verism throughout the Roman Empire →</a></p><p class="fact">Veristic portraits of the late Republic hold a special fascination for classical art historians. Romans had inherited the use of sculpted marble heads from the Greeks but they did not inherit the veristic style from them. <a href="https://en.wikipedia.org/wiki/Verism#Verism_in_academia" target="_blank" rel="noopener">Verism in academia →</a></p>
