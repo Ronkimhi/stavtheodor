@@ -53,6 +53,18 @@
   if (!window.gsap || !window.ScrollTrigger || !window.SplitText || reduce || forceNoGl || !body.classList.contains('gl')) { goStatic(); return; }
   gsap.registerPlugin(ScrollTrigger, SplitText);
   ScrollTrigger.config({ ignoreMobileResize: true });
+  /* a refresh measures every trigger by scrolling to 0 and back. css/theme.css sets html { scroll-behavior: smooth } (no
+     Lenis on touch screens), and Chromium then runs that scroll to 0 as a smooth scroll that has not moved yet when the
+     trigger is measured: a refresh while the page is scrolled (a reload or a return that restores the position) gave
+     the opening a start of minus the scroll offset, so back at the top its progress never reached 0 and the first room
+     stayed blended with the next one, or showed the wrong room (2026-11-27, Iris gate 3c). The refresh now runs with
+     scroll-behavior auto, as GSAP expects, read back at once (Chromium's scrollTo uses the style it last computed, so
+     the scroll to 0 that follows in the same task would still be smooth); anchor links keep their smooth scroll. */
+  var rootEl = document.documentElement;
+  /* the computed value is read back at once: Chromium's scrollTo uses the style it last computed, so without it the
+     scroll to 0 that follows in the same task would still be smooth */
+  ScrollTrigger.addEventListener('refreshInit', function () { rootEl.style.scrollBehavior = 'auto'; void getComputedStyle(rootEl).scrollBehavior; });
+  ScrollTrigger.addEventListener('refresh', function () { rootEl.style.scrollBehavior = ''; });
 
   var gl = null;
   try {

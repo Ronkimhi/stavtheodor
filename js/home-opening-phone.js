@@ -74,7 +74,7 @@
 
     /* ---- the end of the opening, whichever way it comes ---- */
     function showEnd(d, missing) {
-      if (!missing) { whenLoaded(imgA, function () { if (!P.noAfter) { fade(imgA, 1, d); capOn(); } }); }
+      if (!missing) { whenLoaded(imgA, function () { if (!P.noAfter) { fade(imgA, 1, d); capOn(); if (P.shown) { P.shown(); } } }); }
       fade(line1, 0, Math.min(d, 0.35)); fade(line2, 0, Math.min(d, 0.35)); scrim(0);
       if (cue) { fade(cue, 1, 0.5); }
       body.classList.remove('ph-hold'); lock(false);
@@ -382,7 +382,7 @@
         tw(1.30 + c.i * 0.03, 0.70, E.p2out, 0, 1, function (v) { c.el.style.opacity = v; c.el.style.transform = 'translateY(' + (10 * (1 - v)).toFixed(2) + 'px)'; });
       });
       /* the wet band is dry at 2.60: the after <img> goes under the canvas, the canvas fades out over it */
-      call(2.60, function () { fade(imgA, 1, 0); dropGl(); dbg.handoff = now(); });
+      call(2.60, function () { fade(imgA, 1, 0); if (P.shown) { P.shown(); } dropGl(); dbg.handoff = now(); });
       tw(2.40, 0.35, E.p2in, 1, 0, styleOp(line2));
       tw(2.40, 0.35, E.p2in, 1, 0, function (v) { scrim(v); });
       call(2.78, function () {

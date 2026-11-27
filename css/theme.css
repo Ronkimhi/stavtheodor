@@ -1183,6 +1183,13 @@
     html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 22px); bottom: auto; }
     html.open2 body:not(.gl) .hero-ui .hero-write { top: calc(50% + 33.34vw + 82px - var(--hw-lift, 0px)); bottom: auto; }
   }
+  /* iPad-size portrait (768 to 820 px wide) with the phone opening: the opening lines sit 32 px under the room, as on a
+     phone, instead of above the bottom inset, so a two-line caption never crowds the second headline (Iris gate 3c, F1) */
+  @media (min-width: 768px) and (max-width: 820px) and (max-aspect-ratio: 9/10) {
+    html.open2 body.gl .line { top: calc(50dvh + 33.34vw + 32px); bottom: auto; }
+    html.open2.ph-rb body.gl .line { top: calc(var(--ph-rb) + 32px); }
+    html.open2 body:not(.gl) #l1 { top: calc(50% + 33.34vw + 32px); bottom: auto; }
+  }
   /* the buyer pages carry the homepage's first-screen Write to Stav link with data-phone-only (Ron, 2026-11-26): shown only
      with the phone opening, where every rule above and below places it exactly as on the homepage; elsewhere it is not there */
   html:not(.open2) .hero-ui .hero-write[data-phone-only] { display: none; }
