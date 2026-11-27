@@ -187,7 +187,7 @@ DROPS = {'film', 'industries', 'radar'}  # radar: Art Radar stays on the homepag
 # industries: the homepage's links to the seven buyer pages (2026-09-28), never on a buyer page itself.
 # Homepage-only slots (wave 1, inbound, 2026-10-24): like DROPS, the homepage keeps the bytes between the markers and
 # every variant drops them, and fill_regions() then proves the homepage's bytes are absent from the variant page.
-# hero_write: the Write to Stav button on the first screen, under the two opening lines (opens the pop-up, data-write).
+# hero_write: the Write to Stav button on the first screen, under the two opening lines (to /contact/, data-write).
 # home_above_contact: directly above the #contact card (after #faq, flush against its closing tag): the whom I represent
 # block (#represent), then the reviews (#reviews, the REVIEWS slot, sc.reviews_block()). Each marker sits flush against the tag before it, so a
 # variant, which drops the whole region, keeps its bytes.
@@ -668,9 +668,9 @@ def render_home(pages, posts, faq, v=None, variants=()):
         'FAQ': sc.faq_details(questions, first_open=True),
         'INLINE_FORM': sc.inline_form_section(f"/{v['path']}/", mail=sc.mail_href(subject)) if v and v['id'] in INLINE_FORM_VARIANTS else '',
         'FOOTER': sc.footer(home=True, cta=(v['cta_en'], v['cta_he']) if v else None, subject=subject, form=v is None),
-        'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_ui(),  # the fallback panel, the Write to Stav pop-up and form_js()
+        'MAIL_UI': sc.mail_ui(subject) + '\n' + sc.write_tail(),  # the fallback panel, WRITE_JS and form_js()
         'LANG_JS': sc.LANG_JS,
-        'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ''),  # form_js() comes with write_ui(), once per page
+        'PAGE_JS': sc.PAGE_JS + (('\n' + sc.WM_SUB_JS) if v else ''),  # form_js() comes with write_tail(), once per page
         # the reviews (2026-10-24) sit inside the homepage-only home_above_contact slot: filled the same for every page, so
         # the HOME_ONLY leak check compares the full bytes, and every variant drops them with the slot
         'REVIEWS': sc.reviews_block(),

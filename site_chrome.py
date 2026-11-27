@@ -44,8 +44,8 @@ YELP = 'https://www.yelp.com/biz/the-odora-tenafly'
 # The contact form's endpoint (Ron's SEO brief, 2026-09-29, P1.1): the one build constant for it. The backend is Formspree
 # (Ron's form, target stav@stavtheodor.com; set 2026-09-29, replacing the short lived Google Apps Script plan). Set, so the
 # form, its progressive enhancement script and the GA4 generate_lead event appear on /contact/ and in the homepage's
-# #contact, and (since 2026-10-06) in the Write to Stav pop-up on every page (write_ui()); empty it and no form, no form
-# script, no pop-up and no placeholder reaches any page.
+# #contact, and in the inline cards on the money pages (the Write to Stav pop-up of 2026-10-06 is gone since 2026-11-27:
+# every Write to Stav goes to /contact/); empty it and no form, no form script and no placeholder reaches any page.
 FORM_ENDPOINT = 'https://formspree.io/f/xjyklwyb'
 # Signup form switch: Art Radar by email (2026-11-18), radar_subscribe(). While False (or FORM_ENDPOINT is empty) no page
 # carries the form or its script.
@@ -64,7 +64,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # side has used.
 # 20261127p (ipad-scroll-cue-2026-11-27): the scroll cue on every touch iPad held upright, 768 to 1024 px wide, stands
 # clear of the caption (Iris gate 3c, F2), on top of main's 20261127a.
-THEME_CSS = '/css/theme.css?v=20261127p'
+# 20261127d (contact-page-no-popup-2026-11-27): main's 20261127p with the pop-up's rules removed and the contact form's
+# scroll margin added, a value no side has used.
+THEME_CSS = '/css/theme.css?v=20261127d'
 
 
 def rel(*parts):
@@ -394,7 +396,7 @@ NAV_ITEMS = [
     ('/radar/', 'Art Radar', 'ראדאר אמנות'),
     ('#faq', 'Questions', 'שאלות'),
 ]
-# Ron, 2026-11-26: the header's one ask is Write to Stav (the pop-up: the .nav-write item in nav() and nav_write_bar()), so Contact left
+# Ron, 2026-11-26: the header's one ask is Write to Stav (the .nav-write item in nav() and nav_write_bar(), to /contact/ since 2026-11-27), so Contact left
 # the menu, desktop and phone. The footer base keeps its Contact link to /contact/.
 # Who I work with (Ron's SEO brief, 2026-09-29, P1.5): the seven pages for one kind of client each, in every footer and
 # on the projects hub. Interior designers is /for-designers/ since /designers/ was merged into it (it redirects there).
@@ -438,13 +440,16 @@ def nav_call():
 # where the bar is short of room. The compact label is aria-hidden; the full one stays the accessible name (visually
 # hidden there), the same split nav_call() makes between the number and Call.
 WRITE_FULL = ('Write to Stav', 'כתבו לסתיו')
+# Where every Write to Stav control goes (Ron, 2026-11-27: "Rather than a pop-up, let's create a Contact Us page."):
+# the /contact/ page with the form, the same address in both languages (the language is the visitor's stored choice).
+WRITE_PATH = '/contact/'
 WRITE_SHORT = ('Write', 'כתבו')
 
 
 def nav_write_bar():
     """Write to Stav in the phone header bar, beside Call (css/theme.css .nav-write-bar shows it only where the bar has
-    room). Opens the pop-up like every data-write control; write_open's link_location is nav, as for the menu item."""
-    return (f'<a class="nav-write-bar" href="{mail_href()}" data-write data-loc="nav"><span class="vh">{T(*WRITE_FULL)}</span>'
+    room). Goes to /contact/ like every data-write control (WRITE_PATH); write_open's link_location is nav, as for the menu item."""
+    return (f'<a class="nav-write-bar" href="{WRITE_PATH}" data-write data-loc="nav"><span class="vh">{T(*WRITE_FULL)}</span>'
             f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
 
 
@@ -472,9 +477,9 @@ def nav(home=False, own=None, sub=None, lang_links=None):
     links = ''.join(guides_dd(h) if h == GUIDES_INDEX else f'<a href="{own.get(h) or _link(h, home)}">{T(en, he)}</a>'
                     for h, en, he in NAV_ITEMS)
     # Write to Stav in the header (site audit, 2026-11-15): the last item of the bar from 901px, the first of the opened
-    # phone menu (css/theme.css .nav-write, order -1). It opens the pop-up on the same page (WRITE_JS) and sends write_open
-    # with link_location "nav"; the mailto href stays the fallback without JavaScript.
-    links += (f'<a class="nav-write" href="{mail_href()}" data-write data-loc="nav"><span class="wfull">{T(*WRITE_FULL)}</span>'
+    # phone menu (css/theme.css .nav-write, order -1). It goes to /contact/ (WRITE_PATH, Ron 2026-11-27) and WRITE_JS sends
+    # write_open with link_location "nav" on the way.
+    links += (f'<a class="nav-write" href="{WRITE_PATH}" data-write data-loc="nav"><span class="wfull">{T(*WRITE_FULL)}</span>'
               f'<span class="wshort" aria-hidden="true">{T(*WRITE_SHORT)}</span></a>')
     wm_sub = f'<span class="wm-sub" aria-hidden="true">{T(H.escape(sub[0]), H.escape(sub[1]))}</span>' if sub else ''
     return f'''<nav class="nav" aria-label="Main">
@@ -586,7 +591,7 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first
         return f'''<div class="act no-form">
     <div class="act-ways">
       <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור קשר')}</p>
-      <a class="arrow way" href="{mail}" data-write data-loc="{loc}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow way" href="{WRITE_PATH}" data-write data-loc="{loc}"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow way addr" href="{mail}" data-loc="{loc}"><span class="ln"></span>{EMAIL}</a>
       {phone_link(loc).replace('class="arrow tel"', 'class="arrow way tel"')}
     </div>
@@ -635,8 +640,8 @@ def contact_act(path='/', h='h3', mail=None, loc='cta', eyebrow=True, form_first
 def inline_form_section(path, mail=None):
     """The contact card as its own section on a money page (2026-11-02), directly above the page's closing block: the same
     contact_act() the homepage's #contact and /contact/ carry, its existing heading and no new copy, '' while FORM_ENDPOINT
-    is empty. The Write to Stav pop-up stays. form_js() binds it like any other form: its _subject names the page, and
-    generate_lead reads form_loc inline because the form sits outside #write-modal. path: the page's own path."""
+    is empty. form_js() binds it like any other form: its _subject names the page, and generate_lead reads form_loc
+    inline (every form is inline since the pop-up went, 2026-11-27). path: the page's own path."""
     if not FORM_ENDPOINT:
         return ''
     return f'''
@@ -673,7 +678,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
     <p class="eyebrow">{T('Three ways to reach me', 'שלוש דרכים ליצור איתי קשר')}</p>
     <h2 class="serif">{T(cta_en, cta_he)}</h2>
     <div class="foot-ways">
-      <a class="arrow" href="{href}" data-write data-loc="footer"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
+      <a class="arrow" href="{WRITE_PATH}" data-write data-loc="footer"><span class="ln"></span>{T('Write to Stav', 'כתבו לסתיו')}</a>
       <a class="arrow addr" href="{href}"><span class="ln"></span>{EMAIL}</a>
       {phone_link('cta')}
     </div>
@@ -921,6 +926,28 @@ var theodoraVisit = (function () {
   } catch (e) { v.landing = v.landing || location.pathname; }
   return v;
 })();
+/* The page the inquiry is from (2026-11-27, as the pop-up named it): on /contact/, the page whose Write to Stav was
+   clicked (WRITE_JS leaves it in sessionStorage, tw_from, taken once here), else a same-site referrer that is not
+   /contact/ itself; a direct visit, and every other page, keeps its own path. */
+var theodoraFrom = (function () {
+  var here = location.pathname;
+  if (here !== '/contact/') { return here; }
+  try {
+    var ss = window.sessionStorage, held = ss.getItem('tw_from');
+    ss.removeItem('tw_from');
+    if (held) {
+      var h = JSON.parse(held);
+      if (h && typeof h.path === 'string' && h.path.charAt(0) === '/' && h.path !== here && Date.now() - (h.t || 0) < 1800000) { return h.path; }
+    }
+  } catch (e) {}
+  try {
+    if (document.referrer) {
+      var r = new URL(document.referrer);
+      if (r.host === location.host && r.pathname !== here) { return r.pathname; }
+    }
+  } catch (e) {}
+  return here;
+})();
 document.querySelectorAll('form.contact-form').forEach(function (f) {
   var box = f.closest('.contact-box');
   function setVisit() {
@@ -932,13 +959,13 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
   var card = box && box.querySelector('.form-thanks');
   var err = f.querySelector('.form-error');
   var btn = f.querySelector('button[type=submit]');
-  f.querySelector('[name=page]').value = location.pathname;
+  f.querySelector('[name=page]').value = theodoraFrom;
   /* The mail Stav gets names the page the inquiry came from (2026-10-24); the markup keeps the plain subject. */
   var subj = f.querySelector('[name=_subject]');
-  function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + location.pathname; } }
+  function setSubject() { if (subj) { subj.value = 'New inquiry from stavtheodor.com: ' + theodoraFrom; } }
   setSubject();
-  /* The Art Radar inquiry link (2026-11-18): WRITE_JS sends theodora:ask to the pop-up's form on every opening, with
-     {artist, post, slug, msg} for an Art Radar inquiry link (data-ask) and null for any other Write to Stav button. With a
+  /* The Art Radar inquiry link (2026-11-18): setAsk gets {artist, post, slug, msg} for an Art Radar inquiry link (data-ask,
+     handed over from the click through sessionStorage, below) and null otherwise. With a
      context, artist and source_post are enabled and filled, the subject names the artist and the post, and the
      message is prefilled only while the box is empty or still holds the last prefill. Without one, both are emptied
      and disabled again and an untouched prefill is removed, so an ordinary opening never carries an artist. */
@@ -953,7 +980,18 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     if (d) { if (subj) { subj.value = 'Art Radar inquiry: ' + (d.artist || 'a post') + ' (' + d.post + ')'; } }
     else { setSubject(); }
   }
-  f.addEventListener('theodora:ask', function (e) { setAsk(e.detail); });
+  /* Since 2026-11-27 the inquiry link goes to /contact/: WRITE_JS leaves its context in sessionStorage (theodoraAsk) on
+     the click, and the /contact/ form takes it once, here, then drops it. */
+  if (location.pathname === '/contact/') {
+    try {
+      var ss = window.sessionStorage, held = ss.getItem('theodoraAsk');
+      ss.removeItem('theodoraAsk');
+      if (held) {
+        var hd = JSON.parse(held), he = document.body.classList.contains('lang-he');
+        setAsk({ artist: hd.artist || '', post: hd.post || '', slug: hd.slug || '', msg: (he ? hd.msg_he : hd.msg_en) || '' });
+      }
+    } catch (e) {}
+  }
   /* How did you find me? (2026-10-10): What did you ask it? shows, and is sent, only while an AI chip (data-ai) is
      checked; hidden, it is disabled, so its text never reaches Formspree. Synced on every choice, after a reset (once
      the reset has cleared the fields) and on pageshow (a page restored from the back button keeps its old choice). */
@@ -1013,12 +1051,12 @@ document.querySelectorAll('form.contact-form').forEach(function (f) {
     fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) { throw new Error(r.status); }
-        var lead = { form_id: 'contact', form_loc: f.closest('#write-modal') ? 'modal' : 'inline', page_path: location.pathname };
+        var lead = { form_id: 'contact', form_loc: 'inline', page_path: location.pathname };
         if (askCtx) { lead.lead_context = 'radar_ask'; lead.post_slug = askCtx.slug || ''; }
         f.reset();
         lastFill = '';
         setAsk(null);
-        f.querySelector('[name=page]').value = location.pathname;
+        f.querySelector('[name=page]').value = theodoraFrom;
         setSubject();
         setVisit();
         if (card) { thanks(first); }
@@ -1084,104 +1122,65 @@ def mail_ui(subject=''):
 MAIL_UI = mail_ui()
 
 
-# The Write to Stav pop-up (Ron, 2026-10-06). Every "Write to Stav" button (data-write) opens the site's contact form, the
-# same contact_form() markup the inline card renders, inside a native modal <dialog>: the only new parts are the shell (the
-# Write to Stav eyebrow, the card's headline, a close X) and the script below that opens and closes it. form_js() drives the
-# form here as everywhere (Formspree fetch, the thank-you card, the error line), once per page: write_ui() carries it, so
-# tail() and build-home.py must not add it again. The buttons keep their mailto (or #contact) href, so without JavaScript,
-# in a browser with no <dialog>, or with FORM_ENDPOINT empty (no form, so no pop-up) they work as before.
-WRITE_X = ('<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">'
-           '<path d="M5 5l14 14M19 5L5 19"/></svg>')
-
+# Write to Stav goes to /contact/ (Ron, 2026-11-27: "Rather than a pop-up, let's create a Contact Us page."; the pop-up of
+# 2026-10-06 is gone). Every data-write link is a plain link to WRITE_PATH; this script only records the click on the way:
+# GA4 write_open with where the link sits (data-loc, else page) and the page path, sent as a beacon so it survives the page
+# change, and that path in sessionStorage (tw_from) so the /contact/ form names the page the inquiry came from. It never
+# stops the click. An Art Radar inquiry link (data-ask) also sends radar_inquiry and leaves its context
+# (artist, post, slug, the prefilled message in both languages) in sessionStorage for the /contact/ form (form_js());
+# any other Write to Stav click clears that, so an old inquiry never rides along.
 WRITE_JS = '''<script>
 (function () {
-  /* Opens and closes the pop-up (site_chrome.write_ui); the form inside is form_js()'s like any other. */
-  var dlg = document.getElementById('write-modal');
-  if (!dlg || typeof dlg.showModal !== 'function') { return; }
-  var box = dlg.querySelector('.contact-box');
-  var opener = null, lenis = null, downOnBackdrop = false;
-  function focusOn(el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } }
-  function open(from) {
-    opener = from;
-    /* Opened from the phone menu (the header's Write to Stav): close the menu first, and give focus back to the Menu
-       button afterwards, since the link itself is hidden with the menu. */
-    var mb = document.getElementById('menu-btn');
-    if (from.closest && from.closest('#links') && document.body.classList.contains('menu-open')) {
-      document.body.classList.remove('menu-open');
-      if (mb) { mb.setAttribute('aria-expanded', 'false'); opener = mb; }
-    }
-    /* The Art Radar inquiry link (2026-11-18): tell the form which artist and post this opening is about, or null. */
-    var cf = box.querySelector('form.contact-form');
-    if (cf) {
-      var d = null;
-      if (from.hasAttribute && from.hasAttribute('data-ask')) {
-        var he = document.body.classList.contains('lang-he');
-        d = { artist: from.getAttribute('data-artist') || '', post: from.getAttribute('data-post') || '',
-              slug: from.getAttribute('data-post-slug') || '', msg: from.getAttribute(he ? 'data-msg-he' : 'data-msg-en') || '' };
-      }
-      cf.dispatchEvent(new CustomEvent('theodora:ask', { detail: d }));
-    }
-    /* The pop-up's eyebrow names what this opening is about: an inquiry link's own words (data-label-en, -he), else
-       the default Write to Stav twins, kept from the markup on the first opening. */
-    dlg.querySelectorAll('.wm-eyebrow [data-l]').forEach(function (s) {
-      if (!s.hasAttribute('data-default')) { s.setAttribute('data-default', s.textContent); }
-      var own = from.hasAttribute && from.hasAttribute('data-ask') ? from.getAttribute('data-label-' + s.getAttribute('data-l')) : '';
-      s.textContent = own || s.getAttribute('data-default');
-    });
-    document.documentElement.classList.add('write-open');
-    lenis = window.__theodoraLenis || null;
-    if (lenis) { lenis.stop(); }
-    dlg.showModal();
-    dlg.scrollTop = 0;
-    var first = box.classList.contains('sent') ? box.querySelector('.ty-head')
-      : box.querySelector('.contact-form input:checked, .contact-form input[name=name]');
-    if (first) { focusOn(first); }
-  }
-  dlg.addEventListener('close', function () {
-    document.documentElement.classList.remove('write-open');
-    if (lenis) { lenis.start(); lenis = null; }
-    if (opener && document.contains(opener)) { focusOn(opener); }
-  });
-  dlg.addEventListener('mousedown', function (e) { downOnBackdrop = e.target === dlg; });
-  dlg.addEventListener('click', function (e) {
-    if ((e.target === dlg && downOnBackdrop) || (e.target.closest && e.target.closest('[data-close]'))) { dlg.close(); }
-    downOnBackdrop = false;
-  });
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
-    if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) { return; }
-    e.preventDefault();
-    e.stopPropagation();
-    open(a);
-    /* GA4 (2026-11-01): this handler stops the click, so CALL_JS's click_email never sees it; record the opening here,
-       with where the button sits (data-loc, else page) and the page path only. */
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'write_open', { link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
-      if (a.hasAttribute('data-ask')) {
-        window.gtag('event', 'radar_inquiry', { post_slug: a.getAttribute('data-post-slug') || '', link_location: a.getAttribute('data-loc') || 'page', page_path: location.pathname });
+    if (!a) { return; }
+    var ask = a.hasAttribute('data-ask');
+    /* a modified click (a new tab or window) leaves this tab's state alone; write_open still records it */
+    var plain = !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0);
+    if (plain) { try {
+      /* the page this Write to Stav sits on, for the /contact/ form's page field and subject (form_js(), tw_from) */
+      if (location.pathname !== '/contact/') {
+        window.sessionStorage.setItem('tw_from', JSON.stringify({ path: location.pathname, t: Date.now() }));
       }
+      if (ask) {
+        window.sessionStorage.setItem('theodoraAsk', JSON.stringify({ artist: a.getAttribute('data-artist') || '',
+          post: a.getAttribute('data-post') || '', slug: a.getAttribute('data-post-slug') || '',
+          msg_en: a.getAttribute('data-msg-en') || '', msg_he: a.getAttribute('data-msg-he') || '' }));
+      } else { window.sessionStorage.removeItem('theodoraAsk'); }
+    } catch (err) {} }
+    if (typeof window.gtag !== 'function') { return; }
+    var loc = a.getAttribute('data-loc') || 'page';
+    window.gtag('event', 'write_open', { link_location: loc, page_path: location.pathname, transport_type: 'beacon' });
+    if (ask) {
+      window.gtag('event', 'radar_inquiry', { post_slug: a.getAttribute('data-post-slug') || '', link_location: loc, page_path: location.pathname, transport_type: 'beacon' });
     }
   }, true);
 })();
 </script>'''
 
-
-def write_ui():
-    """The Write to Stav pop-up: the <dialog> holding contact_form(), its open and close script, and form_js(), which
-    binds every contact form on the page (the inline card's too). Once per page; '' while FORM_ENDPOINT is empty."""
-    form = contact_form('/', h='h3')
-    if not form:
-        return ''
-    return f'''<dialog class="write-modal" id="write-modal" aria-labelledby="write-modal-title" data-lenis-prevent>
-  <div class="wm-panel">
-    <button type="button" class="wm-x" data-close>{WRITE_X}<span class="vh">{T('Close', 'סגירה')}</span></button>
-    <p class="eyebrow wm-eyebrow">{T('Write to Stav', 'כתבו לסתיו')}</p>
-    <h2 class="serif wm-head" id="write-modal-title">{T(*CONTACT_HEAD)}</h2>
-    {form}
-  </div>
-</dialog>
-{WRITE_JS}
-{form_js()}'''
+# On /contact/ itself (2026-11-27) a Write to Stav click (the header's, the phone menu's) does not reload the page: it closes
+# the phone menu and moves to the form, focusing its first field. Only build-site-pages.py's /contact/ carries it; WRITE_JS
+# still records the click.
+CONTACT_WRITE_JS = '''<script>
+(function () {
+  var f = document.querySelector('form.contact-form');
+  if (!f) { return; }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('[data-write]') : null;
+    if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.pathname !== location.pathname) { return; }
+    e.preventDefault();
+    var mb = document.getElementById('menu-btn');
+    if (document.body.classList.contains('menu-open')) { document.body.classList.remove('menu-open'); if (mb) { mb.setAttribute('aria-expanded', 'false'); } }
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var box = f.closest('.contact-box');
+    var sent = box && box.classList.contains('sent');
+    /* the form's top (its first question) lands under the fixed header: css/theme.css form.contact-form scroll-margin-top */
+    (sent ? box : f).scrollIntoView({ block: sent ? 'center' : 'start', behavior: still ? 'auto' : 'smooth' });
+    var first = sent ? box.querySelector('.ty-head') : f.querySelector('input:checked, input[name=name]');
+    if (first) { try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); } }
+  });
+})();
+</script>'''
 
 LANG_JS = '''<script>
 (function () {
@@ -1277,9 +1276,6 @@ LANG_JS = '''<script>
       window.removeEventListener('blur', mark);
       document.removeEventListener('visibilitychange', mark);
       if (handled) { return; }
-      /* a mail link inside the Write to Stav pop-up: close it, or the panel would sit under the modal dialog */
-      var modal = document.getElementById('write-modal');
-      if (modal && modal.open) { modal.close(); }
       openPanel(addr);
     }, 1000);
   });
@@ -1501,11 +1497,17 @@ SPECULATION_RULES = ('<script type="speculationrules">'
                      '</script>')
 
 
+def write_tail():
+    """WRITE_JS and form_js() (which binds every contact form on the page and records where the visit began, so it runs on
+    every page, form or not), once per page: tail() and build-home.py carry it."""
+    return WRITE_JS + ('\n' + form_js() if FORM_ENDPOINT else '')
+
+
 def tail(home=False, scripts='', quiet=False):
     """scripts: extra script tags a page needs (BA_SCRIPT on the pages with a before/after figure); quiet: the footer
     without its closing block (/contact/, whose body is that block)."""
     extra = '\n' + scripts if scripts else ''
-    return ('\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + write_ui() + '\n' + LANG_JS + '\n' + PAGE_JS + extra
+    return ('\n' + footer(home, quiet=quiet) + '\n\n' + MAIL_UI + '\n' + write_tail() + '\n' + LANG_JS + '\n' + PAGE_JS + extra
             + '\n' + SPECULATION_RULES + '\n\n</body>\n</html>\n')
 
 
