@@ -97,6 +97,9 @@
   <url>
     <loc>https://stavtheodor.com/radar/jcc-gallery-tours-tobi-kahn/</loc>
     <lastmod>2026-10-08</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-10-08-jcc-gallery-tours-tobi-kahn.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/october-in-new-york-museums/</loc>
@@ -171,6 +174,12 @@
   <url>
     <loc>https://stavtheodor.com/radar/september-art-fairs-armory-independent-affordable/</loc>
     <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-16-september-art-fairs-armory-independent-affordable-armory-show.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stavtheodor.com/images/2026-09-16-september-art-fairs-armory-independent-affordable-independent-breuer.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/</loc>
@@ -477,11 +486,11 @@
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/zoya-cherkassky-american-cooking/he/</loc>
-    <lastmod>2026-11-27T16:16:21-05:00</lastmod>
+    <lastmod>2026-11-27T16:34:34-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/ruth-patir-jewish-museum/he/</loc>
-    <lastmod>2026-11-27T16:16:22-05:00</lastmod>
+    <lastmod>2026-11-27T16:34:34-05:00</lastmod>
   </url>
   <url>
     <loc>https://stavtheodor.com/radar/seven-israeli-works-nathan-zach/he/</loc>
