@@ -326,7 +326,7 @@ def radar_html(p):
     <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     {arrow}
   </div>
-  <div class="timeline">{sc.timeline(chosen, with_months=False, dims=p["section"] == "guide", alts=described(p))}
+  <div class="timeline">{sc.timeline(chosen, with_months=False, dims=True, alts=described(p))}
   </div>
 </section>
 '''
@@ -648,7 +648,7 @@ def render_project_page(p, all_pages, projects):
     if hero:
         header = f'''
 <header class="phero">
-  <img src="{hero['src']}" {sc.img_alt(hero.get('alt_en', ''), hero.get('alt_he', ''))}{sc.focus_style(hero)} fetchpriority="high">
+  <img src="{hero['src']}" {sc.img_alt(hero.get('alt_en', ''), hero.get('alt_he', ''))}{sc.dims_attr(hero['src'])}{sc.focus_style(hero)} loading="eager" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <p class="eyebrow">{T('Projects · ' + H.escape(kicker), 'פרויקטים · ' + H.escape(kicker_he))}</p>
@@ -680,7 +680,7 @@ def render_project_page(p, all_pages, projects):
 {faq_html(p)}
 <section class="section wrap">
   <div class="head reveal"><div class="lead"><p class="eyebrow">{T('More projects', 'עוד פרויקטים')}</p></div><a class="arrow" href="/projects/"><span class="ln"></span>{T('Projects', 'פרויקטים')}</a></div>
-  <div class="grid3">{''.join(sc.project_card(q) for q in more)}
+  <div class="grid3">{''.join(sc.project_card(q, dims=True) for q in more)}
   </div>
   <div class="next reveal">
     <p class="eyebrow">{T('Next project', 'הפרויקט הבא')}</p>
@@ -690,29 +690,40 @@ def render_project_page(p, all_pages, projects):
 </section>
 {radar_html(p) if p.get("radar_posts") else ''}'''
     return (sc.head(f"{p.get('head_title') or p['title_en']} · THEODORA", p["meta_description"], url, og_image=og, og_type="article",
-                    lang="en", ld=ld_blocks(p, url, og))
+                    lang="en", ld=ld_blocks(p, url, og), extra=sc.img_preload(hero['src']) if hero else '')
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
 def ba_card(p):
-    """A hub card for a page whose hero is a before/after proposal: the after, marked a proposal."""
+    """A hub card for a page whose hero is a before/after proposal: the after, marked a proposal, with its file's own
+    width and height (2026-11-26)."""
     k = p["before_after"]
+    src = f"/images/spaces/{k}_after-1000.webp"
     return f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
-        <div class="ph"><img src="/images/spaces/{k}_after-1000.webp" {sc.img_alt(sc.spaces()[k]['alt_en'], sc.spaces()[k].get('alt_he', ''))} loading="lazy"><span class="ba-chip">{T('Proposal', 'הצעה')}</span></div>
+        <div class="ph"><img src="{src}" {sc.img_alt(sc.spaces()[k]['alt_en'], sc.spaces()[k].get('alt_he', ''))}{sc.dims_attr(src)} loading="lazy"><span class="ba-chip">{T('Proposal', 'הצעה')}</span></div>
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
         <p class="muted">{T(H.escape(sc.first_sentence(p['lead_en'])), H.escape(sc.first_sentence(p['lead_he'])))}</p>
       </a>'''
+
+
+def hub_srcset(srcset):
+    return ", ".join(f"{u} {w}w" for u, w in srcset)
+
+
+def hub_preload(hero_src, srcset=None):
+    """The hub hero's preload (2026-11-26): the same src, and the same srcset and sizes as hub_hero() writes."""
+    return sc.img_preload(hero_src, hub_srcset(srcset), "100vw") if srcset else sc.img_preload(hero_src)
 
 
 def hub_hero(title_en, title_he, lead_en, lead_he, hero_src, alt_attr, srcset=None):
     """A hub's hero (.phero.hub): the photo, the name as the h1 and the sentence as the lead. alt_attr: the img's alt
     attribute(s), already formed. srcset (optional, 2026-10-25): [(path, width)] candidates, the hero_src among them;
     hero_src stays the src, so a browser without srcset gets the same file as before."""
-    ss = (f' srcset="{", ".join(f"{u} {w}w" for u, w in srcset)}" sizes="100vw"') if srcset else ''
+    ss = (f' srcset="{hub_srcset(srcset)}" sizes="100vw"') if srcset else ''
     return f'''
 <header class="phero hub">
-  <img src="{hero_src}"{ss} {alt_attr} fetchpriority="high">
+  <img src="{hero_src}"{ss} {alt_attr}{sc.dims_attr(hero_src)} loading="eager" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
     <h1 class="serif">{T(H.escape(title_en), H.escape(title_he))}</h1>
@@ -739,7 +750,10 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
     the "All guides" arrow to /guide/, which lists them all. Every card and every guide shown is in the CollectionPage's hasPart."""
     url = f"{SITE}/{section}/"
     guides = list(guides)[:sc.GUIDES_MAX]
-    cards = "".join(sc.project_card(p) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
+    # every card image carries its file's width and height and stays lazy (2026-11-26: no card is in a desktop first
+    # view; on a phone the first card is, but loading it eagerly made Lighthouse's LCP worse on /projects/ and
+    # /advisory/, mobile and desktop, measured, so it was left lazy)
+    cards = "".join(sc.project_card(p, dims=True) if (p.get("hero_image") or p["section"] == "projects") else ba_card(p) if p.get("before_after") else f'''
       <a class="card reveal" href="/{p['path'].strip('/')}/">
         <h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>
         <p class="muted">{T(H.escape(strip_tags(p['meta_description'])), H.escape(snippet(p.get('lead_he') or '')))}</p>
@@ -758,7 +772,8 @@ def render_hub(section, title_en, title_he, lead_en, lead_he, pages, hero_src, h
 </section>{sc.guides_section(guides, GUIDES_HUB_H2, GUIDES_HUB_SUB, arrow=True, tight=True, described=section == "advisory")}
 {who_row(section)}{HUB_CTA}'''
     desc = HUB_DESC.get(section) or strip_tags(lead_en)[:158]
-    return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld)
+    return (sc.head(f"{HUB_HEAD_TITLE.get(section, title_en)} · THEODORA", desc, url, og_image=SITE + hero_src, lang="en", ld=ld,
+                    extra=hub_preload(hero_src))
             + sc.body_open() + sc.nav() + sc.main(body) + sc.tail())
 
 
@@ -893,7 +908,8 @@ def render_guide_index(pages):
     body = sections + guide_where()  # the footer carries the closing line
     # The main landmark starts after the category bar here (2026-11-15): the bar is sticky, and inside <main> it would
     # let go of the screen where main ends, above the footer; as a child of <body> it keeps pinning to the end as before.
-    return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld)
+    return (sc.head(f"{g['title']} · THEODORA", g["description"], url, og_image=SITE + g["hero_src"], lang="en", ld=ld,
+                    extra=hub_preload(g["hero_src"], g.get("hero_srcset")))
             + sc.body_open() + sc.nav() + top + sc.main(body) + sc.tail(scripts=GUIDE_BAR_JS)), len(listed)
 
 
@@ -1377,7 +1393,7 @@ def main():
         if bad:
             print(f"  BLOCKED {p['path']}: {', '.join(bad)}"); problems += 1; continue
         d = p["path"].strip("/")
-        sc.write(os.path.join(d, "index.html"), out)
+        sc.write(os.path.join(d, "index.html"), out, defer=True)
         print(f"  wrote {d}/index.html")
     sc.write(os.path.join(CONTACT["path"], "index.html"), render_contact())
     print(f"  wrote {CONTACT['path']}/index.html" + (" (with the contact form)" if sc.FORM_ENDPOINT else " (no form: site_chrome.FORM_ENDPOINT is empty)"))
