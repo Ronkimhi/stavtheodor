@@ -285,10 +285,11 @@
   .entry .date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .entry .date [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .entry h3 { font-size: 26px; }
-  /* No lone last word in a card title (2026-11-28). Hebrew uses pretty, not balance: balance broke a name joined by a
-     Hebrew hyphen (maqaf) across two lines, and pretty keeps the last line whole without that break. */
+  /* No lone last word in a card title, in either language (2026-11-28). A browser may break a line after a maqaf (the
+     Hebrew hyphen), and balance did, splitting a name across two lines; the build wraps each Hebrew title word that holds
+     a maqaf in .nw (site_chrome.keep_maqaf_words), which stays on one line. */
   .timeline .entry h3 { text-wrap: balance; }
-  body.lang-he .timeline .entry h3 { text-wrap: pretty; }
+  .timeline .entry h3 .nw { white-space: nowrap; }
   .entry .teaser { font-size: 14px; color: var(--muted); margin-top: 8px; }
   /* Hebrew cards on every page: the title and teaser read right to left from the right edge of their cell (the Hebrew
      twins carry dir, but as inline spans they never set the block's direction). The date keeps its place beside the

@@ -1724,6 +1724,14 @@ def month_labels(post):
     return en, he
 
 
+def keep_maqaf_words(s):
+    """A card title's Hebrew, with every word that holds a maqaf (U+05BE, the Hebrew hyphen) wrapped in a
+    <span class="nw"> that the stylesheet keeps on one line (2026-11-28): a browser may break a line after a maqaf, which
+    split a name across two lines once the titles were balanced. Markup only, at render time: the title's characters stay
+    exactly as written, nothing is added, and content/ is not touched."""
+    return re.sub(r'\S*־\S*', lambda m: f'<span class="nw">{m.group(0)}</span>', s)
+
+
 def timeline(posts, with_months, dims=False, alts=False, he_slugs=()):
     """The posts as timeline entries (the homepage, /radar/, and the More list on a post). dims=True (the guide
     pages' From Art Radar block, 2026-09-30 SEO fixes; since 2026-11-26 every caller but the homepage: /radar/, the
@@ -1747,7 +1755,7 @@ def timeline(posts, with_months, dims=False, alts=False, he_slugs=()):
         out.append(f'''
       <a class="entry reveal" href="/radar/{p['slug']}/{'he/' if p['slug'] in he_slugs else ''}">
         <div class="date">{T(p['date_en'], p['date_he'])}</div>
-        <div><h3 class="serif">{T(H.escape(p['title_en']), H.escape(p['title_he']))}</h3>{teaser}</div>
+        <div><h3 class="serif">{T(H.escape(p['title_en']), keep_maqaf_words(H.escape(p['title_he'])))}</h3>{teaser}</div>
         {th}
       </a>''')
     return ''.join(out)
