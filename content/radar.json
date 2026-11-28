@@ -14,11 +14,11 @@
                "orientalism-between-fact-and-fantasy", "giacometti-dendur", "duchamp-moma", "guggenheim-pop",
                "clinamen-park-avenue-armory", "three-exhibitions-three-mediums", "may-big-art-month-nyc", "museums-on-us-bofa"]},
     {"slug": "new-jersey", "hub": false, "label_en": "New Jersey", "label_he": "ניו ג'רזי",
-     "posts": ["basquiat-blue-ribbon-princeton", "living-with-art-montclair", "library-museum-passes"]},
+     "posts": ["basquiat-blue-ribbon-princeton", "jcc-gallery-tours-tobi-kahn", "living-with-art-montclair", "library-museum-passes"]},
     {"slug": "art-market", "hub": false, "label_en": "The art market", "label_he": "שוק האמנות",
      "posts": ["september-art-fairs-armory-independent-affordable", "pollock-record", "brancusi-christies", "botero-in-new-york", "fifth-avenue-jewelry-art", "david-hockney-1937-2026"]}
   ],
-  "no_topic": ["jcc-gallery-tours-tobi-kahn", "welcome-art-radar"],
+  "no_topic": ["welcome-art-radar"],
   "he_pages": ["zoya-cherkassky-american-cooking", "ruth-patir-jewish-museum", "seven-israeli-works-nathan-zach", "pool-in-israeli-art", "three-tel-aviv-shows", "oren-fischer-hallel", "noa-wiegenfeld", "tom-fima", "fresh-paint-2026", "in-a-free-state-luhring-augustine"],
   "posts": {
     "september-art-fairs-armory-independent-affordable": {"seo_title": "New York Art Fairs, September 2026", "meta_description": "The Armory Show and Independent 20th Century in New York, September 24 to 27, 2026, plus the Affordable Art Fair in Chelsea.", "bridge": {"target": "/advisory/art-advisor-vs-consultant-vs-decorator/", "line_en": "At a fair, each booth is a gallery putting its own artists front and center, and that is exactly its job: a gallery represents its artists. As an independent advisor I represent you, the buyer, and who does what, from a gallery's advisory to a decorator or an installer, is on my page about <a href=\"/advisory/art-advisor-vs-consultant-vs-decorator/\">who you need for your walls</a>. And if a work from a fair is still on your mind, write to me.", "line_he": "ביריד, כל ביתן הוא גלריה ששמה בחזית את האמנים שלה, וזה בדיוק התפקיד שלה: גלריה מייצגת את האמנים שלה. כיועצת אמנות עצמאית אני מייצגת אתכם, הקונים, ומי עושה מה, מהייעוץ של גלריה ועד מעצב או מתקין, בעמוד שלי על השאלה <a href=\"/advisory/art-advisor-vs-consultant-vs-decorator/\">את מי אתם צריכים לקירות שלכם</a>. ואם עבודה מיריד עדיין לא יוצאת לכם מהראש, כתבו לי."}},
