@@ -565,6 +565,14 @@
      whole (measured in headless Chromium): from 370px in English, from 400px in Hebrew, whose labels run wider. */
   @media (min-width: 370px) and (max-width: 900px) { body.lang-en .nav .nav-write-bar { display: inline; } }
   @media (min-width: 400px) and (max-width: 900px) { body.lang-he .nav .nav-write-bar { display: inline; } }
+  /* Hebrew phone bar under 350px: its labels run wider than English, so the wordmark met the call link and the menu label
+     reached the screen edge. Here the wordmark drops its trailing tracking (invisible) and sets a little smaller and tighter,
+     and the Hebrew labels go from 16 to 14px, which gives back the 20px side padding and about English's gap at the same
+     width, with every 44px hit area whole. English and 350px up are unchanged. */
+  @media (max-width: 349px) {
+    body.lang-he .nav .wordmark { font-size: 20px; letter-spacing: 0.2em; margin-right: -0.2em; }
+    body.lang-he .nav-call .short [data-l="he"], body.lang-he .menu-btn [data-l="he"] { font-size: 14px; }
+  }
 
   /* The Guides item (2026-10-01, site_chrome.guides_dd, opened by PAGE_JS): the link to /guide/ and a small chevron
      toggle; from 901px a panel under the bar with the six categories in three columns; in the phone menu the toggle
@@ -649,6 +657,24 @@
   body.lang-he .phead .crumbs { direction: rtl; }
   body.lang-he .phead { direction: rtl; }  /* Hebrew: the header's h1, lead, byline and Write to Stav button start on the right; the h1 and lead hold inline twins, so the twins' own dir never reached the block (2026-11-18) */
   body.lang-he .phead .ba-stage { direction: ltr; }  /* the before and after panes keep their order */
+  /* Hebrew mirrors English, the whole page, where the header is followed by a .prose section (advisory, partner, town and
+     county, privacy, the Radar artist index): English holds the header, the column and every section below on the left
+     gutter, so Hebrew holds them on the right one. main stays LTR, so the 1100px header needs margin-left: auto, and each
+     section below it reads right to left: capped boxes (the column, the FAQ, the closing ask) sit on the right, rows and
+     grids (section heads, FAQ rows, guide cards, the Radar strip) run right to left. The Radar strip's line and markers
+     are drawn with physical offsets, so they move to the right side here. Guides (.phead.guide), the Radar posts (an
+     article, not a .prose section) and /contact/ (.contact-head, above) are left as they are. */
+  body.lang-he .phead:not(.guide):has(+ .section > .prose) { margin-left: auto; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section { direction: rtl; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-left: 0; padding-right: 44px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline::before { left: auto; right: 6px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { left: auto; right: -44px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { left: auto; right: -41px; }
+  @media (max-width: 900px) {
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-right: 28px; }
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { right: -28px; }
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { right: -25px; }
+  }
   .pfig figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .plead { padding: clamp(72px, 8vw, 120px) clamp(20px, 3.4vw, 48px) 0; max-width: 1000px; }
   .plead p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }
