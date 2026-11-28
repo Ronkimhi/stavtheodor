@@ -285,12 +285,15 @@
   .entry .date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .entry .date [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .entry h3 { font-size: 26px; }
-  .timeline .entry h3 { text-wrap: balance; }  /* no lone last word in a card title (2026-11-28) */
+  /* No lone last word in a card title (2026-11-28). Hebrew uses pretty, not balance: balance broke a name joined by a
+     Hebrew hyphen (maqaf) across two lines, and pretty keeps the last line whole without that break. */
+  .timeline .entry h3 { text-wrap: balance; }
+  body.lang-he .timeline .entry h3 { text-wrap: pretty; }
   .entry .teaser { font-size: 14px; color: var(--muted); margin-top: 8px; }
-  /* Hebrew cards on every page: the date, title and teaser read right to left from the right edge of their own cell (the
-     Hebrew twins carry dir, but as inline spans they never set the block's direction). Where the whole section is mirrored
-     (the Hebrew mirror below) the card row itself runs right to left as well. */
-  body.lang-he .timeline .entry > div:not(.th) { direction: rtl; }
+  /* Hebrew cards on every page: the title and teaser read right to left from the right edge of their cell (the Hebrew
+     twins carry dir, but as inline spans they never set the block's direction). The date keeps its place beside the
+     marker. Where the whole section is mirrored (the Hebrew mirror below) the card row itself runs right to left. */
+  body.lang-he .timeline .entry h3, body.lang-he .timeline .entry .teaser { direction: rtl; }
   .entry .th { height: 132px; overflow: hidden; background: var(--surface); }
   .entry .th img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
   .entry:hover .th img { transform: scale(1.04); }
