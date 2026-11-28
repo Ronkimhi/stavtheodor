@@ -77,7 +77,7 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261128hm (same branch): in Hebrew those pages and the Radar artist index mirror English whole, every section below the
 # column on the right gutter too.
 # 20261128hn (same branch, merged with main's 20261128jc): both changes in one file, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261128hn'
+THEME_CSS = '/css/theme.css?v=20261128hr'
 
 
 def rel(*parts):
