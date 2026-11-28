@@ -93,6 +93,10 @@
   .links { display: flex; gap: 30px; align-items: center; }
   .links a { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
   .links a [data-l="he"] { font-size: 16px; }
+  /* The Latin name inside a Hebrew nav, menu or footer label (Art Radar, 2026-11-28): the Hebrew labels set larger to make up
+     for small Hebrew letters, so the Latin capitals stood taller than their neighbours; this sets them back, same family,
+     weight and tracking. */
+  .links a [data-l="he"] .lat, .foot [data-l="he"] .lat { font-size: 0.875em; }
   .lang-switch button, .lang-switch a { background: none; border: 0; color: var(--ink); cursor: pointer; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; padding: 0; text-shadow: inherit; }
   body.lang-en .lang-switch [data-lang="en"] { display: none; }
   body.lang-he .lang-switch [data-lang="he"] { display: none; }

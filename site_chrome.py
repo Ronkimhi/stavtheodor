@@ -79,7 +79,8 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261128hn (same branch, merged with main's 20261128jc): both changes in one file, a value no side has used.
 # 20261128fa (theo/form-adjacent-fixes): the .form-note rules are gone (nothing renders that class since PR #91).
 # 20261128fb (same branch, merged with main's 20261128hr): both changes in one file, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261128fb'
+# 20261128fc (same branch): the Latin name inside the Hebrew nav, phone menu and footer (span.lat) sets at 0.875em.
+THEME_CSS = '/css/theme.css?v=20261128fc'
 
 
 def rel(*parts):
@@ -406,7 +407,7 @@ NAV_ITEMS = [
     ('#advisory', 'Advisory', 'ייעוץ'),
     ('/guide/', 'Guides', 'מדריכים'),  # the guides index, a real page on every page, the homepage included (2026-10-01)
     ('#industries', 'For business', 'לעסקים'),
-    ('/radar/', 'Art Radar', 'Art Radar'),
+    ('/radar/', 'Art Radar', '<span class="lat" lang="en">Art Radar</span>'),
     ('#faq', 'Questions', 'שאלות'),
 ]
 # Ron, 2026-11-26: the header's one ask is Write to Stav (the .nav-write item in nav() and nav_write_bar(), to /contact/ since 2026-11-27), so Contact left
@@ -710,7 +711,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
         <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/art-advisor-westchester-ny/">{T('Art advisor in Westchester', "יועצת אמנות בווסטצ'סטר")}</a>
       </div>
       <div>
-        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="{GUIDES_INDEX}">{T('Guides', 'מדריכים')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'Art Radar')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'Art Radar בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="{GUIDES_INDEX}">{T('Guides', 'מדריכים')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', '<span class="lat" lang="en">Art Radar</span>')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', '<span class="lat" lang="en">Art Radar</span> בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
       </div>
       <div class="who">
         <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
