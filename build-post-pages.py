@@ -489,7 +489,7 @@ def note_html(p):
     for t in sc.post_topics(p["slug"]):
         if t.get("hub"):
             links.append(f'<a href="/radar/{t["slug"]}/">'
-                         f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " בראדאר אמנות")}</a>')
+                         f'{T("More " + H.escape(t["label_en"]) + " in Art Radar", "עוד " + H.escape(t["label_he"]) + " ב-Art Radar")}</a>')
     if "ask" in RADAR["posts"].get(p["slug"], {}):  # the inquiry link, last (2026-11-18)
         ask = RADAR["posts"][p["slug"]]["ask"] or {}
         links.append(ask_link(ask.get("name_en", ""), ask.get("name_he", ""), p, "radar-note"))
@@ -604,7 +604,7 @@ def render_post_page(p, all_posts, he=False):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "THEODORA", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "ראדאר אמנות" if he else "Art Radar", "item": SITE + "/radar/"},
+            {"@type": "ListItem", "position": 2, "name": "Art Radar", "item": SITE + "/radar/"},
             {"@type": "ListItem", "position": 3, "name": p["title_he"] if he else p["headline"], "item": permalink},
         ],
     }
@@ -612,7 +612,7 @@ def render_post_page(p, all_posts, he=False):
     others = RELATED[p["slug"]]
     body = f'''
 <header class="phead">
-  <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a></p>
+  <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'Art Radar')}</a></p>
 </header>
 
 <main class="wrap">
@@ -621,7 +621,7 @@ def render_post_page(p, all_posts, he=False):
 {note_html(p)}{working_with_stav(p)}
 <section class="section wrap">
   <div class="head reveal">
-    <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
+    <div class="lead"><p class="eyebrow">{T('More from Art Radar', 'עוד מ-Art Radar')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     <a class="arrow" href="/radar/"><span class="ln"></span>{T('All posts', 'כל הפוסטים')}</a>
   </div>
   <div class="timeline">{sc.timeline(others, with_months=False, dims=True, he_slugs=HE_PAGES if he else ())}
@@ -800,7 +800,7 @@ def render_hub(t, hub):
     }
     body = f'''
 <header class="phead">
-  <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a></p>
+  <p class="eyebrow"><a href="/radar/">{T('Art Radar', 'Art Radar')}</a></p>
   <h1 class="serif">{T(H.escape(hub['h1_en']), H.escape(hub['h1_he']))}</h1>
   <p class="lead">{T(H.escape(hub['intro_en']), H.escape(hub['intro_he']))}</p>
 </header>
@@ -883,7 +883,7 @@ def render_radar_index(posts):
   <img src="{latest_img}" alt=""{sc.dims_attr(latest_img)} loading="eager" fetchpriority="high">
   <div class="scrim"></div>
   <div class="title">
-    <p class="eyebrow">{T('Art Radar', 'ראדאר אמנות')}</p>
+    <p class="eyebrow">{T('Art Radar', 'Art Radar')}</p>
     <h1 class="serif">{T(f'Every post, in order. {n} so far.', f'כל הפוסטים, לפי הסדר. {n} עד היום.')}</h1>
     <p class="cap">{T('The art worth seeing in New York, New Jersey and Tel Aviv, chosen by a curator. Written in Hebrew first, each with a full English translation.', "האמנות ששווה לראות בניו יורק, בניו ג'רזי ובתל אביב, בבחירת אוצרת. כל פוסט נכתב קודם בעברית ומגיע עם תרגום מלא לאנגלית.")}</p>
   </div>

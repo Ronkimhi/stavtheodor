@@ -77,7 +77,10 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261128hm (same branch): in Hebrew those pages and the Radar artist index mirror English whole, every section below the
 # column on the right gutter too.
 # 20261128hn (same branch, merged with main's 20261128jc): both changes in one file, a value no side has used.
-THEME_CSS = '/css/theme.css?v=20261128hr'
+# 20261128fa (theo/form-adjacent-fixes): the .form-note rules are gone (nothing renders that class since PR #91).
+# 20261128fb (same branch, merged with main's 20261128hr): both changes in one file, a value no side has used.
+# 20261128fc (same branch): the Latin name inside the Hebrew nav, phone menu and footer (span.lat) sets at 0.875em.
+THEME_CSS = '/css/theme.css?v=20261128fc'
 
 
 def rel(*parts):
@@ -404,7 +407,7 @@ NAV_ITEMS = [
     ('#advisory', 'Advisory', 'ייעוץ'),
     ('/guide/', 'Guides', 'מדריכים'),  # the guides index, a real page on every page, the homepage included (2026-10-01)
     ('#industries', 'For business', 'לעסקים'),
-    ('/radar/', 'Art Radar', 'ראדאר אמנות'),
+    ('/radar/', 'Art Radar', '<span class="lat" lang="en">Art Radar</span>'),
     ('#faq', 'Questions', 'שאלות'),
 ]
 # Ron, 2026-11-26: the header's one ask is Write to Stav (the .nav-write item in nav() and nav_write_bar(), to /contact/ since 2026-11-27), so Contact left
@@ -708,7 +711,7 @@ def footer(home=False, cta=None, subject='', form=False, quiet=False):
         <p class="eyebrow">{T('Where I work', 'איפה אני עובדת')}</p><a href="/art-consultant-tenafly-nj/">{T('Art consultant in Tenafly', 'יועצת אמנות בטנפליי')}</a><a href="/art-advisor-bergen-county/">{T('Art advisor in Bergen County', 'יועצת אמנות במחוז ברגן')}</a><a href="/art-curator-new-jersey/">{T('Art consultant in New Jersey', "יועצת אמנות בניו ג'רזי")}</a><a href="/art-curator-new-york/">{T('Art advisor in New York', 'יועצת אמנות בניו יורק')}</a><a href="/art-advisor-westchester-ny/">{T('Art advisor in Westchester', "יועצת אמנות בווסטצ'סטר")}</a>
       </div>
       <div>
-        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="{GUIDES_INDEX}">{T('Guides', 'מדריכים')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', 'ראדאר אמנות')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
+        <p class="eyebrow">{T('Explore', 'באתר')}</p><a href="/advisory/">{T('Art advisory', 'ייעוץ אמנות')}</a><a href="{GUIDES_INDEX}">{T('Guides', 'מדריכים')}</a><a href="/projects/">{T('Projects', 'פרויקטים')}</a><a href="/radar/">{T('Art Radar', '<span class="lat" lang="en">Art Radar</span>')}</a><a href="{L('#faq')}">{T('Questions', 'שאלות')}</a><a href="/about/">{T('About', 'אודות')}</a><a href="/contact/">{T('Contact', 'יצירת קשר')}</a><a href="{WHATSAPP}" target="_blank" rel="noopener">{T('Art Radar on WhatsApp', '<span class="lat" lang="en">Art Radar</span> בוואטסאפ')}</a><a href="{INSTAGRAM}" target="_blank" rel="noopener">{T('Instagram', 'אינסטגרם')}</a>
       </div>
       <div class="who">
         <p class="eyebrow">{T('Who I work with', 'עם מי אני עובדת')}</p>{who}
@@ -795,8 +798,8 @@ def contact_form(path='/', h='h3'):
         <p class="eyebrow">{L('While you wait', 'בינתיים')}</p>
         <div class="ty-links">
           <a class="arrow" href="/projects/"><span class="ln"></span>{L('See the projects', 'לפרויקטים')}</a>
-          <a class="arrow" href="/radar/"><span class="ln"></span>{L('Read Art Radar', 'לראדאר אמנות')}</a>
-          <a class="arrow" href="{WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{L('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
+          <a class="arrow" href="/radar/"><span class="ln"></span>{L('Read Art Radar', 'ל-Art Radar')}</a>
+          <a class="arrow" href="{WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{L('Art Radar on WhatsApp', 'Art Radar בוואטסאפ')}</a>
         </div>
       </div>
     </div>
@@ -845,7 +848,7 @@ def radar_subscribe(loc, path, whatsapp=False):
           f'{T("Or join the WhatsApp group", "או הצטרפו לקבוצת הוואטסאפ")}</a></div>') if whatsapp else ''
     return f'''
   <div class="radar-sub-box reveal" aria-live="polite">
-    <p class="eyebrow">{T('Art Radar by email', 'ראדאר אמנות במייל')}</p>
+    <p class="eyebrow">{T('Art Radar by email', 'Art Radar במייל')}</p>
     {T('I send one email a month with the new posts.', 'פעם בחודש אני שולחת מייל אחד עם הפוסטים החדשים.', tag='p', cls='sub-line')}
     <form class="radar-sub" action="{H.escape(FORM_ENDPOINT, quote=True)}" method="POST" data-loc="{loc}">
       <input type="hidden" name="_subject" value="Art Radar by email: new subscriber">
@@ -855,7 +858,7 @@ def radar_subscribe(loc, path, whatsapp=False):
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <label>{T('Email', 'אימייל')} <input type="email" name="email" autocomplete="email" dir="ltr" required></label>
       <button type="submit">{T('Subscribe', 'הרשמה')}</button>
-      {T('You will get Art Radar from me by email, once a month. To stop, reply to any of the emails.', 'תקבלו ממני את ראדאר אמנות במייל, פעם בחודש. כדי להפסיק, השיבו לאחד המיילים.', tag='p', cls='sub-consent')}
+      {T('You will get Art Radar from me by email, once a month. To stop, reply to any of the emails.', 'תקבלו ממני את Art Radar במייל, פעם בחודש. כדי להפסיק, השיבו לאחד המיילים.', tag='p', cls='sub-consent')}
       <p class="sub-error" hidden><span data-l="en">Your signup did not go through. Please write to me at <a href="{mail}" dir="ltr">{EMAIL}</a>.</span><span data-l="he" dir="rtl">ההרשמה לא הצליחה. כתבו לי בכתובת <a href="{mail}" dir="ltr">{EMAIL}</a>.</span></p>
     </form>
     <div class="sub-thanks" hidden>{T('Thank you. You are on the list.', 'תודה. נרשמתם.', tag='p')}</div>
