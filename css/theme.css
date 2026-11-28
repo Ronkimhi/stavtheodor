@@ -657,13 +657,24 @@
   body.lang-he .phead .crumbs { direction: rtl; }
   body.lang-he .phead { direction: rtl; }  /* Hebrew: the header's h1, lead, byline and Write to Stav button start on the right; the h1 and lead hold inline twins, so the twins' own dir never reached the block (2026-11-18) */
   body.lang-he .phead .ba-stage { direction: ltr; }  /* the before and after panes keep their order */
-  /* Hebrew mirrors English on the pages whose header is followed by a .prose column (advisory, partner, town and county,
-     privacy): English holds the header, its figure and the column on the left gutter, so Hebrew holds them on the right one.
-     main stays LTR, so the 1100px header and the 860px column need margin-left: auto to reach it. Guides (their own wider
-     column), the Radar posts (an article, not a .prose section), the Radar artist index (.hub-artists, its own full-width
-     grid) and /contact/ (.contact-head, above) are left as they are. One rule on purpose: a browser without :has drops it
-     whole, so the header and the column never part. */
-  body.lang-he .phead:not(.guide):has(+ .section:not(.hub-artists) > .prose), body.lang-he .phead:not(.guide) + .section:not(.hub-artists) > .prose[data-l="he"] { margin-left: auto; }
+  /* Hebrew mirrors English, the whole page, where the header is followed by a .prose section (advisory, partner, town and
+     county, privacy, the Radar artist index): English holds the header, the column and every section below on the left
+     gutter, so Hebrew holds them on the right one. main stays LTR, so the 1100px header needs margin-left: auto, and each
+     section below it reads right to left: capped boxes (the column, the FAQ, the closing ask) sit on the right, rows and
+     grids (section heads, FAQ rows, guide cards, the Radar strip) run right to left. The Radar strip's line and markers
+     are drawn with physical offsets, so they move to the right side here. Guides (.phead.guide), the Radar posts (an
+     article, not a .prose section) and /contact/ (.contact-head, above) are left as they are. */
+  body.lang-he .phead:not(.guide):has(+ .section > .prose) { margin-left: auto; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section { direction: rtl; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-left: 0; padding-right: 44px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline::before { left: auto; right: 6px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { left: auto; right: -44px; }
+  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { left: auto; right: -41px; }
+  @media (max-width: 900px) {
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-right: 28px; }
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { right: -28px; }
+    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { right: -25px; }
+  }
   .pfig figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .plead { padding: clamp(72px, 8vw, 120px) clamp(20px, 3.4vw, 48px) 0; max-width: 1000px; }
   .plead p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }

@@ -73,7 +73,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # 20261127hf (same branch): the thank-you card's two lines wrap without a lone last word.
 # 20261127hl (fix/he-layout-prose-and-header): Hebrew advisory, partner, town and privacy pages hold their header and
 # column on the right gutter, and the Hebrew phone bar under 350px gets its spacing back.
-THEME_CSS = '/css/theme.css?v=20261127hl'
+# 20261128hm (same branch): in Hebrew those pages and the Radar artist index mirror English whole, every section below the
+# column on the right gutter too.
+THEME_CSS = '/css/theme.css?v=20261128hm'
 
 
 def rel(*parts):
