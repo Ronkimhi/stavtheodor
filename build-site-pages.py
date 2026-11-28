@@ -323,7 +323,7 @@ def radar_html(p):
     return f'''
 <section class="section wrap tight">
   <div class="head reveal">
-    <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מראדאר אמנות')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
+    <div class="lead"><p class="eyebrow">{T('From Art Radar', 'מ-Art Radar')}</p><h2 class="serif">{T('The art worth seeing, chosen by a curator.', 'האמנות ששווה לראות, בבחירת אוצרת.')}</h2></div>
     {arrow}
   </div>
   <div class="timeline">{sc.timeline(chosen, with_months=False, dims=True, alts=described(p))}
@@ -939,7 +939,7 @@ CONTACT = {
     "h1": ("Write to Stav", "כתבו לסתיו"),
     # The lede under the h1 (the Curator's /contact/ copy, 2026-11-27): /contact/ only; sc.FOOTER_CTA stays for the footers.
     "lead": ("One wall or a whole home, an office or a hotel, a client's project or an artist you read about on Art Radar: write to me here. A few lines are enough to start.",
-             "קיר אחד או בית שלם, משרד או מלון, פרויקט של לקוח או אמן שקראתם עליו בראדאר אמנות: כתבו לי כאן. כמה שורות מספיקות כדי להתחיל."),
+             "קיר אחד או בית שלם, משרד או מלון, פרויקט של לקוח או אמן שקראתם עליו ב-Art Radar: כתבו לי כאן. כמה שורות מספיקות כדי להתחיל."),
     # The card heading and the three check lines, /contact/ only (2026-11-27); every other card keeps sc.CONTACT_HEAD and sc.CONTACT_LINES.
     "card_head": ("Here is how it starts.", "כך זה מתחיל."),
     "card_lines": [
@@ -1007,7 +1007,7 @@ def render_contact():
     <ul class="places">{places}</ul>
     <p class="area">{T(*CONTACT["area"])}</p>
     <div class="more">
-      <a class="arrow" href="{sc.WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{T('Art Radar on WhatsApp', 'ראדאר אמנות בוואטסאפ')}</a>
+      <a class="arrow" href="{sc.WHATSAPP}" target="_blank" rel="noopener"><span class="ln"></span>{T('Art Radar on WhatsApp', 'Art Radar בוואטסאפ')}</a>
       <a class="arrow" href="{sc.YELP}" target="_blank" rel="noopener"><span class="ln"></span>{T(*CONTACT["yelp"])}</a>
       <a class="arrow" href="{gbp}" target="_blank" rel="noopener"><span class="ln"></span>{T(*CONTACT["gbp"])}</a>
     </div>

@@ -419,7 +419,7 @@
   .contact-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; grid-column: 1 / -1; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
   .contact-form label.half { grid-column: auto; }
   .contact-form label [data-l="he"] { font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 500; }
-  .contact-form button, .contact-form .form-note, .contact-form .form-error { grid-column: 1 / -1; }
+  .contact-form button, .contact-form .form-error { grid-column: 1 / -1; }
   .contact-form input, .contact-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-family: var(--sans); font-size: 17px; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid rgba(242,240,236,0.36); border-radius: 0; padding: 10px 0 12px; transition: border-color .25s ease, box-shadow .25s ease; }
   .contact-form input:hover, .contact-form textarea:hover { border-bottom-color: rgba(242,240,236,0.5); }
   .contact-form input:focus, .contact-form textarea:focus { outline: none; border-bottom-color: var(--taupe); box-shadow: 0 1px 0 0 var(--taupe); }
@@ -444,8 +444,6 @@
   .contact-form button [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 16px; }
   .contact-form button:hover { background: var(--taupe); border-color: var(--taupe); color: var(--ink); }
   .contact-form button:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
-  .contact-form .form-note { font-size: 14px; line-height: 1.6; color: var(--muted); margin-top: -14px; }
-  .contact-form .form-note [data-l="he"] { font-size: 15px; }
   body.lang-he .contact-form { direction: rtl; text-align: right; }
   body.lang-he .contact-form input, body.lang-he .contact-form textarea { font-family: var(--he), var(--sans); }
   body.lang-he .contact-form input[type="email"], body.lang-he .contact-form input[type="tel"] { direction: ltr; text-align: right; font-family: var(--sans); }
@@ -1224,7 +1222,7 @@
   html.ph-end body:not(.gl) #cap { opacity: 1; }
   html.ph-end body:not(.gl) #cap .cap-t[data-cap="p3"] { display: inline; }
   /* /contact/ copy, 2026-11-27: no one-word last line in the check lines or the form note, and a wider /contact/ lede */
-  .act-lines li > span, .form-note { text-wrap: pretty; }
+  .act-lines li > span { text-wrap: pretty; }
   /* The thank-you card in Stav's voice: no lone last word under the spam line, and the reply line balanced so the address
      (one unbreakable run) does not sit alone under a full line */
   .form-thanks .ty-spam { text-wrap: pretty; }

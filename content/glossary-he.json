@@ -29,10 +29,16 @@
       "he": "בר בפולי-ברז'ר",
       "banned": ["Folies-Berg[eè]re", "Un Bar aux"],
       "note": "The painting's title is written in Hebrew inside Hebrew text."
+    },
+    {
+      "en": "Art Radar",
+      "he": "Art Radar",
+      "banned": ["ראדאר אמנות", "ראדאר האמנות"]
     }
   ],
   "latin_whitelist": [
     "THEODORA",
+    "Art Radar",
     "THEODORA Art Advisory by Stav Theodor",
     "Theadora Art Advisory",
     "TSG Art Advisory",
