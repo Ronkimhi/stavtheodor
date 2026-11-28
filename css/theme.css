@@ -285,7 +285,16 @@
   .entry .date { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .entry .date [data-l="he"] { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .entry h3 { font-size: 26px; }
+  /* No lone last word in a card title, in either language (2026-11-28). A browser may break a line after a maqaf (the
+     Hebrew hyphen), and balance did, splitting a name across two lines; the build wraps each Hebrew title word that holds
+     a maqaf in .nw (site_chrome.keep_maqaf_words), which stays on one line. */
+  .timeline .entry h3 { text-wrap: balance; }
+  .timeline .entry h3 .nw { white-space: nowrap; }
   .entry .teaser { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  /* Hebrew cards on every page: the title and teaser read right to left from the right edge of their cell (the Hebrew
+     twins carry dir, but as inline spans they never set the block's direction). The date keeps its place beside the
+     marker. Where the whole section is mirrored (the Hebrew mirror below) the card row itself runs right to left. */
+  body.lang-he .timeline .entry h3, body.lang-he .timeline .entry .teaser { direction: rtl; }
   .entry .th { height: 132px; overflow: hidden; background: var(--surface); }
   .entry .th img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
   .entry:hover .th img { transform: scale(1.04); }
@@ -658,22 +667,25 @@
   body.lang-he .phead { direction: rtl; }  /* Hebrew: the header's h1, lead, byline and Write to Stav button start on the right; the h1 and lead hold inline twins, so the twins' own dir never reached the block (2026-11-18) */
   body.lang-he .phead .ba-stage { direction: ltr; }  /* the before and after panes keep their order */
   /* Hebrew mirrors English, the whole page, where the header is followed by a .prose section (advisory, partner, town and
-     county, privacy, the Radar artist index): English holds the header, the column and every section below on the left
-     gutter, so Hebrew holds them on the right one. main stays LTR, so the 1100px header needs margin-left: auto, and each
-     section below it reads right to left: capped boxes (the column, the FAQ, the closing ask) sit on the right, rows and
-     grids (section heads, FAQ rows, guide cards, the Radar strip) run right to left. The Radar strip's line and markers
-     are drawn with physical offsets, so they move to the right side here. Guides (.phead.guide), the Radar posts (an
-     article, not a .prose section) and /contact/ (.contact-head, above) are left as they are. */
-  body.lang-he .phead:not(.guide):has(+ .section > .prose) { margin-left: auto; }
-  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section { direction: rtl; }
-  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-left: 0; padding-right: 44px; }
-  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline::before { left: auto; right: 6px; }
-  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { left: auto; right: -44px; }
-  body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { left: auto; right: -41px; }
+     county, privacy, the Radar artist index, and the guides, .phead.guide): English holds the header, the column and every
+     section below on the left gutter, so Hebrew holds them on the right one. main stays LTR, so the 1100px header needs
+     margin-left: auto, and each section below it reads right to left: capped boxes (the column, the FAQ, the closing ask)
+     sit on the right, rows and grids (section heads, FAQ rows, guide cards, the Radar strip) run right to left. On a Radar
+     post the More from Art Radar section (after main, which holds the article) mirrors the same way, head and list together;
+     the post's header, article, note and closing ask are left as they are, as is /contact/ (.contact-head, above). The
+     Radar strip's line and markers are drawn with physical offsets, so they move to the right side wherever the section is
+     mirrored. A guide's diagrams are images and its tables and key numbers sit in the Hebrew column, which carries its own
+     dir, so none of them changes here; the before and after stage keeps LTR (.phead .ba-stage, above). */
+  body.lang-he .phead:has(+ .section > .prose) { margin-left: auto; }
+  body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) { direction: rtl; }
+  body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .timeline { padding-left: 0; padding-right: 44px; }
+  body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .timeline::before { left: auto; right: 6px; }
+  body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .month::before { left: auto; right: -44px; }
+  body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .entry::before { left: auto; right: -41px; }
   @media (max-width: 900px) {
-    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .timeline { padding-right: 28px; }
-    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .month::before { right: -28px; }
-    body.lang-he main:has(> .phead:not(.guide) + .section > .prose) > .section .entry::before { right: -25px; }
+    body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .timeline { padding-right: 28px; }
+    body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .month::before { right: -28px; }
+    body.lang-he :is(main:has(> .phead + .section > .prose) > .section, main:has(> .article) ~ .section:has(> .timeline)) .entry::before { right: -25px; }
   }
   .pfig figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
   .plead { padding: clamp(72px, 8vw, 120px) clamp(20px, 3.4vw, 48px) 0; max-width: 1000px; }
@@ -1072,8 +1084,10 @@
     .gcard h3 { font-size: 19px; text-wrap: pretty; }
     .gcard p { font-size: 14px; }
     .gcard:hover .th img, .gcard:focus-visible .th img { transform: none; }
-    /* Hebrew rows put the thumbnail on the reading side. Wider, the grid stays left anchored like .grid3 and every
-       section head on the site (design review, 2026-09-29): a right anchored grid under a left anchored head left a hole. */
+    /* Hebrew rows put the thumbnail on the reading side, on every page that shows the cards. Wider, the grid follows its
+       section: on the mirrored Hebrew pages (the Hebrew mirror, Part 2) the section head and the grid both sit on the right
+       gutter and run right to left; elsewhere both stay left anchored, since a right anchored grid under a left anchored
+       head leaves a hole (design review, 2026-09-29). */
     body.lang-he .gcards { direction: rtl; }
   }
   @media (prefers-reduced-motion: reduce) { .gcard .th img { transition: none; } }
