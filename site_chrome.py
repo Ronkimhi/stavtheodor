@@ -739,7 +739,9 @@ def contact_form(path='/', h='h3'):
     It is the visitor's own number, collected only; generate_lead never carries it.
     Added 2026-11-18 (Art Radar inquiry link): artist and source_post, hidden and disabled in the markup, so an ordinary
     inquiry never posts them; form_js() enables and fills them only when the form was opened from an Art Radar inquiry link
-    (data-ask) on an Art Radar post or hub, and clears and disables them again for any other opening and after a send."""
+    (data-ask) on an Art Radar post or hub, and clears and disables them again for any other opening and after a send.
+    Added 2026-11-28, every field above unchanged: The budget (budget, radio chips, optional, none checked, BUDGETS), the
+    last field before Send, after How did you find me? and its two conditional fields. No figure in any chip."""
     if not FORM_ENDPOINT:
         return ''
     L = lambda en, he: T(en, he)
@@ -768,6 +770,7 @@ def contact_form(path='/', h='h3'):
       <fieldset class="chip-set"><legend>{L('How did you find me?', 'איך מצאתם אותי?')}</legend><div class="chips">{chips('found_via', [(en, he) for en, he, _ in FOUND_VIA], flag={en for en, _, ai in FOUND_VIA if ai})}</div></fieldset>
       <label class="ai-ask" hidden>{L('What did you ask it?', 'מה שאלתם אותו?')} <input type="text" name="ai_query" autocomplete="off" disabled></label>
       <label class="ref-ask" hidden>{L('Who referred you?', 'מי הפנה אתכם?')} <input type="text" name="referred_by" autocomplete="off" disabled></label>
+      <fieldset class="chip-set"><legend>{L('The budget', 'התקציב')}</legend><div class="chips">{chips('budget', BUDGETS)}</div></fieldset>
       <input type="hidden" name="artist" value="" disabled>
       <input type="hidden" name="source_post" value="" disabled>
       <input type="hidden" name="page" value="{H.escape(path, quote=True)}">
@@ -889,6 +892,13 @@ TIMELINES = [
     ('In 1 to 3 months', 'בעוד חודש עד שלושה'),
     ('In 3 to 6 months', 'בעוד שלושה עד שישה חודשים'),
     ('No date yet', 'עדיין אין תאריך'),
+]
+# The form's "The budget" choices (budget, 2026-11-28, Curator copy), optional: none is checked. Value and English label,
+# Hebrew label. No figure, range or currency in any of them.
+BUDGETS = [
+    ('I have a number in mind', 'יש לי סכום בראש'),
+    ('Flexible, for the right work', 'יש גמישות, ליצירה הנכונה'),
+    ('I would like help planning it', 'אשמח לעזרה בתכנון'),
 ]
 # The How did you find me? values (FOUND_VIA) that ask Who referred you? (referred_by, 2026-11-01). The chips themselves
 # are unchanged: form_js() matches these values.
