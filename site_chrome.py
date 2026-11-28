@@ -71,7 +71,9 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # form's scroll margin added, a value no side has used.
 # 20261127he (fix/he-phead-and-thanks-card): the Hebrew /contact/ header sits at the right edge, over the card.
 # 20261127hf (same branch): the thank-you card's two lines wrap without a lone last word.
-THEME_CSS = '/css/theme.css?v=20261127hf'
+# 20261127hl (fix/he-layout-prose-and-header): Hebrew advisory, partner, town and privacy pages hold their header and
+# column on the right gutter, and the Hebrew phone bar under 350px gets its spacing back.
+THEME_CSS = '/css/theme.css?v=20261127hl'
 
 
 def rel(*parts):
