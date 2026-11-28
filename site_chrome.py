@@ -726,7 +726,8 @@ def contact_form(path='/', h='h3'):
     honeypot, page carries the page's path (path, written here so it survives without JavaScript; form_js() refreshes it). I am a
     (client_type, Homeowner checked) and The project (project_scope, optional, none checked) are chip groups since
     2026-10-06 (mockup A): real radio inputs, visually hidden but focusable, each label showing its twins; the submitted
-    value stays English. The free plan takes no files, so the note asks for the photo by email.
+    value stays English. The form asks for no photos or files, and no note under Send asks for one by email (the
+    site owner, 2026-11-28: no photo ask on the form).
     The thank-you card (2026-09-29) and the error line are in the markup, hidden, both languages as twins: the box
     (.contact-box, aria-live) stacks the form and the card in one grid cell, so the card replaces the form in place and
     the page does not move. h: the card's heading level (h3 under the footer's h2, h2 on /contact/ under its h1).
@@ -783,7 +784,6 @@ def contact_form(path='/', h='h3'):
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="referrer" value="">
       <button type="submit">{L('Send', 'שליחה')}</button>
-      <p class="form-note">{L('Have a photo of the wall or a plan? Send it in reply to my email.', 'יש לכם תמונה של הקיר או תוכנית? שלחו אותה בתשובה למייל שלי.')}</p>
       <p class="form-error" hidden><span data-l="en">Your message did not go through. Please write to <a href="{mail}" dir="ltr">{EMAIL}</a> or call <a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span><span data-l="he" dir="rtl">ההודעה לא נשלחה. כתבו ל-<a href="{mail}" dir="ltr">{EMAIL}</a> או התקשרו ל-<a href="{PHONE_TEL}" data-loc="form" dir="ltr">{PHONE}</a>.</span></p>
     </form>
     <div class="form-thanks" hidden>
