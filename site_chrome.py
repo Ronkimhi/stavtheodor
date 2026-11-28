@@ -71,11 +71,13 @@ SPACES_FILE = os.path.join(ROOT, 'content', 'spaces.json')
 # form's scroll margin added, a value no side has used.
 # 20261127he (fix/he-phead-and-thanks-card): the Hebrew /contact/ header sits at the right edge, over the card.
 # 20261127hf (same branch): the thank-you card's two lines wrap without a lone last word.
+# 20261128jc (radar-jcc-nj-tenafly): the For your space line wraps without a lone last word, a value no side has used.
 # 20261127hl (fix/he-layout-prose-and-header): Hebrew advisory, partner, town and privacy pages hold their header and
 # column on the right gutter, and the Hebrew phone bar under 350px gets its spacing back.
 # 20261128hm (same branch): in Hebrew those pages and the Radar artist index mirror English whole, every section below the
 # column on the right gutter too.
-THEME_CSS = '/css/theme.css?v=20261128hm'
+# 20261128hn (same branch, merged with main's 20261128jc): both changes in one file, a value no side has used.
+THEME_CSS = '/css/theme.css?v=20261128hn'
 
 
 def rel(*parts):
